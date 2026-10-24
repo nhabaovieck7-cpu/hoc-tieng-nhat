@@ -1,0 +1,9 @@
+preview_*.png
+tools/
+__pycache__/
+
+# Nội dung gốc (bản rõ) – KHÔNG đưa lên GitHub, chỉ đưa bản mã hoá trong enc/
+lessons.js
+course.js
+course_n*.js
+search.js

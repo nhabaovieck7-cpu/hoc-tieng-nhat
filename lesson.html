@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=e41dfb44"><title>Bài học</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap"><div class="lhead"><a class="back" href="index.html">← Về trang chủ</a><h1 id="t"></h1><div id="tags"></div></div>
+<div class="layout"><nav class="toc" id="toc"></nav><div class="content" id="m"></div></div></main><footer class="site-title"></footer>
+<script src="config.js?v=47cd0fbe"></script><script src="common.js?v=f0b25c49"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'].concat((()=>{const m=(new URLSearchParams(location.search).get('id')||'').match(/^khoa-(n[12])-(np|tv|kj)-/);return m?['course_'+m[1]+'_'+m[2]]:[]})()))</script><script type="text/plain" id="main">
+const l=LESSONS.find(x=>x.id==new URLSearchParams(location.search).get('id'));const m=document.getElementById('m'),toc=document.getElementById('toc');
+if(!l){m.innerHTML='<section>Không tìm thấy bài học. <a href="index.html">Về trang chủ</a></section>';toc.remove()}else{
+document.title=plain(l.title)+' – '+SITE.title;document.getElementById('t').innerHTML=ruby(l.title);
+document.getElementById('tags').innerHTML='<span class="tag lv">'+l.level+'</span><span class="tag">'+l.type+'</span>'+(l.sample?'<span class="tag mau">Bài mẫu</span>':'');
+const S=[];const sec=(t,html,c)=>{const id='s'+(S.length+1);S.push([id,t]);return '<section id="'+id+'"'+(c?' class="'+c+'"':'')+'><h2>'+t+'</h2>'+html+'</section>'};
+let h='';if(l.explain.length)h+=sec('Giải thích',l.explain.map(e=>'<p>'+ruby(e)+'</p>').join(''));
+if(l.examples.length)h+=sec('Ví dụ',l.examples.map(e=>'<div class="ex"><div class="jp">'+ruby(e.jp)+'</div><div class="vi">'+e.vi+'</div></div>').join(''));
+(l.sections||[]).forEach(s=>{h+=sec(ruby(s.h),ruby(s.html),'sec')});
+if(l.quiz&&l.quiz.length)h+=sec('Luyện tập',l.quiz.map((x,i)=>'<div class="qa"><p><b>Câu '+(i+1)+':</b> '+ruby(x.q)+'</p><button>Xem đáp án</button><div class="ans">'+ruby(x.a)+'</div></div>').join('<hr>'));
+m.innerHTML=h;m.querySelectorAll('table').forEach(t=>{const hs=[...t.querySelectorAll('th')].map(x=>x.textContent.trim());if(hs.length){const k=hs[0]=='Kanji'?'kjt':(hs[1]=='Từ'&&hs[2]=='Cách đọc'?'vt':'gt');t.classList.add('mc',k);t.querySelectorAll('tr').forEach(r=>{if(r.querySelector('th'))r.classList.add('hr');else[...r.children].forEach((c,i)=>{if(hs[i])c.setAttribute('data-l',hs[i])})})}});
+m.querySelectorAll('table').forEach(t=>{if(!t.parentElement.classList.contains('tbl')){const w=document.createElement('div');w.className='tbl';t.before(w);w.append(t)}});
+if(S.length>1){toc.innerHTML='<b>Mục lục</b>'+S.map(([id,t])=>'<a href="#'+id+'">'+t.replace(/<rt>.*?<\/rt>/g,'').replace(/<[^>]+>/g,'')+'</a>').join('');if(S.length>8)toc.classList.add('long')}else{toc.remove();document.querySelector('.layout').style.display='block'}
+m.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.classList.toggle('show');b.textContent=a.classList.contains('show')?'Ẩn đáp án':'Xem đáp án'})}
+</script></body></html>

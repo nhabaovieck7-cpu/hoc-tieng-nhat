@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=e41dfb44"><title>Học tiếng Nhật</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="#tonghop">Tổng hợp mỗi ngày</a><a href="#n1">Khóa học N1</a><a href="#n2">Khóa học N2</a><a href="#kaiwa">Kaiwa</a><a href="#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap">
+<div class="hero"><h1 class="site-title"></h1><p id="intro"></p><div class="stats" id="stats"></div></div>
+<div class="block" id="tonghop"><div class="block-h"><h2>📝 Tổng hợp mỗi ngày</h2><small id="thN"></small></div><div id="thBody" class="cards"></div></div>
+<div class="block" id="n1"><div class="block-h"><h2>📘 Khóa học N1</h2><small>Ngữ pháp · Từ vựng · Kanji</small></div><p class="lead">Học theo thứ tự bài. Cuối mỗi bài có phần luyện tập kèm đáp án.</p><div class="cards" id="c_N1"></div></div>
+<div class="block" id="n2"><div class="block-h"><h2>📗 Khóa học N2</h2><small>Ngữ pháp · Từ vựng · Kanji</small></div><div class="cards" id="c_N2"></div></div>
+<div class="block" id="kaiwa"><div class="block-h"><h2>💬 Kaiwa</h2><small id="kwN"></small></div><p class="lead">Hội thoại thực tế trong công việc kaigo và đời sống.</p><div class="cards" id="kwBody"></div></div>
+<div class="block" id="cu"><div class="block-h"><h2>📂 Từ vựng – Ngữ pháp cũ</h2><small>Tìm trong tất cả bài học</small></div>
+<div class="filters"><input id="q" placeholder="🔍 Tìm bài học, từ, mẫu ngữ pháp..."><select id="lv"><option value="">Mọi cấp độ</option><option>N5</option><option>N4</option><option>N3</option><option>N2</option><option>N1</option></select>
+<select id="ty"><option value="">Bài cũ (từ vựng – ngữ pháp)</option><option value="*">Tất cả bài</option><option>Từ vựng</option><option>Ngữ pháp</option><option>Kanji</option><option>Hội thoại/kaigo</option><option>Tổng hợp N1</option><option>Tổng hợp N2</option><option>Từ vựng N1</option><option>Ngữ pháp N1</option></select></div>
+<p id="count" class="empty"></p><div id="list" class="cards"></div></div>
+</main><footer><span class="site-title"></span><br>Danh sách từ vựng và ngữ pháp N1 do trang tự biên soạn.</footer>
+<script src="config.js?v=47cd0fbe"></script><script src="common.js?v=f0b25c49"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'])</script><script type="text/plain" id="main">
+document.getElementById('intro').textContent=SITE.intro;
+const unit={'Ngữ pháp':'mẫu','Từ vựng':'từ','Kanji':'chữ'},ico={'Ngữ pháp':'文','Từ vựng':'語','Kanji':'字'},SHOW=8;
+const li=(href,t,s)=>'<li><a href="'+href+'"><span>'+t+'</span>'+(s?'<small>'+s+'</small>':'')+'</a></li>';
+function lst(items){const a=items.slice(0,SHOW).join(''),b=items.slice(SHOW).join('');return '<ol class="list">'+a+'</ol>'+(b?'<details class="more"><summary><span class="o">Xem thêm '+(items.length-SHOW)+' bài ▾</span><span class="c">Thu gọn ▴</span></summary><ol class="list" start="'+(SHOW+1)+'" style="counter-reset:n '+SHOW+'">'+b+'</ol></details>':'')}
+const th=LESSONS.filter(l=>/^Tổng hợp/.test(l.type));document.getElementById('thN').textContent=th.length+' bài';
+document.getElementById('thBody').innerHTML=['N1','N2'].map(v=>{const a=th.filter(l=>l.level==v);return '<div class="box"><h3>Tổng hợp '+v+' <small>'+a.length+' bài</small></h3>'+lst(a.map(l=>li('lesson.html?id='+l.id,ruby(l.title.replace(/^Tổng hợp N[12] – /,'')))))+'</div>'}).join('');
+let tot={};Object.keys(COURSE).forEach(lv=>{const el=document.getElementById('c_'+lv);if(!el)return;el.innerHTML=Object.keys(COURSE[lv]).map(t=>{const us=COURSE[lv][t],k=us.reduce((a,u)=>a+u.k,0);tot[t]=(tot[t]||0)+k;return '<div class="box"><h3>'+ico[t]+' '+t+' <small>'+us.length+' bài · '+k+' '+unit[t]+'</small></h3>'+lst(us.map(u=>li('lesson.html?id='+u.id,u.name,u.k+' '+unit[t])))+'</div>'}).join('')});
+const card=l=>'<a class="card" href="lesson.html?id='+l.id+'"><span class="tag lv">'+l.level+'</span><span class="tag">'+l.type+'</span>'+(l.sample?'<span class="tag mau">Bài mẫu</span>':'')+'<h3>'+ruby(l.title)+'</h3><p>'+ruby(l.summary||'')+'</p></a>';
+const kw=LESSONS.filter(l=>l.type=='Hội thoại/kaigo');document.getElementById('kwN').textContent=kw.length+' bài';document.getElementById('kwBody').innerHTML=kw.map(card).join('');
+document.getElementById('stats').innerHTML='<span class="stat"><b>'+th.length+'</b>bài tổng hợp</span><span class="stat"><b>'+(tot['Ngữ pháp']||0)+'</b>mẫu ngữ pháp</span><span class="stat"><b>'+(tot['Từ vựng']||0)+'</b>từ vựng</span><span class="stat"><b>'+(tot['Kanji']||0)+'</b>kanji</span><span class="stat"><b>'+kw.length+'</b>bài kaiwa</span>';
+const OLD=t=>!/^Tổng hợp/.test(t)&&t!='Hội thoại/kaigo';
+const q=document.getElementById('q'),lv=document.getElementById('lv'),ty=document.getElementById('ty'),list=document.getElementById('list');
+function draw(){const k=q.value.trim().toLowerCase();
+const r=LESSONS.filter(l=>(!lv.value||l.level==lv.value)&&(ty.value=='*'||(ty.value?l.type==ty.value:(k?true:OLD(l.type))))&&(!k||plain(l.title+' '+l.summary+' '+l.explain.join(' ')+' '+l.examples.map(e=>e.jp+e.vi).join(' ')+' '+(l.sections||[]).map(s=>s.h+' '+s.html.replace(/<[^>]+>/g,' ')).join(' ')).toLowerCase().includes(k)));
+document.getElementById('count').textContent=r.length+' bài';list.innerHTML=r.length?r.map(card).join(''):'<p class="empty">Không tìm thấy bài nào.</p>'}
+[q,lv,ty].forEach(e=>e.addEventListener('input',draw));draw();
+const nl=[...document.querySelectorAll('.nav a')];addEventListener('scroll',()=>{let cur=nl[0];nl.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<120)cur=a});nl.forEach(a=>a.classList.toggle('on',a==cur))},{passive:true});
+</script></body></html>

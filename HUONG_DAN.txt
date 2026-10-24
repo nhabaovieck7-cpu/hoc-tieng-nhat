@@ -1,0 +1,23 @@
+HƯỚNG DẪN THÊM BÀI HỌC MỚI
+
+1. Mở file lessons.js bằng Notepad (chuột phải > Mở bằng > Notepad).
+2. Copy nguyên một khối bài từ dấu {  đến dấu  }, (gồm cả dấu phẩy sau nó).
+3. Dán xuống ngay dưới, rồi sửa:
+   - id: tên ngắn, không dấu, không trùng (vd: n2-tuvung-1)
+   - sample: xóa dòng này (hoặc để false) – chỉ bài mẫu mới có
+   - title, summary: tên bài và mô tả ngắn
+   - level: N5, N4, N3, N2 hoặc N1
+   - type: "Từ vựng", "Ngữ pháp", "Kanji" hoặc "Hội thoại/kaigo"
+   - explain: các dòng giải thích, mỗi dòng trong dấu " ", cách nhau dấu phẩy
+   - examples: câu tiếng Nhật (jp) và nghĩa tiếng Việt (vi)
+   - quiz: câu hỏi (q) và đáp án (a); không cần thì để  quiz: []
+4. Furigana: viết {漢字|かんじ}  -> chữ かんじ hiện nhỏ phía trên 漢字.
+5. Lưu file, mở index.html để xem. Nếu trang trắng: thường do thiếu dấu phẩy hoặc dấu ".
+Đổi tên trang web: sửa file config.js.
+
+Bài dài (kaiwa, tổng hợp N1) dùng thêm mục "sections": danh sách { h: "tiêu đề mục", html: "nội dung" }.
+Nội dung có thể dùng thẻ <b>đậm</b>, <br> xuống dòng, <table> bảng; furigana vẫn viết {漢字|かんじ}.
+Các loại (type) hiện có: Từ vựng, Ngữ pháp, Kanji, Hội thoại/kaigo, Tổng hợp N1, Từ vựng N1, Ngữ pháp N1.
+Nếu thêm loại mới, thêm <option> tương ứng trong index.html.
+
+LƯU Ý: nội dung trên trang được mã hoá. Sau khi sửa lessons.js, xem tools/HUONG_DAN_BUILD.txt để mã hoá và đưa lên.
