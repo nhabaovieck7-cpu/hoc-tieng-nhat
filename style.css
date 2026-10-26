@@ -100,3 +100,6 @@ html.locked main,html.locked footer,html.locked .gsbar{visibility:hidden}
 
 /* Đọc hiểu */
 .jp{font-size:1.05rem;margin:8px 0 2px}.vi{color:#145a32;margin:0 0 10px 16px;font-size:.95rem}.op{margin-left:20px}.tip{background:#fef9e7;border-left:4px solid #d4ac0d;padding:6px 12px;margin:8px 0;border-radius:6px}.gist{background:#eaf2f8;padding:6px 12px;border-radius:6px;font-size:.95rem}
+/* Ngữ pháp N2 trong đề N1 */
+.pat{border:1px solid #d8dee6;border-radius:10px;padding:8px 14px;margin:14px 0}.hot{color:#fff;background:#c0392b;border-radius:4px;padding:0 6px;font-size:.78rem;margin-left:6px}.xr{color:#fff;background:#1a5276;border-radius:4px;padding:0 5px;font-size:.75rem}
+.lb{display:inline-block;min-width:92px;font-weight:600;color:#1a5276}.row{margin:3px 0}.cmp{background:#fdedec;border-left:4px solid #c0392b;padding:4px 10px;margin:6px 0;border-radius:6px}.rel{background:#f4f6f7;padding:6px 10px;margin:6px 0;border-radius:6px}.ri{border-top:1px dashed #bbb;padding:3px 0}
