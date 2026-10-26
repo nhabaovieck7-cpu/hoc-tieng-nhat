@@ -97,3 +97,6 @@ html.locked main,html.locked footer,html.locked .gsbar{visibility:hidden}
 .lockbox button{margin-top:12px;width:100%;font:inherit;font-weight:600;padding:12px;border:0;border-radius:12px;background:var(--c2);color:#fff;cursor:pointer}.lockbox button:disabled{opacity:.6}
 .lkerr{min-height:1.3em;margin-top:10px;color:#c0283c;font-size:.88rem}
 .nav a.lockbtn{opacity:.55;font-size:.85em}.nav a.lockbtn:hover{opacity:1}
+
+/* Đọc hiểu */
+.jp{font-size:1.05rem;margin:8px 0 2px}.vi{color:#145a32;margin:0 0 10px 16px;font-size:.95rem}.op{margin-left:20px}.tip{background:#fef9e7;border-left:4px solid #d4ac0d;padding:6px 12px;margin:8px 0;border-radius:6px}.gist{background:#eaf2f8;padding:6px 12px;border-radius:6px;font-size:.95rem}
