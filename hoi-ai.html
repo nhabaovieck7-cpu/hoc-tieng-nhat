@@ -2,7 +2,7 @@
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
 <main class="wrap"><div class="pagehead"><h1>🤖 Hỏi AI</h1><p>Hỏi về ngữ pháp, từ vựng, cách nói tự nhiên – trả lời bằng tiếng Việt.</p></div><div id="ai"></div></main><footer class="site-title"></footer>
-<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f9bd3b12"></script><script src="features.js?v=434244e5"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
+<script src="config.js?v=7c077468"></script><script src="common.js?v=f9bd3b12"></script><script src="features.js?v=434244e5"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
 const el=document.getElementById('ai'),qp=new URLSearchParams(location.search);
 if(!F.AI.on()){el.innerHTML='<div class="box"><h3>Trợ lý AI chưa được bật</h3><p class="mut">Chủ trang cần cấu hình máy chủ AI (Cloudflare Worker + Gemini) rồi điền địa chỉ vào <code>config.js</code>. Trong lúc chờ, bạn vẫn học bình thường các bài và trắc nghiệm.</p></div>'}else{
 let mode=qp.get('che')=='chua'?'chua':'hoi',hist=F.ls.get('hn_ai_hist',[]);const mau=qp.get('mau'),bai=qp.get('bai');

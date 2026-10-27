@@ -4,7 +4,7 @@ compatibility_date = "2026-10-01"
 
 [vars]
 ALLOWED_ORIGIN = "https://nhabaovieck7-cpu.github.io"
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.5-flash"
 DAILY_LIMIT = "30"
 
 # Giới hạn theo IP (tuỳ chọn): tạo KV rồi bỏ dấu # 3 dòng dưới

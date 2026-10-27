@@ -2,7 +2,7 @@
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
 <main class="wrap"><div class="pagehead"><h1>⏱ Thi thử N1</h1><p>Đề trộn ngẫu nhiên từ kho câu hỏi của trang (cập nhật hằng ngày), bấm giờ như thi thật.</p></div><div id="ex"></div></main><footer class="site-title"></footer>
-<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f9bd3b12"></script><script src="features.js?v=434244e5"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course_n1_np'])</script><script type="text/plain" id="main">
+<script src="config.js?v=7c077468"></script><script src="common.js?v=f9bd3b12"></script><script src="features.js?v=434244e5"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course_n1_np'])</script><script type="text/plain" id="main">
 const K='hn_exam_v1',el=document.getElementById('ex');
 const pool=(f)=>{const o=[];LESSONS.filter(f).forEach(l=>(l.mcq||[]).concat((l.quiz||[]).filter(x=>x.o)).forEach((x,i)=>{if(x.o&&x.o.length>=2&&x.c!=null)o.push({k:l.id+'#'+i,q:x.q,o:x.o,c:x.c,a:x.a||'',l:l.id})}));return o};
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};

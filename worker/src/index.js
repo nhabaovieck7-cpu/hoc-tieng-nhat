@@ -19,7 +19,7 @@ export default {async fetch(req,env){
  const mode=SYS[b.mode]?b.mode:'hoi',text=String(b.text||'').slice(0,2000),ctx=String(b.ctx||'').slice(0,3000);if(!text.trim())return J({error:'Câu hỏi trống'},400,cors);
  const LIM=+(env.DAILY_LIMIT||30);
  if(env.RL){const ip=req.headers.get('CF-Connecting-IP')||'x',k='rl:'+new Date().toISOString().slice(0,10)+':'+ip;const n=+(await env.RL.get(k)||0);if(n>=LIM)return J({error:'Hôm nay đã dùng hết '+LIM+' câu hỏi AI.'},429,cors);await env.RL.put(k,String(n+1),{expirationTtl:90000})}
- const model=env.GEMINI_MODEL||'gemini-2.5-flash';
+ const model=env.GEMINI_MODEL||'gemini-3.5-flash';
  const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+model+':generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':env.GEMINI_API_KEY},
   body:JSON.stringify({systemInstruction:{parts:[{text:SYS[mode]}]},contents:[{role:'user',parts:[{text:(ctx?ctx+'\n\n':'')+(mode=='dich'?'Bản dịch của học viên: ':'')+text}]}],generationConfig:{temperature:0.4,maxOutputTokens:900}})});
  const j=await r.json().catch(()=>({}));
