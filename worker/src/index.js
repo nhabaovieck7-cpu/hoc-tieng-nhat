@@ -1,5 +1,5 @@
-// Cloudflare Worker: AI (Gemini) + tài khoản (D1) + admin duyệt.
-// Secrets: GEMINI_API_KEY, ACCESS_TOKEN, ADMIN_PASSWORD, CONTENT_KEY_B64
+// Cloudflare Worker: AI (Gemini) + tài khoản (D1) + admin duyệt + Google OAuth.
+// Secrets: GEMINI_API_KEY, ACCESS_TOKEN, ADMIN_PASSWORD, CONTENT_KEY_B64, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
 const SYS={
  hoi:'Bạn là giáo viên tiếng Nhật cho người Việt (trình độ N2–N1, có học viên làm kaigo). Trả lời NGẮN GỌN bằng tiếng Việt, rõ ràng, chính xác. Khi đưa câu tiếng Nhật hãy kèm bản dịch tiếng Việt; có thể ghi furigana dạng {漢字|かんじ}. Dùng **đậm** cho ý chính. Nếu không chắc, nói rõ là không chắc. Chỉ trả lời về tiếng Nhật, JLPT, văn hoá/công việc ở Nhật.',
  chua:'Bạn là giáo viên tiếng Nhật cho người Việt. Học viên gửi một câu tiếng Nhật. Hãy: (1) nói câu đúng hay sai, (2) chỉ ra lỗi cụ thể bằng tiếng Việt (ngữ pháp, trợ từ, kính ngữ, tự nhiên hay không), (3) đưa câu sửa ✅ kèm nghĩa tiếng Việt. Ngắn gọn, dùng ❌ / ✅.',
@@ -11,6 +11,8 @@ const now=()=>new Date().toISOString();
 const b64=buf=>btoa(String.fromCharCode(...new Uint8Array(buf)));
 const ub64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const te=new TextEncoder();
+const b64url=buf=>{const a=buf instanceof Uint8Array?buf:new Uint8Array(buf);let s='';for(const x of a)s+=String.fromCharCode(x);return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
+const randB64url=n=>{const a=new Uint8Array(n);crypto.getRandomValues(a);return b64url(a)};
 
 async function pbkdf2Hash(password,saltB64,iter=100000){
   const salt=ub64(saltB64);
@@ -37,6 +39,33 @@ function cors(env,req){
 async function readJson(req){try{return await req.json()}catch(e){return null}}
 function bearer(req){const a=req.headers.get('Authorization')||'';return a.startsWith('Bearer ')?a.slice(7).trim():''}
 
+async function ensureOauthStates(env){
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS oauth_states (
+    state TEXT PRIMARY KEY,
+    return_to TEXT NOT NULL,
+    expires_at TEXT NOT NULL
+  )`).run();
+}
+
+function siteOrigins(env){
+  return (env.ALLOWED_ORIGIN||'').split(',').map(s=>s.trim()).filter(Boolean);
+}
+function safeReturnTo(env, raw){
+  const fallback='https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/dang-nhap.html';
+  try{
+    const u=new URL(String(raw||fallback));
+    if(!['http:','https:'].includes(u.protocol))return fallback;
+    const allowed=siteOrigins(env).map(o=>{try{return new URL(o).origin}catch(e){return ''}}).filter(Boolean);
+    if(!allowed.includes(u.origin))return fallback;
+    return u.toString().split('#')[0];
+  }catch(e){return fallback}
+}
+function googleRedirectUri(env,req){
+  // cố định theo app Google đã đăng ký
+  return 'https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev/auth/google/callback';
+}
+function googleClientId(env){return (env.GOOGLE_CLIENT_ID||env.OAUTH_GOOGLE_CLIENT_ID||'').trim()}
+
 async function sessionUser(env,token){
   if(!token||!env.DB)return null;
   const row=await env.DB.prepare('SELECT s.kind,s.expires_at,s.user_id,u.email,u.name,u.status,u.method,u.created_at,u.last_visit FROM sessions s LEFT JOIN users u ON u.id=s.user_id WHERE s.token=?').bind(token).first();
@@ -52,15 +81,103 @@ async function makeSession(env,userId,kind,days=30){
 }
 function publicUser(u){return {id:u.id||u.user_id,email:u.email,name:u.name,status:u.status,method:u.method,created_at:u.created_at,last_visit:u.last_visit}}
 function oauthConfigured(env,p){
-  if(p==='google')return !!(env.OAUTH_GOOGLE_CLIENT_ID||'').trim();
+  if(p==='google')return !!googleClientId(env) && !!(env.GOOGLE_CLIENT_SECRET||'').trim();
   if(p==='facebook')return !!(env.OAUTH_FACEBOOK_APP_ID||'').trim();
   if(p==='line')return !!(env.OAUTH_LINE_CHANNEL_ID||'').trim();
   if(p==='apple')return !!(env.OAUTH_APPLE_CLIENT_ID||'').trim();
   return false;
 }
 
+function redirectWith(url, params){
+  const u=new URL(url);
+  Object.entries(params||{}).forEach(([k,v])=>{ if(v!=null && v!=='') u.searchParams.set(k,String(v)); });
+  return Response.redirect(u.toString(), 302);
+}
+
+async function handleGoogleStart(req,env,c){
+  const cid=googleClientId(env);
+  if(!cid || !(env.GOOGLE_CLIENT_SECRET||'').trim())return J({error:'Google OAuth chưa cấu hình'},503,c.h);
+  const url=new URL(req.url);
+  const returnTo=safeReturnTo(env, url.searchParams.get('return')||url.searchParams.get('return_to'));
+  await ensureOauthStates(env);
+  const state=randB64url(24);
+  const exp=new Date(Date.now()+10*60*1000).toISOString();
+  await env.DB.prepare('INSERT INTO oauth_states(state,return_to,expires_at) VALUES(?,?,?)').bind(state,returnTo,exp).run();
+  // dọn state cũ
+  await env.DB.prepare('DELETE FROM oauth_states WHERE expires_at < ?').bind(now()).run();
+  const auth=new URL('https://accounts.google.com/o/oauth2/v2/auth');
+  auth.searchParams.set('client_id',cid);
+  auth.searchParams.set('redirect_uri',googleRedirectUri(env,req));
+  auth.searchParams.set('response_type','code');
+  auth.searchParams.set('scope','openid email profile');
+  auth.searchParams.set('state',state);
+  auth.searchParams.set('access_type','online');
+  auth.searchParams.set('prompt','select_account');
+  return Response.redirect(auth.toString(), 302);
+}
+
+async function handleGoogleCallback(req,env,c){
+  const url=new URL(req.url);
+  const err=url.searchParams.get('error');
+  const code=url.searchParams.get('code');
+  const state=url.searchParams.get('state')||'';
+  await ensureOauthStates(env);
+  const st=state?await env.DB.prepare('SELECT * FROM oauth_states WHERE state=?').bind(state).first():null;
+  const returnTo=st?st.return_to:safeReturnTo(env,null);
+  if(st)await env.DB.prepare('DELETE FROM oauth_states WHERE state=?').bind(state).run();
+  if(err)return redirectWith(returnTo,{oauth_error:'Google từ chối đăng nhập ('+err+')'});
+  if(!st || st.expires_at < now())return redirectWith(returnTo,{oauth_error:'Phiên Google hết hạn. Thử lại.'});
+  if(!code)return redirectWith(returnTo,{oauth_error:'Thiếu mã Google'});
+  const cid=googleClientId(env);
+  const secret=(env.GOOGLE_CLIENT_SECRET||'').trim();
+  if(!cid||!secret)return redirectWith(returnTo,{oauth_error:'Google OAuth chưa cấu hình'});
+
+  const body=new URLSearchParams({
+    code,
+    client_id:cid,
+    client_secret:secret,
+    redirect_uri:googleRedirectUri(env,req),
+    grant_type:'authorization_code'
+  });
+  const tr=await fetch('https://oauth2.googleapis.com/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
+  const tj=await tr.json().catch(()=>({}));
+  if(!tr.ok || !tj.access_token)return redirectWith(returnTo,{oauth_error:'Không đổi được mã Google'});
+
+  const ur=await fetch('https://www.googleapis.com/oauth2/v3/userinfo',{headers:{Authorization:'Bearer '+tj.access_token}});
+  const uj=await ur.json().catch(()=>({}));
+  if(!ur.ok || !uj.email)return redirectWith(returnTo,{oauth_error:'Không lấy được email Google'});
+  const email=String(uj.email).trim().toLowerCase().slice(0,120);
+  const name=String(uj.name||uj.given_name||email.split('@')[0]).trim().slice(0,80)||'Học viên';
+
+  let u=await env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
+  if(u){
+    if(u.status==='locked')return redirectWith(returnTo,{oauth_error:'Tài khoản đã bị khoá. Liên hệ Khánh.'});
+    if(u.status==='rejected')return redirectWith(returnTo,{oauth_error:'Đăng ký đã bị từ chối.'});
+    // liên kết: cập nhật tên nếu cần, ghi method google nếu trước đó email
+    if(u.method!=='google'){
+      await env.DB.prepare('UPDATE users SET method=?, name=?, last_visit=? WHERE id=?').bind('google', name||u.name, now(), u.id).run();
+      u.method='google'; u.name=name||u.name;
+    }else{
+      await env.DB.prepare('UPDATE users SET name=?, last_visit=? WHERE id=?').bind(name||u.name, now(), u.id).run();
+      u.name=name||u.name;
+    }
+    u.last_visit=now();
+  }else{
+    const id=crypto.randomUUID();
+    await env.DB.prepare('INSERT INTO users(id,email,name,pass_salt,pass_hash,method,status,created_at,last_visit) VALUES(?,?,?,?,?,?,?,?,?)')
+      .bind(id,email,name,'oauth','oauth','google','pending',now(),now()).run();
+    u={id,email,name,method:'google',status:'pending',created_at:now(),last_visit:now()};
+  }
+  const sess=await makeSession(env,u.id,'user');
+  const params={session:sess.token,status:u.status,oauth:'google'};
+  return redirectWith(returnTo, params);
+}
+
 async function handleAuth(req,env,c,path){
   if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).'},503,c.h);
+
+  if(path==='/auth/google/start'&&req.method==='GET')return handleGoogleStart(req,env,c);
+  if(path==='/auth/google/callback'&&req.method==='GET')return handleGoogleCallback(req,env,c);
 
   // --- register ---
   if(path==='/auth/register'&&req.method==='POST'){
@@ -88,6 +205,7 @@ async function handleAuth(req,env,c,path){
     const password=String(b.password||'');
     const u=await env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
     if(!u)return J({error:'Email hoặc mật khẩu không đúng'},401,c.h);
+    if(u.method==='google'&&(u.pass_hash==='oauth'||!u.pass_hash))return J({error:'Email này đăng nhập bằng Google'},401,c.h);
     const hash=await pbkdf2Hash(password,u.pass_salt);
     if(hash!==u.pass_hash)return J({error:'Email hoặc mật khẩu không đúng'},401,c.h);
     if(u.status==='locked')return J({error:'Tài khoản đã bị khoá. Liên hệ Khánh.'},403,c.h);
@@ -122,10 +240,13 @@ async function handleAuth(req,env,c,path){
     return J(out,200,c.h);
   }
 
-  // --- oauth stub ---
+  // --- oauth stub (facebook/line/apple) + google tip ---
   if(path.startsWith('/auth/oauth/')&&req.method==='POST'){
     const p=path.slice('/auth/oauth/'.length);
     if(!['google','facebook','line','apple'].includes(p))return J({error:'Nhà cung cấp không hỗ trợ'},400,c.h);
+    if(p==='google'&&oauthConfigured(env,'google')){
+      return J({ok:true,redirect:'/auth/google/start',message:'Dùng GET /auth/google/start'},200,c.h);
+    }
     if(!oauthConfigured(env,p))return J({error:'Sắp có',code:'soon',provider:p,message:'Đăng nhập bằng '+p+' sẽ mở khi Khánh cấu hình xong App ID.'},501,c.h);
     return J({error:'Sắp có',code:'soon',provider:p,message:'Handler OAuth đã sẵn sàng khung nhưng chưa nối xong.'},501,c.h);
   }
@@ -198,7 +319,6 @@ export default {async fetch(req,env){
   const url=new URL(req.url);
   let path=url.pathname.replace(/\/+$/,'')||'/';
   if(path.startsWith('/auth'))return handleAuth(req,env,c,path);
-  // AI: "/" (tương thích cũ) hoặc "/ai"
   if(path==='/'||path==='/ai')return handleAI(req,env,c);
   return J({error:'Không tìm thấy',paths:['/','/ai','/auth/*']},404,c.h);
 }};
