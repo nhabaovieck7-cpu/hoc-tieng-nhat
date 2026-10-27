@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=e785106a"><title>Admin duyệt tài khoản – Học tiếng Nhật</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html">Trang chủ</a><a class="on" href="admin.html">Admin</a></nav></div></div>
+<main class="wrap" style="max-width:720px;padding-bottom:40px">
+<div class="pagehead"><h1>👤 Duyệt tài khoản</h1><p>Chỉ Khánh dùng trang này. Học viên đăng ký sẽ hiện ở tab Chờ duyệt.</p></div>
+
+<div class="authcard" id="loginBox">
+  <h1>Đăng nhập admin</h1>
+  <p class="sub">Mật khẩu admin (khác mã khoá trang).</p>
+  <label for="apw">Mật khẩu admin</label>
+  <input id="apw" type="password" autocomplete="current-password">
+  <button class="primary" id="alogin" type="button">Vào trang duyệt</button>
+  <div class="autherr" id="aerr"></div>
+</div>
+
+<div id="panel" hidden>
+  <div class="adminbar">
+    <div class="tabs" id="tabs">
+      <button type="button" data-t="pending" class="on">Chờ duyệt</button>
+      <button type="button" data-t="approved">Đã duyệt</button>
+      <button type="button" data-t="rejected">Từ chối</button>
+      <button type="button" data-t="locked">Đã khoá</button>
+    </div>
+    <button class="btn g" id="aout" type="button">Đăng xuất</button>
+  </div>
+  <div id="list"></div>
+</div>
+</main>
+<script src="config.js?v=7c077468"></script><script src="common.js?v=f9bd3b12"></script><script src="auth.js?v=fdc05697"></script>
+<script>
+document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
+const loginBox=document.getElementById('loginBox'),panel=document.getElementById('panel');
+const list=document.getElementById('list'),aerr=document.getElementById('aerr');
+let tab='pending';
+function fmt(t){if(!t)return '—';try{const d=new Date(t);return d.toLocaleString('vi-VN',{timeZone:'Asia/Tokyo'})}catch(e){return t}}
+async function load(){
+  list.innerHTML='<p class="empty-note">Đang tải…</p>';
+  try{
+    const j=await AUTH.adminUsers(tab);
+    const us=j.users||[];
+    if(!us.length){list.innerHTML='<p class="empty-note">Không có ai trong mục này.</p>';return}
+    list.innerHTML=us.map(u=>`<div class="userrow" data-id="${u.id}">
+      <b>${esc(u.name||'')}</b>
+      <div class="meta">📧 ${esc(u.email)} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)}</div>
+      <div class="acts">
+        ${tab!=='approved'?`<button class="ok" data-a="approve">Duyệt</button>`:''}
+        ${tab!=='rejected'?`<button class="no" data-a="reject">Từ chối</button>`:''}
+        ${tab!=='locked'?`<button class="lock" data-a="lock">Khoá</button>`:''}
+      </div></div>`).join('');
+    list.querySelectorAll('.acts button').forEach(b=>b.onclick=async()=>{
+      const id=b.closest('.userrow').dataset.id;
+      b.disabled=true;
+      try{await AUTH.adminAction(id,b.dataset.a);await load()}catch(e){alert(e.message);b.disabled=false}
+    });
+  }catch(e){
+    if(e.status===401){showLogin();return}
+    list.innerHTML='<p class="empty-note">'+(e.message||'Lỗi')+'</p>';
+  }
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showLogin(){panel.hidden=true;loginBox.hidden=false}
+function showPanel(){loginBox.hidden=true;panel.hidden=false;load()}
+document.getElementById('alogin').onclick=async()=>{
+  aerr.textContent='';
+  try{await AUTH.adminLogin(document.getElementById('apw').value);showPanel()}
+  catch(e){aerr.textContent=e.message}
+};
+document.getElementById('aout').onclick=()=>{AUTH.setAdmin('');showLogin()};
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
+  tab=b.dataset.t;document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));load();
+});
+if(AUTH.sessionAdmin())showPanel();
+</script>
+</body></html>

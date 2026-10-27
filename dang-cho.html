@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=e785106a"><title>Đang chờ duyệt – Học tiếng Nhật</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html">Trang chủ</a><a href="dang-nhap.html">Tài khoản</a></nav></div></div>
+<main class="wrap">
+<div class="authcard waitbox">
+  <div class="big">⏳</div>
+  <h1>Đang chờ duyệt</h1>
+  <p class="sub" id="msg">Tài khoản của bạn đã gửi cho Khánh. Khi được <b>Duyệt</b>, bạn sẽ mở được bài học. Trang này tự kiểm tra mỗi 20 giây.</p>
+  <p class="honest" id="info"></p>
+  <button class="primary" id="refresh" type="button">Kiểm tra lại</button>
+  <p class="switch"><a href="dang-nhap.html">Quay lại đăng nhập</a> · <a href="#" id="out">Đăng xuất</a></p>
+</div>
+</main>
+<script src="config.js?v=7c077468"></script><script src="common.js?v=f9bd3b12"></script><script src="auth.js?v=fdc05697"></script><script src="lock.js?v=a443a49d"></script>
+<script>
+document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
+const info=document.getElementById('info'),msg=document.getElementById('msg');
+async function check(){
+  if(!AUTH.session()){location.href='dang-nhap.html';return}
+  try{
+    const j=await AUTH.me();
+    info.textContent=(j.user&&j.user.email)?('Email: '+j.user.email):'';
+    if(j.user.status==='approved'){
+      if(j.contentKey)await LOCK.importContentKey(j.contentKey);
+      msg.innerHTML='Đã được duyệt! Đang mở trang học…';
+      location.href='index.html';return;
+    }
+    if(j.user.status==='rejected'){msg.textContent='Đăng ký đã bị từ chối. Liên hệ Khánh nếu cần.';return}
+    if(j.user.status==='locked'){msg.textContent='Tài khoản đã bị khoá.';return}
+  }catch(e){info.textContent=e.message}
+}
+document.getElementById('refresh').onclick=check;
+document.getElementById('out').onclick=async e=>{e.preventDefault();await AUTH.logout();location.href='dang-nhap.html'};
+check();setInterval(check,20000);
+</script>
+</body></html>

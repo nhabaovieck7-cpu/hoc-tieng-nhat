@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=e785106a"><title>Đăng nhập – Học tiếng Nhật</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html">Trang chủ</a><a class="on" href="dang-nhap.html">Tài khoản</a></nav></div></div>
+<main class="wrap">
+<div class="authcard" id="card">
+  <h1 id="title">Đăng nhập</h1>
+  <p class="sub" id="sub">Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.</p>
+  <div id="regFields" hidden>
+    <label for="name">Tên gọi</label>
+    <input id="name" autocomplete="name" placeholder="Vd: Minh">
+  </div>
+  <label for="email">Email</label>
+  <input id="email" type="email" autocomplete="username" placeholder="ban@email.com">
+  <label for="pw">Mật khẩu</label>
+  <input id="pw" type="password" autocomplete="current-password" placeholder="Ít nhất 8 ký tự">
+  <button class="primary" id="go" type="button">Đăng nhập</button>
+  <div class="autherr" id="err"></div>
+  <p class="switch" id="switch">Chưa có tài khoản? <a id="tog">Đăng ký</a></p>
+  <div class="authdiv">hoặc</div>
+  <div class="oauth">
+    <button type="button" data-p="google" disabled>Google <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="facebook" disabled>Facebook <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="line" disabled>LINE <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="apple" disabled>Apple <span class="soon">Sắp có</span></button>
+  </div>
+  <p class="honest" style="text-align:center;margin-top:16px">Khánh vẫn có thể mở bằng <b>mã khoá trang</b> như cũ.</p>
+</div>
+</main>
+<script src="config.js?v=7c077468"></script><script src="common.js?v=f9bd3b12"></script><script src="auth.js?v=fdc05697"></script><script src="lock.js?v=a443a49d"></script>
+<script>
+document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
+let mode='login';
+const title=document.getElementById('title'),sub=document.getElementById('sub'),reg=document.getElementById('regFields');
+const go=document.getElementById('go'),err=document.getElementById('err'),tog=document.getElementById('tog');
+const name=document.getElementById('name'),email=document.getElementById('email'),pw=document.getElementById('pw');
+function setMode(m){
+  mode=m;err.textContent='';
+  if(m==='register'){title.textContent='Đăng ký';sub.textContent='Sau khi đăng ký, chờ Khánh duyệt rồi mới xem bài học.';reg.hidden=false;go.textContent='Đăng ký';tog.parentElement.innerHTML='Đã có tài khoản? <a id="tog">Đăng nhập</a>';document.getElementById('tog').onclick=()=>setMode('login');pw.autocomplete='new-password'}
+  else{title.textContent='Đăng nhập';sub.textContent='Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.';reg.hidden=true;go.textContent='Đăng nhập';tog.parentElement.innerHTML='Chưa có tài khoản? <a id="tog">Đăng ký</a>';document.getElementById('tog').onclick=()=>setMode('register');pw.autocomplete='current-password'}
+}
+tog.onclick=()=>setMode('register');
+async function afterAuth(j){
+  if(j.status==='pending'){location.href='dang-cho.html';return}
+  if(j.status==='approved'){if(j.contentKey)await LOCK.importContentKey(j.contentKey);location.href='index.html';return}
+  err.textContent='Trạng thái tài khoản: '+(j.status||'?');
+}
+go.onclick=async()=>{
+  err.textContent='';go.disabled=true;
+  try{
+    if(mode==='register'){
+      if(!name.value.trim())throw new Error('Nhập tên gọi');
+      const j=await AUTH.register(name.value.trim(),email.value.trim(),pw.value);
+      await afterAuth(j);
+    }else{
+      const j=await AUTH.login(email.value.trim(),pw.value);
+      await afterAuth(j);
+    }
+  }catch(e){err.textContent=e.message||String(e)}
+  finally{go.disabled=false}
+};
+document.querySelectorAll('.oauth button').forEach(b=>b.onclick=async()=>{
+  err.textContent='';
+  try{await AUTH.oauth(b.dataset.p)}catch(e){err.textContent=(e.body&&e.body.message)||e.message||'Sắp có'}
+});
+// Nếu đã đăng nhập sẵn
+(async()=>{
+  if(!AUTH.session())return;
+  try{const j=await AUTH.me();await afterAuth(j)}catch(e){}
+})();
+</script>
+</body></html>

@@ -3,14 +3,24 @@ main = "src/index.js"
 compatibility_date = "2026-10-01"
 
 [vars]
-ALLOWED_ORIGIN = "https://nhabaovieck7-cpu.github.io"
+ALLOWED_ORIGIN = "https://nhabaovieck7-cpu.github.io,http://127.0.0.1:8765,http://localhost:8765"
 GEMINI_MODEL = "gemini-3.5-flash"
-DAILY_LIMIT = "30"
+DAILY_LIMIT = "16"
+# OAuth app IDs (để trống = nút "Sắp có"). Điền khi Khánh tạo xong app.
+OAUTH_GOOGLE_CLIENT_ID = ""
+OAUTH_FACEBOOK_APP_ID = ""
+OAUTH_LINE_CHANNEL_ID = ""
+OAUTH_APPLE_CLIENT_ID = ""
 
-# Giới hạn theo IP (tuỳ chọn): tạo KV rồi bỏ dấu # 3 dòng dưới
-# npx wrangler kv namespace create RL   -> dán id vào đây
+[[d1_databases]]
+binding = "DB"
+database_name = "hoc-tieng-nhat-auth"
+database_id = "fa97d57e-86e0-412c-9f8d-5d63ae039de1"
+
+# Giới hạn AI theo IP (tuỳ chọn): tạo KV rồi bỏ dấu # 
 # [[kv_namespaces]]
 # binding = "RL"
 # id = "DAN_ID_KV_VAO_DAY"
 
-# Secrets (KHÔNG ghi vào file này): GEMINI_API_KEY, ACCESS_TOKEN – xem HUONG_DAN.txt
+# Secrets (KHÔNG ghi vào file này):
+# GEMINI_API_KEY, ACCESS_TOKEN, ADMIN_PASSWORD, CONTENT_KEY_B64

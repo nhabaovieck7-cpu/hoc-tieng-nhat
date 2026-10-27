@@ -60,7 +60,7 @@ function bindMCQ(root,onGrade){$$('.mcq',root).forEach(Q=>{if(Q.dataset.b)return
  rd.onclick=()=>{Q.classList.remove('done');qs.forEach(q=>{q.classList.remove('qok','qbad');$$('.opt',q).forEach(x=>x.classList.remove('sel','right','wrong'));$('.mx',q).hidden=true});sc.textContent='';g.hidden=false;rd.hidden=true}})}
 
 // ===== 7. Trợ lý AI (qua Cloudflare Worker → Gemini) =====
-const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:30,
+const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:16,
  used(){const u=ls.get('hn_ai_used',{});return u[today()]||0},
  async token(){const k=localStorage.getItem('hn_key_v1')||'';const h=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('hn-ai:'+k));return [...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('')},
  async ask(mode,text,ctx){if(!this.on())throw new Error('AI chưa được bật.');if(this.used()>=this.LIM)throw new Error('Hôm nay đã dùng hết '+this.LIM+' câu hỏi AI. Mai quay lại nhé!');
