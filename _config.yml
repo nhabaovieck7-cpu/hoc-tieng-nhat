@@ -1,0 +1,8 @@
+# GitHub Pages build config for hoc-tieng-nhat.
+# Keep server source code and internal docs out of the published site.
+# The worker/ folder stays in the repo (the Worker is deployed from it),
+# but its files must not be served as web pages.
+exclude:
+  - worker
+  - HUONG_DAN.txt
+  - HUONG_DAN_TINH_NANG.txt
