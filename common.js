@@ -4,7 +4,7 @@ function plain(s){return s.replace(/\{([^|}]+)\|([^}]+)\}/g,'$1$2')}
 function stripYomiTarget(s){return String(s||'').replace(/<(b|u|strong)(\s[^>]*)?>([\s\S]*?)<\/\1>/gi,function(_,t,a,inner){return '<'+t+(a||'')+'>'+inner.replace(/\{([^|}]+)\|[^}]+\}/g,'$1')+'</'+t+'>'})}
 function prepMcqQ(q,o){var s=String(q||''); if(/<(b|u|strong)\b/i.test(s)) s=stripYomiTarget(s); return s}
 
-document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);document.title=SITE.title;
+document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);if(!document.title||!document.title.trim())document.title=SITE.title;
 
 // ===== Tìm kiếm toàn trang (ô tìm kiếm trên đầu) =====
 (function(){
@@ -13,7 +13,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function boot(){const tb=document.querySelector('.topbar');if(!tb||document.getElementById('gs'))return;
  const d=document.createElement('div');d.className='gsbar';d.innerHTML='<div class="wrap"><div class="gs" id="gs"><span class="gsi">🔍</span><input id="gq" type="search" autocomplete="off" placeholder="Tìm kanji, từ vựng, nghĩa tiếng Việt, mẫu ngữ pháp, bài học…"><div class="gsr" id="gsr" hidden></div></div></div>';
  tb.appendChild(d);const q=d.querySelector('#gq'),r=d.querySelector('#gsr');let K=null,loading=false,t=0;
- const load=()=>{if(K||loading)return;loading=true;LOCK.load('search').then(()=>{K=SIDX.E.map(e=>nz(e[1]+' '+e[2]));go()})};
+ const load=()=>{if(K||loading)return;loading=true;LOCK.load('search').then(()=>{K=SIDX.E.map(e=>nz(e[1]+' '+e[2]));go()}).catch(()=>{loading=false;r.hidden=false;r.innerHTML='<div class="gsm">\u26A0\uFE0F Không tải được chỉ mục tìm kiếm (có thể do mạng). Gõ lại sau ít giây để thử lại.</div>'})};
  function go(){const v=nz(q.value);if(!v){r.hidden=true;return}
   if(!K){r.hidden=false;r.innerHTML='<div class="gsm">Đang tải chỉ mục…</div>';return}
   const ws=v.split(' ');const hits=[],seenL={};

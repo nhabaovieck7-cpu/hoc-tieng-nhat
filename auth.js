@@ -58,7 +58,6 @@ const AUTH=(()=>{
   }
   async function adminUsers(tab){return api('/auth/admin/users?tab='+encodeURIComponent(tab||'pending'),{admin:true})}
   async function adminAction(userId,action){return api('/auth/admin/action',{method:'POST',admin:true,body:{userId,action}})}
-  async function oauth(provider){return api('/auth/oauth/'+provider,{method:'POST',body:{}})}
 
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function shortLabel(u){
@@ -111,9 +110,18 @@ const AUTH=(()=>{
       );
       box.querySelector('#acctOut').onclick=()=>signOut(true);
     }catch(e){
-      // session hết hạn → về trạng thái đăng nhập
-      setSession('');
-      paint('<a class="acctin" href="dang-nhap.html">Đăng nhập</a>');
+      if(e.status===401||e.status===403){
+        // Máy chủ xác nhận phiên hết hạn/không hợp lệ → mới xoá phiên.
+        setSession('');
+        paint('<a class="acctin" href="dang-nhap.html">Đăng nhập</a>');
+      }else{
+        // Lỗi mạng/tạm thời: giữ nguyên phiên, đừng bắt đăng nhập lại oan.
+        paint(
+          '<span class="acctwho" title="Chưa kiểm tra được tài khoản (lỗi mạng)">Tài khoản</span>'+
+          '<button type="button" class="acctout" id="acctOut">Đăng xuất</button>'
+        );
+        box.querySelector('#acctOut').onclick=()=>signOut(true);
+      }
     }
   }
 
@@ -121,5 +129,5 @@ const AUTH=(()=>{
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>mountAccountBox());
   else mountAccountBox();
 
-  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,oauth,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
+  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
 })();
