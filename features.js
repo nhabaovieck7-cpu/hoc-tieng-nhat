@@ -32,7 +32,7 @@ function dialogs(root){if(!root)return;$$('p',root).forEach(p=>{const parts=p.in
 function rateBar(){if(!tts.ok)return '';return '<div class="ttsbar"><span>🔊 Tốc độ đọc:</span>'+[0.7,0.9,1,1.2].map(r=>'<button type="button" data-r="'+r+'" class="'+(r==tts.rate?'on':'')+'">'+r+'×</button>').join('')+'<small>Giọng máy (ja-JP), chỉ đọc chữ, không đọc furigana.</small></div>'}
 function bindRate(root){$$('.ttsbar button',root).forEach(b=>b.onclick=()=>{tts.setRate(+b.dataset.r);$$('.ttsbar button').forEach(x=>x.classList.toggle('on',x.dataset.r==b.dataset.r));tts.speak('こんにちは')})}
 
-// ===== 3. Tiến độ (lưu trên máy) =====
+// ===== 2. Tiến độ (lưu trên máy) =====
 const P={K:'hn_prog_v1',get(){return ls.get(this.K,{days:{},seen:{},best:{},last:null})},save(p){ls.set(this.K,p)},
  touch(){const p=this.get();p.days[today()]=1;this.save(p);return p},
  seen(id,title){const p=this.touch();p.seen[id]=Date.now();p.last={id,title};this.save(p)},
@@ -50,7 +50,7 @@ function dashboard(el){if(!el)return;const p=P.get(),seen=Object.keys(p.seen),bs
  '<p class="mut">Lưu trên máy này (không gửi đi đâu). <a href="#" id="pgreset">Xoá tiến độ</a></p></div>';
  $('#pgreset',el).onclick=e=>{e.preventDefault();if(confirm('Xoá toàn bộ tiến độ trên máy này?')){localStorage.removeItem(P.K);dashboard(el)}}}
 
-// ===== Trắc nghiệm 4 lựa chọn (giống trong bài học) =====
+// ===== 3. Trắc nghiệm 4 lựa chọn (giống trong bài học) =====
 function mcqHTML(qs,o={}){return '<div class="mcq"'+(o.id?' data-id="'+esc(o.id)+'" data-title="'+esc(o.title||'')+'"':'')+'>'+(o.hint===false?'':'<p class="mqh">Chạm vào một phương án cho mỗi câu, rồi bấm <b>Chấm điểm</b>.</p>')+qs.map((x,i)=>'<div class="mq" data-c="'+x.c+'"><div class="mqq">'+(o.num?'<b>Câu '+(i+1)+':</b> ':'')+(typeof prepMcqQ=='function'?R(prepMcqQ(x.q,x.o)):R(x.q))+'</div><div class="mo">'+x.o.map((t,j)=>'<button type="button" class="opt" data-i="'+j+'"><span class="on">'+(j+1)+'</span><span class="ot">'+R(t)+'</span></button>').join('')+'</div><div class="mx" hidden><div class="mxr"></div>'+R(x.a||'')+'</div></div>').join('')+'<div class="mbar"><button type="button" class="grade">Chấm điểm</button><button type="button" class="redo" hidden>Làm lại</button><span class="score"></span></div></div>'}
 function bindMCQ(root,onGrade){$$('.mcq',root).forEach(Q=>{if(Q.dataset.b)return;Q.dataset.b=1;const qs=$$('.mq',Q),sc=$('.score',Q),g=$('.grade',Q),rd=$('.redo',Q);
  Q.addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b||Q.classList.contains('done'))return;$$('.opt',b.parentNode).forEach(x=>x.classList.toggle('sel',x==b))});
@@ -59,7 +59,7 @@ function bindMCQ(root,onGrade){$$('.mcq',root).forEach(Q=>{if(Q.dataset.b)return
   Q.classList.add('done');sc.textContent='Đúng '+ok+'/'+qs.length+' câu';sc.dataset.ok=ok;g.hidden=true;rd.hidden=false;if(Q.dataset.id)P.score(Q.dataset.id,Q.dataset.title,ok,qs.length);onGrade&&onGrade(ok,qs.length,Q)};
  rd.onclick=()=>{Q.classList.remove('done');qs.forEach(q=>{q.classList.remove('qok','qbad');$$('.opt',q).forEach(x=>x.classList.remove('sel','right','wrong'));$('.mx',q).hidden=true});sc.textContent='';g.hidden=false;rd.hidden=true}})}
 
-// ===== 7. Trợ lý AI (qua Cloudflare Worker → Gemini) =====
+// ===== 4. Trợ lý AI (qua Cloudflare Worker → Gemini) =====
 const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:16,
  used(){const u=ls.get('hn_ai_used',{});return u[today()]||0},
  async token(){const k=localStorage.getItem('hn_key_v1')||'';const h=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('hn-ai:'+k));return [...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('')},
@@ -69,7 +69,7 @@ const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:16,
  // định dạng trả lời: **đậm**, *nghiêng*, xuống dòng, {漢字|かな}
  fmt(s){return R(esc(s)).replace(/&lt;(\/?)(ruby|rt)&gt;/g,'<$1$2>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<i>$2</i>').replace(/\n/g,'<br>')}};
 
-// ===== 8. Bình luận (Giscus – GitHub Discussions) =====
+// ===== 5. Bình luận (Giscus – GitHub Discussions) =====
 function comments(el,term){if(!el)return;const g=typeof SITE!='undefined'&&SITE.giscus;
  if(!g||!g.repoId||!g.categoryId){el.remove();return}
  el.innerHTML='<h2>💬 Thảo luận bài học</h2><div class="cwarn">⚠️ <b>Bình luận công khai, không được mã khoá.</b> Không ghi tên thật, nơi làm việc hay thông tin cá nhân. Câu hỏi mới được AI (Gemini) tự trả lời trong vài phút – AI có thể sai.</div><div class="giscus"></div>';
@@ -77,7 +77,7 @@ function comments(el,term){if(!el)return;const g=typeof SITE!='undefined'&&SITE.
  Object.entries({'data-repo':g.repo,'data-repo-id':g.repoId,'data-category':g.category,'data-category-id':g.categoryId,'data-mapping':'specific','data-term':term,'data-strict':'1','data-reactions-enabled':'1','data-emit-metadata':'0','data-input-position':'bottom','data-theme':'light','data-lang':'vi','data-loading':'lazy'}).forEach(([k,v])=>s.setAttribute(k,v));
  el.append(s)}
 
-// ===== 5. Ứng dụng (PWA) + ngoại tuyến =====
+// ===== 6. Ứng dụng (PWA) + ngoại tuyến =====
 function offlineBar(){let b=$('#offbar');if(!b){b=document.createElement('div');b.id='offbar';b.className='offbar';b.textContent='📶 Đang ngoại tuyến – đang dùng bản đã lưu trên máy.';document.body.appendChild(b)}b.hidden=navigator.onLine}
 addEventListener('online',offlineBar);addEventListener('offline',offlineBar);
 if('serviceWorker' in navigator&&location.protocol!='file:')addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
