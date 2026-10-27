@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Hỏi AI</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap"><div class="pagehead"><h1>🤖 Hỏi AI</h1><p>Hỏi về ngữ pháp, từ vựng, cách nói tự nhiên – trả lời bằng tiếng Việt.</p></div><div id="ai"></div></main><footer class="site-title"></footer>
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
+const el=document.getElementById('ai'),qp=new URLSearchParams(location.search);
+if(!F.AI.on()){el.innerHTML='<div class="box"><h3>Trợ lý AI chưa được bật</h3><p class="mut">Chủ trang cần cấu hình máy chủ AI (Cloudflare Worker + Gemini) rồi điền địa chỉ vào <code>config.js</code>. Trong lúc chờ, bạn vẫn học bình thường các bài và trắc nghiệm.</p></div>'}else{
+let mode=qp.get('che')=='chua'?'chua':'hoi',hist=F.ls.get('hn_ai_hist',[]);const mau=qp.get('mau'),bai=qp.get('bai');
+el.innerHTML='<div class="tabs"><button data-m="hoi">💬 Hỏi đáp</button><button data-m="chua">✍️ AI chữa câu</button></div>'+(mau?'<div class="box" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><div><b class="jp">'+F.esc(mau)+'</b><div class="mut">'+F.esc(bai||'')+'</div></div><span class="pill on">Đang hỏi về mẫu này</span></div>':'')+
+'<div class="chat" id="chat"></div><div class="chatin"><textarea id="q" rows="1"></textarea><button class="spk" id="go" aria-label="Gửi">➤</button></div><p class="honest" id="lim"></p>';
+const chat=document.getElementById('chat'),q=document.getElementById('q'),go=document.getElementById('go');
+const PH={hoi:'Nhập câu hỏi… (vd: Phân biệt 〜が早いか và 〜や否や?)',chua:'Viết một câu tiếng Nhật để AI chữa…'};
+function lim(){document.getElementById('lim').textContent='Miễn phí, giới hạn '+F.AI.LIM+' câu hỏi/ngày (đã dùng '+F.AI.used()+'). AI có thể sai – kiểm tra lại với bài học.'}
+function setMode(m){mode=m;el.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));q.placeholder=PH[m]}
+function add(cls,html){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;chat.append(d);return d}
+hist.slice(-10).forEach(h=>{add('me',F.esc(h.q));add('ai',(h.m=='chua'?'<b class="mut">✍️ AI chữa câu</b><br>':'')+F.AI.fmt(h.a))});
+el.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));setMode(mode);lim();
+if(mau&&!hist.length)q.value='Giải thích mẫu '+mau+' và cho 2 ví dụ.';
+async function send(){const t=q.value.trim();if(!t)return;q.value='';add('me',F.esc(t));const w=add('ai','<span class="mut">Đang trả lời…</span>');go.disabled=true;
+ try{const a=await F.AI.ask(mode,t,mau?('Mẫu ngữ pháp đang học: '+mau+(bai?' (bài: '+bai+')':'')):'');w.innerHTML=(mode=='chua'?'<b class="mut">✍️ AI chữa câu</b><br>':'')+F.AI.fmt(a);hist.push({q:t,a,m:mode});F.ls.set('hn_ai_hist',hist.slice(-30));F.P.touch()}
+ catch(e){w.className='msg ai err';w.textContent='⚠️ '+e.message}go.disabled=false;lim();w.scrollIntoView({block:'nearest'})}
+go.onclick=send;q.addEventListener('keydown',e=>{if(e.key=='Enter'&&!e.shiftKey){e.preventDefault();send()}})}
+</script></body></html>

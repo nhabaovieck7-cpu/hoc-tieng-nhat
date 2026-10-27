@@ -1,8 +1,16 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=8f061e40"><title>Học tiếng Nhật</title></head><body>
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Học tiếng Nhật</title></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="#tonghop">Tổng hợp mỗi ngày</a><a href="#n1">Khóa học N1</a><a href="#n2">Khóa học N2</a><a href="#dokkai">Đọc hiểu</a><a href="#kaiwa">Kaiwa</a><a href="#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
 <main class="wrap">
 <div class="hero"><h1 class="site-title"></h1><p id="intro"></p><div class="stats" id="stats"></div></div>
+<div class="block" id="tiendo"><div id="pg"></div></div>
+<div class="block" id="tinhnang"><div class="block-h"><h2>✨ Luyện tập thêm</h2></div><div class="tiles">
+<a class="tile" href="tin-tuc.html"><b>📰 Tin tức mỗi ngày</b><small>Tin Nhật Bản + cộng đồng người Nhật ở VN, tập dịch, đọc hiểu</small></a>
+<a class="tile" href="luyen-nghe.html"><b>🎧 Luyện nghe JLPT</b><small>課題理解・ポイント理解・即時応答 (giọng máy)</small></a>
+<a class="tile" href="on-tap.html"><b>🃏 Ôn tập thẻ</b><small>Thẻ từ, kanji, ngữ pháp – tự xếp lịch ôn</small></a>
+<a class="tile" href="thi-thu.html"><b>⏱ Thi thử N1</b><small>Đề trộn ngẫu nhiên, bấm giờ, chấm điểm</small></a>
+<a class="tile ai-only" href="hoi-ai.html"><b>🤖 Hỏi AI</b><small>Hỏi đáp, chữa câu bằng tiếng Việt</small></a>
+<a class="tile" href="ung-dung.html"><b>📲 Cài ứng dụng</b><small>Dùng như app, không cần mạng</small></a></div></div>
 <div class="block" id="tonghop"><div class="block-h"><h2>📝 Tổng hợp mỗi ngày</h2><small id="thN"></small></div><div id="thBody" class="cards"></div></div>
 <div class="block" id="n1"><div class="block-h"><h2>📘 Khóa học N1</h2><small>Ngữ pháp · Từ vựng · Kanji</small></div><p class="lead">Học theo thứ tự bài. Cuối mỗi bài có phần luyện tập kèm đáp án.</p><div class="cards" id="c_N1"></div></div>
 <div class="block" id="n2"><div class="block-h"><h2>📗 Khóa học N2</h2><small>Ngữ pháp · Từ vựng · Kanji</small></div><div class="cards" id="c_N2"></div></div>
@@ -13,7 +21,7 @@
 <select id="ty"><option value="">Bài cũ (từ vựng – ngữ pháp)</option><option value="*">Tất cả bài</option><option>Từ vựng</option><option>Ngữ pháp</option><option>Kanji</option><option>Hội thoại/kaigo</option><option>Đọc hiểu</option><option>Tổng hợp N1</option><option>Tổng hợp N2</option><option>Từ vựng N1</option><option>Ngữ pháp N1</option></select></div>
 <p id="count" class="empty"></p><div id="list" class="cards"></div></div>
 </main><footer><span class="site-title"></span><br>Danh sách từ vựng và ngữ pháp N1 do trang tự biên soạn.</footer>
-<script src="config.js?v=47cd0fbe"></script><script src="common.js?v=f0b25c49"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'])</script><script type="text/plain" id="main">
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'])</script><script type="text/plain" id="main">
 document.getElementById('intro').textContent=SITE.intro;
 const unit={'Ngữ pháp':'mẫu','Từ vựng':'từ','Kanji':'chữ'},ico={'Ngữ pháp':'文','Từ vựng':'語','Kanji':'字'},SHOW=8;
 const li=(href,t,s)=>'<li><a href="'+href+'"><span>'+t+'</span>'+(s?'<small>'+s+'</small>':'')+'</a></li>';
@@ -31,5 +39,6 @@ function draw(){const k=q.value.trim().toLowerCase();
 const r=LESSONS.filter(l=>(!lv.value||l.level==lv.value)&&(ty.value=='*'||(ty.value?l.type==ty.value:(k?true:OLD(l.type))))&&(!k||plain(l.title+' '+l.summary+' '+l.explain.join(' ')+' '+l.examples.map(e=>e.jp+e.vi).join(' ')+' '+(l.sections||[]).map(s=>s.h+' '+s.html.replace(/<[^>]+>/g,' ')).join(' ')).toLowerCase().includes(k)));
 document.getElementById('count').textContent=r.length+' bài';list.innerHTML=r.length?r.map(card).join(''):'<p class="empty">Không tìm thấy bài nào.</p>'}
 [q,lv,ty].forEach(e=>e.addEventListener('input',draw));draw();
-const nl=[...document.querySelectorAll('.nav a')];addEventListener('scroll',()=>{let cur=nl[0];nl.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<120)cur=a});nl.forEach(a=>a.classList.toggle('on',a==cur))},{passive:true});
+const nl=[...document.querySelectorAll('.nav a')];F.dashboard(document.getElementById('pg'));if(!F.AI.on())document.querySelectorAll('.ai-only').forEach(e=>e.remove());
+addEventListener('scroll',()=>{let cur=nl[0];nl.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<120)cur=a});nl.forEach(a=>a.classList.toggle('on',a==cur))},{passive:true});
 </script></body></html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Tin tức</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap"><div class="pagehead"><h1>📰 Báo chí – Tin tức mỗi ngày</h1></div>
+<div class="tabs" id="tabs"><button data-t="jp" class="on">🇯🇵 Tin Nhật Bản</button><button data-t="vn">🇻🇳 Cộng đồng người Nhật ở Việt Nam</button></div>
+<p class="honest">🕖 Cập nhật mỗi ngày: tóm tắt bằng lời của trang và dẫn nguồn, không chép nguyên bài. Tin có nhãn “Ví dụ” là tin minh họa.</p><div id="list"></div></main><footer class="site-title"></footer>
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
+let NW=[];const list=document.getElementById('list');let tab=F.ls.get('hn_news_tab','jp');
+function item(n){const tr=n.tr,qs=n.qs||[];
+ return '<article class="news" id="'+n.id+'"><div class="nh">'+(n.sample?'<span class="vd">Ví dụ</span>':'<span></span>')+'<span class="mut">'+n.date.split('-').reverse().join('/')+'</span></div>'+
+ '<h3 class="jp">'+ruby(n.h)+' <span class="sp" data-s="h"></span></h3><div class="ex2 jp">'+ruby(n.ex)+' <span class="sp" data-s="ex"></span></div><div class="sum">🇻🇳 '+F.esc(n.vi)+'</div>'+
+ '<div class="chips">'+(n.vo||[]).map(v=>'<span><b class="jp">'+ruby(v[0])+'</b> '+F.esc(v[1])+'</span>').join('')+'</div>'+
+ '<div class="src"><span>Nguồn: '+F.esc(n.src.name)+'</span><a href="'+F.esc(n.src.url)+'" target="_blank" rel="noopener noreferrer">Xem bài gốc ↗</a></div>'+
+ (tr||qs.length?'<details class="prac"><summary>✍️ Luyện tập: tập dịch + đọc hiểu</summary>'+
+ (tr?'<div class="tr"><h4>✍️ Tập dịch</h4><div class="jp" style="line-height:2.1">'+ruby(tr.jp)+'</div><textarea placeholder="Viết bản dịch tiếng Việt của bạn…"></textarea><div class="row2"><button class="btn l sm" data-a="model">Xem bản dịch mẫu</button>'+(F.AI.on()?'<button class="btn" data-a="ai">🤖 AI chấm bản dịch</button>':'<button class="btn" data-a="self">So sánh với bản mẫu</button>')+'</div><div class="fbx"></div></div>':'')+
+ (qs.length?'<h4>📖 Đọc hiểu kiểu dokkai</h4>'+F.mcqHTML(qs,{id:n.id,title:'Tin '+n.date+' – đọc hiểu',hint:false}):'')+'</details>':'')+'</article>'}
+function draw(){document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));const a=NW.filter(n=>n.tab==tab);
+ list.innerHTML=a.length?a.map(item).join(''):'<div class="box"><p class="mut">Chưa có tin trong mục này.</p></div>';
+ list.querySelectorAll('.news').forEach(el=>{const n=NW.find(x=>x.id==el.id);el.querySelectorAll('.sp').forEach(s=>{if(F.tts.ok)s.append(F.spkBtn(()=>F.tts.text(n[s.dataset.s]),true))});
+  const t=el.querySelector('.tr');if(t){const ta=t.querySelector('textarea'),fb=t.querySelector('.fbx'),k='hn_tr_'+n.id;ta.value=F.ls.get(k,'');ta.oninput=()=>F.ls.set(k,ta.value);
+   t.querySelectorAll('[data-a]').forEach(b=>b.onclick=async()=>{const a=b.dataset.a;
+    if(a=='model'||a=='self'){fb.innerHTML='<div class="fb model"><b>Bản dịch mẫu:</b> '+F.esc(n.tr.vi)+'</div>'+(a=='self'&&ta.value.trim()?'<div class="fb">Tự so sánh: ý chính đã đủ chưa? Từ khoá: '+(n.vo||[]).map(v=>'<b>'+ruby(v[0])+'</b> = '+F.esc(v[1])).join(', ')+'</div>':'');return}
+    if(!ta.value.trim()){fb.innerHTML='<div class="fb">Hãy viết bản dịch trước nhé.</div>';return}
+    b.disabled=true;fb.innerHTML='<div class="fb">🤖 Đang chấm…</div>';
+    try{const r=await F.AI.ask('dich',ta.value,'Câu gốc: '+plain(n.tr.jp)+'\nBản dịch mẫu: '+n.tr.vi);fb.innerHTML='<div class="fb">🤖 '+F.AI.fmt(r)+'<br><i class="mut">AI có thể sai.</i></div>';F.P.touch()}catch(e){fb.innerHTML='<div class="fb">⚠️ '+F.esc(e.message)+'</div>'}b.disabled=false})}});
+ F.bindMCQ(list)}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;F.ls.set('hn_news_tab',tab);draw()});
+LOCK.load('news').then(()=>{NW=typeof NEWS!='undefined'?NEWS:[]}).catch(()=>{}).then(()=>{draw();const h=location.hash.slice(1);const e=h&&document.getElementById(h);if(e){const n=NW.find(x=>x.id==h);if(n&&n.tab!=tab){tab=n.tab;draw()}document.getElementById(h).scrollIntoView();document.getElementById(h).querySelector('details')?.setAttribute('open','')}});
+</script></body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Luyện nghe JLPT</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap"><div class="pagehead"><h1>🎧 Luyện nghe JLPT</h1><p>Nghe bằng giọng máy đọc tiếng Nhật, lấy từ bài kaiwa, đọc hiểu và tin tức của trang.</p></div>
+<div class="tabs" id="tabs"><button data-t="kadai">課題理解</button><button data-t="point">ポイント理解</button><button data-t="soku">即時応答</button></div>
+<p class="mut" id="desc"></p><div id="box"></div>
+<p class="honest">🔈 Giọng máy đọc (TTS tiếng Nhật của trình duyệt), <b>không phải người thật</b> – ngữ điệu có thể chưa tự nhiên. Đề thi JLPT thật dùng giọng người.</p></main><footer class="site-title"></footer>
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons'])</script><script type="text/plain" id="main">
+const D=document.createElement('div');const tx=h=>{D.innerHTML=ruby(h);D.querySelectorAll('rt').forEach(x=>x.remove());return D.textContent.trim()};
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const DESC={kadai:'課題理解・内容理解: nghe cả đoạn (tin tức, đọc hiểu) rồi trả lời câu hỏi về nội dung.',point:'ポイント理解: nghe một câu, chọn nghĩa đúng (nắm ý chính).',soku:'即時応答: nghe một câu nói trong hội thoại, chọn câu đáp lại phù hợp nhất.'};
+// ---- tạo bài nghe từ nội dung của trang ----
+const IT={kadai:[],point:[],soku:[]},SENT=[];
+const kw=LESSONS.filter(l=>l.type=='Hội thoại/kaigo'),dk=LESSONS.filter(l=>l.type=='Đọc hiểu');
+kw.forEach(l=>(l.sections||[]).forEach(s=>{const ps=s.html.split(/<\/p>/);ps.forEach((p,pi)=>{const ls=p.replace(/<p>/,'').split(/<br\s*\/?>/i).map(x=>x.trim()).filter(Boolean);const lines=ls.map(x=>{const m=x.replace(/<[^>]+>/g,'').match(/^(.{1,30}?)[：]([\s\S]+)$/);return m?{sp:tx(m[1]),jp:m[2].trim()}:null});if(lines.length<4||lines.some(x=>!x))return;
+ const nx=(ps[pi+1]||'').replace(/<[^>]+>/g,'');const vq=nx.includes('Dịch')?[...nx.matchAll(/“([^”]+)”/g)].map(m=>m[1]):[];if(vq.length==lines.length)lines.forEach((x,i)=>x.vi=vq[i]);
+ lines.forEach((x,i)=>{if(i<lines.length-1&&lines[i+1].sp!=x.sp)IT.soku.push({src:'Kaiwa · '+l.title.replace(/（.*$/,''),l:l.id,cue:x,ans:lines[i+1],pool:lines});SENT.push(x)})})}));
+dk.forEach(l=>{const s=(l.sections||[]).find(s=>/Nguyên văn|dịch từng câu/.test(s.h));if(!s)return;D.innerHTML=s.html;const js=[...D.querySelectorAll('div.jp')];const pairs=js.map(j=>{const v=j.nextElementSibling;return {jp:j.innerHTML.replace(/^[①-⑳]\s*/,''),vi:v&&v.classList.contains('vi')?v.textContent.replace(/^→\s*/,''):''}}).filter(x=>x.vi);
+ pairs.forEach(p=>SENT.push(p));const qs=(l.mcq||[]).filter(q=>q.q.length<400&&q.o&&q.o.length==4);if(pairs.length&&qs.length){for(let i=0;i<pairs.length;i+=6){IT.kadai.push({src:'Đọc hiểu · '+l.title,l:l.id,script:pairs.slice(i,i+6),qs:i==0?qs.slice(0,2):[]})}IT.kadai=IT.kadai.filter(x=>x.qs.length)}});
+LESSONS.forEach(l=>(l.examples||[]).forEach(e=>SENT.push({jp:e.jp,vi:e.vi})));
+SENT.filter(s=>s.vi&&tx(s.jp).length>=8&&tx(s.jp).length<=70).forEach((s,i,a)=>IT.point.push({src:'Câu trong bài học',s,a}));
+function newsItems(){if(typeof NEWS=='undefined')return;NEWS.forEach(n=>{if(n.qs&&n.qs.length)IT.kadai.unshift({src:(n.tab=='jp'?'Tin Nhật Bản':'Tin cộng đồng')+' · '+n.date,news:n.id,sample:n.sample,script:[{jp:n.h,vi:''},{jp:n.ex,vi:n.vi}],qs:n.qs});if(n.tr)SENT.push(n.tr)})}
+// ---- trình phát ----
+let tab=F.ls.get('hn_listen_tab','kadai'),order={},pos={},rate=F.ls.get('hn_listen_rate',1),showS=false,play=null,score=F.ls.get('hn_listen_score',{});
+function cur(){const a=IT[tab];if(!order[tab])order[tab]=shuf(a.map((_,i)=>i)),pos[tab]=0;return a[order[tab][pos[tab]%a.length]]}
+function lines(it){return tab=='soku'?[it.cue]:tab=='point'?[it.s]:it.script}
+function qsOf(it){if(tab=='kadai')return it.qs;if(tab=='soku'){const others=shuf(IT.soku.filter(x=>tx(x.ans.jp)!=tx(it.ans.jp)&&x.cue!=it.cue).map(x=>x.ans)).slice(0,3);const o=shuf([it.ans].concat(others));return [{q:'Nghe câu nói, chọn câu đáp lại phù hợp nhất.',o:o.map(x=>x.jp),c:o.indexOf(it.ans),a:'Đáp lại đúng: '+it.ans.jp+(it.ans.vi?' – '+it.ans.vi:'')}]}
+ const others=shuf(it.a.filter(x=>x.vi!=it.s.vi)).slice(0,3);const o=shuf([it.s].concat(others));return [{q:'Câu vừa nghe có nghĩa là gì?',o:o.map(x=>x.vi),c:o.indexOf(it.s),a:it.s.jp+' – '+it.s.vi}]}
+const est=t=>Math.max(1.5,tx(t).length*0.17/rate);
+function stop(){if(play){play.stop=true;play=null}F.tts.stop()}
+async function start(from){stop();const it=cur(),L=lines(it),me={stop:false,i:from||0};play=me;ui();const tot=L.reduce((a,x)=>a+est(x.jp),0);
+ for(;me.i<L.length;me.i++){if(me.stop)return;const done=L.slice(0,me.i).reduce((a,x)=>a+est(x.jp),0);prog(done,tot,est(L[me.i].jp));document.querySelectorAll('.script .ln').forEach((e,i)=>e.classList.toggle('reading',i==me.i));await F.tts.speak(tx(L[me.i].jp),{rate:0.9*rate});if(!me.stop)await new Promise(r=>setTimeout(r,350))}
+ if(me.stop)return;play=null;prog(tot,tot,0);document.querySelectorAll('.script .ln').forEach(e=>e.classList.remove('reading'));ui()}
+let anim=0;function prog(done,tot,span){cancelAnimationFrame(anim);const t0=performance.now();const f=()=>{const d=Math.min(tot,done+Math.min(span,(performance.now()-t0)/1000));const b=document.getElementById('pbi');if(!b)return;b.style.width=(100*d/tot)+'%';document.getElementById('t0').textContent=mm(d);document.getElementById('t1').textContent=mm(tot);if(d<done+span)anim=requestAnimationFrame(f)};f()}
+const mm=s=>Math.floor(s/60)+':'+String(Math.round(s%60)).padStart(2,'0');
+function ui(){const b=document.getElementById('pp');if(b)b.textContent=play?'⏸':'▶'}
+function draw(){stop();document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));document.getElementById('desc').textContent=DESC[tab];const box=document.getElementById('box');
+ if(!IT[tab].length){box.innerHTML='<div class="box"><p class="mut">Chưa có bài cho dạng này.</p></div>';return}
+ if(!F.tts.ok){box.innerHTML='<div class="box"><p>⚠️ Trình duyệt này không hỗ trợ đọc tiếng Nhật (Web Speech). Hãy dùng Chrome hoặc Safari bản mới.</p></div>';return}
+ const it=cur(),L=lines(it),qs=qsOf(it),sc=score[tab]||{ok:0,n:0};const tot=L.reduce((a,x)=>a+est(x.jp),0);
+ box.innerHTML='<div class="box"><div class="nh" style="display:flex;justify-content:space-between;gap:8px">'+(it.sample?'<span class="vd" style="background:#fff0d6;color:#a0522d;border-radius:99px;padding:1px 10px;font-size:.8rem">Ví dụ</span>':'<span></span>')+'<span class="mut">Nguồn: '+(it.news?'<a href="tin-tuc.html#'+it.news+'">'+F.esc(it.src)+'</a>':it.l?'<a href="lesson.html?id='+it.l+'">'+F.esc(it.src)+'</a>':F.esc(it.src))+'</span></div>'+
+ (tab=='kadai'?'<p class="mut" style="margin:6px 0 0">Nghe đoạn sau rồi trả lời '+qs.length+' câu hỏi.</p>':'')+
+ '<div class="player"><button class="spk pp" id="pp">▶</button><div class="pb"><div class="bar"><i id="pbi" style="width:0"></i></div><div class="tm"><span id="t0">0:00</span><span id="t1">'+mm(tot)+'</span></div></div><button class="spk sm" id="rp" title="Nghe lại từ đầu">🔁</button></div>'+
+ '<div class="speeds">'+[0.75,1,1.25].map(r=>'<button class="pill'+(r==rate?' on':'')+'" data-r="'+r+'">'+r+'×</button>').join('')+'<button class="pill tg" id="tg">📝 '+(showS?'Ẩn lời':'Hiện lời')+'</button></div>'+
+ '<div class="script" id="sc"'+(showS?'':' hidden')+'>'+L.map(x=>'<div class="ln jp">'+(x.sp?F.esc(x.sp)+'：':'')+ruby(x.jp)+'</div>'+(x.vi?'<div class="v">'+F.esc(x.vi)+'</div>':'')).join('')+'</div>'+
+ F.mcqHTML(qs,{hint:false})+'<div class="exnav"><button class="btn" id="nx">Câu tiếp →</button><span style="align-self:center"><b>Đúng '+sc.ok+'/'+sc.n+' câu</b> <span class="mut">('+'dạng này)</span></span></div></div>';
+ document.getElementById('pp').onclick=()=>{if(play){const i=play.i;stop();box.dataset.i=i;ui()}else start(+box.dataset.i||0)};
+ document.getElementById('rp').onclick=()=>{box.dataset.i=0;start(0)};
+ box.querySelectorAll('.speeds [data-r]').forEach(b=>b.onclick=()=>{rate=+b.dataset.r;F.ls.set('hn_listen_rate',rate);box.querySelectorAll('.speeds [data-r]').forEach(x=>x.classList.toggle('on',x==b));if(play){const i=play.i;start(i)}});
+ document.getElementById('tg').onclick=()=>{showS=!showS;document.getElementById('sc').hidden=!showS;document.getElementById('tg').textContent='📝 '+(showS?'Ẩn lời':'Hiện lời')};
+ F.bindMCQ(box,(ok,n)=>{score[tab]={ok:(score[tab]?score[tab].ok:0)+ok,n:(score[tab]?score[tab].n:0)+n};F.ls.set('hn_listen_score',score);F.P.score('luyen-nghe-'+tab,'Luyện nghe '+document.querySelector('#tabs .on').textContent,score[tab].ok,score[tab].n);box.querySelector('.exnav b').textContent='Đúng '+score[tab].ok+'/'+score[tab].n+' câu';showS=true;document.getElementById('sc').hidden=false;document.getElementById('tg').textContent='📝 Ẩn lời'});
+ document.getElementById('nx').onclick=()=>{pos[tab]++;showS=false;box.dataset.i=0;draw();scrollTo(0,0)};box.dataset.i=0}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;F.ls.set('hn_listen_tab',tab);showS=false;draw()});
+LOCK.load('news').catch(()=>{}).then(()=>{newsItems();draw()});
+</script></body></html>

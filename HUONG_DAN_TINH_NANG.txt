@@ -1,0 +1,20 @@
+TÍNH NĂNG MỚI (nhánh next)
+
+1. 🔊 Đọc to: nút loa ở câu ví dụ, từ vựng, hội thoại (giọng máy ja-JP của trình duyệt). Không cần cấu hình.
+2. 🃏 Ôn thẻ (on-tap.html): thẻ lấy từ Khóa N1/N2 (từ vựng, kanji, ngữ pháp). Lịch ôn lưu trên máy.
+3. 📈 Tiến độ: trên trang chủ. Lưu trên máy (localStorage), không gửi đi đâu.
+4. ⏱ Thi thử N1 (thi-thu.html): đề trộn từ câu trắc nghiệm của trang, bấm giờ, chấm điểm (chưa có 聴解).
+5. 📲 Ứng dụng/offline (ung-dung.html, manifest.json, sw.js): nội dung lưu offline vẫn là bản mã hoá.
+6. 🤖 Hỏi AI (hoi-ai.html + nút “Hỏi AI về mẫu này” + “AI chấm bản dịch”): cần Worker – xem worker/HUONG_DAN.txt.
+   Chưa cấu hình SITE.aiEndpoint thì mọi nút AI tự ẩn.
+7. 💬 Bình luận Giscus dưới mỗi bài + AI tự trả lời (.github/workflows/ai-reply.yml):
+   a. GitHub repo → Settings → General → Features: bật Discussions; tạo category "Bình luận" (loại Announcement để chỉ giscus tạo bài).
+   b. Cài app https://github.com/apps/giscus cho repo.
+   c. Vào https://giscus.app, nhập repo → lấy data-repo-id và data-category-id → dán vào config.js (SITE.giscus).
+   d. Settings → Secrets and variables → Actions → New secret: GEMINI_API_KEY.
+   ⚠️ Bình luận là CÔNG KHAI (không mã hoá). Tiêu đề thảo luận là mã bài (vd khoa-n1-np-01), không phải nội dung bài.
+8. 📰 Tin tức (tin-tuc.html): thêm tin vào tools/news/<ngày>.json (mẫu: tools/news/MAU.json), rồi
+   python3 tools/news.py && python3 tools/stamp.py. Tin được mã hoá thành enc/news.bin.
+   Xoá tools/news/2026-10-28-vidu.json khi đã có tin thật (đó là tin ví dụ).
+9. 🎧 Luyện nghe (luyen-nghe.html): tự tạo từ kaiwa, đọc hiểu, tin tức. Giọng máy, không phải người thật.
+Kiểm thử: NODE_PATH=<thư mục có jsdom> node tools/test_features.js

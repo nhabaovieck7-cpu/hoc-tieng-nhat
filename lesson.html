@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=8f061e40"><title>Bài học</title></head><body>
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Bài học</title></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
 <main class="wrap"><div class="lhead"><a class="back" href="index.html">← Về trang chủ</a><h1 id="t"></h1><div id="tags"></div></div>
-<div class="layout"><nav class="toc" id="toc"></nav><div class="content" id="m"></div></div></main><footer class="site-title"></footer>
-<script src="config.js?v=47cd0fbe"></script><script src="common.js?v=f0b25c49"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'].concat((()=>{const m=(new URLSearchParams(location.search).get('id')||'').match(/^khoa-(n[12])-(np|tv|kj)-/);return m?['course_'+m[1]+'_'+m[2]]:[]})()))</script><script type="text/plain" id="main">
+<div class="layout"><nav class="toc" id="toc"></nav><div class="content" id="m"></div></div><section class="comments" id="cmt"></section></main><footer class="site-title"></footer>
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons','course'].concat((()=>{const m=(new URLSearchParams(location.search).get('id')||'').match(/^khoa-(n[12])-(np|tv|kj)-/);return m?['course_'+m[1]+'_'+m[2]]:[]})()))</script><script type="text/plain" id="main">
 const l=LESSONS.find(x=>x.id==new URLSearchParams(location.search).get('id'));const m=document.getElementById('m'),toc=document.getElementById('toc');
 if(!l){m.innerHTML='<section>Không tìm thấy bài học. <a href="index.html">Về trang chủ</a></section>';toc.remove()}else{
 document.title=plain(l.title)+' – '+SITE.title;document.getElementById('t').innerHTML=ruby(l.title);
@@ -16,7 +16,7 @@ const MQT='🎯 Trắc nghiệm – chấm điểm';
 (l.sections||[]).forEach((s,i)=>{if(i==0&&l.mcq&&l.mcqAt<0)h+=MQ(l.mcq,MQT);h+=sec(ruby(s.h),ruby(s.html),'sec');if(l.mcq&&i==l.mcqAt)h+=MQ(l.mcq,MQT)});
 if(l.quiz&&l.quiz.length&&l.quiz.every(x=>x.o))h+=MQ(l.quiz,'Luyện tập',1);
 else if(l.quiz&&l.quiz.length)h+=sec('Luyện tập',l.quiz.map((x,i)=>'<div class="qa"><p><b>Câu '+(i+1)+':</b> '+ruby(x.q)+'</p><button>Xem đáp án</button><div class="ans">'+ruby(x.a)+'</div></div>').join('<hr>'));
-m.innerHTML=h;m.querySelectorAll('table').forEach(t=>{const hs=[...t.querySelectorAll('th')].map(x=>x.textContent.trim());if(hs.length){const k=hs[0]=='Kanji'?'kjt':(hs[1]=='Từ'&&hs[2]=='Cách đọc'?'vt':'gt');t.classList.add('mc',k);t.querySelectorAll('tr').forEach(r=>{if(r.querySelector('th'))r.classList.add('hr');else[...r.children].forEach((c,i)=>{if(hs[i])c.setAttribute('data-l',hs[i])})})}});
+m.innerHTML=F.rateBar()+h;m.querySelectorAll('table').forEach(t=>{const hs=[...t.querySelectorAll('th')].map(x=>x.textContent.trim());if(hs.length){const k=hs[0]=='Kanji'?'kjt':(hs[1]=='Từ'&&hs[2]=='Cách đọc'?'vt':'gt');t.classList.add('mc',k);t.querySelectorAll('tr').forEach(r=>{if(r.querySelector('th'))r.classList.add('hr');else[...r.children].forEach((c,i)=>{if(hs[i])c.setAttribute('data-l',hs[i])})})}});
 m.querySelectorAll('table').forEach(t=>{if(!t.parentElement.classList.contains('tbl')){const w=document.createElement('div');w.className='tbl';t.before(w);w.append(t)}});
 if(S.length>1){toc.innerHTML='<b>Mục lục</b>'+S.map(([id,t])=>'<a href="#'+id+'">'+t.replace(/<rt>.*?<\/rt>/g,'').replace(/<[^>]+>/g,'')+'</a>').join('');if(S.length>8)toc.classList.add('long')}else{toc.remove();document.querySelector('.layout').style.display='block'}
 m.querySelectorAll('.mcq').forEach(Q=>{const qs=[...Q.querySelectorAll('.mq')],sc=Q.querySelector('.score'),g=Q.querySelector('.grade'),rd=Q.querySelector('.redo');
@@ -25,5 +25,12 @@ g.onclick=()=>{let ok=0;qs.forEach(q=>{const c=+q.dataset.c,os=[...q.querySelect
 const x=q.querySelector('.mx');x.hidden=false;x.querySelector('.mxr').innerHTML=s==c?'✅ Đúng':(s<0?'⚪ Chưa chọn':'❌ Sai')+' – đáp án đúng: <b>'+(c+1)+'</b>'});
 Q.classList.add('done');sc.textContent='Đúng '+ok+'/'+qs.length+' câu';sc.dataset.ok=ok;g.hidden=true;rd.hidden=false;sc.scrollIntoView&&sc.scrollIntoView({block:'nearest'})};
 rd.onclick=()=>{Q.classList.remove('done');qs.forEach(q=>{q.classList.remove('qok','qbad');q.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel','right','wrong'));q.querySelector('.mx').hidden=true});sc.textContent='';g.hidden=false;rd.hidden=true}});
-m.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.classList.toggle('show');b.textContent=a.classList.contains('show')?'Ẩn đáp án':'Xem đáp án'})}
+m.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.classList.toggle('show');b.textContent=a.classList.contains('show')?'Ẩn đáp án':'Xem đáp án'})
+// ==== tính năng mới: tiến độ, đọc to, hỏi AI, bình luận ====
+F.P.seen(l.id,plain(l.title));F.bindRate(m);
+m.querySelectorAll('.mcq').forEach((Q,i)=>Q.querySelector('.grade').addEventListener('click',()=>{const sc=Q.querySelector('.score');F.P.score(l.id+(i?'#'+i:''),plain(l.title)+(i?' ('+(i+1)+')':''),+sc.dataset.ok,Q.querySelectorAll('.mq').length)}));
+F.dialogs(m);F.addSpeakers(m);
+if(F.AI.on()&&/Ngữ pháp|Tổng hợp/.test(l.type))m.querySelectorAll('section.sec').forEach(s=>{const h=s.querySelector('h2');if(!h||!/[〜ぁ-んァ-ン一-龯]/.test(h.textContent))return;const t=F.tts.text(h).replace(/^\d+\.\s*/,'');const a=document.createElement('a');a.className='askai';a.href='hoi-ai.html?mau='+encodeURIComponent(t)+'&bai='+encodeURIComponent(plain(l.title));a.textContent='🤖 Hỏi AI về mẫu này';h.after(a)});
+F.comments(document.getElementById('cmt'),l.id);
+}
 </script></body></html>

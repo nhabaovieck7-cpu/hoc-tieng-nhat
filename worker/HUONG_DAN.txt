@@ -1,0 +1,19 @@
+TRỢ LÝ AI (Cloudflare Worker → Gemini, gói miễn phí)
+
+Cần: tài khoản Cloudflare (miễn phí) + khoá Gemini API (miễn phí, https://aistudio.google.com/apikey).
+Chạy trong thư mục web-tiengnhat (có biến môi trường WEB_PASSWORD):
+
+  1. npx wrangler login                                  # đăng nhập Cloudflare trên trình duyệt
+  2. cd worker
+  3. npx wrangler secret put GEMINI_API_KEY              # dán khoá Gemini khi được hỏi (không ghi vào file)
+  4. (cd .. && node tools/ai_token.js) | npx wrangler secret put ACCESS_TOKEN
+                                                         # mã truy cập = băm từ mã khoá trang, không in ra màn hình
+  5. (tuỳ chọn, giới hạn theo IP) npx wrangler kv namespace create RL  -> dán id vào wrangler.toml, bỏ dấu #
+  6. npx wrangler deploy                                 # in ra địa chỉ https://hoc-tieng-nhat-ai.<tên>.workers.dev
+  7. Dán địa chỉ đó vào config.js:  SITE.aiEndpoint = "https://hoc-tieng-nhat-ai.<tên>.workers.dev";
+  8. python3 tools/stamp.py, commit, push.
+
+Bảo mật: khoá Gemini chỉ nằm trong Worker. Worker chỉ nhận yêu cầu từ ALLOWED_ORIGIN và có X-Access đúng
+(chỉ người đã mở khoá trang mới có). Đổi mật khẩu trang -> chạy lại bước 4.
+Giới hạn: 30 câu/ngày/người (DAILY_LIMIT). Gói miễn phí Gemini có giới hạn số yêu cầu/phút – quá tải sẽ báo "thử lại sau".
+Lưu ý: gói miễn phí của Gemini có thể dùng nội dung gửi lên để cải thiện mô hình – không gửi thông tin cá nhân.

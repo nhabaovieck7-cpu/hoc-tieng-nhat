@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3a3eb34b"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#c8374f"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Ôn tập thẻ</title></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#tonghop">Tổng hợp mỗi ngày</a><a href="index.html#n1">Khóa học N1</a><a href="index.html#n2">Khóa học N2</a><a href="index.html#dokkai">Đọc hiểu</a><a href="index.html#kaiwa">Kaiwa</a><a href="index.html#cu">Từ vựng – Ngữ pháp cũ</a></nav></div></div>
+<main class="wrap"><div class="pagehead"><h1>🃏 Ôn tập thẻ</h1><p>Lặp lại ngắt quãng: thẻ khó gặp lại sớm, thẻ dễ lâu mới gặp lại.</p></div>
+<div class="tabs" id="decks"></div><div class="mut" id="stat"></div><div class="bar" style="margin:6px 0 12px"><i id="prog" style="width:0"></i></div>
+<div id="card"></div><div class="mut" style="text-align:center">← Vuốt trái: Quên · Vuốt phải: Nhớ →</div></main><footer class="site-title"></footer>
+<script src="config.js?v=3384dcd2"></script><script src="common.js?v=f0b25c49"></script><script src="features.js?v=2cea19aa"></script><script src="lock.js?v=42ab2e34"></script><script>LOCK.run(['lessons'])</script><script type="text/plain" id="main">
+const DECKS=[['n1_tv','N1 Từ vựng'],['n1_kj','N1 Kanji'],['n1_np','N1 Ngữ pháp'],['n2_tv','N2 Từ vựng'],['n2_kj','N2 Kanji'],['n2_np','N2 Ngữ pháp']];
+const NEW_PER_DAY=20,S=F.ls.get('hn_srs_v1',{c:{},n:{}}),save=()=>F.ls.set('hn_srs_v1',S);
+const tx=el=>{if(!el)return '';const c=el.cloneNode(true);c.querySelectorAll('rt,.ix,.spk').forEach(x=>x.remove());return c.textContent.trim()};
+const box=document.createElement('div');
+function cards(dk){const [lv,pt]=dk.split('_'),out=[];LESSONS.filter(l=>l.id.startsWith('khoa-'+lv+'-'+pt+'-')).forEach(l=>{
+ if(pt=='np'){(l.sections||[]).forEach(s=>{box.innerHTML=ruby(s.html);const p=[...box.querySelectorAll('p')].find(x=>/Nghĩa/.test(x.textContent));const ex=box.querySelector('.ex');const f=tx((()=>{const d=document.createElement('div');d.innerHTML=ruby(s.h);return d})()).replace(/^\d+\.\s*/,'');
+  out.push({id:l.id+':'+f,f,rd:'',hv:'',m:p?p.textContent.replace(/^Nghĩa:\s*/,''):'',ej:ex?ex.querySelector('.jp').innerHTML:'',ev:ex&&ex.querySelector('.vi')?ex.querySelector('.vi').textContent:'',l:l.id})});return}
+ (l.sections||[]).forEach(s=>{box.innerHTML=ruby(s.html);const t=box.querySelector('table');if(!t)return;const hs=[...t.querySelectorAll('th')].map(x=>x.textContent.trim());
+  [...t.querySelectorAll('tr')].slice(1).forEach(r=>{const td=[...r.children],g=h=>td[hs.indexOf(h)];const ix=r.querySelector('.ix');
+   if(pt=='kj')out.push({id:l.id+':'+tx(g('Kanji')),f:tx(g('Kanji')),rd:[tx(g('Âm On')),tx(g('Âm Kun'))].filter(x=>x&&x!='—').join(' / '),hv:tx(g('Hán Việt')),m:tx(g('Nghĩa')),ej:ix?ix.querySelector('.jp').innerHTML:'',ev:ix?tx(ix.querySelector('.vi')):'',l:l.id});
+   else out.push({id:l.id+':'+tx(g('Từ')),f:tx(g('Từ')),rd:tx(g('Cách đọc')),hv:tx(g('Hán Việt')),m:tx(g('Nghĩa')),ej:ix?ix.querySelector('.jp').innerHTML:'',ev:ix?tx(ix.querySelector('.vi')):'',l:l.id})})})});return out}
+const DAY=864e5,MIN=6e4;
+function next(st,r){st=st||{iv:0,ef:2.5,reps:0};let iv=st.iv,ef=st.ef;
+ if(r==0)return {iv:0,ef:Math.max(1.3,ef-.2),reps:0,due:Date.now()+MIN};
+ if(r==1)iv=iv?Math.max(1,iv*1.2):1,ef=Math.max(1.3,ef-.15);else if(r==2)iv=iv?iv*ef:3;else iv=iv?iv*ef*1.3:7,ef+=.15;
+ iv=Math.round(iv*10)/10;return {iv,ef,reps:st.reps+1,due:Date.now()+iv*DAY}}
+const lab=st=>[0,1,2,3].map(r=>{const n=next(st,r);return r==0?'<1 phút':(n.iv<30?Math.round(n.iv)+' ngày':Math.round(n.iv/30)+' tháng')});
+let deck=F.ls.get('hn_srs_deck','n1_tv'),all=[],queue=[],cur=null,flipped=false,done=0;
+function build(){const now=Date.now(),t=F.today();S.n[t]=S.n[t]||{};const due=all.filter(c=>S.c[c.id]&&S.c[c.id].due<=now).sort((a,b)=>S.c[a.id].due-S.c[b.id].due);
+ const usedNew=S.n[t][deck]||0,fresh=all.filter(c=>!S.c[c.id]).slice(0,Math.max(0,NEW_PER_DAY-usedNew));queue=due.concat(fresh);
+ document.getElementById('stat').innerHTML='Hôm nay: <b>'+due.length+'</b> thẻ cần ôn · <b>'+fresh.length+'</b> thẻ mới · còn lại '+queue.length;
+ document.getElementById('prog').style.width=(done+queue.length?Math.round(100*done/(done+queue.length)):100)+'%'}
+function show(){build();cur=queue[0];flipped=false;const el=document.getElementById('card');
+ if(!cur){el.innerHTML='<div class="fc"><div class="big">🎉</div><b>Xong thẻ hôm nay!</b><p class="mut">'+all.length+' thẻ trong bộ · đã ôn '+Object.keys(S.c).filter(k=>all.some(c=>c.id==k)).length+' thẻ. Quay lại vào ngày mai.</p></div>';return}
+ el.innerHTML='<div class="fc" id="fc"><div class="side">Mặt trước</div><div class="big">'+F.esc(cur.f)+'</div><div id="sp"></div><div class="hint">Chạm để lật thẻ</div></div><div id="back"></div><div id="rt"></div>';
+ const sp=document.getElementById('sp');if(F.tts.ok)sp.append(F.spkBtn(()=>cur.rd&&!/[ァ-ン]/.test(cur.rd)?cur.f:cur.f));
+ document.getElementById('fc').onclick=flip;swipe(document.getElementById('fc'))}
+function flip(){if(flipped||!cur)return;flipped=true;const st=S.c[cur.id],L=lab(st);
+ document.getElementById('back').innerHTML='<div class="fc back" style="margin-top:10px;cursor:default"><div class="side">Mặt sau</div>'+(cur.rd||cur.hv?'<div class="rd">'+F.esc(cur.rd)+(cur.hv?' · <span style="font-weight:400">'+F.esc(cur.hv)+'</span>':'')+'</div>':'')+'<div class="mean">'+F.esc(cur.m)+'</div>'+(cur.ej?'<div class="exj jp">'+cur.ej+'</div><div class="exv">'+F.esc(cur.ev)+'</div>':'')+'<div style="margin-top:6px"><a class="mut" href="lesson.html?id='+cur.l+'">Xem bài học ›</a></div></div>';
+ document.getElementById('rt').innerHTML='<div class="rate">'+['Quên','Khó','Nhớ','Dễ'].map((t,i)=>'<button class="r'+i+'" data-r="'+i+'">'+t+'<small>'+L[i]+'</small></button>').join('')+'</div>';
+ document.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>rate(+b.dataset.r));if(cur.ej)F.addSpeakers(document.getElementById('back'))}
+function rate(r){const isNew=!S.c[cur.id];S.c[cur.id]=next(S.c[cur.id],r);if(isNew){const t=F.today();S.n={[t]:S.n[t]||{}};S.n[t][deck]=(S.n[t][deck]||0)+1}save();F.P.touch();if(r>0)done++;show()}
+function swipe(el){let x0=null;el.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});el.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)<60)return;if(!flipped){flip();return}rate(dx<0?0:2)})}
+document.addEventListener('keydown',e=>{if(e.key==' '){e.preventDefault();flip()}else if(flipped&&'1234'.includes(e.key))rate(+e.key-1)});
+async function openDeck(d){deck=d;F.ls.set('hn_srs_deck',d);document.querySelectorAll('#decks button').forEach(b=>b.classList.toggle('on',b.dataset.d==d));document.getElementById('card').innerHTML='<p class="mut">Đang tải bộ thẻ…</p>';
+ if(!LESSONS.some(l=>l.id.startsWith('khoa-'+d.replace('_','-')+'-')))await LOCK.load('course_'+d);all=cards(d);done=0;show()}
+document.getElementById('decks').innerHTML=DECKS.map(([d,t])=>'<button data-d="'+d+'">'+t+'</button>').join('');document.querySelectorAll('#decks button').forEach(b=>b.onclick=()=>openDeck(b.dataset.d));openDeck(deck);
+</script></body></html>

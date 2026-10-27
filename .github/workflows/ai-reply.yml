@@ -1,0 +1,30 @@
+# AI tự trả lời bình luận mới (Giscus = GitHub Discussions) bằng Gemini (gói miễn phí).
+# Cần: bật Discussions cho repo, cài Giscus, và thêm secret GEMINI_API_KEY (Settings → Secrets → Actions).
+name: AI trả lời bình luận
+on:
+  discussion_comment:
+    types: [created]
+permissions:
+  discussions: write
+  contents: read
+concurrency:
+  group: ai-reply-${{ github.event.discussion.number }}
+  cancel-in-progress: false
+jobs:
+  reply:
+    if: ${{ github.event.comment.user.type != 'Bot' && !contains(github.event.comment.body, '🤖 AI trả lời') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Trả lời bằng Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_MODEL: gemini-2.5-flash
+        run: node .github/scripts/ai-reply.mjs

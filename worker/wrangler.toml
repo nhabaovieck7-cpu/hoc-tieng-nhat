@@ -1,0 +1,16 @@
+name = "hoc-tieng-nhat-ai"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://nhabaovieck7-cpu.github.io"
+GEMINI_MODEL = "gemini-2.5-flash"
+DAILY_LIMIT = "30"
+
+# Giới hạn theo IP (tuỳ chọn): tạo KV rồi bỏ dấu # 3 dòng dưới
+# npx wrangler kv namespace create RL   -> dán id vào đây
+# [[kv_namespaces]]
+# binding = "RL"
+# id = "DAN_ID_KV_VAO_DAY"
+
+# Secrets (KHÔNG ghi vào file này): GEMINI_API_KEY, ACCESS_TOKEN – xem HUONG_DAN.txt
