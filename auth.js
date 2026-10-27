@@ -34,7 +34,12 @@ const AUTH=(()=>{
   async function logout(){try{await api('/auth/logout',{method:'POST'})}catch(e){}setSession('');}
   async function adminLogin(password){
     const j=await api('/auth/admin/login',{method:'POST',body:{password}});
-    setAdmin(j.session);return j;
+    setAdmin(j.session);
+    if(j.contentKey){
+      try{localStorage.setItem('hn_key_v1',j.contentKey)}catch(e){}
+      await applyContentKey(j.contentKey);
+    }
+    return j;
   }
   async function adminUsers(tab){return api('/auth/admin/users?tab='+encodeURIComponent(tab||'pending'),{admin:true})}
   async function adminAction(userId,action){return api('/auth/admin/action',{method:'POST',admin:true,body:{userId,action}})}

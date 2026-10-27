@@ -109,7 +109,13 @@ async function handleAuth(req,env,c,path){
   // --- me ---
   if(path==='/auth/me'&&(req.method==='GET'||req.method==='POST')){
     const t=bearer(req);const s=await sessionUser(env,t);
-    if(!s||s.kind!=='user')return J({error:'Chưa đăng nhập'},401,c.h);
+    if(!s)return J({error:'Chưa đăng nhập'},401,c.h);
+    if(s.kind==='admin'){
+      const out={ok:true,user:{id:'admin',name:'Admin',status:'approved',method:'admin'}};
+      if(env.CONTENT_KEY_B64)out.contentKey=env.CONTENT_KEY_B64;
+      return J(out,200,c.h);
+    }
+    if(s.kind!=='user')return J({error:'Chưa đăng nhập'},401,c.h);
     if(s.status==='approved')await env.DB.prepare('UPDATE users SET last_visit=? WHERE id=?').bind(now(),s.user_id).run();
     const out={ok:true,user:publicUser(s)};
     if(s.status==='approved'&&env.CONTENT_KEY_B64)out.contentKey=env.CONTENT_KEY_B64;
@@ -131,7 +137,9 @@ async function handleAuth(req,env,c,path){
     const pw=String(b.password||'').trim();
     if(pw!==env.ADMIN_PASSWORD)return J({error:'Mật khẩu admin không đúng'},401,c.h);
     const sess=await makeSession(env,'admin','admin',7);
-    return J({ok:true,session:sess.token},200,c.h);
+    const out={ok:true,session:sess.token};
+    if(env.CONTENT_KEY_B64)out.contentKey=env.CONTENT_KEY_B64;
+    return J(out,200,c.h);
   }
 
   // --- admin users ---
