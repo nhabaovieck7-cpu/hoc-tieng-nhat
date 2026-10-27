@@ -1,5 +1,9 @@
 function ruby(s){return s.replace(/\{([^|}]+)\|([^}]+)\}/g,'<ruby>$1<rt>$2</rt></ruby>')}
 function plain(s){return s.replace(/\{([^|}]+)\|([^}]+)\}/g,'$1$2')}
+/* Bỏ furigana trên từ được hỏi (chữ in đậm/gạch chân) — tránh lộ đáp án câu 漢字読み */
+function stripYomiTarget(s){return String(s||'').replace(/<(b|u|strong)(\s[^>]*)?>([\s\S]*?)<\/\1>/gi,function(_,t,a,inner){return '<'+t+(a||'')+'>'+inner.replace(/\{([^|}]+)\|[^}]+\}/g,'$1')+'</'+t+'>'})}
+function prepMcqQ(q,o){var s=String(q||''); if(/<(b|u|strong)\b/i.test(s)) s=stripYomiTarget(s); return s}
+
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);document.title=SITE.title;
 
 // ===== Tìm kiếm toàn trang (ô tìm kiếm trên đầu) =====
