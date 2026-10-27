@@ -10,7 +10,7 @@
   <h1>Đăng nhập admin</h1>
   <p class="sub">Mật khẩu admin (khác mã khoá trang).</p>
   <label for="apw">Mật khẩu admin</label>
-  <input id="apw" type="password" autocomplete="current-password">
+  <input id="apw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
   <button class="primary" id="alogin" type="button">Vào trang duyệt</button>
   <div class="autherr" id="aerr"></div>
 </div>
@@ -64,7 +64,7 @@ function showLogin(){panel.hidden=true;loginBox.hidden=false}
 function showPanel(){loginBox.hidden=true;panel.hidden=false;load()}
 document.getElementById('alogin').onclick=async()=>{
   aerr.textContent='';
-  try{await AUTH.adminLogin(document.getElementById('apw').value);showPanel()}
+  try{await AUTH.adminLogin(document.getElementById('apw').value.trim());showPanel()}
   catch(e){aerr.textContent=e.message}
 };
 document.getElementById('aout').onclick=()=>{AUTH.setAdmin('');showLogin()};

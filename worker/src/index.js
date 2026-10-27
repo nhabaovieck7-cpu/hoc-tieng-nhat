@@ -128,7 +128,7 @@ async function handleAuth(req,env,c,path){
   if(path==='/auth/admin/login'&&req.method==='POST'){
     if(!env.ADMIN_PASSWORD)return J({error:'Chưa đặt ADMIN_PASSWORD'},503,c.h);
     const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
-    const pw=String(b.password||'');
+    const pw=String(b.password||'').trim();
     if(pw!==env.ADMIN_PASSWORD)return J({error:'Mật khẩu admin không đúng'},401,c.h);
     const sess=await makeSession(env,'admin','admin',7);
     return J({ok:true,session:sess.token},200,c.h);
