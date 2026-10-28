@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8adf83d7"><title>Đăng nhập – Học tiếng Nhật</title><meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:title" content="Đăng nhập – Học tiếng Nhật"><meta property="og:description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css?v=8adf83d7"><title>Đăng nhập – Học tiếng Nhật</title><meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:title" content="Đăng nhập – Học tiếng Nhật"><meta property="og:description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="dang-nhap.html">Tài khoản</a></nav></div></div>
 <main class="wrap">
@@ -65,11 +65,24 @@ document.getElementById('btnGoogle').onclick=()=>{
   const ret=location.href.split('#')[0].split('?')[0];
   location.href=(SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/google/start?return='+encodeURIComponent(ret);
 };
-// Quay lại từ Google OAuth (?session=&status=) hoặc lỗi
+// Quay lại từ Google OAuth (?code=&status=) hoặc lỗi
 (async()=>{
   const u=new URL(location.href);
   const oauthErr=u.searchParams.get('oauth_error');
   if(oauthErr){err.textContent=oauthErr;u.searchParams.delete('oauth_error');history.replaceState({},'',u.pathname+u.search+u.hash)}
+  const xcode=u.searchParams.get('code');
+  if(xcode){
+    ['code','status','oauth'].forEach(k=>u.searchParams.delete(k));
+    history.replaceState({},'',u.pathname+(u.search||'')+u.hash);
+    try{
+      const r=await fetch((SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/exchange',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:xcode})});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||!j.session)throw new Error(j.error||'Đổi mã đăng nhập thất bại');
+      AUTH.setSession(j.session);
+      await afterAuth(j);return;
+    }catch(e){err.textContent=e.message||String(e)}
+  }
+  // Dự phòng chuyển tiếp: Worker cũ vẫn redirect kèm ?session=
   const sess=u.searchParams.get('session');
   const st=u.searchParams.get('status');
   if(sess){
