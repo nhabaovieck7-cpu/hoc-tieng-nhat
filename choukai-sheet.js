@@ -39,7 +39,8 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
   'html[data-theme="dark"] .ck-qh:hover{background:#262019}'+
   'html[data-theme="dark"] .ck-qst{color:#5b82c4}'+
   'html[data-theme="dark"] .ck-qst[data-res="ok"]{color:#63c984}'+
-  'html[data-theme="dark"] .ck-qst[data-res="wrong"]{color:#e0655a}';
+  'html[data-theme="dark"] .ck-qst[data-res="wrong"]{color:#e0655a}'+
+  '.ck-sheet>.ck-open{margin:2px 0 4px}';
   (document.head||document.documentElement).appendChild(st);
 })();
 
@@ -80,12 +81,17 @@ function renderSheet(li,vid,key){
   const wrap=document.createElement('div');
   wrap.className='ck-sheet'; wrap.dataset.vid=vid;
   const total=key.mondai.reduce((a,m)=>a+m.c.length,0);
-  wrap.innerHTML='<h4>📝 Phiếu trả lời · '+esc(key.level)+' 聴解 '+esc(key.session)+' ('+total+' câu)</h4>'+
+  const tglS=document.createElement('button'); tglS.type='button'; tglS.className='btn ck-open'; tglS.setAttribute('aria-expanded','false');
+  tglS.textContent='📝 Phiếu trả lời ▾';
+  const body=document.createElement('div'); body.className='ck-body'; body.hidden=true;
+  tglS.onclick=()=>{ body.hidden=!body.hidden; tglS.setAttribute('aria-expanded',body.hidden?'false':'true'); tglS.textContent=body.hidden?'📝 Phiếu trả lời ▾':'📝 Phiếu trả lời ▴'; };
+  wrap.append(tglS,body);
+  body.innerHTML='<h4>📝 Phiếu trả lời · '+esc(key.level)+' 聴解 '+esc(key.session)+' ('+total+' câu)</h4>'+
     '<p class="mut" style="margin:0 0 6px;font-size:.8rem">Chọn đáp án khi nghe (giống phiếu thi). Bấm <b>Chấm điểm</b> để xem đúng/sai theo đáp án đã xác minh.</p>';
   const stored=load(vid);
   const tools=document.createElement('div'); tools.className='ck-tools';
   const tgl=document.createElement('button'); tgl.type='button'; tgl.className='btn g'; tgl.textContent='Mở tất cả';
-  tools.appendChild(tgl); wrap.appendChild(tools);
+  tools.appendChild(tgl); body.appendChild(tools);
   const syncTools=()=>{
     const anyClosed=[...wrap.querySelectorAll('.ck-qb')].some(b=>b.hidden);
     tgl.textContent=anyClosed?'Mở tất cả':'Thu gọn tất cả';
@@ -140,16 +146,16 @@ function renderSheet(li,vid,key){
       body.append(optsWrap,ans);
       row.append(head,body); box.appendChild(row);
     });
-    wrap.appendChild(box);
+    body.appendChild(box);
   });
   const bar=document.createElement('div'); bar.className='ck-bar';
   const grade=document.createElement('button'); grade.type='button'; grade.className='btn'; grade.textContent='Chấm điểm';
   const redo=document.createElement('button'); redo.type='button'; redo.className='btn g'; redo.textContent='Làm lại'; redo.hidden=true;
   const score=document.createElement('div'); score.className='ck-score';
-  bar.append(grade,redo,score); wrap.appendChild(bar);
+  bar.append(grade,redo,score); body.appendChild(bar);
   const src=document.createElement('p'); src.className='ck-src';
   src.textContent='Nguồn đáp án: '+key.source+' — không đoán.';
-  wrap.appendChild(src);
+  body.appendChild(src);
 
   grade.onclick=()=>{
     let okAll=0,totAll=0; const per=[];
