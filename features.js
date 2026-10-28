@@ -18,10 +18,10 @@ const AUDIO_INDEX_URL='audio-index.json';
 function aNorm(s){return String(s==null?'':s).normalize('NFKC').replace(/[（(][^）)]*[ぁ-んァ-ン][^）)]*[）)]/g,'').replace(/\s+/g,'')}
 let _aidx=null,_aidxP=null;
 function loadAudioIndex(){if(_aidx)return Promise.resolve(_aidx);if(_aidxP)return _aidxP;_aidxP=fetch(AUDIO_INDEX_URL,{cache:'force-cache'}).then(r=>r.ok?r.json():{}).catch(()=>({})).then(j=>{_aidx=j||{};return _aidx});return _aidxP}
-const _au=new Audio();_au.preload='auto';let _auRes=null;
+const _au=new Audio();_au.preload='auto';let _auRes=null,_auSeq=0;
 function _auFinish(){if(_auRes){const r=_auRes;_auRes=null;r()}}
-function _auStop(){try{_au.pause()}catch(e){}_auFinish()}
-function _auPlay(id,rate){return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{_auFinish();res('err')};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';try{_au.playbackRate=rate||1}catch(e){}const p=_au.play();if(p&&p.catch)p.catch(()=>{_auFinish();res('err')})})}
+function _auStop(){_auSeq++;try{_au.pause()}catch(e){}_auFinish()}
+function _auPlay(id,rate){const seq=++_auSeq;return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{if(seq===_auSeq){_auFinish();res('err')}};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';try{_au.playbackRate=rate||1}catch(e){}let tried=false;const go=()=>{if(seq!==_auSeq)return;const p=_au.play();if(p&&p.catch)p.catch(()=>{if(seq!==_auSeq)return;if(!tried){tried=true;setTimeout(go,400)}else{_auFinish();res('err')}})};go()})}
 const tts={rate:ls.get('hn_tts_rate',0.9),ok:typeof speechSynthesis!='undefined'&&typeof SpeechSynthesisUtterance!='undefined',
  voice(){if(!this.ok)return null;const ja=speechSynthesis.getVoices().filter(x=>/^ja/i.test(x.lang));if(!ja.length)return null;
   // Chọn giọng Nhật TỰ NHIÊN NHẤT theo TẦNG ƯU TIÊN cố định, không phụ thuộc thứ tự liệt kê của
@@ -38,7 +38,13 @@ const tts={rate:ls.get('hn_tts_rate',0.9),ok:typeof speechSynthesis!='undefined'
  stop(){_auStop();if(this.ok)speechSynthesis.cancel()},
  setRate(r){this.rate=r;ls.set('hn_tts_rate',r)}};
 if(tts.ok)try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
-function spkBtn(getText,sm){const b=document.createElement('button');b.type='button';b.className='spk'+(sm?' sm':'');b.textContent='🔊';b.title='Nghe (giọng máy)';b.setAttribute('aria-label','Nghe câu tiếng Nhật');
+// Nạp sẵn mục lục bản thu ngay khi mở trang: lần bấm nghe đầu tiên không phải chờ tải index.
+// Mở khoá phần tử audio ở cử chỉ chạm đầu tiên: iOS Safari chặn play() phát sau một await
+// nếu phần tử audio chưa từng được phát trong cử chỉ người dùng (lỗi hay gặp ở trang thẻ ôn tập).
+try{loadAudioIndex()}catch(e){}
+try{const _SILENT='data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YSADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==';
+const _unlock=()=>{window.removeEventListener('pointerdown',_unlock);try{_au.src=_SILENT;const p=_au.play();if(p&&p.then)p.then(()=>{try{if(_au.src===_SILENT){_au.pause();_au.removeAttribute('src');_au.load()}}catch(e){}}).catch(()=>{})}catch(e){}};window.addEventListener('pointerdown',_unlock)}catch(e){}
+function spkBtn(getText,sm){const b=document.createElement('button');b.type='button';b.className='spk'+(sm?' sm':'');b.textContent='🔊';b.title='Nghe phát âm';b.setAttribute('aria-label','Nghe câu tiếng Nhật');
  b.onclick=e=>{e.preventDefault();e.stopPropagation();$$('.spk.on').forEach(x=>x.classList.remove('on'));b.classList.add('on');tts.speak(typeof getText=='function'?getText():getText).then(()=>b.classList.remove('on'))};return b}
 // gắn nút 🔊 vào các câu tiếng Nhật trong một vùng
 function addSpeakers(root){if(!tts.ok||!root)return;
