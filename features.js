@@ -36,7 +36,8 @@ function spkBtn(getText,sm){const b=document.createElement('button');b.type='but
 function addSpeakers(root){if(!tts.ok||!root)return;
  $$('.ex .jp, div.jp, td.jp, .kwl, .op.jp, .q.jp',root).forEach(el=>{if(el.querySelector(':scope > .spk')||el.closest('.mq'))return;if(!/[ぁ-んァ-ン一-龯]/.test(el.textContent))return;el.append(' ',spkBtn(()=>tts.text(el),true))});
  // bảng "Sách giáo khoa / Người Nhật nói thật": đọc từng ô tiếng Nhật
- $$('table',root).forEach(t=>{$$('tr',t).forEach(r=>{[...r.children].forEach(c=>{if(c.tagName!='TD'||c.querySelector('.spk')||c.classList.contains('jp'))return;const tx=c.cloneNode(true);$$('rt,.ix',tx).forEach(x=>x.remove());const s=tx.textContent.trim();if(s&&/[ぁ-んァ-ン]/.test(s)&&!/[a-zA-Zà-ỹ]{3}/.test(s))c.append(' ',spkBtn(()=>tts.text(c),true))})})})}
+ // bảng từ vựng (vt): bỏ qua ô cột "Cách đọc" – nút ở đó đọc lại đúng từ mà nút cạnh từ (cột "Từ") đã đọc, thừa một nút
+ $$('table',root).forEach(t=>{const vt=t.classList.contains('vt');$$('tr',t).forEach(r=>{[...r.children].forEach(c=>{if(c.tagName!='TD'||c.querySelector('.spk')||c.classList.contains('jp'))return;if(vt&&c.getAttribute('data-l')=='Cách đọc')return;const tx=c.cloneNode(true);$$('rt,.ix',tx).forEach(x=>x.remove());const s=tx.textContent.trim();if(s&&/[ぁ-んァ-ン]/.test(s)&&!/[a-zA-Zà-ỹ]{3}/.test(s))c.append(' ',spkBtn(()=>tts.text(c),true))})})})}
 // đoạn hội thoại "A：…<br>B：…" -> mỗi dòng một nút + nút đọc cả đoạn
 function dialogs(root){if(!root)return;$$('p',root).forEach(p=>{const parts=p.innerHTML.split(/<br\s*\/?>/i);if(parts.length<3||parts.filter(x=>/^[\s\S]{0,40}?[：]/.test(x.replace(/<[^>]+>/g,'').trim())).length<3)return;
  p.innerHTML=parts.map(x=>'<span class="kwl">'+x.trim()+'</span>').join('');p.classList.add('kwp');if(!tts.ok)return;
