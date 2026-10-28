@@ -53,7 +53,7 @@ dk.forEach(l=>{const s=(l.sections||[]).find(s=>/Nguyên văn|dịch từng câu
  pairs.forEach(p=>SENT.push(p));const qs=(l.mcq||[]).filter(q=>q.q.length<400&&q.o&&q.o.length==4);if(pairs.length&&qs.length){for(let i=0;i<pairs.length;i+=6){IT.kadai.push({src:'Đọc hiểu · '+l.title,l:l.id,script:pairs.slice(i,i+6),qs:i==0?qs.slice(0,2):[]})}IT.kadai=IT.kadai.filter(x=>x.qs.length)}});
 LESSONS.forEach(l=>(l.examples||[]).forEach(e=>SENT.push({jp:e.jp,vi:e.vi})));
 SENT.filter(s=>s.vi&&tx(s.jp).length>=8&&tx(s.jp).length<=70).forEach((s,i,a)=>IT.point.push({src:'Câu trong bài học',s,a}));
-function newsItems(){if(typeof NEWS=='undefined')return;NEWS.forEach(n=>{if(n.qs&&n.qs.length)IT.kadai.unshift({src:(n.tab=='jp'?'Tin Nhật Bản':'Tin cộng đồng')+' · '+n.date,news:n.id,sample:n.sample,script:[{jp:n.h,vi:''},{jp:n.ex,vi:n.vi}],qs:n.qs});if(n.tr)SENT.push(n.tr)})}
+function newsItems(){if(typeof NEWS=='undefined')return;NEWS.forEach(n=>{if(n.qs&&n.qs.length)IT.kadai.unshift({src:(n.tab=='jp'?'Tin Nhật Bản':n.tab=='vj'?'Người Việt ở Nhật':'Tin cộng đồng')+' · '+n.date,news:n.id,sample:n.sample,script:[{jp:n.h,vi:''},{jp:n.ex,vi:n.vi}],qs:n.qs});if(n.tr)SENT.push(n.tr)})}
 // ---- trình phát ----
 let tab=F.ls.get('hn_listen_tab','kadai'),order={},pos={},rate=F.ls.get('hn_listen_rate',1),showS=false,play=null,score=F.ls.get('hn_listen_score',{});
 function cur(){const a=IT[tab];if(!order[tab])order[tab]=shuf(a.map((_,i)=>i)),pos[tab]=0;return a[order[tab][pos[tab]%a.length]]}
