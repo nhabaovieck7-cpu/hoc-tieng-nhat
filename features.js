@@ -21,12 +21,20 @@ function loadAudioIndex(){if(_aidx)return Promise.resolve(_aidx);if(_aidxP)retur
 const _au=new Audio();_au.preload='auto';let _auRes=null;
 function _auFinish(){if(_auRes){const r=_auRes;_auRes=null;r()}}
 function _auStop(){try{_au.pause()}catch(e){}_auFinish()}
-function _auPlay(id,rate){return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{_auFinish();res('err')};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';const p=_au.play();if(p&&p.catch)p.catch(()=>{_auFinish();res('err')})})}
+function _auPlay(id,rate){return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{_auFinish();res('err')};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';try{_au.playbackRate=rate||1}catch(e){}const p=_au.play();if(p&&p.catch)p.catch(()=>{_auFinish();res('err')})})}
 const tts={rate:ls.get('hn_tts_rate',0.9),ok:typeof speechSynthesis!='undefined'&&typeof SpeechSynthesisUtterance!='undefined',
- voice(){if(!this.ok)return null;const v=speechSynthesis.getVoices().filter(x=>/^ja/i.test(x.lang));return v.find(x=>/Google|Kyoko|O-ren|Otoya|Nanami/i.test(x.name))||v[0]||null},
+ voice(){if(!this.ok)return null;const ja=speechSynthesis.getVoices().filter(x=>/^ja/i.test(x.lang));if(!ja.length)return null;
+  // Chọn giọng Nhật TỰ NHIÊN NHẤT theo TẦNG ƯU TIÊN cố định, không phụ thuộc thứ tự liệt kê của
+  // trình duyệt (bản cũ lấy giọng đầu tiên khớp tên trong danh sách nên kết quả hên xui: trên iOS
+  // có máy trúng giọng nam Otoya trước Kyoko). Thứ tự tầng: Nanami (Edge/Windows 11, gồm bản
+  // Online Natural) > giọng neural/premium/enhanced khác > Google (Chrome/Android) > Kyoko
+  // (Apple) > Ayumi/Haruka (Windows) > O-ren (Apple) > giọng nam hệ thống (Keita/Otoya/Ichiro).
+  const tiers=[/nanami/i,/natural|neural|premium|enhanced/i,/google/i,/kyoko/i,/ayumi|haruka/i,/o-ren/i,/keita|otoya|ichiro/i];
+  for(const t of tiers){const v=ja.find(x=>t.test(x.name));if(v)return v}
+  return ja.find(x=>/^ja[-_]JP$/i.test(x.lang))||ja[0]},
  // chữ cần đọc: bỏ furigana (rt), bỏ nút, bỏ tên người nói "Nam："
  text(el){if(typeof el=='string'){const d=document.createElement('div');d.innerHTML=R(el);el=d}const c=el.cloneNode(true);$$('rt,rp,button,.ix,.vi',c).forEach(x=>x.remove());return c.textContent.replace(/^\s*[^：:\s]{1,12}[：:]/,'').replace(/[（(][^）)]*[ぁ-んァ-ン][^）)]*[）)]/g,'').replace(/\s+/g,' ').trim()},
- async speak(t,o={}){if(!o.queue){_auStop();if(this.ok)speechSynthesis.cancel()}if(AUDIO_ON&&t){try{const idx=await loadAudioIndex();const id=idx[aNorm(t)];if(id){const r=await _auPlay(id,o.rate||this.rate);if(r!=='err')return}}catch(e){}}if(!this.ok)return;return new Promise(res=>{const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';const v=this.voice();if(v)u.voice=v;u.rate=o.rate||this.rate;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)})},
+ async speak(t,o={}){if(!o.queue){_auStop();if(this.ok)speechSynthesis.cancel()}if(AUDIO_ON&&t){try{const idx=await loadAudioIndex();const id=idx[aNorm(t)];if(id){const r=await _auPlay(id,o.rate||this.rate);if(r!=='err')return}}catch(e){}}if(!this.ok)return;return new Promise(res=>{const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.pitch=1;const v=this.voice();if(v)u.voice=v;u.rate=o.rate||this.rate;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)})},
  stop(){_auStop();if(this.ok)speechSynthesis.cancel()},
  setRate(r){this.rate=r;ls.set('hn_tts_rate',r)}};
 if(tts.ok)try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
