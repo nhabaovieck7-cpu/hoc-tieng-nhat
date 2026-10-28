@@ -62,3 +62,9 @@ try{var mq=matchMedia('(prefers-color-scheme: dark)');
  var onchg=function(e){if(!saved())apply(e.matches?'dark':'light')};
  if(mq.addEventListener)mq.addEventListener('change',onchg);else if(mq.addListener)mq.addListener(onchg)}catch(e){}
 })();
+
+// ===== Nút "← Quay lại" (trang con): có trang trước cùng site thì history.back(),
+// không có (mở trực tiếp) thì đi theo href trang cha đã khai sẵn trên nút =====
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a.hn-back'):null;if(!a)return;
+ var ok=false;try{ok=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(x){}
+ if(ok&&history.length>1){e.preventDefault();history.back()}});

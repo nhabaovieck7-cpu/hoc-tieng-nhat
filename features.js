@@ -99,7 +99,13 @@ const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:16,
   else{const u=ls.get('hn_ai_used',{});u[today()]=(u[today()]||0)+1;ls.set('hn_ai_used',{[today()]:u[today()]})}
   return j.reply||''},
  // định dạng trả lời: **đậm**, *nghiêng*, xuống dòng, {漢字|かな}
- fmt(s){return R(esc(s)).replace(/&lt;(\/?)(ruby|rt)&gt;/g,'<$1$2>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<i>$2</i>').replace(/\n/g,'<br>')}};
+ fmt(s){const inl=t=>R(esc(t)).replace(/&lt;(\/?)(ruby|rt)&gt;/g,'<$1$2>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<i>$2</i>');
+  let out='',list=false;const end=()=>{if(list){out+='</ul>';list=false}};
+  String(s||'').split('\n').forEach(ln=>{const h=ln.match(/^\s*#{1,6}\s+(.+?)\s*#*\s*$/),li=ln.match(/^\s*(?:[-•*]|\d{1,2}[.)])\s+(.+)$/);
+   if(h){end();out+='<div class="aih">'+inl(h[1])+'</div>'}
+   else if(li){if(!list){out+='<ul class="ail">';list=true}out+='<li>'+inl(li[1])+'</li>'}
+   else{end();out+=inl(ln)+'<br>'}});
+  end();return out.replace(/(<br>)+$/,'')}};
 
 // ===== 5. Bình luận (Giscus – GitHub Discussions) =====
 function comments(el,term){if(!el)return;const g=typeof SITE!='undefined'&&SITE.giscus;
