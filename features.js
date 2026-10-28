@@ -64,8 +64,13 @@ const AI={on:()=>!!(typeof SITE!='undefined'&&SITE.aiEndpoint),LIM:16,
  used(){const u=ls.get('hn_ai_used',{});return u[today()]||0},
  async token(){const k=localStorage.getItem('hn_key_v1')||'';const h=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('hn-ai:'+k));return [...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('')},
  async ask(mode,text,ctx){if(!this.on())throw new Error('AI chưa được bật.');if(this.used()>=this.LIM)throw new Error('Hôm nay đã dùng hết '+this.LIM+' câu hỏi AI. Mai quay lại nhé!');
-  const r=await fetch(SITE.aiEndpoint,{method:'POST',headers:{'Content-Type':'application/json','X-Access':await this.token()},body:JSON.stringify({mode,text:String(text).slice(0,2000),ctx:String(ctx||'').slice(0,3000)})});
-  const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi máy chủ AI ('+r.status+')'));const u=ls.get('hn_ai_used',{});u[today()]=(u[today()]||0)+1;ls.set('hn_ai_used',{[today()]:u[today()]});return j.reply||''},
+  const hd={'Content-Type':'application/json','X-Access':await this.token()};
+  const st=(typeof AUTH!='undefined'&&AUTH.session)?AUTH.session():'';if(st)hd.Authorization='Bearer '+st;
+  const r=await fetch(SITE.aiEndpoint,{method:'POST',headers:hd,body:JSON.stringify({mode,text:String(text).slice(0,2000),ctx:String(ctx||'').slice(0,3000)})});
+  const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi máy chủ AI ('+r.status+')'));
+  if(typeof j.aiLeft==='number'){ls.set('hn_ai_used',{[today()]:Math.max(0,this.LIM-j.aiLeft)})}
+  else{const u=ls.get('hn_ai_used',{});u[today()]=(u[today()]||0)+1;ls.set('hn_ai_used',{[today()]:u[today()]})}
+  return j.reply||''},
  // định dạng trả lời: **đậm**, *nghiêng*, xuống dòng, {漢字|かな}
  fmt(s){return R(esc(s)).replace(/&lt;(\/?)(ruby|rt)&gt;/g,'<$1$2>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<i>$2</i>').replace(/\n/g,'<br>')}};
 
