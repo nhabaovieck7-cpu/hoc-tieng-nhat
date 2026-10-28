@@ -15,8 +15,99 @@ let h='';if(l.explain.length)h+=sec('Giải thích',l.explain.map(e=>'<p>'+ruby(
 if(l.examples.length)h+=sec('Ví dụ',l.examples.map(e=>'<div class="ex"><div class="jp">'+ruby(e.jp)+'</div><div class="vi">'+e.vi+'</div></div>').join(''));
 const MQ=(qs,t,num)=>sec(t,'<div class="mcq"><p class="mqh">Chạm vào một phương án cho mỗi câu, rồi bấm <b>Chấm điểm</b>.</p>'+qs.map((x,i)=>'<div class="mq" data-c="'+x.c+'"><div class="mqq">'+(num?'<b>Câu '+(i+1)+':</b> ':'')+ruby(x.q)+'</div><div class="mo">'+x.o.map((o,j)=>'<button type="button" class="opt" data-i="'+j+'"><span class="on">'+(j+1)+'</span><span class="ot">'+ruby(o)+'</span></button>').join('')+'</div><div class="mx" hidden><div class="mxr"></div>'+ruby(x.a||'')+'</div></div>').join('')+'<div class="mbar"><button type="button" class="grade">Chấm điểm</button><button type="button" class="redo" hidden>Làm lại</button><span class="score"></span></div></div>');
 const MQT='🎯 Trắc nghiệm – chấm điểm';
+// ==== GENQ: sinh trắc nghiệm kiểu JLPT (20–30 câu, chấm điểm) từ dữ liệu bài — chạy lúc hiển thị ====
+const GQ_TX=s=>String(s==null?'':s).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+const GQ_PL=s=>String(s==null?'':s).replace(/\{([^|}]+)\|[^}]+\}/g,'$1').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+const GQ_HS=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0};
+const GQ_RG=seed=>{let a=(seed>>>0)||1;return()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}};
+const GQ_SH=(a,R)=>{for(let i=a.length-1;i>0;i--){const j=(R()*(i+1))|0;const t=a[i];a[i]=a[j];a[j]=t}return a};
+function GQ_MK(R,q,right,pool,a){if(right==null)return null;const rp=GQ_PL(right);if(!rp)return null;const seen=new Set([rp]),d=[];for(const x of pool||[]){if(x==null)continue;const p=GQ_PL(x);if(!p||seen.has(p)||p==='—')continue;seen.add(p);d.push(x)}if(d.length<3)return null;GQ_SH(d,R);const o=d.slice(0,3);o.push(right);GQ_SH(o,R);return{q,o,c:o.indexOf(right),a:a||''}}
+function GQ_BAG(){const seen=new Set(),list=[];return{add(x){if(!x)return;const k=GQ_PL(x.q);if(!k||seen.has(k))return;seen.add(k);list.push(x)},list}}
+function GQ_PICK(R,groups,target){const bag=GQ_BAG();const gs=groups.map(g=>GQ_SH(g.filter(Boolean),R));let more=true;while(bag.list.length<target&&more){more=false;for(const g of gs){if(g.length){bag.add(g.shift());more=true;if(bag.list.length>=target)break}}}return bag.list}
+function GQ_TABLES(l){const out=[];(l.sections||[]).forEach(s=>{const html=s.html||'';const th=[...html.matchAll(/<th[^>]*>(.*?)<\/th>/gs)].map(x=>GQ_TX(x[1]));if(!th.length)return;const rows=[];for(const m of html.matchAll(/<tr>(.*?)<\/tr>/gs)){const cells=[...m[1].matchAll(/<td[^>]*>(.*?)<\/td>/gs)].map(x=>x[1]);if(cells.length)rows.push(cells)}out.push({th,rows})});return out}
+function GQ_VOCAB(l,R){
+  const T=GQ_TABLES(l).find(t=>t.th.some(h=>h==='Cách đọc'));if(!T)return[];
+  const V=[];
+  for(const c of T.rows){if(c.length<5)continue;const word=c[1].trim();if(!word)continue;
+    const mcell=c[4];const ix=mcell.match(/<div class="ix"><div class="jp">(.*?)<\/div><div class="vi">(.*?)<\/div><\/div>/s);
+    const mean=GQ_TX(ix?mcell.slice(0,ix.index):mcell),read=GQ_TX(c[2]),hv=GQ_TX(c[3]);
+    if(!mean||!read)continue;
+    V.push({w:word,wp:GQ_PL(word),r:read,hv,mean,ej:ix?ix[1]:'',ev:ix?GQ_TX(ix[2]):''})}
+  if(V.length<4)return[];
+  const means=V.map(x=>x.mean),reads=V.map(x=>x.r),words=V.map(x=>x.w),evs=V.map(x=>x.ev).filter(Boolean);
+  const g1=[],g2=[],g3=[],g4=[],g5=[];
+  for(const x of V){
+    g1.push(GQ_MK(R,'「'+x.w+'」 có nghĩa là gì?',x.mean,means,x.wp+'（'+x.r+'）— '+x.mean+(x.hv&&x.hv!=='—'?' · Hán Việt: '+x.hv:'')));
+    if(x.wp!==x.r&&/[一-龯々]/.test(x.wp))g2.push(GQ_MK(R,'Cách đọc của 「'+x.wp+'」 là gì?',x.r,reads,x.wp+' đọc là '+x.r+' — '+x.mean));
+    g3.push(GQ_MK(R,'Từ nào có nghĩa “'+x.mean+'”?',x.w,words,x.w+'（'+x.r+'）— '+x.mean));
+    if(x.ej){
+      let ej=x.ej,ok=false;
+      if(ej.includes(x.w)){ej=ej.replace(x.w,'＿＿＿');ok=true}
+      else{const tk=(ej.match(/\{[^{}]+\}/g)||[]).find(t=>GQ_PL(t)===x.wp||GQ_PL(t).startsWith(x.wp));if(tk){ej=ej.replace(tk,'＿＿＿');ok=true}}
+      if(ok)g4.push(GQ_MK(R,'Điền từ thích hợp vào chỗ trống: '+ej,x.w,words,x.ev));
+      if(x.ev)g5.push(GQ_MK(R,'Câu 「'+GQ_PL(x.ej)+'」 có nghĩa là gì?',x.ev,evs,x.ej));
+    }
+  }
+  return GQ_PICK(R,[g1,g3,g2,g4,g5],26);
+}
+function GQ_KANJI(l,R){
+  const T=GQ_TABLES(l).find(t=>t.th.some(h=>h==='Âm On'));if(!T)return[];
+  const K=[],CP=[];
+  for(const c of T.rows){if(c.length<6)continue;const kj=GQ_TX(c[0]);if(!kj)continue;
+    const cps=[];const ccell=c[5].split(/<div class="ix">/)[0];
+    for(const part of ccell.split(/<br\s*\/?>/)){const mm=GQ_TX(part).match(/^(.*?)[（(](.*?)[）)]\s*[:：]\s*(.*)$/);if(mm&&mm[1].trim())cps.push({w:mm[1].trim(),r:mm[2].trim(),m:mm[3].trim()})}
+    K.push({kj,on:GQ_TX(c[1]),kun:GQ_TX(c[2]),hv:GQ_TX(c[3]),mean:GQ_TX(c[4]),cps});cps.forEach(x=>CP.push(x))}
+  if(K.length<4)return[];
+  const ons=K.map(y=>y.on).filter(v=>v&&v!=='—'),kuns=K.map(y=>y.kun).filter(v=>v&&v!=='—'),hvs=K.map(y=>y.hv).filter(v=>v&&v!=='—');
+  const dupMean=new Set(K.filter((x,i)=>K.some((y,j)=>j!==i&&y.mean===x.mean)).map(x=>x.kj));
+  const g1=[],g2=[],g3=[],g4=[],g5=[],g6=[],g7=[];
+  for(const x of K){
+    g1.push(GQ_MK(R,'Chữ 「'+x.kj+'」 có nghĩa là gì?',x.mean,K.map(y=>y.mean),'「'+x.kj+'」 — '+x.mean+' · Hán Việt: '+x.hv));
+    if(x.on&&x.on!=='—')g2.push(GQ_MK(R,'Âm On (音読み) của chữ 「'+x.kj+'」 là gì?',x.on,ons,'On: '+x.on+' · Kun: '+x.kun));
+    if(x.kun&&x.kun!=='—')g3.push(GQ_MK(R,'Âm Kun (訓読み) của chữ 「'+x.kj+'」 là gì?',x.kun,kuns,'Kun: '+x.kun+' · On: '+x.on));
+    if(x.hv&&x.hv!=='—')g4.push(GQ_MK(R,'Âm Hán Việt của chữ 「'+x.kj+'」 là gì?',x.hv,hvs,x.kj+' = '+x.hv));
+    if(!dupMean.has(x.kj))g7.push(GQ_MK(R,'Chữ kanji nào có nghĩa “'+x.mean+'”?',x.kj,K.map(y=>y.kj),x.kj+' — '+x.mean));
+    for(const cp of x.cps){
+      g5.push(GQ_MK(R,'Từ 「'+cp.w+'」 đọc là gì?',cp.r,CP.map(y=>y.r),cp.w+'（'+cp.r+'）— '+cp.m));
+      g6.push(GQ_MK(R,'Từ 「'+cp.w+'」 có nghĩa là gì?',cp.m,CP.map(y=>y.m),cp.w+'（'+cp.r+'）— '+cp.m));
+    }
+  }
+  return GQ_PICK(R,[g5,g1,g2,g3,g6,g4,g7],26);
+}
+function GQ_GRAM(l,R){
+  const P=[];
+  for(const s of (l.sections||[])){
+    const html=s.html||'';
+    const mean=(html.match(/<b>Nghĩa:<\/b>\s*(.*?)<\/p>/s)||[])[1];
+    const stru=(html.match(/<b>Cấu trúc:<\/b>\s*(.*?)<\/p>/s)||[])[1];
+    const ex=[];for(const m of html.matchAll(/<div class="ex"><div class="jp">(.*?)<\/div><div class="vi">(.*?)<\/div><\/div>/gs))ex.push({jp:m[1],vi:GQ_TX(m[2])});
+    if(!ex.length&&!mean)continue;
+    P.push({pat:String(s.h||'').replace(/^\s*\d+\.\s*/,''),mean:mean?GQ_TX(mean):'',stru:stru?GQ_TX(stru):'',ex});
+  }
+  if(P.length<2)return[];
+  const bag=GQ_BAG();
+  (l.quiz||[]).filter(x=>x&&Array.isArray(x.o)&&x.o.length===4&&x.c>=0&&x.c<4&&new Set(x.o.map(o=>GQ_PL(o))).size===4).forEach(x=>bag.add(x));
+  const allAns=[],allVi=[];
+  P.forEach(p=>p.ex.forEach(e=>{const b=[...e.jp.matchAll(/<b>(.*?)<\/b>/gs)].map(x=>x[1]);e.ans=b.join('、');if(e.ans)allAns.push(e.ans);if(e.vi)allVi.push(e.vi)}));
+  const dupMean=new Set(P.filter((x,i)=>x.mean&&P.some((y,j)=>j!==i&&y.mean===x.mean)).map(x=>x.pat));
+  const g1=[],g2=[],g3=[],g4=[],g5=[];
+  for(const p of P){
+    for(const e of p.ex){if(e.ans)g1.push(GQ_MK(R,'Điền mẫu ngữ pháp thích hợp: '+e.jp.replace(/<b>.*?<\/b>/gs,'＿＿＿'),e.ans,allAns,e.ans+' — '+e.vi))}
+    if(p.mean&&!dupMean.has(p.pat)){
+      g2.push(GQ_MK(R,'Mẫu ngữ pháp nào trong bài này mang nghĩa: “'+p.mean+'”?',p.pat,P.map(x=>x.pat),p.pat+' — '+p.mean));
+      g3.push(GQ_MK(R,'Mẫu 「'+GQ_PL(p.pat)+'」 có nghĩa là gì?',p.mean,P.map(x=>x.mean),p.pat+' — '+p.mean));
+    }
+    if(p.stru)g4.push(GQ_MK(R,'Cấu trúc đúng của mẫu 「'+GQ_PL(p.pat)+'」 là gì?',p.stru,P.map(x=>x.stru),p.stru));
+    for(const e of p.ex){if(e.vi)g5.push(GQ_MK(R,'Câu 「'+GQ_PL(e.jp)+'」 có nghĩa là gì?',e.vi,allVi,e.jp))}
+  }
+  GQ_PICK(R,[g1,g5,g2,g3,g4],Math.max(0,26-bag.list.length)).forEach(x=>bag.add(x));
+  return bag.list;
+}
+function GENQ(l){try{const R=GQ_RG(GQ_HS(l.id));if(l.type==='Từ vựng')return GQ_VOCAB(l,R);if(l.type==='Kanji')return GQ_KANJI(l,R);if(l.type==='Ngữ pháp')return GQ_GRAM(l,R)}catch(e){}return null}
 (l.sections||[]).forEach((s,i)=>{if(i==0&&l.mcq&&l.mcqAt<0)h+=MQ(l.mcq,MQT);h+=sec(ruby(s.h),ruby(s.html),'sec');if(l.mcq&&i==l.mcqAt)h+=MQ(l.mcq,MQT)});
-if(l.quiz&&l.quiz.length&&l.quiz.every(x=>x.o))h+=MQ(l.quiz,'Luyện tập',1);
+const GQ=(!l.mcq&&/^(Từ vựng|Kanji|Ngữ pháp)$/.test(l.type))?GENQ(l):null;
+if(GQ&&GQ.length>=12)h+=MQ(GQ,'Luyện tập',1).replace('<div class="mcq">','<div class="mcq genq">');
+else if(l.quiz&&l.quiz.length&&l.quiz.every(x=>x.o))h+=MQ(l.quiz,'Luyện tập',1);
 else if(l.quiz&&l.quiz.length)h+=sec('Luyện tập',l.quiz.map((x,i)=>'<div class="qa"><p><b>Câu '+(i+1)+':</b> '+ruby(x.q)+'</p><button>Xem đáp án</button><div class="ans">'+ruby(x.a)+'</div></div>').join('<hr>'));
 m.innerHTML=(TH?'':F.rateBar())+h;m.querySelectorAll('table').forEach(t=>{const hs=[...t.querySelectorAll('th')].map(x=>x.textContent.trim());if(hs.length){const k=hs[0]=='Kanji'?'kjt':(hs[1]=='Từ'&&hs[2]=='Cách đọc'?'vt':'gt');t.classList.add('mc',k);t.querySelectorAll('tr').forEach(r=>{if(r.querySelector('th'))r.classList.add('hr');else[...r.children].forEach((c,i)=>{if(hs[i])c.setAttribute('data-l',hs[i])})})}});
 m.querySelectorAll('table').forEach(t=>{if(!t.parentElement.classList.contains('tbl')){const w=document.createElement('div');w.className='tbl';t.before(w);w.append(t)}});
@@ -28,6 +119,7 @@ const x=q.querySelector('.mx');x.hidden=false;x.querySelector('.mxr').innerHTML=
 Q.classList.add('done');sc.textContent='Đúng '+ok+'/'+qs.length+' câu';sc.dataset.ok=ok;g.hidden=true;rd.hidden=false;sc.scrollIntoView&&sc.scrollIntoView({block:'nearest'})};
 rd.onclick=()=>{Q.classList.remove('done');qs.forEach(q=>{q.classList.remove('qok','qbad');q.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel','right','wrong'));q.querySelector('.mx').hidden=true});sc.textContent='';g.hidden=false;rd.hidden=true}});
 m.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.classList.toggle('show');b.textContent=a.classList.contains('show')?'Ẩn đáp án':'Xem đáp án'})
+m.querySelectorAll('.mcq.genq').forEach(Q=>{const rd=Q.querySelector('.redo');if(!rd)return;let att=0;rd.addEventListener('click',()=>{att++;const R=GQ_RG(GQ_HS(l.id)+att*7919);const qs=GQ_SH([...Q.querySelectorAll('.mq')],R);qs.forEach(q=>Q.insertBefore(q,Q.querySelector('.mbar')));qs.forEach((q,i)=>{const b=q.querySelector('.mqq b');if(b)b.textContent='Câu '+(i+1)+':';const c=+q.dataset.c,mo=q.querySelector('.mo'),os=[...mo.querySelectorAll('.opt')],right=os[c],sh=GQ_SH(os,R);sh.forEach(x=>mo.appendChild(x));sh.forEach((x,j)=>{x.querySelector('.on').textContent=j+1});q.dataset.c=sh.indexOf(right)})})});
 // ==== tính năng mới: tiến độ, đọc to, hỏi AI, bình luận ====
 F.P.seen(l.id,plain(l.title));F.bindRate(m);
 m.querySelectorAll('.mcq').forEach((Q,i)=>Q.querySelector('.grade').addEventListener('click',()=>{const sc=Q.querySelector('.score');F.P.score(l.id+(i?'#'+i:''),plain(l.title)+(i?' ('+(i+1)+')':''),+sc.dataset.ok,Q.querySelectorAll('.mq').length)}));
