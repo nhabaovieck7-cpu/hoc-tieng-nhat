@@ -9,6 +9,7 @@
 const DECKS=[['n5_tv','N5 Từ vựng'],['n5_kj','N5 Kanji'],['n5_np','N5 Ngữ pháp'],['n4_tv','N4 Từ vựng'],['n4_kj','N4 Kanji'],['n4_np','N4 Ngữ pháp'],['n3_tv','N3 Từ vựng'],['n3_kj','N3 Kanji'],['n3_np','N3 Ngữ pháp'],['n1_tv','N1 Từ vựng'],['n1_kj','N1 Kanji'],['n1_np','N1 Ngữ pháp'],['n2_tv','N2 Từ vựng'],['n2_kj','N2 Kanji'],['n2_np','N2 Ngữ pháp']];
 const NEW_PER_DAY=20,S=F.ls.get('hn_srs_v1',{c:{},n:{}}),save=()=>F.ls.set('hn_srs_v1',S);
 const tx=el=>{if(!el)return '';const c=el.cloneNode(true);c.querySelectorAll('rt,.ix,.spk').forEach(x=>x.remove());return c.textContent.trim()};
+const jpDom=s=>{const c=String(s||'').replace(/[（(][^）)]*[）)]/g,'');const jp=(c.match(/[ぁ-んァ-ン一-龯]/g)||[]).length;const lt=(c.match(/[A-Za-zÀ-ỹ]/g)||[]).length;return jp>0&&jp>=lt};
 const box=document.createElement('div');
 function cards(dk){const [lv,pt]=dk.split('_'),out=[];LESSONS.filter(l=>l.id.startsWith('khoa-'+lv+'-'+pt+'-')).forEach(l=>{
  if(pt=='np'){(l.sections||[]).forEach(s=>{box.innerHTML=ruby(s.html);const p=[...box.querySelectorAll('p')].find(x=>/Nghĩa/.test(x.textContent));const ex=box.querySelector('.ex');const f=tx((()=>{const d=document.createElement('div');d.innerHTML=ruby(s.h);return d})()).replace(/^\d+\.\s*/,'');
@@ -31,7 +32,7 @@ function build(){const now=Date.now(),t=F.today();S.n[t]=S.n[t]||{};const due=al
 function show(){build();cur=queue[0];flipped=false;const el=document.getElementById('card');
  if(!cur){el.innerHTML='<div class="fc"><div class="big">🎉</div><b>Xong thẻ hôm nay!</b><p class="mut">'+all.length+' thẻ trong bộ · đã ôn '+Object.keys(S.c).filter(k=>all.some(c=>c.id==k)).length+' thẻ. Quay lại vào ngày mai.</p></div>';return}
  el.innerHTML='<div class="fc" id="fc"><div class="side">Mặt trước</div><div class="big">'+F.esc(cur.f)+'</div><div id="sp"></div><div class="hint">Chạm để lật thẻ</div></div><div id="back"></div><div id="rt"></div>';
- const sp=document.getElementById('sp');if(F.tts.ok)sp.append(F.spkBtn(()=>cur.rd&&!/[ァ-ン]/.test(cur.rd)?cur.f:cur.f));
+ const sp=document.getElementById('sp');if(F.tts.ok&&jpDom(cur.f))sp.append(F.spkBtn(()=>cur.f));
  document.getElementById('fc').onclick=flip;swipe(document.getElementById('fc'))}
 function flip(){if(flipped||!cur)return;flipped=true;const st=S.c[cur.id],L=lab(st);
  document.getElementById('back').innerHTML='<div class="fc back" style="margin-top:10px;cursor:default"><div class="side">Mặt sau</div>'+(cur.rd||cur.hv?'<div class="rd">'+F.esc(cur.rd)+(cur.hv?' · <span style="font-weight:400">'+F.esc(cur.hv)+'</span>':'')+'</div>':'')+'<div class="mean">'+F.esc(cur.m)+'</div>'+(cur.ej?'<div class="exj jp">'+cur.ej+'</div><div class="exv">'+F.esc(cur.ev)+'</div>':'')+'<div style="margin-top:6px"><a class="mut" href="lesson.html?id='+cur.l+'">Xem bài học ›</a></div></div>';
