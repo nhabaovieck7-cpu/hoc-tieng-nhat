@@ -675,4 +675,11 @@ html[data-theme="dark"] .hn-back:hover{color:#12233f}
 .hn-sh-item:hover{border-color:var(--shu)}
 .hn-sh-ic{font-size:1.1rem;width:24px;text-align:center;flex:none}
 .hn-sh-note{margin:12px 0 0;color:var(--ai);font-size:.9rem;min-height:1.2em}
+
+/* ===== Nút chia sẻ trên header ===== */
+.hn-share-hdr{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:0 15px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-weight:600;font-size:.92rem;line-height:1;cursor:pointer}
+.hn-share-hdr:hover{border-color:var(--shu);color:var(--shu)}
+.hn-share-hdr .hn-share-hic{font-size:1.05rem;line-height:1}
+@media(max-width:860px){.hn-share-hdr{width:42px;height:42px;min-height:42px;padding:0;justify-content:center;border-radius:50%}.hn-share-hdr .hn-share-tx{display:none}}
+@media(max-width:600px){.hn-share-hdr{grid-row:2;grid-column:2;justify-self:end;z-index:2}}
 @media(max-width:480px){.hn-sh-list{grid-template-columns:1fr}}
