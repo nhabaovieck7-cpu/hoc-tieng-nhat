@@ -511,3 +511,132 @@ body.hide-furigana rt{display:none}
 .ytube h3{margin:20px 0 4px;font-size:16px;color:var(--ai)}
 /* Tin tức: tiêu đề JP giãn dòng kiểu NHK Easy như bản phác */
 .news h3{line-height:1.75}
+
+/* ============================================================
+   CHẾ ĐỘ TỐI (thử nghiệm trên next, 2026-10-28): bật bằng nút
+   ở header (common.js), trạng thái đặt trên <html data-theme>
+   ngay từ <head> để không chớp sáng. Nền tối ấm (không đen
+   tuyền), thẻ tối hơn nền một bậc, chữ sáng ấm; hai màu nhấn
+   chàm/đỏ son được tăng sáng cho nền tối. Nội dung bài học có
+   nền sáng viết cứng theo class (.sec/.ex/.tip...) được ép về
+   nền tối trong phạm vi vùng bài học (#m) và các khối liên quan.
+   ============================================================ */
+.themetgl{flex:none;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--m);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.themetgl:hover{color:var(--t);border-color:var(--shu)}
+.themetgl svg{width:20px;height:20px}
+@media(max-width:600px){.themetgl{grid-row:1;justify-self:end;z-index:2}}
+html[data-theme="dark"]{--c:#e0655a;--c2:#8fb0e3;--bg:#201c17;--card:#171410;--t:#f2ede3;--m:#b7ae9e;--line:#453f34;--soft:#27344e;--ai:#8fb0e3;--ai-soft:#27344e;--shu:#e0655a;--shu-soft:#472c27;--gold:#d9a84e;--shadow:0 1px 2px rgba(0,0,0,.45),0 10px 26px rgba(0,0,0,.35);color-scheme:dark}
+html[data-theme="dark"] rt{color:#93a3b5}
+/* khung trang: header, thanh tab, tìm kiếm, tài khoản */
+html[data-theme="dark"] .topbar{background:rgba(23,20,16,.92)}
+html[data-theme="dark"] .nav a:hover{background:#2b2620}
+html[data-theme="dark"] .tabbar{background:rgba(23,20,16,.95)}
+html[data-theme="dark"] .tabbar a{color:#8d8474}
+html[data-theme="dark"] .gsbar{background:rgba(23,20,16,.97)}
+html[data-theme="dark"] .gs input{background:var(--card);color:var(--t)}
+html[data-theme="dark"] .gsr{background:#221d17}
+html[data-theme="dark"] .gsm{border-bottom-color:var(--line)}
+html[data-theme="dark"] .gsa{border-bottom-color:#2c2721}
+html[data-theme="dark"] .gsa:hover,html[data-theme="dark"] .gsa:focus{background:#2a2318}
+html[data-theme="dark"] .acctout{background:var(--card)}
+html[data-theme="dark"] .acctlink{border-color:#7a4a42}
+html[data-theme="dark"] .acctin{color:#12233f!important}
+html[data-theme="dark"] .lockscr{background:linear-gradient(160deg,#1b1813,#262038)}
+/* bề mặt thẻ viết cứng màu trắng → thẻ tối */
+html[data-theme="dark"] section,html[data-theme="dark"] .toc,html[data-theme="dark"] .mq,html[data-theme="dark"] .fc,html[data-theme="dark"] .exq,html[data-theme="dark"] .result,html[data-theme="dark"] .news,html[data-theme="dark"] .msg.ai,html[data-theme="dark"] .authcard,html[data-theme="dark"] .userrow,html[data-theme="dark"] .lockbox,html[data-theme="dark"] .mbar,html[data-theme="dark"] .ck-m,html[data-theme="dark"] .ytlist li,html[data-theme="dark"] .oauth button{background:var(--card)}
+html[data-theme="dark"] .card:hover{border-color:#5a5344}
+/* ô nhập, nút bấm, trạng thái chọn/đúng/sai */
+html[data-theme="dark"] .filters input,html[data-theme="dark"] .filters select,html[data-theme="dark"] .authcard input,html[data-theme="dark"] .lockbox input,html[data-theme="dark"] .tr textarea,html[data-theme="dark"] .chatin textarea{background:#221d17;color:var(--t);border-color:#3d382d}
+html[data-theme="dark"] .tabs button{background:#2b2620;color:var(--t)}
+html[data-theme="dark"] .tabs button.on{background:var(--ai);color:#12233f}
+html[data-theme="dark"] .btn{color:#12233f}
+html[data-theme="dark"] .btn.g{background:#5a5344;color:#f2ede3}
+html[data-theme="dark"] .btn.l{background:var(--ai-soft);color:var(--ai)}
+html[data-theme="dark"] .qa button{background:var(--card);color:var(--shu);border-color:var(--shu)}
+html[data-theme="dark"] .qa button:hover{background:var(--shu);color:#fff}
+html[data-theme="dark"] .spk{color:#12233f}
+html[data-theme="dark"] .spk.sm{background:var(--ai-soft);color:var(--ai)}
+html[data-theme="dark"] .spk.on{background:var(--shu);color:#fff;box-shadow:0 0 0 4px #5a3531}
+html[data-theme="dark"] .ttsbar button,html[data-theme="dark"] .pill{background:var(--card);color:var(--ai)}
+html[data-theme="dark"] .ttsbar button.on,html[data-theme="dark"] .pill.on{background:var(--ai);color:#12233f}
+html[data-theme="dark"] .mbar button{background:var(--ai);color:#12233f}
+html[data-theme="dark"] .mbar .redo{background:#5a5344;color:#f2ede3}
+html[data-theme="dark"] .askai{color:#12233f}
+html[data-theme="dark"] .msg.me{color:#12233f}
+html[data-theme="dark"] .lockbox button,html[data-theme="dark"] .lockcta{color:#12233f}
+html[data-theme="dark"] .opt{background:#221d17;border-color:#3d382d}
+html[data-theme="dark"] .opt .on{background:#2e3a52;color:#c9d8f2}
+html[data-theme="dark"] .opt.sel{border-color:#5b82c4;background:#25334d}
+html[data-theme="dark"] .opt.sel .on{background:#5b82c4;color:#fff}
+html[data-theme="dark"] .opt.right{border-color:#3f9e63;background:#1d3325}
+html[data-theme="dark"] .opt.right .on{background:#2e8b57;color:#fff}
+html[data-theme="dark"] .opt.wrong{border-color:#d9534a;background:#3d2320}
+html[data-theme="dark"] .opt.wrong .on{background:#c0392b;color:#fff}
+html[data-theme="dark"] .mq.qok{border-color:#3f9e63}
+html[data-theme="dark"] .mq.qbad{border-color:#d9534a}
+html[data-theme="dark"] .ck-opts button{background:var(--card);border-color:#3d382d;color:var(--t)}
+html[data-theme="dark"] .ck-opts button.sel{border-color:#5b82c4;background:#25334d;color:var(--ai)}
+html[data-theme="dark"] .ck-opts button.right{border-color:#3f9e63;background:#1d3325;color:#63c984}
+html[data-theme="dark"] .ck-opts button.wrong{border-color:#d9534a;background:#3d2320;color:#e0655a}
+html[data-theme="dark"] .exgrid button{background:var(--card);border-color:#3d382d;color:var(--t)}
+html[data-theme="dark"] .exgrid .a{background:#25334d;border-color:#5b82c4}
+html[data-theme="dark"] .exgrid .ok{background:#1d3325;border-color:#3f9e63}
+html[data-theme="dark"] .exgrid .bad{background:#3d2320;border-color:#d9534a}
+html[data-theme="dark"] .exgrid .cur{outline-color:var(--ai)}
+/* khối phụ: nhãn, thanh tiến độ, băng từ, phản hồi, tin tức, nghe */
+html[data-theme="dark"] .tag{background:#2b2620;color:#b7ae9e}
+html[data-theme="dark"] .tag.mau{background:#4a3d14;color:#f0c884}
+html[data-theme="dark"] .list li{border-top-color:#2c2721}
+html[data-theme="dark"] .bar,html[data-theme="dark"] .progress{background:#35302a}
+html[data-theme="dark"] .switch{background:#35302a}
+html[data-theme="dark"] .switch .knob{background:#d8d2c2}
+html[data-theme="dark"] .cat-card .list a:before{background:#2b2620;color:var(--m)}
+html[data-theme="dark"] .cat-card .list li.done a:before{background:var(--ai);color:#12233f}
+html[data-theme="dark"] .cat-card .list li.cur a:before{background:var(--shu);color:#fff}
+html[data-theme="dark"] .glyph-kan{background:#3a2f16}
+html[data-theme="dark"] .word-band{background:#27344e;color:#eaf1fb}
+html[data-theme="dark"] .chips span{color:var(--t)}
+html[data-theme="dark"] .fb{background:#262a38}
+html[data-theme="dark"] .fb.model{background:#1d3325}
+html[data-theme="dark"] .script{background:#262019}
+html[data-theme="dark"] .script .v,html[data-theme="dark"] .news .sum,html[data-theme="dark"] .fc .exv{color:#63c984}
+html[data-theme="dark"] .news .vd{background:#4a3418;color:#f0c884}
+html[data-theme="dark"] .ck-note{background:#262019;color:var(--m)}
+html[data-theme="dark"] .ck-ql,html[data-theme="dark"] .ck-ans,html[data-theme="dark"] .ck-src,html[data-theme="dark"] .mqh{color:var(--m)}
+html[data-theme="dark"] .result .sc{color:#63c984}
+html[data-theme="dark"] .result.fail .sc{color:#e0655a}
+html[data-theme="dark"] .timer{color:#e0655a}
+html[data-theme="dark"] .cwarn{background:#3d2320;border-color:#7a3a34}
+html[data-theme="dark"] .msg.err{background:#3d2320}
+html[data-theme="dark"] .lkerr,html[data-theme="dark"] .autherr{color:#e0655a}
+html[data-theme="dark"] .vi{color:#8fce9f}
+/* ===== nội dung bài học: ép nền sáng viết cứng về nền tối ===== */
+html[data-theme="dark"] .ex{background:#262019;border-left-color:#8a4a42}
+html[data-theme="dark"] .sec th{background:#2b2620;color:#ddd5c3}
+html[data-theme="dark"] .sec th,html[data-theme="dark"] .sec td{border-bottom-color:#2c2721}
+html[data-theme="dark"] .sec tbody tr:nth-child(even) td{background:#1d1a14}
+html[data-theme="dark"] .sec tr.right td{background:#1d3325}
+html[data-theme="dark"] .sec .ok{color:#63c984}
+html[data-theme="dark"] .sec .ng{color:#e0655a}
+html[data-theme="dark"] .sec .q{background:#2b2620}
+html[data-theme="dark"] .sec .note{background:#262019;color:var(--m)}
+html[data-theme="dark"] .sec .ix{background:#241c16;border-left-color:#8a4a42}
+html[data-theme="dark"] .sec .hv{color:#7fb3e0}
+html[data-theme="dark"] .sec table.vt td.hv{background:#25334d!important;color:#c9d8f2}
+html[data-theme="dark"] .ans{background:#1d3325;border-color:#2c5238}
+html[data-theme="dark"] .tip{background:#3a2f16;border-left-color:#b07d2b}
+html[data-theme="dark"] .gist{background:#25334d}
+html[data-theme="dark"] .cmp{background:#3d2320;border-left-color:#d9534a}
+html[data-theme="dark"] .rel{background:#262019}
+html[data-theme="dark"] .pat{border-color:#3d382d}
+html[data-theme="dark"] .lb{color:#7fb3e0}
+html[data-theme="dark"] .ssc{background:#211d26;border-color:#3d382d}
+html[data-theme="dark"] .ssm{color:#c39bd8}
+html[data-theme="dark"] .mx{background:#262019}
+html[data-theme="dark"] .kwl.reading{background:#3a2f16}
+html[data-theme="dark"] tr.gshl td,html[data-theme="dark"] .gshl{background:#4a3d14!important}
+/* lưới an toàn: phần tử nào trong vùng bài học còn ghi nền bằng style inline thì ép về nền thẻ tối, giữ nguyên chữ */
+html[data-theme="dark"] #m [style*="background"]{background-color:var(--card)!important}
+/* hàng thẻ của bảng bài học trên mobile (bảng biến thành thẻ ở ≤700px): nền trắng viết cứng trong luật cũ */
+html[data-theme="dark"] .sec table.mc tr{background:var(--card)}
+html[data-theme="dark"] .sec table.mc tr.right{background:#1d3325}

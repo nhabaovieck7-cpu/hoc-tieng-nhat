@@ -33,3 +33,32 @@ function boot(){const tb=document.querySelector('.topbar');if(!tb||document.getE
 }
 addEventListener('unlocked',boot);
 })();
+
+// ===== Chế độ tối / sáng =====
+// Trạng thái do script nhỏ trong <head> đặt lên <html data-theme> trước khi vẽ
+// (theo localStorage 'hn_theme', chưa có thì theo prefers-color-scheme).
+// Module này gắn nút bật/tắt vào header và giữ đồng bộ khi hệ thống đổi.
+(function(){
+var root=document.documentElement,KEY='hn_theme';
+var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+function saved(){try{var v=localStorage.getItem(KEY);return v==='dark'||v==='light'?v:null}catch(e){return null}}
+function sysDark(){try{return !!(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)}catch(e){return false}}
+function cur(){return root.dataset.theme==='dark'?'dark':'light'}
+function paint(){var b=document.getElementById('themetgl');if(!b)return;var d=cur()==='dark';
+ b.innerHTML=d?SUN:MOON;b.setAttribute('aria-label',d?'Chuyển sang chế độ sáng':'Chuyển sang chế độ tối');b.title=d?'Chế độ sáng':'Chế độ tối'}
+function apply(t){root.dataset.theme=t;var mc=document.querySelector('meta[name="theme-color"]');
+ if(mc)mc.setAttribute('content',t==='dark'?'#201c17':'#233d63');paint()}
+if(!root.dataset.theme)apply(saved()||(sysDark()?'dark':'light'));
+function boot(){var w=document.querySelector('.topbar .wrap');if(!w){paint();return}
+ if(!document.getElementById('themetgl')){
+  var b=document.createElement('button');b.type='button';b.id='themetgl';b.className='themetgl';
+  b.addEventListener('click',function(){var t=cur()==='dark'?'light':'dark';
+   try{localStorage.setItem(KEY,t)}catch(e){} apply(t)});
+  w.appendChild(b)}
+ paint()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+try{var mq=matchMedia('(prefers-color-scheme: dark)');
+ var onchg=function(e){if(!saved())apply(e.matches?'dark':'light')};
+ if(mq.addEventListener)mq.addEventListener('change',onchg);else if(mq.addListener)mq.addListener(onchg)}catch(e){}
+})();
