@@ -34,10 +34,22 @@ function spkBtn(getText,sm){const b=document.createElement('button');b.type='but
  b.onclick=e=>{e.preventDefault();e.stopPropagation();$$('.spk.on').forEach(x=>x.classList.remove('on'));b.classList.add('on');tts.speak(typeof getText=='function'?getText():getText).then(()=>b.classList.remove('on'))};return b}
 // gắn nút 🔊 vào các câu tiếng Nhật trong một vùng
 function addSpeakers(root){if(!tts.ok||!root)return;
- $$('.ex .jp, div.jp, td.jp, .kwl, .op.jp, .q.jp',root).forEach(el=>{if(el.querySelector(':scope > .spk')||el.closest('.mq'))return;if(!/[ぁ-んァ-ン一-龯]/.test(el.textContent))return;el.append(' ',spkBtn(()=>tts.text(el),true))});
+ // Khử trùng tổng quát: trong cùng một hàng bảng / một khối mục (.ex, .mq, .qa), hai nút đọc trùng khít
+ // một câu (sau tts.text) thì chỉ giữ nút đầu tiên — nút sau là nút thừa. Phạm vi hẹp theo hàng/khối nên
+ // các mục khác nhau lặp lại cùng một câu vẫn giữ nguyên nút của mình.
+ const seen=new WeakMap();
+ const scopeOf=el=>el.closest('tr')||el.closest('.ex,.mq,.qa')||el;
+ const dup=(el,t)=>{if(!t)return false;const sc=scopeOf(el);let s=seen.get(sc);if(!s){s=new Set();seen.set(sc,s)}if(s.has(t))return true;s.add(t);return false};
+ $$('.ex .jp, div.jp, td.jp, .kwl, .op.jp, .q.jp',root).forEach(el=>{if(el.querySelector(':scope > .spk')||el.closest('.mq'))return;if(!/[ぁ-んァ-ン一-龯]/.test(el.textContent))return;if(dup(el,tts.text(el)))return;el.append(' ',spkBtn(()=>tts.text(el),true))});
  // bảng "Sách giáo khoa / Người Nhật nói thật": đọc từng ô tiếng Nhật
  // bảng từ vựng (vt): bỏ qua ô cột "Cách đọc" – nút ở đó đọc lại đúng từ mà nút cạnh từ (cột "Từ") đã đọc, thừa một nút
- $$('table',root).forEach(t=>{const vt=t.classList.contains('vt');$$('tr',t).forEach(r=>{[...r.children].forEach(c=>{if(c.tagName!='TD'||c.querySelector('.spk')||c.classList.contains('jp'))return;if(vt&&c.getAttribute('data-l')=='Cách đọc')return;const tx=c.cloneNode(true);$$('rt,.ix',tx).forEach(x=>x.remove());const s=tx.textContent.trim();if(s&&/[ぁ-んァ-ン]/.test(s)&&!/[a-zA-Zà-ỹ]{3}/.test(s))c.append(' ',spkBtn(()=>tts.text(c),true))})})})}
+ // (giữ riêng quy tắc cột này: hai nút khác dạng chữ — kanji vs kana — nên khử trùng theo text không bắt được)
+ $$('table',root).forEach(t=>{const vt=t.classList.contains('vt'),kjt=t.classList.contains('kjt');$$('tr',t).forEach(r=>{[...r.children].forEach(c=>{if(c.tagName!='TD'||c.querySelector('.spk')||c.classList.contains('jp'))return;if(vt&&c.getAttribute('data-l')=='Cách đọc')return;const tx=c.cloneNode(true);$$('rt,.ix',tx).forEach(x=>x.remove());const s=tx.textContent.trim();if(!s||!/[ぁ-んァ-ン]/.test(s)||/[a-zA-Zà-ỹ]{3}/.test(s))return;
+  // Âm On / Âm Kun của bảng kanji là hai thông tin riêng: không khử trùng lẫn nhau,
+  // nhưng vẫn đăng ký text vào phạm vi hàng để ô khác trùng với chúng vẫn bị khử
+  const onkun=kjt&&(c.getAttribute('data-l')=='Âm On'||c.getAttribute('data-l')=='Âm Kun');
+  if(onkun)dup(c,tts.text(c));else if(dup(c,tts.text(c)))return;
+  c.append(' ',spkBtn(()=>tts.text(c),true))})})})}
 // đoạn hội thoại "A：…<br>B：…" -> mỗi dòng một nút + nút đọc cả đoạn
 function dialogs(root){if(!root)return;$$('p',root).forEach(p=>{const parts=p.innerHTML.split(/<br\s*\/?>/i);if(parts.length<3||parts.filter(x=>/^[\s\S]{0,40}?[：]/.test(x.replace(/<[^>]+>/g,'').trim())).length<3)return;
  p.innerHTML=parts.map(x=>'<span class="kwl">'+x.trim()+'</span>').join('');p.classList.add('kwp');if(!tts.ok)return;
