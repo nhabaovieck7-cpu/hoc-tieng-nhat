@@ -88,7 +88,7 @@ async function offlineStatus(){if(!('caches' in window))return null;const m=awai
  for(const [f,v] of Object.entries(m.v)){const r=await c.match('enc/'+f+'.bin?v='+v);if(r){n++;bytes+=(await r.clone().arrayBuffer()).byteLength}}return {n,total:Object.keys(m.v).length,mb:bytes/1048576}}
 
 // thêm mục mới vào thanh menu (mọi trang)
-const NAV=[['tin-tuc.html','📰 Tin tức'],['luyen-nghe.html','🎧 Luyện nghe'],['on-tap.html','🃏 Ôn thẻ'],['thi-thu.html','⏱ Thi thử'],['hoi-ai.html','🤖 Hỏi AI'],['ung-dung.html','📲 Ứng dụng']];
+const NAV=[['tin-tuc.html','Tin tức'],['luyen-nghe.html','Luyện nghe'],['on-tap.html','Ôn thẻ'],['thi-thu.html','Thi thử'],['hoi-ai.html','Hỏi AI'],['ung-dung.html','Ứng dụng']];
 function nav(){const n=$('.topbar .nav');if(!n||n.dataset.f)return;n.dataset.f=1;const here=location.pathname.split('/').pop();
  NAV.forEach(([h,t])=>{if(h=='hoi-ai.html'&&!AI.on())return;const a=document.createElement('a');a.href=h;a.textContent=t;if(here==h)a.className='on';const lk=$('.lockbtn',n);lk?n.insertBefore(a,lk):n.append(a)})}
 addEventListener('unlocked',()=>{nav();offlineBar();precache()});
