@@ -77,6 +77,184 @@ function renderEmbed(li, vid, title){
   li.appendChild(wrap);
 }
 
+/* ===== ĐỢT 3: phiếu tự chấm cho đề chưa có key + nhãn đáp án trong video =====
+   FORMATS: mẫu chuẩn hiện hành của từng cấp (số câu suy từ các phiếu đã xác minh
+   trên trang + bảng cấu trúc JLPT công bố; vài kỳ cũ có thể lệch vài câu). */
+const FORMATS={
+ "N1":[{name:"問題1",desc:"課題理解",choices:4,n:6},{name:"問題2",desc:"ポイント理解",choices:4,n:7},{name:"問題3",desc:"概要理解",choices:4,n:6},{name:"問題4",desc:"即時応答",choices:3,n:13},{name:"問題5",desc:"統合理解",choices:4,n:3}],
+ "N2":[{name:"問題1",desc:"課題理解",choices:4,n:5},{name:"問題2",desc:"ポイント理解",choices:4,n:6},{name:"問題3",desc:"概要理解",choices:4,n:5},{name:"問題4",desc:"即時応答",choices:3,n:11},{name:"問題5",desc:"統合理解",choices:4,n:3}],
+ "N3":[{name:"問題1",desc:"課題理解",choices:4,n:6},{name:"問題2",desc:"ポイント理解",choices:4,n:6},{name:"問題3",desc:"概要理解",choices:4,n:3},{name:"問題4",desc:"発話表現",choices:4,n:4},{name:"問題5",desc:"即時応答",choices:3,n:9}],
+ "N4":[{name:"問題1",desc:"課題理解",choices:4,n:8},{name:"問題2",desc:"ポイント理解",choices:4,n:7},{name:"問題3",desc:"発話表現",choices:4,n:5},{name:"問題4",desc:"即時応答",choices:3,n:8}],
+ "N5":[{name:"問題1",desc:"課題理解",choices:4,n:7},{name:"問題2",desc:"ポイント理解",choices:4,n:6},{name:"問題3",desc:"発話表現",choices:4,n:5},{name:"問題4",desc:"即時応答",choices:3,n:6}]
+};
+const VID_LABELS={"00EItcIod-E":"end","0RQYavOdfnk":"unknown","1WDF63H8qZQ":"end","5E-9dcp9iLk":"unknown","5ZrEBc7r0eY":"end","5b995VcJuV4":"unknown","79IGiPodBB0":"unknown","8ToNGO6sI9c":"end","8gvLxL6Wmr8":"unknown","90I32aHrF78":"end","A3HndNqtogU":"unknown","AtY9YSLT3jw":"end","CI13-VkhtAI":"end","E7sa6Wilrfs":"end","F6ELghsFVK8":"unknown","FOGhNmH6cGE":"unknown","F_OENsu4Cv4":"end","GSOBD5vl8jQ":"unknown","GzhDnW9y2Nk":"unknown","Hf0IpRAGUz0":"end","Ici3Q7LKdFw":"end","J--7gfmYCUA":"end","JZJ9-2s2DoE":"end","K3c_dSP_QXY":"end","KeHn78eVD6A":"end","LKLFl7CW4_Q":"end","LeLgK__o-Q4":"end","MkzEjj2H6Ac":"end","MzxZFycbXIs":"per","OHYSAfkHfdc":"unknown","OeTlXJ0W5w4":"unknown","Rl_OLxyVxkE":"end","RnNqPGCzH3U":"unknown","Ttm6ZOrp2zE":"end","U5iKC7UdrS0":"end","UZkwrs32QL4":"end","V-Pwww5q16M":"unknown","WO1Rz7GkboM":"per","XG2wRNaZhA4":"end","YGu2z-5jOGA":"unknown","_qOEdHZdPhU":"end","a_YebRtuWQI":"end","bD3_j2nqCbQ":"end","cpOaSWliLzE":"end","d4c-CL1JwQ0":"end","dAEawhAMufk":"unknown","eEAbXBRthX8":"end","eKV7vbcTKB4":"unknown","ezSd2y6fGj8":"unknown","fDFrZ9giMQA":"end","fWxWy2FFA0Y":"unknown","hQIbKTpbvEo":"unknown","he1U5jkFYHs":"end","jV-wT4rw_XY":"end","kT0oJ7Abqk0":"end","nT3mO9ibJ1Q":"per","ni_PF_GGJeQ":"end","oyewM6GWMM8":"unknown","psQfsg8iJxw":"unknown","qJ-7H1DGYKM":"end","qJNO6iLnGTs":"unknown","qZzKoz7pkfk":"unknown","qg2QSL987oE":"end","s-bmJ4YSjaQ":"unknown","sTGSDkqr58c":"end","t2K5p2nOgRo":"end","x8wf2fvEkkk":"end","xLO9EDHwBE8":"end","xkF5kY9Yf4c":"end","zGVvPLMygwk":"end","zjRLNHdW1Rs":"end"};
+const LABEL_TXT={per:"✅ Đáp án sau mỗi câu",end:"📋 Đáp án cuối bài",unknown:"❔ Chưa rõ có đáp án trong video"};
+
+(function(){
+  if(document.getElementById('ck-self-style')) return;
+  const st=document.createElement('style'); st.id='ck-self-style';
+  st.textContent=
+  '.ck-tag{display:inline-block;margin:6px 0 0;padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:600}'+
+  '.ck-tag.t-per{background:#e2f4e5;color:#20713a}'+
+  '.ck-tag.t-end{background:#fff0d6;color:#a0522d}'+
+  '.ck-tag.t-unk{background:#eeeeee;color:#777777}'+
+  'html[data-theme="dark"] .ck-tag.t-per{background:#1d3320;color:#63c984}'+
+  'html[data-theme="dark"] .ck-tag.t-end{background:#3a2a16;color:#e0a35a}'+
+  'html[data-theme="dark"] .ck-tag.t-unk{background:#2c2620;color:#999999}'+
+  '.ck-mark{display:none;gap:8px;margin:8px 0 2px}'+
+  '.ck-sheet.marking .ck-mark{display:flex}'+
+  '.ck-mark button{flex:1;min-height:40px;border-radius:10px;border:1px solid #bbbbbb;background:transparent;font:inherit;font-weight:600;cursor:pointer;color:inherit}'+
+  '.ck-mark button.mk-ok.sel{background:#2e8b57;color:#ffffff;border-color:#2e8b57}'+
+  '.ck-mark button.mk-ng.sel{background:#c0392b;color:#ffffff;border-color:#c0392b}';
+  (document.head||document.documentElement).appendChild(st);
+})();
+
+function loadMark(vid){try{return JSON.parse(localStorage.getItem('hn_choukai_mark_'+vid)||'{}')}catch(e){return {}}}
+function saveMark(vid,mk){try{localStorage.setItem('hn_choukai_mark_'+vid,JSON.stringify(mk))}catch(e){}}
+
+function renderTag(li,vid){
+  const lab=VID_LABELS[vid]||'unknown';
+  const d=document.createElement('div');
+  d.className='ck-tag t-'+(lab==='per'?'per':lab==='end'?'end':'unk');
+  d.textContent=LABEL_TXT[lab]||LABEL_TXT.unknown;
+  const ch=li.querySelector('.mut');
+  if(ch) ch.after(d); else li.appendChild(d);
+}
+
+function selfQLabel(m,i){
+  if(m.name==='問題5' && m.n===4) return ['1番','2番','3番・質問1','3番・質問2'][i];
+  return (i+1)+'番';
+}
+
+/* Phiếu tự chấm: cùng khung phiếu chuẩn; học viên tự đánh dấu Đúng/Sai theo đáp án
+   nghe/xem được trong video. Trang KHÔNG có key cho các đề này — tuyệt đối không
+   trình bày điểm tự chấm như đáp án chính thức. */
+function renderSelfSheet(li,vid,level,session){
+  const fmt=FORMATS[level]; if(!fmt) return;
+  const wrap=document.createElement('div');
+  wrap.className='ck-sheet ck-self'; wrap.dataset.vid=vid;
+  const total=fmt.reduce((a,m)=>a+m.n,0);
+  const tglS=document.createElement('button'); tglS.type='button'; tglS.className='btn ck-open'; tglS.setAttribute('aria-expanded','false');
+  tglS.textContent='📝 Phiếu trả lời (tự chấm) ▾';
+  const body=document.createElement('div'); body.className='ck-body'; body.hidden=true;
+  tglS.onclick=()=>{ body.hidden=!body.hidden; tglS.setAttribute('aria-expanded',body.hidden?'false':'true'); tglS.textContent=body.hidden?'📝 Phiếu trả lời (tự chấm) ▾':'📝 Phiếu trả lời (tự chấm) ▴'; };
+  wrap.append(tglS,body);
+  body.innerHTML='<h4>📝 Phiếu trả lời (tự chấm) · '+esc(level)+' 聴解'+(session?' '+esc(session):'')+' ('+total+' câu · mẫu chuẩn)</h4>'+
+    '<p class="mut" style="margin:0 0 6px;font-size:.8rem">Đề này <b>chưa có đáp án đã xác minh</b>. Hãy làm như thi thật: chọn đáp án khi nghe, đối chiếu đáp án ngay trong video, rồi bấm <b>Tự chấm</b> và tự đánh dấu từng câu <b>Đúng/Sai</b> — trang tính điểm từ đánh dấu của bạn. Đây là <b>tự chấm theo đáp án trong video</b>, không phải đáp án chính thức. Số câu theo mẫu chuẩn hiện hành của '+esc(level)+'; một số kỳ cũ có thể lệch vài câu.</p>';
+  const stored=load(vid);
+  const marks=loadMark(vid);
+  const tools=document.createElement('div'); tools.className='ck-tools';
+  const tgl=document.createElement('button'); tgl.type='button'; tgl.className='btn g'; tgl.textContent='Mở tất cả';
+  tools.appendChild(tgl); body.appendChild(tools);
+  const setOpen=(row,open)=>{
+    const b=row.querySelector('.ck-qb'); if(b) b.hidden=!open;
+    row.classList.toggle('open',open);
+    const h=row.querySelector('.ck-qh'); if(h) h.setAttribute('aria-expanded',open?'true':'false');
+    const anyClosed=[...wrap.querySelectorAll('.ck-qb')].some(x=>x.hidden);
+    tgl.textContent=anyClosed?'Mở tất cả':'Thu gọn tất cả';
+  };
+  tgl.onclick=()=>{
+    const rows=[...wrap.querySelectorAll('.ck-q')];
+    const anyClosed=rows.some(r=>r.querySelector('.ck-qb').hidden);
+    rows.forEach(r=>setOpen(r,anyClosed));
+  };
+  const bar=document.createElement('div'); bar.className='ck-bar';
+  const grade=document.createElement('button'); grade.type='button'; grade.className='btn'; grade.textContent='Tự chấm theo đáp án trong video';
+  const redo=document.createElement('button'); redo.type='button'; redo.className='btn g'; redo.textContent='Làm lại'; redo.hidden=true;
+  const score=document.createElement('div'); score.className='ck-score';
+  bar.append(grade,redo,score);
+  const updateScore=()=>{
+    let ok=0,ng=0;
+    fmt.forEach((m,mi)=>{ for(let qi=0;qi<m.n;qi++){ const v=(marks[mi]||{})[qi]; if(v===1)ok++; else if(v===0)ng++; } });
+    const marked=ok+ng;
+    if(!wrap.classList.contains('marking')){ score.textContent=''; return; }
+    score.innerHTML= marked
+      ? '<b>Tự chấm: '+ok+' đúng · '+ng+' sai</b> — đã đánh dấu '+marked+'/'+total+' câu · điểm theo phần đã chấm: <b>'+ok+'/'+marked+'</b>'
+      : 'Đang ở chế độ tự chấm: hãy đánh dấu <b>Đúng/Sai</b> cho từng câu theo đáp án trong video.';
+  };
+  fmt.forEach((m,mi)=>{
+    const box=document.createElement('div');
+    box.className='ck-m'; box.dataset.mi=String(mi);
+    box.innerHTML='<h5>'+esc(m.name)+' · '+esc(m.desc)+(m.choices===3?' · 即時応答 (3 lựa chọn)':'')+'</h5>';
+    for(let qi=0;qi<m.n;qi++){
+      const row=document.createElement('div');
+      row.className='ck-q'; row.dataset.qi=String(qi);
+      const head=document.createElement('button'); head.type='button'; head.className='ck-qh'; head.setAttribute('aria-expanded','false');
+      const lab=document.createElement('span'); lab.className='ck-ql'; lab.textContent=selfQLabel(m,qi);
+      const st=document.createElement('span'); st.className='ck-qst';
+      const chev=document.createElement('span'); chev.className='ck-chev'; chev.setAttribute('aria-hidden','true'); chev.textContent='▾';
+      head.append(lab,st,chev);
+      head.onclick=()=>setOpen(row,row.querySelector('.ck-qb').hidden);
+      const qb=document.createElement('div'); qb.className='ck-qb'; qb.hidden=true;
+      const optsWrap=document.createElement('div'); optsWrap.className='ck-opts';
+      const chosen0=+(stored[mi]||{})[qi]||0;
+      if(chosen0){ st.textContent='Đã chọn: '+chosen0; }
+      for(let n=1;n<=m.choices;n++){
+        const b=document.createElement('button'); b.type='button'; b.dataset.n=String(n); b.textContent=String(n);
+        if(chosen0===n) b.classList.add('sel');
+        b.onclick=()=>{
+          optsWrap.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
+          b.classList.add('sel');
+          if(!wrap.classList.contains('marking')) st.textContent='Đã chọn: '+n;
+          const cur=load(vid); if(!cur[mi]) cur[mi]={}; cur[mi][qi]=n; save(vid,cur);
+          const rows=[...wrap.querySelectorAll('.ck-q')]; const ix=rows.indexOf(row);
+          setOpen(row,false);
+          if(ix>=0&&ix<rows.length-1) setOpen(rows[ix+1],true);
+        };
+        optsWrap.appendChild(b);
+      }
+      const mk=document.createElement('div'); mk.className='ck-mark';
+      const bOk=document.createElement('button'); bOk.type='button'; bOk.className='mk-ok'; bOk.textContent='✓ Đúng';
+      const bNg=document.createElement('button'); bNg.type='button'; bNg.className='mk-ng'; bNg.textContent='✗ Sai';
+      const applyMarkUI=()=>{
+        const v=(marks[mi]||{})[qi];
+        bOk.classList.toggle('sel',v===1); bNg.classList.toggle('sel',v===0);
+        if(wrap.classList.contains('marking')){
+          if(v===1){ st.textContent='✅ Đúng (tự chấm)'; st.dataset.res='ok'; }
+          else if(v===0){ st.textContent='❌ Sai (tự chấm)'; st.dataset.res='wrong'; }
+          else { const c=+(load(vid)[mi]||{})[qi]||0; st.textContent=c?('Đã chọn: '+c+' · chưa đánh dấu'):''; st.removeAttribute('data-res'); }
+        }
+      };
+      const setMark=v=>{
+        if(!marks[mi]) marks[mi]={};
+        marks[mi][qi]=v; saveMark(vid,marks);
+        applyMarkUI(); updateScore();
+      };
+      bOk.onclick=()=>setMark(1);
+      bNg.onclick=()=>setMark(0);
+      mk.append(bOk,bNg);
+      qb.append(optsWrap,mk);
+      row.append(head,qb); box.appendChild(row);
+      row._applyMarkUI=applyMarkUI;
+    }
+    body.appendChild(box);
+  });
+  body.appendChild(bar);
+  const src=document.createElement('p'); src.className='ck-src';
+  src.textContent='Phiếu tự chấm theo mẫu chuẩn '+level+' — trang không lưu đáp án của đề này vì chưa đối chiếu được từ 2 nguồn độc lập.';
+  body.appendChild(src);
+
+  const enterMarking=(expand)=>{
+    wrap.classList.add('marking'); grade.hidden=true; redo.hidden=false;
+    wrap.querySelectorAll('.ck-q').forEach(r=>{ if(r._applyMarkUI) r._applyMarkUI(); if(expand) setOpen(r,true); });
+    updateScore();
+  };
+  grade.onclick=()=>enterMarking(true);
+  redo.onclick=()=>{
+    wrap.classList.remove('marking');
+    wrap.querySelectorAll('.ck-opts button').forEach(b=>b.classList.remove('sel'));
+    wrap.querySelectorAll('.ck-mark button').forEach(b=>b.classList.remove('sel'));
+    wrap.querySelectorAll('.ck-qst').forEach(x=>{x.textContent='';x.removeAttribute('data-res')});
+    wrap.querySelectorAll('.ck-q').forEach(r=>setOpen(r,false));
+    Object.keys(marks).forEach(k=>delete marks[k]);
+    save(vid,{}); saveMark(vid,{});
+    score.textContent=''; grade.hidden=false; redo.hidden=true;
+  };
+  const hasMark=fmt.some((m,mi)=>{ const mm=marks[mi]||{}; return Object.keys(mm).length>0; });
+  if(hasMark) enterMarking(false);
+  li.appendChild(wrap);
+}
+
 function renderSheet(li,vid,key){
   const wrap=document.createElement('div');
   wrap.className='ck-sheet'; wrap.dataset.vid=vid;
@@ -197,26 +375,29 @@ function renderSheet(li,vid,key){
   li.appendChild(wrap);
 }
 
-function renderNoKey(li){
-  const n=document.createElement('p'); n.className='ck-note';
-  n.textContent='Chưa có đáp án đã xác minh cho đề này — phiếu trả lời sẽ hiện khi đối chiếu được đủ đáp án từ video (mô tả/phụ đề) hoặc bảng đáp án công bố của kỳ thi.';
-  li.appendChild(n);
-}
 
 function demoShot(){
   const mode=new URLSearchParams(location.search).get('ckshot');
   if(!mode) return;
   const root=document.getElementById('choukai-yt'); if(!root) return;
-  if(mode==='nokey'){
-    const note=root.querySelector('.ck-note'); if(!note) return;
-    const li=note.closest('li');
-    root.querySelectorAll('.ytlist li').forEach(x=>{if(x!==li) x.remove()});
+  const keepOnly=li=>{ root.querySelectorAll('.ytlist li').forEach(x=>{if(x!==li) x.remove()}); };
+  if(mode==='nokey'||mode==='self'||mode==='selfmark'){
+    const sheet=root.querySelector('.ck-sheet.ck-self'); if(!sheet) return;
+    const li=sheet.closest('li'); keepOnly(li);
+    if(mode==='nokey') return;
+    const tgl=sheet.querySelector('.ck-open'); if(tgl) tgl.click();
+    const rows=sheet.querySelectorAll('.ck-q');
+    rows.forEach((row,ix)=>{ if(ix<6){ const b=row.querySelector('.ck-opts button[data-n="'+((ix%4)+1)+'"]'); if(b) b.click(); } });
+    if(mode==='selfmark'){
+      const g=[...sheet.querySelectorAll('.ck-bar .btn')].find(b=>b.textContent.indexOf('Tự chấm')===0); if(g) g.click();
+      rows.forEach((row,ix)=>{ const b=row.querySelector(ix<3?'.mk-ok':(ix===3?'.mk-ng':'.mk-ok')); if(b&&(ix<5)) b.click(); });
+    }
     return;
   }
-  const sheet=root.querySelector('.ck-sheet[data-vid="F6ELghsFVK8"]')||root.querySelector('.ck-sheet');
+  const sheet=root.querySelector('.ck-sheet[data-vid="F6ELghsFVK8"]')||root.querySelector('.ck-sheet:not(.ck-self)');
   if(!sheet) return;
   const li=sheet.closest('li');
-  root.querySelectorAll('.ytlist li').forEach(x=>{if(x!==li) x.remove()});
+  keepOnly(li);
   if(mode==='empty'||mode==='embed') return;
   if(mode==='playing'){
     const fac=li.querySelector('.yt-facade');
@@ -243,8 +424,16 @@ function init(){
     const a=li.querySelector('a[href*="youtube.com"],a[href*="youtu.be"]'); if(!a) return;
     const vid=vidOf(a); if(!vid) return;
     const title=(a.querySelector('b')||a).textContent.trim();
+    renderTag(li,vid);
     renderEmbed(li, vid, title);
-    if(KEYS[vid]) renderSheet(li,vid,KEYS[vid]); else renderNoKey(li);
+    if(KEYS[vid]) renderSheet(li,vid,KEYS[vid]);
+    else{
+      let h=li.parentElement.previousElementSibling; while(h&&h.tagName!=='H3') h=h.previousElementSibling;
+      const lv=h?('N'+(h.id||'').replace('lv-n','')):'';
+      let sess=''; const tm=title.match(/(\d{4})年(\d{1,2})月/)||title.match(/(\d{1,2})\s*\/\s*(\d{4})/)||title.match(/(\d{4})\s*\/\s*(\d{1,2})/);
+      if(tm){ if(tm[1].length===4) sess=tm[2].padStart(2,'0')+'/'+tm[1]; else sess=tm[1].padStart(2,'0')+'/'+tm[2]; }
+      renderSelfSheet(li,vid,lv,sess);
+    }
   });
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{init();demoShot()});
