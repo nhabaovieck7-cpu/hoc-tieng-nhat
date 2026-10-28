@@ -50,29 +50,100 @@ function GQ_VOCAB(l,R){
   }
   return GQ_PICK(R,[g1,g3,g2,g4,g5],26);
 }
-function GQ_KANJI(l,R){
-  const T=GQ_TABLES(l).find(t=>t.th.some(h=>h==='Âm On'));if(!T)return[];
-  const K=[],CP=[];
-  for(const c of T.rows){if(c.length<6)continue;const kj=GQ_TX(c[0]);if(!kj)continue;
-    const cps=[];const ccell=c[5].split(/<div class="ix">/)[0];
-    for(const part of ccell.split(/<br\s*\/?>/)){const mm=GQ_TX(part).match(/^(.*?)[（(](.*?)[）)]\s*[:：]\s*(.*)$/);if(mm&&mm[1].trim())cps.push({w:mm[1].trim(),r:mm[2].trim(),m:mm[3].trim()})}
-    K.push({kj,on:GQ_TX(c[1]),kun:GQ_TX(c[2]),hv:GQ_TX(c[3]),mean:GQ_TX(c[4]),cps});cps.forEach(x=>CP.push(x))}
-  if(K.length<4)return[];
-  const ons=K.map(y=>y.on).filter(v=>v&&v!=='—'),kuns=K.map(y=>y.kun).filter(v=>v&&v!=='—'),hvs=K.map(y=>y.hv).filter(v=>v&&v!=='—');
-  const dupMean=new Set(K.filter((x,i)=>K.some((y,j)=>j!==i&&y.mean===x.mean)).map(x=>x.kj));
-  const g1=[],g2=[],g3=[],g4=[],g5=[],g6=[],g7=[];
+// ==== GQK: câu hỏi kanji sát đề thi JLPT (文字・語彙) — sinh từ dữ liệu bài ====
+// Dạng đề thật: đọc từ gạch chân trong câu (T1), chọn chữ Hán cho từ kana trong câu (T2),
+// điền từ vào chỗ trống theo ngữ cảnh (T3), nghĩa của từ trong câu (T4), chọn câu dùng từ đúng (T5).
+// Bài không có câu ví dụ: dùng dạng gần đề nhất từ từ ghép (F1 đọc từ, F2 chọn chữ viết, F3 nghĩa từ, F4 chọn từ theo nghĩa).
+// KHÔNG còn câu hỏi âm Hán Việt / âm On / âm Kun / nghĩa từng chữ rời.
+function GQK_TARGET(x){
+  if(!x.ej)return null;
+  const bm=x.ej.match(/<b>(.*?)<\/b>/s);if(!bm)return null;
+  const tm=bm[1].match(/\{([^|}]+)\|([^}]+)\}/);
+  let base,read;
+  if(tm){base=tm[1];read=tm[2]}else{base=GQ_PL(bm[1]);read=''}
+  if(!base)return null;
+  let cp=null;for(const c of x.cps){if(c.w===base||c.w.indexOf(base)===0||base.indexOf(c.w)===0){cp=c;break}}
+  if(cp&&cp.r)read=cp.r;
+  const marked=x.ej.replace(bm[0],'\u0001'+bm[1]+'\u0002');
+  const plain=GQ_PL(marked),si=plain.indexOf('\u0001'),ei=plain.indexOf('\u0002');
+  if(si<0||ei<0)return null;
+  const before=plain.slice(0,si),span=plain.slice(si+1,ei),after=plain.slice(ei+1);
+  if(span!==base)return null;
+  // bề mặt đầy đủ của từ trong câu: nếu từ ghép dài hơn phần in đậm (okurigana nằm ngoài token)
+  let surf=base,okuri='';
+  if(cp&&cp.w.indexOf(base)===0&&cp.w.length>base.length){const tail=cp.w.slice(base.length);if(after.indexOf(tail)===0){surf=cp.w;okuri=tail}}
+  else if(!cp){const m=after.match(/^[ぁ-ん]+/);if(m){let ok='';for(const ch of m[0]){if('を,は,が,に,へ,と,も,の,で,や,か,だ'.indexOf(ch)>=0)break;ok+=ch;if(ok.length>=3)break}if(ok&&ok===m[0]&&!/^[ぁ-ん]/.test(after.slice(ok.length))){okuri=ok;surf=base+ok;if(read)read=read+ok}}}
+  return{base,read,cp,surf,okuri,before,after,plain:before+base+after};
+}
+function GQK_VARIANTS(base,K,realSet){
+  // biến thể sai kiểu đề thi: thay 1 chữ trong từ bằng chữ khác của cùng bài (ưu tiên chữ đồng âm)
+  const chars=[...base],out=[],seen=new Set([base]);
+  const byChar={};for(const e of K){const rs=new Set();String(e.on||'').split(/[、,]/).forEach(v=>{v=v.trim();if(v&&v!=='—')rs.add(v)});String(e.kun||'').split(/[・、,]/).forEach(v=>{v=v.trim();if(v&&v!=='—')rs.add(v)});byChar[e.kj]=rs}
+  const pool=K.map(e=>e.kj).filter(c=>c&&c!==base);
+  for(let i=0;i<chars.length;i++){
+    const orig=chars[i];if(!/[一-龯々]/.test(orig))continue;
+    const same=[],rest=[];
+    for(const c of pool){if(c===orig)continue;let sh=false;const a=byChar[orig],b=byChar[c];if(a&&b)for(const v of a)if(b.has(v)){sh=true;break}(sh?same:rest).push(c)}
+    for(const c of same.concat(rest)){
+      const v=chars.slice();v[i]=c;const w=v.join('');
+      if(seen.has(w)||realSet.has(w))continue;seen.add(w);out.push(w);if(out.length>=6)break;
+    }
+    if(out.length>=6)break;
+  }
+  return out;
+}
+function GQK_GROUPS(l,R){
+  const K=(typeof GM_KDATA==='function')?GM_KDATA(l):[];
+  const G={T1:[],T2:[],T3:[],T4:[],T5:[],F1:[],F2:[],F3:[],F4:[]};
+  if(K.length<4)return G;
+  const CP=[];K.forEach(x=>x.cps.forEach(cp=>CP.push(cp)));
+  const realSet=new Set();CP.forEach(c=>realSet.add(c.w));K.forEach(x=>realSet.add(x.kj));
+  const tg={};K.forEach(x=>{const t=GQK_TARGET(x);if(t){tg[x.kj]=t;realSet.add(t.base);realSet.add(t.surf)}});
+  // khung câu trùng nhau (chỉ khác từ đích) -> điền trống sẽ có 2 đáp án đúng, phải loại
+  const frameN={};Object.keys(tg).forEach(kj=>{const t=tg[kj];const fk=t.before+' '+t.after;frameN[fk]=(frameN[fk]||0)+1});
+  const allReads=CP.map(c=>c.r),allMeans=CP.map(c=>c.m),allWords=CP.map(c=>c.w);
+  // bản đồ mơ hồ: từ có nhiều cách đọc/nghĩa khác nhau trong cùng bài -> không ra câu hỏi rời cho từ đó
+  const wR={},wM={},mW={},rmW={};
+  CP.forEach(c=>{(wR[c.w]=wR[c.w]||new Set()).add(c.r);(wM[c.w]=wM[c.w]||new Set()).add(c.m);(mW[c.m]=mW[c.m]||new Set()).add(c.w);(rmW[c.r+'|'+c.m]=rmW[c.r+'|'+c.m]||new Set()).add(c.w)});
+  Object.keys(tg).forEach(kj=>{const t=tg[kj];allReads.push(t.read);if(t.cp)allMeans.push(t.cp.m);allWords.push(t.surf)});
+  const meanOf=t=>t.cp?t.cp.m:'';
   for(const x of K){
-    g1.push(GQ_MK(R,'Chữ 「'+x.kj+'」 có nghĩa là gì?',x.mean,K.map(y=>y.mean),'「'+x.kj+'」 — '+x.mean+' · Hán Việt: '+x.hv));
-    if(x.on&&x.on!=='—')g2.push(GQ_MK(R,'Âm On (音読み) của chữ 「'+x.kj+'」 là gì?',x.on,ons,'On: '+x.on+' · Kun: '+x.kun));
-    if(x.kun&&x.kun!=='—')g3.push(GQ_MK(R,'Âm Kun (訓読み) của chữ 「'+x.kj+'」 là gì?',x.kun,kuns,'Kun: '+x.kun+' · On: '+x.on));
-    if(x.hv&&x.hv!=='—')g4.push(GQ_MK(R,'Âm Hán Việt của chữ 「'+x.kj+'」 là gì?',x.hv,hvs,x.kj+' = '+x.hv));
-    if(!dupMean.has(x.kj))g7.push(GQ_MK(R,'Chữ kanji nào có nghĩa “'+x.mean+'”?',x.kj,K.map(y=>y.kj),x.kj+' — '+x.mean));
+    const t=tg[x.kj];
+    if(t){
+      const exA=(t.cp?(t.surf+'（'+t.read+'）— '+t.cp.m):(t.surf+' đọc là '+t.read))+(x.ev?' · Dịch câu: '+x.ev:'');
+      const sentU=t.before+'<u>'+t.base+'</u>'+t.after;
+      G.T1.push(GQ_MK(R,sentU+' — Từ được gạch chân trong câu đọc là gì?',t.read,allReads,exA));
+      const vars=GQK_VARIANTS(t.base,K,realSet);
+      if(vars.length>=3)G.T2.push(GQ_MK(R,t.before+'<b>'+t.read+'</b>'+t.after.slice(t.okuri.length)+' — Từ in đậm trong câu viết bằng chữ Hán là gì?',t.base,vars,exA));
+      if(frameN[t.before+' '+t.after]<=1)G.T3.push(GQ_MK(R,'Điền từ thích hợp vào chỗ trống: '+t.before+'＿＿＿'+t.after,t.surf,allWords,x.ev||exA));
+      if(t.cp)G.T4.push(GQ_MK(R,sentU+' — Từ được gạch chân trong câu có nghĩa là gì?',t.cp.m,allMeans,exA));
+      if(t.cp){
+        const myTok=new Set(String(t.cp.m).toLowerCase().split(/[\s,;、]+/).filter(v=>v.length>=2));
+        const dis=[];
+        for(const y of K){if(y===x)continue;const ty=tg[y.kj];if(!ty||!ty.cp)continue;
+          const oTok=String(ty.cp.m).toLowerCase().split(/[\s,;、]+/).filter(v=>v.length>=2);
+          if(oTok.some(v=>myTok.has(v)))continue;
+          if(ty.plain.indexOf(t.surf)>=0)continue;
+          dis.push(ty.before+t.surf+ty.after);if(dis.length>=3)break}
+        if(dis.length>=3)G.T5.push(GQ_MK(R,'Câu nào dùng từ 「'+t.surf+'」 đúng?',t.plain,dis,exA));
+      }
+    }
+    // dạng dự phòng từ từ ghép (bài không có ví dụ, hoặc bổ sung cho đủ bộ)
     for(const cp of x.cps){
-      g5.push(GQ_MK(R,'Từ 「'+cp.w+'」 đọc là gì?',cp.r,CP.map(y=>y.r),cp.w+'（'+cp.r+'）— '+cp.m));
-      g6.push(GQ_MK(R,'Từ 「'+cp.w+'」 có nghĩa là gì?',cp.m,CP.map(y=>y.m),cp.w+'（'+cp.r+'）— '+cp.m));
+      if(wR[cp.w].size<=1)G.F1.push(GQ_MK(R,'Từ 「'+cp.w+'」 đọc là gì?',cp.r,allReads,cp.w+'（'+cp.r+'）— '+cp.m));
+      if(/[一-龯々]/.test(cp.w)&&rmW[cp.r+'|'+cp.m].size<=1){const vars=GQK_VARIANTS(cp.w,K,realSet);if(vars.length>=3)G.F2.push(GQ_MK(R,'Từ đọc là 「'+cp.r+'」, có nghĩa “'+cp.m+'”, viết bằng chữ Hán là gì?',cp.w,vars,cp.w+'（'+cp.r+'）— '+cp.m))}
+      if(wM[cp.w].size<=1)G.F3.push(GQ_MK(R,'Từ 「'+cp.w+'」 có nghĩa là gì?',cp.m,allMeans,cp.w+'（'+cp.r+'）— '+cp.m));
+      if(mW[cp.m].size<=1)G.F4.push(GQ_MK(R,'Từ nào có nghĩa “'+cp.m+'”?',cp.w,allWords,cp.w+'（'+cp.r+'）— '+cp.m));
     }
   }
-  return GQ_PICK(R,[g5,g1,g2,g3,g6,g4,g7],26);
+  return G;
+}
+function GQ_KANJI(l,R){
+  const G=GQK_GROUPS(l,R);
+  const hasCtx=G.T1.length||G.T2.length||G.T3.length||G.T4.length||G.T5.length;
+  // bài có câu ví dụ: ưu tiên dạng trong câu, dạng từ ghép chỉ bổ sung; bài không có ví dụ: chỉ dùng dạng từ ghép
+  const order=hasCtx?[G.T1,G.T2,G.T3,G.T4,G.T5,G.F1,G.F2,G.F4,G.F3]:[G.F1,G.F2,G.F4,G.F3];
+  return GQ_PICK(R,order,26);
 }
 function GQ_GRAM(l,R){
   const P=[];
@@ -157,15 +228,16 @@ function GM_POOLS(l,R){
   }else if(l.type==='Kanji'){
     const K=GM_KDATA(l);if(K.length<4)return null;
     const CP=[];K.forEach(x=>x.cps.forEach(cp=>CP.push(cp)));
-    const ons=K.map(y=>y.on).filter(v=>v&&v!=='—'),kuns=K.map(y=>y.kun).filter(v=>v&&v!=='—'),evs=K.map(y=>y.ev).filter(Boolean);
-    const cpm=CP.map(y=>y.m),cpr=CP.map(y=>y.r);
+    const evs=K.map(y=>y.ev).filter(Boolean);
+    const cpm=CP.map(y=>y.m);
+    const wM={};CP.forEach(c=>{(wM[c.w]=wM[c.w]||new Set()).add(c.m)});
+    const G=GQK_GROUPS(l,R);
+    const put=(pool,arr,tag)=>{for(const q of arr)if(q)add(pool,q,tag+GQ_PL(q.q))};
+    put(A,G.T1,'n1');put(A,G.T2,'n2');put(A,G.T4,'n4');put(A,G.F2,'nf2');
+    put(D,G.T3,'n3');put(D,G.T5,'n5');put(D,G.F1,'k5');put(D,G.F4,'k4');put(D,G.F3,'k6');
     for(const x of K){
-      add(A,GQ_MK(R,'Chữ 「'+x.kj+'」 có nghĩa là gì?',x.mean,K.map(y=>y.mean),'「'+x.kj+'」 — '+x.mean+' · Hán Việt: '+x.hv),'k1'+x.kj);
-      if(x.on&&x.on!=='—')add(A,GQ_MK(R,'Âm On (音読み) của chữ 「'+x.kj+'」 là gì?',x.on,ons,'On: '+x.on+' · Kun: '+x.kun),'k2'+x.kj);
-      if(x.kun&&x.kun!=='—')add(A,GQ_MK(R,'Âm Kun (訓読み) của chữ 「'+x.kj+'」 là gì?',x.kun,kuns,'Kun: '+x.kun+' · On: '+x.on),'k3'+x.kj);
       for(const cp of x.cps){
-        add(D,GQ_MK(R,'Từ 「'+cp.w+'」 đọc là gì?',cp.r,cpr,cp.w+'（'+cp.r+'）— '+cp.m),'k5'+cp.w);
-        add(D,GQ_MK(R,'Từ 「'+cp.w+'」 có nghĩa là gì?',cp.m,cpm,cp.w+'（'+cp.r+'）— '+cp.m),'k6'+cp.w);
+        if(wM[cp.w].size>1)continue;
         const ql=GQ_MK(R,'🎧 Nghe và chọn nghĩa đúng của từ vừa nghe',cp.m,cpm,cp.w+'（'+cp.r+'）— '+cp.m);if(ql){ql.speak=cp.w;add(C,ql,'l3'+cp.w)}
       }
       if(x.ej){
