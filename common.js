@@ -111,4 +111,12 @@ function copyLink(u){function ok(){var old=copyBtn.innerHTML;copyBtn.innerHTML='
 document.addEventListener('click',function(e){var b=e.target&&e.target.closest?e.target.closest('[data-share]'):null;if(!b)return;var u=urlFor(b);
  if(navigator.share){navigator.share({title:TITLE,text:TEXT,url:u}).catch(function(err){if(err&&err.name!=='AbortError')openPanel(b)})}
  else openPanel(b)});
+// Nút chia sẻ trên header: gắn vào .topbar .wrap, ngay trước nút chế độ tối —
+// dùng chung handler [data-share] ở trên nên chia sẻ đúng URL trang đang xem.
+function hdrBoot(){var w=document.querySelector('.topbar .wrap');if(!w||document.getElementById('hdrshare'))return;
+ var b=document.createElement('button');b.type='button';b.id='hdrshare';b.className='hn-share-hdr';b.setAttribute('data-share','');b.setAttribute('aria-label','Chia sẻ trang web');b.title='Chia sẻ trang web';
+ b.innerHTML='<span class="hn-share-hic" aria-hidden="true">📤</span><span class="hn-share-tx">Chia sẻ</span>';
+ var t=document.getElementById('themetgl');
+ if(t&&t.parentNode===w)w.insertBefore(b,t);else w.appendChild(b)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',hdrBoot);else hdrBoot();
 })();
