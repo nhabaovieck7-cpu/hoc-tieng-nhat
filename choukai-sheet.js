@@ -17,6 +17,32 @@ function load(vid){try{return JSON.parse(localStorage.getItem(LS_PREFIX+vid)||'{
 function save(vid,ans){try{localStorage.setItem(LS_PREFIX+vid,JSON.stringify(ans))}catch(e){}}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 
+/* Phiếu trả lời thu gọn: mỗi 番 là một khối thu/mở, mặc định thu gọn. */
+(function(){
+  if(document.getElementById('ck-acc-style')) return;
+  const st=document.createElement('style'); st.id='ck-acc-style';
+  st.textContent=
+  '.ck-sheet .ck-q{display:block;padding:2px 0}'+
+  '.ck-qh{display:flex;align-items:center;gap:8px;width:100%;min-height:44px;padding:6px 8px;margin:0;font:inherit;text-align:left;background:transparent;border:0;border-radius:10px;cursor:pointer}'+
+  '.ck-qh:hover{background:#eef3f8}'+
+  '.ck-qh .ck-ql{flex:none;min-width:4.5rem;font-size:.85rem;font-weight:700;color:#555}'+
+  '.ck-qst{flex:1;font-size:.8rem;font-weight:600;color:#2f6fb2}'+
+  '.ck-qst[data-res="ok"]{color:#2e8b57}'+
+  '.ck-qst[data-res="wrong"]{color:#c0392b}'+
+  '.ck-qst[data-res="none"]{color:#999}'+
+  '.ck-chev{flex:none;font-size:.78rem;color:var(--accent,#c8374f);transition:transform .18s ease}'+
+  '.ck-q.open .ck-chev{transform:rotate(180deg)}'+
+  '.ck-qb{padding:2px 8px 6px}'+
+  '.ck-tools{margin:0 0 2px}'+
+  '.ck-tools .btn{font-size:.8rem;padding:7px 12px;min-height:36px}'+
+  'html[data-theme="dark"] .ck-qh{color:var(--m)}'+
+  'html[data-theme="dark"] .ck-qh:hover{background:#262019}'+
+  'html[data-theme="dark"] .ck-qst{color:#5b82c4}'+
+  'html[data-theme="dark"] .ck-qst[data-res="ok"]{color:#63c984}'+
+  'html[data-theme="dark"] .ck-qst[data-res="wrong"]{color:#e0655a}';
+  (document.head||document.documentElement).appendChild(st);
+})();
+
 function renderEmbed(li, vid, title){
   const wrap=document.createElement('div');
   wrap.className='yt-embed';
@@ -57,6 +83,24 @@ function renderSheet(li,vid,key){
   wrap.innerHTML='<h4>📝 Phiếu trả lời · '+esc(key.level)+' 聴解 '+esc(key.session)+' ('+total+' câu)</h4>'+
     '<p class="mut" style="margin:0 0 6px;font-size:.8rem">Chọn đáp án khi nghe (giống phiếu thi). Bấm <b>Chấm điểm</b> để xem đúng/sai theo đáp án đã xác minh.</p>';
   const stored=load(vid);
+  const tools=document.createElement('div'); tools.className='ck-tools';
+  const tgl=document.createElement('button'); tgl.type='button'; tgl.className='btn g'; tgl.textContent='Mở tất cả';
+  tools.appendChild(tgl); wrap.appendChild(tools);
+  const syncTools=()=>{
+    const anyClosed=[...wrap.querySelectorAll('.ck-qb')].some(b=>b.hidden);
+    tgl.textContent=anyClosed?'Mở tất cả':'Thu gọn tất cả';
+  };
+  const setOpen=(row,open)=>{
+    const b=row.querySelector('.ck-qb'); if(b) b.hidden=!open;
+    row.classList.toggle('open',open);
+    const h=row.querySelector('.ck-qh'); if(h) h.setAttribute('aria-expanded',open?'true':'false');
+    syncTools();
+  };
+  tgl.onclick=()=>{
+    const rows=[...wrap.querySelectorAll('.ck-q')];
+    const anyClosed=rows.some(r=>r.querySelector('.ck-qb').hidden);
+    rows.forEach(r=>setOpen(r,anyClosed));
+  };
   key.mondai.forEach((m,mi)=>{
     const box=document.createElement('div');
     box.className='ck-m'; box.dataset.mi=String(mi);
@@ -64,7 +108,13 @@ function renderSheet(li,vid,key){
     m.c.forEach((correct,qi)=>{
       const row=document.createElement('div');
       row.className='ck-q'; row.dataset.qi=String(qi);
-      const lab=document.createElement('div'); lab.className='ck-ql'; lab.textContent=qLabel(m,qi);
+      const head=document.createElement('button'); head.type='button'; head.className='ck-qh'; head.setAttribute('aria-expanded','false');
+      const lab=document.createElement('span'); lab.className='ck-ql'; lab.textContent=qLabel(m,qi);
+      const st=document.createElement('span'); st.className='ck-qst';
+      const chev=document.createElement('span'); chev.className='ck-chev'; chev.setAttribute('aria-hidden','true'); chev.textContent='▾';
+      head.append(lab,st,chev);
+      head.onclick=()=>setOpen(row,row.querySelector('.ck-qb').hidden);
+      const body=document.createElement('div'); body.className='ck-qb'; body.hidden=true;
       const optsWrap=document.createElement('div');
       const texts=m.o && m.o[qi];
       const hasText=Array.isArray(texts) && texts.length===m.choices && texts.every(Boolean);
@@ -73,17 +123,22 @@ function renderSheet(li,vid,key){
         const b=document.createElement('button'); b.type='button'; b.dataset.n=String(n);
         if(hasText) b.innerHTML='<span class="ck-num">'+n+'</span><span class="ck-tx">'+esc(texts[n-1])+'</span>';
         else b.textContent=String(n);
-        if(+(stored[mi]||{})[qi]===n) b.classList.add('sel');
+        if(+(stored[mi]||{})[qi]===n){ b.classList.add('sel'); st.textContent='Đã chọn: '+n; }
         b.onclick=()=>{
           if(wrap.classList.contains('done')) return;
           optsWrap.querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
           b.classList.add('sel');
+          st.textContent='Đã chọn: '+n; st.removeAttribute('data-res');
           const cur=load(vid); if(!cur[mi]) cur[mi]={}; cur[mi][qi]=n; save(vid,cur);
+          const rows=[...wrap.querySelectorAll('.ck-q')]; const ix=rows.indexOf(row);
+          setOpen(row,false);
+          if(ix>=0&&ix<rows.length-1) setOpen(rows[ix+1],true);
         };
         optsWrap.appendChild(b);
       }
       const ans=document.createElement('div'); ans.className='ck-ans'; ans.hidden=true;
-      row.append(lab,optsWrap,ans); box.appendChild(row);
+      body.append(optsWrap,ans);
+      row.append(head,body); box.appendChild(row);
     });
     wrap.appendChild(box);
   });
@@ -116,9 +171,12 @@ function renderSheet(li,vid,key){
         const ttxt=(Array.isArray(texts)&&texts[correct-1])?(' — '+texts[correct-1]):'';
         ans.hidden=false;
         ans.innerHTML=(chosen===correct?'✅ Đúng':(chosen?'❌ Sai':'⚪ Chưa chọn'))+' · đáp án: <b>'+correct+'</b>'+esc(ttxt);
+        const st=row.querySelector('.ck-qst');
+        if(st){ st.textContent=(chosen===correct?'✅ Đúng':(chosen?'❌ Sai':'⚪ Chưa chọn'))+' · đáp án '+correct; st.dataset.res=(chosen===correct?'ok':(chosen?'wrong':'none')); }
       });
       per.push(m.name+': '+ok+'/'+m.c.length);
     });
+    wrap.querySelectorAll('.ck-q').forEach(r=>setOpen(r,true));
     wrap.classList.add('done'); grade.hidden=true; redo.hidden=false;
     score.innerHTML='<b>Tổng: '+okAll+'/'+totAll+'</b><br>'+per.join(' · ');
   };
@@ -126,6 +184,8 @@ function renderSheet(li,vid,key){
     wrap.classList.remove('done');
     wrap.querySelectorAll('.ck-opts button').forEach(b=>b.classList.remove('sel','right','wrong'));
     wrap.querySelectorAll('.ck-ans').forEach(a=>{a.hidden=true;a.textContent=''});
+    wrap.querySelectorAll('.ck-qst').forEach(x=>{x.textContent='';x.removeAttribute('data-res')});
+    wrap.querySelectorAll('.ck-q').forEach(r=>setOpen(r,false));
     save(vid,{}); score.textContent=''; grade.hidden=false; redo.hidden=true;
   };
   li.appendChild(wrap);
