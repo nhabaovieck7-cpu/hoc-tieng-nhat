@@ -7,13 +7,27 @@ const R=s=>typeof ruby=='function'?ruby(String(s||'')):String(s||'');
 const ls={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 
-// ===== 1. Đọc to bằng giọng máy tiếng Nhật =====
+// ===== 1. Đọc to: ưu tiên giọng thu sẵn VOICEVOX, không có thì giọng máy tiếng Nhật =====
+// Cơ chế: tts.speak(text) -> chuẩn hoá -> tra audio-index.json -> trúng id thì
+// phát audio/<id>.mp3; không trúng / lỗi phát / index tải hỏng -> giọng máy như cũ.
+// Cờ tắt khẩn cấp: AUDIO_ON=false -> toàn bộ về giọng máy ngay.
+const AUDIO_ON=true;
+const AUDIO_BASE='audio/';
+const AUDIO_INDEX_URL='audio-index.json';
+// Chuẩn hoá khoá tra: PHẢI giống hệt norm() trong gen-audio-index.py
+function aNorm(s){return String(s==null?'':s).normalize('NFKC').replace(/[（(][^）)]*[ぁ-んァ-ン][^）)]*[）)]/g,'').replace(/\s+/g,'')}
+let _aidx=null,_aidxP=null;
+function loadAudioIndex(){if(_aidx)return Promise.resolve(_aidx);if(_aidxP)return _aidxP;_aidxP=fetch(AUDIO_INDEX_URL,{cache:'force-cache'}).then(r=>r.ok?r.json():{}).catch(()=>({})).then(j=>{_aidx=j||{};return _aidx});return _aidxP}
+const _au=new Audio();_au.preload='auto';let _auRes=null;
+function _auFinish(){if(_auRes){const r=_auRes;_auRes=null;r()}}
+function _auStop(){try{_au.pause()}catch(e){}_auFinish()}
+function _auPlay(id,rate){return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{_auFinish();res('err')};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';const p=_au.play();if(p&&p.catch)p.catch(()=>{_auFinish();res('err')})})}
 const tts={rate:ls.get('hn_tts_rate',0.9),ok:typeof speechSynthesis!='undefined'&&typeof SpeechSynthesisUtterance!='undefined',
  voice(){if(!this.ok)return null;const v=speechSynthesis.getVoices().filter(x=>/^ja/i.test(x.lang));return v.find(x=>/Google|Kyoko|O-ren|Otoya|Nanami/i.test(x.name))||v[0]||null},
  // chữ cần đọc: bỏ furigana (rt), bỏ nút, bỏ tên người nói "Nam："
  text(el){if(typeof el=='string'){const d=document.createElement('div');d.innerHTML=R(el);el=d}const c=el.cloneNode(true);$$('rt,rp,button,.ix,.vi',c).forEach(x=>x.remove());return c.textContent.replace(/^\s*[^：:\s]{1,12}[：:]/,'').replace(/[（(][^）)]*[ぁ-んァ-ン][^）)]*[）)]/g,'').replace(/\s+/g,' ').trim()},
- speak(t,o={}){if(!this.ok)return Promise.resolve();return new Promise(res=>{if(!o.queue)speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';const v=this.voice();if(v)u.voice=v;u.rate=o.rate||this.rate;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)})},
- stop(){if(this.ok)speechSynthesis.cancel()},
+ async speak(t,o={}){if(!o.queue){_auStop();if(this.ok)speechSynthesis.cancel()}if(AUDIO_ON&&t){try{const idx=await loadAudioIndex();const id=idx[aNorm(t)];if(id){const r=await _auPlay(id,o.rate||this.rate);if(r!=='err')return}}catch(e){}}if(!this.ok)return;return new Promise(res=>{const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';const v=this.voice();if(v)u.voice=v;u.rate=o.rate||this.rate;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)})},
+ stop(){_auStop();if(this.ok)speechSynthesis.cancel()},
  setRate(r){this.rate=r;ls.set('hn_tts_rate',r)}};
 if(tts.ok)try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
 function spkBtn(getText,sm){const b=document.createElement('button');b.type='button';b.className='spk'+(sm?' sm':'');b.textContent='🔊';b.title='Nghe (giọng máy)';b.setAttribute('aria-label','Nghe câu tiếng Nhật');
