@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14111f">
+<title>Hành trình đến Edo · Game học tiếng Nhật</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<header id="gtop"></header>
+
+<!-- ===== INTRO CỐT TRUYỆN (bỏ qua được, nhớ đã xem ở hn_game_intro_seen) ===== -->
+<section id="intro" class="scene hid" aria-label="Giới thiệu cốt truyện">
+  <div class="sky"></div><div class="sun"></div><div class="fuji"></div>
+  <div class="gtitle">HÀNH TRÌNH<br>ĐẾN EDO</div>
+  <div class="gsub jp">江戸への旅</div>
+  <div class="dlg" id="introDlg"></div>
+  <div class="row">
+    <button class="btn alt" id="introSkip" type="button">Bỏ qua</button>
+    <button class="btn" id="introNext" type="button">Tiếp ▶</button>
+  </div>
+</section>
+
+<!-- ===== SẢNH GAME (HUB) ===== -->
+<main id="hub" class="wrap hid">
+  <div class="card hub-hero">
+    <div class="hav" id="hubAvatar" aria-hidden="true"></div>
+    <div class="grow">
+      <h1 id="hubGreet">Chào bạn!</h1>
+      <p class="mut" id="hubSub">Shogun Bóng Tối đã đánh cắp mọi chữ kanji. Đi 5 vùng, hạ 5 trùm, lấy lại chữ cho dân làng Edo!</p>
+      <div class="row" style="margin-top:10px;flex-wrap:wrap">
+        <a class="btn" href="chien-dich.html">🗺️ Bắt đầu hành trình</a>
+        <a class="btn alt" href="nhan-vat.html">🎭 Nhân vật</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mascot-row" style="margin-top:14px">
+    <button class="me mascot" id="mascotFace" type="button" aria-label="Nghe linh vật nói" style="background:none;border:0;cursor:pointer;padding:0">🐱</button>
+    <div class="mascot-bubble" id="mascotBubble" role="status">…</div>
+  </div>
+
+  <h2>🗾 Bản đồ Nhật Bản — 5 vùng, 5 trùm</h2>
+  <p class="mut" style="margin-bottom:10px">Mỗi vùng một trùm. Hạ trùm để mở vùng kế tiếp trong Chiến dịch.</p>
+  <div class="map" id="map">
+    <svg class="route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M50 92 C20 80 80 68 40 56 C10 44 80 34 55 22 C40 14 60 8 50 6" stroke="#ffd84e" stroke-width=".8" stroke-dasharray="2 2" fill="none"/>
+    </svg>
+  </div>
+
+  <h2>🎮 Chọn chế độ chơi</h2>
+  <div class="mode-grid" id="modeGrid"></div>
+
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h2 style="margin-top:0">🏆 Bảng xếp hạng</h2>
+      <div class="tabs" role="tablist" aria-label="Kiểu xếp hạng">
+        <button type="button" id="lbTabWeek" class="on">Tuần này</button>
+        <button type="button" id="lbTabTotal">Tổng</button>
+      </div>
+      <div id="lbBox"><p class="lb-empty">Đang tải bảng xếp hạng…</p></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0">🎖️ Thành tích của <span data-call>bạn</span></h2>
+      <div id="statBox"><p class="lb-empty">Đang tải…</p></div>
+      <div class="badges" id="badgeBox" style="margin-top:10px"></div>
+    </div>
+  </div>
+
+  <p class="note">
+    <button type="button" id="replayIntro" style="background:none;border:0;color:var(--m);font:inherit;font-size:11px;cursor:pointer;text-decoration:underline;min-height:44px">Xem lại intro cốt truyện</button>
+    · Câu hỏi trong game lấy trực tiếp từ bài học của trang, không lưu sẵn trong game.
+  </p>
+  <div style="height:70px"></div>
+</main>
+
+<!-- Thứ tự script theo CONTRACT: config → game → fx → trend/sfx/music (Nhánh 4) → game-api (Nhánh 5) → script trang -->
+<script src="../config.js"></script>
+<script src="game.js"></script>
+<script src="fx.js"></script>
+<script src="trend.js"></script>
+<script src="sfx.js"></script>
+<script src="music.js"></script>
+<script src="game-api.js"></script>
+<script>
+GAME_topbar('🗾 Hành trình đến Edo');
+
+/* ---------- Dữ liệu thẻ chế độ ---------- */
+var MODES = [
+  { href: 'chien-dich.html', e: '🗺️', c: '#ff7eb6', t: 'Chiến dịch N5 → N1', d: '10 chặng mỗi trình độ + chủ đề, 3 màn + 1 màn trùm, chấm sao mở khóa dần.' },
+  { href: 'dau-kanji.html', e: '⚔️', c: '#ff7a45', t: 'Đấu trùm', d: 'Đối đầu trùm của từng vùng. Trả lời đúng là tung tuyệt chiêu!' },
+  { href: 'leo-thap.html', e: '🏯', c: '#22d3ee', t: 'Leo tháp', d: 'Leo từng tầng lâu đài mây. Sai là rơi tầng — càng cao càng căng.' },
+  { href: 'chay-vo-tan.html', e: '🏃', c: '#2fbf71', t: 'Chạy vô tận', d: 'Chạy và trả lời thật nhanh, xem được bao xa trước khi hụt hơi.' },
+  { href: 'le-hoi.html', e: '🏮', c: '#ffd84e', t: 'Lễ hội', d: 'Mini-game lễ hội làng Sakura: vui, nhanh, nhiều pháo giấy.' },
+  { href: 'phong-nhom.html', e: '👥', c: '#7c5cff', t: 'Phòng nhóm · Đối kháng', d: 'Tạo phòng rủ bạn bè, đấu 1-1 và Chém gió bằng câu trend có sẵn.' },
+  { href: 'nhan-vat.html', e: '🎭', c: '#ff4fd8', t: 'Tạo nhân vật', d: 'Đổi giới tính, tóc, trang phục, màu da/tóc và chọn linh vật đồng hành.' }
+];
+document.getElementById('modeGrid').innerHTML = MODES.map(function (m) {
+  return '<a class="mode-card" style="--mc:' + m.c + '" href="' + m.href + '">' +
+    '<span class="mi" aria-hidden="true">' + m.e + '</span>' +
+    '<span><b>' + esc(m.t) + '</b><small>' + esc(m.d) + '</small></span>' +
+    '<span class="arr" aria-hidden="true">›</span></a>';
+}).join('');
+
+/* ---------- Intro cốt truyện ---------- */
+var INTRO_KEY = 'hn_game_intro_seen';
+var introIdx = 0;
+function storyLines(u, avatar) {
+  var pet = GAME_PETS[avatar.pet] || GAME_PETS.meo;
+  var ten = u.name ? ' <b>' + esc(u.name) + '</b>' : '';
+  return [
+    'Năm 2026, một cơn bão chữ cuốn ' + esc(GAME_XH()) + ten + ' xuyên không về Nhật Bản cổ đại… 🌪️',
+    'Ở Edo, <b>Shogun Bóng Tối</b> đã đánh cắp mọi chữ kanji. Dân làng không đọc nổi cả thực đơn ramen! 🍜',
+    pet.e + ' <b>' + esc(pet.n) + '</b>: "Meo! ' + esc(GAME_Xh()) + ' là người được chọn đó. Đi 5 vùng, hạ 5 trùm, lấy lại chữ cho Edo. Dễ ợt… chắc vậy 😼"'
+  ];
+}
+function showIntro() {
+  document.getElementById('hub').classList.add('hid');
+  var intro = document.getElementById('intro');
+  intro.classList.remove('hid');
+  introIdx = 0;
+  GAME_USER.then(function (u) { paintStory(u); });
+  window.scrollTo(0, 0);
+}
+function paintStory(u) {
+  var lines = storyLines(u, GAME_AVATAR.load());
+  var dlg = document.getElementById('introDlg');
+  dlg.innerHTML = lines[Math.min(introIdx, lines.length - 1)];
+  if (dlg.animate && !GAME_reducedMotion()) {
+    dlg.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1 }], { duration: 300 });
+  }
+  document.getElementById('introNext').textContent =
+    introIdx >= lines.length - 1 ? 'Lên đường! 🗾' : 'Tiếp ▶';
+}
+function finishIntro() {
+  gameStore.set(INTRO_KEY, '1');
+  document.getElementById('intro').classList.add('hid');
+  document.getElementById('hub').classList.remove('hid');
+  window.scrollTo(0, 0);
+  tryMusic();
+  mascotSay('vao');
+}
+document.getElementById('introSkip').addEventListener('click', finishIntro);
+document.getElementById('introNext').addEventListener('click', function () {
+  GAME_USER.then(function (u) {
+    var lines = storyLines(u, GAME_AVATAR.load());
+    introIdx++;
+    if (introIdx >= lines.length) { finishIntro(); return; }
+    paintStory(u);
+  });
+});
+document.getElementById('replayIntro').addEventListener('click', showIntro);
+// Hoa anh đào rơi ở intro
+(function () {
+  var intro = document.getElementById('intro');
+  for (var i = 0; i < 14; i++) {
+    var s = document.createElement('span');
+    s.className = 'sakura';
+    s.textContent = '🌸';
+    s.style.left = (Math.random() * 100) + '%';
+    s.style.animationDuration = (4 + Math.random() * 5) + 's';
+    s.style.animationDelay = (-Math.random() * 6) + 's';
+    intro.appendChild(s);
+  }
+})();
+
+/* ---------- Nhạc sảnh: chỉ sau tương tác đầu tiên (hook an toàn) ---------- */
+var musicStarted = false;
+function tryMusic() {
+  if (musicStarted) return;
+  if (window.GMUSIC && typeof window.GMUSIC.play === 'function') {
+    try { window.GMUSIC.play('lobby'); musicStarted = true; } catch (e) { /* chưa sẵn */ }
+  }
+}
+document.addEventListener('pointerdown', tryMusic, { once: false });
+
+/* ---------- Mascot nói câu trend (hook an toàn cho Nhánh 4) ---------- */
+var FALLBACK_LINES = {
+  vao: ['Meo~ {X} tới rồi! Hôm nay hạ trùm nào trước đây? 😼', 'Chào {X}! Chữ kanji đang chờ {X} giải cứu đó nha.'],
+  chem: ['Ê {X}, trùm vùng này nghe tên {X} là run rồi kìa 🤭', 'Tui canh cá khô ở nhà, {X} cứ yên tâm quẩy!']
+};
+function fallbackLine(moment) {
+  var arr = FALLBACK_LINES[moment] || FALLBACK_LINES.vao;
+  var t = arr[Math.floor(Math.random() * arr.length)];
+  return t.replace(/\{X\}/g, GAME_USER_DATA.call);
+}
+function mascotSay(moment) {
+  var bubble = document.getElementById('mascotBubble');
+  var face = document.getElementById('mascotFace');
+  // Ưu tiên GTREND của Nhánh 4: say() tự hiện bong bóng nổi + đọc to và
+  // TRẢ VỀ câu đã nói — chép câu đó vào bong bóng tĩnh của hub để chữ còn
+  // ở lại sau khi bong bóng nổi của GTREND tự ẩn (3,6 giây).
+  if (window.GTREND && typeof window.GTREND.say === 'function') {
+    try {
+      var t = window.GTREND.say(moment || 'vao', face);
+      if (t) {
+        bubble.textContent = t;
+        // Điều phối hợp nhất (sửa L2 của nhánh kiểm thử): ẩn bong bóng tĩnh
+        // trong lúc bong bóng nổi của GTREND còn hiện, tránh 2 bong bóng
+        // trùng cùng một câu chồng lên nhau; chữ tĩnh hiện lại ngay khi
+        // bong bóng nổi mờ đi để câu trend còn ở lại trên màn.
+        bubble.style.visibility = 'hidden';
+        var tries = 0;
+        var iv = setInterval(function () {
+          var gb = document.getElementById('gt-bubble');
+          var op = gb ? getComputedStyle(gb).opacity : '0';
+          if (!gb || op === '0' || ++tries > 30) { bubble.style.visibility = ''; clearInterval(iv); }
+        }, 250);
+        return;
+      }
+    } catch (e) { /* rơi xuống dự phòng */ }
+  }
+  bubble.textContent = fallbackLine(moment || 'vao');
+}
+document.getElementById('mascotFace').addEventListener('click', function () {
+  if (window.GFX) GFX.burst(this, 16);
+  mascotSay('chem');
+});
+
+/* ---------- Bản đồ 5 vùng ---------- */
+function paintHubUser(u, avatar) {
+  document.getElementById('hubAvatar').innerHTML = GAME_AVATAR.svg(avatar, 92);
+  var pet = GAME_PETS[avatar.pet] || GAME_PETS.meo;
+  document.getElementById('mascotFace').textContent = pet.e;
+  var greet = document.getElementById('hubGreet');
+  greet.textContent = u.loggedIn
+    ? 'Chào ' + u.call + (u.name && u.name !== u.call ? ' ' + u.name : '') + '!'
+    : 'Chào bạn!';
+  document.querySelectorAll('[data-call]').forEach(function (el) { el.textContent = u.call; });
+  paintMap(u, avatar);
+}
+function zoneUnlocked(progress, idx) {
+  // Chưa có dữ liệu tiến độ (Nhánh 5 chưa sẵn / khách): mở vùng đầu, các vùng
+  // sau vẫn vào được trang Chiến dịch — khóa chặng do Nhánh 2 xử lý trong trang.
+  if (!progress || !progress.campaign) return true;
+  if (idx === 0) return true;
+  var prev = GAME_ZONES[idx - 1];
+  var c = progress.campaign[prev.id + '-kanji'] || progress.campaign[prev.id + '-mix'];
+  return !!(c && (c.unlocked > 0 || (c.stars && Object.keys(c.stars).length)));
+}
+function paintMap(u, avatar) {
+  var map = document.getElementById('map');
+  map.querySelectorAll('.zn').forEach(function (x) { x.remove(); });
+  var pos = [[50, 90], [35, 70], [62, 50], [38, 32], [52, 11]];
+  function draw(progress) {
+    GAME_ZONES.forEach(function (z, i) {
+      var open = zoneUnlocked(progress, i);
+      var a = document.createElement('a');
+      a.className = 'zn' + (open ? '' : ' lock');
+      a.href = 'chien-dich.html?level=' + z.id;
+      a.style.left = pos[i][0] + '%';
+      a.style.top = pos[i][1] + '%';
+      a.style.setProperty('--zc', z.bg);
+      a.setAttribute('aria-label', z.name + ', trùm ' + z.boss);
+      a.setAttribute('title', z.gname);
+      a.innerHTML =
+        (i === 0 ? '<span class="me" aria-hidden="true">' + GAME_AVATAR.svg(avatar, 40) + '</span>' : '') +
+        '<div class="bb">' + (open ? z.be : '🔒') + '</div>' +
+        '<b>' + esc(z.id) + ' · ' + esc(z.name) + '</b>' +
+        '<small>' + esc(z.ge) + ' Trùm ' + esc(z.boss) + '</small>';
+      if (!open) {
+        a.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          toast('Hạ trùm vùng trước để mở vùng này nha!');
+        });
+      }
+      map.appendChild(a);
+    });
+  }
+  if (window.GAME_API && typeof window.GAME_API.getProgress === 'function') {
+    try {
+      var p = window.GAME_API.getProgress();
+      if (p && typeof p.then === 'function') p.then(draw).catch(function () { draw(null); });
+      else draw(p);
+    } catch (e) { draw(null); }
+  } else {
+    draw(gameStore.get('hn_game_progress', null));
+  }
+}
+
+/* ---------- Bảng xếp hạng & thành tích ---------- */
+var lbCat = 'week';
+function paintLeaderboard() {
+  var box = document.getElementById('lbBox');
+  document.getElementById('lbTabWeek').classList.toggle('on', lbCat === 'week');
+  document.getElementById('lbTabTotal').classList.toggle('on', lbCat === 'total');
+  if (!(window.GAME_API && typeof window.GAME_API.leaderboard === 'function')) {
+    box.innerHTML = '<p class="lb-empty">🏆 Bảng xếp hạng sẽ sáng đèn ngay khi có điểm đầu tiên. ' +
+      (GAME_USER_DATA.loggedIn
+        ? 'Chơi một ván Chiến dịch hoặc Đấu trùm để ghi tên lên bảng nhé!'
+        : 'Khách chơi thử được ngay — <a href="../dang-nhap.html">đăng nhập</a> để điểm được lưu và lên bảng.') + '</p>';
+    return;
+  }
+  box.innerHTML = '<p class="lb-empty">Đang tải…</p>';
+  Promise.resolve(window.GAME_API.leaderboard({ cat: lbCat, level: GAME_USER_DATA.level || undefined }))
+    .then(function (res) {
+      var rows = (res && (res.rows || res.list || res.entries)) || [];
+      if (!rows.length) {
+        box.innerHTML = (res && res.guest)
+          ? '<p class="lb-empty">🏆 Khách chưa lên bảng xếp hạng máy chủ được. <a href="../dang-nhap.html">Đăng nhập</a> rồi chơi một ván để ghi tên nhé!</p>'
+          : '<p class="lb-empty">Chưa có ai ghi điểm ở mục này. Là người đầu tiên luôn nào! 🚀</p>';
+        return;
+      }
+      box.innerHTML = '<ul class="lb">' + rows.slice(0, 10).map(function (r, i) {
+        var nm = r.name || r.display || 'Học viên';
+        var medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i + 1);
+        return '<li class="' + (r.me ? 'me' : '') + '"><span class="rk">' + medal + '</span>' +
+          '<span class="ava" aria-hidden="true">' + esc(String(nm).trim().charAt(0).toUpperCase() || '?') + '</span>' +
+          '<span class="grow">' + esc(nm) + (r.me ? ' (' + esc(GAME_USER_DATA.call) + ')' : '') + '</span>' +
+          '<b>' + esc(String(r.score != null ? r.score : (r.points != null ? r.points : ''))) + '</b></li>';
+      }).join('') + '</ul>';
+    })
+    .catch(function () {
+      box.innerHTML = '<p class="lb-empty">Chưa tải được bảng xếp hạng (có thể do mạng). Thử lại sau ít phút nhé.</p>';
+    });
+}
+document.getElementById('lbTabWeek').addEventListener('click', function () { lbCat = 'week'; paintLeaderboard(); });
+document.getElementById('lbTabTotal').addEventListener('click', function () { lbCat = 'total'; paintLeaderboard(); });
+
+function paintStats() {
+  var box = document.getElementById('statBox');
+  var badges = document.getElementById('badgeBox');
+  function draw(progress) {
+    var totals = (progress && progress.totals) || {};
+    var score = totals.score || 0, wins = totals.bossWins || 0;
+    box.innerHTML = '<ul class="lb">' +
+      '<li><span class="rk">⭐</span><span class="grow">Tổng điểm</span><b>' + esc(String(score)) + '</b></li>' +
+      '<li><span class="rk">👑</span><span class="grow">Số lần hạ trùm</span><b>' + esc(String(wins)) + '</b></li></ul>';
+    badges.innerHTML =
+      '<span class="bd' + (wins >= 1 ? '' : ' lock') + '">👑 Hạ trùm đầu tiên</span>' +
+      '<span class="bd' + (wins >= 5 ? '' : ' lock') + '">⚔️ Hạ 5 trùm</span>' +
+      '<span class="bd' + (score >= 1000 ? '' : ' lock') + '">⭐ 1.000 điểm</span>' +
+      '<span class="bd' + (score >= 5000 ? '' : ' lock') + '">💎 5.000 điểm</span>';
+  }
+  if (window.GAME_API && typeof window.GAME_API.getProgress === 'function') {
+    try {
+      var p = window.GAME_API.getProgress();
+      if (p && typeof p.then === 'function') { p.then(draw).catch(function () { draw(null); }); return; }
+      draw(p); return;
+    } catch (e) { /* rơi xuống local */ }
+  }
+  draw(gameStore.get('hn_game_progress', null));
+}
+
+/* ---------- Khởi động ---------- */
+GAME_USER.then(function (u) {
+  var avatar = GAME_AVATAR.load();
+  paintHubUser(u, avatar);
+  paintLeaderboard();
+  paintStats();
+  if (String(gameStore.get(INTRO_KEY, '')) === '1') {
+    document.getElementById('hub').classList.remove('hid');
+    mascotSay('vao');
+  } else {
+    showIntro();
+  }
+  // Máy mới chưa có nhân vật local mà tài khoản đã có bản đồng bộ: kéo về.
+  if (!localStorage.getItem('hn_game_avatar') && u.loggedIn && GAME_AVATAR.pullHoso) {
+    GAME_AVATAR.pullHoso().then(function (cfg) {
+      if (cfg) { paintHubUser(GAME_USER_DATA, cfg); }
+    });
+  }
+});
+document.addEventListener('hn-game-avatar', function () {
+  GAME_USER.then(function (u) { paintHubUser(u, GAME_AVATAR.load()); });
+});
+</script>
+</body>
+</html>

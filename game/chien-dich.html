@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chiến dịch N5→N1 · Hành trình đến Edo</title>
+<!-- game.css (nhánh 1) đặt trước; chien-dich.css tự đủ dùng khi thiếu -->
+<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="chien-dich.css">
+</head>
+<body class="cd-body">
+<div class="cd-top">
+  <a class="cd-home" href="index.html" aria-label="Về sảnh game">🏠</a>
+  <b class="cd-title">🗺️ Hành trình dài</b>
+  <span class="cd-grow"></span>
+  <div id="sndToggles"></div>
+</div>
+
+<div class="cd-wrap">
+  <!-- ===== Chọn trình độ / chủ đề / độ khó ===== -->
+  <section id="cdPick" class="cd-screen">
+    <h2 class="cd-h2">🗺️ Hành trình dài · chọn đường</h2>
+    <p class="cd-sub" id="cdGreet"></p>
+    <div class="cd-card">
+      <b>1. Trình độ đang học</b>
+      <p class="cd-sub">Mỗi trình độ 10 chặng · mỗi chặng 3 màn + 1 màn trùm</p>
+      <div class="cd-seg cd-lvs" id="cdLvs"></div>
+    </div>
+    <div class="cd-card">
+      <b>2. Muốn luyện gì?</b>
+      <p class="cd-sub">Ngữ pháp có điền chỗ trống, sắp xếp câu, chọn trợ từ</p>
+      <div class="cd-seg cd-tys" id="cdTys"></div>
+    </div>
+    <div class="cd-card">
+      <b>3. Độ khó</b>
+      <p class="cd-sub">Khó hơn = ít thời gian hơn, điểm cao hơn</p>
+      <div class="cd-seg cd-diffs" id="cdDiffs"></div>
+    </div>
+    <button class="cd-btn cd-blk" id="cdGoMap">Vào bản đồ ➜</button>
+    <p class="cd-note">Câu hỏi lấy trực tiếp từ bài học thật của trang (chỉ đọc). Cần mạng để tải câu hỏi.</p>
+  </section>
+
+  <!-- ===== Bản đồ chặng ===== -->
+  <section id="cdMap" class="cd-screen cd-hid">
+    <div class="cd-mhead" id="cdMh"></div>
+    <div class="cd-path" id="cdPath"></div>
+  </section>
+
+  <!-- ===== Màn chơi ===== -->
+  <section id="cdPlay" class="cd-screen cd-hid">
+    <div class="cd-row">
+      <b id="cdPt"></b><span id="cdPr" class="cd-mut"></span>
+    </div>
+    <div id="cdBossBox" class="cd-hid">
+      <div class="cd-row"><span class="cd-hearts" id="cdHearts"></span><b id="cdBossName"></b></div>
+      <div class="cd-bhp"><i id="cdBhp"></i></div>
+      <div class="cd-arena"><div class="cd-fig" id="cdFig1">🦸</div><div class="cd-fig cd-bossfig" id="cdFig2">👹</div></div>
+    </div>
+    <div class="cd-hud">
+      <span class="cd-hud-item">⭐ <b id="cdScore">0</b></span>
+      <span class="cd-hud-item cd-combo" id="cdCombo">Combo ×0</span>
+      <span class="cd-hud-item">❤️ <b id="cdLives">3</b></span>
+    </div>
+    <div class="cd-timer"><i id="cdTm"></i></div>
+    <div class="cd-card" id="cdQbox"></div>
+    <div class="cd-lifelines" id="cdLife">
+      <button class="cd-life" id="cdL5050">✂️ 50/50 <small id="cdL5050N"></small></button>
+      <button class="cd-life" id="cdLSwap">🔄 Đổi câu <small id="cdLSwapN"></small></button>
+      <button class="cd-life" id="cdLTime">⏱️ Thêm giờ <small id="cdLTimeN"></small></button>
+    </div>
+    <button class="cd-btn cd-alt cd-blk" id="cdQuit">🏳️ Bỏ màn này</button>
+  </section>
+
+  <!-- ===== Kết quả ===== -->
+  <section id="cdRes" class="cd-screen cd-hid">
+    <div class="cd-card cd-res" id="cdRb"></div>
+  </section>
+</div>
+
+<!-- Thứ tự nạp: nền chung (nhánh 1/4/5, hook an toàn nếu chưa có) -> bộ câu hỏi -> chiến dịch -->
+<script src="../config.js"></script>
+<script>try{ if (window.SITE && SITE.aiEndpoint) window.GAME_ENDPOINT = SITE.aiEndpoint; }catch(e){}</script>
+<script src="game.js"></script>
+<script src="fx.js"></script>
+<script src="sfx.js"></script>
+<script src="trend.js"></script>
+<script src="music.js"></script>
+<script src="game-api.js"></script>
+<script src="questions.js"></script>
+<script src="chien-dich.js"></script>
+</body>
+</html>

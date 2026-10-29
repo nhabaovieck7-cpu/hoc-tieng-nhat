@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leo tháp · Hành trình đến Edo</title>
+<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="modes.css">
+</head>
+<body class="mx-body">
+<div class="mx-top"><a class="mx-back" href="index.html">← Tất cả game</a><span class="mx-title">🏯 Leo tháp</span><div id="sndToggles" class="snd-toggles"></div></div>
+<main class="mx-wrap">
+  <section id="menu"></section>
+  <section id="play" class="mx-hid">
+    <div class="tw-grid">
+      <div class="mx-card">
+        <div class="mx-row"><b class="mx-grow" id="fh">Tầng 1</b><span class="tw-lvtag" id="lt">N5</span><span class="mx-pill" id="sc">⭐ 0</span></div>
+        <div class="mx-timer"><i id="tBar"></i></div>
+        <div class="mx-row"><span class="mx-grow mx-mut" id="mileInfo">Mốc tiếp theo: tầng 5</span><span class="mx-pill" id="tTxt"></span></div>
+        <div class="mx-q" id="qBox"></div>
+        <div class="mx-qsub" id="qSub"></div>
+        <div class="mx-opts" id="optBox"></div>
+        <div id="ordBox"></div>
+        <div class="tw-life">
+          <button id="lf50" type="button">✂️ 50/50<small>bỏ 2 đáp án sai</small></button>
+          <button id="lfTime" type="button">⏱️ +10 giây<small>thêm giờ 1 lần</small></button>
+          <button id="lfSwap" type="button">🔄 Đổi câu<small>qua câu khác</small></button>
+        </div>
+        <div style="height:12px"></div>
+        <button class="mx-btn alt" id="btnQuit" type="button">Dừng leo &amp; nhận kết quả</button>
+      </div>
+      <div class="mx-card">
+        <h2 style="margin-top:0">🏯 Tháp Tengu</h2>
+        <div class="tw-tower" id="tw"></div>
+        <p class="mx-mut">Sai hoặc hết giờ thì rơi xuống 1 tầng. Càng lên cao thời gian mỗi câu càng ít. Mỗi 5 tầng là một mốc đáng nhớ!</p>
+        <p class="tw-rec" id="recInfo"></p>
+      </div>
+    </div>
+  </section>
+  <section id="result" class="mx-hid"></section>
+</main>
+<script src="game.js"></script>
+<script src="fx.js"></script>
+<script src="questions.js"></script>
+<script src="trend.js"></script>
+<script src="music.js"></script>
+<script src="sfx.js"></script>
+<script src="game-api.js"></script>
+<script src="leo-thap.js"></script>
+</body>
+</html>

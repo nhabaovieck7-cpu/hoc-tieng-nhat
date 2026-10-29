@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* =====================================================================
+   game.css — Phong cách CHUNG cho game "Hành trình đến Edo" (Nhánh 1)
+   Màu rực, chữ to đậm, mobile-first 375/390, nút >= 44px.
+   Chỉ chứa: biến màu dùng chung, khung trang, topbar, nút/thẻ chung,
+   hub (intro / bản đồ / thẻ chế độ), tạo nhân vật, bong bóng mascot,
+   công tắc âm thanh (.snd-toggles — UI do Nhánh 4 gắn vào), lớp FX.
+   CSS riêng của từng chế độ chơi nằm ở file của nhánh sở hữu
+   (chien-dich.css, modes.css, phong-nhom.css) — KHÔNG viết vào đây.
+   ===================================================================== */
+:root{
+  --c:#cf3a2e;          /* đỏ thương hiệu trang chính */
+  --vermillion:#cf3a2e;
+  --indigo:#233d63;      /* chàm thương hiệu trang chính */
+  --gold:#d9a84e;
+  --sun:#ffd84e;
+  --pink:#ff4fd8;
+  --neon:#7c5cff;
+  --cy:#22d3ee;
+  --bg:#14111f;
+  --bg2:#1a0b2e;
+  --card:#1f1b2e;
+  --card2:#2a2440;
+  --line:#352f4a;
+  --t:#f4f1ea;
+  --m:#a49fb8;
+  --ok:#2fbf71;
+  --bad:#ef4b5b;
+  --z-n5:#ff7eb6; --z-n4:#2fbf71; --z-n3:#22d3ee; --z-n2:#ff7a45; --z-n1:#7c5cff;
+  --radius:18px;
+  --shadow:0 6px 20px rgba(207,58,46,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Be Vietnam Pro","Noto Sans JP",system-ui,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%,#3a1d5c 0,transparent 60%),
+    radial-gradient(900px 500px at -10% 110%,#5c1d2a 0,transparent 60%),
+    var(--bg);
+  color:var(--t);
+  min-height:100vh;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.jp{font-family:"Noto Sans JP",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:14px}
+.hid{display:none!important}
+.grow{flex:1}
+.mut{color:var(--m);font-size:13px}
+h1{font-size:26px;font-weight:800;letter-spacing:-.5px}
+h2{font-size:18px;font-weight:800;margin:14px 0 8px}
+a{color:var(--cy)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:8px}
+
+/* ---------- Topbar dùng chung (.gtop, do game.js dựng) ---------- */
+.gtop{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:8px 12px;min-height:56px;
+  position:sticky;top:0;z-index:40;
+  background:rgba(20,17,31,.85);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.gtop-logo{
+  font-size:26px;text-decoration:none;line-height:1;
+  min-width:44px;min-height:44px;display:grid;place-items:center;
+}
+.gtop-title{
+  color:var(--t);text-decoration:none;font-weight:800;font-size:17px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.gtop-back{
+  color:var(--t);text-decoration:none;font-weight:700;font-size:14px;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;min-height:44px;display:inline-flex;align-items:center;
+}
+.gtop-user{display:flex;align-items:center;gap:8px;min-width:0}
+.gtop-ava{width:36px;height:36px;flex:0 0 36px;border-radius:50%;overflow:hidden;display:block}
+.gtop-ava svg{width:36px;height:36px;display:block}
+.gtop-who{font-size:13px;line-height:1.2;white-space:nowrap}
+.gtop-who b{display:block;font-size:13px;max-width:110px;overflow:hidden;text-overflow:ellipsis}
+.gtop-who small{color:var(--m);font-size:11px}
+.gtop-who small a{color:var(--sun);font-weight:700}
+@media(max-width:430px){.gtop-who{display:none}}
+
+/* ---------- 3 công tắc âm thanh (Nhánh 4 gắn nút vào đây) ---------- */
+/* Nút do GMUSIC.mountToggles (Nhánh 4) tạo mang class .snd-toggle và một số
+   style nội tuyến (nền trắng, đệm rộng) — game.css chuẩn hoá lại cho vừa
+   topbar game: pill tối, gọn, >= 44px. Trạng thái Tắt do Nhánh 4 đặt bằng
+   opacity nội tuyến nên CSS này KHÔNG đụng vào opacity. */
+.snd-toggles{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.snd-toggles:empty{display:none}
+.snd-toggle{
+  min-height:44px!important;min-width:44px!important;
+  padding:7px 11px!important;margin:0!important;
+  border-radius:999px!important;border:1.5px solid var(--line)!important;
+  background:#231e35!important;color:var(--t)!important;
+  font-size:13px!important;font-weight:700!important;
+  font-family:inherit;cursor:pointer;
+  display:inline-flex!important;align-items:center;gap:6px;line-height:1.15;
+}
+.snd-toggle:active{transform:scale(.94)}
+.snd-toggle[aria-checked="false"]{border-style:dashed!important}
+/* Màn hình hẹp: công tắc xuống hàng riêng trong topbar, canh phải,
+   để tiêu đề + avatar không bị ép mất chữ (đã kiểm 375/390). */
+@media(max-width:719px){
+  .snd-toggles{order:9;flex:1 1 100%;justify-content:flex-end}
+}
+
+/* ---------- Nút & thẻ chung ---------- */
+.btn{
+  border:0;border-radius:14px;padding:14px 18px;min-height:48px;
+  font:inherit;font-weight:800;font-size:16px;color:#fff;
+  background:linear-gradient(135deg,var(--c),#ff7a45);
+  cursor:pointer;box-shadow:var(--shadow);transition:transform .1s;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  text-decoration:none;text-align:center;
+}
+.btn:active{transform:scale(.96)}
+.btn.alt{background:var(--card);border:1px solid var(--line);box-shadow:none;color:var(--t)}
+.btn.gold{background:linear-gradient(135deg,var(--gold),#ff9d45);color:#221a08;box-shadow:0 6px 20px rgba(217,168,78,.35)}
+.btn.blk{width:100%}
+.btn:disabled{opacity:.45;pointer-events:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.pill{display:inline-flex;gap:4px;align-items:center;padding:4px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:12px;font-weight:700}
+.row{display:flex;gap:10px;align-items:center}
+.grid2{display:grid;gap:14px}
+@media(min-width:760px){.grid2{grid-template-columns:1.3fr 1fr}}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg button{
+  background:var(--card);border:2px solid var(--line);color:var(--t);
+  border-radius:14px;padding:10px 6px;min-height:48px;
+  font:inherit;font-weight:700;cursor:pointer;
+}
+.seg button small{display:block;color:var(--m);font-weight:500;font-size:11px}
+.seg button.on{border-color:var(--gold);background:var(--card2);box-shadow:0 0 16px rgba(217,168,78,.3)}
+.tabs{display:flex;gap:6px;margin:8px 0}
+.tabs button{
+  flex:1;background:none;border:1px solid var(--line);color:var(--m);
+  border-radius:10px;padding:9px;min-height:44px;
+  font:inherit;font-size:13px;font-weight:700;cursor:pointer;
+}
+.tabs button.on{color:var(--t);background:var(--card2);border-color:var(--neon)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{
+  background:#231e35;border:1px solid var(--line);color:var(--t);
+  border-radius:99px;padding:9px 13px;min-height:44px;
+  font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+}
+.chips button.on{border-color:var(--sun);color:var(--sun);background:#2b2540}
+.chips button:disabled{opacity:.45;cursor:not-allowed}
+.toast{
+  position:fixed;left:50%;top:70px;transform:translateX(-50%);
+  background:var(--sun);color:#221a08;padding:11px 18px;border-radius:99px;
+  font-weight:800;z-index:90;animation:gpop .3s;max-width:92vw;text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.note{font-size:11px;color:var(--m);text-align:center;margin-top:14px}
+
+/* ---------- Bảng xếp hạng (khung chung) ---------- */
+.lb{list-style:none}
+.lb li{display:flex;align-items:center;gap:10px;padding:9px 6px;border-bottom:1px solid var(--line);min-height:44px}
+.lb li:last-child{border-bottom:0}
+.lb li.me{background:rgba(217,168,78,.12);border-radius:10px}
+.lb .rk{width:26px;font-weight:800;color:var(--m);text-align:center;flex:0 0 26px}
+.lb li:nth-child(1) .rk{color:var(--gold)}
+.lb .ava{
+  width:30px;height:30px;flex:0 0 30px;border-radius:50%;
+  display:grid;place-items:center;font-weight:800;font-size:13px;
+  background:linear-gradient(135deg,var(--c),var(--neon));color:#fff;
+}
+.lb-empty{color:var(--m);font-size:14px;line-height:1.55;padding:8px 2px}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.bd{font-size:12px;font-weight:700;padding:7px 11px;border-radius:12px;background:var(--card2);border:1px solid var(--line)}
+.bd.lock{opacity:.4}
+
+/* ---------- Intro cốt truyện (hub) ---------- */
+.scene{
+  min-height:calc(100vh - 56px);display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:20px;position:relative;overflow:hidden;
+}
+.sky{position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,#ff7a45 0,#ff4fd8 25%,#3a1d5c 55%,#14111f 80%);z-index:0}
+.sun{
+  width:180px;height:180px;border-radius:50%;
+  background:repeating-linear-gradient(#ffd84e 0 14px,transparent 14px 20px);
+  position:absolute;bottom:10%;left:50%;transform:translateX(-50%);
+  opacity:.85;filter:drop-shadow(0 0 40px #ff4fd8);
+}
+.fuji{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:0;height:0;border-left:260px solid transparent;border-right:260px solid transparent;
+  border-bottom:200px solid #1a0b2e;
+}
+.gtitle{
+  position:relative;z-index:2;font-size:clamp(38px,11vw,84px);font-weight:900;
+  font-style:italic;line-height:.98;color:#fff;
+  -webkit-text-stroke:2px #1a0b2e;
+  text-shadow:5px 5px 0 var(--pink),10px 10px 0 var(--neon);
+  transform:rotate(-4deg);animation:gslam .7s cubic-bezier(.2,1.6,.4,1);
+}
+.gsub{position:relative;z-index:2;font-family:"Noto Sans JP",sans-serif;font-size:22px;letter-spacing:10px;color:var(--sun);margin:12px 0 18px}
+.dlg{
+  position:relative;z-index:2;background:rgba(10,6,20,.88);
+  border:2px solid var(--pink);border-radius:18px;padding:14px 16px;
+  max-width:520px;text-align:left;font-size:15px;line-height:1.55;
+  box-shadow:6px 6px 0 var(--neon);margin-bottom:16px;min-height:84px;
+}
+.dlg b{color:var(--sun)}
+.scene .row{position:relative;z-index:2}
+.sakura{position:absolute;top:-24px;font-size:20px;z-index:1;animation:gfall linear infinite;pointer-events:none}
+@keyframes gfall{to{transform:translateY(112vh) rotate(540deg)}}
+@keyframes gslam{0%{transform:rotate(-4deg) scale(2.6);opacity:0}100%{transform:rotate(-4deg) scale(1);opacity:1}}
+
+/* ---------- Bản đồ 5 vùng + trùm (hub) ---------- */
+.map{
+  position:relative;height:600px;border-radius:24px;overflow:hidden;
+  background:linear-gradient(180deg,#3a1d5c,#1a2a4a 40%,#123c2e 80%,#3a2a1a);
+  border:2px solid var(--line);
+}
+@media(max-width:480px){.map{height:520px}}
+.map svg.route{position:absolute;inset:0;width:100%;height:100%}
+.zn{
+  position:absolute;transform:translate(-50%,-50%);text-align:center;
+  text-decoration:none;color:#fff;width:126px;z-index:2;
+  min-height:44px;
+}
+.zn .bb{
+  width:66px;height:66px;margin:0 auto;border-radius:50%;
+  display:grid;place-items:center;font-size:34px;background:var(--zc,#7c5cff);
+  box-shadow:0 0 0 4px #14111f,0 0 0 6px var(--zc,#7c5cff),0 0 24px var(--zc,#7c5cff);
+  animation:gfloat 2.2s ease-in-out infinite;
+}
+.zn b{display:block;font-size:12.5px;margin-top:7px;text-shadow:0 2px 5px #000;line-height:1.3}
+.zn small{font-size:10.5px;background:rgba(0,0,0,.66);padding:3px 8px;border-radius:99px;display:inline-block;margin-top:3px;line-height:1.35;max-width:150px}
+.zn.lock .bb{filter:grayscale(1) brightness(.55);box-shadow:0 0 0 4px #14111f,0 0 0 7px #555;animation:none}
+.zn .me{position:absolute;top:-30px;right:16px;width:40px;height:40px;animation:gfloat 1s ease-in-out infinite}
+.zn .me svg{width:40px;height:40px}
+@keyframes gfloat{50%{transform:translateY(-6px)}}
+
+/* ---------- Thẻ chế độ chơi (hub) ---------- */
+.mode-grid{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:640px){.mode-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.mode-grid{grid-template-columns:repeat(3,1fr)}}
+.mode-card{
+  display:flex;gap:13px;align-items:center;text-decoration:none;color:var(--t);
+  background:var(--card);border:2px solid var(--line);border-radius:var(--radius);
+  padding:15px;min-height:84px;transition:transform .12s,border-color .12s;
+}
+.mode-card:active{transform:scale(.97)}
+.mode-card:hover{border-color:var(--mc,var(--neon))}
+.mode-card .mi{
+  font-size:40px;flex:0 0 62px;width:62px;height:62px;border-radius:16px;
+  display:grid;place-items:center;
+  background:color-mix(in srgb,var(--mc,var(--neon)) 22%,transparent);
+  box-shadow:inset 0 0 0 2px var(--mc,var(--neon));
+}
+.mode-card b{display:block;font-size:17px;font-weight:800;line-height:1.25}
+.mode-card small{color:var(--m);font-size:12.5px;line-height:1.4;display:block;margin-top:2px}
+.mode-card .arr{margin-left:auto;font-size:20px;color:var(--m);flex:0 0 auto}
+.hub-hero{display:flex;gap:14px;align-items:center}
+.hub-hero .hav{flex:0 0 auto;animation:gfloat 2.4s ease-in-out infinite}
+.hub-hero .hav svg{display:block}
+
+/* ---------- Bong bóng thoại mascot (dùng chung) ---------- */
+#pet{
+  position:fixed;left:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:35;
+  display:flex;align-items:flex-end;gap:6px;
+  max-width:min(340px,calc(100vw - 130px));
+}
+#pet .pe{font-size:48px;animation:gfloat 1.6s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5));cursor:pointer;background:none;border:0;padding:0;min-width:44px;min-height:44px}
+#pet .pb{
+  background:#fff;color:#1a0b2e;font-size:13px;font-weight:700;line-height:1.45;
+  padding:9px 12px;border-radius:14px 14px 14px 4px;margin-bottom:32px;
+  box-shadow:3px 3px 0 var(--cy);
+}
+#pet.in .pb{animation:gpop .35s}
+.mascot-bubble{
+  background:#fff;color:#1a0b2e;font-size:13.5px;font-weight:700;line-height:1.45;
+  padding:10px 13px;border-radius:14px 14px 14px 4px;box-shadow:3px 3px 0 var(--cy);
+  max-width:300px;
+}
+.mascot-row{display:flex;align-items:flex-end;gap:8px}
+.mascot-row .me{font-size:52px;animation:gfloat 1.8s ease-in-out infinite;line-height:1}
+@keyframes gpop{0%{transform:scale(.7)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* ---------- Tạo nhân vật ---------- */
+.hero-stage{text-align:center;padding:10px 0 4px}
+.hero-stage .hav{display:inline-block;animation:gfloat 2.2s ease-in-out infinite}
+.hero-stage .hav svg{width:min(200px,58vw);height:auto}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px}
+.cl{
+  background:#231e35;border:2px solid var(--line);border-radius:16px;
+  padding:11px 4px;text-align:center;cursor:pointer;min-height:76px;
+  font-size:12px;font-weight:700;color:var(--t);font-family:inherit;
+}
+.cl span{display:block;font-size:30px;margin-bottom:3px}
+.cl.on{border-color:var(--pink);background:#3a1d5c;box-shadow:0 0 16px rgba(255,79,216,.45);transform:translateY(-2px)}
+.swatches{display:flex;flex-wrap:wrap;gap:9px}
+.sw{
+  width:46px;height:46px;border-radius:50%;cursor:pointer;flex:0 0 46px;
+  border:3px solid var(--line);padding:0;
+}
+.sw.on{border-color:#fff;box-shadow:0 0 0 3px var(--pink),0 0 14px rgba(255,79,216,.5);transform:scale(1.08)}
+.pet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}
+.pet-opt{
+  background:#231e35;border:2px solid var(--line);border-radius:16px;color:var(--t);
+  padding:11px 4px;text-align:center;cursor:pointer;min-height:76px;
+  font-size:12px;font-weight:700;font-family:inherit;
+}
+.pet-opt span{display:block;font-size:32px;margin-bottom:3px}
+.pet-opt.on{border-color:var(--cy);background:#12303c;box-shadow:0 0 16px rgba(34,211,238,.4)}
+
+/* ---------- Câu hỏi / đáp án (khung tối thiểu dùng chung) ---------- */
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:430px){.opts{grid-template-columns:1fr}}
+.opt{
+  background:var(--card2);border:2px solid var(--line);border-radius:16px;
+  padding:16px 10px;color:var(--t);font:inherit;font-weight:700;font-size:16px;
+  cursor:pointer;transition:border-color .15s;min-height:56px;
+}
+.opt:hover{border-color:var(--neon)}
+.opt.ok{background:var(--ok);border-color:var(--ok);animation:gpop .3s}
+.opt.bad{background:var(--bad);border-color:var(--bad);animation:gshake .3s}
+.opt.gone{opacity:.15;pointer-events:none}
+.q{
+  font-family:"Noto Sans JP",sans-serif;font-size:clamp(38px,11vw,54px);font-weight:900;
+  text-align:center;margin:8px 0;text-shadow:0 0 30px rgba(124,92,255,.6);line-height:1.2;
+}
+.timer{height:8px;border-radius:9px;background:var(--card2);overflow:hidden}
+.timer i{display:block;height:100%;background:linear-gradient(90deg,var(--ok),var(--gold),var(--bad));width:100%;transition:width .1s linear}
+@keyframes gshake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* ---------- FX (fx.js) ---------- */
+.fx-canvas{position:fixed;inset:0;pointer-events:none;z-index:60}
+.fx-flash{position:fixed;inset:0;z-index:59;pointer-events:none}
+body.hitstop *{animation-play-state:paused!important}
+.big{
+  position:fixed;left:50%;top:32%;transform:translate(-50%,-50%) rotate(-6deg);z-index:70;
+  font-weight:900;font-size:clamp(34px,9vw,72px);line-height:.98;text-align:center;color:#fff;
+  -webkit-text-stroke:2px #1a0b2e;
+  text-shadow:4px 4px 0 var(--pink),8px 8px 0 var(--neon),0 0 40px rgba(255,255,255,.35);
+  pointer-events:none;animation:gslam2 .45s cubic-bezier(.2,1.6,.4,1);
+  font-style:italic;white-space:nowrap;
+}
+.big.sk{font-size:clamp(22px,6vw,46px);top:20%}
+.big.perfect{color:var(--sun);top:45%}
+.big.ultra{
+  background:linear-gradient(90deg,#ffd84e,#ff4fd8,#22d3ee,#ffd84e);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:0;font-size:clamp(46px,14vw,108px);background-size:300%;
+  animation:gslam2 .5s cubic-bezier(.2,1.6,.4,1),grb 1s linear infinite;
+}
+.big.vic{top:10%;font-size:clamp(40px,12vw,80px)}
+@keyframes gslam2{0%{transform:translate(-50%,-50%) rotate(-6deg) scale(3);opacity:0}100%{transform:translate(-50%,-50%) rotate(-6deg) scale(1);opacity:1}}
+@keyframes grb{to{background-position:300%}}
+.hype{
+  position:fixed;right:12px;bottom:calc(150px + env(safe-area-inset-bottom));z-index:65;
+  width:max-content;max-width:min(78vw,420px);
+  background:#fff;color:#1a0b2e;font-weight:900;padding:9px 14px;
+  border-radius:16px 16px 4px 16px;box-shadow:4px 4px 0 var(--pink);
+  transform:rotate(2deg);animation:gslidein .35s;font-size:15px;line-height:1.32;
+}
+@keyframes gslidein{from{transform:translateX(120%) rotate(3deg)}}
+.beamfx{
+  position:fixed;height:34px;margin-top:-17px;transform-origin:0 50%;z-index:62;
+  pointer-events:none;border-radius:20px;
+  background:linear-gradient(90deg,transparent,var(--c) 20%,#fff 50%,var(--c) 80%);
+  box-shadow:0 0 30px var(--c),0 0 60px var(--c);
+  animation:gbeam .35s ease-out forwards;
+}
+@keyframes gbeam{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.beamfx.shuriken,.beamfx.gun{background:none;box-shadow:none}
+.beamfx i{position:absolute;left:0;top:0;font-style:normal;font-size:30px;color:var(--c);text-shadow:0 0 12px var(--c);animation:gfly .35s linear forwards}
+@keyframes gfly{to{left:100%;transform:rotate(720deg)}}
+.beamfx.thunder{
+  background:linear-gradient(transparent,var(--c),#fff);
+  clip-path:polygon(40% 0,70% 0,50% 40%,80% 40%,30% 100%,45% 55%,20% 55%);
+  margin:0;border-radius:0;
+}
+#combo{
+  position:fixed;left:12px;top:38%;z-index:64;opacity:0;pointer-events:none;
+  transform:rotate(-6deg);text-align:center;transition:opacity .2s;
+}
+#combo.on{opacity:1}
+#combo b{
+  display:block;font-size:62px;font-weight:900;font-style:italic;line-height:.9;
+  color:var(--sun);-webkit-text-stroke:2px #1a0b2e;text-shadow:4px 4px 0 var(--pink);
+}
+#combo small{font-weight:900;letter-spacing:3px;color:#fff;text-shadow:2px 2px 0 var(--neon)}
+
+/* ---------- Tôn trọng giảm chuyển động ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .zn .bb,.hub-hero .hav,.hero-stage .hav,#pet .pe,.mascot-row .me{animation:none!important}
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Phòng nhóm &amp; Đối kháng · Hành trình đến Edo</title>
+<!-- Khi đăng: trang nằm ở game/ nên tham chiếu ../config.js + ../auth.js của site.
+     Trong staging, phong-nhom.js tự dùng GAME_ENDPOINT mặc định đúng địa chỉ
+     Worker nếu SITE chưa có (xem CONTRACT.md). -->
+<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="phong-nhom.css">
+</head>
+<body class="pn-body">
+<header class="pn-top">
+  <a class="pn-home" href="index.html" aria-label="Về sảnh game">🏠</a>
+  <span class="pn-top-title">🎤 Phòng nhóm · ⚔️ Đối kháng</span>
+  <div id="sndToggles"></div>
+  <span class="pn-user" id="pnUserChip">…</span>
+</header>
+
+<main class="pn-wrap">
+  <!-- Khách chưa đăng nhập: chỉ xem trang + thông báo -->
+  <section id="pnGuest" class="pn-card pn-guest hid">
+    <div class="pn-guest-emoji">🔐</div>
+    <h1 class="pn-h1">Đăng nhập để chơi cùng bạn bè</h1>
+    <p class="pn-mut">Phòng nhóm và đối kháng 1-1 cần tài khoản để nhận diện người chơi, giữ điểm và chống spam. Khách vẫn xem được trang này, nhưng chưa tạo/vào phòng được.</p>
+    <a class="pn-btn pn-btn-main pn-blk" href="../dang-nhap.html">Đăng nhập</a>
+    <a class="pn-btn pn-btn-alt pn-blk" href="index.html">Chơi một mình trước</a>
+  </section>
+
+  <!-- Sảnh: tạo phòng / vào phòng -->
+  <section id="pnLobby" class="hid">
+    <div class="pn-card">
+      <h1 class="pn-h1">🎤 Tạo phòng chơi nhóm</h1>
+      <p class="pn-mut" id="pnHello"></p>
+      <h2 class="pn-h2">Chế độ</h2>
+      <div class="pn-seg" id="pnModeSeg" role="group" aria-label="Chế độ phòng">
+        <button type="button" data-v="group" class="on">👥 Nhóm<small>tối đa 8 người</small></button>
+        <button type="button" data-v="versus">⚔️ Đối kháng 1-1<small>2 người</small></button>
+      </div>
+      <h2 class="pn-h2">Trình độ</h2>
+      <div class="pn-seg pn-seg-lv" id="pnLevelSeg" role="group" aria-label="Trình độ">
+        <button type="button" data-v="N5">N5</button>
+        <button type="button" data-v="N4" class="on">N4</button>
+        <button type="button" data-v="N3">N3</button>
+        <button type="button" data-v="N2">N2</button>
+        <button type="button" data-v="N1">N1</button>
+      </div>
+      <h2 class="pn-h2">Chủ đề</h2>
+      <div class="pn-seg" id="pnTopicSeg" role="group" aria-label="Chủ đề">
+        <button type="button" data-v="kanji">漢 Kanji</button>
+        <button type="button" data-v="vocab">語 Từ vựng</button>
+        <button type="button" data-v="grammar">文 Ngữ pháp</button>
+        <button type="button" data-v="mix" class="on">🎲 Trộn</button>
+      </div>
+      <h2 class="pn-h2">Số câu mỗi ván</h2>
+      <div class="pn-seg" id="pnCountSeg" role="group" aria-label="Số câu">
+        <button type="button" data-v="5">5 câu<small>nhanh gọn</small></button>
+        <button type="button" data-v="10" class="on">10 câu</button>
+        <button type="button" data-v="15">15 câu<small>dài hơi</small></button>
+      </div>
+      <button type="button" class="pn-btn pn-btn-main pn-blk" id="pnCreate">Tạo phòng ▶</button>
+      <p class="pn-note" id="pnCreateNote"></p>
+    </div>
+
+    <div class="pn-card">
+      <h2 class="pn-h2" style="margin-top:0">🔑 Vào phòng bằng mã</h2>
+      <div class="pn-join-row">
+        <input id="pnJoinCode" class="pn-code-input" maxlength="5" autocapitalize="characters" autocomplete="off" placeholder="MÃ 5 KÝ TỰ" aria-label="Mã phòng">
+        <button type="button" class="pn-btn pn-btn-main" id="pnJoin">Vào phòng</button>
+      </div>
+      <p class="pn-note" id="pnJoinNote">Nhập mã 5 ký tự chủ phòng gửi cho mình.</p>
+    </div>
+  </section>
+
+  <!-- Phòng chờ -->
+  <section id="pnRoom" class="pn-card pn-stage hid">
+    <p class="pn-mut" style="text-align:center">Mã phòng — gửi cho mọi người để vào cùng</p>
+    <div class="pn-code" id="pnRoomCode">-----</div>
+    <div class="pn-row-center">
+      <button type="button" class="pn-btn pn-btn-alt" id="pnCopy">🔗 Chép mã</button>
+      <span class="pn-pill" id="pnRoomMeta"></span>
+    </div>
+    <p class="pn-mut" style="text-align:center" id="pnRoomCount"></p>
+    <div class="pn-players" id="pnPlayers"></div>
+    <button type="button" class="pn-btn pn-btn-main pn-blk" id="pnStart" disabled>Chờ thêm người…</button>
+    <p class="pn-note" id="pnStartNote"></p>
+    <button type="button" class="pn-btn pn-btn-ghost pn-blk" id="pnLeaveLobby">Rời phòng</button>
+  </section>
+
+  <!-- Trong trận -->
+  <section id="pnPlay" class="hid">
+    <div class="pn-strip" id="pnStrip"></div>
+    <div class="pn-card pn-stage">
+      <div class="pn-row"><span class="pn-mut pn-grow" id="pnQn"></span><span class="pn-mut" id="pnQt"></span></div>
+      <div class="pn-timer"><i id="pnTimerBar"></i></div>
+      <div class="pn-q jp" id="pnQPrompt"></div>
+      <p class="pn-qsub jp" id="pnQSub"></p>
+      <div class="pn-opts" id="pnOpts"></div>
+      <div class="pn-order hid" id="pnOrder">
+        <div class="pn-order-built jp" id="pnOrderBuilt" aria-label="Câu đang xếp"></div>
+        <div class="pn-order-tokens" id="pnOrderTokens"></div>
+        <button type="button" class="pn-btn pn-btn-main pn-blk" id="pnOrderCheck">Kiểm tra câu ✔</button>
+      </div>
+      <p class="pn-feedback" id="pnFeedback"></p>
+    </div>
+  </section>
+
+  <!-- Chờ người khác xong -->
+  <section id="pnWait" class="pn-card hid">
+    <h2 class="pn-h2" style="margin-top:0">⏳ Đã xong phần của mình!</h2>
+    <p class="pn-mut" id="pnWaitMsg">Chờ những người còn lại trả lời xong… điểm cập nhật trực tiếp.</p>
+    <div id="pnWaitBars"></div>
+    <button type="button" class="pn-btn pn-btn-ghost pn-blk hid" id="pnForceDone">Đóng ván (chủ phòng)</button>
+  </section>
+
+  <!-- Kết quả -->
+  <section id="pnResult" class="hid"></section>
+</main>
+
+<div id="pnChatMount"></div>
+<div class="pn-toast hid" id="pnToast" role="status"></div>
+
+<!-- File chung của game (các nhánh khác) — mọi global đều được dùng có
+     guard trong phong-nhom.js/chat.js, thiếu file nào trang vẫn chạy. -->
+<script src="../config.js"></script>
+<script src="../auth.js"></script>
+<script src="game.js"></script>
+<script src="questions.js"></script>
+<script src="trend.js"></script>
+<script src="music.js"></script>
+<script src="sfx.js"></script>
+<script src="fx.js"></script>
+<script src="game-api.js"></script>
+<script src="chat.js"></script>
+<script src="phong-nhom.js"></script>
+</body>
+</html>

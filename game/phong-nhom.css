@@ -1,0 +1,159 @@
+/* =====================================================================
+ * phong-nhom.css — NHÁNH 6: sảnh phòng, mã phòng, bàn đối kháng,
+ * bong bóng Chém gió. Mobile-first 375/390, nút >= 44px.
+ * Mọi lớp đều tiền tố pn- / cg- để không đụng game.css của nhánh 1
+ * (trang vẫn đẹp khi game.css chưa có, vì ở đây tự đủ biến + nền).
+ * ===================================================================== */
+:root{
+  --pn-gold:#d9a84e; --pn-bg:#14111f; --pn-card:#1f1b2e; --pn-line:#352f4a;
+  --pn-t:#f4f1ea; --pn-m:#a49fb8; --pn-ok:#2fbf71; --pn-bad:#ef4b5b;
+  --pn-neon:#7c5cff; --pn-cy:#22d3ee; --pn-c:#cf3a2e;
+}
+.pn-body{background:radial-gradient(1200px 600px at 80% -10%,#3a1d5c 0,transparent 60%),radial-gradient(900px 500px at -10% 110%,#5c1d2a 0,transparent 60%),var(--pn-bg);color:var(--pn-t);min-height:100vh}
+.pn-wrap{max-width:960px;margin:0 auto;padding:14px 14px 150px}
+.pn-top{display:flex;align-items:center;gap:10px;padding:10px 14px;position:sticky;top:0;z-index:20;background:rgba(20,17,31,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--pn-line)}
+.pn-home{color:var(--pn-t);text-decoration:none;font-size:20px;min-width:44px;min-height:44px;display:grid;place-items:center}
+.pn-top-title{font-weight:800;flex:1;font-size:15px}
+.pn-user{font-size:12px;font-weight:700;background:var(--pn-card);border:1px solid var(--pn-line);border-radius:99px;padding:6px 10px;max-width:38vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pn-card{background:var(--pn-card);border:1px solid var(--pn-line);border-radius:18px;padding:16px;margin-bottom:14px}
+.pn-stage{background:linear-gradient(180deg,#2b1a52,#1a1430);border:2px solid var(--pn-neon);box-shadow:0 0 30px rgba(124,92,255,.35)}
+.pn-h1{font-size:24px;font-weight:800;margin-bottom:6px}
+.pn-h2{font-size:16px;margin:16px 0 8px}
+.pn-mut{color:var(--pn-m);font-size:13px;line-height:1.5}
+.pn-note{font-size:12px;color:var(--pn-m);text-align:center;margin-top:10px;min-height:16px}
+.pn-grow{flex:1}
+.pn-row{display:flex;gap:10px;align-items:center}
+.pn-row-center{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin:8px 0}
+.pn-pill{display:inline-flex;gap:4px;align-items:center;padding:5px 10px;border-radius:99px;background:#2a2440;border:1px solid var(--pn-line);font-size:12px;font-weight:700}
+.hid{display:none!important}
+
+/* --- nút bấm (>=44px) --- */
+.pn-btn{border:0;border-radius:14px;padding:12px 18px;font:inherit;font-weight:800;font-size:16px;min-height:48px;color:#fff;background:linear-gradient(135deg,var(--pn-c),#ff7a45);cursor:pointer;box-shadow:0 6px 20px rgba(207,58,46,.35);transition:transform .1s}
+.pn-btn:active{transform:scale(.97)}
+.pn-btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.pn-btn-alt{background:#2a2440;border:1px solid var(--pn-line);box-shadow:none;font-size:14px;min-height:44px;padding:10px 14px}
+.pn-btn-ghost{background:none;border:1px dashed var(--pn-line);box-shadow:none;color:var(--pn-m);font-size:14px;min-height:44px}
+.pn-blk{width:100%;margin-top:10px}
+
+/* --- chọn chế độ / trình độ / chủ đề --- */
+.pn-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pn-seg-lv{grid-template-columns:repeat(5,1fr)}
+.pn-seg button{background:#2a2440;border:2px solid var(--pn-line);color:var(--pn-t);border-radius:14px;padding:10px 4px;font:inherit;font-weight:700;cursor:pointer;min-height:48px;font-size:14px}
+.pn-seg button small{display:block;color:var(--pn-m);font-weight:500;font-size:11px}
+.pn-seg button.on{border-color:var(--pn-gold);background:#332a4d;box-shadow:0 0 14px rgba(217,168,78,.3)}
+
+/* --- vào phòng bằng mã --- */
+.pn-join-row{display:flex;gap:8px}
+.pn-code-input{flex:1;min-width:0;background:#14111f;border:2px solid var(--pn-line);border-radius:14px;color:#fff;padding:12px;font:inherit;font-size:20px;font-weight:900;letter-spacing:4px;text-transform:uppercase;text-align:center;min-height:48px}
+.pn-code-input:focus{outline:none;border-color:var(--pn-gold)}
+
+/* --- khách --- */
+.pn-guest{text-align:center}
+.pn-guest-emoji{font-size:46px;margin-bottom:6px}
+
+/* --- mã phòng + danh sách người chơi --- */
+.pn-code{font-size:42px;font-weight:900;letter-spacing:8px;text-align:center;color:var(--pn-gold);text-shadow:0 0 20px rgba(217,168,78,.5);word-break:break-all}
+.pn-players{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.pn-pl{text-align:center;font-size:12px;line-height:1.3;overflow-wrap:anywhere}
+.pn-pl .pn-ava{margin:0 auto 4px;width:48px;height:48px;font-size:19px}
+.pn-pl.wait{opacity:.55}
+.pn-pl.wait .pn-ava{background:#2a2440;border:2px dashed var(--pn-line);box-shadow:none}
+.pn-pl .pn-host{display:block;color:var(--pn-gold);font-size:10px;font-weight:800}
+.pn-pl .pn-off{color:var(--pn-bad);font-size:10px}
+.pn-ava{border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--pn-c),var(--pn-neon));color:#fff;position:relative;flex:none}
+.pn-ava.me{box-shadow:0 0 0 2px var(--pn-bg),0 0 0 4px var(--pn-gold)}
+
+/* --- dải người chơi trong trận --- */
+.pn-strip{display:flex;gap:8px;justify-content:space-between;margin:4px 0 10px;flex-wrap:wrap}
+.pn-strip .pn-pl{flex:1;min-width:64px;background:rgba(31,27,46,.7);border:1px solid var(--pn-line);border-radius:14px;padding:8px 4px}
+.pn-strip .pn-ava{width:38px;height:38px;font-size:15px}
+.pn-strip .pn-score{font-weight:900;color:var(--pn-gold)}
+.pn-strip .pn-prog{display:block;color:var(--pn-m);font-size:10px}
+.pn-strip .pn-pl.flash{animation:pnPop .4s}
+@keyframes pnPop{0%{transform:scale(.92)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+/* --- câu hỏi --- */
+.pn-timer{height:8px;border-radius:9px;background:#2a2440;overflow:hidden;margin:6px 0}
+.pn-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--pn-ok),var(--pn-gold),var(--pn-bad));width:100%;transition:width .1s linear}
+.pn-q{font-size:clamp(30px,9vw,52px);font-weight:900;text-align:center;margin:10px 0 2px;text-shadow:0 0 30px rgba(124,92,255,.6);overflow-wrap:anywhere}
+.pn-qsub{text-align:center;color:var(--pn-m);font-size:16px;min-height:22px;margin-bottom:8px}
+.pn-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pn-opt{background:#2a2440;border:2px solid var(--pn-line);border-radius:16px;padding:14px 8px;color:var(--pn-t);font:inherit;font-weight:700;font-size:16px;cursor:pointer;min-height:52px;transition:all .15s;overflow-wrap:anywhere}
+.pn-opt:nth-child(1){border-color:#57455e}.pn-opt:nth-child(2){border-color:#2c4a55}.pn-opt:nth-child(3){border-color:#5a4a2c}.pn-opt:nth-child(4){border-color:#2c4a38}
+.pn-opt.ok{background:var(--pn-ok);border-color:var(--pn-ok)}
+.pn-opt.bad{background:var(--pn-bad);border-color:var(--pn-bad)}
+.pn-opt:disabled{cursor:default}
+.pn-feedback{text-align:center;margin-top:12px;font-weight:800;min-height:24px;font-size:15px}
+.pn-feedback.ok{color:var(--pn-ok)}.pn-feedback.bad{color:var(--pn-bad)}
+
+/* --- câu sắp xếp --- */
+.pn-order-built{min-height:52px;background:#14111f;border:2px dashed var(--pn-line);border-radius:14px;padding:10px;font-size:18px;font-weight:700;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pn-order-built .pn-tok{background:var(--pn-neon)}
+.pn-order-tokens{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.pn-tok{border:0;border-radius:12px;padding:10px 14px;font:inherit;font-weight:800;font-size:16px;color:#fff;background:#3a3157;cursor:pointer;min-height:44px}
+.pn-tok.used{opacity:.25;pointer-events:none}
+
+/* --- bảng điểm / kết quả --- */
+.pn-bar{display:flex;align-items:center;gap:8px;margin:8px 0;font-size:14px}
+.pn-bar .pn-bar-name{width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pn-bar .pn-bar-track{flex:1;height:22px;border-radius:6px;background:#2a2440;overflow:hidden}
+.pn-bar .pn-bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--pn-neon),var(--pn-cy));transition:width .8s}
+.pn-podium{text-align:center}
+.pn-podium .pn-crown{font-size:58px}
+.pn-rank-list{list-style:none;margin-top:8px}
+.pn-rank-list li{display:flex;align-items:center;gap:10px;padding:10px 6px;border-bottom:1px solid var(--pn-line)}
+.pn-rank-list li.me{background:rgba(217,168,78,.12);border-radius:10px}
+.pn-rank-list .pn-rk{width:26px;font-weight:900;text-align:center}
+.pn-rank-list .pn-ava{width:30px;height:30px;font-size:13px}
+
+/* --- toast --- */
+.pn-toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);background:var(--pn-gold);color:#221;padding:10px 18px;border-radius:99px;font-weight:800;z-index:60;max-width:88vw;text-align:center;font-size:14px}
+
+/* =====================================================================
+ * Chém gió (chat.js) — lớp cg-
+ * ===================================================================== */
+.cg-fab{position:fixed;right:10px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:45;width:110px;height:48px;border-radius:16px;border:0;background:linear-gradient(135deg,#ff4fd8,#7c5cff);color:#fff;font:inherit;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;gap:6px;box-shadow:0 6px 18px rgba(255,79,216,.35);cursor:pointer}
+.cg-fab small{font-size:12px}
+.cg-feed{position:fixed;left:10px;bottom:calc(128px + env(safe-area-inset-bottom));width:min(260px,62vw);z-index:44;background:rgba(15,12,25,.78);backdrop-filter:blur(8px);border:1px solid var(--pn-line);border-radius:14px;font-size:12px}
+.cg-feed.cg-feed-hidden{display:none}
+.cg-feed-h{display:flex;align-items:center;gap:6px;padding:6px 8px;border-bottom:1px solid var(--pn-line)}
+.cg-feed-h b{flex:none}
+.cg-switch{margin-left:auto;display:flex;align-items:center;gap:4px;color:var(--pn-m);font-size:11px;cursor:pointer}
+.cg-switch input{width:18px;height:18px;accent-color:var(--pn-neon)}
+.cg-feed-x{background:none;border:0;color:#fff;cursor:pointer;font-size:13px;min-width:32px;min-height:32px}
+.cg-list{max-height:104px;overflow-y:auto;padding:4px 8px}
+.cg-msg{padding:2px 0;line-height:1.4;overflow-wrap:anywhere}
+.cg-msg b{color:var(--pn-cy)}.cg-msg.me b{color:var(--pn-gold)}
+.cg-sheet{position:fixed;inset:auto 0 0 0;z-index:50;display:flex;justify-content:center}
+.cg-sh{width:100%;max-width:560px;background:#1f1b2e;border:1px solid var(--pn-line);border-radius:22px 22px 0 0;padding:14px 14px calc(14px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(0,0,0,.65)}
+.cg-sh-h{display:flex;align-items:center;gap:8px}
+.cg-grow{flex:1}
+.cg-x{background:#2a2440;border:1px solid var(--pn-line);color:#fff;border-radius:10px;padding:8px 12px;cursor:pointer;min-height:40px}
+.cg-tabs{display:flex;gap:6px;margin:10px 0}
+.cg-tabs button{flex:1;background:none;border:1px solid var(--pn-line);color:var(--pn-m);border-radius:10px;padding:9px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;min-height:44px}
+.cg-tabs button.on{color:var(--pn-t);background:#2b2540;border-color:var(--pn-neon)}
+.cg-grid{max-height:280px;overflow-y:auto;display:grid;gap:6px}
+.cg-grid.cg-hot{grid-template-columns:1fr 1fr}
+.cg-grid.cg-emo{grid-template-columns:repeat(8,1fr)}
+.cg-grid button{background:#2a2440;border:1px solid var(--pn-line);color:var(--pn-t);border-radius:12px;padding:9px 8px;font:inherit;font-size:12px;font-weight:600;text-align:left;cursor:pointer;line-height:1.35;min-height:44px}
+.cg-grid.cg-emo button{font-size:23px;text-align:center;padding:6px 0}
+.cg-grid button:active{transform:scale(.95);border-color:#ff4fd8}
+.cg-row{display:flex;gap:8px;align-items:center;margin-top:10px}
+.cg-row input{flex:1;min-width:0;background:#14111f;border:1px solid var(--pn-line);border-radius:12px;color:#fff;padding:11px;font:inherit;font-size:14px;min-height:48px}
+.cg-send{border:0;border-radius:12px;padding:12px 16px;font:inherit;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--pn-c),#ff7a45);cursor:pointer;min-height:48px}
+.cg-meta{font-size:11px;color:var(--pn-m);margin-top:6px}
+.cg-offrow{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--pn-m);margin-top:8px}
+.cg-offrow input{width:18px;height:18px;accent-color:var(--pn-neon)}
+.cg-off .cg-fab{filter:grayscale(.7);opacity:.75}
+
+/* Bong bóng: vị trí do JS tính (neo + lệch tầng theo slot), ở đây chỉ kiểu. */
+.cg-layer{position:absolute;inset:0;pointer-events:none;z-index:46}
+.cg-bubble{position:absolute;max-width:160px;background:#fff;color:#1a0b2e;font-weight:800;font-size:13px;padding:7px 11px;border-radius:14px;box-shadow:3px 3px 0 var(--pn-cy);text-align:center;line-height:1.35;overflow-wrap:anywhere;transition:opacity .4s,transform .4s;animation:pnPop .3s}
+.cg-bubble.me{box-shadow:3px 3px 0 var(--pn-gold);background:#fff7d6}
+.cg-bubble.out{opacity:0;transform:translateY(-14px)}
+
+@media (min-width:760px){
+  .pn-wrap{padding-top:20px}
+  .pn-code{font-size:52px}
+  .cg-grid.cg-hot{grid-template-columns:1fr 1fr 1fr}
+}

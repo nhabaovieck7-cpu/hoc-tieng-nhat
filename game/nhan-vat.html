@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14111f">
+<title>Tạo nhân vật · Hành trình đến Edo</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<header id="gtop"></header>
+
+<main class="wrap">
+  <div class="row" style="margin-bottom:10px">
+    <div class="grow">
+      <h1>🎭 Tạo nhân vật</h1>
+      <p class="mut">Chọn diện mạo cho chuyến đi Edo. Nhân vật hiện ở sảnh game và trên bản đồ.</p>
+    </div>
+    <a class="btn alt" href="index.html">← Sảnh</a>
+  </div>
+
+  <div class="grid2">
+    <!-- Xem trước -->
+    <div class="card">
+      <div class="hero-stage">
+        <div class="hav" id="stageAvatar" aria-label="Xem trước nhân vật"></div>
+        <p style="font-weight:800;font-size:20px;margin-top:8px" id="stageName">…</p>
+        <p class="mut" id="stageDesc">…</p>
+      </div>
+      <div class="mascot-row" style="justify-content:center;margin-top:8px">
+        <span class="me" id="stagePet" aria-hidden="true">🐱</span>
+        <div class="mascot-bubble" id="stageBubble" role="status">…</div>
+      </div>
+      <div style="height:14px"></div>
+      <button class="btn blk" id="btnRandom" type="button">🎲 Ngẫu nhiên cho vui</button>
+    </div>
+
+    <!-- Tuỳ chọn -->
+    <div class="card">
+      <h2 style="margin-top:0">1. Giới tính nhân vật</h2>
+      <div class="seg" id="segGender" role="group" aria-label="Giới tính nhân vật">
+        <button type="button" data-v="nam">👦 Nam</button>
+        <button type="button" data-v="nu">👧 Nữ</button>
+      </div>
+
+      <h2>2. Lớp nhân vật</h2>
+      <div class="cgrid" id="classGrid"></div>
+
+      <h2>3. Kiểu tóc</h2>
+      <div class="chips" id="hairChips"></div>
+
+      <h2>4. Màu da</h2>
+      <div class="swatches" id="skinSw" role="group" aria-label="Màu da"></div>
+
+      <h2>5. Màu tóc</h2>
+      <div class="swatches" id="hairColorSw" role="group" aria-label="Màu tóc"></div>
+
+      <h2>6. Trang phục</h2>
+      <div class="chips" id="outfitChips"></div>
+
+      <h2>7. Linh vật đồng hành</h2>
+      <div class="pet-grid" id="petGrid"></div>
+
+      <div style="height:16px"></div>
+      <button class="btn blk" id="btnSave" type="button">Lên đường thôi! 🗾</button>
+      <p class="note" id="syncNote">Nhân vật được lưu trên máy này (hn_game_avatar). Đăng nhập thì em tự đồng bộ nhẹ vào hồ sơ tài khoản.</p>
+    </div>
+  </div>
+  <div style="height:60px"></div>
+</main>
+
+<script src="../config.js"></script>
+<script src="game.js"></script>
+<script src="fx.js"></script>
+<script src="trend.js"></script>
+<script src="sfx.js"></script>
+<script src="music.js"></script>
+<script>
+GAME_topbar('🎭 Tạo nhân vật', { back: true });
+
+var cfg = GAME_AVATAR.load();
+var AV = GAME_AVATAR;
+
+var PET_LINES = [
+  'Meo~ diện mạo này là cháy nhất Edo luôn đó!',
+  'Đổi kiểu tóc là đổi cả vận may đó nha 😼',
+  'Trang phục này đi hạ trùm là hết nước chấm!',
+  'Chọn tui là chuẩn rồi, tui canh cá khô cực đỉnh 🐟'
+];
+
+function clsOf() { return AV.classOf(cfg); }
+function petOf() { return GAME_PETS[cfg.pet] || GAME_PETS.meo; }
+function outfitOf() { return AV.outfitOf(cfg); }
+
+function paint() {
+  document.getElementById('stageAvatar').innerHTML = AV.svg(cfg, 200);
+  document.getElementById('stagePet').textContent = petOf().e;
+  GAME_USER.then(function (u) {
+    var ten = u.name ? ' ' + u.name : '';
+    document.getElementById('stageName').textContent =
+      (GAME_Xh() + ten + ' · ' + clsOf().n).trim();
+    document.getElementById('stageDesc').textContent =
+      'Tuyệt chiêu: ' + clsOf().sk + ' · ' + outfitOf().e + ' ' + outfitOf().n +
+      ' · Đồng hành: ' + petOf().e + ' ' + petOf().n;
+  });
+  // Giới tính
+  document.querySelectorAll('#segGender button').forEach(function (b) {
+    b.classList.toggle('on', b.dataset.v === cfg.gender);
+  });
+  // Lớp nhân vật
+  document.getElementById('classGrid').innerHTML = GAME_CLASSES.map(function (c) {
+    return '<button type="button" class="cl' + (c.k === cfg.cls ? ' on' : '') + '" data-cls="' + c.k + '">' +
+      '<span aria-hidden="true">' + c.e + '</span>' + esc(c.n) + '</button>';
+  }).join('');
+  document.querySelectorAll('#classGrid .cl').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.cls = b.dataset.cls; changed(true); });
+  });
+  // Kiểu tóc
+  document.getElementById('hairChips').innerHTML = AV.HAIRS.map(function (h) {
+    return '<button type="button" class="' + (h.k === cfg.hair ? 'on' : '') + '" data-hair="' + h.k + '">💇 ' + esc(h.n) + '</button>';
+  }).join('');
+  document.querySelectorAll('#hairChips button').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.hair = b.dataset.hair; changed(); });
+  });
+  // Màu da
+  document.getElementById('skinSw').innerHTML = AV.SKINS.map(function (s) {
+    return '<button type="button" class="sw' + (s.v === cfg.skin ? ' on' : '') + '" data-skin="' + s.v +
+      '" style="background:' + s.v + '" aria-label="Màu da ' + esc(s.n) + '" title="' + esc(s.n) + '"></button>';
+  }).join('');
+  document.querySelectorAll('#skinSw .sw').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.skin = b.dataset.skin; changed(); });
+  });
+  // Màu tóc
+  document.getElementById('hairColorSw').innerHTML = AV.HAIRCOLORS.map(function (s) {
+    return '<button type="button" class="sw' + (s.v === cfg.hairColor ? ' on' : '') + '" data-hc="' + s.v +
+      '" style="background:' + s.v + '" aria-label="Màu tóc ' + esc(s.n) + '" title="' + esc(s.n) + '"></button>';
+  }).join('');
+  document.querySelectorAll('#hairColorSw .sw').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.hairColor = b.dataset.hc; changed(); });
+  });
+  // Trang phục
+  document.getElementById('outfitChips').innerHTML = AV.OUTFITS.map(function (o) {
+    return '<button type="button" class="' + (o.k === cfg.outfit ? 'on' : '') + '" data-outfit="' + o.k + '">' +
+      o.e + ' ' + esc(o.n) + '</button>';
+  }).join('');
+  document.querySelectorAll('#outfitChips button').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.outfit = b.dataset.outfit; changed(true); });
+  });
+  // Linh vật
+  document.getElementById('petGrid').innerHTML = Object.keys(GAME_PETS).map(function (k) {
+    var p = GAME_PETS[k];
+    return '<button type="button" class="pet-opt' + (k === cfg.pet ? ' on' : '') + '" data-pet="' + k + '">' +
+      '<span aria-hidden="true">' + p.e + '</span>' + esc(p.n) + '</button>';
+  }).join('');
+  document.querySelectorAll('#petGrid .pet-opt').forEach(function (b) {
+    b.addEventListener('click', function () { cfg.pet = b.dataset.pet; petSay(); changed(true); });
+  });
+}
+
+function petSay() {
+  // Câu của linh vật ở trang này là câu riêng của trang tạo nhân vật (không
+  // thuộc kho khoảnh khắc trend), nên ghi thẳng vào bong bóng tĩnh của trang.
+  // GTREND.bubble() chỉ vẽ bong bóng NỔI riêng của Nhánh 4 — nếu "mượn" nó ở
+  // đây, bong bóng tĩnh sẽ kẹt ở trạng thái chờ. Xem nhật ký N1.
+  var t = PET_LINES[Math.floor(Math.random() * PET_LINES.length)];
+  document.getElementById('stageBubble').textContent = t;
+}
+
+/* Đổi lựa chọn: vẽ lại ngay + lưu nháp local (nút Lưu là xác nhận chính thức) */
+function changed(pop) {
+  cfg = AV.sanitize(cfg);
+  paint();
+  gameStore.set('hn_game_avatar', cfg);
+  if (pop && window.GFX) GFX.burst(document.getElementById('stageAvatar'), 22);
+}
+GAME_segPick(document.getElementById('segGender'), function (v) {
+  cfg.gender = v;
+  changed();
+});
+
+document.getElementById('btnRandom').addEventListener('click', function () {
+  cfg = AV.sanitize({
+    gender: Math.random() < 0.5 ? 'nam' : 'nu',
+    hair: AV.HAIRS[Math.floor(Math.random() * AV.HAIRS.length)].k,
+    skin: AV.SKINS[Math.floor(Math.random() * AV.SKINS.length)].v,
+    hairColor: AV.HAIRCOLORS[Math.floor(Math.random() * AV.HAIRCOLORS.length)].v,
+    outfit: AV.OUTFITS[Math.floor(Math.random() * AV.OUTFITS.length)].k,
+    cls: GAME_CLASSES[Math.floor(Math.random() * GAME_CLASSES.length)].k,
+    pet: Object.keys(GAME_PETS)[Math.floor(Math.random() * Object.keys(GAME_PETS).length)]
+  });
+  petSay();
+  changed(true);
+});
+
+document.getElementById('btnSave').addEventListener('click', function () {
+  cfg = AV.save(cfg); // lưu local + phát sự kiện + đồng bộ /hoso chạy nền nếu đã đăng nhập
+  if (window.GFX) {
+    GFX.confetti(90);
+    GFX.burst(document.getElementById('stageAvatar'), 50);
+  }
+  toast('Đã lưu nhân vật! Đang về sảnh… 🗾');
+  var note = document.getElementById('syncNote');
+  GAME_USER.then(function (u) {
+    if (!u.loggedIn && note) {
+      note.textContent = 'Đang chơi với tư cách khách: nhân vật chỉ lưu trên máy này. Đăng nhập để đồng bộ vào tài khoản.';
+    }
+  });
+  setTimeout(function () { location.href = 'index.html'; }, 900);
+});
+
+/* Khởi động: nếu máy chưa có nhân vật mà tài khoản có bản đồng bộ thì kéo về trước */
+(function init() {
+  paint();
+  petSay();
+  GAME_USER.then(function (u) {
+    paint();
+    if (!localStorage.getItem('hn_game_avatar') && u.loggedIn) {
+      AV.pullHoso().then(function (pulled) { if (pulled) { cfg = pulled; paint(); } });
+    }
+  });
+})();
+</script>
+</body>
+</html>
