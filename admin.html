@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"></noscript>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=a16ae40b"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=ba16ae40"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="admin.html">Admin</a></nav></div></div>
 <main class="wrap" style="max-width:720px;padding-bottom:40px">
@@ -49,6 +49,7 @@
   <div class="authcard" style="margin-bottom:14px">
     <h3 style="margin-top:0">📣 Phát thanh cho mọi học viên đã duyệt</h3>
     <textarea id="cmBcBody" rows="3" maxlength="4000" placeholder="Nội dung phát thanh…" style="width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;background:var(--card);color:var(--t);box-sizing:border-box"></textarea>
+    <div class="meta" id="cmBcCount" style="margin-top:8px">Đang đếm số người nhận…</div>
     <div style="margin-top:8px"><button class="primary" type="button" id="cmBcSend">Gửi phát thanh…</button></div>
     <div id="cmBcList" style="margin-top:10px"></div>
   </div>
@@ -62,7 +63,7 @@
   </div>
 
   <h2 style="margin-top:30px">🔐 Xem tin nhắn học viên (có mật khẩu)</h2>
-  <p class="meta">Mục này chỉ dùng khi cần xử lý an toàn/vi phạm. Mở xem bắt buộc nhập lại mật khẩu admin (kiểm tra phía máy chủ); quyền xem giữ tới khi đăng xuất hoặc bấm “Đóng quyền xem”. Mọi lần mở đều được ghi vào nhật ký truy cập bên dưới.</p>
+  <p class="meta">Mục này chỉ dùng khi cần xử lý an toàn/vi phạm. Mở xem bắt buộc nhập lại mật khẩu admin (kiểm tra phía máy chủ) và ghi lý do; quyền xem giữ tới khi đăng xuất hoặc bấm “🔒 Đóng quyền xem”. Mọi lần mở đều được ghi vào nhật ký truy cập bên dưới — nhật ký chỉ hiển thị trong trang quản trị này.</p>
   <div id="cmGate"></div>
   <div id="cmConvs"><p class="empty-note">Đang tải…</p></div>
   <div id="cmView"></div>
@@ -154,6 +155,8 @@ if(AUTH.sessionAdmin())showPanel();
 const cmNames={};
 async function cmLoadNames(){for(const t of ['approved','locked','pending']){try{const j=await AUTH.adminUsers(t);(j.users||[]).forEach(u=>{cmNames[u.id]=u.name||u.email})}catch(e){}}}
 function cmName(id){if(id==='admin')return 'Admin';return cmNames[id]||id}
+function cmPersonName(p){if(p&&typeof p==='object'){if(p.id&&p.name)cmNames[p.id]=p.name;return p.name||cmName(p.id||'')}return cmName(p)}
+function cmPersonId(p){if(p&&typeof p==='object')return p.id||'';return String(p||'')}
 let cmPostFilter='all',cmRepStatus='open',cmGranted=false;
 async function cmLoadPosts(){const box=document.getElementById('cmPosts');box.innerHTML='<p class="empty-note">Đang tải…</p>';
  try{const j=await AUTH.api('/community/admin/posts?filter='+cmPostFilter,{admin:true});const ps=j.posts||[];
@@ -205,43 +208,77 @@ async function cmLoadReports(){const box=document.getElementById('cmReports');bo
 async function cmLoadBroadcasts(){const box=document.getElementById('cmBcList');
  try{const j=await AUTH.api('/chat/admin/broadcasts',{admin:true});const bs=j.broadcasts||[];
   box.innerHTML=bs.length?'<h4 style="margin:8px 0">Các lần phát thanh trước</h4>'+bs.map(b=>'<div class="meta" style="margin-top:6px">📣 '+fmt(b.created_at)+' · '+b.recipient_count+' người nhận<br>'+esc(b.body)+'</div>').join(''):''}catch(e){box.innerHTML=''}}
+async function cmLoadBcCount(){const el=document.getElementById('cmBcCount');
+ try{const j=await AUTH.adminUsers('approved');const n=(j.users||[]).length;if(el)el.textContent='Sẽ gửi tới '+n+' học viên đã duyệt.';return n}
+ catch(e){if(el)el.textContent='Chưa đếm được số người nhận — vẫn gửi được, số người nhận thật sẽ hiện sau khi gửi.';return 0}}
 async function cmFillUsers(){const sel=document.getElementById('cmDmUser');
  try{const j=await AUTH.adminUsers('approved');const us=j.users||[];
   sel.innerHTML=us.map(u=>'<option value="'+u.id+'">'+esc(u.name||u.email)+'</option>').join('')||'<option value="">(Chưa có học viên đã duyệt)</option>'}catch(e){}}
 async function cmGate(){const g=document.getElementById('cmGate');
- try{const j=await AUTH.api('/chat/admin/view-state',{admin:true});cmGranted=!!j.granted;
-  g.innerHTML=cmGranted?'<p class="meta">🔓 Quyền xem đang mở cho phiên này. <button class="lock" type="button" id="cmLockView">Đóng quyền xem</button></p>'
-   :'<div class="authcard"><label for="cmGatePw">Mật khẩu admin (nhập lại để mở quyền xem)</label><input id="cmGatePw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="primary" type="button" id="cmUnlock">Mở quyền xem</button><div class="autherr" id="cmGateErr"></div></div>';
-  if(cmGranted){const b=document.getElementById('cmLockView');b.onclick=async()=>{try{await AUTH.api('/chat/admin/lock-view',{method:'POST',admin:true,body:{}})}catch(e){}cmGate();document.getElementById('cmView').innerHTML=''}}
-  else{const b=document.getElementById('cmUnlock');b.onclick=async()=>{const err=document.getElementById('cmGateErr');err.textContent='';
-   try{await AUTH.api('/chat/admin/unlock',{method:'POST',admin:true,body:{password:document.getElementById('cmGatePw').value}});cmGate();cmLoadLog()}catch(e){err.textContent=e.message}}}
+ try{const j=await AUTH.api('/chat/admin/view-state',{admin:true});cmGranted=!!(j.unlocked||j.granted);
+  if(cmGranted){
+   g.innerHTML='<p class="meta">🔓 Quyền xem đang mở cho phiên này. <button class="lock" type="button" id="cmLockView">🔒 Đóng quyền xem</button></p>';
+   const b=document.getElementById('cmLockView');b.onclick=async()=>{try{await AUTH.api('/chat/admin/lock-view',{method:'POST',admin:true,body:{}})}catch(e){}cmGranted=false;document.getElementById('cmView').innerHTML='';cmGate();cmLoadLog()};
+  }else{
+   g.innerHTML='<div class="authcard"><label for="cmGatePw">Mật khẩu admin (nhập lại để mở quyền xem)</label>'
+    +'<input id="cmGatePw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false">'
+    +'<label for="cmGateReason">Lý do mở xem (bắt buộc — ghi vào nhật ký truy cập)</label>'
+    +'<input id="cmGateReason" type="text" list="cmReasonList" maxlength="200" placeholder="Chọn gợi ý hoặc tự ghi lý do…" autocomplete="off">'
+    +'<datalist id="cmReasonList"><option value="Xử lý báo cáo quấy rối"></option><option value="Xử lý báo cáo lừa đảo"></option><option value="Kiểm tra theo yêu cầu của học viên"></option><option value="Nghi vấn gian lận"></option><option value="Lý do khác"></option></datalist>'
+    +'<button class="primary" type="button" id="cmUnlock">Mở quyền xem</button><div class="autherr" id="cmGateErr"></div></div>';
+   const b=document.getElementById('cmUnlock');b.onclick=async()=>{const err=document.getElementById('cmGateErr');err.textContent='';
+    const pw=document.getElementById('cmGatePw').value;
+    const reason=document.getElementById('cmGateReason').value.trim();
+    if(!pw){err.textContent='Hãy nhập lại mật khẩu admin.';document.getElementById('cmGatePw').focus();return}
+    if(!reason){err.textContent='Hãy ghi lý do mở xem — chưa có lý do thì chưa mở được. Lý do được ghi vào nhật ký truy cập.';document.getElementById('cmGateReason').focus();return}
+    b.disabled=true;
+    try{await AUTH.api('/chat/admin/unlock',{method:'POST',admin:true,body:{password:pw,reason}});cmGate();cmLoadLog()}catch(e){err.textContent=e.message}b.disabled=false};
+  }
  }catch(e){g.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
 async function cmLoadConvs(){const box=document.getElementById('cmConvs');box.innerHTML='<p class="empty-note">Đang tải…</p>';
  try{const j=await AUTH.api('/chat/admin/conversations',{admin:true});const cs=j.conversations||[];
   if(!cs.length){box.innerHTML='<p class="empty-note">Chưa có cuộc trò chuyện nào giữa học viên.</p>';return}
-  box.innerHTML=cs.map(c=>`<div class="userrow"><b>${esc(cmName(c.user_a))}</b> ↔ <b>${esc(cmName(c.user_b))}</b>
-   <div class="meta">Tin cuối: ${c.last_at?fmt(c.last_at):'—'}</div>
-   <div class="acts"><button class="lock" data-view="${c.id}">Xem cuộc trò chuyện</button></div></div>`).join('');
+  box.innerHTML=cs.map(c=>{const reps=Number(c.open_reports||0);
+   return `<div class="userrow"><b>${esc(cmPersonName(c.user_a))}</b> ↔ <b>${esc(cmPersonName(c.user_b))}</b>${reps>0?' <span class="meta">🚩 '+reps+' báo cáo</span>':''}
+   <div class="meta">Tin cuối: ${c.last_at?fmt(c.last_at):'—'}${c.msg_count!=null?' · '+c.msg_count+' tin':''}</div>
+   <div class="acts"><button class="lock" data-view="${c.id}">Xem cuộc trò chuyện</button></div></div>`}).join('');
   box.querySelectorAll('button[data-view]').forEach(b=>b.onclick=()=>cmViewConv(b.dataset.view));
  }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
 async function cmViewConv(id){const box=document.getElementById('cmView');
  if(!cmGranted){box.innerHTML='<p class="empty-note">🔒 Cần mở quyền xem bằng mật khẩu admin ở trên trước.</p>';cmGate();return}
  box.innerHTML='<p class="empty-note">Đang tải tin nhắn…</p>';
  try{const j=await AUTH.api('/chat/admin/messages?conv_id='+encodeURIComponent(id),{admin:true});const ms=j.messages||[];
-  box.innerHTML='<div class="authcard"><h3 style="margin-top:0">'+esc(cmName(j.user_a))+' ↔ '+esc(cmName(j.user_b))+'</h3>'
-  +(ms.length?ms.map(m=>'<div class="meta" style="margin-top:6px"><b>'+esc(cmName(m.sender_id))+'</b> · '+fmt(m.created_at)+(m.deleted?' · (người gửi đã xoá — nội dung gốc bên dưới)':'')+'<br><span style="white-space:pre-wrap">'+esc(m.body||'(tệp đính kèm)')+'</span></div>').join(''):'<p class="empty-note">Chưa có tin nhắn.</p>')
-  +'</div>';cmLoadLog();
+  const idB=cmPersonId(j.user_b);
+  box.innerHTML='<div class="authcard"><h3 style="margin-top:0">'+esc(cmPersonName(j.user_a))+' ↔ '+esc(cmPersonName(j.user_b))+'</h3>'
+  +(ms.length?ms.map(m=>{const right=!!idB&&m.sender_id===idB;
+    return '<div style="display:flex;flex-direction:column;align-items:'+(right?'flex-end':'flex-start')+';margin-top:10px">'
+    +'<div class="meta"><b>'+esc(cmName(m.sender_id))+'</b> · '+fmt(m.created_at)+(m.deleted?' · (người gửi đã xoá — nội dung gốc bên dưới)':'')+'</div>'
+    +'<div class="cm-bubble" style="max-width:82%;border-radius:14px;padding:8px 12px;white-space:pre-wrap;word-break:break-word;background:'+(right?'var(--soft)':'var(--bg)')+';border:1px solid var(--line);color:var(--t)">'+esc(m.body||'(tệp đính kèm)')+'</div></div>'}).join(''):'<p class="empty-note">Chưa có tin nhắn.</p>')
+  +'<p class="meta" style="text-align:center;margin-top:14px;font-weight:700">Chế độ chỉ xem — quản trị không gửi tin thay học viên</p></div>';cmLoadLog();
  }catch(e){if(e.body&&e.body.code==='need_unlock'){cmGranted=false;cmGate()}box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
 async function cmLoadLog(){const box=document.getElementById('cmLog');
  try{const j=await AUTH.api('/chat/admin/access-log',{admin:true});const ls=j.log||[];
-  box.innerHTML=ls.length?ls.map(l=>'<div class="meta" style="margin-top:5px">'+(l.kind==='unlock'?'🔓 Mở quyền xem':'👁 Mở xem: '+esc(cmName(l.user_a))+' ↔ '+esc(cmName(l.user_b)))+' · '+fmt(l.opened_at)+'</div>').join(''):'<p class="empty-note">Chưa có lượt truy cập nào.</p>';
+  if(!ls.length){box.innerHTML='<p class="empty-note">Chưa có lượt truy cập nào.</p>';return}
+  box.innerHTML='<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.92em"><thead><tr>'
+  +'<th style="text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)">Thời gian</th>'
+  +'<th style="text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)">Loại</th>'
+  +'<th style="text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)">Hội thoại</th>'
+  +'<th style="text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)">Lý do</th></tr></thead><tbody>'
+  +ls.map(l=>{const pair=(l.user_a||l.user_b)?esc(cmName(l.user_a))+' ↔ '+esc(cmName(l.user_b)):'—';
+    const kind=l.kind==='unlock'?'🔓 Mở quyền xem':(l.kind==='open'?'👁 Mở xem hội thoại':esc(l.kind||''));
+    const reason=esc(l.reason||'—')+(l.report_id?' <span class="meta">(báo cáo '+esc(l.report_id)+')</span>':'');
+    return '<tr><td style="padding:6px 4px;border-bottom:1px solid var(--line);white-space:nowrap">'+fmt(l.opened_at)+'</td>'
+    +'<td style="padding:6px 4px;border-bottom:1px solid var(--line)">'+kind+'</td>'
+    +'<td style="padding:6px 4px;border-bottom:1px solid var(--line)">'+pair+'</td>'
+    +'<td style="padding:6px 4px;border-bottom:1px solid var(--line)">'+reason+'</td></tr>'}).join('')
+  +'</tbody></table></div><p class="meta" style="margin-top:6px">Nhật ký chỉ hiển thị trong trang quản trị này. Nhật ký chỉ thêm, không sửa/xóa được.</p>';
  }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
 let cmInited=false;
-async function cmInit(){if(cmInited)return;cmInited=true;await cmLoadNames();cmGate();cmLoadPosts();cmLoadReports();cmLoadBroadcasts();cmFillUsers();cmLoadConvs();cmLoadLog()}
+async function cmInit(){if(cmInited)return;cmInited=true;await cmLoadNames();cmGate();cmLoadPosts();cmLoadReports();cmLoadBroadcasts();cmLoadBcCount();cmFillUsers();cmLoadConvs();cmLoadLog()}
 document.querySelectorAll('#cmPostTabs button').forEach(b=>b.onclick=()=>{cmPostFilter=b.dataset.f;document.querySelectorAll('#cmPostTabs button').forEach(x=>x.classList.toggle('on',x===b));cmLoadPosts()});
 document.querySelectorAll('#cmRepTabs button').forEach(b=>b.onclick=()=>{cmRepStatus=b.dataset.s;document.querySelectorAll('#cmRepTabs button').forEach(x=>x.classList.toggle('on',x===b));cmLoadReports()});
 document.getElementById('cmBcSend').onclick=async()=>{const body=document.getElementById('cmBcBody').value.trim();if(!body){alert('Hãy nhập nội dung phát thanh.');return}
- let n=0;try{const j=await AUTH.adminUsers('approved');n=(j.users||[]).length}catch(e){}
+ const n=await cmLoadBcCount();
  if(!confirm('Gửi phát thanh tới '+n+' học viên đã duyệt? Nội dung sẽ vào luồng chat Admin của từng người.'))return;
  const b=document.getElementById('cmBcSend');b.disabled=true;
  try{const j=await AUTH.api('/chat/admin/broadcast',{method:'POST',admin:true,body:{body}});alert('Đã phát thanh tới '+j.recipient_count+' học viên.');document.getElementById('cmBcBody').value='';cmLoadBroadcasts()}catch(e){alert(e.message)}b.disabled=false};
