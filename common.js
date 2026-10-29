@@ -125,7 +125,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 // Chuông hiện TỔNG chưa đọc = thông báo cộng đồng + tin nhắn chưa đọc (đếm riêng ở /community/unread).
 // Chỉ hiện khi đã có phiên đăng nhập học viên; thông báo là TRONG trang (không push về điện thoại).
 (function(){
-var base=function(){return (window.SITE&&SITE.aiEndpoint)||''};
+var base=function(){return (typeof SITE!='undefined'&&SITE&&SITE.aiEndpoint)||(window.SITE&&window.SITE.aiEndpoint)||''};
 function sess(){try{return localStorage.getItem('hn_sess_v1')||''}catch(e){return ''}}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 async function api(path,opts){opts=opts||{};var h={'Content-Type':'application/json'};var t=sess();if(t)h.Authorization='Bearer '+t;

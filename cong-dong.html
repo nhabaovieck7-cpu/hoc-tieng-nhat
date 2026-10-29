@@ -69,7 +69,7 @@ function avaHTML(p,sm){const nm=(p&&p.name)||'?';const ini=nm.trim().charAt(0).t
 function when(t){try{const d=new Date(t),n=new Date(),s=(n-d)/1000;if(s<60)return 'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';if(s<86400*7)return Math.floor(s/86400)+' ngày trước';return d.toLocaleDateString('vi-VN')}catch(e){return ''}}
 function nameLine(p){if(!p)return '';return '<a class="cd-name" href="cong-dong.html?u='+encodeURIComponent(p.id)+'">'+esc(p.name)+'</a>'+(p.admin?'<span class="cd-adm">Admin</span>':'')+(p.level?'<span class="cd-lv">'+esc(p.level)+'</span>':'')}
 async function resolveFiles(scope){const ids=new Set();scope.querySelectorAll('[data-avf],[data-imgf],[data-docf]').forEach(el=>{const id=el.dataset.avf||el.dataset.imgf||el.dataset.docf;if(id)ids.add(id)});
- if(!ids.size)return;let map={};try{const j=await AUTH.api('/community/file-token',{method:'POST',body:{ids:[...ids].slice(0,60)}});map=j.urls||{}}catch(e){return}
+ if(!ids.size)return;let map={};try{const j=await AUTH.api('/community/file-token',{method:'POST',body:{ids:[...ids].slice(0,60)}});map=Object.fromEntries(Object.entries(j.urls||{}).map(([k,v])=>[k,String(v).startsWith('/')?SITE.aiEndpoint.replace(/\/$/,'')+v:v]))}catch(e){return}
  scope.querySelectorAll('[data-avf]').forEach(el=>{const u=map[el.dataset.avf];if(u)el.src=u});
  scope.querySelectorAll('[data-imgf]').forEach(el=>{const u=map[el.dataset.imgf];if(u){el.src=u;el.closest('a')&&(el.closest('a').href=u)}});
  scope.querySelectorAll('[data-docf]').forEach(el=>{const u=map[el.dataset.docf];if(u)el.href=u})}
@@ -121,8 +121,8 @@ async function shrinkImage(file){if(!/^image\//.test(file.type)||file.type==='im
 async function uploadFiles(purpose){const out=[];for(const f of pendingFiles){let file=f.file;
  if(f.kind==='image')file=await shrinkImage(file);
  const fd=new FormData();fd.append('purpose',purpose);fd.append('file',file);
- const r=await fetch(SITE.aiEndpoint+'/community/upload',{method:'POST',headers:{Authorization:'<redacted>'+AUTH.session()},body:fd});
- const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi tải file '+r.status));out.push(j.id)}return out}
+ const r=await fetch(SITE.aiEndpoint+'/community/upload',{method:'POST',headers:{Authorization:'Bearer '+AUTH.session()},body:fd});
+ const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi tải file '+r.status));out.push((j.file&&j.file.id)||j.id)}return out}
 function fileChips() {const box=document.getElementById('cdchips');if(!box)return;box.innerHTML=pendingFiles.map((f,i)=>'<span class="cd-chip">'+(f.kind==='image'?'🖼 ':'📎 ')+esc(f.file.name)+'<button type="button" data-chip-x="'+i+'">✕</button></span>').join('');
  box.querySelectorAll('[data-chip-x]').forEach(b=>b.onclick=()=>{pendingFiles.splice(+b.dataset.chipX,1);fileChips()})}
 function renderMine(){const m=document.getElementById('cdmine');const p=ME;
@@ -138,6 +138,7 @@ function renderMine(){const m=document.getElementById('cdmine');const p=ME;
  +'<label for="pf-goal">Mục tiêu</label><input class="cd-inp" id="pf-goal" maxlength="120" value="'+esc(p.goal||'')+'" placeholder="Ví dụ: Đỗ N2 tháng 7/2027">'
  +'<label>Ảnh đại diện</label><div><input type="file" id="pf-ava" accept="image/jpeg,image/png,image/webp" hidden><button type="button" class="cd-filebtn" data-need-storage id="pf-avabtn">🖼 Chọn ảnh đại diện</button> <span class="cd-mut" id="pf-avaname"></span></div>'
  +'<div class="cd-err" id="pferr"></div><div style="margin-top:10px;display:flex;gap:8px"><button type="submit" class="cd-send">Lưu hồ sơ</button><button type="button" class="cd-ghost" id="pfcancel">Huỷ</button></div></form>';
+ resolveFiles(m);
  document.getElementById('cdedit').onclick=()=>{document.getElementById('cdpform').hidden=false};
  document.getElementById('pfcancel').onclick=()=>{document.getElementById('cdpform').hidden=true};
  const avIn=document.getElementById('pf-ava');document.getElementById('pf-avabtn').onclick=()=>avIn.click();
