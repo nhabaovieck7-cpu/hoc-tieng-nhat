@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "date": "2026-10-30",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 30/10/2026（問題11・中文）",
+      "file": "2026-10-30-n1-set.json"
+    },
+    {
+      "date": "2026-10-30",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 30/10/2026（主張理解）",
+      "file": "2026-10-30-reading.json"
+    },
+    {
+      "date": "2026-10-30",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 18 — Tối nay ăn gì? — Chuyện bếp núc, giao hàng nhầm và kế hoạch cuối tuần",
+      "file": "2026-10-30-kaiwa.json"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "lesson": 18,
+  "topic": "Tối nay ăn gì? — Chuyện bếp núc, giao hàng nhầm và kế hoạch cuối tuần",
+  "lines": [
+    {
+      "speaker": "翔太",
+      "ja": "ただいまー。あ、今日さ、宅配ボックスに変な荷物入ってたんだけど。",
+      "vi": "Em về rồi đây. À, hôm nay này, trong hộp nhận đồ có một kiện hàng lạ."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "え、なにそれ？　うちのじゃないの？",
+      "vi": "Hả, cái gì thế? Không phải đồ nhà mình à?"
+    },
+    {
+      "speaker": "翔太",
+      "ja": "いや、宛名見たらさ、隣の棟の人だった。部屋番号がさ、似てるんだよね、うちと。",
+      "vi": "Không, nhìn tên người nhận thì là người tòa bên cạnh. Số phòng ấy, giống nhà mình."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "あー、よくあるよね、それ。で、どうしたの？　置いといた？",
+      "vi": "À, chuyện đó hay gặp mà. Rồi sao, cậu để nguyên đó à?"
+    },
+    {
+      "speaker": "翔太",
+      "ja": "ううん、管理人室に届けといた。ついでにさ、今日の晩ごはんどうする？",
+      "vi": "Không, tớ mang qua phòng quản lý rồi. Tiện thể này, tối nay ăn gì?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "んー、冷蔵庫にさ、鶏肉あるじゃん。あれでなんか作らない？",
+      "vi": "Ừm, trong tủ lạnh có thịt gà mà. Nấu gì với nó đi?"
+    },
+    {
+      "speaker": "翔太",
+      "ja": "いいね。じゃあさ、照り焼きにしちゃう？　ごはん炊いとくよ。",
+      "vi": "Hay đấy. Thế làm gà teriyaki nhé? Tớ nấu cơm trước."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "あ、でもさ、うちの人、今日遅くなるって言ってたよ。帰り、9時過ぎるって。",
+      "vi": "À, nhưng mà người nhà tớ bảo hôm nay về muộn. Về thì cũng quá 9 giờ."
+    },
+    {
+      "speaker": "翔太",
+      "ja": "そっか。じゃあさ、先に二人で食べちゃって、取り置きしとけばいいじゃん。",
+      "vi": "Thế à. Vậy thì hai đứa mình ăn trước, phần để lại là được mà."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "だね。あ、それとさ、週末の話なんだけど、土曜どうする？",
+      "vi": "Ừ nhỉ. À, còn chuyện cuối tuần, thứ Bảy tính sao?"
+    },
+    {
+      "speaker": "翔太",
+      "ja": "土曜？　あー、天気よさそうだし、どっか出かけない？　ほら、前から行きたがってたあのカフェ。",
+      "vi": "Thứ Bảy á? À, thời tiết có vẻ đẹp, đi đâu chơi không? Này, cái quán cà phê mà cậu bảo muốn đi từ lâu ấy."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "あ、あそこね！　行きたーい。でもさ、混んでそうじゃない？　予約できるかな。",
+      "vi": "À, chỗ đó hả! Muốn đi quá. Nhưng mà chắc đông nhỉ? Không biết có đặt chỗ được không."
+    },
+    {
+      "speaker": "翔太",
+      "ja": "まあ、ダメだったらその辺ぶらぶらすればいいって。とりあえず明日、電話してみるよ。",
+      "vi": "Thôi, nếu không được thì đi loanh quanh gần đó cũng được mà. Tạm thời ngày mai tớ gọi điện thử."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "うん、お願い。あ、ごはん炊けた？　なんかいい匂いしてきた。",
+      "vi": "Ừ, nhờ cậu nhé. À, cơm chín chưa? Thấy thơm thơm rồi."
+    },
+    {
+      "speaker": "翔太",
+      "ja": "もうすぐだよ。はい、鶏肉切るの手伝って。ねぎも刻んどいて。",
+      "vi": "Sắp xong rồi. Này, phụ tớ cắt thịt gà đi. Hành cũng thái sẵn giúp nhé."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "はーい。ねえ、照り焼きのタレさ、甘めがいいな。砂糖、ちょっと多めで。",
+      "vi": "Vâng ạ. Này, nước sốt teriyaki ấy, tớ thích ngọt một chút. Cho đường nhiều hơn tí nhé."
+    },
+    {
+      "speaker": "翔太",
+      "ja": "了解。あ、そうだ、明日の朝さ、ゴミ出し当番、俺だっけ？",
+      "vi": "Rõ. À, đúng rồi, sáng mai đến lượt ai đổ rác nhỉ, tớ à?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "ううん、明日は私。だから安心して寝てていいよ。ほら、早く食べよ。",
+      "vi": "Không, mai là lượt tớ. Nên cứ yên tâm mà ngủ nhé. Nào, ăn nhanh thôi."
+    }
+  ],
+  "notes": [
+    "「〜じゃん」: cách nói khẳng định thân mật, tương đương 'mà', 'đấy chứ' — dùng với bạn bè, người thân, không dùng với cấp trên.",
+    "「〜って」: trích dẫn lời nói một cách suồng sã (〜と言っていた → 〜って). Ví dụ: 「遅くなるって」= bảo là sẽ về muộn.",
+    "「どうする？」「どうしたの？」: câu hỏi rút gọn, bỏ trợ từ — văn nói tự nhiên, khác văn viết 「どうするのですか」.",
+    "「〜しとく／しとけば」: dạng rút gọn của 「〜しておく／しておけば」 — làm sẵn, để sẵn cho tiện.",
+    "「だね・そっか・まあ」: từ đệm giữ nhịp hội thoại, thể hiện sự đồng tình hoặc suy nghĩ — đừng dịch sát từng từ, hãy cảm nhận nhịp.",
+    "「うちの人」: cách nói tự nhiên, trung tính để chỉ người trong nhà (người thân sống cùng), tránh dùng từ chỉ quan hệ cụ thể trong hội thoại suồng sã.",
+    "「取り置き」: để phần (đồ ăn) lại cho người về sau — từ rất hay gặp trong đời sống gia đình ở Nhật.",
+    "「ぶらぶらする」: đi dạo loanh quanh không mục đích cụ thể — sắc thái thư giãn, khác với 「散歩する」 trang trọng hơn."
+  ]
+}
