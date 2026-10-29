@@ -82,6 +82,7 @@ var TEXT='Học tiếng Nhật miễn phí cho người Việt: khóa học N5�
 var HOME='https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/';
 var ov=null,copyBtn=null,note=null,curUrl=HOME;
 function urlFor(btn){var u=btn&&btn.getAttribute('data-url');if(u)return u;
+ if(/(^|\/)lesson\.html$/.test(location.pathname)){var id=new URLSearchParams(location.search).get('id')||'';if(/^[\w-]+$/.test(id))return HOME+'bai/'+id+'.html'}
  if(/(^|\/)index\.html$/.test(location.pathname)||location.pathname.endsWith('/'))return HOME;
  return location.href.split('#')[0]}
 function build(){if(ov)return;var eu=encodeURIComponent(curUrl),et=encodeURIComponent(TITLE+' — '+TEXT),ew=encodeURIComponent(TEXT+'\n'+curUrl);
@@ -195,3 +196,32 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 // ===== Mục "Xếp hạng" trong menu chính (29/10): chèn 1 lần vào .topbar .nav =====
 (function(){function boot(){var nav=document.querySelector('.topbar .nav');if(!nav||nav.querySelector('a[href="xep-hang.html"]'))return;var a=document.createElement('a');a.href='xep-hang.html';a.textContent='🏆 Xếp hạng';a.className='hn-navlink';if(/(^|\/)xep-hang\.html$/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();
+
+// ===== Header gọn trên điện thoại (29/10, Phía B): 1 hàng — tên trang · 🔍 · chế độ tối · avatar.
+// Tài khoản, tin nhắn, thông báo, chia sẻ, đăng xuất gom vào menu avatar (#hdrmenu). Trên máy tính #hdrmenu
+// dùng display:contents nên các nút vẫn nằm trên thanh như cũ. Chỉ DI CHUYỂN phần tử, không đổi auth.js.
+(function(){
+function boot(){var w=document.querySelector('.topbar .wrap');if(!w||document.getElementById('hdrmenu'))return;var tb=w.parentNode;
+ var menu=document.createElement('div');menu.id='hdrmenu';menu.setAttribute('role','menu');
+ function addSq(){if(w.querySelector(':scope > .hdr-sq')||!tb.querySelector('.gsbar'))return;var sq=document.createElement('button');sq.type='button';sq.className='hdr-sq';sq.setAttribute('aria-label','Tìm kiếm');sq.textContent='🔍';
+  sq.onclick=function(){var o=tb.classList.toggle('gs-open');if(o){var q=tb.querySelector('.gsbar input');if(q)setTimeout(function(){q.focus()},30)}};w.appendChild(sq)}
+ var av=document.createElement('button');av.type='button';av.className='hdr-av out';av.setAttribute('aria-label','Mở menu tài khoản');av.setAttribute('aria-haspopup','true');av.setAttribute('aria-expanded','false');av.innerHTML='<span class="hdr-l">☰</span><span class="hdr-dot"></span>';
+ w.appendChild(av);w.appendChild(menu);
+ function close(){menu.classList.remove('open');av.setAttribute('aria-expanded','false')}
+ av.onclick=function(e){e.stopPropagation();var o=menu.classList.toggle('open');av.setAttribute('aria-expanded',o?'true':'false')};
+ document.addEventListener('click',function(e){if(!menu.classList.contains('open'))return;if(menu.contains(e.target)||av.contains(e.target))return;close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+ var IDS=['hdrshare','hnchat','acctbox'];
+ function sweep(){addSq();IDS.forEach(function(id){var el=document.getElementById(id);if(el&&el.parentNode===w)menu.appendChild(el)});
+  var nw=w.querySelector(':scope > .hn-nwrap');if(nw)menu.appendChild(nw);
+  var box=document.getElementById('acctbox'),who=box&&box.querySelector('.acctwho'),inl=box&&box.querySelector('.acctin');
+  var L=av.querySelector('.hdr-l'),txt,lab,out;
+  if(who&&!inl){var n=(who.textContent||'').replace(/^[^\p{L}\p{N}]+/u,'').trim();txt=(n&&n!=='…'?Array.from(n)[0]:'👤').toUpperCase();lab='Tài khoản: '+(who.textContent||'').trim();out=false}
+  else{txt='☰';lab='Mở menu';out=true}
+  var dot=false;menu.querySelectorAll('.hn-cbdg').forEach(function(b){if(b.classList.contains('on')&&(b.textContent||'').trim()&&b.textContent.trim()!=='0')dot=true});
+  // chỉ ghi khi thật sự khác, tránh vòng lặp MutationObserver
+  if(L.textContent!==txt)L.textContent=txt;if(av.getAttribute('aria-label')!==lab)av.setAttribute('aria-label',lab);
+  if(av.classList.contains('out')!==out)av.classList.toggle('out',out);if(av.classList.contains('dot')!==dot)av.classList.toggle('dot',dot)}
+ sweep();new MutationObserver(sweep).observe(tb,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class']});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();

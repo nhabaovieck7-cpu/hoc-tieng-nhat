@@ -683,3 +683,35 @@ html[data-theme="dark"] .hn-back:hover{color:#12233f}
 @media(max-width:860px){.hn-share-hdr{width:42px;height:42px;min-height:42px;padding:0;justify-content:center;border-radius:50%}.hn-share-hdr .hn-share-tx{display:none}}
 @media(max-width:600px){.hn-share-hdr{grid-row:2;grid-column:2;justify-self:end;z-index:2}}
 @media(max-width:480px){.hn-sh-list{grid-template-columns:1fr}}
+/* ===== Header gọn 1 hàng trên điện thoại + menu avatar (29/10, Phía B) ===== */
+#hdrmenu{display:contents}
+.hdr-av,.hdr-sq{display:none}
+@media(max-width:860px){
+ .topbar .wrap{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;min-height:56px!important;padding-top:0!important;padding-bottom:0!important;row-gap:0!important;position:relative}
+ .topbar .brand{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:16px;grid-row:auto!important;margin:0!important}
+ .topbar .themetgl{grid-row:auto!important;width:40px;height:40px;order:8}
+ .hdr-sq,.hdr-av{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-size:17px;cursor:pointer;position:relative;padding:0}
+ .hdr-sq{order:7}.hdr-av{order:9;background:var(--shu);border-color:var(--shu);color:#fff;font-weight:700;font-size:16px}
+ .hdr-av.out{background:var(--card);color:var(--t);border-color:var(--line)}
+ .hdr-av .hdr-dot{position:absolute;top:-2px;right:-2px;width:11px;height:11px;border-radius:50%;background:#e0352b;border:2px solid var(--card);display:none}
+ .hdr-av.dot .hdr-dot{display:block}
+ #hdrmenu{display:none;position:absolute;right:10px;top:54px;z-index:70;flex-direction:column;align-items:stretch;gap:4px;min-width:220px;max-width:calc(100vw - 20px);background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:8px}
+ #hdrmenu.open{display:flex}
+ #hdrmenu>*{order:0}
+ #hdrmenu .acctbox{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:4px;margin:0!important;max-width:none!important;width:auto!important;grid-row:auto!important;order:-1;padding-bottom:6px;border-bottom:1px solid var(--line)}
+ #hdrmenu .acctwho{padding:6px 10px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:none}
+ #hdrmenu .acctout,#hdrmenu .acctin,#hdrmenu .acctlink{width:100%;text-align:left;justify-content:flex-start}
+ #hdrmenu .hn-cb,#hdrmenu .hn-share-hdr{font-family:inherit;width:100%!important;height:auto!important;min-height:44px!important;border-radius:10px!important;justify-content:flex-start!important;padding:8px 10px!important;gap:10px;font-size:15px;border:0;background:transparent;color:var(--t);display:flex!important;align-items:center}
+ #hdrmenu .hn-cb:hover,#hdrmenu .hn-share-hdr:hover{background:var(--soft)}
+ #hdrmenu .hn-share-hdr .hn-share-tx{display:inline!important}
+ #hdrmenu #hnchat::after{content:"Tin nhắn";font-weight:600}
+ #hdrmenu #hnbell::after{content:"Thông báo";font-weight:600}
+ #hdrmenu .hn-cbdg{position:static!important;margin-left:auto;order:2}
+ #hdrmenu .hn-nwrap{display:block;position:relative}
+ #hdrmenu .hn-ndd{position:static!important;width:auto!important;max-width:none!important;box-shadow:none!important;margin-top:4px}
+ .topbar .gsbar{display:none}
+ .topbar.gs-open .gsbar{display:block}
+}
+/* Đang mở khoá nội dung: hiện dòng chờ thay vì màn hình trống */
+html.locked body::after{content:"Đang mở bài học…";position:fixed;left:50%;top:42%;transform:translateX(-50%);color:var(--m);font-size:15px;font-weight:600;pointer-events:none}
+html.locked body:has(.lockscr)::after{content:none}

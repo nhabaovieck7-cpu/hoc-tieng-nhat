@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /hoc-tieng-nhat/admin.html
+Disallow: /hoc-tieng-nhat/dang-cho.html
+
+Sitemap: https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/sitemap.xml

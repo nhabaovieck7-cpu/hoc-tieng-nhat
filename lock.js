@@ -63,7 +63,16 @@ async function verifySession(){
   clearStoredKey();
   return null;
 }
-async function load(name){const m=await getMeta();const r=await fetch('enc/'+name+'.bin?v='+(m.v[name]||''));if(!r.ok)throw new Error('HTTP '+r.status+' khi tải gói '+name);const z=await dec(key,new Uint8Array(await r.arrayBuffer()));const t=await new Response(new Blob([z]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+// Tăng tốc (29/10): tải sẵn các gói .bin song song với bước xác thực /auth/me; trang chủ dùng danh sách bài rút gọn
+// (lessons-meta.js, công khai, cùng mã phiên bản) thay cho gói lessons 1MB — lệch phiên bản thì tải gói đầy đủ như cũ.
+const pre={};
+const binUrl=(m,name)=>'enc/'+name+'.bin?v='+(m.v[name]||'');
+function liteOk(m,name){const L=window.LESSONS_META;return name==='lessons'&&L&&L.v&&L.v===m.v.lessons&&Array.isArray(L.list)}
+function prefetch(m,files){for(const f of files){if(pre[f]||liteOk(m,f))continue;pre[f]=fetch(binUrl(m,f)).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status+' khi tải gói '+f);return r.arrayBuffer()});pre[f].catch(()=>{})}}
+async function load(name){const m=await getMeta();
+ if(liteOk(m,name)){window.LESSONS=window.LESSONS_META.list;return}
+ let ab;if(pre[name]){ab=await pre[name];delete pre[name]}else{const r=await fetch(binUrl(m,name));if(!r.ok)throw new Error('HTTP '+r.status+' khi tải gói '+name);ab=await r.arrayBuffer()}
+ const z=await dec(key,new Uint8Array(ab));const t=await new Response(new Blob([z]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
  const s=document.createElement('script');s.textContent=t;document.head.appendChild(s)}
 function lockAgain(){clearStoredKey();location.reload()}
 function screen(){
@@ -72,9 +81,8 @@ function screen(){
     const d=document.createElement('div');d.className='lockscr';
     const title=(typeof SITE!='undefined'?SITE.title:'');
     d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+title+'</h1>'+
-      '<p>Chưa đăng nhập thì không xem được nội dung. Đăng nhập (tài khoản đã được duyệt) hoặc vào trang quản lý.</p>'+
+      '<p>Chưa đăng nhập thì không xem được nội dung. Hãy đăng nhập bằng tài khoản đã được duyệt để học.</p>'+
       '<a class="lockcta" href="dang-nhap.html">Đăng nhập / Đăng ký</a>'+
-      '<p class="lkalt"><a href="admin.html">Vào trang quản lý</a></p>'+
       '<div class="lkerr" id="lkerr"></div></div>';
     document.body.appendChild(d);
   });
@@ -93,7 +101,8 @@ function errScreen(msg){
 async function run(files){
   document.documentElement.classList.add('locked');
   try{
-    await getMeta();
+    const m0=await getMeta();
+    try{if(localStorage.getItem(SS)||localStorage.getItem(AS))prefetch(m0,files)}catch(e){}
     key=await verifySession();
   }catch(e){
     errScreen('Không tải được dữ liệu mở khoá. Có thể do mạng chập chờn — kiểm tra kết nối rồi bấm Thử lại.');
