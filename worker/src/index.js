@@ -31,7 +31,7 @@ function cors(env,req){
     ok,
     h:{
       'Access-Control-Allow-Origin':ok?origin:(allow[0]||'*'),
-      'Access-Control-Allow-Methods':'GET, POST, OPTIONS',
+      'Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',
       'Access-Control-Allow-Headers':'Content-Type, X-Access, Authorization',
       'Access-Control-Max-Age':'86400',
       'Vary':'Origin'
@@ -752,6 +752,103 @@ async function handleAuth(req,env,c,path){
   return J({error:'Không tìm thấy API'},404,c.h);
 }
 
+// --- Hồ sơ cá nhân theo tài khoản: GET/POST/DELETE /hoso (29/10) ---
+// Bảng RIÊNG user_hoso (không dùng `profiles` của Cộng đồng). Chỉ chủ tài khoản
+// đọc/ghi qua phiên của chính mình (sessionUser), không có :id, không có danh
+// sách, không admin/xếp hạng/stats nào đọc bảng này. Không log nội dung.
+const HOSO_MAX={hn_dk_ho_so:4096,hn_dk_avatar:70000,hn_dk_level:4,hn_dk_goal:4};
+const HOSO_LEVEL=['N5','N4','N3','N2','N1'];
+const HOSO_GOAL=['5','10','20','30','60','120'];
+const _hosoRl=new Map();
+function hosoRlOk(uid){
+  const m=Math.floor(Date.now()/60000);const k=uid+':'+m;
+  const n=(_hosoRl.get(k)||0)+1;_hosoRl.set(k,n);
+  if(_hosoRl.size>500)for(const kk of _hosoRl.keys()){if(!kk.endsWith(':'+m))_hosoRl.delete(kk)}
+  return n<=20;
+}
+function hosoAvatarOk(v){
+  let b64;
+  if(v.startsWith('data:image/webp;base64,'))b64=v.slice(23);
+  else if(v.startsWith('data:image/jpeg;base64,'))b64=v.slice(23);
+  else return false;
+  if(!/^[A-Za-z0-9+/]+={0,2}$/.test(b64))return false;
+  let bin;try{bin=atob(b64.slice(0,16))}catch(e){return false}
+  const by=i=>bin.charCodeAt(i);
+  if(v.startsWith('data:image/webp'))return bin.length>=12&&bin.slice(0,4)==='RIFF'&&bin.slice(8,12)==='WEBP';
+  return bin.length>=3&&by(0)===0xFF&&by(1)===0xD8&&by(2)===0xFF;
+}
+// Trả mã lỗi (chuỗi) nếu giá trị không hợp lệ, null nếu hợp lệ.
+function hosoCheck(k,v){
+  if(typeof v!=='string')return 'type';
+  if(v.length>HOSO_MAX[k])return 'size';
+  if(k==='hn_dk_avatar')return hosoAvatarOk(v)?null:'avatar';
+  if(k==='hn_dk_level')return HOSO_LEVEL.includes(v)?null:'enum';
+  if(k==='hn_dk_goal')return HOSO_GOAL.includes(v)?null:'enum';
+  if(k==='hn_dk_ho_so'){try{const o=JSON.parse(v);return (o&&typeof o==='object'&&!Array.isArray(o))?null:'json'}catch(e){return 'json'}}
+  return 'key';
+}
+let _hosoReady=false;
+async function ensureHoso(env){
+  if(_hosoReady)return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS user_hoso (
+    user_id TEXT NOT NULL,
+    pkey TEXT NOT NULL,
+    value TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    PRIMARY KEY(user_id, pkey)
+  )`).run();
+  _hosoReady=true;
+}
+async function handleHoso(req,env,c){
+  const h=Object.assign({},c.h,{'Cache-Control':'no-store, private'});
+  if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).'},503,h);
+  const s=await sessionUser(env,bearer(req));
+  if(!s||s.kind!=='user')return J({error:'Chưa đăng nhập'},401,h);
+  if(s.status==='locked'||s.status==='rejected')return J({error:'Tài khoản không còn hiệu lực'},403,h);
+  await ensureHoso(env);
+  if(req.method==='GET'){
+    const r=await env.DB.prepare('SELECT pkey,value,updated_at FROM user_hoso WHERE user_id=?').bind(s.user_id).all();
+    const items={};
+    for(const row of (r.results||[]))items[row.pkey]={v:row.value,u:row.updated_at};
+    return J({ok:true,items,server_time:now()},200,h);
+  }
+  if(req.method==='DELETE'){
+    await env.DB.prepare('DELETE FROM user_hoso WHERE user_id=?').bind(s.user_id).run();
+    return J({ok:true},200,h);
+  }
+  if(req.method==='POST'){
+    if(!hosoRlOk(s.user_id))return J({error:'Lưu quá nhanh, thử lại sau ít phút'},429,h);
+    const len=+(req.headers.get('Content-Length')||0);
+    if(len>200000)return J({error:'Dữ liệu quá lớn'},413,h);
+    const b=await readJson(req);
+    if(!b||typeof b.items!=='object'||!b.items||Array.isArray(b.items))return J({error:'Dữ liệu không hợp lệ'},400,h);
+    const keys=Object.keys(b.items);
+    if(keys.length>10)return J({error:'Quá nhiều mục'},413,h);
+    // Kiểm tra hết trước khi ghi: một mục sai thì không ghi mục nào.
+    for(const k of keys){
+      if(!(k in HOSO_MAX))continue;
+      const e=hosoCheck(k,b.items[k]);
+      if(e==='avatar')return J({error:'Ảnh không hợp lệ'},400,h);
+      if(e==='size')return J({error:k==='hn_dk_avatar'?'Ảnh quá lớn':'Dữ liệu quá lớn',key:k},413,h);
+      if(e)return J({error:'Dữ liệu không hợp lệ',key:k},400,h);
+    }
+    if(Array.isArray(b.delete)){
+      for(const k of b.delete.slice(0,10)){
+        if(!(typeof k==='string'&&k in HOSO_MAX))continue;
+        await env.DB.prepare('DELETE FROM user_hoso WHERE user_id=? AND pkey=?').bind(s.user_id,k).run();
+      }
+    }
+    const t=now();const updated={};
+    for(const k of keys){
+      if(!(k in HOSO_MAX))continue;
+      await env.DB.prepare('INSERT INTO user_hoso(user_id,pkey,value,updated_at) VALUES(?,?,?,?) ON CONFLICT(user_id,pkey) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at').bind(s.user_id,k,b.items[k],t).run();
+      updated[k]=t;
+    }
+    return J({ok:true,updated},200,h);
+  }
+  return J({error:'Chỉ nhận GET, POST hoặc DELETE'},405,h);
+}
+
 // --- Đồng bộ tiến độ học theo tài khoản: GET/POST /progress ---
 // Xác thực bằng ĐÚNG phiên đăng nhập hiện có (Bearer + sessionUser — phiên gắn
 // thiết bị đã bị gỡ sẽ bị sessionUser vô hiệu, tiến độ cũng khoá theo).
@@ -931,6 +1028,177 @@ async function handleAI(req,env,c){
 // KHÔNG có bất kỳ chữ nào phía học viên nhắc tới việc admin xem được chat:
 // nhật ký truy cập chỉ tồn tại trong trang quản trị.
 let _cmReady=false;
+// ===== CỘNG ĐỒNG v2 (30/10/2026, Phía B): phản ứng, nhóm cấp độ, lưu bài, chia sẻ, nhắc tên, bạn bè =====
+// Gói Workers Free: tối đa 50 truy vấn D1 mỗi lần gọi -> mọi danh sách dùng truy vấn gom (IN ...) hoặc env.DB.batch (tính 1 truy vấn).
+const CM_REACTS=['like','love','haha','wow','sad','strong'];
+const CM_LEVELS=['N5','N4','N3','N2','N1'];
+const CM_MSG_REACTS=['👍','❤️','😂','😮','😢','🙏'];
+const CM_MENTION_MAX=10;
+const CM_ONLINE_MS=120e3;
+function cmQ(n){return Array(n).fill('?').join(',')}
+function cmMinute(){return new Date().toISOString().slice(0,16)}
+function cmDay(){return new Date().toISOString().slice(0,10)}
+// Đếm + chặn theo khoá: trả true nếu VƯỢT giới hạn (đếm cả lần này).
+async function cmLimit(env,kind,me,max,per){
+  const slot=per==='day'?cmDay():per==='hour'?new Date().toISOString().slice(0,13):cmMinute();
+  return (await rlHit(env,'cm2:'+kind+':'+slot+':'+me,slot))>max;
+}
+const CM_MIGRATE={
+  likes:[['type',"TEXT NOT NULL DEFAULT 'like'"]],
+  posts:[['level',"TEXT NOT NULL DEFAULT ''"]],
+  profiles:[['region',"TEXT NOT NULL DEFAULT ''"],['discoverable','INTEGER NOT NULL DEFAULT 1'],['last_seen','TEXT'],['mention_policy',"TEXT NOT NULL DEFAULT 'all'"]],
+  messages:[['reply_to','TEXT'],['kind',"TEXT NOT NULL DEFAULT 'text'"],['ref_id','TEXT']],
+  notifications:[['conv_id','TEXT']],
+  chat_view_grants:[['reason',"TEXT NOT NULL DEFAULT ''"]],
+  chat_access_log:[['reason','TEXT'],['report_id','TEXT']]
+};
+const CM_V2_SQL=[
+  `CREATE TABLE IF NOT EXISTS saved_posts (user_id TEXT NOT NULL, post_id TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT '', PRIMARY KEY(user_id,post_id))`,
+  `CREATE TABLE IF NOT EXISTS message_reactions (message_id TEXT NOT NULL, user_id TEXT NOT NULL, emoji TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT '', PRIMARY KEY(message_id,user_id))`,
+  `CREATE TABLE IF NOT EXISTS friendships (pair_key TEXT PRIMARY KEY, user_a TEXT NOT NULL, user_b TEXT NOT NULL, requester_id TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'pending', message TEXT NOT NULL DEFAULT '', created_at TEXT NOT NULL DEFAULT '', updated_at TEXT NOT NULL DEFAULT '')`,
+  `CREATE TABLE IF NOT EXISTS mentions (id TEXT PRIMARY KEY, source_kind TEXT NOT NULL, source_id TEXT NOT NULL, from_id TEXT NOT NULL, to_id TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT '')`,
+  `CREATE TABLE IF NOT EXISTS conv_mutes (user_id TEXT NOT NULL, conv_id TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT '', PRIMARY KEY(user_id,conv_id))`,
+  `CREATE INDEX IF NOT EXISTS idx_posts_created ON posts(created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_posts_level ON posts(level,created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_comments_post ON comments(post_id,created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_messages_conv ON messages(conv_id,created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_messages_ref ON messages(ref_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_notif_user ON notifications(user_id,created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_friend_a ON friendships(user_a,status)`,
+  `CREATE INDEX IF NOT EXISTS idx_friend_b ON friendships(user_b,status)`,
+  `CREATE INDEX IF NOT EXISTS idx_mentions_to ON mentions(to_id,created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_mentions_src ON mentions(source_kind,source_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_profiles_disc ON profiles(discoverable,level)`,
+  `CREATE INDEX IF NOT EXISTS idx_reports_target ON reports(target_type,target_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_conv_a ON conversations(user_a)`,
+  `CREATE INDEX IF NOT EXISTS idx_conv_b ON conversations(user_b)`
+];
+async function cmMigrate(env){
+  const tbls=Object.keys(CM_MIGRATE);
+  const r=await env.DB.batch(tbls.map(t=>env.DB.prepare('SELECT name FROM pragma_table_info(?)').bind(t)));
+  for(let i=0;i<tbls.length;i++){
+    const have=new Set((r[i].results||[]).map(x=>x.name));
+    for(const [col,def] of CM_MIGRATE[tbls[i]]){
+      if(!have.has(col)){try{await env.DB.prepare('ALTER TABLE '+tbls[i]+' ADD COLUMN '+col+' '+def).run()}catch(e){}}
+    }
+  }
+  await env.DB.batch(CM_V2_SQL.map(s=>env.DB.prepare(s)));
+}
+function cmAdminProfile(){return {id:'admin',name:'Quản trị viên',avatar_file:null,bio:'',level:'',goal:'',region:'',admin:true,official:true}}
+// Hồ sơ gom: 1 truy vấn cho cả danh sách id.
+async function cmProfiles(env,ids){
+  const out={};const uniq=[...new Set(ids.filter(Boolean).map(String))];
+  if(uniq.includes('admin'))out.admin=cmAdminProfile();
+  const real=uniq.filter(x=>x!=='admin');
+  for(let i=0;i<real.length;i+=90){
+    const part=real.slice(i,i+90);
+    const r=await env.DB.prepare('SELECT u.id,u.name,p.display_name,p.bio,p.level,p.goal,p.avatar_file,p.region FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.id IN ('+cmQ(part.length)+')').bind(...part).all();
+    for(const p of (r.results||[]))out[p.id]={id:p.id,name:(p.display_name&&p.display_name.trim())||p.name||'',avatar_file:p.avatar_file||null,bio:p.bio||'',level:p.level||'',goal:p.goal||'',region:p.region||''};
+  }
+  for(const id of real)if(!out[id])out[id]={id,name:'(đã xoá)',avatar_file:null,bio:'',level:'',goal:'',region:''};
+  return out;
+}
+// Tập người bị chặn theo CẢ HAI chiều với me.
+async function cmBlockSet(env,me){
+  const r=await env.DB.prepare('SELECT blocked_id AS x FROM blocks WHERE user_id=? UNION SELECT user_id AS x FROM blocks WHERE blocked_id=?').bind(me,me).all();
+  return new Set((r.results||[]).map(x=>x.x));
+}
+async function cmBlockedEither(env,a,b){
+  if(a==='admin'||b==='admin')return false;
+  const r=await env.DB.prepare('SELECT 1 AS x FROM blocks WHERE (user_id=? AND blocked_id=?) OR (user_id=? AND blocked_id=?) LIMIT 1').bind(a,b,b,a).first();
+  return !!r;
+}
+function cmPair(a,b){const [x,y]=[String(a),String(b)].sort();return {key:x+'|'+y,a:x,b:y}}
+async function cmFriendRow(env,a,b){return await env.DB.prepare('SELECT * FROM friendships WHERE pair_key=?').bind(cmPair(a,b).key).first()}
+function cmFriendState(row,me){
+  if(!row||row.status==='declined')return 'none';
+  if(row.status==='accepted')return 'friends';
+  return row.requester_id===me?'outgoing':'incoming';
+}
+// Chuỗi @[id] trong nội dung -> danh sách id hợp lệ (đã lọc chặn + quyền "ai được nhắc đến tôi").
+const CM_MENTION_RE=/@\[([A-Za-z0-9_-]{1,64})\]/g;
+function cmMentionIds(body){const s=new Set();let m;CM_MENTION_RE.lastIndex=0;while((m=CM_MENTION_RE.exec(body)))s.add(m[1]);return [...s]}
+async function cmCheckMentions(env,me,body,allowOnly){
+  const ids=cmMentionIds(body).filter(x=>x!==me&&x!=='admin');
+  if(ids.length>CM_MENTION_MAX)return {err:'Mỗi nội dung chỉ được nhắc tối đa '+CM_MENTION_MAX+' người.'};
+  if(!ids.length)return {body,ids:[]};
+  const q=cmQ(ids.length);
+  const [us,bl,fr]=await env.DB.batch([
+    env.DB.prepare("SELECT u.id,u.name,u.status,p.display_name,COALESCE(p.mention_policy,'all') AS mp FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.id IN ("+q+")").bind(...ids),
+    env.DB.prepare('SELECT blocked_id AS x FROM blocks WHERE user_id=? AND blocked_id IN ('+q+') UNION SELECT user_id AS x FROM blocks WHERE blocked_id=? AND user_id IN ('+q+')').bind(me,...ids,me,...ids),
+    env.DB.prepare("SELECT CASE WHEN user_a=? THEN user_b ELSE user_a END AS x FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?)").bind(me,me,me)
+  ]);
+  const blocked=new Set((bl.results||[]).map(x=>x.x)),friends=new Set((fr.results||[]).map(x=>x.x));
+  const info={};for(const u of (us.results||[]))info[u.id]=u;
+  const ok=[];
+  for(const id of ids){
+    const u=info[id];
+    const good=u&&u.status==='approved'&&!blocked.has(id)&&(allowOnly?allowOnly.includes(id):true)&&(u.mp==='all'||(u.mp==='friends'&&friends.has(id)));
+    if(good)ok.push(id);
+  }
+  // Nhắc không hợp lệ -> đổi về chữ thường "@Tên" (không thành liên kết, không gửi thông báo).
+  const out=body.replace(CM_MENTION_RE,(all,id)=>ok.includes(id)?all:('@'+((info[id]&&((info[id].display_name||'').trim()||info[id].name))||'người dùng')));
+  return {body:out,ids:ok};
+}
+async function cmSaveMentions(env,me,ids,kind,sourceId,notif){
+  if(!ids.length)return;
+  const t=now();const st=[];
+  for(const to of ids){
+    st.push(env.DB.prepare('INSERT INTO mentions(id,source_kind,source_id,from_id,to_id,created_at) VALUES(?,?,?,?,?,?)').bind(crypto.randomUUID(),kind,sourceId,me,to,t));
+    st.push(env.DB.prepare('INSERT INTO notifications(id,user_id,actor_id,type,post_id,comment_id,conv_id,created_at) VALUES(?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(),to,me,'mention_'+kind,notif.post_id||null,notif.comment_id||null,notif.conv_id||null,t));
+  }
+  await env.DB.batch(st);
+}
+function cmMentionMap(body,profs){const m={};for(const id of cmMentionIds(body||''))if(profs[id])m[id]=profs[id].name;return m}
+// Bài viết gom: ~2 truy vấn cho cả trang (1 batch + 1 hồ sơ).
+async function cmShapePosts(env,rows,me){
+  if(!rows.length)return [];
+  const ids=rows.map(r=>r.id),q=cmQ(ids.length);
+  const res=await env.DB.batch([
+    env.DB.prepare('SELECT pf.post_id,f.id,f.purpose,f.kind,f.name,f.mime,f.size FROM post_files pf JOIN files f ON f.id=pf.file_id WHERE pf.post_id IN ('+q+') AND f.deleted=0 ORDER BY pf.ord').bind(...ids),
+    env.DB.prepare('SELECT post_id,COUNT(*) AS n FROM comments WHERE post_id IN ('+q+') AND deleted=0 AND hidden=0 GROUP BY post_id').bind(...ids),
+    env.DB.prepare("SELECT target_id,COALESCE(type,'like') AS t,COUNT(*) AS n FROM likes WHERE target_type='post' AND target_id IN ("+q+") GROUP BY target_id,t").bind(...ids),
+    env.DB.prepare("SELECT target_id,COALESCE(type,'like') AS t FROM likes WHERE target_type='post' AND user_id=? AND target_id IN ("+q+")").bind(me||'',...ids),
+    env.DB.prepare('SELECT post_id FROM saved_posts WHERE user_id=? AND post_id IN ('+q+')').bind(me||'',...ids),
+    env.DB.prepare("SELECT ref_id,COUNT(*) AS n FROM messages WHERE kind='post' AND ref_id IN ("+q+") GROUP BY ref_id").bind(...ids)
+  ]);
+  const [rf,rc,rr,rm,rs,rsh]=res.map(x=>x.results||[]);
+  const authorIds=rows.map(r=>r.author_id);
+  for(const r of rows)authorIds.push(...cmMentionIds(r.body||''));
+  const profs=await cmProfiles(env,authorIds);
+  return rows.map(row=>{
+    const reactions={};let total=0;
+    for(const x of rr)if(x.target_id===row.id){reactions[x.t]=x.n;total+=x.n}
+    const my=rm.find(x=>x.target_id===row.id);
+    const cc=rc.find(x=>x.post_id===row.id),sh=rsh.find(x=>x.ref_id===row.id);
+    return {id:row.id,author:profs[row.author_id],body:row.body,mentions:cmMentionMap(row.body,profs),level:row.level||'',pinned:!!row.pinned,hidden:!!row.hidden,created_at:row.created_at,
+      files:rf.filter(f=>f.post_id===row.id).map(f=>({id:f.id,purpose:f.purpose,kind:f.kind,name:f.name,mime:f.mime,size:f.size})),
+      like_count:total,reactions,my_reaction:my?my.t:null,liked:!!my,comment_count:cc?cc.n:0,share_count:sh?sh.n:0,saved:rs.some(x=>x.post_id===row.id),mine:row.author_id===me};
+  });
+}
+async function cmShapeComments(env,rows,me){
+  if(!rows.length)return [];
+  const ids=rows.map(r=>r.id),q=cmQ(ids.length);
+  const all=[];
+  for(let i=0;i<ids.length;i+=90){
+    const part=ids.slice(i,i+90),pq=cmQ(part.length);
+    const res=await env.DB.batch([
+      env.DB.prepare("SELECT target_id,COALESCE(type,'like') AS t,COUNT(*) AS n FROM likes WHERE target_type='comment' AND target_id IN ("+pq+") GROUP BY target_id,t").bind(...part),
+      env.DB.prepare("SELECT target_id,COALESCE(type,'like') AS t FROM likes WHERE target_type='comment' AND user_id=? AND target_id IN ("+pq+")").bind(me||'',...part)
+    ]);
+    all.push(res);
+  }
+  const rr=[],rm=[];for(const res of all){rr.push(...(res[0].results||[]));rm.push(...(res[1].results||[]))}
+  const pids=rows.map(r=>r.author_id);for(const r of rows)pids.push(...cmMentionIds(r.body||''));
+  const profs=await cmProfiles(env,pids);
+  return rows.map(row=>{
+    const reactions={};let total=0;for(const x of rr)if(x.target_id===row.id){reactions[x.t]=x.n;total+=x.n}
+    const my=rm.find(x=>x.target_id===row.id);
+    const body=row.deleted?'':row.body;
+    return {id:row.id,post_id:row.post_id,author:profs[row.author_id],parent_id:row.parent_id||null,body,mentions:cmMentionMap(body,profs),deleted:!!row.deleted,hidden:!!row.hidden,created_at:row.created_at,like_count:total,reactions,my_reaction:my?my.t:null,liked:!!my,mine:row.author_id===me};
+  });
+}
+
 async function ensureCommunity(env){
   if(_cmReady||!env.DB)return;
   const sqls=[
@@ -1061,7 +1329,8 @@ async function ensureCommunity(env){
     user_b TEXT,
     opened_at TEXT NOT NULL DEFAULT ''
   )`];
-  for(const s of sqls)await env.DB.prepare(s).run();
+  await env.DB.batch(sqls.map(q=>env.DB.prepare(q)));
+  await cmMigrate(env);
   _cmReady=true;
 }
 
@@ -1084,7 +1353,7 @@ function cmNeedAdmin(s){
   return null;
 }
 async function cmProfile(env,uid){
-  if(uid==='admin')return {id:'admin',name:'Admin',avatar_file:null,bio:'',level:'',goal:'',admin:true};
+  if(uid==='admin')return cmAdminProfile();
   const p=await env.DB.prepare('SELECT p.display_name,p.bio,p.level,p.goal,p.avatar_file,u.name FROM profiles p RIGHT JOIN users u ON u.id=p.user_id WHERE u.id=?').bind(uid).first()
     || await env.DB.prepare('SELECT NULL AS display_name,NULL AS bio,NULL AS level,NULL AS goal,NULL AS avatar_file,name FROM users WHERE id=?').bind(uid).first();
   if(!p)return {id:uid,name:'(đã xoá)',avatar_file:null,bio:'',level:'',goal:''};
@@ -1116,6 +1385,72 @@ async function cmCommentShape(env,row,me){
   return {id:row.id,post_id:row.post_id,author:await cmProfile(env,row.author_id),parent_id:row.parent_id||null,body:row.deleted?'':row.body,deleted:!!row.deleted,hidden:!!row.hidden,created_at:row.created_at,like_count:lc?lc.n:0,liked,mine:row.author_id===me};
 }
 
+// --- Tin nhắn gom (chat giai đoạn 2, đặc tả audit mục 4b) ---
+// Đặt ngay sau cmCommentShape. Nạp GỘP cho cả trang tin (tối đa 100): tin được
+// trả lời (cùng bảng messages, theo reply_to), cảm xúc (message_reactions
+// GROUP BY + của me), hồ sơ người được nhắc, thẻ bài cho kind='post' (dùng
+// cmShapePosts; bài đã xoá/ẩn -> post=null). Mỗi tin trả đúng các trường:
+// {id, conv_id, sender_id, mine, body ('' nếu deleted), deleted, file, file_id,
+//  reply_to, reply_preview, kind, ref_id, post, mentions, reactions, read_at,
+//  created_at} — reactions dạng {<type>:{count, mine}}.
+async function cmShapeMessages(env,rows,me){
+  if(!rows.length)return [];
+  const ids=rows.map(r=>r.id);
+  const reactMap={},myMap={};
+  for(let i=0;i<ids.length;i+=90){
+    const part=ids.slice(i,i+90),pq=cmQ(part.length);
+    const res=await env.DB.batch([
+      env.DB.prepare('SELECT message_id,emoji AS t,COUNT(*) AS n FROM message_reactions WHERE message_id IN ('+pq+') GROUP BY message_id,emoji').bind(...part),
+      env.DB.prepare('SELECT message_id,emoji AS t FROM message_reactions WHERE user_id=? AND message_id IN ('+pq+')').bind(me||'',...part)
+    ]);
+    for(const x of (res[0].results||[])){(reactMap[x.message_id]=reactMap[x.message_id]||{})[x.t]=x.n}
+    for(const x of (res[1].results||[]))myMap[x.message_id]=x.t;
+  }
+  const fileIds=[...new Set(rows.map(r=>r.file_id).filter(Boolean))];
+  const files={};
+  for(let i=0;i<fileIds.length;i+=90){
+    const part=fileIds.slice(i,i+90);
+    const r=await env.DB.prepare('SELECT id,purpose,kind,name,mime,size FROM files WHERE id IN ('+cmQ(part.length)+') AND deleted=0').bind(...part).all();
+    for(const f of (r.results||[]))files[f.id]=f;
+  }
+  const replyIds=[...new Set(rows.map(r=>r.reply_to).filter(Boolean))];
+  const replies={};
+  for(let i=0;i<replyIds.length;i+=90){
+    const part=replyIds.slice(i,i+90);
+    const r=await env.DB.prepare('SELECT * FROM messages WHERE id IN ('+cmQ(part.length)+')').bind(...part).all();
+    for(const m of (r.results||[]))replies[m.id]=m;
+  }
+  const postIds=[...new Set(rows.filter(r=>(r.kind||'text')==='post'&&r.ref_id).map(r=>r.ref_id))];
+  const postRows=[];
+  for(let i=0;i<postIds.length;i+=90){
+    const part=postIds.slice(i,i+90);
+    const r=await env.DB.prepare('SELECT * FROM posts WHERE id IN ('+cmQ(part.length)+')').bind(...part).all();
+    postRows.push(...(r.results||[]));
+  }
+  const visiblePosts=postRows.filter(p=>!p.deleted&&!p.hidden);
+  const shapedPosts=await cmShapePosts(env,visiblePosts,me);
+  const posts={};
+  visiblePosts.forEach((p,i)=>{const s=shapedPosts[i];posts[p.id]={id:s.id,author:s.author,body:s.body,level:s.level,created_at:s.created_at,files:s.files}});
+  const mentionProbe=[];
+  for(const r of rows)if(!r.deleted)mentionProbe.push(...cmMentionIds(r.body||''));
+  const profs=await cmProfiles(env,mentionProbe);
+  return rows.map(row=>{
+    const kind=row.kind||'text';
+    const body=row.deleted?'':(row.body||'');
+    const rp=row.reply_to?replies[row.reply_to]:null;
+    const reactions={};
+    const counts=reactMap[row.id]||{};
+    for(const t in counts)reactions[t]={count:counts[t],mine:myMap[row.id]===t};
+    return {id:row.id,conv_id:row.conv_id,sender_id:row.sender_id,mine:row.sender_id===me,body,deleted:!!row.deleted,
+      file:row.file_id?(files[row.file_id]||null):null,file_id:row.file_id||null,
+      reply_to:row.reply_to||null,
+      reply_preview:rp?{id:rp.id,sender_id:rp.sender_id,body:rp.deleted?'':(String(rp.body||'').slice(0,120)||(rp.file_id?'📎 Tệp đính kèm':'')),deleted:!!rp.deleted,has_file:!!rp.file_id}:null,
+      kind,ref_id:row.ref_id||null,
+      post:!row.deleted&&kind==='post'&&row.ref_id?(posts[row.ref_id]||null):null,
+      mentions:cmMentionMap(body,profs),reactions,
+      read_at:row.read_at||null,created_at:row.created_at};
+  });
+}
 // --- chữ ký tải tệp: HMAC-SHA256(id:hết_hạn) suy từ CONTENT_KEY_B64 (không thêm secret) ---
 async function cmFileKey(env){
   const dig=await crypto.subtle.digest('SHA-256',te.encode('hn-file:'+(env.CONTENT_KEY_B64||'')));
@@ -1233,6 +1568,292 @@ async function handleCommunity(req,env,c,path){
   const gate=isAdminPath?cmNeedAdmin(s):cmNeedUser(s);
   if(gate)return gate;
   const me=s.user_id;
+
+  // ===== v2 (Phía B, 30/10/2026): các handler dưới đây THAY bản cũ cùng đường dẫn (bản cũ phía dưới giữ làm dự phòng, không còn chạy tới) =====
+  if(path==='/community/heartbeat'&&method==='POST'){
+    // Online = last_seen trong 2 phút. Ghi tối đa 1 lần/60 giây.
+    const p=await env.DB.prepare('SELECT last_seen FROM profiles WHERE user_id=?').bind(me).first();
+    if(!p)await env.DB.prepare("INSERT OR IGNORE INTO profiles(user_id,display_name,updated_at,last_seen) VALUES(?,'',?,?)").bind(me,now(),now()).run();
+    else if(!p.last_seen||Date.now()-Date.parse(p.last_seen)>60e3)await env.DB.prepare('UPDATE profiles SET last_seen=? WHERE user_id=?').bind(now(),me).run();
+    const uc=await env.DB.prepare("SELECT (SELECT COUNT(*) FROM notifications WHERE user_id=? AND is_read=0) AS n,(SELECT COUNT(*) FROM friendships WHERE status='pending' AND requester_id<>? AND (user_a=? OR user_b=?)) AS f").bind(me,me,me,me).first();
+    return J({ok:true,notifications:uc?uc.n:0,friend_requests:uc?uc.f:0},200,c.h);
+  }
+  if(path==='/community/profile'&&method==='POST'){
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const cur=await env.DB.prepare('SELECT * FROM profiles WHERE user_id=?').bind(me).first()||{};
+    const pick=(k,max,def)=>b[k]===undefined?(cur[k]===undefined||cur[k]===null?def:cur[k]):String(b[k]||'').trim().slice(0,max);
+    const display_name=pick('display_name',60,''),bio=pick('bio',300,''),goal=pick('goal',120,'');
+    let level=pick('level',20,'');
+    const region=pick('region',40,'');
+    const discoverable=b.discoverable===undefined?(cur.discoverable===undefined||cur.discoverable===null?1:cur.discoverable):(b.discoverable?1:0);
+    let mp=b.mention_policy===undefined?(cur.mention_policy||'all'):String(b.mention_policy);
+    if(!['all','friends','none'].includes(mp))return J({error:'Lựa chọn "Ai được nhắc đến tôi" không hợp lệ'},400,c.h);
+    let avatar=cur.avatar_file===undefined?null:cur.avatar_file;
+    if(b.avatar_file){avatar=String(b.avatar_file);
+      const f=await env.DB.prepare('SELECT * FROM files WHERE id=?').bind(avatar).first();
+      if(!f||f.deleted||f.owner_id!==me||f.kind!=='image'||f.purpose!=='avatar')return J({error:'Ảnh đại diện không hợp lệ'},400,c.h);
+    }
+    if(b.avatar_clear)avatar=null;
+    await env.DB.prepare('INSERT INTO profiles(user_id,display_name,bio,level,goal,avatar_file,region,discoverable,mention_policy,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT(user_id) DO UPDATE SET display_name=excluded.display_name,bio=excluded.bio,level=excluded.level,goal=excluded.goal,avatar_file=excluded.avatar_file,region=excluded.region,discoverable=excluded.discoverable,mention_policy=excluded.mention_policy,updated_at=excluded.updated_at')
+      .bind(me,display_name,bio,level,goal,avatar,region,discoverable,mp,now()).run();
+    const prof=await cmProfile(env,me);
+    return J({ok:true,profile:Object.assign(prof,{region,discoverable:!!discoverable,mention_policy:mp})},200,c.h);
+  }
+  if(path==='/community/profile'&&method==='GET'){
+    const uid=url.searchParams.get('user_id')||me;
+    if(uid!==me&&await cmBlockedEither(env,me,uid))return J({error:'Không xem được hồ sơ này'},403,c.h);
+    const r=await env.DB.prepare('SELECT * FROM posts WHERE author_id=? AND deleted=0 AND hidden=0 ORDER BY created_at DESC LIMIT 30').bind(uid).all();
+    const prof=(await cmProfiles(env,[uid]))[uid];
+    if(uid===me){const x=await env.DB.prepare('SELECT discoverable,mention_policy FROM profiles WHERE user_id=?').bind(me).first();prof.discoverable=x?!!x.discoverable:true;prof.mention_policy=x?x.mention_policy||'all':'all'}
+    return J({ok:true,profile:prof,posts:await cmShapePosts(env,r.results||[],me),storage_enabled:CM_STORAGE_ON},200,c.h);
+  }
+  if(path==='/community/user'&&method==='GET'){
+    const uid=url.searchParams.get('user_id')||'';
+    if(!uid)return J({error:'Thiếu user_id'},400,c.h);
+    if(uid==='admin')return J({ok:true,profile:cmAdminProfile(),stats:null,friend:'none',online:false},200,c.h);
+    const u=await env.DB.prepare('SELECT id,status FROM users WHERE id=?').bind(uid).first();
+    if(!u)return J({error:'Không tìm thấy học viên'},404,c.h);
+    const blocked=uid!==me&&await cmBlockedEither(env,me,uid);
+    const iBlocked=blocked?!!(await env.DB.prepare('SELECT 1 AS x FROM blocks WHERE user_id=? AND blocked_id=?').bind(me,uid).first()):false;
+    if(blocked&&!iBlocked)return J({error:'Không xem được hồ sơ này'},403,c.h);
+    await ensureStats(env);
+    const [a,b2,cnt,pg,bg,fr,mu]=await env.DB.batch([
+      env.DB.prepare('SELECT last_seen FROM profiles WHERE user_id=?').bind(uid),
+      env.DB.prepare('SELECT COUNT(*) AS n FROM posts WHERE author_id=? AND deleted=0 AND hidden=0').bind(uid),
+      env.DB.prepare("SELECT COUNT(*) AS n FROM likes l JOIN posts p ON p.id=l.target_id WHERE l.target_type='post' AND p.author_id=?").bind(uid),
+      env.DB.prepare('SELECT pkey,value,updated_at FROM user_progress WHERE user_id=?').bind(uid),
+      env.DB.prepare('SELECT COUNT(*) AS n FROM badge_grants WHERE user_id=?').bind(uid),
+      env.DB.prepare("SELECT COUNT(*) AS n FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?)").bind(uid,uid),
+      env.DB.prepare("SELECT COUNT(*) AS n FROM (SELECT CASE WHEN user_a=? THEN user_b ELSE user_a END AS x FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?)) f1 JOIN (SELECT CASE WHEN user_a=? THEN user_b ELSE user_a END AS x FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?)) f2 ON f1.x=f2.x").bind(uid,uid,uid,me,me,me)
+    ]);
+    const prog={};for(const r of (pg.results||[]))prog[r.pkey]={value:r.value,updated_at:r.updated_at};
+    let st={};try{st=stCompute(prog)}catch(e){}
+    const ls=a.results&&a.results[0]?a.results[0].last_seen:null;
+    const frow=uid===me?null:await cmFriendRow(env,me,uid);
+    return J({ok:true,profile:(await cmProfiles(env,[uid]))[uid],
+      stats:{post_count:b2.results[0].n,reactions_received:cnt.results[0].n,streak:st.streakCur||0,xp_total:st.xpTotal||0,badge_count:bg.results[0].n,friend_count:fr.results[0].n,mutual_friends:uid===me?0:mu.results[0].n},
+      friend:uid===me?'self':cmFriendState(frow,me),online:!blocked&&!!ls&&Date.now()-Date.parse(ls)<CM_ONLINE_MS,last_seen:blocked?null:ls,blocked_by_me:iBlocked},200,c.h);
+  }
+  if(path==='/community/feed'&&method==='GET'){
+    const before=url.searchParams.get('before')||'';
+    const limit=Math.min(30,Math.max(1,+(url.searchParams.get('limit')||20)));
+    const lvRaw=String(url.searchParams.get('level')||'').toUpperCase();
+    const level=CM_LEVELS.includes(lvRaw)?lvRaw:'';
+    const sort=url.searchParams.get('sort')==='hot'?'hot':'new';
+    const offset=Math.max(0,Math.min(300,+(url.searchParams.get('offset')||0)));
+    const blk=[...(await cmBlockSet(env,me))].slice(0,80);
+    let where='p.deleted=0 AND p.hidden=0';const binds=[];
+    if(level){where+=' AND p.level=?';binds.push(level)}
+    if(blk.length){where+=' AND p.author_id NOT IN ('+cmQ(blk.length)+')';binds.push(...blk)}
+    let rows;
+    if(sort==='hot'){
+      const since=new Date(Date.now()-7*864e5).toISOString();
+      const r=await env.DB.prepare("SELECT p.*, ((SELECT COUNT(*) FROM likes l WHERE l.target_type='post' AND l.target_id=p.id)+2*(SELECT COUNT(*) FROM comments c WHERE c.post_id=p.id AND c.deleted=0 AND c.hidden=0)+1.0)/(((julianday('now')-julianday(p.created_at))*24+2)*((julianday('now')-julianday(p.created_at))*24+2)) AS score FROM posts p WHERE "+where+" AND p.created_at>? ORDER BY score DESC, p.created_at DESC LIMIT ? OFFSET ?").bind(...binds,since,limit,offset).all();
+      rows=r.results||[];
+    }else if(before){
+      const r=await env.DB.prepare('SELECT p.* FROM posts p WHERE '+where+' AND p.created_at<? ORDER BY p.created_at DESC LIMIT ?').bind(...binds,before,limit).all();
+      rows=r.results||[];
+    }else{
+      const r=await env.DB.prepare('SELECT p.* FROM posts p WHERE '+where+' ORDER BY p.pinned DESC, p.created_at DESC LIMIT ?').bind(...binds,limit).all();
+      rows=r.results||[];
+    }
+    return J({ok:true,posts:await cmShapePosts(env,rows,me),level:level||'all',sort,storage_enabled:CM_STORAGE_ON,me:await cmProfile(env,me)},200,c.h);
+  }
+  if(path==='/community/posts'&&method==='POST'){
+    const hour=new Date().toISOString().slice(0,13);
+    if(await rlHit(env,'cm:post:'+hour+':'+me,hour)>=16)return J({error:'Bạn đăng bài hơi nhanh — thử lại sau ít phút.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    let body=String(b.body||'').trim().slice(0,5000);
+    const lvRaw=String(b.level||'').toUpperCase();
+    if(lvRaw&&lvRaw!=='ALL'&&!CM_LEVELS.includes(lvRaw))return J({error:'Nhóm cấp độ không hợp lệ'},400,c.h);
+    const level=CM_LEVELS.includes(lvRaw)?lvRaw:'';
+    const fileIds=Array.isArray(b.file_ids)?[...new Set(b.file_ids.map(String))].slice(0,6):[];
+    if(!body&&!fileIds.length)return J({error:'Bài viết trống'},400,c.h);
+    const mc=await cmCheckMentions(env,me,body);if(mc.err)return J({error:mc.err},400,c.h);body=mc.body;
+    if(fileIds.length){
+      const q=cmQ(fileIds.length);
+      const [fr,ur]=await env.DB.batch([env.DB.prepare('SELECT * FROM files WHERE id IN ('+q+')').bind(...fileIds),env.DB.prepare('SELECT file_id FROM post_files WHERE file_id IN ('+q+')').bind(...fileIds)]);
+      const fm={};for(const f of (fr.results||[]))fm[f.id]=f;
+      for(const fid of fileIds){const f=fm[fid];if(!f||f.deleted||f.owner_id!==me||f.purpose!=='post')return J({error:'Tệp đính kèm không hợp lệ'},400,c.h)}
+      if((ur.results||[]).length)return J({error:'Tệp đã được dùng ở bài khác'},400,c.h);
+    }
+    const id=crypto.randomUUID(),t=now();
+    const st=[env.DB.prepare('INSERT INTO posts(id,author_id,body,level,created_at,updated_at) VALUES(?,?,?,?,?,?)').bind(id,me,body,level,t,t)];
+    fileIds.forEach((fid,i)=>st.push(env.DB.prepare('INSERT INTO post_files(post_id,file_id,ord) VALUES(?,?,?)').bind(id,fid,i)));
+    await env.DB.batch(st);
+    await cmSaveMentions(env,me,mc.ids,'post',id,{post_id:id});
+    const row=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(id).first();
+    return J({ok:true,post:(await cmShapePosts(env,[row],me))[0]},201,c.h);
+  }
+  if(path==='/community/posts/delete'&&method==='POST'){
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const row=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(String(b.id||'')).first();
+    if(!row||row.deleted)return J({error:'Không tìm thấy bài viết'},404,c.h);
+    if(row.author_id!==me)return J({error:'Chỉ xoá được bài của chính bạn'},403,c.h);
+    await env.DB.batch([env.DB.prepare('UPDATE posts SET deleted=1, updated_at=? WHERE id=?').bind(now(),row.id),env.DB.prepare("DELETE FROM mentions WHERE source_kind='post' AND source_id=?").bind(row.id)]);
+    return J({ok:true},200,c.h);
+  }
+  if(path==='/community/comments'&&method==='GET'){
+    const postId=url.searchParams.get('post_id')||'';
+    const post=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(postId).first();
+    if(!post||post.deleted||post.hidden)return J({error:'Không tìm thấy bài viết'},404,c.h);
+    const blk=[...(await cmBlockSet(env,me))].slice(0,80);
+    const r=await env.DB.prepare('SELECT * FROM comments WHERE post_id=? AND deleted=0 AND hidden=0'+(blk.length?' AND author_id NOT IN ('+cmQ(blk.length)+')':'')+' ORDER BY created_at ASC LIMIT 300').bind(postId,...blk).all();
+    return J({ok:true,comments:await cmShapeComments(env,r.results||[],me)},200,c.h);
+  }
+  if(path==='/community/comments'&&method==='POST'){
+    const hour=new Date().toISOString().slice(0,13);
+    if(await rlHit(env,'cm:cmt:'+hour+':'+me,hour)>=61)return J({error:'Bạn bình luận hơi nhanh — thử lại sau ít phút.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const postId=String(b.post_id||'');
+    const post=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(postId).first();
+    if(!post||post.deleted||post.hidden)return J({error:'Không tìm thấy bài viết'},404,c.h);
+    if(await cmBlockedEither(env,me,post.author_id))return J({error:'Không thể bình luận bài này'},403,c.h);
+    let body=String(b.body||'').trim().slice(0,2000);
+    if(!body)return J({error:'Bình luận trống'},400,c.h);
+    const mc=await cmCheckMentions(env,me,body);if(mc.err)return J({error:mc.err},400,c.h);body=mc.body;
+    let parentId=null,parent=null;
+    if(b.parent_id){
+      parent=await env.DB.prepare('SELECT * FROM comments WHERE id=? AND post_id=?').bind(String(b.parent_id),postId).first();
+      if(!parent||parent.deleted)return J({error:'Không tìm thấy bình luận gốc'},404,c.h);
+      parentId=parent.parent_id||parent.id;
+      if(parentId!==parent.id)parent=await env.DB.prepare('SELECT * FROM comments WHERE id=?').bind(parentId).first();
+    }
+    const id=crypto.randomUUID();
+    await env.DB.prepare('INSERT INTO comments(id,post_id,author_id,parent_id,body,created_at) VALUES(?,?,?,?,?,?)').bind(id,postId,me,parentId,body,now()).run();
+    const mset=new Set(mc.ids);
+    if(parentId&&parent&&parent.author_id!==me){if(!mset.has(parent.author_id))await cmNotify(env,parent.author_id,me,'reply_comment',postId,id)}
+    else if(post.author_id!==me&&!mset.has(post.author_id))await cmNotify(env,post.author_id,me,'comment_post',postId,id);
+    await cmSaveMentions(env,me,mc.ids,'comment',id,{post_id:postId,comment_id:id});
+    const row=await env.DB.prepare('SELECT * FROM comments WHERE id=?').bind(id).first();
+    return J({ok:true,comment:(await cmShapeComments(env,[row],me))[0]},201,c.h);
+  }
+  if(path==='/community/like'&&method==='POST'){
+    if(await cmLimit(env,'like',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const tt=String(b.target_type||''),tid=String(b.target_id||'');
+    const type=b.type===undefined||b.type===null||b.type===''?'like':String(b.type);
+    if(!['post','comment'].includes(tt))return J({error:'Loại không hợp lệ'},400,c.h);
+    if(!CM_REACTS.includes(type))return J({error:'Cảm xúc không hợp lệ'},400,c.h);
+    let author=null,postId=null;
+    if(tt==='post'){
+      const p=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(tid).first();
+      if(!p||p.deleted||p.hidden)return J({error:'Không tìm thấy bài viết'},404,c.h);
+      author=p.author_id;postId=p.id;
+    }else{
+      const cm=await env.DB.prepare('SELECT * FROM comments WHERE id=?').bind(tid).first();
+      if(!cm||cm.deleted||cm.hidden)return J({error:'Không tìm thấy bình luận'},404,c.h);
+      author=cm.author_id;postId=cm.post_id;
+    }
+    if(await cmBlockedEither(env,me,author))return J({error:'Không thể bày tỏ cảm xúc với nội dung này'},403,c.h);
+    const ex=await env.DB.prepare("SELECT COALESCE(type,'like') AS t FROM likes WHERE target_type=? AND target_id=? AND user_id=?").bind(tt,tid,me).first();
+    let mine=null;
+    if(ex&&ex.t===type){await env.DB.prepare('DELETE FROM likes WHERE target_type=? AND target_id=? AND user_id=?').bind(tt,tid,me).run()}
+    else if(ex){await env.DB.prepare('UPDATE likes SET type=? WHERE target_type=? AND target_id=? AND user_id=?').bind(type,tt,tid,me).run();mine=type}
+    else{
+      await env.DB.prepare('INSERT INTO likes(target_type,target_id,user_id,created_at,type) VALUES(?,?,?,?,?)').bind(tt,tid,me,now(),type).run();mine=type;
+      await cmNotify(env,author,me,tt==='post'?'like_post':'like_comment',postId,tt==='comment'?tid:null);
+    }
+    const rr=await env.DB.prepare("SELECT COALESCE(type,'like') AS t,COUNT(*) AS n FROM likes WHERE target_type=? AND target_id=? GROUP BY t").bind(tt,tid).all();
+    const reactions={};let count=0;for(const x of (rr.results||[])){reactions[x.t]=x.n;count+=x.n}
+    return J({ok:true,liked:!!mine,my_reaction:mine,count,reactions},200,c.h);
+  }
+  if(path==='/community/save'&&method==='POST'){
+    if(await cmLimit(env,'save',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const pid=String(b.post_id||'');
+    const p=await env.DB.prepare('SELECT id,deleted,hidden FROM posts WHERE id=?').bind(pid).first();
+    const ex=await env.DB.prepare('SELECT 1 AS x FROM saved_posts WHERE user_id=? AND post_id=?').bind(me,pid).first();
+    if(ex){await env.DB.prepare('DELETE FROM saved_posts WHERE user_id=? AND post_id=?').bind(me,pid).run();return J({ok:true,saved:false},200,c.h)}
+    if(!p||p.deleted||p.hidden)return J({error:'Không tìm thấy bài viết'},404,c.h);
+    const n=await env.DB.prepare('SELECT COUNT(*) AS n FROM saved_posts WHERE user_id=?').bind(me).first();
+    if(n&&n.n>=500)return J({error:'Bạn đã lưu tối đa 500 bài — bỏ lưu bớt rồi lưu tiếp nhé.'},429,c.h);
+    await env.DB.prepare('INSERT OR IGNORE INTO saved_posts(user_id,post_id,created_at) VALUES(?,?,?)').bind(me,pid,now()).run();
+    return J({ok:true,saved:true},200,c.h);
+  }
+  if(path==='/community/saved'&&method==='GET'){
+    const before=url.searchParams.get('before')||'9999';
+    const r=await env.DB.prepare('SELECT p.*,s.created_at AS saved_at FROM saved_posts s JOIN posts p ON p.id=s.post_id WHERE s.user_id=? AND s.created_at<? AND p.deleted=0 AND p.hidden=0 ORDER BY s.created_at DESC LIMIT 30').bind(me,before).all();
+    const rows=r.results||[];
+    const posts=await cmShapePosts(env,rows,me);
+    posts.forEach((p,i)=>p.saved_at=rows[i].saved_at);
+    return J({ok:true,posts},200,c.h);
+  }
+  if(path==='/community/share'&&method==='POST'){
+    if(await cmLimit(env,'share',me,20,'day'))return J({error:'Hôm nay bạn đã chia sẻ 20 lần — mai chia sẻ tiếp nhé.'},429,c.h);
+    if(await cmLimit(env,'chatmin',me,30,'minute'))return J({error:'Bạn gửi tin hơi nhanh — chờ một chút rồi gửi tiếp.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const pid=String(b.post_id||'');
+    const p=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(pid).first();
+    if(!p||p.deleted||p.hidden)return J({error:'Không tìm thấy bài viết'},404,c.h);
+    let cv=null;
+    if(b.conv_id){cv=await env.DB.prepare('SELECT * FROM conversations WHERE id=?').bind(String(b.conv_id)).first();if(cv&&cv.user_a!==me&&cv.user_b!==me)cv=null}
+    else if(b.user_id){
+      const other=String(b.user_id);
+      if(other===me||other==='admin')return J({error:'Không thể chia sẻ cho người này'},400,c.h);
+      cv=await env.DB.prepare('SELECT * FROM conversations WHERE pair_key=?').bind(cmPair(me,other).key).first();
+      if(!cv){
+        const fr=await cmFriendRow(env,me,other);
+        if(!fr||fr.status!=='accepted')return J({error:'Chỉ chia sẻ được cho bạn bè hoặc người bạn đã từng nhắn tin.'},403,c.h);
+        const pr=cmPair(me,other),id=crypto.randomUUID(),t=now();
+        await env.DB.prepare('INSERT OR IGNORE INTO conversations(id,pair_key,user_a,user_b,is_admin,created_at,last_at) VALUES(?,?,?,?,0,?,?)').bind(id,pr.key,pr.a,pr.b,t,t).run();
+        cv=await env.DB.prepare('SELECT * FROM conversations WHERE pair_key=?').bind(pr.key).first();
+      }
+    }
+    if(!cv)return J({error:'Không tìm thấy cuộc trò chuyện'},404,c.h);
+    if(cv.is_admin)return J({error:'Không chia sẻ vào cuộc trò chuyện với quản trị viên'},400,c.h);
+    const otherId=cv.user_a===me?cv.user_b:cv.user_a;
+    if(await cmBlockedEither(env,me,otherId))return J({error:'Không thể gửi tới người này.',code:'blocked'},403,c.h);
+    if(await cmBlockedEither(env,otherId,p.author_id))return J({error:'Người nhận không xem được bài này.'},403,c.h);
+    const body=String(b.body||'').trim().slice(0,1000);
+    const id=crypto.randomUUID(),t=now();
+    await env.DB.batch([
+      env.DB.prepare("INSERT INTO messages(id,conv_id,sender_id,body,kind,ref_id,created_at) VALUES(?,?,?,?,'post',?,?)").bind(id,cv.id,me,body,pid,t),
+      env.DB.prepare('UPDATE conversations SET last_at=? WHERE id=?').bind(t,cv.id)
+    ]);
+    if(p.author_id!==me&&p.author_id!==otherId)await cmNotify(env,p.author_id,me,'share_post',pid,null);
+    return J({ok:true,conv_id:cv.id,message_id:id},201,c.h);
+  }
+  if(path==='/community/report'&&method==='POST'){
+    const day=new Date().toISOString().slice(0,10);
+    if(await rlHit(env,'cm:rep:'+day+':'+me,day)>=21)return J({error:'Bạn đã báo cáo nhiều lần hôm nay — admin sẽ xem xét dần.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const tt=String(b.target_type||''),tid=String(b.target_id||'');
+    const reason=String(b.reason||'').trim().slice(0,500);
+    let snap=null;
+    if(tt==='post'){
+      const p=await env.DB.prepare('SELECT * FROM posts WHERE id=?').bind(tid).first();
+      if(!p)return J({error:'Không tìm thấy bài viết'},404,c.h);
+      snap={body:p.body,author_id:p.author_id,created_at:p.created_at};
+    }else if(tt==='comment'){
+      const cm=await env.DB.prepare('SELECT * FROM comments WHERE id=?').bind(tid).first();
+      if(!cm)return J({error:'Không tìm thấy bình luận'},404,c.h);
+      snap={body:cm.body,author_id:cm.author_id,post_id:cm.post_id,created_at:cm.created_at};
+    }else if(tt==='user'){
+      const u=await env.DB.prepare('SELECT id FROM users WHERE id=?').bind(tid).first();
+      if(!u||tid===me)return J({error:'Không tìm thấy học viên'},404,c.h);
+      snap={user_id:tid,profile:await cmProfile(env,tid)};
+    }else return J({error:'Loại báo cáo không hợp lệ'},400,c.h);
+    const dup=await env.DB.prepare("SELECT id FROM reports WHERE reporter_id=? AND target_type=? AND target_id=? AND status='open'").bind(me,tt,tid).first();
+    if(dup)return J({ok:true,id:dup.id,duplicate:true},200,c.h);
+    const id=crypto.randomUUID();
+    await env.DB.prepare('INSERT INTO reports(id,reporter_id,target_type,target_id,reason,snapshot,created_at) VALUES(?,?,?,?,?,?,?)').bind(id,me,tt,tid,reason,JSON.stringify(snap),now()).run();
+    // Tự ẩn khi >=3 người KHÁC NHAU báo cáo (admin hiện lại được qua /community/admin/moderate action=show).
+    let auto_hidden=false;
+    if(tt==='post'||tt==='comment'){
+      const n=await env.DB.prepare("SELECT COUNT(DISTINCT reporter_id) AS n FROM reports WHERE target_type=? AND target_id=? AND status='open'").bind(tt,tid).first();
+      if(n&&n.n>=3){await env.DB.prepare('UPDATE '+(tt==='post'?'posts':'comments')+' SET hidden=1 WHERE id=?').bind(tid).run();auto_hidden=true}
+    }
+    return J({ok:true,id,auto_hidden},201,c.h);
+  }
+  if(path==='/community/notifications'&&method==='GET'){
+    const r=await env.DB.prepare('SELECT * FROM notifications WHERE user_id=? ORDER BY created_at DESC LIMIT 50').bind(me).all();
+    const rows=r.results||[];
+    const profs=await cmProfiles(env,rows.map(n=>n.actor_id));
+    const out=rows.map(n=>({id:n.id,type:n.type,actor:profs[n.actor_id],post_id:n.post_id,comment_id:n.comment_id,conv_id:n.conv_id||null,read:!!n.is_read,created_at:n.created_at}));
+    const uc=await env.DB.prepare('SELECT COUNT(*) AS n FROM notifications WHERE user_id=? AND is_read=0').bind(me).first();
+    return J({ok:true,notifications:out,unread:uc?uc.n:0},200,c.h);
+  }
 
   // ===== HỒ SƠ =====
   if(path==='/community/profile'&&method==='GET'){
@@ -1501,14 +2122,27 @@ async function handleCommunity(req,env,c,path){
   }
   if(path==='/chat/conversations'&&method==='GET'){
     const r=await env.DB.prepare('SELECT * FROM conversations WHERE user_a=? OR user_b=? ORDER BY last_at DESC LIMIT 60').bind(me,me).all();
+    const rows=r.results||[];
+    // Nạp GỘP last_seen của mọi người còn lại (1 lượt truy vấn cho cả danh sách).
+    const otherIds=[...new Set(rows.map(cv=>cv.user_a===me?cv.user_b:cv.user_a).filter(x=>x!=='admin'))];
+    const lsMap={};
+    for(let i=0;i<otherIds.length;i+=90){
+      const part=otherIds.slice(i,i+90);
+      const lr=await env.DB.prepare('SELECT user_id,last_seen FROM profiles WHERE user_id IN ('+cmQ(part.length)+')').bind(...part).all();
+      for(const p of (lr.results||[]))lsMap[p.user_id]=p.last_seen||null;
+    }
     const out=[];
-    for(const cv of (r.results||[])){
+    for(const cv of rows){
       const otherId=cv.user_a===me?cv.user_b:cv.user_a;
-      const last=await env.DB.prepare('SELECT body,file_id,deleted,sender_id FROM messages WHERE conv_id=? ORDER BY created_at DESC LIMIT 1').bind(cv.id).first();
+      const last=await env.DB.prepare('SELECT body,file_id,deleted,sender_id,kind,read_at FROM messages WHERE conv_id=? ORDER BY created_at DESC LIMIT 1').bind(cv.id).first();
       const uc=await env.DB.prepare('SELECT COUNT(*) AS n FROM messages WHERE conv_id=? AND sender_id<>? AND read_at IS NULL AND deleted=0').bind(cv.id,me).first();
-      out.push({id:cv.id,other:await cmProfile(env,otherId),is_admin:!!cv.is_admin,last_at:cv.last_at,
+      const prof=await cmProfile(env,otherId);
+      const lastSeen=otherId==='admin'?null:(lsMap[otherId]||null);
+      const online=!!lastSeen&&(Date.now()-Date.parse(lastSeen))<CM_ONLINE_MS;
+      const mu=await env.DB.prepare('SELECT 1 AS x FROM conv_mutes WHERE user_id=? AND conv_id=?').bind(me,cv.id).first();
+      out.push({id:cv.id,other:Object.assign(prof,{online,last_seen:lastSeen}),is_admin:!!cv.is_admin,last_at:cv.last_at,
         last_text:last?(last.deleted?'Tin nhắn đã bị xoá':(last.body||(last.file_id?'📎 Tệp đính kèm':''))):'',
-        last_mine:last?last.sender_id===me:false,unread:uc?uc.n:0});
+        last_mine:last?last.sender_id===me:false,last_kind:last?(last.kind||'text'):'',last_sender_id:last?last.sender_id:null,last_read_at:last?(last.read_at||null):null,muted:!!mu,unread:uc?uc.n:0});
     }
     return J({ok:true,conversations:out,storage_enabled:CM_STORAGE_ON},200,c.h);
   }
@@ -1539,17 +2173,16 @@ async function handleCommunity(req,env,c,path){
       const r=await env.DB.prepare('SELECT * FROM messages WHERE conv_id=? ORDER BY created_at DESC LIMIT 100').bind(convId).all();
       rows=(r.results||[]).reverse();
     }
-    const out=[];
-    for(const m of rows){
-      let file=null;
-      if(m.file_id){
-        const f=await env.DB.prepare('SELECT id,purpose,kind,name,mime,size FROM files WHERE id=? AND deleted=0').bind(m.file_id).first();
-        if(f)file=f;
-      }
-      out.push({id:m.id,sender_id:m.sender_id,mine:m.sender_id===me,body:m.deleted?'':m.body,deleted:!!m.deleted,file,read_at:m.read_at,created_at:m.created_at});
-    }
+    const out=await cmShapeMessages(env,rows,me);
     const otherId=cv.user_a===me?cv.user_b:cv.user_a;
-    return J({ok:true,messages:out,other:await cmProfile(env,otherId),is_admin:!!cv.is_admin},200,c.h);
+    const prof=await cmProfile(env,otherId);
+    let online=false,lastSeen=null;
+    if(otherId!=='admin'){
+      const pr=await env.DB.prepare('SELECT last_seen FROM profiles WHERE user_id=?').bind(otherId).first();
+      lastSeen=pr?(pr.last_seen||null):null;
+      online=!!lastSeen&&(Date.now()-Date.parse(lastSeen))<CM_ONLINE_MS;
+    }
+    return J({ok:true,messages:out,other:Object.assign(prof,{online,last_seen:lastSeen}),is_admin:!!cv.is_admin},200,c.h);
   }
   if(path==='/chat/read'&&method==='POST'){
     const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
@@ -1579,7 +2212,7 @@ async function handleCommunity(req,env,c,path){
     if(iBlocked)return J({error:'Bạn đã chặn người này — bỏ chặn để nhắn tiếp.',code:'blocked_by_me'},403,c.h);
     const theyBlocked=otherId==='admin'?null:await env.DB.prepare('SELECT 1 AS x FROM blocks WHERE user_id=? AND blocked_id=?').bind(otherId,me).first();
     if(theyBlocked)return J({error:'Không thể gửi tin nhắn tới người này.',code:'blocked'},403,c.h);
-    const body=String(b.body||'').trim().slice(0,4000);
+    let body=String(b.body||'').trim().slice(0,4000);
     let fileId=null;
     if(b.file_id){
       fileId=String(b.file_id);
@@ -1589,10 +2222,63 @@ async function handleCommunity(req,env,c,path){
       if(used)return J({error:'Tệp đã được dùng ở tin khác'},400,c.h);
     }
     if(!body&&!fileId)return J({error:'Tin nhắn trống'},400,c.h);
+    // @ trong chat: chạy cmCheckMentions như bài/bình luận (đặc tả 4d: KHÔNG
+    // allowOnly) — lọc theo chặn + mention_policy của người được nhắc, tối đa
+    // CM_MENTION_MAX; token không hợp lệ bị hạ xuống chữ thường, không thông báo.
+    let mc={body,ids:[]};
+    if(body){
+      mc=await cmCheckMentions(env,me,body);
+      if(mc.err)return J({error:mc.err},400,c.h);
+      body=mc.body;
+    }
+    // Trả lời 1 tin: tin gốc phải tồn tại và thuộc CHÍNH cuộc trò chuyện này.
+    const replyTo=String(b.reply_to||'');
+    if(replyTo){
+      const rp=await env.DB.prepare('SELECT id FROM messages WHERE id=? AND conv_id=?').bind(replyTo,cv.id).first();
+      if(!rp)return J({error:'Không tìm thấy tin nhắn được trả lời trong cuộc trò chuyện này'},400,c.h);
+    }
     const id=crypto.randomUUID(),t=now();
-    await env.DB.prepare('INSERT INTO messages(id,conv_id,sender_id,body,file_id,created_at) VALUES(?,?,?,?,?,?)').bind(id,cv.id,me,body,fileId,t).run();
+    await env.DB.prepare("INSERT INTO messages(id,conv_id,sender_id,body,file_id,reply_to,kind,created_at) VALUES(?,?,?,?,?,?,'text',?)").bind(id,cv.id,me,body,fileId,replyTo||null,t).run();
     await env.DB.prepare('UPDATE conversations SET last_at=? WHERE id=?').bind(t,cv.id).run();
-    return J({ok:true,message:{id,sender_id:me,mine:true,body,deleted:false,file:null,read_at:null,created_at:t},conv_id:cv.id},201,c.h);
+    await cmSaveMentions(env,me,mc.ids,'message',id,{conv_id:cv.id});
+    const row=await env.DB.prepare('SELECT * FROM messages WHERE id=?').bind(id).first();
+    return J({ok:true,message:(await cmShapeMessages(env,[row],me))[0],conv_id:cv.id},201,c.h);
+  }
+  // Cảm xúc tin nhắn (đặc tả 4e): type thuộc CM_REACTS, hoặc null/'' = gỡ.
+  // Đã có cùng type -> DELETE (gỡ); type khác -> UPDATE; chưa có -> INSERT
+  // (bảng message_reactions, cột emoji chứa type). Chỉ thành viên hội thoại.
+  if(path==='/chat/react'&&method==='POST'){
+    if(await cmLimit(env,'mreact',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const mid=String(b.message_id||'');
+    const type=b.type===undefined||b.type===null?'':String(b.type);
+    if(type&&!CM_REACTS.includes(type))return J({error:'Cảm xúc không hợp lệ'},400,c.h);
+    const m=await env.DB.prepare('SELECT * FROM messages WHERE id=?').bind(mid).first();
+    if(!m||m.deleted)return J({error:'Không tìm thấy tin nhắn'},404,c.h);
+    const cv=await cmConvOf(env,m.conv_id,me);
+    if(!cv)return J({error:'Không tìm thấy cuộc trò chuyện'},404,c.h);
+    const ex=await env.DB.prepare('SELECT emoji AS t FROM message_reactions WHERE message_id=? AND user_id=?').bind(mid,me).first();
+    let mine=null;
+    if(!type){
+      if(ex)await env.DB.prepare('DELETE FROM message_reactions WHERE message_id=? AND user_id=?').bind(mid,me).run();
+    }
+    else if(ex&&ex.t===type){await env.DB.prepare('DELETE FROM message_reactions WHERE message_id=? AND user_id=?').bind(mid,me).run()}
+    else if(ex){await env.DB.prepare('UPDATE message_reactions SET emoji=? WHERE message_id=? AND user_id=?').bind(type,mid,me).run();mine=type}
+    else{await env.DB.prepare('INSERT INTO message_reactions(message_id,user_id,emoji,created_at) VALUES(?,?,?,?)').bind(mid,me,type,now()).run();mine=type}
+    const rr=await env.DB.prepare('SELECT emoji AS t,COUNT(*) AS n FROM message_reactions WHERE message_id=? GROUP BY emoji').bind(mid).all();
+    const reactions={};for(const x of (rr.results||[]))reactions[x.t]={count:x.n,mine:x.t===mine};
+    return J({ok:true,reactions,mine},200,c.h);
+  }
+  // Tắt/bật thông báo 1 cuộc trò chuyện (đặc tả 4f, bảng conv_mutes sẵn có):
+  // muted=true -> INSERT OR IGNORE; muted=false -> DELETE. Theo từng tài khoản.
+  if(path==='/chat/mute'&&method==='POST'){
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const cv=await cmConvOf(env,String(b.conv_id||''),me);
+    if(!cv)return J({error:'Không tìm thấy cuộc trò chuyện'},404,c.h);
+    const muted=!!b.muted;
+    if(muted)await env.DB.prepare('INSERT OR IGNORE INTO conv_mutes(user_id,conv_id,created_at) VALUES(?,?,?)').bind(me,cv.id,now()).run();
+    else await env.DB.prepare('DELETE FROM conv_mutes WHERE user_id=? AND conv_id=?').bind(me,cv.id).run();
+    return J({ok:true,muted},200,c.h);
   }
   if(path==='/chat/delete-message'&&method==='POST'){
     const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
@@ -1650,12 +2336,9 @@ async function handleCommunity(req,env,c,path){
     if(filter==='pinned')where='WHERE deleted=0 AND pinned=1';
     if(filter==='deleted')where='WHERE deleted=1';
     const r=await env.DB.prepare('SELECT * FROM posts '+where+' ORDER BY created_at DESC LIMIT 100').all();
-    const out=[];
-    for(const row of (r.results||[])){
-      const p=await cmPostShape(env,row,'admin');
-      p.deleted=!!row.deleted;
-      out.push(p);
-    }
+    const rows=r.results||[],out=[];
+    for(let i=0;i<rows.length;i+=30)out.push(...await cmShapePosts(env,rows.slice(i,i+30),'admin'));
+    out.forEach((p,i)=>p.deleted=!!rows[i].deleted);
     return J({ok:true,posts:out},200,c.h);
   }
   if(path==='/community/admin/moderate'&&method==='POST'){
@@ -1771,14 +2454,19 @@ async function handleCommunity(req,env,c,path){
   if(path==='/chat/admin/unlock'&&method==='POST'){
     if(!env.ADMIN_PASSWORD)return J({error:'Chưa đặt ADMIN_PASSWORD'},503,c.h);
     const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    // Bắt buộc lý do (đặc tả 4h): thiếu/trắng -> 400 với đúng câu lỗi của đặc tả;
+    // kiểm TRƯỚC mật khẩu để lần thử thiếu lý do không ăn vào bộ đếm chống dò.
+    const reason=String(b.reason||'').trim().slice(0,200);
+    if(!reason)return J({error:'Hãy nhập lý do xem (ví dụ: xử lý báo cáo quấy rối).'},400,c.h);
+    const reportId=String(b.report_id||'').trim().slice(0,64);
     const afDay=new Date().toISOString().slice(0,10);
     const afKey='lf:'+afDay+':admin:'+(req.headers.get('CF-Connecting-IP')||'x');
     if(await rlPeek(env,afKey)>=10)return J({error:'Quá nhiều lần nhập sai. Thử lại vào ngày mai.'},429,c.h);
     const pw=String(b.password||'').trim();
     if(pw!==env.ADMIN_PASSWORD){await rlHit(env,afKey,afDay);return J({error:'Mật khẩu admin không đúng'},401,c.h)}
     const token=bearer(req);
-    await env.DB.prepare('INSERT OR REPLACE INTO chat_view_grants(token,granted_at) VALUES(?,?)').bind(token,now()).run();
-    await env.DB.prepare("INSERT INTO chat_access_log(id,kind,conv_id,user_a,user_b,opened_at) VALUES(?,'unlock',NULL,NULL,NULL,?)").bind(crypto.randomUUID(),now()).run();
+    await env.DB.prepare('INSERT OR REPLACE INTO chat_view_grants(token,granted_at,reason) VALUES(?,?,?)').bind(token,now(),reason).run();
+    await env.DB.prepare("INSERT INTO chat_access_log(id,kind,conv_id,user_a,user_b,opened_at,reason,report_id) VALUES(?,'unlock',NULL,NULL,NULL,?,?,?)").bind(crypto.randomUUID(),now(),reason,reportId||null).run();
     return J({ok:true},200,c.h);
   }
   if(path==='/chat/admin/lock-view'&&method==='POST'){
@@ -1790,9 +2478,17 @@ async function handleCommunity(req,env,c,path){
   }
   if(path==='/chat/admin/conversations'&&method==='GET'){
     const r=await env.DB.prepare('SELECT c.*, (SELECT COUNT(*) FROM messages m WHERE m.conv_id=c.id) AS msg_count FROM conversations c WHERE c.is_admin=0 ORDER BY c.last_at DESC LIMIT 100').all();
+    const rows=r.results||[];
+    // Nạp GỘP số báo cáo chat đang mở cho mọi cuộc trò chuyện (1 lượt GROUP BY).
+    const repMap={};
+    for(let i=0;i<rows.length;i+=90){
+      const part=rows.slice(i,i+90).map(cv=>cv.id);
+      const rr=await env.DB.prepare("SELECT conv_id,COUNT(*) AS n FROM reports WHERE target_type='chat' AND status='open' AND conv_id IN ("+cmQ(part.length)+") GROUP BY conv_id").bind(...part).all();
+      for(const x of (rr.results||[]))repMap[x.conv_id]=x.n;
+    }
     const out=[];
-    for(const cv of (r.results||[])){
-      out.push({id:cv.id,user_a:await cmProfile(env,cv.user_a),user_b:await cmProfile(env,cv.user_b),last_at:cv.last_at,msg_count:cv.msg_count});
+    for(const cv of rows){
+      out.push({id:cv.id,user_a:await cmProfile(env,cv.user_a),user_b:await cmProfile(env,cv.user_b),last_at:cv.last_at,msg_count:cv.msg_count,open_reports:repMap[cv.id]||0});
     }
     return J({ok:true,conversations:out},200,c.h);
   }
@@ -1802,7 +2498,12 @@ async function handleCommunity(req,env,c,path){
     const cv=await env.DB.prepare('SELECT * FROM conversations WHERE id=?').bind(convId).first();
     if(!cv)return J({error:'Không tìm thấy cuộc trò chuyện'},404,c.h);
     // Ghi nhật ký TRƯỚC khi trả dữ liệu: mọi lần mở xem đều có dấu vết phía admin.
-    await env.DB.prepare("INSERT INTO chat_access_log(id,kind,conv_id,user_a,user_b,opened_at) VALUES(?,'open',?,?,?,?)").bind(crypto.randomUUID(),cv.id,cv.user_a,cv.user_b,now()).run();
+    // Lý do lấy từ grant đang mở (SELECT reason FROM chat_view_grants theo token
+    // phiên — ghi lúc unlock ở (h)); report_id lấy từ query (?report_id=...)
+    // khi admin mở xem từ một báo cáo cụ thể. Cả hai chép vào dòng 'open'.
+    const grant=await env.DB.prepare('SELECT reason FROM chat_view_grants WHERE token=?').bind(bearer(req)).first();
+    const reportId=String(url.searchParams.get('report_id')||'').slice(0,64);
+    await env.DB.prepare("INSERT INTO chat_access_log(id,kind,conv_id,user_a,user_b,opened_at,reason,report_id) VALUES(?,'open',?,?,?,?,?,?)").bind(crypto.randomUUID(),cv.id,cv.user_a,cv.user_b,now(),grant?(grant.reason||null):null,reportId||null).run();
     const r=await env.DB.prepare('SELECT * FROM messages WHERE conv_id=? ORDER BY created_at ASC LIMIT 500').bind(convId).all();
     const out=[];
     for(const m of (r.results||[])){
@@ -1813,6 +2514,180 @@ async function handleCommunity(req,env,c,path){
   if(path==='/chat/admin/access-log'&&method==='GET'){
     const r=await env.DB.prepare('SELECT * FROM chat_access_log ORDER BY opened_at DESC LIMIT 200').all();
     return J({ok:true,log:r.results||[]},200,c.h);
+  }
+
+  // ===== BẠN BÈ (giai đoạn 2, nhánh 2): /friends/* =====
+  // Trạng thái quan hệ luôn suy từ bảng friendships qua cmFriendRow/cmFriendState
+  // ('none'|'outgoing'|'incoming'|'friends'; hàng status='declined' tính là 'none').
+  // Cổng tài khoản approved đã áp ở đầu handleCommunity (cmNeedUser) như mọi
+  // endpoint /community khác nên khối này không kiểm tra lại phiên/quyền.
+  // cmProfiles không trả last_seen nên trạng thái online tra riêng tại đây.
+  async function frLastSeen(env,ids){
+    const out={};const uniq=[...new Set(ids.filter(Boolean).map(String))].filter(x=>x!=='admin');
+    for(let i=0;i<uniq.length;i+=90){
+      const part=uniq.slice(i,i+90);
+      const r=await env.DB.prepare('SELECT user_id,last_seen FROM profiles WHERE user_id IN ('+cmQ(part.length)+')').bind(...part).all();
+      for(const p of (r.results||[]))out[p.user_id]=p.last_seen||null;
+    }
+    return out;
+  }
+  function frEntry(prof,ls,extra){
+    return Object.assign({user:prof,online:!!ls&&(Date.now()-Date.parse(ls))<CM_ONLINE_MS,last_seen:ls||null},extra||{});
+  }
+  // Đếm bạn chung của từng ứng viên với me (tương đương mẫu tự-join f1/f2 trong
+  // /community/user, tính phía JS trên 1 truy vấn gom để tiết kiệm lượt D1).
+  async function frMutual(env,me,ids){
+    const mutual={};if(!ids.length)return mutual;
+    const myFr=await env.DB.prepare("SELECT CASE WHEN user_a=? THEN user_b ELSE user_a END AS x FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?)").bind(me,me,me).all();
+    const mySet=new Set((myFr.results||[]).map(x=>x.x));
+    if(!mySet.size)return mutual;
+    const qmarks=cmQ(ids.length);
+    const their=await env.DB.prepare('SELECT user_a,user_b FROM friendships WHERE status=\'accepted\' AND (user_a IN ('+qmarks+') OR user_b IN ('+qmarks+'))').bind(...ids,...ids).all();
+    for(const x of (their.results||[])){
+      for(const cand of [x.user_a,x.user_b]){
+        if(!ids.includes(cand))continue;
+        const otherSide=cand===x.user_a?x.user_b:x.user_a;
+        if(mySet.has(otherSide))mutual[cand]=(mutual[cand]||0)+1;
+      }
+    }
+    return mutual;
+  }
+  if(path==='/friends/request'&&method==='POST'){
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const other=String(b.user_id||'');
+    const target=other?await env.DB.prepare('SELECT id,status FROM users WHERE id=?').bind(other).first():null;
+    if(!target||target.status!=='approved')return J({error:'Không tìm thấy học viên này'},404,c.h);
+    if(other===me)return J({error:'Bạn không thể gửi lời mời cho chính mình'},400,c.h);
+    if(await cmBlockedEither(env,me,other))return J({error:'Không thể gửi lời mời tới người này.',code:'blocked'},403,c.h);
+    if(await rlHit(env,'cm:friendreq:'+cmDay()+':'+me,cmDay())>=21)return J({error:'Bạn đã gửi khá nhiều lời mời hôm nay — mai gửi tiếp nhé.'},429,c.h);
+    const message=String(b.message||'').trim().slice(0,300);
+    const row=await cmFriendRow(env,me,other);
+    const state0=cmFriendState(row,me);
+    if(state0==='friends')return J({ok:true,state:'friends'},200,c.h);
+    if(state0==='outgoing')return J({ok:true,state:'outgoing'},200,c.h);
+    // Phía kia đã mời mình trước: chỉ báo trạng thái, KHÔNG tự chấp nhận —
+    // muốn kết bạn thì người dùng bấm đồng ý qua /friends/respond.
+    if(state0==='incoming')return J({ok:true,state:'incoming'},200,c.h);
+    const pr=cmPair(me,other),t=now();
+    if(row){
+      // Hàng cũ status='declined': dùng lại đúng hàng đó, mở một lời mời mới.
+      await env.DB.prepare("UPDATE friendships SET requester_id=?,status='pending',message=?,updated_at=? WHERE pair_key=?").bind(me,message,t,row.pair_key).run();
+    }else{
+      await env.DB.prepare('INSERT INTO friendships(pair_key,user_a,user_b,requester_id,status,message,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?)').bind(pr.key,pr.a,pr.b,me,'pending',message,t,t).run();
+    }
+    await cmNotify(env,other,me,'friend_request',null,null);
+    return J({ok:true,state:'outgoing'},200,c.h);
+  }
+  if(path==='/friends/respond'&&method==='POST'){
+    if(await cmLimit(env,'friendact',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const other=String(b.user_id||'');
+    let accept=null;
+    if(b.action==='accept')accept=true;
+    else if(b.action==='decline')accept=false;
+    else if(typeof b.accept==='boolean')accept=b.accept;
+    else if(typeof b.accepted==='boolean')accept=b.accepted;
+    if(accept===null)return J({error:'Thiếu lựa chọn đồng ý hay từ chối'},400,c.h);
+    const row=other?await cmFriendRow(env,me,other):null;
+    // Chỉ xử lý khi hàng đang pending và người gửi là phía kia (requester_id = user_id).
+    if(!row||row.status!=='pending'||row.requester_id!==other)return J({error:'Không tìm thấy lời mời'},404,c.h);
+    if(accept){
+      await env.DB.prepare("UPDATE friendships SET status='accepted',updated_at=? WHERE pair_key=?").bind(now(),row.pair_key).run();
+      await cmNotify(env,other,me,'friend_accept',null,null);
+      return J({ok:true,state:'friends'},200,c.h);
+    }
+    await env.DB.prepare("UPDATE friendships SET status='declined',updated_at=? WHERE pair_key=?").bind(now(),row.pair_key).run();
+    return J({ok:true,state:'none'},200,c.h);
+  }
+  if(path==='/friends/cancel'&&method==='POST'){
+    if(await cmLimit(env,'friendact',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const other=String(b.user_id||'');
+    const row=other?await cmFriendRow(env,me,other):null;
+    if(!row||row.status!=='pending'||row.requester_id!==me)return J({error:'Không tìm thấy lời mời đã gửi để huỷ'},404,c.h);
+    await env.DB.prepare('DELETE FROM friendships WHERE pair_key=?').bind(row.pair_key).run();
+    return J({ok:true,state:'none'},200,c.h);
+  }
+  if(path==='/friends/remove'&&method==='POST'){
+    if(await cmLimit(env,'friendact',me,60,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const b=await readJson(req);if(!b)return J({error:'Dữ liệu không hợp lệ'},400,c.h);
+    const other=String(b.user_id||'');
+    const row=other?await cmFriendRow(env,me,other):null;
+    if(!row||row.status!=='accepted')return J({error:'Hai bạn chưa phải bạn bè'},404,c.h);
+    await env.DB.prepare('DELETE FROM friendships WHERE pair_key=?').bind(row.pair_key).run();
+    return J({ok:true,state:'none'},200,c.h);
+  }
+  if(path==='/friends/list'&&method==='GET'){
+    const r=await env.DB.prepare("SELECT *,CASE WHEN user_a=? THEN user_b ELSE user_a END AS other_id FROM friendships WHERE status='accepted' AND (user_a=? OR user_b=?) LIMIT 200").bind(me,me,me).all();
+    const rows=r.results||[];
+    const profs=await cmProfiles(env,rows.map(x=>x.other_id));
+    const seen=await frLastSeen(env,rows.map(x=>x.other_id));
+    const friends=rows.map(x=>frEntry(profs[x.other_id],seen[x.other_id]));
+    // Đang online xếp trước, trong cùng nhóm thì theo tên A–Z.
+    friends.sort((a,b2)=>((b2.online?1:0)-(a.online?1:0))||String(a.user.name).localeCompare(String(b2.user.name)));
+    return J({ok:true,friends,total:friends.length},200,c.h);
+  }
+  if(path==='/friends/requests'&&method==='GET'){
+    const r=await env.DB.prepare("SELECT *,CASE WHEN user_a=? THEN user_b ELSE user_a END AS other_id FROM friendships WHERE status='pending' AND (user_a=? OR user_b=?) ORDER BY created_at DESC LIMIT 100").bind(me,me,me).all();
+    const rows=r.results||[];
+    const profs=await cmProfiles(env,rows.map(x=>x.other_id));
+    const incoming=[],outgoing=[];
+    for(const x of rows){
+      if(x.requester_id===me)outgoing.push({user:profs[x.other_id],created_at:x.created_at||null});
+      else incoming.push({user:profs[x.other_id],message:x.message||'',created_at:x.created_at||null});
+    }
+    return J({ok:true,incoming,outgoing},200,c.h);
+  }
+  if(path==='/friends/search'&&method==='GET'){
+    if(await cmLimit(env,'search',me,30,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const q=String(url.searchParams.get('q')||'').trim().slice(0,60);
+    const lvRaw=String(url.searchParams.get('level')||'').toUpperCase();
+    const level=CM_LEVELS.includes(lvRaw)?lvRaw:'';
+    const region=String(url.searchParams.get('region')||'').trim().slice(0,40);
+    if(!q&&!level&&!region)return J({ok:true,users:[]},200,c.h);
+    const blk=[...(await cmBlockSet(env,me))].slice(0,80);
+    let sql="SELECT u.id FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.status='approved' AND COALESCE(p.discoverable,1)=1 AND u.id<>?";
+    const binds=[me];
+    if(blk.length){sql+=' AND u.id NOT IN ('+cmQ(blk.length)+')';binds.push(...blk)}
+    if(q){
+      const pat='%'+q.toLowerCase().replace(/[\\%_]/g,'\\$&')+'%';
+      sql+=" AND (LOWER(u.name) LIKE ? ESCAPE '\\' OR LOWER(COALESCE(p.display_name,'')) LIKE ? ESCAPE '\\')";
+      binds.push(pat,pat);
+    }
+    if(level){sql+=' AND p.level=?';binds.push(level)}
+    if(region){sql+=' AND LOWER(p.region)=LOWER(?)';binds.push(region)}
+    sql+=' ORDER BY (p.last_seen IS NULL),p.last_seen DESC,u.name ASC LIMIT 30';
+    const r=await env.DB.prepare(sql).bind(...binds).all();
+    const ids=(r.results||[]).map(x=>x.id);
+    if(!ids.length)return J({ok:true,users:[]},200,c.h);
+    const profs=await cmProfiles(env,ids);
+    const seen=await frLastSeen(env,ids);
+    const qmarks=cmQ(ids.length);
+    const fr=await env.DB.prepare('SELECT * FROM friendships WHERE (user_a=? AND user_b IN ('+qmarks+')) OR (user_b=? AND user_a IN ('+qmarks+'))').bind(me,...ids,me,...ids).all();
+    const state={};for(const x of (fr.results||[]))state[x.user_a===me?x.user_b:x.user_a]=cmFriendState(x,me);
+    const mutual=await frMutual(env,me,ids);
+    const users=ids.map(id=>frEntry(profs[id],seen[id],{friend:state[id]||'none',mutual_friends:mutual[id]||0}));
+    return J({ok:true,users},200,c.h);
+  }
+  if(path==='/friends/suggest'&&method==='GET'){
+    if(await cmLimit(env,'search',me,30,'minute'))return J({error:'Bạn thao tác hơi nhanh — chờ một chút nhé.'},429,c.h);
+    const meProf=await env.DB.prepare('SELECT level FROM profiles WHERE user_id=?').bind(me).first();
+    const myLevel=meProf?meProf.level||'':'';
+    const r=await env.DB.prepare("SELECT u.id,p.level,p.last_seen FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.status='approved' AND COALESCE(p.discoverable,1)=1 AND u.id<>? ORDER BY (p.last_seen IS NULL),p.last_seen DESC LIMIT 200").bind(me).all();
+    const blk=await cmBlockSet(env,me);
+    const rel=await env.DB.prepare('SELECT *,CASE WHEN user_a=? THEN user_b ELSE user_a END AS other_id FROM friendships WHERE (user_a=? OR user_b=?) AND status IN (\'pending\',\'accepted\')').bind(me,me,me).all();
+    const busy=new Set((rel.results||[]).map(x=>x.other_id));
+    // Loại: bị chặn hai chiều + đã có hàng accepted/pending (hàng declined không loại).
+    const cand=(r.results||[]).filter(x=>!blk.has(x.id)&&!busy.has(x.id));
+    if(!cand.length)return J({ok:true,users:[]},200,c.h);
+    const candIds=cand.map(x=>x.id);
+    const mutual=await frMutual(env,me,candIds);
+    const profs=await cmProfiles(env,candIds);
+    const seen=await frLastSeen(env,candIds);
+    // Ưu tiên cùng cấp với me trước (khác cấp vẫn hiện sau), rồi bạn chung giảm dần.
+    cand.sort((a,b2)=>(((myLevel&&b2.level===myLevel)?1:0)-((myLevel&&a.level===myLevel)?1:0))||((mutual[b2.id]||0)-(mutual[a.id]||0))||String(b2.last_seen||'').localeCompare(String(a.last_seen||'')));
+    const users=cand.slice(0,12).map(x=>frEntry(profs[x.id],seen[x.id],{friend:'none',mutual_friends:mutual[x.id]||0}));
+    return J({ok:true,users},200,c.h);
   }
 
   return J({error:'Không tìm thấy API'},404,c.h);
@@ -2096,8 +2971,9 @@ export default {async fetch(req,env){
   let path=url.pathname.replace(/\/+$/,'')||'/';
   if(path.startsWith('/auth'))return handleAuth(req,env,c,path);
   if(path==='/progress')return handleProgress(req,env,c);
+  if(path==='/hoso')return handleHoso(req,env,c);
   if(path.startsWith('/stats/'))return handleStats(req,env,c,path);
-  if(path.startsWith('/community')||path.startsWith('/chat'))return handleCommunity(req,env,c,path);
+  if(path.startsWith('/community')||path.startsWith('/chat')||path.startsWith('/friends'))return handleCommunity(req,env,c,path);
   if(path.startsWith('/job/'))return handleJob(req,env,c,path);
   if(path.startsWith('/free/'))return handleFree(req,env,c,path);
   if(path==='/'||path==='/ai')return handleAI(req,env,c);
