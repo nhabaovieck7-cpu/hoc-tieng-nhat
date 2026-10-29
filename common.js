@@ -172,12 +172,14 @@ async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return
  var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);
  var chat=document.createElement('button');chat.type='button';chat.id='hnchat';chat.className='hn-cb';chat.title='Tin nhắn';chat.setAttribute('aria-label','Tin nhắn');
  chat.innerHTML='💬<span class="hn-cbdg"></span>';chat.addEventListener('click',function(){location.href='tin-nhan.html'});
+ var fr=document.createElement('button');fr.type='button';fr.id='hnfriends';fr.className='hn-cb';fr.title='Bạn bè';fr.setAttribute('aria-label','Bạn bè');
+ fr.innerHTML='🤝';fr.addEventListener('click',function(){location.href='ban-be.html'});
  var wrap=document.createElement('span');wrap.className='hn-nwrap';
  var bell=document.createElement('button');bell.type='button';bell.id='hnbell';bell.className='hn-cb';bell.title='Thông báo';bell.setAttribute('aria-label','Thông báo');
  bell.innerHTML='🔔<span class="hn-cbdg"></span>';
  var dd=document.createElement('div');dd.className='hn-ndd';dd.hidden=true;wrap.appendChild(bell);wrap.appendChild(dd);
  var tgl=document.getElementById('themetgl');
- if(tgl&&tgl.parentNode===w){w.insertBefore(chat,tgl);w.insertBefore(wrap,tgl)}else{w.appendChild(chat);w.appendChild(wrap)}
+ if(tgl&&tgl.parentNode===w){w.insertBefore(chat,tgl);w.insertBefore(fr,tgl);w.insertBefore(wrap,tgl)}else{w.appendChild(chat);w.appendChild(fr);w.appendChild(wrap)}
  bell.addEventListener('click',async function(){if(!dd.hidden){dd.hidden=true;return}
   dd.hidden=false;dd.innerHTML='<h4>🔔 Thông báo</h4><p style="padding:6px 8px;color:var(--m);font-size:14px">Đang tải…</p>';
   try{var j=await api('/community/notifications');NOTIFS=j.notifications||[];UNREAD.notifications=j.unread||0;renderDD(dd);
