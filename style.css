@@ -871,3 +871,14 @@ textarea.hs-in{min-height:84px;resize:vertical;font-family:inherit}
 @media(max-width:400px){.brand .st-f{display:none}.brand .st-s{display:inline}.topbar .hs-tb{display:none!important}.topbar .brand{font-size:16px;min-height:44px}}
 .hn-greet .hn-khen{display:block;font-size:16px;line-height:1.45;font-weight:600;color:var(--t);margin:6px 0 0;overflow-wrap:break-word}
 .hn-greet .hn-moi{display:block;font-size:16px;line-height:1.45;font-weight:700;color:var(--c,#c0392b);margin:2px 0 4px}
+
+/* Admin: khu tổng quan + số đếm/chấm đỏ trên tab + huy hiệu chờ duyệt ở hộp tài khoản (admin-fix 30/10/2026) */
+.astats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.astat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;text-align:left;font:inherit;color:var(--t);display:flex;flex-direction:column;gap:2px;min-width:0;box-sizing:border-box}
+button.astat{cursor:pointer}
+button.astat:hover{border-color:var(--c)}
+.astat-n{font-size:1.35rem;font-weight:800;line-height:1.15}
+.astat-l{font-size:.82rem;color:var(--m);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:560px){.astats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tabs button .tabdot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#cf3a2e;margin-left:7px;vertical-align:2px;box-shadow:0 0 0 2px rgba(207,58,46,.25)}
+.acctbadge{display:inline-block;min-width:20px;height:20px;line-height:20px;padding:0 5px;margin-left:6px;border-radius:99px;background:#cf3a2e;color:#fff;font-size:.74rem;font-weight:800;text-align:center;vertical-align:1px;box-sizing:border-box}

@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"></noscript>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=3f8cf1d3"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=5881e20b"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="admin.html">Admin</a></nav></div></div>
 <main class="wrap" style="max-width:720px;padding-bottom:40px">
@@ -24,6 +24,12 @@
       <button type="button" data-t="locked">Đã khoá</button>
     </div>
     <button class="btn g" id="aout" type="button">Đăng xuất</button>
+  </div>
+  <div class="astats" id="astats" aria-label="Tổng quan tài khoản">
+    <div class="astat"><span class="astat-n" id="astatTotal">—</span><span class="astat-l">Tổng thành viên</span></div>
+    <button type="button" class="astat" id="astatPending" title="Xem danh sách chờ duyệt"><span class="astat-n" id="astatPendingN">—</span><span class="astat-l">⏳ Chờ duyệt</span></button>
+    <div class="astat"><span class="astat-n" id="astatApprovedN">—</span><span class="astat-l">✅ Đã duyệt</span></div>
+    <div class="astat"><span class="astat-n" id="astatOnlineN">—</span><span class="astat-l">🟢 Đang trực tuyến</span></div>
   </div>
   <div id="list"></div>
 
@@ -71,14 +77,47 @@
   <div id="cmLog"><p class="empty-note">Đang tải…</p></div>
 </div>
 </main>
-<script src="config.js?v=c2a095db"></script><script src="common.js?v=9230452c"></script><script src="auth.js?v=c28e099a"></script>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=9230452c"></script><script src="auth.js?v=97b7b059"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 const loginBox=document.getElementById('loginBox'),panel=document.getElementById('panel');
 const list=document.getElementById('list'),aerr=document.getElementById('aerr');
 let tab='pending';
 function fmt(t){if(!t)return '—';try{const d=new Date(t);return d.toLocaleString('vi-VN',{timeZone:'Asia/Tokyo'})}catch(e){return t}}
+// ===== Tổng quan + số đếm trên tab: ưu tiên GET /auth/admin/stats; endpoint lỗi/404 thì tự tính từ danh sách 4 tab (online khi đó hiện "—") =====
+const TABKEYS=['pending','approved','rejected','locked'];
+document.querySelectorAll('#tabs button').forEach(b=>{b.dataset.label=b.textContent.trim()});
+function paintStats(c,online){
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
+  set('astatTotal',c?String(c.total):'—');
+  set('astatPendingN',c?String(c.pending):'—');
+  set('astatApprovedN',c?String(c.approved):'—');
+  set('astatOnlineN',online==null?'—':String(online));
+  document.querySelectorAll('#tabs button').forEach(b=>{
+    const n=c?c[b.dataset.t]:null;
+    b.textContent=(b.dataset.label||'')+(n==null?'':' ('+n+')');
+    if(b.dataset.t==='pending'&&n>0){const d=document.createElement('span');d.className='tabdot';d.title='Có '+n+' tài khoản chờ duyệt';b.appendChild(d)}
+  });
+}
+async function loadStats(){
+  let c=null,online=null;
+  try{
+    const j=AUTH.adminStats?await AUTH.adminStats():await AUTH.api('/auth/admin/stats',{admin:true});
+    if(j&&j.counts){
+      c={pending:+j.counts.pending||0,approved:+j.counts.approved||0,rejected:+j.counts.rejected||0,locked:+j.counts.locked||0};
+      c.total=j.counts.total!=null?(+j.counts.total||0):c.pending+c.approved+c.rejected+c.locked;
+      online=j.online==null?null:(+j.online||0);
+    }
+  }catch(e){c=null}
+  if(!c){
+    const cc={pending:0,approved:0,rejected:0,locked:0};let any=false;
+    for(const t of TABKEYS){try{const j=await AUTH.adminUsers(t);cc[t]=(j.users||[]).length;any=true}catch(e){}}
+    if(any){cc.total=cc.pending+cc.approved+cc.rejected+cc.locked;c=cc}
+  }
+  paintStats(c,online);
+}
 async function load(){
+  loadStats();
   list.innerHTML='<p class="empty-note">Đang tải…</p>';
   try{
     const j=await AUTH.adminUsers(tab);
@@ -97,8 +136,14 @@ async function load(){
     list.querySelectorAll('.acts button').forEach(b=>b.onclick=async()=>{
       const row=b.closest('.userrow'),id=row.dataset.id;
       if(b.dataset.a==='devices'){toggleDevices(row,id,b);return}
+      const act=b.dataset.a;
+      if(act==='reject'||act==='lock'){
+        const u=us.find(x=>String(x.id)===String(id))||{};
+        const who=((u.name||'').trim()||'—')+' ('+(u.email||'không rõ email')+')';
+        if(!confirm((act==='reject'?'Từ chối':'Khoá')+' tài khoản '+who+'?'))return;
+      }
       b.disabled=true;
-      try{await AUTH.adminAction(id,b.dataset.a);await load()}catch(e){alert(e.message);b.disabled=false}
+      try{await AUTH.adminAction(id,act);await load()}catch(e){alert(e.message);b.disabled=false}
     });
   }catch(e){
     if(e.status===401){showLogin();return}
@@ -148,6 +193,9 @@ document.getElementById('aout').onclick=async()=>{await AUTH.signOut(false);show
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
   tab=b.dataset.t;document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));load();
 });
+document.getElementById('astatPending').onclick=()=>{
+  const b=document.querySelector('#tabs button[data-t="pending"]');if(b)b.click();
+};
 if(AUTH.sessionAdmin())showPanel();
 </script>
 <script>

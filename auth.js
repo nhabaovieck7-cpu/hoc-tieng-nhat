@@ -112,6 +112,7 @@ const AUTH=(()=>{
   }
   async function adminUsers(tab){return api('/auth/admin/users?tab='+encodeURIComponent(tab||'pending'),{admin:true})}
   async function adminAction(userId,action){return api('/auth/admin/action',{method:'POST',admin:true,body:{userId,action}})}
+  async function adminStats(){return api('/auth/admin/stats',{admin:true})}
   // Bị chặn vì đủ 2 thiết bị: xem danh sách bằng vé + gỡ 1 thiết bị để hoàn tất đăng nhập.
   async function deviceTicketInfo(ticket){return api('/auth/device/ticket-info',{method:'POST',body:{login_ticket:ticket}})}
   async function deviceResolve(ticket,removeDeviceId){
@@ -151,10 +152,25 @@ const AUTH=(()=>{
     if(sessionAdmin()){
       paint(
         '<span class="acctwho" title="Admin">👑 Admin</span>'+
-        '<a class="acctlink" href="admin.html">Quản lý</a>'+
+        '<a class="acctlink" id="acctAdminLink" href="admin.html">Quản lý</a>'+
         '<button type="button" class="acctout" id="acctOut">Đăng xuất</button>'
       );
       box.querySelector('#acctOut').onclick=()=>signOut(true);
+      // Huy hiệu số chờ duyệt cạnh "Quản lý" (fail-silent, chạy nền: API lỗi thì thôi, không chậm/không vỡ hộp tài khoản)
+      (async()=>{
+        try{
+          const j=await adminUsers('pending');
+          const n=((j&&j.users)||[]).length;
+          if(!n||!sessionAdmin())return;
+          const link=box.querySelector('#acctAdminLink');
+          if(!link||link.querySelector('.acctbadge'))return;
+          const bd=document.createElement('span');
+          bd.className='acctbadge';
+          bd.textContent=n>99?'99+':String(n);
+          bd.title='Có '+n+' tài khoản chờ duyệt';
+          link.appendChild(bd);
+        }catch(e){}
+      })();
       return;
     }
 
@@ -194,7 +210,7 @@ const AUTH=(()=>{
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>mountAccountBox());
   else mountAccountBox();
 
-  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,adminDevices,adminDeviceRemove,adminDeviceRemoveAll,deviceTicketInfo,deviceResolve,deviceId,deviceReady,deviceLabel,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
+  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,adminStats,adminDevices,adminDeviceRemove,adminDeviceRemoveAll,deviceTicketInfo,deviceResolve,deviceId,deviceReady,deviceLabel,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
 })();
 
 // ===== Đồng bộ tiến độ học theo tài khoản (qua Worker /progress) =====
