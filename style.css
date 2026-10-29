@@ -642,12 +642,12 @@ html[data-theme="dark"] .sec table.mc tr{background:var(--card)}
 html[data-theme="dark"] .sec table.mc tr.right{background:#1d3325}
 
 /* nút quay lại trang trước (trang con) — dính ngay dưới header khi cuộn để luôn thấy và bấm được; top = chiều cao header đo thật theo breakpoint (129/115/158px) cộng ~10px khoảng hở */
-.hn-back{display:inline-flex;align-items:center;min-height:44px;padding:6px 18px;margin:16px 0 0;border-radius:99px;background:var(--ai);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;line-height:1.2;position:sticky;top:139px;z-index:15;box-shadow:0 4px 14px rgba(20,30,50,.18)}
+.hn-back{display:inline-flex;align-items:center;min-height:44px;padding:6px 18px;margin:16px 0 0;border-radius:99px;background:var(--ai);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;line-height:1.2;position:sticky;top:71px;z-index:15;box-shadow:0 4px 14px rgba(20,30,50,.18)}
 .hn-back:hover{opacity:.88;color:#fff}
 html[data-theme="dark"] .hn-back{color:#12233f}
 html[data-theme="dark"] .hn-back:hover{color:#12233f}
-@media(max-width:860px){.hn-back{top:125px}}
-@media(max-width:600px){.hn-back{top:168px}}
+@media(max-width:860px){.hn-back{top:65px}}
+@media(max-width:600px){.hn-back{top:65px}}
 /* câu trả lời AI: tiêu đề + danh sách sinh từ markdown */
 .msg.ai .aih{font-weight:700;font-size:1.05em;margin:.5em 0 .1em}
 .msg.ai ul.ail{margin:.25em 0 .45em;padding-left:1.25em}

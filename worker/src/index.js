@@ -2036,6 +2036,23 @@ async function freeLoad(env,level,section){
   const arr=extra?all.filter(x=>freeSecOf(x)===section&&String(x.level||'').toLowerCase()===level).sort((a,b)=>String(a.id).localeCompare(String(b.id),'en',{numeric:true})):all;
   return {v,lessons:arr};
 }
+
+// /free/news: tin tức công khai; phần luyện tập (dịch, đọc hiểu, nghe...) chỉ mở cho 1 tin/ngày (tin đầu tiên của hôm nay, JST).
+const FREE_NEWS_BASE=['id','date','tab','sample','h','ex','vi','vo','src'];
+async function freeNews(env,c){
+  const meta=await (await fetch(FREE_SITE+'enc/meta.json',{cf:{cacheTtl:300}})).json();
+  const v=(meta.v||{}).news;if(!v)throw new Error('no-pack');
+  const k='news@'+v;let all=_freeMem.get(k);
+  if(!all){
+    const r=await fetch(FREE_SITE+'enc/news.bin?v='+v,{cf:{cacheTtl:600}});if(!r.ok)throw new Error('fetch '+r.status);
+    const t=new TextDecoder().decode(await gunzipBytes(await gcmDecrypt(env,new Uint8Array(await r.arrayBuffer()))));
+    all=freeParseObjs(t);for(const key of _freeMem.keys())if(key.startsWith('news@'))_freeMem.delete(key);_freeMem.set(k,all);
+  }
+  const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+  const pick=all.find(n=>n.date===today&&(n.tr||(n.qs&&n.qs.length)||Object.keys(n).some(x=>!FREE_NEWS_BASE.includes(x))));
+  const news=all.map(n=>{if(pick&&n.id===pick.id)return Object.assign({},n,{practice:true});const o={};for(const f of FREE_NEWS_BASE)if(n[f]!==undefined)o[f]=n[f];o.practice=false;return o});
+  return {ok:true,today,practiceId:pick?pick.id:null,news};
+}
 async function handleFree(req,env,c,path){
   if(req.method!=='GET')return J({error:'Chỉ nhận GET'},405,c.h);
   const ip=req.headers.get('CF-Connecting-IP')||'?';const now=Date.now();
@@ -2044,6 +2061,13 @@ async function handleFree(req,env,c,path){
   let over=++e.n>60;
   if(!over&&env.FREE_RL){try{const r=await env.FREE_RL.limit({key:'free:'+ip});if(!r.success)over=true}catch(_){}}
   if(over)return J({error:'Quá nhiều yêu cầu, thử lại sau 1 phút'},429,Object.assign({'Retry-After':'60'},c.h));
+  if(path==='/free/news'){
+    const cache=caches.default;const ck=new Request(new URL(req.url).origin+'/free/news',{method:'GET'});
+    const hit=await cache.match(ck);if(hit){const h=new Response(hit.body,hit);for(const[k2,v2]of Object.entries(c.h))h.headers.set(k2,v2);return h}
+    let body;try{body=await freeNews(env,c)}catch(err){return J({error:'Không tải được tin tức'},502,c.h)}
+    await cache.put(ck,new Response(JSON.stringify(body),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=300'}}));
+    return J(body,200,Object.assign({'Cache-Control':'public, max-age=300'},c.h));
+  }
   const u=new URL(req.url);const level=(u.searchParams.get('level')||'').toLowerCase(),section=(u.searchParams.get('section')||'').toLowerCase();
   if(!FREE_LEVELS.includes(level)||!FREE_SECTIONS.includes(section))return J({error:'level phải là n5..n1, section phải là np|tv|kj|kaiwa|dokkai|tonghop'},400,c.h);
   const cache=caches.default;const ck=new Request(u.toString(),{method:'GET'});
