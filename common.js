@@ -154,6 +154,7 @@ function typeText(n){var a=n.actor&&n.actor.name?n.actor.name:'Ai đó';
  if(n.type==='like_comment')return '<b>'+esc(a)+'</b> đã thích bình luận của bạn';
  if(n.type==='comment_post')return '<b>'+esc(a)+'</b> đã bình luận vào bài của bạn';
  if(n.type==='reply_comment')return '<b>'+esc(a)+'</b> đã trả lời bình luận của bạn';
+ if(n.type==='badge'){var BN={'streak7':'Chuỗi 7 ngày','streak30':'Chuỗi 30 ngày','cards100':'100 thẻ mới','cards500':'500 thẻ mới','boss10':'Hạ trùm 10 lần','listen5':'5 đề nghe','lessons50':'50 bài đã học','xp1000':'1.000 XP','level':'Trọn một cấp độ','top3':'Top 3 tuần'};return '🏅 Bạn vừa đạt huy hiệu <b>'+(BN[n.comment_id]||'mới')+'</b> — xem ở mục Xếp hạng'}
  return '<b>'+esc(a)+'</b> có hoạt động mới'}
 function when(t){try{var d=new Date(t),s=(Date.now()-d)/1000;if(s<60)return'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';return d.toLocaleDateString('vi-VN')}catch(e){return''}}
 function renderDD(dd){var items=NOTIFS.map(function(n){var ini=n.actor&&n.actor.name?n.actor.name.trim().charAt(0).toUpperCase():'?';
@@ -191,3 +192,6 @@ async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return
  refresh();setInterval(function(){if(!document.hidden)refresh()},60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
+
+// ===== Mục "Xếp hạng" trong menu chính (29/10): chèn 1 lần vào .topbar .nav =====
+(function(){function boot(){var nav=document.querySelector('.topbar .nav');if(!nav||nav.querySelector('a[href="xep-hang.html"]'))return;var a=document.createElement('a');a.href='xep-hang.html';a.textContent='🏆 Xếp hạng';a.className='hn-navlink';if(/(^|\/)xep-hang\.html$/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();

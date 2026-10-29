@@ -167,6 +167,7 @@ function renderSelfSheet(li,vid,level,session){
     let ok=0,ng=0;
     fmt.forEach((m,mi)=>{ for(let qi=0;qi<m.n;qi++){ const v=(marks[mi]||{})[qi]; if(v===1)ok++; else if(v===0)ng++; } });
     const marked=ok+ng;
+    if(total>0){ if(marked===total){ if(!marks.__done){ marks.__done=Date.now(); saveMark(vid,marks); } } else if(marks.__done){ delete marks.__done; saveMark(vid,marks); } }
     if(!wrap.classList.contains('marking')){ score.textContent=''; return; }
     score.innerHTML= marked
       ? '<b>Tự chấm: '+ok+' đúng · '+ng+' sai</b> — đã đánh dấu '+marked+'/'+total+' câu · điểm theo phần đã chấm: <b>'+ok+'/'+marked+'</b>'
@@ -236,6 +237,7 @@ function renderSelfSheet(li,vid,level,session){
 
   const enterMarking=(expand)=>{
     wrap.classList.add('marking'); grade.hidden=true; redo.hidden=false;
+    try{if(window.F&&F.P&&F.P.touch)F.P.touch()}catch(e){}
     wrap.querySelectorAll('.ck-q').forEach(r=>{ if(r._applyMarkUI) r._applyMarkUI(); if(expand) setOpen(r,true); });
     updateScore();
   };
@@ -361,6 +363,7 @@ function renderSheet(li,vid,key){
       per.push(m.name+': '+ok+'/'+m.c.length);
     });
     wrap.querySelectorAll('.ck-q').forEach(r=>setOpen(r,true));
+    try{ const cur2=load(vid); let ansN=0; key.mondai.forEach((m2,mi2)=>{ const mm2=cur2[mi2]||{}; Object.keys(mm2).forEach(qi2=>{ if(mm2[qi2]!=null) ansN++; }); }); if(total>0&&ansN>=total&&!cur2.__done){ cur2.__done=Date.now(); save(vid,cur2); } if(window.F&&F.P&&F.P.touch)F.P.touch(); }catch(e){}
     wrap.classList.add('done'); grade.hidden=true; redo.hidden=false;
     score.innerHTML='<b>Tổng: '+okAll+'/'+totAll+'</b><br>'+per.join(' · ');
   };
