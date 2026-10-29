@@ -69,4 +69,17 @@ function member(box,name){if(!box||g('hn_dk_member_ok')==='1')return;const n=Str
 function remindToggle(el){if(!el)return;const f=()=>{const off=g('hn_dk_nhac_off')==='1';el.innerHTML='Lời nhắc khi lâu chưa ghé: <b>'+(off?'đang tắt':'đang bật')+'</b> <button type="button" class="dk-btn ghost">'+(off?'Bật lại lời nhắc':'Tắt lời nhắc')+'</button>';el.querySelector('button').onclick=()=>{s('hn_dk_nhac_off',off?'0':'1');f()}};f()}
 addEventListener('guest',()=>setTimeout(()=>remind(),50));addEventListener('unlocked',()=>setTimeout(()=>remind(),50));
 document.addEventListener('DOMContentLoaded',()=>{setTimeout(()=>remind(),2500);remindToggle(document.getElementById('dkRemindSet'))});
-return {esc,welcome,member,remind,toast,confetti,finish,countOf}})();
+// Ghi bài vừa học (chỉ trên máy) + nút "Học tiếp bài hôm nay" cho thành viên
+function track(){if(!/lesson\.html/.test(location.pathname))return;const q=new URLSearchParams(location.search),id=q.get('id');if(!id)return;
+ const save=()=>{const l=(window.LESSONS||[]).find(x=>x&&x.id===id)||{},h=document.querySelector('main h1');
+  s('hn_dk_lastlesson',JSON.stringify({id,url:'lesson.html'+location.search,title:String(l.title||(h&&h.textContent)||'').slice(0,120),t:Date.now()}))};
+ addEventListener('unlocked',()=>setTimeout(save,400));addEventListener('guest',()=>setTimeout(save,400))}
+track();
+function nextOf(id){const m=String(id).match(/^(khoa-n[1-5]-(?:np|tv|kj)-)(\d+)$/);if(!m)return null;const n=String(+m[2]+1).padStart(m[2].length,'0');return 'lesson.html?id='+m[1]+n}
+function cont(el){if(!el)return;let L=null;try{L=JSON.parse(g('hn_dk_lastlesson')||'null')}catch(e){}let done=[];try{done=JSON.parse(g('hn_dk_done')||'[]')}catch(e){}
+ const lv=g('hn_dk_level')||'n5';let href,sub;
+ if(L&&L.id){const nx=done.includes(L.id)&&nextOf(L.id);href=nx||L.url||('lesson.html?id='+encodeURIComponent(L.id));const t=String(L.title||'').replace(/^Khóa N\d · [^·]+ · /,'');
+  sub=nx?'Bài tiếp theo sau: '+t:'Lần trước bạn học: '+t}
+ else{href='lesson.html?id=khoa-'+lv+'-tv-01';sub='Gợi ý bài đầu tiên cho trình độ '+lv.toUpperCase()+' của bạn'}
+ el.innerHTML='<a class="dk-btn big" href="'+esc(href)+'">Học tiếp bài hôm nay ▶</a><p class="dk-sub">'+esc(sub)+'</p>'}
+return {cont,nextOf,esc,welcome,member,remind,toast,confetti,finish,countOf}})();
