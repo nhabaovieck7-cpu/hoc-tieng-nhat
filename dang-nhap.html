@@ -176,7 +176,7 @@ html[data-theme="dark"] #devList .userrow .acts .lock{background:#472c27;color:#
 <p class="lfoot">Tiến độ học được đồng bộ theo tài khoản — học tiếp ở máy nào cũng được.</p>
 </main>
 </div>
-<script src="config.js?v=c2a095db"></script><script src="common.js?v=abda9452"></script><script src="auth.js?v=5e9a553a"></script><script src="lock.js?v=6f8fc162"></script>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=abda9452"></script><script src="auth.js?v=fb72ff4f"></script><script src="lock.js?v=6f8fc162"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 let mode='login';
@@ -223,9 +223,14 @@ function showDeviceLimit(ticket,devices,msg){
 }
 document.getElementById('devCancel').onclick=()=>hideDeviceLimit();
 async function afterAuth(j){
-  if(j.status==='pending'){location.href='dang-cho.html';return}
-  if(j.status==='approved'){if(j.contentKey)await LOCK.importContentKey(j.contentKey);location.href='index.html';return}
-  err.textContent='Trạng thái tài khoản: '+(j.status||'?');
+  // /auth/exchange trả status ở gốc; /auth/me trả trong j.user.status — đọc cả hai.
+  const st=(j&&(j.status||(j.user&&j.user.status)))||'';
+  if(AUTH.mountAccountBox)AUTH.mountAccountBox();
+  if(st==='pending'){location.replace('dang-cho.html');return}
+  if(st==='approved'){if(j.contentKey){try{await LOCK.importContentKey(j.contentKey)}catch(e){}}location.replace('index.html');return}
+  if(st==='rejected'){err.textContent='Đăng ký đã bị từ chối. Liên hệ Khánh nếu cần.';return}
+  if(st==='locked'){err.textContent='Tài khoản đã bị khoá.';return}
+  err.textContent='Trạng thái tài khoản: '+(st||'?');
 }
 go.onclick=async()=>{
   err.textContent='';go.disabled=true;
@@ -282,7 +287,9 @@ document.getElementById('btnGoogle').onclick=async()=>{
   // (Đã bỏ nhận ?session= từ URL — chống cài phiên qua link.)
   if(u.searchParams.has('session')){['session','status','oauth'].forEach(k=>u.searchParams.delete(k));history.replaceState({},'',u.pathname+(u.search||'')+u.hash)}
   if(!AUTH.session())return;
-  try{const j=await AUTH.me();await afterAuth(j)}catch(e){}
+  // Đã có phiên: hỏi máy chủ rồi tự chuyển trang; phiên hỏng (401/403) thì xoá.
+  try{const j=await AUTH.me();await afterAuth(j)}
+  catch(e){if(e.status===401||e.status===403){AUTH.setSession('');if(AUTH.mountAccountBox)AUTH.mountAccountBox()}}
 })();
 </script>
 <script>

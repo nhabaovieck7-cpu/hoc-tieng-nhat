@@ -91,12 +91,15 @@ const AUTH=(()=>{
    *  này (trống chỗ ngay cho thiết bị khác) — xem /auth/logout phía Worker. */
   async function signOut(reload){
     if(session()){
-      try{await api('/auth/logout',{method:'POST',body:deviceBody()})}catch(e){}
+      // Không để mạng chậm giữ người dùng lại quá 4 giây.
+      try{await Promise.race([api('/auth/logout',{method:'POST',body:deviceBody()}),new Promise(r=>setTimeout(r,4000))])}catch(e){}
     }
     setSession('');
     setAdmin('');
     clearContentKey();
-    if(reload!==false)location.reload();
+    try{if(typeof LOCK!='undefined'&&LOCK.clearStoredKey)LOCK.clearStoredKey()}catch(e){}
+    // Chuyển hẳn về trang đăng nhập thay vì reload trang đang mở khoá (tránh màn trắng).
+    if(reload!==false)location.replace('dang-nhap.html');
   }
   async function adminLogin(password){
     const j=await api('/auth/admin/login',{method:'POST',body:{password}});
