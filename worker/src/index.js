@@ -2003,18 +2003,38 @@ async function handleStats(req, env, c, path) {
 // ===== Học thử miễn phí (29/10/2026, Khánh duyệt): người chưa đăng nhập đọc được
 // N5 toàn bộ, N4 nửa đầu mỗi phần (ceil(n/2)), N3/N2/N1 chỉ bài 1 mỗi phần. Allowlist tính ở server.
 const FREE_SITE='https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/';
-const FREE_LEVELS=['n5','n4','n3','n2','n1'],FREE_SECTIONS=['np','tv','kj'];
+const FREE_LEVELS=['n5','n4','n3','n2','n1'],FREE_SECTIONS=['np','tv','kj','kaiwa','dokkai','tonghop'];
+// Bộ đọc literal JS an toàn (không eval): lấy mọi object cấp ngoài cùng trong lessons.js
+function freeParseObjs(t){
+  let i=0;const n=t.length,out=[];
+  const ws=()=>{for(;;){while(i<n&&/\s/.test(t[i]))i++;if(t[i]==='/'&&t[i+1]==='/'){while(i<n&&t[i]!=='\n')i++}else if(t[i]==='/'&&t[i+1]==='*'){i=t.indexOf('*/',i+2);i=i<0?n:i+2}else return}};
+  const str=()=>{const q=t[i++];let s='';while(i<n&&t[i]!==q){if(t[i]==='\\'){const c=t[++i];i++;if(c==='n')s+='\n';else if(c==='t')s+='\t';else if(c==='r')s+='\r';else if(c==='u'){s+=String.fromCharCode(parseInt(t.substr(i,4),16));i+=4}else if(c==='\n'){}else s+=c}else s+=t[i++]}i++;return s};
+  const val=()=>{ws();const c=t[i];
+    if(c==='{'){i++;const o={};for(;;){ws();if(t[i]==='}'){i++;return o}let k;if(t[i]==='"'||t[i]==="'")k=str();else{const m=/^[A-Za-z_$][\w$]*/.exec(t.slice(i,i+64));if(!m)throw new Error('key@'+i);k=m[0];i+=k.length}ws();if(t[i++]!==':')throw new Error(':@'+i);o[k]=val();ws();if(t[i]===',')i++}}
+    if(c==='['){i++;const a=[];for(;;){ws();if(t[i]===']'){i++;return a}a.push(val());ws();if(t[i]===',')i++}}
+    if(c==='"'||c==="'")return str();
+    const m=/^(-?\d+(\.\d+)?([eE][-+]?\d+)?|true|false|null)/.exec(t.slice(i,i+32));if(!m)throw new Error('val@'+i);i+=m[0].length;return JSON.parse(m[0])};
+  while(i<n){ws();if(i>=n)break;const c=t[i];
+    if(c==='{'){try{const o=val();if(o&&o.id)out.push(o)}catch(e){i++}}
+    else if(c==='"'||c==="'")str();else i++}
+  return out;
+}
+function freeSecOf(x){const ty=String(x.type||''),id=String(x.id||'');if(/Hội thoại|kaiwa|kaigo/i.test(ty)||/^kaiwa-/.test(id))return 'kaiwa';if(/Đọc hiểu/i.test(ty)||/dokkai/.test(id))return 'dokkai';if(/Tổng hợp/i.test(ty)||/tonghop/.test(id))return 'tonghop';return ''}
 const _freeMem=new Map();const _freeRl=new Map();
 function freeCount(level,total){if(level==='n5')return total;if(level==='n4')return Math.ceil(total/2);return Math.min(1,total)}
 async function freeLoad(env,level,section){
-  const name='course_'+level+'_'+section;
+  const extra=['kaiwa','dokkai','tonghop'].includes(section);
+  const name=extra?'lessons':'course_'+level+'_'+section;
   const meta=await (await fetch(FREE_SITE+'enc/meta.json',{cf:{cacheTtl:300}})).json();
   const v=(meta.v||{})[name];if(!v)throw new Error('no-pack');
-  const k=name+'@'+v;if(_freeMem.has(k))return _freeMem.get(k);
-  const r=await fetch(FREE_SITE+'enc/'+name+'.bin?v='+v,{cf:{cacheTtl:3600}});if(!r.ok)throw new Error('fetch '+r.status);
-  const t=new TextDecoder().decode(await gunzipBytes(await gcmDecrypt(env,new Uint8Array(await r.arrayBuffer()))));
-  const a=t.indexOf('['),b=t.lastIndexOf(']');const arr=JSON.parse(t.slice(a,b+1));
-  const out={v,lessons:arr};for(const key of _freeMem.keys())if(key.startsWith(name+'@'))_freeMem.delete(key);_freeMem.set(k,out);return out;
+  const k=name+'@'+v;let all=_freeMem.get(k);
+  if(!all){
+    const r=await fetch(FREE_SITE+'enc/'+name+'.bin?v='+v,{cf:{cacheTtl:3600}});if(!r.ok)throw new Error('fetch '+r.status);
+    const t=new TextDecoder().decode(await gunzipBytes(await gcmDecrypt(env,new Uint8Array(await r.arrayBuffer()))));
+    all=freeParseObjs(t);for(const key of _freeMem.keys())if(key.startsWith(name+'@'))_freeMem.delete(key);_freeMem.set(k,all);
+  }
+  const arr=extra?all.filter(x=>freeSecOf(x)===section&&String(x.level||'').toLowerCase()===level).sort((a,b)=>String(a.id).localeCompare(String(b.id),'en',{numeric:true})):all;
+  return {v,lessons:arr};
 }
 async function handleFree(req,env,c,path){
   if(req.method!=='GET')return J({error:'Chỉ nhận GET'},405,c.h);
@@ -2025,7 +2045,7 @@ async function handleFree(req,env,c,path){
   if(!over&&env.FREE_RL){try{const r=await env.FREE_RL.limit({key:'free:'+ip});if(!r.success)over=true}catch(_){}}
   if(over)return J({error:'Quá nhiều yêu cầu, thử lại sau 1 phút'},429,Object.assign({'Retry-After':'60'},c.h));
   const u=new URL(req.url);const level=(u.searchParams.get('level')||'').toLowerCase(),section=(u.searchParams.get('section')||'').toLowerCase();
-  if(!FREE_LEVELS.includes(level)||!FREE_SECTIONS.includes(section))return J({error:'level phải là n5..n1, section phải là np|tv|kj'},400,c.h);
+  if(!FREE_LEVELS.includes(level)||!FREE_SECTIONS.includes(section))return J({error:'level phải là n5..n1, section phải là np|tv|kj|kaiwa|dokkai|tonghop'},400,c.h);
   const cache=caches.default;const ck=new Request(u.toString(),{method:'GET'});
   const hit=await cache.match(ck);if(hit){const h=new Response(hit.body,hit);for(const[k2,v2]of Object.entries(c.h))h.headers.set(k2,v2);return h}
   let pack;try{pack=await freeLoad(env,level,section)}catch(err){return J({error:'Không tải được bài'},502,c.h)}
