@@ -12,6 +12,12 @@ let gap=0;(function(){const now=new Date(),t=day(now),last=g('hn_dk_last');
  let st={n:0,d:''};try{st=JSON.parse(g('hn_dk_streak')||'{}')||st}catch(e){}
  if(st.d!==t){st.n=(st.d&&Math.round((Date.parse(t)-Date.parse(st.d))/864e5)===1)?(st.n||0)+1:1;st.d=t;s('hn_dk_streak',JSON.stringify(st))}
  s('hn_dk_last',t)})();
+// xưng hô cho thành viên: anh/chị theo hồ sơ, không có thì dùng tên, không có tên thì câu không chủ ngữ
+function xung(){try{const h=JSON.parse(g('hn_dk_ho_so')||'null')||{};return h.gt==='nam'?'anh':(h.gt==='nu'?'chị':null)}catch(e){return null}}
+function ten(){return String(g('hn_dk_ten')||'').trim().slice(0,40)}
+function ai(){const x=xung(),n=ten();return x?(n?x+' '+esc(n):x):(n?esc(n):null)}// tên đầy đủ (đã thoát HTML) hoặc null
+function ai2(){return xung()||(ten()?esc(ten()):null)}// lần nhắc sau: chỉ đại từ
+const cap=t=>t?t.charAt(0).toUpperCase()+t.slice(1):t;
 const streak=()=>{try{return (JSON.parse(g('hn_dk_streak')||'{}').n)||1}catch(e){return 1}};
 function toast(html){let t=document.querySelector('.dk-toast');if(!t){t=document.createElement('div');t.className='dk-toast';t.setAttribute('role','status');document.body.appendChild(t)}
  t.innerHTML=html;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),3800)}
@@ -21,13 +27,13 @@ function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)re
 // 5) lời nhắc nhẹ khi lâu chưa ghé, có nút tắt
 function remind(force){const d=force||gap;if(d<3||g('hn_dk_nhac_off')==='1'||document.querySelector('.dk-remind'))return;
  const b=document.createElement('div');b.className='dk-remind';b.setAttribute('role','status');
- b.innerHTML='<p>🌸 Đã '+d+' ngày bạn chưa ghé. Không sao cả — bạn có thể học tiếp bất cứ lúc nào thuận tiện, chỉ vài phút cũng tốt ạ.</p><div class="dk-row"><a class="dk-btn" href="'+(isGuest()?'hoc-thu.html':'index.html#khoahoc')+'">Học tiếp bài gần nhất</a><button type="button" class="dk-btn ghost" data-x>Ẩn lần này</button><button type="button" class="dk-btn ghost" data-off>Tắt lời nhắc này</button></div>';
- b.querySelector('[data-x]').onclick=()=>b.remove();b.querySelector('[data-off]').onclick=()=>{s('hn_dk_nhac_off','1');b.innerHTML='<p>Đã tắt lời nhắc. Bạn có thể bật lại ở cuối trang chủ.</p>';setTimeout(()=>b.remove(),2500)};
+ const S=isGuest()?'bạn':ai(),S2=isGuest()?'bạn':ai2();b.innerHTML='<p>🌸 '+(S?'Đã '+d+' ngày '+S+' chưa ghé. Không sao cả — '+S2+' có thể học tiếp bất cứ lúc nào thuận tiện, chỉ vài phút cũng tốt ạ.':'Đã '+d+' ngày chưa gặp lại. Không sao cả — lúc nào thuận tiện mình học tiếp, chỉ vài phút cũng tốt ạ.')+'</p><div class="dk-row"><a class="dk-btn" href="'+(isGuest()?'hoc-thu.html':'index.html#khoahoc')+'">Học tiếp bài gần nhất</a><button type="button" class="dk-btn ghost" data-x>Ẩn lần này</button><button type="button" class="dk-btn ghost" data-off>Tắt lời nhắc này</button></div>';
+ b.querySelector('[data-x]').onclick=()=>b.remove();b.querySelector('[data-off]').onclick=()=>{s('hn_dk_nhac_off','1');b.innerHTML='<p>Đã tắt lời nhắc. '+(isGuest()?'Bạn có thể bật':'Có thể bật')+' lại ở cuối trang chủ.</p>';setTimeout(()=>b.remove(),2500)};
  const m=document.querySelector('#guestHome:not([hidden])')||document.querySelector('main')||document.body;m.insertBefore(b,m.firstChild)}
 // 5) khen khi làm đúng (bài trắc nghiệm có nút chấm)
 document.addEventListener('click',e=>{const gr=e.target.closest&&e.target.closest('.grade');if(!gr)return;setTimeout(()=>{const Q=gr.closest('.mcq'),sc=Q&&Q.querySelector('.score');if(!sc)return;
- const ok=+sc.dataset.ok||0,n=Q.querySelectorAll('.mx').length||0;if(!ok)return toast('Bạn đã thử rồi, thế là tốt lắm ạ. Xem lại đáp án rồi làm lại nhé!');
- toast((ok===n?'🎉 Tuyệt vời! ':'👏 Giỏi lắm! ')+'Bạn làm đúng <b>'+ok+(n?'/'+n:'')+'</b> câu.')},50)},true);
+ const ok=+sc.dataset.ok||0,n=Q.querySelectorAll('.mx').length||0;const S=isGuest()?'bạn':ai();if(!ok)return toast((S?cap(S)+' đã thử':'Đã thử')+' rồi, thế là tốt lắm ạ. Xem lại đáp án rồi làm lại nhé!');
+ toast((ok===n?'🎉 Tuyệt vời! ':'👏 Giỏi lắm! ')+(S?cap(S)+' làm':'Làm')+' đúng <b>'+ok+(n?'/'+n:'')+'</b> câu.')},50)},true);
 // 1) chào lần đầu + chọn trình độ (khách, trang chủ)
 const LVN={n5:'N5 · mới bắt đầu',n4:'N4 · sơ cấp',n3:'N3 · trung cấp',n2:'N2 · trên trung cấp',n1:'N1 · cao cấp'};
 function welcome(box){if(!box)return;const lv=g('hn_dk_level');
@@ -48,23 +54,23 @@ function countOf(l){const t=String(l.type||''),sm=String(l.summary||'');
  if((l.quiz||[]).length)return [l.quiz.length,'câu luyện tập'];return [0,'']}
 function finish(){const l=(window.LESSONS||[])[0];const m=document.querySelector('main');if(!l||!m||document.querySelector('.dk-done'))return;
  const [n,u]=countOf(l),d=document.createElement('section');d.className='dk-card dk-done';
- d.innerHTML='<h2>Bạn đã đi tới cuối bài 👏</h2><p>Khi học xong, bạn bấm nút dưới đây để đánh dấu nhé.</p><button type="button" class="dk-btn big" data-fin>Đánh dấu: tôi đã học xong bài này</button>';
+ const G=isGuest(),S=G?'bạn':ai(),S2=G?'bạn':ai2();d.innerHTML='<h2>'+(S?cap(S)+' đã':'Đã')+' đi tới cuối bài 👏</h2><p>'+(G?'Khi học xong, bạn bấm nút dưới đây để đánh dấu nhé.':'Khi học xong, bấm nút dưới đây để đánh dấu nhé.')+'</p><button type="button" class="dk-btn big" data-fin>Đánh dấu: tôi đã học xong bài này</button>';
  d.querySelector('[data-fin]').onclick=()=>{confetti();const k='hn_dk_done';let a=[];try{a=JSON.parse(g(k)||'[]')}catch(e){}if(!a.includes(l.id))a.push(l.id);s(k,JSON.stringify(a.slice(-200)));
-  d.innerHTML='<p class="dk-kicker">おめでとう · Chúc mừng bạn!</p><h2>'+(n?'Bạn vừa học <span class="dk-num">'+n+'</span> '+u+'!':'Bạn vừa học xong một bài!')+'</h2><p>Đây là bài học thử thứ <b>'+a.length+'</b> của bạn. 🔥 Chuỗi học: <b>'+streak()+' ngày</b>.</p>'+
+  d.innerHTML='<p class="dk-kicker">おめでとう · Chúc mừng'+(S?' '+S:'')+'!</p><h2>'+(n?(S2?cap(S2)+' vừa học':'Vừa học')+' <span class="dk-num">'+n+'</span> '+u+'!':(S2?cap(S2)+' vừa học':'Vừa học')+' xong một bài!')+'</h2><p>'+(G?'Đây là bài học thử thứ <b>'+a.length+'</b> của bạn.':'Đây là bài thứ <b>'+a.length+'</b> đã hoàn thành'+(S2?' của '+S2:'')+'.')+' 🔥 Chuỗi học: <b>'+streak()+' ngày</b>.</p>'+
   (isGuest()?'<a class="dk-btn big" href="dang-nhap.html">Lưu tiến độ, học tiếp miễn phí</a><a class="dk-btn ghost big" href="hoc-thu.html">Chọn bài học thử tiếp theo</a><p class="dk-priv">🔒 Hiện tiến độ chỉ lưu trên máy này. Khi có tài khoản (miễn phí), bạn xem được tiến độ trên mọi máy. Tài khoản mới được Khánh duyệt thủ công.</p>':'<a class="dk-btn big" href="index.html#khoahoc">Về danh sách bài</a>');d.scrollIntoView({block:'center'})};
  m.appendChild(d)}
-addEventListener('guest',()=>{if(/lesson\.html/.test(location.pathname))setTimeout(finish,300)});
+addEventListener('guest',()=>{if(/lesson\.html/.test(location.pathname))setTimeout(finish,300)});addEventListener('unlocked',()=>{if(/lesson\.html/.test(location.pathname))setTimeout(finish,600)});
 // 4) lần đầu sau khi được duyệt
 const GOALS=[5,10,20];
-function member(box,name){if(!box||g('hn_dk_member_ok')==='1')return;const n=String(name||'').trim().slice(0,40),lv=g('hn_dk_level')||'',gl=g('hn_dk_goal')||'';
- box.innerHTML='<div class="dk-card dk-hi"><p class="dk-kicker">ようこそ · Tài khoản đã được duyệt</p><h2>Chào mừng '+(n?'<span class="hn-name">'+esc(n)+'</span>':'bạn')+' đến với lớp học!</h2><p>Chỉ 3 bước nhỏ để bắt đầu thật nhẹ nhàng:</p><ol class="dk-steps">'+
+function member(box,name){const n=String(name||'').trim().slice(0,40);if(n)s('hn_dk_ten',n);if(!box||g('hn_dk_member_ok')==='1')return;const X=xung(),lv=g('hn_dk_level')||'',gl=g('hn_dk_goal')||'';
+ box.innerHTML='<div class="dk-card dk-hi"><p class="dk-kicker">ようこそ · Tài khoản đã được duyệt</p><h2>Chào mừng '+(X?X+' ':'')+(n?'<span class="hn-name">'+esc(n)+'</span> ':'')+'đến với lớp học!</h2><p>Chỉ 3 bước nhỏ để bắt đầu thật nhẹ nhàng:</p><ol class="dk-steps">'+
  '<li class="'+(lv?'ok':'')+'"><b>1. Chọn trình độ</b><div class="dk-lv sm">'+LV.map(l=>'<button type="button" class="dk-btn'+(l===lv?'':' ghost')+'" data-lv="'+l+'" aria-pressed="'+(l===lv)+'">'+l.toUpperCase()+'</button>').join('')+'</div></li>'+
  '<li class="'+(gl?'ok':'')+'"><b>2. Đặt mục tiêu mỗi ngày</b><div class="dk-lv sm">'+GOALS.map(x=>'<button type="button" class="dk-btn'+(String(x)===gl?'':' ghost')+'" data-g="'+x+'" aria-pressed="'+(String(x)===gl)+'">'+x+' phút/ngày</button>').join('')+'</div></li>'+
  '<li><b>3. Học bài đầu tiên</b><div><a class="dk-btn big" href="lesson.html?id=khoa-'+(lv||'n5')+'-tv-01">Mở bài đầu tiên '+(lv||'n5').toUpperCase()+'</a></div></li></ol>'+
  '<div class="dk-badges"><span class="dk-streak">🔥 Chuỗi học <b>'+streak()+'</b> ngày</span><span class="dk-badge">🌱 Huy hiệu đầu tiên: <b>Khởi đầu</b></span></div>'+
  '<button type="button" class="dk-btn ghost" data-ok>Tôi đã hiểu, ẩn lời chào này</button><p class="dk-priv">🔒 Trình độ, mục tiêu, chuỗi ngày và huy hiệu chỉ lưu trên máy này.</p></div>';
  box.querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{s('hn_dk_level',b.dataset.lv);member(box,name)});
- box.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{s('hn_dk_goal',b.dataset.g);member(box,name);toast('Đã lưu mục tiêu '+b.dataset.g+' phút mỗi ngày. Cảm ơn bạn!')});
+ box.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{s('hn_dk_goal',b.dataset.g);member(box,name);toast('Đã lưu mục tiêu '+b.dataset.g+' phút mỗi ngày. Cảm ơn '+(xung()||'nhiều')+' ạ!')});
  box.querySelector('[data-ok]').onclick=()=>{s('hn_dk_member_ok','1');box.innerHTML=''}}
 function remindToggle(el){if(!el)return;const f=()=>{const off=g('hn_dk_nhac_off')==='1';el.innerHTML='Lời nhắc khi lâu chưa ghé: <b>'+(off?'đang tắt':'đang bật')+'</b> <button type="button" class="dk-btn ghost">'+(off?'Bật lại lời nhắc':'Tắt lời nhắc')+'</button>';el.querySelector('button').onclick=()=>{s('hn_dk_nhac_off',off?'0':'1');f()}};f()}
 addEventListener('guest',()=>setTimeout(()=>remind(),50));addEventListener('unlocked',()=>setTimeout(()=>remind(),50));
@@ -79,7 +85,7 @@ function nextOf(id){const m=String(id).match(/^(khoa-n[1-5]-(?:np|tv|kj)-)(\d+)$
 function cont(el){if(!el)return;let L=null;try{L=JSON.parse(g('hn_dk_lastlesson')||'null')}catch(e){}let done=[];try{done=JSON.parse(g('hn_dk_done')||'[]')}catch(e){}
  const lv=g('hn_dk_level')||'n5';let href,sub;
  if(L&&L.id){const nx=done.includes(L.id)&&nextOf(L.id);href=nx||L.url||('lesson.html?id='+encodeURIComponent(L.id));const t=String(L.title||'').replace(/^Khóa N\d · [^·]+ · /,'');
-  sub=nx?'Bài tiếp theo sau: '+t:'Lần trước bạn học: '+t}
- else{href='lesson.html?id=khoa-'+lv+'-tv-01';sub='Gợi ý bài đầu tiên cho trình độ '+lv.toUpperCase()+' của bạn'}
+  const S=ai2();sub=nx?'Bài tiếp theo sau: '+t:(S?'Lần trước '+S+' học: ':'Bài học gần nhất: ')+t}
+ else{href='lesson.html?id=khoa-'+lv+'-tv-01';sub='Gợi ý bài đầu tiên cho trình độ '+lv.toUpperCase()+(xung()?' của '+xung():'')}
  el.innerHTML='<a class="dk-btn big" href="'+esc(href)+'">Học tiếp bài hôm nay ▶</a><p class="dk-sub">'+esc(sub)+'</p>'}
 return {cont,nextOf,esc,welcome,member,remind,toast,confetti,finish,countOf}})();

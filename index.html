@@ -43,7 +43,7 @@ function doyJST(){var t=new Date(Date.now()+9*36e5);var y=t.getUTCFullYear();ret
 var n=PROVERBS.length,i=(doyJST()*2)%n;
 function fill(k,p){var e=document.getElementById("pvJp"+k);if(e)e.innerHTML=(typeof ruby=="function")?ruby(p.j):p.j;e=document.getElementById("pvVi"+k);if(e)e.textContent=p.v;e=document.getElementById("pvNote"+k);if(e)e.textContent=p.n}
 fill("1",PROVERBS[i]);fill("2",PROVERBS[(i+1)%n]);
-})();</script><script src="don-khach.js?v=4a055249"></script><script src="khen-cau.js?v=c7d45768"></script><script src="chao-cau.js?v=3ca7e356"></script><script>
+})();</script><script src="don-khach.js?v=c4fe2aac"></script><script src="khen-cau.js?v=c7d45768"></script><script src="chao-cau.js?v=3ca7e356"></script><script>
 // Chào theo tên (29/10): tên lấy từ hồ sơ /auth/me, buổi theo đồng hồ máy; tên luôn được thoát HTML.
 function hnEsc(x){return String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function hnGreet(name){const h=new Date().getHours(),b=h<11?'sáng':(h<18?'chiều':'tối');const n=String(name||'').trim().slice(0,40);
