@@ -84,11 +84,11 @@
       var urls = await avatarUrls((lb.list || []).map(function (r) { return r.avatar_file; }));
       var rows = (lb.list || []).map(function (r, i) {
         return '<div class="st-tw-row"><span class="st-medal">' + MEDALS[i] + '</span>' + avHtml(r.name, urls[r.avatar_file])
-          + '<span class="st-tw-name">' + esc(r.name) + (r.me ? '<span class="st-me-chip">Bạn</span>' : '') + '</span>'
+          + '<span class="st-tw-name">' + esc(r.name) + (r.me ? '<span class="st-me-chip">'+HNX.chip()+'</span>' : '') + '</span>'
           + '<span class="st-tw-val">' + r.value + ' XP</span></div>';
       }).join('');
       var meLine = '';
-      if (lb.me && !lb.me.inTop) meLine = '<div class="st-tw-row"><span class="st-medal">' + lb.me.rank + '</span><span class="st-av st-av-t">' + esc((lb.me.name || '?').trim().charAt(0).toUpperCase()) + '</span><span class="st-tw-name">' + esc(lb.me.name) + '<span class="st-me-chip">Bạn</span></span><span class="st-tw-val">' + lb.me.value + ' XP</span></div>';
+      if (lb.me && !lb.me.inTop) meLine = '<div class="st-tw-row"><span class="st-medal">' + lb.me.rank + '</span><span class="st-av st-av-t">' + esc((lb.me.name || '?').trim().charAt(0).toUpperCase()) + '</span><span class="st-tw-name">' + esc(lb.me.name) + '<span class="st-me-chip">'+HNX.chip()+'</span></span><span class="st-tw-val">' + lb.me.value + ' XP</span></div>';
       mount.innerHTML = '<div class="st-topweek"><h2>🏆 Top tuần này</h2>'
         + '<p class="st-sub">XP học tập tuần này (Thứ Hai – Chủ nhật). Học đều mỗi ngày để leo hạng!</p>'
         + (rows || '<p class="st-sub">Chưa có dữ liệu tuần này — hãy là người đầu tiên!</p>') + meLine
@@ -125,7 +125,7 @@
         + '<div class="xh-b-name">' + esc(b.name) + '</div><div class="xh-b-desc">' + esc(b.desc) + '</div>'
         + '<div class="xh-b-prog">' + (b.earned ? '✅ Đã đạt' + (when ? ' · ' + when : '') : b.rawValue + '/' + b.target + ' ' + b.unit) + '</div></div>';
     }).join('');
-    return '<section class="xh-card"><h2>📈 Thành tích của bạn</h2><div class="xh-tiles">' + tiles + '</div>'
+    return '<section class="xh-card"><h2>📈 Thành tích '+(HNX.cua()||'cá nhân')+'</h2><div class="xh-tiles">' + tiles + '</div>'
       + '<h3 class="xh-h3">🏅 Huy hiệu (' + (me.badges || []).filter(function (b) { return b.earned; }).length + '/' + (me.badges || []).length + ')</h3>'
       + '<div class="xh-badges">' + badges + '</div></section>';
   }
@@ -137,17 +137,17 @@
       var list = lb.list || [];
       var pod = list.slice(0, 3).map(function (r, i) {
         return '<div class="xh-pod p' + (i + 1) + '"><div class="xh-pod-medal">' + MEDALS[i] + '</div>' + avHtml(r.name, urls[r.avatar_file])
-          + '<div class="xh-pod-name">' + esc(r.name) + (r.me ? '<span class="st-me-chip">Bạn</span>' : '') + '</div>'
+          + '<div class="xh-pod-name">' + esc(r.name) + (r.me ? '<span class="st-me-chip">'+HNX.chip()+'</span>' : '') + '</div>'
           + '<div class="xh-pod-val">' + fmtVal(cat, r.value) + '</div></div>';
       }).join('');
       var rows = list.map(function (r) {
         return '<div class="xh-row' + (r.me ? ' me' : '') + '"><span class="xh-rk">' + r.rank + '</span>' + avHtml(r.name, urls[r.avatar_file])
-          + '<span class="xh-nm">' + esc(r.name) + (r.me ? '<span class="st-me-chip">Bạn</span>' : '') + '</span>'
+          + '<span class="xh-nm">' + esc(r.name) + (r.me ? '<span class="st-me-chip">'+HNX.chip()+'</span>' : '') + '</span>'
           + '<span class="xh-vl">' + fmtVal(cat, r.value) + '</span></div>';
       }).join('');
       box.innerHTML = (pod ? '<div class="xh-podium">' + pod + '</div>' : '') + (rows || '<p class="mut">Chưa có học viên nào có điểm ở hạng mục này — hãy là người đầu tiên!</p>');
       if (lb.me && !lb.me.inTop) {
-        pin.innerHTML = '<div class="xh-pin"><span class="xh-rk">' + lb.me.rank + '</span><span class="xh-nm">' + esc(lb.me.name) + '<span class="st-me-chip">Bạn</span></span><span class="xh-vl">' + fmtVal(cat, lb.me.value) + '</span></div>';
+        pin.innerHTML = '<div class="xh-pin"><span class="xh-rk">' + lb.me.rank + '</span><span class="xh-nm">' + esc(lb.me.name) + '<span class="st-me-chip">'+HNX.chip()+'</span></span><span class="xh-vl">' + fmtVal(cat, lb.me.value) + '</span></div>';
       }
     } catch (e) {
       box.innerHTML = '<p class="mut">Không tải được bảng xếp hạng. Kiểm tra mạng rồi thử lại.</p>';

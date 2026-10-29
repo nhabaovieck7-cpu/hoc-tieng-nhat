@@ -809,3 +809,61 @@ h1.hn-greet{font-size:clamp(26px,7vw,40px);line-height:1.3;overflow-wrap:anywher
 .dk-sel{width:100%;min-height:50px;font:inherit;font-size:17px;border-radius:12px;border:1px solid var(--line);padding:0 12px;background:var(--card,#fff);color:inherit}
 .dk-fs{border:0;padding:0;margin:0 0 10px}.dk-radio{display:flex;align-items:center;gap:10px;min-height:48px;font-size:17px;border:1px solid var(--line);border-radius:12px;padding:0 14px;margin:8px 0;cursor:pointer}
 .dk-radio input{width:22px;height:22px;accent-color:var(--shu,#cf3a2e)}
+/* Hồ sơ cá nhân */
+#acctbox .acctwho:not([title="Admin"]){cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
+html.hs-lock{overflow:hidden}
+.hs-ov{position:fixed;inset:0;z-index:9999;background:rgba(20,24,35,.45);display:flex;align-items:flex-end;justify-content:center}
+.hs-sheet{background:var(--card,#fff);color:inherit;width:100%;max-width:560px;max-height:92vh;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:20px 20px 0 0;padding:18px 18px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px rgba(0,0,0,.2)}
+@media(min-width:700px){.hs-ov{align-items:center}.hs-sheet{border-radius:20px;max-height:88vh}}
+.hs-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.hs-top h2{margin:0}
+.hs-x{min-width:44px;min-height:44px;border:0;border-radius:50%;background:rgba(0,0,0,.06);font-size:18px;cursor:pointer;color:inherit}
+.hs-note{background:rgba(46,125,50,.09);border-radius:12px;padding:10px 12px;margin:12px 0;line-height:1.5}
+.hs-lab{display:block;font-weight:700;margin:14px 0 6px}
+.hs-in{display:block;width:100%;box-sizing:border-box;min-height:50px;font-size:17px;padding:10px 14px;border:1.5px solid rgba(0,0,0,.2);border-radius:12px;background:var(--bg,#fff);color:inherit}
+.hs-fs{border:0;padding:0;margin:0}.hs-rads{display:flex;flex-wrap:wrap;gap:8px}
+.hs-rad{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border:1.5px solid rgba(0,0,0,.2);border-radius:12px;font-size:16px;cursor:pointer}
+.hs-rad input{width:20px;height:20px}.hs-rad:has(input:checked){border-color:#c0392b;background:rgba(192,57,43,.08)}
+.hs-msg{min-height:1.4em;margin:12px 0 0;color:#2e7d32;font-weight:600}
+.hs-btns{display:grid;gap:10px;margin-top:12px}.hs-btns .dk-btn{width:100%}
+@media(min-width:700px){.hs-btns{grid-template-columns:repeat(3,1fr)}.hs-confirm .hs-btns{grid-template-columns:1fr 1fr}}
+.hs-confirm{margin-top:14px;padding:14px;border-radius:14px;border:2px solid #c0392b;background:rgba(192,57,43,.06)}
+.hs-confirm p{margin:0;line-height:1.5}
+.dk-lv.dk-goals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.dk-lv.dk-goals .dk-btn{width:100%;min-height:48px;padding:10px 6px;white-space:nowrap}
+.hs-hint{margin:4px 0 0;font-size:.85rem;opacity:.7}
+textarea.hs-in{min-height:84px;resize:vertical;font-family:inherit}
+.hs-slh{margin:2px 0 0;font-size:.9rem;opacity:.7;font-style:italic;overflow-wrap:anywhere}
+#acctbox .hs-slogan{display:block;font-size:.7rem;font-weight:400;opacity:.65;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;line-height:1.2;order:2}
+@media(max-width:600px){#acctbox .hs-slogan{max-width:26vw;font-size:.66rem}}
+.hn-greet .hn-slogan{display:block;font-size:.5em;font-weight:500;font-style:italic;opacity:.7;margin-top:4px;overflow-wrap:anywhere}
+#acctbox .acctwho{order:1}#acctbox .hs-slogan{order:2}#acctbox .acctout,#acctbox .acctlink{order:3}
+#hdrmenu #acctbox .hs-slogan{max-width:100%;padding:0 10px 6px;margin-top:-4px}
+/* Tên + slogan trên thanh trên cùng */
+.hs-tb{display:inline-flex;flex-direction:column;align-items:flex-end;justify-content:center;min-width:0;max-width:220px;min-height:44px;padding:2px 4px;margin:0;border:0;background:none;color:var(--t);font:inherit;text-align:right;cursor:pointer;line-height:1.2;flex:0 1 auto;overflow:hidden}
+.hs-tb span{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hs-tb-n{font-weight:700;font-size:.9rem}.hs-tb-s{font-size:.72rem;opacity:.65;font-weight:400}
+.hs-tb:focus-visible{outline:2px solid var(--c,#c0392b);outline-offset:2px;border-radius:8px}
+@media(max-width:600px){.hs-tb{max-width:92px}.hs-tb-n{font-size:.82rem}.hs-tb-s{font-size:.66rem}}
+@media(max-width:380px){.hs-tb{max-width:76px}}
+@media(min-width:861px){.hs-tb{display:none!important}
+ .topbar #acctbox{display:grid;grid-template-columns:auto auto;column-gap:8px;row-gap:0;align-items:center}
+ .topbar #acctbox .acctwho{grid-column:1;grid-row:1;max-width:150px;text-align:right;align-self:end}
+ .topbar #acctbox .hs-slogan{grid-column:1;grid-row:2;max-width:150px;margin:0;padding:0;text-align:right;align-self:start;cursor:pointer}
+ .topbar #acctbox .acctout,.topbar #acctbox .acctlink{grid-column:2;grid-row:1/3}}
+/* Ảnh đại diện */
+.hs-top{justify-content:flex-start}.hs-top .hs-tt{flex:1;min-width:0}.hs-top .hs-x{flex:none}
+.hs-av{flex:none;width:64px;height:64px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#c0392b;color:#fff;font-weight:700;font-size:26px}
+.hs-av img{width:100%;height:100%;object-fit:cover;display:block}
+.hs-avrow{margin:4px 0 6px}.hs-avbtn{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}.hs-avbtn .dk-btn{min-height:46px;flex:1 1 140px}
+.hs-hint.bad{color:#c0392b;opacity:1;font-weight:600}
+.hdr-av.hs-img{background-size:cover;background-position:center}.hdr-av.hs-img .hdr-l{opacity:0}
+.hs-avsm{display:none}
+@media(min-width:861px){.topbar #acctbox .hs-avsm{display:block;grid-column:0;grid-row:1/3;width:34px;height:34px;border-radius:50%;object-fit:cover;order:0}
+ .topbar #acctbox{grid-template-columns:auto auto auto}.topbar #acctbox .hs-avsm{grid-column:1}.topbar #acctbox .acctwho,.topbar #acctbox .hs-slogan{grid-column:2}.topbar #acctbox .acctout,.topbar #acctbox .acctlink{grid-column:3}}
+@media(min-width:861px){.topbar #acctbox{column-gap:6px;grid-template-columns:auto minmax(0,120px) auto}.topbar #acctbox .acctwho,.topbar #acctbox .hs-slogan{max-width:120px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}}
+/* Thành viên trên máy tính: nhường chỗ cho menu (Tin tức không bị cắt) */
+@media(min-width:861px){.topbar .wrap:has(#acctbox .acctwho:not([title="Admin"])) .hn-share-hdr .hn-share-tx{display:none}
+ .topbar .wrap:has(#acctbox .acctwho:not([title="Admin"])) .hn-share-hdr{padding-left:10px;padding-right:10px}
+ .topbar #acctbox:has(.acctwho:not([title="Admin"])) .acctout{padding:8px 11px}}
+@media(min-width:861px) and (max-width:1199px){.topbar #acctbox{grid-template-columns:auto minmax(0,100px) auto}.topbar #acctbox .acctwho,.topbar #acctbox .hs-slogan{max-width:100px}}
+@media(min-width:861px){.topbar #acctbox:has(.acctin){display:flex}}
+@media(min-width:861px){.topbar #acctbox .acctwho{grid-row:1/3;align-self:center}}

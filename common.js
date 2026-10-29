@@ -151,16 +151,16 @@ async function refresh(){if(!sess())return;try{var j=await api('/community/unrea
  badge(document.querySelector('#hnbell .hn-cbdg'),(j.notifications||0)+(j.chat||0));
  badge(document.querySelector('#hnchat .hn-cbdg'),j.chat||0)}catch(e){}}
 function typeText(n){var a=n.actor&&n.actor.name?n.actor.name:'Ai đó';
- if(n.type==='like_post')return '<b>'+esc(a)+'</b> đã thích bài đăng của bạn';
- if(n.type==='like_comment')return '<b>'+esc(a)+'</b> đã thích bình luận của bạn';
- if(n.type==='comment_post')return '<b>'+esc(a)+'</b> đã bình luận vào bài của bạn';
- if(n.type==='reply_comment')return '<b>'+esc(a)+'</b> đã trả lời bình luận của bạn';
- if(n.type==='badge'){var BN={'streak7':'Chuỗi 7 ngày','streak30':'Chuỗi 30 ngày','cards100':'100 thẻ mới','cards500':'500 thẻ mới','boss10':'Hạ trùm 10 lần','listen5':'5 đề nghe','lessons50':'50 bài đã học','xp1000':'1.000 XP','level':'Trọn một cấp độ','top3':'Top 3 tuần'};return '🏅 Bạn vừa đạt huy hiệu <b>'+(BN[n.comment_id]||'mới')+'</b> — xem ở mục Xếp hạng'}
+ if(n.type==='like_post')return '<b>'+esc(a)+'</b> đã thích bài đăng'+(function(){var c=HNX.cua();return c?' '+c:''})();
+ if(n.type==='like_comment')return '<b>'+esc(a)+'</b> đã thích bình luận'+(function(){var c=HNX.cua();return c?' '+c:''})();
+ if(n.type==='comment_post')return '<b>'+esc(a)+'</b> đã bình luận vào bài'+(function(){var c=HNX.cua();return c?' '+c:''})();
+ if(n.type==='reply_comment')return '<b>'+esc(a)+'</b> đã trả lời bình luận'+(function(){var c=HNX.cua();return c?' '+c:''})();
+ if(n.type==='badge'){var BN={'streak7':'Chuỗi 7 ngày','streak30':'Chuỗi 30 ngày','cards100':'100 thẻ mới','cards500':'500 thẻ mới','boss10':'Hạ trùm 10 lần','listen5':'5 đề nghe','lessons50':'50 bài đã học','xp1000':'1.000 XP','level':'Trọn một cấp độ','top3':'Top 3 tuần'};return '🏅 '+(HNX.ai()?HNX.cap(HNX.ai())+' vừa đạt':'Vừa đạt')+' huy hiệu <b>'+(BN[n.comment_id]||'mới')+'</b> — xem ở mục Xếp hạng'}
  return '<b>'+esc(a)+'</b> có hoạt động mới'}
 function when(t){try{var d=new Date(t),s=(Date.now()-d)/1000;if(s<60)return'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';return d.toLocaleDateString('vi-VN')}catch(e){return''}}
 function renderDD(dd){var items=NOTIFS.map(function(n){var ini=n.actor&&n.actor.name?n.actor.name.trim().charAt(0).toUpperCase():'?';
   return '<button type="button" class="hn-nit'+(n.is_read?'':' un')+'" data-nid="'+esc(n.id)+'" data-post="'+esc(n.post_id||'')+'"><span class="hn-nava" style="background:'+color(n.actor&&n.actor.id)+'">'+esc(ini)+'</span><span class="hn-ntx">'+typeText(n)+'<br><span class="hn-ntm">'+when(n.created_at)+'</span></span></button>'}).join('');
- var chatLine=UNREAD.chat>0?'<button type="button" class="hn-nit un" data-gochat="1"><span class="hn-nava" style="background:#233d63">💬</span><span class="hn-ntx">Bạn có <b>'+UNREAD.chat+'</b> tin nhắn chưa đọc<br><span class="hn-ntm">Bấm để mở hộp tin nhắn</span></span></button>':'';
+ var chatLine=UNREAD.chat>0?'<button type="button" class="hn-nit un" data-gochat="1"><span class="hn-nava" style="background:#233d63">💬</span><span class="hn-ntx">'+(HNX.ai()?HNX.cap(HNX.ai())+' có':'Có')+' <b>'+UNREAD.chat+'</b> tin nhắn chưa đọc<br><span class="hn-ntm">Bấm để mở hộp tin nhắn</span></span></button>':'';
  dd.innerHTML='<h4>🔔 Thông báo</h4>'+chatLine+(items||'<p style="padding:6px 8px;color:var(--m);font-size:14px">Chưa có thông báo nào.</p>')
  +(NOTIFS.some(function(n){return !n.is_read})?'<button type="button" class="hn-nall" data-readall="1">Đánh dấu đã đọc tất cả</button>':'')}
 async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return;
@@ -226,4 +226,98 @@ function boot(){var w=document.querySelector('.topbar .wrap');if(!w||document.ge
   if(av.classList.contains('out')!==out)av.classList.toggle('out',out);if(av.classList.contains('dot')!==dot)av.classList.toggle('dot',dot)}
  sweep();new MutationObserver(sweep).observe(tb,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class']});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+/* Xưng hô cho thành viên (Phía B): khách giữ "bạn"; thành viên dùng anh/chị theo hồ sơ (hn_dk_ho_so), không điền giới tính thì dùng tên (hn_dk_ten), không có tên thì câu không đại từ. Tên luôn được thoát HTML. */
+window.HNX=(function(){
+  function g(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function e(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function khach(){return !(g('hn_sess_v1')||g('hn_admin_sess_v1'))}
+  function xung(){try{var h=JSON.parse(g('hn_dk_ho_so')||'null')||{};return h.gt==='nam'?'anh':(h.gt==='nu'?'chị':null)}catch(x){return null}}
+  function ten(){return String(g('hn_dk_ten')||'').trim().slice(0,40)}
+  function cap(s){return s?s.charAt(0).toUpperCase()+s.slice(1):s}
+  /* ai(): "bạn" cho khách; thành viên: "anh"/"chị", hoặc tên, hoặc null (gọi bên ngoài tự viết câu không đại từ) */
+  function ai(){if(khach())return 'bạn';var x=xung(),n=ten();return x||(n?e(n):null)}
+  /* cua(): "của bạn" / "của anh" / "của Minh" / "" */
+  function cua(){var a=ai();return a?'của '+a:''}
+  /* chip(): nhãn cạnh tên mình trên bảng xếp hạng (chỉ đại từ; không điền giới tính thì "Tôi" vì tên đã đứng ngay bên) */
+  function chip(){var x=khach()?'bạn':xung();return x?cap(x):'Tôi'}
+  /* Điền vào <span data-xh="ai|cua" data-xh0="câu thay khi không có đại từ" data-xh-cap> */
+  function fill(root){(root||document).querySelectorAll('[data-xh]').forEach(function(el){if(khach())return;var v=el.getAttribute('data-xh')==='cua'?cua():ai();if(!v){el.textContent=el.getAttribute('data-xh0')||'';return}if(el.hasAttribute('data-xh-cap'))v=cap(v);el.innerHTML=v})}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){fill()});else fill();
+  return {khach:khach,xung:xung,ten:ten,ai:ai,cua:cua,cap:cap,chip:chip,fill:fill};
+})();
+/* Hồ sơ cá nhân (Phía B): bấm tên trên thanh trên cùng (chỉ thành viên). Lưu ở localStorage hn_dk_ho_so — cùng khóa mà HNX/khen-cau đọc (gt: nam|nu|''). Không gửi đi đâu. */
+window.HOSO=(function(){
+  var K='hn_dk_ho_so',AK='hn_dk_avatar';function avg(){try{var v=localStorage.getItem(AK)||'';return /^data:image\/(webp|jpeg);base64,[A-Za-z0-9+\/=]+$/.test(v)?v:''}catch(e){return ''}}
+  function g(){try{return JSON.parse(localStorage.getItem(K)||'null')||{}}catch(e){return {}}}
+  function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function close(){var o=document.getElementById('hsOv');if(o)o.remove();document.documentElement.classList.remove('hs-lock')}
+  function done(msg){try{document.dispatchEvent(new CustomEvent('hn-hoso'))}catch(x){}var m=document.getElementById('hsMsg');if(m)m.textContent=msg}
+  function open(){
+    if(window.HNX&&HNX.khach())return;close();
+    var h=g(),y=new Date().getFullYear(),o='<option value="">— Không chọn —</option>';
+    for(var n=y-12;n>=y-90;n--)o+='<option value="'+n+'"'+(+h.nam===n?' selected':'')+'>'+n+'</option>';
+    function rad(name,v,t,cur){return '<label class="hs-rad"><input type="radio" name="'+name+'" value="'+v+'"'+((cur||'')===v?' checked':'')+'> <span>'+t+'</span></label>'}
+    function inp(id,lab,type,val,ac,ph,ml){return '<label class="hs-lab" for="'+id+'">'+lab+'</label><input class="hs-in" id="'+id+'" type="'+type+'" value="'+e(val)+'" autocomplete="'+ac+'"'+(ph?' placeholder="'+ph+'"':'')+(type==='tel'?' inputmode="tel"':'')+(ml?' maxlength="'+ml+'"':'')+'>'}
+    var x=(window.HNX&&HNX.xung())||'anh/chị';
+    var d=document.createElement('div');d.id='hsOv';d.className='hs-ov';
+    d.innerHTML='<section class="hs-sheet" role="dialog" aria-modal="true" aria-labelledby="hsH"><div class="hs-top"><div class="hs-av" id="hsAvH" aria-hidden="true"></div><div class="hs-tt"><h2 id="hsH">Hồ sơ cá nhân</h2><p class="hs-slh" id="hsSlH" hidden></p></div><button type="button" class="hs-x" data-hs-close aria-label="Đóng">✕</button></div>'+
+     '<p class="hs-note">🔒 Chỉ mình '+e(x)+' thấy, lưu trên máy này, dùng để chọn cách xưng hô và lời chào; không chia sẻ cho ai. Không mục nào bắt buộc.</p>'+
+     '<form id="hsF" novalidate>'+'<div class="hs-avrow"><span class="hs-lab" style="margin:0">Ảnh đại diện</span><input type="file" id="hsFile" accept="image/*" hidden><div class="hs-avbtn"><button type="button" class="dk-btn ghost" data-hs-pick>Đổi ảnh</button><button type="button" class="dk-btn ghost" data-hs-avdel>Xóa ảnh</button></div><p class="hs-hint" id="hsAvMsg" role="status">Ảnh được cắt vuông, thu nhỏ và chỉ lưu trên máy này.</p></div>'+inp('hsGoi','Muốn web gọi mình là gì?','text',h.goi,'off','VD: Sếp Tùng',30)+'<p class="hs-hint">Để trống thì web gọi theo mặc định.</p>'+inp('hsTen','Họ tên','text',h.ten,'name','')+
+     '<label class="hs-lab" for="hsNam">Năm sinh</label><select class="hs-in" id="hsNam">'+o+'</select>'+
+     '<fieldset class="hs-fs"><legend class="hs-lab">Giới tính</legend><div class="hs-rads">'+rad('hsGt','nam','Nam',h.gt)+rad('hsGt','nu','Nữ',h.gt)+rad('hsGt','','Không muốn nói',h.gt)+'</div></fieldset>'+
+     '<label class="hs-lab" for="hsSl">Slogan cá nhân</label><input class="hs-in" id="hsSl" type="text" maxlength="60" value="'+e(h.sl)+'" autocomplete="off" placeholder="VD: Mỗi ngày một chút"><p class="hs-hint" id="hsSlN" aria-live="polite">'+String(h.sl||'').length+'/60</p>'+'<label class="hs-lab" for="hsSo">Sở thích</label><textarea class="hs-in" id="hsSo" rows="3" maxlength="200" placeholder="VD: nấu ăn, anime, đi bộ">'+e(h.so)+'</textarea>'+inp('hsDc','Địa chỉ','text',h.dc,'street-address','')+inp('hsDt','Số điện thoại','tel',h.dt,'tel','')+inp('hsEm','Email','email',h.em,'email','')+
+     '<fieldset class="hs-fs"><legend class="hs-lab">Tình trạng</legend><div class="hs-rads">'+rad('hsTt','doc-than','Độc thân',h.tt)+rad('hsTt','ket-hon','Đã kết hôn',h.tt)+rad('hsTt','','Không muốn nói',h.tt)+'</div></fieldset>'+
+     '<p class="hs-msg" id="hsMsg" role="status"></p><div class="hs-btns"><button type="submit" class="dk-btn big">Lưu</button><button type="button" class="dk-btn big ghost" data-hs-del>Xóa toàn bộ thông tin</button><button type="button" class="dk-btn big ghost" data-hs-close>Đóng</button></div>'+
+     '<div class="hs-confirm" id="hsCf" hidden><p><b>Xóa toàn bộ thông tin hồ sơ trên máy này?</b><br>Cách xưng hô sẽ trở lại mặc định. Không ảnh hưởng tới tài khoản hay tiến độ học.</p><div class="hs-btns"><button type="button" class="dk-btn big" data-hs-yes>Xóa hết</button><button type="button" class="dk-btn big ghost" data-hs-no>Không xóa</button></div></div></form></section>';
+    document.body.appendChild(d);document.documentElement.classList.add('hs-lock');
+    function avPaint(){var v=avg(),n=(document.querySelector('#acctbox .acctwho')||{}).textContent||'';var el=d.querySelector('#hsAvH');el.innerHTML='';if(v){var im=new Image();im.alt='';im.src=v;el.appendChild(im)}else el.textContent=(Array.from(String(n).trim())[0]||'👤').toUpperCase();d.querySelector('[data-hs-avdel]').hidden=!v;d.querySelector('[data-hs-pick]').textContent=v?'Đổi ảnh':'Chọn ảnh'}
+    function avMsg(t,bad){var m=d.querySelector('#hsAvMsg');m.textContent=t;m.classList.toggle('bad',!!bad)}
+    avPaint();
+    d.querySelector('#hsFile').addEventListener('change',function(){var fl=this.files&&this.files[0];this.value='';if(!fl)return;
+      if(fl.size>30*1024*1024){avMsg('Ảnh quá lớn (trên 30MB). Xin chọn ảnh khác ạ.',1);return}avMsg('Đang xử lý ảnh…');
+      var u=URL.createObjectURL(fl),im=new Image();
+      im.onerror=function(){URL.revokeObjectURL(u);avMsg(/heic|heif/i.test(fl.type+fl.name)?'Trình duyệt này chưa đọc được ảnh HEIC. Xin chọn ảnh JPG/PNG, hoặc chụp màn hình ảnh đó rồi chọn lại ạ.':'Không đọc được tệp ảnh này. Xin thử ảnh khác ạ.',1)};
+      im.onload=function(){URL.revokeObjectURL(u);try{var S=Math.min(im.naturalWidth,im.naturalHeight);if(!S)throw 0;var c=document.createElement('canvas');c.width=c.height=256;var x=c.getContext('2d');x.imageSmoothingQuality='high';
+        x.drawImage(im,(im.naturalWidth-S)/2,(im.naturalHeight-S)/2,S,S,0,0,256,256);
+        var type=c.toDataURL('image/webp',.8).indexOf('data:image/webp')===0?'image/webp':'image/jpeg',q=.86,out='';
+        do{out=c.toDataURL(type,q);q-=.08}while(out.length*.75>50*1024&&q>.2);
+        if(out.length*.75>50*1024){avMsg('Ảnh vẫn hơi nặng sau khi nén. Xin thử ảnh khác ạ.',1);return}
+        try{localStorage.setItem(AK,out)}catch(qe){avMsg('Bộ nhớ trình duyệt trên máy này đã đầy nên chưa lưu được ảnh. Xin xóa bớt dữ liệu hoặc thử ảnh khác ạ.',1);return}
+        avPaint();avTop();avMsg('Đã lưu ảnh đại diện ('+Math.round(out.length*.75/1024)+' KB).')}catch(er){avMsg('Không xử lý được ảnh này. Xin thử ảnh khác ạ.',1)}};
+      im.src=u});
+    d.addEventListener('click',function(ev){var t=ev.target;
+      if(t.closest('[data-hs-pick]')){d.querySelector('#hsFile').click();return}
+      if(t.closest('[data-hs-avdel]')){try{localStorage.removeItem(AK)}catch(x){}avPaint();avTop();avMsg('Đã xóa ảnh đại diện.');return}if(t===d||t.closest('[data-hs-close]'))close();
+      else if(t.closest('[data-hs-del]')){var c=d.querySelector('#hsCf');c.hidden=false;c.scrollIntoView({block:'nearest'})}
+      else if(t.closest('[data-hs-no]'))d.querySelector('#hsCf').hidden=true;
+      else if(t.closest('[data-hs-yes]')){try{localStorage.removeItem(K);localStorage.removeItem(AK)}catch(x){}avPaint();avTop();d.querySelector('#hsF').reset();d.querySelectorAll('.hs-in').forEach(function(i){i.value=''});d.querySelector('#hsCf').hidden=true;d.querySelector('#hsSo').value='';d.querySelector('#hsSlN').textContent='0/60';d.querySelector('#hsSlH').hidden=true;done('Đã xóa toàn bộ thông tin hồ sơ trên máy này.')}});
+    d.querySelector('#hsF').addEventListener('submit',function(ev){ev.preventDefault();var f=function(id){return String(d.querySelector('#'+id).value||'').trim().slice(0,200)},r=function(n){var c=d.querySelector('input[name="'+n+'"]:checked');return c?c.value:''};
+      var v={goi:f('hsGoi').slice(0,30),sl:f('hsSl').slice(0,60),so:f('hsSo').slice(0,200),ten:f('hsTen'),nam:f('hsNam'),gt:r('hsGt'),dc:f('hsDc'),dt:f('hsDt'),em:f('hsEm'),tt:r('hsTt')};Object.keys(v).forEach(function(k){if(!v[k])delete v[k]});
+      try{localStorage.setItem(K,JSON.stringify(v))}catch(x){}var hh=d.querySelector('#hsSlH');done('Đã lưu. Cảm ơn '+((window.HNX&&HNX.xung())||'nhiều')+' ạ!')});
+    document.addEventListener('keydown',function k(ev){if(ev.key==='Escape'){close();document.removeEventListener('keydown',k)}});
+    d.querySelector('#hsSl').addEventListener('input',function(){d.querySelector('#hsSlN').textContent=this.value.length+'/60'});var f0=d.querySelector('#hsTen');if(f0&&!('ontouchstart' in window))f0.focus();
+  }
+  /* Tên trên thanh trên cùng -> mở hồ sơ (không đụng auth.js: chỉ bắt sự kiện bấm) */
+  document.addEventListener('click',function(ev){var w=ev.target.closest&&ev.target.closest('#acctbox .acctwho,#acctbox .hs-slogan');if(w&&w.classList.contains('hs-slogan'))w=w.parentNode.querySelector('.acctwho');if(!w||w.title==='Admin'||(window.HNX&&HNX.khach()))return;ev.preventDefault();open()});
+  /* Slogan nhỏ dưới tên trên thanh trên cùng (chỉ thành viên; textContent nên không cần thoát) */
+  function slogan(){tb();avTop();var old=document.querySelectorAll('#acctbox .hs-slogan');old.forEach(function(x){x.remove()});return;/* slogan chỉ hiện dưới lời chào */var w=document.querySelector('#acctbox .acctwho');if(!w)return;var sp=w.parentNode.querySelector('.hs-slogan');var t=(window.HNX&&HNX.khach()||w.title==='Admin')?'':String(g().sl||'').slice(0,60);
+    if(!t){if(sp)sp.remove();return}if(!sp){sp=document.createElement('span');sp.className='hs-slogan';w.insertAdjacentElement('afterend',sp)}if(sp.textContent!==t)sp.textContent=t;sp.title=t}
+  /* Tên + slogan ngay trên thanh trên cùng, cạnh vòng tròn avatar (chỉ thành viên; textContent nên đã an toàn) */
+  function tb(){var av=document.querySelector('.topbar .hdr-av'),who=document.querySelector('#acctbox .acctwho'),inl=document.querySelector('#acctbox .acctin');var c=document.getElementById('hsTb');
+    var n=who&&!inl&&who.title!=='Admin'&&!(window.HNX&&HNX.khach())?(who.textContent||'').trim():'';if(n==='…')n='';
+    if(!av||!n){if(c)c.remove();return}
+    if(!c){c=document.createElement('button');c.type='button';c.id='hsTb';c.className='hs-tb';c.innerHTML='<span class="hs-tb-n"></span><span class="hs-tb-s"></span>';c.addEventListener('click',function(ev){ev.stopPropagation();open()})}
+    if(c.nextElementSibling!==av)av.parentNode.insertBefore(c,av);
+    var sl=String(g().sl||'').trim().slice(0,60),a=c.firstChild,b=c.lastChild;if(a.textContent!==n)a.textContent=n;if(b.textContent!==sl)b.textContent='';b.hidden=true;
+    var lab='Hồ sơ cá nhân: '+n;if(c.getAttribute('aria-label')!==lab){c.setAttribute('aria-label',lab);c.title=lab}}
+  /* Ảnh đại diện trên thanh trên cùng: vòng tròn avatar (điện thoại) và ô tài khoản (máy tính) */
+  function avTop(){var v=(window.HNX&&HNX.khach())?'':avg(),who=document.querySelector('#acctbox .acctwho');if(who&&who.title==='Admin')v='';
+    var av=document.querySelector('.topbar .hdr-av');if(av){var on=!!v&&!!who&&!document.querySelector('#acctbox .acctin');var bg=on?'url("'+v+'")':'';if(av.style.backgroundImage!==bg)av.style.backgroundImage=bg;if(av.classList.contains('hs-img')!==on)av.classList.toggle('hs-img',on)}
+    var box=document.getElementById('acctbox'),sm=box&&box.querySelector('.hs-avsm');if(!box||!who||!v){if(sm)sm.remove();return}
+    if(!sm){sm=document.createElement('img');sm.className='hs-avsm';sm.alt='';box.insertBefore(sm,box.firstChild)}if(sm.getAttribute('src')!==v)sm.src=v}
+  function watch(){var b=document.getElementById('acctbox');if(!b)return false;slogan();new MutationObserver(slogan).observe(b,{childList:true,subtree:true,characterData:true});return true}
+  if(!watch()){var mo=new MutationObserver(function(){if(watch())mo.disconnect()});document.addEventListener('DOMContentLoaded',function(){if(!watch())mo.observe(document.body,{childList:true,subtree:true})})}
+  document.addEventListener('hn-hoso',slogan);
+  return {open:open,close:close,get:g,slogan:slogan};
 })();

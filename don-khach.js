@@ -61,16 +61,16 @@ function finish(){const l=(window.LESSONS||[])[0];const m=document.querySelector
  m.appendChild(d)}
 addEventListener('guest',()=>{if(/lesson\.html/.test(location.pathname))setTimeout(finish,300)});addEventListener('unlocked',()=>{if(/lesson\.html/.test(location.pathname))setTimeout(finish,600)});
 // 4) lần đầu sau khi được duyệt
-const GOALS=[5,10,20];
+const GOALS=[5,10,20,30,60,120];const gname=x=>(x=+x)>=60?(x/60)+' tiếng':x+' phút';
 function member(box,name){const n=String(name||'').trim().slice(0,40);if(n)s('hn_dk_ten',n);if(!box||g('hn_dk_member_ok')==='1')return;const X=xung(),lv=g('hn_dk_level')||'',gl=g('hn_dk_goal')||'';
  box.innerHTML='<div class="dk-card dk-hi"><p class="dk-kicker">ようこそ · Tài khoản đã được duyệt</p><h2>Chào mừng '+(X?X+' ':'')+(n?'<span class="hn-name">'+esc(n)+'</span> ':'')+'đến với lớp học!</h2><p>Chỉ 3 bước nhỏ để bắt đầu thật nhẹ nhàng:</p><ol class="dk-steps">'+
  '<li class="'+(lv?'ok':'')+'"><b>1. Chọn trình độ</b><div class="dk-lv sm">'+LV.map(l=>'<button type="button" class="dk-btn'+(l===lv?'':' ghost')+'" data-lv="'+l+'" aria-pressed="'+(l===lv)+'">'+l.toUpperCase()+'</button>').join('')+'</div></li>'+
- '<li class="'+(gl?'ok':'')+'"><b>2. Đặt mục tiêu mỗi ngày</b><div class="dk-lv sm">'+GOALS.map(x=>'<button type="button" class="dk-btn'+(String(x)===gl?'':' ghost')+'" data-g="'+x+'" aria-pressed="'+(String(x)===gl)+'">'+x+' phút/ngày</button>').join('')+'</div></li>'+
+ '<li class="'+(gl?'ok':'')+'"><b>2. Đặt mục tiêu mỗi ngày</b><div class="dk-lv sm dk-goals">'+GOALS.map(x=>'<button type="button" class="dk-btn'+(String(x)===gl?'':' ghost')+'" data-g="'+x+'" aria-pressed="'+(String(x)===gl)+'">'+gname(x)+'</button>').join('')+'</div></li>'+
  '<li><b>3. Học bài đầu tiên</b><div><a class="dk-btn big" href="lesson.html?id=khoa-'+(lv||'n5')+'-tv-01">Mở bài đầu tiên '+(lv||'n5').toUpperCase()+'</a></div></li></ol>'+
  '<div class="dk-badges"><span class="dk-streak">🔥 Chuỗi học <b>'+streak()+'</b> ngày</span><span class="dk-badge">🌱 Huy hiệu đầu tiên: <b>Khởi đầu</b></span></div>'+
  '<button type="button" class="dk-btn ghost" data-ok>Tôi đã hiểu, ẩn lời chào này</button><p class="dk-priv">🔒 Trình độ, mục tiêu, chuỗi ngày và huy hiệu chỉ lưu trên máy này.</p></div>';
  box.querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{s('hn_dk_level',b.dataset.lv);member(box,name)});
- box.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{s('hn_dk_goal',b.dataset.g);member(box,name);toast('Đã lưu mục tiêu '+b.dataset.g+' phút mỗi ngày. Cảm ơn '+(xung()||'nhiều')+' ạ!')});
+ box.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{s('hn_dk_goal',b.dataset.g);member(box,name);toast('Đã lưu mục tiêu '+gname(b.dataset.g)+' mỗi ngày. Cảm ơn '+(xung()||'nhiều')+' ạ!')});
  box.querySelector('[data-ok]').onclick=()=>{s('hn_dk_member_ok','1');box.innerHTML=''}}
 function remindToggle(el){if(!el)return;const f=()=>{const off=g('hn_dk_nhac_off')==='1';el.innerHTML='Lời nhắc khi lâu chưa ghé: <b>'+(off?'đang tắt':'đang bật')+'</b> <button type="button" class="dk-btn ghost">'+(off?'Bật lại lời nhắc':'Tắt lời nhắc')+'</button>';el.querySelector('button').onclick=()=>{s('hn_dk_nhac_off',off?'0':'1');f()}};f()}
 addEventListener('guest',()=>setTimeout(()=>remind(),50));addEventListener('unlocked',()=>setTimeout(()=>remind(),50));
