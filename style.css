@@ -834,7 +834,7 @@ textarea.hs-in{min-height:84px;resize:vertical;font-family:inherit}
 .hs-slh{margin:2px 0 0;font-size:.9rem;opacity:.7;font-style:italic;overflow-wrap:anywhere}
 #acctbox .hs-slogan{display:block;font-size:.7rem;font-weight:400;opacity:.65;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;line-height:1.2;order:2}
 @media(max-width:600px){#acctbox .hs-slogan{max-width:26vw;font-size:.66rem}}
-.hn-greet .hn-slogan{display:block;font-size:.5em;font-weight:500;font-style:italic;opacity:.7;margin-top:4px;overflow-wrap:anywhere}
+.hn-greet .hn-slogan{display:block;font-size:17px;line-height:1.4;font-weight:600;font-style:normal;color:#c0392b;opacity:1;margin:6px 0 2px;overflow-wrap:break-word;text-wrap:balance}
 #acctbox .acctwho{order:1}#acctbox .hs-slogan{order:2}#acctbox .acctout,#acctbox .acctlink{order:3}
 #hdrmenu #acctbox .hs-slogan{max-width:100%;padding:0 10px 6px;margin-top:-4px}
 /* Tên + slogan trên thanh trên cùng */
