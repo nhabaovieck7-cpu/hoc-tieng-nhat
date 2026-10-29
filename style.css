@@ -715,3 +715,37 @@ html[data-theme="dark"] .hn-back:hover{color:#12233f}
 /* Đang mở khoá nội dung: hiện dòng chờ thay vì màn hình trống */
 html.locked body::after{content:"Đang mở bài học…";position:fixed;left:50%;top:42%;transform:translateX(-50%);color:var(--m);font-size:15px;font-weight:600;pointer-events:none}
 html.locked body:has(.lockscr)::after{content:none}
+/* ===== Học thử (29/10): khách chưa đăng nhập ===== */
+body{padding-bottom:env(safe-area-inset-bottom)}
+@media(max-width:860px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}html.has-reg body{padding-bottom:calc(150px + env(safe-area-inset-bottom))}.ht-reg{bottom:calc(60px + env(safe-area-inset-bottom))!important}}
+html.has-reg body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.ht-reg{position:fixed;left:0;right:0;bottom:0;z-index:55;padding:8px 14px calc(8px + env(safe-area-inset-bottom));background:var(--card,#fff);border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;justify-content:center;box-shadow:0 -4px 14px rgba(0,0,0,.06)}
+@media(max-width:860px){.ht-reg{padding-bottom:8px}}
+.ht-reg p{margin:0;font-size:14px;line-height:1.3;color:var(--m)}
+.ht-big{white-space:nowrap;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:16px;background:#cf3a2e;color:#fff!important;font-weight:800;font-size:17px;text-decoration:none;border:0;cursor:pointer}
+.ht-big.alt{background:#23395b}
+.ht-hero{padding:26px 0 8px}.ht-hero h1{font-size:clamp(26px,6vw,44px);line-height:1.25;margin:0 0 12px}.ht-hero p{font-size:18px;color:var(--m);margin:0 0 18px;max-width:720px}
+.ht-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
+.ht-stats div{background:var(--card,#fff);border:1px solid var(--line);border-radius:16px;padding:14px}.ht-stats b{display:block;font-size:26px;color:#cf3a2e}.ht-stats span{color:var(--m);font-size:14px}
+.ht-shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.ht-shots figure{margin:0;background:var(--card,#fff);border:1px solid var(--line);border-radius:16px;overflow:hidden}.ht-shots img{display:block;width:100%;aspect-ratio:390/600;object-fit:cover;object-position:top}.ht-shots figcaption{padding:8px 12px;font-size:14px;color:var(--m)}
+.ht-toc{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.ht-toc a,.ht-tabs button{min-height:48px;padding:0 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--card,#fff);font:inherit;font-weight:700;color:var(--t);display:inline-flex;align-items:center;text-decoration:none;cursor:pointer;white-space:nowrap}
+.ht-tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 0 10px;scrollbar-width:none;position:sticky;top:0;background:var(--bg);z-index:12}
+.ht-tabs::-webkit-scrollbar{display:none}
+.ht-tabs button[aria-selected=true]{background:#23395b;color:#fff;border-color:#23395b}
+.ht-panel[hidden]{display:none}
+details.ht-yr{background:var(--card,#fff);border:1px solid var(--line);border-radius:16px;margin:10px 0;overflow:hidden}
+details.ht-yr>summary{min-height:52px;display:flex;align-items:center;padding:0 16px;font-weight:700;cursor:pointer;list-style:none}
+details.ht-yr>summary::-webkit-details-marker{display:none}
+details.ht-yr>summary::after{content:'▾';margin-left:auto}details.ht-yr[open]>summary::after{content:'▴'}
+details.ht-yr>.in{padding:0 12px 10px}
+.ht-row{display:flex;align-items:center;gap:12px;min-height:60px;padding:10px 14px;background:var(--card,#fff);border:1px solid var(--line);border-radius:16px;margin:8px 0;text-decoration:none;color:var(--t)}
+.ht-row .tg{margin-left:auto;font-size:13px;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap;background:#e3f4e8;color:#1d7a3a}
+.ht-row.lock{opacity:.62}.ht-row.lock .tg{background:#eee;color:#666}
+.ht-lockli{opacity:.6}.ht-lockli a,.ht-lockli iframe,.ht-lockli .ytfac{pointer-events:none}
+.ht-lockbig{background:var(--card,#fff);border:2px dashed var(--line);border-radius:20px;padding:20px;text-align:center;margin:18px 0}
+.ht-free{display:inline-block;background:#e3f4e8;color:#1d7a3a;font-weight:700;font-size:13px;padding:3px 10px;border-radius:99px}
+.ht-today{display:inline-block;background:#cf3a2e;color:#fff;border-radius:8px;padding:2px 8px;font-size:.8rem;margin-left:6px}
+.ht-locknote{background:#f1efea;color:#777;border-radius:12px;min-height:52px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-top:10px}
+html.guest .admin-only{display:none!important}

@@ -98,7 +98,30 @@ function errScreen(msg){
   document.body.appendChild(d);
   d.querySelector('#lkRetry').onclick=()=>location.reload();
 }
-async function run(files){
+function guestLock(e){
+  if(document.querySelector('.lockscr'))return;
+  const d=document.createElement('div');d.className='lockscr';
+  d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+((e&&e.title)||'Bài này cần đăng ký')+'</h1>'+
+    '<p>'+((e&&e.msg)||'Bài học thử miễn phí: N5 toàn bộ, N4 nửa đầu, N3–N1 bài 1 mỗi phần. Đăng ký bằng Google, Khánh duyệt là học được hết.')+'</p>'+
+    '<a class="lockcta" href="dang-nhap.html">Đăng ký để học tiếp</a>'+
+    '<p class="lkalt"><a href="hoc-thu.html">Xem các bài học thử</a> · <a href="index.html">Trang chủ</a></p></div>';
+  document.body.appendChild(d);
+}
+// Gọi API học thử công khai; 429 thì chờ đúng Retry-After (tối đa 2 lần).
+async function free(path){
+  const ep=((typeof SITE!='undefined'&&SITE.aiEndpoint)||'').replace(/\/$/,'');
+  for(let i=0;i<3;i++){
+    let r;try{r=await fetch(ep+path)}catch(x){throw new Error('Mất kết nối mạng — không tải được bài học thử. Bấm Thử lại.')}
+    if(r.status===429&&i<2){const w=Math.min(30,+(r.headers.get('Retry-After')||5));await new Promise(ok=>setTimeout(ok,w*1000));continue}
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.ok)return j;
+    if(r.status===403)throw Object.assign(new Error('locked'),{locked:true,id:j.id});
+    if(r.status===404)throw new Error('Không có bài học này. <a href="hoc-thu.html">Xem danh sách bài học thử</a>.');
+    if(r.status===429)throw new Error('Đang có quá nhiều lượt mở bài. Chờ một chút rồi bấm Thử lại.');
+    throw new Error('Máy chủ chưa tải được bài học (mã '+r.status+'). Bấm Thử lại sau ít phút.');
+  }
+}
+async function run(files,opt){
   document.documentElement.classList.add('locked');
   try{
     const m0=await getMeta();
@@ -114,6 +137,19 @@ async function run(files){
       return;
     }
     clearStoredKey();
+    // Học thử (29/10): trang nào cho khách thì opt.guest() nạp dữ liệu công khai (Worker /free/*), không cần khoá.
+    if(opt&&opt.guest){
+      window.HN_GUEST=true;document.documentElement.classList.add('guest');
+      let r;
+      try{r=await opt.guest()}catch(e){
+        if(e&&e.locked){guestLock(e);return}
+        errScreen((e&&e.message)||'Không tải được bài học thử. Kiểm tra mạng rồi bấm Thử lại.');return;
+      }
+      document.documentElement.classList.remove('locked');
+      if(r!==false){const m=document.getElementById('main');if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}}
+      dispatchEvent(new Event('guest'));
+      return;
+    }
     await screen();
     return;
   }
@@ -128,4 +164,4 @@ async function run(files){
   if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}
   dispatchEvent(new Event('unlocked'));
 }
-return {run,load,lockAgain,importContentKey,verifySession,clearStoredKey,netFailed:()=>netFail}})();
+return {run,free,guestLock,load,lockAgain,importContentKey,verifySession,clearStoredKey,netFailed:()=>netFail}})();
