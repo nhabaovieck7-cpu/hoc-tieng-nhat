@@ -26,9 +26,51 @@
     <button class="btn g" id="aout" type="button">Đăng xuất</button>
   </div>
   <div id="list"></div>
+
+  <h2 style="margin-top:34px">👥 Kiểm duyệt Cộng đồng</h2>
+  <div class="tabs" id="cmPostTabs">
+    <button type="button" data-f="all" class="on">Tất cả bài</button>
+    <button type="button" data-f="pinned">Đã ghim</button>
+    <button type="button" data-f="hidden">Đã ẩn</button>
+    <button type="button" data-f="deleted">Đã xoá</button>
+  </div>
+  <div id="cmPosts"><p class="empty-note">Đang tải…</p></div>
+
+  <h2 style="margin-top:30px">🚩 Báo cáo vi phạm</h2>
+  <div class="tabs" id="cmRepTabs">
+    <button type="button" data-s="open" class="on">Chưa xử lý</button>
+    <button type="button" data-s="resolved">Đã xử lý</button>
+    <button type="button" data-s="dismissed">Đã bỏ qua</button>
+    <button type="button" data-s="all">Tất cả</button>
+  </div>
+  <div id="cmReports"><p class="empty-note">Đang tải…</p></div>
+
+  <h2 style="margin-top:30px">💬 Chat — nhắn & phát thanh</h2>
+  <div class="authcard" style="margin-bottom:14px">
+    <h3 style="margin-top:0">📣 Phát thanh cho mọi học viên đã duyệt</h3>
+    <textarea id="cmBcBody" rows="3" maxlength="4000" placeholder="Nội dung phát thanh…" style="width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;background:var(--card);color:var(--t);box-sizing:border-box"></textarea>
+    <div style="margin-top:8px"><button class="primary" type="button" id="cmBcSend">Gửi phát thanh…</button></div>
+    <div id="cmBcList" style="margin-top:10px"></div>
+  </div>
+  <div class="authcard" style="margin-bottom:14px">
+    <h3 style="margin-top:0">✉️ Nhắn riêng cho một học viên</h3>
+    <label for="cmDmUser">Học viên</label>
+    <select id="cmDmUser" style="width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;background:var(--card);color:var(--t)"></select>
+    <label for="cmDmBody">Nội dung</label>
+    <textarea id="cmDmBody" rows="2" maxlength="4000" style="width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;background:var(--card);color:var(--t);box-sizing:border-box"></textarea>
+    <div style="margin-top:8px"><button class="primary" type="button" id="cmDmSend">Gửi tin</button> <span class="meta" id="cmDmMsg"></span></div>
+  </div>
+
+  <h2 style="margin-top:30px">🔐 Xem tin nhắn học viên (có mật khẩu)</h2>
+  <p class="meta">Mục này chỉ dùng khi cần xử lý an toàn/vi phạm. Mở xem bắt buộc nhập lại mật khẩu admin (kiểm tra phía máy chủ); quyền xem giữ tới khi đăng xuất hoặc bấm “Đóng quyền xem”. Mọi lần mở đều được ghi vào nhật ký truy cập bên dưới.</p>
+  <div id="cmGate"></div>
+  <div id="cmConvs"><p class="empty-note">Đang tải…</p></div>
+  <div id="cmView"></div>
+  <h3 style="margin-top:22px">📜 Nhật ký truy cập xem chat</h3>
+  <div id="cmLog"><p class="empty-note">Đang tải…</p></div>
 </div>
 </main>
-<script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=7af18363"></script>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=42d8793c"></script><script src="auth.js?v=7af18363"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 const loginBox=document.getElementById('loginBox'),panel=document.getElementById('panel');
@@ -106,5 +148,109 @@ document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
   tab=b.dataset.t;document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));load();
 });
 if(AUTH.sessionAdmin())showPanel();
+</script>
+<script>
+// ===== Cộng đồng + Chat (bổ sung 29/10): kiểm duyệt, báo cáo, phát thanh, xem chat có cổng mật khẩu =====
+const cmNames={};
+async function cmLoadNames(){for(const t of ['approved','locked','pending']){try{const j=await AUTH.adminUsers(t);(j.users||[]).forEach(u=>{cmNames[u.id]=u.name||u.email})}catch(e){}}}
+function cmName(id){if(id==='admin')return 'Admin';return cmNames[id]||id}
+let cmPostFilter='all',cmRepStatus='open',cmGranted=false;
+async function cmLoadPosts(){const box=document.getElementById('cmPosts');box.innerHTML='<p class="empty-note">Đang tải…</p>';
+ try{const j=await AUTH.api('/community/admin/posts?filter='+cmPostFilter,{admin:true});const ps=j.posts||[];
+  if(!ps.length){box.innerHTML='<p class="empty-note">Không có bài nào.</p>';return}
+  box.innerHTML=ps.map(p=>`<div class="userrow"><b>${esc(cmName(p.author_id))}</b> <span class="meta">${fmt(p.created_at)}</span>
+   ${p.pinned?'<span class="meta">📌 Đã ghim</span>':''}${p.hidden?'<span class="meta">· 🙈 Đã ẩn</span>':''}${p.deleted?'<span class="meta">· 🗑 Đã xoá</span>':''}
+   <div style="white-space:pre-wrap;margin:6px 0">${esc(p.body)}</div>
+   <div class="acts">
+    ${p.deleted?`<button class="ok" data-m="restore" data-id="${p.id}">Khôi phục</button>`:`<button class="lock" data-m="delete" data-id="${p.id}">Xoá</button>`}
+    ${!p.deleted?(p.hidden?`<button class="ok" data-m="show" data-id="${p.id}">Hiện</button>`:`<button class="lock" data-m="hide" data-id="${p.id}">Ẩn</button>`):''}
+    ${!p.deleted?(p.pinned?`<button class="lock" data-m="unpin" data-id="${p.id}">Bỏ ghim</button>`:`<button class="ok" data-m="pin" data-id="${p.id}">📌 Ghim</button>`):''}
+    <button class="lock" data-cmts="${p.id}">Bình luận</button>
+    <button class="lock" data-reset="${p.author_id}">Gỡ hồ sơ tác giả</button>
+   </div><div class="devpanel" hidden></div></div>`).join('');
+  box.querySelectorAll('button[data-m]').forEach(b=>b.onclick=async()=>{b.disabled=true;
+   try{await AUTH.api('/community/admin/moderate',{method:'POST',admin:true,body:{target_type:'post',id:b.dataset.id,action:b.dataset.m}});cmLoadPosts()}catch(e){alert(e.message);b.disabled=false}});
+  box.querySelectorAll('button[data-reset]').forEach(b=>b.onclick=async()=>{if(!confirm('Gỡ toàn bộ hồ sơ hiển thị (tên hiển thị, giới thiệu, cấp, mục tiêu, avatar) của học viên này?'))return;
+   try{await AUTH.api('/community/admin/profile-reset',{method:'POST',admin:true,body:{user_id:b.dataset.reset}});alert('Đã gỡ hồ sơ.')}catch(e){alert(e.message)}});
+  box.querySelectorAll('button[data-cmts]').forEach(b=>b.onclick=async()=>{const row=b.closest('.userrow'),p=row.querySelector('.devpanel');
+   if(!p.hidden){p.hidden=true;return}p.hidden=false;p.innerHTML='<p class="empty-note">Đang tải bình luận…</p>';
+   try{const j=await AUTH.api('/community/comments?post_id='+encodeURIComponent(b.dataset.cmts),{admin:true});const cs=j.comments||[];
+    p.innerHTML=cs.length?cs.map(c=>`<div class="meta" style="margin-top:8px"><b>${esc(cmName(c.author_id))}</b> · ${fmt(c.created_at)}${c.hidden?' · 🙈 đã ẩn':''}${c.deleted?' · 🗑 đã xoá':''}<br>${esc(c.deleted?'(đã xoá)':c.body)}<br>
+     ${c.deleted?`<button class="lock" data-cm="restore" data-id="${c.id}">Khôi phục</button>`:`<button class="lock" data-cm="delete" data-id="${c.id}">Xoá</button>`}
+     ${!c.deleted?(c.hidden?`<button class="lock" data-cm="show" data-id="${c.id}">Hiện</button>`:`<button class="lock" data-cm="hide" data-id="${c.id}">Ẩn</button>`):''}</div>`).join(''):'<p class="empty-note">Chưa có bình luận.</p>';
+    p.querySelectorAll('button[data-cm]').forEach(x=>x.onclick=async()=>{x.disabled=true;
+     try{await AUTH.api('/community/admin/moderate',{method:'POST',admin:true,body:{target_type:'comment',id:x.dataset.id,action:x.dataset.cm}});b.click();b.click()}catch(e){alert(e.message);x.disabled=false}})}
+   catch(e){p.innerHTML='<p class="empty-note">'+esc(e.message)+'</p>'}});
+ }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+function cmSnapshot(r){const s=r.snapshot||{};let h='';
+ if(r.target_type==='post')h='<div style="white-space:pre-wrap">'+esc(s.body||'')+'</div>'+(s.author_id?'<div class="meta">Tác giả: '+esc(cmName(s.author_id))+'</div>':'');
+ else if(r.target_type==='comment')h='<div style="white-space:pre-wrap">'+esc(s.body||'')+'</div>'+(s.author_id?'<div class="meta">Tác giả: '+esc(cmName(s.author_id))+'</div>':'');
+ else if(r.target_type==='chat'){const ms=Array.isArray(s)?s:[];h=ms.map(m=>'<div class="meta" style="margin-top:4px"><b>'+esc(cmName(m.sender_id))+'</b> · '+fmt(m.created_at)+(m.deleted?' · (đã xoá)':'')+'<br>'+esc(m.body||'(tệp đính kèm)')+'</div>').join('')||'<div class="meta">(Không có tin đính kèm)</div>'}
+ return h}
+async function cmLoadReports(){const box=document.getElementById('cmReports');box.innerHTML='<p class="empty-note">Đang tải…</p>';
+ try{const j=await AUTH.api('/community/admin/reports?status='+cmRepStatus,{admin:true});const rs=j.reports||[];
+  if(!rs.length){box.innerHTML='<p class="empty-note">Không có báo cáo nào.</p>';return}
+  box.innerHTML=rs.map(r=>`<div class="userrow"><b>${r.target_type==='post'?'📝 Bài đăng':r.target_type==='comment'?'💬 Bình luận':'💬 Cuộc trò chuyện'}</b>
+   <span class="meta">· Người báo cáo: ${esc(cmName(r.reporter_id))} · ${fmt(r.created_at)} · Trạng thái: ${esc(r.status)}</span>
+   ${r.reason?'<div class="meta">Lý do: '+esc(r.reason)+'</div>':''}<div style="margin:6px 0">${cmSnapshot(r)}</div>
+   <div class="acts">
+    ${r.status==='open'?`<button class="ok" data-ra="resolve" data-id="${r.id}">Đã xử lý</button><button class="lock" data-ra="dismiss" data-id="${r.id}">Bỏ qua</button>`:''}
+    ${(r.target_type==='post'||r.target_type==='comment')&&r.snapshot&&r.snapshot.author_id?`<button class="lock" data-rp="${esc(r.snapshot.author_id)}">Gỡ hồ sơ tác giả</button>`:''}
+   </div></div>`).join('');
+  box.querySelectorAll('button[data-ra]').forEach(b=>b.onclick=async()=>{b.disabled=true;
+   try{await AUTH.api('/community/admin/report-action',{method:'POST',admin:true,body:{id:b.dataset.id,action:b.dataset.ra}});cmLoadReports()}catch(e){alert(e.message);b.disabled=false}});
+  box.querySelectorAll('button[data-rp]').forEach(b=>b.onclick=async()=>{if(!confirm('Gỡ hồ sơ hiển thị của học viên này?'))return;
+   try{await AUTH.api('/community/admin/profile-reset',{method:'POST',admin:true,body:{user_id:b.dataset.rp}});alert('Đã gỡ hồ sơ.')}catch(e){alert(e.message)}});
+ }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+async function cmLoadBroadcasts(){const box=document.getElementById('cmBcList');
+ try{const j=await AUTH.api('/chat/admin/broadcasts',{admin:true});const bs=j.broadcasts||[];
+  box.innerHTML=bs.length?'<h4 style="margin:8px 0">Các lần phát thanh trước</h4>'+bs.map(b=>'<div class="meta" style="margin-top:6px">📣 '+fmt(b.created_at)+' · '+b.recipient_count+' người nhận<br>'+esc(b.body)+'</div>').join(''):''}catch(e){box.innerHTML=''}}
+async function cmFillUsers(){const sel=document.getElementById('cmDmUser');
+ try{const j=await AUTH.adminUsers('approved');const us=j.users||[];
+  sel.innerHTML=us.map(u=>'<option value="'+u.id+'">'+esc(u.name||u.email)+'</option>').join('')||'<option value="">(Chưa có học viên đã duyệt)</option>'}catch(e){}}
+async function cmGate(){const g=document.getElementById('cmGate');
+ try{const j=await AUTH.api('/chat/admin/view-state',{admin:true});cmGranted=!!j.granted;
+  g.innerHTML=cmGranted?'<p class="meta">🔓 Quyền xem đang mở cho phiên này. <button class="lock" type="button" id="cmLockView">Đóng quyền xem</button></p>'
+   :'<div class="authcard"><label for="cmGatePw">Mật khẩu admin (nhập lại để mở quyền xem)</label><input id="cmGatePw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="primary" type="button" id="cmUnlock">Mở quyền xem</button><div class="autherr" id="cmGateErr"></div></div>';
+  if(cmGranted){const b=document.getElementById('cmLockView');b.onclick=async()=>{try{await AUTH.api('/chat/admin/lock-view',{method:'POST',admin:true,body:{}})}catch(e){}cmGate();document.getElementById('cmView').innerHTML=''}}
+  else{const b=document.getElementById('cmUnlock');b.onclick=async()=>{const err=document.getElementById('cmGateErr');err.textContent='';
+   try{await AUTH.api('/chat/admin/unlock',{method:'POST',admin:true,body:{password:document.getElementById('cmGatePw').value}});cmGate();cmLoadLog()}catch(e){err.textContent=e.message}}}
+ }catch(e){g.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+async function cmLoadConvs(){const box=document.getElementById('cmConvs');box.innerHTML='<p class="empty-note">Đang tải…</p>';
+ try{const j=await AUTH.api('/chat/admin/conversations',{admin:true});const cs=j.conversations||[];
+  if(!cs.length){box.innerHTML='<p class="empty-note">Chưa có cuộc trò chuyện nào giữa học viên.</p>';return}
+  box.innerHTML=cs.map(c=>`<div class="userrow"><b>${esc(cmName(c.user_a))}</b> ↔ <b>${esc(cmName(c.user_b))}</b>
+   <div class="meta">Tin cuối: ${c.last_at?fmt(c.last_at):'—'}</div>
+   <div class="acts"><button class="lock" data-view="${c.id}">Xem cuộc trò chuyện</button></div></div>`).join('');
+  box.querySelectorAll('button[data-view]').forEach(b=>b.onclick=()=>cmViewConv(b.dataset.view));
+ }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+async function cmViewConv(id){const box=document.getElementById('cmView');
+ if(!cmGranted){box.innerHTML='<p class="empty-note">🔒 Cần mở quyền xem bằng mật khẩu admin ở trên trước.</p>';cmGate();return}
+ box.innerHTML='<p class="empty-note">Đang tải tin nhắn…</p>';
+ try{const j=await AUTH.api('/chat/admin/messages?conv_id='+encodeURIComponent(id),{admin:true});const ms=j.messages||[];
+  box.innerHTML='<div class="authcard"><h3 style="margin-top:0">'+esc(cmName(j.user_a))+' ↔ '+esc(cmName(j.user_b))+'</h3>'
+  +(ms.length?ms.map(m=>'<div class="meta" style="margin-top:6px"><b>'+esc(cmName(m.sender_id))+'</b> · '+fmt(m.created_at)+(m.deleted?' · (người gửi đã xoá — nội dung gốc bên dưới)':'')+'<br><span style="white-space:pre-wrap">'+esc(m.body||'(tệp đính kèm)')+'</span></div>').join(''):'<p class="empty-note">Chưa có tin nhắn.</p>')
+  +'</div>';cmLoadLog();
+ }catch(e){if(e.body&&e.body.code==='need_unlock'){cmGranted=false;cmGate()}box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+async function cmLoadLog(){const box=document.getElementById('cmLog');
+ try{const j=await AUTH.api('/chat/admin/access-log',{admin:true});const ls=j.log||[];
+  box.innerHTML=ls.length?ls.map(l=>'<div class="meta" style="margin-top:5px">'+(l.kind==='unlock'?'🔓 Mở quyền xem':'👁 Mở xem: '+esc(cmName(l.user_a))+' ↔ '+esc(cmName(l.user_b)))+' · '+fmt(l.opened_at)+'</div>').join(''):'<p class="empty-note">Chưa có lượt truy cập nào.</p>';
+ }catch(e){box.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>'}}
+let cmInited=false;
+async function cmInit(){if(cmInited)return;cmInited=true;await cmLoadNames();cmGate();cmLoadPosts();cmLoadReports();cmLoadBroadcasts();cmFillUsers();cmLoadConvs();cmLoadLog()}
+document.querySelectorAll('#cmPostTabs button').forEach(b=>b.onclick=()=>{cmPostFilter=b.dataset.f;document.querySelectorAll('#cmPostTabs button').forEach(x=>x.classList.toggle('on',x===b));cmLoadPosts()});
+document.querySelectorAll('#cmRepTabs button').forEach(b=>b.onclick=()=>{cmRepStatus=b.dataset.s;document.querySelectorAll('#cmRepTabs button').forEach(x=>x.classList.toggle('on',x===b));cmLoadReports()});
+document.getElementById('cmBcSend').onclick=async()=>{const body=document.getElementById('cmBcBody').value.trim();if(!body){alert('Hãy nhập nội dung phát thanh.');return}
+ let n=0;try{const j=await AUTH.adminUsers('approved');n=(j.users||[]).length}catch(e){}
+ if(!confirm('Gửi phát thanh tới '+n+' học viên đã duyệt? Nội dung sẽ vào luồng chat Admin của từng người.'))return;
+ const b=document.getElementById('cmBcSend');b.disabled=true;
+ try{const j=await AUTH.api('/chat/admin/broadcast',{method:'POST',admin:true,body:{body}});alert('Đã phát thanh tới '+j.recipient_count+' học viên.');document.getElementById('cmBcBody').value='';cmLoadBroadcasts()}catch(e){alert(e.message)}b.disabled=false};
+document.getElementById('cmDmSend').onclick=async()=>{const uid=document.getElementById('cmDmUser').value;const body=document.getElementById('cmDmBody').value.trim();const msg=document.getElementById('cmDmMsg');
+ if(!uid||!body){msg.textContent='Chọn học viên và nhập nội dung.';return}
+ const b=document.getElementById('cmDmSend');b.disabled=true;msg.textContent='';
+ try{await AUTH.api('/chat/admin/send',{method:'POST',admin:true,body:{user_id:uid,body}});msg.textContent='Đã gửi ✅';document.getElementById('cmDmBody').value=''}catch(e){msg.textContent=e.message}b.disabled=false};
+document.getElementById('alogin').addEventListener('click',()=>{setTimeout(cmInit,600)});
+document.getElementById('aout').addEventListener('click',()=>{AUTH.api('/chat/admin/lock-view',{method:'POST',admin:true,body:{}}).catch(()=>{})});
+if(AUTH.sessionAdmin())cmInit();
 </script>
 </body></html>
