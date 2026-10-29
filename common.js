@@ -322,3 +322,271 @@ function tb(){var av=document.querySelector('.topbar .hdr-av'),who=document.quer
   document.addEventListener('hn-hoso',slogan);
   return {open:open,close:close,get:g,slogan:slogan};
 })();
+
+// ===== Khung chat thu gọn (dock) dùng chung toàn trang =====
+// Gắn qua common.js: học viên nhắn tin ngay trong trang đang học, không phải
+// rời sang trang Tin nhắn. Thu gọn = nút tròn (máy tính) / thanh mỏng ngay
+// trên thanh tab (điện thoại); bung ra = danh sách hội thoại + 1 cuộc trò
+// chuyện (chữ + ảnh). Tính năng nặng (cảm xúc, trả lời trích dẫn…) ở trang
+// tin-nhan.html đầy đủ. KHÔNG có chỉ báo "đang gõ…".
+// Chỉ hiện khi đã có phiên học viên; không gắn ở trang đăng nhập/chờ duyệt/
+// quản trị và trang Tin nhắn (đã là khung chat đầy đủ). Riêng cong-dong.html:
+// máy tính ≥1000px trang đã có cửa sổ chat nổi riêng (.cd-dock) nên dock này
+// chỉ gắn ở bề rộng <1000px để không chồng lên nhau.
+(function(){
+var PAGE=(location.pathname||'').split('/').pop()||'index.html';
+if(/^(dang-nhap|dang-cho|admin|tin-nhan)\.html$/.test(PAGE))return;
+function sess(){try{return localStorage.getItem('hn_sess_v1')||''}catch(e){return ''}}
+if(!sess())return;
+var EP=(typeof SITE!='undefined'&&SITE&&SITE.aiEndpoint)||'';
+if(!EP)return;
+EP=EP.replace(/\/$/,'');
+var CDMQ=(PAGE==='cong-dong.html'&&window.matchMedia)?window.matchMedia('(max-width:999px)'):null;
+if(CDMQ&&!CDMQ.matches)return;
+
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+async function api(path,opts){opts=opts||{};var h={'Content-Type':'application/json'};var t=sess();if(t)h.Authorization='Bearer '+t;
+ var r=await fetch(EP+path,{method:opts.method||'GET',headers:h,body:opts.body?JSON.stringify(opts.body):undefined});
+ var j=await r.json().catch(function(){return{}});if(!r.ok){var e=new Error(j.error||('Lỗi '+r.status));e.status=r.status;e.body=j;throw e}return j}
+var COLORS=['#cf3a2e','#233d63','#2e7d4f','#8a5a00','#6a3fa0','#0f6f7a','#a03d63','#4c5866'];
+function color(id){var h=0,s=String(id||'');for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return COLORS[h%COLORS.length]}
+function when(t){try{var d=new Date(t),s=(Date.now()-d)/1000;if(s<60)return'vừa xong';if(s<3600)return Math.floor(s/60)+' phút';if(s<86400)return Math.floor(s/3600)+' giờ';if(s<86400*7)return Math.floor(s/86400)+' ngày';return d.toLocaleDateString('vi-VN')}catch(e){return''}}
+function hmt(t){try{return new Date(t).toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})}catch(e){return''}}
+function isOn(p){if(!p)return false;if(typeof p.online!=='undefined')return !!p.online;var ls=p.last_seen;if(ls){try{return (Date.now()-new Date(ls).getTime())<120000}catch(e){return false}}return false}
+
+var CSS=''
++'.hdk{font-size:15px;color:var(--t)}'
++'.hdk-fab{position:fixed;right:20px;bottom:20px;z-index:72;width:56px;height:56px;border-radius:50%;border:0;background:var(--c2);color:#fff;font-size:25px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(20,26,38,.35);display:flex;align-items:center;justify-content:center;transition:transform .18s ease,background .18s ease}'
++'.hdk-fab:hover{transform:translateY(-2px)}'
++'.hdk-bar{display:none}'
++'.hdk-bdg{position:absolute;top:-3px;right:-3px;background:var(--c);color:#fff;border-radius:999px;min-width:20px;height:20px;font-size:11.5px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 5px;border:2px solid var(--card)}'
++'.hdk-bdg.on{display:inline-flex}'
++'.hdk-panel{margin:0;padding:0;position:fixed;right:20px;bottom:88px;z-index:72;width:340px;max-width:calc(100vw - 24px);height:min(520px,calc(100vh - 120px));background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 48px rgba(15,20,30,.28);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .22s ease,transform .22s ease,visibility .22s}'
++'.hdk[data-state="list"] .hdk-panel,.hdk[data-state="chat"] .hdk-panel{opacity:1;visibility:visible;transform:none}'
++'.hdk-ph{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);min-height:52px;box-sizing:border-box}'
++'.hdk-ph b{font-size:16px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
++'.hdk-ic{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:0;background:var(--soft);color:var(--t);font-size:17px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}'
++'.hdk-ic:hover{filter:brightness(.96)}'
++'.hdk-items{flex:1;overflow-y:auto;padding:6px}'
++'.hdk-it{display:flex;gap:10px;width:100%;text-align:left;background:none;border:0;border-radius:12px;padding:9px 8px;font:inherit;color:var(--t);cursor:pointer;align-items:center}'
++'.hdk-it:hover{background:var(--soft)}'
++'.hdk-ava{position:relative;width:44px;height:44px;border-radius:50%;flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:17px;overflow:visible}'
++'.hdk-ava img{width:100%;height:100%;border-radius:50%;object-fit:cover}'
++'.hdk-ava.sm{width:30px;height:30px;flex-basis:30px;font-size:12.5px}'
++'.hdk-onl{position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#31a24c;border:2px solid var(--card)}'
++'.hdk-imid{flex:1;min-width:0}'
++'.hdk-inm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;gap:6px;align-items:center}'
++'.hdk-lv{font-size:11px;font-weight:700;background:var(--soft);color:var(--c2);border-radius:999px;padding:1px 7px}'
++'.hdk-adm{font-size:11px;font-weight:700;background:var(--shu-soft,#faecea);color:var(--c);border-radius:999px;padding:1px 7px}'
++'.hdk-ipv{color:var(--m);font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
++'.hdk-it.un .hdk-ipv{color:var(--t);font-weight:600}'
++'.hdk-irt{flex:0 0 auto;text-align:right}'
++'.hdk-itm{color:var(--m);font-size:12px}'
++'.hdk-cbdg{display:inline-flex;margin-top:3px;background:var(--c);color:#fff;border-radius:999px;min-width:19px;height:19px;font-size:11px;font-weight:700;align-items:center;justify-content:center;padding:0 5px}'
++'.hdk-empty{padding:22px 14px;color:var(--m);text-align:center;line-height:1.6}'
++'.hdk-msgs{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}'
++'.hdk-row{display:flex;gap:7px;align-items:flex-end;max-width:100%}'
++'.hdk-row.me{flex-direction:row-reverse}'
++'.hdk-bub{max-width:76%;background:var(--card);border:1px solid var(--line);border-radius:16px 16px 16px 5px;padding:8px 11px;line-height:1.5;word-break:break-word;white-space:pre-wrap;font-size:14.5px}'
++'.hdk-row.me .hdk-bub{background:var(--c2);border-color:var(--c2);color:#fff;border-radius:16px 16px 5px 16px}'
++'.hdk-bub img{max-width:100%;border-radius:10px;display:block;margin:2px 0}'
++'.hdk-tm{font-size:11px;opacity:.65;margin-top:3px;text-align:right}'
++'.hdk-row.me .hdk-tm{text-align:right}'
++'.hdk-at{color:var(--c2);font-weight:600}'
++'.hdk-row.me .hdk-at{color:#bcd6ff}'
++'.hdk-quote{border-left:3px solid var(--c);background:var(--soft);border-radius:6px;padding:4px 8px;font-size:13px;margin-bottom:5px;color:var(--t)}'
++'.hdk-row.me .hdk-quote{background:rgba(255,255,255,.14);color:#fff;border-left-color:#fff}'
++'.hdk-share{display:block;text-decoration:none;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:8px 10px;color:var(--t);margin-bottom:5px;font-size:13.5px}'
++'.hdk-doc{display:inline-block;text-decoration:none;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:6px 10px;color:var(--t);font-size:13.5px;margin:2px 0}'
++'.hdk-rcpt{align-self:flex-end;font-size:11.5px;color:var(--m);padding:0 4px}'
++'.hdk-form{display:flex;gap:7px;align-items:flex-end;padding:9px 10px;border-top:1px solid var(--line);background:var(--card)}'
++'.hdk-in{flex:1;font:inherit;font-size:15px;line-height:1.4;max-height:74px;resize:none;border:1.5px solid var(--line);border-radius:18px;padding:9px 13px;outline:none;background:var(--card);color:var(--t);box-sizing:border-box}'
++'.hdk-in:focus{border-color:var(--c2)}'
++'.hdk-send{flex:0 0 auto;border:0;border-radius:999px;background:var(--c);color:#fff;font:inherit;font-weight:700;padding:10px 16px;cursor:pointer;min-height:42px}'
++'.hdk-send:disabled{opacity:.55;cursor:default}'
++'.hdk-imgb{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:0;background:var(--soft);font-size:18px;cursor:pointer}'
++'.hdk-chip{display:none;align-items:center;gap:8px;margin:0 10px;padding:7px 10px;background:var(--soft);border-radius:10px;font-size:13px}'
++'.hdk-chip.on{display:flex}.hdk-chip span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
++'.hdk-chip button{border:0;background:none;cursor:pointer;font-size:14px;color:var(--m)}'
++'.hdk-err{display:none;margin:0;padding:7px 12px;color:var(--c);font-size:13px;background:var(--card)}'
++'.hdk-err.on{display:block}'
++'.hdk-status{font-size:12.5px;color:var(--m);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
++'.hdk-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#31a24c;margin-right:5px;vertical-align:1px}'
++'.hdk.hdk-lift .hdk-fab{bottom:76px}'
++'.hdk.hdk-lift .hdk-panel{bottom:144px}'
++'@media(max-width:860px){'
++'.hdk-fab{display:none}'
++'.hdk-bar{display:flex;position:fixed;left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));z-index:72;height:42px;border:0;border-top:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-size:14.5px;align-items:center;gap:8px;padding:0 14px;cursor:pointer;box-shadow:0 -4px 14px rgba(15,20,30,.07)}'
++'.hdk-bar .hdk-bdg{position:static;border:0}'
++'.hdk-bar-tx{font-weight:700;flex:0 0 auto}'
++'.hdk-bar-pv{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--m);text-align:left}'
++'body.hdk-on{padding-bottom:calc(118px + env(safe-area-inset-bottom,0px))}'
++'.hdk-panel{left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));top:60px;width:auto;max-width:none;height:auto;border-radius:18px 18px 0 0;border-bottom:0}'
++'.hdk.hdk-lift .hdk-bar{bottom:calc(124px + env(safe-area-inset-bottom,0px))}'
++'.hdk.hdk-lift .hdk-panel{bottom:calc(124px + env(safe-area-inset-bottom,0px))}'
++'}';
+
+var SSK='hdk_v1';
+var S={open:false,view:'list',conv:null,other:null};
+function saveS(){try{sessionStorage.setItem(SSK,JSON.stringify({o:S.open?1:0,v:S.view,c:S.conv||null,u:S.other?{id:S.other.id,name:S.other.name||''}:null}))}catch(e){}}
+function loadS(){try{var j=JSON.parse(sessionStorage.getItem(SSK)||'null');if(j&&typeof j==='object'){S.open=!!j.o;S.view=j.v==='chat'?'chat':'list';S.conv=j.c||null;S.other=j.u||null}}catch(e){}}
+var CONVS=[],MSGS=[],STORAGE=false,pendFile=null,loadingMsgs=false,dead=false,timers=[];
+var root,fabEl,barEl,barPv,bdgEls,panel,listBox,chatBox,msgBox,inEl,errEl,chipEl,phTitle,phSub,chatHead;
+var FURL={};
+
+function avaHTML(p,sm){if(!p)return '<span class="hdk-ava'+(sm?' sm':'')+'" style="background:#8593a2">?</span>';
+ var ini=esc(((p.name||'?').trim().charAt(0)||'?').toUpperCase());
+ if(p.avatar_file)return '<span class="hdk-ava'+(sm?' sm':'')+'" style="background:'+color(p.id)+'"><img data-hdkf="'+esc(p.avatar_file)+'" alt="" loading="lazy" onerror="this.remove()">'+(isOn(p)?'<span class="hdk-onl"></span>':'')+'</span>';
+ return '<span class="hdk-ava'+(sm?' sm':'')+'" style="background:'+color(p.id)+'">'+ini+(isOn(p)?'<span class="hdk-onl"></span>':'')+'</span>'}
+async function resolveFiles(scope){if(!scope)return;var ids=[];scope.querySelectorAll('[data-hdkf]').forEach(function(el){var id=el.getAttribute('data-hdkf');if(id&&!FURL[id]&&ids.indexOf(id)<0)ids.push(id)});
+ scope.querySelectorAll('[data-hdkf]').forEach(function(el){var id=el.getAttribute('data-hdkf');if(id&&FURL[id]){if(el.tagName==='A')el.href=FURL[id];else el.src=FURL[id]}});
+ if(!ids.length)return;
+ try{var j=await api('/community/file-token',{method:'POST',body:{ids:ids.slice(0,60)}});var map=j.urls||{};Object.keys(map).forEach(function(k){var v=String(map[k]);FURL[k]=v.charAt(0)==='/'?EP+v:v});
+  scope.querySelectorAll('[data-hdkf]').forEach(function(el){var id=el.getAttribute('data-hdkf');if(id&&FURL[id]){if(el.tagName==='A')el.href=FURL[id];else el.src=FURL[id]}})}catch(e){}}
+function convPreview(c){var t=String(c.last_text||'');if(c.last_kind==='post')t='↗️ Đã chia sẻ một bài viết';if(!t)t='Chưa có tin nhắn';return (c.last_mine?'Bạn: ':'')+t}
+function setBadge(n){bdgEls.forEach(function(b){b.textContent=n>99?'99+':String(n);b.classList.toggle('on',n>0)})}
+function renderBar(){var c=CONVS[0];if(!c){barPv.textContent='Nhắn tin với bạn học';return}
+ barPv.textContent=((c.other&&c.other.name)?c.other.name+': ':'')+convPreview(c)}
+function convHTML(c){var p=c.other||{};var on=isOn(p)||isOn(c);var adm=c.is_admin||p.admin;
+ return '<button type="button" class="hdk-it'+(c.unread?' un':'')+'" data-conv="'+esc(c.id)+'">'
+ +avaHTML(p)
+ +'<span class="hdk-imid"><span class="hdk-inm">'+esc(p.name||'Học viên')+(p.level?'<span class="hdk-lv">'+esc(p.level)+'</span>':'')+(adm?'<span class="hdk-adm">Admin</span>':'')+'</span>'
+ +'<span class="hdk-ipv">'+esc(convPreview(c))+'</span></span>'
+ +'<span class="hdk-irt">'+(c.last_at?'<span class="hdk-itm">'+when(c.last_at)+'</span>':'')+(c.unread?'<br><span class="hdk-cbdg">'+c.unread+'</span>':'')+'</span></button>'}
+function renderList(){if(!CONVS.length){listBox.innerHTML='<div class="hdk-empty">Chưa có cuộc trò chuyện nào.<br>Vào trang Cộng đồng hoặc Bạn bè để bắt đầu nhắn tin nhé 💬</div>';return}
+ listBox.innerHTML=CONVS.map(convHTML).join('');resolveFiles(listBox)}
+function bodyHTML(m){var b=esc(m.body||'');var mp=m.mentions||{};
+ return b.replace(/@\[([^\]]+)\]/g,function(t,id){return mp[id]?'<span class="hdk-at">@'+esc(mp[id])+'</span>':t}).replace(/\n/g,'<br>')}
+function msgHTML(m){if(m.deleted)return '<div class="hdk-row'+(m.mine?' me':'')+'"><div class="hdk-bub" style="font-style:italic;opacity:.75">Tin nhắn đã bị xoá</div></div>';
+ var inner='';
+ if(m.kind==='post'&&m.ref_id){var ex=(m.post&&m.post.body)?esc(String(m.post.body).slice(0,90))+'…':'Bài viết được chia sẻ';
+  inner+='<a class="hdk-share" href="cong-dong.html#post-'+esc(m.ref_id)+'">📌 '+ex+'</a>'}
+ if(m.reply_preview&&!m.reply_preview.deleted)inner+='<div class="hdk-quote">'+esc(m.reply_preview.body||'')+'</div>';
+ if(m.body)inner+='<div>'+bodyHTML(m)+'</div>';
+ if(m.file){if(m.file.kind==='image')inner+='<img data-hdkf="'+esc(m.file.id)+'" alt="'+esc(m.file.name||'Ảnh đính kèm')+'">';
+  else inner+='<a class="hdk-doc" data-hdkf="'+esc(m.file.id)+'" href="#" onclick="return false">📎 '+esc(m.file.name||'Tệp đính kèm')+'</a>'}
+ if(!inner)inner='<div>📎 Tệp đính kèm</div>';
+ inner+='<div class="hdk-tm">'+hmt(m.created_at)+'</div>';
+ return '<div class="hdk-row'+(m.mine?' me':'')+'">'+(m.mine?'':avaHTML(S.other,true))+'<div class="hdk-bub">'+inner+'</div></div>'}
+function renderMsgs(){if(!MSGS.length){msgBox.innerHTML='<div class="hdk-empty">Hãy gửi lời chào đầu tiên nhé 👋</div>';return}
+ var html=MSGS.map(msgHTML).join('');
+ var lastMine=null;for(var i=MSGS.length-1;i>=0;i--){if(MSGS[i].mine){lastMine=MSGS[i];break}}
+ if(lastMine&&lastMine.read_at)html+='<div class="hdk-rcpt">Đã xem ✓✓</div>';
+ msgBox.innerHTML=html;resolveFiles(msgBox);msgBox.scrollTop=msgBox.scrollHeight}
+function msgSig(){return MSGS.map(function(m){return [m.id,m.read_at?1:0,m.deleted?1:0].join(':')}).join('|')}
+function statusTx(){var p=S.other;if(!p)return 'Nhắn tin riêng';
+ if(S.isAdmin)return 'Quản trị viên · Chính thức';
+ if(isOn(p))return '<span class="hdk-dot"></span>Đang hoạt động';
+ if(p.last_seen)return 'Hoạt động '+when(p.last_seen)+' trước';return 'Nhắn tin riêng'}
+function paint(){if(!root)return;root.dataset.state=S.open?(S.view==='chat'?'chat':'list'):'closed';
+ fabEl.setAttribute('aria-expanded',S.open?'true':'false');barEl.setAttribute('aria-expanded',S.open?'true':'false');
+ listBox.style.display=S.view==='chat'?'none':'';chatBox.style.display=S.view==='chat'?'flex':'none';
+ var ph=document.getElementById('hdkphList'),pc=document.getElementById('hdkphChat');
+ ph.style.display=S.view==='chat'?'none':'flex';pc.style.display=S.view==='chat'?'flex':'none';
+ if(S.view==='chat'&&S.other){phTitle.textContent=S.other.name||'Học viên';phSub.innerHTML=statusTx();
+  var lk=document.getElementById('hdkFull');lk.href='tin-nhan.html?conv='+encodeURIComponent(S.conv||'');
+  var av=document.getElementById('hdkChatAva');av.innerHTML=avaHTML(S.other);resolveFiles(av)}
+ saveS()}
+async function refreshBadge(){try{var j=await api('/community/unread');setBadge(j.chat||0)}catch(e){}}
+async function loadConvs(quiet){try{var j=await api('/chat/conversations');CONVS=j.conversations||[];STORAGE=!!j.storage_enabled;
+ var ib=document.getElementById('hdkImgB');if(ib)ib.style.display=STORAGE?'':'none';
+ renderBar();if(S.view!=='chat')renderList();
+ if(S.conv){var c=CONVS.find(function(x){return x.id===S.conv});if(c){S.other=c.other||S.other;S.isAdmin=!!c.is_admin;if(S.view==='chat')paint()}}
+ }catch(e){if(e.status===401||e.status===403){dead=true;unmount()}else if(!quiet){listBox.innerHTML='<div class="hdk-empty">Không tải được danh sách hội thoại.<br>Đóng khung rồi mở lại để thử lại nhé.</div>'}}}
+async function loadMsgs(quiet){if(!S.conv||loadingMsgs)return;loadingMsgs=true;
+ try{var j=await api('/chat/messages?conv_id='+encodeURIComponent(S.conv));
+  if(j.other){S.other=j.other}if(typeof j.is_admin!=='undefined')S.isAdmin=!!j.is_admin;
+  var before=msgSig();MSGS=j.messages||[];
+  if(!quiet||msgSig()!==before){renderMsgs();paint()}
+  var c=CONVS.find(function(x){return x.id===S.conv});if(c&&c.unread){c.unread=0}
+  refreshBadge();
+ }catch(e){if(!quiet)showErr('Không tải được tin nhắn.')}loadingMsgs=false}
+function showErr(t){errEl.textContent=t;errEl.classList.add('on');setTimeout(function(){errEl.classList.remove('on')},4000)}
+async function openConv(id){var c=CONVS.find(function(x){return x.id===id});S.conv=id;if(c){S.other=c.other||S.other;S.isAdmin=!!c.is_admin}
+ S.view='chat';S.open=true;MSGS=[];msgBox.innerHTML='<div class="hdk-empty">Đang tải tin nhắn…</div>';paint();await loadMsgs(false)}
+function openDock(view){S.open=true;if(view)S.view=view;if(S.view==='chat'&&!S.conv)S.view='list';paint();
+ if(S.view==='chat'&&S.conv){loadMsgs(true)}else{loadConvs(true)}
+ if(window.innerWidth>860&&S.view==='chat')setTimeout(function(){try{inEl.focus()}catch(e){}},60)}
+function closeDock(){S.open=false;paint()}
+async function shrinkImage(file){if(!/^image\//.test(file.type))return file;
+ return new Promise(function(res){var url;try{url=URL.createObjectURL(file)}catch(e){res(file);return}
+ var img=new Image();
+ img.onload=function(){URL.revokeObjectURL(url);var mx=1600,w=img.naturalWidth,h=img.naturalHeight;if(w<=mx&&h<=mx&&file.size<=2*1024*1024){res(file);return}
+  var k=Math.min(1,mx/Math.max(w,h));var cv=document.createElement('canvas');cv.width=Math.round(w*k);cv.height=Math.round(h*k);
+  cv.getContext('2d').drawImage(img,0,0,cv.width,cv.height);cv.toBlob(function(b){res(b?new File([b],file.name.replace(/\.\w+$/,'.jpg'),{type:'image/jpeg'}):file)},'image/jpeg',0.82)};
+ img.onerror=function(){URL.revokeObjectURL(url);res(file)};img.src=url})}
+async function send(){if(!S.conv)return;var body=inEl.value.trim();if(!body&&!pendFile)return;
+ var btn=document.getElementById('hdkSend');btn.disabled=true;
+ try{var fileId;
+  if(pendFile){var f=await shrinkImage(pendFile);var fd=new FormData();fd.append('purpose','chat');fd.append('file',f);
+   var r=await fetch(EP+'/community/upload',{method:'POST',headers:{Authorization:'Bearer '+sess()},body:fd});
+   var ju=await r.json().catch(function(){return{}});if(!r.ok)throw new Error(ju.error||('Lỗi tải ảnh '+r.status));fileId=(ju.file&&ju.file.id)||ju.id;
+   pendFile=null;paintChip()}
+  var j=await api('/chat/send',{method:'POST',body:{conv_id:S.conv,body:body,file_id:fileId}});
+  inEl.value='';inEl.style.height='auto';
+  if(j.message){MSGS.push(j.message);renderMsgs()}
+  loadConvs(true);
+ }catch(e){showErr(e.message||'Không gửi được tin nhắn.')}
+ btn.disabled=false;if(window.innerWidth>860)inEl.focus()}
+function paintChip(){if(pendFile){chipEl.classList.add('on');chipEl.querySelector('span').textContent='🖼 '+pendFile.name}else{chipEl.classList.remove('on')}}
+function heartbeat(){if(document.hidden)return;api('/community/heartbeat',{method:'POST',body:{}}).catch(function(){})}
+function tickBadge(){if(document.hidden||dead)return;refreshBadge();
+ var ob=document.querySelector('.offbar');root.classList.toggle('hdk-lift',!!ob)}
+function mount(){
+ loadS();
+ var st=document.createElement('style');st.id='hdkcss';st.textContent=CSS;document.head.appendChild(st);
+ root=document.createElement('div');root.className='hdk';root.id='hdk';root.dataset.state='closed';
+ root.innerHTML=''
+ +'<button type="button" class="hdk-fab" id="hdkFab" aria-label="Mở khung nhắn tin" aria-expanded="false">💬<span class="hdk-bdg"></span></button>'
+ +'<button type="button" class="hdk-bar" id="hdkBar" aria-label="Mở khung nhắn tin" aria-expanded="false">💬<span class="hdk-bar-tx">Tin nhắn</span><span class="hdk-bar-pv">Nhắn tin với bạn học</span><span class="hdk-bdg"></span></button>'
+ +'<div class="hdk-panel" role="dialog" aria-label="Khung nhắn tin">'
+ +'<div class="hdk-ph" id="hdkphList"><b>💬 Tin nhắn</b><a class="hdk-ic" href="tin-nhan.html" title="Mở trang Tin nhắn đầy đủ" aria-label="Mở trang Tin nhắn đầy đủ">↗</a><button type="button" class="hdk-ic" id="hdkX1" aria-label="Thu gọn">✕</button></div>'
+ +'<div class="hdk-ph" id="hdkphChat" style="display:none"><button type="button" class="hdk-ic" id="hdkBack" aria-label="Về danh sách">‹</button><span id="hdkChatAva"></span><span style="flex:1;min-width:0"><b id="hdkName"></b><br><span class="hdk-status" id="hdkStatus"></span></span><a class="hdk-ic" id="hdkFull" href="tin-nhan.html" title="Mở trong trang Tin nhắn" aria-label="Mở trong trang Tin nhắn">↗</a><button type="button" class="hdk-ic" id="hdkX2" aria-label="Thu gọn">✕</button></div>'
+ +'<div class="hdk-items" id="hdkList"></div>'
+ +'<div id="hdkChat" style="display:none;flex:1;flex-direction:column;min-height:0">'
+ +'<div class="hdk-msgs" id="hdkMsgs"></div>'
+ +'<p class="hdk-err" id="hdkErr" role="status"></p>'
+ +'<div class="hdk-chip" id="hdkChip"><span></span><button type="button" id="hdkChipX" aria-label="Bỏ ảnh đính kèm">✕</button></div>'
+ +'<form class="hdk-form" id="hdkForm"><button type="button" class="hdk-imgb" id="hdkImgB" aria-label="Gửi ảnh">🖼</button><input type="file" id="hdkFile" accept="image/*" hidden><textarea class="hdk-in" id="hdkIn" rows="1" maxlength="4000" placeholder="Nhắn tin…" aria-label="Nhắn tin"></textarea><button type="submit" class="hdk-send" id="hdkSend">Gửi</button></form>'
+ +'</div></div>';
+ document.body.appendChild(root);
+ document.body.classList.add('hdk-on');
+ fabEl=root.querySelector('#hdkFab');barEl=root.querySelector('#hdkBar');barPv=root.querySelector('.hdk-bar-pv');
+ bdgEls=[root.querySelector('#hdkFab .hdk-bdg'),root.querySelector('#hdkBar .hdk-bdg')];
+ panel=root.querySelector('.hdk-panel');listBox=root.querySelector('#hdkList');chatBox=root.querySelector('#hdkChat');
+ msgBox=root.querySelector('#hdkMsgs');inEl=root.querySelector('#hdkIn');errEl=root.querySelector('#hdkErr');chipEl=root.querySelector('#hdkChip');
+ phTitle=root.querySelector('#hdkName');phSub=root.querySelector('#hdkStatus');chatHead=root.querySelector('#hdkphChat');
+ fabEl.addEventListener('click',function(){S.open?closeDock():openDock()});
+ barEl.addEventListener('click',function(){S.open?closeDock():openDock()});
+ root.querySelector('#hdkX1').addEventListener('click',closeDock);
+ root.querySelector('#hdkX2').addEventListener('click',closeDock);
+ root.querySelector('#hdkBack').addEventListener('click',function(){S.view='list';paint();renderList()});
+ listBox.addEventListener('click',function(e){var b=e.target.closest?e.target.closest('[data-conv]'):null;if(b)openConv(b.getAttribute('data-conv'))});
+ root.querySelector('#hdkForm').addEventListener('submit',function(e){e.preventDefault();send()});
+ inEl.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}});
+ inEl.addEventListener('input',function(){inEl.style.height='auto';inEl.style.height=Math.min(inEl.scrollHeight,74)+'px'});
+ var fIn=root.querySelector('#hdkFile');
+ root.querySelector('#hdkImgB').addEventListener('click',function(){fIn.click()});
+ fIn.addEventListener('change',function(){if(fIn.files&&fIn.files[0]){pendFile=fIn.files[0];paintChip()}fIn.value=''});
+ root.querySelector('#hdkChipX').addEventListener('click',function(){pendFile=null;paintChip()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&S.open)closeDock()});
+ document.addEventListener('visibilitychange',function(){if(document.hidden||dead)return;refreshBadge();heartbeat();
+  if(S.open){if(S.view==='chat')loadMsgs(true);else loadConvs(true)}});
+ timers.push(setInterval(tickBadge,60000));
+ timers.push(setInterval(function(){if(!document.hidden&&!dead&&S.open&&S.view==='chat')loadMsgs(true)},10000));
+ timers.push(setInterval(function(){if(!document.hidden&&!dead&&S.open&&S.view!=='chat')loadConvs(true)},30000));
+ timers.push(setInterval(heartbeat,75000));
+ paint();
+ refreshBadge();heartbeat();
+ loadConvs(true).then(function(){if(dead||!root)return;if(S.open&&S.view==='chat'&&S.conv){paint();loadMsgs(true)}
+  else if(S.open){paint()}});
+}
+function unmount(){timers.forEach(clearInterval);timers=[];
+ if(root&&root.parentNode)root.parentNode.removeChild(root);root=null;
+ document.body.classList.remove('hdk-on');
+ var cs=document.getElementById('hdkcss');if(cs)cs.remove()}
+if(CDMQ){var onchg=function(){if(CDMQ.matches){if(!root)mount()}else{if(root){unmount();root=null}}};
+ if(CDMQ.addEventListener)CDMQ.addEventListener('change',onchg);else if(CDMQ.addListener)CDMQ.addListener(onchg)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
+})();
+
