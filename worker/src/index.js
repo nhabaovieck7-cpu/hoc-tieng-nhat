@@ -1999,6 +1999,52 @@ async function handleStats(req, env, c, path) {
   return J({ error: 'Không tìm thấy API' }, 404, c.h);
 }
 
+
+// ===== Học thử miễn phí (29/10/2026, Khánh duyệt): người chưa đăng nhập đọc được
+// N5 toàn bộ, N4 nửa đầu mỗi phần (ceil(n/2)), N3/N2/N1 chỉ bài 1 mỗi phần. Allowlist tính ở server.
+const FREE_SITE='https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/';
+const FREE_LEVELS=['n5','n4','n3','n2','n1'],FREE_SECTIONS=['np','tv','kj'];
+const _freeMem=new Map();const _freeRl=new Map();
+function freeCount(level,total){if(level==='n5')return total;if(level==='n4')return Math.ceil(total/2);return Math.min(1,total)}
+async function freeLoad(env,level,section){
+  const name='course_'+level+'_'+section;
+  const meta=await (await fetch(FREE_SITE+'enc/meta.json',{cf:{cacheTtl:300}})).json();
+  const v=(meta.v||{})[name];if(!v)throw new Error('no-pack');
+  const k=name+'@'+v;if(_freeMem.has(k))return _freeMem.get(k);
+  const r=await fetch(FREE_SITE+'enc/'+name+'.bin?v='+v,{cf:{cacheTtl:3600}});if(!r.ok)throw new Error('fetch '+r.status);
+  const t=new TextDecoder().decode(await gunzipBytes(await gcmDecrypt(env,new Uint8Array(await r.arrayBuffer()))));
+  const a=t.indexOf('['),b=t.lastIndexOf(']');const arr=JSON.parse(t.slice(a,b+1));
+  const out={v,lessons:arr};for(const key of _freeMem.keys())if(key.startsWith(name+'@'))_freeMem.delete(key);_freeMem.set(k,out);return out;
+}
+async function handleFree(req,env,c,path){
+  if(req.method!=='GET')return J({error:'Chỉ nhận GET'},405,c.h);
+  const ip=req.headers.get('CF-Connecting-IP')||'?';const now=Date.now();
+  let e=_freeRl.get(ip);if(!e||now-e.t>60000){e={t:now,n:0};_freeRl.set(ip,e)}
+  if(_freeRl.size>5000)_freeRl.clear();
+  let over=++e.n>60;
+  if(!over&&env.FREE_RL){try{const r=await env.FREE_RL.limit({key:'free:'+ip});if(!r.success)over=true}catch(_){}}
+  if(over)return J({error:'Quá nhiều yêu cầu, thử lại sau 1 phút'},429,Object.assign({'Retry-After':'60'},c.h));
+  const u=new URL(req.url);const level=(u.searchParams.get('level')||'').toLowerCase(),section=(u.searchParams.get('section')||'').toLowerCase();
+  if(!FREE_LEVELS.includes(level)||!FREE_SECTIONS.includes(section))return J({error:'level phải là n5..n1, section phải là np|tv|kj'},400,c.h);
+  const cache=caches.default;const ck=new Request(u.toString(),{method:'GET'});
+  const hit=await cache.match(ck);if(hit){const h=new Response(hit.body,hit);for(const[k2,v2]of Object.entries(c.h))h.headers.set(k2,v2);return h}
+  let pack;try{pack=await freeLoad(env,level,section)}catch(err){return J({error:'Không tải được bài'},502,c.h)}
+  const L=pack.lessons,nFree=freeCount(level,L.length);
+  const ok=(i)=>i<nFree;
+  let body,status=200;
+  if(path==='/free/list'){
+    body={ok:true,level,section,total:L.length,freeCount:nFree,lessons:L.map((x,i)=>({id:x.id,n:i+1,title:x.title,free:ok(i)}))};
+  }else if(path==='/free/lesson'){
+    const id=u.searchParams.get('id')||'';const i=L.findIndex(x=>x.id===id);
+    if(i<0){status=404;body={error:'Không có bài này'}}
+    else if(!ok(i)){status=403;body={error:'Bài này cần đăng nhập',locked:true,id}}
+    else body={ok:true,level,section,n:i+1,total:L.length,lesson:L[i]};
+  }else return J({error:'Không tìm thấy API free'},404,c.h);
+  const res=J(body,status,Object.assign({'Cache-Control':status===200||status===403?'public, max-age=10800':'no-store'},c.h));
+  if(status===200||status===403){const cr=new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=10800'}});await cache.put(ck,cr)}
+  return res;
+}
+
 export default {async fetch(req,env){
   const c=cors(env,req);
   if(req.method==='OPTIONS')return new Response(null,{status:204,headers:c.h});
@@ -2009,6 +2055,7 @@ export default {async fetch(req,env){
   if(path.startsWith('/stats/'))return handleStats(req,env,c,path);
   if(path.startsWith('/community')||path.startsWith('/chat'))return handleCommunity(req,env,c,path);
   if(path.startsWith('/job/'))return handleJob(req,env,c,path);
+  if(path.startsWith('/free/'))return handleFree(req,env,c,path);
   if(path==='/'||path==='/ai')return handleAI(req,env,c);
   return J({error:'Không tìm thấy',paths:['/','/ai','/auth/*']},404,c.h);
 }};
