@@ -301,10 +301,11 @@ window.HOSO=(function(){
   /* Tên trên thanh trên cùng -> mở hồ sơ (không đụng auth.js: chỉ bắt sự kiện bấm) */
   document.addEventListener('click',function(ev){var w=ev.target.closest&&ev.target.closest('#acctbox .acctwho,#acctbox .hs-slogan');if(w&&w.classList.contains('hs-slogan'))w=w.parentNode.querySelector('.acctwho');if(!w||w.title==='Admin'||(window.HNX&&HNX.khach()))return;ev.preventDefault();open()});
   /* Slogan nhỏ dưới tên trên thanh trên cùng (chỉ thành viên; textContent nên không cần thoát) */
-  function slogan(){tb();avTop();var old=document.querySelectorAll('#acctbox .hs-slogan');old.forEach(function(x){x.remove()});return;/* slogan chỉ hiện dưới lời chào */var w=document.querySelector('#acctbox .acctwho');if(!w)return;var sp=w.parentNode.querySelector('.hs-slogan');var t=(window.HNX&&HNX.khach()||w.title==='Admin')?'':String(g().sl||'').slice(0,60);
+  function slogan(){nick();tb();avTop();var old=document.querySelectorAll('#acctbox .hs-slogan');old.forEach(function(x){x.remove()});return;/* slogan chỉ hiện dưới lời chào */var w=document.querySelector('#acctbox .acctwho');if(!w)return;var sp=w.parentNode.querySelector('.hs-slogan');var t=(window.HNX&&HNX.khach()||w.title==='Admin')?'':String(g().sl||'').slice(0,60);
     if(!t){if(sp)sp.remove();return}if(!sp){sp=document.createElement('span');sp.className='hs-slogan';w.insertAdjacentElement('afterend',sp)}if(sp.textContent!==t)sp.textContent=t;sp.title=t}
   /* Tên + slogan ngay trên thanh trên cùng, cạnh vòng tròn avatar (chỉ thành viên; textContent nên đã an toàn) */
-  function tb(){var av=document.querySelector('.topbar .hdr-av'),who=document.querySelector('#acctbox .acctwho'),inl=document.querySelector('#acctbox .acctin');var c=document.getElementById('hsTb');
+  function nick(){var w=document.querySelector('#acctbox .acctwho');if(!w||w.title==='Admin'||(window.HNX&&HNX.khach()))return;if(w.dataset.acc==null)w.dataset.acc=(w.textContent||'').trim();var gn=String(g().goi||'').trim().slice(0,30),t=gn||w.dataset.acc;if(t&&w.textContent!==t)w.textContent=t}
+function tb(){var av=document.querySelector('.topbar .hdr-av'),who=document.querySelector('#acctbox .acctwho'),inl=document.querySelector('#acctbox .acctin');var c=document.getElementById('hsTb');
     var n=who&&!inl&&who.title!=='Admin'&&!(window.HNX&&HNX.khach())?(who.textContent||'').trim():'';if(n==='…')n='';
     if(!av||!n){if(c)c.remove();return}
     if(!c){c=document.createElement('button');c.type='button';c.id='hsTb';c.className='hs-tb';c.innerHTML='<span class="hs-tb-n"></span><span class="hs-tb-s"></span>';c.addEventListener('click',function(ev){ev.stopPropagation();open()})}

@@ -63,7 +63,7 @@ addEventListener('guest',()=>{if(/lesson\.html/.test(location.pathname))setTimeo
 // 4) lần đầu sau khi được duyệt
 const GOALS=[5,10,20,30,60,120];const gname=x=>(x=+x)>=60?(x/60)+' tiếng':x+' phút';
 function member(box,name){const n=String(name||'').trim().slice(0,40);if(n)s('hn_dk_ten',n);if(!box||g('hn_dk_member_ok')==='1')return;const X=xung(),lv=g('hn_dk_level')||'',gl=g('hn_dk_goal')||'';
- box.innerHTML='<div class="dk-card dk-hi"><p class="dk-kicker">ようこそ · Tài khoản đã được duyệt</p><h2>Chào mừng '+(X?X+' ':'')+(n?'<span class="hn-name">'+esc(n)+'</span> ':'')+'đến với lớp học!</h2><p>Chỉ 3 bước nhỏ để bắt đầu thật nhẹ nhàng:</p><ol class="dk-steps">'+
+ box.innerHTML='<div class="dk-card dk-hi"><p class="dk-steps-h">Chỉ 3 bước nhỏ để bắt đầu thật nhẹ nhàng:</p><ol class="dk-steps">'+
  '<li class="'+(lv?'ok':'')+'"><b>1. Chọn trình độ</b><div class="dk-lv sm">'+LV.map(l=>'<button type="button" class="dk-btn'+(l===lv?'':' ghost')+'" data-lv="'+l+'" aria-pressed="'+(l===lv)+'">'+l.toUpperCase()+'</button>').join('')+'</div></li>'+
  '<li class="'+(gl?'ok':'')+'"><b>2. Đặt mục tiêu mỗi ngày</b><div class="dk-lv sm dk-goals">'+GOALS.map(x=>'<button type="button" class="dk-btn'+(String(x)===gl?'':' ghost')+'" data-g="'+x+'" aria-pressed="'+(String(x)===gl)+'">'+gname(x)+'</button>').join('')+'</div></li>'+
  '<li><b>3. Học bài đầu tiên</b><div><a class="dk-btn big" href="lesson.html?id=khoa-'+(lv||'n5')+'-tv-01">Mở bài đầu tiên '+(lv||'n5').toUpperCase()+'</a></div></li></ol>'+
