@@ -1,22 +1,163 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=55bd96c3"><title>Đăng nhập – Học tiếng Nhật</title><meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:title" content="Đăng nhập – Học tiếng Nhật"><meta property="og:description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=55bd96c3"><title>Đăng nhập – Học tiếng Nhật</title><meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:title" content="Đăng nhập – Học tiếng Nhật"><meta property="og:description" content="Đăng nhập hoặc đăng ký tài khoản Học tiếng Nhật cùng Khánh để mở khóa nội dung bài học."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"><style>
+/* ===== Thiết kế lại trang đăng nhập (áp bản mẫu đã duyệt 29/10) — CSS riêng của trang,
+   dùng biến màu của site nên chế độ tối đi theo data-theme chung ===== */
+.login-stage{display:grid;grid-template-columns:1.05fr 1fr;min-height:calc(100dvh - 62px)}
+/* --- Panel thương hiệu --- */
+.lbrand{position:relative;overflow:hidden;background:linear-gradient(160deg,#2a4a7c 0%,#233d63 46%,#16283f 100%);color:#f4f1e8;display:flex;flex-direction:column;padding:clamp(28px,4.5vw,56px)}
+.lbrand::after{content:"";position:absolute;inset:0;background:radial-gradient(560px 380px at 85% -10%,rgba(207,58,46,.32),transparent 65%),radial-gradient(700px 500px at -10% 110%,rgba(201,154,58,.16),transparent 60%);pointer-events:none}
+.lbrand-top{position:relative;z-index:2;display:flex;align-items:center;gap:12px}
+.lmark{width:46px;height:46px;flex:none;border-radius:12px;background:#cf3a2e;display:grid;place-items:center;font-family:"Shippori Mincho",serif;font-size:24px;font-weight:700;color:#fff;box-shadow:0 8px 20px -6px rgba(0,0,0,.45)}
+.lbrand-name{font-weight:800;font-size:19px;letter-spacing:.01em;line-height:1.2}
+.lbrand-name small{display:block;font-weight:500;font-size:12.5px;color:#b9c7de;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+.lbrand-mid{position:relative;z-index:2;margin-top:auto}
+.lquote{font-family:"Shippori Mincho",serif;font-size:clamp(30px,3.4vw,44px);font-weight:700;line-height:1.35;margin:0 0 10px}
+.lquote .accent{color:#f0937f}
+.lquote-vi{color:#c3cfe2;font-size:16px;margin:0 0 30px;max-width:42ch;line-height:1.55}
+.lchips{display:flex;flex-wrap:wrap;gap:8px}
+.lchip{border:1px solid rgba(244,241,232,.35);color:#eef0e9;border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;background:rgba(255,255,255,.06)}
+.lchip b{font-family:"Shippori Mincho",serif;font-weight:700;margin-right:6px;color:#f5c86e}
+.lart{position:absolute;right:0;bottom:0;width:100%;z-index:1;opacity:.95;pointer-events:none}
+.lbrand-foot{position:relative;z-index:2;margin-top:34px;color:#93a5c0;font-size:13.5px;display:flex;gap:18px;flex-wrap:wrap}
+.lbrand-foot span{display:inline-flex;align-items:center;gap:7px}
+.lbrand-foot svg{width:15px;height:15px;stroke:#93a5c0;flex:none}
+/* --- Phía biểu mẫu --- */
+.lmain{display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,4vw,48px);background:radial-gradient(600px 300px at 100% 0%,var(--soft),transparent 60%),var(--bg)}
+.lfoot{text-align:center;color:var(--m);font-size:13px;margin:22px 0 0}
+.login-stage .authcard{width:100%;max-width:440px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 60px -24px rgba(24,44,74,.28),0 4px 14px -6px rgba(24,44,74,.12);padding:clamp(26px,4vw,40px)}
+.login-stage .authcard h1{margin:0 0 6px;font-size:27px;font-weight:800;letter-spacing:-.01em;color:var(--t);text-align:left}
+.login-stage .authcard .sub{text-align:left;color:var(--m);font-size:15.5px;margin:0 0 22px}
+.login-stage .autherr{text-align:left;min-height:0;margin:0}
+.login-stage .autherr:not(:empty){background:#fbe9e7;color:#b3261e;border-radius:12px;padding:12px 14px;margin:0 0 18px;font-size:14.5px;line-height:1.5}
+html[data-theme="dark"] .login-stage .autherr:not(:empty){background:#3a2226;color:#ef8a83}
+.lfield{margin:0 0 16px}
+.login-stage .authcard label{display:block;font-size:14px;font-weight:600;margin:0 0 7px;color:var(--t)}
+.linput{position:relative}
+.linput .lic{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:19px;height:19px;stroke:var(--m);opacity:.8;pointer-events:none}
+.login-stage .authcard input{width:100%;box-sizing:border-box;font:inherit;font-size:16.5px;padding:13px 46px 13px 45px;border:1.5px solid var(--line);border-radius:16px;background:#fbfaf7;color:var(--t);min-height:52px;outline:none}
+.login-stage .authcard input:focus{border-color:var(--c2);box-shadow:0 0 0 4px var(--soft)}
+.leye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;border-radius:10px;padding:0}
+.leye svg{width:20px;height:20px;stroke:var(--m)}
+.leye:hover svg{stroke:var(--t)}
+.login-stage .authcard .primary{margin-top:8px;width:100%;font:inherit;font-size:16.5px;font-weight:700;min-height:54px;padding:12px;border:0;border-radius:16px;background:var(--c2);color:#fff;cursor:pointer;box-shadow:0 12px 24px -10px rgba(35,61,99,.5)}
+.login-stage .authcard .primary:disabled{opacity:.6;box-shadow:none}
+html[data-theme="dark"] .login-stage .authcard .primary{color:#12233f}
+.login-stage .authcard .switch{width:auto;height:auto;position:static;background:none;border:0;text-align:center;margin:22px 0 0;font-size:15px;color:var(--m)}
+.login-stage .authcard .switch a{color:var(--c2);font-weight:600;cursor:pointer;text-decoration:none}
+.login-stage .authcard .switch a:hover{text-decoration:underline}
+.login-stage .authdiv{display:flex;align-items:center;gap:14px;margin:24px 0 2px;color:var(--m);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.login-stage .oauth{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 4px}
+.login-stage .oauth button{position:relative;font:inherit;font-weight:600;min-height:52px;padding:11px 8px;border-radius:16px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--t);font-size:14.5px}
+.login-stage .oauth button:hover{border-color:var(--m)}
+.login-stage .oauth button:disabled{opacity:.75;cursor:not-allowed}
+.login-stage .oauth #btnGoogle{grid-column:1/-1;min-height:54px;font-size:16px}
+.login-stage .oauth .soon{position:absolute;top:-9px;right:8px;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px}
+.login-stage .authcard .honest{margin:20px 0 0;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--m);text-align:center;line-height:1.55}
+.login-stage .authcard .honest a{color:var(--c2)}
+/* --- Khu vực giới hạn thiết bị --- */
+#devBox{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px}
+#devBox .autherr:not(:empty){margin:0 0 14px}
+#devList .userrow{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:13px 14px;margin:0 0 10px}
+#devList .userrow::before{content:"";width:44px;height:44px;flex:none;border-radius:12px;background:var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23233d63' stroke-width='2'%3E%3Crect x='7' y='2.5' width='10' height='19' rx='2.5'/%3E%3Cpath d='M11 18.5h2'/%3E%3C/svg%3E") center/22px no-repeat}
+html[data-theme="dark"] #devList .userrow::before{background-color:var(--soft)}
+#devList .userrow .meta{flex:1;min-width:0;margin:0;color:var(--m);font-size:13.5px;line-height:1.45}
+#devList .userrow .meta b{color:var(--t);font-size:15.5px}
+#devList .userrow .acts{display:flex;margin:0}
+#devList .userrow .acts button{font:inherit;font-size:14px;font-weight:600;border:0;border-radius:10px;padding:10px 13px;cursor:pointer;min-height:44px;white-space:nowrap}
+#devList .userrow .acts .lock{background:#faecea;color:var(--c)}
+#devList .userrow .acts .lock:disabled{opacity:.55}
+html[data-theme="dark"] #devList .userrow .acts .lock{background:#472c27;color:#e0655a}
+#devBox .switch{margin-top:14px}
+.authcard:has(> #devBox:not([hidden])) .oauth,.authcard:has(> #devBox:not([hidden])) .authdiv,.authcard:has(> #devBox:not([hidden])) > .switch{display:none}
+/* --- Điện thoại --- */
+@media(max-width:860px){
+ .login-stage{grid-template-columns:1fr;min-height:0}
+ .lbrand{padding:22px 22px 0}
+ .lbrand-mid{margin-top:24px}
+ .lquote{font-size:27px}
+ .lquote-vi{margin-bottom:18px;font-size:15px}
+ .lart{position:relative;height:92px;margin-top:4px}
+ .lbrand-foot{display:none}
+ .lmain{padding:18px 14px 30px;justify-content:flex-start}
+ .login-stage .authcard{border-radius:20px;padding:26px 20px;box-shadow:var(--shadow)}
+}
+</style></head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="dang-nhap.html">Tài khoản</a></nav></div></div>
-<main class="wrap">
+<div class="login-stage">
+<aside class="lbrand" aria-hidden="true">
+  <div class="lbrand-top">
+    <div class="lmark">日</div>
+    <div class="lbrand-name"><span class="site-title"></span><small>Japanese for Vietnamese</small></div>
+  </div>
+  <div class="lbrand-mid">
+    <p class="lquote">今日も、<span class="accent">一歩ずつ</span>。</p>
+    <p class="lquote-vi">Mỗi ngày một bước nhỏ — tiến độ của bạn được đồng bộ theo tài khoản, học ở máy nào cũng nối tiếp được.</p>
+    <div class="lchips">
+      <span class="lchip"><b>N5</b>Sơ cấp</span>
+      <span class="lchip"><b>N4</b>Sơ trung cấp</span>
+      <span class="lchip"><b>N3</b>Trung cấp</span>
+      <span class="lchip"><b>N2</b>Trung thượng</span>
+      <span class="lchip"><b>N1</b>Cao cấp</span>
+    </div>
+  </div>
+  <svg class="lart" viewBox="0 0 800 210" preserveAspectRatio="xMidYMax slice" fill="none" aria-hidden="true">
+    <circle cx="648" cy="58" r="34" fill="#cf3a2e" opacity="0.9" />
+    <path d="M420 210 L560 74 L700 210 Z" fill="#f4f1e8" opacity="0.14" />
+    <path d="M560 74 L700 210 L640 210 L585 130 L560 160 L532 128 L478 210 L420 210 Z" fill="#f4f1e8" opacity="0.10" />
+    <path d="M505 210 L560 118 L615 210 Z" fill="#f7f6f2" opacity="0.9" />
+    <path d="M560 118 L578 138 L566 140 L560 132 L552 140 L542 136 Z" fill="#233d63" opacity="0.55" />
+    <path d="M0 210 C120 178 220 196 340 184 C470 171 560 190 800 168 L800 210 Z" fill="#101f33" opacity="0.55" />
+    <g stroke="#f4f1e8" stroke-linecap="round" fill="none" opacity="0.9">
+      <path d="M62 92 Q136 74 210 92" stroke-width="7" />
+      <path d="M84 108 H188" stroke-width="5" />
+      <path d="M104 108 V210 M168 108 V210" stroke-width="6" />
+      <path d="M92 142 H180" stroke-width="4.5" />
+      <path d="M136 100 V126" stroke-width="4.5" />
+    </g>
+    <g fill="#f5c86e" opacity="0.85">
+      <circle cx="330" cy="52" r="2.4" /><circle cx="392" cy="30" r="1.8" />
+      <circle cx="262" cy="76" r="1.8" /><circle cx="730" cy="120" r="2.2" />
+      <circle cx="60" cy="52" r="2" /><circle cx="470" cy="64" r="1.6" />
+    </g>
+  </svg>
+  <div class="lbrand-foot">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Giọng đọc chuẩn kỳ thi JLPT</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.6-6.3M21 4v5h-5"/></svg>Đồng bộ tiến độ 2 thiết bị</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Tin tức Nhật mỗi ngày 5:00</span>
+  </div>
+</aside>
+<main class="lmain">
 <div class="authcard" id="card">
   <h1 id="title">Đăng nhập</h1>
   <p class="sub" id="sub">Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.</p>
-  <div id="regFields" hidden>
-    <label for="name">Tên gọi</label>
-    <input id="name" autocomplete="name" placeholder="Vd: Minh">
-  </div>
-  <label for="email">Email</label>
-  <input id="email" type="email" autocomplete="username" placeholder="ban@email.com">
-  <label for="pw">Mật khẩu</label>
-  <input id="pw" type="password" autocomplete="current-password" placeholder="Ít nhất 8 ký tự">
-  <button class="primary" id="go" type="button">Đăng nhập</button>
   <div class="autherr" id="err"></div>
+  <div class="lfield" id="regFields" hidden>
+    <label for="name">Tên gọi</label>
+    <div class="linput">
+      <svg class="lic" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.6 4.5-5 8-5s6.5 1.4 8 5"/></svg>
+      <input id="name" autocomplete="name" placeholder="Vd: Minh">
+    </div>
+  </div>
+  <div class="lfield">
+    <label for="email">Email</label>
+    <div class="linput">
+      <svg class="lic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <input id="email" type="email" autocomplete="username" placeholder="ban@email.com">
+    </div>
+  </div>
+  <div class="lfield">
+    <label for="pw">Mật khẩu</label>
+    <div class="linput">
+      <svg class="lic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Ít nhất 8 ký tự">
+      <button class="leye" type="button" id="pwEye" aria-label="Hiện mật khẩu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+    </div>
+  </div>
+  <button class="primary" id="go" type="button">Đăng nhập</button>
   <div id="devBox" hidden>
     <div class="autherr" id="devMsg"></div>
     <div id="devList"></div>
@@ -25,14 +166,16 @@
   <p class="switch" id="switch">Chưa có tài khoản? <a id="tog">Đăng ký</a></p>
   <div class="authdiv">hoặc</div>
   <div class="oauth">
-    <button type="button" data-p="google" id="btnGoogle">Google</button>
-    <button type="button" data-p="facebook" disabled>Facebook <span class="soon">Sắp có</span></button>
-    <button type="button" data-p="line" disabled>LINE <span class="soon">Sắp có</span></button>
-    <button type="button" data-p="apple" disabled>Apple <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="google" id="btnGoogle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.3h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.3-2.1 3.7-5.2 3.7-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.2 0-5.9-2.2-6.9-5.1L1.3 17.2C3.3 21.2 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.1 14.3c-.24-.7-.38-1.5-.38-2.3s.14-1.6.38-2.3L1.3 6.8C.5 8.4 0 10.1 0 12s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.7c1.8 0 3 .8 3.7 1.4l3.3-3.2C17.9 1.1 15.2 0 12 0 7.3 0 3.3 2.8 1.3 6.8l3.8 2.9c1-2.9 3.7-5 6.9-5z"/></svg>Tiếp tục với Google</button>
+    <button type="button" data-p="facebook" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.2v3h2.5v7h2.8z"/></svg>Facebook <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="line" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 3.5C6.8 3.5 2.6 6.9 2.6 11.1c0 3.8 3.3 6.9 7.8 7.6.3.1.7.2.8.5.1.3 0 .7 0 1l-.1 1.1c0 .3-.2.7.5.4.7-.4 3.9-2.3 5.3-4 .2-.1.4-.4.4-.6 1.3-1.3 2.1-3 2.1-5C21.4 6.9 17.2 3.5 12 3.5z"/></svg>LINE <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="apple" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c0-2.4 1.96-3.55 2.05-3.6-1.12-1.64-2.86-1.86-3.48-1.89-1.48-.15-2.89.87-3.64.87-.75 0-1.9-.85-3.13-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.9-.43 7.2 1.2 9.56.8 1.16 1.75 2.46 3 2.41 1.2-.05 1.66-.78 3.12-.78s1.87.78 3.14.75c1.3-.02 2.12-1.18 2.92-2.34.92-1.35 1.3-2.65 1.32-2.72-.03-.01-2.54-.98-2.57-3.81zM14.65 5.4c.66-.8 1.1-1.91.98-3.02-.95.04-2.1.63-2.78 1.43-.61.71-1.15 1.84-.98 2.92 1.06.08 2.14-.54 2.78-1.33z"/></svg>Apple <span class="soon">Sắp có</span></button>
   </div>
-  <p class="honest" style="text-align:center;margin-top:16px">Cần tài khoản đã được duyệt (hoặc đăng nhập quản lý) mới xem được bài học.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
+  <p class="honest">Cần tài khoản đã được duyệt (hoặc đăng nhập quản lý) mới xem được bài học.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
 </div>
+<p class="lfoot">Tiến độ học được đồng bộ theo tài khoản — học tiếp ở máy nào cũng được.</p>
 </main>
+</div>
 <script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=7af18363"></script><script src="lock.js?v=6f8fc162"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
@@ -150,5 +293,8 @@ document.getElementById('btnGoogle').onclick=()=>{
   if(!AUTH.session())return;
   try{const j=await AUTH.me();await afterAuth(j)}catch(e){}
 })();
+</script>
+<script>
+document.getElementById('pwEye').addEventListener('click',function(){var pw=document.getElementById('pw');var show=pw.type==='password';pw.type=show?'text':'password';this.setAttribute('aria-label',show?'Ẩn mật khẩu':'Hiện mật khẩu');pw.focus()});
 </script>
 </body></html>
