@@ -28,7 +28,7 @@
   <div id="list"></div>
 </div>
 </main>
-<script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=1807850c"></script>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=7af18363"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 const loginBox=document.getElementById('loginBox'),panel=document.getElementById('panel');
@@ -43,14 +43,17 @@ async function load(){
     if(!us.length){list.innerHTML='<p class="empty-note">Không có ai trong mục này.</p>';return}
     list.innerHTML=us.map(u=>`<div class="userrow" data-id="${u.id}">
       <b>${esc(u.name||'')}</b>
-      <div class="meta">📧 ${esc(u.email)} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)}</div>
+      <div class="meta">📧 ${esc(u.email)} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)} · 📱 <span class="devcnt">${u.device_count||0}</span>/2 thiết bị</div>
       <div class="acts">
         ${tab!=='approved'?`<button class="ok" data-a="approve">Duyệt</button>`:''}
         ${tab!=='rejected'?`<button class="no" data-a="reject">Từ chối</button>`:''}
         ${tab!=='locked'?`<button class="lock" data-a="lock">Khoá</button>`:''}
-      </div></div>`).join('');
+        <button class="lock" data-a="devices">Thiết bị</button>
+      </div>
+      <div class="devpanel" hidden></div></div>`).join('');
     list.querySelectorAll('.acts button').forEach(b=>b.onclick=async()=>{
-      const id=b.closest('.userrow').dataset.id;
+      const row=b.closest('.userrow'),id=row.dataset.id;
+      if(b.dataset.a==='devices'){toggleDevices(row,id,b);return}
       b.disabled=true;
       try{await AUTH.adminAction(id,b.dataset.a);await load()}catch(e){alert(e.message);b.disabled=false}
     });
@@ -60,6 +63,37 @@ async function load(){
   }
 }
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+// ===== Thiết bị của tài khoản: xem, gỡ từng cái, hoặc đăng xuất mọi thiết bị =====
+async function toggleDevices(row,uid,btn){
+  const p=row.querySelector('.devpanel');
+  if(!p.hidden){p.hidden=true;return}
+  p.hidden=false;
+  await renderDevices(row,uid);
+}
+async function renderDevices(row,uid){
+  const p=row.querySelector('.devpanel');
+  p.innerHTML='<p class="empty-note">Đang tải thiết bị…</p>';
+  try{
+    const j=await AUTH.adminDevices(uid);
+    const ds=j.devices||[];
+    row.querySelector('.devcnt').textContent=ds.length;
+    if(!ds.length){p.innerHTML='<p class="empty-note">Chưa có thiết bị nào đăng nhập.</p>';return}
+    p.innerHTML=ds.map(d=>`<div class="meta" style="margin-top:8px">📱 <b>${esc(d.label||'Thiết bị không tên')}</b><br>Đăng nhập đầu: ${fmt(d.first_seen)} · Hoạt động gần nhất: ${fmt(d.last_seen)}<br><button class="lock" data-dev="${esc(d.device_id)}">Gỡ thiết bị này</button></div>`).join('')
+      +`<div class="acts" style="margin-top:8px"><button class="no" data-devall="1">Đăng xuất mọi thiết bị</button></div>`;
+    p.querySelectorAll('button[data-dev]').forEach(b=>b.onclick=async()=>{
+      b.disabled=true;
+      try{await AUTH.adminDeviceRemove(uid,b.dataset.dev);await renderDevices(row,uid)}catch(e){alert(e.message);b.disabled=false}
+    });
+    const all=p.querySelector('button[data-devall]');
+    if(all)all.onclick=async()=>{
+      if(!confirm('Đăng xuất tài khoản này khỏi MỌI thiết bị?'))return;
+      all.disabled=true;
+      try{await AUTH.adminDeviceRemoveAll(uid);await renderDevices(row,uid)}catch(e){alert(e.message);all.disabled=false}
+    };
+  }catch(e){
+    p.innerHTML='<p class="empty-note">'+esc(e.message||'Lỗi')+'</p>';
+  }
+}
 function showLogin(){panel.hidden=true;loginBox.hidden=false}
 function showPanel(){loginBox.hidden=true;panel.hidden=false;load()}
 document.getElementById('alogin').onclick=async()=>{

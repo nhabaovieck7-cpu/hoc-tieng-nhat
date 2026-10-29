@@ -17,6 +17,11 @@
   <input id="pw" type="password" autocomplete="current-password" placeholder="Ít nhất 8 ký tự">
   <button class="primary" id="go" type="button">Đăng nhập</button>
   <div class="autherr" id="err"></div>
+  <div id="devBox" hidden>
+    <div class="autherr" id="devMsg"></div>
+    <div id="devList"></div>
+    <p class="switch"><a id="devCancel">Để sau — quay lại đăng nhập</a></p>
+  </div>
   <p class="switch" id="switch">Chưa có tài khoản? <a id="tog">Đăng ký</a></p>
   <div class="authdiv">hoặc</div>
   <div class="oauth">
@@ -28,7 +33,7 @@
   <p class="honest" style="text-align:center;margin-top:16px">Cần tài khoản đã được duyệt (hoặc đăng nhập quản lý) mới xem được bài học.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
 </div>
 </main>
-<script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=1807850c"></script><script src="lock.js?v=6f8fc162"></script>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=56bdf6a2"></script><script src="auth.js?v=7af18363"></script><script src="lock.js?v=6f8fc162"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 let mode='login';
@@ -41,6 +46,39 @@ function setMode(m){
   else{title.textContent='Đăng nhập';sub.textContent='Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.';reg.hidden=true;go.textContent='Đăng nhập';tog.parentElement.innerHTML='Chưa có tài khoản? <a id="tog">Đăng ký</a>';document.getElementById('tog').onclick=()=>setMode('register');pw.autocomplete='current-password'}
 }
 tog.onclick=()=>setMode('register');
+// ===== Bị chặn vì tài khoản đã dùng đủ 2 thiết bị: chọn gỡ 1 thiết bị để vào =====
+let devTicket='';
+function fmtT(t){if(!t)return '—';try{return new Date(t).toLocaleString('vi-VN',{timeZone:'Asia/Tokyo'})}catch(e){return t}}
+function hideDeviceLimit(){document.getElementById('devBox').hidden=true;devTicket=''}
+function showDeviceLimit(ticket,devices,msg){
+  devTicket=ticket||'';
+  const box=document.getElementById('devBox');
+  document.getElementById('devMsg').textContent=msg||'Tài khoản này đã đăng nhập trên 2 thiết bị khác. Hãy đăng xuất một thiết bị dưới đây để tiếp tục trên thiết bị này:';
+  const dl=document.getElementById('devList');dl.innerHTML='';
+  (devices||[]).forEach(d=>{
+    const row=document.createElement('div');row.className='userrow';
+    const meta=document.createElement('div');meta.className='meta';
+    const b=document.createElement('b');b.textContent=d.label||'Thiết bị không tên';
+    meta.appendChild(b);meta.appendChild(document.createElement('br'));
+    meta.appendChild(document.createTextNode('Hoạt động gần nhất: '+fmtT(d.last_seen)));
+    const acts=document.createElement('div');acts.className='acts';
+    const btn=document.createElement('button');btn.type='button';btn.className='lock';btn.textContent='Đăng xuất thiết bị này';
+    btn.onclick=async()=>{
+      btn.disabled=true;
+      try{
+        const j=await AUTH.deviceResolve(devTicket,d.device_id);
+        hideDeviceLimit();
+        await afterAuth(j);
+      }catch(e){
+        if(e.body&&e.body.code==='device_limit'){showDeviceLimit(e.body.login_ticket,e.body.devices,e.body.error||e.message)}
+        else{document.getElementById('devMsg').textContent=e.message||String(e);btn.disabled=false}
+      }
+    };
+    acts.appendChild(btn);row.appendChild(meta);row.appendChild(acts);dl.appendChild(row);
+  });
+  box.hidden=false;
+}
+document.getElementById('devCancel').onclick=()=>hideDeviceLimit();
 async function afterAuth(j){
   if(j.status==='pending'){location.href='dang-cho.html';return}
   if(j.status==='approved'){if(j.contentKey)await LOCK.importContentKey(j.contentKey);location.href='index.html';return}
@@ -57,19 +95,34 @@ go.onclick=async()=>{
       const j=await AUTH.login(email.value.trim(),pw.value);
       await afterAuth(j);
     }
-  }catch(e){err.textContent=e.message||String(e)}
+  }catch(e){
+    if(e.body&&e.body.code==='device_limit'){showDeviceLimit(e.body.login_ticket,e.body.devices,e.body.error||e.message)}
+    else err.textContent=e.message||String(e)
+  }
   finally{go.disabled=false}
 };
 document.getElementById('btnGoogle').onclick=()=>{
   err.textContent='';
   const ret=location.href.split('#')[0].split('?')[0];
-  location.href=(SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/google/start?return='+encodeURIComponent(ret);
+  location.href=(SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/google/start?return='+encodeURIComponent(ret)
+    +'&device_id='+encodeURIComponent(AUTH.deviceId())+'&device_label='+encodeURIComponent(AUTH.deviceLabel());
 };
 // Quay lại từ Google OAuth (?code=&status=) hoặc lỗi
 (async()=>{
   const u=new URL(location.href);
   const oauthErr=u.searchParams.get('oauth_error');
   if(oauthErr){err.textContent=oauthErr;u.searchParams.delete('oauth_error');history.replaceState({},'',u.pathname+u.search+u.hash)}
+  // Quay lại từ Google nhưng bị chặn vì đủ 2 thiết bị (?device_ticket=)
+  const dticket=u.searchParams.get('device_ticket');
+  if(dticket){
+    ['device_ticket','status','oauth'].forEach(k=>u.searchParams.delete(k));
+    history.replaceState({},'',u.pathname+(u.search||'')+u.hash);
+    try{
+      const info=await AUTH.deviceTicketInfo(dticket);
+      showDeviceLimit(dticket,info.devices,'Tài khoản Google này đã đăng nhập trên 2 thiết bị khác. Hãy đăng xuất một thiết bị dưới đây để tiếp tục trên thiết bị này:');
+    }catch(e){err.textContent=e.message||String(e)}
+    return;
+  }
   const xcode=u.searchParams.get('code');
   if(xcode){
     ['code','status','oauth'].forEach(k=>u.searchParams.delete(k));
