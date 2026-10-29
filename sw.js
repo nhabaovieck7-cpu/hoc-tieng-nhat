@@ -1,6 +1,6 @@
 // Service worker: cho phép dùng offline. Nội dung bài học vẫn là file mã hoá enc/*.bin.
-const APP='hn-app-v49',DATA='hn-data',FONTS='hn-fonts',MEDIA='hn-media';
-const SHELL=['./','index.html','thanh-ngu.html','lesson.html','tin-tuc.html','cong-dong.html','tin-nhan.html','luyen-nghe.html','on-tap.html','thi-thu.html','hoi-ai.html','ung-dung.html','dang-nhap.html','dang-cho.html','chinh-sach.html','admin.html','manifest.json','icons/icon-192.png','enc/meta.json','hero.webp'];
+const APP='hn-app-v50',DATA='hn-data',FONTS='hn-fonts',MEDIA='hn-media';
+const SHELL=['./','index.html','thanh-ngu.html','lesson.html','tin-tuc.html','cong-dong.html','tin-nhan.html','xep-hang.html','luyen-nghe.html','on-tap.html','thi-thu.html','hoi-ai.html','ung-dung.html','dang-nhap.html','dang-cho.html','chinh-sach.html','admin.html','manifest.json','icons/icon-192.png','enc/meta.json','hero.webp'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(APP).then(c=>c.addAll(SHELL)).catch(()=>{}));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>![APP,DATA,FONTS,MEDIA].includes(k)).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 async function netFirst(req,cacheName,opt){const c=await caches.open(cacheName);try{const r=await fetch(req);if(r.ok)c.put(req,r.clone());return r}catch(e){const m=await c.match(req,opt);if(m)return m;throw e}}

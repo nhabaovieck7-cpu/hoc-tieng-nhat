@@ -176,7 +176,8 @@ const AUTH=(()=>{
 // ===== Đồng bộ tiến độ học theo tài khoản (qua Worker /progress) =====
 // CHỈ các khoá TIẾN ĐỘ mới đồng bộ: hn_prog_v1 (bài đã học/điểm/học tiếp),
 // hn_srs_v1 (thẻ ôn tập SRS), hn_choukai_<vid> (phiếu nghe đã chọn),
-// hn_choukai_mark_<vid> (tự đánh dấu đúng/sai). Khoá nội dung/phiên
+// hn_choukai_mark_<vid> (tự đánh dấu đúng/sai), hn_game_v1 (thắng game
+// Đấu trùm: {w:{bài: số lần thắng}, d:{ngày: số lần thắng}}). Khoá nội dung/phiên
 // (hn_key_v1, hn_sess_v1, hn_admin_sess_v1), mã thiết bị (hn_device_id) và
 // tuỳ chọn thiết bị (hn_theme, hn_furi, hn_tts_rate, hn_srs_deck, hn_ai_used)
 // KHÔNG bao giờ rời máy qua kênh này.
@@ -184,7 +185,7 @@ const AUTH=(()=>{
 // Mất mạng -> bỏ qua êm; lần mở trang sau tự đồng bộ lại.
 const HNSYNC=(()=>{
   const META='hn_sync_meta'; // {khoá: mốc ms phía local} — chỉ ở máy này
-  const EXACT={hn_prog_v1:1,hn_srs_v1:1};
+  const EXACT={hn_prog_v1:1,hn_srs_v1:1,hn_game_v1:1};
   const isKey=k=>typeof k==='string'&&(!!EXACT[k]||k.indexOf('hn_choukai_')===0);
   const parseJ=s=>{try{return JSON.parse(s)}catch(e){return null}};
   let dirty={},dirtyDel={},timer=null,busy=false,mute=false;
@@ -242,11 +243,25 @@ const HNSYNC=(()=>{
     let n=0;Object.keys(o).forEach(k=>{const v=o[k];if(v!==null&&v!==undefined&&v!=='')n++});
     return n;
   }
+  function mergeGame(a,b){
+    // game Đấu trùm: mỗi mục (theo bài / theo ngày) lấy số lớn hơn — thắng ở máy nào cũng không mất
+    a=(a&&typeof a==='object')?a:{};b=(b&&typeof b==='object')?b:{};
+    const out={w:{},d:{}};
+    ['w','d'].forEach(sec=>{
+      const am=a[sec]||{},bm=b[sec]||{};
+      Object.keys(am).forEach(k=>{out[sec][k]=+am[k]||0});
+      Object.keys(bm).forEach(k=>{out[sec][k]=Math.max(out[sec][k]||0,+bm[k]||0)});
+    });
+    return out;
+  }
   function mergeVal(k,localStr,serverStr,lts,sts){
     if(serverStr==null)return localStr;
     if(localStr==null)return serverStr;
     if(localStr===serverStr)return localStr;
-    if(k==='hn_srs_v1'||k==='hn_prog_v1'){
+    if(k==='hn_game_v1'){
+      const a=parseJ(localStr),b=parseJ(serverStr);
+      if(a&&b)return JSON.stringify(mergeGame(a,b));
+    }else if(k==='hn_srs_v1'||k==='hn_prog_v1'){
       const a=parseJ(localStr),b=parseJ(serverStr);
       if(a&&b)return JSON.stringify(k==='hn_srs_v1'?mergeSRS(a,b):mergeProg(a,b));
     }else{
