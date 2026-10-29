@@ -124,14 +124,14 @@ async function sendMsg(){const ta=document.getElementById('tntext'),err=document
    const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi tải file '+r.status));fileId=(j.file&&j.file.id)||j.id;pendingFile=null;drawChip()}
   const j=await AUTH.api('/chat/send',{method:'POST',body:{conv_id:CUR.id,body,file_id:fileId}});
   MSGS.push(j.message);ta.value='';const box=document.getElementById('tnmsgs');
-  box.insertAdjacentHTML('beforeend',msgHTML(j.message));box.scrollTop=box.scrollHeight;resolveAvatars(box);loadConvs(true)}
+  box.insertAdjacentHTML('beforeend',msgHTML(j.message));box.scrollTop=box.scrollHeight;resolveAvatars(box);if(fileId)loadMsgs();loadConvs(true)}
  catch(e){err.textContent=e.message}btn.disabled=false}
 async function loadConvs(keep){try{const j=await AUTH.api('/chat/conversations');CONVS=j.conversations;STORAGE=j.storage_enabled;
  if(CUR){const c=CONVS.find(x=>x.id===CUR.id);if(c)CUR=c}
  drawList();const fb=document.getElementById('tnfilebtn');if(fb&&STORAGE)fb.disabled=false}catch(e){}}
 async function loadMsgs(){if(!CUR)return;try{const j=await AUTH.api('/chat/messages?conv_id='+encodeURIComponent(CUR.id));
  const box=document.getElementById('tnmsgs');if(!box)return;const nearBottom=box.scrollHeight-box.scrollTop-box.clientHeight<120;
- const changed=j.messages.length!==MSGS.length||j.messages.some((m,i)=>!MSGS[i]||MSGS[i].id!==m.id||!!MSGS[i].read_at!==!!m.read_at||MSGS[i].deleted!==m.deleted);
+ const changed=j.messages.length!==MSGS.length||j.messages.some((m,i)=>!MSGS[i]||MSGS[i].id!==m.id||!!MSGS[i].read_at!==!!m.read_at||MSGS[i].deleted!==m.deleted||!MSGS[i].file!==!m.file);
  MSGS=j.messages;if(changed){box.innerHTML=MSGS.map(msgHTML).join('')+readMarkHTML();resolveAvatars(box);if(nearBottom)box.scrollTop=box.scrollHeight}
  loadConvs(true)}catch(e){}}
 function openReport(){if(!CUR)return;const recent=MSGS.slice(-50);
