@@ -18,12 +18,24 @@ function cau(){const k=nhom();if(pick&&pick[0]===k)return pick[1];const L=NHOM[k
  try{const v=JSON.parse(g(K)||'null');if(v&&v.k===k)last=v.i}catch(e){}
  let i=Math.floor(Math.random()*L.length);if(L.length>1&&i===last)i=(i+1+Math.floor(Math.random()*(L.length-1)))%L.length;
  s(K,JSON.stringify({k,i}));pick=[k,L[i]];return L[i]}
+
+const NINH={anh:["Anh{ten} chăm thế này, em phục anh thật luôn!","Có anh{ten} ghé học, trang của em sáng hẳn lên.","Anh{ten} học đều quá, đúng là phong độ của người giỏi.","Anh{ten} kiên trì ghê, tiếng Nhật chắc chắn không làm khó được anh.","Nhìn anh{ten} học mà em có thêm động lực theo luôn.","Anh{ten} giỏi thật đó, mỗi lần quay lại là tiến bộ thêm một chút.","Phải công nhận anh{ten} có tinh thần học đáng nể.","Anh{ten} ơi, sự chăm chỉ của anh làm em ngưỡng mộ lắm."],
+chi:["Chị{ten} vừa xinh vừa chăm, em mê luôn!","Có chị{ten} ghé học, trang của em rạng rỡ hẳn lên.","Chị{ten} học đều quá, đúng là phong độ của người giỏi.","Chị{ten} kiên trì ghê, tiếng Nhật chắc chắn không làm khó được chị.","Nhìn chị{ten} học mà em có thêm động lực theo luôn.","Chị{ten} giỏi thật đó, mỗi lần quay lại là tiến bộ thêm một chút.","Phải công nhận chị{ten} có tinh thần học đáng nể.","Chị{ten} ơi, sự chăm chỉ của chị làm em ngưỡng mộ lắm."],
+kd:["Quay lại học đều thế này thì giỏi quá!","Chăm chỉ thế này, tiếng Nhật chắc chắn không làm khó được{ten}.","Tinh thần học này thật đáng nể.","Mỗi lần ghé lại là tiến bộ thêm một chút, tuyệt thật!","Kiên trì thế này là đã đi được nửa đường rồi.","Nhìn{ten} học mà em có thêm động lực theo luôn."]};
+const MOI={anh:["Anh{ten} học cùng em nhé!","Hôm nay anh{ten} học cùng em vài phút nha!","Mình cùng học tiếp bài hôm nay nhé anh{ten}!","Anh{ten} ơi, vào học cùng em một bài nha!","Đi thôi anh{ten}, học cùng em mười phút nhé!"],
+chi:["Chị{ten} học cùng em nhé!","Hôm nay chị{ten} học cùng em vài phút nha!","Mình cùng học tiếp bài hôm nay nhé chị{ten}!","Chị{ten} ơi, vào học cùng em một bài nha!","Đi thôi chị{ten}, học cùng em mười phút nhé!"],
+kd:["Học cùng em nhé!","Hôm nay mình cùng học vài phút nha!","Mình cùng học tiếp bài hôm nay nhé!","Vào học cùng em một bài nha!","Đi thôi, học cùng em mười phút nhé!"]};
+const xp={};function xoay(L,K,k){if(xp[K]&&xp[K][0]===k)return xp[K][1];let last=-1;try{const v=JSON.parse(g(K)||'null');if(v&&v.k===k)last=v.i}catch(e){}
+ let i=Math.floor(Math.random()*L.length);if(L.length>1&&i===last)i=(i+1+Math.floor(Math.random()*(L.length-1)))%L.length;s(K,JSON.stringify({k,i}));xp[K]=[k,L[i]];return L[i]}
+function nhomX(){const x=xung();return x==='anh'?'anh':(x==='chị'?'chi':'kd')}
+function ninh(ten){const k=nhomX();return dien(xoay(NINH[k],'hn_dk_ninh_last',k),ten)}
+function moi(ten){const k=nhomX();return dien(xoay(MOI[k],'hn_dk_moi_last',k),ten)}
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const DANH={nam:['anh','đại ca','boss','sếp'],nu:['chị','chị đại','nữ hoàng','quý cô']};let dpick=null;
 function danh(h){h=h||hoSo();const k=h.gt==='nam'?'nam':(h.gt==='nu'?'nu':'');if(!k)return '';if(dpick&&dpick[0]===k)return dpick[1];
  const L=DANH[k],K='hn_dk_danh_last';let last=-1;try{const v=JSON.parse(g(K)||'null');if(v&&v.k===k)last=v.i}catch(e){}
  let i=Math.floor(Math.random()*L.length);if(i===last)i=(i+1+Math.floor(Math.random()*(L.length-1)))%L.length;s(K,JSON.stringify({k,i}));dpick=[k,L[i]];return L[i]}
-let TEN='';function show(el,ten){if(!el)return;if(ten!=null)TEN=ten;el.innerHTML='<p class="dk-khen">💐 '+esc(dien(cau(),TEN))+'</p><button type="button" class="dk-link" data-hs>Hồ sơ cá nhân (không bắt buộc)</button>';el.querySelector('[data-hs]').onclick=()=>{if(window.HOSO&&!(window.HNX&&HNX.khach()))HOSO.open();else form(el)};if(!show.l){show.l=1;document.addEventListener('hn-hoso',()=>{const e2=document.getElementById('dkKhen');if(e2)show(e2)})}}
+let TEN='';function show(el,ten){if(!el)return;if(ten!=null)TEN=ten;el.innerHTML=(window.HNX&&!HNX.khach()?'':'<p class="dk-khen">💐 '+esc(dien(cau(),TEN))+'</p>')+'<button type="button" class="dk-link" data-hs>Hồ sơ cá nhân (không bắt buộc)</button>';el.querySelector('[data-hs]').onclick=()=>{if(window.HOSO&&!(window.HNX&&HNX.khach()))HOSO.open();else form(el)};if(!show.l){show.l=1;document.addEventListener('hn-hoso',()=>{const e2=document.getElementById('dkKhen');if(e2)show(e2)})}}
 function form(el){const h=hoSo(),y=new Date().getFullYear();let o='<option value="">— Không chọn —</option>';for(let n=y-12;n>=y-90;n--)o+='<option value="'+n+'"'+(+h.nam===n?' selected':'')+'>'+n+'</option>';
  const r=(v,t)=>'<label class="dk-radio"><input type="radio" name="dkgt" value="'+v+'"'+(h.gt===v?' checked':'')+'> '+t+'</label>';
  el.innerHTML='<section class="dk-card dk-hs" aria-labelledby="dkHsH"><h2 id="dkHsH">Hồ sơ cá nhân</h2><p class="dk-priv">🔒 Không bắt buộc. Chỉ lưu trên máy này, dùng để chọn lời khen phù hợp.</p>'+
@@ -33,4 +45,4 @@ function form(el){const h=hoSo(),y=new Date().getFullYear();let o='<option value
  el.querySelector('[data-sv]').onclick=()=>{const c=el.querySelector('input[name=dkgt]:checked');const v={};const n=el.querySelector('#dkNam').value;if(n)v.nam=+n;if(c)v.gt=c.value;s('hn_dk_ho_so',JSON.stringify(v));pick=null;dpick=null;show(el);typeof hnGreet=='function'&&hnGreet(TEN);typeof DK!='undefined'&&DK.toast('Đã lưu trên máy này. Cảm ơn nhiều ạ!')};
  el.querySelector('[data-del]').onclick=()=>{try{localStorage.removeItem('hn_dk_ho_so')}catch(e){}pick=null;dpick=null;show(el);typeof hnGreet=='function'&&hnGreet(TEN);typeof DK!='undefined'&&DK.toast('Đã xóa thông tin hồ sơ khỏi máy này.')};
  el.querySelector('[data-cl]').onclick=()=>show(el)}
-return {DANH,danh,NHOM,nhom,xung,cau,dien,show,form}})();
+return {ninh,moi,DANH,danh,NHOM,nhom,xung,cau,dien,show,form}})();

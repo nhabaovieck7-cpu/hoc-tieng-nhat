@@ -869,3 +869,5 @@ textarea.hs-in{min-height:84px;resize:vertical;font-family:inherit}
 @media(min-width:861px){.topbar #acctbox .acctwho{grid-row:1/3;align-self:center}}
 .brand .st-s{display:none}
 @media(max-width:400px){.brand .st-f{display:none}.brand .st-s{display:inline}.topbar .hs-tb{display:none!important}.topbar .brand{font-size:16px;min-height:44px}}
+.hn-greet .hn-khen{display:block;font-size:16px;line-height:1.45;font-weight:600;color:var(--t);margin:6px 0 0;overflow-wrap:break-word}
+.hn-greet .hn-moi{display:block;font-size:16px;line-height:1.45;font-weight:700;color:var(--c,#c0392b);margin:2px 0 4px}
