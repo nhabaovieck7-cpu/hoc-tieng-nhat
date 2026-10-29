@@ -753,3 +753,7 @@ html.guest .admin-only{display:none!important}
 .ht-hero p.ht-hello,.ht-hello{font-size:clamp(24px,6.5vw,34px);font-weight:800;line-height:1.3;margin:0 0 10px;color:var(--shu,#cf3a2e)}
 h1.hn-greet{font-size:clamp(26px,7vw,40px);line-height:1.3;overflow-wrap:anywhere}
 .hn-name{color:var(--shu,#cf3a2e)}
+.hn-line{display:block;font-size:.62em;font-weight:600;color:var(--t);margin-top:8px;line-height:1.45}
+.ht-line{font-size:clamp(20px,5.4vw,26px)!important;font-weight:700;color:var(--t)!important;line-height:1.45;margin:0 0 10px!important}
+.ht-invite{font-size:17px!important;margin:0 0 12px!important}
+.ht-big.ht-huge{min-height:60px;font-size:19px;padding:0 30px;width:100%;max-width:420px}
