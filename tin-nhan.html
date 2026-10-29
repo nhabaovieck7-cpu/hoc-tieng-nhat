@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=55bd96c3"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#233d63"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Tin nhắn</title><meta name="description" content="Nhắn tin riêng giữa các học viên trong cộng đồng."><script>document.documentElement.classList.add('locked')</script>
+<style>
+.tn-wrap{max-width:920px}
+.tn-grid{display:grid;grid-template-columns:300px 1fr;gap:14px;align-items:start}
+@media(max-width:760px){.tn-grid{grid-template-columns:1fr}.tn-grid.thread .tn-list{display:none}.tn-grid:not(.thread) .tn-thread{display:none}}
+.tn-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.tn-conv{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 6px;cursor:pointer;font:inherit;color:var(--t);min-height:60px}
+.tn-conv:last-child{border-bottom:0}
+.tn-conv.on{background:var(--soft);border-radius:12px}
+.tn-ava{width:44px;height:44px;border-radius:50%;flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:19px;overflow:hidden}
+.tn-ava img{width:100%;height:100%;object-fit:cover;display:block}
+.tn-ava.sm{width:34px;height:34px;flex-basis:34px;font-size:15px}
+.tn-badge{background:var(--c);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;padding:0 6px}
+.tn-adm{display:inline-block;background:var(--c);color:#fff;border-radius:999px;padding:0 8px;font-size:12px;font-weight:700;margin-left:6px;vertical-align:2px}
+.tn-lv{display:inline-block;background:var(--soft);color:var(--c2);border-radius:999px;padding:0 8px;font-size:12px;font-weight:600;margin-left:6px}
+.tn-mut{color:var(--m);font-size:13px}
+.tn-ex{color:var(--m);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px}
+.tn-ex.un{color:var(--t);font-weight:600}
+.tn-msgs{height:52vh;min-height:300px;overflow-y:auto;padding:6px 2px;display:flex;flex-direction:column;gap:6px}
+.tn-row{display:flex;gap:8px;align-items:flex-end}
+.tn-row.me{justify-content:flex-end}
+.tn-bub{max-width:75%;border-radius:16px;padding:9px 13px;background:var(--soft);color:var(--t);line-height:1.5;word-break:break-word;white-space:pre-wrap}
+.tn-row.me .tn-bub{background:var(--c2);color:#fff;border-bottom-right-radius:6px}
+.tn-row:not(.me) .tn-bub{border-bottom-left-radius:6px}
+.tn-bub img{max-width:220px;width:100%;border-radius:10px;display:block}
+.tn-bub a.tn-doc{color:inherit;font-weight:600}
+.tn-del{font-style:italic;opacity:.75}
+.tn-meta{font-size:12px;color:var(--m);text-align:right;margin:2px 4px 4px}
+.tn-del-msg{background:none;border:0;color:var(--m);cursor:pointer;font-size:12px;padding:4px}
+.tn-inrow{display:flex;gap:8px;align-items:flex-end;border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.tn-inrow textarea{flex:1;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;background:var(--card);color:var(--t);resize:none;min-height:44px;max-height:110px}
+.tn-send{background:var(--c);color:#fff;border:0;border-radius:999px;padding:0 18px;font:inherit;font-weight:700;cursor:pointer;min-height:44px}
+.tn-send:disabled{opacity:.55}
+.tn-ghost{background:none;border:1px solid var(--line);color:var(--t);border-radius:999px;padding:0 14px;font:inherit;font-weight:600;cursor:pointer;min-height:40px}
+.tn-filebtn{background:var(--soft);border:0;color:var(--c2);border-radius:999px;width:44px;height:44px;font-size:18px;cursor:pointer;flex:0 0 44px}
+.tn-filebtn:disabled{opacity:.5;cursor:not-allowed}
+.tn-chip{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border-radius:999px;padding:5px 10px;margin:4px 6px 0 0;font-size:13px}
+.tn-chip button{border:0;background:none;cursor:pointer;color:var(--c);font-weight:700}
+.tn-err{color:var(--c);font-size:14px;margin-top:8px;min-height:20px}
+.tn-note{background:#fdf3e3;border:1px solid #ecd9a8;color:#7a5800;border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:12px}
+[data-theme="dark"] .tn-note{background:#3a2f14;color:#f0c869;border-color:#6b5518}
+.tn-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:6px;flex-wrap:wrap}
+.tn-modal{position:fixed;inset:0;background:rgba(10,14,20,.5);z-index:80;display:flex;align-items:center;justify-content:center;padding:16px}
+.tn-sheet{background:var(--card);color:var(--t);border-radius:16px;max-width:520px;width:100%;max-height:82vh;overflow:auto;padding:18px}
+.tn-sheet label{display:flex;gap:8px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+</style></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#khoahoc">Khóa học</a><a href="luyen-nghe.html">Luyện nghe</a><a href="tin-tuc.html">Tin tức</a><a href="hoi-ai.html">Hỏi AI</a><a href="cong-dong.html">Cộng đồng</a></nav></div></div>
+<main class="wrap tn-wrap"><a class="hn-back" href="cong-dong.html">← Quay lại</a> <button type="button" class="hn-share" data-share>📤 Chia sẻ</button>
+<div class="pagehead"><h1>💬 Tin nhắn <span class="h-jp jp">メッセージ</span></h1></div>
+<p class="honest">Nhắn tin riêng 1-1 với học viên khác. Tin nhắn chỉ hiện trong trang này (không gửi thông báo về điện thoại). Nếu ai đó làm phiền, hãy dùng nút <b>Chặn</b> hoặc <b>Báo cáo</b> trong cuộc trò chuyện.</p>
+<div id="tnroot"><p class="mut">Đang tải tin nhắn…</p></div>
+</main><footer class="site-title"></footer>
+<nav class="tabbar" aria-label="Điều hướng dưới"><div class="tabbar-in"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Trang chủ</span></a><a href="index.html#khoahoc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Khóa học</span></a><a href="luyen-nghe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 1 2-2H3z"/></svg><span>Luyện nghe</span></a><a href="tin-tuc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Tin tức</span></a><a class="on" href="cong-dong.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Cộng đồng</span></a></div></nav>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=42d8793c"></script><script src="auth.js?v=7af18363"></script><script src="features.js?v=1a7f97e9"></script><script src="lock.js?v=6f8fc162"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
+const root=document.getElementById('tnroot');
+const esc=F.esc;
+let ME=null,CONVS=[],CUR=null,MSGS=[],BLOCKED=new Set(),STORAGE=false,pollT=null,listT=null,pendingFile=null;
+const AVACOLORS=['#cf3a2e','#233d63','#2e7d4f','#8a5a00','#6a3fa0','#0f6f7a','#a03d63','#4c5866'];
+function avaColor(id){let h=0;const s=String(id||'');for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return AVACOLORS[h%AVACOLORS.length]}
+function avaHTML(p,sm){const nm=(p&&p.name)||'?';const ini=nm.trim().charAt(0).toUpperCase()||'?';
+ if(p&&p.avatar_file)return '<span class="tn-ava'+(sm?' sm':'')+'" style="background:'+avaColor(p.id)+'"><img data-avf="'+esc(p.avatar_file)+'" alt="" loading="lazy" onerror="this.remove()"></span>';
+ return '<span class="tn-ava'+(sm?' sm':'')+'" style="background:'+avaColor(p?p.id:'')+'">'+esc(ini)+'</span>'}
+function when(t){try{const d=new Date(t),n=new Date(),s=(n-d)/1000;if(s<60)return 'vừa xong';if(s<3600)return Math.floor(s/60)+' phút';if(s<86400)return Math.floor(s/3600)+' giờ';return d.toLocaleDateString('vi-VN')}catch(e){return ''}}
+function hmtime(t){try{return new Date(t).toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})}catch(e){return ''}}
+async function resolveAvatars(scope){const ids=new Set();scope.querySelectorAll('[data-avf],[data-imgf],[data-docf]').forEach(el=>{const id=el.dataset.avf||el.dataset.imgf||el.dataset.docf;if(id)ids.add(id)});
+ if(!ids.size)return;let map={};try{const j=await AUTH.api('/community/file-token',{method:'POST',body:{ids:[...ids].slice(0,60)}});map=j.urls||{}}catch(e){return}
+ scope.querySelectorAll('[data-avf]').forEach(el=>{const u=map[el.dataset.avf];if(u)el.src=u});
+ scope.querySelectorAll('[data-imgf]').forEach(el=>{const u=map[el.dataset.imgf];if(u)el.src=u});
+ scope.querySelectorAll('[data-docf]').forEach(el=>{const u=map[el.dataset.docf];if(u)el.href=u})}
+function convHTML(c){const p=c.other;const last=c.last;
+ return '<button type="button" class="tn-conv'+(CUR&&CUR.id===c.id?' on':'')+'" data-conv="'+esc(c.id)+'">'+avaHTML(p)
+ +'<span style="flex:1;min-width:0;text-align:left"><span><b>'+esc(p.name)+'</b>'+(c.is_admin?'<span class="tn-adm">Admin</span>':'')+(p.level?'<span class="tn-lv">'+esc(p.level)+'</span>':'')+'</span><br>'
+ +'<span class="tn-ex'+(c.unread?' un':'')+'">'+esc(last?(last.deleted?'Tin nhắn đã xoá':(last.body||(last.file_id?'📎 Tệp đính kèm':''))):'Chưa có tin nhắn')+'</span></span>'
+ +(last?'<span class="tn-mut">'+when(last.created_at)+'</span>':'')+(c.unread?'<span class="tn-badge">'+c.unread+'</span>':'')+'</button>'}
+function msgHTML(m){if(m.deleted)return '<div class="tn-row'+(m.mine?' me':'')+'"><div class="tn-bub tn-del">Tin nhắn đã xoá</div></div>';
+ let inner='';if(m.body)inner+='<div>'+esc(m.body)+'</div>';
+ if(m.file){if(m.file.kind==='image')inner+='<img data-imgf="'+esc(m.file.id)+'" alt="'+esc(m.file.name)+'">';else inner+='<a class="tn-doc" data-docf="'+esc(m.file.id)+'" href="#" onclick="return false">📎 '+esc(m.file.name)+'</a>'}
+ return '<div class="tn-row'+(m.mine?' me':'')+'" data-msg="'+esc(m.id)+'">'+(!m.mine?avaHTML(CUR.other,true):'')
+ +'<div class="tn-bub">'+inner+'<div class="tn-meta" style="color:inherit;opacity:.7">'+hmtime(m.created_at)+'</div></div>'
+ +(m.mine?'<button type="button" class="tn-del-msg" data-delmsg="'+esc(m.id)+'" title="Xoá tin này">✕</button>':'')+'</div>'}
+function readMarkHTML(){const mine=MSGS.filter(m=>m.mine&&!m.deleted);if(!mine.length)return '';const last=mine[mine.length-1];
+ return '<div class="tn-meta">'+(last.read_at?'Đã đọc':'Đã gửi')+' · '+hmtime(last.created_at)+'</div>'}
+function drawList(){const el=document.getElementById('tnlist');if(!el)return;
+ el.innerHTML=CONVS.length?CONVS.map(convHTML).join(''):'<p class="tn-mut" style="padding:8px">Chưa có cuộc trò chuyện nào. Vào mục Cộng đồng và bấm “Nhắn tin” ở một bài đăng để bắt đầu.</p>';
+ resolveAvatars(el)}
+function drawThread(){const el=document.getElementById('tnthread');if(!el)return;
+ if(!CUR){el.innerHTML='<p class="tn-mut">Chọn một cuộc trò chuyện ở danh sách để bắt đầu.</p>';return}
+ const p=CUR.other;const blocked=BLOCKED.has(p.id);
+ el.innerHTML='<div class="tn-head">'+avaHTML(p,true)+'<div style="flex:1;min-width:120px"><b>'+esc(p.name)+'</b>'+(CUR.is_admin?'<span class="tn-adm">Admin</span>':'')+(p.bio?'<div class="tn-mut">'+esc(p.bio)+'</div>':'')+'</div>'
+ +(!CUR.is_admin?'<a class="tn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="cong-dong.html?u='+encodeURIComponent(p.id)+'">Hồ sơ</a>'
+ +'<button type="button" class="tn-ghost" id="tnblock">'+(blocked?'Bỏ chặn':'Chặn')+'</button><button type="button" class="tn-ghost" id="tnreport">Báo cáo</button>':'')
+ +'<button type="button" class="tn-ghost" id="tnback">← Danh sách</button></div>'
+ +(blocked?'<div class="tn-note">Bạn đã chặn người này — họ không gửi tin cho bạn được nữa. Bấm “Bỏ chặn” để nhận lại.</div>':'')
+ +'<div class="tn-msgs" id="tnmsgs">'+MSGS.map(msgHTML).join('')+readMarkHTML()+'</div>'
+ +'<div id="tnchip"></div><div class="tn-err" id="tnerr"></div>'
+ +'<div class="tn-inrow"><input type="file" id="tnfile" accept="image/jpeg,image/png,image/webp,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip" hidden>'
+ +'<button type="button" class="tn-filebtn" id="tnfilebtn" '+(STORAGE?'':'disabled title="Kho lưu trữ đang được bật"')+'>📎</button>'
+ +'<textarea id="tntext" rows="1" maxlength="4000" placeholder="Nhắn tin…"></textarea><button type="button" class="tn-send" id="tnsend">Gửi</button></div>';
+ const msgs=document.getElementById('tnmsgs');msgs.scrollTop=msgs.scrollHeight;
+ document.getElementById('tnback').onclick=()=>{CUR=null;document.querySelector('.tn-grid').classList.remove('thread');drawThread();drawList()};
+ const bb=document.getElementById('tnblock');if(bb)bb.onclick=async()=>{try{
+   if(BLOCKED.has(p.id)){await AUTH.api('/chat/unblock',{method:'POST',body:{user_id:p.id}});BLOCKED.delete(p.id)}else{if(!confirm('Chặn '+p.name+'? Người này sẽ không gửi tin cho bạn được nữa.'))return;await AUTH.api('/chat/block',{method:'POST',body:{user_id:p.id}});BLOCKED.add(p.id)}
+   drawThread()}catch(e){alert(e.message)}};
+ const rb=document.getElementById('tnreport');if(rb)rb.onclick=openReport;
+ const fb=document.getElementById('tnfilebtn'),fi=document.getElementById('tnfile');
+ fb.onclick=()=>fi.click();fi.onchange=()=>{pendingFile=fi.files[0]||null;fi.value='';drawChip()};
+ document.getElementById('tnsend').onclick=sendMsg;
+ document.getElementById('tntext').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg()}});
+ resolveAvatars(el)}
+function drawChip(){const c=document.getElementById('tnchip');if(!c)return;
+ c.innerHTML=pendingFile?'<span class="tn-chip">📎 '+esc(pendingFile.name)+'<button type="button" id="tnchipx">✕</button></span>':'';
+ const x=document.getElementById('tnchipx');if(x)x.onclick=()=>{pendingFile=null;drawChip()}}
+async function shrinkImage(file){if(!/^image\//.test(file.type))return file;
+ return new Promise(res=>{const img=new Image();const url=URL.createObjectURL(file);
+ img.onload=()=>{URL.revokeObjectURL(url);const mx=1600;let w=img.naturalWidth,h=img.naturalHeight;if(w<=mx&&h<=mx&&file.size<=2*1024*1024){res(file);return}
+  const k=Math.min(1,mx/Math.max(w,h));const cv=document.createElement('canvas');cv.width=Math.round(w*k);cv.height=Math.round(h*k);
+  cv.getContext('2d').drawImage(img,0,0,cv.width,cv.height);cv.toBlob(b=>res(b?new File([b],file.name.replace(/\.\w+$/,'.jpg'),{type:'image/jpeg'}):file),'image/jpeg',0.85)};
+ img.onerror=()=>{URL.revokeObjectURL(url);res(file)};img.src=url})}
+async function sendMsg(){const ta=document.getElementById('tntext'),err=document.getElementById('tnerr');const body=ta.value.trim();
+ if(!body&&!pendingFile){return}const btn=document.getElementById('tnsend');btn.disabled=true;err.textContent='';
+ try{let fileId;if(pendingFile){let f=await shrinkImage(pendingFile);const fd=new FormData();fd.append('purpose','chat');fd.append('file',f);
+   const r=await fetch(SITE.aiEndpoint+'/community/upload',{method:'POST',headers:{Authorization:'<redacted>'+AUTH.session()},body:fd});
+   const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||('Lỗi tải file '+r.status));fileId=j.id;pendingFile=null;drawChip()}
+  const j=await AUTH.api('/chat/send',{method:'POST',body:{conv_id:CUR.id,body,file_id:fileId}});
+  MSGS.push(j.message);ta.value='';const box=document.getElementById('tnmsgs');
+  box.insertAdjacentHTML('beforeend',msgHTML(j.message));box.scrollTop=box.scrollHeight;resolveAvatars(box);loadConvs(true)}
+ catch(e){err.textContent=e.message}btn.disabled=false}
+async function loadConvs(keep){try{const j=await AUTH.api('/chat/conversations');CONVS=j.conversations;STORAGE=j.storage_enabled;
+ if(CUR){const c=CONVS.find(x=>x.id===CUR.id);if(c)CUR=c}
+ drawList();const fb=document.getElementById('tnfilebtn');if(fb&&STORAGE)fb.disabled=false}catch(e){}}
+async function loadMsgs(){if(!CUR)return;try{const j=await AUTH.api('/chat/messages?conv_id='+encodeURIComponent(CUR.id));
+ const box=document.getElementById('tnmsgs');if(!box)return;const nearBottom=box.scrollHeight-box.scrollTop-box.clientHeight<120;
+ const changed=j.messages.length!==MSGS.length||j.messages.some((m,i)=>!MSGS[i]||MSGS[i].id!==m.id||!!MSGS[i].read_at!==!!m.read_at||MSGS[i].deleted!==m.deleted);
+ MSGS=j.messages;if(changed){box.innerHTML=MSGS.map(msgHTML).join('')+readMarkHTML();resolveAvatars(box);if(nearBottom)box.scrollTop=box.scrollHeight}
+ loadConvs(true)}catch(e){}}
+function openReport(){if(!CUR)return;const recent=MSGS.slice(-50);
+ const ov=document.createElement('div');ov.className='tn-modal';
+ ov.innerHTML='<div class="tn-sheet"><h3 style="margin-top:0">Báo cáo cuộc trò chuyện</h3><p class="tn-mut">Chọn các tin nhắn vi phạm để gửi kèm cho quản trị viên xem xét. Chỉ những tin bạn chọn mới được đính kèm.</p>'
+ +recent.map(m=>'<label><input type="checkbox" value="'+esc(m.id)+'"><span>'+(m.deleted?'<i>Tin đã xoá</i>':esc((m.mine?'Bạn: ':'')+(m.body||'📎 Tệp đính kèm')))+'</span></label>').join('')
+ +'<textarea id="tnrep-reason" rows="2" maxlength="500" placeholder="Lý do báo cáo (không bắt buộc)…" style="width:100%;margin-top:10px;border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;background:var(--card);color:var(--t)"></textarea>'
+ +'<div style="display:flex;gap:8px;margin-top:12px"><button type="button" class="tn-send" id="tnrep-send">Gửi báo cáo</button><button type="button" class="tn-ghost" id="tnrep-cancel">Huỷ</button></div></div>';
+ document.body.appendChild(ov);
+ ov.querySelector('#tnrep-cancel').onclick=()=>ov.remove();
+ ov.addEventListener('click',e=>{if(e.target===ov)ov.remove()});
+ ov.querySelector('#tnrep-send').onclick=async()=>{const ids=[...ov.querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value);
+  if(!ids.length){alert('Hãy chọn ít nhất một tin nhắn để báo cáo.');return}
+  try{await AUTH.api('/chat/report',{method:'POST',body:{conv_id:CUR.id,message_ids:ids,reason:ov.querySelector('#tnrep-reason').value}});
+   ov.remove();alert('Đã gửi báo cáo kèm các tin đã chọn. Quản trị viên sẽ xem xét. Cảm ơn bạn!')}catch(e){alert(e.message)}}}
+async function openConv(convId){const c=CONVS.find(x=>x.id===convId);if(!c)return;CUR=c;
+ document.querySelector('.tn-grid').classList.add('thread');
+ try{const j=await AUTH.api('/chat/messages?conv_id='+encodeURIComponent(convId));MSGS=j.messages}catch(e){MSGS=[]}
+ drawThread();drawList();loadConvs(true)}
+root.addEventListener('click',e=>{const b=e.target.closest('[data-conv]');if(b){openConv(b.dataset.conv);return}
+ const d=e.target.closest('[data-delmsg]');if(d){if(!confirm('Xoá tin nhắn này? Người nhận sẽ thấy “Tin nhắn đã xoá”.'))return;
+  AUTH.api('/chat/delete-message',{method:'POST',body:{id:d.dataset.delmsg}}).then(()=>loadMsgs()).catch(x=>alert(x.message))}});
+async function boot(){try{const j=await AUTH.api('/community/profile');ME=j.profile}catch(e){root.innerHTML='<div class="tn-card"><p class="tn-err">⚠️ '+esc(e.message)+'</p></div>';return}
+ root.innerHTML='<div class="tn-note" id="tnstoragenote" hidden>📁 Gửi ảnh/tài liệu trong chat đang được bật trên hệ thống — hiện tại bạn nhắn chữ bình thường; nút 📎 sẽ dùng được ngay khi kho lưu trữ sẵn sàng.</div>'
+ +'<div class="tn-grid"><div class="tn-card tn-list" id="tnlist"><p class="tn-mut">Đang tải…</p></div><div class="tn-card tn-thread" id="tnthread"></div></div>';
+ try{const bj=await AUTH.api('/chat/blocks');BLOCKED=new Set(bj.blocks||[])}catch(e){}
+ await loadConvs();document.getElementById('tnstoragenote').hidden=STORAGE;
+ drawThread();
+ const qs=new URLSearchParams(location.search);
+ if(qs.get('c')){await openConv(qs.get('c'))}
+ else if(qs.get('u')){try{const j=await AUTH.api('/chat/open',{method:'POST',body:{user_id:qs.get('u')}});await loadConvs();await openConv(j.conv_id)}catch(e){alert(e.message)}}
+ clearInterval(pollT);pollT=setInterval(()=>{if(CUR&&!document.hidden)loadMsgs()},4000);
+ clearInterval(listT);listT=setInterval(()=>{if(!document.hidden)loadConvs(true)},20000)}
+boot();
+</script></body></html>

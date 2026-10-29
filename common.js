@@ -120,3 +120,74 @@ function hdrBoot(){var w=document.querySelector('.topbar .wrap');if(!w||document
  if(t&&t.parentNode===w)w.insertBefore(b,t);else w.appendChild(b)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',hdrBoot);else hdrBoot();
 })();
+
+// ===== Cộng đồng: link menu + chuông thông báo + nút tin nhắn trên header =====
+// Chuông hiện TỔNG chưa đọc = thông báo cộng đồng + tin nhắn chưa đọc (đếm riêng ở /community/unread).
+// Chỉ hiện khi đã có phiên đăng nhập học viên; thông báo là TRONG trang (không push về điện thoại).
+(function(){
+var base=function(){return (window.SITE&&SITE.aiEndpoint)||''};
+function sess(){try{return localStorage.getItem('hn_sess_v1')||''}catch(e){return ''}}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+async function api(path,opts){opts=opts||{};var h={'Content-Type':'application/json'};var t=sess();if(t)h.Authorization='Bearer '+t;
+ var r=await fetch(base()+path,{method:opts.method||'GET',headers:h,body:opts.body?JSON.stringify(opts.body):undefined});
+ var j=await r.json().catch(function(){return{}});if(!r.ok){var e=new Error(j.error||('Lỗi '+r.status));e.status=r.status;e.body=j;throw e}return j}
+var CSS='.hn-cb{position:relative;background:none;border:0;cursor:pointer;font-size:19px;line-height:1;padding:8px;border-radius:999px;min-width:40px;min-height:40px}'
++'.hn-cb:hover{background:var(--soft)}.hn-cbdg{position:absolute;top:0;right:-2px;background:var(--c);color:#fff;border-radius:999px;min-width:19px;height:19px;font-size:11px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 5px}'
++'.hn-cbdg.on{display:inline-flex}'
++'.hn-nwrap{position:relative}'
++'.hn-ndd{position:absolute;right:0;top:calc(100% + 8px);width:min(360px,92vw);max-height:70vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.2);z-index:90;padding:8px}'
++'.hn-ndd h4{margin:6px 8px 8px;font-size:15px}.hn-nit{display:flex;gap:9px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 8px;font:inherit;color:var(--t);cursor:pointer;align-items:flex-start}'
++'.hn-nit:last-of-type{border-bottom:0}.hn-nit.un{background:var(--soft);border-radius:10px}'
++'.hn-nava{width:34px;height:34px;border-radius:50%;flex:0 0 34px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px}'
++'.hn-ntx{flex:1;font-size:14px;line-height:1.45}.hn-ntm{color:var(--m);font-size:12px}'
++'.hn-nall{display:block;width:100%;text-align:center;background:none;border:0;border-top:1px solid var(--line);padding:10px;font:inherit;font-weight:600;color:var(--c2);cursor:pointer}'
++'.hn-navlink.on{color:var(--c)}';
+var COLORS=['#cf3a2e','#233d63','#2e7d4f','#8a5a00','#6a3fa0','#0f6f7a','#a03d63','#4c5866'];
+function color(id){var h=0,s=String(id||'');for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return COLORS[h%COLORS.length]}
+var NOTIFS=[],UNREAD={notifications:0,chat:0};
+function badge(el,n){if(!el)return;el.textContent=n>99?'99+':n;el.classList.toggle('on',n>0)}
+async function refresh(){if(!sess())return;try{var j=await api('/community/unread');UNREAD=j;
+ badge(document.querySelector('#hnbell .hn-cbdg'),(j.notifications||0)+(j.chat||0));
+ badge(document.querySelector('#hnchat .hn-cbdg'),j.chat||0)}catch(e){}}
+function typeText(n){var a=n.actor&&n.actor.name?n.actor.name:'Ai đó';
+ if(n.type==='like_post')return '<b>'+esc(a)+'</b> đã thích bài đăng của bạn';
+ if(n.type==='like_comment')return '<b>'+esc(a)+'</b> đã thích bình luận của bạn';
+ if(n.type==='comment_post')return '<b>'+esc(a)+'</b> đã bình luận vào bài của bạn';
+ if(n.type==='reply_comment')return '<b>'+esc(a)+'</b> đã trả lời bình luận của bạn';
+ return '<b>'+esc(a)+'</b> có hoạt động mới'}
+function when(t){try{var d=new Date(t),s=(Date.now()-d)/1000;if(s<60)return'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';return d.toLocaleDateString('vi-VN')}catch(e){return''}}
+function renderDD(dd){var items=NOTIFS.map(function(n){var ini=n.actor&&n.actor.name?n.actor.name.trim().charAt(0).toUpperCase():'?';
+  return '<button type="button" class="hn-nit'+(n.is_read?'':' un')+'" data-nid="'+esc(n.id)+'" data-post="'+esc(n.post_id||'')+'"><span class="hn-nava" style="background:'+color(n.actor&&n.actor.id)+'">'+esc(ini)+'</span><span class="hn-ntx">'+typeText(n)+'<br><span class="hn-ntm">'+when(n.created_at)+'</span></span></button>'}).join('');
+ var chatLine=UNREAD.chat>0?'<button type="button" class="hn-nit un" data-gochat="1"><span class="hn-nava" style="background:#233d63">💬</span><span class="hn-ntx">Bạn có <b>'+UNREAD.chat+'</b> tin nhắn chưa đọc<br><span class="hn-ntm">Bấm để mở hộp tin nhắn</span></span></button>':'';
+ dd.innerHTML='<h4>🔔 Thông báo</h4>'+chatLine+(items||'<p style="padding:6px 8px;color:var(--m);font-size:14px">Chưa có thông báo nào.</p>')
+ +(NOTIFS.some(function(n){return !n.is_read})?'<button type="button" class="hn-nall" data-readall="1">Đánh dấu đã đọc tất cả</button>':'')}
+async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return;
+ var nav=document.querySelector('.topbar .nav');
+ if(nav&&!nav.querySelector('a[href="cong-dong.html"]')){var a=document.createElement('a');a.href='cong-dong.html';a.textContent='Cộng đồng';a.className='hn-navlink';
+  if(/(^|\/)cong-dong\.html$/.test(location.pathname)||/(^|\/)tin-nhan\.html$/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}
+ if(!sess())return;
+ if(document.getElementById('hnbell'))return;
+ var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);
+ var chat=document.createElement('button');chat.type='button';chat.id='hnchat';chat.className='hn-cb';chat.title='Tin nhắn';chat.setAttribute('aria-label','Tin nhắn');
+ chat.innerHTML='💬<span class="hn-cbdg"></span>';chat.addEventListener('click',function(){location.href='tin-nhan.html'});
+ var wrap=document.createElement('span');wrap.className='hn-nwrap';
+ var bell=document.createElement('button');bell.type='button';bell.id='hnbell';bell.className='hn-cb';bell.title='Thông báo';bell.setAttribute('aria-label','Thông báo');
+ bell.innerHTML='🔔<span class="hn-cbdg"></span>';
+ var dd=document.createElement('div');dd.className='hn-ndd';dd.hidden=true;wrap.appendChild(bell);wrap.appendChild(dd);
+ var tgl=document.getElementById('themetgl');
+ if(tgl&&tgl.parentNode===w){w.insertBefore(chat,tgl);w.insertBefore(wrap,tgl)}else{w.appendChild(chat);w.appendChild(wrap)}
+ bell.addEventListener('click',async function(){if(!dd.hidden){dd.hidden=true;return}
+  dd.hidden=false;dd.innerHTML='<h4>🔔 Thông báo</h4><p style="padding:6px 8px;color:var(--m);font-size:14px">Đang tải…</p>';
+  try{var j=await api('/community/notifications');NOTIFS=j.notifications||[];UNREAD.notifications=j.unread||0;renderDD(dd);
+   badge(document.querySelector('#hnbell .hn-cbdg'),UNREAD.notifications+UNREAD.chat)}catch(e){dd.innerHTML='<h4>🔔 Thông báo</h4><p style="padding:6px 8px;color:var(--m);font-size:14px">Không tải được thông báo.</p>'}});
+ document.addEventListener('click',function(e){if(!wrap.contains(e.target))dd.hidden=true});
+ dd.addEventListener('click',async function(e){var it=e.target.closest?e.target.closest('[data-nid],[data-gochat],[data-readall]'):null;if(!it)return;
+  if(it.dataset.gochat){location.href='tin-nhan.html';return}
+  if(it.dataset.readall){try{await api('/community/notifications/read',{method:'POST',body:{}});NOTIFS.forEach(function(n){n.is_read=1});UNREAD.notifications=0;renderDD(dd);refresh()}catch(x){}return}
+  var id=it.dataset.nid,post=it.dataset.post;
+  try{await api('/community/notifications/read',{method:'POST',body:{id:id}})}catch(x){}
+  var n=NOTIFS.find(function(x){return x.id===id});if(n)n.is_read=1;UNREAD.notifications=Math.max(0,UNREAD.notifications-1);refresh();
+  dd.hidden=true;if(post)location.href='cong-dong.html#post-'+encodeURIComponent(post);else location.href='cong-dong.html'});
+ refresh();setInterval(function(){if(!document.hidden)refresh()},60000)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
