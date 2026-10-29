@@ -867,3 +867,5 @@ textarea.hs-in{min-height:84px;resize:vertical;font-family:inherit}
 @media(min-width:861px) and (max-width:1199px){.topbar #acctbox{grid-template-columns:auto minmax(0,100px) auto}.topbar #acctbox .acctwho,.topbar #acctbox .hs-slogan{max-width:100px}}
 @media(min-width:861px){.topbar #acctbox:has(.acctin){display:flex}}
 @media(min-width:861px){.topbar #acctbox .acctwho{grid-row:1/3;align-self:center}}
+.brand .st-s{display:none}
+@media(max-width:400px){.brand .st-f{display:none}.brand .st-s{display:inline}.topbar .hs-tb{display:none!important}.topbar .brand{font-size:16px;min-height:44px}}

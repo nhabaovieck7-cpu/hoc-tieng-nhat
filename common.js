@@ -4,7 +4,7 @@ function plain(s){return s.replace(/\{([^|}]+)\|([^}]+)\}/g,'$1$2')}
 function stripYomiTarget(s){return String(s||'').replace(/<(b|u|strong)(\s[^>]*)?>([\s\S]*?)<\/\1>/gi,function(_,t,a,inner){return '<'+t+(a||'')+'>'+inner.replace(/\{([^|}]+)\|[^}]+\}/g,'$1')+'</'+t+'>'})}
 function prepMcqQ(q,o){var s=String(q||''); if(/<(b|u|strong)\b/i.test(s)) s=stripYomiTarget(s); return s}
 
-document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);if(!document.title||!document.title.trim())document.title=SITE.title;
+document.querySelectorAll('.site-title').forEach(e=>{const f=document.createElement('span'),t=document.createElement('span');f.className='st-f';f.textContent=SITE.title;t.className='st-s';t.textContent=String(SITE.title).replace(/\s+cùng\s+.*$/i,'')||SITE.title;e.textContent='';e.append(f,t);e.setAttribute('aria-label',SITE.title)});if(!document.title||!document.title.trim())document.title=SITE.title;
 
 // ===== Tìm kiếm toàn trang (ô tìm kiếm trên đầu) =====
 (function(){
