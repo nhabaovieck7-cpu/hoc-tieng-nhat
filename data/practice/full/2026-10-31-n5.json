@@ -1,0 +1,662 @@
+{
+ "feature": "full-exam",
+ "date": "2026-10-31",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「電話」は 何と 読みますか。",
+   "choices": [
+    "でんは",
+    "でんわ",
+    "てんわ",
+    "でんしゃ"
+   ],
+   "answer": 1,
+   "explain_vi": "電話 đọc là でんわ, nghĩa là điện thoại. Chữ 電 là でん, chữ 話 trong từ này đọc là わ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「毎日」は 何と 読みますか。",
+   "choices": [
+    "まいあさ",
+    "まいひ",
+    "まいにち",
+    "まいばん"
+   ],
+   "answer": 2,
+   "explain_vi": "毎日 đọc là まいにち, nghĩa là mỗi ngày. Đừng nhầm với まいあさ (mỗi sáng) hay まいばん (mỗi tối)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「部屋」は 何と 読みますか。",
+   "choices": [
+    "へや",
+    "べや",
+    "へあ",
+    "ぺや"
+   ],
+   "answer": 0,
+   "explain_vi": "部屋 đọc là へや, nghĩa là căn phòng. Đây là từ ghép đặc biệt, cần học thuộc cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「友達」は 何と 読みますか。",
+   "choices": [
+    "ゆうだち",
+    "ゆうたち",
+    "ともたち",
+    "ともだち"
+   ],
+   "answer": 3,
+   "explain_vi": "友達 đọc là ともだち, nghĩa là bạn bè. Đây là cách đọc đặc biệt của cả từ nên phải nhớ nguyên từ, không ghép âm đọc của từng chữ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「先週」は 何と 読みますか。",
+   "choices": [
+    "せんしゅ",
+    "せんしゅう",
+    "さきしゅう",
+    "せんしゅい"
+   ],
+   "answer": 1,
+   "explain_vi": "先週 đọc là せんしゅう, nghĩa là tuần trước. Chữ 週 đọc là しゅう, có âm dài う ở cuối."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「来年」は 何と 読みますか。",
+   "choices": [
+    "らいねん",
+    "こねん",
+    "らいね",
+    "きねん"
+   ],
+   "answer": 0,
+   "explain_vi": "来年 đọc là らいねん, nghĩa là năm sau. Chữ 来 đọc là らい, chữ 年 đọc là ねん trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「飛行機」は 何と 読みますか。",
+   "choices": [
+    "ひこき",
+    "ひこうきい",
+    "ひこうき",
+    "ひこせん"
+   ],
+   "answer": 2,
+   "explain_vi": "飛行機 đọc là ひこうき, nghĩa là máy bay. Lưu ý âm dài こう ở giữa từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「病院」は 何と 読みますか。",
+   "choices": [
+    "びょうい",
+    "びよいん",
+    "びょういんい",
+    "びょういん"
+   ],
+   "answer": 3,
+   "explain_vi": "病院 đọc là びょういん, nghĩa là bệnh viện. Chữ 病 đọc là びょう, chữ 院 đọc là いん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「この かばんは 安いです。」の 「安い」は 何と 読みますか。",
+   "choices": [
+    "あんい",
+    "やすい",
+    "やすいい",
+    "たかい"
+   ],
+   "answer": 1,
+   "explain_vi": "安い đọc là やすい, nghĩa là rẻ. Tính từ này có đuôi là い, không nhân đôi thành やすいい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「新聞」は 何と 読みますか。",
+   "choices": [
+    "しんもん",
+    "しんぶんん",
+    "しんぶん",
+    "しんぽん"
+   ],
+   "answer": 2,
+   "explain_vi": "新聞 đọc là しんぶん, nghĩa là báo (tờ báo). Chữ 聞 trong từ này đọc là ぶん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "雨が 降って いますから、（ ）を 持って 行きましょう。",
+   "choices": [
+    "かさ",
+    "ぼうし",
+    "めがね",
+    "てぶくろ"
+   ],
+   "answer": 0,
+   "explain_vi": "Trời đang mưa (雨が降っています) nên cần mang theo かさ (cái ô). Các từ còn lại không dùng để che mưa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "部屋が （ ）ですから、電気を つけて ください。",
+   "choices": [
+    "あかるい",
+    "さむい",
+    "あつい",
+    "くらい"
+   ],
+   "answer": 3,
+   "explain_vi": "Vì phải bật đèn (電気をつけてください) nên phòng phải tối, đáp án là くらい. あかるい nghĩa là sáng, trái nghĩa với ngữ cảnh."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 図書館で （ ）を 借りました。昨日から 読んで います。",
+   "choices": [
+    "てがみ",
+    "本",
+    "音楽",
+    "映画"
+   ],
+   "answer": 1,
+   "explain_vi": "Ở thư viện người ta mượn 本 (sách) để đọc (読んでいます). Âm nhạc thì nghe, phim thì xem, không mượn để đọc."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "雨が 降って います。バスも 来ませんから、（ ）を 呼びましょう。",
+   "choices": [
+    "バス",
+    "先生",
+    "タクシー",
+    "友達"
+   ],
+   "answer": 2,
+   "explain_vi": "Khi mưa và xe buýt không đến, người ta gọi タクシー (taxi) để đi. Động từ 呼ぶ dùng cho việc gọi xe taxi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "ハンさんは 歌が とても （ ）です。みんな 聞きに 来ます。",
+   "choices": [
+    "上手",
+    "下手",
+    "有名",
+    "元気"
+   ],
+   "answer": 0,
+   "explain_vi": "Cụm 歌が上手 nghĩa là hát hay, hợp với việc mọi người đến nghe. 下手 là hát dở, trái với ngữ cảnh."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "冬は 寒いですから、厚い （ ）を 着ます。",
+   "choices": [
+    "シャツ",
+    "ぼうし",
+    "くつ",
+    "セーター"
+   ],
+   "answer": 3,
+   "explain_vi": "Động từ 着ます đi với quần áo mặc trên người, và mùa đông lạnh cần áo len dày セーター. Mũ dùng かぶります, giày dùng はきます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "手紙を 出したいですから、（ ）へ 行きます。",
+   "choices": [
+    "銀行",
+    "郵便局",
+    "病院",
+    "学校"
+   ],
+   "answer": 1,
+   "explain_vi": "Nơi gửi thư (手紙を出す) là 郵便局 (bưu điện). Ngân hàng, bệnh viện và trường học không phải nơi gửi thư."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "弟は 魚を 食べません。焼き肉の 店で （ ）を よく 食べます。",
+   "choices": [
+    "野菜",
+    "果物",
+    "肉",
+    "牛乳"
+   ],
+   "answer": 2,
+   "explain_vi": "Ở quán thịt nướng (焼き肉の店) món chính là 肉 (thịt). Em trai không ăn cá nhưng ở quán này thì ăn thịt."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "明日 試験が ありますから、今晩 たくさん （ ）します。",
+   "choices": [
+    "勉強",
+    "買い物",
+    "洗濯",
+    "料理"
+   ],
+   "answer": 0,
+   "explain_vi": "Ngày mai có kỳ thi (試験) nên tối nay phải 勉強 (học bài) nhiều. Các hoạt động còn lại không liên quan đến việc chuẩn bị thi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「父は 会社員です。」と いちばん 近い 意味の 文は どれですか。",
+   "choices": [
+    "父は 会社へ 行きません。",
+    "父は 学生です。",
+    "父は 家で 働いて います。",
+    "父は 会社で 働いて います。"
+   ],
+   "answer": 3,
+   "explain_vi": "会社員 là nhân viên công ty, tức là người làm việc ở công ty (会社で働いています). Đây là cách diễn đạt gần nghĩa nhất."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「この 本は とても 面白いです。」と いちばん 近い 意味の 文は どれですか。",
+   "choices": [
+    "この 本は とても つまらないです。",
+    "この 本を 読むと 楽しいです。",
+    "この 本は とても 難しいです。",
+    "この 本は とても 高いです。"
+   ],
+   "answer": 1,
+   "explain_vi": "面白い (thú vị) gần nghĩa với việc đọc sách thấy 楽しい (vui, thích thú). つまらない là chán, trái nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「リンさんは 速く 走ります。」と いちばん 近い 意味の 文は どれですか。",
+   "choices": [
+    "リンさんは ゆっくり 走ります。",
+    "リンさんは 走るのが 嫌いです。",
+    "リンさんは 走るのが 速いです。",
+    "リンさんは 毎日 走りません。"
+   ],
+   "answer": 2,
+   "explain_vi": "速く走ります (chạy nhanh) diễn đạt lại thành 走るのが速いです (việc chạy thì nhanh). ゆっくり là chậm, trái nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「今日は 忙しくて、時間が ありません。」と いちばん 近い 意味の 文は どれですか。",
+   "choices": [
+    "今日は 暇では ありません。",
+    "今日は 暇です。",
+    "今日は 休みです。",
+    "今日は 時間が たくさん あります。"
+   ],
+   "answer": 0,
+   "explain_vi": "忙しい (bận) và không có thời gian đồng nghĩa với không rảnh: 暇ではありません. Các đáp án còn lại đều nói hôm nay rảnh hoặc nghỉ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「部屋を 掃除しました。」と いちばん 近い 意味の 文は どれですか。",
+   "choices": [
+    "部屋を 汚しました。",
+    "部屋で 寝ました。",
+    "部屋を 出ました。",
+    "部屋を きれいに しました。"
+   ],
+   "answer": 3,
+   "explain_vi": "掃除する (dọn dẹp) đồng nghĩa với きれいにする (làm cho sạch đẹp). 汚しました là làm bẩn, trái nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 図書館で 日本語（ ）勉強します。",
+   "choices": [
+    "に",
+    "を",
+    "へ",
+    "と"
+   ],
+   "answer": 1,
+   "explain_vi": "Động từ 勉強します cần tân ngữ trực tiếp, dùng trợ từ を: 日本語を勉強します. に, へ, と không làm tân ngữ ở đây."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "部屋の ドアを （ ）ください。",
+   "choices": [
+    "あけます",
+    "あける",
+    "あけて",
+    "あけた"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu 〜てください dùng thể て của động từ: 開ける (nhóm 2) bỏ る thêm て thành あけて. Nên đáp án là あけてください (xin hãy mở cửa)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "昨日は 雨でしたから、どこへも （ ）。",
+   "choices": [
+    "行きませんでした",
+    "行きます",
+    "行きたいです",
+    "行ってください"
+   ],
+   "answer": 0,
+   "explain_vi": "Câu có 昨日 (hôm qua) và cấu trúc どこへも + phủ định, nên phải dùng quá khứ phủ định 行きませんでした (đã không đi đâu cả)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "ハンさんは 英語も 日本語も 話す（ ）。",
+   "choices": [
+    "ことが あります",
+    "ことでは ありません",
+    "ことが 好きです",
+    "ことが できます"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu động từ nguyên dạng + ことができます diễn tả khả năng: nói được cả tiếng Anh lẫn tiếng Nhật. Các mẫu còn lại không diễn tả khả năng."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "映画を 見た（ ）、友達と 食事を しました。",
+   "choices": [
+    "前に",
+    "あとで",
+    "ながら",
+    "とき"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu động từ thể た + あとで nghĩa là sau khi làm xong việc trước thì làm việc sau: xem phim xong rồi đi ăn với bạn. 前に phải đi với động từ nguyên dạng."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしより 妹の 方が 背が （ ）です。妹は 170センチです。",
+   "choices": [
+    "低い",
+    "同じ",
+    "高い",
+    "広い"
+   ],
+   "answer": 2,
+   "explain_vi": "Cấu trúc so sánh 〜より〜の方が và thông tin em gái cao 170cm cho thấy đáp án là 高い (cao hơn tôi). 背が低い là thấp, không hợp ngữ cảnh."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "明日 大雨が 降ったら、サッカーの 試合は （ ）。",
+   "choices": [
+    "ありません",
+    "あります",
+    "ありますか",
+    "ありました"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu 〜たら diễn tả điều kiện trong tương lai: nếu mai mưa to thì trận bóng sẽ không có (ありません). ありました là quá khứ, không hợp với 明日."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "病気ですから、病院へ （ ）なければ なりません。",
+   "choices": [
+    "行きます",
+    "行く",
+    "行かない",
+    "行か"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu 〜なければなりません (phải làm) cần thể ない bỏ い thêm なければ: 行く thành 行かなければ. Ở đây chỗ trống cần phần 行か để ghép thành 行かなければなりません."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：もう 昼ご飯を 食べましたか。 B：いいえ、まだ （ ）。",
+   "choices": [
+    "食べます",
+    "食べていません",
+    "食べました",
+    "食べたいです"
+   ],
+   "answer": 1,
+   "explain_vi": "Trả lời cho もう〜ましたか bằng まだ〜ていません nghĩa là chưa làm: chưa ăn trưa. まだ食べました là sai cách dùng."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "部屋に 椅子が 三つ （ ）。",
+   "choices": [
+    "います",
+    "おります",
+    "あります",
+    "あいます"
+   ],
+   "answer": 2,
+   "explain_vi": "椅子 (ghế) là đồ vật nên dùng あります để chỉ sự tồn tại. います chỉ dùng cho người và động vật."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "次の 文の ★ に 入るものは どれですか。\nわたしは 朝 ＿＿ ★ ＿＿ ＿＿ 学校へ 行きます。\n1 ごはんを　2 食べてから　3 七時に　4 起きて",
+   "choices": [
+    "ごはんを",
+    "食べてから",
+    "七時に",
+    "起きて"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng là: 七時に 起きて ごはんを 食べてから 学校へ行きます (dậy lúc 7 giờ, ăn cơm rồi đi học). Vị trí ★ là mảnh thứ hai, tức 起きて."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "次の 文の ★ に 入るものは どれですか。\nハンさんは ＿＿ ★ ＿＿ ＿＿ 勉強して います。\n1 図書館で　2 一人で　3 毎日　4 日本語を",
+   "choices": [
+    "図書館で",
+    "一人で",
+    "毎日",
+    "日本語を"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng là: 毎日 図書館で 一人で 日本語を 勉強しています (mỗi ngày học tiếng Nhật một mình ở thư viện). Vị trí ★ là mảnh thứ hai, tức 図書館で."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "次の 文の ★ に 入るものは どれですか。\nこれは ＿＿ ★ ＿＿ ＿＿ 本です。\n1 私が　2 昨日　3 買った　4 みどり駅前の 店で",
+   "choices": [
+    "私が",
+    "昨日",
+    "買った",
+    "みどり駅前の 店で"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng là: 私が 昨日 みどり駅前の店で 買った 本です (quyển sách tôi mua hôm qua ở cửa hàng trước ga Midori). Vị trí ★ là mảnh thứ hai, tức 昨日."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "次の 文の ★ に 入るものは どれですか。\nリンさんは ＿＿ ＿＿ ★ ＿＿ 帰りました。\n1 六時に　2 仕事が　3 終わってから　4 家へ",
+   "choices": [
+    "六時に",
+    "仕事が",
+    "終わってから",
+    "家へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng là: 六時に 仕事が 終わってから 家へ 帰りました (6 giờ, sau khi xong việc thì về nhà). Vị trí ★ là mảnh thứ ba, tức 終わってから."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "先週の 日曜日、ハンさんは 友達と 山へ 行きました。朝 早く 起きて、駅へ （ 39 ）、電車に 乗りました。山の 上は 涼しくて、気持ちが よかったです。二人は 写真を 撮ったり、歌を 歌ったり しました。家に 帰ってから、ハンさんは 家族に 撮った 写真を （ 40 ）。\n（ 39 ）に 入るものは どれですか。",
+   "choices": [
+    "行って",
+    "行くて",
+    "行ったて",
+    "行きて"
+   ],
+   "answer": 0,
+   "explain_vi": "Chuỗi hành động liên tiếp dùng thể て: 起きて、駅へ行って、電車に乗りました. Động từ 行く đổi sang thể て là 行って, có âm nhỏ っ đặc biệt."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "先週の 日曜日、ハンさんは 友達と 山へ 行きました。朝 早く 起きて、駅へ （ 39 ）、電車に 乗りました。山の 上は 涼しくて、気持ちが よかったです。二人は 写真を 撮ったり、歌を 歌ったり しました。家に 帰ってから、ハンさんは 家族に 撮った 写真を （ 40 ）。\n（ 40 ）に 入るものは どれですか。",
+   "choices": [
+    "見せますて",
+    "見せて",
+    "見せない",
+    "見せました"
+   ],
+   "answer": 3,
+   "explain_vi": "Cả đoạn kể chuyện quá khứ (先週の日曜日), và câu kết thúc một hành động đã xong nên dùng quá khứ 見せました (đã cho xem). 見せて không thể kết thúc câu ở đây."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "リンさんへ。明日は 雨の 予報ですから、傘を 持って 来て ください。午前10時に さくら町の 図書館の 前で 会いましょう。ハンより\n二人は 明日 どこで 会いますか。",
+   "choices": [
+    "みどり駅の 前",
+    "さくら町の 図書館の 前",
+    "学校の 前",
+    "公園の 前"
+   ],
+   "answer": 1,
+   "explain_vi": "Lời nhắn viết rõ さくら町の図書館の前で会いましょう, tức hai người gặp nhau trước thư viện ở thị trấn Sakura."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "土曜日の 午後、ハンさんと リンさんは 公園で ピクニックを します。二人は サンドイッチと ジュースを 持って 行きます。雨が 降ったら、ピクニックは 日曜日に します。\n雨が 降ったら、どう しますか。",
+   "choices": [
+    "ピクニックを やめます",
+    "家で 食べます",
+    "日曜日に ピクニックを します",
+    "公園へ 行きません"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn nói 雨が降ったら、ピクニックは日曜日にします, tức nếu mưa thì buổi dã ngoại chuyển sang Chủ nhật, không hủy bỏ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "さくら町の 本屋では、今週、本が 安く なって います。辞書は 2000円から 1500円に なりました。セールは 日曜日までです。\n辞書は 今 いくらですか。",
+   "choices": [
+    "1500円",
+    "2000円",
+    "2500円",
+    "1000円"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn nói từ điển giảm từ 2000 yên xuống còn 1500 yên (2000円から1500円になりました), nên giá hiện tại là 1500 yên."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "ハンさんは 先月から 料理を 始めました。初めは 簡単な 料理だけ 作りましたが、今は カレーライスも 作ることが できます。日曜日には 友達を 家に 呼んで、一緒に 料理を 食べます。友達は「とても おいしい」と 言いました。ハンさんは 来月、もっと 難しい 料理に 挑戦したいです。\nハンさんは いつ 料理を 始めましたか。",
+   "choices": [
+    "今日",
+    "明日",
+    "来週",
+    "先月"
+   ],
+   "answer": 3,
+   "explain_vi": "Câu đầu đoạn văn nói ハンさんは先月から料理を始めました, tức Han bắt đầu nấu ăn từ tháng trước."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "ハンさんは 先月から 料理を 始めました。初めは 簡単な 料理だけ 作りましたが、今は カレーライスも 作ることが できます。日曜日には 友達を 家に 呼んで、一緒に 料理を 食べます。友達は「とても おいしい」と 言いました。ハンさんは 来月、もっと 難しい 料理に 挑戦したいです。\n日曜日、ハンさんは 何を しますか。",
+   "choices": [
+    "一人で 料理を 作ります",
+    "友達と 一緒に 料理を 食べます",
+    "レストランへ 行きます",
+    "買い物だけ します"
+   ],
+   "answer": 1,
+   "explain_vi": "Đoạn văn nói ngày Chủ nhật Han mời bạn về nhà và cùng nhau ăn món mình nấu (友達を家に呼んで、一緒に料理を食べます)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "リンさんは 先週、さくら町の お祭りに 行きました。祭りは 土曜日の 夜、6時から 9時まででした。リンさんは 友達と 浴衣を 着て、町の 通りを 歩きました。通りには 食べ物の 店が たくさん あって、二人は 焼きそばを 食べました。8時からは 花火が 始まって、とても きれいでした。リンさんは 祭りの 写真を たくさん 撮りました。\n祭りは 何時まででしたか。",
+   "choices": [
+    "午後6時",
+    "午後8時",
+    "午後9時",
+    "午後10時"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn nói lễ hội từ 6 giờ đến 9 giờ tối (6時から9時まで), nên lễ hội kết thúc lúc 9 giờ tối."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "リンさんは 先週、さくら町の お祭りに 行きました。祭りは 土曜日の 夜、6時から 9時まででした。リンさんは 友達と 浴衣を 着て、町の 通りを 歩きました。通りには 食べ物の 店が たくさん あって、二人は 焼きそばを 食べました。8時からは 花火が 始まって、とても きれいでした。リンさんは 祭りの 写真を たくさん 撮りました。\nリンさんは 祭りで 何を 食べましたか。",
+   "choices": [
+    "焼きそば",
+    "すし",
+    "ラーメン",
+    "カレーライス"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn nói hai người đã ăn 焼きそば (mì xào yakisoba) tại các quầy đồ ăn ở lễ hội."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "リンさんは 先週、さくら町の お祭りに 行きました。祭りは 土曜日の 夜、6時から 9時まででした。リンさんは 友達と 浴衣を 着て、町の 通りを 歩きました。通りには 食べ物の 店が たくさん あって、二人は 焼きそばを 食べました。8時からは 花火が 始まって、とても きれいでした。リンさんは 祭りの 写真を たくさん 撮りました。\n花火は 何時から 始まりましたか。",
+   "choices": [
+    "6時から",
+    "7時から",
+    "9時から",
+    "8時から"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn văn nói 8時からは花火が始まって, tức pháo hoa bắt đầu từ 8 giờ. 6 giờ là giờ bắt đầu lễ hội, không phải pháo hoa."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "日本語クラス（さくら町 公民館）\n・日時：毎週 水曜日と 金曜日、午後7時から 8時30分まで\n・場所：さくら町 公民館 2階\n・お金：1か月 3000円\n・持ってくるもの：教科書と ノートと 鉛筆\n・申し込み：公民館の 窓口で して ください\nクラスは 週に 何回 ありますか。",
+   "choices": [
+    "1回",
+    "3回",
+    "2回",
+    "5回"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi lớp học vào thứ Tư và thứ Sáu hàng tuần (毎週水曜日と金曜日), tức 2 buổi mỗi tuần."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "日本語クラス（さくら町 公民館）\n・日時：毎週 水曜日と 金曜日、午後7時から 8時30分まで\n・場所：さくら町 公民館 2階\n・お金：1か月 3000円\n・持ってくるもの：教科書と ノートと 鉛筆\n・申し込み：公民館の 窓口で して ください\nクラスに 何を 持って 行きますか。",
+   "choices": [
+    "辞書と 傘",
+    "教科書と ノートと 鉛筆",
+    "お金だけ",
+    "教科書だけ"
+   ],
+   "answer": 1,
+   "explain_vi": "Mục 持ってくるもの trong thông báo ghi rõ: sách giáo khoa, vở và bút chì (教科書とノートと鉛筆)."
+  }
+ ]
+}
