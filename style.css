@@ -749,3 +749,7 @@ details.ht-yr>.in{padding:0 12px 10px}
 .ht-today{display:inline-block;background:#cf3a2e;color:#fff;border-radius:8px;padding:2px 8px;font-size:.8rem;margin-left:6px}
 .ht-locknote{background:#f1efea;color:#777;border-radius:12px;min-height:52px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-top:10px}
 html.guest .admin-only{display:none!important}
+/* Chào theo tên (29/10) */
+.ht-hero p.ht-hello,.ht-hello{font-size:clamp(24px,6.5vw,34px);font-weight:800;line-height:1.3;margin:0 0 10px;color:var(--shu,#cf3a2e)}
+h1.hn-greet{font-size:clamp(26px,7vw,40px);line-height:1.3;overflow-wrap:anywhere}
+.hn-name{color:var(--shu,#cf3a2e)}
