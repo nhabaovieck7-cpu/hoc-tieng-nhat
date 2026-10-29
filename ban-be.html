@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"></noscript><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=ba16ae40"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#233d63"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Bạn bè</title><meta name="description" content="Tìm bạn cùng học tiếng Nhật, gửi lời mời kết bạn và trò chuyện cùng nhau."><script>document.documentElement.classList.add('locked')</script>
+<style>
+.bb-wrap{max-width:1180px}
+.bb-lay{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:1000px){.bb-lay{grid-template-columns:280px minmax(0,1fr)}}
+.bb-side{display:none}@media(min-width:1000px){.bb-side{display:block;position:sticky;top:84px;align-self:start}}
+.bb-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:0 0 14px}
+.bb-card h2,.bb-card h3{margin:0 0 10px}
+.bb-nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:var(--t);text-decoration:none;font-weight:600}
+.bb-nav a:hover,.bb-nav a.on{background:var(--soft)}
+.bb-pill{background:#e41e3f;color:#fff;border-radius:99px;padding:0 8px;font-size:12px;font-weight:700;margin-left:auto}
+.bb-tabs{display:flex;gap:6px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:none}
+@media(min-width:1000px){.bb-tabs{display:none}}
+.bb-tabs button{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--t);border-radius:999px;padding:7px 14px;font:inherit;font-weight:600;font-size:14px;cursor:pointer;min-height:38px}
+.bb-tabs button.on{background:var(--c);color:#fff;border-color:var(--c)}
+.bb-bd{background:#e41e3f;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 6px}
+.bb-search{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.bb-inp{border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:inherit;background:var(--card);color:var(--t);min-height:44px;box-sizing:border-box}
+.bb-search .bb-inp{flex:1;min-width:180px}
+.bb-chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+.bb-chips button{border:1px solid var(--line);background:var(--card);color:var(--t);border-radius:999px;padding:6px 13px;font:inherit;font-weight:600;font-size:14px;cursor:pointer;min-height:36px}
+.bb-chips button.on{background:var(--c);color:#fff;border-color:var(--c)}
+.bb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+@media(min-width:1000px){.bb-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.bb-sg{border:1px solid var(--line);border-radius:12px;padding:14px 10px 12px;text-align:center;background:var(--card)}
+.bb-sg .bb-nm{font-weight:700;margin-top:8px;word-break:break-word}
+.bb-ava{width:56px;height:56px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;overflow:hidden;position:relative;text-decoration:none}
+.bb-ava img{width:100%;height:100%;object-fit:cover;display:block}
+.bb-ava.sm{width:48px;height:48px;flex:0 0 48px;font-size:19px;margin:0}
+.bb-dot{position:absolute;right:1px;bottom:1px;width:12px;height:12px;border-radius:50%;background:#31a24c;border:2px solid var(--card)}
+.bb-mut{color:var(--m);font-size:13px}
+.bb-lv{display:inline-block;background:var(--soft);color:var(--c2);border-radius:999px;padding:0 8px;font-size:12px;font-weight:600;margin-left:6px;vertical-align:2px}
+.bb-btn{border:0;border-radius:999px;padding:0 14px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;min-height:40px;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
+.bb-btn.p{background:var(--c);color:#fff}
+.bb-btn.g{background:var(--soft);color:var(--t)}
+.bb-btn:disabled{opacity:.6;cursor:default}
+.bb-sg .bb-btn{width:100%;margin-top:6px}
+.bb-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.bb-row:first-of-type{border-top:0}
+.bb-row .bb-t{flex:1;min-width:0}
+.bb-menu{position:relative}
+.bb-menu>button{background:none;border:0;font-size:20px;color:var(--m);cursor:pointer;padding:2px 8px;border-radius:8px;min-height:36px}
+.bb-pop{position:absolute;right:0;top:38px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.16);z-index:30;min-width:190px;padding:6px}
+.bb-pop button,.bb-pop a{display:block;width:100%;text-align:left;background:none;border:0;font:inherit;padding:9px 10px;border-radius:8px;cursor:pointer;color:var(--t);text-decoration:none;box-sizing:border-box}
+.bb-pop button:hover,.bb-pop a:hover{background:var(--soft)}
+.bb-pol label{display:flex;gap:8px;align-items:flex-start;font-weight:600;margin:10px 0 4px}
+.bb-pol select,.bb-pol input[type="text"]{width:100%;margin-top:4px}
+.bb-err{color:var(--c);font-size:14px;margin-top:8px;min-height:20px}
+.bb-ok{color:var(--ok,#2e7d4f);font-size:14px;margin-top:8px;min-height:20px}
+</style></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#khoahoc">Khóa học</a><a href="luyen-nghe.html">Luyện nghe</a><a href="tin-tuc.html">Tin tức</a><a href="hoi-ai.html">Hỏi AI</a><a class="on" href="cong-dong.html">Cộng đồng</a></nav></div></div>
+<main class="wrap bb-wrap"><a class="hn-back" href="cong-dong.html">← Về Cộng đồng</a> <button type="button" class="hn-share" data-share>📤 Chia sẻ</button>
+<div class="pagehead"><h1>👫 Bạn bè <span class="h-jp jp">友だち</span></h1></div>
+<p class="honest">Tìm bạn cùng cấp để luyện tập và động viên nhau mỗi ngày. Chỉ những học viên cho phép tìm thấy mới hiện trong kết quả tìm kiếm.</p>
+<div class="bb-lay"><aside class="bb-side"><div class="bb-card bb-nav"><a class="on" href="#bbtim">🔍 Tìm bạn bè</a><a href="#bbmoi">🤝 Lời mời kết bạn <span class="bb-pill" id="bbfrpill" hidden></span></a><a href="#bbgoiy">✨ Gợi ý cùng cấp</a><a href="#bbds">👫 Tất cả bạn bè <span class="bb-pill" id="bbfrpill2" hidden style="background:var(--soft);color:var(--c2)"></span></a><a href="tin-nhan.html">💬 Tin nhắn</a><a href="cong-dong.html">🏠 Bảng tin cộng đồng</a></div>
+<div class="bb-card" id="bbmebox"><p class="bb-mut">Đang tải hồ sơ của bạn…</p></div></aside>
+<div id="bbroot"><p class="mut">Đang tải danh sách bạn bè…</p></div></div>
+</main><footer class="site-title"></footer>
+<nav class="tabbar" aria-label="Điều hướng dưới"><div class="tabbar-in"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Trang chủ</span></a><a href="index.html#khoahoc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Khóa học</span></a><a href="luyen-nghe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 1-2-2H3z"/></svg><span>Luyện nghe</span></a><a href="tin-tuc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Tin tức</span></a><a class="on" href="cong-dong.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Cộng đồng</span></a></div></nav>
+<script src="config.js?v=c2a095db"></script><script src="common.js?v=cc687cdf"></script><script src="auth.js?v=fb72ff4f"></script>
+<script src="stats.js?v=2b4656bd"></script><script src="features.js?v=1a7f97e9"></script><script src="lock.js?v=28e9f29f"></script><script>LOCK.run([])</script><script type="text/plain" id="main">
+const root=document.getElementById('bbroot');
+const esc=F.esc;
+let ME=null,FRIENDS=[],INCOMING=[],OUTGOING=[],SUGGEST=[],SLEVEL='',searchT=null;
+const AVACOLORS=['#cf3a2e','#233d63','#2e7d4f','#8a5a00','#6a3fa0','#0f6f7a','#a03d63','#4c5866'];
+function avaColor(id){let h=0;const s=String(id||'');for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return AVACOLORS[h%AVACOLORS.length]}
+function avaHTML(p,sm){const nm=(p&&p.name)||'?';const ini=nm.trim().charAt(0).toUpperCase()||'?';
+ const dot=p&&p.online?'<i class="bb-dot"></i>':'';
+ if(p&&p.avatar_file)return '<span class="bb-ava'+(sm?' sm':'')+'" style="background:'+avaColor(p.id)+'"><img data-avf="'+esc(p.avatar_file)+'" alt="" loading="lazy" onerror="this.remove()">'+dot+'</span>';
+ return '<span class="bb-ava'+(sm?' sm':'')+'" style="background:'+avaColor(p?p.id:'')+'">'+esc(ini)+dot+'</span>'}
+function when(t){try{const d=new Date(t),n=new Date(),s=(n-d)/1000;if(s<60)return 'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';if(s<86400*7)return Math.floor(s/86400)+' ngày trước';return d.toLocaleDateString('vi-VN')}catch(e){return ''}}
+function stateOf(p){return p.friend||p.friend_state||p.state||'none'}
+function normUser(x){if(!x)return null;const u=x.user||x.from||x.profile||x;const o=Object.assign({},u);
+ if(x.mutual_friends!==undefined)o.mutual_friends=x.mutual_friends;if(x.message!==undefined)o._msg=x.message;if(x.created_at!==undefined)o._at=x.created_at;
+ if(x.online!==undefined)o.online=x.online;if(x.last_seen!==undefined)o.last_seen=x.last_seen;
+ if(x.friend||x.friend_state||x.state)o.friend=x.friend||x.friend_state||x.state;return o}
+function metaLine(p){const bits=[];if(p.level)bits.push(esc(p.level));if(p.region)bits.push('📍 '+esc(p.region));if(p.mutual_friends)bits.push(p.mutual_friends+' bạn chung');if(p.streak)bits.push('🔥 '+p.streak+' ngày');return bits.join(' · ')}
+async function resolveFiles(scope){const ids=new Set();scope.querySelectorAll('[data-avf]').forEach(el=>ids.add(el.dataset.avf));
+ if(!ids.size)return;try{const j=await AUTH.api('/community/file-token',{method:'POST',body:{ids:[...ids].slice(0,60)}});const map=Object.fromEntries(Object.entries(j.urls||{}).map(([k,v])=>[k,String(v).startsWith('/')?SITE.aiEndpoint.replace(/\/$/,'')+v:v]));
+ scope.querySelectorAll('[data-avf]').forEach(el=>{const u=map[el.dataset.avf];if(u)el.src=u})}catch(e){}}
+function friendBtnHTML(p){const st=stateOf(p);if(ME&&p.id===ME.id)return '';
+ if(st==='friends')return '<button type="button" class="bb-btn g" disabled>👫 Bạn bè</button>';
+ if(st==='outgoing')return '<button type="button" class="bb-btn g" data-fact="cancel" data-u="'+esc(p.id)+'">✓ Đã gửi · Hủy</button>';
+ if(st==='incoming')return '<button type="button" class="bb-btn p" data-fact="accept" data-u="'+esc(p.id)+'">Chấp nhận</button><button type="button" class="bb-btn g" data-fact="decline" data-u="'+esc(p.id)+'">Từ chối</button>';
+ return '<button type="button" class="bb-btn p" data-fact="request" data-u="'+esc(p.id)+'">➕ Kết bạn</button>'}
+function msgBtnHTML(p,primary){if(ME&&p.id===ME.id)return '';return '<a class="bb-btn '+(primary?'p':'g')+'" href="tin-nhan.html?with='+encodeURIComponent(p.id)+'">💬 Nhắn tin</a>'}
+function sgHTML(p){return '<div class="bb-sg" data-card="'+esc(p.id)+'">'+avaHTML(p)+'<div class="bb-nm">'+esc(p.name)+(p.level?'<span class="bb-lv">'+esc(p.level)+'</span>':'')+'</div><div class="bb-mut">'+metaLine(p)+'</div>'+friendBtnHTML(p)+(stateOf(p)==='friends'?msgBtnHTML(p,true):msgBtnHTML(p,false))+'</div>'}
+function reqRowHTML(p,dir){return '<div class="bb-row" data-card="'+esc(p.id)+'">'+avaHTML(p,true)+'<div class="bb-t"><b>'+esc(p.name)+'</b>'+(p.level?'<span class="bb-lv">'+esc(p.level)+'</span>':'')
+ +'<div class="bb-mut">'+[p.mutual_friends?p.mutual_friends+' bạn chung':'',p._msg?'“'+esc(p._msg)+'”':'',p._at?when(p._at):''].filter(Boolean).join(' · ')+'</div>'
+ +(dir==='in'?'<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap"><button type="button" class="bb-btn p" data-fact="accept" data-u="'+esc(p.id)+'">Chấp nhận</button><button type="button" class="bb-btn g" data-fact="decline" data-u="'+esc(p.id)+'">Từ chối</button></div>'
+ :'<div style="margin-top:6px"><button type="button" class="bb-btn g" data-fact="cancel" data-u="'+esc(p.id)+'">Hủy lời mời</button></div>')
+ +'</div></div>'}
+function friendRowHTML(p){return '<div class="bb-row" data-card="'+esc(p.id)+'">'+avaHTML(p,true)+'<div class="bb-t"><b>'+esc(p.name)+'</b>'+(p.level?'<span class="bb-lv">'+esc(p.level)+'</span>':'')
+ +'<div class="bb-mut">'+(p.online?'Đang hoạt động':(p.last_seen?'Hoạt động '+when(p.last_seen):metaLine(p)||''))+'</div></div>'
+ +'<a class="bb-btn g" href="tin-nhan.html?with='+encodeURIComponent(p.id)+'" aria-label="Nhắn tin">💬</a>'
+ +'<div class="bb-menu"><button type="button" data-menu="'+esc(p.id)+'" aria-label="Tuỳ chọn">⋯</button><div class="bb-pop" hidden>'
+ +'<a href="cong-dong.html#user-'+encodeURIComponent(p.id)+'">👤 Xem trang</a>'
+ +'<button type="button" data-fact="unfriend" data-u="'+esc(p.id)+'">💔 Hủy kết bạn</button>'
+ +'<button type="button" data-fact="block" data-u="'+esc(p.id)+'">⛔ Chặn</button>'
+ +'<button type="button" data-fact="report" data-u="'+esc(p.id)+'">🚩 Báo cáo</button>'
+ +'</div></div></div>'}
+function setBadges(){const n=INCOMING.length;[[document.getElementById('bbfrpill')],[document.getElementById('bbtabpill')]].forEach(([el])=>{if(el){el.hidden=!n;el.textContent=n}});
+ const c=document.getElementById('bbfrpill2');if(c){c.hidden=!FRIENDS.length;c.textContent=FRIENDS.length}
+ const h=document.getElementById('bbmoih');if(h)h.textContent='🤝 Lời mời kết bạn'+(n?' ('+n+')':'');
+ const f=document.getElementById('bbdsh');if(f)f.textContent='👫 Bạn bè'+(FRIENDS.length?' · '+FRIENDS.length:'')}
+function drawLists(){const inc=document.getElementById('bbincoming'),out=document.getElementById('bboutgoing'),sg=document.getElementById('bbsuggest'),fl=document.getElementById('bbfriends');
+ if(inc)inc.innerHTML=INCOMING.length?INCOMING.map(p=>reqRowHTML(p,'in')).join(''):'<p class="bb-mut">Chưa có lời mời nào đang chờ. Khi có bạn mới gửi lời mời, bạn sẽ thấy ở đây.</p>';
+ if(out)out.innerHTML=OUTGOING.length?OUTGOING.map(p=>reqRowHTML(p,'out')).join(''):'<p class="bb-mut">Bạn chưa gửi lời mời nào đang chờ.</p>';
+ if(sg)sg.innerHTML=SUGGEST.length?SUGGEST.map(sgHTML).join(''):'<p class="bb-mut">Chưa có gợi ý — bạn thử tìm bạn ở ô tìm kiếm phía trên nhé.</p>';
+ if(fl)fl.innerHTML=FRIENDS.length?FRIENDS.map(friendRowHTML).join(''):'<p class="bb-mut">Bạn chưa có bạn bè nào. Gửi lời mời kết bạn để bắt đầu nhé!</p>';
+ setBadges();resolveFiles(root)}
+function drawMe(){const box=document.getElementById('bbmebox');if(!box||!ME)return;const p=ME;
+ box.innerHTML='<b>Hồ sơ của bạn</b><div style="display:flex;gap:10px;align-items:center;margin-top:8px">'+avaHTML(p,true)+'<div><b>'+esc(p.name)+'</b>'+(p.level?'<span class="bb-lv">'+esc(p.level)+'</span>':'')+'<div class="bb-mut">'+FRIENDS.length+' bạn bè'+(p.region?' · 📍 '+esc(p.region):'')+'</div></div></div>'}
+function privacyHTML(){const p=ME;return '<div class="bb-card bb-pol" id="bbpriv"><h3>⚙️ Quyền riêng tư</h3>'
+ +'<label><input type="checkbox" id="bbdisc" '+(p.discoverable===false?'':'checked')+'> <span>Cho phép người khác tìm thấy tôi <span class="bb-mut">(mặc định bật; tắt thì bạn không hiện trong kết quả tìm kiếm)</span></span></label>'
+ +'<label style="display:block">📍 Khu vực (không bắt buộc)<input type="text" class="bb-inp" id="bbregion2" maxlength="40" value="'+esc(p.region||'')+'" placeholder="Ví dụ: Osaka, Kawasaki…"></label>'
+ +'<label style="display:block">🏷️ Ai được nhắc đến tôi (@) <select class="bb-inp" id="bbmp"><option value="all"'+(p.mention_policy==='all'||!p.mention_policy?' selected':'')+'>Mọi người</option><option value="friends"'+(p.mention_policy==='friends'?' selected':'')+'>Chỉ bạn bè</option><option value="none"'+(p.mention_policy==='none'?' selected':'')+'>Không ai</option></select></label>'
+ +'<div style="margin-top:10px"><button type="button" class="bb-btn p" id="bbprivsave">Lưu cài đặt</button></div><div class="bb-err" id="bbpriverr"></div><div class="bb-ok" id="bbprivok"></div></div>'}
+async function loadFriends(){try{const j=await AUTH.api('/friends/list');FRIENDS=(j.friends||j.users||[]).map(normUser).filter(Boolean)}catch(e){FRIENDS=[]}
+ try{const j=await AUTH.api('/friends/requests');INCOMING=(j.incoming||[]).map(normUser).filter(Boolean);OUTGOING=(j.outgoing||[]).map(normUser).filter(Boolean);
+  if(!INCOMING.length&&Array.isArray(j.requests))INCOMING=j.requests.map(normUser).filter(Boolean)}catch(e){INCOMING=[];OUTGOING=[]}
+ try{const j=await AUTH.api('/friends/suggest');SUGGEST=(j.suggestions||j.users||[]).map(normUser).filter(Boolean)}catch(e){SUGGEST=[]}
+ drawLists();drawMe()}
+async function doSearch(){const box=document.getElementById('bbresults');if(!box)return;const q=document.getElementById('bbq').value.trim();const region=document.getElementById('bbregion').value.trim();
+ box.innerHTML='<p class="bb-mut">Đang tìm…</p>';
+ try{const qs=new URLSearchParams();if(q)qs.set('q',q);if(SLEVEL)qs.set('level',SLEVEL);if(region)qs.set('region',region);
+  const j=await AUTH.api('/friends/search?'+qs.toString());const users=(j.users||j.results||[]).map(normUser).filter(Boolean).filter(u=>!ME||u.id!==ME.id);
+  const cnt=document.getElementById('bbcount');if(cnt)cnt.textContent=users.length?users.length+' kết quả · chỉ hiện người cho phép tìm thấy, không hiện người đã chặn':'';
+  box.innerHTML=users.length?users.map(sgHTML).join(''):'<p class="bb-mut">Không tìm thấy ai phù hợp. Bạn thử đổi từ khóa, cấp hoặc khu vực nhé.</p>';resolveFiles(box)}
+ catch(e){box.innerHTML='<p class="bb-err">⚠️ '+esc(e.message)+'</p>'}}
+async function friendAction(act,uid,btn){if(act==='unfriend'&&!confirm('Hủy kết bạn với học viên này?'))return;
+ let message='';
+ if(act==='request'){message=prompt('Lời nhắn ngắn gửi kèm lời mời (có thể bỏ trống):','');if(message===null)return;message=String(message).slice(0,300)}
+ if(btn)btn.disabled=true;
+ try{if(act==='accept'||act==='decline')await AUTH.api('/friends/respond',{method:'POST',body:{user_id:uid,action:act}});
+  else if(act==='unfriend')await AUTH.api('/friends/remove',{method:'POST',body:{user_id:uid}});
+  else if(act==='request')await AUTH.api('/friends/request',{method:'POST',body:{user_id:uid,message}});
+  else await AUTH.api('/friends/cancel',{method:'POST',body:{user_id:uid}});
+  if(act==='request'){INCOMING=INCOMING.filter(p=>p.id!==uid);setStateEverywhere(uid,'outgoing')}
+  if(act==='accept'){const p=findUser(uid);INCOMING=INCOMING.filter(x=>x.id!==uid);if(p){p.friend='friends';FRIENDS.unshift(p)}setStateEverywhere(uid,'friends')}
+  if(act==='decline'){INCOMING=INCOMING.filter(p=>p.id!==uid);setStateEverywhere(uid,'none')}
+  if(act==='cancel'){OUTGOING=OUTGOING.filter(p=>p.id!==uid);setStateEverywhere(uid,'none')}
+  if(act==='unfriend'){FRIENDS=FRIENDS.filter(p=>p.id!==uid);setStateEverywhere(uid,'none')}
+  drawLists()}catch(e){alert(e.message);if(btn)btn.disabled=false}}
+function findUser(uid){return INCOMING.find(p=>p.id===uid)||OUTGOING.find(p=>p.id===uid)||SUGGEST.find(p=>p.id===uid)||FRIENDS.find(p=>p.id===uid)||null}
+function setStateEverywhere(uid,st){[SUGGEST,FRIENDS].forEach(a=>a.forEach(p=>{if(p.id===uid)p.friend=st}));
+ document.querySelectorAll('[data-card="'+uid+'"]').forEach(card=>{/* redraw lists handles most; search cards re-render below */});
+ const res=document.getElementById('bbresults');if(res&&res.querySelector('[data-card="'+uid+'"]'))doSearch()}
+let hbT=null;async function heartbeat(){try{const j=await AUTH.api('/community/heartbeat',{method:'POST',body:{}});if(typeof j.friend_requests==='number'){/* badge from server count */const el=document.getElementById('bbfrpill');if(el&&INCOMING.length===0){el.hidden=!j.friend_requests;el.textContent=j.friend_requests||''}}}catch(e){}}
+function hbLoop(){clearTimeout(hbT);if(document.hidden)return;hbT=setTimeout(async()=>{await heartbeat();hbLoop()},75000)}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){heartbeat();hbLoop()}else clearTimeout(hbT)});
+async function boot(){try{const j=await AUTH.api('/community/profile');ME=j.profile}catch(e){root.innerHTML='<div class="bb-card"><p class="bb-err">⚠️ '+esc(e.message)+'</p></div>';return}
+ root.innerHTML='<div class="bb-tabs" role="tablist"><button type="button" class="on" data-bbtab="bbtim">🔍 Tìm bạn</button><button type="button" data-bbtab="bbmoi">Lời mời <span class="bb-bd" id="bbtabpill" hidden></span></button><button type="button" data-bbtab="bbgoiy">Gợi ý</button><button type="button" data-bbtab="bbds">Bạn bè</button><button type="button" data-bbtab="bbdagui">Đã gửi</button></div>'
+ +'<div class="bb-card" id="bbtim"><h3>🔍 Tìm bạn bè</h3><div class="bb-search"><input class="bb-inp" id="bbq" type="search" maxlength="60" placeholder="Tìm theo tên học viên…" autocomplete="off"><input class="bb-inp" id="bbregion" type="text" maxlength="40" placeholder="📍 Khu vực (VD: Osaka)" style="flex:0 1 200px"><button type="button" class="bb-btn p" id="bbgo">Tìm</button></div>'
+ +'<div class="bb-chips" id="bbchips">'+[['','Tất cả cấp'],['N5','N5'],['N4','N4'],['N3','N3'],['N2','N2'],['N1','N1']].map(x=>'<button type="button" data-bblv="'+x[0]+'"'+(x[0]===''?' class="on"':'')+'>'+x[1]+'</button>').join('')+'</div>'
+ +'<div class="bb-mut" id="bbcount"></div><div class="bb-grid" id="bbresults"><p class="bb-mut">Nhập tên (hoặc chọn cấp/khu vực) rồi bấm Tìm nhé.</p></div></div>'
+ +'<div class="bb-card" id="bbmoi"><h3 id="bbmoih">🤝 Lời mời kết bạn</h3><div id="bbincoming"><p class="bb-mut">Đang tải…</p></div><h3 style="margin-top:16px" id="bbdagui">📤 Lời mời đã gửi</h3><div id="bboutgoing"><p class="bb-mut">Đang tải…</p></div></div>'
+ +'<div class="bb-card" id="bbgoiy"><h3>✨ Gợi ý cùng cấp'+(ME.level?' '+esc(ME.level):'')+'</h3><div class="bb-grid" id="bbsuggest"><p class="bb-mut">Đang tải…</p></div></div>'
+ +'<div class="bb-card" id="bbds"><h3 id="bbdsh">👫 Bạn bè</h3><div id="bbfriends"><p class="bb-mut">Đang tải…</p></div><p class="bb-mut" style="margin-top:8px">Menu ⋯ gồm: 👤 Xem trang · 💔 Hủy kết bạn · ⛔ Chặn · 🚩 Báo cáo.</p></div>'
+ +privacyHTML();
+ document.getElementById('bbgo').onclick=doSearch;
+ document.getElementById('bbq').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();doSearch()}});
+ document.getElementById('bbq').addEventListener('input',()=>{clearTimeout(searchT);searchT=setTimeout(doSearch,400)});
+ document.getElementById('bbregion').addEventListener('input',()=>{clearTimeout(searchT);searchT=setTimeout(doSearch,500)});
+ document.getElementById('bbchips').addEventListener('click',e=>{const b=e.target.closest('[data-bblv]');if(!b)return;SLEVEL=b.dataset.bblv;document.querySelectorAll('#bbchips button').forEach(x=>x.classList.toggle('on',x===b));doSearch()});
+ document.getElementById('bbprivsave').onclick=async()=>{const err=document.getElementById('bbpriverr'),ok=document.getElementById('bbprivok');err.textContent='';ok.textContent='';
+  try{const body={discoverable:document.getElementById('bbdisc').checked,region:document.getElementById('bbregion2').value.trim(),mention_policy:document.getElementById('bbmp').value};
+   const j=await AUTH.api('/community/profile',{method:'POST',body});if(j.profile)ME=j.profile;ok.textContent='Đã lưu cài đặt riêng tư ✅';drawMe()}catch(ex){err.textContent=ex.message}};
+ await loadFriends();heartbeat();hbLoop();
+ const h=location.hash;if(h){const el=document.querySelector(h);if(el)el.scrollIntoView()}}
+root.addEventListener('click',async e=>{const t=e.target;
+ const menuBtn=t.closest('[data-menu]');if(menuBtn){const pop=menuBtn.parentElement.querySelector('.bb-pop');const was=pop.hidden;root.querySelectorAll('.bb-pop').forEach(p=>p.hidden=true);pop.hidden=!was;return}
+ if(!t.closest('.bb-menu'))root.querySelectorAll('.bb-pop').forEach(p=>p.hidden=true);
+ const fb=t.closest('[data-fact]');if(fb){const act=fb.dataset.fact,uid=fb.dataset.u;
+  if(act==='block'){if(!confirm('Chặn học viên này? Họ sẽ không nhắn tin hay thấy bài của bạn nữa.'))return;try{await AUTH.api('/chat/block',{method:'POST',body:{user_id:uid}});FRIENDS=FRIENDS.filter(p=>p.id!==uid);SUGGEST=SUGGEST.filter(p=>p.id!==uid);drawLists();const res=document.getElementById('bbresults');if(res)doSearch()}catch(ex){alert(ex.message)}return}
+  if(act==='report'){const reason=prompt('Lý do báo cáo học viên này (không bắt buộc):')||'';try{await AUTH.api('/community/report',{method:'POST',body:{target_type:'user',target_id:uid,reason}});alert('Đã gửi báo cáo. Quản trị viên sẽ xem xét. Cảm ơn bạn!')}catch(ex){alert(ex.message)}return}
+  friendAction(act,uid,fb);return}
+});
+document.addEventListener('click',e=>{const tb=e.target.closest('[data-bbtab]');if(tb){document.querySelectorAll('[data-bbtab]').forEach(b=>b.classList.toggle('on',b===tb));const el=document.getElementById(tb.dataset.bbtab);if(el)el.scrollIntoView({block:'start'})}});
+boot();
+</script></body></html>
