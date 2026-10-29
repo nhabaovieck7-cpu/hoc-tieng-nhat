@@ -1,0 +1,36 @@
+{
+ "feature": "weekly-mock-index",
+ "weeks": [
+  {
+   "week": 1,
+   "label": "Tuần 1",
+   "levels": [
+    {
+     "level": "N5",
+     "file": "week-1-n5.json",
+     "questions": 20
+    },
+    {
+     "level": "N4",
+     "file": "week-1-n4.json",
+     "questions": 20
+    },
+    {
+     "level": "N3",
+     "file": "week-1-n3.json",
+     "questions": 20
+    },
+    {
+     "level": "N2",
+     "file": "week-1-n2.json",
+     "questions": 20
+    },
+    {
+     "level": "N1",
+     "file": "week-1-n1.json",
+     "questions": 20
+    }
+   ]
+  }
+ ]
+}
