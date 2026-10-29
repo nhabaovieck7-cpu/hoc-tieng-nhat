@@ -207,10 +207,9 @@ const AUTH=(()=>{
 // KHÔNG bao giờ rời máy qua kênh này.
 // Chưa đăng nhập -> không làm gì cả, mọi thứ chạy local đúng như cũ.
 // Mất mạng -> bỏ qua êm; lần mở trang sau tự đồng bộ lại.
-const HNSYNC=(()=>{
-  const META='hn_sync_meta'; // {khoá: mốc ms phía local} — chỉ ở máy này
-  const EXACT={hn_prog_v1:1,hn_srs_v1:1,hn_game_v1:1};
-  const isKey=k=>typeof k==='string'&&(!!EXACT[k]||k.indexOf('hn_choukai_')===0);
+function hnMkSync(CFG){
+  const META=CFG.meta; // {khoá: mốc ms phía local} — chỉ ở máy này
+  const isKey=CFG.isKey;
   const parseJ=s=>{try{return JSON.parse(s)}catch(e){return null}};
   let dirty={},dirtyDel={},timer=null,busy=false,mute=false;
   function meta(){return parseJ(localStorage.getItem(META))||{}}
@@ -304,7 +303,7 @@ const HNSYNC=(()=>{
     const ep=endpoint();if(!ep)throw new Error('no-endpoint');
     const tok=(typeof AUTH!='undefined'&&AUTH.session)?AUTH.session():'';
     if(!tok)throw new Error('no-session');
-    const r=await fetch(ep+'/progress',{method:method,headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:body?JSON.stringify(body):undefined,keepalive:!!keepalive});
+    const r=await fetch(ep+CFG.path,{method:method,headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:body?JSON.stringify(body):undefined,keepalive:!!keepalive});
     const j=await r.json().catch(()=>({}));
     if(!r.ok){const e=new Error(j.error||('Lỗi '+r.status));e.status=r.status;throw e}
     return j;
@@ -318,14 +317,14 @@ const HNSYNC=(()=>{
       if(!isKey(k))return;
       const sv=j.items[k],sts=Date.parse(sv.u)||0;
       const lv=localStorage.getItem(k);
-      const merged=mergeVal(k,lv,sv.v,m[k]||0,sts);
+      const merged=(CFG.merge||mergeVal)(k,lv,sv.v,m[k]||0,sts);
       if(merged!==lv){rawSet(k,merged);changed.push(k)}
       m[k]=Math.max(m[k]||0,sts);
       if(merged!==sv.v)dirty[k]=1;
     });
     localKeys().forEach(k=>{if(!j.items[k]&&!dirtyDel[k])dirty[k]=1});
     saveMeta(m);
-    if(changed.length){try{document.dispatchEvent(new CustomEvent('hn-synced',{detail:{keys:changed}}))}catch(e){}}
+    if(changed.length){try{document.dispatchEvent(new CustomEvent('hn-synced',{detail:{keys:changed}}))}catch(e){}if(CFG.onChanged)try{CFG.onChanged(changed)}catch(e){}}
     if(Object.keys(dirty).length||Object.keys(dirtyDel).length)schedule(600);
     return true;
   }
@@ -365,16 +364,41 @@ const HNSYNC=(()=>{
     if(mute||!isKey(k))return;
     delete dirty[k];dirtyDel[k]=1;schedule(2500);
   }
-  // Bắt mọi lần ghi tiến độ (F.ls của features.js, phiếu nghe, trang Ôn thẻ...)
-  try{
-    const _set=Storage.prototype.setItem,_rem=Storage.prototype.removeItem;
-    Storage.prototype.setItem=function(k,v){_set.call(this,k,v);if(this===localStorage)touched(String(k))};
-    Storage.prototype.removeItem=function(k){_rem.call(this,k);if(this===localStorage)removedKey(String(k))};
-  }catch(e){}
   document.addEventListener('visibilitychange',()=>{if(document.hidden)push(true);else pull()});
   try{addEventListener('pagehide',()=>push(true))}catch(e){}
   setInterval(()=>{if(Object.keys(dirty).length||Object.keys(dirtyDel).length)push(false)},30000);
   try{addEventListener('unlocked',()=>pull())}catch(e){}
   if(typeof AUTH!='undefined'&&AUTH.session())pull();
-  return {pull:pull,push:push,isKey:isKey,_merge:{srs:mergeSRS,prog:mergeProg,val:mergeVal}};
+  return {pull:pull,push:push,isKey:isKey,touched:touched,removedKey:removedKey,call:call,rawSet:rawSet,_merge:{srs:mergeSRS,prog:mergeProg,val:mergeVal}};
+}
+const HNSYNC=hnMkSync({path:'/progress',meta:'hn_sync_meta',isKey:k=>typeof k==='string'&&(k==='hn_prog_v1'||k==='hn_srs_v1'||k==='hn_game_v1'||k.indexOf('hn_choukai_')===0)});
+// ===== Đồng bộ Hồ sơ cá nhân theo tài khoản (qua Worker /hoso, bảng riêng tư user_hoso) =====
+// Chỉ chủ tài khoản đọc được. Khách / chưa đăng nhập: không gửi gì. 404 / mất mạng: coi như offline.
+const HNHOSO=(()=>{
+  const KEYS={hn_dk_ho_so:1,hn_dk_avatar:1,hn_dk_level:1,hn_dk_goal:1};
+  const pj=s=>{try{const o=JSON.parse(s);return o&&typeof o==='object'&&!Array.isArray(o)?o:null}catch(e){return null}};
+  // hn_dk_ho_so: gộp TỪNG MỤC theo dấu thời gian _t[mục] (ms) — sửa slogan ở máy này, sở thích ở máy kia đều giữ.
+  function mergeHoSo(a,b){
+    const ta=a._t||{},tb=b._t||{},out={},t={};
+    const fs=new Set(Object.keys(a).concat(Object.keys(b),Object.keys(ta),Object.keys(tb)));fs.delete('_t');
+    fs.forEach(f=>{const x=+ta[f]||0,y=+tb[f]||0;let v;
+      if(x!==y)v=x>y?a[f]:b[f];else v=(a[f]!=null&&a[f]!=='')?a[f]:b[f];
+      if(v!=null&&v!=='')out[f]=v;if(x||y)t[f]=Math.max(x,y)});
+    if(Object.keys(t).length)out._t=t;return out}
+  function merge(k,l,sv,lts,sts){
+    if(sv==null)return l;if(l==null)return sv;if(l===sv)return l;
+    if(k==='hn_dk_ho_so'){const a=pj(l),b=pj(sv);if(a&&b)return JSON.stringify(mergeHoSo(a,b));if(!a)return sv;if(!b)return l}
+    return (lts||0)>=(sts||0)?l:sv}
+  const S=hnMkSync({path:'/hoso',meta:'hn_hoso_meta',isKey:k=>!!KEYS[k],merge:merge,
+    onChanged:()=>{try{document.dispatchEvent(new CustomEvent('hn-hoso'))}catch(e){}}});
+  // "Xóa toàn bộ thông tin": xoá trên tài khoản rồi xoá trên máy (không đẩy lại như thay đổi)
+  async function wipe(){let ok=false;try{await S.call('DELETE');ok=true}catch(e){}
+    Object.keys(KEYS).forEach(k=>S.rawSet(k,null));try{localStorage.removeItem('hn_hoso_meta')}catch(e){}return ok}
+  return {pull:S.pull,push:S.push,isKey:S.isKey,touched:S.touched,removedKey:S.removedKey,wipe:wipe,_merge:merge,_mergeHoSo:mergeHoSo};
 })();
+// Bắt mọi lần ghi (tiến độ + hồ sơ): mỗi bản đồng bộ chỉ nhận khoá của mình
+try{
+  const _set=Storage.prototype.setItem,_rem=Storage.prototype.removeItem;
+  Storage.prototype.setItem=function(k,v){_set.call(this,k,v);if(this===localStorage){k=String(k);HNSYNC.touched(k);HNHOSO.touched(k)}};
+  Storage.prototype.removeItem=function(k){_rem.call(this,k);if(this===localStorage){k=String(k);HNSYNC.removedKey(k);HNHOSO.removedKey(k)}};
+}catch(e){}
