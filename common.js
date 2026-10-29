@@ -198,6 +198,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 // ===== Mục "Xếp hạng" trong menu chính (29/10): chèn 1 lần vào .topbar .nav =====
 (function(){function boot(){var nav=document.querySelector('.topbar .nav');if(!nav||nav.querySelector('a[href="xep-hang.html"]'))return;var a=document.createElement('a');a.href='xep-hang.html';a.textContent='🏆 Xếp hạng';a.className='hn-navlink';if(/(^|\/)xep-hang\.html$/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();
+// ===== Mục "Game" trong menu chính: chèn 1 lần vào .topbar .nav =====
+// Trang game nằm ở thư mục con game/ → đường dẫn từ gốc là "game/index.html".
+// Các trang game KHÔNG nạp common.js của trang chính nên không cần xử lý href ngược.
+(function(){function boot(){var nav=document.querySelector('.topbar .nav');if(!nav||nav.querySelector('a[href="game/index.html"]'))return;var a=document.createElement('a');a.href='game/index.html';a.textContent='🎮 Game';a.className='hn-navlink';if(/(^|\/)game(\/|$)/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();
+
 
 // ===== Header gọn trên điện thoại (29/10, Phía B): 1 hàng — tên trang · 🔍 · chế độ tối · avatar.
 // Tài khoản, tin nhắn, thông báo, chia sẻ, đăng xuất gom vào menu avatar (#hdrmenu). Trên máy tính #hdrmenu
