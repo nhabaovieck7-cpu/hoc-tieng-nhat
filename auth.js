@@ -21,16 +21,37 @@ const AUTH=(()=>{
   // device_id sinh 1 lần cho mỗi hồ sơ trình duyệt, lưu local (hn_device_id) —
   // KHÔNG đồng bộ đi đâu: đăng nhập lại cùng trình duyệt = cùng thiết bị.
   const DK='hn_device_id';
+  // Dự phòng cho Safari (ITP): sao lưu hn_device_id ra cookie first-party + IndexedDB,
+  // đọc thì khôi phục từ nơi còn dữ liệu.
+  const DCOOK='hn_device_id';
+  function devCookieGet(){try{const m=document.cookie.match(/(?:^|;\s*)hn_device_id=([^;]+)/);return m?decodeURIComponent(m[1]):''}catch(e){return ''}}
+  function devCookieSet(d){try{document.cookie=DCOOK+'='+encodeURIComponent(d)+';path=/;max-age=63072000;SameSite=Lax'+(location.protocol==='https:'?';Secure':'')}catch(e){}}
+  function devIdb(mode,val){return new Promise(res=>{try{
+    const rq=indexedDB.open('hn_device',1);
+    rq.onupgradeneeded=()=>rq.result.createObjectStore('kv');
+    rq.onerror=()=>res('');
+    rq.onsuccess=()=>{try{const db=rq.result,tx=db.transaction('kv',mode),st=tx.objectStore('kv');
+      if(mode==='readwrite'){st.put(val,DK);tx.oncomplete=()=>{db.close();res(val)};tx.onerror=()=>{db.close();res('')}}
+      else{const g=st.get(DK);g.onsuccess=()=>{db.close();res(g.result||'')};g.onerror=()=>{db.close();res('')}}
+    }catch(e){res('')}};
+  }catch(e){res('')}})}
+  function devSaveAll(d){try{localStorage.setItem(DK,d)}catch(e){}devCookieSet(d);devIdb('readwrite',d)}
   function deviceId(){
-    try{
-      let d=localStorage.getItem(DK);
-      if(!d){
-        d=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():('dev-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,14));
-        localStorage.setItem(DK,d);
-      }
-      return d;
-    }catch(e){return ''}
+    let d='';
+    try{d=localStorage.getItem(DK)||''}catch(e){}
+    if(!d)d=devCookieGet();
+    if(!d)d=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():('dev-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,14));
+    devSaveAll(d);
+    return d;
   }
+  // Khi tải trang: nếu localStorage + cookie đều mất mà IndexedDB còn thì khôi phục.
+  const deviceReady=(async()=>{
+    let d='';try{d=localStorage.getItem(DK)||''}catch(e){}
+    if(!d)d=devCookieGet();
+    if(!d)d=await devIdb('readonly');
+    if(d)devSaveAll(d);
+    return d;
+  })();
   function deviceLabel(){
     const ua=(navigator&&navigator.userAgent)||'';
     let os='Thiết bị';
@@ -170,7 +191,7 @@ const AUTH=(()=>{
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>mountAccountBox());
   else mountAccountBox();
 
-  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,adminDevices,adminDeviceRemove,adminDeviceRemoveAll,deviceTicketInfo,deviceResolve,deviceId,deviceLabel,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
+  return {register,login,logout,signOut,me,adminLogin,adminUsers,adminAction,adminDevices,adminDeviceRemove,adminDeviceRemoveAll,deviceTicketInfo,deviceResolve,deviceId,deviceReady,deviceLabel,session,sessionAdmin,setSession,setAdmin,applyContentKey,clearContentKey,api,mountAccountBox};
 })();
 
 // ===== Đồng bộ tiến độ học theo tài khoản (qua Worker /progress) =====

@@ -32,7 +32,10 @@ async function check(){
   }catch(e){info.textContent=e.message}
 }
 document.getElementById('refresh').onclick=check;
+// Tự kiểm tra lại mỗi ~20 giây (khi tab đang hiện) và khi tab được mở lại.
+let busy=false;async function poll(){if(busy||document.hidden)return;busy=true;try{await check()}finally{busy=false}}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()});
 document.getElementById('out').onclick=async e=>{e.preventDefault();await AUTH.logout();location.href='dang-nhap.html'};
-check();setInterval(check,20000);
+check();setInterval(poll,20000);
 </script>
 </body></html>

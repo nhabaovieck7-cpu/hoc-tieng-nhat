@@ -244,7 +244,8 @@ go.onclick=async()=>{
   }
   finally{go.disabled=false}
 };
-document.getElementById('btnGoogle').onclick=()=>{
+document.getElementById('btnGoogle').onclick=async()=>{
+  try{await AUTH.deviceReady}catch(e){}
   err.textContent='';
   const ret=location.href.split('#')[0].split('?')[0];
   location.href=(SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/google/start?return='+encodeURIComponent(ret)
@@ -278,18 +279,8 @@ document.getElementById('btnGoogle').onclick=()=>{
       await afterAuth(j);return;
     }catch(e){err.textContent=e.message||String(e)}
   }
-  // Dự phòng chuyển tiếp: Worker cũ vẫn redirect kèm ?session=
-  const sess=u.searchParams.get('session');
-  const st=u.searchParams.get('status');
-  if(sess){
-    AUTH.setSession(sess);
-    ['session','status','oauth'].forEach(k=>u.searchParams.delete(k));
-    history.replaceState({},'',u.pathname+(u.search||'')+u.hash);
-    try{
-      if(st==='pending'||st==='approved'){await afterAuth({status:st,session:sess});return}
-      const j=await AUTH.me();await afterAuth(j);return;
-    }catch(e){err.textContent=e.message||String(e)}
-  }
+  // (Đã bỏ nhận ?session= từ URL — chống cài phiên qua link.)
+  if(u.searchParams.has('session')){['session','status','oauth'].forEach(k=>u.searchParams.delete(k));history.replaceState({},'',u.pathname+(u.search||'')+u.hash)}
   if(!AUTH.session())return;
   try{const j=await AUTH.me();await afterAuth(j)}catch(e){}
 })();
