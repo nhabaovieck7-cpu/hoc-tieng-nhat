@@ -17,6 +17,11 @@ binding = "DB"
 database_name = "hoc-tieng-nhat-auth"
 database_id = "fa97d57e-86e0-412c-9f8d-5d63ae039de1"
 
+# Lưu tệp Cộng đồng/Chat (từ 29/10/2026, theo quyết định của Khánh): bucket R2 riêng tư
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "hoc-tieng-nhat-files"
+
 # Giới hạn AI theo IP (tuỳ chọn): tạo KV rồi bỏ dấu # 
 # [[kv_namespaces]]
 # binding = "RL"
