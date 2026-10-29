@@ -1,6 +1,24 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"></noscript><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=b9861037"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#233d63"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Học tiếng Nhật"><title>Cộng đồng học viên</title><meta name="description" content="Cộng đồng học viên: chia sẻ kinh nghiệm học tiếng Nhật, hỏi đáp và động viên nhau mỗi ngày."><script>document.documentElement.classList.add('locked')</script>
 <style>
-.cd-wrap{max-width:680px}
+.cd-wrap{max-width:1180px}
+.cd-lay{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:1000px){.cd-lay{grid-template-columns:240px minmax(0,640px) 280px;justify-content:center}}
+.cd-side{display:none}@media(min-width:1000px){.cd-side{display:block;position:sticky;top:84px;align-self:start}}
+.cd-nav a,.cd-nav button{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:var(--t);text-decoration:none;font-weight:600;background:none;border:0;font:inherit;width:100%;cursor:pointer}
+.cd-nav [hidden]{display:none!important}
+.cd-nav a:hover,.cd-nav button:hover,.cd-nav .on{background:var(--soft)}
+.cd-tabs{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
+.cd-tabs button{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--t);border-radius:999px;padding:7px 14px;font:inherit;font-weight:600;font-size:14px;cursor:pointer;min-height:38px}
+.cd-tabs button.on{background:var(--c);color:#fff;border-color:var(--c)}
+.cd-sort{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--m);margin:0 2px 10px}
+.cd-sort button{border:0;background:none;font:inherit;font-weight:600;color:var(--m);cursor:pointer;padding:5px 10px;border-radius:8px}
+.cd-sort button.on{background:var(--soft);color:var(--c2)}
+.cd-bell{position:relative}.cd-bd{position:absolute;top:2px;right:4px;background:#e41e3f;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 6px}
+.cd-ntf{display:flex;gap:8px;padding:8px;border-radius:10px;text-decoration:none;color:var(--t);font-size:14px}.cd-ntf.un{background:var(--soft)}
+.cd-rules{font-size:14px;line-height:1.55}.cd-rules li{margin:3px 0}
+.cd-act.saved{color:var(--c2)}
+.cd-mob{display:block}.cd-mob[hidden]{display:none}@media(min-width:1000px){.cd-mob{display:none}}
+.cd-ntfpanel{position:relative}
 .cd-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:0 0 14px}
 .cd-row{display:flex;gap:10px;align-items:flex-start}
 .cd-ava{width:44px;height:44px;border-radius:50%;flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:19px;overflow:hidden;text-decoration:none}
@@ -51,9 +69,9 @@
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html#khoahoc">Khóa học</a><a href="luyen-nghe.html">Luyện nghe</a><a href="tin-tuc.html">Tin tức</a><a href="hoi-ai.html">Hỏi AI</a><a class="on" href="cong-dong.html">Cộng đồng</a></nav></div></div>
 <main class="wrap cd-wrap"><a class="hn-back" href="index.html">← Quay lại</a> <button type="button" class="hn-share" data-share>📤 Chia sẻ</button>
-<div class="pagehead"><h1>👥 Cộng đồng học viên <span class="h-jp jp">みんなの広場</span></h1></div>
-<p class="honest">Nơi học viên chia sẻ kinh nghiệm học, hỏi đáp và động viên nhau. Hãy tử tế và tôn trọng mọi người; bài không phù hợp có thể bị báo cáo và quản trị viên sẽ ẩn/gỡ. Thông báo và tin nhắn chỉ hiện trong trang này (không gửi về điện thoại).</p>
-<div id="cdroot"><p class="mut">Đang tải cộng đồng…</p></div>
+<div class="pagehead" style="display:flex;align-items:center;gap:8px"><h1 style="flex:1">👥 Cộng đồng học viên <span class="h-jp jp">みんなの広場</span></h1><button type="button" class="cd-ghost cd-bell" id="cdbell" aria-label="Thông báo">🔔<span class="cd-bd" id="cdbd" hidden></span></button></div>
+<p class="honest">Nơi học viên chia sẻ kinh nghiệm học, hỏi đáp và động viên nhau. Rất mong bạn giữ lời lẽ tử tế, tôn trọng mọi người. <a href="#noi-quy">Xem nội quy</a>.</p>
+<div class="cd-lay"><aside class="cd-side"><div class="cd-card cd-nav" id="cdleft"><a class="on" href="cong-dong.html">🏠 Bảng tin</a><a href="tin-nhan.html">💬 Tin nhắn</a><a href="ban-be.html" id="cdfriendlink" hidden>👫 Bạn bè</a><button type="button" data-view="saved">🔖 Bài đã lưu</button><a href="#noi-quy">📜 Nội quy</a></div></aside><div id="cdroot"><p class="mut">Đang tải cộng đồng…</p></div><aside class="cd-side"><div class="cd-card"><div style="display:flex;align-items:center"><b>🔔 Thông báo</b><button type="button" class="cd-act" style="margin-left:auto" data-ntf-readall>Đọc hết</button></div><div id="cdntf"><p class="cd-mut">Đang tải…</p></div></div><div class="cd-card cd-rules" id="noi-quy"><b>📜 Nội quy cộng đồng</b><ul style="padding-left:18px;margin:6px 0"><li>Tôn trọng và lịch sự với mọi người.</li><li>Không spam, quảng cáo hay nội dung phản cảm.</li><li>Không đăng thông tin cá nhân của người khác.</li><li>Thấy bài không phù hợp, bạn bấm ⋯ → Báo cáo.</li></ul><p class="cd-mut" style="margin:6px 0 0">🔒 Quản trị viên có thể xem tin nhắn để đảm bảo an toàn cộng đồng. Mỗi lần xem đều được ghi nhật ký.</p></div></aside></div>
 </main><footer class="site-title"></footer>
 <nav class="tabbar" aria-label="Điều hướng dưới"><div class="tabbar-in"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Trang chủ</span></a><a href="index.html#khoahoc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Khóa học</span></a><a href="luyen-nghe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 1 2-2H3z"/></svg><span>Luyện nghe</span></a><a href="tin-tuc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Tin tức</span></a><a class="on" href="cong-dong.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Cộng đồng</span></a></div></nav>
 <script src="config.js?v=c2a095db"></script><script src="common.js?v=cc687cdf"></script><script src="auth.js?v=fb72ff4f"></script>
@@ -84,8 +102,10 @@ function postHTML(p){return '<article class="cd-card" id="post-'+esc(p.id)+'">'
  +(p.mine?'<button type="button" data-act="del-post" data-id="'+esc(p.id)+'">🗑 Xoá bài của tôi</button>':'')
  +'</div></div></div>'
  +'<div class="cd-body">'+esc(p.body)+'</div>'+filesHTML(p.files)
- +'<div class="cd-acts"><button type="button" class="cd-act'+(p.liked?' liked':'')+'" data-like-post="'+esc(p.id)+'">❤️ <span>'+p.like_count+'</span></button>'
- +'<button type="button" class="cd-act" data-cmt-toggle="'+esc(p.id)+'">💬 Bình luận (<span>'+p.comment_count+'</span>)</button></div>'
+ +'<div class="cd-acts"><button type="button" class="cd-act'+(p.liked?' liked':'')+'" data-like-post="'+esc(p.id)+'">👍 Thích <span>'+p.like_count+'</span></button>'
+ +'<button type="button" class="cd-act" data-cmt-toggle="'+esc(p.id)+'">💬 Bình luận (<span>'+p.comment_count+'</span>)</button>'
+ +'<button type="button" class="cd-act" data-sharepost="'+esc(p.id)+'">↗️ Chia sẻ</button>'
+ +'<button type="button" class="cd-act'+(savedIds().includes(p.id)?' saved':'')+'" data-save="'+esc(p.id)+'">🔖 '+(savedIds().includes(p.id)?'Đã lưu':'Lưu')+'</button></div>'
  +'<div class="cd-cmt" data-cmts="'+esc(p.id)+'" hidden></div>'
  +'<div class="cd-inrow"><textarea data-cmt-in="'+esc(p.id)+'" rows="1" placeholder="Viết bình luận…" maxlength="2000"></textarea><button type="button" class="cd-send" data-cmt-send="'+esc(p.id)+'">Gửi</button></div>'
  +'</article>'}
@@ -102,14 +122,34 @@ async function loadComments(postId){const box=root.querySelector('[data-cmts="'+
  box.innerHTML=roots.map(c=>cmtHTML(c,postId)+(byParent[c.id]||[]).map(r=>cmtHTML(r,postId)).join('')).join('')||'<p class="cd-mut">Chưa có bình luận nào.</p>';
  resolveFiles(box)}catch(e){box.innerHTML='<p class="cd-err">'+esc(e.message)+'</p>'}}
 async function loadFeed(append){try{const q='/community/feed?limit=20'+(viewUser?'&author_id='+encodeURIComponent(viewUser):'')+(append&&feedBefore?'&before='+encodeURIComponent(feedBefore):'');
- const j=await AUTH.api(q);STORAGE=j.storage_enabled;const list=document.getElementById('cdfeed');
- if(!append)list.innerHTML=j.posts.length?j.posts.map(postHTML).join(''):'<div class="cd-card"><p class="cd-mut">'+(viewUser?'Người này chưa đăng bài nào.':'Chưa có bài nào — hãy là người đăng đầu tiên!')+'</p></div>';
- else list.insertAdjacentHTML('beforeend',j.posts.map(postHTML).join(''));
- feedBefore=j.next_before;feedDone=!j.next_before;const more=document.getElementById('cdmore');if(more)more.style.display=feedDone?'none':'';
- resolveFiles(list);updStorageUI();
- const h=location.hash;if(h&&h.startsWith('#post-')){const el=document.getElementById(h.slice(1));if(el){el.scrollIntoView({block:'center'});loadComments(h.slice(6))}}
- }catch(e){root.innerHTML='<div class="cd-card"><p class="cd-err">⚠️ '+esc(e.message)+'</p></div>'}}
+ const j=await AUTH.api(q);STORAGE=j.storage_enabled;let ps=j.posts||[];if(viewUser)ps=ps.filter(p=>p.author&&p.author.id===viewUser);
+ POSTS=append?POSTS.concat(ps.filter(p=>!POSTS.some(x=>x.id===p.id))):ps;
+ const last=(j.posts||[]).slice(-1)[0];feedBefore=j.next_before||(last&&(j.posts.length>=20)?last.created_at:null);feedDone=!feedBefore;
+ drawFeed();updStorageUI();
+ const h=location.hash;if(!append&&h&&h.startsWith('#post-')){const el=document.getElementById(h.slice(1));if(el){el.scrollIntoView({block:'center'});loadComments(h.slice(6))}}
+ }catch(e){const l=document.getElementById('cdfeed');(l||root).innerHTML='<div class="cd-card"><p class="cd-err">⚠️ '+esc(e.message)+'</p></div>'}}
 let pendingFiles=[];
+let POSTS=[],LEVEL='',SORT='new',VIEW='feed';
+const RX=[['like','👍','Thích'],['love','❤️','Yêu thích'],['haha','😆','Haha'],['wow','😮','Wow'],['sad','😢','Buồn'],['care','🤗','Thương thương']];
+function savedIds(){try{return JSON.parse(localStorage.getItem('hn_cd_saved')||'[]')}catch(e){return []}}
+function toggleSaved(id){let a=savedIds();const i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.unshift(id);a=a.slice(0,200);try{localStorage.setItem('hn_cd_saved',JSON.stringify(a))}catch(e){}return i<0}
+function savedPosts(){try{return JSON.parse(localStorage.getItem('hn_cd_savedp')||'{}')}catch(e){return {}}}
+function rememberPost(p,on){const m=savedPosts();if(on)m[p.id]=p;else delete m[p.id];try{localStorage.setItem('hn_cd_savedp',JSON.stringify(m))}catch(e){}}
+function viewList(){let a=POSTS.slice();if(VIEW==='saved'){const m=savedPosts();a=savedIds().map(id=>m[id]).filter(Boolean)}
+ if(LEVEL)a=a.filter(p=>p.author&&p.author.level===LEVEL);
+ if(SORT==='hot')a.sort((x,y)=>((y.like_count||0)+2*(y.comment_count||0))-((x.like_count||0)+2*(x.comment_count||0)));
+ return a}
+function drawFeed(){const list=document.getElementById('cdfeed');if(!list)return;const a=viewList();
+ list.innerHTML=a.length?a.map(postHTML).join(''):'<div class="cd-card"><p class="cd-mut">'+(VIEW==='saved'?'Bạn chưa lưu bài nào. Bấm 🔖 Lưu ở bài bất kỳ để xem lại sau.':LEVEL?'Chưa có bài nào của học viên '+esc(LEVEL)+' trong các bài đã tải. Bạn thử bấm “Xem thêm bài” nhé.':viewUser?'Người này chưa đăng bài nào.':'Chưa có bài nào — rất mong bạn là người mở lời đầu tiên!')+'</p></div>';
+ const more=document.getElementById('cdmore');if(more)more.style.display=(feedDone||VIEW==='saved')?'none':'';resolveFiles(list)}
+const NTFTXT={comment_post:'đã bình luận bài của bạn',reply_comment:'đã trả lời bình luận của bạn',like_post:'đã bày tỏ cảm xúc với bài của bạn',like_comment:'đã thích bình luận của bạn',mention:'đã nhắc đến bạn',friend_request:'đã gửi lời mời kết bạn',friend_accept:'đã chấp nhận lời mời kết bạn'};
+async function loadNtf(){const boxes=[document.getElementById('cdntf'),document.getElementById('cdntfm')].filter(Boolean);
+ try{const j=await AUTH.api('/community/notifications');
+  const h=j.notifications.length?j.notifications.slice(0,20).map(n=>'<a class="cd-ntf'+(n.read?'':' un')+'" href="cong-dong.html'+(n.post_id?'#post-'+encodeURIComponent(n.post_id):'')+'" data-ntf="'+esc(n.id)+'">'+avaHTML(n.actor,true).replace(/^<a /,'<span ').replace(/<\/a>$/,'</span>')+'<span><b>'+esc(n.actor&&n.actor.name||'')+'</b> '+esc(NTFTXT[n.type]||'có hoạt động mới')+'<br><span class="cd-mut">'+when(n.created_at)+'</span></span></a>').join(''):'<p class="cd-mut">Bạn chưa có thông báo nào.</p>';
+  boxes.forEach(b=>{b.innerHTML=h;resolveFiles(b)});setBadge(j.unread)}catch(e){boxes.forEach(b=>b.innerHTML='<p class="cd-err">'+esc(e.message)+'</p>')}}
+function setBadge(n){const b=document.getElementById('cdbd');if(b){b.hidden=!n;b.textContent=n>99?'99+':n}}
+let pollT=null;function poll(){clearTimeout(pollT);if(document.hidden)return;pollT=setTimeout(async()=>{try{const j=await AUTH.api('/community/unread');setBadge(j.notifications)}catch(e){}poll()},90000)}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){poll()}else clearTimeout(pollT)});
 function updStorageUI(){document.querySelectorAll('[data-need-storage]').forEach(b=>{b.disabled=!STORAGE;b.title=STORAGE?'':'Kho lưu trữ ảnh/tài liệu đang được bật — tạm thời chưa tải file lên được.'});
  const n=document.getElementById('cdstoragenote');if(n)n.hidden=STORAGE}
 async function shrinkImage(file){if(!/^image\//.test(file.type)||file.type==='image/webp'&&file.size<=5*1024*1024)return file;
@@ -160,13 +200,17 @@ async function boot(){try{const j=await AUTH.api('/community/profile');ME=j.prof
  if(viewUser&&viewUser!==ME.id){renderProfileView();return}
  root.innerHTML='<div class="cd-card" id="cdmine"></div>'
  +'<div class="cd-note" id="cdstoragenote" hidden>📁 Phần đính kèm ảnh/tài liệu đang được bật trên hệ thống — hiện tại bạn vẫn đăng bài bằng chữ và bình luận bình thường; nút đính kèm sẽ dùng được ngay khi kho lưu trữ sẵn sàng.</div>'
- +'<div class="cd-card"><div class="cd-row">'+avaHTML(ME,true)+'<div style="flex:1"><textarea class="cd-ta" id="cdtext" maxlength="4000" placeholder="Chia sẻ điều gì đó với mọi người…"></textarea></div></div>'
+ +'<div class="cd-card"><div class="cd-row">'+avaHTML(ME,true)+'<div style="flex:1"><textarea class="cd-ta" id="cdtext" maxlength="4000" placeholder="Hôm nay bạn học được gì? Chia sẻ với mọi người nhé…"></textarea></div></div>'
  +'<div id="cdchips"></div><div class="cd-err" id="cderr"></div>'
  +'<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px"><input type="file" id="cdimg" accept="image/jpeg,image/png,image/webp" multiple hidden><input type="file" id="cddoc" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip" multiple hidden>'
  +'<button type="button" class="cd-filebtn" data-need-storage id="cdimgbtn">📷 Ảnh</button><button type="button" class="cd-filebtn" data-need-storage id="cddocbtn">📎 Tài liệu</button>'
  +'<button type="button" class="cd-send" id="cdpost" style="margin-left:auto">Đăng bài</button></div></div>'
- +'<div id="cdfeed"></div><button type="button" class="cd-ghost cd-more" id="cdmore">Xem thêm bài</button>';
- renderMine();updStorageUI();
+ +'<div class="cd-mob cd-card" id="cdntfwrap" hidden><b>🔔 Thông báo</b><div id="cdntfm"></div></div>'
+ +'<div class="cd-tabs" id="cdtabs">'+[['','Tất cả'],['N5','N5'],['N4','N4'],['N3','N3'],['N2','N2'],['N1','N1']].map(x=>'<button type="button" data-lv="'+x[0]+'"'+(x[0]===''?' class="on"':'')+'>'+x[1]+'</button>').join('')+'<button type="button" data-view="saved">🔖 Đã lưu</button></div>'
+ +'<div class="cd-sort">Xếp theo: <button type="button" class="on" data-sort="new">Mới nhất</button><button type="button" data-sort="hot">Nổi bật</button></div>'
+ +'<div id="cdfeed"></div><button type="button" class="cd-ghost cd-more" id="cdmore">Xem thêm bài</button>'
+ +'<div class="cd-mob">'+document.getElementById('noi-quy').outerHTML.replace('id="noi-quy"','id="noi-quy-m"')+'</div>';
+ renderMine();updStorageUI();loadNtf();poll();
  const imgIn=document.getElementById('cdimg'),docIn=document.getElementById('cddoc');
  document.getElementById('cdimgbtn').onclick=()=>imgIn.click();document.getElementById('cddocbtn').onclick=()=>docIn.click();
  imgIn.onchange=()=>{[...imgIn.files].forEach(f=>pendingFiles.push({file:f,kind:'image'}));imgIn.value='';fileChips()};
@@ -177,21 +221,32 @@ async function boot(){try{const j=await AUTH.api('/community/profile');ME=j.prof
    const j=await AUTH.api('/community/posts',{method:'POST',body:{body,file_ids:ids}});
    document.getElementById('cdtext').value='';const list=document.getElementById('cdfeed');
    const empty=list.querySelector('.cd-card .cd-mut');if(empty&&list.children.length===1)list.innerHTML='';
-   list.insertAdjacentHTML('afterbegin',postHTML(j.post));resolveFiles(list)}catch(ex){err.textContent=ex.message}btn.disabled=false};
+   POSTS.unshift(j.post);VIEW='feed';drawFeed()}catch(ex){err.textContent=ex.message}btn.disabled=false};
  document.getElementById('cdmore').onclick=()=>loadFeed(true);
  loadFeed(false)}
+document.addEventListener('click',e=>{const t=e.target;
+ const lv=t.closest('[data-lv]');if(lv){LEVEL=lv.dataset.lv;VIEW='feed';document.querySelectorAll('#cdtabs button').forEach(b=>b.classList.toggle('on',b===lv));drawFeed();return}
+ const vw=t.closest('[data-view]');if(vw){VIEW=VIEW==='saved'?'feed':'saved';LEVEL='';document.querySelectorAll('#cdtabs button').forEach(b=>b.classList.toggle('on',VIEW==='saved'?b.dataset.view==='saved':b.dataset.lv===''));drawFeed();document.getElementById('cdtabs')&&document.getElementById('cdtabs').scrollIntoView({block:'start'});return}
+ const so=t.closest('[data-sort]');if(so){SORT=so.dataset.sort;document.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('on',b===so));drawFeed();return}
+ if(t.closest('#cdbell')){const w=document.getElementById('cdntfwrap');if(window.innerWidth>=1000){document.getElementById('cdntf').scrollIntoView({block:'center'});loadNtf()}else if(w){w.hidden=!w.hidden;if(!w.hidden)loadNtf()}return}
+ if(t.closest('[data-ntf-readall]')){AUTH.api('/community/notifications/read',{method:'POST',body:{}}).then(loadNtf).catch(()=>{});return}
+ const nt=t.closest('[data-ntf]');if(nt){AUTH.api('/community/notifications/read',{method:'POST',body:{ids:[nt.dataset.ntf]}}).catch(()=>{});const h=nt.getAttribute('href').split('#')[1];if(h){const el=document.getElementById(h);if(el){e.preventDefault();el.scrollIntoView({block:'center'});loadComments(h.slice(5));history.replaceState(null,'','#'+h)}}return}
+});
 root.addEventListener('click',async e=>{const t=e.target;
+ const sv=t.closest('[data-save]');if(sv){const id=sv.dataset.save;const on=toggleSaved(id);const p=POSTS.find(x=>x.id===id)||savedPosts()[id];if(p)rememberPost(p,on);sv.classList.toggle('saved',on);sv.textContent='🔖 '+(on?'Đã lưu':'Lưu');if(VIEW==='saved'&&!on)drawFeed();return}
+ const sh=t.closest('[data-sharepost]');if(sh){const u=location.origin+location.pathname+'#post-'+sh.dataset.sharepost;
+  if(navigator.share){navigator.share({title:'Bài viết trong Cộng đồng học tiếng Nhật',url:u}).catch(()=>{})}else{try{await navigator.clipboard.writeText(u);sh.textContent='✅ Đã chép link'}catch(ex){prompt('Chép link bài viết:',u)}}return}
  const menuBtn=t.closest('[data-menu]');if(menuBtn){const pop=menuBtn.parentElement.querySelector('.cd-pop');const was=pop.hidden;root.querySelectorAll('.cd-pop').forEach(p=>p.hidden=true);pop.hidden=!was;return}
  if(!t.closest('.cd-menu'))root.querySelectorAll('.cd-pop').forEach(p=>p.hidden=true);
  const act=t.closest('[data-act]');if(act){const a=act.dataset.act;
   if(a==='msg')location.href='tin-nhan.html?u='+encodeURIComponent(act.dataset.u);
   if(a==='report-post'){const reason=prompt('Lý do báo cáo bài này (không bắt buộc):')||'';try{await AUTH.api('/community/report',{method:'POST',body:{target_type:'post',target_id:act.dataset.id,reason}});alert('Đã gửi báo cáo. Quản trị viên sẽ xem xét. Cảm ơn bạn!')}catch(ex){alert(ex.message)}}
-  if(a==='del-post'){if(!confirm('Xoá bài này?'))return;try{await AUTH.api('/community/posts/delete',{method:'POST',body:{id:act.dataset.id}});const el=document.getElementById('post-'+act.dataset.id);el&&el.remove()}catch(ex){alert(ex.message)}}return}
- const lk=t.closest('[data-like-post]');if(lk){try{const j=await AUTH.api('/community/like',{method:'POST',body:{target_type:'post',target_id:lk.dataset.likePost}});lk.classList.toggle('liked',j.liked);lk.querySelector('span').textContent=j.count}catch(ex){alert(ex.message)}return}
+  if(a==='del-post'){if(!confirm('Xoá bài này?'))return;try{await AUTH.api('/community/posts/delete',{method:'POST',body:{id:act.dataset.id}});const el=document.getElementById('post-'+act.dataset.id);el&&el.remove();POSTS=POSTS.filter(x=>x.id!==act.dataset.id)}catch(ex){alert(ex.message)}}return}
+ const lk=t.closest('[data-like-post]');if(lk){try{const j=await AUTH.api('/community/like',{method:'POST',body:{target_type:'post',target_id:lk.dataset.likePost}});lk.classList.toggle('liked',j.liked);lk.querySelector('span').textContent=j.count;const P=POSTS.find(x=>x.id===lk.dataset.likePost);if(P){P.liked=j.liked;P.like_count=j.count}}catch(ex){alert(ex.message)}return}
  const lc=t.closest('[data-like-cmt]');if(lc){try{const j=await AUTH.api('/community/like',{method:'POST',body:{target_type:'comment',target_id:lc.dataset.likeCmt}});lc.classList.toggle('liked',j.liked);lc.querySelector('span').textContent=j.count}catch(ex){alert(ex.message)}return}
  const tg=t.closest('[data-cmt-toggle]');if(tg){const box=root.querySelector('[data-cmts="'+tg.dataset.cmtToggle+'"]');if(box.hidden)loadComments(tg.dataset.cmtToggle);else box.hidden=true;return}
  const cs=t.closest('[data-cmt-send]');if(cs){const postId=cs.dataset.cmtSend;const ta=root.querySelector('[data-cmt-in="'+postId+'"]');const body=ta.value.trim();if(!body)return;cs.disabled=true;
-  try{await AUTH.api('/community/comments',{method:'POST',body:{post_id:postId,body}});ta.value='';loadComments(postId)}catch(ex){alert(ex.message)}cs.disabled=false;return}
+  try{await AUTH.api('/community/comments',{method:'POST',body:{post_id:postId,body}});ta.value='';const P=POSTS.find(x=>x.id===postId);if(P){P.comment_count=(P.comment_count||0)+1;const c=root.querySelector('[data-cmt-toggle="'+postId+'"] span');if(c)c.textContent=P.comment_count}loadComments(postId)}catch(ex){alert(ex.message)}cs.disabled=false;return}
  const rp=t.closest('[data-rep]');if(rp){const box=root.querySelector('[data-repbox="'+rp.dataset.rep+'"]');
   box.innerHTML='<div class="cd-inrow"><textarea rows="1" maxlength="2000" placeholder="Viết trả lời…"></textarea><button type="button" class="cd-send">Gửi</button></div>';
   const ta=box.querySelector('textarea');ta.focus();box.querySelector('button').onclick=async()=>{const body=ta.value.trim();if(!body)return;
