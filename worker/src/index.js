@@ -636,7 +636,8 @@ async function handleAuth(req,env,c,path){
     const u=await env.DB.prepare('SELECT id,email,name FROM users WHERE id=?').bind(row.user_id).first();
     if(!u)return J({error:'Tài khoản không còn tồn tại'},404,c.h);
     const ds=await listDevices(env,row.user_id);
-    return J({ok:true,email:u.email,name:u.name,devices:ds},200,c.h);
+    const prof=await cmProfile(env,u.id).catch(()=>null);
+    return J({ok:true,email:u.email,name:(prof&&prof.name)||u.name,devices:ds},200,c.h);
   }
 
   // --- gỡ một thiết bị bằng vé rồi hoàn tất đăng nhập trên thiết bị mới ---
@@ -852,6 +853,8 @@ async function handleAuth(req,env,c,path){
     if(s.kind!=='user')return J({error:'Chưa đăng nhập'},401,c.h);
     if(s.status==='approved')await env.DB.prepare('UPDATE users SET last_visit=? WHERE id=?').bind(now(),s.user_id).run();
     const out={ok:true,user:publicUser(s)};
+    // NAMEFIX (31/10): tên trả về cho web là TÊN CHUẨN (goi -> display_name -> tên tài khoản).
+    try{const prof=await cmProfile(env,s.user_id);if(prof&&prof.name)out.user.name=prof.name;}catch(e){}
     if(s.status==='approved'&&env.CONTENT_KEY_B64)out.contentKey=env.CONTENT_KEY_B64;
     return J(out,200,c.h);
   }
@@ -896,7 +899,7 @@ async function handleAuth(req,env,c,path){
     else if(tab==='rejected')statusFilter='rejected';
     else statusFilter='pending';
     await ensureDevices(env);
-    const rows=await env.DB.prepare('SELECT id,email,name,method,status,created_at,last_visit,reviewed_at,(SELECT COUNT(*) FROM devices WHERE devices.user_id=users.id) AS device_count FROM users WHERE status=? ORDER BY created_at DESC LIMIT 200').bind(statusFilter).all();
+    const rows=await env.DB.prepare("SELECT u.id,u.email,u.name,u.method,u.status,u.created_at,u.last_visit,u.reviewed_at,(SELECT COUNT(*) FROM devices WHERE devices.user_id=u.id) AS device_count,COALESCE(NULLIF(TRIM(CASE WHEN json_valid(h.value) THEN json_extract(h.value,'$.goi') END),''),NULLIF(TRIM(COALESCE(p.display_name,'')),''),'') AS display_name FROM users u LEFT JOIN profiles p ON p.user_id=u.id LEFT JOIN user_hoso h ON h.user_id=u.id AND h.pkey='hn_dk_ho_so' WHERE u.status=? ORDER BY u.created_at DESC LIMIT 200").bind(statusFilter).all();
     return J({ok:true,tab:statusFilter,users:rows.results||[]},200,c.h);
   }
 
@@ -1062,6 +1065,17 @@ async function handleHoso(req,env,c){
       if(!(k in HOSO_MAX))continue;
       await env.DB.prepare('INSERT INTO user_hoso(user_id,pkey,value,updated_at) VALUES(?,?,?,?) ON CONFLICT(user_id,pkey) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at').bind(s.user_id,k,b.items[k],t).run();
       updated[k]=t;
+    }
+    // NAMEFIX (31/10): ĐỒNG BỘ TÊN CHUẨN — khi hồ sơ được lưu kèm `goi` (tên
+    // muốn được gọi), ghi nhận vào profiles.display_name để mọi bề mặt dùng
+    // chung một nguồn tên (kể cả những nơi chỉ đọc bảng profiles). Chỉ ghi
+    // khi goi có mặt và khác rỗng; không đụng các trường hồ sơ khác.
+    if(updated.hn_dk_ho_so){
+      try{
+        const o=JSON.parse(b.items.hn_dk_ho_so);
+        const g=String((o&&o.goi)||'').trim().slice(0,60);
+        if(g)await env.DB.prepare('INSERT INTO profiles(user_id,display_name,updated_at) VALUES(?,?,?) ON CONFLICT(user_id) DO UPDATE SET display_name=excluded.display_name').bind(s.user_id,g,t).run();
+      }catch(e){}
     }
     return J({ok:true,updated},200,h);
   }
@@ -1306,6 +1320,25 @@ async function cmMigrate(env){
   await env.DB.batch(CM_V2_SQL.map(s=>env.DB.prepare(s)));
 }
 function cmAdminProfile(){return {id:'admin',name:'Quản trị viên',avatar_file:null,bio:'',level:'',goal:'',region:'',admin:true,official:true}}
+// NAMEFIX (31/10/2026, lệnh trực tiếp của chủ trang): TÊN CHUẨN toàn web là
+// tên người dùng muốn được gọi — trường `goi` trong hồ sơ /hoso (blob
+// hn_dk_ho_so, bảng user_hoso). Thứ tự ưu tiên ở MỌI bề mặt hiển thị tên:
+// goi -> profiles.display_name -> users.name. Đọc gộp theo danh sách id
+// (tối đa 90/lô như cmProfiles); lỗi đọc (bảng chưa kịp tạo) -> coi như
+// không có goi, rơi xuống nguồn dự phòng như cũ.
+async function cmGoiMap(env,ids){
+  const out={};const real=[...new Set((ids||[]).filter(x=>x&&x!=='admin').map(String))];
+  for(let i=0;i<real.length;i+=90){
+    const part=real.slice(i,i+90);
+    try{
+      const r=await env.DB.prepare("SELECT user_id,value FROM user_hoso WHERE pkey='hn_dk_ho_so' AND user_id IN ("+cmQ(part.length)+")").bind(...part).all();
+      for(const row of (r.results||[])){
+        try{const o=JSON.parse(row.value);const g=String((o&&o.goi)||'').trim().slice(0,60);if(g)out[row.user_id]=g;}catch(e){}
+      }
+    }catch(e){}
+  }
+  return out;
+}
 // Hồ sơ gom: 1 truy vấn cho cả danh sách id.
 async function cmProfiles(env,ids){
   const out={};const uniq=[...new Set(ids.filter(Boolean).map(String))];
@@ -1316,6 +1349,8 @@ async function cmProfiles(env,ids){
     const r=await env.DB.prepare('SELECT u.id,u.name,p.display_name,p.bio,p.level,p.goal,p.avatar_file,p.region FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.id IN ('+cmQ(part.length)+')').bind(...part).all();
     for(const p of (r.results||[]))out[p.id]={id:p.id,name:(p.display_name&&p.display_name.trim())||p.name||'',avatar_file:p.avatar_file||null,bio:p.bio||'',level:p.level||'',goal:p.goal||'',region:p.region||''};
   }
+  const gois=await cmGoiMap(env,real);
+  for(const id of real)if(gois[id]&&out[id])out[id].name=gois[id];
   for(const id of real)if(!out[id])out[id]={id,name:'(đã xoá)',avatar_file:null,bio:'',level:'',goal:'',region:''};
   return out;
 }
@@ -1358,7 +1393,8 @@ async function cmCheckMentions(env,me,body,allowOnly){
     if(good)ok.push(id);
   }
   // Nhắc không hợp lệ -> đổi về chữ thường "@Tên" (không thành liên kết, không gửi thông báo).
-  const out=body.replace(CM_MENTION_RE,(all,id)=>ok.includes(id)?all:('@'+((info[id]&&((info[id].display_name||'').trim()||info[id].name))||'người dùng')));
+  const gois=await cmGoiMap(env,ids);
+  const out=body.replace(CM_MENTION_RE,(all,id)=>ok.includes(id)?all:('@'+(gois[id]||(info[id]&&((info[id].display_name||'').trim()||info[id].name))||'người dùng')));
   return {body:out,ids:ok};
 }
 async function cmSaveMentions(env,me,ids,kind,sourceId,notif){
@@ -1584,7 +1620,8 @@ async function cmProfile(env,uid){
   const p=await env.DB.prepare('SELECT p.display_name,p.bio,p.level,p.goal,p.avatar_file,u.name FROM profiles p RIGHT JOIN users u ON u.id=p.user_id WHERE u.id=?').bind(uid).first()
     || await env.DB.prepare('SELECT NULL AS display_name,NULL AS bio,NULL AS level,NULL AS goal,NULL AS avatar_file,name FROM users WHERE id=?').bind(uid).first();
   if(!p)return {id:uid,name:'(đã xoá)',avatar_file:null,bio:'',level:'',goal:''};
-  return {id:uid,name:(p.display_name&&p.display_name.trim())||p.name||'',avatar_file:p.avatar_file||null,bio:p.bio||'',level:p.level||'',goal:p.goal||''};
+  const goi=(await cmGoiMap(env,[uid]))[uid]||'';
+  return {id:uid,name:goi||(p.display_name&&p.display_name.trim())||p.name||'',avatar_file:p.avatar_file||null,bio:p.bio||'',level:p.level||'',goal:p.goal||''};
 }
 async function cmNotify(env,recipient,actor,type,postId,commentId){
   if(!recipient||recipient===actor||recipient==='admin')return;
@@ -2873,13 +2910,13 @@ async function handleCommunity(req,env,c,path){
     const region=String(url.searchParams.get('region')||'').trim().slice(0,40);
     if(!q&&!level&&!region)return J({ok:true,users:[]},200,c.h);
     const blk=[...(await cmBlockSet(env,me))].slice(0,80);
-    let sql="SELECT u.id FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.status='approved' AND COALESCE(p.discoverable,1)=1 AND u.id<>?";
+    let sql="SELECT u.id FROM users u LEFT JOIN profiles p ON p.user_id=u.id LEFT JOIN user_hoso hs ON hs.user_id=u.id AND hs.pkey='hn_dk_ho_so' WHERE u.status='approved' AND COALESCE(p.discoverable,1)=1 AND u.id<>?";
     const binds=[me];
     if(blk.length){sql+=' AND u.id NOT IN ('+cmQ(blk.length)+')';binds.push(...blk)}
     if(q){
       const pat='%'+q.toLowerCase().replace(/[\\%_]/g,'\\$&')+'%';
-      sql+=" AND (LOWER(u.name) LIKE ? ESCAPE '\\' OR LOWER(COALESCE(p.display_name,'')) LIKE ? ESCAPE '\\')";
-      binds.push(pat,pat);
+      sql+=" AND (LOWER(u.name) LIKE ? ESCAPE '\\' OR LOWER(COALESCE(p.display_name,'')) LIKE ? ESCAPE '\\' OR LOWER(COALESCE(CASE WHEN json_valid(hs.value) THEN json_extract(hs.value,'$.goi') END,'')) LIKE ? ESCAPE '\\')";
+      binds.push(pat,pat,pat);
     }
     if(level){sql+=' AND p.level=?';binds.push(level)}
     if(region){sql+=' AND LOWER(p.region)=LOWER(?)';binds.push(region)}
@@ -3388,12 +3425,13 @@ async function gameRlHit(env, key, slot) {
 }
 async function gameProfiles(env, ids) {
   if (typeof cmProfiles === 'function') return cmProfiles(env, ids);
-  // Tương đương cmProfiles: display_name (bảng profiles) -> users.name.
+  // Tương đương cmProfiles: goi (hồ sơ /hoso) -> display_name (bảng profiles) -> users.name.
   const out = {}; const uniq = [...new Set((ids || []).filter(Boolean).map(String))];
+  const gois = await cmGoiMap(env, uniq);
   for (const id of uniq) {
     const p = await env.DB.prepare('SELECT p.display_name,p.avatar_file,u.name FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.id=?').bind(id).first();
     out[id] = p
-      ? { id, name: (p.display_name && p.display_name.trim()) || p.name || '', avatar_file: p.avatar_file || null }
+      ? { id, name: gois[id] || (p.display_name && p.display_name.trim()) || p.name || '', avatar_file: p.avatar_file || null }
       : { id, name: '(đã xoá)', avatar_file: null };
   }
   return out;
@@ -3439,6 +3477,11 @@ const GAME_ROUTES = [
   'POST /game/score',
   'GET /game/leaderboard',
   'POST /game/chat', 'GET /game/chat',
+  // Game-plus (vá khi đăng): raid tuần + link ngắn thách đấu — dispatch
+  // ở fetch chính TRƯỚC handleGame vì handler tự xác thực (khách xem
+  // được raid/bản thử thách), không qua cổng đăng nhập chung của game.
+  'GET /game/raid', 'POST /game/raid/hit',
+  'POST /game/challenges', 'GET /game/challenges/*', 'POST /game/challenges/*/result',
 ];
 
 async function handleGame(req, env, ctx) {
@@ -3592,7 +3635,8 @@ if (typeof module !== 'undefined' && module.exports) {
 //
 // Xác thực: sessionUser bắt buộc — chỉ tài khoản kind='user',
 // không bị khoá/từ chối (cùng khuôn handleProgress). Tên người chơi
-// LUÔN lấy từ phiên (users.name), không bao giờ nhận từ client.
+// LUÔN lấy từ máy chủ theo TÊN CHUẨN (goi trong hồ sơ -> profiles.display_name
+// -> users.name), không bao giờ nhận từ client.
 // =====================================================================
 
 const GR_LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
@@ -3603,8 +3647,11 @@ const GR_EVENT_KINDS = ['start', 'questions', 'answer', 'progress', 'finish', 'c
   // Hợp sức (CONTRACT-COOP): chỉ client GỬI 4 kind này; các kind máy chủ PHÁT
   // (coop_locked / coop_question / coop_finish) đi qua grAddEvent trực tiếp,
   // không qua whitelist này. Phòng versus nhận kind co-op sẽ bị từ chối ở handler.
-  'coop_config', 'coop_answer', 'coop_timeout', 'coop_next'];
-const GR_PAYLOAD_MAX = { start: 4000, questions: 60000, answer: 2000, progress: 2000, finish: 2000, chem: 600, chat: 600, rematch: 1000, ping: 200, coop_config: 2000, coop_answer: 2000, coop_timeout: 500, coop_next: 500 };
+  'coop_config', 'coop_answer', 'coop_timeout', 'coop_next',
+  // Giải đấu 1v1 (đợt mở rộng game, vá khi đăng): 3 kind relay nguyên văn,
+  // chỉ cổng cho luồng giải đấu (xem nhánh xử lý riêng ở POST /game/rooms/event).
+  'format_config', 'tourney_config', 'tourney_result'];
+const GR_PAYLOAD_MAX = { start: 4000, questions: 60000, answer: 2000, progress: 2000, finish: 2000, chem: 600, chat: 600, rematch: 1000, ping: 200, coop_config: 2000, coop_answer: 2000, coop_timeout: 500, coop_next: 500, format_config: 2000, tourney_config: 6000, tourney_result: 2000 };
 const GR_QUESTION_MAX = 20;      // tối đa số câu chủ phòng gửi qua event 'questions'
 const GR_SCORE_MAX = 30000;      // trần điểm 1 ván (chống gian lận cơ bản)
 const GR_SCORE_STEP_MAX = 2500;  // trần tăng điểm trong 1 sự kiện answer/progress
@@ -3916,7 +3963,8 @@ async function handleGameRooms(req, env, c, path) {
   if (!s || s.kind !== 'user') return J({ error: 'Cần đăng nhập để chơi cùng bạn bè.', code: 'login_required' }, 401, h);
   if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, h);
   const me = s.user_id;
-  const myName = String(s.name || '').trim().slice(0, 80) || 'Học viên';
+  // NAMEFIX (31/10): tên ghi vào phòng là TÊN CHUẨN từ máy chủ (goi -> display_name -> tên tài khoản).
+  const myName = String(((await cmProfile(env, me)).name || '')).trim().slice(0, 80) || 'Học viên';
   await ensureGameRooms(env);
   await grCleanup(env);
 
@@ -4035,16 +4083,39 @@ async function handleGameRooms(req, env, c, path) {
     if (kind === 'questions') {
       // Đề dự phòng: chỉ chủ phòng, chỉ trước khi bắt đầu (waiting) —
       // danh sách câu chuẩn hoá rồi phát cho cả phòng qua polling.
+      // Giải đấu (vá khi đăng): chủ phòng được gửi đề TỪNG TRẬN CON khi
+      // phòng đang playing nếu payload.format === 'tourney', và sự kiện
+      // lưu kèm format/matchId/duelists để các máy chốt đúng trận con.
       if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới gửi bộ câu được.' }, 403, h);
-      if (room.status !== 'waiting') return J({ error: 'Phòng đã bắt đầu, không đổi bộ câu được nữa.' }, 409, h);
+      const isTourneyQ = payload.format === 'tourney';
+      if (room.status !== 'waiting' && !isTourneyQ) return J({ error: 'Phòng đã bắt đầu, không đổi bộ câu được nữa.' }, 409, h);
       const list = Array.isArray(payload.questions) ? payload.questions.slice(0, GR_QUESTION_MAX).map(grCleanQuestion).filter(Boolean) : [];
       if (!list.length) return J({ error: 'Bộ câu trống hoặc không hợp lệ.' }, 400, h);
-      const id = await grAddEvent(env, code, me, 'questions', { questions: list });
+      const qPayload = { questions: list };
+      if (isTourneyQ) {
+        qPayload.format = 'tourney';
+        qPayload.matchId = String(payload.matchId || '').slice(0, 40);
+        qPayload.duelists = Array.isArray(payload.duelists) ? payload.duelists.slice(0, 2).map(x => String(x).slice(0, 64)) : [];
+      }
+      const id = await grAddEvent(env, code, me, 'questions', qPayload);
       return J({ ok: true, eventId: id, count: list.length }, 200, h);
     }
 
     if (kind === 'start') {
       if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới bắt đầu trận được.' }, 403, h);
+      if (room.status === 'playing' && payload.format === 'tourney') {
+        // Giải đấu (vá khi đăng): start TRẬN CON trong khi phòng đang
+        // playing — relay NGUYÊN payload (format/matchId/duelists/seed/
+        // qCount/deck) để mọi máy chốt đúng trận con; reset state của
+        // mọi người chơi (GIỮ score tích lũy) để mốc lũy kế answered/
+        // correct của trận con tính lại từ 0. Winner trận con do client
+        // chốt từ các sự kiện finish như cũ.
+        for (const p of players) {
+          await env.DB.prepare("UPDATE game_room_players SET state='{}', updated_at=? WHERE room_code=? AND user_id=?").bind(t, code, p.user_id).run();
+        }
+        const idT = await grAddEvent(env, code, me, 'start', payload);
+        return J({ ok: true, eventId: idT, status: 'playing', tourney: true }, 200, h);
+      }
       if (room.status === 'playing') return J({ error: 'Trận đã bắt đầu rồi.' }, 409, h);
       const cfg = GR_MODES[room.mode] || GR_MODES.group;
       if (players.length < cfg.min) return J({ error: 'Cần ít nhất ' + cfg.min + ' người mới bắt đầu được.' }, 409, h);
@@ -4070,7 +4141,10 @@ async function handleGameRooms(req, env, c, path) {
       }
       const qCount = Math.min(15, Math.max(5, parseInt(payload.qCount, 10) || +room.q_count || 10));
       await env.DB.prepare("UPDATE game_rooms SET status='playing', seed=?, q_count=?, updated_at=? WHERE code=?").bind(seed, qCount, t, code).run();
-      const id = await grAddEvent(env, code, me, 'start', { seed, qCount, deck });
+      // Giải đấu (vá khi đăng): start mang format 'tourney' (trận con đầu
+      // tiên khi phòng còn waiting) thì relay nguyên payload như nhánh
+      // trận con ở trên; các thể thức cũ giữ đúng payload rút gọn như trước.
+      const id = await grAddEvent(env, code, me, 'start', payload.format === 'tourney' ? payload : { seed, qCount, deck });
       return J({ ok: true, eventId: id, status: 'playing' }, 200, h);
     }
 
@@ -4264,6 +4338,14 @@ async function handleGameRooms(req, env, c, path) {
       return J({ ok: true, eventId: id }, 200, h);
     }
 
+    if (kind === 'format_config' || kind === 'tourney_config' || kind === 'tourney_result') {
+      // Giải đấu (vá khi đăng): relay nguyên văn cho cả phòng. Chỉ thành
+      // viên phòng mới tới được đây (đã kiểm ở đầu handler); trần payload
+      // theo GR_PAYLOAD_MAX (tourney_config 6000, hai kind còn lại 2000).
+      const id = await grAddEvent(env, code, me, kind, payload);
+      return J({ ok: true, eventId: id }, 200, h);
+    }
+
     // kind === 'ping' (giữ nhịp/nhắc nhẹ): chỉ ghi sự kiện, không đổi trạng thái.
     const id = await grAddEvent(env, code, me, 'ping', {});
     return J({ ok: true, eventId: id }, 200, h);
@@ -4301,6 +4383,240 @@ if (typeof module !== 'undefined' && module.exports) {
     grNormCoopCfg, grCoopCfgOf, grCoopStateOf, grCoopSnap, grCoopNormText, grCoopGrade, grCoopLock, grCoopResolution };
 }
 
+
+// =====================================================================
+// GAME-PLUS (vá khi đăng 31/10): RAID TRÙM TUẦN + LINK NGẮN THÁCH ĐẤU
+// Hai khối dưới dán nguyên văn từ game-plus/worker-additions/ (đã kiểm
+// thử cục bộ 35/35 trên D1 giả). Dispatch ở fetch chính, TRƯỚC
+// handleGame, vì handler tự xác thực bằng sessionUser (khách xem được
+// raid + bản thử thách; POST mới bắt đăng nhập). Không binding/secret
+// mới; bảng game_raid_* và game_challenges tự tạo ở lần gọi đầu.
+// =====================================================================
+// =====================================================================
+// GAME-PLUS — RAID TRÙM TUẦN (bản vá Worker, CHƯA deploy)
+// Dán khối này vào Worker cạnh khối game hiện hành + thêm 2 route:
+//   'GET /game/raid', 'POST /game/raid/hit'  (xem MERGE-RAID.md)
+// Dùng đúng helper sẵn có của Worker: J(), readJson(), bearer(),
+// sessionUser(). Không cần binding/secret mới. Bảng tự tạo (ensure).
+//
+// Mô hình tin cậy (khớp cách game_scores hiện hành nhận điểm client):
+// máy chủ KHÔNG chấm lại câu hỏi; thay vào đó kẹp sát thương mỗi lượt
+// gọi (<=150), giới hạn nhịp 1 lượt / 10 giây / người, và chỉ cộng
+// đúng phần máu còn lại của trùm. Xem MERGE-RAID.md mục "Giới hạn".
+// =====================================================================
+
+const RAID_HP_MAX = 20000;
+const RAID_HIT_CAP = 150;
+const RAID_HIT_GAP_MS = 10000;
+const RAID_BOSSES = [
+  { id: 'oni-do', name: 'Oni Đỏ', emoji: '👹' },
+  { id: 'kappa', name: 'Kappa Láu Cá', emoji: '🐸' },
+  { id: 'tengu', name: 'Tengu Mũi Dài', emoji: '👺' },
+  { id: 'ryujin', name: 'Rồng Lửa Ryūjin', emoji: '🐉' },
+  { id: 'shogun', name: 'Shogun Bóng Tối', emoji: '🥷' },
+  { id: 'tanuki', name: 'Tanuki Bụng Bự', emoji: '🦝' },
+  { id: 'bakeneko', name: 'Bakeneko Hai Đuôi', emoji: '🐱' },
+  { id: 'kitsune', name: 'Kitsune Chín Đuôi', emoji: '🦊' },
+  { id: 'yuki-onna', name: 'Yuki-onna Tuyết Lạnh', emoji: '⛄' },
+  { id: 'jorogumo', name: 'Jorōgumo Nhện Chúa', emoji: '🕷️' },
+  { id: 'nue', name: 'Nue Quái Chimera', emoji: '🐯' },
+  { id: 'umibozu', name: 'Umibōzu Sư Biển', emoji: '🐙' },
+  { id: 'kasha', name: 'Kasha Miêu Hỏa', emoji: '😼' },
+  { id: 'raijin', name: 'Raijin Thần Sấm', emoji: '🌩️' },
+  { id: 'fujin', name: 'Fūjin Thần Gió', emoji: '🌪️' },
+  { id: 'shuten-doji', name: 'Shuten-dōji Vua Quỷ', emoji: '🧌' },
+  { id: 'gashadokuro', name: 'Gashadokuro Khổng Lồ', emoji: '💀' },
+  { id: 'orochi', name: 'Yamata-no-Orochi', emoji: '🐍' }
+];
+let _raidReady = false;
+async function ensureRaid(env) {
+  if (_raidReady || !env.DB) return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_raid_weeks (
+    week_key TEXT PRIMARY KEY, boss_id TEXT NOT NULL DEFAULT '',
+    hp_max INTEGER NOT NULL DEFAULT 0, hp_left INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL DEFAULT '')`).run();
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_raid_hits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    week_key TEXT NOT NULL, user_id TEXT NOT NULL,
+    dmg INTEGER NOT NULL DEFAULT 0, hit_at INTEGER NOT NULL DEFAULT 0)`).run();
+  await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_raid_hits_week_user
+    ON game_raid_hits(week_key, user_id)`).run();
+  _raidReady = true;
+}
+// Tuần JST bắt đầu thứ Hai — cùng thuật toán stWeekKey của khối stats.
+function raidWeekKey(nowMs) {
+  const day = new Date(nowMs + 9 * 3600 * 1000).toISOString().slice(0, 10);
+  const p = day.split('-');
+  const ms = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+  const dow = (new Date(ms).getUTCDay() + 6) % 7;
+  return new Date(ms - dow * 86400000).toISOString().slice(0, 10);
+}
+function raidBossFor(weekKey) {
+  let h = 0;
+  for (let i = 0; i < weekKey.length; i++) h = (h * 31 + weekKey.charCodeAt(i)) >>> 0;
+  return RAID_BOSSES[h % RAID_BOSSES.length];
+}
+async function raidWeekRow(env, weekKey) {
+  const boss = raidBossFor(weekKey);
+  await env.DB.prepare(
+    'INSERT OR IGNORE INTO game_raid_weeks(week_key,boss_id,hp_max,hp_left,created_at) VALUES(?,?,?,?,?)'
+  ).bind(weekKey, boss.id, RAID_HP_MAX, RAID_HP_MAX, new Date().toISOString()).run();
+  return env.DB.prepare(
+    'SELECT week_key,boss_id,hp_max,hp_left FROM game_raid_weeks WHERE week_key=?'
+  ).bind(weekKey).first();
+}
+async function raidState(env, userId) {
+  await ensureRaid(env);
+  const wk = raidWeekKey(Date.now());
+  const row = await raidWeekRow(env, wk);
+  const boss = RAID_BOSSES.find(b => b.id === row.boss_id) || raidBossFor(wk);
+  let myDmg = 0;
+  if (userId) {
+    const r = await env.DB.prepare(
+      'SELECT COALESCE(SUM(dmg),0) AS total FROM game_raid_hits WHERE week_key=? AND user_id=?'
+    ).bind(wk, userId).first();
+    myDmg = (r && +r.total) || 0;
+  }
+  const topR = await env.DB.prepare(
+    `SELECT h.user_id AS uid, SUM(h.dmg) AS total,
+       COALESCE(NULLIF(TRIM(p.display_name),''), u.name) AS name
+     FROM game_raid_hits h
+     JOIN users u ON u.id = h.user_id
+     LEFT JOIN profiles p ON p.user_id = h.user_id
+     WHERE h.week_key = ? GROUP BY h.user_id ORDER BY total DESC LIMIT 10`
+  ).bind(wk).all();
+  const cntR = await env.DB.prepare(
+    'SELECT COUNT(DISTINCT user_id) AS n FROM game_raid_hits WHERE week_key=?'
+  ).bind(wk).first();
+  return {
+    week: wk,
+    boss: { id: boss.id, name: boss.name, emoji: boss.emoji },
+    hpMax: row.hp_max, hpLeft: row.hp_left,
+    defeated: row.hp_left <= 0,
+    myDmg: myDmg,
+    players: (cntR && +cntR.n) || 0,
+    top: ((topR && topR.results) || []).map(r => ({ name: r.name || 'Người chơi', dmg: +r.total || 0 }))
+  };
+}
+// GET /game/raid — khách xem được (myDmg = 0), đăng nhập thì có myDmg.
+async function handleGameRaid(req, env, c) {
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
+  let uid = '';
+  try { const s = await sessionUser(env, bearer(req)); if (s && s.kind === 'user') uid = s.user_id; } catch (e) {}
+  const st = await raidState(env, uid);
+  return J(Object.assign({ ok: true }, st), 200, c.h);
+}
+// POST /game/raid/hit {dmg} — bắt buộc đăng nhập.
+async function handleGameRaidHit(req, env, c) {
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
+  const s = await sessionUser(env, bearer(req));
+  if (!s || s.kind !== 'user') return J({ error: 'Chưa đăng nhập' }, 401, c.h);
+  if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, c.h);
+  await ensureRaid(env);
+  const b = await readJson(req);
+  let dmg = Math.floor(+((b && b.dmg) || 0));
+  if (!isFinite(dmg) || dmg <= 0) return J({ error: 'Sát thương không hợp lệ' }, 400, c.h);
+  if (dmg > RAID_HIT_CAP) dmg = RAID_HIT_CAP;
+  const wk = raidWeekKey(Date.now());
+  const row = await raidWeekRow(env, wk);
+  if (row.hp_left <= 0) {
+    const st = await raidState(env, s.user_id);
+    return J(Object.assign({ ok: true, applied: 0, alreadyDefeated: true }, st), 200, c.h);
+  }
+  const nowMs = Date.now();
+  const lastR = await env.DB.prepare(
+    'SELECT MAX(hit_at) AS last FROM game_raid_hits WHERE week_key=? AND user_id=?'
+  ).bind(wk, s.user_id).first();
+  const last = (lastR && +lastR.last) || 0;
+  if (last && nowMs - last < RAID_HIT_GAP_MS) {
+    return J({ error: 'Đánh chậm lại chút nhé', retryAfterMs: RAID_HIT_GAP_MS - (nowMs - last) }, 429, c.h);
+  }
+  const applied = Math.min(dmg, row.hp_left);
+  await env.DB.prepare('UPDATE game_raid_weeks SET hp_left=? WHERE week_key=?')
+    .bind(row.hp_left - applied, wk).run();
+  await env.DB.prepare('INSERT INTO game_raid_hits(week_key,user_id,dmg,hit_at) VALUES(?,?,?,?)')
+    .bind(wk, s.user_id, applied, nowMs).run();
+  const st = await raidState(env, s.user_id);
+  return J(Object.assign({ ok: true, applied: applied }, st), 200, c.h);
+}
+
+// =====================================================================
+// GAME-PLUS — THÁCH ĐẤU BẠN BÈ: lớp link ngắn phía server (TUỲ CHỌN)
+// Bản chính của tính năng chạy bằng MÃ TỰ CHỨA phía client (không cần
+// server). Khối này chỉ rút gọn link khi được deploy kèm đợt đăng:
+//   POST /game/challenges {payload}        -> {id}  (mã ngắn 6 ký tự)
+//   GET  /game/challenges/<id>             -> {payload, result}
+//   POST /game/challenges/<id>/result {result} -> ghi kết quả ĐẦU TIÊN
+// Dán cạnh khối game + thêm route (xem MERGE-CHALLENGE.md). Dùng đúng
+// helper sẵn có: J(), readJson(), bearer(), sessionUser().
+// =====================================================================
+
+const CHALLENGE_PAYLOAD_MAX = 8192;
+let _challengeReady = false;
+async function ensureChallenges(env) {
+  if (_challengeReady || !env.DB) return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_challenges (
+    id TEXT PRIMARY KEY, creator_id TEXT NOT NULL DEFAULT '',
+    payload TEXT NOT NULL DEFAULT '', result TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL DEFAULT '')`).run();
+  _challengeReady = true;
+}
+function challengeNewId() {
+  const abc = 'abcdefghjkmnpqrstuvwxyz23456789';
+  let id = '';
+  const buf = new Uint8Array(6);
+  crypto.getRandomValues(buf);
+  for (let i = 0; i < 6; i++) id += abc[buf[i] % abc.length];
+  return id;
+}
+// POST /game/challenges — bắt buộc đăng nhập.
+async function handleGameChallengeCreate(req, env, c) {
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
+  const s = await sessionUser(env, bearer(req));
+  if (!s || s.kind !== 'user') return J({ error: 'Chưa đăng nhập' }, 401, c.h);
+  if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, c.h);
+  await ensureChallenges(env);
+  const b = await readJson(req);
+  const payload = (b && typeof b.payload === 'string') ? b.payload : '';
+  if (!payload || payload.length > CHALLENGE_PAYLOAD_MAX) return J({ error: 'Dữ liệu thử thách không hợp lệ' }, 400, c.h);
+  for (let tries = 0; tries < 5; tries++) {
+    const id = challengeNewId();
+    try {
+      await env.DB.prepare('INSERT INTO game_challenges(id,creator_id,payload,result,created_at) VALUES(?,?,?,?,?)')
+        .bind(id, s.user_id, payload, '', new Date().toISOString()).run();
+      return J({ ok: true, id: id }, 200, c.h);
+    } catch (e) { /* trùng id — thử lại */ }
+  }
+  return J({ error: 'Không tạo được mã, thử lại sau' }, 500, c.h);
+}
+// GET /game/challenges/<id> — mã là "chìa khoá" (ai có link cũng xem
+// được nội dung thử thách, giống mã tự chứa phía client).
+async function handleGameChallengeGet(req, env, c, id) {
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
+  await ensureChallenges(env);
+  const row = await env.DB.prepare('SELECT id,payload,result,created_at FROM game_challenges WHERE id=?')
+    .bind(String(id || '').toLowerCase()).first();
+  if (!row) return J({ error: 'Không tìm thấy thử thách' }, 404, c.h);
+  return J({ ok: true, id: row.id, payload: row.payload, result: row.result || '', created_at: row.created_at }, 200, c.h);
+}
+// POST /game/challenges/<id>/result {result} — kết quả đầu tiên thắng.
+async function handleGameChallengeResult(req, env, c, id) {
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
+  const s = await sessionUser(env, bearer(req));
+  if (!s || s.kind !== 'user') return J({ error: 'Chưa đăng nhập' }, 401, c.h);
+  await ensureChallenges(env);
+  const b = await readJson(req);
+  const result = (b && typeof b.result === 'string') ? b.result.slice(0, CHALLENGE_PAYLOAD_MAX) : '';
+  if (!result) return J({ error: 'Kết quả không hợp lệ' }, 400, c.h);
+  const r = await env.DB.prepare("UPDATE game_challenges SET result=? WHERE id=? AND result=''")
+    .bind(result, String(id || '').toLowerCase()).run();
+  const changed = (r && r.meta && +r.meta.changes) || 0;
+  const row = await env.DB.prepare('SELECT result FROM game_challenges WHERE id=?')
+    .bind(String(id || '').toLowerCase()).first();
+  if (!row) return J({ error: 'Không tìm thấy thử thách' }, 404, c.h);
+  return J({ ok: true, recorded: changed > 0, result: row.result || '' }, 200, c.h);
+}
+
 export default {async fetch(req,env){
   const c=cors(env,req);
   if(req.method==='OPTIONS')return new Response(null,{status:204,headers:c.h});
@@ -4313,6 +4629,12 @@ export default {async fetch(req,env){
   if(path.startsWith('/community')||path.startsWith('/chat')||path.startsWith('/friends'))return handleCommunity(req,env,c,path);
   if(path.startsWith('/job/'))return handleJob(req,env,c,path);
   if(path.startsWith('/free/'))return handleFree(req,env,c,path);
+  if(path==='/game/raid'&&req.method==='GET')return handleGameRaid(req,env,c);
+  if(path==='/game/raid/hit'&&req.method==='POST')return handleGameRaidHit(req,env,c);
+  if(path==='/game/challenges'&&req.method==='POST')return handleGameChallengeCreate(req,env,c);
+  const chm=path.match(/^\/game\/challenges\/([a-z0-9]{6})(\/result)?$/);
+  if(chm&&req.method==='GET'&&!chm[2])return handleGameChallengeGet(req,env,c,chm[1]);
+  if(chm&&req.method==='POST'&&chm[2])return handleGameChallengeResult(req,env,c,chm[1]);
   if(path.startsWith('/game/rooms/'))return handleGameRooms(req,env,c,path);
   if(path.startsWith('/game/'))return handleGame(req,env,c);
   if(path==='/'||path==='/ai')return handleAI(req,env,c);

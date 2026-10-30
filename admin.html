@@ -124,8 +124,8 @@ async function load(){
     const us=j.users||[];
     if(!us.length){list.innerHTML='<p class="empty-note">Không có ai trong mục này.</p>';return}
     list.innerHTML=us.map(u=>`<div class="userrow" data-id="${u.id}">
-      <b>${esc(u.name||'')}</b>
-      <div class="meta">📧 ${esc(u.email)} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)} · 📱 <span class="devcnt">${u.device_count||0}</span>/2 thiết bị</div>
+      <b>${esc(u.display_name||u.name||'')}</b>
+      <div class="meta">📧 ${esc(u.email)} · Tên tài khoản: ${esc(u.name||'')} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)} · 📱 <span class="devcnt">${u.device_count||0}</span>/2 thiết bị</div>
       <div class="acts">
         ${tab!=='approved'?`<button class="ok" data-a="approve">Duyệt</button>`:''}
         ${tab!=='rejected'?`<button class="no" data-a="reject">Từ chối</button>`:''}
@@ -139,7 +139,7 @@ async function load(){
       const act=b.dataset.a;
       if(act==='reject'||act==='lock'){
         const u=us.find(x=>String(x.id)===String(id))||{};
-        const who=((u.name||'').trim()||'—')+' ('+(u.email||'không rõ email')+')';
+        const who=((u.display_name||u.name||'').trim()||'—')+' ('+(u.email||'không rõ email')+')';
         if(!confirm((act==='reject'?'Từ chối':'Khoá')+' tài khoản '+who+'?'))return;
       }
       b.disabled=true;
@@ -201,7 +201,7 @@ if(AUTH.sessionAdmin())showPanel();
 <script>
 // ===== Cộng đồng + Chat (bổ sung 29/10): kiểm duyệt, báo cáo, phát thanh, xem chat có cổng mật khẩu =====
 const cmNames={};
-async function cmLoadNames(){for(const t of ['approved','locked','pending']){try{const j=await AUTH.adminUsers(t);(j.users||[]).forEach(u=>{cmNames[u.id]=u.name||u.email})}catch(e){}}}
+async function cmLoadNames(){for(const t of ['approved','locked','pending']){try{const j=await AUTH.adminUsers(t);(j.users||[]).forEach(u=>{cmNames[u.id]=u.display_name||u.name||u.email})}catch(e){}}}
 function cmName(id){if(id==='admin')return 'Admin';return cmNames[id]||id}
 function cmPersonName(p){if(p&&typeof p==='object'){if(p.id&&p.name)cmNames[p.id]=p.name;return p.name||cmName(p.id||'')}return cmName(p)}
 function cmPersonId(p){if(p&&typeof p==='object')return p.id||'';return String(p||'')}
@@ -261,7 +261,7 @@ async function cmLoadBcCount(){const el=document.getElementById('cmBcCount');
  catch(e){if(el)el.textContent='Chưa đếm được số người nhận — vẫn gửi được, số người nhận thật sẽ hiện sau khi gửi.';return 0}}
 async function cmFillUsers(){const sel=document.getElementById('cmDmUser');
  try{const j=await AUTH.adminUsers('approved');const us=j.users||[];
-  sel.innerHTML=us.map(u=>'<option value="'+u.id+'">'+esc(u.name||u.email)+'</option>').join('')||'<option value="">(Chưa có học viên đã duyệt)</option>'}catch(e){}}
+  sel.innerHTML=us.map(u=>'<option value="'+u.id+'">'+esc(u.display_name||u.name||u.email)+'</option>').join('')||'<option value="">(Chưa có học viên đã duyệt)</option>'}catch(e){}}
 async function cmGate(){const g=document.getElementById('cmGate');
  try{const j=await AUTH.api('/chat/admin/view-state',{admin:true});cmGranted=!!(j.unlocked||j.granted);
   if(cmGranted){
