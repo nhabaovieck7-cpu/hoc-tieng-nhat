@@ -189,7 +189,16 @@
   }
 
   function stop() {
-    scene = null;
+    /* MUSICFIX (31/10): KHÔNG xoá `scene` ở đây nữa. `scene` là cảnh
+       gần nhất mà trang đã xin phát, và CẢ HAI đường bật lại đều trông
+       vào nó: panel settings.js gọi play(current()) sau khi bật công
+       tắc, 3 nút rời của chính music.js gọi play(scene). Bản cũ gán
+       scene = null khi tắt -> bật lại thì current() trả null, không ai
+       gọi play() nữa -> mất tiếng hẳn cho tới khi chuyển cảnh (đúng
+       lỗi người dùng báo: tắt đi bật lại thì im luôn, dù thanh trượt
+       vẫn chỉnh được). stop() từ nay chỉ dừng PHÁT (fade + pause + dọn
+       player); trang muốn đổi cảnh thì gọi play() cảnh khác như cũ —
+       không nơi nào ngoài công tắc tắt gọi stop() cả. */
     pendingScene = null;
     players.forEach(function (p) {
       fadeTo(p, 0, function () { try { p.pause(); } catch (e) {} });
