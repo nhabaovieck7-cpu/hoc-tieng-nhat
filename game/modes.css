@@ -38,7 +38,7 @@
 .mx-timer{height:8px;border-radius:9px;background:#2a2440;overflow:hidden;margin:10px 0}
 .mx-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--mx-ok),var(--mx-gold),var(--mx-bad));width:100%;transform-origin:left center}
 .mx-q{font-family:"Noto Sans JP",sans-serif;font-size:40px;font-weight:900;text-align:center;margin:10px 0 2px;
-  color:var(--mx-t);line-height:1.25;word-break:break-word}
+  color:var(--mx-t);line-height:1.25;word-break:break-word;min-height:1.25em}
 .mx-q.long{font-size:21px;font-weight:700;text-align:left}
 .mx-qsub{text-align:center;color:var(--mx-m);font-size:15px;min-height:20px;margin-bottom:6px}
 .mx-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
@@ -171,16 +171,22 @@
 .fh-chain i.on{background:radial-gradient(circle at 35% 35%,#ffe9a8,var(--mx-gold));border-color:var(--mx-gold);
   box-shadow:0 0 10px rgba(217,168,78,.7)}
 .fh-prog{font-size:13px;color:var(--mx-m);text-align:center}
-/* Màn hẹp (≤860px): bong bóng lễ hội KHÔNG absolute nữa — nằm TRONG LUỒNG ở
-   vùng sân khấu (cạnh mascot, phía trên khu đáp án), chiếm chỗ thật nên không
-   bao giờ đè lên .mx-opt/.mx-token. Chữ dài cuộn trong khung (max-height +
-   overflow-y:auto) thay vì phình xuống dưới. left/top/right do JS gán inline
-   bị vô hiệu vì position:static bỏ qua các offset đó. Desktop giữ nguyên. */
+/* Màn hẹp (≤860px): bong bóng lễ hội nằm ở vùng sân khấu (cạnh mascot,
+   phía trên khu đáp án) trong hộp #bubbleBox CAO CỐ ĐỊNH — không đè lên
+   .mx-opt/.mx-token và cũng không làm khung dưới nhảy khi hiện/ẩn (FIX2
+   30/10; bản cũ xếp chồng trong luồng nên sân khấu co/giãn theo bong
+   bóng). Chữ dài cuộn trong khung (max-height + overflow-y:auto) thay vì
+   phình xuống dưới. left/top/right do JS gán inline chỉ dùng ở màn rộng.
+   Desktop giữ nguyên. */
 @media (max-width:860px){
-  .fh-stage{display:flex;align-items:flex-start;gap:10px;min-height:56px}
+  .fh-stage{display:flex;align-items:flex-start;gap:10px;min-height:100px}
   .fh-mascot{flex:0 0 auto}
-  .fh-stage #bubbleBox{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:6px}
-  .fh-bubble{position:static;max-width:100%;max-height:92px;overflow-y:auto;overflow-wrap:break-word}
+  /* FIX2 (30/10): hộp bong bóng lễ hội GIỮ CHIỀU CAO CỐ ĐỊNH 92px, bong
+     bóng phủ tuyệt đối trong hộp (bong bóng sau đè bong bóng trước) —
+     bản cũ xếp chồng trong luồng: hiện 1–2 bong bóng rồi gỡ sau 2,3s làm
+     sân khấu co/giãn, khung câu hỏi + đáp án phía dưới nhảy theo. */
+  .fh-stage #bubbleBox{flex:1 1 auto;min-width:0;position:relative;height:92px;overflow:hidden}
+  .fh-bubble{position:absolute;left:0;right:0;top:0;max-width:100%;max-height:92px;overflow-y:auto;overflow-wrap:break-word}
 }
 @media (min-width:760px){
   .mx-q{font-size:48px}
@@ -194,7 +200,11 @@
    cuộn dọc (vệt đường chạy xuống = nhân vật chạy lên); nhân vật ở đáy;
    câu hỏi ở trên; hàng 3 cổng NGANG phía trước tiến gần dần. Cổng là nút
    bấm thật cao >=44px, chạm trực tiếp để trả lời. */
-.rnv-game{position:relative;height:min(70vh,580px);min-height:470px;max-width:430px;margin:0 auto;
+/* FIX2 (30/10): dùng svh thay vh cho sân chạy — trên điện thoại, thanh
+   địa chỉ ẩn/hiện làm vh (và clientHeight mà vòng lặp game đọc mỗi
+   khung) đổi theo, toàn bộ hàng cổng nhảy vị trí; svh lấy viewport
+   nhỏ nhất nên chiều cao sân ổn định trong suốt ván. */
+.rnv-game{position:relative;height:min(70svh,580px);min-height:470px;max-width:430px;margin:0 auto;
   border-radius:24px;overflow:hidden;touch-action:manipulation;box-sizing:border-box;
   background:linear-gradient(#7dd3fc,#c4b5fd 55%,#fda4af)}
 .rnv-road{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:82%;height:100%;

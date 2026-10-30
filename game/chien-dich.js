@@ -348,7 +348,8 @@
 
   var TYPE_LABEL = {
     kanji: '🈶 Kanji', vocab: '📘 Từ vựng', part: '🧩 Ngữ pháp · chọn trợ từ',
-    fill: '✍️ Ngữ pháp · điền chỗ trống', order: '🔀 Ngữ pháp · sắp xếp câu'
+    fill: '✍️ Ngữ pháp · điền chỗ trống', order: '🔀 Ngữ pháp · sắp xếp câu',
+    grammar: '🧩 Ngữ pháp · chọn đáp án đúng'
   };
 
   function next() {
@@ -371,7 +372,7 @@
         '<div class="cd-opts" id="cdOp"></div><p class="cd-mean" id="cdMean"></p>';
     } else {
       h += '<div class="cd-q">' + esc(q.prompt) + '</div>' +
-        (q.promptSub ? '<p class="cd-qsub">' + esc(q.promptSub) + '</p>' : '') +
+        '<p class="cd-qsub">' + esc(q.promptSub || '') + '</p>' +
         '<div class="cd-opts" id="cdOp"></div><p class="cd-mean" id="cdMean"></p>';
     }
     $('cdQbox').innerHTML = h;

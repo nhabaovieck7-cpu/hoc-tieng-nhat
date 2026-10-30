@@ -62,9 +62,13 @@
     v = Math.max(0, Math.min(1, v));
     volOverride = v;
     try { localStorage.setItem(VOL_KEY_MUSIC, String(Math.round(v * 100))); } catch (e) {}
-    // Đang phát thì áp ngay vào player hiện tại (targetVol đã tính duck).
+    // Áp ngay vào player hiện tại (targetVol đã tính duck). FIX2 bổ
+    // sung: áp cả khi player đang pause — bản cũ chỉ áp khi !paused
+    // nên kéo trượt lúc nhạc tạm dừng không thấy hiệu lực ngay trên
+    // phần tử (dù giá trị đã lưu); nay volume của phần tử khớp mức
+    // mới ngay lập tức, phát lại là nghe đúng luôn.
     var cur = players[players.length - 1];
-    if (cur && !cur.paused) fadeTo(cur, targetVol());
+    if (cur) fadeTo(cur, targetVol());
     return v;
   }
 
@@ -85,19 +89,30 @@
     return a;
   }
 
-  function fadeTo(player, to, done) {
+  /* FIX2 (30/10, "âm lượng lúc được lúc không"): mỗi player giữ ĐÚNG
+     một interval fade của riêng nó (player._fadeTm) — bản cũ mỗi lần gọi
+     fadeTo (play/duck/setVolume) lại tạo interval MỚI mà không hủy cái
+     trước, nhiều interval cùng ghi player.volume tranh nhau trong ~450ms
+     nên mức cuối cùng thắng/thua ngẫu nhiên theo nhịp đồng hồ, kéo thanh
+     trượt xong nghe như không ăn. Nay: fade mới luôn hủy fade cũ của
+     CÙNG player trước khi bắt đầu. */
+  function fadeTo(player, to, done, ms) {
+    if (player._fadeTm) { clearInterval(player._fadeTm); player._fadeTm = null; }
     var from = player.volume;
+    var total = ms || FADE_MS;
     var steps = 9, i = 0;
-    var stepMs = Math.max(20, Math.floor(FADE_MS / steps));
+    var stepMs = Math.max(20, Math.floor(total / steps));
     var tm = setInterval(function () {
       i++;
       var v = from + (to - from) * (i / steps);
       try { player.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
       if (i >= steps) {
         clearInterval(tm);
+        if (player._fadeTm === tm) player._fadeTm = null;
         if (done) done();
       }
     }, stepMs);
+    player._fadeTm = tm;
     return tm;
   }
 
@@ -141,13 +156,10 @@
     ducked = !!onOff;
     var cur = players[players.length - 1];
     if (cur && !cur.paused) {
-      // Duck phản ứng nhanh hơn crossfade thường một chút.
-      var from = cur.volume, to = targetVol(), steps = 5, i = 0;
-      var tm = setInterval(function () {
-        i++;
-        try { cur.volume = Math.max(0, Math.min(1, from + (to - from) * (i / steps))); } catch (e) {}
-        if (i >= steps) clearInterval(tm);
-      }, 40);
+      // Duck đi qua fadeTo dùng chung (nhanh hơn crossfade thường):
+      // interval riêng của duck trước đây cũng là một nguồn tranh ghi
+      // volume với fade của play/setVolume — FIX2 bỏ hẳn.
+      fadeTo(cur, targetVol(), null, 200);
     }
   }
 
@@ -215,6 +227,16 @@
     mountToggles: mountToggles,
     current: function () { return scene; },
     setVolume: setVolume,
-    getVolume: getVolume
+    getVolume: getVolume,
+    // FIX2: móc kiểm thử (chỉ đọc) — harness đo volume THẬT trên từng
+    // player + mức đích hiện tại sau khi kéo thanh trượt.
+    _test: {
+      players: function () {
+        return players.map(function (p) {
+          return { file: (p.dataset && p.dataset.file) || '', volume: p.volume, paused: p.paused };
+        });
+      },
+      targetVol: targetVol
+    }
   };
 })();

@@ -218,6 +218,30 @@
     duck(false);
   }
 
+  /* FIX2 (30/10, "âm lượng lúc được lúc không"): áp âm lượng MỚI NGAY
+     vào clip bản ghi đang phát dở. Bản cũ: speak() chốt vol tại thời
+     điểm bắt đầu phát, kéo thanh trượt giữa chừng không đổi gì cho tới
+     câu đọc SAU — người dùng kéo lúc clip đang đọc sẽ tưởng trượt hỏng.
+     (Câu TTS speechSynthesis không đổi được volume giữa utterance —
+     giới hạn của chính API trình duyệt; câu TTS sau sẽ theo mức mới vì
+     speak() đọc lại cài đặt mỗi lần phát.) */
+  function applyVolumeNow(v01) {
+    var v = Number(v01);
+    if (isNaN(v)) { var s = settings(); v = s.on ? s.vol / 100 : 0; }
+    v = Math.max(0, Math.min(1, v));
+    if (curAudio) { try { curAudio.volume = v; } catch (e) {} }
+    return v;
+  }
+  // Nghe sự kiện đổi cài đặt do settings.js phát (detail = snapshot).
+  try {
+    window.addEventListener('hn-game-settings', function (ev) {
+      var d = (ev && ev.detail) || null;
+      if (!d) return;
+      if (d.voiceOn === false) { stop(); return; }
+      applyVolumeNow((typeof d.voiceVol === 'number' ? d.voiceVol : 100) / 100);
+    });
+  } catch (e) {}
+
   // Lập kế hoạch phát: mảng hành động {type:'audio',src} | {type:'tts',text,lang}.
   function plan(text, idx, opts) {
     var actions = [];
@@ -333,6 +357,7 @@
   window.GAME_VOICE = {
     speak: speak,
     stop: stop,
+    applyVolumeNow: applyVolumeNow,
     presets: PRESETS,
     _test: {
       settings: settings,

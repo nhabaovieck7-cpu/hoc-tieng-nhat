@@ -236,6 +236,12 @@
       var u = new SpeechSynthesisUtterance(text);
       u.lang = /[぀-ヿ]/.test(text) ? 'ja-JP' : 'vi-VN';
       u.rate = 1.02;
+      // FIX2 (30/10): đường dự phòng này trước đây KHÔNG đặt u.volume
+      // (mặc định 1.0 bất kể thanh trượt) — nay theo đúng mức đã lưu.
+      try {
+        var vv = parseInt(localStorage.getItem('hn_game_vol_voice'), 10);
+        u.volume = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
+      } catch (e) {}
       try { if (window.GMUSIC && GMUSIC.duck) GMUSIC.duck(true); } catch (e) {}
       u.onend = u.onerror = function () { try { if (window.GMUSIC && GMUSIC.duck) GMUSIC.duck(false); } catch (e) {} };
       speechSynthesis.speak(u);

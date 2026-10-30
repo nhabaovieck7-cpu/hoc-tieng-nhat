@@ -279,7 +279,13 @@
     fall: function () { play('fall'); },
     play: play,
     setVolume: setVolume,
-    getVolume: getVolume
+    getVolume: getVolume,
+    // FIX2: móc kiểm thử (chỉ đọc) — harness đo gain THẬT của master
+    // GainNode sau khi kéo thanh trượt (null = chưa tạo AudioContext).
+    _test: {
+      masterGain: function () { return master ? master.gain.value : null; },
+      hasContext: function () { return !!AC; }
+    }
   };
 
   window.GSFX = api;

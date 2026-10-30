@@ -262,7 +262,28 @@
     var name = section === 'tonghop' ? 'lessons' : 'course_' + levelLow + '_' + section;
     return loadFullPack(name).then(function (all) {
       if (!all || !all.length) return null;
-      if (section !== 'tonghop') return all;
+      if (section !== 'tonghop') {
+        // FIX2 (30/10): gộp thêm các bài LẺ trong gói 'lessons' thuộc
+        // đúng (cấp, phần) mà freeSecOf không phân loại — bản cũ chỉ
+        // đọc gói 'lessons' cho phần tổng hợp nên 22 bài thật của
+        // khóa N1 (6 bài "Từ vựng N1" + 16 bài "Ngữ pháp N1") không
+        // bao giờ vào được pool game. Chỉ gộp tv/np (kj không có bài
+        // lẻ dạng này); lỗi nạp gói lessons thì giữ nguyên gói khóa.
+        if (section === 'kj') return all;
+        return loadFullPack('lessons').then(function (pack) {
+          if (!pack || !pack.length) return all;
+          var seen = {};
+          all.forEach(function (l) { seen[l.id] = 1; });
+          var extra = pack.filter(function (x) {
+            if (!x || seen[x.id]) return false;
+            if (freeSecOf(x) !== '') return false;
+            if (String(x.level || '').toLowerCase() !== levelLow) return false;
+            var ty = String(x.type || '');
+            return section === 'tv' ? /Từ vựng/.test(ty) : /Ngữ pháp/.test(ty);
+          });
+          return extra.length ? all.concat(extra) : all;
+        }).catch(function () { return all; });
+      }
       var arr = all.filter(function (x) {
         return freeSecOf(x) === 'tonghop' && String(x.level || '').toLowerCase() === levelLow;
       }).sort(function (a, b) { return String(a.id).localeCompare(String(b.id), 'en', { numeric: true }); });
@@ -289,17 +310,58 @@
   // Hàng tv: ô từ dạng {từ|đọc}; cột đọc; cột nghĩa (kèm ví dụ .ix)
   function parseVocabTable(html, lessonId, entries) {
     tableRows(html).forEach(function (cells) {
+      // FIX2 (30/10): bảng 2 cột [Từ, Nghĩa] của các bài Từ vựng N1 lẻ
+      // (gói lessons) — ô từ là một "{từ|đọc}" trọn ô, ô 2 là nghĩa.
+      if (cells.length === 2) {
+        var fm2 = /^\{([^{}|]+)\|([^{}]+)\}$/.exec(clean(cells[0]));
+        if (fm2 && fm2[1].length <= 24) {
+          var mean2 = cleanMeaning(stripTags(String(cells[1]).split(/<div class="ix">/)[0]));
+          if (mean2) entries.push({ word: fm2[1], reading: fm2[2], meaning: mean2, lesson: lessonId, ex: exampleIn(cells[1]) });
+        }
+        return;
+      }
       if (cells.length < 3) return;
       var wi = -1, raw = '';
       for (var i = 0; i < cells.length; i++) {
         var t = clean(cells[i]);
-        if (/^\{[^{}|]+\|[^{}]+\}$/.test(t) || /class="jp"/.test(cells[i])) { wi = i; raw = t; break; }
+        // FIX2 (30/10): nhận ô từ khi markup {từ|đọc} nằm BẤT KỲ đâu
+        // trong ô (bản cũ neo ^...$ nên bỏ qua dạng okurigana
+        // {抱|かか}える rất phổ biến ở N2/N1); bỏ qua ô chứa khối ví
+        // dụ .ix để không bắt nhầm ô nghĩa ở cuối hàng.
+        if (String(cells[i]).indexOf('<div class="ix">') >= 0) continue;
+        if (/\{[^{}|]+\|[^{}]+\}/.test(t) || /class="jp"/.test(cells[i])) { wi = i; raw = t; break; }
       }
-      if (wi < 0) return;
+      if (wi < 0) {
+        // FIX2 (30/10): hàng từ viết THƯỜNG, không markup furigana
+        // (vd アクセント, あくび — class="jp" nằm trên thẻ <td> nên
+        // tableRows không giữ lại được). Dự phòng theo VỊ TRÍ theo
+        // đúng layout bảng tv chuẩn [#, Từ, Cách đọc, Hán Việt,
+        // Nghĩa]: ô từ là ô 1 khi ô 0 là số thứ tự, ngược lại ô 0.
+        // Điều kiện Nhật chặt (có kana/kanji, không chứa dấu tiếng
+        // Việt) để không nuốt hàng tiêu đề/hàng lạ.
+        var pwi = (cells.length >= 4 && /^\d+$/.test(clean(cells[0]))) ? 1 : 0;
+        var pw = clean(stripTags(stripFuri(cells[pwi])));
+        var prd = clean(stripTags(stripFuri(cells[pwi + 1] || '')));
+        if (!pw || pw.length > 24 || pw === 'Từ') return;
+        if (!/[぀-ヿ一-鿿]/.test(pw) || /[àáâãèéêìíòóôõùúýăđơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/i.test(pw)) return;
+        var pLast = cells[cells.length - 1];
+        var pMean = cleanMeaning(stripTags(String(pLast).split(/<div class="ix">/)[0]));
+        if (!pMean) return;
+        entries.push({ word: pw, reading: (prd && !hasKanji(prd)) ? prd : '', meaning: pMean, lesson: lessonId, ex: exampleIn(pLast) });
+        return;
+      }
       var fm = /^\{([^{}|]+)\|([^{}]+)\}$/.exec(raw);
-      var word = fm ? fm[1] : clean(stripTags(stripFuri(cells[wi])));
-      var reading = fm ? fm[2] : clean(stripTags(cells[wi + 1] || ''));
-      if (!fm && cells[wi + 1]) { var rd = clean(stripTags(cells[wi + 1])); if (rd && !hasKanji(rd)) reading = rd; }
+      var word, reading;
+      if (fm) { word = fm[1]; reading = fm[2]; }
+      else {
+        // Dạng okurigana: word = mặt chữ đầy đủ sau khi gỡ furigana;
+        // reading = ráp phần đọc trong ngoặc + kana ngoài ngoặc; nếu
+        // ráp không sạch (còn kanji) thì lấy cột đọc kề bên như cũ.
+        word = clean(stripTags(stripFuri(cells[wi])));
+        reading = clean(stripTags(String(cells[wi]).replace(/\{([^{}|]+)\|([^{}]+)\}/g, '$2')));
+        if (!reading || hasKanji(reading)) reading = '';
+        if (!reading && cells[wi + 1]) { var rd = clean(stripTags(stripFuri(cells[wi + 1]))); if (rd && !hasKanji(rd)) reading = rd; }
+      }
       var lastCell = cells[cells.length - 1];
       var meaningHtml = String(lastCell).split(/<div class="ix">/)[0];
       var meaning = cleanMeaning(stripTags(meaningHtml));
@@ -353,6 +415,13 @@
       if (!it || it.o) return; // quiz có sẵn lựa chọn (np) xử lý riêng
       var q = String(it.q || ''), a = String(it.a || '');
       var m;
+      // FIX2 (30/10): quiz dạng THẺ của các bài Từ vựng N1 lẻ — q là
+      // đúng một "{từ|đọc}", a là nghĩa. Bản cũ không mẫu nào khớp.
+      if ((m = /^\{([^{}|]+)\|([^{}]+)\}$/.exec(q.trim()))) {
+        var cardMean = cleanMeaning(a);
+        if (cardMean) entries.push({ word: m[1], reading: m[2], meaning: cardMean, lesson: lessonId, ex: null });
+        return;
+      }
       if (/Cách đọc và nghĩa|Đọc từ|Đọc 「|thế nào/.test(q) && (m = /「([^」]+)」/.exec(q))) {
         var parts = a.split(/\s+—\s+|\s+–\s+|\s+-\s+/);
         if (parts.length >= 2) {
@@ -378,11 +447,28 @@
   var PARTICLES = ['は', 'が', 'を', 'に', 'へ', 'で', 'と', 'も', 'の', 'か', 'から', 'まで', 'より', 'や', 'ね', 'よ'];
   function isParticle(s) { return PARTICLES.indexOf(s) >= 0; }
 
-  function parseQuizGrammar(quiz, lessonId, fills, targets) {
+  function parseQuizGrammar(quiz, lessonId, fills, targets, directs) {
     (quiz || []).forEach(function (it) {
       if (!it || !it.o || typeof it.c !== 'number') return;
       var prompt = clean(stripTags(stripFuri(String(it.q || '').replace(/^Điền mẫu ngữ pháp thích hợp:\s*/, ''))));
-      if (prompt.indexOf('＿＿') < 0 && prompt.indexOf('（　）') < 0) return;
+      if (prompt.indexOf('＿＿') < 0 && prompt.indexOf('（　）') < 0) {
+        // FIX2 (30/10): quiz ngữ pháp KHÔNG có chỗ trống (chọn mẫu/câu
+        // đúng) — bản cũ bỏ hẳn (381 câu ở 5 cấp). Nay đưa vào pool
+        // dạng câu hỏi TRỰC TIẾP (giữ nguyên câu hỏi + đáp án của bài
+        // học, sinh câu bằng qTonghopDirect) khi có truyền mảng
+        // directs; lời giải thích tiếng Việt lấy từ it.a như fills.
+        if (directs) {
+          var dOpts = uniq(it.o.map(function (o) { return clean(stripTags(stripFuri(o))); })).filter(function (x) { return x; });
+          var dCorr = clean(stripTags(stripFuri(it.o[it.c] || '')));
+          var dExpl = clean(stripTags(stripFuri(String(it.a || ''))));
+          var dVi = dExpl.indexOf(' — ') >= 0 ? dExpl.split(' — ').slice(1).join(' — ') : '';
+          if (dCorr && dOpts.length >= 3 && dOpts.indexOf(dCorr) >= 0 && prompt && prompt.length <= 220) {
+            targets.push(dCorr);
+            directs.push({ prompt: prompt, options: dOpts, correct: dCorr, meaning: dVi, lesson: lessonId, type: 'grammar' });
+          }
+        }
+        return;
+      }
       var correct = clean(stripTags(stripFuri(it.o[it.c] || '')));
       if (!correct) return;
       var distract = uniq(it.o.map(function (o) { return clean(stripTags(stripFuri(o))); }))
@@ -397,6 +483,31 @@
       });
     });
   }
+  /* FIX2 (30/10): thẻ ngữ pháp hỏi–đáp của các bài Ngữ pháp N1 lẻ
+   * (gói lessons): quiz không có o/c, q dạng "〜が早いか nghĩa là
+   * gì?", a là nghĩa tiếng Việt. Không có đáp án nhiễu trong nguồn
+   * nên sinh câu trắc nghiệm bằng cách lấy nghĩa của các thẻ khác
+   * trong cùng cấp làm nhiễu (qGramCard). */
+  function parseGrammarCards(quiz, lessonId, cards) {
+    (quiz || []).forEach(function (it) {
+      if (!it || it.o) return;
+      var q = clean(stripTags(stripFuri(String(it.q || ''))));
+      var m = /^(.+?)\s*nghĩa là gì\?\s*$/.exec(q);
+      if (!m) return;
+      var ans = clean(stripTags(stripFuri(String(it.a || ''))));
+      if (!ans || ans.length > 80) return;
+      cards.push({ pattern: m[1].trim(), answerText: ans, lesson: lessonId });
+    });
+  }
+  function qGramCard(card, cards, r) {
+    var wrongs = uniq(cards.map(function (c) { return c.answerText; }))
+      .filter(function (x) { return x && x !== card.answerText; });
+    if (wrongs.length < 3) return null;
+    wrongs = shuffle(wrongs, r).slice(0, 3);
+    var c = makeChoices(card.answerText, wrongs, r);
+    return { type: 'grammar', prompt: 'Mẫu ' + card.pattern, promptSub: 'Mẫu ngữ pháp này nghĩa là gì?', choices: c.choices, answer: c.answer, answerText: card.answerText };
+  }
+
   // Ví dụ trong section np: <div class="ex"><div class="jp">...<b>đích</b>...</div><div class="vi">...</div></div>
   function parseGrammarExamples(html, lessonId, fills, examples, targets) {
     var re = /<div class="ex">\s*<div class="jp">([\s\S]*?)<\/div>\s*<div class="vi">([\s\S]*?)<\/div>/g, m;
@@ -475,10 +586,29 @@
       if (cells.length < 4) return;
       var word = clean(stripTags(stripFuri(cells[0])));
       var reading = clean(stripTags(stripFuri(cells[1])));
-      var meaning = cleanMeaning(stripTags(String(cells[2]).split(/<div class="ix">/)[0]));
-      if (!word || word.length > 12 || !hasKanji(word)) return;
+      // FIX2 (30/10): chọn ô NGHĨA theo biến thể bảng thực tế:
+      // (a) cột ghi chú loại từ ("từ thuần Nhật", "từ ngoại lai"...)
+      //     chen giữa -> nghĩa ở ô kế tiếp;
+      // (b) bảng có cột Hán Việt [Từ, Cách đọc, Hán Việt, Nghĩa] với
+      //     ô Hán Việt là "—" -> nghĩa ở ô kế tiếp;
+      // (c) chuẩn [Từ, Cách đọc, Nghĩa, Ví dụ] -> nghĩa ở ô 2.
+      var note = clean(stripTags(cells[2]));
+      var meaningCell = cells[2];
+      if (cells.length >= 4 && note.length <= 30 && /thuần Nhật|ngoại lai/.test(note)) meaningCell = cells[3];
+      else if (cells.length >= 4 && (note === '—' || note === '-' || note === '')) meaningCell = cells[3];
+      // stripFuri trước để nghĩa không dính markup {漢字|đọc} thô
+      // (vd nghĩa của ジレンマ chứa "{陥|おちい}る" trong nguồn).
+      var meaning = cleanMeaning(stripTags(stripFuri(String(meaningCell).split(/<div class="ix">/)[0])));
+      if (!word || word.length > 12) return;
+      // FIX2: nhận cả từ THUẦN KANA (phó từ/từ ngoại lai N1 như
+      // おろそか, きっぱり — bản cũ bắt buộc có kanji nên loại 157
+      // mục thật); vẫn chặn hàng đáp án bằng các điều kiện còn lại.
+      if (!hasKanji(word) && !/^[ぁ-ゖァ-ヺー・〜～]+$/.test(word)) return;
       if (/^\d/.test(word) || word.indexOf('{') >= 0) return;
-      if (!/^[ぁ-ゖァ-ヺー]+$/.test(reading)) return;
+      // Cách đọc "—"/trống trong nguồn = nguồn không ghi cách đọc:
+      // giữ mục với reading rỗng (vẫn hỏi được nghĩa), thay vì loại.
+      if (reading === '—' || reading === '-') reading = '';
+      if (reading && !/^[ぁ-ゖァ-ヺー・〜～]+$/.test(reading)) return;
       if (!meaning || meaning.length < 2) return;
       entries.push({ word: word, reading: reading, meaning: meaning, lesson: lessonId, ex: null });
     });
@@ -487,25 +617,28 @@
   /* ---------------- Sắp xếp câu: cắt câu ngắn thành 3–5 mảnh ---------------- */
   function segmentSentence(s) {
     var t = String(s || '').replace(/[。．]$/, '');
-    if (t.length < 8 || t.length > 30) return null;
+    // FIX2 (30/10): nới biên độ dài 8–30 -> 6–48 ký tự và số mảnh
+    // 3–5 -> 3–6: bản cũ loại 54 câu ví dụ nguồn (quá dài >30 ký tự
+    // là chính) khỏi dạng câu sắp xếp dù nội dung hoàn toàn dùng được.
+    if (t.length < 6 || t.length > 48) return null;
     var pts = [], i;
     for (i = 2; i < t.length - 1; i++) {
       if ('はがをにへでともか、'.indexOf(t[i]) >= 0) pts.push(i + 1);
     }
     var cuts = [], last = 0;
-    for (i = 0; i < pts.length && cuts.length < 4; i++) {
+    for (i = 0; i < pts.length && cuts.length < 5; i++) {
       var p = pts[i];
       if (p - last >= 3 && t.length - p >= 3) { cuts.push(p); last = p; }
     }
     if (cuts.length < 2) { // không đủ điểm cắt tự nhiên -> cắt đều
-      var n = t.length >= 15 ? 4 : 3, step = Math.floor(t.length / n);
+      var n = t.length >= 24 ? 5 : (t.length >= 15 ? 4 : 3), step = Math.floor(t.length / n);
       cuts = []; for (i = 1; i < n; i++) cuts.push(step * i);
     }
     var segs = [], prev = 0;
     cuts.forEach(function (c) { segs.push(t.slice(prev, c)); prev = c; });
     segs.push(t.slice(prev));
     segs = segs.filter(function (x) { return x.length > 0; });
-    if (segs.length < 3 || segs.length > 5) return null;
+    if (segs.length < 3 || segs.length > 6) return null;
     return { tokens: segs, answerText: t + '。' };
   }
 
@@ -517,7 +650,7 @@
   function buildPoolFrom(levelLow, section, lessons, src) {
     var pool = {
       vocab: [], kanji: [], kanjiSingle: [],
-      fills: [], examples: [], gramTargets: [],
+      fills: [], examples: [], gramTargets: [], directs: [], gramCards: [],
       tonghopVocab: [], tonghopFills: [], tonghopDirects: [],
       src: src
     };
@@ -530,23 +663,34 @@
         secs.forEach(function (s) { parseKanjiTable(s.html || '', lesson.id, pool.kanjiSingle, pool.kanji); });
         parseQuizVocab(lesson.quiz, lesson.id, pool.kanji);
       } else if (section === 'np') {
-        parseQuizGrammar(lesson.quiz, lesson.id, pool.fills, pool.gramTargets);
+        parseQuizGrammar(lesson.quiz, lesson.id, pool.fills, pool.gramTargets, pool.directs);
+        parseGrammarCards(lesson.quiz, lesson.id, pool.gramCards);
         secs.forEach(function (s) { parseGrammarExamples(s.html || '', lesson.id, pool.fills, pool.examples, pool.gramTargets); });
       } else if (section === 'tonghop') {
         parseTonghopMcq(lesson.mcq, lesson.id, pool.tonghopFills, pool.tonghopDirects, pool.gramTargets);
-        parseQuizGrammar(lesson.quiz, lesson.id, pool.tonghopFills, pool.gramTargets);
+        parseQuizGrammar(lesson.quiz, lesson.id, pool.tonghopFills, pool.gramTargets, pool.tonghopDirects);
         secs.forEach(function (s) { parseTonghopVocabTable(s.html || '', lesson.id, pool.tonghopVocab); });
       }
     });
-    // Khử trùng entries theo word+reading
+    // Khử trùng entries theo word+reading+NGHĨA. FIX2 (30/10): bản cũ
+    // khử theo word+reading nên nuốt mất mọi mục đồng âm/đồng tự khác
+    // nghĩa (đo được: N3 từ vựng mất 291 mục khác nghĩa, N4 mất 115,
+    // N5 mất 77). Nay chỉ gộp khi trùng CẢ nghĩa (trùng tuyệt đối giữa
+    // bảng và quiz của cùng bài), mục khác nghĩa được giữ lại hết.
     ['vocab', 'kanji', 'kanjiSingle', 'tonghopVocab'].forEach(function (k) {
       var seen = {};
       pool[k] = pool[k].filter(function (e) {
-        var kk = e.word + '|' + (e.reading || '');
+        var kk = e.word + '|' + (e.reading || '') + '|' + (e.meaning || '');
         if (seen[kk] || !e.word) return false; seen[kk] = 1; return true;
       });
     });
     pool.gramTargets = uniq(pool.gramTargets);
+    // Khử trùng thẻ ngữ pháp theo mẫu+nghĩa (trùng tuyệt đối giữa các bài).
+    var seenCards = {};
+    pool.gramCards = pool.gramCards.filter(function (c) {
+      var kk = c.pattern + '|' + c.answerText;
+      if (seenCards[kk]) return false; seenCards[kk] = 1; return true;
+    });
     return pool;
   }
   function buildPoolFree(levelLow, section) {
@@ -698,6 +842,12 @@
     }
     if ((topic === 'grammar' || topic === 'mix') && P.np) {
       P.np.fills.forEach(function (f) { push('np', 'np', f.lesson, function () { return qFill(f, P.np, r); }); });
+      // FIX2: câu hỏi ngữ pháp trực tiếp (quiz không chỗ trống) — sinh
+      // bằng cùng máy qTonghopDirect, giữ nguyên đáp án của bài học.
+      if (P.np.directs) P.np.directs.forEach(function (d) { push('np', 'np', d.lesson, function () { return qTonghopDirect(d, r); }); });
+      // FIX2: thẻ ngữ pháp hỏi–đáp của bài lẻ N1 (nghĩa làm đáp án,
+      // nhiễu là nghĩa của các thẻ khác cùng cấp).
+      if (P.np.gramCards) P.np.gramCards.forEach(function (cd) { push('np', 'np', cd.lesson, function () { return qGramCard(cd, P.np.gramCards, r); }); });
       var orderSrc = P.np.examples.slice();
       if (P.tv) P.tv.vocab.forEach(function (e) { if (e.ex && e.ex.jp) orderSrc.push({ jp: e.ex.jp, vi: e.ex.vi, lesson: e.lesson, __sec: 'tv' }); });
       orderSrc.forEach(function (ex) { push('np', ex.__sec || 'np', ex.lesson, function () { return qOrder(ex, r); }); });

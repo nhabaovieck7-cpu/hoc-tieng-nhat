@@ -117,6 +117,14 @@
   //  - <=860px: host là khối TRONG LUỒNG (đẩy nội dung xuống, không đè
   //    lên .opt); bong bóng thành phần tử thường trong host, chữ dài bị
   //    kẹp ~3 dòng + cuộn dọc trong khung, không phình trang.
+  // FIX2 (30/10, góp ý chủ trang "khung câu hỏi/đáp án nhảy lên sau vài
+  // giây, bấm nhầm"): bản 5b cho host CHIỀU CAO CO GIÃN theo bong bóng —
+  // hiện (say ở 'vao'/sau mỗi câu trả lời) thì đẩy khung câu hỏi xuống,
+  // ẩn sau 3,6s (scheduleHide) thì khung NHẢY LÊN đúng lúc người chơi
+  // đang ngắm đáp án. Nay host GIỮ CHỖ CỐ ĐỊNH (92px = đúng max-height
+  // của bong bóng: 3 dòng * 1.45em * 15px + padding 20 + border 4, dư
+  // biên) trong suốt phiên, bong bóng chỉ đổi visibility/opacity —
+  // vị trí khung câu hỏi + đáp án không đổi dù bong bóng hiện/ẩn/đổi câu.
   var bubbleHost = null;
   var bubbleStyleDone = false;
   function ensureBubbleStyle() {
@@ -133,13 +141,12 @@
         'box-shadow:0 8px 24px rgba(20,25,60,.28);opacity:0;pointer-events:none;' +
         'transition:opacity .18s ease, transform .18s ease;transform:translateY(6px)}' +
         '@media (max-width:860px){' +
-        '#gt-bubble-host{height:auto;margin:8px 10px 0}' +
-        '#gt-bubble-host:not(.gt-on){margin:0}' +
-        '#gt-bubble{display:none;position:relative!important;left:auto!important;' +
+        '#gt-bubble-host{height:92px;margin:8px 10px 0}' +
+        '#gt-bubble{visibility:hidden;position:relative!important;left:auto!important;' +
         'top:auto!important;bottom:auto!important;transform:none!important;' +
         'max-width:100%!important;width:auto;box-sizing:border-box;' +
         'max-height:calc(1.45em * 3 + 22px);overflow-y:auto}' +
-        '#gt-bubble-host.gt-on #gt-bubble{display:block}' +
+        '#gt-bubble-host.gt-on #gt-bubble{visibility:visible}' +
         '}';
       (document.head || document.body).appendChild(st);
     } catch (e) { /* không có style: desktop vẫn chạy nhờ style nội tuyến dự phòng */ }
@@ -297,6 +304,12 @@
       if (v) u.voice = v;
       u.rate = p.ja ? 1.1 : 1.08;
       u.pitch = 1.15;
+      // FIX2 (30/10): đường đọc cũ này trước đây không đặt u.volume —
+      // nay theo mức Giọng đọc đã lưu (giống hệt lõi GAME_VOICE).
+      try {
+        var vv = parseInt(localStorage.getItem('hn_game_vol_voice'), 10);
+        u.volume = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
+      } catch (e) {}
       if (idx === parts.length - 1) {
         u.onend = u.onerror = function () {
           if (duckTimer) clearTimeout(duckTimer);

@@ -95,6 +95,11 @@
     } catch (e) {}
   }
   // Chỉ áp âm lượng (khi trượt slider) — không stop/play, không click thử.
+  // FIX2 (30/10): bổ sung kênh 'voice' — bản cũ applyVolume KHÔNG có
+  // nhánh voice nên kéo trượt Giọng đọc không áp gì ngay lúc đó (chỉ
+  // nhờ speak() lần sau tự đọc lại localStorage) -> cảm giác "lúc được
+  // lúc không". Nay gọi thẳng GAME_VOICE.applyVolumeNow để clip đang
+  // phát đổi mức ngay; voice.js cũng tự nghe sự kiện 'hn-game-settings'.
   function applyVolume(kind, st) {
     st = st || get();
     try {
@@ -102,6 +107,8 @@
         window.GMUSIC.setVolume(st.musicVol / 100);
       } else if (kind === 'sfx' && window.GSFX && typeof window.GSFX.setVolume === 'function') {
         window.GSFX.setVolume(st.sfxVol / 100);
+      } else if (kind === 'voice' && window.GAME_VOICE && typeof window.GAME_VOICE.applyVolumeNow === 'function') {
+        window.GAME_VOICE.applyVolumeNow(st.voiceOn ? st.voiceVol / 100 : 0);
       }
     } catch (e) {}
   }

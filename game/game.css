@@ -102,8 +102,11 @@ a{color:var(--cy)}
    style nội tuyến (nền trắng, đệm rộng) — game.css chuẩn hoá lại cho vừa
    topbar game: pill tối, gọn, >= 44px. Trạng thái Tắt do Nhánh 4 đặt bằng
    opacity nội tuyến nên CSS này KHÔNG đụng vào opacity. */
-.snd-toggles{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.snd-toggles:empty{display:none}
+/* FIX2 (30/10): giữ chỗ CỐ ĐỊNH cho vùng nút âm thanh ngay từ lúc trang
+   mở (min-height 44px kể cả khi còn trống) — bản cũ ":empty{display:none}"
+   + nút ⚙️/3 nút rời gắn muộn ở các mốc +300/+600/+1500ms làm topbar
+   phình chiều cao sau vài giây, đẩy cả khung chơi phía dưới nhảy theo. */
+.snd-toggles{display:flex;gap:6px;align-items:center;flex-wrap:wrap;min-height:44px;min-width:44px}
 .snd-toggle{
   min-height:44px!important;min-width:44px!important;
   padding:7px 11px!important;margin:0!important;
