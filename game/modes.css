@@ -36,7 +36,7 @@
 .mx-pill{display:inline-flex;gap:4px;align-items:center;padding:5px 11px;border-radius:99px;background:#241f38;
   border:1px solid var(--mx-line);font-size:12px;font-weight:700;color:var(--mx-t)}
 .mx-timer{height:8px;border-radius:9px;background:#2a2440;overflow:hidden;margin:10px 0}
-.mx-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--mx-ok),var(--mx-gold),var(--mx-bad));width:100%}
+.mx-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--mx-ok),var(--mx-gold),var(--mx-bad));width:100%;transform-origin:left center}
 .mx-q{font-family:"Noto Sans JP",sans-serif;font-size:40px;font-weight:900;text-align:center;margin:10px 0 2px;
   color:var(--mx-t);line-height:1.25;word-break:break-word}
 .mx-q.long{font-size:21px;font-weight:700;text-align:left}
@@ -86,8 +86,8 @@
 .bk-name{font-weight:800;font-size:14px;color:var(--mx-t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:5px}
 .bk-vs{font-size:22px;font-weight:900;font-style:italic;color:var(--mx-gold);padding-top:14px}
 .bk-hp{height:18px;border-radius:9px;background:#2a2440;overflow:hidden;border:2px solid #000;transform:skewX(-12deg)}
-.bk-hp i{display:block;height:100%;width:100%;transition:width .4s;background:linear-gradient(90deg,#2fbf71,#a3e635)}
-.bk-hp.r i{margin-left:auto;background:linear-gradient(90deg,#f97316,#ef4b5b)}
+.bk-hp i{display:block;height:100%;width:100%;transition:transform .4s;transform-origin:left center;background:linear-gradient(90deg,#2fbf71,#a3e635)}
+.bk-hp.r i{transform-origin:right center;background:linear-gradient(90deg,#f97316,#ef4b5b)}
 .bk-arena{display:flex;justify-content:space-between;align-items:flex-end;height:180px;margin:6px 0 12px;
   padding:0 18px;position:relative;border-radius:18px;overflow:hidden;
   background:linear-gradient(transparent 60%,rgba(0,0,0,.5)),radial-gradient(circle at 50% 100%,var(--bkc,#7c5cff) 0,transparent 70%),#1a0b2e}
@@ -229,6 +229,11 @@
    CSS rotate(): 0deg = hướng LÊN về phía cổng trước mặt (hệ quy chiếu ghi
    trong chay-vo-tan.js, hàm faceAngleFor). */
 .rnv-face{display:inline-block;line-height:0;will-change:transform;transform:rotate(0deg)}
+/* Đợt 6 Nhánh N: ĐẦU quay riêng vào đáp án — chay-vo-tan.js chỉ đặt 2 biến
+   --fbht/--fbhtn trên .fb-wrap (trong #runnerFace); luật quay .fb-headturn/
+   .fb-gaze/.fb-hoso-img (tâm cổ 100,100, transition .18s, tắt ở
+   reduced-motion) nằm ở fullbody.css (prep đợt 6), KHÔNG lặp lại ở đây.
+   Không đặt biến = 0deg = hiển thị y hệt đợt 5. */
 .rnv-face svg{display:block;border-radius:50%;box-shadow:0 4px 10px rgba(20,10,50,.35)}
 .rnv-face .rnv-emoji{display:inline-block;font-size:50px;line-height:1}
 /* Fallback khi không gọi được GAME_AVATAR: emoji 🏃 vốn quay NGANG (hướng

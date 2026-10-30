@@ -11,6 +11,11 @@
                                  (null ở cấp 12), pct = % thanh tiến độ.
      GLEVEL.unlocksBetween(a,b) -> mọi món/skill mở theo cấp ở (a, b]
                                  [{kind,id,name,icon,level}] xếp theo cấp.
+                                 ĐỢT 7 (nhánh R): gồm cả món mode 'and'
+                                 (điều kiện kép cấp+sao+trùm, gom theo
+                                 req.level của chúng) NHƯNG món 'and' chỉ
+                                 được tính là "vừa mở" khi ĐỦ cả 3 điều
+                                 kiện ở tiến độ hiện tại.
      GLEVEL.mountHTML(opts?)  -> HTML khối cấp dùng chung (huy hiệu +
                                  thanh tiến độ + "Mở tiếp theo: …");
                                  opts.mini = bản gọn cho hub.
@@ -35,7 +40,7 @@
   var LEVELS = [0, 30, 80, 150, 240, 350, 480, 630, 800, 1000, 1250, 1550];
   var SEEN_KEY = 'hn_game_level_seen';
   var TITLE_MAX = 'Truyền thuyết Edo';
-  var KIND_LABEL = { weapon: 'Vũ khí', armor: 'Giáp', acc: 'Phụ kiện', extra: 'Đồ thêm', skill: 'Skill' };
+  var KIND_LABEL = { weapon: 'Vũ khí', armor: 'Giáp', acc: 'Phụ kiện', extra: 'Đồ thêm', skill: 'Skill', costume: 'Trang phục', hat: 'Mũ nón' };
 
   function gearInfo() {
     try {
@@ -67,7 +72,9 @@
     };
   }
 
-  /* Mọi món/skill có req mode 'level', gom từ catalog tĩnh của GGEAR. */
+  /* Mọi món/skill mở theo cấp, gom từ catalog tĩnh của GGEAR: mode
+     'level' thuần VÀ mode 'and' (đợt 7 — gom theo req.level của món,
+     kèm stars/boss/cond để nơi hiển thị nói đủ điều kiện kép). */
   function levelItems() {
     var out = [];
     try {
@@ -75,12 +82,19 @@
       var groups = [
         ['weapon', window.GGEAR.WEAPONS], ['armor', window.GGEAR.ARMORS],
         ['acc', window.GGEAR.ACCS], ['extra', window.GGEAR.EXTRAS],
+        ['costume', window.GGEAR.COSTUMES], ['hat', window.GGEAR.HATS],
         ['skill', window.GGEAR.SKILLS]
       ];
       groups.forEach(function (g) {
         (g[1] || []).forEach(function (it) {
-          if (it.req && it.req.mode === 'level') {
-            out.push({ kind: g[0], id: it.id, name: it.name, icon: it.icon, level: it.req.level });
+          if (it.req && (it.req.mode === 'level' || it.req.mode === 'and')) {
+            out.push({
+              kind: g[0], id: it.id, name: it.name, icon: it.icon,
+              level: it.req.level, mode: it.req.mode,
+              stars: it.req.stars || 0, boss: it.req.boss || 0,
+              cond: (typeof window.GGEAR.condText === 'function')
+                ? window.GGEAR.condText(it.req) : ('Cấp ' + it.req.level)
+            });
           }
         });
       });
@@ -88,12 +102,35 @@
     } catch (e) { /* bỏ qua */ }
     return out;
   }
+  /* Món đã mở THẬT ở tiến độ hiện tại chưa? Ưu tiên GGEAR.isUnlocked
+     (gồm owned đợt 7); thiếu thì tự tính từ info: 'level' cần đủ cấp,
+     'and' cần ĐỦ cả cấp + sao + trùm. */
+  function itemUnlocked(it) {
+    try {
+      if (window.GGEAR && typeof window.GGEAR.isUnlocked === 'function') {
+        return window.GGEAR.isUnlocked(it.kind, it.id);
+      }
+    } catch (e) { /* rơi xuống tự tính */ }
+    var inf = gearInfo();
+    var lv = (typeof inf.level === 'number') ? inf.level : level();
+    if (it.mode === 'and') {
+      return lv >= it.level && (inf.stars || 0) >= (it.stars || 0) && (inf.bossWins || 0) >= (it.boss || 0);
+    }
+    return lv >= it.level;
+  }
   function unlocksBetween(a, b) {
-    return levelItems().filter(function (it) { return it.level > a && it.level <= b; });
+    return levelItems().filter(function (it) {
+      if (!(it.level > a && it.level <= b)) return false;
+      // Món 'and': đủ cấp trong khoảng thôi chưa đủ — phải đủ cả sao +
+      // trùm (mở thật) mới được liệt kê là "vừa mở" trong popup LÊN CẤP.
+      if (it.mode === 'and') return itemUnlocked(it);
+      return true;
+    });
   }
   function nextUnlock() {
-    var lv = level();
-    var rest = levelItems().filter(function (it) { return it.level > lv; });
+    // "Món sắp mở" = món theo cấp CHƯA mở thật gần nhất: món 'level'
+    // ở cấp cao hơn, hoặc món 'and' còn thiếu sao/trùm dù cấp đã tới.
+    var rest = levelItems().filter(function (it) { return !itemUnlocked(it); });
     return rest.length ? rest[0] : null;
   }
 
@@ -113,8 +150,9 @@
     if (max) {
       nextLine = 'Đã đạt cấp tối đa — 🏆 ' + TITLE_MAX;
     } else if (nu) {
+      // Món 'and' phải nói đủ điều kiện kép (cond), không chỉ "Cấp X".
       nextLine = 'Còn ' + (pr.nextXp - pr.curXp) + ' XP tới cấp ' + (pr.level + 1) +
-        ' · Mở tiếp theo: ' + nu.icon + ' ' + nu.name + ' (Cấp ' + nu.level + ')';
+        ' · Mở tiếp theo: ' + nu.icon + ' ' + nu.name + ' (' + (nu.cond || ('Cấp ' + nu.level)) + ')';
     } else {
       nextLine = 'Còn ' + (pr.nextXp - pr.curXp) + ' XP tới cấp ' + (pr.level + 1);
     }
@@ -161,7 +199,8 @@
       ? '<div class="glv-pop-list">' + items.map(function (it) {
           return '<div class="glv-pop-it"><span aria-hidden="true">' + it.icon + '</span>' +
             '<span><b>' + esc(it.name) + '</b> <span class="glv-pop-kind">' + esc(KIND_LABEL[it.kind] || it.kind) + '</span></span>' +
-            '<span class="glv-pop-lv">Cấp ' + it.level + '</span></div>';
+            // Món 'and': nhãn phải là cond đủ điều kiện kép, không chỉ cấp.
+            '<span class="glv-pop-lv">' + esc(it.mode === 'and' && it.cond ? it.cond : ('Cấp ' + it.level)) + '</span></div>';
         }).join('') + '</div>'
       : '<p class="glv-pop-none">Cấp mới, sức mạnh mới — tiếp tục hành trình đến Edo nhé!</p>';
     ov.innerHTML = '<div class="glv-pop">' +
@@ -210,6 +249,8 @@
     xp: xp,
     progress: progress,
     unlocksBetween: unlocksBetween,
+    levelItems: levelItems,
+    nextUnlock: nextUnlock,
     mountHTML: mountHTML,
     mountInto: mountInto,
     checkNotify: checkNotify

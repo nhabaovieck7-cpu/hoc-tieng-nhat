@@ -6,10 +6,15 @@
      GGEAR.ready()    -> Promise<state>  nạp tiến độ + lựa chọn đã lưu,
                         hợp nhất lựa chọn vào cây progress qua
                         GAME_API.saveProgress({gear}) khi API sẵn sàng.
-     GGEAR.state()    -> {weapon, armor, acc, skill, extra} (đã kiểm tra
-                        mở khoá; món lưu cũ nay bị khoá -> rơi về cơ bản;
-                        extra = kind "Đồ thêm", mặc định 'none')
-     GGEAR.catalog()  -> {weapons, armors, accs, skills} mỗi món
+     GGEAR.state()    -> {weapon, armor, acc, skill, extra, costume, hat}
+                        (đã kiểm tra mở khoá; món lưu cũ nay bị khoá -> rơi
+                        về cơ bản; extra = kind "Đồ thêm", mặc định 'none';
+                        costume = kind "Trang phục" (Tủ đồ, đợt 6), mặc
+                        định 'mac-dinh'; hat = kind "Mũ nón" (Tủ đồ, đợt 6),
+                        mặc định 'none' — bản lưu đợt 5 không có 2 kind này
+                        vẫn nạp ra đúng mặc định đó)
+     GGEAR.catalog()  -> {weapons, armors, accs, skills, extras,
+                        costumes, hats} mỗi món
                         {id,name,icon,color,cond,unlocked}
      GGEAR.select(kind,id) -> bool (false nếu đang khoá); phát
                         CustomEvent 'hn-game-gear' (detail=state, bắn cả
@@ -33,14 +38,29 @@
      req của 12 món/skill đợt 3 GIỮ NGUYÊN 100%; món/skill mới mở theo
      cấp 2–11, cấp 12 là danh hiệu "Truyền thuyết Edo" (xem level.js).
 
-   BẢNG MỐC MỞ KHOÁ (tổng sao campaign = cộng mọi campaign[*].stars,
+   BẢNG MỐC MỞ KHOÁ — ĐỢT 7 (nhánh R): cân bằng lại, kéo giãn bằng
+   ngưỡng món + điều kiện KÉP mode 'and' (cấp VÀ sao VÀ trùm đồng thời);
+   XP (sao*10 + trùm*30) và thang LEVELS GIỮ NGUYÊN — đổi thang XP sẽ
+   làm chậm cả cảm giác lên cấp, kéo giãn bằng ngưỡng món là đủ.
+   (tổng sao campaign = cộng mọi campaign[*].stars,
    bossWins = progress.totals.bossWins):
-     Cơ bản (mở sẵn)      : kiem-go, giap-vai, khan-do, skill chem
-     3 sao                : skill dan
-     5 sao HOẶC 1 trùm    : kiem-thep, giap-thep
-     8 sao HOẶC 2 trùm    : skill chuong
-     15 sao HOẶC 3 trùm   : kiem-lua, giap-rong, vuong-mien
-     20 sao HOẶC 4 trùm   : skill chem-lua
+     Cơ bản (mở sẵn)      : kiem-go, giap-vai, khan-do, dong-phuc,
+                            mu-luoi-trai, chem + các 'none'/'mac-dinh'
+     10 sao HOẶC 2 trùm   : kiem-thep, giap-thep
+     and(9, 30★, 4)       : kiem-set
+     and(10, 35★, 5)      : kiem-lua, giap-rong
+     and(11, 40★, 6)      : giap-thien-loi
+     and(12, 50★, 8)      : vuong-mien (acc + hat)
+     Skill: dan and(3, 10★); chuong and(6, 20★, 2);
+       chem-lua and(11, 45★, 6); song-xung-kich and(12, 55★, 8).
+     Món mở theo cấp thuần (lvlReq) và costume/samurai: xem từng catalog.
+
+   BẢO TOÀN ĐỒ ĐÃ MỞ (đợt 7): state mang 'owned' (mảng id theo kind) +
+   cờ 'ownedMigrated'. Lần nạp đầu bằng code mới, di trú MỘT LẦN: tính
+   tập món mở theo BẢNG CŨ (LEGACY_REQ bên dưới — ngưỡng đợt 5+6) từ
+   tiến độ hiện tại rồi ghi vào owned. isUnlocked = có trong owned
+   HOẶC đạt ngưỡng MỚI. Mỗi lần ready() sau đó, owned được BỔ SUNG các
+   món vừa đạt ngưỡng mới (để lần cân bằng sau không khoá lại).
 
    Nguyên tắc an toàn: khách / chưa đăng nhập / mất mạng vẫn chạy bằng
    localStorage; mọi lời gọi GAME_API/GFX/GSFX đều bọc try/catch +
@@ -56,6 +76,9 @@
   var BASIC = { stars: 0, boss: 0, mode: 'basic' };
   function orReq(stars, boss) { return { stars: stars, boss: boss, mode: 'or' }; }
   function lvlReq(level) { return { stars: 0, boss: 0, mode: 'level', level: level }; }
+  /* ĐỢT 7: mode 'and' — phải đạt ĐỒNG THỜI cấp >= level VÀ sao >= stars
+     VÀ trùm hạ >= boss (boss = 0/undefined nghĩa là không đòi trùm). */
+  function andReq(level, stars, boss) { return { stars: stars || 0, boss: boss || 0, mode: 'and', level: level }; }
 
   /* Cấp người chơi (BATCH5-M): XP = stars*10 + bossWins*30; LEVEL_XP[i]
      là ngưỡng XP tích luỹ để ĐẠT cấp i+1 (12 cấp). */
@@ -73,51 +96,94 @@
 
   var WEAPONS = [
     { id: 'kiem-go',   name: 'Kiếm gỗ',   icon: '🗡️', color: '#a9743f', req: BASIC },
-    { id: 'kiem-thep', name: 'Kiếm thép', icon: '⚔️', color: '#c7d0dd', req: orReq(5, 1) },
-    { id: 'kiem-lua',  name: 'Kiếm lửa',  icon: '🔥', color: '#ff6a1f', req: orReq(15, 3) },
+    { id: 'kiem-thep', name: 'Kiếm thép', icon: '⚔️', color: '#c7d0dd', req: orReq(10, 2) },
+    { id: 'kiem-lua',  name: 'Kiếm lửa',  icon: '🔥', color: '#ff6a1f', req: andReq(10, 35, 5) },
     /* BATCH5-M: mở theo cấp */
-    { id: 'kiem-bang', name: 'Kiếm băng', icon: '❄️', color: '#67e8f9', req: lvlReq(5) },
-    { id: 'kiem-set',  name: 'Kiếm sét',  icon: '⚡', color: '#facc15', req: lvlReq(8) }
+    { id: 'kiem-bang', name: 'Kiếm băng', icon: '❄️', color: '#67e8f9', req: lvlReq(6) },
+    { id: 'kiem-set',  name: 'Kiếm sét',  icon: '⚡', color: '#facc15', req: andReq(9, 30, 4) }
   ];
   var ARMORS = [
     { id: 'giap-vai',  name: 'Giáp vải',      icon: '👕', color: '#5b8a72', req: BASIC },
-    { id: 'giap-thep', name: 'Giáp thép',     icon: '🛡️', color: '#aab6c6', req: orReq(5, 1) },
-    { id: 'giap-rong', name: 'Giáp rồng lửa', icon: '🐉', color: '#ff7a45', req: orReq(15, 3) },
+    { id: 'giap-thep', name: 'Giáp thép',     icon: '🛡️', color: '#aab6c6', req: orReq(10, 2) },
+    { id: 'giap-rong', name: 'Giáp rồng lửa', icon: '🐉', color: '#ff7a45', req: andReq(10, 35, 5) },
     /* BATCH5-M: mở theo cấp */
-    { id: 'giap-bang',      name: 'Giáp băng tinh', icon: '🧊', color: '#7dd3fc', req: lvlReq(5) },
-    { id: 'giap-thien-loi', name: 'Giáp thiên lôi', icon: '🌩️', color: '#fbbf24', req: lvlReq(9) }
+    { id: 'giap-bang',      name: 'Giáp băng tinh', icon: '🧊', color: '#7dd3fc', req: lvlReq(6) },
+    { id: 'giap-thien-loi', name: 'Giáp thiên lôi', icon: '🌩️', color: '#fbbf24', req: andReq(11, 40, 6) }
   ];
   var ACCS = [
     { id: 'khan-do',    name: 'Khăn đỏ',       icon: '🧣', color: '#cf3a2e', req: BASIC },
-    { id: 'vuong-mien', name: 'Vương miện Edo', icon: '👑', color: '#ffd84e', req: orReq(15, 3) },
+    { id: 'vuong-mien', name: 'Vương miện Edo', icon: '👑', color: '#ffd84e', req: andReq(12, 50, 8) },
     /* BATCH5-M: mở theo cấp */
-    { id: 'non-la',    name: 'Nón lá',        icon: '👒', color: '#d9b36a', req: lvlReq(2) },
-    { id: 'bang-tran', name: 'Băng trán ninja', icon: '🎗️', color: '#3b5bdb', req: lvlReq(3) },
-    { id: 'mat-na',    name: 'Mặt nạ Oni',    icon: '👹', color: '#e0452f', req: lvlReq(7) }
+    { id: 'non-la',    name: 'Nón lá',        icon: '👒', color: '#d9b36a', req: lvlReq(3) },
+    { id: 'bang-tran', name: 'Băng trán ninja', icon: '🎗️', color: '#3b5bdb', req: lvlReq(4) },
+    { id: 'mat-na',    name: 'Mặt nạ Oni',    icon: '👹', color: '#e0452f', req: lvlReq(8) }
   ];
   /* BATCH5-M: kind MỚI 'extra' (Đồ thêm). 'none' = không dùng (mặc định,
      mở sẵn) để bản lưu cũ không có extra vẫn hợp lệ 100%. */
   var EXTRAS = [
     { id: 'none',          name: 'Không dùng',    icon: '🚫', color: '#9aa3b2', req: BASIC },
-    { id: 'gang-thep',     name: 'Găng thép',     icon: '🧤', color: '#aab6c6', req: lvlReq(3) },
-    { id: 'giay-gio',      name: 'Giày gió',      icon: '👟', color: '#2fbf71', req: lvlReq(6) },
-    { id: 'ao-choang-dem', name: 'Áo choàng đêm', icon: '🧥', color: '#4c3a8f', req: lvlReq(10) }
+    { id: 'gang-thep',     name: 'Găng thép',     icon: '🧤', color: '#aab6c6', req: lvlReq(4) },
+    { id: 'giay-gio',      name: 'Giày gió',      icon: '👟', color: '#2fbf71', req: lvlReq(7) },
+    { id: 'ao-choang-dem', name: 'Áo choàng đêm', icon: '🧥', color: '#4c3a8f', req: lvlReq(11) }
+  ];
+  /* BATCH6-O1: kind MỚI 'costume' (Trang phục — Tủ đồ). 'mac-dinh' = không
+     vẽ gì thêm (giáp hiện tại hiện nguyên), mở sẵn, để bản lưu cũ không có
+     costume vẫn hợp lệ 100%. color = màu chủ đạo hiển thị chip UI. */
+  var COSTUMES = [
+    { id: 'mac-dinh',   name: 'Mặc định (theo giáp)', icon: '🚫', color: '#9aa3b2', req: BASIC },
+    { id: 'dong-phuc',  name: 'Đồng phục học sinh',   icon: '🎒', color: '#2e3a52', req: BASIC },
+    { id: 'hoodie',     name: 'Áo hoodie',            icon: '🧥', color: '#f97316', req: lvlReq(3) },
+    { id: 'the-thao',   name: 'Đồ thể thao',          icon: '🎽', color: '#2fbf71', req: lvlReq(4) },
+    { id: 'jean',       name: 'Khoác jean',           icon: '👖', color: '#2563eb', req: lvlReq(5) },
+    { id: 'bo-yukata',  name: 'Yukata lễ hội',        icon: '🎐', color: '#ec4899', req: lvlReq(6) },
+    { id: 'bo-kimono',  name: 'Kimono',               icon: '👘', color: '#c0262d', req: lvlReq(7) },
+    { id: 'bo-ninja',   name: 'Đồ ninja',             icon: '🥷', color: '#1f2430', req: lvlReq(9) },
+    { id: 'bo-samurai', name: 'Giáp samurai',         icon: '🏯', color: '#dc2626', req: andReq(12, 45, 7) }
+  ];
+  /* BATCH6-O1: kind MỚI 'hat' (Mũ nón — Tủ đồ). 'none' = không đội (mặc
+     định, mở sẵn). 4 món cũ (non-la / bang-tran / mat-na / vuong-mien)
+     GIỮ NGUYÊN id + req như trong ACCS ở trên. */
+  var HATS = [
+    { id: 'none',         name: 'Không đội',       icon: '🚫', color: '#9aa3b2', req: BASIC },
+    { id: 'mu-luoi-trai', name: 'Mũ lưỡi trai',    icon: '🧢', color: '#3b82f6', req: BASIC },
+    { id: 'non-la',       name: 'Nón lá',          icon: '👒', color: '#d9b36a', req: lvlReq(3) },
+    { id: 'bang-tran',    name: 'Băng trán ninja', icon: '🎗️', color: '#3b5bdb', req: lvlReq(4) },
+    { id: 'mu-len',       name: 'Mũ len',          icon: '🧶', color: '#8b5cf6', req: lvlReq(4) },
+    { id: 'tai-meo',      name: 'Tai mèo',         icon: '🐱', color: '#f9a8d4', req: lvlReq(5) },
+    { id: 'mu-bao-hiem',  name: 'Mũ bảo hiểm',     icon: '⛑️', color: '#facc15', req: lvlReq(6) },
+    { id: 'mat-na',       name: 'Mặt nạ Oni',      icon: '👹', color: '#e0452f', req: lvlReq(8) },
+    { id: 'mu-cao-boi',   name: 'Mũ cao bồi',      icon: '🤠', color: '#92400e', req: lvlReq(9) },
+    { id: 'vuong-mien',   name: 'Vương miện Edo',  icon: '👑', color: '#ffd84e', req: andReq(12, 50, 8) }
   ];
   var SKILLS = [
     { id: 'chem',     name: 'Chém thường',        icon: '🗡️', color: '#ffd84e', req: BASIC },
-    { id: 'dan',      name: 'Bắn đạn năng lượng', icon: '🔮', color: '#22d3ee', req: { stars: 3, boss: 0, mode: 'stars' } },
-    { id: 'chuong',   name: 'Tung chưởng sóng',   icon: '🌀', color: '#7c5cff', req: orReq(8, 2) },
-    { id: 'chem-lua', name: 'Chém lửa',           icon: '🔥', color: '#ff6a1f', req: orReq(20, 4) },
+    { id: 'dan',      name: 'Bắn đạn năng lượng', icon: '🔮', color: '#22d3ee', req: andReq(3, 10, 0) },
+    { id: 'chuong',   name: 'Tung chưởng sóng',   icon: '🌀', color: '#7c5cff', req: andReq(6, 20, 2) },
+    { id: 'chem-lua', name: 'Chém lửa',           icon: '🔥', color: '#ff6a1f', req: andReq(11, 45, 6) },
     /* BATCH5-M: mở theo cấp */
-    { id: 'chem-bang',      name: 'Chém băng',      icon: '❄️', color: '#67e8f9', req: lvlReq(4) },
-    { id: 'set-danh',       name: 'Sét đánh',       icon: '⚡', color: '#fde047', req: lvlReq(6) },
-    { id: 'loc-xoay',       name: 'Lốc xoáy kiếm',  icon: '🌪️', color: '#2dd4bf', req: lvlReq(7) },
-    { id: 'lien-hoan',      name: 'Chém liên hoàn', icon: '💨', color: '#fb7185', req: lvlReq(9) },
-    { id: 'song-xung-kich', name: 'Sóng xung kích', icon: '🌊', color: '#f59e0b', req: lvlReq(11) }
+    { id: 'chem-bang',      name: 'Chém băng',      icon: '❄️', color: '#67e8f9', req: lvlReq(5) },
+    { id: 'set-danh',       name: 'Sét đánh',       icon: '⚡', color: '#fde047', req: lvlReq(7) },
+    { id: 'loc-xoay',       name: 'Lốc xoáy kiếm',  icon: '🌪️', color: '#2dd4bf', req: lvlReq(8) },
+    { id: 'lien-hoan',      name: 'Chém liên hoàn', icon: '💨', color: '#fb7185', req: lvlReq(10) },
+    { id: 'song-xung-kich', name: 'Sóng xung kích', icon: '🌊', color: '#f59e0b', req: andReq(12, 55, 8) }
   ];
-  var LISTS = { weapon: WEAPONS, armor: ARMORS, acc: ACCS, skill: SKILLS, extra: EXTRAS };
-  var KIND_KEY = { weapon: 'weapon', armor: 'armor', acc: 'acc', skill: 'skill', extra: 'extra' };
-  var DEFAULTS = { weapon: 'kiem-go', armor: 'giap-vai', acc: 'khan-do', skill: 'chem', extra: 'none' };
+  var LISTS = { weapon: WEAPONS, armor: ARMORS, acc: ACCS, skill: SKILLS, extra: EXTRAS, costume: COSTUMES, hat: HATS };
+  var KIND_KEY = { weapon: 'weapon', armor: 'armor', acc: 'acc', skill: 'skill', extra: 'extra', costume: 'costume', hat: 'hat' };
+  var DEFAULTS = { weapon: 'kiem-go', armor: 'giap-vai', acc: 'khan-do', skill: 'chem', extra: 'none', costume: 'mac-dinh', hat: 'none' };
+
+  /* ĐỢT 7 — BẢNG NGƯỠNG CŨ (đợt 5+6, TRƯỚC cân bằng đợt 7), nhúng theo
+     id để DI TRÚ owned một lần: món nào tiến độ hiện tại đã mở theo
+     bảng này thì được ghi owned và không bao giờ bị khoá lại bởi bảng
+     mới. KHÔNG dùng cho logic mở khoá thường ngày (chỉ migrate). */
+  var LEGACY_REQ = {
+    weapon: { 'kiem-go': BASIC, 'kiem-thep': orReq(5, 1), 'kiem-lua': orReq(15, 3), 'kiem-bang': lvlReq(5), 'kiem-set': lvlReq(8) },
+    armor: { 'giap-vai': BASIC, 'giap-thep': orReq(5, 1), 'giap-rong': orReq(15, 3), 'giap-bang': lvlReq(5), 'giap-thien-loi': lvlReq(9) },
+    acc: { 'khan-do': BASIC, 'vuong-mien': orReq(15, 3), 'non-la': lvlReq(2), 'bang-tran': lvlReq(3), 'mat-na': lvlReq(7) },
+    extra: { 'none': BASIC, 'gang-thep': lvlReq(3), 'giay-gio': lvlReq(6), 'ao-choang-dem': lvlReq(10) },
+    costume: { 'mac-dinh': BASIC, 'dong-phuc': BASIC, 'hoodie': lvlReq(2), 'the-thao': lvlReq(3), 'jean': lvlReq(4), 'bo-yukata': lvlReq(5), 'bo-kimono': lvlReq(6), 'bo-ninja': lvlReq(8), 'bo-samurai': lvlReq(10) },
+    hat: { 'none': BASIC, 'mu-luoi-trai': BASIC, 'non-la': lvlReq(2), 'bang-tran': lvlReq(3), 'mu-len': lvlReq(3), 'tai-meo': lvlReq(4), 'mu-bao-hiem': lvlReq(5), 'mat-na': lvlReq(7), 'mu-cao-boi': lvlReq(8), 'vuong-mien': orReq(15, 3) },
+    skill: { 'chem': BASIC, 'dan': { stars: 3, boss: 0, mode: 'stars' }, 'chuong': orReq(8, 2), 'chem-lua': orReq(20, 4), 'chem-bang': lvlReq(4), 'set-danh': lvlReq(6), 'loc-xoay': lvlReq(7), 'lien-hoan': lvlReq(9), 'song-xung-kich': lvlReq(11) }
+  };
 
   function findIn(list, id) {
     for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i];
@@ -127,17 +193,40 @@
     if (!req || req.mode === 'basic') return 'Mở sẵn';
     if (req.mode === 'level') return 'Cấp ' + req.level;
     if (req.mode === 'stars') return 'Cần ' + req.stars + ' sao để mở';
+    if (req.mode === 'and') {
+      // Liệt kê ĐỦ mọi thành phần phải đạt ĐỒNG THỜI (trùm chỉ khi > 0).
+      var t = 'Cấp ' + req.level + ' · ' + req.stars + '★';
+      if (req.boss) t += ' · ' + req.boss + ' trùm';
+      return t;
+    }
     return 'Cần ' + req.stars + ' sao hoặc hạ ' + req.boss + ' trùm để mở';
   }
-  function isUnlocked(item, prog) {
-    var req = item.req || BASIC;
+  function progLevel(p) { return (typeof p.level === 'number') ? p.level : levelOfXp(xpOfProg(p)); }
+  /* Kiểm tra THUẦN ngưỡng (không xét owned) — dùng cho cả req mới lẫn
+     LEGACY_REQ khi di trú. */
+  function reqUnlocked(req, prog) {
+    req = req || BASIC;
     if (req.mode === 'basic') return true;
-    if (req.mode === 'level') {
-      var lv = (typeof prog.level === 'number') ? prog.level : levelOfXp(xpOfProg(prog));
-      return lv >= req.level;
-    }
+    if (req.mode === 'level') return progLevel(prog) >= req.level;
     if (req.mode === 'stars') return prog.stars >= req.stars;
+    if (req.mode === 'and') {
+      return progLevel(prog) >= req.level &&
+        prog.stars >= (req.stars || 0) &&
+        prog.bossWins >= (req.boss || 0);
+    }
     return prog.stars >= req.stars || prog.bossWins >= req.boss;
+  }
+  /* owned theo kind (đợt 7) — khai báo trước isUnlocked; giá trị thật
+     được nạp ở phần Trạng thái bên dưới. */
+  var ownedState = { weapon: [], armor: [], acc: [], extra: [], skill: [], costume: [], hat: [] };
+  var ownedMigrated = false;
+  function ownedHas(kind, id) {
+    return !!(ownedState[kind] && ownedState[kind].indexOf(id) !== -1);
+  }
+  /* isUnlocked = đã sở hữu bền (owned) HOẶC đạt ngưỡng MỚI. */
+  function isUnlocked(item, prog, kind) {
+    if (kind && ownedHas(kind, item.id)) return true;
+    return reqUnlocked(item.req, prog);
   }
 
   /* ------------------- Đọc tiến độ (sao + trùm) ------------------- */
@@ -188,7 +277,12 @@
     try {
       var v = localStorage.getItem(LS_KEY);
       var o = v ? JSON.parse(v) : null;
-      if (o && typeof o === 'object') return sanitizeRaw(o);
+      if (o && typeof o === 'object') {
+        // ĐỢT 7: owned + cờ di trú đi cùng bản lưu gear (nếu có).
+        ownedState = sanitizeOwned(o);
+        ownedMigrated = o.ownedMigrated === true;
+        return sanitizeRaw(o);
+      }
     } catch (e) { /* hỏng thì dùng mặc định */ }
     return sanitizeRaw({}); // mặc định mọi kind (kể cả extra='none')
   }
@@ -200,28 +294,86 @@
     }
     return out;
   }
-  // Lựa chọn hiệu lực: món nào đang khoá -> rơi về cơ bản của loại đó.
+  /* ĐỢT 7: làm sạch owned — chỉ giữ id có thật trong catalog của TỪNG
+     kind, bỏ trùng; đầu vào lạ/hỏng -> mảng rỗng theo kind. */
+  function sanitizeOwned(o) {
+    var out = { weapon: [], armor: [], acc: [], extra: [], skill: [], costume: [], hat: [] };
+    var src = (o && typeof o === 'object' && o.owned && typeof o.owned === 'object') ? o.owned : null;
+    if (!src) return out;
+    for (var kind in LISTS) {
+      var arr = Array.isArray(src[kind]) ? src[kind] : [];
+      for (var i = 0; i < arr.length; i++) {
+        if (findIn(LISTS[kind], arr[i]) && out[kind].indexOf(arr[i]) === -1) out[kind].push(arr[i]);
+      }
+    }
+    return out;
+  }
+  function ownedCopy() {
+    var out = {};
+    for (var kind in LISTS) out[kind] = ownedState[kind].slice();
+    return out;
+  }
+  function ownedAdd(kind, id) {
+    if (ownedState[kind].indexOf(id) === -1) { ownedState[kind].push(id); return true; }
+    return false;
+  }
+  /* ĐỢT 7 — DI TRÚ MỘT LẦN + BỔ SUNG owned. Chỉ chạy trong ready() khi
+     prog đã là tiến độ THẬT (không chạy ở prog 0 mặc định lúc nạp file).
+     - Chưa migrated: cộng mọi món mở theo LEGACY_REQ (bảng cũ đợt 5+6).
+     - Luôn: cộng mọi món đang đạt ngưỡng MỚI (ghi nhận bền).
+     Trả true nếu owned thay đổi. */
+  function refreshOwned() {
+    var changed = false;
+    if (!ownedMigrated) {
+      for (var kind in LISTS) {
+        var legacy = LEGACY_REQ[kind] || {};
+        LISTS[kind].forEach(function (it) {
+          if (reqUnlocked(legacy[it.id] || it.req, prog) && ownedAdd(kind, it.id)) changed = true;
+        });
+      }
+      ownedMigrated = true;
+      changed = true;
+    }
+    for (var k2 in LISTS) {
+      LISTS[k2].forEach(function (it) {
+        if (reqUnlocked(it.req, prog) && ownedAdd(k2, it.id)) changed = true;
+      });
+    }
+    return changed;
+  }
+  // Lựa chọn hiệu lực: món đang khoá (không owned + chưa đạt ngưỡng mới)
+  // -> rơi về cơ bản của loại đó (fallback an toàn; sau di trú, món đã
+  // mở theo bảng cũ nằm trong owned nên lựa chọn đang mặc được giữ).
   function validState() {
     var out = {};
     for (var kind in LISTS) {
       var key = KIND_KEY[kind];
       var item = findIn(LISTS[kind], sel[key]);
-      out[key] = (item && isUnlocked(item, prog)) ? item.id : DEFAULTS[key];
+      out[key] = (item && isUnlocked(item, prog, kind)) ? item.id : DEFAULTS[key];
     }
     return out;
   }
+  function fullGearState(state) {
+    // Bản ghi bền đầy đủ: lựa chọn + owned + cờ di trú (đợt 7).
+    return {
+      weapon: state.weapon, armor: state.armor, acc: state.acc, skill: state.skill,
+      extra: state.extra, costume: state.costume, hat: state.hat,
+      owned: ownedCopy(), ownedMigrated: ownedMigrated
+    };
+  }
   function persist(state, syncServer) {
-    try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch (e) { /* bỏ qua */ }
+    var full = fullGearState(state);
+    try { localStorage.setItem(LS_KEY, JSON.stringify(full)); } catch (e) { /* bỏ qua */ }
     if (syncServer === false) return;
     try {
       if (window.GAME_API && typeof window.GAME_API.saveProgress === 'function') {
-        var p = window.GAME_API.saveProgress({ gear: { weapon: state.weapon, armor: state.armor, acc: state.acc, skill: state.skill, extra: state.extra } });
+        var p = window.GAME_API.saveProgress({ gear: full });
         if (p && typeof p.catch === 'function') p.catch(function () { /* mạng lỗi: local vẫn còn */ });
       }
     } catch (e) { /* không bao giờ để lỗi đồng bộ phá game */ }
   }
   function fireEvent(state) {
-    var detail = { weapon: state.weapon, armor: state.armor, acc: state.acc, skill: state.skill, extra: state.extra };
+    var detail = { weapon: state.weapon, armor: state.armor, acc: state.acc, skill: state.skill, extra: state.extra, costume: state.costume, hat: state.hat };
     try { window.dispatchEvent(new CustomEvent('hn-game-gear', { detail: detail })); } catch (e) { /* bỏ qua */ }
     try { document.dispatchEvent(new CustomEvent('hn-game-gear', { detail: detail })); } catch (e) { /* bỏ qua */ }
   }
@@ -243,9 +395,19 @@
         // chưa có local mà cây progress có gear (đồng bộ tài khoản) thì dùng nó.
         var hasLocal = false;
         try { hasLocal = !!localStorage.getItem(LS_KEY); } catch (e) { hasLocal = false; }
-        if (!hasLocal && info.gear) sel = sanitizeRaw(info.gear);
+        if (!hasLocal && info.gear) {
+          sel = sanitizeRaw(info.gear);
+          // ĐỢT 7: bản gear đồng bộ từ tài khoản mang theo owned của nó;
+          // bản cũ (không owned/ownedMigrated) -> refreshOwned() di trú.
+          ownedState = sanitizeOwned(info.gear);
+          ownedMigrated = info.gear.ownedMigrated === true;
+        }
+        // ĐỢT 7: di trú một lần (bảng cũ) + bổ sung món đạt ngưỡng mới
+        // TRƯỚC khi chốt lựa chọn hiệu lực, để đồ đang mặc theo bảng cũ
+        // không bị validState() đẩy về cơ bản.
+        refreshOwned();
         var st = validState();
-        sel = { weapon: st.weapon, armor: st.armor, acc: st.acc, skill: st.skill, extra: st.extra };
+        sel = { weapon: st.weapon, armor: st.armor, acc: st.acc, skill: st.skill, extra: st.extra, costume: st.costume, hat: st.hat };
         persist(st); // ghi local + hợp nhất vào progress (nếu API có)
         return st;
       }).catch(function () {
@@ -256,7 +418,14 @@
     return readyPromise;
   }
 
-  function state() { return validState(); }
+  function state() {
+    // Lựa chọn hiệu lực + owned/ownedMigrated (đợt 7) — các nơi gọi cũ
+    // chỉ đọc st.weapon/st.armor/... nên trường thêm là an toàn.
+    var st = validState();
+    st.owned = ownedCopy();
+    st.ownedMigrated = ownedMigrated;
+    return st;
+  }
   function skillId() { return validState().skill; }
   function info() {
     return {
@@ -266,21 +435,23 @@
     };
   }
 
-  function catalogList(list) {
+  function catalogList(list, kind) {
     return list.map(function (it) {
       return {
         id: it.id, name: it.name, icon: it.icon, color: it.color,
-        cond: condText(it.req), unlocked: isUnlocked(it, prog)
+        cond: condText(it.req), unlocked: isUnlocked(it, prog, kind)
       };
     });
   }
   function catalog() {
     return {
-      weapons: catalogList(WEAPONS),
-      armors: catalogList(ARMORS),
-      accs: catalogList(ACCS),
-      skills: catalogList(SKILLS),
-      extras: catalogList(EXTRAS)
+      weapons: catalogList(WEAPONS, 'weapon'),
+      armors: catalogList(ARMORS, 'armor'),
+      accs: catalogList(ACCS, 'acc'),
+      skills: catalogList(SKILLS, 'skill'),
+      extras: catalogList(EXTRAS, 'extra'),
+      costumes: catalogList(COSTUMES, 'costume'),
+      hats: catalogList(HATS, 'hat')
     };
   }
 
@@ -289,7 +460,7 @@
     if (!list) return false;
     var item = findIn(list, id);
     if (!item) return false;
-    if (!isUnlocked(item, prog)) return false; // đang khoá: không chọn, không lưu
+    if (!isUnlocked(item, prog, kind)) return false; // đang khoá: không chọn, không lưu
     sel[KIND_KEY[kind]] = id;
     var st = validState();
     persist(st);
@@ -764,8 +935,20 @@
     decorate: decorate,
     badge: badge,
     info: info,
-    WEAPONS: WEAPONS, ARMORS: ARMORS, ACCS: ACCS, SKILLS: SKILLS, EXTRAS: EXTRAS,
-    LEVEL_XP: LEVEL_XP
+    /* ĐỢT 7 (phụ, cộng thêm — API cũ giữ nguyên): kiểm tra mở khoá theo
+       kind+id (gồm owned), bản sao owned, văn bản điều kiện, và bảng
+       LEGACY_REQ để harness đối chiếu di trú. */
+    isUnlocked: function (kind, id) {
+      var list = LISTS[kind];
+      if (!list) return false;
+      var it = findIn(list, id);
+      return it ? isUnlocked(it, prog, kind) : false;
+    },
+    owned: function () { return ownedCopy(); },
+    condText: condText,
+    WEAPONS: WEAPONS, ARMORS: ARMORS, ACCS: ACCS, SKILLS: SKILLS, EXTRAS: EXTRAS, COSTUMES: COSTUMES, HATS: HATS,
+    LEVEL_XP: LEVEL_XP,
+    LEGACY_REQ: LEGACY_REQ
   };
 
   // Tự khởi động nhẹ: đọc local ngay (sel đã nạp đồng bộ ở trên) và đối

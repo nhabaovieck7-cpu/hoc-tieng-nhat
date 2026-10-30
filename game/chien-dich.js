@@ -90,7 +90,15 @@
     return b ? b.emoji + (b.sub || '') : (stage === STAGES - 1 ? BOSS_FINAL : MINI[stage]);
   }
   var NODES_PER_STAGE = 4, STAGES = 10;
-  var Q_NORMAL = 6, Q_BOSS = 10;
+  /* ĐỢT 7 (P2): tăng mật độ ×3 — Q_NORMAL 6→18, Q_BOSS 10→30 ⇒ 84 câu/chặng
+     (trước 28). Trần getQuestions là 40 nên 30 vẫn an toàn.
+     Cấu trúc trộn mảng mới: mỗi chặng = 3 màn thường chuyên mảng (topic của
+     track) + 1 màn TRÙM topic 'mix' (tổng kiểm tra kj+tv+np+tonghop). */
+  var Q_NORMAL = 18, Q_BOSS = 30;
+  /* HP trùm ×3 theo số câu (100 là cân bằng cho 10 câu với sát thương
+     12/18 mỗi câu đúng — giữ nguyên sát thương thì trùm 30 câu sẽ gục sau
+     ~7–9 câu). Thanh HP luôn vẽ theo tỉ lệ hp/BOSS_HP. */
+  var BOSS_HP = 300;
   var LIFE_MAX = { fifty: 1, swap: 1, time: 2 };
 
   /* Thời gian/câu theo chặng: 18s (chặng 1) -> 6s (chặng 10) */
@@ -253,14 +261,18 @@
     var boss = node === 3;
     G = {
       stage: stage, node: node, boss: boss,
+      /* Topic của MÀN: trùm luôn 'mix' (tổng kiểm tra cả chặng), 3 màn
+         thường giữ topic của track. loadQuestions + lifeline Đổi câu đều
+         phải dùng G.topic thay vì TY trực tiếp. */
+      topic: boss ? 'mix' : TY,
       n: boss ? Q_BOSS : Q_NORMAL, i: 0, ok: 0, bad: 0,
-      hp: 100, life: 3, streak: 0, score: 0,
+      hp: boss ? BOSS_HP : 100, life: 3, streak: 0, score: 0,
       remainSum: 0, qs: [], startedAt: Date.now(), attempt: 0,
       help: { fifty: LIFE_MAX.fifty, swap: LIFE_MAX.swap, time: LIFE_MAX.time },
       locked: false
     };
     show('cdPlay');
-    $('cdPt').textContent = LV + ' · Chặng ' + (stage + 1) + (boss ? ' · TRÙM' : ' · Màn ' + (node + 1));
+    $('cdPt').textContent = LV + ' · Chặng ' + (stage + 1) + (boss ? ' · TRÙM · Trộn tổng hợp' : ' · Màn ' + (node + 1));
     $('cdBossBox').classList.toggle('cd-hid', !boss);
     if (boss) {
       var bo2 = cdBoss(stage);
@@ -299,7 +311,7 @@
     setLifelinesEnabled(false);
     var seed = (Date.now() % 100000) + G.stage * 131 + G.node * 17 + (++G.attempt) * 997;
     var myG = G;
-    window.GQ.getQuestions({ level: LV, topic: TY, count: G.n, seed: seed }).then(function (qs) {
+    window.GQ.getQuestions({ level: LV, topic: G.topic || TY, count: G.n, seed: seed }).then(function (qs) {
       if (G !== myG) return; // người chơi đã bỏ màn trong lúc tải
       if (!qs || !qs.length) throw new Error('empty');
       G.qs = qs; G.n = qs.length; G.i = 0;
@@ -321,7 +333,7 @@
     $('cdLives').textContent = G.life;
     if (G.boss) {
       $('cdHearts').textContent = '❤️'.repeat(Math.max(0, G.life)) + '🖤'.repeat(Math.max(0, 3 - G.life));
-      $('cdBhp').style.width = Math.max(0, G.hp) + '%';
+      $('cdBhp').style.width = clamp(G.hp / BOSS_HP * 100, 0, 100) + '%';
     }
     $('cdPr').textContent = 'Câu ' + Math.min(G.i + 1, G.n) + '/' + G.n;
     $('cdL5050N').textContent = 'còn ' + G.help.fifty;
@@ -526,7 +538,7 @@
     setLifelinesEnabled(false);
     var myG = G;
     var seed = (Date.now() % 100000) + G.stage * 733 + G.i * 31;
-    window.GQ.getQuestions({ level: LV, topic: TY, count: 1, seed: seed }).then(function (qs) {
+    window.GQ.getQuestions({ level: LV, topic: myG.topic || TY, count: 1, seed: seed }).then(function (qs) {
       if (G !== myG) return;
       if (qs && qs.length) {
         var dup = G.qs.some(function (x) { return x.prompt === qs[0].prompt && x.answerText === qs[0].answerText; });
@@ -559,9 +571,13 @@
     var stars = 0;
     if (pass) {
       var avgRemain = G.n ? G.remainSum / G.n : 0;
+      /* ĐỢT 7: sao theo TỈ LỆ sai (bad/n) thay cho ngưỡng tuyệt đối
+         bad<=1/bad<=2 của thời 6/10 câu — cùng tỉ lệ cũ (1/6 và 1/3 số câu)
+         để 18/30 câu vẫn công bằng như 6/10 câu. */
+      var badRatio = G.n ? G.bad / G.n : 0;
       if (G.bad === 0) stars = 3;
-      else if (G.bad <= 1) stars = avgRemain >= 0.4 ? 3 : 2;
-      else if (G.bad <= 2) stars = 2;
+      else if (badRatio <= 1 / 6) stars = avgRemain >= 0.4 ? 3 : 2;
+      else if (badRatio <= 1 / 3) stars = 2;
       else stars = 1;
     }
     var c = camp(), key = G.stage + '-' + G.node;

@@ -47,19 +47,17 @@
   try { mq = window.matchMedia('(prefers-reduced-motion: reduce)'); } catch (e) { mq = null; }
   function reduced() { return !!(mq && mq.matches); }
 
-  /* Đo fps đơn giản (cùng cách với dau-kanji): < 30fps -> giảm hạt. */
-  var lowFx = false, fxFrames = 0, fxTPrev = 0;
-  (function fpsWatch(ts) {
-    if (typeof window.requestAnimationFrame !== 'function') return;
-    if (!fxTPrev) fxTPrev = ts || 0;
-    fxFrames++;
-    if (ts && ts - fxTPrev >= 1000) {
-      var fps = fxFrames * 1000 / Math.max(1, ts - fxTPrev);
-      lowFx = fps > 0 && fps < 30;
-      fxFrames = 0; fxTPrev = ts;
-    }
-    window.requestAnimationFrame(fpsWatch);
-  })(0);
+  /* Đợt 7 (nhánh Q): BỎ vòng fpsWatch rAF riêng chạy vĩnh viễn của module
+     này (bản cũ: 1 vòng rAF luôn chạy từ lúc nạp script dù chưa đấu).
+     Chất lượng hiệu ứng đọc CHUNG từ bộ đo FPS duy nhất của charanim.js
+     qua window.__GPERF.tier / GCANIM.quality(): khác 'full' -> giảm hạt. */
+  function lowFx() {
+    try {
+      if (window.__GPERF && window.__GPERF.tier) return window.__GPERF.tier !== 'full';
+      if (window.GCANIM && typeof window.GCANIM.quality === 'function') return window.GCANIM.quality() !== 'full';
+    } catch (e) { /* bỏ qua */ }
+    return false;
+  }
 
   function sfxHit() {
     try {
@@ -70,7 +68,7 @@
   function burstAt(el) {
     if (reduced() || !el) return;
     try {
-      if (window.GFX && typeof window.GFX.burst === 'function') window.GFX.burst(el, lowFx ? 8 : 20);
+      if (window.GFX && typeof window.GFX.burst === 'function') window.GFX.burst(el, lowFx() ? 8 : 20);
     } catch (e) { /* bỏ qua */ }
   }
   function esc(s) {
@@ -128,7 +126,9 @@
     ['me', 'foe'].forEach(function (key) {
       var e = state.els[key]; if (!e) return;
       var pct = Math.max(0, state[key] / state.max * 100);
-      if (e.fill) e.fill.style.width = pct + '%';
+      // Đợt 7: thanh máu chạy bằng transform scaleX (compositor) thay
+      // width (layout) — CSS .gc-bar i đã cố định width:100% + origin theo phía.
+      if (e.fill) e.fill.style.transform = 'scaleX(' + (pct / 100) + ')';
       if (e.num) e.num.textContent = String(Math.max(0, state[key]));
       if (e.bar) e.bar.classList.toggle('gc-low', pct <= 30);
     });
@@ -176,7 +176,7 @@
     var filt = red
       ? 'brightness(1.85) drop-shadow(0 0 14px rgba(239,75,91,.95)) saturate(1.7) hue-rotate(-30deg)'
       : 'brightness(2.25) drop-shadow(0 0 16px rgba(255,216,78,.95))';
-    var amp = (reduced() || lowFx) ? 0 : 7;
+    var amp = (reduced() || lowFx()) ? 0 : 7;
     try {
       e.fig.animate([
         { transform: 'translate(0,0)', filter: 'none' },
@@ -191,7 +191,7 @@
     try {
       var a = atkE.fig.getBoundingClientRect(), b = tgtE.fig.getBoundingClientRect();
       var dx = (b.left + b.width / 2) - (a.left + a.width / 2);
-      var reach = dx * (lowFx ? 0.45 : 0.58);
+      var reach = dx * (lowFx() ? 0.45 : 0.58);
       if (atkE.fig.animate) {
         atkE.fig.animate([
           { transform: 'translate(0,0)' },

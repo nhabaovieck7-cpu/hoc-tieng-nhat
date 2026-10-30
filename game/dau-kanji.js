@@ -179,8 +179,10 @@
 
   /* ---------- Chơi ---------- */
   function setHp() {
-    $('#hpP').style.width = Math.max(0, hpP) + '%';
-    $('#hpB').style.width = Math.max(0, hpB / hpBMax * 100) + '%';
+    // Đợt 7: thanh máu bằng transform scaleX (compositor) thay width
+    // (layout) — modes.css .bk-hp i đã cố định width:100% + origin theo phía.
+    $('#hpP').style.transform = 'scaleX(' + (Math.max(0, hpP) / 100) + ')';
+    $('#hpB').style.transform = 'scaleX(' + Math.max(0, hpB / hpBMax) + ')';
     $('#hpBoxP').classList.toggle('low', hpP <= 30);
     $('#hpBoxB').classList.toggle('low', hpB / hpBMax <= 0.3);
     $('#scorePill').textContent = '⭐ ' + score;
@@ -206,18 +208,17 @@
   var mqReduced = null;
   try { mqReduced = window.matchMedia('(prefers-reduced-motion: reduce)'); } catch (e) { mqReduced = null; }
   function reducedMotion() { return !!(mqReduced && mqReduced.matches); }
-  var lowFx = false, fxFrames = 0, fxTPrev = 0;
-  (function fpsWatch(ts) {
-    if (typeof window.requestAnimationFrame !== 'function') return;
-    if (!fxTPrev) fxTPrev = ts || 0;
-    fxFrames++;
-    if (ts && ts - fxTPrev >= 1000) {
-      var fps = fxFrames * 1000 / Math.max(1, ts - fxTPrev);
-      lowFx = fps > 0 && fps < 30;
-      fxFrames = 0; fxTPrev = ts;
-    }
-    window.requestAnimationFrame(fpsWatch);
-  })(0);
+  /* Đợt 7 (nhánh Q): BỎ vòng fpsWatch rAF riêng chạy vĩnh viễn (bản cũ là
+     vòng rAF thứ hai song song với charanim trên cùng trang). Đọc chất
+     lượng CHUNG từ bộ đo FPS duy nhất (charanim.js) qua __GPERF/GCANIM:
+     khác 'full' -> giảm hạt/biên độ như ngưỡng fps<30 cũ. */
+  function lowFx() {
+    try {
+      if (window.__GPERF && window.__GPERF.tier) return window.__GPERF.tier !== 'full';
+      if (window.GCANIM && typeof window.GCANIM.quality === 'function') return window.GCANIM.quality() !== 'full';
+    } catch (e) { /* bỏ qua */ }
+    return false;
+  }
   function slashFx(target, foe) {
     var ar = $('#arena'); if (!ar || !target) return;
     try {
@@ -243,7 +244,7 @@
     var filt = tint === 'red'
       ? 'brightness(1.85) drop-shadow(0 0 14px rgba(239,75,91,.95)) saturate(1.7) hue-rotate(-30deg)'
       : 'brightness(2.25) drop-shadow(0 0 16px rgba(255,216,78,.95))';
-    var amp = (reduced || lowFx) ? 0 : 7;
+    var amp = (reduced || lowFx()) ? 0 : 7;
     try {
       tgt.animate([
         { transform: 'translate(0,0)', filter: 'none' },
@@ -268,7 +269,7 @@
     try {
       var a = atk.getBoundingClientRect(), b = tgt.getBoundingClientRect();
       var dx = (b.left + b.width / 2) - (a.left + a.width / 2);
-      var reach = dx * (lowFx ? 0.45 : 0.58);
+      var reach = dx * (lowFx() ? 0.45 : 0.58);
       if (atk.animate) {
         atk.animate([
           { transform: 'translate(0,0)' },
@@ -281,14 +282,16 @@
     } catch (e) { /* bỏ qua */ }
     slashFx(tgt, opts.tint === 'red');
     if (opts.particles && window.GFX && typeof GFX.burst === 'function') {
-      try { GFX.burst(tgt, lowFx ? 8 : 20); } catch (e) { /* bỏ qua */ }
+      try { GFX.burst(tgt, lowFx() ? 8 : 20); } catch (e) { /* bỏ qua */ }
     }
   }
   function startTimer(sec, onTimeout) {
     stopTimer(); limMs = sec * 1000; t0 = Date.now();
     timer = setInterval(function () {
       var left = limMs - (Date.now() - t0);
-      $('#tBar').style.width = Math.max(0, left / limMs * 100) + '%';
+      // Đợt 7: thanh giờ bằng transform scaleX thay width (tick 50ms
+      // không còn ép layout mỗi nhịp) — modes.css .mx-timer i origin trái.
+      $('#tBar').style.transform = 'scaleX(' + Math.max(0, left / limMs) + ')';
       $('#tTxt').textContent = (Math.max(0, left) / 1000).toFixed(1) + 's';
       if (left <= 0) { stopTimer(); onTimeout(); }
     }, 50);

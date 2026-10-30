@@ -470,7 +470,9 @@
           d.style.fontSize = (34 + i * 7) + 'px';
           overlay.appendChild(d);
           totalEl.textContent = 'TỔNG SÁT THƯƠNG ' + cum;
-          try { hpFill.style.width = Math.max(0, 100 - Math.round(cum / baseDmg * 100)) + '%'; } catch (e) {}
+          // Đợt 7: tụt máu bằng transform scaleX thay width (finisher.css
+          // .gfb-hp-fill đã cố định width:100% + transform-origin trái).
+          try { hpFill.style.transform = 'scaleX(' + Math.max(0, 1 - cum / baseDmg) + ')'; } catch (e) {}
           // Rung màn hình: biên độ tăng dần theo đòn
           try {
             if (overlay.animate) {

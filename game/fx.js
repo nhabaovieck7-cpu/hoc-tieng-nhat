@@ -25,9 +25,28 @@
     } catch (e) { /* âm thanh là phụ, lỗi thì thôi */ }
   }
 
-  /* ---------------- Lớp hạt (canvas) ---------------- */
+  /* ---------------- Lớp hạt (canvas) ----------------
+     Đợt 7 (nhánh Q) — tối ưu theo số đo harness (work/Q/tests):
+     - Vòng rAF TỰ DỪNG khi hết hạt (bản cũ chạy vĩnh viễn + clearRect
+       toàn màn mỗi khung sau lần fxInit đầu tiên) và tự dừng khi tab ẩn;
+       có hạt mới thì pushPart khởi động lại.
+     - Ngân sách hạt theo bậc chất lượng __GPERF.tier (charanim.js là bộ
+       đo FPS chung duy nhất): 'full' tối đa 300 hạt sống, 'low' tối đa
+       140 và số hạt mỗi lần burst/confetti nhân 0.45; 'off' (reduced
+       motion) vốn đã bị chặn ở cửa hàm. */
   var cv = null, cx = null, parts = [], rafOn = false;
-  var MAX_PARTS = 420;
+  function fxTier() {
+    try {
+      if (window.__GPERF && window.__GPERF.tier) return window.__GPERF.tier;
+      if (window.GCANIM && typeof window.GCANIM.quality === 'function') return window.GCANIM.quality();
+    } catch (e) { /* bỏ qua */ }
+    return 'full';
+  }
+  function capParts() { return fxTier() === 'low' ? 140 : 300; }
+  function scaleN(n) {
+    if (fxTier() === 'low') return Math.max(4, Math.round(n * 0.45));
+    return n;
+  }
   function fxInit() {
     if (cv) return;
     cv = document.createElement('canvas');
@@ -43,12 +62,16 @@
     };
     rs();
     window.addEventListener('resize', rs);
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && parts.length && !rafOn) { rafOn = true; requestAnimationFrame(loop); }
+    });
     if (!rafOn) { rafOn = true; requestAnimationFrame(loop); }
   }
   function loop() {
-    if (!cx) { rafOn = false; return; }
-    cx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    if (!cx || document.hidden) { rafOn = false; return; }
     parts = parts.filter(function (p) { return p.l > 0; });
+    cx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    if (!parts.length) { rafOn = false; return; } // hết hạt -> dừng hẳn vòng lặp
     for (var i = 0; i < parts.length; i++) {
       var p = parts[i];
       p.x += p.vx; p.y += p.vy; p.vy += p.g; p.l -= p.dec;
@@ -71,8 +94,10 @@
     requestAnimationFrame(loop);
   }
   function pushPart(p) {
-    if (parts.length >= MAX_PARTS) parts.splice(0, parts.length - MAX_PARTS + 1);
+    var cap = capParts();
+    if (parts.length >= cap) parts.splice(0, parts.length - cap + 1);
     parts.push(p);
+    if (!rafOn && cv) { rafOn = true; requestAnimationFrame(loop); }
   }
   var SPARK_COLORS = ['#ffd84e', '#ff7a45', '#ff4fd8', '#22d3ee', '#ffffff'];
   function pickColor(cols) { return cols[Math.floor(Math.random() * cols.length)]; }
@@ -98,6 +123,7 @@
       if (Array.isArray(b)) cols = b;
     }
     fxInit();
+    n = scaleN(n);
     for (var i = 0; i < n; i++) {
       var ang = Math.random() * Math.PI * 2, sp = 2 + Math.random() * 7;
       pushPart({
@@ -112,7 +138,7 @@
   /* Pháo giấy: confetti(n?) — rơi từ trên xuống, đủ màu */
   function confetti(n) {
     if (reduced()) return;
-    n = (typeof n === 'number') ? n : 130;
+    n = scaleN((typeof n === 'number') ? n : 130);
     fxInit();
     var cols = ['#ffd84e', '#ff4fd8', '#22d3ee', '#2fbf71', '#ff7a45', '#7c5cff', '#ffffff'];
     for (var i = 0; i < n; i++) {
@@ -220,6 +246,7 @@
     L.style.width = len + 'px';
     L.style.transform = 'rotate(' + ang + 'rad)';
     L.style.setProperty('--c', S.c);
+    L.style.setProperty('--fly', len + 'px'); // đợt 7: đích translateX cho @keyframes gfly (game.css)
     if (k === 'shuriken' || k === 'gun') {
       var icons = '';
       var cnt = (k === 'gun') ? 7 : 5;
@@ -261,7 +288,8 @@
 
   window.GFX = {
     shake: shake, burst: burst, confetti: confetti, comboPop: comboPop,
-    perfect: perfect, ultra: ultra, bigText: bigText, flash: flash, skill: skill
+    perfect: perfect, ultra: ultra, bigText: bigText, flash: flash, skill: skill,
+    _parts: function () { return parts.length; } // đợt 7: harness/__GPERF đọc số hạt sống
   };
   // Tương thích bản mẫu cho các nhánh đã quen tên toàn cục
   window.shake = shake;

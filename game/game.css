@@ -465,7 +465,7 @@ body.hitstop *{animation-play-state:paused!important}
 @keyframes gbeam{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 .beamfx.shuriken,.beamfx.gun{background:none;box-shadow:none}
 .beamfx i{position:absolute;left:0;top:0;font-style:normal;font-size:30px;color:var(--c);text-shadow:0 0 12px var(--c);animation:gfly .35s linear forwards}
-@keyframes gfly{to{left:100%;transform:rotate(720deg)}}
+@keyframes gfly{to{transform:translateX(var(--fly,300px)) rotate(720deg)}} /* đợt 7: bay bằng transform thay left (layout); --fly = độ dài tia do fx.js đặt */
 .beamfx.thunder{
   background:linear-gradient(transparent,var(--c),#fff);
   clip-path:polygon(40% 0,70% 0,50% 40%,80% 40%,30% 100%,45% 55%,20% 55%);

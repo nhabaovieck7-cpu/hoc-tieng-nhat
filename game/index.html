@@ -483,6 +483,10 @@ GAME_USER.then(function (u) {
 document.addEventListener('hn-game-avatar', function () {
   GAME_USER.then(function (u) { paintHubUser(u, GAME_AVATAR.load()); });
 });
+/* ĐỢT 6 (vá tích hợp coordinator): toàn thân ở hub có thể vẽ TRƯỚC khi
+   GGEAR nạp xong tiến độ -> món khoá cấp rơi về mặc định. Nạp xong thì
+   vẽ lại 1 lần cho khớp đồ đang chọn (cùng cơ chế ở chay-vo-tan.js). */
+try { if (window.GGEAR && typeof GGEAR.ready === 'function') GGEAR.ready().then(function () { paintHubUser(GAME_USER_DATA, GAME_AVATAR.load()); }); } catch (e) {}
 </script>
 <!-- BATCH5-M: gắn chip cấp ở hero + thông báo LÊN CẤP khi vào sảnh -->
 <script>

@@ -161,6 +161,7 @@
       var sub = $('#qSub');
       if (q.promptSub) { sub.textContent = q.promptSub; sub.style.display = ''; } else sub.style.display = 'none';
       var gb = $('#gateBox'); gb.innerHTML = '';
+      gb.style.top = '132px'; // đợt 7: top cố định 1 lần/cổng; vòng loop chỉ còn transform (xem loop)
       curOpts.forEach(function (o, i) {
         /* Cổng = NÚT BẤM THẬT: chạm/click trực tiếp để trả lời ngay khi
            cổng đang tiến gần, không phải chờ cổng chạm đáy. */
@@ -188,15 +189,22 @@
       var H = $('#stage').clientHeight;
       var y = (t - gateT0) / travelMs;
       var gb = $('#gateBox');
-      /* Hàng cổng xuất phát ngay dưới hộp câu hỏi (top 132px, tránh HUD/
-         câu hỏi) và tiến về phía nhân vật ở đáy (chân cổng cách đáy
-         116px), phóng to dần như cũ. */
-      gb.style.top = (132 + y * (H - 248)) + 'px';
-      gb.style.transform = 'scale(' + (0.62 + y * 0.38) + ')';
+      /* Hàng cổng xuất phát ngay dưới hộp câu hỏi (top 132px cố định ở
+         nextGate, tránh HUD/câu hỏi) và tiến về phía nhân vật ở đáy
+         (chân cổng cách đáy 116px), phóng to dần như cũ.
+         Đợt 7 (nhánh Q): tiến cổng bằng transform translateY + scale
+         (compositor) thay style.top từng khung (ép layout mỗi khung). */
+      gb.style.transform = 'translateY(' + (y * (H - 248)) + 'px) scale(' + (0.62 + y * 0.38) + ')';
       if (y >= 1) resolveGate();
     }
-    $('#distBox').textContent = Math.floor(dist) + ' m';
-    $('#scoreBox').textContent = '⭐ ' + Math.floor(score);
+    /* Đợt 6 N: đầu dõi cổng gần nhất trong chính vòng lặp cổng này;
+       khi đang dash/vỡ (resolving) giữ nguyên góc dash. */
+    if (!resolving) trackHeadNormal();
+    /* Đợt 7: HUD chỉ ghi DOM khi số nguyên đổi (bản cũ ghi textContent
+       2 lần/khung dù số chưa đổi). */
+    var dInt = Math.floor(dist), sInt = Math.floor(score);
+    if (dInt !== loop._dInt) { loop._dInt = dInt; $('#distBox').textContent = dInt + ' m'; }
+    if (sInt !== loop._sInt) { loop._sInt = sInt; $('#scoreBox').textContent = '⭐ ' + sInt; }
     raf = requestAnimationFrame(loop);
   }
   function reducedMotion() {
@@ -258,7 +266,7 @@
   function bindFaceEvent() {
     if (faceEvtBound) return; faceEvtBound = true;
     /* Người chơi đổi nhân vật/mặt lúc đang ở trang -> vẽ lại mặt runner. */
-    document.addEventListener('hn-game-avatar', function () { setupRunnerFace(); setFace(0, 0); });
+    document.addEventListener('hn-game-avatar', function () { setupRunnerFace(); setFace(0, 0); setHeadTurn(0); });
   }
   /* Góc nghiêng (độ, đã clamp ±55) từ vector runner->cổng (dx, dy theo
      tọa độ màn hình: x phải+, y xuống+). Hướng lên tuyệt đối có phương
@@ -298,6 +306,77 @@
     face.style.transform = 'rotate(0deg)';
     face._dev = 0;
     face.setAttribute('data-face-deg', '0');
+    setHeadTurn(0);
+  }
+
+  /* ===== Đợt 6 Nhánh N: MẶT QUAY VÀO ĐÁP ÁN (đầu quay riêng) =====
+     Prep đợt 6 (fullbody.js/css, KHÔNG sửa ở đây): đầu + phụ kiện đầu của
+     GBODY gói trong <g class="fb-headturn">, quay quanh cổ (100,100) theo
+     2 biến CSS trên .fb-wrap: --fbht (độ, kèm 'deg') + --fbhtn (số độ).
+     Hàm này CHỈ đặt 2 biến đó + ghi data-head-deg lên #runnerFace cho
+     harness đọc số (đo thật vẫn bằng ma trận computed của .fb-headturn).
+     Góc thân .rnv-face của đợt 4/5 (setFace) giữ nguyên, không đụng.
+     reduced-motion: CSS .fb-headturn đã tắt transition -> đặt biến là
+     tới ngay giá trị cuối, không cần nhánh riêng. */
+  var HEAD_MAX_DEG = 40; /* clamp cứng của đầu */
+  var headDegCur = 0;    /* góc đầu hiện tại (để trả dần về 0 khi hết cổng) */
+  function clampHead(v, lo, hi) { return v < lo ? lo : (v > hi ? hi : v); }
+  function setHeadTurn(deg) {
+    var face = $('#runnerFace'); if (!face) return;
+    if (typeof deg !== 'number' || !isFinite(deg)) deg = 0;
+    deg = clampHead(deg, -HEAD_MAX_DEG, HEAD_MAX_DEG);
+    headDegCur = deg;
+    face.setAttribute('data-head-deg', String(Math.round(deg * 10) / 10));
+    var wrap = face.querySelector('.fb-wrap');
+    if (!wrap) return; /* fallback emoji/avatar cũ: bỏ qua êm */
+    try {
+      wrap.style.setProperty('--fbht', deg + 'deg');
+      wrap.style.setProperty('--fbhtn', String(deg));
+    } catch (e) {}
+  }
+  /* dx (px) từ tâm runner tới tâm CỔNG GẦN NHẤT phía trước (cổng còn ở
+     trên runner, theo bounding rect; khoảng cách Euclid). null = không
+     có cổng nào phía trước. */
+  function nearestGateDx() {
+    var runner = $('#runner'); if (!runner) return null;
+    var gates = $$('#gateBox .rnv-gate'); if (!gates.length) return null;
+    var rr = runner.getBoundingClientRect();
+    var rcx = rr.left + rr.width / 2, rcy = rr.top + rr.height / 2;
+    var best = null, bestD = Infinity;
+    gates.forEach(function (g) {
+      var gr = g.getBoundingClientRect(); if (!gr.width) return;
+      var cx = gr.left + gr.width / 2, cy = gr.top + gr.height / 2;
+      if (cy > rcy) return; /* cổng đã qua khỏi runner: không tính */
+      var d2 = (cx - rcx) * (cx - rcx) + (cy - rcy) * (cy - rcy);
+      if (d2 < bestD) { bestD = d2; best = cx - rcx; }
+    });
+    return best;
+  }
+  /* Góc đầu ở nhịp CHẠY THƯỜNG: dõi cổng gần nhất, hệ số 0.10, clamp ±12. */
+  function normalHeadDeg() {
+    var dx = nearestGateDx();
+    if (dx === null) return 0;
+    return clampHead(dx * 0.10, -12, 12);
+  }
+  /* Cập nhật mỗi tick trong loop() sẵn có (chỉ khi KHÔNG resolving —
+     lúc dash/vỡ, góc dash phải giữ nguyên): có cổng -> dõi theo cổng
+     gần nhất; không cổng -> trả DẦN về 0. */
+  function trackHeadNormal() {
+    var dx = nearestGateDx();
+    if (dx === null) {
+      if (Math.abs(headDegCur) < 0.2) { if (headDegCur !== 0) setHeadTurn(0); return; }
+      setHeadTurn(headDegCur * 0.8);
+      return;
+    }
+    setHeadTurn(clampHead(dx * 0.10, -12, 12));
+  }
+  /* Góc đầu khi DASH tới cổng được chạm: hệ số 0.30 theo dx của CHÍNH
+     cổng đó, clamp ±40; cổng lệch rõ (|dx| > 30) mà góc chưa tới 28 thì
+     nâng lên ±28 cho mặt quay RÕ. */
+  function headTurnForDash(dx) {
+    var d = clampHead(dx * 0.30, -HEAD_MAX_DEG, HEAD_MAX_DEG);
+    if (Math.abs(d) < 28 && Math.abs(dx) > 30) d = dx > 0 ? 28 : -28;
+    return d;
   }
 
   function resetRunner() {
@@ -353,6 +432,8 @@
          suốt cú phóng, giữ nguyên tới khi cổng vỡ (settleGate ->
          resetRunner -> resetFace mới trả về hướng lên). */
       setFace(faceAngleFor(dx, dy), dashMs);
+      /* Đợt 6 N: ĐẦU quay rõ vào chính cổng được chạm (thêm vào góc thân). */
+      setHeadTurn(headTurnForDash(dx));
       try {
         dash = runner.animate([
           { transform: 'translate(0px,0px) scale(1)' },
@@ -365,8 +446,11 @@
       if (runner && gateEl) {
         try {
           var rr2 = runner.getBoundingClientRect(), gr2 = gateEl.getBoundingClientRect();
-          setFace(faceAngleFor((gr2.left + gr2.width / 2) - (rr2.left + rr2.width / 2),
+          var dx2 = (gr2.left + gr2.width / 2) - (rr2.left + rr2.width / 2);
+          setFace(faceAngleFor(dx2,
                                (gr2.top + gr2.height / 2) - (rr2.top + rr2.height / 2)), 0);
+          /* Đợt 6 N: reduced-motion vẫn quay đầu vào cổng (áp tĩnh ngay). */
+          setHeadTurn(headTurnForDash(dx2));
         } catch (e) {}
       }
       dash = wait(dashMs);
@@ -404,6 +488,9 @@
     var ci = correctIdx(cur);
     $$('#gateBox .rnv-gate').forEach(function (g, i) { g.classList.add(curOpts[i] === cur.choices[ci] ? 'ok' : 'bad'); });
     resetRunner();
+    /* Đợt 6 N: cổng vỡ xong (hook settle sẵn có) -> đầu rời góc dash, trở
+       về giá trị chạy thường tính lại theo cổng gần nhất (hoặc 0). */
+    setHeadTurn(normalHeadDeg());
     var fl = $('#flash');
     if (right) {
       combo++; bestCombo = Math.max(bestCombo, combo);
@@ -480,6 +567,11 @@
   bindUserEvent();
   setupRunnerFace();
   paintRunnerPlate();
+  /* ĐỢT 6 (vá tích hợp coordinator): runner vẽ lần đầu có thể TRƯỚC khi
+     GGEAR nạp xong tiến độ — lúc đó state() rơi về mặc định cho mọi món
+     khoá cấp (trang phục/mũ/vũ khí/giáp), và không có sự kiện nào vẽ lại.
+     Nạp xong tiến độ thì vẽ lại đúng 1 lần cho khớp đồ đang chọn. */
+  try { if (window.GGEAR && typeof GGEAR.ready === 'function') GGEAR.ready().then(function () { setupRunnerFace(); }); } catch (e) {}
   bindFaceEvent();
   loadUser().then(function () { buildMenu(); bindControls(); });
 })();

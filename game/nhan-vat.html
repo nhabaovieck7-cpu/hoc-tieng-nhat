@@ -119,6 +119,17 @@
     <div class="gg-grid" id="ggSkills"></div>
     <p class="note" style="text-align:left">Trang bị áp dụng cho mọi chế độ đấu (phòng nhóm, đấu trùm…). Món khoá mở dần theo sao chiến dịch và số trùm đã hạ.</p>
   </section>
+
+  <!-- BATCH6-O1: Tủ đồ — Trang phục (costume) & Mũ nón (hat), 2 kind mới của GGEAR -->
+  <section class="card gg-card" id="wardrobeSection" aria-label="Tủ đồ">
+    <h2 style="margin-top:0">🧺 Tủ đồ</h2>
+    <p class="mut">Đổi quần áo và mũ nón cho nhân vật — xem trước cập nhật ngay trên sân khấu ở trên.</p>
+    <h3 class="gg-kind">👘 Trang phục</h3>
+    <div class="gg-grid" id="ggCostumes"></div>
+    <h3 class="gg-kind">🧢 Mũ nón</h3>
+    <div class="gg-grid" id="ggHats"></div>
+    <p class="note" style="text-align:left">Món khoá mở dần theo cấp người chơi. Đang đội mũ nón thì mũ nón được ưu tiên trên đầu hơn phụ kiện cùng vị trí.</p>
+  </section>
   <div style="height:60px"></div>
 </main>
 
@@ -303,7 +314,7 @@ function ggRenderList(elId, items, kind, curId) {
     b.addEventListener('click', function () {
       var id = b.dataset.id, kd = b.dataset.kind;
       var cat = GGEAR.catalog();
-      var list = kd === 'weapon' ? cat.weapons : kd === 'armor' ? cat.armors : kd === 'acc' ? cat.accs : cat.skills;
+      var list = kd === 'weapon' ? cat.weapons : kd === 'armor' ? cat.armors : kd === 'acc' ? cat.accs : kd === 'extra' ? cat.extras : kd === 'costume' ? cat.costumes : kd === 'hat' ? cat.hats : cat.skills;
       var it = null;
       list.forEach(function (x) { if (x.id === id) it = x; });
       if (!it || !it.unlocked) {
@@ -327,6 +338,9 @@ function paintGear() {
   ggRenderList('ggArmors', cat.armors, 'armor', st.armor);
   ggRenderList('ggAccs', cat.accs, 'acc', st.acc);
   ggRenderList('ggSkills', cat.skills, 'skill', st.skill);
+  /* BATCH6-O1: 2 lưới Tủ đồ dùng lại đúng cơ chế ggRenderList ở trên */
+  if (cat.costumes) ggRenderList('ggCostumes', cat.costumes, 'costume', st.costume);
+  if (cat.hats) ggRenderList('ggHats', cat.hats, 'hat', st.hat);
 }
 window.addEventListener('hn-game-gear', function () { paintGear(); applyGearToStage(); paintStageBody(); });
 if (window.GGEAR && GGEAR.ready) {

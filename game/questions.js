@@ -2,7 +2,12 @@
  * questions.js — NHÁNH 2 · Game "Hành trình đến Edo"
  * Bộ chuyển câu hỏi từ BÀI HỌC THẬT lúc chạy, CHỈ ĐỌC qua /free/list +
  * /free/lesson (đọc-only, không sửa endpoint, không nhúng nội dung
- * khóa học vào file). Giao diện theo CONTRACT.md:
+ * khóa học vào file). ĐỢT 7 · P1: người ĐÃ ĐĂNG NHẬP (phiên hn_sess_v1 +
+ * khoá nội dung hn_key_v1//auth/me) mở thêm nguồn FULL — giải mã gói
+ * enc/*.bin ngay trên máy (fmt 2, chỉ trong bộ nhớ) và dùng TOÀN BỘ bài;
+ * khách vẫn đi đường free y như cũ; lỗi nguồn full -> rơi êm về free.
+ * Mỗi Question có thêm q.lesson (id bài gốc) + q.src ('full'|'free').
+ * Giao diện theo CONTRACT.md:
  *
  *   window.GQ.getQuestions({level, topic, count, seed})
  *     level: 'N5'|'N4'|'N3'|'N2'|'N1'
@@ -34,6 +39,10 @@
   var ROOT = (typeof window !== 'undefined') ? window : globalThis;
   var ENDPOINT = ROOT.GAME_ENDPOINT ||
     'https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev'; // = SITE.aiEndpoint; khi hợp nhất, game.js/config.js có thể đặt GAME_ENDPOINT trước.
+  // Gốc site (nơi có enc/): game nằm ở /game/ nên gốc là ../ — harness kiểm
+  // thử có thể ghi đè bằng window.GAME_SITE_ROOT (URL tuyệt đối kết thúc /).
+  var SITE_ROOT = String(ROOT.GAME_SITE_ROOT || '../');
+  if (!/\/$/.test(SITE_ROOT)) SITE_ROOT += '/';
 
   // ĐỢT SỬA 30/10 — nhánh Q: bỏ hẳn trần số bài/phiên (bản gốc 8, bản
   // trung gian 16) — tải MỌI bài free của section; thứ tự tải XOAY theo
@@ -136,6 +145,129 @@
     var chains = [];
     for (var i = 0; i < Math.min(FETCH_BATCH, ids.length); i++) chains.push(step());
     return Promise.all(chains).then(function () { return out; });
+  }
+
+  /* ---------------- Nguồn FULL cho người đã đăng nhập (ĐỢT 7 · P1) ----------------
+   * Phiên: localStorage 'hn_sess_v1' (đúng cách game-api.js đọc; ưu tiên
+   * AUTH.session() nếu trang đã nạp auth.js). Khoá nội dung: ưu tiên
+   * localStorage 'hn_key_v1' (auth.js đã lưu), thiếu thì GET /auth/me
+   * (Bearer) lấy j.contentKey — chỉ tài khoản approved mới có. Gói
+   * <site>/enc/*.bin giải mã fmt 2 ngay trên máy: IV 12 byte đầu +
+   * AES-256-GCM + gzip (đúng lock.js của trang học). Nội dung đã giải mã
+   * CHỈ ở trong bộ nhớ phiên — TUYỆT ĐỐI không ghi xuống localStorage.
+   * Mọi lỗi ở nguồn full → resolve null → buildPool rơi êm về đường free. */
+  function gameSession() {
+    try { if (ROOT.AUTH && typeof ROOT.AUTH.session === 'function') return ROOT.AUTH.session() || ''; } catch (e) { /* bỏ qua */ }
+    try { return localStorage.getItem('hn_sess_v1') || ''; } catch (e) { return ''; }
+  }
+  var lastSessFp = null; // vân tay phiên đã thấy; đổi phiên/khoá -> bỏ mọi cache full
+  function sessFp() { var t = gameSession(); return t ? 's' + hashStr(t).toString(36) : ''; }
+  var fullKeyPromise = null, fullKeyFp = '';
+  var fullPackCache = {};   // name@fp -> Promise<mảng bài đã parse | null>
+  var siteMetaPromise = null;
+  function checkSessionEpoch() {
+    var fp = sessFp();
+    if (lastSessFp === null) { lastSessFp = fp; return; }
+    if (fp !== lastSessFp) {
+      lastSessFp = fp;
+      poolCache = {}; fullPackCache = {}; fullKeyPromise = null; fullKeyFp = ''; siteMetaPromise = null;
+    }
+  }
+  function b64ToBytes(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  function importContentKey(b64) {
+    if (!ROOT.crypto || !ROOT.crypto.subtle) return Promise.reject(new Error('no-subtle'));
+    return ROOT.crypto.subtle.importKey('raw', b64ToBytes(b64), 'AES-GCM', false, ['decrypt']);
+  }
+  function getContentKey() {
+    var tok = gameSession();
+    if (!tok) return Promise.resolve(null);
+    var fp = sessFp();
+    if (fullKeyPromise && fullKeyFp === fp) return fullKeyPromise;
+    fullKeyFp = fp;
+    fullKeyPromise = (function () {
+      var stored = '';
+      try { stored = localStorage.getItem('hn_key_v1') || ''; } catch (e) { /* bỏ qua */ }
+      var fromStored = stored ? importContentKey(stored).catch(function () { return null; }) : Promise.resolve(null);
+      return fromStored.then(function (k) {
+        if (k) return k;
+        return fetch(ENDPOINT + '/auth/me', { headers: { Authorization: 'Bearer ' + tok } })
+          .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+          .then(function (j) { return (j && j.contentKey) ? importContentKey(j.contentKey) : null; })
+          .catch(function () { return null; });
+      });
+    })();
+    return fullKeyPromise;
+  }
+  function siteMeta() {
+    if (!siteMetaPromise) {
+      siteMetaPromise = fetch(SITE_ROOT + 'enc/meta.json').then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status); return r.json();
+      }).catch(function (e) { siteMetaPromise = null; throw e; });
+    }
+    return siteMetaPromise;
+  }
+  function decryptPackText(key, buf) {
+    var bytes = new Uint8Array(buf);
+    return ROOT.crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes.slice(0, 12) }, key, bytes.slice(12))
+      .then(function (z) {
+        var stream = new Blob([z]).stream().pipeThrough(new DecompressionStream('gzip'));
+        return new Response(stream).text();
+      });
+  }
+  // Port nguyên văn parser khoan dung của Worker (freeParseObjs): text gói
+  // là dãy object JS literal, không phải JSON thuần.
+  function freeParseObjs(t) {
+    var i = 0, n = t.length, out = [];
+    function ws() { for (;;) { while (i < n && /\s/.test(t[i])) i++; if (t[i] === '/' && t[i + 1] === '/') { while (i < n && t[i] !== '\n') i++; } else if (t[i] === '/' && t[i + 1] === '*') { i = t.indexOf('*/', i + 2); i = i < 0 ? n : i + 2; } else return; } }
+    function str() { var q = t[i++], s = ''; while (i < n && t[i] !== q) { if (t[i] === '\\') { var c = t[++i]; i++; if (c === 'n') s += '\n'; else if (c === 't') s += '\t'; else if (c === 'r') s += '\r'; else if (c === 'u') { s += String.fromCharCode(parseInt(t.substr(i, 4), 16)); i += 4; } else if (c === '\n') { /* nối dòng */ } else s += c; } else s += t[i++]; } i++; return s; }
+    function val() {
+      ws(); var c = t[i];
+      if (c === '{') { i++; var o = {}; for (;;) { ws(); if (t[i] === '}') { i++; return o; } var k; if (t[i] === '"' || t[i] === "'") k = str(); else { var m = /^[A-Za-z_$][\w$]*/.exec(t.slice(i, i + 64)); if (!m) throw new Error('key@' + i); k = m[0]; i += k.length; } ws(); if (t[i++] !== ':') throw new Error(':@' + i); o[k] = val(); ws(); if (t[i] === ',') i++; } }
+      if (c === '[') { i++; var a = []; for (;;) { ws(); if (t[i] === ']') { i++; return a; } a.push(val()); ws(); if (t[i] === ',') i++; } }
+      if (c === '"' || c === "'") return str();
+      var m2 = /^(-?\d+(\.\d+)?([eE][-+]?\d+)?|true|false|null)/.exec(t.slice(i, i + 32));
+      if (!m2) throw new Error('val@' + i); i += m2[0].length; return JSON.parse(m2[0]);
+    }
+    while (i < n) { ws(); if (i >= n) break; var c2 = t[i]; if (c2 === '{') { try { var o2 = val(); if (o2 && o2.id) out.push(o2); } catch (e) { i++; } } else if (c2 === '"' || c2 === "'") str(); else i++; }
+    return out;
+  }
+  // Port freeSecOf của Worker: phân loại bài trong gói 'lessons'.
+  function freeSecOf(x) {
+    var ty = String(x.type || ''), id = String(x.id || '');
+    if (/Hội thoại|kaiwa|kaigo/i.test(ty) || /^kaiwa-/.test(id)) return 'kaiwa';
+    if (/Đọc hiểu/i.test(ty) || /dokkai/.test(id)) return 'dokkai';
+    if (/Tổng hợp/i.test(ty) || /tonghop/.test(id)) return 'tonghop';
+    return '';
+  }
+  function loadFullPack(name) {
+    return getContentKey().then(function (key) {
+      if (!key) return null;
+      var ck = name + '@' + fullKeyFp;
+      if (fullPackCache[ck]) return fullPackCache[ck];
+      var p = siteMeta().then(function (meta) {
+        var v = (meta.v || {})[name];
+        if (v == null) throw new Error('no-pack');
+        return fetch(SITE_ROOT + 'enc/' + name + '.bin?v=' + v);
+      }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.arrayBuffer(); })
+        .then(function (buf) { return decryptPackText(key, buf); })
+        .then(function (text) { return freeParseObjs(text); })
+        .catch(function () { delete fullPackCache[ck]; return null; });
+      fullPackCache[ck] = p;
+      return p;
+    }).catch(function () { return null; });
+  }
+  // Mảng bài FULL cho (level, section); null = không dùng được -> fallback free.
+  function resolveFullLessons(levelLow, section) {
+    if (!gameSession()) return Promise.resolve(null);
+    var name = section === 'tonghop' ? 'lessons' : 'course_' + levelLow + '_' + section;
+    return loadFullPack(name).then(function (all) {
+      if (!all || !all.length) return null;
+      if (section !== 'tonghop') return all;
+      var arr = all.filter(function (x) {
+        return freeSecOf(x) === 'tonghop' && String(x.level || '').toLowerCase() === levelLow;
+      }).sort(function (a, b) { return String(a.id).localeCompare(String(b.id), 'en', { numeric: true }); });
+      return arr.length ? arr : null;
+    }).catch(function () { return null; });
   }
 
   /* ---------------- Trích bảng từ vựng / kanji từ html ---------------- */
@@ -377,10 +509,48 @@
     return { tokens: segs, answerText: t + '。' };
   }
 
-  /* ---------------- Dựng pool theo (level, section), cache trong phiên ---------------- */
-  var poolCache = {}; // key level/section -> Promise<pool>
-  function buildPool(levelLow, section) {
-    var key = levelLow + '/' + section;
+  /* ---------------- Dựng pool theo (level, section, nguồn), cache trong phiên ----------------
+   * Nguồn 'full' (đã đăng nhập, giải mã gói enc trên máy) dùng TOÀN BỘ bài;
+   * nguồn 'free' giữ nguyên hành vi cũ. Cache theo (level, section, nguồn);
+   * đổi phiên/khoá -> checkSessionEpoch() bỏ toàn bộ cache. */
+  var poolCache = {}; // key level/section@nguồn -> Promise<pool>
+  function buildPoolFrom(levelLow, section, lessons, src) {
+    var pool = {
+      vocab: [], kanji: [], kanjiSingle: [],
+      fills: [], examples: [], gramTargets: [],
+      tonghopVocab: [], tonghopFills: [], tonghopDirects: [],
+      src: src
+    };
+    lessons.forEach(function (lesson) {
+      var secs = lesson.sections || [];
+      if (section === 'tv') {
+        secs.forEach(function (s) { parseVocabTable(s.html || '', lesson.id, pool.vocab); });
+        parseQuizVocab(lesson.quiz, lesson.id, pool.vocab);
+      } else if (section === 'kj') {
+        secs.forEach(function (s) { parseKanjiTable(s.html || '', lesson.id, pool.kanjiSingle, pool.kanji); });
+        parseQuizVocab(lesson.quiz, lesson.id, pool.kanji);
+      } else if (section === 'np') {
+        parseQuizGrammar(lesson.quiz, lesson.id, pool.fills, pool.gramTargets);
+        secs.forEach(function (s) { parseGrammarExamples(s.html || '', lesson.id, pool.fills, pool.examples, pool.gramTargets); });
+      } else if (section === 'tonghop') {
+        parseTonghopMcq(lesson.mcq, lesson.id, pool.tonghopFills, pool.tonghopDirects, pool.gramTargets);
+        parseQuizGrammar(lesson.quiz, lesson.id, pool.tonghopFills, pool.gramTargets);
+        secs.forEach(function (s) { parseTonghopVocabTable(s.html || '', lesson.id, pool.tonghopVocab); });
+      }
+    });
+    // Khử trùng entries theo word+reading
+    ['vocab', 'kanji', 'kanjiSingle', 'tonghopVocab'].forEach(function (k) {
+      var seen = {};
+      pool[k] = pool[k].filter(function (e) {
+        var kk = e.word + '|' + (e.reading || '');
+        if (seen[kk] || !e.word) return false; seen[kk] = 1; return true;
+      });
+    });
+    pool.gramTargets = uniq(pool.gramTargets);
+    return pool;
+  }
+  function buildPoolFree(levelLow, section) {
+    var key = levelLow + '/' + section + '@free';
     if (poolCache[key]) return poolCache[key];
     var p = freeList(levelLow, section).then(function (list) {
       var free = (list.lessons || []).filter(function (x) { return x.free; });
@@ -400,38 +570,7 @@
       return fetchLessons(levelLow, section, ordered.map(function (x) { return x.id; }));
     }).then(function (lessons) {
       if (!lessons.length) throw new Error('EMPTY');
-      var pool = {
-        vocab: [], kanji: [], kanjiSingle: [],
-        fills: [], examples: [], gramTargets: [],
-        tonghopVocab: [], tonghopFills: [], tonghopDirects: []
-      };
-      lessons.forEach(function (lesson) {
-        var secs = lesson.sections || [];
-        if (section === 'tv') {
-          secs.forEach(function (s) { parseVocabTable(s.html || '', lesson.id, pool.vocab); });
-          parseQuizVocab(lesson.quiz, lesson.id, pool.vocab);
-        } else if (section === 'kj') {
-          secs.forEach(function (s) { parseKanjiTable(s.html || '', lesson.id, pool.kanjiSingle, pool.kanji); });
-          parseQuizVocab(lesson.quiz, lesson.id, pool.kanji);
-        } else if (section === 'np') {
-          parseQuizGrammar(lesson.quiz, lesson.id, pool.fills, pool.gramTargets);
-          secs.forEach(function (s) { parseGrammarExamples(s.html || '', lesson.id, pool.fills, pool.examples, pool.gramTargets); });
-        } else if (section === 'tonghop') {
-          parseTonghopMcq(lesson.mcq, lesson.id, pool.tonghopFills, pool.tonghopDirects, pool.gramTargets);
-          parseQuizGrammar(lesson.quiz, lesson.id, pool.tonghopFills, pool.gramTargets);
-          secs.forEach(function (s) { parseTonghopVocabTable(s.html || '', lesson.id, pool.tonghopVocab); });
-        }
-      });
-      // Khử trùng entries theo word+reading
-      ['vocab', 'kanji', 'kanjiSingle', 'tonghopVocab'].forEach(function (k) {
-        var seen = {};
-        pool[k] = pool[k].filter(function (e) {
-          var kk = e.word + '|' + (e.reading || '');
-          if (seen[kk] || !e.word) return false; seen[kk] = 1; return true;
-        });
-      });
-      pool.gramTargets = uniq(pool.gramTargets);
-      return pool;
+      return buildPoolFrom(levelLow, section, lessons, 'free');
     }).catch(function (e) {
       delete poolCache[key];
       if (e && e.message === 'EMPTY') throw new Error('Chưa có bài học mở miễn phí cho phần này. Thử trình độ/chủ đề khác nhé!');
@@ -439,6 +578,17 @@
     });
     poolCache[key] = p;
     return p;
+  }
+  function buildPool(levelLow, section) {
+    checkSessionEpoch();
+    return resolveFullLessons(levelLow, section).then(function (full) {
+      if (full && full.length) {
+        var key = levelLow + '/' + section + '@full:' + fullKeyFp;
+        if (!poolCache[key]) poolCache[key] = Promise.resolve(buildPoolFrom(levelLow, section, full, 'full'));
+        return poolCache[key];
+      }
+      return buildPoolFree(levelLow, section);
+    });
   }
 
   /* ---------------- Sinh câu hỏi từ entries ---------------- */
@@ -578,6 +728,7 @@
     var count = Math.max(1, Math.min(40, opts.count || 6));
     var r = rng(opts.seed);
     var levelLow = level.toLowerCase();
+    checkSessionEpoch();
     if (!/^n[1-5]$/.test(levelLow)) {
       return Promise.reject(new Error('Trình độ chưa đúng. Chọn N5–N1 nhé!'));
     }
@@ -627,6 +778,9 @@
           try { q = g.make(); } catch (e) { q = null; }
           if (!q) continue;
           q.id = makeQid(levelLow, g.section, g.lesson, q);
+          // Truy vết nguồn (ĐỢT 7 · P1, additive): bài gốc + nguồn dữ liệu.
+          q.lesson = g.lesson || undefined;
+          q.src = (P[g.section] && P[g.section].src) || 'free';
           var key = q.type + '|' + q.prompt + '|' + q.answerText;
           if (usedKey[key] || usedKey['id:' + q.id]) continue;
           if (q.type === 'order') {
@@ -665,6 +819,6 @@
     });
   }
 
-  ROOT.GQ = { getQuestions: getQuestions, _version: 'n2-3-q' };
+  ROOT.GQ = { getQuestions: getQuestions, _version: 'b7-p1' };
   if (typeof module !== 'undefined' && module.exports) module.exports = ROOT.GQ;
 })();

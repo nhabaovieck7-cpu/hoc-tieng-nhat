@@ -50,9 +50,35 @@
   top:16.1%;
   width:40%;
   aspect-ratio:1/1;
-  transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%) rotate(var(--fbht,0deg)) translateX(calc(var(--fbhtn,0)*.22px));
+  transition:transform .18s ease-out;
   border-radius:50%;
   object-fit:cover;
   display:block;
   pointer-events:none;
 }
+
+/* ĐỢT 6 (prep cho Việc N): lớp QUAY ĐẦU riêng — nhóm .fb-headturn
+   (đầu + phụ kiện đầu) quay quanh cổ (100,100) theo biến --fbht (độ)
+   do JS đặt trên .fb-wrap; .fb-gaze (cụm mắt/mày/miệng) dịch ngang
+   theo --fbhtn (số độ, không đơn vị) để điểm nhìn đi theo hướng quay.
+   Mặc định --fbht không đặt = 0deg -> hiển thị y hệt đợt 5. */
+.fb-headturn{
+  transform-box:view-box;
+  transform-origin:100px 100px;
+  transform:rotate(var(--fbht,0deg));
+  transition:transform .18s ease-out;
+}
+.fb-gaze{
+  transform:translateX(calc(var(--fbhtn,0)*.14px));
+  transition:transform .18s ease-out;
+}
+@media (prefers-reduced-motion: reduce){
+  .fb-headturn,.fb-gaze,.fb-hoso-img{transition:none}
+}
+
+/* ĐỢT 6 (O2): nhóm trang phục (trên .fb-torso) + nhóm mũ mới (trong
+   .fb-headturn) — chỉ để harness chọn/đo theo class gg-c-<id> /
+   gg-h-<id>; không có luật hình học nào (mọi hình vẽ nằm trong SVG).
+   pointer-events:none để lớp vẽ không bao giờ chặn tương tác. */
+.fb-wrap .gg-costume,.fb-wrap .gg-hat,.fb-wrap .gg-ninja-mask{pointer-events:none}

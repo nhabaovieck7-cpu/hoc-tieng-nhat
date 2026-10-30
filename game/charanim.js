@@ -96,8 +96,12 @@
     } catch (e) { /* bỏ qua */ }
   }
 
-  /* Vòng đo fps bằng rAF: đếm khung trong cửa sổ 500ms. */
+  /* Vòng đo fps bằng rAF: đếm khung trong cửa sổ 500ms.
+     Đợt 7 (nhánh Q): đây là vòng đo FPS DUY NHẤT của game — fx-combat.js
+     và dau-kanji.js đã bỏ vòng fpsWatch riêng và đọc chung qua
+     window.__GPERF (xem cuối file). Vòng này tự dừng khi tab ẩn. */
   var rafId = 0, frames = 0, winStart = 0, measuring = false;
+  var lastFps = 0;
   function loop(ts) {
     if (!measuring) return;
     rafId = requestAnimationFrame(loop);
@@ -105,7 +109,8 @@
     frames++;
     var elapsed = ts - winStart;
     if (elapsed >= 500) {
-      evaluate(Math.round(frames * 1000 / elapsed));
+      lastFps = Math.round(frames * 1000 / elapsed);
+      evaluate(lastFps);
       frames = 0; winStart = ts;
     }
   }
@@ -157,7 +162,22 @@
     apply: apply,
     quality: quality,
     _fpsSample: evaluate,
-    version: '1.0'
+    version: '1.1'
+  };
+
+  /* Đợt 7 (nhánh Q): điểm truy cập hiệu năng DÙNG CHUNG cho mọi module
+     hiệu ứng + harness kiểm chứng. tier: 'full' | 'low' | 'off' — suy từ
+     đúng cơ chế quality() ở trên (fps < 30 trong 2 cửa sổ 500ms liên
+     tiếp -> 'low'; fps >= 55 trong 3 cửa sổ liên tiếp -> hồi 'full';
+     reduced-motion -> 'off'). fx.js giảm số hạt theo tier này. */
+  window.__GPERF = {
+    get fps() { return lastFps; },
+    get tier() { return quality(); },
+    quality: quality,
+    particles: function () {
+      try { return (window.GFX && typeof window.GFX._parts === 'function') ? window.GFX._parts() : null; }
+      catch (e) { return null; }
+    }
   };
 
   try {

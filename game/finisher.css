@@ -114,7 +114,7 @@
 .gfb-boss-name{font-weight:900;font-size:19px;color:#fff;margin-top:4px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .gfb-boss-tag{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--gfb-c,#ff7a45);margin-top:2px}
 .gfb-hp{height:9px;border-radius:5px;background:rgba(255,255,255,.22);margin-top:8px;overflow:hidden}
-.gfb-hp-fill{height:100%;width:100%;border-radius:5px;background:linear-gradient(90deg,#ff4d4d,#ffd84e);transition:width .18s ease-out}
+.gfb-hp-fill{height:100%;width:100%;border-radius:5px;background:linear-gradient(90deg,#ff4d4d,#ffd84e);transition:transform .18s ease-out;transform-origin:left center}
 
 /* Số sát thương từng đòn trong chuỗi dồn dập */
 .gfb-dmg{
