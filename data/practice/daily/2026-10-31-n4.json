@@ -1,0 +1,268 @@
+{
+  "feature": "daily-test",
+  "date": "2026-10-31",
+  "level": "N4",
+  "duration_minutes": 25,
+  "questions": [
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "友だちとの約束を忘れてはいけません。「約束」の読み方として正しいものはどれですか。",
+      "choices": [
+        "やくそく",
+        "やくそ",
+        "やくしょく",
+        "やっそく"
+      ],
+      "answer": 0,
+      "explain_vi": "約束 đọc là やくそく, nghĩa là lời hẹn. Đây là từ quen thuộc ở trình độ N4."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "先生に連絡をしなければなりません。「連絡」の読み方として正しいものはどれですか。",
+      "choices": [
+        "れんら",
+        "れんらく",
+        "れんろく",
+        "れんらくう"
+      ],
+      "answer": 1,
+      "explain_vi": "連絡 đọc là れんらく, nghĩa là liên lạc. Âm ん trong れん và らく cần đọc rõ, không bỏ hay kéo dài."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "旅行の準備はもう終わりました。「準備」の読み方として正しいものはどれですか。",
+      "choices": [
+        "じゅび",
+        "じゅんぴ",
+        "じゅんび",
+        "じゅんみ"
+      ],
+      "answer": 2,
+      "explain_vi": "準備 đọc là じゅんび, nghĩa là sự chuẩn bị. Chữ 備 đọc là び, không phải ぴ hay み."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「けんこう」の漢字として正しいものはどれですか。",
+      "choices": [
+        "建康",
+        "健広",
+        "康健",
+        "健康"
+      ],
+      "answer": 3,
+      "explain_vi": "けんこう viết là 健康, nghĩa là sức khỏe. Cần nhớ đúng bộ của 健 và 康, không đảo thứ tự hai chữ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「しんぱい」の漢字として正しいものはどれですか。",
+      "choices": [
+        "心西",
+        "心配",
+        "心肥",
+        "心酉"
+      ],
+      "answer": 1,
+      "explain_vi": "しんぱい viết là 心配, nghĩa là lo lắng. Chữ 配 có bộ 酉, dễ nhầm với các chữ trông giống."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "彼は試験に（ ）したので、とてもうれしいです。",
+      "choices": [
+        "失敗",
+        "遅刻",
+        "合格",
+        "欠席"
+      ],
+      "answer": 2,
+      "explain_vi": "Thi đỗ dùng 合格する. 失敗 là thất bại, 遅刻 là đến muộn, 欠席 là vắng mặt, đều trái với niềm vui trong câu."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "この説明書は（ ）ので、初めての人でも分かります。",
+      "choices": [
+        "難しい",
+        "長い",
+        "分かりにくい",
+        "分かりやすい"
+      ],
+      "answer": 3,
+      "explain_vi": "説明書 dễ hiểu thì dùng 分かりやすい. 難しい là khó, 分かりにくい là khó hiểu, đều trái nghĩa với ý câu."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "道が（ ）ので、早く着きました。",
+      "choices": [
+        "空いていた",
+        "混んでいた",
+        "狭かった",
+        "暗かった"
+      ],
+      "answer": 0,
+      "explain_vi": "Đường vắng thì dùng 空いている, nên đến sớm. 混んでいた là tắc đường, sẽ làm đến muộn, không hợp với câu."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "明日は雨だそうですから、傘を（ ）ください。",
+      "choices": [
+        "持って行き",
+        "持って行って",
+        "持って行っておいて",
+        "持って行く"
+      ],
+      "answer": 2,
+      "explain_vi": "Chuẩn bị trước một việc dùng 〜ておく: 持って行っておいてください nghĩa là hãy mang ô đi sẵn."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "財布を家に忘れて（ ）。買い物ができませんでした。",
+      "choices": [
+        "しまう",
+        "しまって",
+        "しまいます",
+        "しまった"
+      ],
+      "answer": 3,
+      "explain_vi": "Việc đã xảy ra ngoài ý muốn và đã xong dùng 〜てしまった: 忘れてしまった nghĩa là lỡ để quên."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "天気予報によると、明日は雪が（ ）そうです。",
+      "choices": [
+        "降る",
+        "降って",
+        "降り",
+        "降った"
+      ],
+      "answer": 0,
+      "explain_vi": "Nghe nói, truyền đạt lại dùng 〜そうです với thể thường: 降るそうです nghĩa là nghe nói tuyết sẽ rơi."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "明日までにこのレポートを（ ）なりません。",
+      "choices": [
+        "出さ",
+        "出さなければ",
+        "出し",
+        "出して"
+      ],
+      "answer": 1,
+      "explain_vi": "Phải làm gì dùng 〜なければなりません: 出さなければなりません nghĩa là phải nộp báo cáo."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "彼は日本に来た（ ）ですから、日本語がまだあまり話せません。",
+      "choices": [
+        "ところ",
+        "はず",
+        "ばかり",
+        "ため"
+      ],
+      "answer": 2,
+      "explain_vi": "Vừa mới làm gì dùng 〜たばかり: 来たばかり nghĩa là vừa mới đến Nhật, nên tiếng Nhật còn chưa nói tốt."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "毎日練習したので、漢字が読める（ ）なりました。",
+      "choices": [
+        "ような",
+        "ようた",
+        "よ",
+        "ように"
+      ],
+      "answer": 3,
+      "explain_vi": "Trở nên có thể làm gì dùng 〜ようになる: 読めるようになりました nghĩa là đã trở nên đọc được chữ Hán."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "雨が（ ）、明日の試合は行います。",
+      "choices": [
+        "降っても",
+        "降って",
+        "降ったら",
+        "降れば"
+      ],
+      "answer": 0,
+      "explain_vi": "Dù… vẫn… dùng 〜ても: 雨が降っても nghĩa là dù trời mưa, trận đấu ngày mai vẫn diễn ra."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ゆうたさんはさくら町に住んでいます。毎日、自転車で会社へ行きます。会社は駅の近くにあります。昼休みは、同僚と近くの公園で昼ごはんを食べます。日曜日は、家族と山へ行くことが多いです。\nゆうたさんは何で会社へ行きますか。",
+      "choices": [
+        "バス",
+        "自転車",
+        "電車",
+        "車"
+      ],
+      "answer": 1,
+      "explain_vi": "Đoạn văn nói 毎日、自転車で会社へ行きます, tức Yuta đến công ty bằng xe đạp mỗi ngày."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ゆうたさんはさくら町に住んでいます。毎日、自転車で会社へ行きます。会社は駅の近くにあります。昼休みは、同僚と近くの公園で昼ごはんを食べます。日曜日は、家族と山へ行くことが多いです。\nゆうたさんの会社はどこにありますか。",
+      "choices": [
+        "公園の近く",
+        "山の近く",
+        "駅の近く",
+        "海の近く"
+      ],
+      "answer": 2,
+      "explain_vi": "Đoạn văn nói 会社は駅の近くにあります, tức công ty ở gần ga. Công viên là nơi ăn trưa, núi là nơi đi chơi ngày Chủ nhật."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ゆうたさんはさくら町に住んでいます。毎日、自転車で会社へ行きます。会社は駅の近くにあります。昼休みは、同僚と近くの公園で昼ごはんを食べます。日曜日は、家族と山へ行くことが多いです。\nゆうたさんは昼休みに何をしますか。",
+      "choices": [
+        "仕事をします",
+        "本を読みます",
+        "昼寝をします",
+        "同僚と昼ごはんを食べます"
+      ],
+      "answer": 3,
+      "explain_vi": "Đoạn văn nói 昼休みは、同僚と近くの公園で昼ごはんを食べます, tức giờ nghỉ trưa Yuta ăn trưa cùng đồng nghiệp ở công viên gần đó."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ひまわり図書館は、火曜日から日曜日まで開いています。月曜日は休みです。午前九時から午後六時までです。本は一人五冊まで、二週間借りることができます。図書館の二階には、静かに勉強できる部屋があります。\nひまわり図書館は何曜日に休みですか。",
+      "choices": [
+        "月曜日",
+        "火曜日",
+        "日曜日",
+        "土曜日"
+      ],
+      "answer": 0,
+      "explain_vi": "Đoạn văn nói 月曜日は休みです, tức thư viện nghỉ thứ Hai. Thư viện mở từ thứ Ba đến Chủ nhật."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ひまわり図書館は、火曜日から日曜日まで開いています。月曜日は休みです。午前九時から午後六時までです。本は一人五冊まで、二週間借りることができます。図書館の二階には、静かに勉強できる部屋があります。\n本は一人何冊まで借りることができますか。",
+      "choices": [
+        "三冊",
+        "五冊",
+        "二冊",
+        "十冊"
+      ],
+      "answer": 1,
+      "explain_vi": "Đoạn văn nói 本は一人五冊まで、二週間借りることができます, tức mỗi người mượn tối đa 5 quyển trong 2 tuần."
+    }
+  ]
+}
