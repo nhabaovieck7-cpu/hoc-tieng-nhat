@@ -1,0 +1,83 @@
+/* =====================================================================
+   plus.css — Lớp dùng chung ĐỢT GAME-PLUS (plus.js)
+   Chỉ chứa style cho: bộ chọn kỹ năng trước trận (.gplus-loadout /
+   .gplus-pick), HUD kỹ năng trong trận (.gplus-skill), toast tài
+   nguyên làng (.gplus-toast) và trạng thái khoá/đã dùng của chúng.
+   Tông khớp game.css: nền --card/--card2, viền --line, vàng --gold /
+   nắng --sun, bo 14–18px, nút >= 44px, chữ Be Vietnam Pro (kế thừa).
+   Mọi biển hiệu đều pointer-events an toàn: toast không nhận chạm,
+   HUD/loadout nằm trong luồng trang (không fixed, không phủ câu hỏi).
+   ===================================================================== */
+
+/* ---------- Hộp chứa do trang chế độ chèn ---------- */
+.gplus-hud{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.gplus-hud:empty{display:none;margin:0}
+.gplus-loadout-host:empty{display:none}
+
+/* ---------- Bộ chọn kỹ năng trước trận ---------- */
+.gplus-loadout{
+  background:var(--card,#1f1b2e);border:1px solid var(--line,#352f4a);
+  border-radius:var(--radius,18px);padding:14px;margin:12px 0;
+}
+.gplus-loadout-t{font-size:15px;font-weight:800;margin-bottom:10px}
+.gplus-loadout-t span{color:var(--m,#a49fb8);font-size:12px;font-weight:600}
+.gplus-loadout-row{display:flex;gap:8px;flex-wrap:wrap}
+.gplus-pick{
+  flex:1 1 150px;min-height:56px;padding:10px 12px;text-align:left;
+  background:var(--card2,#2a2440);border:2px solid var(--line,#352f4a);
+  border-radius:14px;color:var(--t,#f4f1ea);
+  font:inherit;font-size:14px;font-weight:700;line-height:1.3;cursor:pointer;
+}
+.gplus-pick small{
+  display:block;margin-top:3px;color:var(--m,#a49fb8);
+  font-size:11.5px;font-weight:500;line-height:1.35;
+}
+.gplus-pick:active{transform:scale(.97)}
+.gplus-pick.on{
+  border-color:var(--gold,#d9a84e);color:var(--sun,#ffd84e);background:#2b2540;
+  box-shadow:0 0 14px rgba(217,168,78,.3);
+}
+.gplus-pick.on small{color:var(--t,#f4f1ea)}
+/* Khoá (chưa đủ cấp): plus.js đặt disabled trên nút */
+.gplus-pick:disabled{opacity:.45;cursor:not-allowed;border-style:dashed}
+.gplus-pick:disabled:active{transform:none}
+
+/* ---------- HUD kỹ năng trong trận ---------- */
+.gplus-skill{
+  display:inline-flex;align-items:center;gap:5px;
+  min-height:44px;padding:9px 13px;border-radius:999px;
+  background:#231e35;border:1.5px solid var(--gold,#d9a84e);color:var(--t,#f4f1ea);
+  font:inherit;font-size:13px;font-weight:800;line-height:1.15;cursor:pointer;
+  touch-action:manipulation;
+}
+.gplus-skill:active{transform:scale(.94)}
+.gplus-skill .gplus-uses{color:var(--sun,#ffd84e);font-weight:900}
+/* Bị động (khiên/hồi sinh) hoặc không dùng được ở chế độ này (đóng băng
+   thiếu handler / gợi ý thiếu handler): plus.js đặt disabled */
+.gplus-skill:disabled{opacity:.55;border-style:dashed;cursor:default}
+.gplus-skill:disabled:active{transform:none}
+/* Đã dùng hết lượt trong trận */
+.gplus-skill.used{opacity:.38;border-color:var(--line,#352f4a);border-style:dashed}
+.gplus-skill.used .gplus-uses{color:var(--m,#a49fb8)}
+
+/* ---------- Toast tài nguyên làng ---------- */
+.gplus-toast{
+  position:fixed;left:50%;top:calc(64px + env(safe-area-inset-top));z-index:95;
+  transform:translate(-50%,0);
+  background:var(--sun,#ffd84e);color:#221a08;
+  padding:10px 16px;border-radius:99px;
+  font-size:13.5px;font-weight:800;line-height:1.3;text-align:center;
+  max-width:92vw;box-shadow:0 8px 24px rgba(0,0,0,.35);
+  pointer-events:none;
+}
+
+/* ---------- Đóng băng cổng (chay-vo-tan, vá khi đăng) ---------- */
+.rnv-frozen .rnv-gate{
+  box-shadow:0 0 0 3px rgba(140,220,255,.9),0 0 20px rgba(140,220,255,.65);
+  filter:brightness(1.12) saturate(.6);
+}
+
+/* ---------- Tôn trọng giảm chuyển động ---------- */
+@media (prefers-reduced-motion: reduce){
+  .gplus-pick:active,.gplus-skill:active{transform:none}
+}

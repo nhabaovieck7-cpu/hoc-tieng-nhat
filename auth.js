@@ -291,6 +291,48 @@ function hnMkSync(CFG){
       Object.keys(am).forEach(k=>{out[sec][k]=+am[k]||0});
       Object.keys(bm).forEach(k=>{out[sec][k]=Math.max(out[sec][k]||0,+bm[k]||0)});
     });
+    const num=(o,k)=>+((o&&o[k])||0)||0;
+    // GAME-PLUS x: nhật ký câu sai — gộp theo qid, n/done/last lấy lớn hơn
+    if(a.x||b.x){
+      const ax=a.x||{},bx=b.x||{},ox={};
+      Object.keys(ax).forEach(k=>{ox[k]=ax[k]});
+      Object.keys(bx).forEach(k=>{
+        const ea=ox[k],eb=bx[k];
+        if(!ea){ox[k]=eb;return}
+        ox[k]=Object.assign({},ea,eb,{n:Math.max(num(ea,'n'),num(eb,'n')),done:Math.max(num(ea,'done'),num(eb,'done')),last:Math.max(num(ea,'last'),num(eb,'last'))});
+      });
+      out.x=ox;
+    }
+    // GAME-PLUS v: làng Edo — e (đã kiếm) / s (đã chi) / b (cấp công trình)
+    // đều lấy lớn hơn từng mục (số dư = e - s nên chi/kiếm ở máy nào cũng
+    // không hồi sinh tài nguyên); day: ngày mới hơn thắng, cùng ngày lấy max
+    if(a.v||b.v){
+      const av=a.v||{},bv=b.v||{},ov={};
+      ['e','s','b'].forEach(sec=>{
+        const am=av[sec]||{},bm=bv[sec]||{},om={};
+        Object.keys(am).forEach(k=>{om[k]=+am[k]||0});
+        Object.keys(bm).forEach(k=>{om[k]=Math.max(om[k]||0,+bm[k]||0)});
+        ov[sec]=om;
+      });
+      const ad=av.day,bd=bv.day;
+      if(ad&&bd){
+        if(ad.d===bd.d)ov.day={d:ad.d,go:Math.max(num(ad,'go'),num(bd,'go')),da:Math.max(num(ad,'da'),num(bd,'da')),xu:Math.max(num(ad,'xu'),num(bd,'xu'))};
+        else ov.day=(String(ad.d)>String(bd.d))?ad:bd;
+      }else if(ad||bd)ov.day=ad||bd;
+      ov._t=Math.max(num(av,'_t'),num(bv,'_t'));
+      out.v=ov;
+    }
+    // GAME-PLUS u/t/c và mọi mục lạ khác: nếu là đối tượng có _t thì lấy
+    // bản mới hơn nguyên khối; chỉ một phía có thì giữ phía đó (không xoá)
+    const doneSecs={w:1,d:1,x:1,v:1};
+    Object.keys(a).concat(Object.keys(b)).forEach(k=>{
+      if(doneSecs[k]||(k in out))return;
+      const ea=a[k],eb=b[k];
+      if(ea===undefined){out[k]=eb;return}
+      if(eb===undefined){out[k]=ea;return}
+      const ta=(ea&&typeof ea==='object')?num(ea,'_t'):0,tb=(eb&&typeof eb==='object')?num(eb,'_t'):0;
+      out[k]=tb>ta?eb:ea;
+    });
     return out;
   }
   function mergeVal(k,localStr,serverStr,lts,sts){

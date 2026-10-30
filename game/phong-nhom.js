@@ -179,7 +179,12 @@
     pollTimer: null, pollBusy: false, pollWanted: false,
     chatReady: false, chatName: null, chatCall: null, // tên/call đã mount vào GCHAT
     resultInfo: null,               // {won, rank, count} của màn kết quả đang hiện
-    sel: { mode: 'group', level: 'N4', topic: 'mix', count: 10, style: 'versus', coop: { qCount: 10, timeSec: 15, livesOn: true, lives: 3 } },
+    sel: { mode: 'group', level: 'N4', topic: 'mix', count: 20, style: 'versus', coop: { qCount: 10, timeSec: 15, livesOn: true, lives: 3 } },
+    /* --- Mở rộng phòng versus: thể thức + runtime (coop không dùng) --- */
+    format: 'versus',        // 'versus' | 'relay' | 'tourney' — vắng mặt = 'versus'
+    relay: null,             // runtime Tiếp sức (initRelayState dựng khi vào trận)
+    tourney: null,           // runtime Giải đấu { bracket, results, finishSeen, ... }
+    _forceStart: false,      // chỉ tourney dùng: ép startMatch dù đang ở view play/wait/result của trận con trước
     /* --- Hợp sức (co-op): chỉ sống khi room.style === 'coop' --- */
     coop: null,              // snapshot trạng thái đội mới nhất (room.coop / sự kiện start)
     coopResolution: null,    // resolution của câu hiện tại (để vẽ HUD/feedback)
@@ -193,7 +198,7 @@
 
   /* ============================ E: GCOMBAT (chỉ versus) + F: mặt hồ sơ ============================ */
   function combatOn() {
-    return !!(window.GCOMBAT && S.room && S.room.style !== 'coop');
+    return !!(window.GCOMBAT && S.room && S.room.style !== 'coop' && S.format !== 'relay' && S.format !== 'tourney');
   }
   function answerBoolNow(ev) {
     // Boolean của câu VỪA trả lời, tính bằng HIỆU SỐ lũy kế:
@@ -332,11 +337,16 @@
       beginMatchWithSeed(S.room.seed, S.room.qCount);
     }
     if (S.room.status === 'done' && (S.view === 'play' || S.view === 'wait')) {
-      if (isCoopRoom()) showCoopResult(); else showResult();
+      if (isCoopRoom()) showCoopResult(); else if (isRelay()) showRelayResult(); else showResult();
     }
     if (S.room.status === 'waiting' && prevStatus === 'done' && S.view === 'result') enterRoomView();
     // Hợp sức: khớp lại từ snapshot room.coop khi lỡ sự kiện / nạp lại trang.
     if (isCoopRoom() && S.room.coop) syncCoopSnapshot(S.room.coop);
+    // Mở rộng: lỡ sự kiện 'start' nhưng đã có deck + format -> vẫn vào trận.
+    if (S.pendingStart && S.deck && S.view === 'room' && (isRelay() || isTourney())) {
+      if (isTourney()) S._forceStart = true;
+      startMatch();
+    }
     if (S.view === 'room') renderRoom();
     if (S.view === 'play' || S.view === 'wait') { renderStrip(); renderCoopHud(); }
     if (S.view === 'wait') renderWaitBars();
@@ -347,21 +357,93 @@
     var p = ev.payload || {};
     switch (ev.kind) {
       case 'questions':
-        if (Array.isArray(p.questions) && p.questions.length && !S.deck) {
-          S.deck = p.questions; S.deckSource = 'event';
-          if (S.view === 'room' || S.pendingStart) startMatch();
+        if (Array.isArray(p.questions) && p.questions.length) {
+          // Mở rộng: deck gắn format/trận con (relay/tourney) — chờ 'start'
+          // chốt mới vào trận, và deck của trận con MỚI thay deck cũ.
+          if (p.format === 'relay' || p.format === 'tourney' || p.matchId) {
+            if (p.format) S.format = p.format;
+            if (isTourney()) {
+              var tq = ensureTourney();
+              if (p.matchId && p.matchId !== tq.currentMatchId) {
+                tq.currentMatchId = p.matchId;
+                if (Array.isArray(p.duelists)) tq.duelists = p.duelists;
+                S.deck = p.questions; S.deckSource = 'event'; tq.deckMatchId = p.matchId;
+                S.pendingStart = true;
+              } else if (!S.deck) { S.deck = p.questions; S.deckSource = 'event'; }
+            } else if (!S.deck) {
+              S.deck = p.questions; S.deckSource = 'event'; S.pendingStart = true;
+            }
+            break;
+          }
+          if (!S.deck) {
+            S.deck = p.questions; S.deckSource = 'event';
+            if (S.view === 'room' || S.pendingStart) startMatch();
+          }
         }
         break;
       case 'start':
         S.pendingStart = true;
+        if (p.format) S.format = p.format; // thể thức chốt trong payload start
+        else if (p.matchId) S.format = 'tourney';
         if (p.coop) S.coop = p.coop; // snapshot đội kèm sự kiện start (phòng coop)
-        if (S.deck && S.deckSource === 'event') { startMatch(); }
+        if (isTourney()) {
+          var ts = ensureTourney();
+          if (p.matchId) ts.currentMatchId = p.matchId;
+          if (Array.isArray(p.duelists)) ts.duelists = p.duelists;
+          // Echo của chính trận con đang chạy (chủ phòng tự startMatch tại
+          // chỗ rồi sự kiện dội về qua poll): bỏ qua, không khởi động lại.
+          var echoRunning = ts.startedMatchId && ts.startedMatchId === ts.currentMatchId && (S.view === 'play' || S.view === 'wait');
+          if (!echoRunning) {
+            S._forceStart = true; // trận con mới phải thay màn của trận con trước
+            if (S.deck && ts.deckMatchId === ts.currentMatchId) { startMatch(); }
+            else { beginMatchWithSeed(p.seed || (S.room && S.room.seed), p.qCount || (S.room && S.room.qCount)); }
+          }
+        }
+        else if (S.deck && S.deckSource === 'event') { startMatch(); }
         else { beginMatchWithSeed(p.seed || (S.room && S.room.seed), p.qCount || (S.room && S.room.qCount)); }
         if (S.view === 'play') { renderStrip(); renderCoopHud(); }
         break;
       case 'coop_config':
         if (p.coop && S.room) { S.room.coopCfg = normCoopCfg(p.coop); if (S.view === 'room') renderRoom(); }
         break;
+      case 'format_config':
+        // Mở rộng: chủ phòng đổi thể thức ở phòng chờ (mẫu coop_config).
+        if (['versus', 'relay', 'tourney'].indexOf(p.format) >= 0) {
+          S.format = p.format;
+          if (S.view === 'room') renderRoom();
+        }
+        break;
+      case 'relay_config':
+        S.format = 'relay';
+        if (S.view === 'room') renderRoom();
+        break;
+      case 'tourney_config':
+        if (p.bracket) {
+          S.format = 'tourney';
+          var tc = ensureTourney();
+          tc.bracket = p.bracket; tc.results = {};
+          tourneyResolveBracket(); // điền bye + vòng sau; winner sẵn có -> results
+          if (S.view === 'room') renderRoom();
+        }
+        break;
+      case 'tourney_result':
+        if (p.matchId && p.winnerId != null) tourneyOnResult(p.matchId, p.winnerId);
+        break;
+      case 'finish': {
+        // Mở rộng giải đấu: ghi finish của từng đấu thủ theo matchId để
+        // chốt winner khi cả 2 đã xong trận con (khán giả không finish).
+        if (isTourney() && S.tourney) {
+          var tf = ensureTourney();
+          var midF = p.matchId || tf.currentMatchId;
+          var mF = midF ? tourneyMatchById(midF) : null;
+          if (mF && (String(ev.userId) === String(mF.a) || String(ev.userId) === String(mF.b))) {
+            tf.finishSeen[midF] = tf.finishSeen[midF] || {};
+            tf.finishSeen[midF][ev.userId] = { score: p.score || 0, correct: p.correct || 0 };
+            tourneyMaybeDecide(midF);
+          }
+        }
+        break;
+      }
       case 'coop_locked':
         if (p.resolution) applyCoopResolution(p.resolution);
         break;
@@ -377,6 +459,10 @@
         if (window.GCHAT) GCHAT.receiveRemote({ userId: ev.userId, name: ev.name, text: p.text, kind: ev.kind });
         break;
       case 'answer': {
+        // Mở rộng: relay suy tiến trình đội + khán giả tourney bám đáp án
+        // của 2 đấu thủ (đều cổng bằng format, versus/coop không qua đây).
+        if (isRelay()) relayOnAnswerEvent(ev);
+        if (isTourney()) tourneyOnAnswerEvent(ev);
         // Nháy dải điểm của đối thủ vừa trả lời
         try {
           var el = document.querySelector('[data-strip="' + CSS.escape(String(ev.userId)) + '"]');
@@ -396,12 +482,16 @@
       }
       case 'rematch':
         S.deck = null; S.deckSource = ''; S.pendingStart = false;
+        resetFormatRuntime(); // reset runtime relay/tourney, GIỮ S.format đã chọn
         resetMatchLocal();
         if (S.view !== 'room') enterRoomView(); else renderRoom();
         break;
       case 'system':
         if (p.text === 'done' && (S.view === 'play' || S.view === 'wait')) {
-          if (isCoopRoom()) showCoopResult(); else showResult();
+          if (isCoopRoom()) showCoopResult();
+          else if (isRelay()) showRelayResult();
+          else if (isTourney()) { /* giải đấu kết thúc qua tourney_result của chung kết */ }
+          else showResult();
         }
         break;
     }
@@ -426,7 +516,7 @@
     return null;
   }
   async function beginMatchWithSeed(seed, count) {
-    if (S.view === 'play') return;
+    if (S.view === 'play' && !S._forceStart) return;
     var qs = await fetchSeedDeck(seed, count);
     if (qs) { S.deck = qs; S.deckSource = 'seed'; startMatch(); return; }
     // Không có GQ ở máy này: chờ thêm sự kiện 'questions' của chủ phòng
@@ -478,13 +568,24 @@
     }
     paintMyRoomFace(grid);
     renderRoomCoop();
+    renderRoomFormat();
     var startBtn = $('pnStart'), note = $('pnStartNote');
-    var min = S.room.mode === 'versus' ? 2 : 2;
+    var min = (!isCoopRoom() && S.format === 'tourney') ? 4 : 2;
     if (isHost()) {
       var ready = S.room.players.length >= min && S.room.status === 'waiting';
       startBtn.disabled = !ready;
-      startBtn.textContent = ready ? 'Bắt đầu ▶ (' + S.room.players.length + ' người)' : 'Chờ thêm người…';
-      note.textContent = ready ? cap(user.call) + ' là chủ phòng — bấm Bắt đầu khi mọi người đã vào đủ.' : 'Gửi mã phòng cho mọi người, đủ ' + min + ' người là bắt đầu được.';
+      startBtn.textContent = ready
+        ? (!isCoopRoom() && S.format === 'relay' ? 'Bắt đầu tiếp sức 🤝 (' + S.room.players.length + ' người)'
+          : !isCoopRoom() && S.format === 'tourney' ? 'Bắt đầu giải 🏆 (' + S.room.players.length + ' người)'
+          : 'Bắt đầu ▶ (' + S.room.players.length + ' người)')
+        : 'Chờ thêm người…';
+      note.textContent = ready
+        ? (!isCoopRoom() && S.format === 'tourney'
+          ? 'Hạt giống theo thứ tự vào phòng; ' + cap(user.call) + ' là trọng tài — bấm Bắt đầu giải khi mọi người đã vào đủ.'
+          : cap(user.call) + ' là chủ phòng — bấm Bắt đầu khi mọi người đã vào đủ.')
+        : (!isCoopRoom() && S.format === 'tourney'
+          ? '🏆 Giải đấu cần tối thiểu 4 người — gửi mã phòng mời thêm người vào nhé.'
+          : 'Gửi mã phòng cho mọi người, đủ ' + min + ' người là bắt đầu được.');
     } else {
       startBtn.disabled = true;
       startBtn.textContent = 'Chờ chủ phòng bắt đầu…';
@@ -501,6 +602,7 @@
     clearCoopTimers();
     if (code && user.loggedIn && !silent) { try { await GROOMS.leave(code); } catch (e) {} }
     S.code = ''; S.room = null; S.deck = null; S.lastEventId = 0;
+    resetFormatRuntime(); S.format = 'versus';
     if (window.GCHAT) GCHAT.destroy(); S.chatReady = false; S.chatName = null; S.chatCall = null;
     try { if (window.GMUSIC && GMUSIC.play) GMUSIC.play('lobby'); } catch (e) {}
   }
@@ -580,12 +682,20 @@
     S.coopResolution = null; S.coopRevealedQi = -1; S.coopNextSentQi = -1;
     S.coopSubmitted = false; S.coopFinish = null;
     if (isCoopRoom()) S.coop = null; // máy chủ rematch cũng reset trạng thái đội về null
+    // Mở rộng: relay dựng lại ở startMatch (initRelayState); tourney chỉ
+    // reset runtime của trận con (watch), GIỮ bracket/results đã chốt.
+    clearFormatTimers();
+    S.relay = null;
+    if (S.tourney) S.tourney.watch = null;
   }
   function startMatch() {
-    if (S.view === 'play') return; // sự kiện start dội về qua polling: đang đấu thì bỏ qua
+    if (S.view === 'play' && !S._forceStart) return; // sự kiện start dội về qua polling: đang đấu thì bỏ qua
+    S._forceStart = false;
     if (!S.deck || !S.deck.length) return;
     S.pendingStart = false;
     resetMatchLocal();
+    if (isRelay()) initRelayState();
+    if (isTourney()) { initTourneyMatchRuntime(); S.tourney.startedMatchId = S.tourney.currentMatchId; }
     S.matchStartedAt = Date.now(); // điều phối hợp nhất: để nộp durationMs thật cho /game/score
     S.view = 'play';
     show($('pnRoom'), false); show($('pnWait'), false); show($('pnResult'), false);
@@ -629,6 +739,31 @@
         strip.appendChild(d);
         return;
       }
+      if (isRelay()) {
+        // Tiếp sức: hiện đóng góp giữ lượt của từng người (từ runtime đội).
+        var rc = (S.relay && S.relay.contrib && S.relay.contrib[pl.userId]) || { held: 0, correct: 0, wrong: 0, points: 0 };
+        d.innerHTML = pnPlate(pl) +
+          '<div class="pn-ava' + (pl.me ? ' me' : '') + '">' + esc(initial(shownName(pl))) + '</div>' +
+          '<span>' + (pl.me ? esc(user.call) + ' ' : '') + esc(shownName(pl)) + '</span>' +
+          '<span class="pn-score"> ' + (rc.points || 0) + 'đ</span>' +
+          '<span class="pn-prog">giữ lượt ' + (rc.held || 0) + ' · đúng ' + (rc.correct || 0) + '</span>';
+        strip.appendChild(d);
+        return;
+      }
+      if (isTourney()) {
+        var totalT = S.deck ? S.deck.length : S.room.qCount;
+        var isDuel = S.tourney && (String(S.tourney.duelists[0]) === String(pl.userId) || String(S.tourney.duelists[1]) === String(pl.userId));
+        var progT = isDuel
+          ? (st.finished ? '✅ xong trận' : 'Câu ' + Math.min((st.qIndex || 0) + 1, totalT) + '/' + totalT)
+          : '👀 khán giả';
+        d.innerHTML = pnPlate(pl) +
+          '<div class="pn-ava' + (pl.me ? ' me' : '') + '">' + esc(initial(shownName(pl))) + '</div>' +
+          '<span>' + (pl.me ? esc(user.call) + ' ' : '') + esc(shownName(pl)) + '</span>' +
+          '<span class="pn-score"> ' + (pl.score || 0) + 'đ</span>' +
+          '<span class="pn-prog">' + esc(progT) + '</span>';
+        strip.appendChild(d);
+        return;
+      }
       var prog = st.finished ? '✅ xong' : ('Câu ' + Math.min((st.qIndex || 0) + 1, S.room.qCount) + '/' + S.room.qCount);
       d.innerHTML = pnPlate(pl) +
         '<div class="pn-ava' + (pl.me ? ' me' : '') + '">' + esc(initial(shownName(pl))) + '</div>' +
@@ -638,6 +773,7 @@
       strip.appendChild(d);
     });
     paintMyRoomFace(strip); // F: chỉ .pn-ava.me, giữ nguyên phần tử neo chat
+    renderRelayHud(); renderTourneyHud();
   }
 
   /* ============================ Hợp sức: phòng chờ ============================ */
@@ -907,13 +1043,650 @@
     mountChat();
   }
 
+
+  /* ============================ MỞ RỘNG: Tiếp sức + Giải đấu ============================
+   * Cổng cứng: mọi nhánh dưới đây chỉ chạy khi S.format === 'relay' /
+   * 'tourney' trong phòng style versus. Format vắng/'versus' và phòng
+   * coop giữ hành vi cũ 100% (versus vẫn không lockstep: mỗi máy tự chạy
+   * deck, 'answer' là snapshot lũy kế, answerBoolNow suy boolean bằng
+   * hiệu số lũy kế — xem phụ lục 8.2 của THIET-KE.md). */
+  function isRelay() { return !isCoopRoom() && S.format === 'relay'; }
+  function isTourney() { return !isCoopRoom() && S.format === 'tourney'; }
+  function clearFormatTimers() {
+    if (S._fmtWatchTimer) { clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null; }
+    if (S._fmtRevealTimer) { clearTimeout(S._fmtRevealTimer); S._fmtRevealTimer = null; }
+  }
+  function resetFormatRuntime() {
+    clearFormatTimers();
+    S.relay = null; S.tourney = null;
+  }
+  function fmtPlayerLabel(pl) {
+    if (!pl) return '';
+    return (pl.me ? user.call + ' ' : '') + shownName(pl);
+  }
+  function fmtNameById(uid) {
+    var pl = coopPlayerById(uid);
+    return pl ? fmtPlayerLabel(pl) : 'Người chơi';
+  }
+
+  /* ---------- Thể thức ở phòng chờ ---------- */
+  function renderRoomFormat() {
+    var box = $('pnRoomFormat'); if (!box) return;
+    if (isCoopRoom() || !S.room) { show(box, false); return; }
+    show(box, true);
+    markSel('pnFormatSeg', S.format);
+    var n = S.room.players.length;
+    var noteEl = $('pnFormatEditNote');
+    if (noteEl) noteEl.textContent = isHost() ? '(chủ phòng chọn, cả phòng thấy ngay)' : '(chỉ chủ phòng chọn được)';
+    var seg = $('pnFormatSeg');
+    if (seg) seg.querySelectorAll('button').forEach(function (b) {
+      var lockedTourney = b.getAttribute('data-v') === 'tourney' && n < 4;
+      b.disabled = !isHost() || lockedTourney;
+      b.classList.toggle('pn-x-locked', lockedTourney);
+    });
+    var fn = $('pnFormatNote');
+    if (fn) {
+      if (S.format === 'relay') fn.textContent = '🤝 Tiếp sức: 24 câu, luân phiên người trả lời theo thứ tự vào phòng; cả đội chung điểm, chung 3 mạng — sai hoặc hết giờ mất 1 mạng.';
+      else if (S.format === 'tourney') fn.textContent = n < 4
+        ? '🏆 Giải đấu cần tối thiểu 4 người (hiện ' + n + ' người) — thể thức đang khoá, mời thêm người vào phòng nhé.'
+        : '🏆 Giải đấu 1v1 loại trực tiếp: hạt giống theo thứ tự vào phòng; tứ kết/bán kết 8 câu, chung kết 12 câu; chủ phòng là trọng tài.';
+      else fn.textContent = '⚔️ Đối kháng: mỗi người tự trả lời cả bộ câu và đua điểm như từ trước tới nay.';
+    }
+    var bv = $('pnBracketView');
+    if (bv) {
+      if (S.format === 'tourney' && S.tourney && S.tourney.bracket) {
+        bv.innerHTML = tourneyBracketHtml();
+        show(bv, true);
+      } else show(bv, false);
+    }
+  }
+  function sendFormatConfig(fmt) {
+    S.format = fmt;
+    if (S.code) GROOMS.event(S.code, 'format_config', { format: fmt }).catch(function () {});
+    if (S.view === 'room') renderRoom();
+  }
+
+  /* ---------- HUD + dải lượt trong trận ---------- */
+  function relayHolderFor(qi) {
+    if (!S.room || !S.room.players.length) return null;
+    return S.room.players[qi % S.room.players.length] || null;
+  }
+  function relayHearts(lives) {
+    var s = '';
+    for (var i = 0; i < 3; i++) s += i < lives ? '❤️' : '🖤';
+    return s;
+  }
+  function renderRelayHud() {
+    var el = $('pnRelayHud'); if (!el) return;
+    if (!isRelay() || S.view !== 'play' || !S.relay) { show(el, false); return; }
+    show(el, true);
+    var holder = relayHolderFor(S.qi);
+    el.innerHTML = '🤝 Tiếp sức · Điểm đội <b>' + S.relay.teamScore + '</b> · 🔥 Chuỗi đội ' + S.relay.streak +
+      ' · <span class="pn-x-hearts">' + relayHearts(Math.max(0, S.relay.lives)) + '</span>' +
+      (holder ? ' · 🎯 Lượt: ' + esc(fmtPlayerLabel(holder)) : '');
+  }
+  function tourneyCurrentMatch() {
+    if (!S.tourney) return null;
+    return tourneyMatchById(S.tourney.currentMatchId);
+  }
+  function tourneyMatchScore(uid) {
+    var t = S.tourney;
+    if (t && t.currentMatchId && t.finishSeen[t.currentMatchId] && t.finishSeen[t.currentMatchId][uid]) {
+      return t.finishSeen[t.currentMatchId][uid].score || 0;
+    }
+    var pl = coopPlayerById(uid);
+    if (!pl) return 0;
+    if (pl.state && typeof pl.state.score === 'number') return pl.state.score;
+    return pl.score || 0;
+  }
+  function renderTourneyHud() {
+    var el = $('pnTourneyHud'); if (!el) return;
+    if (!isTourney() || S.view !== 'play' || !S.tourney) { show(el, false); return; }
+    show(el, true);
+    var m = tourneyCurrentMatch();
+    var a = S.tourney.duelists[0], b = S.tourney.duelists[1];
+    el.innerHTML = '🏆 ' + esc(m ? m.label : 'Giải đấu') + ': ' +
+      esc(fmtNameById(a)) + ' <b>' + tourneyMatchScore(a) + 'đ</b> vs <b>' + tourneyMatchScore(b) + 'đ</b> ' + esc(fmtNameById(b));
+  }
+  // Dải trong khu câu hỏi: lượt của ai (relay) / trận của ai (tourney).
+  function renderFormatBanner() {
+    var el = $('pnTurnBanner'); if (!el) return;
+    if (S.view !== 'play') { show(el, false); return; }
+    if (isRelay()) {
+      var holder = relayHolderFor(S.qi);
+      if (!holder) { show(el, false); return; }
+      show(el, true);
+      el.classList.toggle('watch', !holder.me);
+      el.textContent = holder.me
+        ? '🎯 Lượt của ' + fmtPlayerLabel(holder) + ' — trả lời cho cả đội nhé!'
+        : '🎯 Lượt của ' + fmtPlayerLabel(holder) + ' — cả đội cổ vũ, chỉ người giữ lượt bấm được.';
+      return;
+    }
+    if (isTourney()) {
+      var m = tourneyCurrentMatch();
+      var a = S.tourney ? S.tourney.duelists[0] : null, b = S.tourney ? S.tourney.duelists[1] : null;
+      if (a == null || b == null) { show(el, false); return; }
+      var me = mePlayer();
+      var amDuelist = me && (String(me.userId) === String(a) || String(me.userId) === String(b));
+      show(el, true);
+      el.classList.toggle('watch', !amDuelist);
+      el.textContent = (m ? m.label + ': ' : '') + fmtNameById(a) + ' vs ' + fmtNameById(b) +
+        (amDuelist ? ' — thi đấu hết mình nhé!' : ' — 👀 đang xem, chỉ 2 đấu thủ bấm được.');
+      return;
+    }
+    show(el, false);
+  }
+
+  /* ---------- Máy xem (spectator): relay chờ lượt / tourney khán giả ---------- */
+  // Trả 'relay' | 'tourney' nếu MÁY NÀY chỉ được xem ở câu hiện tại.
+  function spectatorKindNow() {
+    if (isRelay() && S.relay) {
+      var h = relayHolderFor(S.qi);
+      return h && !h.me ? 'relay' : null;
+    }
+    if (isTourney() && S.tourney) {
+      var me = mePlayer(); if (!me) return 'tourney';
+      var ds = S.tourney.duelists || [];
+      return (String(ds[0]) === String(me.userId) || String(ds[1]) === String(me.userId)) ? null : 'tourney';
+    }
+    return null;
+  }
+  function setupSpectatorQuestion() {
+    // Khoá mọi nút trả lời ngay từ lúc dựng câu; timer trang vẫn chạy để
+    // VẼ thanh giờ nhưng S.locked=true nên không tự kết luận — máy xem
+    // chỉ tiến khi có 'answer' của người giữ lượt/đấu thủ, hoặc watchdog.
+    S.locked = true;
+    var opts = $('pnOpts');
+    if (opts) Array.prototype.forEach.call(opts.children, function (b) { b.disabled = true; b.classList.add('pn-x-ro'); });
+    var box = $('pnOrderTokens');
+    if (box) box.querySelectorAll('.pn-tok').forEach(function (x) { x.disabled = true; x.classList.add('pn-x-ro'); });
+    var chk = $('pnOrderCheck'); if (chk) chk.disabled = true;
+  }
+  function startSpectatorWatchdog(kind) {
+    if (S._fmtWatchTimer) clearInterval(S._fmtWatchTimer);
+    var startAt = S.qStartedAt || Date.now();
+    var myQi = S.qi;
+    S._fmtWatchTimer = setInterval(function () {
+      if (S.view !== 'play' || S.qi !== myQi) { clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null; return; }
+      if (Date.now() - startAt > QUESTION_TIME_MS + 6000) {
+        clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null;
+        if (kind === 'relay') relayWatchdogFire();
+        else tourneySpectatorForceAdvance();
+      }
+    }, 250);
+  }
+  function revealCorrectNow() {
+    var q = S.deck && S.deck[S.qi]; if (!q) return;
+    var opts = $('pnOpts');
+    if (opts && q.choices && typeof q.answer === 'number') {
+      Array.prototype.forEach.call(opts.children, function (b, i) {
+        b.disabled = true;
+        if (i === q.answer) b.classList.add('ok');
+      });
+    }
+    var chk = $('pnOrderCheck'); if (chk) chk.disabled = true;
+  }
+
+  /* ---------- Tiếp sức: trạng thái đội (mọi máy tự tính cùng một cách) ---------- */
+  function initRelayState() {
+    var r = {
+      teamScore: 0, streak: 0, bestStreak: 0, lives: 3,
+      processed: {}, contrib: {}, prevScore: {},
+      finishSent: false, revealFor: -1,
+    };
+    (S.room ? S.room.players : []).forEach(function (pl) {
+      r.contrib[pl.userId] = { held: 0, correct: 0, wrong: 0, points: 0 };
+      r.prevScore[pl.userId] = (pl.state && typeof pl.state.score === 'number') ? pl.state.score : (pl.score || 0);
+    });
+    S.relay = r;
+  }
+  function relayRecordAnswer(qIndex, holderId, isCorrect, pointsDelta, isTimeout) {
+    if (!S.relay || S.relay.processed[qIndex]) return false;
+    S.relay.processed[qIndex] = true;
+    var c = S.relay.contrib[holderId] || (S.relay.contrib[holderId] = { held: 0, correct: 0, wrong: 0, points: 0 });
+    c.held++;
+    if (isCorrect) {
+      c.correct++; c.points += pointsDelta || 0;
+      S.relay.teamScore += pointsDelta || 0;
+      S.relay.streak++; S.relay.bestStreak = Math.max(S.relay.bestStreak, S.relay.streak);
+    } else {
+      c.wrong++;
+      S.relay.streak = 0; S.relay.lives--;
+    }
+    S.relay.lastDelta = isCorrect ? (pointsDelta || 0) : 0;
+    renderRelayHud();
+    return true;
+  }
+  // Điểm câu của người giữ lượt = hiệu số snapshot lũy kế của chính họ.
+  function relayScoreDelta(ev) {
+    var p = (ev && ev.payload) || {};
+    var pl = coopPlayerById(ev && ev.userId);
+    var cum = (pl && pl.state && typeof pl.state.score === 'number') ? pl.state.score
+      : (typeof p.score === 'number' ? p.score : null);
+    if (cum == null || !S.relay) return 0;
+    var k = String(ev.userId);
+    var prev = S.relay.prevScore[k] || 0;
+    S.relay.prevScore[k] = cum;
+    return Math.max(0, cum - prev);
+  }
+  function relaySyncScoreMap(ev) {
+    if (!S.relay) return;
+    var p = (ev && ev.payload) || {};
+    var pl = coopPlayerById(ev && ev.userId);
+    var cum = (pl && pl.state && typeof pl.state.score === 'number') ? pl.state.score
+      : (typeof p.score === 'number' ? p.score : null);
+    if (cum != null) S.relay.prevScore[String(ev.userId)] = cum;
+  }
+  function relayOnAnswerEvent(ev) {
+    if (!S.relay || S.view !== 'play' || !S.deck) return;
+    var p = (ev && ev.payload) || {};
+    if (typeof p.qIndex !== 'number') return;
+    var qIndex = p.qIndex;
+    var holder = relayHolderFor(qIndex);
+    if (!holder || String(holder.userId) !== String(ev.userId)) { answerBoolNow(ev); relaySyncScoreMap(ev); return; }
+    if (S.relay.processed[qIndex]) { answerBoolNow(ev); relaySyncScoreMap(ev); return; } // tiếng vọng của chính mình / đã tính
+    if (qIndex < S.qi) { answerBoolNow(ev); relaySyncScoreMap(ev); return; } // answer đến muộn sau watchdog: bỏ qua kết quả, chỉ đồng bộ mốc lũy kế
+    if (qIndex > S.qi) {
+      // Cả chùm sự kiện dồn về cùng lúc (poll gom): xả reveal đang chờ của
+      // câu trước rồi nhảy thẳng tới câu này, tránh kẹt ở câu cũ.
+      if (S.relay.revealFor === S.qi && S.relay.processed[S.qi]) {
+        if (S._fmtRevealTimer) { clearTimeout(S._fmtRevealTimer); S._fmtRevealTimer = null; }
+        S.relay.revealFor = -1;
+        S.qi = S.qi + 1;
+        if (S.qi === qIndex) { nextQuestion(); }
+        else { answerBoolNow(ev); relaySyncScoreMap(ev); return; }
+      } else { answerBoolNow(ev); relaySyncScoreMap(ev); return; }
+    }
+    var isCorrect = answerBoolNow(ev);
+    var delta = relayScoreDelta(ev);
+    var me = mePlayer();
+    if (me && String(me.userId) === String(ev.userId)) {
+      relayRecordAnswer(qIndex, ev.userId, isCorrect, delta, false); // dự phòng: thường đã ghi ở gradeAndAdvance
+      return;
+    }
+    relayRecordAnswer(qIndex, ev.userId, isCorrect, delta, false);
+    relayRevealAndSchedule(qIndex, isCorrect, false);
+  }
+  function relayRevealAndSchedule(qIndex, isCorrect, isTimeout) {
+    if (!S.relay) return;
+    S.relay.revealFor = qIndex;
+    if (S._fmtWatchTimer) { clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null; }
+    stopQuestionTimer();
+    revealCorrectNow();
+    var q = S.deck && S.deck[qIndex];
+    var holder = relayHolderFor(qIndex);
+    var fb = $('pnFeedback');
+    if (fb) {
+      if (isTimeout) {
+        fb.textContent = '⏰ ' + (holder ? fmtPlayerLabel(holder) : 'Người giữ lượt') + ' chưa trả lời kịp — đội mất 1 mạng. ❤️ còn ' + Math.max(0, S.relay.lives) + (q && q.answerText ? ' · Đáp án đúng: ' + q.answerText : '');
+        fb.className = 'pn-feedback bad';
+      } else if (isCorrect) {
+        fb.textContent = '✅ ' + (holder ? fmtPlayerLabel(holder) : '') + ' trả lời đúng! Đội +' + (S.relay.lastDelta || 0) + 'đ · 🔥 chuỗi ' + S.relay.streak + (q && q.meaning ? ' · ' + q.meaning : '');
+        fb.className = 'pn-feedback ok';
+      } else {
+        fb.textContent = '❌ ' + (holder ? fmtPlayerLabel(holder) : '') + ' trả lời sai — đội mất 1 mạng. ❤️ còn ' + Math.max(0, S.relay.lives) + (q && q.answerText ? ' · Đáp án đúng: ' + q.answerText : '');
+        fb.className = 'pn-feedback bad';
+      }
+    }
+    try { if (window.GSFX && GSFX.play) GSFX.play(isCorrect ? 'correct' : 'wrong'); } catch (e) {}
+    if (S._fmtRevealTimer) clearTimeout(S._fmtRevealTimer);
+    S._fmtRevealTimer = setTimeout(function () {
+      S._fmtRevealTimer = null;
+      if (!S.relay || S.view !== 'play') return;
+      S.relay.revealFor = -1;
+      S.qi = qIndex + 1;
+      relayAdvanceFrom();
+    }, REVEAL_MS);
+  }
+  function relayAdvanceFrom() {
+    if (!S.relay) return;
+    if (S.relay.lives <= 0 || !S.deck || S.qi >= S.deck.length) { relayFinishLocal(); return; }
+    nextQuestion();
+  }
+  function relayWatchdogFire() {
+    if (!S.relay || S.view !== 'play') return;
+    var qIndex = S.qi;
+    var holder = relayHolderFor(qIndex);
+    if (!holder || S.relay.processed[qIndex]) return;
+    relayRecordAnswer(qIndex, holder.userId, false, 0, true); // timeout: mất streak + 1 mạng
+    relayRevealAndSchedule(qIndex, false, true);
+  }
+  function relayFinishLocal() {
+    if (S.relay) {
+      if (S.relay.finishSent) return;
+      S.relay.finishSent = true;
+    }
+    clearFormatTimers();
+    finishLocal(); // điểm nộp = S.score = đóng góp cá nhân của máy này
+  }
+  function showRelayResult() {
+    if (!S.room || S.view === 'result') return;
+    var r = S.relay || { teamScore: 0, bestStreak: 0, lives: 0, contrib: {} };
+    S.view = 'result';
+    S.resultInfo = null;
+    stopQuestionTimer(); clearFormatTimers();
+    show($('pnPlay'), false); show($('pnWait'), false); show($('pnRoom'), false);
+    var box = $('pnResult'); show(box, true);
+    var total = S.deck ? S.deck.length : 24;
+    var teamCorrect = 0;
+    Object.keys(r.contrib || {}).forEach(function (k) { teamCorrect += r.contrib[k].correct || 0; });
+    var rows = S.room.players.map(function (pl) {
+      return { pl: pl, c: (r.contrib && r.contrib[pl.userId]) || { held: 0, correct: 0, wrong: 0, points: 0 } };
+    }).sort(function (a, b) { return (b.c.points - a.c.points) || (b.c.correct - a.c.correct); });
+    try { if (window.GTREND && GTREND.say) GTREND.say('thang'); if (window.GFX && GFX.confetti) GFX.confetti(); } catch (e) {}
+    box.innerHTML =
+      '<div class="pn-card pn-podium"><div class="pn-crown">🤝</div>' +
+      '<h1 class="pn-h1">Kết quả tiếp sức</h1>' +
+      '<p style="margin:10px 0"><span class="pn-pill">🤝 Điểm đội ' + r.teamScore + '</span> ' +
+      '<span class="pn-pill">✅ Đội đúng ' + teamCorrect + '/' + total + '</span> ' +
+      '<span class="pn-pill">🔥 Chuỗi dài nhất ' + r.bestStreak + '</span> ' +
+      '<span class="pn-pill">❤️ Mạng còn ' + Math.max(0, r.lives) + '/3</span></p>' +
+      (r.lives <= 0 ? '<p class="pn-mut">Đội đã hết mạng trước khi đi hết bộ câu — ván sau giữ chuỗi chắc tay hơn nhé!</p>' : '') +
+      '<ul class="pn-coop-table">' + rows.map(function (row) {
+        return '<li class="' + (row.pl.me ? 'me' : '') + '"><span class="pn-ava' + (row.pl.me ? ' me' : '') + '">' + esc(initial(shownName(row.pl))) + '</span>' +
+          '<span class="pn-grow">' + esc(fmtPlayerLabel(row.pl)) + (row.pl.isHost ? ' 👑' : '') +
+          '<span class="pn-coop-detail">đã giữ ' + row.c.held + ' lượt · đúng ' + row.c.correct + ' · sai ' + row.c.wrong + '</span></span>' +
+          '<b>' + row.c.points + 'đ</b></li>';
+      }).join('') + '</ul>' +
+      (isHost()
+        ? '<button type="button" class="pn-btn pn-btn-main pn-blk" id="pnRelayRematch">🔁 Chơi lại (giữ thể thức)</button>'
+        : '<p class="pn-note">Chờ chủ phòng mở ván mới (giữ nguyên thể thức), hoặc về sảnh tạo phòng của riêng mình.</p>') +
+      '<button type="button" class="pn-btn pn-btn-alt pn-blk" id="pnRelayBackLobby">Về sảnh</button></div>';
+    paintMyRoomFace(box);
+    wireFormatResultButtons('pnRelayRematch', 'pnRelayBackLobby');
+    mountChat();
+  }
+  function wireFormatResultButtons(rematchId, backId) {
+    var rm = $(rematchId);
+    if (rm) rm.addEventListener('click', async function () {
+      rm.disabled = true;
+      try {
+        await GROOMS.event(S.code, 'rematch', {});
+        S.deck = null; S.deckSource = '';
+        resetFormatRuntime(); // giữ S.format
+        resetMatchLocal(); startPolling(); enterRoomView();
+      } catch (e) { toast(e.message || 'Chưa mở được ván mới.'); rm.disabled = false; }
+    });
+    var back = $(backId);
+    if (back) back.addEventListener('click', backToLobby);
+  }
+
+  /* ---------- Giải đấu: dựng nhánh + trọng tài ---------- */
+  function ensureTourney() {
+    if (!S.tourney) {
+      S.tourney = {
+        bracket: null, results: {}, finishSeen: {}, resultSent: {}, scheduled: {},
+        currentMatchId: null, duelists: [], deckMatchId: null, watch: null,
+      };
+    }
+    return S.tourney;
+  }
+  function initTourneyMatchRuntime() {
+    var t = ensureTourney();
+    t.watch = null;
+  }
+  function tourneyMatchById(id) {
+    var t = S.tourney;
+    if (!t || !t.bracket || !id) return null;
+    return t.bracket.matches.find(function (m) { return m.id === id; }) || null;
+  }
+  function tourneyBuildBracket(players) {
+    var ids = players.map(function (pl) { return pl.userId; });
+    var size = ids.length <= 4 ? 4 : 8;
+    function seed(i) { return i <= ids.length ? ids[i - 1] : null; } // hạt giống i (1-based) theo thứ tự vào phòng
+    function mk(id, round, label, a, b, aFrom, bFrom, count) {
+      return { id: id, round: round, label: label, a: a, b: b, aFrom: aFrom, bFrom: bFrom, winner: null, bye: false, count: count };
+    }
+    var matches = [];
+    if (size === 4) {
+      // Sơ đồ hạt giống nhánh 4: 1-4, 2-3
+      matches.push(mk('SF1', 'SF', 'Bán kết 1', seed(1), seed(4), null, null, 8));
+      matches.push(mk('SF2', 'SF', 'Bán kết 2', seed(2), seed(3), null, null, 8));
+      matches.push(mk('F', 'F', 'Chung kết', null, null, 'SF1', 'SF2', 12));
+    } else {
+      // Sơ đồ hạt giống nhánh 8: 1-8, 4-5, 2-7, 3-6; thiếu hạt giống = bye
+      var pairs = [[1, 8], [4, 5], [2, 7], [3, 6]];
+      pairs.forEach(function (pr, i) {
+        matches.push(mk('QF' + (i + 1), 'QF', 'Tứ kết ' + (i + 1), seed(pr[0]), seed(pr[1]), null, null, 8));
+      });
+      matches.push(mk('SF1', 'SF', 'Bán kết 1', null, null, 'QF1', 'QF2', 8));
+      matches.push(mk('SF2', 'SF', 'Bán kết 2', null, null, 'QF3', 'QF4', 8));
+      matches.push(mk('F', 'F', 'Chung kết', null, null, 'SF1', 'SF2', 12));
+    }
+    return { size: size, seedIds: ids.slice(), matches: matches, champion: null };
+  }
+  // Điền slot từ winner của trận nguồn + tự chốt bye (1 slot trống hẳn khi
+  // cả 2 slot đã rõ). Chạy lặp tới khi ổn định; máy nào cũng tính giống nhau.
+  function tourneyResolveBracket() {
+    var t = ensureTourney();
+    if (!t.bracket) return;
+    var ms = t.bracket.matches;
+    function byId(id) { return ms.find(function (m) { return m.id === id; }) || null; }
+    var changed = true, guard = 0;
+    while (changed && guard++ < 12) {
+      changed = false;
+      ms.forEach(function (m) {
+        if (m.a == null && m.aFrom) { var fa = byId(m.aFrom); if (fa && fa.winner != null) { m.a = fa.winner; changed = true; } }
+        if (m.b == null && m.bFrom) { var fb = byId(m.bFrom); if (fb && fb.winner != null) { m.b = fb.winner; changed = true; } }
+        if (m.winner == null && !m.void) {
+          var aDone = m.a != null || !m.aFrom || (byId(m.aFrom) && byId(m.aFrom).void);
+          var bDone = m.b != null || !m.bFrom || (byId(m.bFrom) && byId(m.bFrom).void);
+          if (aDone && bDone) {
+            if (m.a != null && m.b == null) { m.winner = m.a; m.bye = true; changed = true; }
+            else if (m.b != null && m.a == null) { m.winner = m.b; m.bye = true; changed = true; }
+            else if (m.a == null && m.b == null) { m.void = true; changed = true; }
+            if (m.winner != null && !t.results[m.id]) t.results[m.id] = m.winner;
+          }
+        }
+      });
+    }
+    var fin = byId('F');
+    if (fin && fin.winner != null) t.bracket.champion = fin.winner;
+  }
+  function tourneyBracketHtml() {
+    var t = S.tourney;
+    if (!t || !t.bracket) return '';
+    var html = '<div class="pn-x-bracket">';
+    t.bracket.matches.forEach(function (m) {
+      var aN = m.a != null ? fmtNameById(m.a) : (m.aFrom ? 'Thắng ' + (byIdLabel(m.aFrom)) : '—');
+      var bN = m.b != null ? fmtNameById(m.b) : (m.bFrom ? 'Thắng ' + (byIdLabel(m.bFrom)) : '—');
+      html += '<div class="pn-x-match' + (m.winner != null ? ' done' : '') + (m.bye ? ' bye' : '') + '">' +
+        '<span class="pn-x-round">' + esc(m.label) + '</span>' +
+        '<span class="pn-x-vs">' + esc(aN) + ' vs ' + esc(bN) + (m.bye ? ' <span class="pn-mut">(bye — vào thẳng)</span>' : '') + '</span>' +
+        (m.winner != null ? '<span class="pn-x-win">🏅 ' + esc(fmtNameById(m.winner)) + '</span>' : '<span class="pn-mut">chưa đấu</span>') +
+        '</div>';
+    });
+    html += '</div>';
+    if (t.bracket.champion != null) {
+      html += '<div class="pn-x-champ">🏆 Nhà vô địch: ' + esc(fmtNameById(t.bracket.champion)) + '</div>';
+    }
+    return html;
+    function byIdLabel(id) {
+      var mm = t.bracket.matches.find(function (x) { return x.id === id; });
+      return mm ? mm.label : id;
+    }
+  }
+  function tourneyComputeWinner(match) {
+    var t = ensureTourney();
+    var fs = t.finishSeen[match.id] || {};
+    var fa = fs[match.a], fb = fs[match.b];
+    if (!fa || !fb) return null;
+    if ((fa.correct || 0) !== (fb.correct || 0)) return (fa.correct || 0) > (fb.correct || 0) ? match.a : match.b;
+    if ((fa.score || 0) !== (fb.score || 0)) return (fa.score || 0) > (fb.score || 0) ? match.a : match.b;
+    // Hoà tuyệt đối: người vào phòng trước thắng (thứ tự mảng players).
+    var ia = S.room ? S.room.players.findIndex(function (pl) { return String(pl.userId) === String(match.a); }) : 0;
+    var ib = S.room ? S.room.players.findIndex(function (pl) { return String(pl.userId) === String(match.b); }) : 1;
+    return (ia >= 0 && (ib < 0 || ia < ib)) ? match.a : match.b;
+  }
+  function tourneyMaybeDecide(matchId) {
+    var t = ensureTourney();
+    var m = tourneyMatchById(matchId);
+    if (!m || m.winner != null) return;
+    var winner = tourneyComputeWinner(m);
+    if (winner == null) return; // chưa đủ 2 finish của trận con
+    if (!isHost()) { renderTourneyHud(); return; } // máy khác chờ trọng tài chốt
+    if (t.resultSent[matchId]) return;
+    t.resultSent[matchId] = true;
+    if (S.code) GROOMS.event(S.code, 'tourney_result', { matchId: matchId, winnerId: winner }).catch(function () {});
+    tourneyOnResult(matchId, winner); // máy chủ phòng áp ngay tại chỗ, bản vọng về bị chặn trùng
+  }
+  function tourneyOnResult(matchId, winnerId) {
+    var t = ensureTourney();
+    if (!t.bracket) return;
+    if (t.results[matchId] != null) return; // đã áp kết quả này rồi
+    t.results[matchId] = winnerId;
+    var m = tourneyMatchById(matchId);
+    if (m) m.winner = winnerId;
+    tourneyResolveBracket();
+    if ((m && m.round === 'F') || (t.bracket && t.bracket.champion != null)) { showTourneyResult(); return; }
+    showTourneyIntermission(m, winnerId);
+    if (isHost() && !t.scheduled[matchId]) {
+      t.scheduled[matchId] = true;
+      setTimeout(function () { tourneyHostAdvance(); }, 3000); // nhịp nghỉ xem nhánh
+    }
+  }
+  async function tourneyHostAdvance() {
+    var t = ensureTourney();
+    tourneyResolveBracket();
+    if (!t.bracket) return;
+    if (t.bracket.champion != null) { showTourneyResult(); return; }
+    var next = t.bracket.matches.find(function (m) { return m.winner == null && !m.void && m.a != null && m.b != null; });
+    if (next) await tourneyHostStartMatch(next);
+  }
+  async function tourneyHostStartMatch(match) {
+    var t = ensureTourney();
+    t.currentMatchId = match.id;
+    t.duelists = [match.a, match.b];
+    t.watch = null;
+    var matchSeed = String((S.room && S.room.seed) || S.code) + ':' + match.id;
+    var qs = await fetchSeedDeck(matchSeed, match.count);
+    if (qs) {
+      S.deck = qs; S.deckSource = 'event'; t.deckMatchId = match.id;
+      try { await GROOMS.event(S.code, 'questions', { questions: qs, format: 'tourney', matchId: match.id, duelists: t.duelists }); }
+      catch (e) { S.deckSource = 'seed'; }
+      await GROOMS.event(S.code, 'start', { format: 'tourney', matchId: match.id, duelists: t.duelists, seed: matchSeed, qCount: qs.length, deck: S.deckSource === 'event' ? 'event' : 'seed' });
+      S._forceStart = true;
+      startMatch();
+    } else {
+      await GROOMS.event(S.code, 'start', { format: 'tourney', matchId: match.id, duelists: t.duelists, seed: matchSeed, qCount: match.count, deck: 'seed' });
+      S._forceStart = true;
+      beginMatchWithSeed(matchSeed, match.count);
+    }
+  }
+  async function hostStartTourney() {
+    if (!S.room || S.room.players.length < 4) { toast('🏆 Giải đấu cần tối thiểu 4 người.'); return; }
+    var t = ensureTourney();
+    t.bracket = tourneyBuildBracket(S.room.players);
+    t.results = {}; t.finishSeen = {}; t.resultSent = {}; t.scheduled = {};
+    t.currentMatchId = null; t.duelists = [];
+    tourneyResolveBracket(); // bye chốt ngay trong nhánh phát đi
+    await GROOMS.event(S.code, 'tourney_config', { bracket: t.bracket });
+    await tourneyHostAdvance();
+  }
+  /* Khán giả giải đấu: bám đáp án của 2 đấu thủ */
+  function tourneyOnAnswerEvent(ev) {
+    var t = S.tourney;
+    if (!t || S.view !== 'play') return;
+    if (spectatorKindNow() !== 'tourney') return; // đấu thủ tự chạy luồng versus của mình
+    var p = (ev && ev.payload) || {};
+    if (typeof p.qIndex !== 'number') return;
+    t.watch = t.watch || { a: -1, b: -1, revealedFor: -1 };
+    if (String(ev.userId) === String(t.duelists[0])) t.watch.a = Math.max(t.watch.a, p.qIndex);
+    else if (String(ev.userId) === String(t.duelists[1])) t.watch.b = Math.max(t.watch.b, p.qIndex);
+    else return;
+    tourneySpectatorCheck();
+  }
+  function tourneySpectatorCheck() {
+    var t = S.tourney;
+    if (!t || !t.watch || t.watch.revealedFor === S.qi) return;
+    if (t.watch.a >= S.qi && t.watch.b >= S.qi) tourneySpectatorRevealAndAdvance();
+  }
+  function tourneySpectatorForceAdvance() {
+    // Watchdog: đấu thủ treo/rớt mạng — khán giả vẫn tiến để không kẹt màn.
+    var t = S.tourney;
+    if (!t) return;
+    t.watch = t.watch || { a: -1, b: -1, revealedFor: -1 };
+    if (t.watch.revealedFor === S.qi) return;
+    tourneySpectatorRevealAndAdvance();
+  }
+  function tourneySpectatorRevealAndAdvance() {
+    var t = S.tourney;
+    if (!t || !t.watch || t.watch.revealedFor === S.qi) return;
+    t.watch.revealedFor = S.qi;
+    if (S._fmtWatchTimer) { clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null; }
+    stopQuestionTimer();
+    revealCorrectNow();
+    var fb = $('pnFeedback');
+    if (fb) { fb.textContent = '👀 Cả hai đấu thủ đã qua câu này — xem đáp án đúng ở trên nhé.'; fb.className = 'pn-feedback'; }
+    if (S._fmtRevealTimer) clearTimeout(S._fmtRevealTimer);
+    S._fmtRevealTimer = setTimeout(function () {
+      S._fmtRevealTimer = null;
+      if (S.view !== 'play' || !isTourney()) return;
+      S.qi++;
+      if (!S.deck || S.qi >= S.deck.length) {
+        // Hết deck của trận con: chờ 2 finish + tourney_result của trọng tài.
+        renderFormatBanner();
+        var fb2 = $('pnFeedback');
+        if (fb2) fb2.textContent = '🏁 Hết trận — chờ trọng tài chốt kết quả…';
+        return;
+      }
+      nextQuestion();
+    }, REVEAL_MS);
+  }
+  function showTourneyIntermission(match, winnerId) {
+    if (!S.room) return;
+    S.view = 'result';
+    stopQuestionTimer(); clearFormatTimers();
+    show($('pnPlay'), false); show($('pnWait'), false); show($('pnRoom'), false);
+    var box = $('pnResult'); show(box, true);
+    box.innerHTML =
+      '<div class="pn-card pn-podium"><div class="pn-crown">🏆</div>' +
+      '<h1 class="pn-h1">' + esc(match ? match.label : 'Trận đấu') + ' kết thúc!</h1>' +
+      '<p class="pn-mut">🏅 ' + esc(fmtNameById(winnerId)) + ' thắng trận này và đi tiếp.</p>' +
+      tourneyBracketHtml() +
+      '<p class="pn-note">' + (isHost() ? cap(user.call) + ' là trọng tài — trận tiếp theo sẽ tự mở sau ít giây.' : 'Chờ chủ phòng (trọng tài) mở trận tiếp theo…') + '</p>' +
+      '<button type="button" class="pn-btn pn-btn-alt pn-blk" id="pnTourBackLobby">Về sảnh</button></div>';
+    paintMyRoomFace(box);
+    var back = $('pnTourBackLobby');
+    if (back) back.addEventListener('click', backToLobby);
+    mountChat();
+  }
+  function showTourneyResult() {
+    if (!S.room || !S.tourney || !S.tourney.bracket) return;
+    S.view = 'result';
+    S.resultInfo = null;
+    stopQuestionTimer(); clearFormatTimers();
+    show($('pnPlay'), false); show($('pnWait'), false); show($('pnRoom'), false);
+    var box = $('pnResult'); show(box, true);
+    var champ = S.tourney.bracket.champion;
+    var me = mePlayer();
+    var iChamp = me && champ != null && String(me.userId) === String(champ);
+    try { if (window.GTREND && GTREND.say) GTREND.say(iChamp ? 'thang' : 'thua'); if (window.GFX && GFX.confetti) GFX.confetti(); } catch (e) {}
+    box.innerHTML =
+      '<div class="pn-card pn-podium"><div class="pn-crown">🏆</div>' +
+      '<h1 class="pn-h1">Kết quả giải đấu</h1>' +
+      (champ != null
+        ? '<div class="pn-x-champ">🏆 Nhà vô địch: ' + esc(fmtNameById(champ)) + (iChamp ? ' — chính là ' + esc(user.call) + '! 🎊' : '') + '</div>'
+        : '<p class="pn-mut">Giải chưa có nhà vô địch.</p>') +
+      tourneyBracketHtml() +
+      (isHost()
+        ? '<button type="button" class="pn-btn pn-btn-main pn-blk" id="pnTourRematch">🔁 Giải mới (giữ thể thức)</button>'
+        : '<p class="pn-note">Chờ chủ phòng mở giải mới (giữ nguyên thể thức), hoặc về sảnh tạo phòng của riêng mình.</p>') +
+      '<button type="button" class="pn-btn pn-btn-alt pn-blk" id="pnTourBackLobby2">Về sảnh</button></div>';
+    paintMyRoomFace(box);
+    wireFormatResultButtons('pnTourRematch', 'pnTourBackLobby2');
+    mountChat();
+  }
+
   function stopQuestionTimer() { if (S.timer) { clearInterval(S.timer); S.timer = null; } }
   function nextQuestion(startedAtOverride) {
     stopQuestionTimer();
+    if (S._fmtWatchTimer) { clearInterval(S._fmtWatchTimer); S._fmtWatchTimer = null; }
     if (!S.deck || S.qi >= S.deck.length) {
       if (isCoopRoom()) return; // coop: hết câu do máy chủ chốt qua coop_finish, không tự finish kiểu đối kháng
       finishLocal(); return;
     }
+    if (isRelay() && S.relay && S.relay.lives <= 0) { relayFinishLocal(); return; }
     S.locked = false;
     S.coopResolution = null;
     var chkBtn = $('pnOrderCheck'); if (chkBtn) chkBtn.disabled = false;
@@ -936,6 +1709,10 @@
         opts.appendChild(b);
       });
     }
+    // Mở rộng: máy xem (chờ lượt relay / khán giả tourney) dựng câu chỉ-đọc.
+    var spectatorKind = spectatorKindNow();
+    renderFormatBanner();
+    if (spectatorKind) setupSpectatorQuestion();
     var timeMs = questionTimeMs();
     S.qStartedAt = startedAtOverride
       || (isCoopRoom() && S.coop && S.coop.qIndex === S.qi && S.coop.startedAt ? S.coop.startedAt : null)
@@ -950,7 +1727,9 @@
         if (isCoopRoom()) onCoopTimeout(); else onTimeout();
       }
     }, 80);
-    renderCoopHud();
+    renderCoopHud(); renderRelayHud(); renderTourneyHud();
+    if (spectatorKind) startSpectatorWatchdog(spectatorKind);
+    if (spectatorKind === 'tourney') tourneySpectatorCheck(); // 2 đấu thủ có thể đã qua câu này rồi
   }
 
   function buildOrder(q) {
@@ -996,6 +1775,8 @@
     stopQuestionTimer();
     if (combatOn()) { try { GCOMBAT.hit('me', !!isCorrect, 10); } catch (e) {} } // E: phủ pickChoice + order check + timeout (đều chảy qua đây)
     var q = S.deck[S.qi];
+    window.GPLUS_TRACK && GPLUS_TRACK(q, isCorrect);
+    var scoreBefore = S.score;
     S.answered++;
     var elapsed = Date.now() - S.qStartedAt;
     var speed = Math.max(0, 1 - elapsed / QUESTION_TIME_MS);
@@ -1003,6 +1784,13 @@
       S.correct++; S.streak++; S.bestStreak = Math.max(S.bestStreak, S.streak);
       S.score += Math.round(500 + 500 * speed) + Math.min(150, S.streak * 25);
     } else { S.streak = 0; }
+    // Mở rộng tiếp sức: người giữ lượt là MÌNH — ghi kết quả câu này vào
+    // trạng thái đội ngay tại chỗ (máy khác ghi khi nhận 'answer' của mình;
+    // tiếng vọng về bị relayRecordAnswer chặn trùng bằng processed[qIndex]).
+    if (isRelay() && S.relay) {
+      var meG = mePlayer();
+      if (meG) relayRecordAnswer(S.qi, meG.userId, !!isCorrect, isCorrect ? (S.score - scoreBefore) : 0, false);
+    }
     // Tô đáp án đúng
     var opts = $('pnOpts');
     if (opts && q.choices && typeof q.answer === 'number') {
@@ -1027,6 +1815,7 @@
   }
   function pickChoice(idx, btn) {
     if (S.locked) return;
+    if (spectatorKindNow()) return; // máy xem (relay chờ lượt / khán giả tourney) không bấm thay được
     if (isCoopRoom()) { coopPickChoice(idx, btn); return; } // khoá cục bộ ngay + gửi coop_answer, chờ resolution của đội
     S.locked = true;
     var q = S.deck[S.qi];
@@ -1039,8 +1828,21 @@
 
   function finishLocal() {
     stopQuestionTimer();
-    if (S.code) GROOMS.event(S.code, 'finish', { score: S.score, correct: S.correct }).catch(function () {});
-    try { if (window.GAME_API && GAME_API.submitScore) GAME_API.submitScore({ mode: S.room ? S.room.mode : 'group', level: S.room ? S.room.level : 'N4', score: S.score, durationMs: S.matchStartedAt ? Date.now() - S.matchStartedAt : 0 }); } catch (e) {}
+    if (isTourney() && S.tourney) {
+      // Trận con giải đấu: finish kèm matchId để mọi máy chốt winner;
+      // KHÔNG nộp điểm lẻ từng trận con lên bảng điểm chung.
+      var midT = S.tourney.currentMatchId;
+      if (S.code) GROOMS.event(S.code, 'finish', { score: S.score, correct: S.correct, format: 'tourney', matchId: midT }).catch(function () {});
+      var meT = mePlayer();
+      if (midT && meT) {
+        S.tourney.finishSeen[midT] = S.tourney.finishSeen[midT] || {};
+        S.tourney.finishSeen[midT][meT.userId] = { score: S.score, correct: S.correct };
+        tourneyMaybeDecide(midT);
+      }
+    } else {
+      if (S.code) GROOMS.event(S.code, 'finish', { score: S.score, correct: S.correct }).catch(function () {});
+      try { if (window.GAME_API && GAME_API.submitScore) GAME_API.submitScore({ mode: S.room ? S.room.mode : 'group', level: S.room ? S.room.level : 'N4', score: S.score, durationMs: S.matchStartedAt ? Date.now() - S.matchStartedAt : 0 }); } catch (e) {}
+    }
     if (S.room && S.room.players.length <= 1) { showResult(); return; }
     S.view = 'wait';
     show($('pnPlay'), false); show($('pnWait'), true);
@@ -1155,6 +1957,16 @@
   async function boot() {
     segInit('pnModeSeg', 'mode'); segInit('pnLevelSeg', 'level'); segInit('pnTopicSeg', 'topic'); segInit('pnCountSeg', 'count');
     segBind('pnStyleSeg', function (v) { S.sel.style = v; applyStylePanel(); });
+    // Mở rộng: segment Thể thức trong phòng chờ (chỉ phòng style versus).
+    segBind('pnFormatSeg', function (v) {
+      if (!isHost() || isCoopRoom()) { renderRoomFormat(); return; } // khách: chỉ-đọc, seg tự vẽ lại theo S.format
+      if (v === 'tourney' && S.room && S.room.players.length < 4) {
+        toast('🏆 Giải đấu cần tối thiểu 4 người.');
+        renderRoomFormat();
+        return;
+      }
+      sendFormatConfig(v);
+    });
     bindCoopSegs('pnCoop', function () { return S.sel.coop; }, applyStylePanel);
     bindCoopSegs('pnRoomCoop', function () {
       if (!S.room) S.room = {};
@@ -1226,6 +2038,21 @@
     $('pnStart').addEventListener('click', async function () {
       var btn = $('pnStart'); btn.disabled = true;
       try {
+        // Mở rộng — Giải đấu: trọng tài chốt nhánh rồi mở từng trận con.
+        if (!isCoopRoom() && S.format === 'tourney') { await hostStartTourney(); return; }
+        // Mở rộng — Tiếp sức: deck cố định 24 câu, phát như luồng versus.
+        if (!isCoopRoom() && S.format === 'relay') {
+          var qsR = await fetchSeedDeck(S.room.seed, 24);
+          if (qsR) {
+            S.deck = qsR; S.deckSource = 'event';
+            try { await GROOMS.event(S.code, 'questions', { questions: qsR, format: 'relay' }); } catch (e) { S.deckSource = 'seed'; }
+            await GROOMS.event(S.code, 'start', { seed: S.room.seed, qCount: qsR.length, deck: S.deckSource === 'event' ? 'event' : 'seed', format: 'relay' });
+          } else {
+            await GROOMS.event(S.code, 'start', { seed: S.room.seed, qCount: 24, deck: 'seed', format: 'relay' });
+          }
+          if (S.deck) startMatch();
+          return;
+        }
         // 1) Lấy bộ câu BẰNG SEED CHUNG ở máy chủ phòng
         var qs = await fetchSeedDeck(S.room.seed, S.room.qCount);
         if (qs) {

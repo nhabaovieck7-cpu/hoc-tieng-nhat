@@ -1,0 +1,51 @@
+/* x-thach-dau.css — THÁCH ĐẤU BẠN BÈ (game-plus nhánh D).
+   Chỉ lớp tiền tố td- cho thach-dau.html; KHÔNG sửa game.css/modes.css. */
+
+.td-mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;word-break:break-all}
+
+/* Ô dán / ô hiện mã thử thách */
+.td-code-in{width:100%;box-sizing:border-box;background:#241f38;border:2px solid var(--mx-line);
+  border-radius:14px;color:var(--mx-t);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13px;line-height:1.5;padding:12px;resize:vertical;min-height:64px}
+.td-code-in:focus{outline:none;border-color:var(--mx-gold)}
+.td-code-out{background:#17132a}
+.td-err{color:#ff9db1;background:#3d1430;border:1px solid var(--mx-bad);border-radius:12px;
+  padding:10px 12px;font-size:13.5px;font-weight:600;line-height:1.5;margin-top:12px}
+
+/* Thẻ người thách */
+.td-chal{border:1px solid var(--mx-gold);border-radius:14px;padding:14px;margin-top:14px;background:#2b2540}
+.td-chal h3{margin:0 0 6px;font-size:17px}
+.td-chal .mx-stat-row{justify-content:flex-start;margin:8px 0}
+
+/* So sánh 2 cột ở màn kết quả */
+.td-vs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;text-align:left}
+.td-col{background:#241f38;border:2px solid var(--mx-line);border-radius:14px;padding:12px}
+.td-col.me{border-color:var(--mx-gold)}
+.td-col h3{margin:0 0 8px;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.td-col .td-row{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-top:1px dashed var(--mx-line);font-size:14px}
+.td-col .td-row b{font-weight:800}
+.td-verdict{font-size:21px;font-weight:900;margin:8px 0 2px}
+.td-verdict.win{color:var(--mx-gold)}
+.td-verdict.lose{color:#ff9db1}
+.td-trend{color:var(--mx-m);font-size:14px;font-style:italic;margin-top:6px}
+
+/* Hàng nút phụ (sao chép / tạo mã) */
+.td-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.td-link{display:block;margin-top:10px;color:var(--mx-cy);font-size:12.5px;word-break:break-all;text-align:left}
+
+/* Lịch sử thách đấu */
+.td-hist{list-style:none;margin:8px 0 0;padding:0}
+.td-hist li{background:#241f38;border:1px solid var(--mx-line);border-radius:12px;padding:9px 12px;margin-bottom:7px;font-size:13.5px;line-height:1.5}
+.td-hist .td-hist-code{color:var(--mx-m);font-size:11.5px}
+.td-hist .td-hist-verdict{font-weight:800}
+.td-hist .td-hist-verdict.win{color:var(--mx-gold)}
+.td-hist .td-hist-verdict.lose{color:#ff9db1}
+
+/* Hàng nút kỹ năng GPLUS trong trận */
+.td-skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.td-skills:empty{display:none}
+#createCard .gplus-loadout{margin-top:14px}
+
+@media (max-width:480px){
+  .td-actions{grid-template-columns:1fr}
+}

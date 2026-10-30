@@ -1,0 +1,87 @@
+/* x-trum-sai-lam.css — TRÙM SAI LẦM (đợt game-plus, nhánh B).
+   Chỉ lớp tiền tố ts- cho trum-sai-lam.html + style tối thiểu cho HUD/
+   bộ chọn kỹ năng GPLUS (trang này theo khung chỉ nạp game.css +
+   modes.css + file này, không nạp bosses.css/plus.css nên hộp thoại
+   trùm và .gplus-* được định kiểu tại đây, không đụng file dùng chung).
+   Hiệu ứng chỉ transform/opacity, không thêm vòng rAF/interval mới. */
+
+/* Tim người chơi (thay thanh máu phía người chơi như dau-kanji) */
+.ts-hearts{font-size:19px;line-height:1.3;letter-spacing:3px;min-height:25px}
+
+/* Thẻ trùm ở menu */
+.ts-boss{display:flex;gap:14px;align-items:center;background:#241f38;
+  border:2px solid var(--ts-c,var(--mx-gold));border-radius:16px;padding:12px 14px;margin:12px 0;
+  box-shadow:4px 4px 0 rgba(0,0,0,.35)}
+.ts-boss-emoji{font-size:56px;line-height:1.1;flex:0 0 auto;text-align:center;min-width:68px}
+.ts-boss-emoji small{display:block;font-size:20px;line-height:1}
+.ts-boss-info{flex:1 1 auto;min-width:0}
+.ts-boss-info b{font-size:18px}
+.ts-line{font-style:italic;margin-top:4px;color:var(--mx-t)}
+
+/* Tóm tắt hồ sơ điểm yếu */
+.ts-sum{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 4px}
+.ts-stat{background:#241f38;border:1px solid var(--mx-line);border-radius:12px;
+  padding:10px 4px;text-align:center}
+.ts-stat b{display:block;font-size:22px;color:var(--mx-gold);line-height:1.15}
+.ts-stat span{font-size:11px;color:var(--mx-m)}
+@media (max-width:560px){.ts-sum{grid-template-columns:repeat(2,1fr)}}
+
+/* Trạng thái rỗng trung thực (pool điểm yếu < 8 câu) */
+.ts-empty{text-align:center;padding:18px 8px 6px}
+.ts-empty p{color:var(--mx-m);font-weight:600;max-width:420px;margin:8px auto 0}
+
+/* Hộp thoại trùm trong trận (mẫu gb-say của bosses.css, tự chứa) */
+.ts-say{display:flex;gap:10px;align-items:flex-start;background:#fff;color:#1a0b2e;
+  border-radius:14px;padding:10px 12px;margin:0 0 12px;
+  box-shadow:3px 3px 0 var(--ts-c,#ef4b5b)}
+.ts-say .ts-say-face{font-size:34px;line-height:1.1;flex:0 0 auto}
+.ts-say b{color:#cf3a2e}
+.ts-say p{margin:2px 0 0;font-weight:600}
+.ts-say.ts-low{box-shadow:3px 3px 0 #ef4b5b;background:#fff1f2}
+
+/* Biển báo trong arena (hồi sinh...) — trong arena, pointer-events:none,
+   tự gỡ sau ~1,6s ở JS, không che câu hỏi/đáp án */
+.ts-banner{position:absolute;left:50%;top:10px;transform:translateX(-50%);
+  z-index:7;pointer-events:none;white-space:nowrap;
+  background:rgba(10,6,24,.88);color:#ffd84e;border:2px solid #2fbf71;border-radius:99px;
+  padding:7px 16px;font-weight:900;font-size:15px;letter-spacing:.4px;
+  box-shadow:0 6px 22px rgba(0,0,0,.5),0 0 16px rgba(47,191,113,.45);
+  animation:ts-banner-in 1.6s ease-out forwards}
+@keyframes ts-banner-in{0%{opacity:0;transform:translateX(-50%) scale(.7)}
+  14%{opacity:1;transform:translateX(-50%) scale(1.06)}
+  24%{transform:translateX(-50%) scale(1)}
+  78%{opacity:1}100%{opacity:0;transform:translateX(-50%) scale(1)}}
+
+/* Dòng chốt xử lý ở màn kết quả */
+.ts-proc{background:#241f38;border:1px solid var(--mx-line);border-radius:12px;
+  padding:10px 12px;font-size:13px;color:var(--mx-t);margin:0 0 14px;text-align:left}
+
+/* Bộ kỹ năng GPLUS (plus.js): bộ chọn trước trận + HUD trong trận.
+   Định kiểu tại đây vì trang không nạp plus.css (xem đầu file). */
+#skillHud{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.gplus-skill{background:#2b2540;border:1px solid var(--mx-gold);color:var(--mx-gold);
+  border-radius:99px;padding:7px 12px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;min-height:40px}
+.gplus-skill .gplus-uses{color:var(--mx-t)}
+.gplus-skill.used{opacity:.35;border-color:var(--mx-line);color:var(--mx-m)}
+.gplus-skill:disabled{cursor:default}
+.gplus-loadout{margin-top:14px;text-align:left}
+.gplus-loadout-t{font-weight:800;margin-bottom:8px}
+.gplus-loadout-t span{color:var(--mx-m);font-weight:500;font-size:12px}
+.gplus-loadout-row{display:flex;flex-wrap:wrap;gap:8px}
+.gplus-pick{flex:1 1 30%;min-width:104px;background:#241f38;border:2px solid var(--mx-line);
+  border-radius:12px;color:var(--mx-t);padding:9px 6px;font:inherit;font-weight:700;
+  font-size:13px;cursor:pointer;min-height:48px}
+.gplus-pick small{display:block;font-weight:500;font-size:11px;color:var(--mx-m);margin-top:2px}
+.gplus-pick.on{border-color:var(--mx-gold);background:#2b2540;box-shadow:inset 0 0 0 1px var(--mx-gold)}
+.gplus-pick:disabled{opacity:.45;cursor:default}
+
+/* Toast tài nguyên làng của plus.js (bản thật tự tạo div.gplus-toast khi
+   nộp điểm): trang không nạp plus.css nên định vị tối thiểu tại đây —
+   cố định trên cùng giữa màn hình, không nhận chạm, không che đáp án. */
+.gplus-toast{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:60;
+  pointer-events:none;background:rgba(10,6,24,.9);color:#ffd84e;border:1px solid var(--mx-gold);
+  border-radius:99px;padding:7px 14px;font-weight:800;font-size:13px;white-space:nowrap}
+
+@media (prefers-reduced-motion: reduce){
+  .ts-banner{animation:none}
+}

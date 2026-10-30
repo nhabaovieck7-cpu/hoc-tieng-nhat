@@ -1,0 +1,47 @@
+/* x-dau-kanji.css — MỞ RỘNG ĐẤU TRÙM (phase trùm + chiêu phá + phù trợ).
+   Chỉ lớp tiền tố x- cho dau-kanji.html; KHÔNG sửa game.css/modes.css.
+   Hiệu ứng chỉ transform/opacity, không thêm vòng rAF/interval mới. */
+
+/* Biển phase: nằm TRONG arena (.bk-arena đã position:relative +
+   overflow:hidden), phủ trên sân đấu nhưng pointer-events:none và tự
+   gỡ sau ~1,6s ở JS — không che khu câu hỏi/đáp án phía dưới arena. */
+.x-phase-banner{position:absolute;left:50%;top:10px;transform:translateX(-50%);
+  z-index:7;pointer-events:none;white-space:nowrap;
+  background:rgba(10,6,24,.88);color:#ffd84e;border:2px solid #ef4b5b;border-radius:99px;
+  padding:7px 16px;font-weight:900;font-size:15px;letter-spacing:.4px;
+  box-shadow:0 6px 22px rgba(0,0,0,.5),0 0 16px rgba(239,75,91,.45);
+  animation:x-phase-in 1.6s ease-out forwards}
+@keyframes x-phase-in{0%{opacity:0;transform:translateX(-50%) scale(.7)}
+  14%{opacity:1;transform:translateX(-50%) scale(1.06)}
+  24%{transform:translateX(-50%) scale(1)}
+  78%{opacity:1}100%{opacity:0;transform:translateX(-50%) scale(1)}}
+
+/* Huy hiệu chiêu đang áp (cạnh pill giờ) */
+.x-trick-badge{background:#3d1430;color:#ff9db1;border:1px solid #ef4b5b;font-weight:800}
+
+/* Ép giờ: thanh giờ chuyển tông đỏ/cam khi đang bị ×0,6 */
+.mx-timer.x-squeezed i{background:linear-gradient(90deg,#ef4b5b,#f97316)}
+
+/* Che 1 đáp án: lớp phủ 🌀 kín nút — nút VẪN bấm được (lớp phủ
+   pointer-events:none, không disabled), chỉ khuất chữ bên dưới. */
+#optBox .mx-opt.x-covered{position:relative;overflow:hidden}
+.x-cover{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:repeating-linear-gradient(45deg,#241f38 0 14px,#2e2752 14px 28px);
+  font-size:30px;pointer-events:none;z-index:2}
+
+/* Đảo đáp án: nhấp nháy viền khi các nút vừa hoán vị */
+#optBox.x-swapped .mx-opt{animation:x-swap-flash .6s ease-out}
+@keyframes x-swap-flash{0%{border-color:#ffd84e;box-shadow:0 0 0 2px #ffd84e,0 0 16px rgba(255,216,78,.8)}
+  100%{box-shadow:none}}
+
+/* Hàng phù trợ — mẫu lifeline như .tw-life của leo-thap */
+.x-life{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.x-life button{background:#2b2540;border:1px solid var(--mx-gold);color:var(--mx-gold);border-radius:12px;
+  padding:10px 4px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;min-height:48px}
+.x-life button small{display:block;font-weight:500;font-size:11px;color:var(--mx-m)}
+.x-life button:disabled{opacity:.3;border-color:var(--mx-line);color:var(--mx-m);cursor:default}
+
+@media (prefers-reduced-motion: reduce){
+  .x-phase-banner{animation:none}
+  #optBox.x-swapped .mx-opt{animation:none}
+}

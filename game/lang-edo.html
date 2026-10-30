@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Làng Edo · Hành trình đến Edo</title>
+<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="modes.css">
+<link rel="stylesheet" href="x-lang-edo.css">
+</head>
+<body class="mx-body">
+<div class="mx-top"><a class="mx-back" href="index.html">← Tất cả game</a><a class="gtop-course" href="../index.html" aria-label="Quay lại khóa học">← <span>Về khóa học</span></a><span class="mx-title">🏘️ Làng Edo</span><div id="sndToggles" class="snd-toggles"></div></div>
+<main class="mx-wrap">
+  <section class="mx-card le-res-card" aria-label="Tài nguyên">
+    <div class="le-res">
+      <span class="le-res-item">🪵 Gỗ <b id="resGo">0</b></span>
+      <span class="le-res-item">🪨 Đá <b id="resDa">0</b></span>
+      <span class="le-res-item">🪙 Xu <b id="resXu">0</b></span>
+    </div>
+    <p class="mx-mut le-res-note">Chơi bất kỳ chế độ nào cũng kiếm được tài nguyên theo điểm số — điểm càng cao thì gỗ, đá và xu nhận được càng nhiều.</p>
+  </section>
+
+  <section class="mx-card le-yard-card" aria-label="Sân làng">
+    <h2 class="le-h">🏘️ Sân làng</h2>
+    <div class="le-yard"><div class="le-grid" id="yard"></div></div>
+    <p class="le-hint" id="emptyHint">Chơi Chiến dịch/Đấu trùm vài lượt rồi quay lại xây căn nhà đầu tiên.</p>
+  </section>
+
+  <section aria-label="Xây dựng">
+    <h2 class="le-h2">🔨 Xây dựng &amp; nâng cấp</h2>
+    <div class="le-panel" id="panel"></div>
+  </section>
+</main>
+<script src="game.js"></script>
+<script src="plus.js"></script>
+<script src="village-catalog.js"></script>
+<script src="lang-edo.js"></script>
+</body>
+</html>

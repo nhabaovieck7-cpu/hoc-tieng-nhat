@@ -205,6 +205,7 @@
     segPick($('cdLvs'), function (v) { LV = v; });
     segPick($('cdTys'), function (v) { TY = v; pick(); });
     segPick($('cdDiffs'), function (v) { DIFF = v; localStorage.setItem('hn_game_diff', v); });
+    if (window.GPLUS) GPLUS.mountLoadout($('cdPlusLoadout'));
     $('cdGoMap').onclick = function () {
       localStorage.setItem('hn_game_lv', LV); localStorage.setItem('hn_game_ty', TY);
       map();
@@ -278,6 +279,7 @@
     };
     show('cdPlay');
     needNext = false;
+    if (window.GPLUS) GPLUS.beginMatch();
     if (pauseCtl) pauseCtl.setVisible(true);
     $('cdPt').textContent = LV + ' · Chặng ' + (stage + 1) + (boss ? ' · TRÙM · Trộn tổng hợp' : ' · Màn ' + (node + 1));
     $('cdBossBox').classList.toggle('cd-hid', !boss);
@@ -499,6 +501,8 @@
   function answer(ok) {
     if (isPaused() || G.locked) return;
     G.locked = true;
+    window.GPLUS_TRACK && GPLUS_TRACK(G.q, ok);
+    var __pr = window.GPLUS ? GPLUS.onAnswer(ok) : null;
     clearInterval(tmr);
     setLifelinesEnabled(false);
     var ratio = remainRatio();
@@ -506,6 +510,7 @@
     if (ok) {
       G.ok++; G.streak++;
       var gained = Math.round((100 + Math.round(ratio * 50) + G.streak * 10) * DIFFS[DIFF].x);
+      if (window.GPLUS) gained *= GPLUS.scoreMul();
       G.score += gained;
       HOOK.sfx('correct');
       HOOK.fx('burst');
@@ -518,7 +523,7 @@
         HOOK.fx('shake');
       }
     } else {
-      G.bad++; G.streak = 0;
+      G.bad++; if (!(__pr && __pr.shieldUsed)) G.streak = 0;
       HOOK.sfx('wrong');
       HOOK.fx('shake');
       HOOK.trend('sai');
@@ -565,10 +570,17 @@
     deadline += qDuration * 0.5; // +50% thời lượng câu hiện tại
     updateHud(); setLifelinesEnabled(true);
   };
-  $('cdQuit').onclick = function () { if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); };
+  $('cdQuit').onclick = function () { if (window.GPLUS) GPLUS.endMatch(); if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); };
 
   /* ---------- Kết thúc màn ---------- */
   function end() {
+    /* GAME-PLUS hồi sinh: chỉ khi thua vì hết tim ở màn trùm (life<=0) —
+       sống lại 1 tim và làm lại câu vừa sai (G.i lùi 1). */
+    if (G && G.life <= 0 && window.GPLUS && GPLUS.tryRevive()) {
+      G.life = 1; G.i = Math.max(0, G.i - 1);
+      next(); return;
+    }
+    if (window.GPLUS) GPLUS.endMatch();
     if (pauseCtl) pauseCtl.setVisible(false);
     clearInterval(tmr);
     var boss = G.boss;
@@ -652,6 +664,33 @@
   /* FIX3: gắn nút Tạm dừng (pause.js) cho màn chơi — gồm cả màn TRÙM
      của chiến dịch (dùng chung đồng hồ deadline này). Thoát trong lớp
      phủ = đúng luồng nút "🏳️ Bỏ màn này" (cdQuit) sẵn có. */
+  /* GAME-PLUS: phép dời giờ DÙNG CHUNG cho onResume của GPAUSE và kỹ
+     năng Đóng băng — cộng dur vào deadline/qStartAt/G.startedAt (đồng hồ
+     câu chạy theo deadline tuyệt đối nên dời là chạy tiếp đúng giá trị). */
+  function shiftCdTime(dur) {
+    deadline += dur; qStartAt += dur;
+    if (G) G.startedAt += dur;
+  }
+  if (window.GPLUS) {
+    GPLUS.setHudHost($('cdPlusHud'));
+    GPLUS.setFreezeHandler(function () {
+      if (!G || G.locked || isPaused()) return false;
+      shiftCdTime(5000);
+      return true;
+    });
+    GPLUS.setHintHandler(function () {
+      if (!G || !G.q || G.locked || G.q.type === 'order') return false;
+      var op = $('cdOp'); if (!op) return false;
+      var btns = op.querySelectorAll('.cd-opt');
+      for (var i = 0; i < btns.length; i++) {
+        if (parseInt(btns[i].dataset.i, 10) !== G.q.answer && !btns[i].classList.contains('cd-gone') && !btns[i].disabled) {
+          btns[i].classList.add('cd-gone');
+          return true;
+        }
+      }
+      return false;
+    });
+  }
   if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
     pauseCtl = window.GPAUSE.create({
       btnHost: $('cdPauseSlot') || $('cdPlay'),
@@ -659,14 +698,13 @@
       isPlaying: function () { return !!G && !$('cdPlay').classList.contains('cd-hid'); },
       onPause: function () { clearInterval(tmr); },
       onResume: function (dur) {
-        deadline += dur; qStartAt += dur;
+        shiftCdTime(dur);
         if (G) {
-          G.startedAt += dur;
           if (G.q && !G.locked) { clearInterval(tmr); tmr = setInterval(tmrTick, 100); }
         }
         if (needNext) { needNext = false; next(); }
       },
-      onExit: function () { if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); }
+      onExit: function () { if (window.GPLUS) GPLUS.endMatch(); if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); }
     });
   }
 

@@ -1,0 +1,52 @@
+/* x-raid.css — RAID TRÙM TUẦN (game-plus nhánh D).
+   Chỉ lớp tiền tố rd- cho raid.html; KHÔNG sửa game.css/modes.css.
+   Thanh máu dùng transform scaleX (compositor) như đợt 7. */
+
+/* Thanh máu trùm ở panel sảnh: to, rõ số */
+.rd-hp{height:22px;border-radius:11px;background:#2a2440;overflow:hidden;border:2px solid #000;margin:10px 0 6px}
+.rd-hp i{display:block;height:100%;width:100%;transform-origin:left center;
+  background:linear-gradient(90deg,#f97316,#ef4b5b);transition:transform .5s ease}
+.rd-hp-num{font-weight:800;font-size:15px;color:var(--mx-t)}
+.rd-hp-num small{color:var(--mx-m);font-weight:600}
+
+/* Boss panel */
+.rd-boss-head{display:flex;gap:14px;align-items:center}
+.rd-boss-emoji{font-size:64px;line-height:1.1;animation:mx-float 1.8s ease-in-out infinite}
+.rd-boss-head h1{margin:2px 0 4px}
+.rd-week{color:var(--mx-gold);font-weight:700;font-size:13px}
+.rd-stats{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+
+/* Bảng đóng góp top 10 */
+.rd-top{margin:10px 0 0;padding:0;list-style:none;counter-reset:rdtop}
+.rd-top li{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;background:#241f38;margin-bottom:6px}
+.rd-top li::before{counter-increment:rdtop;content:counter(rdtop);font-weight:900;color:var(--mx-gold);min-width:20px;text-align:center}
+.rd-top li.me{border:1px solid var(--mx-gold)}
+.rd-top .rd-top-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.rd-top .rd-top-dmg{font-weight:800;color:#ffb27a}
+.rd-top-empty{color:var(--mx-m);font-size:13px;line-height:1.5;margin-top:8px}
+
+/* Thẻ khoá "sắp mở" */
+.rd-locked{text-align:center;padding:26px 16px}
+.rd-locked .mx-big-emoji{font-size:58px}
+.rd-locked h1{margin:8px 0}
+
+/* Trạng thái đã hạ */
+.rd-defeated{border-color:var(--mx-gold);box-shadow:0 0 18px rgba(217,168,78,.25)}
+.rd-defeated-banner{font-size:19px;font-weight:900;color:var(--mx-gold);text-align:center;margin:6px 0}
+
+/* Ghi chú phía người chơi trong HUD trận (thay thanh máu người chơi:
+   raid không có máu người chơi/thua chung cuộc) */
+.rd-side-note{font-size:13px;font-weight:700;color:var(--mx-m);padding-top:4px}
+.bk-side.r .rd-side-note{text-align:right}
+
+/* Hàng nút kỹ năng GPLUS trong trận */
+.rd-skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.rd-skills:empty{display:none}
+
+/* Khu chọn cấp + loadout trong thẻ setup */
+#raidSetup .gplus-loadout{margin-top:14px}
+
+@media (prefers-reduced-motion: reduce){
+  .rd-boss-emoji{animation:none}
+  .rd-hp i{transition:none}
+}

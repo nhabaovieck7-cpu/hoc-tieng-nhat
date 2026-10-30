@@ -1,0 +1,67 @@
+/* x-le-hoi.css — CSS RIÊNG cho mở rộng LỄ HỘI "Đua tem lễ hội"
+   (game-expand mục 4). Chỉ chứa lớp tiền tố xlh- dựng động bởi
+   le-hoi.js: bản đồ 6 quầy, dòng thông báo chuyển quầy, nút nghe lại
+   của Quầy Nghe, lưới tem + hộp quà ở màn kết quả. Không đụng
+   modes.css/game.css; khung bong bóng 92px của fix2 nằm ở modes.css
+   và KHÔNG được định nghĩa lại ở đây. Chỉ dùng transform/opacity cho
+   hiệu ứng, không thêm vòng rAF/interval nào. */
+
+/* ===== Bản đồ quầy: hàng 6 quầy ở đầu khu chơi ===== */
+.xlh-map{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0 8px}
+.xlh-stall{position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;
+  padding:8px 4px 7px;border-radius:14px;background:#241f38;border:2px solid var(--mx-line);
+  color:var(--mx-t);text-align:center;min-height:74px;box-sizing:border-box}
+.xlh-stall .xlh-emoji{font-size:22px;line-height:1.15}
+.xlh-stall .xlh-name{font-size:11.5px;font-weight:800;line-height:1.25}
+.xlh-stall .xlh-stat{font-size:11px;color:var(--mx-m);font-weight:700}
+.xlh-stall.cur{border-color:var(--mx-gold);background:#2b2540;
+  box-shadow:inset 0 0 0 1px var(--mx-gold),0 0 12px rgba(217,168,78,.35)}
+.xlh-stall.cur .xlh-stat{color:var(--mx-gold)}
+.xlh-stall.done{border-color:var(--mx-ok)}
+.xlh-stall.done .xlh-stat{color:var(--mx-ok)}
+.xlh-stamp{position:absolute;top:2px;right:5px;font-size:15px;line-height:1;
+  filter:drop-shadow(0 0 5px rgba(217,168,78,.8))}
+.xlh-nostamp{position:absolute;top:2px;right:7px;font-size:13px;color:var(--mx-m);line-height:1}
+
+/* ===== Dòng thông báo quầy hiện tại / chuyển quầy ===== */
+.xlh-banner{margin:0 0 8px;padding:9px 12px;border-radius:12px;text-align:center;
+  background:#2b2540;border:1px solid var(--mx-gold);color:var(--mx-t);
+  font-size:13.5px;font-weight:700;line-height:1.45}
+
+/* ===== Quầy Nghe: nút nghe lại ===== */
+.xlh-listen{display:flex;justify-content:center;margin:10px 0 2px}
+.xlh-listen-btn{border:2px solid var(--mx-gold);border-radius:99px;padding:12px 22px;
+  background:linear-gradient(135deg,#2b2540,#241f38);color:var(--mx-t);
+  font:inherit;font-weight:800;font-size:16px;cursor:pointer;min-height:52px;
+  box-shadow:0 4px 14px rgba(217,168,78,.25)}
+.xlh-listen-btn:active{transform:scale(.97)}
+.xlh-listen-btn:disabled{opacity:.45;cursor:default;box-shadow:none}
+
+/* ===== Màn kết quả: lưới tem 5 quầy + hộp quà ===== */
+.xlh-stamps{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
+.xlh-stamp-cell{display:flex;flex-direction:column;align-items:center;gap:1px;
+  padding:10px 6px;border-radius:14px;background:#241f38;border:2px solid var(--mx-line);
+  color:var(--mx-t);text-align:center}
+.xlh-stamp-cell.got{border-color:var(--mx-gold);
+  box-shadow:inset 0 0 0 1px var(--mx-gold),0 0 10px rgba(217,168,78,.25)}
+.xlh-cell-emoji{font-size:24px;line-height:1.15}
+.xlh-cell-name{font-size:12.5px;font-weight:800;line-height:1.25}
+.xlh-cell-stat{font-size:11.5px;color:var(--mx-m);font-weight:700}
+.xlh-cell-stamp{font-size:12px;font-weight:800;color:var(--mx-m)}
+.xlh-stamp-cell.got .xlh-cell-stamp{color:var(--mx-gold)}
+.xlh-gift{margin:10px 0;padding:12px 14px;border-radius:14px;text-align:center;
+  background:linear-gradient(135deg,rgba(217,168,78,.22),rgba(207,58,46,.22));
+  border:2px solid var(--mx-gold);color:var(--mx-t);font-weight:800;font-size:15px;line-height:1.5}
+
+@media (min-width:760px){
+  .xlh-map{grid-template-columns:repeat(6,1fr)}
+  .xlh-stamps{grid-template-columns:repeat(5,1fr)}
+  .xlh-stamp-cell:last-child{grid-column:auto}
+}
+@media (max-width:759px){
+  /* 5 ô tem trên mobile: ô cuối spanning cho cân lưới 2 cột */
+  .xlh-stamp-cell:last-child{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion: reduce){
+  .xlh-listen-btn:active{transform:none}
+}

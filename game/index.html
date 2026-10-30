@@ -97,6 +97,7 @@
 <script src="sfx.js"></script>
 <script src="music.js"></script>
 <script src="game-api.js"></script>
+<script src="plus.js"></script>
 <script src="fullbody.js"></script>
 <script src="nameplate.js"></script>
 <!-- BATCH5-M: gear (tiến độ/cấp) + cấp người chơi cho hub -->
@@ -153,11 +154,15 @@ document.addEventListener('visibilitychange', function () {
 /* ---------- Dữ liệu thẻ chế độ ---------- */
 var MODES = [
   { href: 'chien-dich.html', e: '🗺️', c: '#ff7eb6', t: 'Chiến dịch N5 → N1', d: '10 chặng mỗi trình độ + chủ đề, 3 màn + 1 màn trùm, chấm sao mở khóa dần.' },
-  { href: 'dau-kanji.html', e: '⚔️', c: '#ff7a45', t: 'Đấu trùm', d: 'Đối đầu trùm của từng vùng. Trả lời đúng là tung tuyệt chiêu!' },
-  { href: 'leo-thap.html', e: '🏯', c: '#22d3ee', t: 'Leo tháp', d: 'Leo từng tầng lâu đài mây. Sai là rơi tầng — càng cao càng căng.' },
+  { href: 'dau-kanji.html', e: '⚔️', c: '#ff7a45', t: 'Đấu trùm', d: 'Trùm 3 phase nổi giận, tung chiêu phá đòn. Leo hạng: hạ liền 3 trùm giành cúp!' },
+  { href: 'leo-thap.html', e: '🏯', c: '#22d3ee', t: 'Leo tháp', d: 'Chinh phục đỉnh tháp 30 tầng: cổng trùm mini, checkpoint, trạm nghỉ và sự kiện bất ngờ.' },
   { href: 'chay-vo-tan.html', e: '🏃', c: '#2fbf71', t: 'Chạy vô tận', d: 'Chạy và trả lời thật nhanh, xem được bao xa trước khi hụt hơi.' },
-  { href: 'le-hoi.html', e: '🏮', c: '#ffd84e', t: 'Lễ hội', d: 'Mini-game lễ hội làng Sakura: vui, nhanh, nhiều pháo giấy.' },
-  { href: 'phong-nhom.html', e: '👥', c: '#7c5cff', t: 'Phòng nhóm · Đối kháng', d: 'Tạo phòng rủ bạn bè, đấu 1-1 và Chém gió bằng câu trend có sẵn.' },
+  { href: 'le-hoi.html', e: '🏮', c: '#ffd84e', t: 'Lễ hội', d: 'Đua tem lễ hội: vòng quanh 6 quầy trò chơi, gom đủ 5 tem đổi quà lớn.' },
+  { href: 'phong-nhom.html', e: '👥', c: '#7c5cff', t: 'Phòng nhóm · Đối kháng', d: 'Tạo phòng rủ bạn bè: đối kháng, hợp sức, tiếp sức đồng đội và giải đấu 1v1 loại trực tiếp.' },
+  { href: 'trum-sai-lam.html', e: '👹', c: '#ef4b5b', t: 'Trùm Sai Lầm', d: 'Con trùm mang mặt điểm yếu của chính mình' },
+  { href: 'lang-edo.html', e: '🏘️', c: '#8bc34a', t: 'Làng Edo', d: 'Chơi game kiếm gỗ đá xu, xây làng lớn dần' },
+  { href: 'raid.html', e: '🐉', c: '#ff9d45', t: 'Raid Trùm Tuần', d: 'Cả trường cùng đánh một trùm mỗi tuần' },
+  { href: 'thach-dau.html', e: '⚔️', c: '#4fc3f7', t: 'Thách Đấu Bạn Bè', d: 'Gửi mã thử thách, bạn chơi sau rồi so điểm' },
   { href: 'nhan-vat.html', e: '🎭', c: '#ff4fd8', t: 'Tạo nhân vật', d: 'Đổi giới tính, tóc, trang phục, màu da/tóc và chọn linh vật đồng hành.' }
 ];
 document.getElementById('modeGrid').innerHTML = MODES.map(function (m) {

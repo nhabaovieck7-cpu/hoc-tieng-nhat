@@ -36,6 +36,11 @@
     return 100;
   }
   function effHpOf(b) { return Math.round(baseHpFor(b.lv) * (b.hpMul || 1)); }
+  /* MỞ RỘNG ĐẤU TRÙM: HP hiệu dụng TRONG TRẬN — đánh lẻ ×2.6, leo hạng
+     ×2.0 (so với effHpOf gốc ở trên; roster vẫn hiển thị máu gốc). */
+  function battleHpOf(b) { return Math.round(effHpOf(b) * (st.mode === 'ladder' ? 2.0 : 2.6)); }
+  /* Họ câu theo phase: Phase 1 = 'kanji' (bản sắc chế độ), Phase 2/3 = 'mix'. */
+  function phaseTopic(p) { return p <= 1 ? 'kanji' : 'mix'; }
   function qSeconds() { var b = bossNow(); return DIFF[st.diff].s / ((b && b.spdMul) || 1); }
   function normOrig(i) {
     var b = BOSSES[i];
@@ -105,16 +110,18 @@
       if (r && r.catch) r.catch(function () {});
     }
   } catch (e) {} }
-  function fetchQ(count) {
+  /* Tham số hoá theo topic của phase hiện tại (poolTopic); không truyền
+     topic thì lấy theo pool đang dùng. Câu hỏi VẪN chỉ qua GQ. */
+  function fetchQ(count, topic) {
     if (!(window.GQ && typeof GQ.getQuestions === 'function')) return Promise.reject(new Error('gq-missing'));
-    return GQ.getQuestions({ level: st.lv, topic: 'kanji', count: count });
+    return GQ.getQuestions({ level: st.lv, topic: topic || poolTopic || 'kanji', count: count });
   }
   function usable(qs) { return (qs || []).filter(function (q) { return q && ((q.choices && q.choices.length >= 2) || (q.tokens && q.tokens.length >= 2)); }); }
   function correctIdx(q) { if (typeof q.answer === 'number') return q.answer; if (q.choices) { var i = q.choices.indexOf(q.answerText); if (i >= 0) return i; } return -1; }
   function norm(s) { return String(s == null ? '' : s).replace(/\s+/g, ''); }
 
   /* ---------- Trạng thái ---------- */
-  var st = { boss: 3, diff: 'tb' };
+  var st = { boss: 3, diff: 'tb', mode: 'solo' };
   Object.defineProperty(st, 'lv', { get: function () { return bossNow().lv; } });
   var hpP = 100, hpB = 100, hpBMax = 100, round = 0, okCount = 0, streak = 0, best = 0, score = 0,
       lock = false, pool = [], qi = 0, cur = null, t0 = 0, startT = 0, timer = null, limMs = 0;
@@ -122,6 +129,26 @@
      giữ đồng hồ câu, needNext hoãn next() khi đang dừng. */
   var timerCb = null, timerLive = false, needNext = false, pauseCtl = null;
   function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
+
+  /* ---------- MỞ RỘNG: phase trùm + chiêu phá + phù trợ + leo hạng ----------
+     phase: 1 (100–67% máu) / 2 (66–34%) / 3 (33–0%). pendingPhase được
+     chốt ở cú đánh làm trùm tụt qua mốc, áp dụng ở next() kế tiếp để
+     không phá câu đang reveal. trick = chiêu đang áp cho câu hiện tại:
+       { kind:'cover'|'squeeze'|'swap'|null, el, origLimMs, cutMs,
+         swapTimer, swapPending, qRound }
+     lastTrickKind chống lặp cùng chiêu 2 lần liền (giữ xuyên leo hạng). */
+  var phase = 1, pendingPhase = 0, trickPending = false, p3Since = 0,
+      poolTopic = 'kanji', nextPool = null, nextPoolPhase = 0, preloadBusy = false,
+      trick = null, lastTrickKind = null,
+      usedLife = { break: false, time: false, f50: false },
+      ladderLineup = null, ladderIdx = 0, advancing = false, resultInfo = null;
+  var PHASE_SAY = {
+    2: 'Gừ… được lắm! Ta nổi giận rồi đây — coi chừng chiêu phá của ta đấy!',
+    3: 'Chưa xong đâu! Ta dốc toàn lực rồi — đừng hòng thoát khỏi tay ta!'
+  };
+  function phaseFor(frac) { return frac > 0.66 ? 1 : (frac > 0.33 ? 2 : 3); }
+  function newTrick() { return { kind: null, el: null, origLimMs: 0, cutMs: 0, swapTimer: null, swapPending: false, qRound: 0 }; }
+  trick = newTrick();
 
   /* ---------- Menu ---------- */
   function segHTML(items, cur, attr) {
@@ -147,7 +174,7 @@
       '<div class="gb-next" id="gbNext" data-boss-id="' + esc(B.id) + '" style="--gb-c:' + esc(B.color) + '">' +
       '<div class="gb-next-emoji">' + B.emoji + (B.sub ? '<small>' + B.sub + '</small>' : '') + '</div>' +
       '<div class="gb-next-info"><b>' + esc(B.name) + '</b>' +
-      '<div class="gb-meta">' + esc(B.lv) + ' · ' + esc(B.theme || B.zone || '') + ' · <span class="gb-tier">Tier ' + B.tier + '</span> · ❤️ ' + effHpOf(B) + ' máu</div>' +
+      '<div class="gb-meta">' + esc(B.lv) + ' · ' + esc(B.theme || B.zone || '') + ' · <span class="gb-tier">Tier ' + B.tier + '</span> · ❤️ ' + battleHpOf(B) + ' máu trong trận</div>' +
       (B.line ? '<div class="gb-line">“' + esc(B.line) + '”</div>' : '') +
       '<button type="button" class="gb-change" id="btnChangeBoss">🔀 Đổi trùm khác</button></div></div>';
     /* Lưới roster toàn bộ boss: bấm chọn tay được; chọn tay thì loại boss
@@ -165,6 +192,11 @@
       '<h2>Trùm sắp đấu</h2>' + nextHTML +
       '<h2>Tất cả trùm (chạm để chọn tay)</h2>' + rosterHTML +
       '<h2>Độ khó</h2>' + segHTML(Object.keys(DIFF).map(function (k) { return { v: k, n: DIFF[k].n, sub: DIFF[k].s + 's/câu' + (DIFF[k].x > 1 ? ' · x2 điểm' : '') }; }), st.diff, 'diff') +
+      '<h2>Cách đánh</h2>' + segHTML([{ v: 'solo', n: 'Đánh lẻ', sub: '1 trùm · HP ×2,6 · 3 phase' }, { v: 'ladder', n: '🏆 Leo hạng', sub: '3 trùm liền · HP ×2,0' }], st.mode, 'mode') +
+      (st.mode === 'ladder'
+        ? '<p class="mx-mut" style="margin-top:8px">Leo hạng: rút 3 trùm ngẫu nhiên, sắp tier tăng dần. Giữ điểm/streak xuyên suốt; giữa các trùm hồi 35 máu + hồi 1 phù đã dùng. Trùm chọn tay ở trên chỉ áp cho Đánh lẻ.</p>'
+        : '<p class="mx-mut" style="margin-top:8px">Đánh lẻ: trùm chia 3 phase theo máu (66%/33%). Từ Phase 2 trùm tung chiêu phá và họ câu đổi sang trộn; có 3 phù trợ, mỗi phù 1 lần/trận.</p>') +
+      '<div id="dkPlusLoadout"></div>' +
       '<div style="height:14px"></div><button class="mx-btn" id="btnGo" type="button">Vào trận ▶</button>' +
       '<p class="mx-mut" style="text-align:center;margin-top:10px">Câu hỏi kanji lấy từ bài học thật của trang, hiện ngay khi chơi.</p></div>';
     var chg = $('#btnChangeBoss');
@@ -178,6 +210,10 @@
       });
     });
     bindSeg(m, 'diff', function (v) { st.diff = v; });
+    /* Đổi cách đánh thì vẽ lại menu để số máu trong trận (×2,6 / ×2,0)
+       và dòng mô tả khớp lựa chọn; boss đang chọn không đổi. */
+    bindSeg(m, 'mode', function (v) { st.mode = v; buildMenu(); });
+    if (window.GPLUS) GPLUS.mountLoadout($('#dkPlusLoadout'));
     $('#btnGo').addEventListener('click', start);
   }
 
@@ -325,7 +361,7 @@
      thêm thẻ script/link bosses nên không chèn sẵn div vào HTML). Hiện
      câu thoại boss ở ĐẦU trận; khi boss xuống <=30% máu chỉ đổi viền đỏ
      cảnh báo (gb-low), không đổi nội dung thoại — ghi rõ vậy. */
-  function sayBoss(lowOnly) {
+  function sayBoss(lowOnly, text) {
     var B = bossNow(), play = $('#play'); if (!play || !B) return;
     var el = $('#gbSay');
     if (!el) {
@@ -337,8 +373,154 @@
     el.style.setProperty('--gb-c', B.color);
     el.classList.toggle('gb-low', !!lowOnly);
     el.innerHTML = '<span class="gb-say-face">' + B.emoji + (B.sub || '') + '</span><div><b>' + esc(B.name) + ':</b>' +
-      '<p>“' + esc(B.line || 'Lên đi, ta chờ!') + '”</p></div>';
+      '<p>“' + esc(text || B.line || 'Lên đi, ta chờ!') + '”</p></div>';
     el.classList.remove('mx-hid');
+  }
+
+  /* ---------- MỞ RỘNG: phase / chiêu phá / phù trợ ---------- */
+  /* Biển phase: tạo động TRONG arena (như dmgPop), pointer-events:none
+     qua x-dau-kanji.css, tự gỡ sau ~1,6s — không che câu hỏi/đáp án. */
+  function showPhaseBanner(txt) {
+    var ar = $('#arena'); if (!ar) return;
+    var old = ar.querySelector('.x-phase-banner'); if (old) old.remove();
+    var d = document.createElement('div');
+    d.className = 'x-phase-banner'; d.setAttribute('aria-hidden', 'true'); d.textContent = txt;
+    ar.appendChild(d);
+    setTimeout(function () { d.remove(); }, 1600);
+  }
+  function paintTrickBadge() {
+    var b = $('#trickBadge'); if (!b) return;
+    var txt = trick.kind === 'cover' ? '🌀 Che 1 đáp án' : trick.kind === 'squeeze' ? '⚡ Ép giờ ×0,6' : (trick.kind === 'swap' ? '🔀 Đảo đáp án' : '');
+    b.textContent = txt; b.classList.toggle('mx-hid', !txt);
+    var tb = document.querySelector('#play .mx-timer');
+    if (tb) tb.classList.toggle('x-squeezed', trick.kind === 'squeeze');
+  }
+  /* Nạp dự phòng pool của phase kế: gọi khi máu trùm vừa xuống mốc
+     70% (chuẩn bị Phase 2) / 37% (chuẩn bị Phase 3) để lúc chuyển
+     phase (66%/33%) chỉ việc hoán pool, không giật chờ mạng. */
+  function maybePreload() {
+    if (nextPool || preloadBusy || hpB <= 0) return;
+    var frac = hpB / hpBMax, want = 0;
+    if (phase === 1 && frac <= 0.70 && frac > 0.66) want = 2;
+    else if (phase === 2 && frac <= 0.37 && frac > 0.33) want = 3;
+    if (!want) return;
+    preloadBusy = true;
+    var lv = st.lv; // chốt cấp của trùm hiện tại (leo hạng đổi trùm = đổi cấp)
+    fetchQ(14, phaseTopic(want)).then(function (qs) {
+      preloadBusy = false;
+      var u = usable(qs);
+      /* Chỉ giữ nếu vẫn đang đấu cùng trùm/cấp và chưa qua phase đó. */
+      if (u.length && st.lv === lv && phase < want) { nextPool = u; nextPoolPhase = want; }
+    }).catch(function () { preloadBusy = false; });
+  }
+  /* Áp phase mới ngay trước câu kế tiếp: hoán pool theo topic phase,
+     biển báo + rung arena nhẹ + câu thoại phase trong gbSay, và hẹn
+     1 chiêu phá cho câu sắp hiện (trickPending, xử lý trong next()). */
+  function applyPhase(np) {
+    phase = np; p3Since = 0;
+    poolTopic = phaseTopic(np);
+    if (nextPool && nextPoolPhase === np) { pool = nextPool; qi = 0; }
+    else { pool = []; qi = 0; }
+    nextPool = null; nextPoolPhase = 0;
+    showPhaseBanner(np === 2 ? 'PHASE 2 — TRÙM NỔI GIẬN 🔥' : 'PHASE 3 — TRÙM BÙNG NỔ 💥');
+    fx('shake', $('#arena'));
+    sayBoss(true, PHASE_SAY[np]);
+    trickPending = true;
+  }
+  function pickTrick(q) {
+    /* Câu sắp xếp (order) không có nút đáp án để che/đảo -> chỉ Ép giờ. */
+    var cand = (q.choices && q.choices.length >= 2) ? ['cover', 'squeeze', 'swap'] : ['squeeze'];
+    var fresh = cand.filter(function (k) { return k !== lastTrickKind; });
+    var list = fresh.length ? fresh : cand;
+    return list[Math.random() * list.length | 0];
+  }
+  function cancelSwap() {
+    if (trick.swapTimer) { clearTimeout(trick.swapTimer); trick.swapTimer = null; }
+    trick.swapPending = false;
+    if (trick.kind === 'swap') trick.kind = null;
+  }
+  function clearTrick() {
+    if (trick.swapTimer) clearTimeout(trick.swapTimer);
+    trick = newTrick();
+    paintTrickBadge();
+  }
+  function applyCover() {
+    var btns = $$('#optBox .mx-opt').filter(function (b) { return !b.classList.contains('gone'); });
+    if (!btns.length) btns = $$('#optBox .mx-opt');
+    if (!btns.length) { trick.kind = null; return; }
+    var b = btns[Math.random() * btns.length | 0];
+    b.classList.add('x-covered');
+    var cov = document.createElement('span');
+    cov.className = 'x-cover'; cov.setAttribute('aria-hidden', 'true'); cov.textContent = '🌀';
+    b.appendChild(cov);
+    trick.el = b;
+  }
+  function scheduleSwap(ms) {
+    if (trick.swapTimer) clearTimeout(trick.swapTimer);
+    trick.swapTimer = setTimeout(function () { trick.swapTimer = null; doSwap(); }, ms);
+  }
+  function doSwap() {
+    /* Đang pause: ĐÔNG CỨNG nhịp đảo — hoãn sang sau resume (onResume
+       của GPAUSE hẹn lại); câu đã khoá/đã trả lời thì bỏ qua hẳn. */
+    if (isPaused()) { trick.swapPending = true; return; }
+    trick.swapPending = false;
+    if (lock || !cur || trick.qRound !== round) { if (trick.kind === 'swap') { trick.kind = null; paintTrickBadge(); } return; }
+    var box = $('#optBox'); if (!box) return;
+    var btns = $$('#optBox .mx-opt');
+    if (btns.length < 2) { trick.kind = null; paintTrickBadge(); return; }
+    shuffle(btns).forEach(function (b) { box.appendChild(b); });
+    box.classList.add('x-swapped');
+    setTimeout(function () { box.classList.remove('x-swapped'); }, 650);
+    trick.kind = null; paintTrickBadge();
+  }
+  /* Hàng phù trợ: trạng thái disabled khớp usedLife (leo hạng hồi lại
+     1 phù đã dùng thì paintLife mở khoá nút đó). */
+  function paintLife() {
+    var m = { lfBreak: 'break', lfTime6: 'time', lf5050: 'f50' };
+    Object.keys(m).forEach(function (id) { var b = $('#' + id); if (b) b.disabled = !!usedLife[m[id]]; });
+  }
+  function reviveOneLife() {
+    var used = Object.keys(usedLife).filter(function (k) { return usedLife[k]; });
+    if (!used.length) return null;
+    var k = used[Math.random() * used.length | 0];
+    usedLife[k] = false; paintLife();
+    return k;
+  }
+  function bindLifelines() {
+    var bb = $('#lfBreak'), bt = $('#lfTime6'), bf = $('#lf5050');
+    if (bb) bb.addEventListener('click', function () {
+      if (isPaused() || usedLife.break || lock || !timerLive) return;
+      var did = false;
+      if (trick.kind === 'cover' && trick.el) { /* bỏ lớp che */
+        trick.el.classList.remove('x-covered');
+        var cov = trick.el.querySelector('.x-cover'); if (cov) cov.remove();
+        trick.el = null; trick.kind = null; did = true;
+      } else if (trick.kind === 'squeeze') { /* cộng lại đúng phần giờ bị cắt (kể cả khi đã +6s xen giữa) */
+        limMs += trick.cutMs || 0; trick.kind = null; did = true;
+      } else if (trick.kind === 'swap' || trick.swapPending || trick.swapTimer) { /* huỷ đảo đang chờ */
+        cancelSwap(); did = true;
+      }
+      if (!did) return; /* không có chiêu nào đang áp: không tốn phù */
+      usedLife.break = true; paintLife(); paintTrickBadge();
+      trend('trogiup'); sfx('click');
+    });
+    if (bt) bt.addEventListener('click', function () {
+      if (isPaused() || usedLife.time || lock || !timerLive) return;
+      usedLife.time = true; paintLife();
+      /* +6s bám đúng cơ chế giờ fix3 của trang: đồng hồ tính
+         left = limMs - (Date.now() - t0) nên chỉ cần limMs += 6000 —
+         pause vẫn đúng vì onResume đã cộng dur vào t0. */
+      limMs += 6000;
+      trend('trogiup'); sfx('click');
+    });
+    if (bf) bf.addEventListener('click', function () {
+      if (isPaused() || usedLife.f50 || lock || !cur || !cur.choices) return;
+      usedLife.f50 = true; paintLife(); trend('trogiup'); sfx('click');
+      var ci = correctIdx(cur), k = 0;
+      $$('#optBox .mx-opt').forEach(function (b) {
+        if (k < 2 && +b.getAttribute('data-ix') !== ci && !b.classList.contains('gone')) { b.classList.add('gone'); k++; }
+      });
+    });
   }
   /* ===== Đợt 5 Nhánh C: BIỂN TÊN MÌNH trên đầu #figP =====
      LỰA CHỌN: GIỮ NGUYÊN hình #figP cũ (emoji 🥷 / mặt hồ sơ 'hoso' 84px —
@@ -370,12 +552,42 @@
     var el = tmp.firstChild;
     if (el) { el.classList.add('gnp-top'); fig.appendChild(el); }
   }
+  /* Leo hạng: rút 3 trùm bằng GBOSS.next() 3 lần rồi sắp tier tăng dần.
+     Không có GBOSS thì xoay vòng 5 trùm gốc (tier = thứ tự gốc). */
+  function drawLadderLineup() {
+    var out = [];
+    if (window.GBOSS && typeof GBOSS.next === 'function') {
+      for (var i = 0; i < 3; i++) out.push(GBOSS.next());
+    } else {
+      for (var k = 0; k < 3; k++) out.push(normOrig((st.boss + k) % BOSSES.length));
+    }
+    out.sort(function (a, b) { return (a.tier || 0) - (b.tier || 0); });
+    return out;
+  }
   function start() {
-    var B = bossNow();
-    hpP = 100; hpBMax = effHpOf(B); hpB = hpBMax; round = 0; okCount = 0; streak = 0; best = 0; score = 0; qi = 0; pool = [];
+    /* Khởi tạo LƯỢT (điểm/streak/phù giữ xuyên suốt leo hạng); từng trùm
+       được dựng bởi startBossFight(). */
+    hpP = 100; round = 0; okCount = 0; streak = 0; best = 0; score = 0;
+    usedLife = { break: false, time: false, f50: false }; paintLife();
+    lastTrickKind = null; resultInfo = null; advancing = false;
     startT = Date.now(); needNext = false;
+    if (window.GPLUS) GPLUS.beginMatch();
+    if (st.mode === 'ladder') {
+      ladderLineup = drawLadderLineup(); ladderIdx = 0;
+      setBoss(ladderLineup[0], false);
+    } else { ladderLineup = null; ladderIdx = 0; }
     if (pauseCtl) pauseCtl.setVisible(true);
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid');
+    music('boss'); trend('vao');
+    startBossFight(bossNow());
+  }
+  /* Dựng 1 trùm trong lượt: HP theo cách đánh (×2,6 lẻ / ×2,0 leo hạng),
+     phase về 1, pool về topic 'kanji', gỡ mọi chiêu/phù đang treo. */
+  function startBossFight(B) {
+    hpBMax = battleHpOf(B); hpB = hpBMax;
+    phase = 1; pendingPhase = 0; trickPending = false; p3Since = 0;
+    pool = []; qi = 0; poolTopic = 'kanji'; nextPool = null; nextPoolPhase = 0;
+    clearTrick();
     document.documentElement.style.setProperty('--bkc', B.color);
     var arena = $('#arena');
     arena.style.setProperty('--bkc', B.color);
@@ -389,19 +601,33 @@
       GAME_AVATAR.paintFace($('#figP'), GAME_AVATAR.load(), 84);
     }
     paintPlayerPlate(); // Đợt 5 C: biển tên mình treo trên đầu #figP (sau paintFace để không bị ghi đè)
-    $('#bName').textContent = B.emoji + ' ' + B.name;
+    $('#bName').textContent = B.emoji + ' ' + B.name + (st.mode === 'ladder' ? ' · Trùm ' + (ladderIdx + 1) + '/3' : '');
     $('#bName').setAttribute('data-boss-id', B.id);
     $('#figB').textContent = B.emoji; // chỉ emoji chính (104px): emoji phụ để ở hộp thoại, tránh xếp chồng tràn arena
     $('#play').classList.remove('mx-hid');
     sayBoss(false);
     setHp();
-    music('boss'); trend('vao');
     loadMore(14).then(function () { next(); }).catch(function () {
       showError('Có vẻ đang mất mạng hoặc chưa có dữ liệu bài học cho cấp ' + st.lv + '. ' + callName() + ' thử lại sau ít phút nhé.');
     });
   }
+  /* Leo hạng: hạ 1 trùm chưa phải cuối -> KHÔNG kết lượt, KHÔNG nộp
+     điểm, KHÔNG GFIN (kết liễu chỉ ở trùm cuối). Hồi 35 máu người chơi
+     + hồi 1 phù đã dùng (ngẫu nhiên), dựng trùm kế tiếp. */
+  function advanceBoss() {
+    if (advancing) return; advancing = true;
+    stopTimer(); clearTrick();
+    ladderIdx++;
+    var B = ladderLineup[ladderIdx];
+    setBoss(B, false);
+    hpP = Math.min(100, hpP + 35);
+    var revived = reviveOneLife();
+    startBossFight(B);
+    showPhaseBanner('⚔️ TRÙM ' + (ladderIdx + 1) + '/3: ' + B.name + ' · +35 máu' + (revived ? ' · hồi 1 phù' : ''));
+    advancing = false;
+  }
   function loadMore(n) {
-    return fetchQ(n).then(function (qs) {
+    return fetchQ(n, poolTopic).then(function (qs) {
       var u = usable(qs);
       if (!u.length && !pool.length) throw new Error('empty');
       pool = pool.concat(u); return pool;
@@ -414,18 +640,46 @@
 
   function next() {
     if (isPaused()) { needNext = true; return; }
-    if (hpP <= 0 || hpB <= 0) return end();
+    if (hpP <= 0) return end();
+    if (hpB <= 0) {
+      /* Leo hạng còn trùm kế: chuyển trùm thay vì kết lượt. */
+      if (st.mode === 'ladder' && ladderLineup && ladderIdx < ladderLineup.length - 1) return advanceBoss();
+      return end();
+    }
+    /* Chuyển phase chốt từ cú đánh trước áp ở đây: hoán pool + hẹn chiêu. */
+    if (pendingPhase && pendingPhase > phase) { applyPhase(pendingPhase); }
+    pendingPhase = 0;
     takeQ().then(function (q) {
       if (!q) return end();
       cur = q; lock = false; round++;
-      $('#roundInfo').textContent = 'Hiệp ' + round + ' · Đúng & nhanh = đòn mạnh';
+      clearTrick();
+      /* Chiêu phá: hẹn từ chuyển phase (trickPending) hoặc mỗi 3 câu
+         ở Phase 3 (p3Since đếm câu Phase 3 kể từ chiêu gần nhất). */
+      var due = false;
+      if (trickPending) { due = true; trickPending = false; }
+      else if (phase === 3) { p3Since++; if (p3Since >= 3) { due = true; p3Since = 0; } }
+      var chosen = due ? pickTrick(q) : null;
+      if (chosen) { lastTrickKind = chosen; trick.kind = chosen; trick.qRound = round; }
+      $('#roundInfo').textContent = 'Hiệp ' + round + ' · Phase ' + phase + (st.mode === 'ladder' ? ' · Trùm ' + (ladderIdx + 1) + '/3' : '') + ' · Đúng & nhanh = đòn mạnh';
       var qb = $('#qBox');
       qb.textContent = q.prompt || '';
       qb.classList.toggle('long', (q.prompt || '').length > 14);
       $('#qSub').textContent = q.promptSub || (q.meaning && q.type !== 'kanji' ? '' : '');
       $('#optBox').innerHTML = ''; $('#ordBox').innerHTML = '';
       if (q.tokens && q.tokens.length >= 2 && !q.choices) renderOrder(q); else renderChoices(q);
-      startTimer(qSeconds(), function () { if (!lock) { lock = true; onWrong(true); } });
+      var sec = qSeconds();
+      if (chosen === 'squeeze') {
+        /* Ép giờ: áp hệ số ×0,6 vào limMs của CHÍNH câu này qua
+           startTimer; origLimMs giữ để phù Phá sương khôi phục. */
+        trick.origLimMs = sec * 1000;
+        sec = sec * 0.6;
+        trick.cutMs = trick.origLimMs - sec * 1000;
+      }
+      paintTrickBadge();
+      startTimer(sec, function () { if (!lock) { lock = true; onWrong(true); } });
+      if (chosen === 'cover') applyCover();
+      else if (chosen === 'swap') scheduleSwap(1200);
+      paintTrickBadge();
     });
   }
   function renderChoices(q) {
@@ -433,13 +687,17 @@
     q.choices.forEach(function (c, i) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'mx-opt'; b.textContent = c;
+      /* data-ix giữ chỉ số đáp án GỐC: chiêu Đảo đáp án hoán vị vị trí
+         DOM nên mọi tra cứu đúng/sai phải theo data-ix, không theo
+         thứ tự DOM (revealChoices + phù 50/50 đều dùng data-ix). */
+      b.setAttribute('data-ix', String(i));
       b.addEventListener('click', function () { answer(i === ci, b); });
       box.appendChild(b);
     });
   }
   function revealChoices() {
     var ci = correctIdx(cur);
-    $$('#optBox .mx-opt').forEach(function (b, i) { b.disabled = true; if (i === ci) b.classList.add('ok'); });
+    $$('#optBox .mx-opt').forEach(function (b) { b.disabled = true; if (+b.getAttribute('data-ix') === ci) b.classList.add('ok'); });
   }
   function renderOrder(q) {
     var box = $('#ordBox'), picked = [];
@@ -476,6 +734,11 @@
 
   function answer(right, btn) {
     if (isPaused() || lock) return; lock = true; stopTimer();
+    /* GAME-PLUS: đáp án SAI (bấm sai + hết giờ) đều chảy qua onWrong nên
+       ghi câu sai + khiên đặt ở onWrong để không ghi/không đỡ 2 lần;
+       ở đây chỉ ghi khi ĐÚNG. */
+    if (right) { window.GPLUS_TRACK && GPLUS_TRACK(cur, right); }
+    cancelSwap(); paintTrickBadge(); /* câu đã khoá: đảo đang chờ bị huỷ */
     var sp = speedFrac(), D = DIFF[st.diff];
     if (right) {
       if (btn) btn.classList.add('ok');
@@ -484,9 +747,16 @@
       fx('comboPop', streak);
       var ultra = streak >= 5;
       var dmg = Math.round((12 + sp * 14) * (ultra ? 2 : 1));
-      score += Math.round((100 + sp * 100) * D.x * (1 + streak * 0.1));
+      score += Math.round((100 + sp * 100) * D.x * (1 + streak * 0.1)) * (window.GPLUS ? GPLUS.scoreMul() : 1);
       var hpBBefore = hpB;
       hpB = Math.max(0, hpB - dmg); setHp();
+      /* Mốc phase 66%/33%: chốt pendingPhase (áp ở next() kế tiếp);
+         mốc nạp dự phòng 70%/37% chạy ngay để pool phase mới sẵn sàng. */
+      if (hpB > 0) {
+        var np = phaseFor(hpB / hpBMax);
+        if (np > phase) pendingPhase = np;
+        maybePreload();
+      }
       var dealtB = hpBBefore - hpB; // delta HP thật (đã clamp) — số bay lên khớp đúng thanh máu
       sfx(ultra ? 'thunder' : SKILLS[(round - 1) % SKILLS.length]);
       fx(ultra ? 'ultra' : 'burst', $('#figB'));
@@ -503,9 +773,13 @@
   }
   function onWrong(timeout, btn) {
     stopTimer();
+    window.GPLUS_TRACK && GPLUS_TRACK(cur, false);
+    var __pr = window.GPLUS ? GPLUS.onAnswer(false) : null;
+    cancelSwap(); paintTrickBadge();
     if (btn) btn.classList.add('bad');
     revealChoices();
-    streak = 0; fx('comboPop', 0);
+    /* Khiên GAME-PLUS: đỡ đúng phần mất streak/combo, máu vẫn trừ như cũ. */
+    if (__pr && __pr.shieldUsed) { fx('comboPop', streak); } else { streak = 0; fx('comboPop', 0); }
     var dmg = timeout ? 14 : 15;
     var hpPBefore = hpP;
     hpP = Math.max(0, hpP - dmg); setHp();
@@ -518,10 +792,30 @@
   }
 
   function end() {
+    /* GAME-PLUS hồi sinh: chỉ khi thua vì hết máu (hpP<=0, trùm còn sống) —
+       hồi 20 máu rồi đấu tiếp câu kế. */
+    if (hpP <= 0 && hpB > 0 && window.GPLUS && GPLUS.tryRevive()) {
+      hpP = 20; setHp();
+      if (pauseCtl) pauseCtl.setVisible(true);
+      next(); return;
+    }
+    if (window.GPLUS) GPLUS.endMatch();
     if (pauseCtl) pauseCtl.setVisible(false);
+    clearTrick();
     /* Kết liễu BOSS (đợt 4): chỉ khi thắng, gắn TRƯỚC khi end() ẩn sân đấu;
-       truyền boss CỦA VÁN (bossNow()). Thua (hpB>0) tuyệt đối không chạy. */
+       truyền boss CỦA VÁN (bossNow()). Thua (hpB>0) tuyệt đối không chạy.
+       Leo hạng: end() chỉ tới được ở trùm cuối (thắng) hoặc khi gục giữa
+       chừng nên GFIN kết liễu giữ đúng ở trùm cuối như thiết kế. */
     if (hpB <= 0 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ boss: bossNow(), fromEl: $('#figP'), toEl: $('#figB'), dmg: score }); else GFIN.play({ fromEl: $('#figP'), toEl: $('#figB'), dmg: score }); } catch (e) {} }
+    /* Chốt thông tin kết quả TRƯỚC renderResult (hàm này được gọi lại
+       khi tên người chơi resolve muộn nên phải đọc từ resultInfo). */
+    if (st.mode === 'ladder' && ladderLineup) {
+      resultInfo = {
+        ladder: true, win: hpB <= 0, fellAt: ladderIdx + 1,
+        fellBoss: bossNow().name,
+        names: ladderLineup.map(function (b) { return b.name; })
+      };
+    } else resultInfo = null;
     stopTimer();
     $('#play').classList.add('mx-hid');
     var B = bossNow(), win = hpB <= 0;
@@ -537,17 +831,55 @@
     var B = bossNow(), win = hpB <= 0;
     var zone = B.theme || B.zone || '';
     var r = $('#result'); r.classList.remove('mx-hid');
-    r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">' + (win ? '🏆' : '💪') + '</div>' +
-      '<h1>' + (win ? 'Hạ gục ' + esc(B.name) + '!' : 'Suýt nữa thôi!') + '</h1>' +
-      '<p class="mx-mut">' + (win ? callName() + ' quá cháy! Vùng ' + esc(zone) + ' đã yên bình trở lại 🔓' : callName() + ' đánh rất hay, nghỉ một chút rồi phục thù nhé!') + '</p>' +
-      '<div class="mx-stat-row"><span class="mx-pill">⭐ ' + score + ' điểm</span><span class="mx-pill">✅ ' + okCount + ' đúng</span><span class="mx-pill">⚡ Combo cao nhất ' + best + '</span><span class="mx-pill">❤️ Còn ' + Math.max(0, hpP) + ' máu</span></div>' +
-      (win ? '<p class="mx-pill" style="margin-bottom:12px">🎉 Mở khóa danh hiệu: Người hùng ' + esc(zone) + '</p><br>' : '') +
-      '<button class="mx-btn" id="btnAgain" type="button">Đánh lại</button><div style="height:8px"></div>' +
-      '<a class="mx-btn alt" style="display:block;text-align:center;text-decoration:none" href="index.html">Về hub game</a></div>';
+    var head, sub, extra = '';
+    if (resultInfo && resultInfo.ladder) {
+      if (resultInfo.win) {
+        head = '🏆 CHINH PHỤC LEO HẠNG!';
+        sub = callName() + ' đã hạ cả 3 trùm liền một mạch: ' + esc(resultInfo.names.join(' → ')) + '. Đỉnh thật sự!';
+        extra = '<p class="mx-pill" style="margin-bottom:12px">🎉 Mở khóa danh hiệu: Vô địch Leo hạng trùm</p><br>';
+      } else {
+        head = 'Gục ở trùm thứ ' + resultInfo.fellAt + '/3';
+        sub = callName() + ' đã gục trước ' + esc(resultInfo.fellBoss) + ' ở lượt leo hạng. Điểm của cả lượt vẫn được ghi nhận — nghỉ một chút rồi leo lại nhé!';
+      }
+      r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">' + (resultInfo.win ? '🏆' : '💪') + '</div>' +
+        '<h1>' + head + '</h1>' +
+        '<p class="mx-mut">' + sub + '</p>' +
+        '<div class="mx-stat-row"><span class="mx-pill">⭐ ' + score + ' điểm</span><span class="mx-pill">✅ ' + okCount + ' đúng</span><span class="mx-pill">⚡ Combo cao nhất ' + best + '</span><span class="mx-pill">❤️ Còn ' + Math.max(0, hpP) + ' máu</span></div>' +
+        extra +
+        '<button class="mx-btn" id="btnAgain" type="button">Đánh lại</button><div style="height:8px"></div>' +
+        '<a class="mx-btn alt" style="display:block;text-align:center;text-decoration:none" href="index.html">Về hub game</a></div>';
+    } else {
+      r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">' + (win ? '🏆' : '💪') + '</div>' +
+        '<h1>' + (win ? 'Hạ gục ' + esc(B.name) + '!' : 'Suýt nữa thôi!') + '</h1>' +
+        '<p class="mx-mut">' + (win ? callName() + ' quá cháy! Vùng ' + esc(zone) + ' đã yên bình trở lại 🔓' : callName() + ' đánh rất hay, nghỉ một chút rồi phục thù nhé!') + '</p>' +
+        '<div class="mx-stat-row"><span class="mx-pill">⭐ ' + score + ' điểm</span><span class="mx-pill">✅ ' + okCount + ' đúng</span><span class="mx-pill">⚡ Combo cao nhất ' + best + '</span><span class="mx-pill">❤️ Còn ' + Math.max(0, hpP) + ' máu</span></div>' +
+        (win ? '<p class="mx-pill" style="margin-bottom:12px">🎉 Mở khóa danh hiệu: Người hùng ' + esc(zone) + '</p><br>' : '') +
+        '<button class="mx-btn" id="btnAgain" type="button">Đánh lại</button><div style="height:8px"></div>' +
+        '<a class="mx-btn alt" style="display:block;text-align:center;text-decoration:none" href="index.html">Về hub game</a></div>';
+    }
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenuKeep(); });
   }
   function buildMenuKeep() { /* giữ lựa chọn trùm/độ khó đã chọn */ buildMenu(); }
 
+  /* GAME-PLUS: phép dời giờ DÙNG CHUNG cho onResume của GPAUSE và kỹ
+     năng Đóng băng — cộng dur vào t0 (mốc đồng hồ câu) + startT. */
+  function shiftDkTime(dur) { t0 += dur; startT += dur; }
+  if (window.GPLUS) {
+    GPLUS.setHudHost($('#dkPlusHud'));
+    GPLUS.setFreezeHandler(function () {
+      if (!timerLive || lock) return false;
+      shiftDkTime(5000);
+      return true;
+    });
+    GPLUS.setHintHandler(function () {
+      if (!cur || lock || !cur.choices) return false;
+      var ci = correctIdx(cur), done = false;
+      $$('#optBox .mx-opt').forEach(function (b) {
+        if (!done && +b.getAttribute('data-ix') !== ci && !b.classList.contains('gone') && !b.disabled) { b.classList.add('gone'); done = true; }
+      });
+      return done;
+    });
+  }
   /* FIX3: nút Tạm dừng — onResume cộng ms đã dừng vào t0 + startT. */
   if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
     pauseCtl = window.GPAUSE.create({
@@ -556,14 +888,21 @@
       isPlaying: function () { return !$('#play').classList.contains('mx-hid'); },
       onPause: function () { suspendTimer(); },
       onResume: function (dur) {
-        t0 += dur; startT += dur;
+        shiftDkTime(dur);
         if (timerLive) armTimer();
         if (needNext) { needNext = false; next(); }
+        /* MỞ RỘNG: đảo đáp án bị đông cứng lúc pause -> hẹn lại sau
+           resume, chỉ khi vẫn đúng câu đó và câu chưa khoá. */
+        if (trick.swapPending) {
+          trick.swapPending = false;
+          if (!lock && timerLive && trick.qRound === round) scheduleSwap(250);
+          else if (trick.kind === 'swap') { trick.kind = null; paintTrickBadge(); }
+        }
       },
-      onExit: function () { stopTimer(); $('#play').classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); }
+      onExit: function () { if (window.GPLUS) GPLUS.endMatch(); stopTimer(); clearTrick(); $('#play').classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); }
     });
   }
 
   bindUserEvent();
-  loadUser().then(buildMenu);
+  loadUser().then(function () { buildMenu(); bindLifelines(); paintLife(); });
 })();

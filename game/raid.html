@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Raid trùm tuần · Hành trình đến Edo</title>
+<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="modes.css">
+<link rel="stylesheet" href="bosses.css">
+<link rel="stylesheet" href="gear.css"><link rel="stylesheet" href="charanim.css">
+<link rel="stylesheet" href="nameplate.css">
+<link rel="stylesheet" href="finisher.css">
+<link rel="stylesheet" href="plus.css">
+<link rel="stylesheet" href="x-raid.css">
+</head>
+<body class="mx-body">
+<div class="mx-top"><a class="mx-back" href="index.html">← Tất cả game</a><a class="gtop-course" href="../index.html" aria-label="Quay lại khóa học">← <span>Về khóa học</span></a><span class="mx-title">🐉 Raid trùm tuần</span><div id="sndToggles" class="snd-toggles"></div></div>
+<main class="mx-wrap">
+  <section id="menu">
+    <div id="raidPanel"></div>
+    <div class="mx-card mx-hid" id="raidSetup">
+      <h2 style="margin-top:0">⚔️ Vào trận raid</h2>
+      <p class="mx-mut">10 câu trộn (mix) theo cấp đã chọn · 12 giây/câu như Đấu trùm. Mỗi câu đúng = <b>10 sát thương</b>; chuỗi đúng từ 5 trở lên được <b>+2/câu</b>. Hết 10 câu, tổng sát thương được gửi lên máy chủ raid 1 lần để trừ máu trùm tuần chung của cả cộng đồng.</p>
+      <h2>Trình độ</h2>
+      <div id="lvSeg"></div>
+      <div id="loadoutBox"></div>
+      <div style="height:14px"></div>
+      <button class="mx-btn" id="btnRaidGo" type="button">Vào trận raid ▶</button>
+      <p class="mx-mut" style="text-align:center;margin-top:10px">Sát thương chỉ được ghi khi đã đăng nhập và máy chủ raid đang mở.</p>
+    </div>
+  </section>
+  <section id="play" class="mx-hid">
+    <div class="bk-hud">
+      <div class="bk-side"><div class="bk-name" id="pName">Người chơi</div><div class="rd-side-note" id="pNote">🔥 Chuỗi 0 · ⚔️ 0 dmg</div></div>
+      <span class="bk-vs">VS</span>
+      <div class="bk-side r"><div class="bk-name" id="bName">Trùm tuần</div><div class="bk-hp r" id="hpBoxB"><i id="hpB"></i></div></div>
+    </div>
+    <div class="bk-arena" id="arena"><div class="bk-fig" id="figP">🥷</div><div class="bk-fig boss" id="figB">🐉</div></div>
+    <div class="mx-card">
+      <div class="mx-row"><span class="mx-grow mx-mut" id="roundInfo">Câu 1/10</span><span class="mx-pill" id="dmgPill">⚔️ 0 dmg</span><span class="mx-pill" id="tTxt"></span></div>
+      <div class="mx-timer"><i id="tBar"></i></div>
+      <div class="mx-q" id="qBox"></div>
+      <div class="mx-qsub" id="qSub"></div>
+      <div class="mx-opts" id="optBox"></div>
+      <div id="ordBox"></div>
+      <div class="mx-combo" id="comboBox"></div>
+      <div id="skillHud" class="rd-skills"></div>
+      <div class="gpause-slot" id="pauseSlot"></div>
+    </div>
+  </section>
+  <section id="result" class="mx-hid"></section>
+</main>
+<script src="game.js"></script>
+<script src="settings.js"></script>
+<script src="fx.js"></script>
+<script src="questions.js"></script>
+<script src="voice.js"></script>
+<script src="trend.js"></script>
+<script src="music.js"></script>
+<script src="sfx.js"></script>
+<script src="game-api.js"></script>
+<script src="bosses.js"></script><script src="gear.js"></script><script src="charanim.js"></script>
+<script src="nameplate.js"></script><script src="finisher.js"></script>
+<script src="pause.js"></script>
+<script src="plus.js"></script>
+<script src="raid.js"></script>
+</body>
+</html>

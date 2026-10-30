@@ -1,0 +1,45 @@
+/* x-phong-nhom.css — MỞ RỘNG phòng nhóm: thể thức Tiếp sức + Giải đấu 1v1.
+ * Chỉ chứa style cho phần tử mới (pn-x-*); không ghi đè style cũ của
+ * phong-nhom.css để hành vi versus/coop giữ nguyên 100%. */
+
+/* --- Khối chọn Thể thức ở phòng chờ --- */
+.pn-x-format { margin: 14px 0 4px; }
+.pn-x-format .pn-seg button:disabled { opacity: .45; cursor: not-allowed; }
+.pn-x-format .pn-seg button.pn-x-locked { opacity: .45; }
+
+/* --- Dải HUD trong trận (relay / tourney) --- */
+.pn-x-hud {
+  margin: 0 0 8px; padding: 8px 12px; border-radius: 12px;
+  background: var(--pn-card, #fff8ec); border: 1px solid rgba(120, 90, 20, .25);
+  font-weight: 600; text-align: center; line-height: 1.5;
+}
+.pn-x-hud .pn-x-hearts { letter-spacing: 2px; }
+
+/* --- Dải lượt / khán giả trong khu câu hỏi --- */
+.pn-x-banner {
+  margin: 8px 0; padding: 8px 12px; border-radius: 10px;
+  background: #eef4ff; border: 1px dashed #7aa2e8;
+  font-weight: 700; text-align: center;
+}
+.pn-x-banner.watch { background: #f3efff; border-color: #a58ae0; }
+
+/* Đáp án ở chế độ chỉ-đọc (khán giả / người chờ lượt): mờ nhẹ, không bấm */
+.pn-opts button.pn-x-ro, .pn-order-tokens .pn-tok.pn-x-ro { opacity: .75; }
+
+/* --- Sơ đồ nhánh giải đấu --- */
+.pn-x-bracket-wrap { margin: 10px 0; }
+.pn-x-bracket { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
+.pn-x-match {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 10px; border-radius: 10px;
+  background: rgba(127, 127, 127, .08); border: 1px solid rgba(127, 127, 127, .25);
+}
+.pn-x-match .pn-x-round { font-weight: 800; white-space: nowrap; }
+.pn-x-match .pn-x-vs { flex: 1 1 auto; min-width: 140px; }
+.pn-x-match .pn-x-win { font-weight: 800; color: #b8860b; white-space: nowrap; }
+.pn-x-match.done { border-color: #b8860b; }
+.pn-x-match.bye { opacity: .8; }
+.pn-x-champ {
+  margin: 10px 0; padding: 12px; border-radius: 12px; text-align: center;
+  background: #fff3c4; border: 2px solid #e6b800; font-size: 1.15em; font-weight: 800;
+}

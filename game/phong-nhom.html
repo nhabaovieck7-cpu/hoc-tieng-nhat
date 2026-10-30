@@ -9,6 +9,7 @@
      Worker nếu SITE chưa có (xem CONTRACT.md). -->
 <link rel="stylesheet" href="game.css">
 <link rel="stylesheet" href="phong-nhom.css">
+<link rel="stylesheet" href="x-phong-nhom.css">
 <link rel="stylesheet" href="fx-combat.css">
 <link rel="stylesheet" href="gear.css"><link rel="stylesheet" href="charanim.css">
 <link rel="stylesheet" href="nameplate.css">
@@ -67,8 +68,10 @@
         <h2 class="pn-h2">Số câu mỗi ván</h2>
         <div class="pn-seg" id="pnCountSeg" role="group" aria-label="Số câu">
           <button type="button" data-v="5">5 câu<small>nhanh gọn</small></button>
-          <button type="button" data-v="10" class="on">10 câu</button>
+          <button type="button" data-v="10">10 câu</button>
           <button type="button" data-v="15">15 câu<small>dài hơi</small></button>
+          <button type="button" data-v="20" class="on">20 câu</button>
+          <button type="button" data-v="30">30 câu<small>marathon</small></button>
         </div>
       </div>
       <div id="pnCoopPanel" class="hid">
@@ -170,6 +173,16 @@
         </div>
       </div>
     </div>
+    <div id="pnRoomFormat" class="pn-x-format hid">
+      <h3 class="pn-h3">Thể thức <span class="pn-mut" id="pnFormatEditNote"></span></h3>
+      <div class="pn-seg" id="pnFormatSeg" role="group" aria-label="Thể thức phòng đối kháng">
+        <button type="button" data-v="versus" class="on">⚔️ Đối kháng<small>mỗi người tự đua điểm</small></button>
+        <button type="button" data-v="relay">🤝 Tiếp sức<small>24 câu · cả đội luân phiên</small></button>
+        <button type="button" data-v="tourney">🏆 Giải đấu<small>1v1 loại trực tiếp</small></button>
+      </div>
+      <p class="pn-note" id="pnFormatNote"></p>
+      <div id="pnBracketView" class="pn-x-bracket-wrap hid"></div>
+    </div>
     <button type="button" class="pn-btn pn-btn-main pn-blk" id="pnStart" disabled>Chờ thêm người…</button>
     <p class="pn-note" id="pnStartNote"></p>
     <button type="button" class="pn-btn pn-btn-ghost pn-blk" id="pnLeaveLobby">Rời phòng</button>
@@ -178,10 +191,13 @@
   <!-- Trong trận -->
   <section id="pnPlay" class="hid">
     <div class="pn-coophud hid" id="pnCoopHud" role="status"></div>
+    <div class="pn-x-hud hid" id="pnRelayHud" role="status"></div>
+    <div class="pn-x-hud hid" id="pnTourneyHud" role="status"></div>
     <div class="pn-strip" id="pnStrip"></div>
     <div id="pnCombat" aria-hidden="true"></div>
     <div class="pn-card pn-stage">
       <div class="pn-row"><span class="pn-mut pn-grow" id="pnQn"></span><span class="pn-mut" id="pnQt"></span></div>
+      <div class="pn-x-banner hid" id="pnTurnBanner" role="status"></div>
       <div class="pn-timer"><i id="pnTimerBar"></i></div>
       <div class="pn-q jp" id="pnQPrompt"></div>
       <p class="pn-qsub jp" id="pnQSub"></p>
@@ -227,6 +243,7 @@
 <script src="chat.js"></script>
 <script src="fx-combat.js"></script><script src="bosses.js"></script><script src="gear.js"></script><script src="charanim.js"></script>
 <script src="nameplate.js"></script><script src="finisher.js"></script>
+<script src="plus.js"></script>
 <script src="phong-nhom.js"></script>
 </body>
 </html>

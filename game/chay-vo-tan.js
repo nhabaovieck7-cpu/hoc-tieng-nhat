@@ -80,7 +80,8 @@
   var st = { lv: 'N5', diff: 'tb' };
   var playing = false, score = 0, combo = 0, bestCombo = 0, lives = 3, dist = 0, gates = 0,
       pool = [], qi = 0, cur = null, curOpts = [], gateT0 = 0, travelMs = 6000, raf = null,
-      shield = 1, shieldOn = false, slow = 1, slowOn = false, startT = 0, lastFrame = 0, resolving = false;
+      shield = 1, shieldOn = false, slow = 1, slowOn = false, startT = 0, lastFrame = 0, resolving = false,
+      freezeUntil = 0; /* GAME-PLUS đóng băng (vá khi đăng): mốc performance.now kết thúc cửa sổ đóng băng cổng; 0 = không đóng băng */
   /* FIX3: tạm dừng (pause.js) — vòng rAF vẫn chạy nhưng đứng yên khi
      đang dừng (chỉ cập nhật lastFrame để dt không nhảy), resume cộng
      số ms đã dừng vào gateT0 (performance.now) + startT (Date.now). */
@@ -95,9 +96,11 @@
       '<p class="mx-mut">Chào ' + esc(callName()) + '! Chạy dọc lên phía trước: CHẠM thẳng vào cổng mang nghĩa đúng — nhân vật sẽ phóng tới tung skill phá cổng. Đừng để cổng chạm tới nơi mà chưa trả lời. Càng chạy nhịp càng nhanh. Sai 3 lần là hết lượt. Trợ giúp mỗi lượt: 🛡️ khiên chắn 1 lần sai · 🐢 chạy chậm 1 câu.</p>' +
       '<h2>Trình độ</h2><div class="mx-seg lv" data-seg="lv">' + LEVELS.map(function (l) { return '<button type="button" data-v="' + l + '" class="' + (l === st.lv ? 'on' : '') + '">' + l + '</button>'; }).join('') + '</div>' +
       '<h2>Độ khó</h2><div class="mx-seg" data-seg="diff">' + Object.keys(DIFF).map(function (k) { return '<button type="button" data-v="' + k + '" class="' + (k === st.diff ? 'on' : '') + '">' + DIFF[k].n + '<small>' + DIFF[k].s + 's/cổng' + (DIFF[k].x > 1 ? ' · x2 điểm' : '') + '</small></button>'; }).join('') + '</div>' +
+      '<div id="rnPlusLoadout"></div>' +
       '<div style="height:14px"></div><button class="mx-btn" id="btnGo" type="button">Xuất phát ▶</button></div>';
     bindSeg(m, 'lv', function (v) { st.lv = v; });
     bindSeg(m, 'diff', function (v) { st.diff = v; });
+    if (window.GPLUS) GPLUS.mountLoadout($('#rnPlusLoadout'));
     $('#btnGo').addEventListener('click', start);
   }
   function bindSeg(root, attr, cb) {
@@ -134,7 +137,8 @@
 
   function start() {
     score = 0; combo = 0; bestCombo = 0; lives = 3; dist = 0; gates = 0; qi = 0; pool = [];
-    shield = 1; shieldOn = false; slow = 1; slowOn = false; resolving = false;
+    shield = 1; shieldOn = false; slow = 1; slowOn = false; resolving = false; freezeUntil = 0;
+    if (window.GPLUS) GPLUS.beginMatch();
     startT = Date.now(); lastFrame = 0;
     if (pauseCtl) pauseCtl.setVisible(true);
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid'); $('#play').classList.remove('mx-hid');
@@ -181,16 +185,32 @@
       });
       travelMs = travelFor(gates);
       gateT0 = performance.now();
+      freezeUntil = 0; /* cổng mới = mốc giờ mới: đóng băng không chảy sang cổng sau */
       $('#road').style.animationDuration = Math.max(0.22, 0.5 * (travelMs / 6000)) + 's';
     });
   }
   function loop(t) {
     if (!playing) return;
     if (isPaused()) { lastFrame = t; raf = requestAnimationFrame(loop); return; }
+    var frameMs = lastFrame ? (t - lastFrame) : 0;
     if (lastFrame) {
-      var dt = (t - lastFrame) / 1000;
+      var dt = frameMs / 1000;
       dist += dt * (6 + gates * 0.15); /* quãng đường chạy */
       if (gates > 0) score += dt * 2;   /* điểm quãng đường nhẹ */
+    }
+    /* Đóng băng GAME-PLUS (vá khi đăng): trong cửa sổ đóng băng, dời
+       gateT0 theo đúng nhịp khung hình để tiến độ cổng (t - gateT0)
+       ĐỨNG YÊN tại chỗ suốt 5 giây — thay phép cộng thẳng 5000ms vào
+       gateT0 trước đây làm cổng nhảy lùi ngược lên trên. */
+    if (freezeUntil) {
+      var gbF = $('#gateBox');
+      if (t < freezeUntil) {
+        gateT0 += frameMs;
+        if (gbF && !gbF.classList.contains('rnv-frozen')) gbF.classList.add('rnv-frozen');
+      } else {
+        freezeUntil = 0;
+        if (gbF) gbF.classList.remove('rnv-frozen');
+      }
     }
     lastFrame = t;
     if (cur && !resolving) {
@@ -493,6 +513,10 @@
     settleGate(false);
   }
   function settleGate(right) {
+    /* GAME-PLUS: settleGate là phễu chấm DUY NHẤT của chế độ (chạm sai
+       và cổng chạm đáy/hết giờ đều chảy qua đây) — ghi câu sai, khiên
+       và x2 đặt ở đây, mỗi đáp án đúng 1 lần. */
+    window.GPLUS_TRACK && GPLUS_TRACK(cur, right);
     var ci = correctIdx(cur);
     $$('#gateBox .rnv-gate').forEach(function (g, i) { g.classList.add(curOpts[i] === cur.choices[ci] ? 'ok' : 'bad'); });
     resetRunner();
@@ -502,7 +526,7 @@
     var fl = $('#flash');
     if (right) {
       combo++; bestCombo = Math.max(bestCombo, combo);
-      score += Math.round(100 * DIFF[st.diff].x * (1 + combo * 0.1));
+      score += Math.round(100 * DIFF[st.diff].x * (1 + combo * 0.1)) * (window.GPLUS ? GPLUS.scoreMul() : 1);
       fl.style.background = 'rgba(24,160,88,.35)';
       sfx('beam'); fx('comboPop', combo);
       trend(combo >= 5 ? 'combo' : 'dung');
@@ -511,9 +535,14 @@
       fl.style.background = 'rgba(217,168,78,.4)';
       sfx('click');
     } else {
-      combo = 0; lives--;
+      /* Khiên GAME-PLUS: chỉ hỏi khiên ở nhánh này (nhánh shieldOn ở
+         trên đã có khiên riêng của chế độ đỡ rồi, không tốn khiên plus);
+         đỡ đúng phần mất combo, vẫn mất tim như cũ. */
+      var __pr = window.GPLUS ? GPLUS.onAnswer(false) : null;
+      if (__pr && __pr.shieldUsed) { fx('comboPop', combo); } else { combo = 0; fx('comboPop', 0); }
+      lives--;
       fl.style.background = 'rgba(207,58,46,.4)';
-      sfx('wrong'); fx('shake', $('#stage')); fx('comboPop', 0);
+      sfx('wrong'); fx('shake', $('#stage'));
       trend('sai');
     }
     fl.style.opacity = '1';
@@ -521,7 +550,15 @@
     slowOn = false;
     updateHud();
     gates++;
-    if (lives <= 0) { setTimeout(end, 550); playing = false; return; }
+    if (lives <= 0) {
+      /* GAME-PLUS hồi sinh: hết tim -> sống lại 1 tim, chạy tiếp cổng kế. */
+      if (window.GPLUS && GPLUS.tryRevive()) {
+        lives = 1; updateHud();
+        setTimeout(function () { resolving = false; if (playing) nextGate(); }, 260);
+        return;
+      }
+      setTimeout(end, 550); playing = false; return;
+    }
     setTimeout(function () { resolving = false; if (playing) nextGate(); }, 260);
   }
   function updateHud() {
@@ -548,6 +585,7 @@
 
   function end() {
     if (!playing && $('#play').classList.contains('mx-hid')) return;
+    if (window.GPLUS) GPLUS.endMatch();
     if (pauseCtl) pauseCtl.setVisible(false);
     /* Kết liễu (đợt 3): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. */
     /* Kết liễu BOSS (đợt 4, gắn theo mẫu nhánh B): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. Chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
@@ -573,6 +611,30 @@
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
   }
 
+  /* Phép dời giờ của GPAUSE (onResume): cộng dur vào gateT0 (mốc giờ
+     cổng, performance.now) + startT (Date.now) đúng như onResume gốc.
+     Kỹ năng Đóng băng KHÔNG dùng phép này nữa (vá khi đăng): đóng băng
+     mở cửa sổ freezeUntil và vòng loop tự dời gateT0 theo nhịp khung
+     để cổng đứng yên tại chỗ 5 giây (xem loop). */
+  function shiftRnTime(dur) { gateT0 += dur; startT += dur; if (freezeUntil) freezeUntil += dur; }
+  if (window.GPLUS) {
+    GPLUS.setHudHost($('#rnPlusHud'));
+    GPLUS.setFreezeHandler(function () {
+      if (!playing || !cur || resolving) return false;
+      freezeUntil = performance.now() + 5000;
+      return true;
+    });
+    GPLUS.setHintHandler(function () {
+      if (!playing || !cur || resolving) return false;
+      var ci = correctIdx(cur), done = false;
+      $$('#gateBox .rnv-gate').forEach(function (g, i) {
+        if (!done && curOpts[i] !== cur.choices[ci] && g.style.pointerEvents !== 'none') {
+          g.style.opacity = '0.15'; g.style.pointerEvents = 'none'; done = true;
+        }
+      });
+      return done;
+    });
+  }
   /* FIX3: nút Tạm dừng — thoát trong lớp phủ = đúng nút Dừng sẵn có. */
   if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
     pauseCtl = window.GPAUSE.create({
@@ -581,7 +643,7 @@
       isPlaying: function () { return playing; },
       onPause: function () { var stg = $('#stage'); if (stg) stg.classList.add('gpause-frozen'); },
       onResume: function (dur) {
-        gateT0 += dur; startT += dur;
+        shiftRnTime(dur);
         var stg = $('#stage'); if (stg) stg.classList.remove('gpause-frozen');
       },
       onExit: function () { if (playing) end(); }
