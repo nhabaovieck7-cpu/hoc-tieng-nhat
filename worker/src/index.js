@@ -79,20 +79,80 @@ function siteBase(env){
   const o=siteOrigins(env)[0];
   return (o||'https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat').replace(/\/$/,'');
 }
-// Gửi email đặt lại mật khẩu qua Resend (https://resend.com) — hàm cắm-rút, thay nhà cung cấp chỉ sửa hàm này.
-// Cần secret RESEND_API_KEY + biến/secret RESEND_FROM (địa chỉ gửi thuộc tên miền đã xác thực trên Resend).
-// Chưa cấu hình → trả false, KHÔNG coi là lỗi lộ ra ngoài (endpoint luôn trả phản hồi chung). Token/link TUYỆT ĐỐI không ghi log.
+// --- Lớp gửi mail chung (theo cấu hình secret) + log bảo mật đặt lại mật khẩu ---
+// sendMail(env,{to,subject,text,html}) phân phối theo env.MAIL_PROVIDER:
+//   'resend' → Resend, 'brevo' → Brevo, 'mock' → chỉ phục vụ kiểm thử (production không đặt).
+// Cấu hình chính: MAIL_PROVIDER + MAIL_API_KEY + MAIL_FROM (địa chỉ gửi thuộc tên miền đã xác thực).
+// Tương thích ngược: chưa đặt bộ MAIL_* mà đã đặt RESEND_API_KEY + RESEND_FROM thì dùng Resend với hai secret cũ.
+// Chưa cấu hình gì → trả false lặng lẽ, KHÔNG coi là lỗi lộ ra ngoài (endpoint luôn trả phản hồi chung).
+// Token/link/mật khẩu TUYỆT ĐỐI không ghi log ở bất cứ đâu; lỗi fetch nuốt im lặng trả false.
+function parseMailFrom(from){
+  const s=String(from||'').trim();
+  const m=s.match(/^(.*?)<([^>]+)>$/);
+  if(m){const name=m[1].trim();const email=m[2].trim();return name?{name,email}:{email}}
+  return {email:s};
+}
+async function sendMail(env,msg){
+  if(!env||!msg||!msg.to)return false;
+  const to=msg.to,subject=msg.subject,text=msg.text,html=msg.html;
+  let provider=String(env.MAIL_PROVIDER||'').trim().toLowerCase();
+  let apiKey=String(env.MAIL_API_KEY||'').trim();
+  let from=String(env.MAIL_FROM||'').trim();
+  // Tương thích ngược với cấu hình Resend cũ: chỉ lấp phần còn thiếu khi provider trống hoặc là 'resend'.
+  if((!provider||!apiKey||!from)&&(env.RESEND_API_KEY||env.RESEND_FROM)){
+    if(!provider)provider='resend';
+    if(provider==='resend'){
+      if(!apiKey)apiKey=String(env.RESEND_API_KEY||'').trim();
+      if(!from)from=String(env.RESEND_FROM||'').trim();
+    }
+  }
+  if(!provider)return false;
+  if(provider==='mock'){
+    if(Array.isArray(env.MAIL_MOCK)){env.MAIL_MOCK.push({to,subject,text,html});return true}
+    return false;
+  }
+  if(!apiKey||!from)return false;
+  try{
+    if(provider==='resend'){
+      const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+apiKey},body:JSON.stringify({from,to:[to],subject,text,html})});
+      return r.ok;
+    }
+    if(provider==='brevo'){
+      const sender=parseMailFrom(from);
+      const r=await fetch('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{'Content-Type':'application/json','api-key':apiKey},body:JSON.stringify({sender,to:[{email:to}],subject,textContent:text,htmlContent:html})});
+      return r.ok;
+    }
+    return false;
+  }catch(e){return false}
+}
+// Bảng log bảo mật tự tạo ở lần dùng đầu (không cần SQL tay); lỗi log không bao giờ làm hỏng luồng chính.
+let _secLogReady=false;
+async function ensureSecLog(env){
+  if(_secLogReady||!env.DB)return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS auth_security_log (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT,
+    event TEXT,
+    ip TEXT,
+    created_at TEXT
+  )`).run();
+  _secLogReady=true;
+}
+async function logSec(env,email,event,req){
+  try{
+    if(!env||!env.DB)return;
+    await ensureSecLog(env);
+    let ip='';
+    try{ip=(req&&req.headers&&typeof req.headers.get==='function')?(req.headers.get('CF-Connecting-IP')||''):''}catch(e){ip=''}
+    await env.DB.prepare('INSERT INTO auth_security_log(email,event,ip,created_at) VALUES(?,?,?,?)').bind(String(email||'').slice(0,120),String(event||''),String(ip||''),now()).run();
+  }catch(e){}
+}
+// Gửi email đặt lại mật khẩu — hàm mỏng gọi sendMail, giữ nguyên nội dung email như bản hiện tại để endpoint không phải sửa nhiều.
 async function sendResetEmail(env,to,link){
-  const key=(env.RESEND_API_KEY||'').trim();
-  const from=(env.RESEND_FROM||'').trim();
-  if(!key||!from)return false;
   const subject='Đặt lại mật khẩu – Học tiếng Nhật cùng Khánh';
   const text='Bạn (hoặc ai đó) vừa xin đặt lại mật khẩu cho tài khoản Học tiếng Nhật cùng Khánh.\n\nMở link sau để đặt mật khẩu mới (link chỉ dùng được 1 lần, hết hạn sau 30 phút):\n'+link+'\n\nNếu không phải bạn, cứ bỏ qua email này — mật khẩu cũ vẫn giữ nguyên.';
   const html='<div style="font-family:sans-serif;line-height:1.6;color:#222"><p>Bạn (hoặc ai đó) vừa xin <b>đặt lại mật khẩu</b> cho tài khoản <b>Học tiếng Nhật cùng Khánh</b>.</p><p><a href="'+link+'" style="display:inline-block;background:#233d63;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none">Đặt lại mật khẩu</a></p><p style="font-size:.9em">Link chỉ dùng được 1 lần và hết hạn sau 30 phút. Nếu nút bấm không mở được, hãy dán link này vào trình duyệt:<br>'+link+'</p><p style="font-size:.9em;color:#666">Nếu không phải bạn, cứ bỏ qua email này — mật khẩu cũ vẫn giữ nguyên.</p></div>';
-  try{
-    const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+key},body:JSON.stringify({from,to:[to],subject,text,html})});
-    return r.ok;
-  }catch(e){return false}
+  return sendMail(env,{to,subject,text,html});
 }
 
 // --- Đếm giới hạn dùng chung (A4: đăng nhập sai; A6: hạn mức AI) ---
@@ -626,8 +686,10 @@ async function handleAuth(req,env,c,path){
     if(await rlPeek(env,ipKey)>=10||await rlPeek(env,emKey)>=3)return done();
     await rlHit(env,ipKey,prDay);await rlHit(env,emKey,prDay);
     const u=await env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
-    // Chỉ tài khoản có mật khẩu thật mới đặt lại được (tài khoản Google thuần không có mật khẩu để đặt lại).
-    if(u&&u.pass_hash&&u.pass_hash!=='oauth'){
+    // Chỉ tài khoản có mật khẩu thật mới đặt lại được (tài khoản Google thuần không có mật khẩu để đặt lại),
+    // và chỉ khi status thuộc {'approved','pending'}: 'locked'/'rejected' thì KHÔNG cấp token, KHÔNG gửi mail,
+    // vẫn trả đúng câu chung 200 ở cuối hàm (chống dò trạng thái tài khoản).
+    if(u&&u.pass_hash&&u.pass_hash!=='oauth'&&(u.status==='approved'||u.status==='pending')){
       await ensurePasswordResets(env);
       const token=randB64url(32);
       const tokenHash=await sha256hex(token);
@@ -635,6 +697,7 @@ async function handleAuth(req,env,c,path){
       // INSERT OR REPLACE theo email: xin link mới sẽ huỷ link cũ chưa dùng của cùng email.
       await env.DB.prepare('INSERT OR REPLACE INTO password_resets(email,token_hash,expires_at,used,created_at) VALUES(?,?,?,0,?)').bind(email,tokenHash,exp,now()).run();
       await env.DB.prepare('DELETE FROM password_resets WHERE expires_at < ?').bind(now()).run();
+      await logSec(env,email,'reset_requested',req);
       const link=siteBase(env)+'/dat-lai-mat-khau.html?token='+encodeURIComponent(token);
       await sendResetEmail(env,email,link);
     }
@@ -659,11 +722,14 @@ async function handleAuth(req,env,c,path){
     if(!row||row.used||row.expires_at<now()){await rlHit(env,rstKey,rstDay);return fail()}
     const u=await env.DB.prepare('SELECT * FROM users WHERE email=?').bind(row.email).first();
     if(!u){await rlHit(env,rstKey,rstDay);return fail()}
+    // Tài khoản 'locked'/'rejected' bị chặn đặt lại: tính rlHit như các lỗi khác, ghi log bảo mật, trả fail() chung, KHÔNG đổi mật khẩu.
+    if(u.status==='locked'||u.status==='rejected'){await rlHit(env,rstKey,rstDay);await logSec(env,row.email,'reset_blocked_status',req);return fail()}
     // Đổi mật khẩu theo đúng cơ chế hiện tại: salt ngẫu nhiên mới + PBKDF2 (pbkdf2Hash).
     const salt=randB64(16);
     const hash=await pbkdf2Hash(password,salt);
     await env.DB.prepare('UPDATE users SET pass_salt=?, pass_hash=? WHERE id=?').bind(salt,hash,u.id).run();
     await env.DB.prepare('UPDATE password_resets SET used=1 WHERE email=?').bind(row.email).run();
+    await logSec(env,row.email,'reset_completed',req);
     // Vô hiệu hoá MỌI phiên cũ của tài khoản: mọi thiết bị phải đăng nhập lại bằng mật khẩu mới.
     await env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(u.id).run();
     await ensureDevices(env);
@@ -3167,6 +3233,7 @@ const GAME_SCORE_RULES = {
   endless:  { cap: 200000, minMs: 10000, maxPerSec: 500 },
   festival: { cap: 20000,  minMs: 5000,  maxPerSec: 600 },
   versus:   { cap: 30000,  minMs: 10000, maxPerSec: 700 },
+  coop:     { cap: 20000,  minMs: 10000, maxPerSec: 700 },
 };
 const GAME_MODE_ALIASES = {
   'chien-dich': 'campaign', campaign: 'campaign',
@@ -3176,6 +3243,7 @@ const GAME_MODE_ALIASES = {
   'le-hoi': 'festival', festival: 'festival',
   'doi-khang': 'versus', 'phong-nhom': 'versus', versus: 'versus', room: 'versus',
   group: 'versus', // mode phòng nhóm của nhánh 6 (game-rooms: 'group' | 'versus')
+  coop: 'coop', 'hop-suc': 'coop', // hợp sức: điểm CÁ NHÂN nộp sau coop_finish
 };
 const GAME_LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
 const GAME_MAX_DURATION_MS = 6 * 3600 * 1000; // một lượt > 6 giờ = bịa
@@ -3503,8 +3571,13 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 // =====================================================================
+// =====================================================================
 // NHÁNH 6 — Phòng nhóm + đối kháng 1-1: endpoint /game/rooms/*
-// File BỔ SUNG cho Worker hoc-tieng-nhat-ai (xem MERGE-N6.md để hợp nhất).
+// + ĐỢT HỢP SỨC (co-op): bản ĐẦY ĐỦ = bản staging game-build + tích hợp
+// hợp sức theo game-coop/CONTRACT-COOP.md (xem MERGE-COOP.md để hợp nhất).
+// Các đường versus/group cũ giữ nguyên hành vi; style 'coop' mới kích hoạt
+// thêm: cột style/coop_cfg/coop_state trên game_rooms, sự kiện coop_*,
+// chấm điểm đội ở máy chủ. File BỔ SUNG cho Worker hoc-tieng-nhat-ai.
 // Dán toàn bộ khối này vào worker-index.js TRƯỚC `export default`,
 // rồi thêm 1 dòng dispatch trong fetch handler:
 //   if (path.startsWith('/game/rooms/')) return handleGameRooms(req, env, c, path);
@@ -3526,11 +3599,19 @@ const GR_LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
 const GR_TOPICS = ['kanji', 'vocab', 'grammar', 'mix'];
 const GR_MODES = { group: { max: 8, min: 2 }, versus: { max: 2, min: 2 } };
 const GR_CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // bỏ 0/O/1/I/L cho dễ đọc/dễ đọc thành tiếng
-const GR_EVENT_KINDS = ['start', 'questions', 'answer', 'progress', 'finish', 'chem', 'chat', 'rematch', 'ping'];
-const GR_PAYLOAD_MAX = { start: 4000, questions: 60000, answer: 2000, progress: 2000, finish: 2000, chem: 600, chat: 600, rematch: 1000, ping: 200 };
+const GR_EVENT_KINDS = ['start', 'questions', 'answer', 'progress', 'finish', 'chem', 'chat', 'rematch', 'ping',
+  // Hợp sức (CONTRACT-COOP): chỉ client GỬI 4 kind này; các kind máy chủ PHÁT
+  // (coop_locked / coop_question / coop_finish) đi qua grAddEvent trực tiếp,
+  // không qua whitelist này. Phòng versus nhận kind co-op sẽ bị từ chối ở handler.
+  'coop_config', 'coop_answer', 'coop_timeout', 'coop_next'];
+const GR_PAYLOAD_MAX = { start: 4000, questions: 60000, answer: 2000, progress: 2000, finish: 2000, chem: 600, chat: 600, rematch: 1000, ping: 200, coop_config: 2000, coop_answer: 2000, coop_timeout: 500, coop_next: 500 };
 const GR_QUESTION_MAX = 20;      // tối đa số câu chủ phòng gửi qua event 'questions'
 const GR_SCORE_MAX = 30000;      // trần điểm 1 ván (chống gian lận cơ bản)
 const GR_SCORE_STEP_MAX = 2500;  // trần tăng điểm trong 1 sự kiện answer/progress
+const GR_COOP_QCOUNTS = [10, 15, 20];  // số câu hợp lệ của phòng hợp sức
+const GR_COOP_TIMES = [10, 15, 20, 30]; // giây/câu hợp lệ của phòng hợp sức
+const GR_COOP_REVEAL_MS = 1800;   // khách chỉ được coop_next sau mốc chốt + 1800ms (chủ phòng: ngay)
+const GR_COOP_POINT_MAX = 1150;   // trần điểm 1 câu đúng: 500 gốc + 500 tốc độ + 150 streak
 
 let _grReady = false;
 async function ensureGameRooms(env) {
@@ -3540,8 +3621,19 @@ async function ensureGameRooms(env) {
     mode TEXT NOT NULL DEFAULT 'group', level TEXT NOT NULL DEFAULT 'N5',
     topic TEXT NOT NULL DEFAULT 'mix', status TEXT NOT NULL DEFAULT 'waiting',
     seed TEXT NOT NULL DEFAULT '', q_count INTEGER NOT NULL DEFAULT 10,
+    style TEXT NOT NULL DEFAULT 'versus', coop_cfg TEXT NOT NULL DEFAULT '',
+    coop_state TEXT NOT NULL DEFAULT '',
     created_at TEXT NOT NULL, updated_at TEXT NOT NULL DEFAULT ''
   )`).run();
+  // Bảng game_rooms ĐÃ TỒN TẠI từ bản live (chưa có 3 cột hợp sức): thêm cột
+  // bằng ALTER guarded — cột đã có thì ALTER lỗi, bắt lỗi và bỏ qua. Chạy
+  // mỗi lần ensure (trước _grReady) để bảng cũ/mới đều dùng chung 1 đường code.
+  const grAlters = [
+    "ALTER TABLE game_rooms ADD COLUMN style TEXT NOT NULL DEFAULT 'versus'",
+    "ALTER TABLE game_rooms ADD COLUMN coop_cfg TEXT NOT NULL DEFAULT ''",
+    "ALTER TABLE game_rooms ADD COLUMN coop_state TEXT NOT NULL DEFAULT ''",
+  ];
+  for (const sql of grAlters) { try { await env.DB.prepare(sql).run(); } catch (e) { /* cột đã tồn tại */ } }
   await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_room_players (
     room_code TEXT NOT NULL, user_id TEXT NOT NULL, name TEXT NOT NULL DEFAULT '',
     score INTEGER NOT NULL DEFAULT 0, state TEXT NOT NULL DEFAULT '{}',
@@ -3589,6 +3681,156 @@ function grParseState(s) { try { const o = JSON.parse(s || '{}'); return (o && t
 function grParsePayload(s) { try { const o = JSON.parse(s || '{}'); return (o && typeof o === 'object' && !Array.isArray(o)) ? o : {}; } catch (e) { return {}; } }
 function grCleanCode(v) { return String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8); }
 
+// =====================================================================
+// HỢP SỨC (co-op) — CONTRACT-COOP. Nguyên tắc cứng: style vắng mặt hoặc
+// 'versus' -> MỌI đường code dưới đây bất hoạt, hành vi đối kháng cũ giữ
+// nguyên 100%. Lưu trữ trạng thái đội: cột coop_state (JSON) trên chính
+// hàng game_rooms của phòng; coop_cfg (JSON đã chuẩn hoá) ở cột riêng.
+// Ghi trạng thái đội bằng CAS trên chuỗi coop_state cũ
+// (UPDATE ... WHERE COALESCE(coop_state,'')=<chuỗi cũ>) nên 2 máy trả lời
+// gần như đồng thời cũng chỉ có ĐÚNG 1 lần chốt/câu ghi được; máy thua CAS
+// đọc lại trạng thái và nhận resolution của người thắng (200, không lỗi).
+// Trường nội bộ của trạng thái lưu (không lộ ra snapshot): _lockedAt (ms
+// lúc chốt câu hiện tại — cửa sổ reveal của coop_next), _correctAnswer.
+// =====================================================================
+function grNormCoopCfg(raw) {
+  const o = (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
+  const qc = parseInt(o.qCount, 10);
+  const ts = parseInt(o.timeSec, 10);
+  const lv = parseInt(o.lives, 10);
+  return {
+    qCount: GR_COOP_QCOUNTS.includes(qc) ? qc : 10,          // sai -> mặc định 10
+    timeSec: GR_COOP_TIMES.includes(ts) ? ts : 15,           // sai -> mặc định 15
+    livesOn: o.livesOn == null ? true : !!o.livesOn,         // mặc định bật
+    lives: (Number.isInteger(lv) && lv >= 1 && lv <= 5) ? lv : 3,
+  };
+}
+function grCoopCfgOf(room) {
+  if (!room || room.style !== 'coop') return null;
+  try {
+    const o = JSON.parse(room.coop_cfg || '');
+    if (o && typeof o === 'object' && !Array.isArray(o)) return grNormCoopCfg(o);
+  } catch (e) { /* cấu hình hỏng -> dùng mặc định */ }
+  return grNormCoopCfg(null);
+}
+function grCoopStateOf(room) {
+  if (!room || !room.coop_state) return null;
+  try {
+    const o = JSON.parse(room.coop_state);
+    return (o && typeof o === 'object' && !Array.isArray(o) && Number.isInteger(o.qIndex)) ? o : null;
+  } catch (e) { return null; }
+}
+// norm của câu ghép từ (order): bỏ mọi khoảng trắng + bỏ '。' ở cuối.
+function grCoopNormText(s) {
+  return String(s == null ? '' : s).replace(/\s+/g, '').replace(/。$/, '');
+}
+// Chiếu trạng thái đội nội bộ -> snapshot đúng CONTRACT §2 (bỏ trường _*).
+function grCoopSnap(st) {
+  if (!st || typeof st !== 'object') return null;
+  const contrib = {};
+  for (const k of Object.keys(st.contrib || {})) {
+    const cc = st.contrib[k] || {};
+    contrib[k] = { answered: +cc.answered || 0, correct: +cc.correct || 0, wrong: +cc.wrong || 0, points: +cc.points || 0 };
+  }
+  let locked = null;
+  if (st.locked) {
+    locked = {
+      by: st.locked.by || null,
+      choice: st.locked.choice == null ? null : st.locked.choice,
+      correct: !!st.locked.correct, timeout: !!st.locked.timeout,
+      points: +st.locked.points || 0,
+    };
+    if (st.locked.orderText != null) locked.orderText = String(st.locked.orderText);
+  }
+  return {
+    qIndex: +st.qIndex || 0, phase: st.phase || 'ask', total: +st.total || 0,
+    teamScore: +st.teamScore || 0, teamCorrect: +st.teamCorrect || 0, teamStreak: +st.teamStreak || 0,
+    livesLeft: st.livesLeft == null ? null : +st.livesLeft,
+    locked, contrib, startedAt: +st.startedAt || 0,
+  };
+}
+function grCoopCorrectAnswer(q) {
+  if (!q) return { index: null, text: '' };
+  if (q.type === 'order') return { index: null, text: String(q.answerText || '') };
+  if (Number.isInteger(q.answer)) return { index: q.answer, text: String((Array.isArray(q.choices) && q.choices[q.answer]) || q.answerText || '') };
+  return { index: null, text: String(q.answerText || '') };
+}
+// Chấm 1 câu theo deck máy chủ giữ. q=null (không có sự kiện 'questions',
+// deck 'seed') -> tin trường correct client gửi (điểm vẫn bị trần cứng ở
+// grCoopLock). Câu choices thiếu answer -> so text với answerText.
+function grCoopGrade(q, choice, orderText, claimedCorrect) {
+  if (!q) return !!claimedCorrect;
+  if (q.type === 'order') return grCoopNormText(orderText) === grCoopNormText(q.answerText);
+  if (Number.isInteger(q.answer)) return choice === q.answer;
+  return choice != null && Array.isArray(q.choices) && q.choices[choice] != null && q.choices[choice] === q.answerText;
+}
+// Deck chấm điểm = payload sự kiện 'questions' MỚI NHẤT của phòng.
+async function grLatestDeck(env, code) {
+  try {
+    const r = await env.DB.prepare("SELECT payload FROM game_room_events WHERE room_code=? AND kind='questions' ORDER BY id DESC LIMIT 1").bind(code).first();
+    if (!r) return null;
+    const p = grParsePayload(r.payload);
+    return (Array.isArray(p.questions) && p.questions.length) ? p.questions : null;
+  } catch (e) { return null; }
+}
+// Dựng resolution (CONTRACT §3) từ trạng thái đội đã chốt.
+function grCoopResolution(st, nameOf) {
+  const snap = grCoopSnap(st);
+  if (!snap || !snap.locked) return null;
+  const res = {
+    qIndex: snap.qIndex, by: snap.locked.by,
+    name: snap.locked.by ? ((nameOf || {})[snap.locked.by] || '') : '',
+    choice: snap.locked.choice, correct: snap.locked.correct, timeout: snap.locked.timeout,
+    points: snap.locked.points,
+    correctAnswer: st._correctAnswer || { index: null, text: '' },
+    teamScore: snap.teamScore, teamCorrect: snap.teamCorrect,
+    livesLeft: snap.livesLeft, contrib: snap.contrib,
+  };
+  if (snap.locked.orderText != null) res.orderText = snap.locked.orderText;
+  return res;
+}
+// Áp 1 lần chốt lên trạng thái đội (sửa tại chỗ trên bản sao đã parse):
+// chấm điểm theo CONTRACT §4, cập nhật contrib/mạng/streak, phase -> 'reveal'.
+// by=null nghĩa là timeout (không tính vào cá nhân ai).
+function grCoopLock(st, cfg, by, name, choice, orderText, correct, correctAnswer, timeout) {
+  const nowMs = Date.now();
+  const elapsed = Math.max(0, nowMs - (+st.startedAt || nowMs));
+  let points = 0;
+  if (correct) {
+    points = 500
+      + Math.round(500 * Math.max(0, 1 - elapsed / (cfg.timeSec * 1000)))
+      + Math.min(150, (+st.teamStreak || 0) * 25); // streak tính TRƯỚC câu này
+  }
+  const cap = GR_COOP_POINT_MAX * (+st.total || 0); // trần chống gian lận: 1150 x tổng số câu
+  if ((+st.teamScore || 0) + points > cap) points = Math.max(0, cap - (+st.teamScore || 0));
+  st.teamScore = (+st.teamScore || 0) + points;
+  if (correct) { st.teamCorrect = (+st.teamCorrect || 0) + 1; st.teamStreak = (+st.teamStreak || 0) + 1; }
+  else {
+    st.teamStreak = 0;
+    if (cfg.livesOn && st.livesLeft != null) st.livesLeft = Math.max(0, st.livesLeft - 1);
+  }
+  if (by) {
+    if (!st.contrib || typeof st.contrib !== 'object') st.contrib = {};
+    const cc = st.contrib[by] || (st.contrib[by] = { answered: 0, correct: 0, wrong: 0, points: 0 });
+    cc.answered += 1;
+    if (correct) { cc.correct += 1; cc.points += points; } else { cc.wrong += 1; }
+  }
+  st.locked = { by: by || null, choice: choice == null ? null : choice, correct: !!correct, timeout: !!timeout, points };
+  if (orderText != null) st.locked.orderText = String(orderText).slice(0, 300);
+  st._correctAnswer = correctAnswer || { index: null, text: '' };
+  st._lockedAt = nowMs;
+  st.phase = 'reveal';
+  return grCoopResolution(st, by ? { [by]: name || '' } : {});
+}
+// Ghi trạng thái đội bằng CAS: chỉ ghi được nếu coop_state còn đúng chuỗi
+// đã đọc. Trả true nếu ghi được, false nếu có máy khác vừa đổi trạng thái.
+async function grCoopWrite(env, code, oldRaw, st) {
+  const r = await env.DB.prepare("UPDATE game_rooms SET coop_state=?, updated_at=? WHERE code=? AND COALESCE(coop_state,'')=?")
+    .bind(JSON.stringify(st), now(), code, oldRaw == null ? '' : String(oldRaw)).run();
+  if (!r || !r.meta || r.meta.changes == null) return true; // D1 luôn trả meta.changes; thiếu thì coi như đã ghi
+  return (+r.meta.changes || 0) > 0;
+}
+
 // Chuẩn hoá 1 câu hỏi do chủ phòng gửi (đề dự phòng qua event): chỉ giữ
 // đúng hình dạng Question của CONTRACT, cắt độ dài từng trường, bỏ mọi
 // trường lạ. Trả null nếu câu không dùng được.
@@ -3632,9 +3874,14 @@ async function grUpsertPlayer(env, code, userId, name) {
 
 function grRoomView(room, players, me) {
   const tNow = Date.now();
+  const style = room.style === 'coop' ? 'coop' : 'versus';
   return {
     code: room.code, mode: room.mode, level: room.level, topic: room.topic,
     status: room.status, seed: room.seed, qCount: +room.q_count || 10,
+    // Hợp sức (CONTRACT §1): phòng versus -> coopCfg/coop đều null.
+    style,
+    coopCfg: style === 'coop' ? grCoopCfgOf(room) : null,
+    coop: style === 'coop' ? grCoopSnap(grCoopStateOf(room)) : null,
     hostUser: room.host_user, isHost: room.host_user === me,
     createdAt: room.created_at, maxPlayers: (GR_MODES[room.mode] || GR_MODES.group).max,
     players: players.map(p => {
@@ -3666,12 +3913,10 @@ async function handleGameRooms(req, env, c, path) {
   const h = Object.assign({}, c.h, { 'Cache-Control': 'no-store, private' });
   if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, h);
   const s = await sessionUser(env, bearer(req));
-  if (!s || (s.kind !== 'user' && s.kind !== 'admin')) return J({ error: 'Cần đăng nhập để chơi cùng bạn bè.', code: 'login_required' }, 401, h); // ADMINFIX (30/10): admin = thành viên đã duyệt
+  if (!s || s.kind !== 'user') return J({ error: 'Cần đăng nhập để chơi cùng bạn bè.', code: 'login_required' }, 401, h);
   if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, h);
   const me = s.user_id;
-  // ADMINFIX (30/10): phiên admin không có users.name (NULL) — gọi tên 'Admin'
-  // thay vì rơi về nhãn chung 'Học viên' trong phòng chơi.
-  const myName = s.kind === 'admin' ? 'Admin' : (String(s.name || '').trim().slice(0, 80) || 'Học viên');
+  const myName = String(s.name || '').trim().slice(0, 80) || 'Học viên';
   await ensureGameRooms(env);
   await grCleanup(env);
 
@@ -3684,7 +3929,11 @@ async function handleGameRooms(req, env, c, path) {
     const level = GR_LEVELS.includes(b.level) ? b.level : null;
     const topic = GR_TOPICS.includes(b.topic) ? b.topic : null;
     if (!mode || !level || !topic) return J({ error: 'Chế độ, trình độ hoặc chủ đề chưa hợp lệ.' }, 400, h);
-    const qCount = Math.min(15, Math.max(5, parseInt(b.qCount, 10) || 10));
+    // Hợp sức: style chỉ nhận đúng 'coop', còn lại (kể cả vắng mặt) = 'versus'.
+    // Phòng coop: qCount lấy từ coopCfg (10/15/20); versus giữ clamp cũ 5..15.
+    const style = b.style === 'coop' ? 'coop' : 'versus';
+    const coopCfg = style === 'coop' ? grNormCoopCfg(b.coop) : null;
+    const qCount = style === 'coop' ? coopCfg.qCount : Math.min(15, Math.max(5, parseInt(b.qCount, 10) || 10));
     let code = null;
     for (let i = 0; i < 8 && !code; i++) {
       const cand = grCode();
@@ -3693,10 +3942,17 @@ async function handleGameRooms(req, env, c, path) {
     if (!code) return J({ error: 'Chưa tạo được mã phòng, thử lại sau ít giây nhé.' }, 503, h);
     const seed = String(Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36));
     const t = now();
-    await env.DB.prepare('INSERT INTO game_rooms(code,host_user,mode,level,topic,status,seed,q_count,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?)')
-      .bind(code, me, mode, level, topic, 'waiting', seed, qCount, t, t).run();
+    if (style === 'coop') {
+      await env.DB.prepare('INSERT INTO game_rooms(code,host_user,mode,level,topic,status,seed,q_count,created_at,updated_at,style,coop_cfg,coop_state) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)')
+        .bind(code, me, mode, level, topic, 'waiting', seed, qCount, t, t, 'coop', JSON.stringify(coopCfg), '').run();
+    } else {
+      await env.DB.prepare('INSERT INTO game_rooms(code,host_user,mode,level,topic,status,seed,q_count,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?)')
+        .bind(code, me, mode, level, topic, 'waiting', seed, qCount, t, t).run();
+    }
     await grUpsertPlayer(env, code, me, myName);
-    await grAddEvent(env, code, me, 'system', { text: 'created', mode, level, topic });
+    await grAddEvent(env, code, me, 'system', style === 'coop'
+      ? { text: 'created', mode, level, topic, style, coop: coopCfg }
+      : { text: 'created', mode, level, topic });
     const room = await grRoom(env, code);
     const players = await grPlayers(env, code);
     return J({ ok: true, room: grRoomView(room, players, me) }, 201, h);
@@ -3793,8 +4049,26 @@ async function handleGameRooms(req, env, c, path) {
       const cfg = GR_MODES[room.mode] || GR_MODES.group;
       if (players.length < cfg.min) return J({ error: 'Cần ít nhất ' + cfg.min + ' người mới bắt đầu được.' }, 409, h);
       const seed = String(payload.seed || room.seed || '').slice(0, 40) || room.seed;
-      const qCount = Math.min(15, Math.max(5, parseInt(payload.qCount, 10) || +room.q_count || 10));
       const deck = payload.deck === 'event' ? 'event' : 'seed'; // 'event' = chờ sự kiện questions của chủ phòng
+      if (room.style === 'coop') {
+        // Hợp sức: khởi tạo trạng thái đội (CONTRACT §3). qCount lấy từ
+        // coopCfg (cho phép 20, bỏ qua clamp 5..15 của versus); total bị
+        // chặn bởi độ dài deck thật nếu chủ phòng đã gửi sự kiện questions.
+        const coopCfg = grCoopCfgOf(room) || grNormCoopCfg(null);
+        const qCount = coopCfg.qCount;
+        const deckQ = await grLatestDeck(env, code);
+        const total = deckQ ? Math.max(1, Math.min(coopCfg.qCount, deckQ.length)) : coopCfg.qCount;
+        const st0 = {
+          qIndex: 0, phase: 'ask', total, teamScore: 0, teamCorrect: 0, teamStreak: 0,
+          livesLeft: coopCfg.livesOn ? coopCfg.lives : null,
+          locked: null, contrib: {}, startedAt: Date.now(), _lockedAt: 0, _correctAnswer: null,
+        };
+        await env.DB.prepare("UPDATE game_rooms SET status='playing', seed=?, q_count=?, coop_state=?, updated_at=? WHERE code=?").bind(seed, qCount, JSON.stringify(st0), t, code).run();
+        const snap0 = grCoopSnap(st0);
+        const id = await grAddEvent(env, code, me, 'start', { seed, qCount, deck, coop: snap0 });
+        return J({ ok: true, eventId: id, status: 'playing', coop: snap0 }, 200, h);
+      }
+      const qCount = Math.min(15, Math.max(5, parseInt(payload.qCount, 10) || +room.q_count || 10));
       await env.DB.prepare("UPDATE game_rooms SET status='playing', seed=?, q_count=?, updated_at=? WHERE code=?").bind(seed, qCount, t, code).run();
       const id = await grAddEvent(env, code, me, 'start', { seed, qCount, deck });
       return J({ ok: true, eventId: id, status: 'playing' }, 200, h);
@@ -3850,12 +4124,133 @@ async function handleGameRooms(req, env, c, path) {
       if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới mở ván mới được.' }, 403, h);
       if (room.status !== 'done') return J({ error: 'Ván hiện tại chưa kết thúc.' }, 409, h);
       const seed = String(Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36));
-      await env.DB.prepare("UPDATE game_rooms SET status='waiting', seed=?, updated_at=? WHERE code=?").bind(seed, t, code).run();
+      const isCoopRoom = room.style === 'coop';
+      if (isCoopRoom) {
+        // Hợp sức: reset thêm trạng thái đội về rỗng (chờ start ván mới);
+        // GIỮ nguyên style + coop_cfg (2 cột riêng, không đụng vào).
+        await env.DB.prepare("UPDATE game_rooms SET status='waiting', seed=?, coop_state='', updated_at=? WHERE code=?").bind(seed, t, code).run();
+      } else {
+        await env.DB.prepare("UPDATE game_rooms SET status='waiting', seed=?, updated_at=? WHERE code=?").bind(seed, t, code).run();
+      }
       for (const p of players) {
         await env.DB.prepare("UPDATE game_room_players SET score=0, state='{}', updated_at=? WHERE room_code=? AND user_id=?").bind(t, code, p.user_id).run();
       }
       const id = await grAddEvent(env, code, me, 'rematch', { seed });
-      return J({ ok: true, eventId: id, status: 'waiting', seed }, 200, h);
+      return J({ ok: true, eventId: id, status: 'waiting', seed, coopCfg: isCoopRoom ? grCoopCfgOf(room) : undefined }, 200, h);
+    }
+
+    if (kind === 'coop_config') {
+      // Chỉ chủ phòng, chỉ khi phòng đang chờ, chỉ phòng hợp sức (CONTRACT §3).
+      if (room.style !== 'coop') return J({ error: 'Phòng này không phải phòng hợp sức.' }, 400, h);
+      if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới sửa cài đặt hợp sức được.' }, 403, h);
+      if (room.status !== 'waiting') return J({ error: 'Chỉ sửa cài đặt khi phòng đang chờ.' }, 409, h);
+      const cfg = grNormCoopCfg(payload.coop);
+      await env.DB.prepare('UPDATE game_rooms SET coop_cfg=?, q_count=?, updated_at=? WHERE code=?').bind(JSON.stringify(cfg), cfg.qCount, t, code).run();
+      const id = await grAddEvent(env, code, me, 'coop_config', { coop: cfg });
+      return J({ ok: true, eventId: id, coop: cfg }, 200, h);
+    }
+
+    if (kind === 'coop_answer' || kind === 'coop_timeout') {
+      // Chốt câu hợp sức: người hợp lệ ĐẦU TIÊN thắng (CAS ở grCoopWrite).
+      // Người đến sau / timeout đến sau: 200 {locked:false, resolution} —
+      // không phải lỗi (máy chủ deduplicate bằng locked, CONTRACT §3).
+      if (room.style !== 'coop') return J({ error: 'Phòng này không phải phòng hợp sức.' }, 400, h);
+      if (room.status !== 'playing') return J({ error: 'Trận chưa bắt đầu hoặc đã kết thúc.' }, 409, h);
+      const isTimeout = kind === 'coop_timeout';
+      const qIndex = Math.floor(+payload.qIndex);
+      if (!Number.isFinite(qIndex)) return J({ error: 'Số câu không hợp lệ.' }, 400, h);
+      let choice = null, orderText;
+      if (!isTimeout) {
+        if (payload.choice != null) {
+          choice = Math.floor(+payload.choice);
+          if (!(choice >= 0 && choice <= 3)) return J({ error: 'Đáp án không hợp lệ.' }, 400, h);
+        }
+        if (payload.orderText != null) orderText = String(payload.orderText).slice(0, 300);
+        if (choice == null && orderText == null) return J({ error: 'Chưa có đáp án.' }, 400, h);
+      }
+      const cfg = grCoopCfgOf(room) || grNormCoopCfg(null);
+      const nameOf = {}; players.forEach(p => { nameOf[p.user_id] = p.name || ''; });
+      let cur = room;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const st = grCoopStateOf(cur);
+        if (!st) return J({ error: 'Trạng thái đội chưa sẵn sàng.' }, 409, h);
+        if (st.locked && st.qIndex === qIndex) {
+          return J({ ok: true, locked: false, resolution: grCoopResolution(st, nameOf) }, 200, h);
+        }
+        if (st.phase !== 'ask' || st.locked) return J({ error: 'Câu này đã chốt rồi.' }, 409, h);
+        if (qIndex !== st.qIndex || qIndex < 0 || qIndex >= st.total) return J({ error: 'Số câu không khớp câu hiện tại.' }, 409, h);
+        if (isTimeout && (Date.now() - (+st.startedAt || 0)) < cfg.timeSec * 1000 - 750) {
+          return J({ error: 'Chưa hết giờ câu này.' }, 409, h);
+        }
+        const deck = await grLatestDeck(env, code);
+        const q = deck ? deck[st.qIndex] : null;
+        const correct = isTimeout ? false : grCoopGrade(q, choice, orderText, payload.correct);
+        const st2 = JSON.parse(JSON.stringify(st));
+        const res = grCoopLock(st2, cfg, isTimeout ? null : me, myName, isTimeout ? null : choice, isTimeout ? undefined : orderText, correct, grCoopCorrectAnswer(q), isTimeout);
+        if (!(await grCoopWrite(env, code, cur.coop_state, st2))) {
+          cur = await grRoom(env, code); // thua CAS: đọc lại rồi thử/dedupe ở vòng sau
+          if (!cur) return J({ error: 'Không tìm thấy phòng này.', code: 'room_gone' }, 404, h);
+          continue;
+        }
+        const id = await grAddEvent(env, code, me, 'coop_locked', { resolution: res });
+        if (!isTimeout) {
+          // Mirror đóng góp vào game_room_players: score = điểm cá nhân,
+          // state = {qIndex, answered, correct, wrong, streak, finished}.
+          const cc = (st2.contrib || {})[me] || { answered: 0, correct: 0, wrong: 0, points: 0 };
+          const oldP = grParseState(mine.state);
+          const pst = { qIndex: st2.qIndex, answered: cc.answered, correct: cc.correct, wrong: cc.wrong, streak: oldP.streak || 0, finished: !!oldP.finished };
+          await env.DB.prepare('UPDATE game_room_players SET score=?, state=?, updated_at=? WHERE room_code=? AND user_id=?')
+            .bind(Math.max(+mine.score || 0, cc.points), JSON.stringify(pst), t, code, me).run();
+        }
+        return J({ ok: true, locked: true, resolution: res, eventId: id }, 200, h);
+      }
+      const fresh = await grRoom(env, code);
+      const fst = fresh ? grCoopStateOf(fresh) : null;
+      if (fst && fst.locked && fst.qIndex === qIndex) {
+        return J({ ok: true, locked: false, resolution: grCoopResolution(fst, nameOf) }, 200, h);
+      }
+      return J({ error: 'Đang bận chốt câu, thử lại nhé.' }, 409, h);
+    }
+
+    if (kind === 'coop_next') {
+      // Qua câu: chỉ khi phase 'reveal' + qIndex khớp câu vừa chốt. Chủ
+      // phòng chuyển ngay; người khác phải qua mốc chốt + 1800ms (CONTRACT §3).
+      if (room.style !== 'coop') return J({ error: 'Phòng này không phải phòng hợp sức.' }, 400, h);
+      if (room.status !== 'playing') return J({ error: 'Trận chưa bắt đầu hoặc đã kết thúc.' }, 409, h);
+      const qIndex = Math.floor(+payload.qIndex);
+      if (!Number.isFinite(qIndex)) return J({ error: 'Số câu không hợp lệ.' }, 400, h);
+      let cur = room;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const st = grCoopStateOf(cur);
+        if (!st) return J({ error: 'Trạng thái đội chưa sẵn sàng.' }, 409, h);
+        if (st.phase !== 'reveal' || !st.locked) return J({ error: 'Câu hiện tại chưa chốt.' }, 409, h);
+        if (qIndex !== st.qIndex) return J({ error: 'Số câu không khớp câu vừa chốt.' }, 409, h);
+        if (cur.host_user !== me && (Date.now() - (+st._lockedAt || 0)) < GR_COOP_REVEAL_MS) {
+          return J({ error: 'Chờ chủ phòng chuyển câu đã nhé.' }, 409, h);
+        }
+        const finish = st.livesLeft === 0 || st.qIndex >= st.total - 1;
+        const st2 = JSON.parse(JSON.stringify(st));
+        if (finish) { st2.phase = 'done'; }
+        else {
+          st2.qIndex += 1; st2.phase = 'ask'; st2.locked = null;
+          st2.startedAt = Date.now(); st2._lockedAt = 0; st2._correctAnswer = null;
+        }
+        if (!(await grCoopWrite(env, code, cur.coop_state, st2))) {
+          cur = await grRoom(env, code);
+          if (!cur) return J({ error: 'Không tìm thấy phòng này.', code: 'room_gone' }, 404, h);
+          continue;
+        }
+        if (finish) {
+          await env.DB.prepare("UPDATE game_rooms SET status='done', updated_at=? WHERE code=?").bind(t, code).run();
+          await grAddEvent(env, code, me, 'system', { text: 'done' });
+          const fin = { teamScore: st2.teamScore, teamCorrect: st2.teamCorrect, total: st2.total, livesLeft: st2.livesLeft, contrib: grCoopSnap(st2).contrib };
+          const id = await grAddEvent(env, code, me, 'coop_finish', fin);
+          return J({ ok: true, eventId: id, finished: true, finish: fin }, 200, h);
+        }
+        const id = await grAddEvent(env, code, me, 'coop_question', { qIndex: st2.qIndex, startedAt: st2.startedAt });
+        return J({ ok: true, eventId: id, finished: false, qIndex: st2.qIndex, startedAt: st2.startedAt }, 200, h);
+      }
+      return J({ error: 'Đang bận chuyển câu, thử lại nhé.' }, 409, h);
     }
 
     if (kind === 'chem' || kind === 'chat') {
@@ -3902,7 +4297,8 @@ async function handleGameRooms(req, env, c, path) {
 // Cho phép harness Node nạp module này để kiểm thử (Worker ESM không có
 // `module` nên dòng này vô hại khi dán vào worker-index.js).
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { handleGameRooms, ensureGameRooms, grCleanQuestion, grCleanCode, grCode };
+  module.exports = { handleGameRooms, ensureGameRooms, grCleanQuestion, grCleanCode, grCode,
+    grNormCoopCfg, grCoopCfgOf, grCoopStateOf, grCoopSnap, grCoopNormText, grCoopGrade, grCoopLock, grCoopResolution };
 }
 
 export default {async fetch(req,env){
