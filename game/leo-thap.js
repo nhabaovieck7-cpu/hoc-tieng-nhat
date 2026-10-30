@@ -14,9 +14,28 @@
   var TOPICS = { mix: 'Trộn', kanji: 'Kanji', vocab: 'Từ vựng', grammar: 'Ngữ pháp' };
 
   var user = { loggedIn: false, name: 'Khách', call: 'bạn', gender: null, level: null };
+  function syncUser(u) { if (u) for (var k in u) user[k] = u[k]; return user; }
   function loadUser() {
     if (typeof window.GAME_USER === 'undefined') return Promise.resolve(user);
-    return Promise.resolve(window.GAME_USER).then(function (u) { if (u) for (var k in u) user[k] = u[k]; return user; }).catch(function () { return user; });
+    return Promise.resolve(window.GAME_USER).then(syncUser).catch(function () { return user; });
+  }
+  /* Tên có thể resolve SAU khi menu đã vẽ (game.js phát sự kiện
+     'hn-game-user', detail = GAME_USER_DATA, mỗi khi resolve/refresh xong):
+     đồng bộ lại bản local rồi vẽ lại phần đang hiện có dùng tên — menu khi
+     đang ở menu (lời chào + dòng kỷ lục), màn kết quả khi đang hiện.
+     Đăng ký đúng 1 lần, vẽ lại idempotent, không đổi logic chơi/điểm. */
+  var userEvtBound = false;
+  function bindUserEvent() {
+    if (userEvtBound) return; userEvtBound = true;
+    window.addEventListener('hn-game-user', function (ev) {
+      syncUser((ev && ev.detail) || window.GAME_USER_DATA);
+      refreshNameUI();
+    });
+  }
+  function refreshNameUI() {
+    var menu = $('#menu'), res = $('#result');
+    if (menu && !menu.classList.contains('mx-hid') && menu.innerHTML) buildMenu();
+    else if (res && !res.classList.contains('mx-hid') && res.innerHTML) renderResult();
   }
   function callName() {
     if (!user.loggedIn) return 'bạn';
@@ -266,13 +285,24 @@
     $('#btnQuit').addEventListener('click', end);
   }
 
+  var lastIsRec = false;
   function end() {
     if ($('#play').classList.contains('mx-hid')) return;
     stopTimer();
+    /* Kết liễu BOSS (đợt 4): chỉ khi đạt ngưỡng thắng sẵn có (tầng 10+);
+       chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
+    if (topFloor >= 10 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ fromEl: document.querySelector('#tw .tw-fl.cur'), toEl: null, dmg: score, label: 'TẦNG ' + topFloor + '!' }); else GFIN.play({ fromEl: document.querySelector('#tw .tw-fl.cur'), toEl: null, dmg: score, label: 'TẦNG ' + topFloor + '!' }); } catch (e) {} }
     $('#play').classList.add('mx-hid');
-    var isRec = saveRec();
+    lastIsRec = saveRec();
     submitScore(score, startT);
     sfx(topFloor >= 10 ? 'victory' : 'click');
+    renderResult();
+  }
+  /* Chỉ DỰNG HTML màn kết quả từ state hiện tại (saveRec/submitScore/sfx nằm
+     ở end(), KHÔNG chạy lại ở đây); gọi lại khi tên người chơi resolve muộn
+     để dòng chữ dùng tên mới nhất. */
+  function renderResult() {
+    var isRec = lastIsRec;
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">🏯</div>' +
       '<h1>Lên tới tầng ' + topFloor + '!</h1>' +
@@ -283,5 +313,6 @@
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
   }
 
+  bindUserEvent();
   loadUser().then(function () { buildMenu(); bindLifelines(); });
 })();

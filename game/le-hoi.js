@@ -17,9 +17,29 @@
   var CHEERS = ['Cố lên nào! 🎉', 'Nhanh tay, nhanh mắt! 👀', 'Chuỗi đang nóng dần! 🔥', 'Thêm một câu nữa thôi!', 'Lễ hội là phải cháy! 🎆', 'Tuyệt vời ông mặt trời! ☀️'];
 
   var user = { loggedIn: false, name: 'Khách', call: 'bạn', gender: null, level: null };
+  function syncUser(u) { if (u) for (var k in u) user[k] = u[k]; return user; }
   function loadUser() {
     if (typeof window.GAME_USER === 'undefined') return Promise.resolve(user);
-    return Promise.resolve(window.GAME_USER).then(function (u) { if (u) for (var k in u) user[k] = u[k]; return user; }).catch(function () { return user; });
+    return Promise.resolve(window.GAME_USER).then(syncUser).catch(function () { return user; });
+  }
+  /* Tên có thể resolve SAU khi menu đã vẽ (game.js phát sự kiện
+     'hn-game-user', detail = GAME_USER_DATA, mỗi khi resolve/refresh xong):
+     đồng bộ lại bản local rồi vẽ lại phần đang hiện có dùng tên — menu khi
+     đang ở menu, màn kết quả khi đang hiện kết quả. Đăng ký đúng 1 lần,
+     vẽ lại idempotent (chỉ dựng lại HTML từ state hiện tại, không nộp điểm
+     lại, không đổi logic chơi). */
+  var userEvtBound = false;
+  function bindUserEvent() {
+    if (userEvtBound) return; userEvtBound = true;
+    window.addEventListener('hn-game-user', function (ev) {
+      syncUser((ev && ev.detail) || window.GAME_USER_DATA);
+      refreshNameUI();
+    });
+  }
+  function refreshNameUI() {
+    var menu = $('#menu'), res = $('#result');
+    if (menu && !menu.classList.contains('mx-hid') && menu.innerHTML) buildMenu();
+    else if (res && !res.classList.contains('mx-hid') && res.innerHTML) renderResult();
   }
   function callName() {
     if (!user.loggedIn) return 'bạn';
@@ -71,8 +91,15 @@
     var d = document.createElement('div');
     d.className = 'fh-bubble'; d.textContent = text;
     var p = bubblePos[slot];
-    if (p.left) d.style.left = p.left; if (p.right) d.style.right = p.right;
-    d.style.top = p.top;
+    /* Màn hẹp (≤860px): KHÔNG gán vị trí cứng — CSS để bong bóng trong luồng
+       (position:static) cạnh mascot phía trên khu đáp án, không đè đáp án.
+       Vị trí tuyệt đối lệch nhau chỉ dùng ở màn rộng. */
+    var narrow = false;
+    try { narrow = window.matchMedia('(max-width: 860px)').matches; } catch (e) {}
+    if (!narrow) {
+      if (p.left) d.style.left = p.left; if (p.right) d.style.right = p.right;
+      d.style.top = p.top;
+    }
     box.appendChild(d);
     setTimeout(function () { d.classList.add('out'); }, 1900);
     setTimeout(function () { d.remove(); bubbleBusy[slot] = false; pumpBubbles(); }, 2300);
@@ -241,12 +268,21 @@
   }
 
   function end() {
+    /* Kết liễu BOSS (đợt 4): chỉ khi đạt ngưỡng thắng sẵn có (đúng 7+/10);
+       chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
+    if (okCount >= 7 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ fromEl: $('#mascot'), toEl: null, dmg: score }); else GFIN.play({ fromEl: $('#mascot'), toEl: null, dmg: score }); } catch (e) {} }
     stopTimer();
     $('#play').classList.add('mx-hid');
     submitScore(score, startT);
     sfx(okCount >= 7 ? 'victory' : 'click');
     trend(okCount >= 7 ? 'thang' : 'dung');
     if (okCount >= 7) fx('confetti');
+    renderResult();
+  }
+  /* Chỉ DỰNG HTML màn kết quả từ state hiện tại (không nộp điểm/không sfx —
+     các hiệu ứng phụ nằm ở end()); gọi lại khi tên người chơi resolve muộn
+     để dòng chữ dùng tên mới nhất. */
+  function renderResult() {
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">🎆</div>' +
       '<h1>Lễ hội khép lại!</h1>' +
@@ -257,5 +293,6 @@
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
   }
 
+  bindUserEvent();
   loadUser().then(buildMenu);
 })();

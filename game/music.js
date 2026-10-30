@@ -4,11 +4,16 @@
 // Tải lười (chỉ tạo <audio> khi play), loop, chỉ phát sau tương tác đầu tiên,
 // chuyển cảnh crossfade ngắn, duck() giảm ~70% âm lượng khi câu trend đang đọc.
 // Công tắc localStorage: 'hn_game_snd_music' | 'hn_game_snd_sfx' | 'hn_game_snd_voice' (1/0).
-// API: window.GMUSIC = { play(scene), stop(), duck(on), mountToggles(el), current() }
+// Âm lượng nhạc: 'hn_game_vol_music' (0..100, mặc định 100) — targetVol() = BASE_VOL * vol.
+// API: window.GMUSIC = { play(scene), stop(), duck(on), mountToggles(el), current(),
+//                        setVolume(v01), getVolume() }
+// Có GAME_SETTINGS (settings.js) thì mountToggles NHƯỜNG panel ⚙️, không dựng 3 nút rời.
 (function () {
   'use strict';
 
   var KEYS = { voice: 'hn_game_snd_voice', sfx: 'hn_game_snd_sfx', music: 'hn_game_snd_music' };
+  var VOL_KEY_MUSIC = 'hn_game_vol_music';
+  var volOverride = null; // setVolume() đặt; null = đọc từ localStorage
   var SCENES = {
     lobby: 'lofi-chill.mp3',
     normal: 'trap-ngau.mp3',
@@ -38,7 +43,30 @@
   function setKey(key, val) {
     try { localStorage.setItem(KEYS[key], val ? '1' : '0'); } catch (e) {}
   }
-  function targetVol() { return ducked ? BASE_VOL * DUCK_RATIO : BASE_VOL; }
+  function musicVol01() {
+    if (volOverride != null) return volOverride;
+    try {
+      var v = parseInt(localStorage.getItem(VOL_KEY_MUSIC), 10);
+      if (isNaN(v)) return 1;
+      return Math.max(0, Math.min(100, v)) / 100;
+    } catch (e) { return 1; }
+  }
+  function targetVol() {
+    var base = BASE_VOL * musicVol01();
+    return ducked ? base * DUCK_RATIO : base;
+  }
+  function getVolume() { return musicVol01(); }
+  function setVolume(v01) {
+    var v = Number(v01);
+    if (isNaN(v)) return musicVol01();
+    v = Math.max(0, Math.min(1, v));
+    volOverride = v;
+    try { localStorage.setItem(VOL_KEY_MUSIC, String(Math.round(v * 100))); } catch (e) {}
+    // Đang phát thì áp ngay vào player hiện tại (targetVol đã tính duck).
+    var cur = players[players.length - 1];
+    if (cur && !cur.paused) fadeTo(cur, targetVol());
+    return v;
+  }
 
   ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
     window.addEventListener(ev, function () {
@@ -131,7 +159,15 @@
   ];
 
   function mountToggles(el) {
-    if (!el) return;
+    if (!el) return false;
+    // Có panel cài đặt ⚙️ (settings.js): nhường hẳn, KHÔNG dựng 3 nút rời
+    // để tránh trùng. settings.js cũng tự chiếm #sndToggles nếu đến sau.
+    if (window.GAME_SETTINGS) {
+      if (typeof window.GAME_SETTINGS.mountSettings === 'function') {
+        try { window.GAME_SETTINGS.mountSettings(el); } catch (e) {}
+      }
+      return false;
+    }
     el.textContent = '';
     el.classList.add('snd-toggles');
     DEFS.forEach(function (def) {
@@ -177,6 +213,8 @@
     stop: stop,
     duck: duck,
     mountToggles: mountToggles,
-    current: function () { return scene; }
+    current: function () { return scene; },
+    setVolume: setVolume,
+    getVolume: getVolume
   };
 })();

@@ -35,6 +35,13 @@
     try { return localStorage.getItem(SK) || ''; } catch (e) { return ''; }
   }
   function isGuestNow() { return !session(); }
+  // Tên hiển thị hiện tại theo game.js (GAME_USER_DATA — hồ sơ web mới
+  // nhất). Đọc TẠI THỜI ĐIỂM GỌI, không cache ở module này (Nhánh N):
+  // file này không gắn tên vào bất kỳ payload nào (máy chủ tự nhận diện
+  // qua token), chỗ duy nhất cần tên là me.name của leaderboard dự phòng.
+  function currentName() {
+    try { return (window.GAME_USER_DATA && window.GAME_USER_DATA.name) || ''; } catch (e) { return ''; }
+  }
 
   function lsGet(key, fallback) {
     try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
@@ -116,6 +123,10 @@
   // submitScore({mode, level, score, durationMs}): luôn lưu local trước;
   // đăng nhập thì gửi máy chủ (máy chủ kiểm trần điểm — bị từ chối thì
   // trả {ok:false, error} để UI báo nhẹ, KHÔNG ném lỗi).
+  // Payload KHÔNG chứa tên (cả bản local lẫn bản gửi): máy chủ gắn điểm
+  // với tài khoản qua token; tên hiển thị do UI lấy từ GAME_USER_DATA
+  // lúc vẽ — nên đổi tên hồ sơ là bảng xếp hạng hiện tên mới ngay ở
+  // dòng của mình, không có bản tên cũ nào bị cache ở đây.
   function submitScore(s) {
     s = s || {};
     var rec = { mode: s.mode, level: s.level, score: s.score, durationMs: s.durationMs, at: new Date().toISOString() };
@@ -138,7 +149,7 @@
     q = q || {};
     var cat = (q.cat === 'total') ? 'total' : 'week';
     var localTotal = lsGet(LS_SCORES, []).reduce(function (sum, r) { return sum + (+r.score || 0); }, 0);
-    var fallback = { ok: false, cat: cat, level: q.level || 'all', list: [], me: { rank: null, name: '', score: localTotal, local: true } };
+    var fallback = { ok: false, cat: cat, level: q.level || 'all', list: [], me: { rank: null, name: currentName(), score: localTotal, local: true } };
     if (isGuestNow()) { fallback.guest = true; return Promise.resolve(fallback); }
     var path = '/game/leaderboard?cat=' + encodeURIComponent(cat) + (q.level ? '&level=' + encodeURIComponent(q.level) : '');
     return api(path).then(function (j) {

@@ -1,0 +1,226 @@
+/* =====================================================================
+   charanim.css — HOẠT HỌA NHÂN VẬT DÙNG CHUNG (Nhánh A, đợt game 4)
+   Đi cùng charanim.js (window.GCANIM). Chỉ animate transform/opacity.
+
+   Cấu trúc markup (do GAME_AVATAR.svg / faceHTML trong game.js sinh):
+     <span class="ca-wrap">            khung nhân vật (bán thân SVG)
+       <span class="ca-shadow"></span> bóng đổ (chỉ hiện khi chạy/thắng)
+       <svg class="ca-svg"> … <g class="ca-torso"> <g class="ca-head">
+         <g class="ca-hair"> <g class="ca-eye ca-eye-l/r"> …
+     Mặt ảnh hồ sơ: <span class="gface ca-hoso"> <span class="ca-wrap">…
+       + <img class="gface-img"> phủ trên — hoạt họa CHỈ áp lên cả khối
+       .ca-hoso (nhún thở/bob toàn thân), TUYỆT ĐỐI không animate các
+       lớp bên trong (không chớp mắt/vẽ mí lên ảnh thật).
+
+   Cách gắn trạng thái (GCANIM.apply(el, state) hoặc gán class tay):
+     .ca-idle   đứng chờ: nhún thở + chớp mắt (mặt SVG) + tóc/phụ kiện lay
+     .ca-run    chạy: bob nhịp đôi + nghiêng + đầu/thân lệch pha + bóng
+                (hook sẵn trên .rnv-runner-in của Chạy vô tận)
+     .ca-attack tấn công: lao tới + giật về (áp lên chính phần tử)
+     .ca-hit    trúng đòn: giật mình + chớp mờ ngắn (áp lên chính phần tử)
+     .ca-win    thắng: nhảy ăn mừng + vung vũ khí + phụ kiện bay
+   Phụ kiện GGEAR.decorate: .ca-flutter (khăn đỏ/vương miện) tự phấp
+   phới nhẹ, chạy/thắng thì phấp phới nhanh và mạnh hơn.
+
+   Chất lượng (charanim.js điều khiển class trên <html>):
+     .ca-q-low  fps < 30 kéo dài: tắt hiệu ứng phụ (tóc, phụ kiện, bóng,
+                gật đầu) — giữ bob/chạy, nhún thở, chớp mắt.
+     .ca-q-off  prefers-reduced-motion: tắt toàn bộ.
+     .ca-paused trang ẩn (visibilitychange): animation-play-state paused.
+   ===================================================================== */
+
+/* ------------------------- Khung & bóng đổ ------------------------- */
+.ca-wrap{position:relative;display:inline-block;line-height:0;vertical-align:middle}
+.ca-wrap>svg{display:block}
+.ca-shadow{
+  position:absolute;left:50%;bottom:-3px;width:72%;height:11px;
+  transform:translateX(-50%) scaleX(.9);border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(16,8,36,.38),rgba(16,8,36,0) 68%);
+  opacity:0;pointer-events:none;
+}
+/* Mặt ảnh hồ sơ: SVG dự phòng nằm dưới <img> — không bóng, không lớp động */
+.gface .ca-shadow{display:none}
+.gface>.ca-wrap{display:block;width:100%;height:100%}
+.gface>.ca-wrap>svg{display:block;width:100%;height:100%}
+/* Bù các quy tắc .gface>svg trong game.css khi SVG đã được bọc .ca-wrap */
+.gtop-ava .gface>.ca-wrap>svg,.hub-hero .hav .gface>.ca-wrap>svg,
+.hero-stage .hav .gface>.ca-wrap>svg,.zn .me .gface>.ca-wrap>svg{width:100%;height:100%}
+
+/* Điểm neo transform cho từng bộ phận SVG (neo theo hộp của chính nó) */
+.ca-svg{transform-box:fill-box;transform-origin:50% 92%}
+.ca-head{transform-box:fill-box;transform-origin:50% 88%}
+.ca-hair{transform-box:fill-box;transform-origin:50% 6%}
+.ca-hair-back{transform-box:fill-box;transform-origin:50% 8%}
+.ca-torso{transform-box:fill-box;transform-origin:50% 100%}
+.ca-eye{transform-box:fill-box;transform-origin:50% 50%}
+.ca-flutter{transform-box:fill-box;transform-origin:50% 4%}
+.ca-flutter-tail{transform-box:fill-box;transform-origin:50% 0%}
+
+/* ------------------------- Keyframes ------------------------- */
+@keyframes caBreathe{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-1.6px) scale(1.014)}
+}
+@keyframes caHeadNod{
+  0%,100%{transform:rotate(-.7deg) translateY(0)}
+  50%{transform:rotate(.9deg) translateY(.6px)}
+}
+@keyframes caBlink{
+  0%,91%,100%{transform:scaleY(1)}
+  94.5%{transform:scaleY(.07)}
+  98%{transform:scaleY(1)}
+}
+@keyframes caHairSway{
+  0%,100%{transform:rotate(-1.5deg)}
+  50%{transform:rotate(1.7deg)}
+}
+@keyframes caRunBob{ /* nhịp đôi: 2 lần nảy trong 1 chu kỳ */
+  0%,50%,100%{transform:translateY(0)}
+  25%,75%{transform:translateY(-5px)}
+}
+@keyframes caRunTilt{
+  0%,100%{transform:rotate(-2.6deg)}
+  50%{transform:rotate(2.6deg)}
+}
+@keyframes caRunHead{
+  0%,100%{transform:translateY(.6px) rotate(1.1deg)}
+  50%{transform:translateY(-1.2px) rotate(-1.3deg)}
+}
+@keyframes caRunTorso{
+  0%,100%{transform:rotate(1.3deg)}
+  50%{transform:rotate(-1.3deg)}
+}
+@keyframes caHairBounce{
+  0%,100%{transform:translateY(0) rotate(-1deg)}
+  50%{transform:translateY(1.6px) rotate(1.4deg)}
+}
+@keyframes caShadowPulse{
+  0%,50%,100%{transform:translateX(-50%) scaleX(1);opacity:.5}
+  25%,75%{transform:translateX(-50%) scaleX(.8);opacity:.34}
+}
+@keyframes caFlutter{
+  0%,100%{transform:rotate(0deg) skewX(0deg)}
+  30%{transform:rotate(-5.5deg) skewX(-3deg)}
+  65%{transform:rotate(3.5deg) skewX(2deg)}
+}
+@keyframes caFlutterTail{
+  0%,100%{transform:rotate(0deg)}
+  40%{transform:rotate(-9deg)}
+  75%{transform:rotate(5deg)}
+}
+@keyframes caFlutterRun{
+  0%,100%{transform:rotate(-2deg) skewX(-2deg)}
+  35%{transform:rotate(-13deg) skewX(-7deg)}
+  70%{transform:rotate(6deg) skewX(3deg)}
+}
+@keyframes caAttack{
+  0%{transform:translate(0,0) rotate(0deg) scale(1)}
+  32%{transform:translate(17px,-5px) rotate(3.2deg) scale(1.045)}
+  52%{transform:translate(19px,-4px) rotate(3.6deg) scale(1.05)}
+  78%{transform:translate(-3px,1px) rotate(-.6deg) scale(.995)}
+  100%{transform:translate(0,0) rotate(0deg) scale(1)}
+}
+@keyframes caHit{
+  0%{transform:translate(0,0);opacity:1}
+  18%{transform:translate(-7px,1px);opacity:.55}
+  38%{transform:translate(6px,-1px);opacity:.85}
+  58%{transform:translate(-4px,0);opacity:.65}
+  78%{transform:translate(3px,0);opacity:.92}
+  100%{transform:translate(0,0);opacity:1}
+}
+@keyframes caWinJump{
+  0%,100%{transform:translateY(0) scale(1)}
+  28%{transform:translateY(-14px) scale(1.03)}
+  52%{transform:translateY(0) scale(.99)}
+  72%{transform:translateY(-9px) scale(1.02)}
+  88%{transform:translateY(0) scale(1)}
+}
+@keyframes caWinWave{ /* gốc 24deg sẵn trong transform của .gg-weapon */
+  from{transform:rotate(7deg)}
+  to{transform:rotate(41deg)}
+}
+
+/* ------------------------- ĐỨNG CHỜ (idle) ------------------------- */
+.ca-idle .ca-wrap,.ca-wrap.ca-idle,
+.ca-idle .gface.ca-hoso,.gface.ca-hoso.ca-idle{
+  animation:caBreathe 2.8s ease-in-out infinite;
+}
+.ca-idle .ca-head{animation:caHeadNod 2.8s ease-in-out infinite}
+.ca-idle .ca-hair{animation:caHairSway 2.8s ease-in-out infinite}
+.ca-idle .ca-eye,.ca-win .ca-eye{animation:caBlink 4.4s linear infinite}
+
+/* ------------------------- CHẠY (run) ------------------------- */
+.ca-run .ca-wrap,.ca-wrap.ca-run,
+.ca-run .gface.ca-hoso,.gface.ca-hoso.ca-run{
+  animation:caRunBob .38s linear infinite;
+}
+.ca-run .ca-svg{animation:caRunTilt .38s linear infinite}
+.ca-run .ca-head{animation:caRunHead .38s linear infinite}
+.ca-run .ca-torso{animation:caRunTorso .38s linear infinite}
+.ca-run .ca-hair{animation:caHairBounce .38s linear infinite}
+.ca-run .ca-shadow{opacity:.5;animation:caShadowPulse .38s linear infinite}
+.ca-run .ca-flutter{animation:caFlutterRun .5s ease-in-out infinite}
+
+/* ------------------------- TẤN CÔNG / TRÚNG ĐÒN ------------------------- */
+.ca-attack{animation:caAttack .55s cubic-bezier(.25,.7,.3,1) 1}
+.ca-hit{animation:caHit .45s linear 1}
+
+/* ------------------------- THẮNG (win) ------------------------- */
+.ca-win .ca-wrap,.ca-wrap.ca-win,
+.ca-win .gface.ca-hoso,.gface.ca-hoso.ca-win{
+  animation:caWinJump .9s ease-in-out infinite;
+}
+.ca-win .ca-hair{animation:caHairBounce .45s ease-in-out infinite}
+.ca-win .ca-shadow{opacity:.45;animation:caShadowPulse .9s linear infinite}
+.ca-win .ca-flutter{animation:caFlutterRun .5s ease-in-out infinite}
+.ca-win .gg-weapon{
+  transform-box:view-box;transform-origin:158px 150px;
+  animation:caWinWave .45s ease-in-out infinite alternate;
+}
+
+/* ------------------------- PHỤ KIỆN PHẤP PHỚI -------------------------
+   Phấp phới THEO chuyển động: đứng chờ -> lay nhẹ; chạy/thắng -> nhanh
+   và mạnh hơn (khai báo ở mục run/win phía trên). Không trạng thái
+   (GCANIM 'none') -> phụ kiện đứng yên như phần còn lại. */
+.ca-idle .ca-flutter{animation:caFlutter 1.7s ease-in-out infinite}
+.ca-idle .ca-flutter-tail{animation:caFlutterTail 1.7s ease-in-out infinite}
+
+/* Mặt ảnh hồ sơ: khoá MỌI hoạt họa lớp trong (không chớp mắt lên ảnh,
+   không lệch khung) — chỉ cả khối .ca-hoso động theo trạng thái ở trên. */
+.ca-hoso .ca-wrap,.ca-hoso .ca-svg,.ca-hoso .ca-head,.ca-hoso .ca-hair,
+.ca-hoso .ca-hair-back,.ca-hoso .ca-torso,.ca-hoso .ca-eye{
+  animation:none !important;
+}
+
+/* ------------------------- CHẤT LƯỢNG THẤP (fps < 30) ------------------------- */
+html.ca-q-low .ca-flutter,html.ca-q-low .ca-flutter-tail,
+html.ca-q-low .ca-hair,html.ca-q-low .ca-hair-back,
+html.ca-q-low .ca-head,html.ca-q-low .ca-shadow{
+  animation:none !important;
+}
+html.ca-q-low .ca-shadow{opacity:0}
+
+/* ------------------------- TẮT TOÀN BỘ / REDUCED MOTION ------------------------- */
+html.ca-q-off .ca-wrap,html.ca-q-off .ca-svg,html.ca-q-off .ca-head,
+html.ca-q-off .ca-hair,html.ca-q-off .ca-hair-back,html.ca-q-off .ca-torso,
+html.ca-q-off .ca-eye,html.ca-q-off .ca-shadow,html.ca-q-off .ca-flutter,
+html.ca-q-off .ca-flutter-tail,html.ca-q-off .gface,
+html.ca-q-off .gg-weapon,html.ca-q-off .ca-attack,html.ca-q-off .ca-hit{
+  animation:none !important;
+}
+@media (prefers-reduced-motion: reduce){
+  .ca-wrap,.ca-svg,.ca-head,.ca-hair,.ca-hair-back,.ca-torso,.ca-eye,
+  .ca-shadow,.ca-flutter,.ca-flutter-tail,.gface.ca-hoso,.gg-weapon,
+  .ca-attack,.ca-hit{
+    animation:none !important;
+  }
+}
+
+/* ------------------------- TRANG ẨN: TẠM DỪNG ------------------------- */
+html.ca-paused .ca-wrap,html.ca-paused .ca-svg,html.ca-paused .ca-head,
+html.ca-paused .ca-hair,html.ca-paused .ca-hair-back,html.ca-paused .ca-torso,
+html.ca-paused .ca-eye,html.ca-paused .ca-shadow,html.ca-paused .ca-flutter,
+html.ca-paused .ca-flutter-tail,html.ca-paused .gface,
+html.ca-paused .gg-weapon,html.ca-paused .ca-attack,html.ca-paused .ca-hit{
+  animation-play-state:paused !important;
+}

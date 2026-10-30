@@ -1,0 +1,58 @@
+/* =====================================================================
+   fullbody.css — Hình người TOÀN THÂN (Đợt game 5, Nhánh A)
+   CHỈ cấu trúc / kích thước / khớp xoay cho tiền tố .fb- (và .gg- lồng
+   trong .fb- khi cần). KHÔNG keyframes trạng thái — hoạt họa
+   .ca-run/.ca-idle/.ca-attack/.ca-hit/.ca-win do fullbody-anim.css
+   (Nhánh B) đảm nhiệm. Mắt .ca-eye dùng lại chớp mắt của charanim.css.
+
+   Khớp (transform-box: fill-box; origin 50% 0% = đỉnh-giữa của chính
+   nhóm, trùng vai/khuỷu/hông/gối theo hình học viewBox 0 0 200 360):
+   .fb-arm-l/.fb-arm-r   -> vai (68,118)/(132,118)
+   .fb-fore-l/.fb-fore-r -> khuỷu (~y164 của nhóm cẳng)
+   .fb-leg-l/.fb-leg-r   -> hông (86,204)/(114,204)
+   .fb-shin-l/.fb-shin-r -> gối (~y256 của nhóm cẳng chân)
+   ===================================================================== */
+
+.fb-wrap{
+  position:relative;
+  display:inline-block;
+  aspect-ratio:200/360;
+  line-height:0;
+  vertical-align:middle;
+  flex:none;
+}
+.fb-wrap>.fb-svg{display:block;width:100%;height:100%}
+
+/* Bóng đổ dưới chân (ellipse trong SVG) */
+.fb-shadow{fill:rgba(20,16,40,.30)}
+
+/* Khớp chi: mọi nhóm chi xoay quanh đỉnh-giữa của chính nó */
+.fb-arm-l,.fb-arm-r,.fb-leg-l,.fb-leg-r,
+.fb-fore-l,.fb-fore-r,.fb-shin-l,.fb-shin-r{
+  transform-box:fill-box;
+  transform-origin:50% 0%;
+}
+/* Đầu gật quanh cổ (đáy nhóm đầu) */
+.fb-head{transform-box:fill-box;transform-origin:50% 92%}
+/* Thân cúi quanh hông (đáy nhóm thân) */
+.fb-torso{transform-box:fill-box;transform-origin:50% 100%}
+/* Tóc dài sau lưng: fill-box để Nhánh B phấp phới nếu cần.
+   LƯU Ý: .fb-weapon KHÔNG đặt transform-box/origin ở đây — vũ khí dùng
+   thuộc tính transform="rotate(… cx cy)" trong SVG; CSS transform-origin
+   sẽ phá tâm quay đó (đã đo thực tế: kiếm lệch khỏi tay). */
+.fb-wrap .ca-hair-back{transform-box:fill-box;transform-origin:50% 0%}
+
+/* Mặt ảnh hồ sơ: phủ tròn vùng đầu — tâm 50% / 16.1% (= 58/360),
+   đường kính 40% bề ngang wrap (= 80/200 bề ngang viewBox) */
+.fb-hoso-img{
+  position:absolute;
+  left:50%;
+  top:16.1%;
+  width:40%;
+  aspect-ratio:1/1;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  pointer-events:none;
+}

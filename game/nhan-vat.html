@@ -6,6 +6,19 @@
 <meta name="theme-color" content="#14111f">
 <title>Tạo nhân vật · Hành trình đến Edo</title>
 <link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="gear.css">
+<link rel="stylesheet" href="charanim.css">
+<link rel="stylesheet" href="fullbody.css">
+<link rel="stylesheet" href="fullbody-anim.css"><link rel="stylesheet" href="nameplate.css">
+<style>
+/* Đợt 5 Nhánh C: khối nhân vật TOÀN THÂN + biển tên trên sân khấu trang nhân vật */
+.nv-bodybox{text-align:center;margin-bottom:4px}
+.nv-platebox{min-height:24px;margin-bottom:2px}
+.nv-body{display:flex;justify-content:center}
+.nv-body .fb-wrap{line-height:0}
+</style>
+<!-- BATCH5-M: kiểu khối cấp người chơi -->
+<link rel="stylesheet" href="level.css">
 </head>
 <body>
 <header id="gtop"></header>
@@ -23,6 +36,11 @@
     <!-- Xem trước -->
     <div class="card">
       <div class="hero-stage">
+        <!-- Đợt 5 Nhánh C: khối chính TOÀN THÂN (GBODY) + biển tên mình trên đầu -->
+        <div class="nv-bodybox">
+          <div class="nv-platebox" id="stagePlate"></div>
+          <div class="nv-body" id="stageBody" aria-label="Xem trước nhân vật toàn thân"></div>
+        </div>
         <div class="hav" id="stageAvatar" aria-label="Xem trước nhân vật"></div>
         <p style="font-weight:800;font-size:20px;margin-top:8px" id="stageName">…</p>
         <p class="mut" id="stageDesc">…</p>
@@ -31,13 +49,30 @@
         <span class="me" id="stagePet" aria-hidden="true">🐱</span>
         <div class="mascot-bubble" id="stageBubble" role="status">…</div>
       </div>
+      <!-- BATCH5-M: khối cấp người chơi (GLEVEL) nổi bật cạnh sân khấu -->
+      <div id="glvMountNv" style="margin-top:10px"></div>
+      <!-- Hoạt họa nhân vật (Nhánh A, đợt 4): xem trước các trạng thái -->
+      <div class="chips" id="caDemo" role="group" aria-label="Xem trước hoạt họa nhân vật" style="justify-content:center;margin-top:10px">
+        <button type="button" data-ca="idle">🧍 Đứng chờ</button>
+        <button type="button" data-ca="run">🏃 Chạy</button>
+        <button type="button" data-ca="attack">⚔️ Tấn công</button>
+        <button type="button" data-ca="hit">💥 Trúng đòn</button>
+        <button type="button" data-ca="win">🏆 Thắng</button>
+      </div>
       <div style="height:14px"></div>
       <button class="btn blk" id="btnRandom" type="button">🎲 Ngẫu nhiên cho vui</button>
     </div>
 
     <!-- Tuỳ chọn -->
     <div class="card">
-      <h2 style="margin-top:0">1. Giới tính nhân vật</h2>
+      <h2 style="margin-top:0">Mặt nhân vật</h2>
+      <div class="chips" id="faceChips" role="group" aria-label="Nguồn mặt nhân vật">
+        <button type="button" id="btnFaceHoso">🖼️ Dùng ảnh hồ sơ</button>
+        <button type="button" id="btnFaceMascot">🎭 Về nhân vật mặc định</button>
+      </div>
+      <p class="note" id="faceNote" role="status" style="text-align:left" hidden></p>
+
+      <h2>1. Giới tính nhân vật</h2>
       <div class="seg" id="segGender" role="group" aria-label="Giới tính nhân vật">
         <button type="button" data-v="nam">👦 Nam</button>
         <button type="button" data-v="nu">👧 Nữ</button>
@@ -66,15 +101,42 @@
       <p class="note" id="syncNote">Nhân vật được lưu trên máy này (hn_game_avatar). Đăng nhập thì em tự đồng bộ nhẹ vào hồ sơ tài khoản.</p>
     </div>
   </div>
+
+  <!-- Việc I (đợt game 3): Trang bị & Skill dùng chung GGEAR -->
+  <section class="card gg-card" id="gearSection" aria-label="Trang bị và skill">
+    <h2 style="margin-top:0">⚔️ Trang bị &amp; Skill</h2>
+    <p class="mut gg-prog" id="ggProg">Đang tải tiến độ…</p>
+    <h3 class="gg-kind">🗡️ Vũ khí</h3>
+    <div class="gg-grid" id="ggWeapons"></div>
+    <h3 class="gg-kind">🛡️ Giáp</h3>
+    <div class="gg-grid" id="ggArmors"></div>
+    <h3 class="gg-kind">🎀 Phụ kiện</h3>
+    <div class="gg-grid" id="ggAccs"></div>
+    <!-- BATCH5-M: kind mới "Đồ thêm" (extra) -->
+    <h3 class="gg-kind">🎒 Đồ thêm</h3>
+    <div class="gg-grid" id="ggExtras"></div>
+    <h3 class="gg-kind">✨ Skill tung đòn</h3>
+    <div class="gg-grid" id="ggSkills"></div>
+    <p class="note" style="text-align:left">Trang bị áp dụng cho mọi chế độ đấu (phòng nhóm, đấu trùm…). Món khoá mở dần theo sao chiến dịch và số trùm đã hạ.</p>
+  </section>
   <div style="height:60px"></div>
 </main>
 
 <script src="../config.js"></script>
 <script src="game.js"></script>
+<script src="settings.js"></script>
 <script src="fx.js"></script>
+<script src="voice.js"></script>
 <script src="trend.js"></script>
 <script src="sfx.js"></script>
 <script src="music.js"></script>
+<script src="game-api.js"></script>
+<script src="gear.js"></script>
+<script src="charanim.js"></script>
+<script src="fullbody.js"></script>
+<script src="nameplate.js"></script>
+<!-- BATCH5-M: cấp người chơi (GLEVEL) -->
+<script src="level.js"></script>
 <script>
 GAME_topbar('🎭 Tạo nhân vật', { back: true });
 
@@ -92,17 +154,237 @@ function clsOf() { return AV.classOf(cfg); }
 function petOf() { return GAME_PETS[cfg.pet] || GAME_PETS.meo; }
 function outfitOf() { return AV.outfitOf(cfg); }
 
-function paint() {
-  document.getElementById('stageAvatar').innerHTML = AV.svg(cfg, 200);
-  document.getElementById('stagePet').textContent = petOf().e;
-  GAME_USER.then(function (u) {
-    var ten = u.name ? ' ' + u.name : '';
-    document.getElementById('stageName').textContent =
-      (GAME_Xh() + ten + ' · ' + clsOf().n).trim();
-    document.getElementById('stageDesc').textContent =
-      'Tuyệt chiêu: ' + clsOf().sk + ' · ' + outfitOf().e + ' ' + outfitOf().n +
-      ' · Đồng hành: ' + petOf().e + ' ' + petOf().n;
+/* Đồng bộ TÊN (Nhánh N): nguồn DUY NHẤT là GAME_USER của game.js.
+   paintStageText(u) vẽ stageName từ user được truyền vào — gọi lại mỗi
+   khi game.js phát sự kiện 'hn-game-user' (tên hồ sơ mới nhất), thay vì
+   chỉ vẽ một lần từ GAME_USER.then như trước. Chip topbar (#gtopName /
+   #gtopSub do GAME_topbar của game.js vẽ) cũng vẽ lại cùng lúc. */
+function paintStageText(u) {
+  u = u || window.GAME_USER_DATA || {};
+  var ten = u.name ? ' ' + u.name : '';
+  var call = u.call ? u.call.charAt(0).toUpperCase() + u.call.slice(1) : GAME_Xh();
+  document.getElementById('stageName').textContent =
+    (call + ten + ' · ' + clsOf().n).trim();
+  document.getElementById('stageDesc').textContent =
+    'Tuyệt chiêu: ' + clsOf().sk + ' · ' + outfitOf().e + ' ' + outfitOf().n +
+    ' · Đồng hành: ' + petOf().e + ' ' + petOf().n;
+}
+function paintTopbarUser(u) {
+  var nameEl = document.getElementById('gtopName');
+  var subEl = document.getElementById('gtopSub');
+  if (!nameEl || !subEl || !u) return;
+  if (u.loggedIn) {
+    nameEl.textContent = u.name || 'Học viên';
+    subEl.textContent = (u.level ? u.level + ' · ' : '') + 'Chào ' + u.call + '!';
+  } else {
+    nameEl.textContent = 'Khách';
+    subEl.innerHTML = '<a href="../dang-nhap.html">Đăng nhập</a> để lưu điểm';
+  }
+}
+/* Nguồn mặt nhân vật (Nhánh F): 'hoso' = ảnh hồ sơ của chính mình
+   (GAME_USER_DATA.avatarFile/avatarUrl do game.js resolve từ
+   /community/profile + /community/file-token), 'mascot' = SVG mặc định.
+   Lựa chọn lưu trong chính cấu hình avatar (cfg.face + cfg.faceFile đối
+   chiếu) qua changed()/AV.save như mọi tuỳ chọn khác — không lưu URL tạm. */
+var FACE_NO_PHOTO_MSG = 'Chưa có ảnh hồ sơ — thêm ảnh ở trang Cộng đồng/Hồ sơ nhé';
+function showFaceNote(msg) {
+  var n = document.getElementById('faceNote');
+  if (!n) return;
+  n.textContent = msg || '';
+  n.hidden = !msg;
+}
+function paintFaceUI() {
+  var bH = document.getElementById('btnFaceHoso');
+  var bM = document.getElementById('btnFaceMascot');
+  if (bH) bH.classList.toggle('on', cfg.face === 'hoso');
+  if (bM) bM.classList.toggle('on', cfg.face !== 'hoso');
+}
+/* Đợt 5 Nhánh C: khối chính TOÀN THÂN trên sân khấu — GBODY.paint với chính
+   cfg hiện tại (GBODY tự đọc GGEAR.state() để vẽ giáp/vũ khí/phụ kiện đang
+   mặc lên hình mới). GBODY vắng/lỗi -> dự phòng mặt bán thân như cũ.
+   Biển .gnp-own trên đầu lấy tên MỚI NHẤT qua GNAME.ownName(); GNAME còn
+   tự sửa text biển theo sự kiện 'hn-game-user', và paintStageBody được gọi
+   lại từ paintStageFace (mọi lần đổi avatar/trang bị đều qua đây). */
+function paintStageBody() {
+  var host = document.getElementById('stageBody');
+  var plate = document.getElementById('stagePlate');
+  if (plate) {
+    try { plate.innerHTML = window.GNAME ? GNAME.plate(GNAME.ownName(), { own: true }) : ''; }
+    catch (e) { plate.innerHTML = ''; }
+  }
+  if (!host) return;
+  try {
+    if (window.GBODY && typeof GBODY.paint === 'function') {
+      GBODY.paint(host, cfg, { height: 230 });
+      caApplyBody(caStageState);
+      return;
+    }
+  } catch (e) { /* rơi xuống dự phòng bán thân */ }
+  host.innerHTML = '';
+  AV.paintFace(host, cfg, 110);
+}
+/* Áp cùng trạng thái hoạt họa của sân khấu lên hình toàn thân (nhánh B lo
+   keyframes theo class ca-* trên .fb-wrap). */
+function caApplyBody(state) {
+  if (!window.GCANIM) return;
+  var wrap = document.querySelector('#stageBody .fb-wrap');
+  if (wrap) GCANIM.apply(wrap, state);
+}
+function paintStageFace() {
+  // Hàm dùng chung của game.js: chọn 'hoso' + có URL -> <img> tròn;
+  // ngược lại -> SVG mặc định. Xem trước cập nhật tức thì tại đây.
+  AV.paintFace(document.getElementById('stageAvatar'), cfg, 200);
+  applyGearToStage();
+  paintStageBody();
+  paintFaceUI();
+  // Xem trước CÓ hoạt họa (Nhánh A): mặc định đứng chờ (nhún thở +
+  // chớp mắt với mặt SVG; mặt ảnh hồ sơ chỉ nhún thở toàn thân).
+  caApplyStage(caStageState);
+}
+/* Trạng thái hoạt họa của sân khấu xem trước (GCANIM, charanim.js).
+   attack/hit là nhịp 1 lần — GCANIM tự gỡ, trạng thái giữ vẫn nguyên. */
+var caStageState = 'idle';
+function caApplyStage(state) {
+  var host = document.getElementById('stageAvatar');
+  if (!host || !window.GCANIM) return;
+  if (state === 'attack' || state === 'hit') { GCANIM.apply(host, state); caApplyBody(state); return; }
+  caStageState = state;
+  GCANIM.apply(host, state);
+  caApplyBody(state);
+  document.querySelectorAll('#caDemo button').forEach(function (b) {
+    b.classList.toggle('on', b.dataset.ca === state);
   });
+}
+document.querySelectorAll('#caDemo button').forEach(function (b) {
+  b.addEventListener('click', function () { caApplyStage(b.dataset.ca); });
+});
+
+/* ---- Trang bị & Skill (Việc I): xem trước + khu chọn đồ ---- */
+function applyGearToStage() {
+  var host = document.getElementById('stageAvatar');
+  if (!host || !window.GGEAR) return;
+  host.classList.add('gg-host');
+  // SVG vẽ được: chèn lớp trang bị vào chính chuỗi SVG (không che mặt).
+  // Đã có lớp gear của lựa chọn CŨ thì gỡ ra rồi decorate lại theo state mới.
+  var svg = host.querySelector('svg');
+  if (svg && window.GGEAR) {
+    var st = GGEAR.state();
+    var wantKey = st.weapon + '/' + st.armor + '/' + st.acc;
+    var cur = svg.querySelector('.gg-gear');
+    if (!cur || cur.dataset.gear !== wantKey) {
+      if (cur) cur.remove();
+      var dec = GGEAR.decorate(svg.outerHTML);
+      if (dec && dec !== svg.outerHTML) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = dec;
+        var nsvg = tmp.querySelector('svg');
+        if (nsvg) svg.replaceWith(nsvg);
+      }
+    }
+  }
+  // Huy hiệu vũ khí ở góc: luôn hiện, kể cả khi mặt là <img> hồ sơ phủ lên SVG.
+  var old = host.querySelector('.gg-badge');
+  if (old) old.remove();
+  host.insertAdjacentHTML('beforeend', GGEAR.badge());
+}
+function ggRenderList(elId, items, kind, curId) {
+  var box = document.getElementById(elId);
+  if (!box) return;
+  box.innerHTML = items.map(function (it) {
+    return '<button type="button" class="gg-item' + (it.unlocked ? '' : ' locked') + (curId === it.id ? ' on' : '') + '"' +
+      ' data-kind="' + kind + '" data-id="' + it.id + '"' +
+      (it.unlocked ? '' : ' aria-disabled="true" title="' + esc(it.cond) + '"') + '>' +
+      (it.unlocked ? '' : '<span class="gg-lock" aria-hidden="true">🔒</span>') +
+      '<span class="gg-ic" aria-hidden="true">' + it.icon + '</span>' +
+      '<span class="gg-nm"><span class="gg-dot" style="background:' + it.color + '"></span>' + esc(it.name) + '</span>' +
+      '<span class="gg-cond">' + esc(it.cond) + '</span></button>';
+  }).join('');
+  box.querySelectorAll('.gg-item').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.dataset.id, kd = b.dataset.kind;
+      var cat = GGEAR.catalog();
+      var list = kd === 'weapon' ? cat.weapons : kd === 'armor' ? cat.armors : kd === 'acc' ? cat.accs : cat.skills;
+      var it = null;
+      list.forEach(function (x) { if (x.id === id) it = x; });
+      if (!it || !it.unlocked) {
+        // Món khoá: rung nhẹ + báo điều kiện, TUYỆT ĐỐI không chọn.
+        b.classList.remove('gg-shake');
+        void b.offsetWidth;
+        b.classList.add('gg-shake');
+        if (window.toast && it) toast('🔒 ' + it.cond);
+        return;
+      }
+      if (GGEAR.select(kd, id)) { paintGear(); applyGearToStage(); }
+    });
+  });
+}
+function paintGear() {
+  if (!window.GGEAR) return;
+  var cat = GGEAR.catalog(), st = GGEAR.state(), inf = GGEAR.info();
+  var prog = document.getElementById('ggProg');
+  if (prog) prog.textContent = 'Tiến độ của anh: ⭐ ' + inf.stars + ' sao chiến dịch · 👹 đã hạ ' + inf.bossWins + ' trùm';
+  ggRenderList('ggWeapons', cat.weapons, 'weapon', st.weapon);
+  ggRenderList('ggArmors', cat.armors, 'armor', st.armor);
+  ggRenderList('ggAccs', cat.accs, 'acc', st.acc);
+  ggRenderList('ggSkills', cat.skills, 'skill', st.skill);
+}
+window.addEventListener('hn-game-gear', function () { paintGear(); applyGearToStage(); paintStageBody(); });
+if (window.GGEAR && GGEAR.ready) {
+  GGEAR.ready().then(function () { paintGear(); applyGearToStage(); paintStageBody(); }).catch(function () { /* bỏ qua */ });
+}
+function chooseFaceHoso() {
+  var u = window.GAME_USER_DATA || {};
+  if (!u.avatarFile) {
+    // Chưa có ảnh hồ sơ (hoặc khách): báo nhẹ, GIỮ mặt mặc định.
+    showFaceNote(FACE_NO_PHOTO_MSG);
+    if (window.toast) toast(FACE_NO_PHOTO_MSG);
+    return;
+  }
+  cfg.face = 'hoso';
+  cfg.faceFile = u.avatarFile;
+  showFaceNote('');
+  changed(true);
+  if (!u.avatarUrl && AV.refreshFace) {
+    // URL tạm chưa kịp resolve: nạp ngay rồi vẽ lại qua sự kiện hn-game-user.
+    AV.refreshFace().then(function () { paintStageFace(); });
+  }
+}
+function chooseFaceMascot() {
+  cfg.face = 'mascot';
+  showFaceNote('');
+  changed(true);
+}
+document.getElementById('btnFaceHoso').addEventListener('click', chooseFaceHoso);
+document.getElementById('btnFaceMascot').addEventListener('click', chooseFaceMascot);
+
+window.addEventListener('hn-game-user', function (ev) {
+  var u = (ev && ev.detail) || window.GAME_USER_DATA;
+  paintStageText(u);
+  paintTopbarUser(u);
+  // Mặt vẽ lại cùng nhịp với tên: hồ sơ đổi ảnh -> avatarFile mới ->
+  // xem trước hiện ảnh MỚI (game.js luôn resolve từ mã file mới nhất).
+  paintStageFace();
+  if (cfg.face === 'hoso' && u.loaded && u.loggedIn && !u.avatarFile) {
+    showFaceNote(FACE_NO_PHOTO_MSG); // ảnh hồ sơ đã bị gỡ: mặt tự về SVG
+  } else if (u.avatarFile) {
+    showFaceNote('');
+  }
+});
+var lastUserRefresh = 0;
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState !== 'visible') return;
+  var now = Date.now();
+  if (now - lastUserRefresh < 30000) return;
+  lastUserRefresh = now;
+  if (typeof window.GAME_USER_REFRESH === 'function') {
+    try { window.GAME_USER_REFRESH(); } catch (e) { /* bỏ qua */ }
+  }
+});
+
+function paint() {
+  paintStageFace();
+  document.getElementById('stagePet').textContent = petOf().e;
+  GAME_USER.then(function (u) { paintStageText(u); });
   // Giới tính
   document.querySelectorAll('#segGender button').forEach(function (b) {
     b.classList.toggle('on', b.dataset.v === cfg.gender);
@@ -171,6 +453,10 @@ function changed(pop) {
   cfg = AV.sanitize(cfg);
   paint();
   gameStore.set('hn_game_avatar', cfg);
+  // Phát lại sự kiện như AV.save để chip topbar (game.js nghe
+  // 'hn-game-avatar') vẽ lại mặt ngay cả khi mới lưu nháp — nhất là khi
+  // vừa đổi nguồn mặt sang ảnh hồ sơ / về mặc định (Nhánh F).
+  try { document.dispatchEvent(new CustomEvent('hn-game-avatar', { detail: cfg })); } catch (e) { /* bỏ qua */ }
   if (pop && window.GFX) GFX.burst(document.getElementById('stageAvatar'), 22);
 }
 GAME_segPick(document.getElementById('segGender'), function (v) {
@@ -186,7 +472,8 @@ document.getElementById('btnRandom').addEventListener('click', function () {
     hairColor: AV.HAIRCOLORS[Math.floor(Math.random() * AV.HAIRCOLORS.length)].v,
     outfit: AV.OUTFITS[Math.floor(Math.random() * AV.OUTFITS.length)].k,
     cls: GAME_CLASSES[Math.floor(Math.random() * GAME_CLASSES.length)].k,
-    pet: Object.keys(GAME_PETS)[Math.floor(Math.random() * Object.keys(GAME_PETS).length)]
+    pet: Object.keys(GAME_PETS)[Math.floor(Math.random() * Object.keys(GAME_PETS).length)],
+    face: cfg.face, faceFile: cfg.faceFile // ngẫu nhiên diện mạo, giữ nguyên nguồn mặt
   });
   petSay();
   changed(true);
@@ -207,6 +494,52 @@ document.getElementById('btnSave').addEventListener('click', function () {
   });
   setTimeout(function () { location.href = 'index.html'; }, 900);
 });
+
+/* ================= BATCH5-M: Đồ thêm (extra) + khối cấp =================
+   Khối riêng của Việc M: lưới "Đồ thêm" tự vẽ (không sửa paintGear cũ),
+   khối cấp GLEVEL gắn cạnh sân khấu + thẻ ăn mừng LÊN CẤP khi vào trang. */
+function paintExtrasM() {
+  if (!window.GGEAR) return;
+  var box = document.getElementById('ggExtras');
+  if (!box) return;
+  var cat = GGEAR.catalog(), st = GGEAR.state();
+  if (!cat.extras) return;
+  box.innerHTML = cat.extras.map(function (it) {
+    return '<button type="button" class="gg-item' + (it.unlocked ? '' : ' locked') + (st.extra === it.id ? ' on' : '') + '"' +
+      ' data-id="' + it.id + '"' +
+      (it.unlocked ? '' : ' aria-disabled="true" title="' + esc(it.cond) + '"') + '>' +
+      (it.unlocked ? '' : '<span class="gg-lock" aria-hidden="true">🔒</span>') +
+      '<span class="gg-ic" aria-hidden="true">' + it.icon + '</span>' +
+      '<span class="gg-nm"><span class="gg-dot" style="background:' + it.color + '"></span>' + esc(it.name) + '</span>' +
+      '<span class="gg-cond">' + esc(it.cond) + '</span></button>';
+  }).join('');
+  box.querySelectorAll('.gg-item').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var it = null;
+      GGEAR.catalog().extras.forEach(function (x) { if (x.id === b.dataset.id) it = x; });
+      if (!it || !it.unlocked) {
+        b.classList.remove('gg-shake');
+        void b.offsetWidth;
+        b.classList.add('gg-shake');
+        if (window.toast && it) toast('🔒 ' + it.cond);
+        return;
+      }
+      if (GGEAR.select('extra', it.id)) { paintExtrasM(); applyGearToStage(); }
+    });
+  });
+}
+function mountLevelNvM() {
+  var m = document.getElementById('glvMountNv');
+  if (m && window.GLEVEL) GLEVEL.mountInto(m);
+}
+window.addEventListener('hn-game-gear', function () { paintExtrasM(); mountLevelNvM(); });
+if (window.GGEAR && GGEAR.ready) {
+  GGEAR.ready().then(function () {
+    paintExtrasM();
+    mountLevelNvM();
+    if (window.GLEVEL) GLEVEL.checkNotify();
+  }).catch(function () { /* bỏ qua */ });
+}
 
 /* Khởi động: nếu máy chưa có nhân vật mà tài khoản có bản đồng bộ thì kéo về trước */
 (function init() {

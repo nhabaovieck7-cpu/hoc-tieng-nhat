@@ -6,41 +6,44 @@
 <title>Chạy vô tận · Hành trình đến Edo</title>
 <link rel="stylesheet" href="game.css">
 <link rel="stylesheet" href="modes.css">
+<link rel="stylesheet" href="gear.css"><link rel="stylesheet" href="charanim.css">
+<link rel="stylesheet" href="finisher.css">
+<link rel="stylesheet" href="fullbody.css">
+<link rel="stylesheet" href="fullbody-anim.css"><link rel="stylesheet" href="nameplate.css">
 </head>
 <body class="mx-body">
-<div class="mx-top"><a class="mx-back" href="index.html">← Tất cả game</a><span class="mx-title">🏃 Chạy vô tận</span><div id="sndToggles" class="snd-toggles"></div></div>
+<div class="mx-top"><a class="mx-back" href="index.html">← Tất cả game</a><a class="gtop-course" href="../index.html" aria-label="Quay lại khóa học">← <span>Về khóa học</span></a><span class="mx-title">🏃 Chạy vô tận</span><div id="sndToggles" class="snd-toggles"></div></div>
 <main class="mx-wrap">
   <section id="menu"></section>
   <section id="play" class="mx-hid">
-    <div class="rn-game" id="stage">
-      <div class="rn-road" id="road"></div>
-      <div class="rn-hud"><span id="livesBox">❤️❤️❤️</span><span id="distBox">0 m</span><span id="scoreBox">⭐ 0</span><span id="comboBox">🔥 0</span></div>
-      <div class="rn-qw" id="qBox">…</div>
-      <div class="rn-qsub" id="qSub" style="display:none"></div>
-      <div class="rn-gates" id="gateBox"></div>
-      <div class="rn-runner" id="runner">🏃</div>
-      <div class="rn-flash" id="flash"></div>
+    <div class="rnv-game" id="stage">
+      <div class="rnv-road" id="road"></div>
+      <div class="rnv-hud"><span id="livesBox">❤️❤️❤️</span><span id="distBox">0 m</span><span id="scoreBox">⭐ 0</span><span id="comboBox">🔥 0</span></div>
+      <div class="rnv-qw" id="qBox">…</div>
+      <div class="rnv-qsub" id="qSub" style="display:none"></div>
+      <div class="rnv-gates" id="gateBox"></div>
+      <div class="rnv-runner" id="runner"><span class="rnv-plate" id="runnerPlate"></span><span class="rnv-runner-in ca-run"><span class="rnv-face" id="runnerFace"><span class="rnv-emoji">🏃</span></span></span></div>
+      <div class="rnv-flash" id="flash"></div>
     </div>
-    <div class="rn-lanes">
-      <button class="mx-btn alt" id="btnLeft" type="button">◀ Trái</button>
+    <div class="rnv-tools">
       <button class="mx-btn alt" id="btnShield" type="button">🛡️ Khiên (1)</button>
-      <button class="mx-btn alt" id="btnRight" type="button">Phải ▶</button>
-    </div>
-    <div class="rn-tools">
-      <button class="mx-btn alt" id="btnSlow" type="button">🐢 Chạy chậm 1 câu</button>
+      <button class="mx-btn alt" id="btnSlow" type="button">🐢 Chậm 1 câu</button>
       <button class="mx-btn alt" id="btnStop" type="button">Dừng nghỉ ⏸</button>
     </div>
-    <p class="mx-mut" style="margin-top:10px">Vuốt trái/phải trên đường chạy, bấm nút hoặc dùng phím ← → để chuyển làn. Chạy vào cổng mang nghĩa đúng trước khi cổng chạm tới nơi!</p>
+    <p class="mx-mut" style="margin-top:10px">CHẠM thẳng vào cổng đáp án đúng: nhân vật sẽ phóng tới tung skill phá cổng. Đừng để cổng chạm tới nơi mà chưa chạm đáp án — mất 1 tim đấy!</p>
   </section>
   <section id="result" class="mx-hid"></section>
 </main>
 <script src="game.js"></script>
+<script src="settings.js"></script>
 <script src="fx.js"></script>
 <script src="questions.js"></script>
+<script src="voice.js"></script>
 <script src="trend.js"></script>
 <script src="music.js"></script>
 <script src="sfx.js"></script>
-<script src="game-api.js"></script>
+<script src="game-api.js"></script><script src="bosses.js"></script><script src="gear.js"></script><script src="charanim.js"></script><script src="finisher.js"></script>
+<script src="fullbody.js"></script><script src="nameplate.js"></script>
 <script src="chay-vo-tan.js"></script>
 </body>
 </html>

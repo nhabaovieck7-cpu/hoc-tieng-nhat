@@ -77,6 +77,20 @@ a{color:var(--cy)}
 .gtop-user{display:flex;align-items:center;gap:8px;min-width:0}
 .gtop-ava{width:36px;height:36px;flex:0 0 36px;border-radius:50%;overflow:hidden;display:block}
 .gtop-ava svg{width:36px;height:36px;display:block}
+
+/* ---------- Mặt nhân vật dùng ẢNH HỒ SƠ (Nhánh F) ----------
+   GAME_AVATAR.faceHTML(): <span class="gface"> bọc SVG dự phòng, <img
+   class="gface-img"> ảnh hồ sơ tròn phủ lên trên (object-fit cover);
+   ảnh lỗi/hết hạn thì img tự gỡ và SVG mặc định hiện ra. */
+.gface{position:relative;display:inline-block;border-radius:50%;vertical-align:middle;flex:none}
+.gface>svg{display:block}
+.gface-img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.gtop-ava .gface{width:100%!important;height:100%!important}
+.gtop-ava .gface>svg{width:100%;height:100%}
+.hub-hero .hav .gface>svg{width:100%;height:100%}
+.hero-stage .hav .gface{width:min(200px,58vw)!important;height:min(200px,58vw)!important}
+.hero-stage .hav .gface>svg{width:100%;height:100%}
+.zn .me .gface>svg{width:100%;height:100%}
 .gtop-who{font-size:13px;line-height:1.2;white-space:nowrap}
 .gtop-who b{display:block;font-size:13px;max-width:110px;overflow:hidden;text-overflow:ellipsis}
 .gtop-who small{color:var(--m);font-size:11px}
@@ -105,6 +119,79 @@ a{color:var(--cy)}
    để tiêu đề + avatar không bị ép mất chữ (đã kiểm 375/390). */
 @media(max-width:719px){
   .snd-toggles{order:9;flex:1 1 100%;justify-content:flex-end}
+}
+
+/* ---------- Nút "← Về khóa học" trong topbar (coordinator gắn .gtop-course
+   vào game.js, đặt trước #sndToggles) — Nhánh S lo style ---------- */
+.gtop-course{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:10px 14px;border-radius:999px;
+  background:#2b2540;border:1.5px solid var(--gold);color:var(--sun);
+  font-size:13.5px;font-weight:800;text-decoration:none;white-space:nowrap;
+  flex:0 0 auto;line-height:1.15;
+}
+.gtop-course:active{transform:scale(.94)}
+
+/* ---------- Panel cài đặt âm thanh (settings.js, tiền tố gs-) ---------- */
+.gs-gear{
+  min-width:44px;min-height:44px;padding:8px;border-radius:999px;
+  border:1.5px solid var(--line);background:#231e35;color:var(--t);
+  font-size:20px;line-height:1;cursor:pointer;font-family:inherit;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.gs-gear:active{transform:scale(.92)}
+.gs-panel{
+  position:fixed;z-index:200;width:320px;max-width:calc(100vw - 16px);
+  background:var(--card);border:1.5px solid var(--line);border-radius:16px;
+  padding:14px;color:var(--t);box-shadow:0 16px 40px rgba(0,0,0,.55);
+  font-family:inherit;
+}
+.gs-panel[hidden]{display:none!important}
+.gs-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.gs-title{font-size:15px;font-weight:800}
+.gs-close{
+  min-width:44px;min-height:44px;border-radius:12px;flex:0 0 44px;
+  border:1.5px solid var(--line);background:var(--card2);color:var(--t);
+  font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.gs-close:active{transform:scale(.92)}
+.gs-row{
+  display:flex;align-items:center;gap:8px;
+  padding:7px 0;border-top:1px solid var(--line);
+}
+.gs-row-label{flex:0 0 96px;font-size:13.5px;font-weight:700;line-height:1.25}
+.gs-switch{
+  min-width:52px;min-height:44px;padding:8px 10px;border-radius:999px;
+  border:1.5px solid var(--gold);background:var(--card2);color:var(--sun);
+  font-size:12.5px;font-weight:800;cursor:pointer;font-family:inherit;flex:0 0 auto;
+}
+.gs-switch.off{opacity:.55;border-style:dashed;color:var(--m)}
+.gs-switch:active{transform:scale(.94)}
+.gs-range{flex:1 1 auto;min-width:56px;height:44px;accent-color:var(--vermillion);cursor:pointer}
+.gs-range:disabled{opacity:.4;cursor:not-allowed}
+.gs-pct{flex:0 0 42px;text-align:right;font-size:13px;font-weight:800}
+.gs-style{border-top:1px solid var(--line);padding-top:10px;margin-top:3px}
+.gs-style-title{font-size:13px;font-weight:800;margin-bottom:8px}
+.gs-style-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gs-style-opt{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  min-height:44px;padding:8px 4px;border:2px solid var(--line);border-radius:12px;
+  background:var(--card2);color:var(--t);font-size:13px;font-weight:700;
+  cursor:pointer;text-align:center;line-height:1.2;
+}
+.gs-style-opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.gs-style-opt.on{border-color:var(--gold);color:var(--sun);background:#2b2540}
+
+/* ---------- Topbar không tràn ở màn hẹp (≤640px, kiểm 375px) ---------- */
+@media(max-width:640px){
+  .gtop{gap:6px;padding:8px}
+  .gtop-title{font-size:15px}
+  .gtop-course{font-size:12px;padding:8px 10px}
+  .gtop-who b{max-width:72px}
+  .gtop-ava{width:32px;height:32px;flex-basis:32px}
+  .gtop-ava svg{width:32px;height:32px}
+  .gs-row-label{flex-basis:84px;font-size:12.5px}
 }
 
 /* ---------- Nút & thẻ chung ---------- */
@@ -168,7 +255,9 @@ a{color:var(--cy)}
   width:30px;height:30px;flex:0 0 30px;border-radius:50%;
   display:grid;place-items:center;font-weight:800;font-size:13px;
   background:linear-gradient(135deg,var(--c),var(--neon));color:#fff;
+  position:relative;overflow:hidden;
 }
+.lb .ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
 .lb-empty{color:var(--m);font-size:14px;line-height:1.55;padding:8px 2px}
 .badges{display:flex;gap:8px;flex-wrap:wrap}
 .bd{font-size:12px;font-weight:700;padding:7px 11px;border-radius:12px;background:var(--card2);border:1px solid var(--line)}
@@ -279,6 +368,10 @@ a{color:var(--cy)}
   background:#fff;color:#1a0b2e;font-size:13.5px;font-weight:700;line-height:1.45;
   padding:10px 13px;border-radius:14px 14px 14px 4px;box-shadow:3px 3px 0 var(--cy);
   max-width:300px;
+}
+/* Màn hẹp: chữ dài tự cuộn trong khung bong bóng thay vì tràn màn hình. */
+@media(max-width:860px){
+  .mascot-bubble{max-height:38vh;overflow-y:auto}
 }
 .mascot-row{display:flex;align-items:flex-end;gap:8px}
 .mascot-row .me{font-size:52px;animation:gfloat 1.8s ease-in-out infinite;line-height:1}

@@ -1,0 +1,12 @@
+/* nameplate.css — ĐỢT GAME 5 · Nhánh C: biển tên người chơi (.gnp).
+   Chỉ lớp tiền tố .gnp- / .gnp. Biển nhỏ gọn: nền tối bán trong, chữ trắng,
+   bo tròn; tên dài tự cắt ellipsis trong max-width, không bao giờ tràn trang. */
+.gnp{display:inline-block;max-width:120px;padding:2px 10px;border-radius:99px;
+  background:rgba(18,14,34,.84);color:#fff;border:1px solid rgba(255,255,255,.38);
+  font-size:12px;font-weight:800;line-height:1.5;letter-spacing:.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top;
+  box-shadow:0 2px 8px rgba(10,6,30,.35);box-sizing:border-box}
+.gnp-own{border-color:rgba(255,216,78,.85);color:#ffe98a}
+.gnp-hide{display:none!important}
+/* Biển "treo" trên đầu một figure (vd #figP ở Đấu trùm): cha phải position:relative. */
+.gnp-top{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);z-index:3}

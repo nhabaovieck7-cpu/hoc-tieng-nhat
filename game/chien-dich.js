@@ -31,10 +31,28 @@
     },
     fx: function (fn, arg) { try { if (window.GFX && GFX[fn]) GFX[fn](arg); } catch (e) {} }
   };
+  /* Đồng bộ tên mới nhất: game.js phát sự kiện 'hn-game-user' (detail =
+     GAME_USER_DATA) mỗi khi resolve/refresh xong — cập nhật HOOK.user rồi
+     vẽ lại lời chào ở màn chọn (greet) và màn kết quả nếu đang hiện
+     (renderRes). Listener đăng ký đúng 1 lần; vẽ lại idempotent, không
+     đổi logic chơi/điểm/lưu tiến độ. */
+  var userEvtBound = false;
+  function onGameUser(u) {
+    if (u) HOOK.user = u;
+    greet();
+    if (lastRes && typeof renderRes === 'function') {
+      var resEl = $('cdRes');
+      if (resEl && !resEl.classList.contains('cd-hid')) renderRes();
+    }
+  }
   try {
     var gu = window.GAME_USER;
-    if (gu && typeof gu.then === 'function') gu.then(function (u) { if (u) { HOOK.user = u; greet(); } });
+    if (gu && typeof gu.then === 'function') gu.then(onGameUser);
     else if (gu && typeof gu === 'object') { HOOK.user = gu; }
+    if (!userEvtBound) {
+      userEvtBound = true;
+      window.addEventListener('hn-game-user', function (ev) { onGameUser((ev && ev.detail) || window.GAME_USER_DATA); });
+    }
   } catch (e) {}
   function call() { return HOOK.user.call || 'bạn'; }
   function capCall() { var c = call(); return c.charAt(0).toUpperCase() + c.slice(1); }
@@ -56,6 +74,21 @@
   var PLACES = ['Cổng làng', 'Chợ sáng', 'Cầu gỗ', 'Đền nhỏ', 'Suối nước nóng', 'Rừng đèn lồng', 'Đồi trà', 'Bến thuyền', 'Tháp canh', 'Thành trì trùm'];
   var MINI = ['🦊', '🐍', '🦇', '👻', '🐗', '🕷️', '🦂', '🐺', '🗿'];
   var BOSS_FINAL = '👹';
+  /* Việc J: boss màn trùm lấy từ GBOSS (bosses.js) theo ánh xạ CỐ ĐỊNH
+     GBOSS.campaign(stage) — stage 0..9 -> 10 boss khác nhau, tier tăng
+     dần, stage cuối (9) = 'shogun'. Vì ánh xạ cố định nên mọi chặng trong
+     một lượt xem bản đồ luôn hiện boss khác nhau (không trùng). Nếu
+     bosses.js thiếu, rơi về MINI/BOSS_FINAL cũ. */
+  function cdBoss(stage) {
+    try {
+      if (window.GBOSS && typeof GBOSS.campaign === 'function') return GBOSS.campaign(stage);
+    } catch (e) {}
+    return null;
+  }
+  function cdBossEmoji(stage) {
+    var b = cdBoss(stage);
+    return b ? b.emoji + (b.sub || '') : (stage === STAGES - 1 ? BOSS_FINAL : MINI[stage]);
+  }
   var NODES_PER_STAGE = 4, STAGES = 10;
   var Q_NORMAL = 6, Q_BOSS = 10;
   var LIFE_MAX = { fifty: 1, swap: 1, time: 2 };
@@ -184,13 +217,15 @@
       var open = isOpen(c, s, 0);
       var done = nodeStars(c, s, 3) > 0;
       if (open && !done && cur < 0) cur = s;
-      var boss = s === STAGES - 1 ? BOSS_FINAL : MINI[s];
+      var bo = cdBoss(s);
+      var boss = cdBossEmoji(s);
       var nodes = [0, 1, 2, 3].map(function (m) {
         var st = nodeStars(c, s, m), u = isOpen(c, s, m);
         var stars = [1, 2, 3].map(function (i) { return i <= st ? '<b>★</b>' : '★'; }).join('');
         if (m === 3) {
-          return '<button class="cd-nd cd-boss ' + (u && !st ? 'cd-open' : '') + '" data-c="' + s + '" data-m="' + m + '"' + (u ? '' : ' disabled') + '>' +
-            boss + '<small>' + (s === STAGES - 1 ? 'Trùm vùng' : 'Trùm chặng') + '</small><span class="cd-st">' + stars + '</span></button>';
+          return '<button class="cd-nd cd-boss ' + (u && !st ? 'cd-open' : '') + '" data-c="' + s + '" data-m="' + m + '"' +
+            (bo ? ' data-boss-id="' + esc(bo.id) + '"' : '') + (u ? '' : ' disabled') + '>' +
+            boss + '<small>' + (bo ? esc(bo.name) + ' · ' : '') + (s === STAGES - 1 ? 'Trùm vùng' : 'Trùm chặng') + '</small><span class="cd-st">' + stars + '</span></button>';
         }
         return '<button class="cd-nd ' + (u && !st ? 'cd-open' : '') + '" data-c="' + s + '" data-m="' + m + '"' + (u ? '' : ' disabled') + '>' +
           'Màn ' + (m + 1) + '<span class="cd-st">' + stars + '</span></button>';
@@ -212,6 +247,7 @@
 
   /* ---------- Chơi ---------- */
   var G = null, tmr = null, deadline = 0, qDuration = 0, qStartAt = 0;
+  var lastRes = null; // snapshot kết quả màn vừa kết thúc, để renderRes() vẽ lại khi tên resolve muộn
 
   function start(stage, node) {
     var boss = node === 3;
@@ -227,8 +263,28 @@
     $('cdPt').textContent = LV + ' · Chặng ' + (stage + 1) + (boss ? ' · TRÙM' : ' · Màn ' + (node + 1));
     $('cdBossBox').classList.toggle('cd-hid', !boss);
     if (boss) {
-      $('cdBossName').textContent = (stage === STAGES - 1 ? BOSS_FINAL + ' Trùm ' : MINI[stage] + ' Trùm ') + PLACES[stage];
-      $('cdFig2').textContent = stage === STAGES - 1 ? BOSS_FINAL : MINI[stage];
+      var bo2 = cdBoss(stage);
+      if (bo2) {
+        $('cdBossName').textContent = bo2.emoji + ' ' + bo2.name + ' — Trùm ' + PLACES[stage];
+        $('cdBossName').setAttribute('data-boss-id', bo2.id);
+        $('cdFig2').textContent = bo2.emoji; // chỉ emoji chính ở arena; emoji phụ ở hộp thoại/bản đồ
+        $('cdBossBox').setAttribute('data-boss-id', bo2.id);
+        $('cdBossBox').style.setProperty('--cd-zc', bo2.color);
+        /* Hộp thoại boss: tạo động 1 lần (chien-dich.html chỉ được thêm
+           thẻ script/link bosses) — hiện tên + câu thoại riêng của boss. */
+        var say = $('cdBossSay');
+        if (!say) {
+          say = document.createElement('div');
+          say.className = 'gb-say'; say.id = 'cdBossSay';
+          $('cdBossBox').appendChild(say);
+        }
+        say.style.setProperty('--gb-c', bo2.color);
+        say.innerHTML = '<span class="gb-say-face">' + bo2.emoji + (bo2.sub || '') + '</span><div><b>' +
+          esc(bo2.name) + ':</b><p>“' + esc(bo2.line) + '”</p></div>';
+      } else {
+        $('cdBossName').textContent = (stage === STAGES - 1 ? BOSS_FINAL + ' Trùm ' : MINI[stage] + ' Trùm ') + PLACES[stage];
+        $('cdFig2').textContent = stage === STAGES - 1 ? BOSS_FINAL : MINI[stage];
+      }
       $('cdBhp').style.width = '100%';
     }
     HOOK.music(boss ? 'boss' : 'normal');
@@ -493,6 +549,13 @@
     clearInterval(tmr);
     var boss = G.boss;
     var pass = boss ? (G.hp <= 0 && G.life > 0) : (G.ok >= Math.ceil(G.n * 0.6) && G.life > 0);
+    /* Kết liễu (đợt 3 + BOSS đợt 4): chỉ khi qua màn; thua thì không chạy.
+       Màn TRÙM -> playBoss với boss chặng cố định cdBoss(G.stage);
+       màn thường -> giữ GFIN.play đợt 3 như cũ. */
+    if (pass && window.GFIN) { try {
+      if (boss && typeof GFIN.playBoss === 'function') GFIN.playBoss({ boss: cdBoss(G.stage), fromEl: $('cdFig1'), toEl: $('cdFig2'), dmg: G.score });
+      else GFIN.play({ fromEl: $('cdFig1'), toEl: boss ? $('cdFig2') : null, dmg: G.score });
+    } catch (e) {} }
     var stars = 0;
     if (pass) {
       var avgRemain = G.n ? G.remainSum / G.n : 0;
@@ -520,31 +583,42 @@
         })).catch(function () {});
       } catch (e) {}
     }
-    show('cdRes');
-    HOOK.sfx(pass ? 'victory' : 'lose');
-    HOOK.music('map');
     var nx = null;
     if (pass) {
       if (G.node < 3) nx = [G.stage, G.node + 1];
       else if (G.stage < STAGES - 1) nx = [G.stage + 1, 0];
     }
-    $('cdRb').innerHTML =
-      '<div class="cd-bigemoji">' + (pass ? (boss ? '🏆' : '🎉') : '💪') + '</div>' +
-      '<h2>' + (pass ? (boss ? 'Hạ trùm chặng ' + (G.stage + 1) + '!' : 'Qua màn!') : 'Chưa qua, thử lại nha ' + call()) + '</h2>' +
-      '<div class="cd-stars">' + [1, 2, 3].map(function (i) { return '<span class="' + (i <= stars ? '' : 'cd-off') + '">⭐</span>'; }).join('') + '</div>' +
-      '<p class="cd-sub">Đúng ' + G.ok + ' · sai ' + G.bad + ' · điểm màn: <b>' + G.score + '</b>' +
-      (pass ? (boss && nx ? ' · Chặng ' + (nx[0] + 1) + ' đã mở 🔓' : '') : ' · cần đúng ≥60%' + (boss ? ' và hạ hết máu trùm' : '')) + '</p>' +
-      (pass && nx ? '<button class="cd-btn cd-blk" id="cdNx">' + (G.node === 3 ? 'Sang chặng mới ➜' : 'Màn tiếp ➜') + '</button><br><br>' : '') +
-      (!pass ? '<button class="cd-btn cd-blk" id="cdRt">Chơi lại</button><br><br>' : '') +
-      '<button class="cd-btn cd-alt cd-blk" id="cdMp">🗺️ Về bản đồ</button>';
+    /* Snapshot để renderRes() vẽ lại được (kể cả sau khi G đã null) khi tên
+       người chơi resolve muộn — phần lưu tiến độ/nộp điểm ở trên KHÔNG chạy
+       lại khi vẽ lại. */
+    lastRes = { pass: pass, boss: boss, stars: stars, ok: G.ok, bad: G.bad, score: G.score, nx: nx, stage: G.stage, node: G.node };
+    show('cdRes');
+    HOOK.sfx(pass ? 'victory' : 'lose');
+    HOOK.music('map');
+    renderRes();
     if (pass) { HOOK.fx('confetti'); HOOK.trend(boss ? 'thang' : 'dung'); }
     else HOOK.trend('thua');
-    var endStage = G.stage, endNode = G.node;
-    var nxB = $('cdNx'), rtB = $('cdRt');
-    if (nxB) nxB.onclick = function () { start(nx[0], nx[1]); };
-    if (rtB) rtB.onclick = function () { start(endStage, endNode); };
-    $('cdMp').onclick = map;
     G = null;
+  }
+
+  /* Chỉ DỰNG HTML màn kết quả từ lastRes (tiêu đề thua dùng call() — lấy
+     HOOK.user mới nhất tại thời điểm vẽ). Idempotent. */
+  function renderRes() {
+    var R = lastRes;
+    if (!R) return;
+    $('cdRb').innerHTML =
+      '<div class="cd-bigemoji">' + (R.pass ? (R.boss ? '🏆' : '🎉') : '💪') + '</div>' +
+      '<h2>' + (R.pass ? (R.boss ? 'Hạ trùm chặng ' + (R.stage + 1) + '!' : 'Qua màn!') : 'Chưa qua, thử lại nha ' + call()) + '</h2>' +
+      '<div class="cd-stars">' + [1, 2, 3].map(function (i) { return '<span class="' + (i <= R.stars ? '' : 'cd-off') + '">⭐</span>'; }).join('') + '</div>' +
+      '<p class="cd-sub">Đúng ' + R.ok + ' · sai ' + R.bad + ' · điểm màn: <b>' + R.score + '</b>' +
+      (R.pass ? (R.boss && R.nx ? ' · Chặng ' + (R.nx[0] + 1) + ' đã mở 🔓' : '') : ' · cần đúng ≥60%' + (R.boss ? ' và hạ hết máu trùm' : '')) + '</p>' +
+      (R.pass && R.nx ? '<button class="cd-btn cd-blk" id="cdNx">' + (R.node === 3 ? 'Sang chặng mới ➜' : 'Màn tiếp ➜') + '</button><br><br>' : '') +
+      (!R.pass ? '<button class="cd-btn cd-blk" id="cdRt">Chơi lại</button><br><br>' : '') +
+      '<button class="cd-btn cd-alt cd-blk" id="cdMp">🗺️ Về bản đồ</button>';
+    var nxB = $('cdNx'), rtB = $('cdRt');
+    if (nxB) nxB.onclick = function () { start(R.nx[0], R.nx[1]); };
+    if (rtB) rtB.onclick = function () { start(R.stage, R.node); };
+    $('cdMp').onclick = map;
   }
 
   /* ---------- Khởi động ---------- */

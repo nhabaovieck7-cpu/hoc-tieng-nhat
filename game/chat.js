@@ -12,6 +12,9 @@
  *     onSendTrend(text),       // gửi câu trend cho cả phòng (phong-nhom nối GROOMS)
  *     onSendText(text),        // gửi tin chữ cho cả phòng (sau khi qua chatSend nếu có)
  *     lines,                   // tuỳ chọn: mảng câu trend 'chem' ghi đè nguồn mặc định
+ *     teamLines,               // Việc G: mảng câu trend TỔ ĐỘI (chỉ phòng Hợp sức,
+ *                              //   lấy từ GTREND_TEAM.linesFor('coop') — xem trend-team.js).
+ *                              //   Có câu -> sheet thêm thẻ "🤝 Tổ đội"; rỗng/vắng -> như cũ.
  *   })
  *   GCHAT.receiveRemote({userId, name, text, kind})  // tin từ polling đổ về
  *   GCHAT.showBubble(userKey, text, {me})            // hiện bong bóng (qua hàng đợi)
@@ -160,6 +163,36 @@
   ];
   var EMO = ['😂', '🔥', '😎', '🤯', '👏', '😭', '🫡', '💀', '🥶', '🙏', '🤣', '😤', '🍜', '🌸', '👑', '💯'];
   var lastTrendIdx = -1;
+  /* Việc G: kiểu CÂU THOẠI tổ đội (Bình thường/Chất) — lưu lựa chọn
+   * của người chơi, mặc định Bình thường. Độc lập với kiểu GIỌNG đọc. */
+  var TEAM_STYLE_KEY = 'hn_game_team_style';
+  function loadTeamStyle() {
+    try { return localStorage.getItem(TEAM_STYLE_KEY) === 'chat' ? 'chat' : 'normal'; } catch (e) { return 'normal'; }
+  }
+  function saveTeamStyle(v) {
+    try { localStorage.setItem(TEAM_STYLE_KEY, v === 'chat' ? 'chat' : 'normal'); } catch (e) {}
+  }
+  function normTeamEntries(arr) {
+    if (!Array.isArray(arr)) return [];
+    var out = [];
+    arr.forEach(function (e) {
+      if (typeof e === 'string' && e) out.push({ t: e, s: 'neu' });
+      else if (e && typeof e.t === 'string' && e.t) out.push({ t: e.t, s: (e.s === 'win' || e.s === 'lose') ? e.s : 'neu' });
+    });
+    return out;
+  }
+  function normalizeTeamSets(opts) {
+    if (opts && opts.teamSets && typeof opts.teamSets === 'object') {
+      var n = normTeamEntries(opts.teamSets.normal);
+      var c = normTeamEntries(opts.teamSets.chat);
+      if (n.length || c.length) return { normal: n, chat: c };
+      return null;
+    }
+    // Tương thích ngược: mảng teamLines cũ -> bộ Bình thường, trung tính.
+    if (opts && Array.isArray(opts.teamLines) && opts.teamLines.length) return { normal: normTeamEntries(opts.teamLines), chat: [] };
+    return null;
+  }
+
   function trendLines(explicit) {
     if (Array.isArray(explicit) && explicit.length) return explicit.slice();
     try {
@@ -188,6 +221,14 @@
     try {
       if (localStorage.getItem(VOICE_KEY) === '0') return;
       if (localStorage.getItem(CHEM_KEY) === '0') return;
+      // Nhánh V: ủy quyền lõi đọc chung GAME_VOICE (voice.js) — nó tự lo
+      // công tắc/âm lượng/kiểu giọng + ưu tiên bản ghi ../audio-index.json
+      // cho câu tiếng Nhật. Cổng CHEM_KEY ở trên vẫn giữ: tắt Chém gió thì
+      // không đọc tiếng người khác dù GAME_VOICE đang bật.
+      if (window.GAME_VOICE && typeof window.GAME_VOICE.speak === 'function') {
+        window.GAME_VOICE.speak(text);
+        return;
+      }
       if (!('speechSynthesis' in window)) return;
       // GTREND lo phần đọc câu trend CỦA MÌNH (say/bubble). Ở đây cần đọc
       // ĐÚNG câu người khác gửi nên dùng speechSynthesis trực tiếp:
@@ -215,7 +256,12 @@
       if (!on && state.scheduler) state.scheduler.clear();
       if (state.els && state.els.toggle) state.els.toggle.checked = on;
       if (state.els && state.els.root) state.els.root.classList.toggle('cg-off', !on);
-      if (!on) { try { speechSynthesis.cancel(); } catch (e) {} }
+      if (!on) {
+        try {
+          if (window.GAME_VOICE && typeof window.GAME_VOICE.stop === 'function') window.GAME_VOICE.stop();
+          else speechSynthesis.cancel();
+        } catch (e) {}
+      }
     }
   }
 
@@ -227,6 +273,42 @@
     var me = opts.me || { id: 'me', name: '' };
     var call = opts.call || 'bạn';
     var lines = trendLines(opts.lines);
+    // Việc G: câu trend TỔ ĐỘI là preset RIÊNG hai kiểu câu do nơi gắn
+    // (phòng Hợp sức) cấp qua opts.teamSets {normal, chat}; không trộn
+    // vào lines chung. Kiểu câu khác hẳn kiểu GIỌNG đọc trong ⚙️.
+    var teamSets = normalizeTeamSets(opts);
+    var teamStyle = loadTeamStyle();
+    var hasTeam = !!teamSets && (((teamSets.normal || []).length) || ((teamSets.chat || []).length));
+    /* Việc G — XOAY CÂU theo tình thế + túi không lặp: câu đã phát
+     * (bởi mình) bị loại khỏi lưới cho tới khi dùng hết nhóm hợp lệ
+     * (thẻ tình huống khớp + thẻ trung tính) của bộ đang chọn; hết
+     * nhóm thì vòng mới bắt đầu. Mỗi (bộ × tình huống) một túi riêng.
+     * Tình huống do nơi gắn cấp qua opts.situationFor(); không có
+     * hàm đó -> 'any' (mọi câu đều hợp lệ, vẫn áp túi không lặp). */
+    var teamUsed = {};
+    function currentSituation() {
+      if (!opts.situationFor) return 'any';
+      try {
+        var s = opts.situationFor();
+        return (s === 'win' || s === 'lose') ? s : 'neu';
+      } catch (e) { return 'neu'; }
+    }
+    function teamLinesNow() {
+      if (!teamSets) return [];
+      var set = (teamSets[teamStyle] && teamSets[teamStyle].length) ? teamSets[teamStyle] : (teamSets.normal || []);
+      var sit = currentSituation();
+      var elig = sit === 'any' ? set.slice()
+        : set.filter(function (e) { return e.s === sit || e.s === 'neu'; });
+      var key = teamStyle + '|' + sit;
+      var used = teamUsed[key] || (teamUsed[key] = {});
+      var avail = elig.filter(function (e) { return !used[e.t]; });
+      if (!avail.length && elig.length) { teamUsed[key] = {}; avail = elig; }
+      return avail.map(function (e) { return e.t; });
+    }
+    function teamMarkUsed(text) {
+      var key = teamStyle + '|' + currentSituation();
+      (teamUsed[key] || (teamUsed[key] = {}))[text] = 1;
+    }
     var enabled = chemEnabled();
     var lastSendAt = 0;
 
@@ -238,7 +320,10 @@
       '<div class="cg-list" id="cgList"></div></div>' +
       '<div class="cg-sheet hid" id="cgSheet"><div class="cg-sh">' +
       '<div class="cg-sh-h"><b class="cg-grow">Chém gió với cả phòng</b><button type="button" class="cg-x" id="cgClose">✕</button></div>' +
-      '<div class="cg-tabs" id="cgTabs"><button type="button" class="on" data-t="hot">🔥 Câu trend</button><button type="button" data-t="emo">😂 Biểu cảm</button></div>' +
+      '<div class="cg-tabs" id="cgTabs"><button type="button" class="on" data-t="hot">🔥 Câu trend</button>' +
+      (hasTeam ? '<button type="button" data-t="team">🤝 Tổ đội</button>' : '') +
+      '<button type="button" data-t="emo">😂 Biểu cảm</button></div>' +
+      (hasTeam ? '<div class="cg-seg hid" id="cgSeg" role="group" aria-label="Kiểu câu thoại tổ đội"><button type="button" data-s="normal">Bình thường</button><button type="button" data-s="chat">Chất</button></div>' : '') +
       '<div class="cg-grid cg-hot" id="cgGrid"></div>' +
       '<div class="cg-row"><input id="cgIn" maxlength="' + TEXT_MAX + '" placeholder="Bình luận ngắn (tối đa ' + TEXT_MAX + ' ký tự)…" autocomplete="off">' +
       '<button type="button" class="cg-send" id="cgSend">Gửi</button></div>' +
@@ -250,6 +335,7 @@
       root: mountEl, fab: mountEl.querySelector('#cgFab'), feed: mountEl.querySelector('#cgFeed'),
       list: mountEl.querySelector('#cgList'), sheet: mountEl.querySelector('#cgSheet'),
       grid: mountEl.querySelector('#cgGrid'), tabs: mountEl.querySelector('#cgTabs'),
+      seg: mountEl.querySelector('#cgSeg'),
       input: mountEl.querySelector('#cgIn'), send: mountEl.querySelector('#cgSend'),
       hint: mountEl.querySelector('#cgHint'), cnt: mountEl.querySelector('#cgCnt'),
       toggle: mountEl.querySelector('#cgToggle'), toggle2: mountEl.querySelector('#cgToggle2'),
@@ -328,12 +414,13 @@
     }
     function sendTrend(rawText) {
       var text = String(rawText || '').replace(/\{X\}/g, call);
-      if (!gateSend()) return;
+      if (!gateSend()) return false;
       showBubble(me.id, text, { me: true });
       feed(call === 'bạn' ? me.name : call + ' ' + me.name, text, true);
       sayOwn(text);
       els.sheet.classList.add('hid');
       try { if (opts.onSendTrend) opts.onSendTrend(text); } catch (e) {}
+      return true;
     }
     function sendText(raw) {
       var text = clampText(raw, TEXT_MAX);
@@ -367,13 +454,25 @@
     }
 
     /* ----- lưới câu trend / biểu cảm ----- */
+    function paintSeg() {
+      if (!els.seg) return;
+      els.seg.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('on', b.getAttribute('data-s') === teamStyle);
+      });
+    }
     function grid(kind) {
       els.grid.className = 'cg-grid ' + (kind === 'emo' ? 'cg-emo' : 'cg-hot');
       els.grid.innerHTML = '';
-      (kind === 'emo' ? EMO : lines).forEach(function (x) {
+      if (els.seg) { els.seg.classList.toggle('hid', kind !== 'team'); paintSeg(); }
+      var src = kind === 'emo' ? EMO : (kind === 'team' ? teamLinesNow() : lines);
+      src.forEach(function (x) {
         var b = document.createElement('button');
         b.type = 'button'; b.textContent = x;
-        b.addEventListener('click', function () { kind === 'emo' ? sendTrend(x) : sendTrend(x); });
+        b.addEventListener('click', function () {
+          var ok = sendTrend(x);
+          // Việc G: câu tổ đội vừa phát rời lưới ngay (túi không lặp).
+          if (kind === 'team' && ok) { teamMarkUsed(x); grid('team'); }
+        });
         els.grid.appendChild(b);
       });
     }
@@ -382,6 +481,13 @@
       b.addEventListener('click', function () {
         els.tabs.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
         b.classList.add('on'); grid(b.getAttribute('data-t'));
+      });
+    });
+    if (els.seg) els.seg.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        teamStyle = b.getAttribute('data-s') === 'chat' ? 'chat' : 'normal';
+        saveTeamStyle(teamStyle);
+        grid('team');
       });
     });
     els.fab.addEventListener('click', function () {
@@ -434,6 +540,6 @@
     setEnabled: setChemEnabled,
     isEnabled: chemEnabled,
     destroy: destroy,
-    _test: { createBubbleScheduler: createBubbleScheduler, bubblePos: bubblePos, filterBad: filterBad, clampText: clampText, esc: esc, trendLines: trendLines },
+    _test: { createBubbleScheduler: createBubbleScheduler, bubblePos: bubblePos, filterBad: filterBad, clampText: clampText, esc: esc, trendLines: trendLines, teamSetsOf: function (o) { var s = normalizeTeamSets(o || {}); return s ? { normal: s.normal.slice(), chat: s.chat.slice() } : null; }, loadTeamStyle: loadTeamStyle, saveTeamStyle: saveTeamStyle },
   };
 })();

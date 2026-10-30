@@ -2,19 +2,64 @@
 // TUYỆT ĐỐI không phát giọng nói, không hô tên skill — chỉ tiếng nổ/sét/súng/chưởng/thắng/thua/click.
 // Tôn trọng công tắc localStorage 'hn_game_snd_sfx' (đọc lại mỗi lần phát).
 // AudioContext chỉ khởi tạo sau tương tác đầu tiên của người chơi (luật autoplay iPhone).
-// API: window.GSFX = { hit, shoot, thunder, explosion, win, lose, click, ultra }
+// Âm lượng skill: master GainNode (gain = 'hn_game_vol_sfx'/100, mặc định 100)
+// mà mọi env gain nối vào thay vì c.destination; GSFX.setVolume(v01) cập nhật ngay.
+// API: window.GSFX = { hit, shoot, thunder, explosion, win, lose, click, ultra,
+//                      finisher, bossfin, setVolume(v01), getVolume() }
+// Tiếng 'finisher' (Nhánh K, đợt 3): tổng hợp WebAudio tại chỗ trong file này,
+// KHÔNG dùng asset/MP3 ngoài — cùng cơ chế master gain + công tắc như mọi tiếng khác.
+// Tiếng 'bossfin' (Nhánh B, đợt 4): CŨNG tổng hợp WebAudio tại chỗ trong file
+// này (không file ngoài, không thư viện) — xem chú thích ở FX.bossfin bên dưới.
 //      (+ bí danh tương thích bản mẫu: fire, gun, beam, combo, perfect, victory, fall, wrong, shuriken; window.sfx(name))
 (function () {
   'use strict';
 
   var LS_SFX = 'hn_game_snd_sfx';
+  var LS_VOL_SFX = 'hn_game_vol_sfx';
   var AC = null;
   var unlocked = false;
   var noiseCache = null;
+  var master = null;      // GainNode tổng, tạo lười khi có AudioContext
+  var volOverride = null; // setVolume() đặt; null = đọc từ localStorage
 
   function sfxOn() {
     try { return localStorage.getItem(LS_SFX) !== '0'; } catch (e) { return true; }
   }
+
+  function sfxVol01() {
+    if (volOverride != null) return volOverride;
+    try {
+      var v = parseInt(localStorage.getItem(LS_VOL_SFX), 10);
+      if (isNaN(v)) return 1;
+      return Math.max(0, Math.min(100, v)) / 100;
+    } catch (e) { return 1; }
+  }
+
+  // Master gain: mọi tiếng skill đều qua đây rồi mới ra destination.
+  function masterNode(c) {
+    if (!master) {
+      master = c.createGain();
+      master.gain.value = sfxVol01();
+      master.connect(c.destination);
+    }
+    return master;
+  }
+
+  function setVolume(v01) {
+    var v = Number(v01);
+    if (isNaN(v)) return sfxVol01();
+    v = Math.max(0, Math.min(1, v));
+    volOverride = v;
+    try { localStorage.setItem(LS_VOL_SFX, String(Math.round(v * 100))); } catch (e) {}
+    if (master) {
+      try {
+        if (AC) master.gain.setTargetAtTime(v, AC.currentTime, 0.03);
+        else master.gain.value = v;
+      } catch (e) { try { master.gain.value = v; } catch (e2) {} }
+    }
+    return v;
+  }
+  function getVolume() { return sfxVol01(); }
 
   function ac() {
     if (!unlocked) return null;
@@ -56,7 +101,7 @@
     o.frequency.setValueAtTime(f1, t);
     if (f2) o.frequency.exponentialRampToValueAtTime(Math.max(1, f2), t + dur);
     env(g, t, 0.01, vol, dur);
-    o.connect(g); g.connect(c.destination);
+    o.connect(g); g.connect(masterNode(c));
     o.start(t); o.stop(t + dur + 0.05);
   }
 
@@ -68,7 +113,7 @@
     f.frequency.setValueAtTime(f1, t);
     if (f2) f.frequency.exponentialRampToValueAtTime(Math.max(10, f2), t + dur);
     env(g, t, 0.01, vol, dur);
-    s.connect(f); f.connect(g); g.connect(c.destination);
+    s.connect(f); f.connect(g); g.connect(masterNode(c));
     s.start(t); s.stop(t + dur + 0.1);
   }
 
@@ -143,6 +188,51 @@
         tt += pair[1] * 0.8;
       });
     },
+    // KẾT LIỄU thắng trận (Nhánh K) — phân biệt rõ với 'win' (giai điệu vuông ngắn):
+    // ~1,15s gồm 3 lớp: (1) quét lên nhanh sawtooth+triangle 180->1400Hz + gió highpass,
+    // (2) một đòn trầm mạnh ở 0,30s (sine 160->38Hz + noise lowpass + square phụ),
+    // (3) arpeggio chuông lấp lánh 1319/1568/2093/2637Hz từ 0,55s + hợp âm shimmer cuối.
+    finisher: function (t) {
+      tone('sawtooth', 180, 1400, t, 0.28, 0.14);
+      tone('triangle', 360, 2800, t, 0.28, 0.10);
+      noise(t, 0.25, 'highpass', 1200, 6000, 0.12);
+      tone('sine', 160, 38, t + 0.30, 0.45, 0.5);
+      noise(t + 0.30, 0.35, 'lowpass', 900, 120, 0.5);
+      tone('square', 90, 45, t + 0.30, 0.30, 0.18);
+      [1319, 1568, 2093, 2637].forEach(function (f, i) {
+        tone('sine', f, 0, t + 0.55 + i * 0.09, 0.35, 0.16);
+        tone('triangle', f * 2, 0, t + 0.55 + i * 0.09, 0.22, 0.05);
+      });
+      tone('sine', 1047, 0, t + 0.92, 0.30, 0.08);
+    },
+    // KẾT LIỄU BOSS CUỐI VÁN (Nhánh B, đợt 4) — khác rõ 'finisher' (1 đòn
+    // duy nhất ~1,15s): bản này dài ~2,4s, bám đúng nhịp hình của
+    // GFIN.playBoss: (1) 6 ĐÒN DỒN DẬP ở các mốc 0 / .23 / .44 / .63 /
+    // .80 / .95s (nhịp nhanh dần, biên độ tăng dần: sine trầm 170->48Hz
+    // + noise lowpass + tick sawtooth ngắn), (2) SLOW-MO ở 1,28s: quét
+    // pitch RƠI 820->70Hz trong 0,42s (cảm giác thời gian chậm lại),
+    // (3) NỔ LỚN ở 1,72s: noise lowpass dài 0,7s + sine 150->30Hz +
+    // noise bandpass phụ, (4) chuông ăn mừng 1568/2093/2637/3136Hz từ
+    // 1,88s. Nguồn âm: 100% tổng hợp WebAudio tại chỗ (oscillator +
+    // noise buffer qua env/master gain sẵn có) — KHÔNG asset ngoài.
+    bossfin: function (t) {
+      var hits = [0, 0.23, 0.44, 0.63, 0.80, 0.95];
+      hits.forEach(function (off, i) {
+        var v = 0.26 + i * 0.05; // đòn sau mạnh hơn đòn trước
+        tone('sine', 170, 48, t + off, 0.22, v);
+        noise(t + off, 0.16, 'lowpass', 1100, 140, v * 0.85);
+        tone('sawtooth', 320 + i * 90, 120, t + off, 0.07, 0.10);
+      });
+      tone('sawtooth', 820, 70, t + 1.28, 0.42, 0.13);
+      tone('sine', 410, 38, t + 1.28, 0.42, 0.16);
+      noise(t + 1.30, 0.38, 'bandpass', 2400, 220, 0.12, 2);
+      noise(t + 1.72, 0.70, 'lowpass', 2600, 90, 0.55);
+      tone('sine', 150, 30, t + 1.72, 0.62, 0.55);
+      noise(t + 1.80, 0.45, 'bandpass', 900, 2600, 0.22, 2);
+      [1568, 2093, 2637, 3136].forEach(function (f, i) {
+        tone('sine', f, 0, t + 1.88 + i * 0.08, 0.32, 0.13);
+      });
+    },
     // Thua
     lose: function (t) {
       var seq = [[392, 0.3], [370, 0.3], [349, 0.3], [330, 0.8]];
@@ -175,6 +265,8 @@
     lose: function () { play('lose'); },
     click: function () { play('click'); },
     ultra: function () { play('ultra'); },
+    finisher: function () { play('finisher'); },
+    bossfin: function () { play('bossfin'); },
     // Bí danh tương thích bản mẫu / nhánh khác nếu gọi nhầm tên:
     fire: function () { play('explosion'); },
     gun: function () { play('shoot'); },
@@ -185,7 +277,9 @@
     victory: function () { play('win'); },
     wrong: function () { play('wrong'); },
     fall: function () { play('fall'); },
-    play: play
+    play: play,
+    setVolume: setVolume,
+    getVolume: getVolume
   };
 
   window.GSFX = api;

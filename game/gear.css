@@ -1,0 +1,64 @@
+/* =====================================================================
+   gear.css — Kiểu cho hệ thống Trang bị & Skill (Việc I, đợt game 3)
+   Tiền tố gg- để không đụng game.css / modes.css / fx-combat.css.
+   Gồm: (1) khu chọn trang bị ở nhan-vat.html, (2) hiệu ứng đòn của
+   GGEAR.attackFx (.gg-fx, .gg-slash, .gg-proj, .gg-wave, .gg-ember),
+   (3) huy hiệu vũ khí .gg-badge gắn góc avatar DOM.
+   ===================================================================== */
+
+/* ---------------- (1) Khu trang bị ở nhan-vat.html ---------------- */
+.gg-card{margin-top:14px}
+.gg-prog{font-weight:700}
+.gg-kind{margin:16px 0 8px;font-size:16px}
+.gg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:9px}
+.gg-item{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:11px 7px 9px;border-radius:14px;border:2px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.05);color:inherit;font:inherit;cursor:pointer;
+  min-height:44px;text-align:center;transition:border-color .15s,background .15s}
+.gg-item .gg-ic{font-size:27px;line-height:1.1}
+.gg-item .gg-nm{font-weight:800;font-size:13.5px;line-height:1.2}
+.gg-item .gg-cond{font-size:11px;opacity:.75;line-height:1.25}
+.gg-item.on{border-color:#ffd84e;background:rgba(255,216,78,.13);
+  box-shadow:0 0 0 1px #ffd84e inset}
+.gg-item.on::after{content:'✓ Đang dùng';font-size:10.5px;font-weight:900;color:#ffd84e}
+.gg-item.locked{cursor:not-allowed;filter:grayscale(.75);opacity:.72}
+.gg-item.locked .gg-ic{filter:blur(.4px)}
+.gg-lock{position:absolute;top:6px;right:8px;font-size:14px}
+.gg-item.gg-shake{animation:gg-shake .32s ease}
+@keyframes gg-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.gg-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;
+  border:1px solid rgba(0,0,0,.35);vertical-align:-1px}
+
+/* ---------------- (2) Hiệu ứng đòn attackFx ---------------- */
+.gg-fx{position:fixed;z-index:9990;pointer-events:none}
+.gg-slash{width:110px;height:13px;border-radius:99px;opacity:0;
+  background:linear-gradient(90deg,transparent,#fff 30%,#ffd84e 55%,#ff7a45 80%,transparent);
+  box-shadow:0 0 18px rgba(255,216,78,.85);transform:rotate(-38deg)}
+.gg-slash-fire{background:linear-gradient(90deg,transparent,#fff2c8 25%,#ffb347 50%,#ff6a1f 78%,transparent);
+  box-shadow:0 0 22px rgba(255,106,31,.95)}
+.gg-proj{width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,#fff 0 22%,var(--gg-c,#22d3ee) 55%,transparent 78%);
+  box-shadow:0 0 16px 5px var(--gg-c,#22d3ee)}
+.gg-proj::before{content:'';position:absolute;right:60%;top:50%;width:52px;height:6px;
+  transform:translateY(-50%);border-radius:99px;
+  background:linear-gradient(90deg,transparent,var(--gg-c,#22d3ee));opacity:.75}
+.gg-wave{width:44px;height:44px;border-radius:50%;
+  border:4px solid var(--gg-c,#7c5cff);
+  box-shadow:0 0 18px var(--gg-c,#7c5cff),inset 0 0 14px var(--gg-c,#7c5cff);opacity:0}
+.gg-ember{width:8px;height:8px;border-radius:50%;
+  background:radial-gradient(circle,#ffd23f 0 30%,#ff6a1f 70%,transparent);
+  box-shadow:0 0 9px 2px rgba(255,122,45,.8)}
+.gg-hit{outline:2px solid rgba(255,216,78,.0)}
+
+/* ---------------- (3) Huy hiệu góc avatar ---------------- */
+.gg-host{position:relative}
+.gg-badge{position:absolute;right:-3px;bottom:-3px;z-index:5;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:50%;font-size:16px;line-height:1;
+  background:#241d3d;border:2px solid #ffd84e;box-shadow:0 2px 8px rgba(0,0,0,.45)}
+
+@media (prefers-reduced-motion: reduce){
+  .gg-slash,.gg-wave,.gg-ember{display:none}
+  .gg-item.gg-shake{animation:none}
+  .gg-item{transition:none}
+}

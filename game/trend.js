@@ -1,8 +1,14 @@
 // trend.js — Câu trend game "Hành trình đến Edo" (Nhánh 4)
 // Nguồn lời: ban-giao-game/cau-trend-game.md (bảng chính 94 câu + Bổ sung đợt 2: 129 câu = 223 câu).
 // Giữ nguyên lời, không chế thêm. {X} thay bằng GAME_USER.call (anh/chị/tên; khách = 'bạn').
-// Đọc to bằng speechSynthesis: đoạn tiếng Nhật (kana/kanji) -> ja-JP, còn lại -> vi-VN.
-// Tôn trọng công tắc giọng localStorage 'hn_game_snd_voice' (đọc lại mỗi lần phát).
+// PHÁT ÂM (Nhánh V): ủy quyền window.GAME_VOICE.speak (voice.js) nếu có —
+//   lõi đó ưu tiên BẢN GHI trong ../audio-index.json, rồi BẢN ĐỌC kana trích
+//   từ furigana {chữ|cách đọc}, rồi mới TTS theo kiểu giọng đã cài. voice.js
+//   vắng mặt -> rơi về đường speechSynthesis cũ trong file này (giữ nguyên).
+// BONG BÓNG (Nhánh V, việc 5b): trên màn hẹp (<=860px) #gt-bubble nằm TRONG
+//   LUỒNG trong #gt-bubble-host chèn ngay sau topbar/header — không còn
+//   position:fixed nổi tự do nên không đè vùng đáp án (.opt). Desktop giữ
+//   fixed neo theo linh vật như cũ.
 // API: window.GTREND = { say(moment, anchorEl?|opts?), show(text, anchorEl?), bubble (bí danh của show), stop(), TREND }
 (function () {
   'use strict';
@@ -52,30 +58,121 @@
     return String(text).split('{X}').join(call);
   }
 
+  /* Việc G — THẺ TÌNH HUỐNG theo khoảnh khắc (đấu đơn): nhóm câu khen/
+   * ăn mừng khi ĐANG THẮNG, nhóm gỡ gạc/động viên khi ĐANG THUA, nhóm
+   * mở trận/trợ giúp/đổi câu là TRUNG TÍNH dùng mọi lúc. Khoảnh khắc
+   * do màn chơi truyền vào say() vốn đã đúng tình thế (đúng/sai/hết
+   * giờ/thắng/thua trận) nên thẻ ở đây chỉ là lớp phân loại báo cáo. */
+  var SITUATION = {
+    dung: 'win', combo: 'win', nhanh: 'win', thang: 'win',
+    sai: 'lose', hetgio: 'lose', thua: 'lose', roi: 'lose',
+    vao: 'neu', trogiup: 'neu', doicau: 'neu',
+  };
+  /* Việc G — TÚI XÁO TRỘN (shuffle-bag) theo từng khoảnh khắc: một câu
+   * đã phát thì không phát lại cho tới khi dùng hết cả nhóm; hết nhóm
+   * mới xáo vòng mới (và tránh câu cuối vòng trước lặp ngay đầu vòng
+   * sau khi nhóm có từ 2 câu). Thay cơ chế cũ chỉ tránh lặp liền 1 câu. */
+  var bags = {};
+  function shuffledIdx(n) {
+    var a = []; for (var i = 0; i < n; i++) a.push(i);
+    for (var j = n - 1; j > 0; j--) {
+      var k = Math.floor(Math.random() * (j + 1));
+      var tmp = a[j]; a[j] = a[k]; a[k] = tmp;
+    }
+    return a;
+  }
   function pick(moment) {
     var arr = TREND[moment];
     if (!arr || !arr.length) return null;
     if (arr.length === 1) { lastIdx[moment] = 0; return arr[0]; }
-    var i;
-    do { i = Math.floor(Math.random() * arr.length); } while (i === lastIdx[moment]);
-    lastIdx[moment] = i;
-    return arr[i];
+    var bag = bags[moment];
+    if (!bag || bag.pos >= bag.order.length) {
+      var order = shuffledIdx(arr.length);
+      if (bag && arr[order[0]] === bag.last) { var t0 = order[0]; order[0] = order[1]; order[1] = t0; }
+      bag = bags[moment] = { order: order, pos: 0, last: bag ? bag.last : null };
+    }
+    var idx = bag.order[bag.pos++];
+    bag.last = arr[idx];
+    lastIdx[moment] = idx;
+    return arr[idx];
   }
 
+  // ---- Furigana {chữ|cách đọc}: tách bản HIỂN THỊ và bản ĐỌC (cùng
+  // regex với stripFuri/furiReading của questions.js). Câu trend hiện
+  // không chứa markup này, nhưng nếu có (hoặc show() được gọi với text
+  // có furigana) thì phần đọc sẽ truyền reading cho GAME_VOICE để TTS
+  // đọc đúng kana thay vì đoán kanji/tên người.
+  function stripFuri(s) {
+    return String(s == null ? '' : s).replace(/\{([^{}|]+)\|[^{}]*\}/g, '$1').replace(/[{}]/g, '');
+  }
+  function furiReading(s) {
+    return String(s == null ? '' : s).replace(/\{[^{}|]+\|([^{}]*)\}/g, '$1');
+  }
+  function hasFuri(s) { return /\{[^{}|]+\|[^{}]*\}/.test(String(s || '')); }
+
   // ---- Bong bóng thoại (DOM an toàn: chỉ textContent, không innerHTML) ----
+  // Nhánh V (5b): bong bóng sống trong #gt-bubble-host đặt ngay sau
+  // topbar/header. CSS nhúng 1 lần bằng thẻ <style>:
+  //  - >860px: host không chiếm chỗ (height:0), bong bóng fixed như cũ.
+  //  - <=860px: host là khối TRONG LUỒNG (đẩy nội dung xuống, không đè
+  //    lên .opt); bong bóng thành phần tử thường trong host, chữ dài bị
+  //    kẹp ~3 dòng + cuộn dọc trong khung, không phình trang.
+  var bubbleHost = null;
+  var bubbleStyleDone = false;
+  function ensureBubbleStyle() {
+    if (bubbleStyleDone) return;
+    bubbleStyleDone = true;
+    try {
+      var st = document.createElement('style');
+      st.id = 'gt-bubble-style';
+      st.textContent =
+        '#gt-bubble-host{display:block;height:0;margin:0;padding:0}' +
+        '#gt-bubble{position:fixed;z-index:9990;max-width:min(78vw,320px);' +
+        'background:#fff;color:#1d2440;border:2px solid #233d63;border-radius:16px;' +
+        'padding:10px 14px;font-size:15px;font-weight:700;line-height:1.45;' +
+        'box-shadow:0 8px 24px rgba(20,25,60,.28);opacity:0;pointer-events:none;' +
+        'transition:opacity .18s ease, transform .18s ease;transform:translateY(6px)}' +
+        '@media (max-width:860px){' +
+        '#gt-bubble-host{height:auto;margin:8px 10px 0}' +
+        '#gt-bubble-host:not(.gt-on){margin:0}' +
+        '#gt-bubble{display:none;position:relative!important;left:auto!important;' +
+        'top:auto!important;bottom:auto!important;transform:none!important;' +
+        'max-width:100%!important;width:auto;box-sizing:border-box;' +
+        'max-height:calc(1.45em * 3 + 22px);overflow-y:auto}' +
+        '#gt-bubble-host.gt-on #gt-bubble{display:block}' +
+        '}';
+      (document.head || document.body).appendChild(st);
+    } catch (e) { /* không có style: desktop vẫn chạy nhờ style nội tuyến dự phòng */ }
+  }
   function ensureBubble() {
     if (bubbleEl && bubbleEl.parentNode) return bubbleEl;
+    ensureBubbleStyle();
+    if (!bubbleHost || !bubbleHost.parentNode) {
+      bubbleHost = document.createElement('div');
+      bubbleHost.id = 'gt-bubble-host';
+      var top = document.querySelector('.gtop, #gtop, header');
+      if (top && top.parentNode) top.parentNode.insertBefore(bubbleHost, top.nextSibling);
+      else if (document.body) document.body.insertBefore(bubbleHost, document.body.firstChild);
+    }
     bubbleEl = document.createElement('div');
     bubbleEl.id = 'gt-bubble';
     bubbleEl.className = 'gt-bubble';
     bubbleEl.setAttribute('role', 'status');
+    // Dự phòng khi <style> không chèn được: desktop vẫn fixed như cũ.
+    // Ở <=860px, các !important trong <style> sẽ thắng style nội tuyến này.
     bubbleEl.style.cssText = 'position:fixed;z-index:9990;max-width:min(78vw,320px);' +
       'background:#fff;color:#1d2440;border:2px solid #233d63;border-radius:16px;' +
       'padding:10px 14px;font-size:15px;font-weight:700;line-height:1.45;' +
       'box-shadow:0 8px 24px rgba(20,25,60,.28);opacity:0;pointer-events:none;' +
       'transition:opacity .18s ease, transform .18s ease;transform:translateY(6px)';
-    document.body.appendChild(bubbleEl);
+    bubbleHost.appendChild(bubbleEl);
     return bubbleEl;
+  }
+  function isNarrow() {
+    try {
+      if (window.matchMedia) return window.matchMedia('(max-width:860px)').matches;
+    } catch (e) {}
+    return (window.innerWidth || 1024) <= 860;
   }
 
   function findAnchor(anchorEl) {
@@ -91,7 +188,19 @@
   function show(text, anchorEl) {
     if (!text) return;
     var el = ensureBubble();
-    el.textContent = fillX(text);
+    el.textContent = fillX(stripFuri(text)); // hiển thị không kèm {chữ|đọc}
+    if (bubbleHost) bubbleHost.classList.add('gt-on');
+    if (isNarrow()) {
+      // Trong luồng: không neo tọa độ, không transform — host ngay dưới
+      // topbar đẩy vùng câu hỏi/đáp án xuống, giao nhau với .opt = 0.
+      el.style.left = '';
+      el.style.top = '';
+      el.style.bottom = '';
+      el.style.transform = 'none';
+      el.style.opacity = '1';
+      scheduleHide();
+      return el.textContent;
+    }
     var anchor = findAnchor(anchorEl);
     if (anchor) {
       var r = anchor.getBoundingClientRect();
@@ -120,7 +229,12 @@
   function hideBubble() {
     if (!bubbleEl) return;
     bubbleEl.style.opacity = '0';
-    bubbleEl.style.transform = 'translateY(6px)';
+    if (!isNarrow()) bubbleEl.style.transform = 'translateY(6px)';
+    // Màn hẹp: gỡ .gt-on để host thu lại (bong bóng display:none theo CSS).
+    if (bubbleHost) {
+      var host = bubbleHost;
+      setTimeout(function () { host.classList.remove('gt-on'); }, 200);
+    }
   }
 
   // ---- Đọc to: tách đoạn Nhật / Việt ----
@@ -151,7 +265,20 @@
     try { if (window.GMUSIC && typeof window.GMUSIC.duck === 'function') window.GMUSIC.duck(!!on); } catch (e) {}
   }
 
-  function speak(text) {
+  // ---- Phát âm: ưu tiên ủy quyền GAME_VOICE (voice.js, Nhánh V) ----
+  // GAME_VOICE tự lo: công tắc + âm lượng + kiểu giọng + bản ghi + bản đọc.
+  // Không có GAME_VOICE -> speakLegacy (đường cũ, giữ nguyên hành vi).
+  function speak(text, reading) {
+    try {
+      if (window.GAME_VOICE && typeof window.GAME_VOICE.speak === 'function') {
+        window.GAME_VOICE.speak(text, reading ? { reading: reading } : undefined);
+        return;
+      }
+    } catch (e) { /* rơi xuống đường cũ */ }
+    speakLegacy(text);
+  }
+
+  function speakLegacy(text) {
     if (!voiceOn()) return;
     if (!window.speechSynthesis) return;
     var clean = text.replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF\uFE0F]/gu, '').replace(/\s+/g, ' ').trim();
@@ -193,17 +320,23 @@
     var raw = pick(key);
     if (!raw) return null;
     var text = fillX(raw);
-    show(text, anchorEl);
-    speak(text);
-    return text;
+    // Furigana (nếu câu có): hiển thị bản strip, đọc theo bản kana.
+    var display = stripFuri(text);
+    var reading = hasFuri(text) ? furiReading(text) : null;
+    show(display, anchorEl);
+    speak(display, reading);
+    return display;
   }
 
   function stop() {
-    try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
+    try {
+      if (window.GAME_VOICE && typeof window.GAME_VOICE.stop === 'function') window.GAME_VOICE.stop();
+      else if (window.speechSynthesis) window.speechSynthesis.cancel();
+    } catch (e) {}
     if (duckTimer) clearTimeout(duckTimer);
     duck(false);
     hideBubble();
   }
 
-  window.GTREND = { say: say, show: show, bubble: show, stop: stop, TREND: TREND };
+  window.GTREND = { say: say, show: show, bubble: show, stop: stop, TREND: TREND, SITUATION: SITUATION, situationOf: function (m) { return SITUATION[m] || 'neu'; }, _test: { stripFuri: stripFuri, furiReading: furiReading, hasFuri: hasFuri, isNarrow: isNarrow, pick: pick, resetBags: function () { bags = {}; } } };
 })();

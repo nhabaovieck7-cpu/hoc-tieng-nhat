@@ -60,7 +60,9 @@
 .pn-pl.wait .pn-ava{background:#2a2440;border:2px dashed var(--pn-line);box-shadow:none}
 .pn-pl .pn-host{display:block;color:var(--pn-gold);font-size:10px;font-weight:800}
 .pn-pl .pn-off{color:var(--pn-bad);font-size:10px}
-.pn-ava{border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--pn-c),var(--pn-neon));color:#fff;position:relative;flex:none}
+.pn-ava{border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--pn-c),var(--pn-neon));color:#fff;position:relative;flex:none;overflow:hidden}
+.pn-ava .gface{width:100%!important;height:100%!important}
+.pn-ava .gface>svg{width:100%;height:100%}
 .pn-ava.me{box-shadow:0 0 0 2px var(--pn-bg),0 0 0 4px var(--pn-gold)}
 
 /* --- dải người chơi trong trận --- */
@@ -132,6 +134,10 @@
 .cg-tabs{display:flex;gap:6px;margin:10px 0}
 .cg-tabs button{flex:1;background:none;border:1px solid var(--pn-line);color:var(--pn-m);border-radius:10px;padding:9px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;min-height:44px}
 .cg-tabs button.on{color:var(--pn-t);background:#2b2540;border-color:var(--pn-neon)}
+.cg-seg{display:flex;gap:6px;margin:0 0 10px;background:#1d1830;border:1px solid var(--pn-line);border-radius:999px;padding:4px}
+.cg-seg.hid{display:none}
+.cg-seg button{flex:1;background:none;border:none;color:var(--pn-m);border-radius:999px;padding:8px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;min-height:40px}
+.cg-seg button.on{background:var(--pn-neon);color:#14101f}
 .cg-grid{max-height:280px;overflow-y:auto;display:grid;gap:6px}
 .cg-grid.cg-hot{grid-template-columns:1fr 1fr}
 .cg-grid.cg-emo{grid-template-columns:repeat(8,1fr)}
@@ -152,8 +158,42 @@
 .cg-bubble.me{box-shadow:3px 3px 0 var(--pn-gold);background:#fff7d6}
 .cg-bubble.out{opacity:0;transform:translateY(-14px)}
 
+/* =====================================================================
+ * Hợp sức (co-op) — lớp pn-coop- / pn-coophud, cộng thêm biến thể seg.
+ * Mọi nút vẫn >= 44px (kế thừa .pn-seg button), HUD nằm TRONG luồng trang.
+ * ===================================================================== */
+.pn-h3{font-size:13px;margin:12px 0 6px;color:var(--pn-m);font-weight:700}
+.pn-seg-2{grid-template-columns:repeat(2,1fr)}
+.pn-seg-4{grid-template-columns:repeat(4,1fr)}
+.pn-seg button:disabled{opacity:.45;cursor:not-allowed}
+.pn-coop-rules{background:#14111f;border:1px solid var(--pn-line);border-radius:14px;padding:10px 12px;margin-top:14px}
+.pn-coop-rules p{font-size:13px;line-height:1.55;margin:4px 0;color:var(--pn-t);overflow-wrap:anywhere}
+.pn-coop-room{margin-top:6px;text-align:left}
+.pn-coop-summary{display:flex;justify-content:center;text-align:center;max-width:100%;overflow-wrap:anywhere}
+.pn-coophud{background:linear-gradient(135deg,#233d2b,#1a1430);border:2px solid var(--pn-ok);border-radius:14px;padding:10px 12px;margin:4px 0 10px;font-weight:800;font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.pn-coophud .pn-coophud-actor{display:block;font-size:13px;font-weight:700;color:var(--pn-m)}
+.pn-coophud .pn-coophud-actor.ok{color:var(--pn-ok)}
+.pn-coophud .pn-coophud-actor.bad{color:var(--pn-bad)}
+.pn-opt.picked{border-color:var(--pn-gold);box-shadow:0 0 12px rgba(217,168,78,.45)}
+.pn-coop-table{list-style:none;margin-top:8px;text-align:left}
+.pn-coop-table li{display:flex;align-items:center;gap:10px;padding:10px 6px;border-bottom:1px solid var(--pn-line);flex-wrap:wrap}
+.pn-coop-table li.me{background:rgba(217,168,78,.12);border-radius:10px}
+.pn-coop-table .pn-ava{width:30px;height:30px;font-size:13px}
+.pn-coop-table .pn-coop-detail{display:block;font-size:12px;color:var(--pn-m);font-weight:600}
+
+@media (max-width:480px){
+  .pn-seg-4{grid-template-columns:repeat(2,1fr)}
+  .pn-seg-lv{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .pn-seg button{font-size:13px;padding:10px 2px;overflow-wrap:anywhere}
+  .pn-coophud{font-size:14px}
+}
+
 @media (min-width:760px){
   .pn-wrap{padding-top:20px}
   .pn-code{font-size:52px}
   .cg-grid.cg-hot{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* --- Đợt 5 Nhánh C: biển tên .gnp trên đầu chip từng người chơi (chỉ THÊM lớp .pn-) --- */
+.pn-pl .gnp{display:block;margin:0 auto 4px;max-width:100%;text-align:center}
+.pn-strip .pn-pl .gnp{font-size:11px;padding:1px 8px}

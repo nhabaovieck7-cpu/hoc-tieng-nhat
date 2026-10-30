@@ -1,0 +1,52 @@
+/* =====================================================================
+   level.css — Khối CẤP NGƯỜI CHƠI + thẻ thông báo LÊN CẤP (Việc M,
+   đợt game 5 — BATCH5-M). Tiền tố glv- để không đụng game.css/gear.css.
+   Dùng ở nhan-vat.html (khối cấp nổi bật) và index.html hub (bản mini).
+   ===================================================================== */
+
+/* ---------------- Khối cấp ---------------- */
+.glv{display:flex;gap:12px;align-items:center;text-align:left;
+  background:linear-gradient(135deg,rgba(124,92,255,.20),rgba(255,216,78,.10));
+  border:2px solid rgba(255,216,78,.45);border-radius:16px;padding:10px 12px;color:inherit}
+.glv-badge{flex:0 0 auto;width:56px;height:56px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#ffe98a,#f5b301 72%);color:#3a2a00;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.35)}
+.glv-badge-lv{font-size:22px;font-weight:900;line-height:1}
+.glv-badge-tx{font-size:9px;font-weight:800;letter-spacing:.14em}
+.glv-main{flex:1 1 auto;min-width:0}
+.glv-head{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:15px}
+.glv-title12{color:#ffd84e;font-weight:800;font-size:13.5px}
+.glv-xpv{margin-left:auto;font-weight:800;color:#ffd84e;font-size:13px;white-space:nowrap}
+.glv-bar{height:10px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;margin:6px 0 4px}
+.glv-fill{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#7c5cff,#ffd84e);transition:width .4s ease}
+.glv-next{font-size:12px;opacity:.88;line-height:1.4}
+/* Bản gọn ở hub: huy hiệu nhỏ + thanh mảnh */
+.glv-mini{padding:8px 10px;border-radius:14px}
+.glv-mini .glv-badge{width:44px;height:44px}
+.glv-mini .glv-badge-lv{font-size:18px}
+.glv-mini .glv-bar{height:6px}
+
+/* ---------------- Thẻ thông báo LÊN CẤP ---------------- */
+.glv-overlay{position:fixed;inset:0;z-index:9995;background:rgba(10,8,20,.66);
+  display:flex;align-items:center;justify-content:center;padding:18px}
+.glv-pop{background:#241d3d;color:#fff;border:2px solid #ffd84e;border-radius:20px;
+  max-width:420px;width:100%;padding:22px 20px;text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,.5);animation:glv-pop-in .35s ease}
+@keyframes glv-pop-in{from{transform:scale(.9) translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.glv-pop-ttl{font-size:26px;font-weight:900;color:#ffd84e;line-height:1.2}
+.glv-pop-sub{margin-top:5px;font-weight:800;font-size:15px}
+.glv-pop-list{margin:14px 0 4px;text-align:left;display:grid;gap:7px;max-height:46vh;overflow:auto}
+.glv-pop-it{display:flex;gap:9px;align-items:center;background:rgba(255,255,255,.06);
+  border-radius:12px;padding:8px 11px;font-size:14px}
+.glv-pop-kind{opacity:.75;font-size:12px}
+.glv-pop-lv{margin-left:auto;font-size:12px;opacity:.85;white-space:nowrap;font-weight:700}
+.glv-pop-none{margin:12px 0 4px;font-size:14px;opacity:.9}
+.glv-pop-btn{margin-top:14px;background:#ffd84e;color:#241d3d;border:0;border-radius:12px;
+  padding:12px 24px;font:inherit;font-weight:900;cursor:pointer;min-height:44px;width:100%}
+
+@media (prefers-reduced-motion: reduce){
+  .glv-fill{transition:none}
+  .glv-pop{animation:none}
+}

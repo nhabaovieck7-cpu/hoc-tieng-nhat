@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Chiến dịch N5→N1 · Hành trình đến Edo</title>
 <!-- game.css (nhánh 1) đặt trước; chien-dich.css tự đủ dùng khi thiếu -->
-<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="game.css"><link rel="stylesheet" href="charanim.css">
 <link rel="stylesheet" href="chien-dich.css">
+<link rel="stylesheet" href="bosses.css">
+<link rel="stylesheet" href="finisher.css">
 </head>
 <body class="cd-body">
 <div class="cd-top">
   <a class="cd-home" href="index.html" aria-label="Về sảnh game">🏠</a>
   <b class="cd-title">🗺️ Hành trình dài</b>
+  <a class="gtop-course" href="../index.html" aria-label="Quay lại khóa học">← <span>Về khóa học</span></a>
   <span class="cd-grow"></span>
   <div id="sndToggles"></div>
 </div>
@@ -81,12 +84,15 @@
 <script src="../config.js"></script>
 <script>try{ if (window.SITE && SITE.aiEndpoint) window.GAME_ENDPOINT = SITE.aiEndpoint; }catch(e){}</script>
 <script src="game.js"></script>
+<script src="settings.js"></script>
 <script src="fx.js"></script>
 <script src="sfx.js"></script>
+<script src="voice.js"></script>
 <script src="trend.js"></script>
 <script src="music.js"></script>
 <script src="game-api.js"></script>
 <script src="questions.js"></script>
+<script src="bosses.js"></script><script src="gear.js"></script><script src="charanim.js"></script><script src="finisher.js"></script>
 <script src="chien-dich.js"></script>
 </body>
 </html>

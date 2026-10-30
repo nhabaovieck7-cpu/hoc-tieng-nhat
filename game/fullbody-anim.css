@@ -1,0 +1,390 @@
+/* =====================================================================
+   fullbody-anim.css — HOẠT HỌA TOÀN THÂN (Nhánh B, đợt game 5)
+   Đi cùng fullbody.js/fullbody.css (nhánh A) + charanim.js (GCANIM).
+   Chỉ animate transform/opacity. KHÔNG định nghĩa lại ca-eye/blink
+   (chớp mắt do charanim.css lo); nhịp thở/bob dùng keyframes fb* có
+   cùng nhịp/trị số với caBreathe/caRunBob của đợt 4 để hòa hệ.
+
+   Cấu trúc (hợp đồng đợt 5, viewBox 0 0 200 360):
+     <span class="fb-wrap"><svg class="fb-svg">
+       <ellipse class="fb-shadow">
+       <g class="fb-leg-l"><g class="fb-shin-l">…</g></g>
+       <g class="fb-leg-r"><g class="fb-shin-r">…</g></g>
+       <g class="fb-arm-l"><g class="fb-fore-l">…</g></g>
+       <g class="fb-torso">…
+       <g class="fb-arm-r"><g class="fb-fore-r"><g class="fb-weapon">…
+       <g class="fb-head">… (mắt ca-eye do charanim lo)
+   Vũ khí nằm TRONG fb-fore-r nên tự vung theo tay phải — file này
+   không animate trực tiếp .fb-weapon (tránh ghi đè transform đặt
+   vũ khí của nhánh A).
+
+   Trạng thái GCANIM gắn class ca-run/ca-idle/ca-attack/ca-hit/ca-win
+   lên chính .fb-wrap hoặc phần tử tổ tiên — mọi luật đều khai cả 2
+   dạng selector (.fb-wrap.ca-run … và .ca-run .fb-…).
+
+   Chất lượng (class trên <html> do charanim.js điều khiển):
+     .ca-q-low  tắt phụ (tóc/khăn/bóng/gật đầu) — giữ chạy/thở chính.
+     .ca-q-off  tắt toàn bộ (đồng bộ prefers-reduced-motion).
+     .ca-paused trang ẩn: animation-play-state paused.
+   ===================================================================== */
+
+/* ----------------- Điểm neo khớp (khớp với hợp đồng A) -----------------
+   Tay/chân/cẳng: origin tại khớp (vai/hông/khuỷu/gối) = 50% 0% của
+   chính nhóm; thân: 50% 100% (hông); đầu: 50% 88% (cổ). Khai lại ở
+   đây đúng trị số hợp đồng để file chạy độc lập được với fixture. */
+.fb-wrap .fb-arm-l,.fb-wrap .fb-arm-r,.fb-wrap .fb-leg-l,.fb-wrap .fb-leg-r,
+.fb-wrap .fb-fore-l,.fb-wrap .fb-fore-r,.fb-wrap .fb-shin-l,.fb-wrap .fb-shin-r{
+  transform-box:fill-box;transform-origin:50% 0%;
+}
+.fb-wrap .fb-torso{transform-box:fill-box;transform-origin:50% 100%}
+.fb-wrap .fb-head{transform-box:fill-box;transform-origin:50% 88%}
+.fb-wrap .fb-svg{transform-box:fill-box;transform-origin:50% 100%}
+.fb-wrap .fb-shadow{transform-box:fill-box;transform-origin:50% 50%}
+.fb-wrap .fb-hair,.fb-wrap .ca-hair{transform-box:fill-box;transform-origin:50% 6%}
+
+/* ------------------------- Keyframes: idle + chạy ------------------------- */
+@keyframes fbBreathe{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-1.6px) scale(1.014)}
+}
+@keyframes fbHeadNod{
+  0%,100%{transform:rotate(-.7deg) translateY(0)}
+  50%{transform:rotate(.9deg) translateY(.6px)}
+}
+@keyframes fbTorsoBreathe{
+  0%,100%{transform:rotate(0deg) translateY(0)}
+  50%{transform:rotate(.5deg) translateY(-.8px)}
+}
+@keyframes fbHairSway{
+  0%,100%{transform:rotate(-1.5deg)}
+  50%{transform:rotate(1.7deg)}
+}
+@keyframes fbRunBob{ /* nhịp đôi: 2 lần nảy trong 1 chu kỳ, như caRunBob */
+  0%,50%,100%{transform:translateY(0)}
+  25%,75%{transform:translateY(-5px)}
+}
+@keyframes fbRunSvg{
+  0%,100%{transform:rotate(-1.1deg)}
+  50%{transform:rotate(1.1deg)}
+}
+@keyframes fbLegL{ /* hông: biên độ ±28° */
+  0%,100%{transform:rotate(28deg)}
+  25%{transform:rotate(0deg)}
+  50%{transform:rotate(-28deg)}
+  75%{transform:rotate(0deg)}
+}
+@keyframes fbLegR{ /* lệch pha 180° so với chân trái */
+  0%,100%{transform:rotate(-28deg)}
+  25%{transform:rotate(0deg)}
+  50%{transform:rotate(28deg)}
+  75%{transform:rotate(0deg)}
+}
+@keyframes fbShinL{ /* gối: co mạnh khi chân vung qua (75%), gần duỗi khi chạm đất (0%) */
+  0%,100%{transform:rotate(-8deg)}
+  25%{transform:rotate(-40deg)}
+  50%{transform:rotate(-18deg)}
+  75%{transform:rotate(-55deg)}
+}
+@keyframes fbShinR{ /* lệch pha 180° so với cẳng trái */
+  0%,100%{transform:rotate(-18deg)}
+  25%{transform:rotate(-55deg)}
+  50%{transform:rotate(-8deg)}
+  75%{transform:rotate(-40deg)}
+}
+@keyframes fbArmL{ /* vai: NGƯỢC PHA chân trái, cùng pha chân phải, ±22° */
+  0%,100%{transform:rotate(-22deg)}
+  25%{transform:rotate(0deg)}
+  50%{transform:rotate(22deg)}
+  75%{transform:rotate(0deg)}
+}
+@keyframes fbArmR{ /* vai: NGƯỢC PHA chân phải */
+  0%,100%{transform:rotate(22deg)}
+  25%{transform:rotate(0deg)}
+  50%{transform:rotate(-22deg)}
+  75%{transform:rotate(0deg)}
+}
+@keyframes fbForeL{ /* khuỷu luôn hơi co, co thêm khi tay đưa ra trước */
+  0%,100%{transform:rotate(-26deg)}
+  25%{transform:rotate(-12deg)}
+  50%{transform:rotate(-34deg)}
+  75%{transform:rotate(-12deg)}
+}
+@keyframes fbForeR{
+  0%,100%{transform:rotate(-34deg)}
+  25%{transform:rotate(-12deg)}
+  50%{transform:rotate(-26deg)}
+  75%{transform:rotate(-12deg)}
+}
+@keyframes fbRunTorso{ /* cúi trước ~5° + xoắn nhẹ theo nhịp chân */
+  0%,100%{transform:rotate(5.9deg)}
+  50%{transform:rotate(4.1deg)}
+}
+@keyframes fbRunHead{ /* counter-rotate khử cúi của thân: đầu giữ gần thẳng */
+  0%,100%{transform:rotate(-5.4deg) translateY(.5px)}
+  50%{transform:rotate(-4.6deg) translateY(-.7px)}
+}
+@keyframes fbHairBounce{
+  0%,100%{transform:translateY(0) rotate(-1.2deg)}
+  50%{transform:translateY(1.5px) rotate(1.3deg)}
+}
+@keyframes fbFlutterRun{ /* cùng trị số caFlutterRun đợt 4 */
+  0%,100%{transform:rotate(-2deg) skewX(-2deg)}
+  35%{transform:rotate(-13deg) skewX(-7deg)}
+  70%{transform:rotate(6deg) skewX(3deg)}
+}
+@keyframes fbShadowPulse{ /* bóng co theo nhịp đôi của bob */
+  0%,50%,100%{transform:scaleX(1);opacity:.5}
+  25%,75%{transform:scaleX(.8);opacity:.34}
+}
+
+/* ----------------- Keyframes: tấn công / trúng đòn / thắng ----------------- */
+@keyframes fbAtkWrap{
+  0%{transform:translate(0,0)}
+  28%{transform:translate(-5px,0)}
+  55%{transform:translate(15px,-4px)}
+  78%{transform:translate(6px,-1px)}
+  100%{transform:translate(0,0)}
+}
+@keyframes fbAtkArmR{ /* vai phải: giơ cao ra sau rồi chém mạnh xuống trước */
+  0%{transform:rotate(0deg)}
+  28%{transform:rotate(-98deg)}
+  52%{transform:rotate(58deg)}
+  72%{transform:rotate(44deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkForeR{ /* khuỷu: gập lấy đà rồi duỗi thẳng lúc chém */
+  0%{transform:rotate(0deg)}
+  28%{transform:rotate(-50deg)}
+  52%{transform:rotate(8deg)}
+  72%{transform:rotate(-4deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkArmL{ /* tay trái vung ngược giữ thăng bằng */
+  0%{transform:rotate(0deg)}
+  28%{transform:rotate(14deg)}
+  52%{transform:rotate(-30deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkTorso{ /* thân: ngả sau lấy đà rồi cúi xông tới */
+  0%{transform:rotate(0deg)}
+  28%{transform:rotate(-5deg)}
+  55%{transform:rotate(13deg)}
+  78%{transform:rotate(8deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkHead{
+  0%{transform:rotate(0deg)}
+  28%{transform:rotate(3deg)}
+  55%{transform:rotate(-8deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkLegL{
+  0%{transform:rotate(0deg)}
+  55%{transform:rotate(18deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbAtkLegR{
+  0%{transform:rotate(0deg)}
+  55%{transform:rotate(-14deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbHitWrap{
+  0%{transform:translate(0,0);opacity:1}
+  18%{transform:translate(-8px,1px);opacity:.6}
+  38%{transform:translate(4px,0);opacity:.88}
+  58%{transform:translate(-3px,0);opacity:.75}
+  78%{transform:translate(1px,0);opacity:.95}
+  100%{transform:translate(0,0);opacity:1}
+}
+@keyframes fbHitTorso{
+  0%{transform:rotate(0deg)}
+  22%{transform:rotate(-7deg)}
+  55%{transform:rotate(3deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbHitHead{
+  0%{transform:rotate(0deg) translateX(0)}
+  22%{transform:rotate(-6deg) translateX(-2px)}
+  55%{transform:rotate(2deg) translateX(0)}
+  100%{transform:rotate(0deg) translateX(0)}
+}
+@keyframes fbHitArmL{ /* tay giơ phản xạ che thân */
+  0%{transform:rotate(0deg)}
+  22%{transform:rotate(42deg)}
+  55%{transform:rotate(18deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbHitArmR{
+  0%{transform:rotate(0deg)}
+  22%{transform:rotate(-42deg)}
+  55%{transform:rotate(-18deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbHitLegL{
+  0%{transform:rotate(0deg)}
+  22%{transform:rotate(-10deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbHitLegR{
+  0%{transform:rotate(0deg)}
+  22%{transform:rotate(12deg)}
+  100%{transform:rotate(0deg)}
+}
+@keyframes fbWinJump{ /* cùng trị số caWinJump đợt 4 */
+  0%,100%{transform:translateY(0) scale(1)}
+  28%{transform:translateY(-14px) scale(1.03)}
+  52%{transform:translateY(0) scale(.99)}
+  72%{transform:translateY(-9px) scale(1.02)}
+  88%{transform:translateY(0) scale(1)}
+}
+@keyframes fbWinArmL{ /* tay trái giơ cao suốt nhịp, vẫy theo cú nhảy */
+  0%,100%{transform:rotate(136deg)}
+  28%{transform:rotate(150deg)}
+  52%{transform:rotate(124deg)}
+  72%{transform:rotate(146deg)}
+  88%{transform:rotate(130deg)}
+}
+@keyframes fbWinArmR{ /* tay phải giơ cao — vũ khí trong fore-r vẫy theo */
+  0%,100%{transform:rotate(-136deg)}
+  28%{transform:rotate(-150deg)}
+  52%{transform:rotate(-124deg)}
+  72%{transform:rotate(-146deg)}
+  88%{transform:rotate(-130deg)}
+}
+@keyframes fbWinForeL{
+  0%,100%{transform:rotate(-16deg)}
+  28%{transform:rotate(-34deg)}
+  52%{transform:rotate(-10deg)}
+  72%{transform:rotate(-30deg)}
+}
+@keyframes fbWinForeR{
+  0%,100%{transform:rotate(-16deg)}
+  28%{transform:rotate(-34deg)}
+  52%{transform:rotate(-10deg)}
+  72%{transform:rotate(-30deg)}
+}
+@keyframes fbWinHead{
+  0%,100%{transform:rotate(-2deg)}
+  50%{transform:rotate(2.5deg)}
+}
+@keyframes fbWinTorso{
+  0%,100%{transform:rotate(0deg)}
+  28%{transform:rotate(-2deg)}
+  52%{transform:rotate(1deg)}
+}
+
+/* ------------------------- ĐỨNG CHỜ (idle) -------------------------
+   Chân tay về 0, không keyframes chi — chỉ thở thân/đầu (nhịp 2.8s
+   như caBreathe) + tóc lay nhẹ; chớp mắt do ca-eye của charanim lo. */
+.fb-wrap.ca-idle,.ca-idle .fb-wrap{animation:fbBreathe 2.8s ease-in-out infinite}
+.fb-wrap.ca-idle .fb-torso,.ca-idle .fb-torso{animation:fbTorsoBreathe 2.8s ease-in-out infinite}
+.fb-wrap.ca-idle .fb-head,.ca-idle .fb-head{animation:fbHeadNod 2.8s ease-in-out infinite}
+.fb-wrap.ca-idle .fb-hair,.ca-idle .fb-hair,
+.fb-wrap.ca-idle .ca-hair,.ca-idle .fb-head .ca-hair{animation:fbHairSway 2.8s ease-in-out infinite}
+.fb-wrap.ca-idle .fb-leg-l,.ca-idle .fb-leg-l,
+.fb-wrap.ca-idle .fb-leg-r,.ca-idle .fb-leg-r,
+.fb-wrap.ca-idle .fb-arm-l,.ca-idle .fb-arm-l,
+.fb-wrap.ca-idle .fb-arm-r,.ca-idle .fb-arm-r,
+.fb-wrap.ca-idle .fb-fore-l,.ca-idle .fb-fore-l,
+.fb-wrap.ca-idle .fb-fore-r,.ca-idle .fb-fore-r,
+.fb-wrap.ca-idle .fb-shin-l,.ca-idle .fb-shin-l,
+.fb-wrap.ca-idle .fb-shin-r,.ca-idle .fb-shin-r{
+  animation:none;transform:rotate(0deg);
+}
+.fb-wrap.ca-idle .fb-shadow,.ca-idle .fb-shadow{opacity:.45}
+
+/* ------------------------- CHẠY (run, 0.38s) ------------------------- */
+.fb-wrap.ca-run,.ca-run .fb-wrap{animation:fbRunBob .38s linear infinite}
+.fb-wrap.ca-run .fb-svg,.ca-run .fb-svg{animation:fbRunSvg .38s linear infinite}
+.fb-wrap.ca-run .fb-leg-l,.ca-run .fb-leg-l{animation:fbLegL .38s linear infinite}
+.fb-wrap.ca-run .fb-leg-r,.ca-run .fb-leg-r{animation:fbLegR .38s linear infinite}
+.fb-wrap.ca-run .fb-shin-l,.ca-run .fb-shin-l{animation:fbShinL .38s linear infinite}
+.fb-wrap.ca-run .fb-shin-r,.ca-run .fb-shin-r{animation:fbShinR .38s linear infinite}
+.fb-wrap.ca-run .fb-arm-l,.ca-run .fb-arm-l{animation:fbArmL .38s linear infinite}
+.fb-wrap.ca-run .fb-arm-r,.ca-run .fb-arm-r{animation:fbArmR .38s linear infinite}
+.fb-wrap.ca-run .fb-fore-l,.ca-run .fb-fore-l{animation:fbForeL .38s linear infinite}
+.fb-wrap.ca-run .fb-fore-r,.ca-run .fb-fore-r{animation:fbForeR .38s linear infinite}
+.fb-wrap.ca-run .fb-torso,.ca-run .fb-torso{animation:fbRunTorso .38s linear infinite}
+.fb-wrap.ca-run .fb-head,.ca-run .fb-head{animation:fbRunHead .38s linear infinite}
+.fb-wrap.ca-run .fb-hair,.ca-run .fb-hair,
+.fb-wrap.ca-run .ca-hair,.ca-run .fb-head .ca-hair{animation:fbHairBounce .38s linear infinite}
+.fb-wrap.ca-run .fb-shadow,.ca-run .fb-shadow{animation:fbShadowPulse .38s linear infinite}
+.fb-wrap.ca-run .ca-flutter,.ca-run .fb-wrap .ca-flutter{animation:fbFlutterRun .5s ease-in-out infinite}
+
+/* ----------------- TẤN CÔNG (one-shot 550ms, khai SAU run/idle
+   để thắng khi GCANIM chồng ca-attack lên trạng thái giữ) ----------------- */
+.fb-wrap.ca-attack,.ca-attack .fb-wrap{animation:fbAtkWrap .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-arm-r,.ca-attack .fb-arm-r{animation:fbAtkArmR .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-fore-r,.ca-attack .fb-fore-r{animation:fbAtkForeR .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-arm-l,.ca-attack .fb-arm-l{animation:fbAtkArmL .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-torso,.ca-attack .fb-torso{animation:fbAtkTorso .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-head,.ca-attack .fb-head{animation:fbAtkHead .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-leg-l,.ca-attack .fb-leg-l{animation:fbAtkLegL .55s cubic-bezier(.25,.7,.3,1) 1}
+.fb-wrap.ca-attack .fb-leg-r,.ca-attack .fb-leg-r{animation:fbAtkLegR .55s cubic-bezier(.25,.7,.3,1) 1}
+
+/* ----------------- TRÚNG ĐÒN (one-shot 450ms) ----------------- */
+.fb-wrap.ca-hit,.ca-hit .fb-wrap{animation:fbHitWrap .45s linear 1}
+.fb-wrap.ca-hit .fb-torso,.ca-hit .fb-torso{animation:fbHitTorso .45s linear 1}
+.fb-wrap.ca-hit .fb-head,.ca-hit .fb-head{animation:fbHitHead .45s linear 1}
+.fb-wrap.ca-hit .fb-arm-l,.ca-hit .fb-arm-l{animation:fbHitArmL .45s linear 1}
+.fb-wrap.ca-hit .fb-arm-r,.ca-hit .fb-arm-r{animation:fbHitArmR .45s linear 1}
+.fb-wrap.ca-hit .fb-leg-l,.ca-hit .fb-leg-l{animation:fbHitLegL .45s linear 1}
+.fb-wrap.ca-hit .fb-leg-r,.ca-hit .fb-leg-r{animation:fbHitLegR .45s linear 1}
+
+/* ------------------------- THẮNG (win) ------------------------- */
+.fb-wrap.ca-win,.ca-win .fb-wrap{animation:fbWinJump .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-arm-l,.ca-win .fb-arm-l{animation:fbWinArmL .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-arm-r,.ca-win .fb-arm-r{animation:fbWinArmR .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-fore-l,.ca-win .fb-fore-l{animation:fbWinForeL .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-fore-r,.ca-win .fb-fore-r{animation:fbWinForeR .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-head,.ca-win .fb-head{animation:fbWinHead .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-torso,.ca-win .fb-torso{animation:fbWinTorso .9s ease-in-out infinite}
+.fb-wrap.ca-win .fb-hair,.ca-win .fb-hair,
+.fb-wrap.ca-win .ca-hair,.ca-win .fb-head .ca-hair{animation:fbHairBounce .45s ease-in-out infinite}
+.fb-wrap.ca-win .fb-shadow,.ca-win .fb-shadow{animation:fbShadowPulse .9s linear infinite}
+.fb-wrap.ca-win .ca-flutter,.ca-win .fb-wrap .ca-flutter{animation:fbFlutterRun .5s ease-in-out infinite}
+.fb-wrap.ca-win .fb-leg-l,.ca-win .fb-leg-l,
+.fb-wrap.ca-win .fb-leg-r,.ca-win .fb-leg-r,
+.fb-wrap.ca-win .fb-shin-l,.ca-win .fb-shin-l,
+.fb-wrap.ca-win .fb-shin-r,.ca-win .fb-shin-r{
+  animation:none;transform:rotate(0deg);
+}
+
+/* ------------------------- CHẤT LƯỢNG THẤP (fps < 30) -------------------------
+   Tắt phụ: tóc, khăn, bóng, gật/nod đầu. Giữ: bob, chân, tay, thân. */
+html.ca-q-low .fb-wrap .fb-hair,html.ca-q-low .fb-wrap .ca-hair,
+html.ca-q-low .fb-wrap .ca-flutter,html.ca-q-low .fb-wrap .ca-flutter-tail,
+html.ca-q-low .fb-wrap .fb-head,html.ca-q-low .fb-wrap .fb-shadow{
+  animation:none !important;
+}
+html.ca-q-low .fb-wrap .fb-shadow{opacity:0}
+
+/* ------------------------- TẮT TOÀN BỘ / REDUCED MOTION ------------------------- */
+html.ca-q-off .fb-wrap,html.ca-q-off .fb-svg,html.ca-q-off .fb-head,
+html.ca-q-off .fb-hair,html.ca-q-off .fb-torso,html.ca-q-off .fb-shadow,
+html.ca-q-off .fb-arm-l,html.ca-q-off .fb-arm-r,
+html.ca-q-off .fb-fore-l,html.ca-q-off .fb-fore-r,
+html.ca-q-off .fb-leg-l,html.ca-q-off .fb-leg-r,
+html.ca-q-off .fb-shin-l,html.ca-q-off .fb-shin-r,
+html.ca-q-off .fb-wrap .ca-flutter,html.ca-q-off .fb-wrap .ca-flutter-tail{
+  animation:none !important;
+}
+@media (prefers-reduced-motion: reduce){
+  .fb-wrap,.fb-svg,.fb-head,.fb-hair,.fb-torso,.fb-shadow,
+  .fb-arm-l,.fb-arm-r,.fb-fore-l,.fb-fore-r,
+  .fb-leg-l,.fb-leg-r,.fb-shin-l,.fb-shin-r,
+  .fb-wrap .ca-flutter,.fb-wrap .ca-flutter-tail{
+    animation:none !important;
+  }
+}
+
+/* ------------------------- TRANG ẨN: TẠM DỪNG ------------------------- */
+html.ca-paused .fb-wrap,html.ca-paused .fb-svg,html.ca-paused .fb-head,
+html.ca-paused .fb-hair,html.ca-paused .fb-torso,html.ca-paused .fb-shadow,
+html.ca-paused .fb-arm-l,html.ca-paused .fb-arm-r,
+html.ca-paused .fb-fore-l,html.ca-paused .fb-fore-r,
+html.ca-paused .fb-leg-l,html.ca-paused .fb-leg-r,
+html.ca-paused .fb-shin-l,html.ca-paused .fb-shin-r,
+html.ca-paused .fb-wrap .ca-flutter,html.ca-paused .fb-wrap .ca-flutter-tail{
+  animation-play-state:paused !important;
+}

@@ -92,11 +92,28 @@
   padding:0 18px;position:relative;border-radius:18px;overflow:hidden;
   background:linear-gradient(transparent 60%,rgba(0,0,0,.5)),radial-gradient(circle at 50% 100%,var(--bkc,#7c5cff) 0,transparent 70%),#1a0b2e}
 .bk-fig{font-size:70px;line-height:1;position:relative;z-index:2}
+#figP .gface{width:84px;height:84px}
+#figP .gface>svg{width:100%;height:100%}
 .bk-fig.boss{font-size:104px;animation:mx-float 1.8s ease-in-out infinite}
 .bk-dmg{position:absolute;font-weight:900;font-size:32px;color:#ffd84e;-webkit-text-stroke:2px #000;z-index:5;
   animation:bk-up 1s forwards;pointer-events:none}
 @keyframes bk-up{to{transform:translateY(-64px);opacity:0}}
 .bk-hp.low i{background:linear-gradient(90deg,#ef4b5b,#f97316)}
+/* Hiệu ứng đối kháng (Nhánh E): vệt chém cận chiến do dau-kanji.js tạo tại
+   thời điểm đòn chạm; chuyển động nhân vật/chớp/rung chạy bằng WAAPI trong
+   JS (chỉ transform/opacity/filter). Thanh máu .bk-hp i ở trên đã có sẵn
+   transition:width .4s nên máu "chạy" về giá trị mới sau mỗi đòn. */
+.bk-slash{position:absolute;width:104px;height:13px;border-radius:99px;pointer-events:none;z-index:6;opacity:0;
+  background:linear-gradient(90deg,transparent,#fff 30%,#ffd84e 55%,#ff7a45 80%,transparent);
+  box-shadow:0 0 18px rgba(255,216,78,.8);transform:rotate(-38deg)}
+.bk-slash.foe{background:linear-gradient(90deg,transparent,#fff 30%,#ff8fa3 55%,#ef4b5b 80%,transparent);
+  box-shadow:0 0 18px rgba(239,75,91,.8)}
+@media (prefers-reduced-motion: reduce){
+  .bk-slash{display:none}
+  .bk-hp i{transition:none}
+  .bk-fig.boss{animation:none}
+  .bk-dmg{animation:none}
+}
 
 /* ===== LEO THÁP (tw-) ===== */
 .tw-tower{display:flex;flex-direction:column-reverse;gap:4px;max-height:212px;overflow:hidden;margin:8px 0}
@@ -154,8 +171,85 @@
 .fh-chain i.on{background:radial-gradient(circle at 35% 35%,#ffe9a8,var(--mx-gold));border-color:var(--mx-gold);
   box-shadow:0 0 10px rgba(217,168,78,.7)}
 .fh-prog{font-size:13px;color:var(--mx-m);text-align:center}
+/* Màn hẹp (≤860px): bong bóng lễ hội KHÔNG absolute nữa — nằm TRONG LUỒNG ở
+   vùng sân khấu (cạnh mascot, phía trên khu đáp án), chiếm chỗ thật nên không
+   bao giờ đè lên .mx-opt/.mx-token. Chữ dài cuộn trong khung (max-height +
+   overflow-y:auto) thay vì phình xuống dưới. left/top/right do JS gán inline
+   bị vô hiệu vì position:static bỏ qua các offset đó. Desktop giữ nguyên. */
+@media (max-width:860px){
+  .fh-stage{display:flex;align-items:flex-start;gap:10px;min-height:56px}
+  .fh-mascot{flex:0 0 auto}
+  .fh-stage #bubbleBox{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:6px}
+  .fh-bubble{position:static;max-width:100%;max-height:92px;overflow-y:auto;overflow-wrap:break-word}
+}
 @media (min-width:760px){
   .mx-q{font-size:48px}
   .bk-arena{height:210px}
   .tw-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:start}
+}
+
+/* ===== CHẠY VÔ TẬN DỌC (rnv-) — Đợt 3 Việc H: chạy dọc + chạm đáp án =====
+   Chỉ THÊM lớp tiền tố .rnv-; các lớp .rn- cũ giữ nguyên cho các trang
+   khác. Khung dọc: stage max-width ~430px căn giữa, tỉ lệ cao; đường chạy
+   cuộn dọc (vệt đường chạy xuống = nhân vật chạy lên); nhân vật ở đáy;
+   câu hỏi ở trên; hàng 3 cổng NGANG phía trước tiến gần dần. Cổng là nút
+   bấm thật cao >=44px, chạm trực tiếp để trả lời. */
+.rnv-game{position:relative;height:min(70vh,580px);min-height:470px;max-width:430px;margin:0 auto;
+  border-radius:24px;overflow:hidden;touch-action:manipulation;box-sizing:border-box;
+  background:linear-gradient(#7dd3fc,#c4b5fd 55%,#fda4af)}
+.rnv-road{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:82%;height:100%;
+  background:repeating-linear-gradient(180deg,#3b3553 0 40px,#433c5e 40px 80px);
+  clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);animation:rnv-roll .5s linear infinite}
+@keyframes rnv-roll{to{background-position:0 80px}}
+.rnv-hud{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:6px;
+  color:#fff;font-weight:800;text-shadow:0 2px 6px rgba(0,0,0,.45);z-index:3;font-size:14px;white-space:nowrap}
+.rnv-qw{position:absolute;top:42px;left:50%;transform:translateX(-50%);background:#fff;color:#1c2430;border-radius:16px;
+  padding:6px 16px;font-size:clamp(22px,7.2vw,32px);font-weight:800;z-index:3;box-shadow:0 8px 20px rgba(0,0,0,.15);
+  font-family:"Noto Sans JP",sans-serif;max-width:92%;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-sizing:border-box}
+.rnv-qsub{position:absolute;top:102px;left:50%;transform:translateX(-50%);z-index:3;color:#1c2430;font-weight:700;
+  background:rgba(255,255,255,.85);border-radius:99px;padding:2px 12px;font-size:13px;white-space:nowrap;max-width:92%;
+  overflow:hidden;text-overflow:ellipsis;box-sizing:border-box}
+.rnv-gates{position:absolute;left:0;right:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;
+  padding:0 6px;z-index:2;transform-origin:50% 0;box-sizing:border-box}
+.rnv-gate{background:rgba(255,255,255,.94);color:#1c2430;border:0;border-radius:14px;padding:8px 3px;text-align:center;
+  font:inherit;font-weight:700;font-size:14px;border-bottom:5px solid var(--mx-neon);min-height:52px;width:100%;
+  box-sizing:border-box;display:flex;align-items:center;justify-content:center;word-break:break-word;
+  cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.rnv-gate:active{filter:brightness(1.12)}
+.rnv-gate:disabled{cursor:default}
+.rnv-gate.ok{border-bottom-color:var(--mx-ok);background:#dcfce7}
+.rnv-gate.bad{border-bottom-color:var(--mx-bad);background:#fee2e2}
+.rnv-gate.rnv-broken{opacity:.55;filter:brightness(1.35) saturate(1.3);transform:rotate(-4deg) scale(.9)}
+.rnv-runner{position:absolute;bottom:16px;left:calc(50% - 32px);width:64px;text-align:center;z-index:4;pointer-events:none;will-change:transform}
+.rnv-runner-in{display:inline-block;font-size:50px;line-height:1;animation:rnv-bob .3s ease-in-out infinite alternate}
+@keyframes rnv-bob{to{transform:translateY(-6px)}}
+/* Đợt 4 Nhánh F: mặt/thân nhân vật (.rnv-face) là lớp XOAY riêng, nằm trong
+   .rnv-runner-in (giữ nhịp bob + hook ca-run cho hoạt họa chạy) và dưới
+   #runner (giữ phóng WAAPI) để ba transform không đè nhau. Góc áp dụng =
+   CSS rotate(): 0deg = hướng LÊN về phía cổng trước mặt (hệ quy chiếu ghi
+   trong chay-vo-tan.js, hàm faceAngleFor). */
+.rnv-face{display:inline-block;line-height:0;will-change:transform;transform:rotate(0deg)}
+.rnv-face svg{display:block;border-radius:50%;box-shadow:0 4px 10px rgba(20,10,50,.35)}
+.rnv-face .rnv-emoji{display:inline-block;font-size:50px;line-height:1}
+/* Fallback khi không gọi được GAME_AVATAR: emoji 🏃 vốn quay NGANG (hướng
+   sang trái ở font Noto/Apple) nên bọc thêm lớp quay 90deg CW để hướng
+   chạy trỏ LÊN phía cổng. */
+.rnv-face.rnv-face-emoji .rnv-emoji{transform:rotate(90deg)}
+/* Đợt 5 Nhánh C: runner TOÀN THÂN (GBODY đặt TRONG .rnv-face — quay cả thân
+   theo cùng góc mặt đợt 4, clamp ±55°) + BIỂN TÊN .gnp-own nằm trong #runner
+   nhưng NGOÀI .rnv-face (không quay theo mặt, chữ luôn đọc được), ngay trên
+   đầu nhân vật. .fb-svg không bị bo tròn/cắt như mặt bán thân đợt 4. */
+.rnv-face .fb-svg{border-radius:0;box-shadow:none}
+.rnv-plate{display:block;text-align:center;margin-bottom:2px;line-height:0}
+.rnv-plate:empty{display:none}
+.rnv-plate .gnp{max-width:110px}
+.rnv-flash{position:absolute;inset:0;opacity:0;transition:opacity .25s;z-index:5;pointer-events:none}
+.rnv-shard{position:absolute;width:10px;height:10px;border-radius:2px;z-index:6;pointer-events:none;box-shadow:0 0 6px rgba(255,255,255,.6)}
+.rnv-tools{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px auto 0;max-width:430px}
+.rnv-tools button{min-height:52px;font-size:14px;padding:10px 4px}
+.rnv-tools button:disabled{opacity:.4}
+@media (prefers-reduced-motion: reduce){
+  .rnv-road{animation:none}
+  .rnv-runner-in{animation:none}
+  .rnv-shard{display:none}
 }

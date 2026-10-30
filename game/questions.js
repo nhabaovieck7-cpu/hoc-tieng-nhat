@@ -13,7 +13,20 @@
  *               meaning?}
  *
  * Nguồn theo topic: kanji→section kj, vocab→tv, grammar→np,
- * mix→gộp kj+tv+np.
+ * mix→gộp kj+tv+np (+tonghop: chỉ các câu mcq trích an toàn, xem
+ * parseTonghopMcq). Dokkai/kaiwa KHÔNG dùng (đánh giá ở báo cáo nhánh Q:
+ * dokkai cần cả bài đọc dài, kaiwa không có cấu trúc hỏi–đáp hợp định dạng).
+ *
+ * Bản Q (sửa "ít + lặp"):
+ * - Tải MỌI bài free của section (bỏ trần 8 bài/phiên), tải theo đợt
+ *   FETCH_BATCH; thứ tự bài XOAY theo phiên bằng cursor localStorage
+ *   hn_game_q_cursor_<level>_<section> (ưu tiên bài chưa tải gần đây ở
+ *   đầu hàng đợi tải/khử trùng).
+ * - Mỗi Question có id ổn định = hash(level|section|lesson|prompt|answerText).
+ * - Chống lặp bền vững: localStorage hn_game_seen_q (tối đa 4000 id, FIFO)
+ *   + tập đã phát trong phiên; getQuestions ưu tiên câu CHƯA thấy, cạn
+ *   pool chưa-thấy mới dùng lại câu cũ nhất; mix chia đều vòng tròn
+ *   (round-robin) giữa các section thay vì dồn một section.
  * Lỗi mạng / không có dữ kiện → reject Error với thông điệp thân thiện.
  * ===================================================================== */
 (function () {
@@ -22,8 +35,23 @@
   var ENDPOINT = ROOT.GAME_ENDPOINT ||
     'https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev'; // = SITE.aiEndpoint; khi hợp nhất, game.js/config.js có thể đặt GAME_ENDPOINT trước.
 
-  var MAX_LESSONS_PER_SECTION = 8;   // giới hạn số bài tải mỗi section/phiên (tránh dồn request)
-  var FETCH_BATCH = 3;               // số lesson tải song song tối đa
+  // ĐỢT SỬA 30/10 — nhánh Q: bỏ hẳn trần số bài/phiên (bản gốc 8, bản
+  // trung gian 16) — tải MỌI bài free của section; thứ tự tải XOAY theo
+  // cursor lưu bền (hn_game_q_cursor_*) để các phiên liên tiếp ưu tiên
+  // các bài khác nhau khi khử trùng/chọn câu.
+  var FETCH_BATCH = 6;               // số lesson tải song song tối đa
+  var SEEN_KEY = 'hn_game_seen_q';   // id câu đã phát (chống lặp bền vững)
+  var SEEN_CAP = 4000;
+  var SESSION_SEEN = {};             // id đã phát trong phiên (trang) hiện tại
+  function loadSeen() {
+    try {
+      var a = JSON.parse(localStorage.getItem(SEEN_KEY) || '[]');
+      return Array.isArray(a) ? a : [];
+    } catch (e) { return []; }
+  }
+  function saveSeen(arr) {
+    try { localStorage.setItem(SEEN_KEY, JSON.stringify(arr.slice(-SEEN_CAP))); } catch (e) { /* bỏ qua */ }
+  }
 
   /* ---------------- RNG có seed (mulberry32) ---------------- */
   function rng(seed) {
@@ -75,10 +103,17 @@
   function hasKanji(s) { return /[\u4e00-\u9fff]/.test(s); }
 
   /* ---------------- Gọi /free/* ---------------- */
-  function fetchJSON(url) {
+  function fetchJSON(url, attempt) {
+    // Thử lại tối đa 3 lần (chờ 700ms rồi 1600ms): Worker có lúc trả lỗi
+    // thoáng qua khi dồn nhiều request tải bài.
     return fetch(url).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
+    }).catch(function (e) {
+      var n = attempt || 0;
+      if (n >= 2) throw e;
+      return new Promise(function (res) { setTimeout(res, n === 0 ? 700 : 1600); })
+        .then(function () { return fetchJSON(url, n + 1); });
     });
   }
   function freeList(level, section) {
@@ -254,6 +289,69 @@
     }
   }
 
+  /* ---------------- Tổng hợp: mcq[] sẵn đáp án + bảng từ chặt chẽ ----------------
+   * Bài tonghop có trường mcq[] dạng {q, o[], c, a} GIỐNG hệt quiz ngữ
+   * pháp (đã kiểm chứng trên dữ liệu thật: N1 9 câu, N2 14 câu, tất cả
+   * đều có o/c hợp lệ). Câu có chỗ trống （　）/＿＿ đi qua cùng đường
+   * fills như np; câu không chỗ trống (đọc/gạch chân) dựng thẳng thành
+   * Question trắc nghiệm. Nghĩa lấy từ thẻ <i>…</i> đầu trường a.
+   * CHỈ dùng cho topic mix (đúng bản chất "tổng hợp"). */
+  function tonghopMeaning(a) {
+    var m = /<i>([\s\S]*?)<\/i>/.exec(String(a || ''));
+    return m ? clean(stripTags(stripFuri(m[1]))) : '';
+  }
+  function parseTonghopMcq(mcq, lessonId, fills, directs, targets) {
+    (mcq || []).forEach(function (it) {
+      if (!it || !Array.isArray(it.o) || typeof it.c !== 'number') return;
+      var prompt = clean(stripTags(stripFuri(String(it.q || '')))).replace(/^Câu\s*\d+\s*[.:]?\s*/, '');
+      if (!prompt || prompt.length > 220) return;
+      var opts = uniq(it.o.map(function (o) { return clean(stripTags(stripFuri(o))); }))
+        .filter(function (x) { return x; });
+      var correct = clean(stripTags(stripFuri(it.o[it.c] || '')));
+      if (!correct || opts.length < 3 || opts.indexOf(correct) < 0) return;
+      var meaning = tonghopMeaning(it.a);
+      targets.push(correct);
+      // Chỗ trống: ＿＿ hoặc （　）— lưu ý clean() đã gấp khoảng trắng
+      // toàn chiều U+3000 trong （　） thành space thường nên phải test
+      // bằng \s, nếu test chuỗi cứng '（　）' sẽ không bao giờ khớp.
+      if (/＿＿|（\s）/.test(prompt)) {
+        var distract = opts.filter(function (x) { return x !== correct; });
+        fills.push({
+          prompt: prompt, answerText: correct, distractors: distract,
+          meaning: meaning, lesson: lessonId,
+          type: (isParticle(correct) && distract.every(isParticle)) ? 'part' : 'fill'
+        });
+      } else {
+        // Câu đọc từ gạch chân: đáp án là cách đọc (toàn kana) -> 'kanji';
+        // đáp án chứa kanji (chọn chữ/từ đúng) -> 'vocab'.
+        var kanaOnly = function (s) { return /^[ぁ-ゖァ-ヺー・]+$/.test(s); };
+        directs.push({
+          prompt: prompt, options: opts, correct: correct,
+          meaning: meaning, lesson: lessonId,
+          type: kanaOnly(correct) ? 'kanji' : 'vocab'
+        });
+      }
+    });
+  }
+  // Bảng từ tonghop: [Từ, Cách đọc, Nghĩa, Câu ví dụ] với từ viết thường
+  // (không {furigana}). Điều kiện CHẶT để không nuốt nhầm bảng đáp án:
+  // từ không bắt đầu bằng số thứ tự "1.", có kanji, ≤12 ký tự; cách đọc
+  // THUẦN kana; nghĩa ≥2 ký tự. (Đã đối chiếu tay 2 bài thật: trúng đúng
+  // 5/5 từ thật mỗi bài, loại hết các hàng đáp án/giải thích.)
+  function parseTonghopVocabTable(html, lessonId, entries) {
+    tableRows(html).forEach(function (cells) {
+      if (cells.length < 4) return;
+      var word = clean(stripTags(stripFuri(cells[0])));
+      var reading = clean(stripTags(stripFuri(cells[1])));
+      var meaning = cleanMeaning(stripTags(String(cells[2]).split(/<div class="ix">/)[0]));
+      if (!word || word.length > 12 || !hasKanji(word)) return;
+      if (/^\d/.test(word) || word.indexOf('{') >= 0) return;
+      if (!/^[ぁ-ゖァ-ヺー]+$/.test(reading)) return;
+      if (!meaning || meaning.length < 2) return;
+      entries.push({ word: word, reading: reading, meaning: meaning, lesson: lessonId, ex: null });
+    });
+  }
+
   /* ---------------- Sắp xếp câu: cắt câu ngắn thành 3–5 mảnh ---------------- */
   function segmentSentence(s) {
     var t = String(s || '').replace(/[。．]$/, '');
@@ -287,14 +385,25 @@
     var p = freeList(levelLow, section).then(function (list) {
       var free = (list.lessons || []).filter(function (x) { return x.free; });
       if (!free.length) throw new Error('EMPTY');
-      var r = rng(hashStr(key));
-      var chosen = shuffle(free, r).slice(0, MAX_LESSONS_PER_SECTION);
-      return fetchLessons(levelLow, section, chosen.map(function (x) { return x.id; }));
+      // XOAY BÀI theo phiên: xoay danh sách free bắt đầu từ cursor đã
+      // lưu rồi tải HẾT (không cắt cửa sổ nữa). Vì đã tải hết, cursor
+      // chủ yếu đổi THỨ TỰ ưu tiên (bài ở đầu được khử trùng trước,
+      // bài lỗi mạng ở các phiên khác nhau cũng khác nhau); bước nhảy
+      // cursor = một nửa vòng để phiên sau bắt đầu ở vùng bài khác.
+      var ck = 'hn_game_q_cursor_' + levelLow + '_' + section;
+      var cursor = 0;
+      try { cursor = parseInt(localStorage.getItem(ck) || '0', 10) || 0; } catch (e) { /* bỏ qua */ }
+      var start = ((cursor % free.length) + free.length) % free.length;
+      var ordered = free.slice(start).concat(free.slice(0, start));
+      var stride = free.length > 1 ? Math.max(1, Math.floor(free.length / 2)) : 0;
+      try { localStorage.setItem(ck, String((start + stride) % free.length)); } catch (e) { /* bỏ qua */ }
+      return fetchLessons(levelLow, section, ordered.map(function (x) { return x.id; }));
     }).then(function (lessons) {
       if (!lessons.length) throw new Error('EMPTY');
       var pool = {
         vocab: [], kanji: [], kanjiSingle: [],
-        fills: [], examples: [], gramTargets: []
+        fills: [], examples: [], gramTargets: [],
+        tonghopVocab: [], tonghopFills: [], tonghopDirects: []
       };
       lessons.forEach(function (lesson) {
         var secs = lesson.sections || [];
@@ -307,10 +416,14 @@
         } else if (section === 'np') {
           parseQuizGrammar(lesson.quiz, lesson.id, pool.fills, pool.gramTargets);
           secs.forEach(function (s) { parseGrammarExamples(s.html || '', lesson.id, pool.fills, pool.examples, pool.gramTargets); });
+        } else if (section === 'tonghop') {
+          parseTonghopMcq(lesson.mcq, lesson.id, pool.tonghopFills, pool.tonghopDirects, pool.gramTargets);
+          parseQuizGrammar(lesson.quiz, lesson.id, pool.tonghopFills, pool.gramTargets);
+          secs.forEach(function (s) { parseTonghopVocabTable(s.html || '', lesson.id, pool.tonghopVocab); });
         }
       });
       // Khử trùng entries theo word+reading
-      ['vocab', 'kanji', 'kanjiSingle'].forEach(function (k) {
+      ['vocab', 'kanji', 'kanjiSingle', 'tonghopVocab'].forEach(function (k) {
         var seen = {};
         pool[k] = pool[k].filter(function (e) {
           var kk = e.word + '|' + (e.reading || '');
@@ -402,6 +515,59 @@
     return { type: 'order', prompt: 'Sắp xếp các mảnh thành câu đúng', promptSub: ex.vi ? '“' + ex.vi + '”' : undefined, tokens: toks, answerText: seg.answerText, meaning: ex.vi || undefined };
   }
 
+  function qTonghopDirect(d, r) {
+    var wrongs = shuffle(d.options.filter(function (x) { return x !== d.correct; }), r).slice(0, 3);
+    if (wrongs.length < 2) return null;
+    var c = makeChoices(d.correct, wrongs, r);
+    return { type: d.type, prompt: d.prompt, promptSub: 'Chọn đáp án đúng', choices: c.choices, answer: c.answer, answerText: d.correct, meaning: d.meaning || undefined };
+  }
+
+  /* Gom "máy sinh câu" theo TỪNG section (bucket) để mix chia đều.
+   * Mỗi gen ghi rõ section + lesson gốc phục vụ id ổn định và để KHÔNG
+   * bao giờ lấy câu ngoài section của topic. */
+  function collectGens(P, topic, r) {
+    var buckets = { kj: [], tv: [], np: [], tonghop: [] };
+    function push(bucket, section, lesson, make) { buckets[bucket].push({ section: section, lesson: lesson, make: make }); }
+    if ((topic === 'kanji' || topic === 'mix') && P.kj) {
+      P.kj.kanji.forEach(function (e) {
+        push('kj', 'kj', e.lesson, function () { return qKanjiReading(e, P.kj.kanji, r); });
+        push('kj', 'kj', e.lesson, function () { return qKanjiMeaning(e, P.kj.kanji, r); });
+      });
+      P.kj.kanjiSingle.forEach(function (e) {
+        push('kj', 'kj', e.lesson, function () { return qKanjiMeaning(e, P.kj.kanjiSingle.concat(P.kj.kanji), r); });
+        push('kj', 'kj', e.lesson, function () { return qKanjiReading(e, P.kj.kanjiSingle, r); });
+      });
+    }
+    if ((topic === 'vocab' || topic === 'mix') && P.tv) {
+      P.tv.vocab.forEach(function (e) {
+        push('tv', 'tv', e.lesson, function () { return qVocabMeaning(e, P.tv.vocab, r); });
+        push('tv', 'tv', e.lesson, function () { return qVocabReading(e, P.tv.vocab, r); });
+        push('tv', 'tv', e.lesson, function () { return qVocabReverse(e, P.tv.vocab, r); });
+        push('tv', 'tv', e.lesson, function () { return qVocabFill(e, P.tv.vocab, r); });
+      });
+    }
+    if ((topic === 'grammar' || topic === 'mix') && P.np) {
+      P.np.fills.forEach(function (f) { push('np', 'np', f.lesson, function () { return qFill(f, P.np, r); }); });
+      var orderSrc = P.np.examples.slice();
+      if (P.tv) P.tv.vocab.forEach(function (e) { if (e.ex && e.ex.jp) orderSrc.push({ jp: e.ex.jp, vi: e.ex.vi, lesson: e.lesson, __sec: 'tv' }); });
+      orderSrc.forEach(function (ex) { push('np', ex.__sec || 'np', ex.lesson, function () { return qOrder(ex, r); }); });
+    }
+    if (topic === 'mix' && P.tonghop) {
+      P.tonghop.tonghopVocab.forEach(function (e) {
+        push('tonghop', 'tonghop', e.lesson, function () { return qVocabMeaning(e, P.tonghop.tonghopVocab, r); });
+        push('tonghop', 'tonghop', e.lesson, function () { return qVocabReading(e, P.tonghop.tonghopVocab, r); });
+        push('tonghop', 'tonghop', e.lesson, function () { return qVocabReverse(e, P.tonghop.tonghopVocab, r); });
+      });
+      P.tonghop.tonghopFills.forEach(function (f) { push('tonghop', 'tonghop', f.lesson, function () { return qFill(f, P.tonghop, r); }); });
+      P.tonghop.tonghopDirects.forEach(function (d) { push('tonghop', 'tonghop', d.lesson, function () { return qTonghopDirect(d, r); }); });
+    }
+    return buckets;
+  }
+  // id ổn định của một câu: hash(level|section|lesson|prompt|answerText)
+  function makeQid(levelLow, section, lesson, q) {
+    return 'q' + hashStr(levelLow + '|' + section + '|' + (lesson || '') + '|' + (q.prompt || '') + '|' + q.answerText).toString(36);
+  }
+
   /* ---------------- getQuestions ---------------- */
   var TOPIC_SECTIONS = { kanji: ['kj'], vocab: ['tv'], grammar: ['np'], mix: ['kj', 'tv', 'np'] };
 
@@ -415,7 +581,7 @@
     if (!/^n[1-5]$/.test(levelLow)) {
       return Promise.reject(new Error('Trình độ chưa đúng. Chọn N5–N1 nhé!'));
     }
-    var sections = TOPIC_SECTIONS[topic];
+    var sections = topic === 'mix' ? TOPIC_SECTIONS.mix.concat(['tonghop']) : TOPIC_SECTIONS[topic];
     return Promise.all(sections.map(function (s) {
       return buildPool(levelLow, s).then(function (p) { return { section: s, pool: p }; })
         .catch(function (e) { return { section: s, pool: null, error: e }; });
@@ -425,67 +591,80 @@
       var P = {};
       okPools.forEach(function (x) { P[x.section] = x.pool; });
 
-      // Danh sách "máy sinh câu" theo topic
-      var gens = [];
-      if (topic === 'kanji' || topic === 'mix') {
-        if (P.kj) {
-          P.kj.kanji.forEach(function (e) {
-            gens.push({ make: function () { return qKanjiReading(e, P.kj.kanji, r); } });
-            gens.push({ make: function () { return qKanjiMeaning(e, P.kj.kanji, r); } });
-          });
-          P.kj.kanjiSingle.forEach(function (e) {
-            gens.push({ make: function () { return qKanjiMeaning(e, P.kj.kanjiSingle.concat(P.kj.kanji), r); } });
-            gens.push({ make: function () { return qKanjiReading(e, P.kj.kanjiSingle, r); } });
-          });
-        }
-      }
-      if (topic === 'vocab' || topic === 'mix') {
-        if (P.tv) {
-          P.tv.vocab.forEach(function (e) {
-            gens.push({ make: function () { return qVocabMeaning(e, P.tv.vocab, r); } });
-            gens.push({ make: function () { return qVocabReading(e, P.tv.vocab, r); } });
-            gens.push({ make: function () { return qVocabReverse(e, P.tv.vocab, r); } });
-            gens.push({ make: function () { return qVocabFill(e, P.tv.vocab, r); } });
-          });
-        }
-      }
-      if (topic === 'grammar' || topic === 'mix') {
-        if (P.np) {
-          P.np.fills.forEach(function (f) { gens.push({ make: function () { return qFill(f, P.np, r); } }); });
-          var orderSrc = P.np.examples.slice();
-          if (P.tv) P.tv.vocab.forEach(function (e) { if (e.ex && e.ex.jp) orderSrc.push({ jp: e.ex.jp, vi: e.ex.vi, lesson: e.lesson }); });
-          orderSrc.forEach(function (ex) { gens.push({ make: function () { return qOrder(ex, r); } }); });
-        }
-      }
-      if (!gens.length) throw new Error('Bài học chưa đủ dữ kiện để tạo câu hỏi cho phần này. Thử chủ đề khác nhé!');
+      // Gom gens theo bucket section; mix sẽ lấy VÒNG TRÒN đều các
+      // bucket thay vì dồn vào bucket nhiều gen nhất.
+      var buckets = collectGens(P, topic, r);
+      var bucketNames = Object.keys(buckets).filter(function (k) { return buckets[k].length; });
+      var totalGens = bucketNames.reduce(function (n, k) { return n + buckets[k].length; }, 0);
+      if (!totalGens) throw new Error('Bài học chưa đủ dữ kiện để tạo câu hỏi cho phần này. Thử chủ đề khác nhé!');
 
-      var out = [], seen = {}, orderSeen = {};
+      // CHỐNG LẶP (nhánh Q): ưu tiên tuyệt đối câu CHƯA từng phát —
+      // theo sổ bền hn_game_seen_q VÀ tập trong phiên SESSION_SEEN.
+      // Câu đã thấy (hoặc câu 'order' vượt trần ~1/3) bị hoãn vào
+      // fallback; chỉ khi chưa đủ count mới lấy lại, ƯU TIÊN câu bị
+      // hoãn vì trần order (vẫn là câu mới) rồi đến câu đã thấy CŨ
+      // NHẤT (theo thứ tự trong sổ bền).
+      var seenArr = loadSeen();
+      var seenIdx = {};
+      seenArr.forEach(function (id, i) { seenIdx[id] = i; });
+      function isSeen(id) { return (id in seenIdx) || !!SESSION_SEEN[id]; }
+
+      var queues = bucketNames.map(function (name) {
+        return { gens: shuffle(buckets[name], r), i: 0 };
+      });
+      var out = [], fallback = [], usedKey = {}, orderSeen = {};
       var orderCap = Math.max(1, Math.round(count / 3)); // tối đa ~1/3 câu sắp xếp mỗi màn
       var orderUsed = 0;
-      var shuffledGens = shuffle(gens, r);
-      var attempts = 0, gi = 0;
-      while (out.length < count && attempts < gens.length * 3 + 60) {
-        attempts++;
-        var g = shuffledGens[gi++ % shuffledGens.length];
-        var q = null;
-        try { q = g.make(); } catch (e) { q = null; }
-        if (!q) continue;
-        if (q.type === 'order') {
-          if (orderUsed >= orderCap || orderSeen[q.answerText]) continue;
-          orderSeen[q.answerText] = 1; orderUsed++;
+      var remaining = totalGens;
+      while (out.length < count && remaining > 0) {
+        var progressed = false;
+        for (var qi = 0; qi < queues.length && out.length < count; qi++) {
+          var qu = queues[qi];
+          if (qu.i >= qu.gens.length) continue;
+          progressed = true;
+          var g = qu.gens[qu.i++]; remaining--;
+          var q = null;
+          try { q = g.make(); } catch (e) { q = null; }
+          if (!q) continue;
+          q.id = makeQid(levelLow, g.section, g.lesson, q);
+          var key = q.type + '|' + q.prompt + '|' + q.answerText;
+          if (usedKey[key] || usedKey['id:' + q.id]) continue;
+          if (q.type === 'order') {
+            if (orderSeen[q.answerText]) continue;
+            orderSeen[q.answerText] = 1;
+            if (orderUsed >= orderCap) { usedKey[key] = 1; usedKey['id:' + q.id] = 1; fallback.push({ q: q, fresh: !isSeen(q.id) }); continue; }
+          }
+          usedKey[key] = 1; usedKey['id:' + q.id] = 1;
+          if (isSeen(q.id)) { fallback.push({ q: q, fresh: false }); continue; }
+          out.push(q);
+          if (q.type === 'order') orderUsed++;
         }
-        var key = q.type + '|' + q.prompt + '|' + q.answerText;
-        if (seen[key]) continue;
-        seen[key] = 1;
-        out.push(q);
+        if (!progressed) break;
+      }
+      if (out.length < count && fallback.length) {
+        fallback.sort(function (a, b) {
+          if (a.fresh !== b.fresh) return a.fresh ? -1 : 1; // câu mới (hoãn vì trần order) trước
+          var ia = a.q.id in seenIdx ? seenIdx[a.q.id] : 1e9; // rồi câu đã thấy cũ nhất
+          var ib = b.q.id in seenIdx ? seenIdx[b.q.id] : 1e9;
+          return ia - ib;
+        });
+        for (var fi = 0; fi < fallback.length && out.length < count; fi++) out.push(fallback[fi].q);
       }
       if (out.length < Math.min(count, 3)) {
         throw new Error('Chưa gom đủ câu hỏi cho màn này. Thử lại hoặc đổi chủ đề nhé!');
       }
-      return out.slice(0, count);
+      var finalQs = out.slice(0, count);
+      // Ghi sổ: id đã phát vào SESSION_SEEN + sổ bền (id được phát lại
+      // thì dời xuống cuối sổ = "mới thấy lại", FIFO cắt ở SEEN_CAP).
+      var finalIds = {};
+      finalQs.forEach(function (q) { SESSION_SEEN[q.id] = 1; finalIds[q.id] = 1; });
+      var kept = seenArr.filter(function (id) { return !finalIds[id]; });
+      finalQs.forEach(function (q) { kept.push(q.id); });
+      saveSeen(kept);
+      return finalQs;
     });
   }
 
-  ROOT.GQ = { getQuestions: getQuestions, _version: 'n2-1' };
+  ROOT.GQ = { getQuestions: getQuestions, _version: 'n2-3-q' };
   if (typeof module !== 'undefined' && module.exports) module.exports = ROOT.GQ;
 })();

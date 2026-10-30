@@ -1,0 +1,179 @@
+/* finisher.css — Hiệu ứng KẾT LIỄU (Nhánh K, đợt game 3)
+   Mọi selector đều tiền tố .gf- để không đụng style chế độ khác.
+   Overlay z-index 9990: trên mọi lớp game (fx-canvas 60, .big 70, topbar 40,
+   settings panel 200) nhưng vẫn là lớp hiệu ứng ngắn, chạm để bỏ qua. */
+
+.gf-overlay{
+  position:fixed;inset:0;z-index:9990;
+  pointer-events:auto;touch-action:none;
+  background:radial-gradient(ellipse at 50% 42%, rgba(255,190,40,0) 42%, rgba(20,8,0,.28) 100%);
+  overflow:hidden;
+}
+.gf-overlay.gf-charge{
+  animation:gfCharge .45s ease-out;
+}
+@keyframes gfCharge{
+  0%{background:radial-gradient(ellipse at 50% 42%, rgba(255,216,78,.34) 0%, rgba(20,8,0,.05) 55%, rgba(20,8,0,.28) 100%)}
+  100%{background:radial-gradient(ellipse at 50% 42%, rgba(255,190,40,0) 42%, rgba(20,8,0,.28) 100%)}
+}
+
+/* Clone nhân vật tại vị trí fromEl */
+.gf-clone{
+  position:fixed;z-index:9992;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;
+  filter:drop-shadow(0 0 14px rgba(255,216,78,.85));
+}
+.gf-clone-emoji{font-size:60px;line-height:1;width:68px;height:68px}
+.gf-clone-inner{margin:0 !important}
+
+/* Mục tiêu mặc định khi không có toEl */
+.gf-target{
+  position:fixed;z-index:9991;pointer-events:none;
+  transform:translate(-50%,-50%);
+  font-size:76px;line-height:1;
+  filter:drop-shadow(0 0 18px rgba(255,80,60,.8));
+  animation:gfTargetIn .3s ease-out;
+}
+@keyframes gfTargetIn{from{transform:translate(-50%,-50%) scale(.4);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+
+/* Vệt chém fallback (khi không có GGEAR/GFX) */
+.gf-slash{
+  position:fixed;z-index:9993;pointer-events:none;
+  height:7px;margin-top:-3.5px;border-radius:4px;transform-origin:0 50%;
+  background:linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 30%, #ffd84e 62%, #ff7a45 100%);
+  box-shadow:0 0 16px 4px rgba(255,180,60,.75);
+  animation:gfSlash .38s ease-out forwards;
+}
+@keyframes gfSlash{
+  0%{opacity:0;clip-path:inset(0 100% 0 0)}
+  25%{opacity:1}
+  60%{clip-path:inset(0 0 0 0);opacity:1}
+  100%{opacity:0;clip-path:inset(0 0 0 0)}
+}
+
+/* Số sát thương lớn bay lên */
+.gf-dmg{
+  position:fixed;z-index:9994;pointer-events:none;
+  transform:translate(-50%,-50%);
+  font-family:inherit;font-weight:900;letter-spacing:.5px;
+  font-size:clamp(42px,11vw,78px);line-height:1;white-space:nowrap;
+  color:#ffd84e;
+  text-shadow:0 2px 0 #c2410c, 0 0 6px #ff7a45, 0 0 22px rgba(255,110,40,.9), 0 4px 14px rgba(0,0,0,.45);
+  animation:gfDmgFly 1.25s cubic-bezier(.2,.7,.3,1) forwards;
+}
+@keyframes gfDmgFly{
+  0%{opacity:0;transform:translate(-50%,-30%) scale(.5)}
+  15%{opacity:1;transform:translate(-50%,-60%) scale(1.18)}
+  32%{transform:translate(-50%,-74%) scale(1)}
+  72%{opacity:1;transform:translate(-50%,-128%) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-185%) scale(.98)}
+}
+
+/* Chữ K.O.! bùng nổ */
+.gf-ko{
+  position:fixed;left:50%;top:36%;z-index:9995;pointer-events:none;
+  transform:translate(-50%,-50%) rotate(-5deg);
+  font-family:inherit;font-weight:900;line-height:1;white-space:nowrap;
+  font-size:clamp(58px,17vw,124px);letter-spacing:2px;
+  color:#ffdf3d;
+  -webkit-text-stroke:3px #b91c1c;
+  text-shadow:0 3px 0 #b91c1c, 0 0 10px rgba(255,90,30,.95), 0 0 34px rgba(255,150,30,.85), 0 8px 22px rgba(0,0,0,.5);
+  animation:gfKoIn .42s cubic-bezier(.2,1.7,.35,1) both, gfKoShake .28s ease-in-out .44s 2;
+}
+@keyframes gfKoIn{
+  0%{opacity:0;transform:translate(-50%,-50%) rotate(-5deg) scale(3.1)}
+  60%{opacity:1;transform:translate(-50%,-50%) rotate(-5deg) scale(.94)}
+  100%{opacity:1;transform:translate(-50%,-50%) rotate(-5deg) scale(1)}
+}
+@keyframes gfKoShake{
+  0%,100%{margin-left:0}
+  25%{margin-left:-7px}
+  75%{margin-left:7px}
+}
+/* Reduced-motion: chữ tĩnh, không rung/scale */
+.gf-ko.gf-still{animation:none}
+
+/* ===== BOSS CUỐI VÁN (Nhánh B, đợt 4) — mọi selector tiền tố .gfb- ===== */
+.gfb-overlay{background:radial-gradient(ellipse at 50% 42%, rgba(255,120,40,.10) 30%, rgba(24,4,0,.42) 100%)}
+.gfb-overlay.gfb-slow{background:radial-gradient(ellipse at 50% 42%, rgba(90,140,255,.16) 30%, rgba(2,8,28,.5) 100%)}
+
+/* Thẻ boss hiện trong overlay */
+/* Định vị bằng left/top đo thực trong finisher.js (KHÔNG dùng transform
+   translate(-50%,-50%)): GGEAR.flashTarget animate transform khi trúng
+   đòn sẽ đè mất transform căn giữa, làm thẻ lệch nửa bề ngang. */
+.gfb-boss{
+  position:fixed;z-index:9991;pointer-events:none;
+  text-align:center;min-width:150px;padding:10px 14px 12px;border-radius:18px;
+  background:rgba(18,10,24,.72);
+  border:2px solid var(--gfb-c,#ff7a45);
+  box-shadow:0 0 26px var(--gfb-c,#ff7a45), 0 10px 28px rgba(0,0,0,.5);
+  animation:gfbBossIn .3s ease-out;
+}
+@keyframes gfbBossIn{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.gfb-boss-emoji{font-size:76px;line-height:1;filter:drop-shadow(0 0 16px var(--gfb-c,#ff7a45))}
+.gfb-boss-name{font-weight:900;font-size:19px;color:#fff;margin-top:4px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.gfb-boss-tag{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--gfb-c,#ff7a45);margin-top:2px}
+.gfb-hp{height:9px;border-radius:5px;background:rgba(255,255,255,.22);margin-top:8px;overflow:hidden}
+.gfb-hp-fill{height:100%;width:100%;border-radius:5px;background:linear-gradient(90deg,#ff4d4d,#ffd84e);transition:width .18s ease-out}
+
+/* Số sát thương từng đòn trong chuỗi dồn dập */
+.gfb-dmg{
+  position:fixed;z-index:9994;pointer-events:none;
+  transform:translate(-50%,-50%);
+  font-weight:900;line-height:1;white-space:nowrap;color:#ffe066;
+  text-shadow:0 2px 0 #c2410c, 0 0 14px rgba(255,110,40,.95), 0 4px 12px rgba(0,0,0,.5);
+  animation:gfbDmgFly .95s cubic-bezier(.2,.7,.3,1) forwards;
+}
+@keyframes gfbDmgFly{
+  0%{opacity:0;transform:translate(-50%,-30%) scale(.5)}
+  16%{opacity:1;transform:translate(-50%,-62%) scale(1.2)}
+  70%{opacity:1;transform:translate(-50%,-120%) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-170%) scale(.96)}
+}
+
+/* Tổng sát thương cộng dồn */
+.gfb-total{
+  position:fixed;left:50%;bottom:9%;z-index:9994;pointer-events:none;
+  transform:translateX(-50%);
+  font-weight:900;font-size:clamp(17px,5vw,26px);letter-spacing:1px;white-space:nowrap;
+  color:#fff;background:rgba(18,10,24,.72);border:2px solid #ffd84e;border-radius:999px;
+  padding:7px 18px;box-shadow:0 0 18px rgba(255,180,60,.55);
+}
+.gfb-total-final{color:#ffd84e;transform:translateX(-50%) scale(1.18)}
+
+/* Chớp sáng theo đòn / lúc nổ */
+.gfb-flash{position:fixed;inset:0;z-index:9993;pointer-events:none;background:#fff7d6;opacity:0}
+
+/* Nhãn slow-motion */
+.gfb-slowtag{
+  position:fixed;left:50%;top:12%;z-index:9994;pointer-events:none;
+  transform:translateX(-50%);
+  font-weight:900;font-size:15px;letter-spacing:3px;color:#a5d8ff;
+  text-shadow:0 0 14px rgba(80,150,255,.9);
+  animation:gfbSlowTag .42s ease-out;
+}
+@keyframes gfbSlowTag{from{opacity:0;letter-spacing:8px}to{opacity:1;letter-spacing:3px}}
+
+/* Vòng nổ ở đòn cuối */
+.gfb-ring{
+  position:fixed;z-index:9992;pointer-events:none;width:36px;height:36px;
+  transform:translate(-50%,-50%);border-radius:50%;
+  border:5px solid #ffd84e;box-shadow:0 0 30px rgba(255,150,30,.9), inset 0 0 22px rgba(255,110,40,.8);
+  animation:gfbRing .55s ease-out forwards;
+}
+@keyframes gfbRing{
+  0%{opacity:1;transform:translate(-50%,-50%) scale(.5)}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(7)}
+}
+.gfb-ko{top:38%}
+
+@media (prefers-reduced-motion: reduce){
+  .gf-overlay, .gf-overlay.gf-charge, .gf-target, .gf-slash, .gf-dmg, .gf-ko{
+    animation:none !important;
+  }
+  .gf-dmg{opacity:1}
+  .gf-slash{display:none}
+  .gfb-boss, .gfb-dmg, .gfb-ring, .gfb-slowtag{animation:none !important}
+  .gfb-dmg{opacity:1}
+  .gfb-ring{display:none}
+}

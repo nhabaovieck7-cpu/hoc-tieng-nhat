@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14111f">
 <title>Hành trình đến Edo · Game học tiếng Nhật</title>
-<link rel="stylesheet" href="game.css">
+<link rel="stylesheet" href="game.css"><link rel="stylesheet" href="charanim.css">
+<link rel="stylesheet" href="fullbody.css">
+<link rel="stylesheet" href="fullbody-anim.css"><link rel="stylesheet" href="nameplate.css">
+<style>
+/* Đợt 5 Nhánh C: hình TOÀN THÂN + biển tên ở sảnh (chip 40px bảng xếp hạng giữ nguyên) */
+.hub-fig{flex:0 0 auto;text-align:center}
+.hub-platebox{min-height:24px;margin-bottom:2px;text-align:center}
+.hub-fig .fb-wrap{line-height:0}
+</style>
+<!-- BATCH5-M: kiểu khối cấp người chơi -->
+<link rel="stylesheet" href="level.css">
 </head>
 <body>
 <header id="gtop"></header>
@@ -25,7 +35,7 @@
 <!-- ===== SẢNH GAME (HUB) ===== -->
 <main id="hub" class="wrap hid">
   <div class="card hub-hero">
-    <div class="hav" id="hubAvatar" aria-hidden="true"></div>
+    <div class="hub-fig"><div class="hub-platebox" id="hubPlate"></div><div class="hav" id="hubAvatar" aria-hidden="true"></div></div>
     <div class="grow">
       <h1 id="hubGreet">Chào bạn!</h1>
       <p class="mut" id="hubSub">Shogun Bóng Tối đã đánh cắp mọi chữ kanji. Đi 5 vùng, hạ 5 trùm, lấy lại chữ cho dân làng Edo!</p>
@@ -33,6 +43,8 @@
         <a class="btn" href="chien-dich.html">🗺️ Bắt đầu hành trình</a>
         <a class="btn alt" href="nhan-vat.html">🎭 Nhân vật</a>
       </div>
+      <!-- BATCH5-M: chip cấp + thanh tiến độ mảnh ở hero (GLEVEL) -->
+      <div id="glvMountHub" style="margin-top:10px"></div>
     </div>
   </div>
 
@@ -77,14 +89,66 @@
 
 <!-- Thứ tự script theo CONTRACT: config → game → fx → trend/sfx/music (Nhánh 4) → game-api (Nhánh 5) → script trang -->
 <script src="../config.js"></script>
-<script src="game.js"></script>
+<script src="game.js"></script><script src="charanim.js"></script>
+<script src="settings.js"></script>
 <script src="fx.js"></script>
+<script src="voice.js"></script>
 <script src="trend.js"></script>
 <script src="sfx.js"></script>
 <script src="music.js"></script>
 <script src="game-api.js"></script>
+<script src="fullbody.js"></script>
+<script src="nameplate.js"></script>
+<!-- BATCH5-M: gear (tiến độ/cấp) + cấp người chơi cho hub -->
+<script src="gear.js"></script>
+<script src="level.js"></script>
 <script>
 GAME_topbar('🗾 Hành trình đến Edo');
+
+/* ---------- Đồng bộ TÊN hiển thị (Nhánh N) ----------
+   Nguồn tên DUY NHẤT: GAME_USER/GAME_USER_DATA của game.js (hồ sơ web
+   mới nhất). game.js phát sự kiện window 'hn-game-user' (detail = user)
+   mỗi khi resolve xong — nghe sự kiện đó (hoặc gọi GAME_USER_REFRESH()
+   khi quay lại tab) là vẽ lại MỌI nhãn tên trên trang: chip tài khoản
+   góc trên phải (#gtopName/#gtopSub do GAME_topbar của game.js vẽ),
+   lời chào hero, tiêu đề thành tích [data-call], thoại intro và dòng
+   "mình" trên bảng xếp hạng. Không đọc cache tên nào khác ở trang này. */
+function paintTopbarUser(u) {
+  var nameEl = document.getElementById('gtopName');
+  var subEl = document.getElementById('gtopSub');
+  if (!nameEl || !subEl || !u) return;
+  if (u.loggedIn) {
+    nameEl.textContent = u.name || 'Học viên';
+    subEl.textContent = (u.level ? u.level + ' · ' : '') + 'Chào ' + u.call + '!';
+  } else {
+    nameEl.textContent = 'Khách';
+    subEl.innerHTML = '<a href="../dang-nhap.html">Đăng nhập</a> để lưu điểm';
+  }
+}
+function onGameUserFresh(u) {
+  u = u || window.GAME_USER_DATA;
+  if (!u) return;
+  paintTopbarUser(u);
+  paintHubUser(u, GAME_AVATAR.load());
+  paintLeaderboard();
+  var intro = document.getElementById('intro');
+  if (intro && !intro.classList.contains('hid')) paintStory(u);
+}
+window.addEventListener('hn-game-user', function (ev) {
+  onGameUserFresh((ev && ev.detail) || window.GAME_USER_DATA);
+});
+var lastUserRefresh = 0;
+function refreshGameUser() {
+  var now = Date.now();
+  if (now - lastUserRefresh < 30000) return; // tránh gọi dồn khi tab chớp tắt
+  lastUserRefresh = now;
+  if (typeof window.GAME_USER_REFRESH === 'function') {
+    try { window.GAME_USER_REFRESH(); } catch (e) { /* game.js lo phần còn lại */ }
+  }
+}
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'visible') refreshGameUser();
+});
 
 /* ---------- Dữ liệu thẻ chế độ ---------- */
 var MODES = [
@@ -219,8 +283,32 @@ document.getElementById('mascotFace').addEventListener('click', function () {
 });
 
 /* ---------- Bản đồ 5 vùng ---------- */
+/* Đợt 5 Nhánh C: biển tên mình trên đầu hình ở sảnh — tên MỚI NHẤT qua
+   GNAME.ownName() (khách -> '' -> không biển); GNAME tự sửa text biển
+   theo sự kiện 'hn-game-user', paintHubUser gọi lại hàm này mỗi lần vẽ. */
+function paintHubPlate() {
+  var p = document.getElementById('hubPlate');
+  if (!p) return;
+  try { p.innerHTML = window.GNAME ? GNAME.plate(GNAME.ownName(), { own: true }) : ''; }
+  catch (e) { p.innerHTML = ''; }
+}
 function paintHubUser(u, avatar) {
-  document.getElementById('hubAvatar').innerHTML = GAME_AVATAR.svg(avatar, 92);
+  // Nhánh F: chân dung sảnh dùng hàm mặt dùng chung của game.js —
+  // đã chọn "Dùng ảnh hồ sơ" thì hiện <img> hồ sơ, ngược lại SVG mascot.
+  // Hàm này chạy lại mỗi sự kiện 'hn-game-user' (onGameUserFresh) nên
+  // hồ sơ đổi ảnh là sảnh hiện ảnh mới, không cần sửa thêm ở đây.
+  // Đợt 5 Nhánh C: ưu tiên HÌNH TOÀN THÂN GBODY (chiều cao 120) + biển tên
+  // .gnp-own phía trên; GBODY vắng/lỗi -> rơi về mặt bán thân F như cũ.
+  var hubHost = document.getElementById('hubAvatar');
+  var bodyDone = false;
+  try {
+    if (window.GBODY && typeof GBODY.paint === 'function') {
+      GBODY.paint(hubHost, avatar, { height: 120 });
+      bodyDone = true;
+    }
+  } catch (e) { bodyDone = false; }
+  if (!bodyDone) GAME_AVATAR.paintFace(hubHost, avatar, 92);
+  paintHubPlate();
   var pet = GAME_PETS[avatar.pet] || GAME_PETS.meo;
   document.getElementById('mascotFace').textContent = pet.e;
   var greet = document.getElementById('hubGreet');
@@ -255,7 +343,7 @@ function paintMap(u, avatar) {
       a.setAttribute('aria-label', z.name + ', trùm ' + z.boss);
       a.setAttribute('title', z.gname);
       a.innerHTML =
-        (i === 0 ? '<span class="me" aria-hidden="true">' + GAME_AVATAR.svg(avatar, 40) + '</span>' : '') +
+        (i === 0 ? '<span class="me" aria-hidden="true">' + GAME_AVATAR.faceHTML(avatar, 40) + '</span>' : '') +
         '<div class="bb">' + (open ? z.be : '🔒') + '</div>' +
         '<b>' + esc(z.id) + ' · ' + esc(z.name) + '</b>' +
         '<small>' + esc(z.ge) + ' Trùm ' + esc(z.boss) + '</small>';
@@ -302,14 +390,44 @@ function paintLeaderboard() {
           : '<p class="lb-empty">Chưa có ai ghi điểm ở mục này. Là người đầu tiên luôn nào! 🚀</p>';
         return;
       }
+      // Dòng "mình": nhận diện theo r.me của máy chủ; cấu trúc trả về
+      // không có cờ me trên từng dòng thì khớp theo res.me.rank với
+      // r.rank (thiếu r.rank thì lấy thứ tự dòng trong top đã trả).
+      // Dòng của mình HIỂN THỊ bằng tên GAME_USER hiện tại (hồ sơ mới
+      // nhất) thay cho tên máy chủ đã lưu lúc ghi điểm; tên NGƯỜI KHÁC
+      // giữ nguyên của máy chủ — client không có quyền/không nên sửa.
+      var meRank = (res && res.me && typeof res.me.rank === 'number') ? res.me.rank : null;
       box.innerHTML = '<ul class="lb">' + rows.slice(0, 10).map(function (r, i) {
+        var rank = (typeof r.rank === 'number') ? r.rank : (i + 1);
+        var isMe = !!r.me || (meRank != null && rank === meRank);
         var nm = r.name || r.display || 'Học viên';
+        if (isMe && GAME_USER_DATA.loggedIn && GAME_USER_DATA.name) nm = GAME_USER_DATA.name;
         var medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i + 1);
-        return '<li class="' + (r.me ? 'me' : '') + '"><span class="rk">' + medal + '</span>' +
-          '<span class="ava" aria-hidden="true">' + esc(String(nm).trim().charAt(0).toUpperCase() || '?') + '</span>' +
-          '<span class="grow">' + esc(nm) + (r.me ? ' (' + esc(GAME_USER_DATA.call) + ')' : '') + '</span>' +
+        // F: ảnh hồ sơ từng dòng — dòng mình ưu tiên GAME_USER_DATA mới nhất thay cho avatar_file máy chủ (có thể cũ).
+        var myAvUrl = (isMe && GAME_USER_DATA.avatarUrl) ? GAME_USER_DATA.avatarUrl : null;
+        var avFile = (isMe && GAME_USER_DATA.avatarFile) ? GAME_USER_DATA.avatarFile : (r.avatar_file || null);
+        var avaInner = esc(String(nm).trim().charAt(0).toUpperCase() || '?') +
+          (myAvUrl
+            ? '<img src="' + esc(myAvUrl) + '" alt="" loading="lazy" onerror="this.remove()">'
+            : (avFile ? '<img data-avf="' + esc(avFile) + '" alt="" loading="lazy" onerror="this.remove()">' : ''));
+        return '<li class="' + (isMe ? 'me' : '') + '"><span class="rk">' + medal + '</span>' +
+          '<span class="ava" aria-hidden="true">' + avaInner + '</span>' +
+          '<span class="grow">' + esc(nm) + (isMe ? ' (' + esc(GAME_USER_DATA.call) + ')' : '') + '</span>' +
           '<b>' + esc(String(r.score != null ? r.score : (r.points != null ? r.points : ''))) + '</b></li>';
       }).join('') + '</ul>';
+      // F: resolve file-token theo LÔ một lần cho cả bảng (chỉ các dòng chưa có src trực tiếp).
+      try {
+        if (window.GAME_AVATAR && typeof GAME_AVATAR.resolveFileUrls === 'function') {
+          var avIds = rows.slice(0, 10).map(function (r) { return r.avatar_file; }).filter(Boolean);
+          if (avIds.length) {
+            GAME_AVATAR.resolveFileUrls(avIds).then(function (map) {
+              box.querySelectorAll('img[data-avf]').forEach(function (img) {
+                var u = map[img.getAttribute('data-avf')]; if (u) img.src = u;
+              });
+            }).catch(function () {});
+          }
+        }
+      } catch (e) {}
     })
     .catch(function () {
       box.innerHTML = '<p class="lb-empty">Chưa tải được bảng xếp hạng (có thể do mạng). Thử lại sau ít phút nhé.</p>';
@@ -365,6 +483,22 @@ GAME_USER.then(function (u) {
 document.addEventListener('hn-game-avatar', function () {
   GAME_USER.then(function (u) { paintHubUser(u, GAME_AVATAR.load()); });
 });
+</script>
+<!-- BATCH5-M: gắn chip cấp ở hero + thông báo LÊN CẤP khi vào sảnh -->
+<script>
+(function () {
+  function goM() {
+    var m = document.getElementById('glvMountHub');
+    if (m && window.GLEVEL) GLEVEL.mountInto(m, { mini: true });
+    if (window.GLEVEL) GLEVEL.checkNotify();
+  }
+  if (window.GGEAR && GGEAR.ready) { GGEAR.ready().then(goM).catch(goM); }
+  else { goM(); }
+  window.addEventListener('hn-game-gear', function () {
+    var m = document.getElementById('glvMountHub');
+    if (m && window.GLEVEL) GLEVEL.mountInto(m, { mini: true });
+  });
+})();
 </script>
 </body>
 </html>

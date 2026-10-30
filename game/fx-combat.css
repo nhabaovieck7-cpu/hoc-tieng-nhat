@@ -1,0 +1,39 @@
+/* =====================================================================
+   fx-combat.css — Kiểu cho module hiệu ứng đối kháng GCOMBAT
+   (fx-combat.js, Nhánh E) dùng ở Phòng Đối kháng.
+   Tiền tố gc- để không đụng game.css / phong-nhom.css / modes.css.
+   Ngôn ngữ hiệu ứng khớp Đấu trùm (bk- trong modes.css): thanh máu
+   xiên, vệt chém vàng/đỏ, số sát thương vàng bay lên, máu chạy bằng
+   transition width .45s. Chỉ transform/opacity/filter chuyển động.
+   ===================================================================== */
+.gc-wrap{position:relative;display:flex;gap:10px;align-items:flex-start;
+  padding:10px 12px 6px;border-radius:16px;overflow:hidden;
+  background:linear-gradient(transparent 60%,rgba(0,0,0,.35)),radial-gradient(circle at 50% 110%,rgba(124,92,255,.5) 0,transparent 70%),#1a0b2e}
+.gc-side{flex:1;min-width:0}
+.gc-side.gc-r{text-align:right}
+.gc-head{display:flex;gap:8px;align-items:baseline;margin-bottom:5px}
+.gc-side.gc-r .gc-head{flex-direction:row-reverse}
+.gc-name{font-weight:800;font-size:14px;color:#f4f1ea;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gc-hpnum{font-weight:900;font-size:13px;color:#ffd84e;font-variant-numeric:tabular-nums}
+.gc-bar{height:16px;border-radius:9px;background:#2a2440;overflow:hidden;border:2px solid #000;transform:skewX(-12deg)}
+.gc-bar i{display:block;height:100%;width:100%;transition:width .45s ease;
+  background:linear-gradient(90deg,#2fbf71,#a3e635)}
+.gc-bar.gc-r i{margin-left:auto;background:linear-gradient(90deg,#f97316,#ef4b5b)}
+.gc-bar.gc-low i{background:linear-gradient(90deg,#ef4b5b,#f97316)}
+.gc-vs{font-size:20px;font-weight:900;font-style:italic;color:#d9a84e;padding-top:16px}
+.gc-fig{font-size:52px;line-height:1.15;text-align:center;position:relative;z-index:2;will-change:transform}
+.gc-side.gc-r .gc-fig{transform:scaleX(-1)}
+.gc-fx{position:absolute;inset:0;pointer-events:none;z-index:6}
+.gc-dmg{position:absolute;font-weight:900;font-size:28px;color:#ffd84e;-webkit-text-stroke:2px #000;
+  animation:gc-up 1s forwards;pointer-events:none}
+@keyframes gc-up{to{transform:translateY(-56px);opacity:0}}
+.gc-slash{position:absolute;width:104px;height:13px;border-radius:99px;pointer-events:none;opacity:0;
+  background:linear-gradient(90deg,transparent,#fff 30%,#ffd84e 55%,#ff7a45 80%,transparent);
+  box-shadow:0 0 18px rgba(255,216,78,.8);transform:rotate(-38deg)}
+.gc-slash.foe{background:linear-gradient(90deg,transparent,#fff 30%,#ff8fa3 55%,#ef4b5b 80%,transparent);
+  box-shadow:0 0 18px rgba(239,75,91,.8)}
+@media (prefers-reduced-motion: reduce){
+  .gc-slash{display:none}
+  .gc-bar i{transition:none}
+  .gc-dmg{animation:none}
+}

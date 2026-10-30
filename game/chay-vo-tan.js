@@ -1,8 +1,19 @@
-/* chay-vo-tan.js — Nhánh 3: Chạy vô tận (theo bản mẫu mau-game-b).
-   Chạy liên tục: chọn làn có đáp án đúng trước khi cổng chạm tới. Nhịp nhanh dần
-   theo số cổng đã qua. Sai 3 lần (hết tim) hoặc để cổng qua khi sai = mất tim;
-   hết tim thì game over. Điểm = đáp án đúng + quãng đường. Câu hỏi qua GQ
-   (topic vocab, hook an toàn), nhạc GMUSIC 'normal', điểm nộp GAME_API. */
+/* chay-vo-tan.js — Chạy vô tận (Đợt 3, Việc H: CHẠY DỌC + CHẠM ĐÁP ÁN).
+   Đường chạy dọc: nhân vật ở dưới chạy hướng lên, 3 cổng đáp án NGANG hàng
+   ở phía trước tiến gần dần (nhịp travelFor giữ nguyên: nhanh dần 3%/cổng,
+   sàn 2.2s, khiên chậm x1.6). Tương tác chính = CHẠM TRỰC TIẾP vào cổng:
+   nhân vật phóng tới cổng (WAAPI ~300ms) rồi tung skill phá vỡ cổng
+   (ưu tiên GGEAR.attackFx nếu nhánh gear đã nạp, fallback GFX.skill/burst
+   + mảnh DOM vỡ), sau hiệu ứng vỡ ~450ms mới chốt kết quả.
+   Luật GIỮ NGUYÊN: sai (chạm sai HOẶC cổng chạm tới mà chưa trả lời) mất
+   1 tim, 3 tim hết lượt, khiên chắn 1 lần sai, điểm = 100 x hệ số khó x
+   (1 + combo x 0.1) + điểm quãng đường, nộp điểm GAME_API mode
+   'chay-vo-tan'. Câu hỏi qua GQ (topic vocab).
+   Đợt 4 Nhánh F: runner dùng nhân vật GAME_AVATAR (fallback emoji quay
+   lên) và QUAY MẶT/NGHIÊNG THÂN về phía cổng được chạm trong lúc phóng —
+   xem khối "HƯỚNG MẶT VỀ ĐÁP ÁN" ở dưới (hệ quy chiếu: rotate 0deg =
+   hướng lên, âm = trái, dương = phải, clamp ±55deg). Luật/điểm/hình học
+   đợt 3 không đổi. */
 (function () {
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -14,9 +25,29 @@
   var LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
 
   var user = { loggedIn: false, name: 'Khách', call: 'bạn', gender: null, level: null };
+  function syncUser(u) { if (u) for (var k in u) user[k] = u[k]; return user; }
   function loadUser() {
     if (typeof window.GAME_USER === 'undefined') return Promise.resolve(user);
-    return Promise.resolve(window.GAME_USER).then(function (u) { if (u) for (var k in u) user[k] = u[k]; return user; }).catch(function () { return user; });
+    return Promise.resolve(window.GAME_USER).then(syncUser).catch(function () { return user; });
+  }
+  /* Tên có thể resolve SAU khi menu đã vẽ (game.js phát sự kiện
+     'hn-game-user', detail = GAME_USER_DATA, mỗi khi resolve/refresh xong):
+     đồng bộ lại bản local rồi vẽ lại phần đang hiện có dùng tên — menu khi
+     đang ở menu, tiêu đề màn kết quả khi đang hiện. Đăng ký đúng 1 lần,
+     vẽ lại idempotent, không đổi logic chơi/điểm. */
+  var userEvtBound = false;
+  function bindUserEvent() {
+    if (userEvtBound) return; userEvtBound = true;
+    window.addEventListener('hn-game-user', function (ev) {
+      syncUser((ev && ev.detail) || window.GAME_USER_DATA);
+      refreshNameUI();
+    });
+  }
+  function refreshNameUI() {
+    paintRunnerPlate();
+    var menu = $('#menu'), res = $('#result');
+    if (menu && !menu.classList.contains('mx-hid') && menu.innerHTML) buildMenu();
+    else if (res && !res.classList.contains('mx-hid') && res.innerHTML) renderResult();
   }
   function callName() {
     if (!user.loggedIn) return 'bạn';
@@ -47,7 +78,7 @@
   function correctIdx(q) { if (typeof q.answer === 'number') return q.answer; if (q.choices) { var i = q.choices.indexOf(q.answerText); if (i >= 0) return i; } return -1; }
 
   var st = { lv: 'N5', diff: 'tb' };
-  var playing = false, lane = 1, score = 0, combo = 0, bestCombo = 0, lives = 3, dist = 0, gates = 0,
+  var playing = false, score = 0, combo = 0, bestCombo = 0, lives = 3, dist = 0, gates = 0,
       pool = [], qi = 0, cur = null, curOpts = [], gateT0 = 0, travelMs = 6000, raf = null,
       shield = 1, shieldOn = false, slow = 1, slowOn = false, startT = 0, lastFrame = 0, resolving = false;
 
@@ -56,7 +87,7 @@
     m.innerHTML =
       '<div class="mx-card"><div class="mx-big-emoji">🏃</div>' +
       '<h1>Chạy vô tận</h1>' +
-      '<p class="mx-mut">Chào ' + esc(callName()) + '! Chạy vào làn mang nghĩa đúng để qua cổng. Càng chạy nhịp càng nhanh. Sai 3 lần là hết lượt. Trợ giúp mỗi lượt: 🛡️ khiên chắn 1 lần sai · 🐢 chạy chậm 1 câu.</p>' +
+      '<p class="mx-mut">Chào ' + esc(callName()) + '! Chạy dọc lên phía trước: CHẠM thẳng vào cổng mang nghĩa đúng — nhân vật sẽ phóng tới tung skill phá cổng. Đừng để cổng chạm tới nơi mà chưa trả lời. Càng chạy nhịp càng nhanh. Sai 3 lần là hết lượt. Trợ giúp mỗi lượt: 🛡️ khiên chắn 1 lần sai · 🐢 chạy chậm 1 câu.</p>' +
       '<h2>Trình độ</h2><div class="mx-seg lv" data-seg="lv">' + LEVELS.map(function (l) { return '<button type="button" data-v="' + l + '" class="' + (l === st.lv ? 'on' : '') + '">' + l + '</button>'; }).join('') + '</div>' +
       '<h2>Độ khó</h2><div class="mx-seg" data-seg="diff">' + Object.keys(DIFF).map(function (k) { return '<button type="button" data-v="' + k + '" class="' + (k === st.diff ? 'on' : '') + '">' + DIFF[k].n + '<small>' + DIFF[k].s + 's/cổng' + (DIFF[k].x > 1 ? ' · x2 điểm' : '') + '</small></button>'; }).join('') + '</div>' +
       '<div style="height:14px"></div><button class="mx-btn" id="btnGo" type="button">Xuất phát ▶</button></div>';
@@ -96,13 +127,14 @@
   }
 
   function start() {
-    lane = 1; score = 0; combo = 0; bestCombo = 0; lives = 3; dist = 0; gates = 0; qi = 0; pool = [];
+    score = 0; combo = 0; bestCombo = 0; lives = 3; dist = 0; gates = 0; qi = 0; pool = [];
     shield = 1; shieldOn = false; slow = 1; slowOn = false; resolving = false;
     startT = Date.now(); lastFrame = 0;
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid'); $('#play').classList.remove('mx-hid');
     $('#btnShield').disabled = false; $('#btnShield').textContent = '🛡️ Khiên (1)';
     $('#btnSlow').disabled = false;
-    updateHud(); posRunner();
+    resetRunner();
+    updateHud();
     music('normal'); trend('vao');
     loadMore(14).then(function () {
       playing = true;
@@ -129,8 +161,15 @@
       var sub = $('#qSub');
       if (q.promptSub) { sub.textContent = q.promptSub; sub.style.display = ''; } else sub.style.display = 'none';
       var gb = $('#gateBox'); gb.innerHTML = '';
-      curOpts.forEach(function (o) {
-        var d = document.createElement('div'); d.className = 'rn-gate'; d.textContent = o; gb.appendChild(d);
+      curOpts.forEach(function (o, i) {
+        /* Cổng = NÚT BẤM THẬT: chạm/click trực tiếp để trả lời ngay khi
+           cổng đang tiến gần, không phải chờ cổng chạm đáy. */
+        var d = document.createElement('button');
+        d.type = 'button'; d.className = 'rnv-gate'; d.textContent = o;
+        d.setAttribute('data-idx', i);
+        d.setAttribute('aria-label', 'Đáp án: ' + o);
+        d.addEventListener('click', function () { answerGate(i, d); });
+        gb.appendChild(d);
       });
       travelMs = travelFor(gates);
       gateT0 = performance.now();
@@ -149,7 +188,10 @@
       var H = $('#stage').clientHeight;
       var y = (t - gateT0) / travelMs;
       var gb = $('#gateBox');
-      gb.style.top = (118 + y * (H - 210)) + 'px';
+      /* Hàng cổng xuất phát ngay dưới hộp câu hỏi (top 132px, tránh HUD/
+         câu hỏi) và tiến về phía nhân vật ở đáy (chân cổng cách đáy
+         116px), phóng to dần như cũ. */
+      gb.style.top = (132 + y * (H - 248)) + 'px';
       gb.style.transform = 'scale(' + (0.62 + y * 0.38) + ')';
       if (y >= 1) resolveGate();
     }
@@ -157,11 +199,211 @@
     $('#scoreBox').textContent = '⭐ ' + Math.floor(score);
     raf = requestAnimationFrame(loop);
   }
+  function reducedMotion() {
+    try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; }
+  }
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  /* ===== Đợt 4 Nhánh F: NHÂN VẬT GAME + HƯỚNG MẶT VỀ ĐÁP ÁN =====
+     Thị giác: ưu tiên nhân vật SVG dùng chung GAME_AVATAR.paintFace
+     (đúng mẫu dau-kanji.js / phong-nhom.js: bọc try/catch, cfg từ
+     GAME_AVATAR.load(), mặt hồ sơ 'hoso' tự resolve). Chỉ khi không gọi
+     được mới giữ emoji 🏃 dự phòng trong HTML — CSS .rnv-face-emoji quay
+     glyph 90deg để hướng chạy trỏ lên (xem modes.css).
+     HỆ QUY CHIẾU GÓC (để harness đo): góc áp trên .rnv-face là CSS
+     rotate() theo độ, 0deg = mặt/hướng nhân vật hướng LÊN phía cổng
+     trước mặt (vector (0,-1), phương vị -90deg). Góc âm = nghiêng về
+     phía TRÁI màn hình, dương = nghiêng về phía PHẢI. */
+  var FACE_MAX_DEG = 55; /* clamp: không bao giờ lật ngược nhân vật */
+  /* Đợt 5 Nhánh C: runner ưu tiên HÌNH NGƯỜI TOÀN THÂN GBODY (nhánh A) đặt
+     TRONG .rnv-face — góc quay đợt 4 áp trên .rnv-face nên cả thân quay theo
+     như mặt. GBODY vắng/lỗi -> rơi về mặt bán thân GAME_AVATAR đợt 4, rồi
+     emoji 🏃 (đúng mẫu fallback đợt 4). Biển tên .gnp-own nằm trong #runner
+     NGOÀI .rnv-face (xem paintRunnerPlate) nên không quay theo thân. */
+  var RUNNER_BODY_H = 84;
+  function setupRunnerFace() {
+    var face = $('#runnerFace'); if (!face) return;
+    try {
+      if (window.GBODY && typeof GBODY.paint === 'function' && window.GAME_AVATAR) {
+        GBODY.paint(face, GAME_AVATAR.load(), { height: RUNNER_BODY_H });
+        face.classList.add('rnv-face-avatar', 'rnv-face-body'); face.classList.remove('rnv-face-emoji');
+        return;
+      }
+      if (window.GAME_AVATAR && typeof GAME_AVATAR.paintFace === 'function') {
+        GAME_AVATAR.paintFace(face, GAME_AVATAR.load(), 56);
+        face.classList.add('rnv-face-avatar'); face.classList.remove('rnv-face-body', 'rnv-face-emoji');
+        return;
+      }
+      if (window.GAME_AVATAR && typeof GAME_AVATAR.faceHTML === 'function') {
+        face.innerHTML = GAME_AVATAR.faceHTML(GAME_AVATAR.load(), 56);
+        face.classList.add('rnv-face-avatar'); face.classList.remove('rnv-face-body', 'rnv-face-emoji');
+        return;
+      }
+    } catch (e) { /* rơi xuống fallback emoji bên dưới */ }
+    if (!face.querySelector('.rnv-emoji')) face.innerHTML = '<span class="rnv-emoji">🏃</span>';
+    face.classList.add('rnv-face-emoji'); face.classList.remove('rnv-face-body');
+  }
+  /* Biển tên mình trên đầu runner: GNAME.plate(own) — tên MỚI NHẤT từ
+     GAME_USER_DATA (GNAME tự nghe 'hn-game-user' để sửa text biển đang có;
+     hàm này dựng lại biển khi chưa có, vd khách vừa đăng nhập). Khách ->
+     ownName() = '' -> không biển. */
+  function paintRunnerPlate() {
+    var box = $('#runnerPlate'); if (!box) return;
+    try {
+      box.innerHTML = (window.GNAME && typeof GNAME.plate === 'function')
+        ? GNAME.plate(GNAME.ownName(), { own: true }) : '';
+    } catch (e) { box.innerHTML = ''; }
+  }
+  var faceEvtBound = false;
+  function bindFaceEvent() {
+    if (faceEvtBound) return; faceEvtBound = true;
+    /* Người chơi đổi nhân vật/mặt lúc đang ở trang -> vẽ lại mặt runner. */
+    document.addEventListener('hn-game-avatar', function () { setupRunnerFace(); setFace(0, 0); });
+  }
+  /* Góc nghiêng (độ, đã clamp ±55) từ vector runner->cổng (dx, dy theo
+     tọa độ màn hình: x phải+, y xuống+). Hướng lên tuyệt đối có phương
+     vị atan2 = -90deg nên độ lệch = phương vị + 90, chuẩn hóa [-180,180]
+     rồi clamp. Cổng trái -> âm, cổng phải -> dương. */
+  function faceAngleFor(dx, dy) {
+    var dev = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+    while (dev > 180) dev -= 360;
+    while (dev < -180) dev += 360;
+    if (dev > FACE_MAX_DEG) dev = FACE_MAX_DEG;
+    if (dev < -FACE_MAX_DEG) dev = -FACE_MAX_DEG;
+    return dev;
+  }
+  /* Áp góc lên .rnv-face (lớp riêng dưới #runner để không đè animation
+     phóng WAAPI, trong .rnv-runner-in để không đè nhịp bob/ca-run).
+     Ghi dataset.faceDeg để harness đọc số chính xác bên cạnh ma trận
+     transform tính được. */
+  function setFace(dev, ms) {
+    var face = $('#runnerFace'); if (!face) return;
+    var from = (typeof face._dev === 'number') ? face._dev : 0;
+    face._dev = dev;
+    face.setAttribute('data-face-deg', String(Math.round(dev * 10) / 10));
+    try {
+      if (face.animate && !reducedMotion() && ms > 0) {
+        face.animate([
+          { transform: 'rotate(' + from + 'deg)' },
+          { transform: 'rotate(' + dev + 'deg)' }
+        ], { duration: ms, easing: 'ease-out', fill: 'forwards' });
+      } else {
+        face.style.transform = 'rotate(' + dev + 'deg)';
+      }
+    } catch (e) { try { face.style.transform = 'rotate(' + dev + 'deg)'; } catch (e2) {} }
+  }
+  function resetFace() {
+    var face = $('#runnerFace'); if (!face) return;
+    try { if (face.getAnimations) face.getAnimations().forEach(function (a) { a.cancel(); }); } catch (e) {}
+    face.style.transform = 'rotate(0deg)';
+    face._dev = 0;
+    face.setAttribute('data-face-deg', '0');
+  }
+
+  function resetRunner() {
+    var r = $('#runner'); if (!r) return;
+    try { if (r.getAnimations) r.getAnimations().forEach(function (a) { a.cancel(); }); } catch (e) {}
+    r.style.transform = '';
+    resetFace();
+  }
+  /* Mảnh DOM vỡ bay ra từ tâm cổng rồi tự biến mất (dự phòng/đi kèm GFX). */
+  function spawnShards(gateEl) {
+    var stage = $('#stage'); if (!stage || !gateEl) return;
+    var sr = stage.getBoundingClientRect(), gr = gateEl.getBoundingClientRect();
+    var cx = gr.left - sr.left + gr.width / 2, cy = gr.top - sr.top + gr.height / 2;
+    var cols = ['#ffd84e', '#ff7a45', '#22d3ee', '#ffffff', '#7c5cff'];
+    for (var i = 0; i < 8; i++) {
+      var s = document.createElement('span');
+      s.className = 'rnv-shard';
+      s.style.left = cx + 'px'; s.style.top = cy + 'px';
+      s.style.background = cols[i % cols.length];
+      stage.appendChild(s);
+      (function (el, k) {
+        var ang = (Math.PI * 2 * k) / 8 + Math.random() * 0.5;
+        var d = 34 + Math.random() * 30;
+        try {
+          if (el.animate) el.animate([
+            { transform: 'translate(-50%,-50%) rotate(0deg)', opacity: 1 },
+            { transform: 'translate(' + (Math.cos(ang) * d - 5) + 'px,' + (Math.sin(ang) * d - 5) + 'px) rotate(' + (120 + k * 40) + 'deg)', opacity: 0 }
+          ], { duration: 430, easing: 'cubic-bezier(.2,.8,.3,1)', fill: 'forwards' });
+        } catch (e) {}
+        setTimeout(function () { el.remove(); }, 460);
+      })(s, i);
+    }
+  }
+  /* CHẠM ĐÁP ÁN: khoá chạm thêm (resolving), nhân vật phóng tới cổng
+     (~300ms WAAPI) -> tung skill phá vỡ cổng (GGEAR.attackFx nếu có,
+     fallback GFX.skill('beam') / GFX.burst + mảnh DOM) -> sau nhịp vỡ
+     ~450ms mới chốt kết quả như resolveGate cũ. */
+  function answerGate(idx, gateEl) {
+    if (!playing || resolving || !cur) return;
+    resolving = true;
+    $$('#gateBox .rnv-gate').forEach(function (g) { g.disabled = true; });
+    var ci = correctIdx(cur);
+    var right = curOpts[idx] === cur.choices[ci];
+    var runner = $('#runner');
+    var rm = reducedMotion();
+    var dashMs = rm ? 40 : 300, breakMs = rm ? 60 : 450;
+    var dash = Promise.resolve();
+    if (runner && gateEl && runner.animate && !rm) {
+      var rr = runner.getBoundingClientRect(), gr = gateEl.getBoundingClientRect();
+      var dx = (gr.left + gr.width / 2) - (rr.left + rr.width / 2);
+      var dy = (gr.top + gr.height / 2) - (rr.top + rr.height / 2);
+      /* Nhánh F: mặt + thân quay/nghiêng về phía cổng được chạm trong
+         suốt cú phóng, giữ nguyên tới khi cổng vỡ (settleGate ->
+         resetRunner -> resetFace mới trả về hướng lên). */
+      setFace(faceAngleFor(dx, dy), dashMs);
+      try {
+        dash = runner.animate([
+          { transform: 'translate(0px,0px) scale(1)' },
+          { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(1.18)' }
+        ], { duration: dashMs, easing: 'cubic-bezier(.3,1.3,.5,1)', fill: 'forwards' }).finished.catch(function () {});
+      } catch (e) { dash = wait(dashMs); }
+    } else {
+      /* reduced-motion / không có WAAPI: vẫn quay mặt về cổng (áp tĩnh
+         ngay, không chuyển động) để ý nghĩa hướng mặt không mất. */
+      if (runner && gateEl) {
+        try {
+          var rr2 = runner.getBoundingClientRect(), gr2 = gateEl.getBoundingClientRect();
+          setFace(faceAngleFor((gr2.left + gr2.width / 2) - (rr2.left + rr2.width / 2),
+                               (gr2.top + gr2.height / 2) - (rr2.top + rr2.height / 2)), 0);
+        } catch (e) {}
+      }
+      dash = wait(dashMs);
+    }
+    dash.then(function () {
+      if (!playing) return;
+      gateEl.classList.add('rnv-broken');
+      var fxDone;
+      if (window.GGEAR && typeof window.GGEAR.attackFx === 'function') {
+        /* gear.js do nhánh khác sở hữu — chỉ gọi phòng thủ khi tồn tại. */
+        try { fxDone = Promise.resolve(window.GGEAR.attackFx(runner, gateEl)); }
+        catch (e) { fxDone = Promise.reject(e); }
+        fxDone = fxDone.catch(function () {
+          if (window.GFX && typeof GFX.burst === 'function') GFX.burst(gateEl);
+        });
+      } else if (window.GFX && typeof GFX.skill === 'function') {
+        try { fxDone = Promise.resolve(GFX.skill('beam', runner, gateEl)); } catch (e) { fxDone = Promise.resolve(); }
+      } else if (window.GFX && typeof GFX.burst === 'function') {
+        try { GFX.burst(gateEl); } catch (e) {}
+        fxDone = Promise.resolve();
+      } else { fxDone = Promise.resolve(); }
+      spawnShards(gateEl);
+      return Promise.race([fxDone, wait(breakMs + 250)]).then(function () { return wait(rm ? 0 : Math.max(0, breakMs - 200)); });
+    }).then(function () {
+      if (!playing) return;
+      settleGate(right);
+    }).catch(function () { if (playing) settleGate(right); });
+  }
+  /* Cổng chạm đáy mà chưa trả lời -> tính như trả lời sai (luật cũ). */
   function resolveGate() {
     resolving = true;
+    settleGate(false);
+  }
+  function settleGate(right) {
     var ci = correctIdx(cur);
-    var right = curOpts[lane] === cur.choices[ci];
-    $$('#gateBox .rn-gate').forEach(function (g, i) { g.classList.add(curOpts[i] === cur.choices[ci] ? 'ok' : 'bad'); });
+    $$('#gateBox .rnv-gate').forEach(function (g, i) { g.classList.add(curOpts[i] === cur.choices[ci] ? 'ok' : 'bad'); });
+    resetRunner();
     var fl = $('#flash');
     if (right) {
       combo++; bestCombo = Math.max(bestCombo, combo);
@@ -192,12 +434,10 @@
     $('#comboBox').textContent = '🔥 ' + combo;
     $('#scoreBox').textContent = '⭐ ' + Math.floor(score);
   }
-  function posRunner() { $('#runner').style.left = (lane * 33.333) + '%'; }
-  function move(d) { if (!playing) return; lane = Math.max(0, Math.min(2, lane + d)); posRunner(); sfx('click'); }
-
+  /* Việc H: ĐÃ BỎ hẳn cơ chế làn — không còn nút Trái/Phải, vuốt chuyển
+     làn hay phím mũi tên. Trả lời = chạm trực tiếp vào cổng (xem
+     answerGate). bindControls chỉ còn Khiên / Chậm / Dừng. */
   function bindControls() {
-    $('#btnLeft').addEventListener('click', function () { move(-1); });
-    $('#btnRight').addEventListener('click', function () { move(1); });
     $('#btnShield').addEventListener('click', function () {
       if (!shield || shieldOn) return;
       shield = 0; shieldOn = true; this.textContent = '🛡️ Khiên đang bật'; trend('trogiup');
@@ -209,27 +449,24 @@
       gateT0 = performance.now() - (performance.now() - gateT0) / 1.6;
     });
     $('#btnStop').addEventListener('click', function () { if (playing) end(); });
-    document.addEventListener('keydown', function (e) {
-      if (!playing) return;
-      if (e.key === 'ArrowLeft') move(-1);
-      if (e.key === 'ArrowRight') move(1);
-    });
-    var sx = null, stage = $('#stage');
-    stage.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
-    stage.addEventListener('touchend', function (e) {
-      if (sx == null) return;
-      var d = e.changedTouches[0].clientX - sx; sx = null;
-      if (Math.abs(d) > 30) move(d > 0 ? 1 : -1);
-    }, { passive: true });
   }
 
   function end() {
     if (!playing && $('#play').classList.contains('mx-hid')) return;
+    /* Kết liễu (đợt 3): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. */
+    /* Kết liễu BOSS (đợt 4, gắn theo mẫu nhánh B): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. Chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
+    if (lives > 0 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ fromEl: $('#runner'), toEl: null, dmg: Math.floor(score) }); else GFIN.play({ fromEl: $('#runner'), toEl: null, dmg: Math.floor(score) }); } catch (e) {} }
     playing = false; if (raf) cancelAnimationFrame(raf);
     $('#play').classList.add('mx-hid');
     submitScore(score, startT);
     sfx(lives > 0 ? 'click' : 'lose');
     if (lives <= 0) trend('thua');
+    renderResult();
+  }
+  /* Chỉ DỰNG HTML màn kết quả từ state hiện tại (submitScore/sfx/trend nằm ở
+     end(), KHÔNG chạy lại ở đây); gọi lại khi tên người chơi resolve muộn để
+     tiêu đề dùng tên mới nhất. */
+  function renderResult() {
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-result"><div class="mx-big-emoji mx-pop">🏅</div>' +
       '<h1>' + esc(callName()) + ' chạy được ' + Math.floor(dist) + ' m!</h1>' +
@@ -240,5 +477,9 @@
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
   }
 
+  bindUserEvent();
+  setupRunnerFace();
+  paintRunnerPlate();
+  bindFaceEvent();
   loadUser().then(function () { buildMenu(); bindControls(); });
 })();
