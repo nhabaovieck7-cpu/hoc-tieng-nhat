@@ -1,6 +1,30 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"></noscript>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=5881e20b"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"></head><body>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><link rel="stylesheet" href="style.css?v=5881e20b"><title>Admin duyệt tài khoản – Học tiếng Nhật</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Học tiếng Nhật"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"><style>
+.hv-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.hv-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.hv-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r,16px);padding:12px;min-width:0}
+.hv-q{width:100%;box-sizing:border-box;min-height:46px;border:1px solid var(--line);border-radius:12px;padding:0 12px;font:inherit;background:var(--card);color:var(--t);margin-bottom:8px}
+.hv-fl{display:flex;gap:6px;margin-bottom:6px}.hv-fl button{flex:1;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}.hv-fl button.on{background:var(--shu-soft,#faecea);border-color:var(--c);color:var(--c)}
+.hv-row{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:11px 6px;min-height:62px;font:inherit;color:inherit;cursor:pointer}.hv-row:first-child{border-top:0}.hv-row.sel{background:var(--soft);border-radius:12px}
+.hv-av{position:relative;flex:none;width:42px;height:42px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:700;color:var(--c2)}
+.hv-dot{position:absolute;right:-1px;bottom:-1px;width:13px;height:13px;border-radius:50%;border:2px solid var(--card);background:#b9bec5}.hv-dot.on{background:#2e9d5b;box-shadow:0 0 0 3px rgba(46,157,91,.2)}
+.hv-nm{font-weight:700}.hv-sub{font-size:.82rem;color:var(--m)}.hv-min{margin-left:auto;text-align:right;font-weight:700;color:var(--c2);white-space:nowrap}.hv-min small{display:block;font-weight:400;font-size:.72rem;color:var(--m)}
+.hv-back{display:none;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-weight:600;margin-bottom:10px;cursor:pointer}
+.hv-dh{display:flex;align-items:center;gap:12px;margin-bottom:10px}.hv-dh .hv-av{width:54px;height:54px;font-size:1.2rem}
+.hv-now{display:inline-block;font-size:.8rem;padding:3px 10px;border-radius:99px;background:#e5f5ec;color:#1d7a45;font-weight:600}.hv-now.off{background:#eee;color:#555}
+.hv-h{margin:6px 0 8px;font-size:1rem;color:var(--c2);border-left:4px solid var(--c);padding-left:8px}
+.hv-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:6px 0 10px}.hv-seg button{min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-weight:700;cursor:pointer}.hv-seg button.on{background:var(--c);color:#fff;border-color:var(--c)}
+.hv-chart{display:flex;align-items:flex-end;gap:4px;height:170px;padding-top:8px;border-bottom:1px solid var(--line)}.hv-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;min-width:0}.hv-bar i{display:block;width:100%;max-width:34px;background:linear-gradient(var(--c),#e2685d);border-radius:6px 6px 0 0;min-height:1px}.hv-bar em{font-style:normal;font-size:.64rem;color:var(--m);margin-bottom:2px;white-space:nowrap}
+.hv-lab{display:flex;gap:4px;font-size:.64rem;color:var(--m)}.hv-lab span{flex:1;text-align:center;min-width:0;overflow:hidden;white-space:nowrap}
+.hv-sum{font-size:.88rem;color:var(--m);margin:8px 0 12px}
+.hv-tb{width:100%;border-collapse:collapse;font-size:.86rem;table-layout:fixed}.hv-tb th,.hv-tb td{text-align:left;padding:8px 5px;border-top:1px solid var(--line);word-break:break-word}.hv-tb th{color:var(--m);font-weight:600;font-size:.78rem}
+.hv-more{width:100%;min-height:44px;margin-top:8px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-weight:600;cursor:pointer}
+@media(min-width:861px){.hv-grid{grid-template-columns:minmax(0,340px) minmax(0,1fr)}main.wrap.hv-wide{max-width:1100px!important}}
+@media(max-width:860px){.hv-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.hv-back{display:inline-block}.hv.det #hvList{display:none}.hv:not(.det) #hvDet{display:none}.hv-tb th:nth-child(4),.hv-tb td:nth-child(4){display:none}}
+main.wrap{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
+</style>
+</head><body>
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="admin.html">Admin</a></nav></div></div>
 <main class="wrap" style="max-width:720px;padding-bottom:40px">
@@ -32,6 +56,15 @@
     <div class="astat"><span class="astat-n" id="astatOnlineN">—</span><span class="astat-l">🟢 Đang trực tuyến</span></div>
   </div>
   <div id="list"></div>
+
+  <h2 style="margin-top:34px" id="hvTitle">📈 Học viên — thời gian học</h2>
+  <div class="hv">
+    <div class="hv-stats"><div class="astat"><span class="astat-n" id="hvOn">—</span><span class="astat-l">🟢 Đang học ngay lúc này</span></div><div class="astat"><span class="astat-n" id="hvTd">—</span><span class="astat-l">Học hôm nay</span></div><div class="astat"><span class="astat-n" id="hvMin">—</span><span class="astat-l">Tổng phút hôm nay</span></div><div class="astat"><span class="astat-n" id="hvAvg">—</span><span class="astat-l">Phút TB mỗi ngày (7 ngày)</span></div></div>
+    <div class="hv-grid">
+      <section class="hv-card" id="hvList"><input class="hv-q" id="hvQ" type="search" placeholder="Tìm tên…" aria-label="Tìm học viên"><div class="hv-fl" id="hvFl"><button type="button" data-hf="all" class="on">Tất cả</button><button type="button" data-hf="online">Đang học</button><button type="button" data-hf="today">Hôm nay</button></div><div id="hvRows"><p class="empty-note">Đang tải…</p></div></section>
+      <section class="hv-card" id="hvDet"><p class="empty-note">Chọn một học viên để xem chi tiết.</p></section>
+    </div>
+  </div>
 
   <h2 style="margin-top:34px">👥 Kiểm duyệt Cộng đồng</h2>
   <div class="tabs" id="cmPostTabs">
@@ -183,7 +216,7 @@ async function renderDevices(row,uid){
   }
 }
 function showLogin(){panel.hidden=true;loginBox.hidden=false}
-function showPanel(){loginBox.hidden=true;panel.hidden=false;load()}
+function showPanel(){loginBox.hidden=true;panel.hidden=false;load();hvLoad()}
 document.getElementById('alogin').onclick=async()=>{
   aerr.textContent='';
   try{await AUTH.adminLogin(document.getElementById('apw').value.trim());document.getElementById('apw').value='';showPanel()}
@@ -196,6 +229,72 @@ document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
 document.getElementById('astatPending').onclick=()=>{
   const b=document.querySelector('#tabs button[data-t="pending"]');if(b)b.click();
 };
+// ===== Học viên — thời gian học (GET /admin/study/*, chỉ admin; giờ JST) =====
+const HV={f:'all',users:[],sel:null,by:'day',ses:[],more:false};
+const hvEl=id=>document.getElementById(id);
+const hvPad=n=>String(n).padStart(2,'0');
+function hvJ(ms){const d=new Date(ms+9*3600e3);return {dm:hvPad(d.getUTCDate())+'/'+hvPad(d.getUTCMonth()+1),hm:hvPad(d.getUTCHours())+':'+hvPad(d.getUTCMinutes()),day:d.toISOString().slice(0,10)}}
+function hvDur(m){m=Math.round(m||0);return m>=60?Math.floor(m/60)+'g'+(m%60?hvPad(m%60):''):m+'ph'}
+const hvToday=()=>hvJ(Date.now()).day;
+function hvWhen(ms){if(!ms)return '—';const j=hvJ(ms);return (j.day===hvToday()?'':j.dm+' ')+j.hm}
+const HVPG={index:'Trang chủ',lesson:'Bài học','hoc-thu':'Học thử','hoi-ai':'Hỏi AI','luyen-nghe':'Luyện nghe','on-tap':'Ôn tập','thanh-ngu':'Thành ngữ','thi-thu':'Thi thử','tin-tuc':'Tin tức','ung-dung':'Ứng dụng','xep-hang':'Xếp hạng'};
+const hvPage=p=>p?esc(HVPG[p]||p):'';
+const hvIni=n=>esc(((n||'?').trim().split(/\s+/).pop()||'?')[0].toUpperCase());
+function hvErr(e){return e&&e.status===403?'Phiên admin hết hạn hoặc không đủ quyền — vui lòng đăng nhập lại.':'Không tải được dữ liệu ('+esc(e&&e.message||'lỗi mạng')+').'}
+async function hvApi(p){return AUTH.api('/admin/study/'+p,{admin:true})}
+async function hvLoad(){
+  document.querySelector('main.wrap').classList.add('hv-wide');
+  hvOverview();hvUsers();
+}
+async function hvOverview(){
+  try{const o=await hvApi('overview');hvEl('hvOn').textContent=o.online;hvEl('hvTd').textContent=o.today_users;hvEl('hvMin').textContent=o.today_min;hvEl('hvAvg').textContent=o.avg7_min}
+  catch(e){['hvOn','hvTd','hvMin','hvAvg'].forEach(i=>hvEl(i).textContent='—')}
+}
+async function hvUsers(){
+  try{HV.users=await hvApi('users?filter='+HV.f);hvRows()}
+  catch(e){HV.users=[];hvEl('hvRows').innerHTML='<p class="empty-note">'+hvErr(e)+'</p>'}
+}
+function hvRows(){
+  const q=hvEl('hvQ').value.trim().toLowerCase();
+  const us=HV.users.filter(u=>!q||(u.name||'').toLowerCase().includes(q));
+  hvEl('hvRows').innerHTML=us.length?us.map(u=>{
+    const sub=u.online?'Đang học'+(u.page?' · '+hvPage(u.page):'')+(u.last_login?' · từ '+hvJ(u.last_login).hm:''):(u.last_login?'Vào '+hvWhen(u.last_login)+(u.last_logout?' · thoát '+hvWhen(u.last_logout):''):'Chưa có phiên học');
+    return `<button type="button" class="hv-row${u.id===HV.sel?' sel':''}" data-hu="${esc(u.id)}"><span class="hv-av">${hvIni(u.name)}<span class="hv-dot${u.online?' on':''}"></span></span><span style="min-width:0"><span class="hv-nm">${esc(u.name||'—')}</span><br><span class="hv-sub">${sub}</span></span><span class="hv-min">${u.today_min||0} ph<small>hôm nay</small></span></button>`}).join(''):'<p class="empty-note">Chưa có học viên nào ở mục này.</p>';
+}
+async function hvOpen(id){
+  HV.sel=id;HV.ses=[];HV.more=false;document.querySelector('.hv').classList.add('det');hvRows();
+  hvEl('hvDet').innerHTML='<button type="button" class="hv-back" data-hback="1">← Danh sách</button><p class="empty-note">Đang tải…</p>';
+  await Promise.all([hvSessions(),hvAgg()]);hvDet();
+  if(innerWidth<=860)hvEl('hvTitle').scrollIntoView({block:'start'});
+}
+async function hvSessions(before){
+  try{const r=await hvApi('sessions?user='+encodeURIComponent(HV.sel)+'&limit=20'+(before?'&before='+before:''));HV.ses=HV.ses.concat(r);HV.more=r.length===20;HV.sesErr=null}catch(e){HV.sesErr=e}
+}
+async function hvAgg(){try{HV.agg=await hvApi('agg?user='+encodeURIComponent(HV.sel)+'&by='+HV.by);HV.aggErr=null}catch(e){HV.agg=[];HV.aggErr=e}}
+function hvLabel(b){if(HV.by==='day')return innerWidth<500?String(+b.label.slice(3)):b.label;if(HV.by==='week')return b.label;if(HV.by==='month')return 'Th'+(+b.label.slice(5));return b.label}
+function hvDet(){
+  const u=HV.users.find(x=>x.id===HV.sel)||{name:'—'};const s=HV.ses[0];
+  const st=u.online?`<span class="hv-now">● Đang học${u.page?' · '+hvPage(u.page):''}${s&&s.device?' · '+esc(s.device):''}</span>`:`<span class="hv-now off">Ngoại tuyến${u.last_logout?' · thoát lúc '+hvJ(u.last_logout).dm+' '+hvJ(u.last_logout).hm:''}</span>`;
+  const a=HV.agg||[],mx=Math.max(1,...a.map(x=>x.min)),tot=a.reduce((t,x)=>t+x.min,0);
+  const chart=HV.aggErr?'<p class="empty-note">'+hvErr(HV.aggErr)+'</p>':`<div class="hv-chart">${a.map(x=>`<div class="hv-bar" title="${esc(x.from)}${x.to!==x.from?' → '+esc(x.to):''}: ${hvDur(x.min)}"><em>${x.min?hvDur(x.min):''}</em><i style="height:${x.min/mx*85}%"></i></div>`).join('')}</div><div class="hv-lab">${a.map(x=>'<span>'+esc(hvLabel(x))+'</span>').join('')}</div><p class="hv-sum">Tổng ${hvDur(tot)} · trung bình ${hvDur(a.length?tot/a.length:0)} mỗi ${({day:'ngày',week:'tuần',month:'tháng',year:'năm'})[HV.by]}</p>`;
+  const now=Date.now();
+  const rows=HV.ses.map(x=>{const open=x.ended_at==null;return `<tr><td>${hvJ(x.started_at).dm} ${hvJ(x.started_at).hm}</td><td>${open?'<span class="hv-now">đang học</span>':hvJ(x.ended_at).hm}</td><td>${hvDur((x.active_sec||0)/60)}</td><td>${esc(x.device||'—')}${x.page?' · '+hvPage(x.page):''}</td></tr>`}).join('');
+  hvEl('hvDet').innerHTML=`<button type="button" class="hv-back" data-hback="1">← Danh sách</button>
+  <div class="hv-dh"><span class="hv-av">${hvIni(u.name)}<span class="hv-dot${u.online?' on':''}"></span></span><div style="min-width:0"><div class="hv-nm" style="font-size:1.15rem">${esc(u.name||'—')}</div>${st}</div></div>
+  <h3 class="hv-h">Thời gian học</h3><div class="hv-seg">${[['day','Ngày'],['week','Tuần'],['month','Tháng'],['year','Năm']].map(([k,t])=>`<button type="button" data-hby="${k}" class="${HV.by===k?'on':''}">${t}</button>`).join('')}</div>${chart}
+  <h3 class="hv-h">Đăng nhập / thoát gần đây</h3>${HV.sesErr?'<p class="empty-note">'+hvErr(HV.sesErr)+'</p>':rows?`<table class="hv-tb"><thead><tr><th>Vào</th><th>Thoát</th><th>Thời lượng</th><th>Thiết bị · trang</th></tr></thead><tbody>${rows}</tbody></table>${HV.more?'<button type="button" class="hv-more" data-hmore="1">Xem thêm</button>':''}`:'<p class="empty-note">Chưa có phiên học nào.</p>'}
+  <p class="meta" style="margin-top:8px">Giờ hiển thị theo giờ Nhật (JST). Chỉ ghi khi học viên đã đăng nhập và trang đang mở.</p>`;
+}
+document.addEventListener('click',async e=>{
+  const r=e.target.closest('[data-hu]');if(r){hvOpen(r.dataset.hu);return}
+  const f=e.target.closest('[data-hf]');if(f){HV.f=f.dataset.hf;document.querySelectorAll('[data-hf]').forEach(b=>b.classList.toggle('on',b===f));hvUsers();return}
+  const g=e.target.closest('[data-hby]');if(g){HV.by=g.dataset.hby;await hvAgg();hvDet();return}
+  const m=e.target.closest('[data-hmore]');if(m){m.disabled=true;const last=HV.ses[HV.ses.length-1];await hvSessions(last&&last.started_at);hvDet();return}
+  if(e.target.closest('[data-hback]')){document.querySelector('.hv').classList.remove('det');hvEl('hvTitle').scrollIntoView({block:'start'})}
+});
+hvEl('hvQ').addEventListener('input',hvRows);
+// Tự làm mới 30s/lần khi trang đang mở và đã đăng nhập admin
+setInterval(()=>{if(!panel.hidden&&document.visibilityState==='visible'&&AUTH.sessionAdmin()){hvOverview();hvUsers().then(()=>{if(HV.sel&&document.querySelector('.hv.det,.hv-grid')&&innerWidth>860)hvDet()})}},30e3);
 if(AUTH.sessionAdmin())showPanel();
 </script>
 <script>
