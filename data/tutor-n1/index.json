@@ -17,6 +17,18 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 18 — Tối nay ăn gì? — Chuyện bếp núc, giao hàng nhầm và kế hoạch cuối tuần",
       "file": "2026-10-30-kaiwa.json"
+    },
+    {
+      "date": "2026-10-31",
+      "kind": "sat-set",
+      "title": "Bộ dài ôn tập tuần ngày 31/10/2026（問題10〜13）",
+      "file": "2026-10-31-sat-set.json"
+    },
+    {
+      "date": "2026-10-31",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 19 — Buổi sáng ở day service — Đón khách, tắm, ăn trưa và cuộc gọi của người nhà",
+      "file": "2026-10-31-kaiwa.json"
     }
   ]
 }
