@@ -52,6 +52,10 @@ html[data-theme="dark"] .login-stage .authcard .primary{color:#12233f}
 .login-stage .oauth button:hover{border-color:var(--m)}
 .login-stage .oauth button:disabled{opacity:.75;cursor:not-allowed}
 .login-stage .oauth #btnGoogle{grid-column:1/-1;min-height:54px;font-size:16px}
+.login-stage .oauth #btnFacebook,.login-stage .oauth #btnLine{grid-column:1/-1;min-height:54px;font-size:16px;color:#fff;border:0}
+.login-stage .oauth #btnFacebook{background:#1877F2}.login-stage .oauth #btnFacebook svg{fill:#fff}
+.login-stage .oauth #btnLine{background:#06C755}.login-stage .oauth #btnLine svg{fill:#fff}
+.login-stage .oauth button[hidden]{display:none}
 .login-stage .oauth .soon{position:absolute;top:-9px;right:8px;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px}
 .login-stage .authcard .honest{margin:20px 0 0;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--m);text-align:center;line-height:1.55}
 .login-stage .authcard .honest a{color:var(--c2)}
@@ -167,8 +171,8 @@ html[data-theme="dark"] #devList .userrow .acts .lock{background:#472c27;color:#
   <div class="authdiv">hoặc</div>
   <div class="oauth">
     <button type="button" data-p="google" id="btnGoogle"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.3h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.3-2.1 3.7-5.2 3.7-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.2 0-5.9-2.2-6.9-5.1L1.3 17.2C3.3 21.2 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.1 14.3c-.24-.7-.38-1.5-.38-2.3s.14-1.6.38-2.3L1.3 6.8C.5 8.4 0 10.1 0 12s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.7c1.8 0 3 .8 3.7 1.4l3.3-3.2C17.9 1.1 15.2 0 12 0 7.3 0 3.3 2.8 1.3 6.8l3.8 2.9c1-2.9 3.7-5 6.9-5z"/></svg>Tiếp tục với Google</button>
-    <button type="button" data-p="facebook" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.2v3h2.5v7h2.8z"/></svg>Facebook <span class="soon">Sắp có</span></button>
-    <button type="button" data-p="line" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 3.5C6.8 3.5 2.6 6.9 2.6 11.1c0 3.8 3.3 6.9 7.8 7.6.3.1.7.2.8.5.1.3 0 .7 0 1l-.1 1.1c0 .3-.2.7.5.4.7-.4 3.9-2.3 5.3-4 .2-.1.4-.4.4-.6 1.3-1.3 2.1-3 2.1-5C21.4 6.9 17.2 3.5 12 3.5z"/></svg>LINE <span class="soon">Sắp có</span></button>
+    <button type="button" data-p="facebook" id="btnFacebook" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.2v3h2.5v7h2.8z"/></svg>Tiếp tục với Facebook</button>
+    <button type="button" data-p="line" id="btnLine" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 3.5C6.8 3.5 2.6 6.9 2.6 11.1c0 3.8 3.3 6.9 7.8 7.6.3.1.7.2.8.5.1.3 0 .7 0 1l-.1 1.1c0 .3-.2.7.5.4.7-.4 3.9-2.3 5.3-4 .2-.1.4-.4.4-.6 1.3-1.3 2.1-3 2.1-5C21.4 6.9 17.2 3.5 12 3.5z"/></svg>Tiếp tục với LINE</button>
     <button type="button" data-p="apple" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c0-2.4 1.96-3.55 2.05-3.6-1.12-1.64-2.86-1.86-3.48-1.89-1.48-.15-2.89.87-3.64.87-.75 0-1.9-.85-3.13-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.9-.43 7.2 1.2 9.56.8 1.16 1.75 2.46 3 2.41 1.2-.05 1.66-.78 3.12-.78s1.87.78 3.14.75c1.3-.02 2.12-1.18 2.92-2.34.92-1.35 1.3-2.65 1.32-2.72-.03-.01-2.54-.98-2.57-3.81zM14.65 5.4c.66-.8 1.1-1.91.98-3.02-.95.04-2.1.63-2.78 1.43-.61.71-1.15 1.84-.98 2.92 1.06.08 2.14-.54 2.78-1.33z"/></svg>Apple <span class="soon">Sắp có</span></button>
   </div>
   <p class="honest">Cần tài khoản đã được duyệt (hoặc đăng nhập quản lý) mới xem được bài học.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
@@ -254,6 +258,20 @@ go.onclick=async()=>{
   }
   finally{go.disabled=false}
 };
+// Facebook / LINE: chỉ hiện khi Worker đã bật (GET /auth/providers)
+function socialStart(p){return async()=>{
+  try{await AUTH.deviceReady}catch(e){}
+  err.textContent='';
+  const ret=location.href.split('#')[0].split('?')[0];
+  location.href=(SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/'+p+'/start?return='+encodeURIComponent(ret)
+    +'&device_id='+encodeURIComponent(AUTH.deviceId())+'&device_label='+encodeURIComponent(AUTH.deviceLabel());
+}}
+document.getElementById('btnFacebook').onclick=socialStart('facebook');
+document.getElementById('btnLine').onclick=socialStart('line');
+fetch((SITE.aiEndpoint||'').replace(/\/$/,'')+'/auth/providers').then(r=>r.ok?r.json():{}).then(pv=>{
+  if(pv&&pv.facebook)document.getElementById('btnFacebook').hidden=false;
+  if(pv&&pv.line)document.getElementById('btnLine').hidden=false;
+}).catch(()=>{});
 document.getElementById('btnGoogle').onclick=async()=>{
   try{await AUTH.deviceReady}catch(e){}
   err.textContent='';
@@ -273,7 +291,7 @@ document.getElementById('btnGoogle').onclick=async()=>{
     history.replaceState({},'',u.pathname+(u.search||'')+u.hash);
     try{
       const info=await AUTH.deviceTicketInfo(dticket);
-      showDeviceLimit(dticket,info.devices,'Tài khoản Google này đã đăng nhập trên 2 thiết bị khác. Hãy đăng xuất một thiết bị dưới đây để tiếp tục trên thiết bị này:');
+      showDeviceLimit(dticket,info.devices,'Tài khoản này đã đăng nhập trên 2 thiết bị khác. Hãy đăng xuất một thiết bị dưới đây để tiếp tục trên thiết bị này:');
     }catch(e){err.textContent=e.message||String(e)}
     return;
   }
