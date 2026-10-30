@@ -1,6 +1,8 @@
 // Cloudflare Worker: AI (Gemini) + tài khoản (D1) + admin duyệt + Google OAuth
 // + giới hạn 2 thiết bị/tài khoản + đồng bộ tiến độ /progress (29/10)
 // + Cộng đồng (bảng tin/hồ sơ/thông báo) + Chat riêng 1-1 + công cụ admin cộng đồng (29/10).
+// + ADMINFIX (30/10, nhánh 2 — bản vá staging, CHƯA deploy): thêm GET /auth/admin/stats
+//   và parity phiên admin = thành viên đã duyệt ở các cổng thành viên. Chi tiết: PATCH-NOTES.md.
 // Secrets: GEMINI_API_KEY, ACCESS_TOKEN, ADMIN_PASSWORD, CONTENT_KEY_B64, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
 const SYS={
  hoi:'Bạn là giáo viên tiếng Nhật cho người Việt (trình độ N2–N1, có học viên làm kaigo). Trả lời NGẮN GỌN bằng tiếng Việt, rõ ràng, chính xác. Khi đưa câu tiếng Nhật hãy kèm bản dịch tiếng Việt; có thể ghi furigana dạng {漢字|かんじ}. Dùng **đậm** cho ý chính. Nếu không chắc, nói rõ là không chắc. Chỉ trả lời về tiếng Nhật, JLPT, văn hoá/công việc ở Nhật.',
@@ -291,8 +293,7 @@ async function deviceGate(env,userId,deviceId,label){
 }
 function oauthConfigured(env,p){
   if(p==='google')return !!googleClientId(env) && !!(env.GOOGLE_CLIENT_SECRET||'').trim();
-  if(p==='facebook')return !!(env.OAUTH_FACEBOOK_APP_ID||'').trim();
-  if(p==='line')return !!(env.OAUTH_LINE_CHANNEL_ID||'').trim();
+  if(p==='facebook'||p==='line'){const cr=oauthCreds(env,p);return !!(cr.id&&cr.secret)}
   if(p==='apple')return !!(env.OAUTH_APPLE_CLIENT_ID||'').trim();
   return false;
 }
@@ -404,11 +405,144 @@ async function handleGoogleCallback(req,env,c){
   return redirectWith(returnTo,{code:xcode,status:u.status,oauth:'google'});
 }
 
+// ===== Đăng nhập Facebook + LINE (30/10) — cùng khuôn Google: state chống CSRF,
+// đổi mã ở máy chủ, liên kết theo email đã xác minh, user mới = 'pending'.
+// Bí mật: FACEBOOK_APP_ID/FACEBOOK_APP_SECRET, LINE_CHANNEL_ID/LINE_CHANNEL_SECRET.
+// Thiếu bí mật => 503 "chưa bật", nút trên web ẩn (GET /auth/providers).
+const WORKER_ORIGIN='https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev';
+const OAUTH_LABEL={facebook:'Facebook',line:'LINE'};
+function oauthCreds(env,p){
+  if(p==='facebook')return {id:(env.FACEBOOK_APP_ID||'').trim(),secret:(env.FACEBOOK_APP_SECRET||'').trim()};
+  if(p==='line')return {id:(env.LINE_CHANNEL_ID||'').trim(),secret:(env.LINE_CHANNEL_SECRET||'').trim()};
+  return {id:'',secret:''};
+}
+function oauthCallbackUri(p){return WORKER_ORIGIN+'/auth/'+p+'/callback'}
+let _oidReady=false;
+async function ensureOauthIdentities(env){
+  if(_oidReady)return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS oauth_identities (
+    provider TEXT NOT NULL, sub TEXT NOT NULL, user_id TEXT NOT NULL, created_at TEXT NOT NULL,
+    PRIMARY KEY(provider,sub))`).run();
+  _oidReady=true;
+}
+async function handleSocialStart(req,env,c,p){
+  const cr=oauthCreds(env,p);
+  if(!cr.id||!cr.secret)return J({error:'Đăng nhập bằng '+OAUTH_LABEL[p]+' chưa bật',code:'disabled',provider:p},503,c.h);
+  const url=new URL(req.url);
+  const returnTo=safeReturnTo(env, url.searchParams.get('return')||url.searchParams.get('return_to'));
+  await ensureOauthStates(env);
+  const state=randB64url(24);
+  const exp=new Date(Date.now()+10*60*1000).toISOString();
+  await env.DB.prepare('INSERT INTO oauth_states(state,return_to,expires_at) VALUES(?,?,?)').bind(state,returnTo,exp).run();
+  const did=String(url.searchParams.get('device_id')||'').trim().slice(0,80);
+  const lab=String(url.searchParams.get('device_label')||'').trim().slice(0,120);
+  if(did){await ensureDevices(env);await env.DB.prepare('INSERT OR REPLACE INTO oauth_state_devices(state,device_id,device_label) VALUES(?,?,?)').bind(state,did,lab).run()}
+  await env.DB.prepare('DELETE FROM oauth_states WHERE expires_at < ?').bind(now()).run();
+  let auth;
+  if(p==='facebook'){
+    auth=new URL('https://www.facebook.com/v19.0/dialog/oauth');
+    auth.searchParams.set('scope','public_profile,email');
+  }else{
+    auth=new URL('https://access.line.me/oauth2/v2.1/authorize');
+    auth.searchParams.set('scope','profile openid email');
+    auth.searchParams.set('nonce',state);
+  }
+  auth.searchParams.set('response_type','code');
+  auth.searchParams.set('client_id',cr.id);
+  auth.searchParams.set('redirect_uri',oauthCallbackUri(p));
+  auth.searchParams.set('state',state);
+  return Response.redirect(auth.toString(),302);
+}
+async function handleSocialCallback(req,env,c,p){
+  const L=OAUTH_LABEL[p];
+  const url=new URL(req.url);
+  const err=url.searchParams.get('error');
+  const code=url.searchParams.get('code');
+  const state=url.searchParams.get('state')||'';
+  await ensureOauthStates(env);
+  const st=state?await env.DB.prepare('SELECT * FROM oauth_states WHERE state=?').bind(state).first():null;
+  const returnTo=st?st.return_to:safeReturnTo(env,null);
+  if(st)await env.DB.prepare('DELETE FROM oauth_states WHERE state=?').bind(state).run();
+  let sd=null;
+  if(state){await ensureDevices(env);sd=await env.DB.prepare('SELECT device_id,device_label FROM oauth_state_devices WHERE state=?').bind(state).first();if(sd)await env.DB.prepare('DELETE FROM oauth_state_devices WHERE state=?').bind(state).run()}
+  if(err)return redirectWith(returnTo,{oauth_error:L+' từ chối đăng nhập'});
+  if(!st||st.expires_at<now())return redirectWith(returnTo,{oauth_error:'Phiên '+L+' hết hạn. Thử lại.'});
+  if(!code)return redirectWith(returnTo,{oauth_error:'Thiếu mã '+L});
+  const cr=oauthCreds(env,p);
+  if(!cr.id||!cr.secret)return redirectWith(returnTo,{oauth_error:'Đăng nhập bằng '+L+' chưa bật'});
+  let sub='',email='',name='';
+  try{
+    if(p==='facebook'){
+      const tu=new URL('https://graph.facebook.com/v19.0/oauth/access_token');
+      tu.searchParams.set('client_id',cr.id);tu.searchParams.set('client_secret',cr.secret);
+      tu.searchParams.set('redirect_uri',oauthCallbackUri(p));tu.searchParams.set('code',code);
+      const tr=await fetch(tu.toString());const tj=await tr.json().catch(()=>({}));
+      if(!tr.ok||!tj.access_token)return redirectWith(returnTo,{oauth_error:'Không đổi được mã Facebook'});
+      const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(cr.secret),{name:'HMAC',hash:'SHA-256'},false,['sign']);
+      const sig=new Uint8Array(await crypto.subtle.sign('HMAC',key,new TextEncoder().encode(tj.access_token)));
+      const proof=[...sig].map(b=>b.toString(16).padStart(2,'0')).join('');
+      const mu=new URL('https://graph.facebook.com/v19.0/me');
+      mu.searchParams.set('fields','id,name,email');mu.searchParams.set('appsecret_proof',proof);
+      const mr=await fetch(mu.toString(),{headers:{Authorization:'Bearer '+tj.access_token}});const mj=await mr.json().catch(()=>({}));
+      if(!mr.ok||!mj.id)return redirectWith(returnTo,{oauth_error:'Không lấy được thông tin Facebook'});
+      sub=String(mj.id);email=String(mj.email||'');name=String(mj.name||'');
+    }else{
+      const tr=await fetch('https://api.line.me/oauth2/v2.1/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams({grant_type:'authorization_code',code,redirect_uri:oauthCallbackUri(p),client_id:cr.id,client_secret:cr.secret})});
+      const tj=await tr.json().catch(()=>({}));
+      if(!tr.ok||!tj.id_token)return redirectWith(returnTo,{oauth_error:'Không đổi được mã LINE'});
+      const vr=await fetch('https://api.line.me/oauth2/v2.1/verify',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams({id_token:tj.id_token,client_id:cr.id,nonce:state})});
+      const vj=await vr.json().catch(()=>({}));
+      if(!vr.ok||!vj.sub)return redirectWith(returnTo,{oauth_error:'Không xác minh được LINE'});
+      sub=String(vj.sub);email=String(vj.email||'');name=String(vj.name||'');
+    }
+  }catch(e){return redirectWith(returnTo,{oauth_error:'Lỗi kết nối '+L+'. Thử lại.'})}
+  email=email.trim().toLowerCase().slice(0,120);
+  name=name.trim().slice(0,80)||(email?email.split('@')[0]:'Học viên');
+  await ensureOauthIdentities(env);
+  let u=null;
+  const idr=await env.DB.prepare('SELECT user_id FROM oauth_identities WHERE provider=? AND sub=?').bind(p,sub).first();
+  if(idr)u=await env.DB.prepare('SELECT * FROM users WHERE id=?').bind(idr.user_id).first();
+  if(!u&&email)u=await env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
+  if(u){
+    if(u.status==='locked')return redirectWith(returnTo,{oauth_error:'Tài khoản đã bị khoá. Liên hệ Khánh.'});
+    if(u.status==='rejected')return redirectWith(returnTo,{oauth_error:'Đăng ký đã bị từ chối.'});
+    await env.DB.prepare('UPDATE users SET last_visit=? WHERE id=?').bind(now(),u.id).run();
+  }else{
+    const id=crypto.randomUUID();
+    const em=email||(p+'-'+sub.replace(/[^A-Za-z0-9_-]/g,'').slice(0,60)+'@no-email.invalid');
+    await env.DB.prepare('INSERT INTO users(id,email,name,pass_salt,pass_hash,method,status,created_at,last_visit) VALUES(?,?,?,?,?,?,?,?,?)')
+      .bind(id,em,name,'oauth','oauth',p,'pending',now(),now()).run();
+    u={id,email:em,name,method:p,status:'pending'};
+  }
+  if(!idr)await env.DB.prepare('INSERT OR IGNORE INTO oauth_identities(provider,sub,user_id,created_at) VALUES(?,?,?,?)').bind(p,sub,u.id,now()).run();
+  let bind='';
+  if(sd&&sd.device_id){
+    const gate=await deviceGate(env,u.id,sd.device_id,sd.device_label);
+    if(!gate.ok)return redirectWith(returnTo,{device_ticket:gate.ticket,status:u.status,oauth:p});
+    bind=sd.device_id;
+  }
+  const sess=await makeSession(env,u.id,'user');
+  if(bind)await bindSessionDevice(env,sess.token,u.id,bind);
+  await ensureOauthCodes(env);
+  const xcode=randB64url(32);
+  const xexp=new Date(Date.now()+5*60*1000).toISOString();
+  await env.DB.prepare('INSERT INTO oauth_codes(code,session,expires_at) VALUES(?,?,?)').bind(xcode,sess.token,xexp).run();
+  await env.DB.prepare('DELETE FROM oauth_codes WHERE expires_at < ?').bind(now()).run();
+  return redirectWith(returnTo,{code:xcode,status:u.status,oauth:p});
+}
+
 async function handleAuth(req,env,c,path){
   if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).'},503,c.h);
 
   if(path==='/auth/google/start'&&req.method==='GET')return handleGoogleStart(req,env,c);
   if(path==='/auth/google/callback'&&req.method==='GET')return handleGoogleCallback(req,env,c);
+  if(path==='/auth/providers'&&req.method==='GET'){
+    return J({google:oauthConfigured(env,'google'),facebook:oauthConfigured(env,'facebook'),line:oauthConfigured(env,'line')},200,c.h);
+  }
+  {const m=path.match(/^\/auth\/(facebook|line)\/(start|callback)$/);
+   if(m&&req.method==='GET')return m[2]==='start'?handleSocialStart(req,env,c,m[1]):handleSocialCallback(req,env,c,m[1]);}
 
   // --- exchange: đổi mã dùng 1 lần (A13) lấy phiên — dùng xong xoá mã ngay ---
   if(path==='/auth/exchange'&&req.method==='POST'){
@@ -660,6 +794,7 @@ async function handleAuth(req,env,c,path){
   if(path.startsWith('/auth/oauth/')&&req.method==='POST'){
     const p=path.slice('/auth/oauth/'.length);
     if(!['google','facebook','line','apple'].includes(p))return J({error:'Nhà cung cấp không hỗ trợ'},400,c.h);
+    if((p==='facebook'||p==='line')&&oauthConfigured(env,p))return J({ok:true,redirect:'/auth/'+p+'/start'},200,c.h);
     if(p==='google'&&oauthConfigured(env,'google')){
       return J({ok:true,redirect:'/auth/google/start',message:'Dùng GET /auth/google/start'},200,c.h);
     }
@@ -711,6 +846,23 @@ async function handleAuth(req,env,c,path){
     const r=await env.DB.prepare('UPDATE users SET status=?, reviewed_at=? WHERE id=?').bind(map[action],now(),id).run();
     if(!r.meta||!r.meta.changes)return J({error:'Không tìm thấy người dùng'},404,c.h);
     return J({ok:true,status:map[action]},200,c.h);
+  }
+
+  // --- admin stats: tổng quan (ADMINFIX 30/10, chỉ thêm mới) ---
+  // Đếm users theo status + số hồ sơ đang online. "Online" bám đúng định
+  // nghĩa sẵn có của /community/heartbeat: profiles.last_seen trong 120 giây
+  // (CM_ONLINE_MS=120e3). Cổng: chỉ phiên kind='admin'.
+  if(path==='/auth/admin/stats'&&req.method==='GET'){
+    const t=bearer(req);const s=await sessionUser(env,t);
+    if(!s||s.kind!=='admin')return J({error:'Cần đăng nhập admin'},401,c.h);
+    const row=await env.DB.prepare("SELECT COUNT(*) AS total, COALESCE(SUM(CASE WHEN status='pending' THEN 1 ELSE 0 END),0) AS pending, COALESCE(SUM(CASE WHEN status='approved' THEN 1 ELSE 0 END),0) AS approved, COALESCE(SUM(CASE WHEN status='rejected' THEN 1 ELSE 0 END),0) AS rejected, COALESCE(SUM(CASE WHEN status='locked' THEN 1 ELSE 0 END),0) AS locked FROM users").first();
+    let online=0;
+    try{
+      const since=new Date(Date.now()-120e3).toISOString();
+      const on=await env.DB.prepare('SELECT COUNT(*) AS n FROM profiles WHERE last_seen IS NOT NULL AND last_seen>=?').bind(since).first();
+      online=on?+on.n||0:0;
+    }catch(e){online=0} // bảng profiles chưa từng được tạo (site chưa mở Cộng đồng) -> 0, không sập endpoint
+    return J({ok:true,counts:{pending:row?+row.pending||0:0,approved:row?+row.approved||0:0,rejected:row?+row.rejected||0:0,locked:row?+row.locked||0:0,total:row?+row.total||0:0},online},200,c.h);
   }
 
   // --- admin: danh sách thiết bị của một tài khoản ---
@@ -803,7 +955,8 @@ async function handleHoso(req,env,c){
   const h=Object.assign({},c.h,{'Cache-Control':'no-store, private'});
   if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).'},503,h);
   const s=await sessionUser(env,bearer(req));
-  if(!s||s.kind!=='user')return J({error:'Chưa đăng nhập'},401,h);
+  // ADMINFIX (30/10): phiên admin qua cổng như thành viên đã duyệt (xem cmNeedUser).
+  if(!s||(s.kind!=='user'&&s.kind!=='admin'))return J({error:'Chưa đăng nhập'},401,h);
   if(s.status==='locked'||s.status==='rejected')return J({error:'Tài khoản không còn hiệu lực'},403,h);
   await ensureHoso(env);
   if(req.method==='GET'){
@@ -865,7 +1018,9 @@ function progKeyOk(k){
 async function handleProgress(req,env,c){
   if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).'},503,c.h);
   const s=await sessionUser(env,bearer(req));
-  if(!s||s.kind!=='user')return J({error:'Chưa đăng nhập'},401,c.h);
+  // ADMINFIX (30/10): phiên admin qua cổng như thành viên đã duyệt (status của
+  // admin là NULL nên hai chốt locked/rejected dưới đây tự bỏ qua; xem cmNeedUser).
+  if(!s||(s.kind!=='user'&&s.kind!=='admin'))return J({error:'Chưa đăng nhập'},401,c.h);
   if(s.status==='locked'||s.status==='rejected')return J({error:'Tài khoản không còn hiệu lực'},403,c.h);
   await ensureDevices(env);
   if(req.method==='GET'){
@@ -1342,6 +1497,12 @@ async function cmSession(env,req){
 }
 let cmC={h:{}}; // cors context được gán trong handleCommunity
 function cmNeedUser(s){
+  // ADMINFIX (30/10): phiên admin (kind='admin', user_id='admin', KHÔNG có hàng
+  // users nên status=NULL) được đối xử như thành viên ĐÃ DUYỆT — admin là chủ
+  // trang và /auth/me đã trả status:'approved' cho chính phiên này. Chỉ nới
+  // đúng kind='admin'; mọi phiên user pending/locked/rejected vẫn qua cổng cũ
+  // ngay dưới đây, không đổi một ly.
+  if(s&&s.kind==='admin')return null;
   if(!s||s.kind!=='user')return J({error:'Cần đăng nhập tài khoản học viên'},401,cmC.h);
   if(s.status==='locked')return J({error:'Tài khoản đã bị khoá'},403,cmC.h);
   if(s.status==='rejected')return J({error:'Tài khoản đã bị từ chối'},403,cmC.h);
@@ -1573,7 +1734,7 @@ async function handleCommunity(req,env,c,path){
   if(path==='/community/heartbeat'&&method==='POST'){
     // Online = last_seen trong 2 phút. Ghi tối đa 1 lần/60 giây.
     const p=await env.DB.prepare('SELECT last_seen FROM profiles WHERE user_id=?').bind(me).first();
-    if(!p)await env.DB.prepare("INSERT OR IGNORE INTO profiles(user_id,display_name,updated_at,last_seen) VALUES(?,'',?,?)").bind(me,now(),now()).run();
+    if(!p)await env.DB.prepare("INSERT OR IGNORE INTO profiles(user_id,display_name,updated_at,last_seen) VALUES(?,?,?,?)").bind(me,me==='admin'?'Admin':'',now(),now()).run(); // ADMINFIX (30/10): hàng profiles cho id 'admin' mang tên 'Admin' thay vì rỗng (xử lý trong mã, không chèn dữ liệu tay)
     else if(!p.last_seen||Date.now()-Date.parse(p.last_seen)>60e3)await env.DB.prepare('UPDATE profiles SET last_seen=? WHERE user_id=?').bind(now(),me).run();
     const uc=await env.DB.prepare("SELECT (SELECT COUNT(*) FROM notifications WHERE user_id=? AND is_read=0) AS n,(SELECT COUNT(*) FROM friendships WHERE status='pending' AND requester_id<>? AND (user_a=? OR user_b=?)) AS f").bind(me,me,me,me).first();
     return J({ok:true,notifications:uc?uc.n:0,friend_requests:uc?uc.f:0},200,c.h);
@@ -2826,9 +2987,13 @@ async function handleStats(req, env, c, path) {
   if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, c.h);
   await ensureStats(env);
   const s = await sessionUser(env, bearer(req));
-  if (!s || s.kind !== 'user') return J({ error: 'Chưa đăng nhập' }, 401, c.h);
-  if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, c.h);
-  if (s.status !== 'approved') return J({ error: 'Tài khoản chưa được duyệt' }, 403, c.h);
+  // ADMINFIX (30/10): phiên admin (status NULL vì không có hàng users) được
+  // đối xử như đã duyệt; hai chốt status chỉ áp cho phiên user như trước.
+  if (!s || (s.kind !== 'user' && s.kind !== 'admin')) return J({ error: 'Chưa đăng nhập' }, 401, c.h);
+  if (s.kind === 'user') {
+    if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, c.h);
+    if (s.status !== 'approved') return J({ error: 'Tài khoản chưa được duyệt' }, 403, c.h);
+  }
   const me = s.user_id;
   if (path === '/stats/me' && req.method === 'GET') {
     const all = await stLoadAll(env);
@@ -2964,6 +3129,782 @@ async function handleFree(req,env,c,path){
   return res;
 }
 
+// =====================================================================
+// game-routes.js — NHÁNH 5: route /game/* cho game "Hành trình đến Edo"
+// (tiến độ, điểm + chống gian lận cơ bản, bảng xếp hạng game, Chém gió).
+//
+// ĐÂY LÀ ĐOẠN GHÉP vào worker/src/index.js (bản live: worker-index.js),
+// KHÔNG phải file chạy độc lập. Cách ghép: xem MERGE-N5.md.
+// Đoạn này dùng ĐÚNG các helper sẵn có của file đích:
+//   J(o,s,h), now(), readJson(req), bearer(req), sessionUser(env,token),
+//   rlHit(env,key,slot)/rlPeek(env,key) [giới hạn qua KV RL hoặc D1
+//   rate_limits], cmProfiles(env,ids)/cmProfile(env,uid) [tên hiển thị].
+// Mọi helper sẵn có đều có bản dự phòng tối thiểu ngay dưới (chỉ dùng khi
+// typeof === 'undefined') để file vẫn node --check được và không vỡ nếu
+// thứ tự ghép thay đổi. KHÔNG sửa /stats, /progress, /hoso sẵn có:
+// xếp hạng game ở đây là bảng RIÊNG theo (mode/)trình độ của game.
+// =====================================================================
+
+// --- Trần điểm / chống gian lận cơ bản --------------------------------
+// Điểm tính theo bản mẫu đã duyệt:
+//   - campaign (mỗi lần nộp = 1 màn: 6 câu thường / 10 câu trùm):
+//     điểm/câu kiểu đấu trùm ≈ (100..200) × hệ số khó (≤2) × (1+combo×0,1).
+//   - boss (đấu trùm lẻ): cần ~4–8 câu đúng để hạ trùm.
+//   - tower (leo tháp): điểm/tầng = 100 × max(1, tầng/3) × hệ số khó —
+//     tăng theo tầng nên trần cao + trần điểm/giây cao hơn.
+//   - endless (chạy vô tận): điểm/câu ~100 × khó × (1+combo×0,1), chạy
+//     bao lâu tuỳ sức — trần tổng cao nhất, chặn chính bằng điểm/giây.
+//   - festival (lễ hội): các mini-game ngắn, cỡ một màn campaign dài.
+//   - versus (phòng/đối kháng): điểm/câu (500+500×tốc độ) × khó ≤ 2.000,
+//     một trận ~10 câu.
+// maxPerSec là TRẦN ĐIỂM/GIÂY TRUNG BÌNH cho cả lượt (cộng +200 điểm
+// dung sai cho câu đầu/cộng dồn làm tròn). Đây là chống gian lận CƠ BẢN
+// (máy chủ không xem được diễn biến ván chơi) — đủ chặn điểm bịa thô.
+const GAME_SCORE_RULES = {
+  campaign: { cap: 10000,  minMs: 5000,  maxPerSec: 600 },
+  boss:     { cap: 15000,  minMs: 8000,  maxPerSec: 600 },
+  tower:    { cap: 100000, minMs: 10000, maxPerSec: 800 },
+  endless:  { cap: 200000, minMs: 10000, maxPerSec: 500 },
+  festival: { cap: 20000,  minMs: 5000,  maxPerSec: 600 },
+  versus:   { cap: 30000,  minMs: 10000, maxPerSec: 700 },
+};
+const GAME_MODE_ALIASES = {
+  'chien-dich': 'campaign', campaign: 'campaign',
+  'dau-trum': 'boss', 'dau-kanji': 'boss', boss: 'boss',
+  'leo-thap': 'tower', tower: 'tower',
+  'chay-vo-tan': 'endless', endless: 'endless',
+  'le-hoi': 'festival', festival: 'festival',
+  'doi-khang': 'versus', 'phong-nhom': 'versus', versus: 'versus', room: 'versus',
+  group: 'versus', // mode phòng nhóm của nhánh 6 (game-rooms: 'group' | 'versus')
+};
+const GAME_LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
+const GAME_MAX_DURATION_MS = 6 * 3600 * 1000; // một lượt > 6 giờ = bịa
+const GAME_PROG_KEY_RE = /^[a-z][a-z0-9_-]{0,39}$/;
+const GAME_PROG_KEYS_PER_USER = 20;
+const GAME_PROG_MAX_CHARS = 32768;   // JSON tiến độ tối đa 32KB / khoá
+const GAME_CHAT_MAX_CHARS = 60;
+
+// --- Hàm thuần (không đụng env/DB) — tách riêng để kiểm thử bằng node ---
+function gameNormMode(mode) {
+  return GAME_MODE_ALIASES[String(mode || '').trim().toLowerCase()] || null;
+}
+function gameNormLevel(level) {
+  const lv = String(level || '').trim().toUpperCase();
+  return GAME_LEVELS.includes(lv) ? lv : null;
+}
+// Trả {ok:true,mode,level,score,durationMs,rule} hoặc {ok:false,error}.
+function gameValidateScore(input) {
+  const b = input || {};
+  const mode = gameNormMode(b.mode);
+  if (!mode) return { ok: false, error: 'Chế độ chơi không hợp lệ' };
+  const level = gameNormLevel(b.level);
+  if (!level) return { ok: false, error: 'Trình độ phải là N5, N4, N3, N2 hoặc N1' };
+  const score = b.score, durationMs = b.durationMs;
+  if (!Number.isInteger(score) || score < 0) return { ok: false, error: 'Điểm không hợp lệ' };
+  if (!Number.isInteger(durationMs) || durationMs <= 0) return { ok: false, error: 'Thời gian chơi không hợp lệ' };
+  const rule = GAME_SCORE_RULES[mode];
+  if (score > rule.cap) return { ok: false, error: 'Điểm vượt mức tối đa của chế độ này (' + rule.cap + ')' };
+  if (durationMs < rule.minMs) return { ok: false, error: 'Lượt chơi quá ngắn so với điểm — chưa ghi nhận được' };
+  if (durationMs > GAME_MAX_DURATION_MS) return { ok: false, error: 'Thời gian chơi không hợp lệ' };
+  const allowed = Math.floor(rule.maxPerSec * durationMs / 1000) + 200;
+  if (score > allowed) return { ok: false, error: 'Điểm tăng nhanh bất thường — chưa ghi nhận được' };
+  return { ok: true, mode, level, score, durationMs, rule };
+}
+// Ngày theo giờ Nhật (JST = UTC+9, không giờ mùa) — cùng cách stJstDay().
+function gameJstDay(ms) { return new Date(ms + 9 * 3600 * 1000).toISOString().slice(0, 10); }
+// Khoá tuần = ngày thứ Hai (JST) của tuần chứa ngày chơi — cùng stWeekKey().
+function gameWeekKey(ms) {
+  const day = gameJstDay(ms || Date.now());
+  const p = day.split('-');
+  const utc = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+  const dow = (new Date(utc).getUTCDay() + 6) % 7; // thứ Hai = 0
+  return new Date(utc - dow * 86400000).toISOString().slice(0, 10);
+}
+// Nhãn tuần ISO 8601 (YYYY-Www) của ngày JST — chỉ để hiển thị/gỡ lỗi.
+function gameWeekLabel(ms) {
+  const day = gameJstDay(ms || Date.now());
+  const p = day.split('-');
+  const d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+  const dow = (d.getUTCDay() + 6) % 7;
+  const thu = new Date(d.getTime() + (3 - dow) * 86400000); // thứ Năm của tuần
+  const year = thu.getUTCFullYear();
+  const jan4 = new Date(Date.UTC(year, 0, 4));
+  const jan4Dow = (jan4.getUTCDay() + 6) % 7;
+  const week1Mon = jan4.getTime() - jan4Dow * 86400000;
+  const week = Math.floor((d.getTime() - dow * 86400000 - week1Mon) / (7 * 86400000)) + 1;
+  return year + '-W' + String(week).padStart(2, '0');
+}
+// Bỏ dấu tiếng Việt để lọc từ tục kể cả khi gõ không dấu / chêm ký tự lạ.
+function gameStripVi(s) {
+  return String(s || '')
+    .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+// Danh sách cấm CƠ BẢN (tiếng Việt + vài từ Anh phổ biến). So sau khi bỏ
+// dấu; cụm nhiều chữ so trên chuỗi đã chuẩn hoá, từ đơn so theo token và
+// cả dạng "dính liền" (gõ l.ồ.n / l ồ n đều dính).
+const GAME_BAD_WORDS = [
+  'địt', 'đụ', 'đéo', 'đĩ', 'đái', 'lồn', 'cặc', 'buồi', 'đầu buồi',
+  'con đĩ', 'đồ đĩ', 'chó đẻ', 'đồ chó', 'con chó', 'thằng chó',
+  'mẹ mày', 'con mẹ', 'địt mẹ', 'đụ mẹ', 'vãi lồn', 'vãi cặc',
+  'ngu lồn', 'ngu như chó', 'đồ ngu', 'thằng ngu', 'óc chó', 'súc vật',
+  'chết mẹ', 'cút mẹ', 'đm', 'đcm', 'dcm', 'vcl', 'vl',
+  'fuck', 'shit', 'bitch', 'dick', 'pussy',
+];
+const GAME_BAD_NORM = GAME_BAD_WORDS.map(w => gameStripVi(w)).filter(Boolean);
+// Các từ mà dạng BỎ DẤU trùng từ lành hay gặp ("cac" = các, "lon" = lon
+// bia, "du" = du học, "dai" = dai/bền): chỉ chặn khi gõ ĐÚNG dấu (lượt 1),
+// không chặn ở lượt bỏ dấu để khỏi phạt oan người gõ không dấu.
+const GAME_BAD_AMBIG = new Set(['cac', 'lon', 'du', 'dai', 'dm']);
+function gameFindBad(text) {
+  const raw = String(text || '').toLowerCase().replace(/[^a-zà-ỹ0-9]+/gi, ' ').replace(/\s+/g, ' ').trim();
+  // Lượt 1: khớp đúng nguyên văn (có dấu) — bắt cả các từ dễ trùng ở trên.
+  if (raw) {
+    const paddedRaw = ' ' + raw + ' ';
+    for (const w of GAME_BAD_WORDS) {
+      const wl = w.toLowerCase();
+      if (paddedRaw.includes(' ' + wl + ' ')) return wl;
+    }
+  }
+  // Lượt 2: bỏ dấu — bỏ qua từ quá ngắn (<3) và từ dễ trùng từ lành.
+  const norm = gameStripVi(text);
+  if (!norm) return null;
+  const padded = ' ' + norm + ' ';
+  for (const w of GAME_BAD_NORM) {
+    if (!w.includes(' ') && (w.length < 3 || GAME_BAD_AMBIG.has(w))) continue;
+    if (padded.includes(' ' + w + ' ')) return w;
+  }
+  const squashWords = GAME_BAD_NORM.filter(w => !w.includes(' ') && w.length >= 3 && !GAME_BAD_AMBIG.has(w));
+  const squash = norm.replace(/ /g, '');
+  for (const w of squashWords) { if (squash.includes(w)) return w; }
+  // Né lọc bằng cách tách từng chữ cái ("l o n"): nối các token 1 ký tự
+  // liên tiếp rồi so với MỌI từ đơn cấm (kể cả từ dễ trùng — tách chữ cái
+  // rời rạc gần như không bao giờ là câu lành).
+  const toks = norm.split(' ');
+  let run = '';
+  const runs = [];
+  for (const tk of toks) { if (tk.length === 1) { run += tk; } else { if (run) runs.push(run); run = ''; } }
+  if (run) runs.push(run);
+  const allSingle = GAME_BAD_NORM.filter(w => !w.includes(' ') && w.length >= 3);
+  for (const r of runs) { for (const w of allSingle) { if (r.includes(w)) return w; } }
+  // lặp chữ để né lọc: n-g-u-l-o-o-o-n -> rút gọn chữ lặp liên tiếp còn 1
+  const squeezed = norm.replace(/(.)\1+/g, '$1').replace(/ /g, '');
+  for (const w of squashWords) { if (squeezed.includes(w.replace(/(.)\1+/g, '$1'))) return w; }
+  return null;
+}
+function gameChatCheck(text) {
+  if (typeof text !== 'string') return { ok: false, error: 'Tin nhắn không hợp lệ' };
+  const t = text.trim();
+  if (!t) return { ok: false, error: 'Chưa có chữ nào để gửi' };
+  if ([...t].length > GAME_CHAT_MAX_CHARS) return { ok: false, error: 'Tin nhắn tối đa ' + GAME_CHAT_MAX_CHARS + ' ký tự thôi nhé' };
+  if (gameFindBad(t)) return { ok: false, error: 'Câu này hơi quá lời — mình chém gió vui vẻ thôi nhé 😅' };
+  return { ok: true, text: t };
+}
+
+// --- Dự phòng tối thiểu (chỉ khi ghép ở vị trí chưa có helper sẵn) -----
+async function gameRlHit(env, key, slot) {
+  if (typeof rlHit === 'function') return rlHit(env, key, slot);
+  // Tương đương rlHit của worker-index.js: KV RL ưu tiên, không thì D1.
+  try {
+    if (env.RL) { const n = +(await env.RL.get(key) || 0) + 1; await env.RL.put(key, String(n), { expirationTtl: 90000 }); return n; }
+    if (env.DB) {
+      await env.DB.prepare(`CREATE TABLE IF NOT EXISTS rate_limits (
+        key TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0, day TEXT NOT NULL DEFAULT '')`).run();
+      await env.DB.prepare('INSERT INTO rate_limits(key,count,day) VALUES(?,?,?) ON CONFLICT(key) DO UPDATE SET count=count+1').bind(key, 1, slot || '').run();
+      const row = await env.DB.prepare('SELECT count FROM rate_limits WHERE key=?').bind(key).first();
+      return row ? (+row.count || 0) : 1;
+    }
+  } catch (e) {}
+  return 0;
+}
+async function gameProfiles(env, ids) {
+  if (typeof cmProfiles === 'function') return cmProfiles(env, ids);
+  // Tương đương cmProfiles: display_name (bảng profiles) -> users.name.
+  const out = {}; const uniq = [...new Set((ids || []).filter(Boolean).map(String))];
+  for (const id of uniq) {
+    const p = await env.DB.prepare('SELECT p.display_name,p.avatar_file,u.name FROM users u LEFT JOIN profiles p ON p.user_id=u.id WHERE u.id=?').bind(id).first();
+    out[id] = p
+      ? { id, name: (p.display_name && p.display_name.trim()) || p.name || '', avatar_file: p.avatar_file || null }
+      : { id, name: '(đã xoá)', avatar_file: null };
+  }
+  return out;
+}
+
+// --- Schema (chỉ THÊM bảng game_*, đúng phong cách ensure-*) -----------
+let _gameReady = false;
+async function ensureGame(env) {
+  if (_gameReady || !env.DB) return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_progress (
+    user_id TEXT NOT NULL,
+    key TEXT NOT NULL,
+    data TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    PRIMARY KEY(user_id, key)
+  )`).run();
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_scores (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    mode TEXT NOT NULL,
+    level TEXT NOT NULL,
+    score INTEGER NOT NULL,
+    duration_ms INTEGER NOT NULL,
+    week_key TEXT NOT NULL,
+    created_at TEXT NOT NULL
+  )`).run();
+  await env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_game_scores_week ON game_scores(week_key, level, user_id)').run();
+  await env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_game_scores_user ON game_scores(user_id, created_at)').run();
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_chat (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    text TEXT NOT NULL,
+    created_at TEXT NOT NULL
+  )`).run();
+  await env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_game_chat_created ON game_chat(created_at)').run();
+  _gameReady = true;
+}
+
+// Danh sách route của nhánh 5 (nhánh 6 thêm /game/rooms/* RIÊNG, không
+// đụng danh sách này; dispatch /game/* xem MERGE-N5.md).
+const GAME_ROUTES = [
+  'GET /game/progress', 'POST /game/progress',
+  'POST /game/score',
+  'GET /game/leaderboard',
+  'POST /game/chat', 'GET /game/chat',
+];
+
+async function handleGame(req, env, ctx) {
+  const c = ctx || { h: {} };
+  const h = Object.assign({}, c.h, { 'Cache-Control': 'no-store, private' });
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu tài khoản (D1).' }, 503, h);
+  const url = new URL(req.url);
+  const path = url.pathname.replace(/\/+$/, '') || '/';
+  const method = req.method;
+  // Mọi route game đều cần đăng nhập (khách chơi thử = localStorage ở web).
+  const s = await sessionUser(env, bearer(req));
+  if (!s || (s.kind !== 'user' && s.kind !== 'admin')) return J({ error: 'Chưa đăng nhập' }, 401, h); // ADMINFIX (30/10): admin = thành viên đã duyệt
+  if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, h);
+  const me = s.user_id;
+  await ensureGame(env);
+
+  // ----- Tiến độ: GET /game/progress ----------------------------------
+  if (path === '/game/progress' && method === 'GET') {
+    const r = await env.DB.prepare('SELECT key,data,updated_at FROM game_progress WHERE user_id=?').bind(me).all();
+    const items = {};
+    for (const row of (r.results || [])) items[row.key] = { v: row.data, u: row.updated_at };
+    return J({ ok: true, items, server_time: now() }, 200, h);
+  }
+  // ----- Tiến độ: POST /game/progress {key, data} ----------------------
+  if (path === '/game/progress' && method === 'POST') {
+    const minute = new Date().toISOString().slice(0, 16);
+    if (await gameRlHit(env, 'game:prog:' + minute + ':' + me, minute) > 30)
+      return J({ error: 'Lưu tiến độ hơi nhanh — thử lại sau một phút nhé' }, 429, h);
+    const len = +(req.headers.get('Content-Length') || 0);
+    if (len > GAME_PROG_MAX_CHARS + 4096) return J({ error: 'Dữ liệu quá lớn' }, 413, h);
+    const b = await readJson(req);
+    if (!b || typeof b.key !== 'string' || !GAME_PROG_KEY_RE.test(b.key))
+      return J({ error: 'Khoá tiến độ không hợp lệ' }, 400, h);
+    if (!b.data || typeof b.data !== 'object' || Array.isArray(b.data))
+      return J({ error: 'Dữ liệu tiến độ phải là một đối tượng JSON' }, 400, h);
+    let data;
+    try { data = JSON.stringify(b.data); } catch (e) { return J({ error: 'Dữ liệu không hợp lệ' }, 400, h); }
+    if (data.length > GAME_PROG_MAX_CHARS) return J({ error: 'Dữ liệu tiến độ quá lớn' }, 413, h);
+    const cnt = await env.DB.prepare('SELECT COUNT(*) AS n FROM game_progress WHERE user_id=?').bind(me).first();
+    const has = await env.DB.prepare('SELECT key FROM game_progress WHERE user_id=? AND key=?').bind(me, b.key).first();
+    if (!has && cnt && (+cnt.n || 0) >= GAME_PROG_KEYS_PER_USER)
+      return J({ error: 'Quá nhiều khoá tiến độ' }, 413, h);
+    const t = now();
+    await env.DB.prepare('INSERT INTO game_progress(user_id,key,data,updated_at) VALUES(?,?,?,?) ON CONFLICT(user_id,key) DO UPDATE SET data=excluded.data, updated_at=excluded.updated_at').bind(me, b.key, data, t).run();
+    return J({ ok: true, key: b.key, updated_at: t }, 200, h);
+  }
+  // ----- Điểm: POST /game/score {mode, level, score, durationMs} -------
+  if (path === '/game/score' && method === 'POST') {
+    const minute = new Date().toISOString().slice(0, 16);
+    if (await gameRlHit(env, 'game:score:' + minute + ':' + me, minute) > 10)
+      return J({ error: 'Gửi điểm hơi nhanh — nghỉ tay một phút nhé' }, 429, h);
+    const b = await readJson(req);
+    if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const v = gameValidateScore(b);
+    if (!v.ok) return J({ error: v.error }, 400, h);
+    const t = now();
+    await env.DB.prepare('INSERT INTO game_scores(id,user_id,mode,level,score,duration_ms,week_key,created_at) VALUES(?,?,?,?,?,?,?,?)')
+      .bind(crypto.randomUUID(), me, v.mode, v.level, v.score, v.durationMs, gameWeekKey(Date.now()), t).run();
+    return J({ ok: true, mode: v.mode, level: v.level, score: v.score, week_key: gameWeekKey(Date.now()) }, 200, h);
+  }
+  // ----- Xếp hạng game: GET /game/leaderboard?cat=week|total&level=N5 ---
+  if (path === '/game/leaderboard' && method === 'GET') {
+    const cat = (url.searchParams.get('cat') || 'week').toLowerCase();
+    if (cat !== 'week' && cat !== 'total') return J({ error: 'cat phải là week hoặc total' }, 400, h);
+    const rawLevel = url.searchParams.get('level');
+    const level = rawLevel ? gameNormLevel(rawLevel) : null;
+    if (rawLevel && !level) return J({ error: 'Trình độ phải là N5, N4, N3, N2 hoặc N1' }, 400, h);
+    // Cộng dồn theo user (tổng điểm; phụ: điểm lượt cao nhất, số lượt).
+    // Quy mô trang nhỏ — gom hết rồi xếp hạng trong bộ nhớ như stLoadAll().
+    let sql = 'SELECT user_id, SUM(score) AS total, MAX(score) AS best, COUNT(*) AS plays FROM game_scores';
+    const cond = [], args = [];
+    if (cat === 'week') { cond.push('week_key=?'); args.push(gameWeekKey(Date.now())); }
+    if (level) { cond.push('level=?'); args.push(level); }
+    if (cond.length) sql += ' WHERE ' + cond.join(' AND ');
+    sql += ' GROUP BY user_id';
+    const r = await env.DB.prepare(sql).bind(...args).all();
+    const rows = (r.results || []).map(x => ({ uid: x.user_id, score: +x.total || 0, best: +x.best || 0, plays: +x.plays || 0 }));
+    rows.sort((a, b2) => (b2.score - a.score) || (b2.best - a.best) || (a.uid < b2.uid ? -1 : 1));
+    rows.forEach((x, i) => { x.rank = i + 1; });
+    const topRows = rows.filter(x => x.score > 0).slice(0, 20);
+    const profs = await gameProfiles(env, topRows.map(x => x.uid).concat([me]));
+    const list = topRows.map(x => ({ rank: x.rank, name: (profs[x.uid] || {}).name || '', avatar_file: (profs[x.uid] || {}).avatar_file || null, score: x.score, best: x.best, plays: x.plays, me: x.uid === me }));
+    const mine = rows.find(x => x.uid === me) || null;
+    const meOut = mine ? { rank: mine.rank, name: (profs[me] || {}).name || '', avatar_file: (profs[me] || {}).avatar_file || null, score: mine.score, best: mine.best, plays: mine.plays, inTop: list.some(x => x.me) } : null;
+    return J({ ok: true, cat, level: level || 'all', week_key: cat === 'week' ? gameWeekKey(Date.now()) : null, list, me: meOut }, 200, h);
+  }
+  // ----- Chém gió: POST /game/chat {text} -------------------------------
+  if (path === '/game/chat' && method === 'POST') {
+    // Chống spam: tối đa 1 tin / 3 giây và 20 tin / phút (rate_limits sẵn có).
+    const sec3 = String(Math.floor(Date.now() / 3000));
+    if (await gameRlHit(env, 'game:chat3s:' + sec3 + ':' + me, sec3) > 1)
+      return J({ error: 'Chém từ từ thôi — chờ 3 giây rồi chém tiếp nhé 😄' }, 429, h);
+    const minute = new Date().toISOString().slice(0, 16);
+    if (await gameRlHit(env, 'game:chatmin:' + minute + ':' + me, minute) > 20)
+      return J({ error: 'Chém gió hơi nhiều rồi — nghỉ một phút nhé 😄' }, 429, h);
+    const b = await readJson(req);
+    if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const chk = gameChatCheck(b.text);
+    if (!chk.ok) return J({ error: chk.error }, 400, h);
+    const t = now();
+    await env.DB.prepare('INSERT INTO game_chat(id,user_id,text,created_at) VALUES(?,?,?,?)').bind(crypto.randomUUID(), me, chk.text, t).run();
+    // Dọn tin cũ > 7 ngày ngay trong lần ghi (rẻ, khỏi cần cron riêng).
+    const cutoff = new Date(Date.now() - 7 * 86400000).toISOString();
+    await env.DB.prepare('DELETE FROM game_chat WHERE created_at<?').bind(cutoff).run();
+    const profs = await gameProfiles(env, [me]);
+    return J({ ok: true, message: { user_id: me, name: (profs[me] || {}).name || '', text: chk.text, created_at: t } }, 200, h);
+  }
+  // ----- Chém gió: GET /game/chat — 30 tin gần nhất trong 1 giờ ---------
+  // (cho nhánh 6 hiển thị bong bóng ở sảnh/phòng nếu muốn; text là dữ liệu
+  // người dùng — PHÍA WEB PHẢI escape khi đưa vào HTML, như mọi nơi khác.)
+  if (path === '/game/chat' && method === 'GET') {
+    const since = new Date(Date.now() - 3600000).toISOString();
+    const r = await env.DB.prepare('SELECT id,user_id,text,created_at FROM game_chat WHERE created_at>=? ORDER BY created_at DESC LIMIT 30').bind(since).all();
+    const rows = (r.results || []).slice().reverse();
+    const profs = await gameProfiles(env, rows.map(x => x.user_id));
+    return J({ ok: true, messages: rows.map(x => ({ id: x.id, user_id: x.user_id, name: (profs[x.user_id] || {}).name || '', text: x.text, created_at: x.created_at })) }, 200, h);
+  }
+  if (path.startsWith('/game/rooms/')) return J({ error: 'Route phòng/đối kháng thuộc nhánh 6' }, 404, h);
+  return J({ error: 'Không tìm thấy API game' }, 404, h);
+}
+
+// Cho kiểm thử bằng node (Worker không có `module` nên đoạn này vô hại).
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    GAME_SCORE_RULES, GAME_ROUTES,
+    gameNormMode, gameNormLevel, gameValidateScore,
+    gameJstDay, gameWeekKey, gameWeekLabel,
+    gameStripVi, gameFindBad, gameChatCheck,
+  };
+}
+
+// =====================================================================
+// NHÁNH 6 — Phòng nhóm + đối kháng 1-1: endpoint /game/rooms/*
+// File BỔ SUNG cho Worker hoc-tieng-nhat-ai (xem MERGE-N6.md để hợp nhất).
+// Dán toàn bộ khối này vào worker-index.js TRƯỚC `export default`,
+// rồi thêm 1 dòng dispatch trong fetch handler:
+//   if (path.startsWith('/game/rooms/')) return handleGameRooms(req, env, c, path);
+//
+// Phụ thuộc hàm có sẵn của Worker (đúng phong cách bản live):
+//   J(body,status,headers), now(), bearer(req), readJson(req),
+//   sessionUser(env,token), rlHit(env,key,day), rlPeek(env,key)
+// Bảng D1 (CHỈ THÊM, tiền tố game_): game_rooms, game_room_players,
+// game_room_events — xem schema-rooms.sql. Đồng bộ bằng POLLING
+// (gói Free: không WebSocket/Durable Objects). Phòng cũ được dọn
+// cơ hội (opportunistic) ngay trong các lần truy vấn, không cron.
+//
+// Xác thực: sessionUser bắt buộc — chỉ tài khoản kind='user',
+// không bị khoá/từ chối (cùng khuôn handleProgress). Tên người chơi
+// LUÔN lấy từ phiên (users.name), không bao giờ nhận từ client.
+// =====================================================================
+
+const GR_LEVELS = ['N5', 'N4', 'N3', 'N2', 'N1'];
+const GR_TOPICS = ['kanji', 'vocab', 'grammar', 'mix'];
+const GR_MODES = { group: { max: 8, min: 2 }, versus: { max: 2, min: 2 } };
+const GR_CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // bỏ 0/O/1/I/L cho dễ đọc/dễ đọc thành tiếng
+const GR_EVENT_KINDS = ['start', 'questions', 'answer', 'progress', 'finish', 'chem', 'chat', 'rematch', 'ping'];
+const GR_PAYLOAD_MAX = { start: 4000, questions: 60000, answer: 2000, progress: 2000, finish: 2000, chem: 600, chat: 600, rematch: 1000, ping: 200 };
+const GR_QUESTION_MAX = 20;      // tối đa số câu chủ phòng gửi qua event 'questions'
+const GR_SCORE_MAX = 30000;      // trần điểm 1 ván (chống gian lận cơ bản)
+const GR_SCORE_STEP_MAX = 2500;  // trần tăng điểm trong 1 sự kiện answer/progress
+
+let _grReady = false;
+async function ensureGameRooms(env) {
+  if (_grReady || !env.DB) return;
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_rooms (
+    code TEXT PRIMARY KEY, host_user TEXT NOT NULL,
+    mode TEXT NOT NULL DEFAULT 'group', level TEXT NOT NULL DEFAULT 'N5',
+    topic TEXT NOT NULL DEFAULT 'mix', status TEXT NOT NULL DEFAULT 'waiting',
+    seed TEXT NOT NULL DEFAULT '', q_count INTEGER NOT NULL DEFAULT 10,
+    created_at TEXT NOT NULL, updated_at TEXT NOT NULL DEFAULT ''
+  )`).run();
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_room_players (
+    room_code TEXT NOT NULL, user_id TEXT NOT NULL, name TEXT NOT NULL DEFAULT '',
+    score INTEGER NOT NULL DEFAULT 0, state TEXT NOT NULL DEFAULT '{}',
+    joined_at TEXT NOT NULL DEFAULT '', updated_at TEXT NOT NULL DEFAULT '',
+    PRIMARY KEY(room_code, user_id)
+  )`).run();
+  await env.DB.prepare(`CREATE TABLE IF NOT EXISTS game_room_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, room_code TEXT NOT NULL,
+    user_id TEXT NOT NULL DEFAULT '', kind TEXT NOT NULL,
+    payload TEXT NOT NULL DEFAULT '{}', created_at TEXT NOT NULL
+  )`).run();
+  await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_game_rooms_status_created ON game_rooms(status, created_at)`).run();
+  await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_game_room_events_room_id ON game_room_events(room_code, id)`).run();
+  _grReady = true;
+}
+
+// --- Dọn phòng cũ theo điều kiện thời gian, chạy CƠ HỘI khi có truy vấn ---
+// Tối đa 1 lần / 10 phút / isolate: waiting quá 2 giờ, done quá 2 giờ,
+// playing quá 6 giờ coi như bỏ dở -> xoá cả người chơi + sự kiện của phòng.
+let _grCleanedAt = 0;
+async function grCleanup(env) {
+  const t = Date.now();
+  if (t - _grCleanedAt < 600000) return;
+  _grCleanedAt = t;
+  try {
+    const cutWait = new Date(t - 2 * 3600e3).toISOString();
+    const cutPlay = new Date(t - 6 * 3600e3).toISOString();
+    const old = await env.DB.prepare(
+      `SELECT code FROM game_rooms WHERE (status IN ('waiting','done') AND created_at < ?) OR (status='playing' AND created_at < ?) LIMIT 50`
+    ).bind(cutWait, cutPlay).all();
+    for (const r of (old.results || [])) {
+      await env.DB.prepare('DELETE FROM game_room_events WHERE room_code=?').bind(r.code).run();
+      await env.DB.prepare('DELETE FROM game_room_players WHERE room_code=?').bind(r.code).run();
+      await env.DB.prepare('DELETE FROM game_rooms WHERE code=?').bind(r.code).run();
+    }
+  } catch (e) { /* dọn dẹp là việc phụ: lỗi thì bỏ qua, không chặn luồng chính */ }
+}
+
+function grCode() {
+  const a = new Uint8Array(5); crypto.getRandomValues(a);
+  let s = ''; for (const x of a) s += GR_CODE_ALPHABET[x % GR_CODE_ALPHABET.length];
+  return s;
+}
+function grParseState(s) { try { const o = JSON.parse(s || '{}'); return (o && typeof o === 'object' && !Array.isArray(o)) ? o : {}; } catch (e) { return {}; } }
+function grParsePayload(s) { try { const o = JSON.parse(s || '{}'); return (o && typeof o === 'object' && !Array.isArray(o)) ? o : {}; } catch (e) { return {}; } }
+function grCleanCode(v) { return String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8); }
+
+// Chuẩn hoá 1 câu hỏi do chủ phòng gửi (đề dự phòng qua event): chỉ giữ
+// đúng hình dạng Question của CONTRACT, cắt độ dài từng trường, bỏ mọi
+// trường lạ. Trả null nếu câu không dùng được.
+function grCleanQuestion(q) {
+  if (!q || typeof q !== 'object' || Array.isArray(q)) return null;
+  const types = ['kanji', 'vocab', 'part', 'fill', 'order'];
+  const type = types.includes(q.type) ? q.type : 'vocab';
+  const out = { type, prompt: String(q.prompt || '').slice(0, 300) };
+  if (!out.prompt) return null;
+  if (q.promptSub) out.promptSub = String(q.promptSub).slice(0, 200);
+  if (Array.isArray(q.choices)) out.choices = q.choices.slice(0, 4).map(x => String(x == null ? '' : x).slice(0, 120));
+  if (Number.isInteger(q.answer) && q.answer >= 0 && q.answer <= 3) out.answer = q.answer;
+  if (Array.isArray(q.tokens)) out.tokens = q.tokens.slice(0, 12).map(x => String(x == null ? '' : x).slice(0, 60));
+  out.answerText = String(q.answerText == null ? '' : q.answerText).slice(0, 300);
+  if (q.meaning) out.meaning = String(q.meaning).slice(0, 300);
+  if (type !== 'order' && (!out.choices || out.choices.length < 2 || out.answer == null)) return null;
+  if (type === 'order' && (!out.tokens || out.tokens.length < 2 || !out.answerText)) return null;
+  return out;
+}
+
+async function grRoom(env, code) {
+  return env.DB.prepare('SELECT * FROM game_rooms WHERE code=?').bind(code).first();
+}
+async function grPlayers(env, code) {
+  const r = await env.DB.prepare('SELECT user_id,name,score,state,joined_at,updated_at FROM game_room_players WHERE room_code=? ORDER BY joined_at ASC, user_id ASC').bind(code).all();
+  return r.results || [];
+}
+async function grAddEvent(env, code, userId, kind, payload) {
+  const p = JSON.stringify(payload || {});
+  const r = await env.DB.prepare('INSERT INTO game_room_events(room_code,user_id,kind,payload,created_at) VALUES(?,?,?,?,?)')
+    .bind(code, userId || '', kind, p, now()).run();
+  return (r && r.meta && (r.meta.last_row_id || r.meta.lastRowId)) || 0;
+}
+async function grUpsertPlayer(env, code, userId, name) {
+  const t = now();
+  await env.DB.prepare(`INSERT INTO game_room_players(room_code,user_id,name,score,state,joined_at,updated_at)
+    VALUES(?,?,?,0,'{}',?,?)
+    ON CONFLICT(room_code,user_id) DO UPDATE SET name=excluded.name, updated_at=excluded.updated_at`)
+    .bind(code, userId, name, t, t).run();
+}
+
+function grRoomView(room, players, me) {
+  const tNow = Date.now();
+  return {
+    code: room.code, mode: room.mode, level: room.level, topic: room.topic,
+    status: room.status, seed: room.seed, qCount: +room.q_count || 10,
+    hostUser: room.host_user, isHost: room.host_user === me,
+    createdAt: room.created_at, maxPlayers: (GR_MODES[room.mode] || GR_MODES.group).max,
+    players: players.map(p => {
+      const st = grParseState(p.state);
+      return {
+        userId: p.user_id, name: p.name || '', score: +p.score || 0,
+        state: st, isHost: p.user_id === room.host_user, me: p.user_id === me,
+        online: !!(p.updated_at && (tNow - Date.parse(p.updated_at)) < 45000),
+        finished: !!st.finished,
+      };
+    }),
+  };
+}
+
+// Giới hạn tần suất ghi (dùng chung rate_limits của Worker: rlHit/rlPeek).
+// Trả Response 429 nếu vượt, null nếu qua. GET /state KHÔNG đếm ở đây:
+// polling 1–3 giây mà ghi D1 mỗi lần sẽ đốt quota — nhịp poll do client
+// giữ (chỉ khi tab hiển thị), xem phong-nhom.js.
+async function grRate(req, env, c, userId, action, limit, slotKind) {
+  const day = new Date().toISOString().slice(0, 10);
+  const slot = slotKind === 'hour' ? new Date().toISOString().slice(0, 13) : new Date().toISOString().slice(0, 16);
+  const key = 'gr:' + action + ':' + slot + ':' + userId;
+  const n = await rlHit(env, key, day);
+  if (n > limit) return J({ error: 'Thao tác hơi nhanh — chờ một chút rồi thử lại nhé.', code: 'rate_limited' }, 429, c.h);
+  return null;
+}
+
+async function handleGameRooms(req, env, c, path) {
+  const h = Object.assign({}, c.h, { 'Cache-Control': 'no-store, private' });
+  if (!env.DB) return J({ error: 'Chưa cấu hình cơ sở dữ liệu (D1).' }, 503, h);
+  const s = await sessionUser(env, bearer(req));
+  if (!s || (s.kind !== 'user' && s.kind !== 'admin')) return J({ error: 'Cần đăng nhập để chơi cùng bạn bè.', code: 'login_required' }, 401, h); // ADMINFIX (30/10): admin = thành viên đã duyệt
+  if (s.status === 'locked' || s.status === 'rejected') return J({ error: 'Tài khoản không còn hiệu lực' }, 403, h);
+  const me = s.user_id;
+  // ADMINFIX (30/10): phiên admin không có users.name (NULL) — gọi tên 'Admin'
+  // thay vì rơi về nhãn chung 'Học viên' trong phòng chơi.
+  const myName = s.kind === 'admin' ? 'Admin' : (String(s.name || '').trim().slice(0, 80) || 'Học viên');
+  await ensureGameRooms(env);
+  await grCleanup(env);
+
+  // ---------- POST /game/rooms/create {mode, level, topic} ----------
+  if (path === '/game/rooms/create' && req.method === 'POST') {
+    const limited = await grRate(req, env, c, me, 'create', 10, 'hour');
+    if (limited) return limited;
+    const b = await readJson(req); if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const mode = GR_MODES[b.mode] ? b.mode : null;
+    const level = GR_LEVELS.includes(b.level) ? b.level : null;
+    const topic = GR_TOPICS.includes(b.topic) ? b.topic : null;
+    if (!mode || !level || !topic) return J({ error: 'Chế độ, trình độ hoặc chủ đề chưa hợp lệ.' }, 400, h);
+    const qCount = Math.min(15, Math.max(5, parseInt(b.qCount, 10) || 10));
+    let code = null;
+    for (let i = 0; i < 8 && !code; i++) {
+      const cand = grCode();
+      if (!(await grRoom(env, cand))) code = cand;
+    }
+    if (!code) return J({ error: 'Chưa tạo được mã phòng, thử lại sau ít giây nhé.' }, 503, h);
+    const seed = String(Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36));
+    const t = now();
+    await env.DB.prepare('INSERT INTO game_rooms(code,host_user,mode,level,topic,status,seed,q_count,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?)')
+      .bind(code, me, mode, level, topic, 'waiting', seed, qCount, t, t).run();
+    await grUpsertPlayer(env, code, me, myName);
+    await grAddEvent(env, code, me, 'system', { text: 'created', mode, level, topic });
+    const room = await grRoom(env, code);
+    const players = await grPlayers(env, code);
+    return J({ ok: true, room: grRoomView(room, players, me) }, 201, h);
+  }
+
+  // ---------- POST /game/rooms/join {code} ----------
+  if (path === '/game/rooms/join' && req.method === 'POST') {
+    const limited = await grRate(req, env, c, me, 'join', 30, 'hour');
+    if (limited) return limited;
+    const b = await readJson(req); if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const code = grCleanCode(b.code);
+    const room = code ? await grRoom(env, code) : null;
+    if (!room) return J({ error: 'Không tìm thấy phòng này. Kiểm tra lại mã nhé.' }, 404, h);
+    const players = await grPlayers(env, code);
+    const already = players.some(p => p.user_id === me);
+    if (!already) {
+      if (room.status !== 'waiting') return J({ error: 'Phòng đã bắt đầu hoặc đã kết thúc, không vào thêm được.' }, 409, h);
+      const max = (GR_MODES[room.mode] || GR_MODES.group).max;
+      if (players.length >= max) return J({ error: 'Phòng đã đủ người rồi.' }, 409, h);
+      await grUpsertPlayer(env, code, me, myName);
+      await grAddEvent(env, code, me, 'join', { name: myName });
+    }
+    const room2 = await grRoom(env, code);
+    const players2 = await grPlayers(env, code);
+    return J({ ok: true, room: grRoomView(room2, players2, me) }, 200, h);
+  }
+
+  // ---------- GET /game/rooms/state?code=&since= ----------
+  if (path === '/game/rooms/state' && req.method === 'GET') {
+    const url = new URL(req.url);
+    const code = grCleanCode(url.searchParams.get('code') || '');
+    const since = Math.max(0, parseInt(url.searchParams.get('since') || '0', 10) || 0);
+    const room = code ? await grRoom(env, code) : null;
+    if (!room) return J({ error: 'Không tìm thấy phòng này.', code: 'room_gone' }, 404, h);
+    let players = await grPlayers(env, code);
+    // Chỉ thành viên phòng mới xem được trạng thái/sự kiện (chống dò phòng lạ).
+    if (!players.some(p => p.user_id === me)) return J({ error: 'Chưa ở trong phòng này.', code: 'not_in_room' }, 403, h);
+    // Nhịp tim: cập nhật updated_at của chính mình tối đa 1 lần / 30 giây.
+    const mine = players.find(p => p.user_id === me);
+    if (mine && (!mine.updated_at || (Date.now() - Date.parse(mine.updated_at)) > 30000)) {
+      await env.DB.prepare('UPDATE game_room_players SET updated_at=? WHERE room_code=? AND user_id=?').bind(now(), code, me).run();
+      players = await grPlayers(env, code);
+    }
+    let evRows;
+    if (since > 0) {
+      const r = await env.DB.prepare('SELECT id,user_id,kind,payload,created_at FROM game_room_events WHERE room_code=? AND id>? ORDER BY id ASC LIMIT 100').bind(code, since).all();
+      evRows = r.results || [];
+    } else {
+      const r = await env.DB.prepare('SELECT id,user_id,kind,payload,created_at FROM game_room_events WHERE room_code=? ORDER BY id DESC LIMIT 50').bind(code).all();
+      evRows = (r.results || []).slice().reverse();
+    }
+    const nameOf = {}; players.forEach(p => { nameOf[p.user_id] = p.name || ''; });
+    const events = evRows.map(e => ({ id: +e.id, userId: e.user_id, name: nameOf[e.user_id] || '', kind: e.kind, payload: grParsePayload(e.payload), createdAt: e.created_at }));
+    const lastEventId = events.length ? events[events.length - 1].id : since;
+    return J({ ok: true, room: grRoomView(room, players, me), events, lastEventId, serverTime: now() }, 200, h);
+  }
+
+  // ---------- POST /game/rooms/event {code, kind, payload} ----------
+  if (path === '/game/rooms/event' && req.method === 'POST') {
+    const b = await readJson(req); if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const code = grCleanCode(b.code);
+    const kind = String(b.kind || '');
+    if (!GR_EVENT_KINDS.includes(kind)) return J({ error: 'Loại sự kiện không hợp lệ.' }, 400, h);
+    // Chém gió trong phòng: siết riêng (1 tin / ~3 giây thể hiện bằng
+    // trần phút thấp + trần tổng trong phòng do client giữ 3 giây).
+    const limited = kind === 'chem' || kind === 'chat'
+      ? await grRate(req, env, c, me, 'chem', 20, 'min')
+      : await grRate(req, env, c, me, 'event', 120, 'min');
+    if (limited) return limited;
+    const room = code ? await grRoom(env, code) : null;
+    if (!room) return J({ error: 'Không tìm thấy phòng này.', code: 'room_gone' }, 404, h);
+    const players = await grPlayers(env, code);
+    const mine = players.find(p => p.user_id === me);
+    if (!mine) return J({ error: 'Chưa ở trong phòng này.', code: 'not_in_room' }, 403, h);
+    let payload = (b.payload && typeof b.payload === 'object' && !Array.isArray(b.payload)) ? b.payload : {};
+    const rawLen = JSON.stringify(payload).length;
+    if (rawLen > (GR_PAYLOAD_MAX[kind] || 2000)) return J({ error: 'Dữ kiện sự kiện quá lớn.' }, 413, h);
+    const t = now();
+
+    if (kind === 'questions') {
+      // Đề dự phòng: chỉ chủ phòng, chỉ trước khi bắt đầu (waiting) —
+      // danh sách câu chuẩn hoá rồi phát cho cả phòng qua polling.
+      if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới gửi bộ câu được.' }, 403, h);
+      if (room.status !== 'waiting') return J({ error: 'Phòng đã bắt đầu, không đổi bộ câu được nữa.' }, 409, h);
+      const list = Array.isArray(payload.questions) ? payload.questions.slice(0, GR_QUESTION_MAX).map(grCleanQuestion).filter(Boolean) : [];
+      if (!list.length) return J({ error: 'Bộ câu trống hoặc không hợp lệ.' }, 400, h);
+      const id = await grAddEvent(env, code, me, 'questions', { questions: list });
+      return J({ ok: true, eventId: id, count: list.length }, 200, h);
+    }
+
+    if (kind === 'start') {
+      if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới bắt đầu trận được.' }, 403, h);
+      if (room.status === 'playing') return J({ error: 'Trận đã bắt đầu rồi.' }, 409, h);
+      const cfg = GR_MODES[room.mode] || GR_MODES.group;
+      if (players.length < cfg.min) return J({ error: 'Cần ít nhất ' + cfg.min + ' người mới bắt đầu được.' }, 409, h);
+      const seed = String(payload.seed || room.seed || '').slice(0, 40) || room.seed;
+      const qCount = Math.min(15, Math.max(5, parseInt(payload.qCount, 10) || +room.q_count || 10));
+      const deck = payload.deck === 'event' ? 'event' : 'seed'; // 'event' = chờ sự kiện questions của chủ phòng
+      await env.DB.prepare("UPDATE game_rooms SET status='playing', seed=?, q_count=?, updated_at=? WHERE code=?").bind(seed, qCount, t, code).run();
+      const id = await grAddEvent(env, code, me, 'start', { seed, qCount, deck });
+      return J({ ok: true, eventId: id, status: 'playing' }, 200, h);
+    }
+
+    if (kind === 'answer' || kind === 'progress') {
+      if (room.status !== 'playing') return J({ error: 'Trận chưa bắt đầu hoặc đã kết thúc.' }, 409, h);
+      const oldState = grParseState(mine.state);
+      const nextScore = Math.floor(+payload.score || 0);
+      if (nextScore < 0 || nextScore > GR_SCORE_MAX) return J({ error: 'Điểm không hợp lệ.' }, 400, h);
+      if (nextScore > (+mine.score || 0) + GR_SCORE_STEP_MAX) return J({ error: 'Điểm tăng bất thường, đã chặn lại.' }, 400, h);
+      const st = {
+        qIndex: Math.min(30, Math.max(0, Math.floor(+payload.qIndex || 0))),
+        answered: Math.min(30, Math.max(0, Math.floor(+payload.answered || 0))),
+        correct: Math.min(30, Math.max(0, Math.floor(+payload.correct || 0))),
+        streak: Math.min(30, Math.max(0, Math.floor(+payload.streak || 0))),
+        finished: !!oldState.finished,
+      };
+      if (st.correct > st.answered) st.correct = st.answered;
+      await env.DB.prepare('UPDATE game_room_players SET score=?, state=?, updated_at=? WHERE room_code=? AND user_id=?')
+        .bind(Math.max(+mine.score || 0, nextScore), JSON.stringify(st), t, code, me).run();
+      const id = await grAddEvent(env, code, me, kind, { qIndex: st.qIndex, correct: kind === 'answer' ? !!payload.correct : undefined, score: Math.max(+mine.score || 0, nextScore) });
+      return J({ ok: true, eventId: id }, 200, h);
+    }
+
+    if (kind === 'finish') {
+      const st = grParseState(mine.state);
+      st.finished = true;
+      if (payload.score != null) {
+        const fs = Math.floor(+payload.score || 0);
+        if (fs >= 0 && fs <= GR_SCORE_MAX && fs <= (+mine.score || 0) + GR_SCORE_STEP_MAX) {
+          await env.DB.prepare('UPDATE game_room_players SET score=?, state=?, updated_at=? WHERE room_code=? AND user_id=?').bind(Math.max(+mine.score || 0, fs), JSON.stringify(st), t, code, me).run();
+        } else {
+          await env.DB.prepare('UPDATE game_room_players SET state=?, updated_at=? WHERE room_code=? AND user_id=?').bind(JSON.stringify(st), t, code, me).run();
+        }
+      } else {
+        await env.DB.prepare('UPDATE game_room_players SET state=?, updated_at=? WHERE room_code=? AND user_id=?').bind(JSON.stringify(st), t, code, me).run();
+      }
+      const id = await grAddEvent(env, code, me, 'finish', { score: +mine.score || 0, correct: st.correct || 0 });
+      // Cả phòng xong -> đóng phòng (done). Chủ phòng cũng có thể đóng
+      // sớm bằng {final:true} khi có người rời giữa chừng.
+      const after = await grPlayers(env, code);
+      const allDone = after.length > 0 && after.every(p => grParseState(p.state).finished);
+      if (allDone || (room.host_user === me && payload.final === true)) {
+        await env.DB.prepare("UPDATE game_rooms SET status='done', updated_at=? WHERE code=?").bind(t, code).run();
+        await grAddEvent(env, code, me, 'system', { text: 'done' });
+        return J({ ok: true, eventId: id, status: 'done' }, 200, h);
+      }
+      return J({ ok: true, eventId: id, status: room.status }, 200, h);
+    }
+
+    if (kind === 'rematch') {
+      if (room.host_user !== me) return J({ error: 'Chỉ chủ phòng mới mở ván mới được.' }, 403, h);
+      if (room.status !== 'done') return J({ error: 'Ván hiện tại chưa kết thúc.' }, 409, h);
+      const seed = String(Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36));
+      await env.DB.prepare("UPDATE game_rooms SET status='waiting', seed=?, updated_at=? WHERE code=?").bind(seed, t, code).run();
+      for (const p of players) {
+        await env.DB.prepare("UPDATE game_room_players SET score=0, state='{}', updated_at=? WHERE room_code=? AND user_id=?").bind(t, code, p.user_id).run();
+      }
+      const id = await grAddEvent(env, code, me, 'rematch', { seed });
+      return J({ ok: true, eventId: id, status: 'waiting', seed }, 200, h);
+    }
+
+    if (kind === 'chem' || kind === 'chat') {
+      if (room.status === 'done') return J({ error: 'Phòng đã kết thúc.' }, 409, h);
+      const text = String(payload.text || '').replace(/\s+/g, ' ').trim().slice(0, kind === 'chat' ? 60 : 120);
+      if (!text) return J({ error: 'Nội dung trống.' }, 400, h);
+      // LƯU Ý: lọc từ tục cho 'chat' nằm ở POST /game/chat của nhánh 5
+      // (GAME_API.chatSend phía client đã đi qua đó trước khi relay vào
+      // phòng); ở đây chỉ relay nguyên văn đã cắt + escape phía hiển thị.
+      const id = await grAddEvent(env, code, me, kind, { text, moment: String(payload.moment || 'chem').slice(0, 20) });
+      return J({ ok: true, eventId: id }, 200, h);
+    }
+
+    // kind === 'ping' (giữ nhịp/nhắc nhẹ): chỉ ghi sự kiện, không đổi trạng thái.
+    const id = await grAddEvent(env, code, me, 'ping', {});
+    return J({ ok: true, eventId: id }, 200, h);
+  }
+
+  // ---------- POST /game/rooms/leave {code} ----------
+  if (path === '/game/rooms/leave' && req.method === 'POST') {
+    const b = await readJson(req); if (!b) return J({ error: 'Dữ liệu không hợp lệ' }, 400, h);
+    const code = grCleanCode(b.code);
+    const room = code ? await grRoom(env, code) : null;
+    if (!room) return J({ ok: true, gone: true }, 200, h); // phòng không còn: coi như đã rời
+    await grAddEvent(env, code, me, 'leave', { name: myName });
+    await env.DB.prepare('DELETE FROM game_room_players WHERE room_code=? AND user_id=?').bind(code, me).run();
+    const rest = await grPlayers(env, code);
+    if (!rest.length) {
+      await env.DB.prepare('DELETE FROM game_room_events WHERE room_code=?').bind(code).run();
+      await env.DB.prepare('DELETE FROM game_rooms WHERE code=?').bind(code).run();
+      return J({ ok: true, roomClosed: true }, 200, h);
+    }
+    // Chủ phòng rời giữa sảnh: chuyển quyền chủ cho người vào sớm nhất còn lại.
+    if (room.host_user === me && room.status === 'waiting') {
+      await env.DB.prepare('UPDATE game_rooms SET host_user=?, updated_at=? WHERE code=?').bind(rest[0].user_id, now(), code).run();
+      await grAddEvent(env, code, me, 'system', { text: 'host_changed', hostUser: rest[0].user_id });
+    }
+    return J({ ok: true }, 200, h);
+  }
+
+  return J({ error: 'Không tìm thấy API phòng game' }, 404, h);
+}
+
+// Cho phép harness Node nạp module này để kiểm thử (Worker ESM không có
+// `module` nên dòng này vô hại khi dán vào worker-index.js).
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { handleGameRooms, ensureGameRooms, grCleanQuestion, grCleanCode, grCode };
+}
+
 export default {async fetch(req,env){
   const c=cors(env,req);
   if(req.method==='OPTIONS')return new Response(null,{status:204,headers:c.h});
@@ -2976,6 +3917,8 @@ export default {async fetch(req,env){
   if(path.startsWith('/community')||path.startsWith('/chat')||path.startsWith('/friends'))return handleCommunity(req,env,c,path);
   if(path.startsWith('/job/'))return handleJob(req,env,c,path);
   if(path.startsWith('/free/'))return handleFree(req,env,c,path);
+  if(path.startsWith('/game/rooms/'))return handleGameRooms(req,env,c,path);
+  if(path.startsWith('/game/'))return handleGame(req,env,c);
   if(path==='/'||path==='/ai')return handleAI(req,env,c);
   return J({error:'Không tìm thấy',paths:['/','/ai','/auth/*']},404,c.h);
 }};
