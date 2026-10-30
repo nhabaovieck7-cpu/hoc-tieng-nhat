@@ -118,6 +118,10 @@
   Object.defineProperty(st, 'lv', { get: function () { return bossNow().lv; } });
   var hpP = 100, hpB = 100, hpBMax = 100, round = 0, okCount = 0, streak = 0, best = 0, score = 0,
       lock = false, pool = [], qi = 0, cur = null, t0 = 0, startT = 0, timer = null, limMs = 0;
+  /* FIX3: tạm dừng (pause.js) — cùng cơ chế leo-thap: timerCb/timerLive
+     giữ đồng hồ câu, needNext hoãn next() khi đang dừng. */
+  var timerCb = null, timerLive = false, needNext = false, pauseCtl = null;
+  function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
 
   /* ---------- Menu ---------- */
   function segHTML(items, cur, attr) {
@@ -285,22 +289,29 @@
       try { GFX.burst(tgt, lowFx() ? 8 : 20); } catch (e) { /* bỏ qua */ }
     }
   }
-  function startTimer(sec, onTimeout) {
-    stopTimer(); limMs = sec * 1000; t0 = Date.now();
+  function armTimer() {
+    if (timer) clearInterval(timer);
     timer = setInterval(function () {
+      if (isPaused()) return;
       var left = limMs - (Date.now() - t0);
       // Đợt 7: thanh giờ bằng transform scaleX thay width (tick 50ms
       // không còn ép layout mỗi nhịp) — modes.css .mx-timer i origin trái.
       $('#tBar').style.transform = 'scaleX(' + Math.max(0, left / limMs) + ')';
       $('#tTxt').textContent = (Math.max(0, left) / 1000).toFixed(1) + 's';
-      if (left <= 0) { stopTimer(); onTimeout(); }
+      if (left <= 0) { stopTimer(); if (timerCb) timerCb(); }
     }, 50);
   }
-  function stopTimer() { if (timer) clearInterval(timer); timer = null; }
+  function startTimer(sec, onTimeout) {
+    stopTimer(); limMs = sec * 1000; t0 = Date.now(); timerCb = onTimeout; timerLive = true;
+    armTimer();
+  }
+  function stopTimer() { if (timer) clearInterval(timer); timer = null; timerLive = false; }
+  function suspendTimer() { if (timer) clearInterval(timer); timer = null; }
   function speedFrac() { return Math.max(0, Math.min(1, (limMs - (Date.now() - t0)) / limMs)); }
 
   function showError(msg) {
     stopTimer();
+    if (pauseCtl) pauseCtl.setVisible(false);
     $('#play').classList.add('mx-hid');
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-err"><div class="mx-big-emoji">🌧️</div><h1>Chưa lấy được câu hỏi</h1>' +
@@ -362,7 +373,8 @@
   function start() {
     var B = bossNow();
     hpP = 100; hpBMax = effHpOf(B); hpB = hpBMax; round = 0; okCount = 0; streak = 0; best = 0; score = 0; qi = 0; pool = [];
-    startT = Date.now();
+    startT = Date.now(); needNext = false;
+    if (pauseCtl) pauseCtl.setVisible(true);
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid');
     document.documentElement.style.setProperty('--bkc', B.color);
     var arena = $('#arena');
@@ -401,6 +413,7 @@
   }
 
   function next() {
+    if (isPaused()) { needNext = true; return; }
     if (hpP <= 0 || hpB <= 0) return end();
     takeQ().then(function (q) {
       if (!q) return end();
@@ -436,13 +449,13 @@
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'mx-token'; b.textContent = tk;
       b.addEventListener('click', function () {
-        if (lock) return;
+        if (isPaused() || lock) return;
         if (b.classList.contains('used')) return;
         b.classList.add('used'); picked.push({ t: tk, b: b });
         var s = document.createElement('button');
         s.type = 'button'; s.className = 'mx-token'; s.textContent = tk;
         s.addEventListener('click', function () {
-          if (lock) return;
+          if (isPaused() || lock) return;
           var ix = picked.findIndex(function (p) { return p.b === b; });
           if (ix >= 0) picked.splice(ix, 1);
           b.classList.remove('used'); s.remove();
@@ -462,7 +475,7 @@
   }
 
   function answer(right, btn) {
-    if (lock) return; lock = true; stopTimer();
+    if (isPaused() || lock) return; lock = true; stopTimer();
     var sp = speedFrac(), D = DIFF[st.diff];
     if (right) {
       if (btn) btn.classList.add('ok');
@@ -505,6 +518,7 @@
   }
 
   function end() {
+    if (pauseCtl) pauseCtl.setVisible(false);
     /* Kết liễu BOSS (đợt 4): chỉ khi thắng, gắn TRƯỚC khi end() ẩn sân đấu;
        truyền boss CỦA VÁN (bossNow()). Thua (hpB>0) tuyệt đối không chạy. */
     if (hpB <= 0 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ boss: bossNow(), fromEl: $('#figP'), toEl: $('#figB'), dmg: score }); else GFIN.play({ fromEl: $('#figP'), toEl: $('#figB'), dmg: score }); } catch (e) {} }
@@ -533,6 +547,22 @@
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenuKeep(); });
   }
   function buildMenuKeep() { /* giữ lựa chọn trùm/độ khó đã chọn */ buildMenu(); }
+
+  /* FIX3: nút Tạm dừng — onResume cộng ms đã dừng vào t0 + startT. */
+  if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
+    pauseCtl = window.GPAUSE.create({
+      btnHost: $('#pauseSlot') || $('#play'),
+      exitLabel: 'Thoát trận (về menu)',
+      isPlaying: function () { return !$('#play').classList.contains('mx-hid'); },
+      onPause: function () { suspendTimer(); },
+      onResume: function (dur) {
+        t0 += dur; startT += dur;
+        if (timerLive) armTimer();
+        if (needNext) { needNext = false; next(); }
+      },
+      onExit: function () { stopTimer(); $('#play').classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); }
+    });
+  }
 
   bindUserEvent();
   loadUser().then(buildMenu);

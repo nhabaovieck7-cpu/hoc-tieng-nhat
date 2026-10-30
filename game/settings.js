@@ -56,6 +56,43 @@
     return STYLES.indexOf(s) >= 0 ? s : 'thuong';
   }
 
+  /* ---------- FIX3 (30/10, Lỗi 4): KIỂU GIỌNG DÙNG CHUNG ----------
+     Nguồn SỐ DUY NHẤT cho 3 preset giọng đọc. Bản cũ: preset nằm rải
+     rác — voice.js đặt chat = {rate 1.0, pitch 1.0} GIỐNG HỆT thuong
+     (chỉ khác cách chọn giọng, nên nghe như không đổi), trend.js
+     speakLegacy tự đặt rate 1.1/1.08 + pitch 1.15 bất kể kiểu đã chọn,
+     chat.js speakText tự đặt rate 1.02 + pitch mặc định. Nay mọi đường
+     tạo SpeechSynthesisUtterance (voice.js / trend.js / chat.js) đều
+     gọi GAME_VOICE_STYLE.applyTo(u, {lang, voice, volume, style?}):
+       chat   (Chất):       pitch 0.55 (thấp rõ), rate 0.88 (chậm, chắc)
+       thuong (Bình thường): pitch 1.00, rate 1.00 (trung tính)
+       cute   (Dễ thương):  pitch 1.60 (cao rõ), rate 1.12 (nhanh nhẹ)
+     Việc CHỌN GIỌNG (ưu tiên giọng nam/trầm cho 'chat') nằm ở
+     voice.js pickVoice — applyTo chỉ áp số + giọng được truyền vào. */
+  var VOICE_PRESETS = {
+    chat: { pitch: 0.55, rate: 0.88 },
+    thuong: { pitch: 1.0, rate: 1.0 },
+    cute: { pitch: 1.6, rate: 1.12 }
+  };
+  window.GAME_VOICE_STYLE = {
+    presets: VOICE_PRESETS,
+    current: function () { return readStyle(); },
+    preset: function (style) { return VOICE_PRESETS[VOICE_PRESETS[style] ? style : readStyle()] || VOICE_PRESETS.thuong; },
+    applyTo: function (u, opts) {
+      if (!u) return u;
+      opts = opts || {};
+      var p = window.GAME_VOICE_STYLE.preset(opts.style);
+      if (opts.lang) u.lang = opts.lang;
+      if (opts.voice) { try { u.voice = opts.voice; } catch (e) {} }
+      u.pitch = p.pitch;
+      u.rate = p.rate;
+      if (typeof opts.volume === 'number' && !isNaN(opts.volume)) {
+        u.volume = Math.max(0, Math.min(1, opts.volume));
+      }
+      return u;
+    }
+  };
+
   function get() {
     return {
       voiceOn: readOn('voice'), voiceVol: readVol('voice'),
@@ -90,7 +127,12 @@
       } else if (kind === 'sfx' && window.GSFX) {
         if (typeof window.GSFX.setVolume === 'function') window.GSFX.setVolume(st.sfxVol / 100);
       } else if (kind === 'voice') {
-        if (!st.voiceOn && window.GTREND && typeof window.GTREND.stop === 'function') window.GTREND.stop();
+        // FIX3: tắt kênh giọng phải câm NGAY cả lõi đọc GAME_VOICE
+        // (clip đang phát + TTS), không chỉ dừng bong bóng trend.
+        if (!st.voiceOn) {
+          if (window.GAME_VOICE && typeof window.GAME_VOICE.stop === 'function') window.GAME_VOICE.stop();
+          else if (window.GTREND && typeof window.GTREND.stop === 'function') window.GTREND.stop();
+        }
       }
     } catch (e) {}
   }
@@ -177,6 +219,15 @@
   var styleLabels = {}; // style -> label.gs-style-opt
   var panelOpen = false;
 
+  /* FIX3 (Lỗi 3): giữ slider trong lúc kéo — gia hạn mỗi 'input',
+     tự nhả sau 900ms không có thao tác (phòng khi sự kiện thả tay
+     bị mất). */
+  function holdRange(rg) {
+    rg._gsHold = true;
+    if (rg._gsHoldTm) clearTimeout(rg._gsHoldTm);
+    rg._gsHoldTm = setTimeout(function () { rg._gsHold = false; }, 900);
+  }
+
   function buildPanel() {
     panel = document.createElement('div');
     panel.className = 'gs-panel';
@@ -233,9 +284,29 @@
         }
       });
       range.addEventListener('input', function () {
+        holdRange(range);
         var patch = {};
         patch[def.kind + 'Vol'] = Number(range.value);
         set(patch);
+      });
+      /* FIX3 (Lỗi 3): một số trình duyệt di động (iOS Safari) phát
+         'input' không đều trong lúc kéo — chốt giá trị cuối bằng
+         'change' (luôn phát khi thả tay) để mức đã chọn không bị mất. */
+      range.addEventListener('change', function () {
+        var patch = {};
+        patch[def.kind + 'Vol'] = Number(range.value);
+        set(patch);
+      });
+      /* FIX3 (Lỗi 3): đánh dấu slider ĐANG được kéo bằng chạm/chuột.
+         syncPanel() thấy dấu này thì TUYỆT ĐỐI không gán lại
+         range.value (xem syncPanel) — chỉ cập nhật số %. */
+      ['pointerdown', 'touchstart'].forEach(function (evn) {
+        range.addEventListener(evn, function () { holdRange(range); }, { passive: true });
+      });
+      ['pointerup', 'pointercancel', 'touchend', 'touchcancel'].forEach(function (evn) {
+        range.addEventListener(evn, function () {
+          setTimeout(function () { range._gsHold = false; }, 60);
+        }, { passive: true });
       });
 
       row.appendChild(lab);
@@ -292,7 +363,19 @@
       r.sw.setAttribute('aria-checked', on ? 'true' : 'false');
       r.sw.textContent = on ? 'Bật' : 'Tắt';
       r.sw.classList.toggle('off', !on);
-      if (document.activeElement !== r.range || Number(r.range.value) !== vol) {
+      /* FIX3 (Lỗi 3 — NGUYÊN NHÂN GỐC phía code): bản cũ gán lại
+         r.range.value ở MỌI lần syncPanel (mà set() gọi syncPanel sau
+         MỌI sự kiện 'input') trừ khi document.activeElement === range.
+         Kéo bằng CHUỘT thì focus vào range nên thoát nạn — đó là lý do
+         harness fix2 (chuột, Chromium desktop) đo đúng. Kéo bằng CHẠM
+         thì iOS Safari KHÔNG đưa focus/activeElement vào range
+         (harness fix3 đo được activeElement = BODY suốt cú kéo) nên
+         mỗi 'input' đều kéo theo một lần gán .value NGAY GIỮA cú kéo:
+         trên WebKit iOS, gán .value bằng JS trong lúc ngón tay đang
+         tracking núm trượt làm cú kéo bị neo/đứt. Nay: đang kéo
+         (_gsHold) thì không gán — chỉ cập nhật số %; hết kéo mới đồng
+         bộ value như cũ. */
+      if (!r.range._gsHold && (document.activeElement !== r.range || Number(r.range.value) !== vol)) {
         r.range.value = String(vol);
       }
       r.pct.textContent = vol + '%';

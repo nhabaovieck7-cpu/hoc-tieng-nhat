@@ -68,6 +68,11 @@
   var floor = 1, topFloor = 1, score = 0, okCount = 0, streak = 0, best = 0, asked = 0,
       lock = false, pool = [], qi = 0, cur = null, t0 = 0, startT = 0, timer = null, limMs = 0,
       usedLife = { f50: false, time: false, swap: false };
+  /* FIX3: tạm dừng — timerCb/timerLive giữ callback + trạng thái đồng
+     hồ câu hiện tại để pause.js dừng/đánh thức đúng interval này;
+     needNext: next() bị gọi trong lúc đang dừng thì hoãn tới resume. */
+  var timerCb = null, timerLive = false, needNext = false, pauseCtl = null;
+  function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
 
   function recKey() { return 'hn_game_tower_best_' + st.lv; }
   function getRec() { try { return JSON.parse(localStorage.getItem(recKey()) || 'null'); } catch (e) { return null; } }
@@ -130,19 +135,27 @@
     $('#recInfo').textContent = rec ? '🏅 Kỷ lục ' + st.lv + ': tầng ' + rec.floor + ' · ' + rec.score + ' điểm' : '';
   }
 
-  function startTimer(sec, onTimeout) {
-    stopTimer(); limMs = sec * 1000; t0 = Date.now();
+  function armTimer() {
+    if (timer) clearInterval(timer);
     timer = setInterval(function () {
+      if (isPaused()) return;
       var left = limMs - (Date.now() - t0);
       $('#tBar').style.width = Math.max(0, left / limMs * 100) + '%';
       $('#tTxt').textContent = (Math.max(0, left) / 1000).toFixed(1) + 's';
-      if (left <= 0) { stopTimer(); onTimeout(); }
+      if (left <= 0) { stopTimer(); if (timerCb) timerCb(); }
     }, 50);
   }
-  function stopTimer() { if (timer) clearInterval(timer); timer = null; }
+  function startTimer(sec, onTimeout) {
+    stopTimer(); limMs = sec * 1000; t0 = Date.now(); timerCb = onTimeout; timerLive = true;
+    armTimer();
+  }
+  function stopTimer() { if (timer) clearInterval(timer); timer = null; timerLive = false; }
+  /* FIX3: dừng interval mà KHÔNG hủy trạng thái đồng hồ (khác stopTimer). */
+  function suspendTimer() { if (timer) clearInterval(timer); timer = null; }
 
   function showError(msg) {
     stopTimer();
+    if (pauseCtl) pauseCtl.setVisible(false);
     $('#play').classList.add('mx-hid');
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-err"><div class="mx-big-emoji">🌧️</div><h1>Chưa lấy được câu hỏi</h1>' +
@@ -155,7 +168,8 @@
     floor = 1; topFloor = 1; score = 0; okCount = 0; streak = 0; best = 0; asked = 0; qi = 0; pool = [];
     usedLife = { f50: false, time: false, swap: false };
     ['lf50', 'lfTime', 'lfSwap'].forEach(function (id) { $('#' + id).disabled = false; });
-    startT = Date.now();
+    startT = Date.now(); needNext = false;
+    if (pauseCtl) pauseCtl.setVisible(true);
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid'); $('#play').classList.remove('mx-hid');
     $('#sc').textContent = '⭐ 0';
     music('normal'); trend('vao');
@@ -176,6 +190,7 @@
   }
 
   function next(keepTime) {
+    if (isPaused()) { needNext = true; return; }
     takeQ().then(function (q) {
       if (!q) return end();
       cur = q; lock = false; asked++;
@@ -209,12 +224,12 @@
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'mx-token'; b.textContent = tk;
       b.addEventListener('click', function () {
-        if (lock || b.classList.contains('used')) return;
+        if (isPaused() || lock || b.classList.contains('used')) return;
         b.classList.add('used'); picked.push({ t: tk, b: b });
         var s = document.createElement('button');
         s.type = 'button'; s.className = 'mx-token'; s.textContent = tk;
         s.addEventListener('click', function () {
-          if (lock) return;
+          if (isPaused() || lock) return;
           var ix = picked.findIndex(function (p) { return p.b === b; });
           if (ix >= 0) picked.splice(ix, 1);
           b.classList.remove('used'); s.remove();
@@ -234,7 +249,7 @@
   }
 
   function answer(right, btn) {
-    if (lock) return; lock = true; stopTimer();
+    if (isPaused() || lock) return; lock = true; stopTimer();
     if (right) {
       if (btn) btn.classList.add('ok');
       revealChoices();
@@ -267,18 +282,18 @@
   /* Trợ giúp — mỗi loại 1 lần/lượt */
   function bindLifelines() {
     $('#lf50').addEventListener('click', function () {
-      if (usedLife.f50 || lock || !cur || !cur.choices) return;
+      if (isPaused() || usedLife.f50 || lock || !cur || !cur.choices) return;
       usedLife.f50 = true; this.disabled = true; trend('trogiup'); sfx('click');
       var ci = correctIdx(cur), k = 0;
       $$('#optBox .mx-opt').forEach(function (b, i) { if (i !== ci && k < 2) { b.classList.add('gone'); k++; } });
     });
     $('#lfTime').addEventListener('click', function () {
-      if (usedLife.time || lock) return;
+      if (isPaused() || usedLife.time || lock) return;
       usedLife.time = true; this.disabled = true; trend('trogiup'); sfx('click');
       limMs += 10000;
     });
     $('#lfSwap').addEventListener('click', function () {
-      if (usedLife.swap || lock) return;
+      if (isPaused() || usedLife.swap || lock) return;
       usedLife.swap = true; this.disabled = true; trend('doicau'); sfx('click');
       asked--; next();
     });
@@ -288,6 +303,7 @@
   var lastIsRec = false;
   function end() {
     if ($('#play').classList.contains('mx-hid')) return;
+    if (pauseCtl) pauseCtl.setVisible(false);
     stopTimer();
     /* Kết liễu BOSS (đợt 4): chỉ khi đạt ngưỡng thắng sẵn có (tầng 10+);
        chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
@@ -311,6 +327,24 @@
       '<button class="mx-btn" id="btnAgain" type="button">Leo lại</button><div style="height:8px"></div>' +
       '<a class="mx-btn alt" style="display:block;text-align:center;text-decoration:none" href="index.html">Về hub game</a></div>';
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
+  }
+
+  /* FIX3: gắn nút Tạm dừng (pause.js). onResume cộng đúng số ms đã
+     dừng vào t0 (đồng hồ câu tính bằng Date.now()-t0) và startT (thời
+     lượng ván) nên đồng hồ chạy tiếp từ đúng giá trị đã dừng. */
+  if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
+    pauseCtl = window.GPAUSE.create({
+      btnHost: $('#pauseSlot') || $('#play'),
+      exitLabel: 'Dừng leo & nhận kết quả',
+      isPlaying: function () { return !$('#play').classList.contains('mx-hid'); },
+      onPause: function () { suspendTimer(); },
+      onResume: function (dur) {
+        t0 += dur; startT += dur;
+        if (timerLive) armTimer();
+        if (needNext) { needNext = false; next(); }
+      },
+      onExit: function () { end(); }
+    });
   }
 
   bindUserEvent();

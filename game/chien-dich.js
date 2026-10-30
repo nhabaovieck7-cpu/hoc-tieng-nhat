@@ -255,6 +255,11 @@
 
   /* ---------- Chơi ---------- */
   var G = null, tmr = null, deadline = 0, qDuration = 0, qStartAt = 0;
+  /* FIX3: tạm dừng (pause.js) — đồng hồ câu chạy theo deadline tuyệt
+     đối (Date.now), nên resume chỉ cần cộng số ms đã dừng vào
+     deadline/qStartAt/G.startedAt là chạy tiếp đúng giá trị đã dừng. */
+  var pauseCtl = null, needNext = false;
+  function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
   var lastRes = null; // snapshot kết quả màn vừa kết thúc, để renderRes() vẽ lại khi tên resolve muộn
 
   function start(stage, node) {
@@ -272,6 +277,8 @@
       locked: false
     };
     show('cdPlay');
+    needNext = false;
+    if (pauseCtl) pauseCtl.setVisible(true);
     $('cdPt').textContent = LV + ' · Chặng ' + (stage + 1) + (boss ? ' · TRÙM · Trộn tổng hợp' : ' · Màn ' + (node + 1));
     $('cdBossBox').classList.toggle('cd-hid', !boss);
     if (boss) {
@@ -353,6 +360,7 @@
   };
 
   function next() {
+    if (isPaused()) { needNext = true; return; }
     clearInterval(tmr);
     if (!G || G.i >= G.n || G.life <= 0 || (G.boss && G.hp <= 0)) return end();
     var q = G.q = G.qs[G.i];
@@ -383,6 +391,13 @@
     setLifelinesEnabled(true);
   }
 
+  function tmrTick() {
+    if (isPaused()) return;
+    var r = (deadline - Date.now()) / qDuration;
+    $('cdTm').style.width = clamp(r * 100, 0, 100) + '%';
+    $('cdTm').parentElement.classList.toggle('cd-low', r < 0.25);
+    if (r <= 0) { clearInterval(tmr); onTimeout(); }
+  }
   function startTimer(q) {
     var base = tsec(G.stage) * (G.boss ? 0.8 : 1) * (q.type === 'order' ? 1.8 : 1) * DIFFS[DIFF].t;
     qDuration = Math.max(4, base) * 1000;
@@ -391,12 +406,7 @@
     $('cdTm').style.width = '100%';
     $('cdTm').parentElement.classList.remove('cd-low');
     clearInterval(tmr);
-    tmr = setInterval(function () {
-      var r = (deadline - Date.now()) / qDuration;
-      $('cdTm').style.width = clamp(r * 100, 0, 100) + '%';
-      $('cdTm').parentElement.classList.toggle('cd-low', r < 0.25);
-      if (r <= 0) { clearInterval(tmr); onTimeout(); }
-    }, 100);
+    tmr = setInterval(tmrTick, 100);
   }
   function remainRatio() { return clamp((deadline - Date.now()) / qDuration, 0, 1); }
 
@@ -407,7 +417,7 @@
     }).join('');
     op.querySelectorAll('.cd-opt').forEach(function (b) {
       b.onclick = function () {
-        if (G.locked) return;
+        if (isPaused() || G.locked) return;
         var ok = parseInt(b.dataset.i, 10) === q.answer;
         op.querySelectorAll('.cd-opt').forEach(function (x) {
           x.disabled = true;
@@ -425,7 +435,7 @@
     var pool = $('cdPool'), ans = $('cdAns');
     pool.querySelectorAll('.cd-tile').forEach(function (b) {
       b.onclick = function () {
-        if (G.locked || b.classList.contains('cd-used')) return;
+        if (isPaused() || G.locked || b.classList.contains('cd-used')) return;
         HOOK.sfx('click');
         b.classList.add('cd-used');
         var idx = parseInt(b.dataset.i, 10);
@@ -433,7 +443,7 @@
         var t = document.createElement('button');
         t.className = 'cd-tile'; t.textContent = q.tokens[idx]; t.dataset.i = idx;
         t.onclick = function () {
-          if (G.locked) return;
+          if (isPaused() || G.locked) return;
           HOOK.sfx('click');
           G.placed.splice(G.placed.indexOf(idx), 1);
           t.remove(); b.classList.remove('cd-used');
@@ -487,7 +497,7 @@
   }
 
   function answer(ok) {
-    if (G.locked) return;
+    if (isPaused() || G.locked) return;
     G.locked = true;
     clearInterval(tmr);
     setLifelinesEnabled(false);
@@ -521,7 +531,7 @@
 
   /* ---------- Trợ giúp ---------- */
   $('cdL5050').onclick = function () {
-    if (!G || G.locked || G.help.fifty <= 0 || !G.q || G.q.type === 'order') return;
+    if (isPaused() || !G || G.locked || G.help.fifty <= 0 || !G.q || G.q.type === 'order') return;
     G.help.fifty--; HOOK.trend('trogiup'); HOOK.sfx('click');
     var q = G.q, wrong = [];
     q.choices.forEach(function (c, i) { if (i !== q.answer) wrong.push(i); });
@@ -533,7 +543,7 @@
     updateHud(); setLifelinesEnabled(true);
   };
   $('cdLSwap').onclick = function () {
-    if (!G || G.locked || G.help.swap <= 0) return;
+    if (isPaused() || !G || G.locked || G.help.swap <= 0) return;
     G.help.swap--; HOOK.trend('doicau');
     clearInterval(tmr);
     setLifelinesEnabled(false);
@@ -550,15 +560,16 @@
     updateHud();
   };
   $('cdLTime').onclick = function () {
-    if (!G || G.locked || G.help.time <= 0) return;
+    if (isPaused() || !G || G.locked || G.help.time <= 0) return;
     G.help.time--; HOOK.trend('trogiup'); HOOK.sfx('click');
     deadline += qDuration * 0.5; // +50% thời lượng câu hiện tại
     updateHud(); setLifelinesEnabled(true);
   };
-  $('cdQuit').onclick = function () { clearInterval(tmr); G = null; map(); };
+  $('cdQuit').onclick = function () { if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); };
 
   /* ---------- Kết thúc màn ---------- */
   function end() {
+    if (pauseCtl) pauseCtl.setVisible(false);
     clearInterval(tmr);
     var boss = G.boss;
     var pass = boss ? (G.hp <= 0 && G.life > 0) : (G.ok >= Math.ceil(G.n * 0.6) && G.life > 0);
@@ -636,6 +647,27 @@
     if (nxB) nxB.onclick = function () { start(R.nx[0], R.nx[1]); };
     if (rtB) rtB.onclick = function () { start(R.stage, R.node); };
     $('cdMp').onclick = map;
+  }
+
+  /* FIX3: gắn nút Tạm dừng (pause.js) cho màn chơi — gồm cả màn TRÙM
+     của chiến dịch (dùng chung đồng hồ deadline này). Thoát trong lớp
+     phủ = đúng luồng nút "🏳️ Bỏ màn này" (cdQuit) sẵn có. */
+  if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
+    pauseCtl = window.GPAUSE.create({
+      btnHost: $('cdPauseSlot') || $('cdPlay'),
+      exitLabel: '🏳️ Bỏ màn này',
+      isPlaying: function () { return !!G && !$('cdPlay').classList.contains('cd-hid'); },
+      onPause: function () { clearInterval(tmr); },
+      onResume: function (dur) {
+        deadline += dur; qStartAt += dur;
+        if (G) {
+          G.startedAt += dur;
+          if (G.q && !G.locked) { clearInterval(tmr); tmr = setInterval(tmrTick, 100); }
+        }
+        if (needNext) { needNext = false; next(); }
+      },
+      onExit: function () { if (pauseCtl) pauseCtl.setVisible(false); clearInterval(tmr); G = null; map(); }
+    });
   }
 
   /* ---------- Khởi động ---------- */

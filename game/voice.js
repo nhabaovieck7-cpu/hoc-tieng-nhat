@@ -12,13 +12,13 @@
  *      {chữ|cách đọc}) và không có bản ghi -> TTS đọc THEO reading thay
  *      vì text gốc. Đây là cơ chế sửa đọc sai tên người / kanji khó.
  *   3) TTS speechSynthesis theo 1 trong 3 KIỂU GIỌNG (cài đặt
- *      localStorage 'hn_game_voice_style'):
- *        'chat'   (Chất):       giọng ja/vi chất lượng nhất theo danh
- *                               sách ưu tiên tên giọng; rate 1.0 pitch 1.0.
- *        'thuong' (Bình thường, MẶC ĐỊNH): cách chọn giọng cũ của
- *                               trend.js (giọng đầu tiên khớp tiền tố
- *                               ngôn ngữ); rate 1.0 pitch 1.0.
- *        'cute'   (Dễ thương): ưu tiên giọng nữ; pitch 1.35 rate 1.08.
+ *      localStorage 'hn_game_voice_style'; SỐ lấy từ GAME_VOICE_STYLE
+ *      ở settings.js — FIX3):
+ *        'chat'   (Chất):       ưu tiên giọng NAM/trầm nhất cho ja/vi;
+ *                               pitch 0.55, rate 0.88.
+ *        'thuong' (Bình thường, MẶC ĐỊNH): giọng đầu tiên khớp tiền tố
+ *                               ngôn ngữ; pitch 1.0, rate 1.0.
+ *        'cute'   (Dễ thương): ưu tiên giọng nữ; pitch 1.6, rate 1.12.
  *
  * Cài đặt dùng chung (đọc lại MỖI LẦN phát, đổi là ăn ngay):
  *   'hn_game_snd_voice'  : '0' = tắt giọng (mặc định bật).
@@ -49,11 +49,25 @@
   var AUDIO_BASE = '../audio/';
   var JA_RE = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;
 
-  var PRESETS = {
-    chat: { label: 'Chất', rate: 1.0, pitch: 1.0 },
-    thuong: { label: 'Bình thường', rate: 1.0, pitch: 1.0 },
-    cute: { label: 'Dễ thương', rate: 1.08, pitch: 1.35 },
-  };
+  /* FIX3 (30/10, Lỗi 4): số preset lấy từ NGUỒN DUY NHẤT
+     GAME_VOICE_STYLE (settings.js). Bản cũ ở đây: chat = {1.0, 1.0}
+     GIỐNG HỆT thuong — chọn "Chất" mà pitch/rate không đổi chút nào,
+     khác biệt duy nhất là thứ tự ưu tiên tên giọng (mà trên máy ít
+     giọng thì giọng được chọn cũng y hệt) nên nghe như chưa sửa.
+     Nay: chat pitch 0.55 / rate 0.88, thuong 1.0 / 1.0,
+     cute pitch 1.6 / rate 1.12 — ba bộ số khác nhau rõ rệt. */
+  var PRESETS = (function () {
+    var base = (window.GAME_VOICE_STYLE && window.GAME_VOICE_STYLE.presets) || {
+      chat: { pitch: 0.55, rate: 0.88 },
+      thuong: { pitch: 1.0, rate: 1.0 },
+      cute: { pitch: 1.6, rate: 1.12 },
+    };
+    return {
+      chat: { label: 'Chất', rate: base.chat.rate, pitch: base.chat.pitch },
+      thuong: { label: 'Bình thường', rate: base.thuong.rate, pitch: base.thuong.pitch },
+      cute: { label: 'Dễ thương', rate: base.cute.rate, pitch: base.cute.pitch },
+    };
+  })();
 
   /* ---------- Cài đặt ---------- */
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -150,6 +164,12 @@
     ],
   };
   var FEMALE_RE = /kyoko|o[\s-]?ren|nanami|haruka|ayumi|ichika|female|hoai\s?my|\blinh\b|zira|samantha|aria|jenny/i;
+  /* FIX3 (Lỗi 4): giọng NAM/TRẦM theo tên mà các nền tảng hay dùng —
+     ja: Otoya + Ichiro + Keita + Takumi (Apple/Microsoft), vi: Nam Minh.
+     Kiểu 'chat' ưu tiên nhóm này TRƯỚC danh sách chất lượng cũ, và
+     loại hẳn giọng nữ đã biết khỏi các vòng ưu tiên sau, để "Chất"
+     không rơi trúng giọng nữ cao rồi hạ pitch giả tạo. */
+  var MALE_RE = /otoya|ichiro|keita|takumi|masahiro|nam\s?minh|\bmale\b|daniel|fred/i;
 
   function pickVoice(lang, style) {
     var prefix = String(lang || '').slice(0, 2).toLowerCase();
@@ -161,11 +181,18 @@
     }
     if (!cands.length) return null;
     if (style === 'chat') {
+      for (var m = 0; m < cands.length; m++) {
+        if (MALE_RE.test(String(cands[m].name || ''))) return cands[m];
+      }
       var prio = CHAT_PRIORITY[prefix] || [];
       for (var p = 0; p < prio.length; p++) {
         for (var c = 0; c < cands.length; c++) {
+          if (FEMALE_RE.test(String(cands[c].name || ''))) continue;
           if (prio[p].test(String(cands[c].name || ''))) return cands[c];
         }
+      }
+      for (var d = 0; d < cands.length; d++) {
+        if (!FEMALE_RE.test(String(cands[d].name || ''))) return cands[d];
       }
       return cands[0];
     }
@@ -225,11 +252,35 @@
      (Câu TTS speechSynthesis không đổi được volume giữa utterance —
      giới hạn của chính API trình duyệt; câu TTS sau sẽ theo mức mới vì
      speak() đọc lại cài đặt mỗi lần phát.) */
+  /* FIX3 (Lỗi 3): giống nhạc nền — .volume của <audio> không do JS
+     điều khiển được trên iOS Safari, nên clip ghi sẵn cũng được nối
+     qua GainNode WebAudio (tạo trong cử chỉ người dùng, resume mỗi
+     lần phát). Có gain thì .volume giữ 1 và gain là mức thật; không
+     nối được thì rơi về .volume như cũ. */
+  var vctx = null, vMaster = null;
+  function ensureVCtx() {
+    if (vctx) { if (vctx.state === 'suspended') { try { vctx.resume(); } catch (e) {} } return vctx; }
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      vctx = new AC();
+      vMaster = vctx.createGain();
+      vMaster.gain.value = 1;
+      vMaster.connect(vctx.destination);
+    } catch (e) { vctx = null; vMaster = null; }
+    return vctx;
+  }
+  try {
+    window.addEventListener('pointerdown', function () { ensureVCtx(); }, { passive: true, capture: true });
+  } catch (e) {}
   function applyVolumeNow(v01) {
     var v = Number(v01);
     if (isNaN(v)) { var s = settings(); v = s.on ? s.vol / 100 : 0; }
     v = Math.max(0, Math.min(1, v));
-    if (curAudio) { try { curAudio.volume = v; } catch (e) {} }
+    if (curAudio) {
+      if (curAudio._cg) { try { curAudio._cg.gain.value = v; } catch (e) {} }
+      else { try { curAudio.volume = v; } catch (e) {} }
+    }
     return v;
   }
   // Nghe sự kiện đổi cài đặt do settings.js phát (detail = snapshot).
@@ -303,7 +354,19 @@
         var au = null;
         try { au = new Audio(a.src); } catch (e) { advance(); return; }
         curAudio = au;
-        try { au.volume = vol; } catch (e) {}
+        // FIX3: ưu tiên GainNode WebAudio (điều khiển được trên iOS).
+        au._cg = null;
+        if (ensureVCtx() && vMaster) {
+          try {
+            var srcN = vctx.createMediaElementSource(au);
+            var cg = vctx.createGain();
+            cg.gain.value = vol;
+            srcN.connect(cg); cg.connect(vMaster);
+            au._cg = cg;
+            au.volume = 1;
+          } catch (e) { au._cg = null; }
+        }
+        if (!au._cg) { try { au.volume = vol; } catch (e) {} }
         au.onended = function () { if (curAudio === au) curAudio = null; advance(); };
         au.onerror = function () { if (curAudio === au) curAudio = null; advance(); };
         watchdog = setTimeout(function () { if (curAudio === au) curAudio = null; advance(); }, 20000);
@@ -317,12 +380,19 @@
       if (!window.speechSynthesis || typeof SpeechSynthesisUtterance === 'undefined') { advance(); return; }
       var u;
       try { u = new SpeechSynthesisUtterance(a.text); } catch (e) { advance(); return; }
-      u.lang = a.lang;
+      /* FIX3 (Lỗi 4): áp kiểu giọng qua HÀM CHUNG GAME_VOICE_STYLE.applyTo
+         (settings.js) — cùng một cửa với trend.js/chat.js. preset cục
+         bộ ở trên chỉ còn là dữ liệu dự phòng đồng bộ với nguồn chung. */
       var v = pickVoice(a.lang, st.style);
-      if (v) u.voice = v;
-      u.rate = preset.rate;
-      u.pitch = preset.pitch;
-      u.volume = vol;
+      if (window.GAME_VOICE_STYLE && typeof window.GAME_VOICE_STYLE.applyTo === 'function') {
+        window.GAME_VOICE_STYLE.applyTo(u, { lang: a.lang, voice: v, volume: vol, style: st.style });
+      } else {
+        u.lang = a.lang;
+        if (v) { try { u.voice = v; } catch (e) {} }
+        u.rate = preset.rate;
+        u.pitch = preset.pitch;
+        u.volume = vol;
+      }
       u.onend = advance;
       u.onerror = advance;
       // iOS đôi khi không bắn onend: ước lượng thời lượng để hàng đợi không kẹt.
@@ -358,6 +428,21 @@
     speak: speak,
     stop: stop,
     applyVolumeNow: applyVolumeNow,
+    /* FIX3: cửa áp kiểu giọng dùng chung, xuất ra cho nơi khác cần —
+       bản thân nó ủy quyền GAME_VOICE_STYLE.applyTo (settings.js). */
+    applyPreset: function (u, opts) {
+      opts = opts || {};
+      if (window.GAME_VOICE_STYLE && typeof window.GAME_VOICE_STYLE.applyTo === 'function') {
+        return window.GAME_VOICE_STYLE.applyTo(u, opts);
+      }
+      var st = settings();
+      var p = PRESETS[opts.style || st.style] || PRESETS.thuong;
+      if (opts.lang) u.lang = opts.lang;
+      if (opts.voice) { try { u.voice = opts.voice; } catch (e) {} }
+      u.pitch = p.pitch; u.rate = p.rate;
+      if (typeof opts.volume === 'number') u.volume = Math.max(0, Math.min(1, opts.volume));
+      return u;
+    },
     presets: PRESETS,
     _test: {
       settings: settings,

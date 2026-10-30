@@ -37,6 +37,40 @@
   var ducked = false;
   var players = []; // tối đa 2 phần tử audio để crossfade
 
+  /* FIX3 (30/10, Lỗi 3): trên iPhone (iOS Safari), thuộc tính
+     .volume của phần tử <audio> KHÔNG do JS điều khiển được (âm
+     lượng media đi theo nút cứng của máy) — đó là lý do kéo slider
+     Nhạc nền trên máy thật "không ăn" dù harness Chromium (nơi
+     .volume đặt được) đo đúng ở fix2. Cách sửa: khi đã có tương tác
+     đầu tiên, nối mỗi player qua WebAudio: <audio> ->
+     MediaElementSource -> GainNode riêng -> master -> destination,
+     và fade bằng GAIN (JS điều khiển được trên iOS). Player nào nối
+     gain thì .volume giữ 1; player nào không nối được (không có
+     WebAudio / lỗi) rơi về đường .volume cũ nguyên vẹn. */
+  var actx = null, masterOut = null;
+  function ensureCtx() {
+    if (actx) { if (actx.state === 'suspended') { try { actx.resume(); } catch (e) {} } return actx; }
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      actx = new AC();
+      masterOut = actx.createGain();
+      masterOut.gain.value = 1;
+      masterOut.connect(actx.destination);
+    } catch (e) { actx = null; masterOut = null; }
+    return actx;
+  }
+  function volGet(p) { return p._g ? (typeof p._gv === 'number' ? p._gv : p._g.gain.value) : p.volume; }
+  function volSet(p, v) {
+    v = Math.max(0, Math.min(1, v));
+    if (p._g) {
+      p._gv = v;
+      try { p._g.gain.value = v; } catch (e) {}
+    } else {
+      try { p.volume = v; } catch (e) {}
+    }
+  }
+
   function on(key) {
     try { return localStorage.getItem(KEYS[key]) !== '0'; } catch (e) { return true; }
   }
@@ -74,6 +108,7 @@
 
   ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
     window.addEventListener(ev, function () {
+      ensureCtx(); // FIX3: tạo/hồi AudioContext ngay trong cử chỉ đầu tiên (điều kiện của iOS)
       if (unlocked) return;
       unlocked = true;
       if (pendingScene) { var s = pendingScene; pendingScene = null; play(s); }
@@ -86,6 +121,18 @@
     a.loop = true;
     a.preload = 'auto';
     a.volume = 0;
+    // FIX3: nối qua GainNode WebAudio khi làm được (xem ensureCtx).
+    if (unlocked && ensureCtx() && masterOut) {
+      try {
+        var srcNode = actx.createMediaElementSource(a);
+        var g = actx.createGain();
+        g.gain.value = 0;
+        srcNode.connect(g);
+        g.connect(masterOut);
+        a._g = g; a._gv = 0;
+        a.volume = 1; // qua gain thì phần tử giữ 1, gain là mức thật
+      } catch (e) { a._g = null; a._gv = null; }
+    }
     return a;
   }
 
@@ -98,14 +145,14 @@
      CÙNG player trước khi bắt đầu. */
   function fadeTo(player, to, done, ms) {
     if (player._fadeTm) { clearInterval(player._fadeTm); player._fadeTm = null; }
-    var from = player.volume;
+    var from = volGet(player); // FIX3: đọc mức THẬT (gain nếu có nối, không thì .volume)
     var total = ms || FADE_MS;
     var steps = 9, i = 0;
     var stepMs = Math.max(20, Math.floor(total / steps));
     var tm = setInterval(function () {
       i++;
       var v = from + (to - from) * (i / steps);
-      try { player.volume = Math.max(0, Math.min(1, v)); } catch (e) {}
+      volSet(player, v); // FIX3: ghi qua cùng một cửa (gain/.volume)
       if (i >= steps) {
         clearInterval(tm);
         if (player._fadeTm === tm) player._fadeTm = null;
@@ -233,7 +280,9 @@
     _test: {
       players: function () {
         return players.map(function (p) {
-          return { file: (p.dataset && p.dataset.file) || '', volume: p.volume, paused: p.paused };
+          // FIX3: volume = mức ÁP THẬT (gain WebAudio nếu đã nối —
+          // đường này mới là đường JS điều khiển được trên iOS).
+          return { file: (p.dataset && p.dataset.file) || '', volume: volGet(p), paused: p.paused, routed: !!p._g, elemVolume: p.volume };
         });
       },
       targetVol: targetVol

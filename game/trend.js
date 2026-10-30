@@ -299,17 +299,37 @@
     duckTimer = setTimeout(function () { duck(false); }, 12000);
     parts.forEach(function (p, idx) {
       var u = new SpeechSynthesisUtterance(p.text);
-      u.lang = p.ja ? 'ja-JP' : 'vi-VN';
       var v = voiceFor(p.ja ? 'ja' : 'vi');
-      if (v) u.voice = v;
-      u.rate = p.ja ? 1.1 : 1.08;
-      u.pitch = 1.15;
       // FIX2 (30/10): đường đọc cũ này trước đây không đặt u.volume —
       // nay theo mức Giọng đọc đã lưu (giống hệt lõi GAME_VOICE).
+      var vol01 = 1;
       try {
         var vv = parseInt(localStorage.getItem('hn_game_vol_voice'), 10);
-        u.volume = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
+        vol01 = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
       } catch (e) {}
+      /* FIX3 (Lỗi 4): bản cũ TỰ đặt u.rate = 1.1/1.08 + u.pitch = 1.15
+         BẤT KỂ kiểu giọng đã chọn trong ⚙️ — đường dự phòng này nuốt
+         mất preset (chọn "Chất" vẫn đọc như thường). Nay áp qua HÀM
+         CHUNG GAME_VOICE_STYLE.applyTo như mọi đường khác; chọn giọng
+         cho 'chat' ở đường này cũng ưu tiên giọng nam/trầm. */
+      var styleNow = 'thuong';
+      try { styleNow = localStorage.getItem('hn_game_voice_style') || 'thuong'; } catch (e) {}
+      if (styleNow === 'chat' && v && /kyoko|o[\s-]?ren|nanami|haruka|ayumi|female|hoai\s?my/i.test(String(v.name || ''))) {
+        try {
+          var vs = window.speechSynthesis.getVoices();
+          for (var vi = 0; vi < vs.length; vi++) {
+            var vl = (vs[vi].lang || '').replace('_', '-').toLowerCase();
+            if (vl.indexOf(p.ja ? 'ja' : 'vi') === 0 && /otoya|ichiro|keita|takumi|nam\s?minh|\bmale\b/i.test(String(vs[vi].name || ''))) { v = vs[vi]; break; }
+          }
+        } catch (e) {}
+      }
+      if (window.GAME_VOICE_STYLE && typeof window.GAME_VOICE_STYLE.applyTo === 'function') {
+        window.GAME_VOICE_STYLE.applyTo(u, { lang: p.ja ? 'ja-JP' : 'vi-VN', voice: v, volume: vol01, style: styleNow });
+      } else {
+        u.lang = p.ja ? 'ja-JP' : 'vi-VN';
+        if (v) { try { u.voice = v; } catch (e) {} }
+        u.rate = 1.0; u.pitch = 1.0; u.volume = vol01;
+      }
       if (idx === parts.length - 1) {
         u.onend = u.onerror = function () {
           if (duckTimer) clearTimeout(duckTimer);

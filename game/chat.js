@@ -234,14 +234,51 @@
       // ĐÚNG câu người khác gửi nên dùng speechSynthesis trực tiếp:
       // câu chứa kana -> ja-JP, còn lại vi-VN (cùng quy tắc bản mẫu).
       var u = new SpeechSynthesisUtterance(text);
-      u.lang = /[぀-ヿ]/.test(text) ? 'ja-JP' : 'vi-VN';
-      u.rate = 1.02;
+      var isJa = /[぀-ヿ]/.test(text);
       // FIX2 (30/10): đường dự phòng này trước đây KHÔNG đặt u.volume
       // (mặc định 1.0 bất kể thanh trượt) — nay theo đúng mức đã lưu.
+      var vol01 = 1;
       try {
         var vv = parseInt(localStorage.getItem('hn_game_vol_voice'), 10);
-        u.volume = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
+        vol01 = isNaN(vv) ? 1 : Math.max(0, Math.min(100, vv)) / 100;
       } catch (e) {}
+      /* FIX3 (Lỗi 4): bản cũ tự đặt u.rate = 1.02, pitch để mặc định,
+         không chọn giọng — bỏ qua hoàn toàn kiểu giọng trong ⚙️. Nay
+         áp qua HÀM CHUNG GAME_VOICE_STYLE.applyTo (settings.js) như
+         voice.js/trend.js; giọng lấy giọng đầu tiên khớp ngôn ngữ,
+         riêng kiểu 'chat' ưu tiên giọng nam/trầm nếu có. */
+      var pickV = null;
+      try {
+        var styleNow = localStorage.getItem('hn_game_voice_style') || 'thuong';
+        var vs = speechSynthesis.getVoices ? speechSynthesis.getVoices() : [];
+        var cands = [];
+        for (var vi = 0; vi < vs.length; vi++) {
+          var vl = (vs[vi].lang || '').replace('_', '-').toLowerCase();
+          if (vl.indexOf(isJa ? 'ja' : 'vi') === 0) cands.push(vs[vi]);
+        }
+        if (cands.length) {
+          pickV = cands[0];
+          if (styleNow === 'chat') {
+            for (var mi = 0; mi < cands.length; mi++) {
+              if (/otoya|ichiro|keita|takumi|nam\s?minh|\bmale\b/i.test(String(cands[mi].name || ''))) { pickV = cands[mi]; break; }
+            }
+          } else if (styleNow === 'cute') {
+            for (var fi = 0; fi < cands.length; fi++) {
+              if (/kyoko|o[\s-]?ren|nanami|haruka|female|hoai\s?my/i.test(String(cands[fi].name || ''))) { pickV = cands[fi]; break; }
+            }
+          }
+        }
+        if (window.GAME_VOICE_STYLE && typeof window.GAME_VOICE_STYLE.applyTo === 'function') {
+          window.GAME_VOICE_STYLE.applyTo(u, { lang: isJa ? 'ja-JP' : 'vi-VN', voice: pickV, volume: vol01, style: styleNow });
+        } else {
+          u.lang = isJa ? 'ja-JP' : 'vi-VN';
+          if (pickV) { try { u.voice = pickV; } catch (e) {} }
+          u.rate = 1.0; u.pitch = 1.0; u.volume = vol01;
+        }
+      } catch (e) {
+        u.lang = isJa ? 'ja-JP' : 'vi-VN';
+        u.volume = vol01;
+      }
       try { if (window.GMUSIC && GMUSIC.duck) GMUSIC.duck(true); } catch (e) {}
       u.onend = u.onerror = function () { try { if (window.GMUSIC && GMUSIC.duck) GMUSIC.duck(false); } catch (e) {} };
       speechSynthesis.speak(u);

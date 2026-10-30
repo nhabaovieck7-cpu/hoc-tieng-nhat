@@ -171,7 +171,28 @@ a{color:var(--cy)}
 }
 .gs-switch.off{opacity:.55;border-style:dashed;color:var(--m)}
 .gs-switch:active{transform:scale(.94)}
-.gs-range{flex:1 1 auto;min-width:56px;height:44px;accent-color:var(--vermillion);cursor:pointer}
+/* FIX3 (30/10, Lỗi 3 — iPhone thật): bản cũ .gs-range chỉ có
+   accent-color, KHÔNG có touch-action và không có rãnh/núm tự vẽ:
+   trên iOS Safari cử chỉ kéo ngang trên slider mặc định dễ bị trình
+   duyệt giành cho cuộn trang, cộng thêm settings.js syncPanel() gán
+   lại range.value giữa lúc kéo bằng chạm (xem settings.js). Nay:
+   touch-action:pan-x (kéo ngang thuộc về slider, cuộn dọc vẫn cuộn
+   panel), rãnh + núm tự vẽ bằng -webkit-slider-* để iOS/Android/
+   desktop render giống nhau và núm to 28px dễ nắm bằng ngón tay. */
+.gs-panel{touch-action:pan-y;overscroll-behavior:contain}
+.gs-gear,.gs-switch,.gs-close,.gs-style-opt{touch-action:manipulation}
+.gs-range{
+  flex:1 1 auto;min-width:56px;height:44px;accent-color:var(--vermillion);cursor:pointer;
+  touch-action:pan-x;-webkit-appearance:none;appearance:none;background:transparent;
+}
+.gs-range::-webkit-slider-runnable-track{height:6px;border-radius:99px;background:#4a4365}
+.gs-range::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--vermillion);margin-top:-11px;
+  box-shadow:0 2px 8px rgba(0,0,0,.45);cursor:pointer;
+}
+.gs-range::-moz-range-track{height:6px;border-radius:99px;background:#4a4365}
+.gs-range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:2.5px solid var(--vermillion);cursor:pointer}
 .gs-range:disabled{opacity:.4;cursor:not-allowed}
 .gs-pct{flex:0 0 42px;text-align:right;font-size:13px;font-weight:800}
 .gs-style{border-top:1px solid var(--line);padding-top:10px;margin-top:3px}
@@ -474,16 +495,58 @@ body.hitstop *{animation-play-state:paused!important}
   clip-path:polygon(40% 0,70% 0,50% 40%,80% 40%,30% 100%,45% 55%,20% 55%);
   margin:0;border-radius:0;
 }
+/* FIX3 (30/10, Lỗi 1): popup combo bản cũ neo fixed left:12px;top:38%
+   + số 62px -> hộp ~115x131px (kèm scale 1.55 lúc bật) đè thẳng ký tự
+   đầu câu hỏi và góc nút đáp án đầu tiên trên iPhone. Nay: hộp THU NHỎ
+   (số 34px desktop / 27px mobile), neo mặc định góc trên-phải, và
+   fx.js comboPop() sẽ ĐO thẻ câu hỏi thật rồi đặt cạnh dưới của hộp
+   ngay TRÊN câu hỏi (hoặc đáy sân ở Chạy vô tận) — hộp không giao câu
+   hỏi/đáp án ở mọi chế độ. transform-origin góc dưới-phải: nhịp scale
+   chỉ phình lên-trái (vào vùng an toàn), cạnh dưới không lấn xuống. */
 #combo{
-  position:fixed;left:12px;top:38%;z-index:64;opacity:0;pointer-events:none;
-  transform:rotate(-6deg);text-align:center;transition:opacity .2s;
+  position:fixed;right:10px;top:64px;left:auto;z-index:64;opacity:0;pointer-events:none;
+  transform:rotate(-6deg);transform-origin:100% 100%;text-align:center;transition:opacity .18s;
+  line-height:1;max-width:110px;
 }
 #combo.on{opacity:1}
 #combo b{
-  display:block;font-size:62px;font-weight:900;font-style:italic;line-height:.9;
-  color:var(--sun);-webkit-text-stroke:2px #1a0b2e;text-shadow:4px 4px 0 var(--pink);
+  display:block;font-size:34px;font-weight:900;font-style:italic;line-height:.95;
+  color:var(--sun);-webkit-text-stroke:1.5px #1a0b2e;text-shadow:3px 3px 0 var(--pink);
 }
-#combo small{font-weight:900;letter-spacing:3px;color:#fff;text-shadow:2px 2px 0 var(--neon)}
+#combo small{display:block;font-size:11px;font-weight:900;letter-spacing:2px;color:#fff;text-shadow:2px 2px 0 var(--neon);margin-top:2px}
+@media(max-width:640px){
+  #combo b{font-size:27px}
+  #combo small{font-size:10px;letter-spacing:1.5px}
+}
+
+/* ---------- FIX3: nút + lớp phủ TẠM DỪNG (pause.js, tiền tố gpause-) ---------- */
+.gpause-slot{margin-top:10px}
+.gpause-btn{
+  display:block;width:100%;min-height:48px;padding:12px 18px;border-radius:14px;
+  border:1.5px solid var(--line);background:#2b2540;color:var(--t);
+  font:inherit;font-weight:800;font-size:15px;cursor:pointer;touch-action:manipulation;
+}
+.gpause-btn[hidden]{display:none!important}
+.gpause-btn:active{transform:scale(.97)}
+.gpause-overlay{
+  position:fixed;inset:0;z-index:300;background:rgba(10,8,20,.74);
+  display:flex;align-items:center;justify-content:center;padding:18px;
+}
+.gpause-overlay[hidden]{display:none!important}
+.gpause-card{
+  background:var(--card);border:1.5px solid var(--line);border-radius:18px;
+  padding:22px 20px;max-width:340px;width:100%;text-align:center;color:var(--t);
+  box-shadow:0 16px 40px rgba(0,0,0,.55);
+}
+.gpause-title{font-size:22px;font-weight:900;margin-bottom:8px}
+.gpause-msg{color:var(--m);font-size:14px;line-height:1.5;margin-bottom:16px}
+.gpause-resume,.gpause-exit{
+  display:block;width:100%;min-height:48px;padding:12px 18px;border-radius:14px;
+  font:inherit;font-weight:800;font-size:15px;cursor:pointer;touch-action:manipulation;
+}
+.gpause-resume{border:0;background:linear-gradient(135deg,var(--c),#ff7a45);color:#fff;box-shadow:var(--shadow)}
+.gpause-exit{background:var(--card2);border:1px solid var(--line);color:var(--t);margin-top:10px}
+.gpause-frozen *{animation-play-state:paused!important}
 
 /* ---------- Tôn trọng giảm chuyển động ---------- */
 @media (prefers-reduced-motion: reduce){

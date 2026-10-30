@@ -201,6 +201,85 @@
     bigText('ULTRA<br>COMBO!!', 'ultra', 1400);
     burst(null, 110);
   }
+  /* FIX3 (30/10, Lỗi 1): vị trí combo tính từ THẺ CÂU HỎI THẬT của
+     chế độ đang chơi, ngay lúc hiện:
+       - Chiến dịch: thẻ #cdQbox; câu hỏi = .cd-q/.cd-sent trong thẻ.
+       - Chạy vô tận: sân #stage — cổng đáp án TRƯỢT dọc khắp sân nên
+         vùng an toàn duy nhất là góc ĐÁY-phải sân (dưới tầm cổng chạm
+         đáy: cổng dừng ở bottom-64px, runner ở giữa sân).
+       - Các chế độ mx (leo-thap/dau-kanji/le-hoi): thẻ .mx-card chứa
+         #qBox; câu hỏi = #qBox, đáp án đầu = .mx-opt/.mx-token.
+     Quy tắc chung (trừ Chạy vô tận): cạnh DƯỚI của hộp combo đặt trên
+     cạnh trên của câu hỏi 4px và trên đáp án đầu tiên — hộp combo
+     KHÔNG BAO GIỜ giao hộp chữ câu hỏi hay bất kỳ nút đáp án nào.
+     Không tìm thấy thẻ (hub/phòng nhóm…): góc trên-phải cố định. */
+  var comboTimer = null;
+  function positionCombo(c) {
+    c.style.left = ''; c.style.right = ''; c.style.top = ''; c.style.bottom = '';
+    var placed = false;
+    try {
+      var card = null, q = null, ans = null, bottomMode = false;
+      var cdq = document.getElementById('cdQbox');
+      if (cdq && cdq.getBoundingClientRect().height) {
+        card = cdq;
+        q = cdq.querySelector('.cd-q, .cd-sent');
+        ans = cdq.querySelector('.cd-opt, .cd-tile');
+      }
+      if (!card) {
+        var stg = document.getElementById('stage');
+        if (stg && document.getElementById('gateBox')) { card = stg; bottomMode = true; }
+      }
+      if (!card) {
+        var qb = document.getElementById('qBox');
+        if (qb) {
+          card = qb.closest ? qb.closest('.mx-card') : null;
+          q = qb;
+          ans = document.querySelector('#optBox .mx-opt, #ordBox .mx-token');
+        }
+      }
+      if (card) {
+        var cr = card.getBoundingClientRect();
+        var h = c.offsetHeight || 40;
+        c.style.right = Math.max(6, Math.round(window.innerWidth - cr.right + 8)) + 'px';
+        var top;
+        if (bottomMode) {
+          top = cr.bottom - h - 8;
+        } else {
+          var limit = cr.bottom;
+          if (q) limit = Math.min(limit, q.getBoundingClientRect().top);
+          if (ans) limit = Math.min(limit, ans.getBoundingClientRect().top);
+          /* Chừa 12px thay vì 4px: hộp combo xoay -6deg + nhịp scale
+             1.1 làm hộp bao thật (getBoundingClientRect) phình thêm
+             ~5px mỗi phía so với offsetHeight — đo harness vòng đầu:
+             chừa 4px còn giao 1,3px ở đỉnh animation. */
+          top = limit - h - 12;
+          if (top < cr.top + 4) top = cr.top + 4;
+        }
+        c.style.top = Math.round(top) + 'px';
+        if (!bottomMode) {
+          /* Né các pill nằm sẵn trong dải an toàn (đồng hồ #tTxt, điểm
+             #sc/#scorePill ở leo-thap/dau-kanji/le-hoi): nếu hộp combo
+             (canh phải) giao một pill thì dịch trái cho tới khi nằm
+             cạnh trái của pill đó — vẫn trong dải trên câu hỏi. */
+          var wCombo = c.offsetWidth || 60;
+          var blockers = card.querySelectorAll('#tTxt, #sc, #scorePill');
+          for (var bi = 0; bi < blockers.length; bi++) {
+            var br = blockers[bi].getBoundingClientRect();
+            if (!br.width || !br.height) continue;
+            var curRight = parseFloat(c.style.right) || 0;
+            var cLeft = window.innerWidth - curRight - wCombo;
+            var cTop = parseFloat(c.style.top) || 0;
+            var cBottom = cTop + h, cRight = cLeft + wCombo;
+            if (cLeft < br.right && br.left < cRight && cTop < br.bottom && br.top < cBottom) {
+              c.style.right = Math.round(window.innerWidth - br.left + 8) + 'px';
+            }
+          }
+        }
+        placed = true;
+      }
+    } catch (e) { /* rơi về vị trí mặc định bên dưới */ }
+    if (!placed) { c.style.right = '10px'; c.style.top = '64px'; }
+  }
   function comboPop(n, el) {
     var c = document.getElementById('combo');
     if (!c) {
@@ -209,16 +288,21 @@
       c.setAttribute('aria-hidden', 'true');
       document.body.appendChild(c);
     }
+    if (comboTimer) { clearTimeout(comboTimer); comboTimer = null; }
     if (!n || n < 2) { c.className = ''; c.innerHTML = ''; return; }
     if (n >= 5 && n % 5 === 0) sfx('ultra'); else sfx('combo');
     c.className = 'on';
     c.innerHTML = '<b>' + (+n) + '</b><small>COMBO</small>';
+    positionCombo(c);
+    /* FIX3: hiện NGẮN (~1s) rồi tự ẩn — bản cũ để hộp combo đứng yên
+       vô hạn tới combo lần sau/sai, nên nó che đáp án suốt câu sau. */
+    comboTimer = setTimeout(function () { c.className = ''; c.innerHTML = ''; comboTimer = null; }, 1000);
     if (!reduced() && c.animate) {
       try {
         c.animate([
-          { transform: 'scale(1.55) rotate(-6deg)' },
+          { transform: 'scale(1.1) rotate(-6deg)' },
           { transform: 'scale(1) rotate(-6deg)' }
-        ], { duration: 240 });
+        ], { duration: 200 });
       } catch (e) { /* bỏ qua */ }
     }
     if (n === 5 || (n >= 10 && n % 10 === 0)) ultra();

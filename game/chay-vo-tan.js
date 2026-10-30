@@ -81,6 +81,11 @@
   var playing = false, score = 0, combo = 0, bestCombo = 0, lives = 3, dist = 0, gates = 0,
       pool = [], qi = 0, cur = null, curOpts = [], gateT0 = 0, travelMs = 6000, raf = null,
       shield = 1, shieldOn = false, slow = 1, slowOn = false, startT = 0, lastFrame = 0, resolving = false;
+  /* FIX3: tạm dừng (pause.js) — vòng rAF vẫn chạy nhưng đứng yên khi
+     đang dừng (chỉ cập nhật lastFrame để dt không nhảy), resume cộng
+     số ms đã dừng vào gateT0 (performance.now) + startT (Date.now). */
+  var pauseCtl = null;
+  function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
 
   function buildMenu() {
     var m = $('#menu');
@@ -106,6 +111,7 @@
 
   function showError(msg) {
     playing = false; if (raf) cancelAnimationFrame(raf);
+    if (pauseCtl) pauseCtl.setVisible(false);
     $('#play').classList.add('mx-hid');
     var r = $('#result'); r.classList.remove('mx-hid');
     r.innerHTML = '<div class="mx-card mx-err"><div class="mx-big-emoji">🌧️</div><h1>Chưa lấy được câu hỏi</h1>' +
@@ -130,6 +136,7 @@
     score = 0; combo = 0; bestCombo = 0; lives = 3; dist = 0; gates = 0; qi = 0; pool = [];
     shield = 1; shieldOn = false; slow = 1; slowOn = false; resolving = false;
     startT = Date.now(); lastFrame = 0;
+    if (pauseCtl) pauseCtl.setVisible(true);
     $('#menu').classList.add('mx-hid'); $('#result').classList.add('mx-hid'); $('#play').classList.remove('mx-hid');
     $('#btnShield').disabled = false; $('#btnShield').textContent = '🛡️ Khiên (1)';
     $('#btnSlow').disabled = false;
@@ -179,6 +186,7 @@
   }
   function loop(t) {
     if (!playing) return;
+    if (isPaused()) { lastFrame = t; raf = requestAnimationFrame(loop); return; }
     if (lastFrame) {
       var dt = (t - lastFrame) / 1000;
       dist += dt * (6 + gates * 0.15); /* quãng đường chạy */
@@ -415,7 +423,7 @@
      fallback GFX.skill('beam') / GFX.burst + mảnh DOM) -> sau nhịp vỡ
      ~450ms mới chốt kết quả như resolveGate cũ. */
   function answerGate(idx, gateEl) {
-    if (!playing || resolving || !cur) return;
+    if (isPaused() || !playing || resolving || !cur) return;
     resolving = true;
     $$('#gateBox .rnv-gate').forEach(function (g) { g.disabled = true; });
     var ci = correctIdx(cur);
@@ -526,11 +534,11 @@
      answerGate). bindControls chỉ còn Khiên / Chậm / Dừng. */
   function bindControls() {
     $('#btnShield').addEventListener('click', function () {
-      if (!shield || shieldOn) return;
+      if (isPaused() || !shield || shieldOn) return;
       shield = 0; shieldOn = true; this.textContent = '🛡️ Khiên đang bật'; trend('trogiup');
     });
     $('#btnSlow').addEventListener('click', function () {
-      if (!slow) return;
+      if (isPaused() || !slow) return;
       slow = 0; slowOn = true; this.disabled = true; trend('trogiup');
       /* kéo dài cổng hiện tại tương ứng */
       gateT0 = performance.now() - (performance.now() - gateT0) / 1.6;
@@ -540,6 +548,7 @@
 
   function end() {
     if (!playing && $('#play').classList.contains('mx-hid')) return;
+    if (pauseCtl) pauseCtl.setVisible(false);
     /* Kết liễu (đợt 3): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. */
     /* Kết liễu BOSS (đợt 4, gắn theo mẫu nhánh B): chỉ khi dừng tự nguyện mà vẫn còn tim; hết tim = thua, không chạy. Chế độ chưa có boss -> playBoss tự lấy GBOSS.next() không trùng. */
     if (lives > 0 && window.GFIN) { try { if (typeof GFIN.playBoss === 'function') GFIN.playBoss({ fromEl: $('#runner'), toEl: null, dmg: Math.floor(score) }); else GFIN.play({ fromEl: $('#runner'), toEl: null, dmg: Math.floor(score) }); } catch (e) {} }
@@ -562,6 +571,21 @@
       '<button class="mx-btn" id="btnAgain" type="button">Chạy thêm vòng nữa ↻</button><div style="height:8px"></div>' +
       '<a class="mx-btn alt" style="display:block;text-align:center;text-decoration:none" href="index.html">Về hub game</a></div>';
     $('#btnAgain').addEventListener('click', function () { r.classList.add('mx-hid'); $('#menu').classList.remove('mx-hid'); buildMenu(); });
+  }
+
+  /* FIX3: nút Tạm dừng — thoát trong lớp phủ = đúng nút Dừng sẵn có. */
+  if (window.GPAUSE && typeof window.GPAUSE.create === 'function') {
+    pauseCtl = window.GPAUSE.create({
+      btnHost: $('#pauseSlot') || $('#play'),
+      exitLabel: 'Dừng nghỉ ⏸',
+      isPlaying: function () { return playing; },
+      onPause: function () { var stg = $('#stage'); if (stg) stg.classList.add('gpause-frozen'); },
+      onResume: function (dur) {
+        gateT0 += dur; startT += dur;
+        var stg = $('#stage'); if (stg) stg.classList.remove('gpause-frozen');
+      },
+      onExit: function () { if (playing) end(); }
+    });
   }
 
   bindUserEvent();
