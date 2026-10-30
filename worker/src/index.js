@@ -4652,6 +4652,166 @@ async function handleGameChallengeResult(req, env, c, id) {
   return J({ ok: true, recorded: changed > 0, result: row.result || '' }, 200, c.h);
 }
 
+// ===== Theo dõi thời gian học cho trang admin "Học viên" (31/10/2026) =====
+// /study/start|ping|end: chỉ thành viên đã duyệt (kind='user', status='approved').
+// Token: header Authorization HOẶC trường "t" trong body (cho navigator.sendBeacon, không gửi được header).
+// Body đọc dạng text rồi JSON.parse → nhận cả text/plain (beacon không bị preflight CORS).
+// Không lưu IP / UA thô; chỉ loại thiết bị rút gọn. Ngày tính theo JST.
+const STUDY_STALE=180e3, STUDY_ONLINE=120e3, STUDY_MAXGAP=120e3, STUDY_CAP=90e3, STUDY_MINPING=45e3;
+let _studyReady=false;
+async function ensureStudy(env){
+  if(_studyReady)return;
+  await env.DB.batch([
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS study_sessions(id TEXT PRIMARY KEY,user_id TEXT NOT NULL,started_at INTEGER NOT NULL,last_ping INTEGER NOT NULL,ended_at INTEGER,active_sec INTEGER NOT NULL DEFAULT 0,page TEXT,lesson TEXT,device TEXT)`),
+    env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_ss_user ON study_sessions(user_id, started_at DESC)'),
+    env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_ss_open ON study_sessions(ended_at, last_ping)'),
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS study_daily(user_id TEXT NOT NULL,day TEXT NOT NULL,active_sec INTEGER NOT NULL DEFAULT 0,sessions INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(user_id, day))`)
+  ]);
+  _studyReady=true;
+}
+const jstDay=ms=>new Date(ms+9*3600e3).toISOString().slice(0,10);
+function studyDevice(ua){
+  ua=String(ua||'');
+  const os=/iPhone/.test(ua)?'iPhone':/iPad/.test(ua)?'iPad':/Android/.test(ua)?'Android':/Mac OS X/.test(ua)?'Mac':/Windows/.test(ua)?'Windows':/Linux/.test(ua)?'Linux':'Khác';
+  const br=/Edg\//.test(ua)?'Edge':/(CriOS|Chrome)\//.test(ua)?'Chrome':/(FxiOS|Firefox)\//.test(ua)?'Firefox':/Safari\//.test(ua)?'Safari':'Khác';
+  return os+' · '+br;
+}
+const studyStr=(v,n)=>(typeof v==='string'&&v)?v.slice(0,n):null;
+async function studyBody(req){
+  const len=+(req.headers.get('Content-Length')||0);
+  if(len>4000)return null;
+  try{const t=await req.text();if(t.length>4000)return null;return t?JSON.parse(t):{}}catch(e){return null}
+}
+// Cộng thời gian: chỉ khi khoảng cách ≤ 2 phút, tối đa 90s/lần (máy ngủ dậy không cộng dồn).
+const studyAdd=(gap)=>(gap>0&&gap<=STUDY_MAXGAP)?Math.round(Math.min(gap,STUDY_CAP)/1000):0;
+
+async function handleStudy(req,env,c,path){
+  const h=Object.assign({},c.h,{'Cache-Control':'no-store, private'});
+  if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu (D1).'},503,h);
+  if(req.method!=='POST')return J({error:'Phương thức không hỗ trợ'},405,h);
+  const b=await studyBody(req);
+  if(!b||typeof b!=='object'||Array.isArray(b))return J({error:'Dữ liệu không hợp lệ'},400,h);
+  const tok=bearer(req)||(typeof b.t==='string'?b.t.slice(0,200):'');
+  const s=await sessionUser(env,tok);
+  if(!s)return J({error:'Chưa đăng nhập'},401,h);
+  if(s.kind!=='user'||s.status!=='approved')return J({error:'Không ghi thời gian học cho tài khoản này'},403,h);
+  await ensureStudy(env);
+  const t=Date.now(), uid=s.user_id;
+  const page=studyStr(b.page,120), lesson=studyStr(b.lesson,120);
+  if(path==='/study/start'){
+    const open=await env.DB.prepare('SELECT id FROM study_sessions WHERE user_id=? AND ended_at IS NULL AND last_ping>=? ORDER BY last_ping DESC LIMIT 1').bind(uid,t-STUDY_STALE).first();
+    if(open){
+      await env.DB.prepare('UPDATE study_sessions SET page=COALESCE(?,page),lesson=COALESCE(?,lesson) WHERE id=?').bind(page,lesson,open.id).run();
+      return J({ok:true,sid:open.id,reused:true,ping_sec:60},200,h);
+    }
+    const sid=randB64(18).replace(/[+/=]/g,c=>c==='+'?'-':c==='/'?'_':'');
+    await env.DB.batch([
+      env.DB.prepare('UPDATE study_sessions SET ended_at=last_ping WHERE user_id=? AND ended_at IS NULL').bind(uid),
+      env.DB.prepare('INSERT INTO study_sessions(id,user_id,started_at,last_ping,page,lesson,device) VALUES(?,?,?,?,?,?,?)').bind(sid,uid,t,t,page,lesson,studyDevice(req.headers.get('User-Agent'))),
+      env.DB.prepare('INSERT INTO study_daily(user_id,day,active_sec,sessions) VALUES(?,?,0,1) ON CONFLICT(user_id,day) DO UPDATE SET sessions=sessions+1').bind(uid,jstDay(t))
+    ]);
+    return J({ok:true,sid,reused:false,ping_sec:60},200,h);
+  }
+  const sid=studyStr(b.sid,64);
+  if(!sid)return J({error:'Thiếu sid'},400,h);
+  const row=await env.DB.prepare('SELECT id,last_ping,ended_at FROM study_sessions WHERE id=? AND user_id=?').bind(sid,uid).first();
+  if(path==='/study/ping'){
+    if(!row||row.ended_at!=null||t-row.last_ping>STUDY_STALE)return J({ok:false,restart:true,error:'Phiên đã kết thúc, gọi /study/start'},409,h);
+    if(t-row.last_ping<STUDY_MINPING)return J({ok:true,added:0,throttled:true},200,h); // rate limit: không ghi DB
+    const add=studyAdd(t-row.last_ping);
+    const st=[env.DB.prepare('UPDATE study_sessions SET last_ping=?,active_sec=active_sec+?,page=COALESCE(?,page),lesson=COALESCE(?,lesson) WHERE id=? AND last_ping=?').bind(t,add,page,lesson,sid,row.last_ping)];
+    if(add)st.push(env.DB.prepare('INSERT INTO study_daily(user_id,day,active_sec,sessions) VALUES(?,?,?,0) ON CONFLICT(user_id,day) DO UPDATE SET active_sec=active_sec+excluded.active_sec').bind(uid,jstDay(t),add));
+    await env.DB.batch(st);
+    return J({ok:true,added:add},200,h);
+  }
+  if(path==='/study/end'){
+    if(!row||row.ended_at!=null)return J({ok:true,already:true},200,h);
+    // Phiên mồ côi (>3 phút không ping): đóng tại last_ping, không cộng.
+    const add=(t-row.last_ping>STUDY_STALE)?0:studyAdd(t-row.last_ping);
+    const end=add?t:row.last_ping;
+    const st=[env.DB.prepare('UPDATE study_sessions SET ended_at=?,last_ping=?,active_sec=active_sec+? WHERE id=? AND ended_at IS NULL').bind(end,end,add,sid)];
+    if(add)st.push(env.DB.prepare('INSERT INTO study_daily(user_id,day,active_sec,sessions) VALUES(?,?,?,0) ON CONFLICT(user_id,day) DO UPDATE SET active_sec=active_sec+excluded.active_sec').bind(uid,jstDay(t),add));
+    await env.DB.batch(st);
+    return J({ok:true,added:add},200,h);
+  }
+  return J({error:'Không tìm thấy'},404,h);
+}
+
+// GET /admin/study/* — chỉ admin, chỉ đọc (trừ dọn phiên mồ côi/quá 180 ngày), no-store.
+async function handleAdminStudy(req,env,c,path){
+  const h=Object.assign({},c.h,{'Cache-Control':'no-store, private'});
+  if(!env.DB)return J({error:'Chưa cấu hình cơ sở dữ liệu (D1).'},503,h);
+  const s=await sessionUser(env,bearer(req));
+  if(!s||s.kind!=='admin')return J({error:'Chỉ admin'},403,h);
+  if(req.method!=='GET')return J({error:'Phương thức không hỗ trợ'},405,h);
+  await ensureStudy(env);
+  const t=Date.now(), q=new URL(req.url).searchParams;
+  // Đóng lười phiên mồ côi + xoá phiên quá 180 ngày (study_daily giữ lâu dài).
+  await env.DB.batch([
+    env.DB.prepare('UPDATE study_sessions SET ended_at=last_ping WHERE ended_at IS NULL AND last_ping<?').bind(t-STUDY_STALE),
+    env.DB.prepare('DELETE FROM study_sessions WHERE started_at<?').bind(t-180*864e5)
+  ]);
+  const today=jstDay(t);
+  if(path==='/admin/study/overview'){
+    const on=await env.DB.prepare('SELECT COUNT(DISTINCT user_id) n FROM study_sessions WHERE ended_at IS NULL AND last_ping>=?').bind(t-STUDY_ONLINE).first();
+    const td=await env.DB.prepare('SELECT COUNT(*) u,COALESCE(SUM(active_sec),0) s FROM study_daily WHERE day=? AND (active_sec>0 OR sessions>0)').bind(today).first();
+    const w=await env.DB.prepare('SELECT COALESCE(SUM(active_sec),0) s FROM study_daily WHERE day>? AND day<=?').bind(jstDay(t-7*864e5),today).first();
+    return J({online:on.n||0,today_users:td.u||0,today_min:Math.round((td.s||0)/60),avg7_min:Math.round((w.s||0)/60/7)},200,h);
+  }
+  if(path==='/admin/study/users'){
+    const f=q.get('filter')||'all';
+    const r=await env.DB.prepare(`SELECT u.id,u.name,
+      (SELECT ss.page FROM study_sessions ss WHERE ss.user_id=u.id AND ss.ended_at IS NULL AND ss.last_ping>=?1 ORDER BY ss.last_ping DESC LIMIT 1) page,
+      (SELECT MAX(started_at) FROM study_sessions ss WHERE ss.user_id=u.id) last_login,
+      (SELECT MAX(ended_at) FROM study_sessions ss WHERE ss.user_id=u.id) last_logout,
+      COALESCE((SELECT active_sec FROM study_daily d WHERE d.user_id=u.id AND d.day=?2),0) today_sec
+      FROM users u WHERE u.status='approved'`).bind(t-STUDY_ONLINE,today).all();
+    let list=(r.results||[]).map(x=>({id:x.id,name:x.name,online:false,page:x.page||null,last_login:x.last_login||null,last_logout:x.last_logout||null,today_min:Math.round(x.today_sec/60)}));
+    // online tính riêng (đúng cả khi page NULL)
+    const onl=await env.DB.prepare('SELECT DISTINCT user_id FROM study_sessions WHERE ended_at IS NULL AND last_ping>=?').bind(t-STUDY_ONLINE).all();
+    const os=new Set((onl.results||[]).map(x=>x.user_id));
+    list.forEach(x=>{x.online=os.has(x.id)});
+    if(f==='online')list=list.filter(x=>x.online);
+    else if(f==='today')list=list.filter(x=>x.today_min>0||(x.last_login&&jstDay(x.last_login)===today));
+    list.sort((a,b)=>(b.online-a.online)||(b.today_min-a.today_min)||((b.last_login||0)-(a.last_login||0)));
+    return J(list,200,h);
+  }
+  if(path==='/admin/study/sessions'){
+    const user=studyStr(q.get('user'),64);
+    if(!user)return J({error:'Thiếu user'},400,h);
+    const lim=Math.max(1,Math.min(100,+q.get('limit')||20));
+    const before=+q.get('before')||9e15;
+    const r=await env.DB.prepare('SELECT started_at,ended_at,active_sec,page,lesson,device FROM study_sessions WHERE user_id=? AND started_at<? ORDER BY started_at DESC LIMIT ?').bind(user,before,lim).all();
+    return J(r.results||[],200,h);
+  }
+  if(path==='/admin/study/agg'){
+    const user=studyStr(q.get('user'),64);
+    if(!user)return J({error:'Thiếu user'},400,h);
+    const by=q.get('by')||'day';
+    const defN={day:14,week:12,month:12,year:3}[by];
+    if(!defN)return J({error:'by phải là day|week|month|year'},400,h);
+    const n=Math.max(1,Math.min(by==='day'?366:by==='week'?104:by==='month'?60:10,+q.get('n')||defN));
+    const d0=new Date(today+'T00:00:00Z'); // ngày JST hiện tại, tính toán theo lịch UTC
+    const ymd=d=>d.toISOString().slice(0,10);
+    const add=(d,k)=>{const x=new Date(d);x.setUTCDate(x.getUTCDate()+k);return x};
+    const buckets=[];
+    for(let i=n-1;i>=0;i--){
+      let from,to,label;
+      if(by==='day'){from=add(d0,-i);to=from;label=ymd(from).slice(5).replace('-','/')}
+      else if(by==='week'){const mon=add(d0,-((d0.getUTCDay()+6)%7)-7*i);from=mon;to=add(mon,6);label=ymd(mon).slice(5).replace('-','/')}
+      else if(by==='month'){from=new Date(Date.UTC(d0.getUTCFullYear(),d0.getUTCMonth()-i,1));to=new Date(Date.UTC(from.getUTCFullYear(),from.getUTCMonth()+1,0));label=ymd(from).slice(0,7)}
+      else{from=new Date(Date.UTC(d0.getUTCFullYear()-i,0,1));to=new Date(Date.UTC(from.getUTCFullYear(),11,31));label=String(from.getUTCFullYear())}
+      buckets.push({label,from:ymd(from),to:ymd(to),min:0});
+    }
+    const r=await env.DB.prepare('SELECT day,active_sec FROM study_daily WHERE user_id=? AND day>=? AND day<=?').bind(user,buckets[0].from,buckets[buckets.length-1].to).all();
+    const sec=buckets.map(()=>0);
+    for(const x of (r.results||[])){const i=buckets.findIndex(bk=>x.day>=bk.from&&x.day<=bk.to);if(i>=0)sec[i]+=x.active_sec}
+    buckets.forEach((bk,i)=>bk.min=Math.round(sec[i]/60));
+    return J(buckets,200,h);
+  }
+  return J({error:'Không tìm thấy'},404,h);
+}
+
 export default {async fetch(req,env){
   const c=cors(env,req);
   if(req.method==='OPTIONS')return new Response(null,{status:204,headers:c.h});
@@ -4660,6 +4820,8 @@ export default {async fetch(req,env){
   if(path.startsWith('/auth'))return handleAuth(req,env,c,path);
   if(path==='/progress')return handleProgress(req,env,c);
   if(path==='/hoso')return handleHoso(req,env,c);
+  if(path.startsWith('/study/'))return handleStudy(req,env,c,path);
+  if(path.startsWith('/admin/study/'))return handleAdminStudy(req,env,c,path);
   if(path.startsWith('/stats/'))return handleStats(req,env,c,path);
   if(path.startsWith('/community')||path.startsWith('/chat')||path.startsWith('/friends'))return handleCommunity(req,env,c,path);
   if(path.startsWith('/job/'))return handleJob(req,env,c,path);
