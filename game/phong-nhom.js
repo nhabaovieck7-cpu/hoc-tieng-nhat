@@ -842,7 +842,7 @@
     if (payload.choice != null && q) {
       return typeof q.answer === 'number' ? payload.choice === q.answer : String(q.choices[payload.choice]) === String(q.answerText);
     }
-    if (payload.orderText != null && q) return normSentence(payload.orderText) === normSentence(q.answerText);
+    if (payload.orderText != null && q) return orderRight(q, payload.orderText);
     return false;
   }
   function sendCoopAnswer(payload) {
@@ -1771,6 +1771,12 @@
   // Math.random thường là đủ.
 
   function normSentence(s) { return String(s || '').replace(/\s+/g, '').replace(/。$/, ''); }
+  /* ARRANGEFIX (31/10): chấm câu sắp xếp qua bộ chấm chung GQ.orderOK
+     để chấp nhận cả thứ tự đảo ngữ đúng như các mode khác. */
+  function orderRight(q, got) {
+    if (window.GQ && typeof GQ.orderOK === 'function') return GQ.orderOK(q, got);
+    return normSentence(got) === normSentence(q.answerText);
+  }
   function gradeAndAdvance(isCorrect, pickedIdx) {
     stopQuestionTimer();
     if (combatOn()) { try { GCOMBAT.hit('me', !!isCorrect, 10); } catch (e) {} } // E: phủ pickChoice + order check + timeout (đều chảy qua đây)
@@ -2075,7 +2081,7 @@
       var q = S.deck[S.qi]; if (!q) return;
       if (isCoopRoom()) { coopSubmitOrder(); return; } // gửi coop_answer kèm orderText
       S.locked = true;
-      gradeAndAdvance(normSentence(S.orderPicked.join('')) === normSentence(q.answerText), -1);
+      gradeAndAdvance(orderRight(q, S.orderPicked.join('')), -1);
     });
     $('pnForceDone').addEventListener('click', function () {
       if (S.code) GROOMS.event(S.code, 'finish', { score: S.score, correct: S.correct, final: true }).catch(function () {});

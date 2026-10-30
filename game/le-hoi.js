@@ -88,6 +88,12 @@
   function usable(qs) { return (qs || []).filter(function (q) { return q && ((q.choices && q.choices.length >= 2) || (q.tokens && q.tokens.length >= 2)); }); }
   function correctIdx(q) { if (typeof q.answer === 'number') return q.answer; if (q.choices) { var i = q.choices.indexOf(q.answerText); if (i >= 0) return i; } return -1; }
   function norm(s) { return String(s == null ? '' : s).replace(/\s+/g, ''); }
+  /* ARRANGEFIX (31/10): chấm câu sắp xếp qua bộ chấm chung GQ.orderOK
+     (bản cũ so norm() không bỏ '。' nên xếp đúng vẫn bị báo sai). */
+  function orderRight(q, got) {
+    if (window.GQ && typeof GQ.orderOK === 'function') return GQ.orderOK(q, got);
+    return norm(got) === norm(String(q.answerText || '').replace(/[。．]+$/, ''));
+  }
 
   /* ---------- Quầy Nghe: điều kiện giọng + lọc câu nghe được ---------- */
   /* GAME_VOICE khả dụng = có speak VÀ có speechSynthesis. Không sửa
@@ -507,7 +513,7 @@
     chk.style.marginTop = '10px';
     chk.addEventListener('click', function () {
       var got = picked.map(function (p) { return p.t; }).join('');
-      answer(norm(got) === norm(q.answerText), chk);
+      answer(orderRight(q, got), chk);
     });
     box.appendChild(slots); box.appendChild(poolEl); box.appendChild(chk);
   }

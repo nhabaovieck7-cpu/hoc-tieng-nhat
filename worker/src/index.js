@@ -3805,9 +3805,44 @@ function grCoopCorrectAnswer(q) {
 // Chấm 1 câu theo deck máy chủ giữ. q=null (không có sự kiện 'questions',
 // deck 'seed') -> tin trường correct client gửi (điểm vẫn bị trần cứng ở
 // grCoopLock). Câu choices thiếu answer -> so text với answerText.
+// ARRANGEFIX (31/10): chấm câu sắp xếp phía máy chủ phải cùng luật với
+// phía web (GQ.orderOK trong game/questions.js): deck chỉ giữ tokens +
+// answerText nên thứ tự gốc được khôi phục bằng ghép tham lam, rồi chấp
+// nhận mọi hoán vị hợp lệ của các cụm trợ từ khi mọi mảnh trước mảnh
+// cuối đều kết thúc bằng trợ từ ranh giới (đảo ngữ tiếng Nhật); mảnh
+// kết bằng '、' dính liền mảnh sau, mảnh cuối (vị ngữ) cố định, có
+// mảnh kết bằng 'か' thì chỉ chấp nhận thứ tự gốc.
+function grCoopOrderAccept(q) {
+  const toks = Array.isArray(q.tokens) ? q.tokens : [];
+  const ans = grCoopNormText(q.answerText);
+  if (!toks.length || !ans) return [];
+  let rest = ans; const used = toks.slice(); const orig = [];
+  while (rest.length) {
+    let best = null;
+    for (const t of used) if (t && rest.indexOf(t) === 0 && (!best || t.length > best.length)) best = t;
+    if (best == null) return [ans];
+    orig.push(best); used.splice(used.indexOf(best), 1); rest = rest.slice(best.length);
+  }
+  if (orig.length !== toks.length) return [ans];
+  const out = [orig.join('')]; const seen = new Set(out);
+  const natural = orig.length >= 3 && orig.slice(0, -1).every((tk) => /[はがをにへでとも、]$/.test(tk));
+  if (!natural) return out;
+  const head = orig.slice(0, -1), tail = orig[orig.length - 1];
+  if (head.some((tk) => /か$/.test(tk))) return out;
+  const blocks = []; let buf = '';
+  head.forEach((tk, ix) => { buf += tk; if (!/、$/.test(tk) || ix === head.length - 1) { blocks.push(buf); buf = ''; } });
+  if (buf) blocks.push(buf);
+  if (blocks.length < 2 || blocks.length > 5) return out;
+  const permute = (arr, l) => {
+    if (l >= arr.length - 1) { const s = arr.join('') + tail; if (!seen.has(s)) { seen.add(s); out.push(s); } return; }
+    for (let j = l; j < arr.length; j++) { const t = arr[l]; arr[l] = arr[j]; arr[j] = t; permute(arr, l + 1); const u = arr[l]; arr[l] = arr[j]; arr[j] = u; }
+  };
+  permute(blocks.slice(), 0);
+  return out;
+}
 function grCoopGrade(q, choice, orderText, claimedCorrect) {
   if (!q) return !!claimedCorrect;
-  if (q.type === 'order') return grCoopNormText(orderText) === grCoopNormText(q.answerText);
+  if (q.type === 'order') return grCoopOrderAccept(q).indexOf(grCoopNormText(orderText)) >= 0;
   if (Number.isInteger(q.answer)) return choice === q.answer;
   return choice != null && Array.isArray(q.choices) && q.choices[choice] != null && q.choices[choice] === q.answerText;
 }

@@ -31,6 +31,12 @@
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.random() * (i + 1) | 0; var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function uniq(a) { var seen = {}, out = []; (a || []).forEach(function (v) { if (v != null && v !== '' && !seen[v]) { seen[v] = 1; out.push(v); } }); return out; }
   function norm(s) { return String(s == null ? '' : s).replace(/\s+/g, ''); }
+  /* ARRANGEFIX (31/10): chấm câu sắp xếp qua bộ chấm chung GQ.orderOK
+     (bản cũ so norm() không bỏ '。' nên xếp đúng vẫn bị báo sai). */
+  function orderRight(q, got) {
+    if (window.GQ && typeof GQ.orderOK === 'function') return GQ.orderOK(q, got);
+    return norm(got) === norm(String(q.answerText || '').replace(/[。．]+$/, ''));
+  }
 
   var MATCH_N = 14;          // số câu mục tiêu của 1 trận
   var MIN_POOL = 8;          // dưới mức này -> trạng thái rỗng trung thực
@@ -577,7 +583,7 @@
     chk.style.marginTop = '10px';
     chk.addEventListener('click', function () {
       var got = picked.map(function (p) { return p.t; }).join('');
-      judge(norm(got) === norm(q.answerText), chk, false);
+      judge(orderRight(q, got), chk, false);
     });
     box.appendChild(slots); box.appendChild(poolEl); box.appendChild(chk);
   }

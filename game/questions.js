@@ -630,7 +630,8 @@
       var p = pts[i];
       if (p - last >= 3 && t.length - p >= 3) { cuts.push(p); last = p; }
     }
-    if (cuts.length < 2) { // không đủ điểm cắt tự nhiên -> cắt đều
+    var natural = cuts.length >= 2; // cắt tại ranh giới trợ từ (cụm trọn vẹn)
+    if (!natural) { // không đủ điểm cắt tự nhiên -> cắt đều (có thể cắt giữa cụm)
       var n = t.length >= 24 ? 5 : (t.length >= 15 ? 4 : 3), step = Math.floor(t.length / n);
       cuts = []; for (i = 1; i < n; i++) cuts.push(step * i);
     }
@@ -639,7 +640,76 @@
     segs.push(t.slice(prev));
     segs = segs.filter(function (x) { return x.length > 0; });
     if (segs.length < 3 || segs.length > 6) return null;
-    return { tokens: segs, answerText: t + '。' };
+    return { tokens: segs, answerText: t + '。', natural: natural };
+  }
+
+  /* ---------------- Chấm câu sắp xếp: thứ tự nào được coi là ĐÚNG ----------------
+   * BUG (chủ trang báo 31/10, ảnh Leo tháp): các mode chấm bằng
+   * norm(câu người chơi nối) === norm(answerText) với norm CHỈ xoá
+   * khoảng trắng — trong khi answerText luôn mang '。' ở cuối còn câu
+   * nối từ các mảnh thì không -> xếp đúng 100% vẫn bị báo SAI ở mọi
+   * mode dùng công thức đó. Sửa tại gốc tại đây:
+   * (1) orderNorm bỏ cả dấu câu cuối '。/．' lẫn khoảng trắng;
+   * (2) khi câu được cắt TỰ NHIÊN (mọi điểm cắt đều nằm ngay sau trợ
+   * từ ranh giới は/が/を/に/へ/で/と/も/、), các cụm trước vị ngữ
+   * được hoán vị cho nhau (đảo ngữ tiếng Nhật vẫn đúng ngữ pháp) —
+   * mảnh kết bằng '、' dính liền mảnh sau nó, mảnh cuối (vị ngữ) cố
+   * định ở cuối, và có mảnh kết bằng 'か' thì KHÔNG hoán vị (か lồng
+   * / chọn lựa không đảo được). Câu bị cắt đều (giữa cụm) chỉ chấp
+   * nhận đúng thứ tự gốc. Xếp sai vẫn bị chấm sai như cũ. */
+  function orderNorm(s) { return String(s == null ? '' : s).replace(/\s+/g, '').replace(/[。．]+$/, ''); }
+  function orderAcceptList(tokens, natural) {
+    var base = tokens.join(''), out = [base], seen = {}; seen[base] = 1;
+    if (!natural || !tokens || tokens.length < 3) return out;
+    var head = tokens.slice(0, -1), tail = tokens[tokens.length - 1], i;
+    for (i = 0; i < head.length; i++) if (/か$/.test(head[i])) return out;
+    var blocks = [], buf = '';
+    head.forEach(function (tk, ix) {
+      buf += tk;
+      if (!/、$/.test(tk) || ix === head.length - 1) { blocks.push(buf); buf = ''; }
+    });
+    if (buf) blocks.push(buf);
+    if (blocks.length < 2 || blocks.length > 5) return out;
+    (function permute(arr, l) {
+      if (l >= arr.length - 1) {
+        var s = arr.join('') + tail;
+        if (!seen[s]) { seen[s] = 1; out.push(s); }
+        return;
+      }
+      for (var j = l; j < arr.length; j++) {
+        var tmp = arr[l]; arr[l] = arr[j]; arr[j] = tmp;
+        permute(arr, l + 1);
+        tmp = arr[l]; arr[l] = arr[j]; arr[j] = tmp;
+      }
+    })(blocks.slice(), 0);
+    return out;
+  }
+  /* Danh sách chấp nhận cho câu hỏi KHÔNG mang sẵn accept (dựng lại từ
+   * mã Thách đấu / phòng nhóm / dữ liệu lưu trữ): khôi phục thứ tự gốc
+   * bằng ghép tham lam các mảnh vào answerText (cùng thuật toán
+   * correctTokens của Chiến dịch), rồi suy "cắt tự nhiên" khi mọi
+   * mảnh trước mảnh cuối đều kết thúc bằng trợ từ ranh giới. */
+  function orderAcceptFromQA(q) {
+    var toks = (q && q.tokens) || [], ans = orderNorm(q && q.answerText);
+    if (!toks.length || !ans) return [];
+    var rest = ans, used = toks.slice(), orig = [];
+    while (rest.length) {
+      var best = null;
+      used.forEach(function (t) { if (t && rest.indexOf(t) === 0 && (!best || t.length > best.length)) best = t; });
+      if (best == null) return [ans];
+      orig.push(best); used.splice(used.indexOf(best), 1); rest = rest.slice(best.length);
+    }
+    if (orig.length !== toks.length) return [ans];
+    var natural = orig.length >= 3 && orig.slice(0, -1).every(function (tk) { return /[はがをにへでとも、]$/.test(tk); });
+    return orderAcceptList(orig, natural);
+  }
+  /* Bộ chấm DÙNG CHUNG cho câu sắp xếp: got = câu người chơi đã nối. */
+  function orderOK(q, got) {
+    if (!q) return false;
+    var list = (q.accept && q.accept.length) ? q.accept : orderAcceptFromQA(q);
+    var g = orderNorm(got);
+    for (var i = 0; i < list.length; i++) if (orderNorm(list[i]) === g) return true;
+    return false;
   }
 
   /* ---------------- Dựng pool theo (level, section, nguồn), cache trong phiên ----------------
@@ -806,7 +876,7 @@
     if (!seg) return null;
     var toks = shuffle(seg.tokens, r), guard = 0;
     while (toks.join('') === seg.tokens.join('') && guard++ < 6) toks = shuffle(seg.tokens, r);
-    return { type: 'order', prompt: 'Sắp xếp các mảnh thành câu đúng', promptSub: ex.vi ? '“' + ex.vi + '”' : undefined, tokens: toks, answerText: seg.answerText, meaning: ex.vi || undefined };
+    return { type: 'order', prompt: 'Sắp xếp các mảnh thành câu đúng', promptSub: ex.vi ? '“' + ex.vi + '”' : undefined, tokens: toks, answerText: seg.answerText, accept: orderAcceptList(seg.tokens, seg.natural), meaning: ex.vi || undefined };
   }
 
   function qTonghopDirect(d, r) {
@@ -969,6 +1039,6 @@
     });
   }
 
-  ROOT.GQ = { getQuestions: getQuestions, _version: 'b7-p1' };
+  ROOT.GQ = { getQuestions: getQuestions, orderOK: orderOK, _version: 'b7-p1' };
   if (typeof module !== 'undefined' && module.exports) module.exports = ROOT.GQ;
 })();

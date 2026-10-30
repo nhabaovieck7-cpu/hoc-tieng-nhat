@@ -118,6 +118,12 @@
   function isPaused() { return !!(pauseCtl && pauseCtl.isPaused()); }
   function correctIdx(q) { if (typeof q.answer === 'number') return q.answer; if (q.choices) { var i = q.choices.indexOf(q.answerText); if (i >= 0) return i; } return -1; }
   function norm(s) { return String(s == null ? '' : s).replace(/\s+/g, ''); }
+  /* ARRANGEFIX (31/10): chấm câu sắp xếp qua bộ chấm chung GQ.orderOK
+     (bản cũ so norm() không bỏ '。' nên xếp đúng vẫn bị báo sai). */
+  function orderRight(q, got) {
+    if (window.GQ && typeof GQ.orderOK === 'function') return GQ.orderOK(q, got);
+    return norm(got) === norm(String(q.answerText || '').replace(/[。．]+$/, ''));
+  }
   function usable(qs) { return (qs || []).filter(function (q) { return q && ((q.choices && q.choices.length >= 2) || (q.tokens && q.tokens.length >= 2)); }); }
 
   /* ---------- Đồng hồ câu (mẫu dau-kanji/leo-thap) ---------- */
@@ -290,7 +296,7 @@
     chk.style.marginTop = '10px';
     chk.addEventListener('click', function () {
       var got = picked.map(function (p) { return p.t; }).join('');
-      funnel(norm(got) === norm(q.answerText), chk, false);
+      funnel(orderRight(q, got), chk, false);
     });
     box.appendChild(slots); box.appendChild(poolEl); box.appendChild(chk);
   }
@@ -392,7 +398,8 @@
             t: q.type || '', l: q.lesson || '', p: q.prompt || '', s: q.promptSub || '',
             a: q.answerText || '',
             c: (q.choices && q.choices.length) ? q.choices.slice() : null,
-            k: (q.tokens && q.tokens.length) ? q.tokens.slice() : null
+            k: (q.tokens && q.tokens.length) ? q.tokens.slice() : null,
+            ac: (q.accept && q.accept.length) ? q.accept.slice() : null
           };
         }),
         from: { name: myDisplayName(), score: me.score, ok: me.ok, ms: me.ms }
@@ -472,6 +479,7 @@
           if (q.answer < 0) return null;
         }
         if (sn.k && sn.k.length) q.tokens = sn.k.slice();
+        if (sn.ac && sn.ac.length) q.accept = sn.ac.slice();
         return q;
       }).filter(Boolean);
       var snapUsable = usable(snapDeck);

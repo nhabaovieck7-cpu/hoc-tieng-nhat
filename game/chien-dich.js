@@ -452,7 +452,12 @@
         };
         ans.appendChild(t);
         if (G.placed.length === q.tokens.length) {
-          var ok = G.placed.every(function (v, i) { return q.tokens[v] === correctTokens(q)[i]; });
+          /* ARRANGEFIX (31/10): chấm qua bộ chấm chung GQ.orderOK để
+             chấp nhận cả thứ tự đảo ngữ đúng (bản cũ chỉ khớp đúng một
+             thứ tự gốc do correctTokens suy ra). */
+          var got = G.placed.map(function (v) { return q.tokens[v]; }).join('');
+          var ok = (window.GQ && typeof GQ.orderOK === 'function') ? GQ.orderOK(q, got)
+            : G.placed.every(function (v, i) { return q.tokens[v] === correctTokens(q)[i]; });
           ans.classList.add(ok ? 'cd-ok' : 'cd-bad');
           if (!ok) {
             var mean = $('cdMean');
