@@ -7,10 +7,12 @@ const R=s=>typeof ruby=='function'?ruby(String(s||'')):String(s||'');
 const ls={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 
-// ===== 1. Đọc to: ưu tiên giọng thu sẵn VOICEVOX, không có thì giọng máy tiếng Nhật =====
+// ===== 1. Đọc to: CHỈ phát bản thu sẵn VOICEVOX (không dùng giọng máy) =====
 // Cơ chế: tts.speak(text) -> chuẩn hoá -> tra audio-index.json -> trúng id thì
-// phát audio/<id>.mp3; không trúng / lỗi phát / index tải hỏng -> giọng máy như cũ.
-// Cờ tắt khẩn cấp: AUDIO_ON=false -> toàn bộ về giọng máy ngay.
+// phát audio/<id>.mp3; không trúng / lỗi phát / index tải hỏng -> KHÔNG phát gì.
+// (Yêu cầu user 29/10/2026: thà không có tiếng còn hơn giọng máy — API giọng máy
+//  của trình duyệt đã gỡ hẳn, không còn đường nào rơi về giọng máy.)
+// Cờ tắt khẩn cấp: AUDIO_ON=false -> tắt toàn bộ âm thanh đọc.
 const AUDIO_ON=true;
 const AUDIO_BASE='audio/';
 const AUDIO_INDEX_URL='audio-index.json';
@@ -22,29 +24,19 @@ const _au=new Audio();_au.preload='auto';let _auRes=null,_auSeq=0;
 function _auFinish(){if(_auRes){const r=_auRes;_auRes=null;r()}}
 function _auStop(){_auSeq++;try{_au.pause()}catch(e){}_auFinish()}
 function _auPlay(id,rate){const seq=++_auSeq;return new Promise(res=>{_auFinish();_auRes=res;_au.onended=()=>_auFinish();_au.onerror=()=>{if(seq===_auSeq){_auFinish();res('err')}};try{_au.playbackRate=rate||1}catch(e){}_au.src=AUDIO_BASE+id+'.mp3';try{_au.playbackRate=rate||1}catch(e){}let tried=false;const go=()=>{if(seq!==_auSeq)return;const p=_au.play();if(p&&p.catch)p.catch(()=>{if(seq!==_auSeq)return;if(!tried){tried=true;setTimeout(go,400)}else{_auFinish();res('err')}})};go()})}
-const tts={rate:ls.get('hn_tts_rate',0.9),ok:typeof speechSynthesis!='undefined'&&typeof SpeechSynthesisUtterance!='undefined',
- voice(){if(!this.ok)return null;const ja=speechSynthesis.getVoices().filter(x=>/^ja/i.test(x.lang));if(!ja.length)return null;
-  // Chọn giọng Nhật TỰ NHIÊN NHẤT theo TẦNG ƯU TIÊN cố định, không phụ thuộc thứ tự liệt kê của
-  // trình duyệt (bản cũ lấy giọng đầu tiên khớp tên trong danh sách nên kết quả hên xui: trên iOS
-  // có máy trúng giọng nam Otoya trước Kyoko). Thứ tự tầng: Nanami (Edge/Windows 11, gồm bản
-  // Online Natural) > giọng neural/premium/enhanced khác > Google (Chrome/Android) > Kyoko
-  // (Apple) > Ayumi/Haruka (Windows) > O-ren (Apple) > giọng nam hệ thống (Keita/Otoya/Ichiro).
-  const tiers=[/nanami/i,/natural|neural|premium|enhanced/i,/google/i,/kyoko/i,/ayumi|haruka/i,/o-ren/i,/keita|otoya|ichiro/i];
-  for(const t of tiers){const v=ja.find(x=>t.test(x.name));if(v)return v}
-  return ja.find(x=>/^ja[-_]JP$/i.test(x.lang))||ja[0]},
+const tts={rate:ls.get('hn_tts_rate',0.9),ok:true,
  // chữ cần đọc: bỏ furigana (rt), bỏ nút, bỏ tên người nói "Nam："
  text(el){if(typeof el=='string'){const d=document.createElement('div');d.innerHTML=R(el);el=d}const c=el.cloneNode(true);$$('rt,rp,button,.ix,.vi',c).forEach(x=>x.remove());return c.textContent.replace(/^\s*[^：:\s]{1,12}[：:]/,'').replace(/[（(][^）)]*[ぁ-んァ-ン][^）)]*[）)]/g,'').replace(/\s+/g,' ').trim()},
- async speak(t,o={}){if(!o.queue){_auStop();if(this.ok)speechSynthesis.cancel()}if(AUDIO_ON&&t){try{const idx=await loadAudioIndex();const id=idx[aNorm(t)];if(id){const r=await _auPlay(id,o.rate||this.rate);if(r!=='err')return}}catch(e){}}if(!this.ok)return;return new Promise(res=>{const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.pitch=1;const v=this.voice();if(v)u.voice=v;u.rate=o.rate||this.rate;u.onend=u.onerror=()=>res();speechSynthesis.speak(u)})},
- stop(){_auStop();if(this.ok)speechSynthesis.cancel()},
+ async speak(t,o={}){if(!o.queue)_auStop();if(!AUDIO_ON||!t)return;try{const idx=await loadAudioIndex();const id=idx[aNorm(t)];if(id)await _auPlay(id,o.rate||this.rate)}catch(e){}},
+ stop(){_auStop()},
  setRate(r){this.rate=r;ls.set('hn_tts_rate',r)}};
-if(tts.ok)try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
 // Nạp sẵn mục lục bản thu ngay khi mở trang: lần bấm nghe đầu tiên không phải chờ tải index.
 // Mở khoá phần tử audio ở cử chỉ chạm đầu tiên: iOS Safari chặn play() phát sau một await
 // nếu phần tử audio chưa từng được phát trong cử chỉ người dùng (lỗi hay gặp ở trang thẻ ôn tập).
 try{loadAudioIndex()}catch(e){}
 try{const _SILENT='data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YSADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==';
 const _unlock=()=>{window.removeEventListener('pointerdown',_unlock);try{_au.src=_SILENT;const p=_au.play();if(p&&p.then)p.then(()=>{try{if(_au.src===_SILENT){_au.pause();_au.removeAttribute('src');_au.load()}}catch(e){}}).catch(()=>{})}catch(e){}};window.addEventListener('pointerdown',_unlock)}catch(e){}
-function spkBtn(getText,sm){const b=document.createElement('button');b.type='button';b.className='spk'+(sm?' sm':'');b.textContent='🔊';b.title='Nghe (giọng máy)';b.setAttribute('aria-label','Nghe câu tiếng Nhật');
+function spkBtn(getText,sm){const b=document.createElement('button');b.type='button';b.className='spk'+(sm?' sm':'');b.textContent='🔊';b.title='Nghe bản thu';b.setAttribute('aria-label','Nghe câu tiếng Nhật');
  b.onclick=e=>{e.preventDefault();e.stopPropagation();$$('.spk.on').forEach(x=>x.classList.remove('on'));b.classList.add('on');tts.speak(typeof getText=='function'?getText():getText).then(()=>b.classList.remove('on'))};return b}
 // gắn nút 🔊 vào các câu tiếng Nhật trong một vùng
 function addSpeakers(root){if(!tts.ok||!root)return;
@@ -70,7 +62,7 @@ function dialogs(root){if(!root)return;$$('p',root).forEach(p=>{const parts=p.in
  const all=document.createElement('button');all.type='button';all.className='spkall';all.textContent='🔊 Đọc cả đoạn hội thoại';let playing=false;
  all.onclick=async()=>{if(playing){playing=false;tts.stop();all.textContent='🔊 Đọc cả đoạn hội thoại';return}playing=true;all.textContent='⏹ Dừng đọc';for(const l of $$('.kwl',p)){if(!playing)break;l.classList.add('reading');await tts.speak(tts.text(l));l.classList.remove('reading')}playing=false;all.textContent='🔊 Đọc cả đoạn hội thoại'};
  p.after(all)})}
-function rateBar(){if(!tts.ok)return '';return '<div class="ttsbar"><span>🔊 Tốc độ đọc:</span>'+[0.7,0.9,1,1.2].map(r=>'<button type="button" data-r="'+r+'" class="'+(r==tts.rate?'on':'')+'">'+r+'×</button>').join('')+'<small>Giọng máy (ja-JP), chỉ đọc chữ, không đọc furigana.</small></div>'}
+function rateBar(){if(!tts.ok)return '';return '<div class="ttsbar"><span>🔊 Tốc độ đọc:</span>'+[0.7,0.9,1,1.2].map(r=>'<button type="button" data-r="'+r+'" class="'+(r==tts.rate?'on':'')+'">'+r+'×</button>').join('')+'<small>Giọng thu sẵn (VOICEVOX), chỉ đọc chữ, không đọc furigana.</small></div>'}
 function bindRate(root){$$('.ttsbar button',root).forEach(b=>b.onclick=()=>{tts.setRate(+b.dataset.r);$$('.ttsbar button').forEach(x=>x.classList.toggle('on',x.dataset.r==b.dataset.r));tts.speak('こんにちは')})}
 
 // ===== 2. Tiến độ (lưu trên máy) =====
