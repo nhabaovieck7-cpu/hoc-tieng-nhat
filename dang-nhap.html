@@ -46,6 +46,10 @@ html[data-theme="dark"] .login-stage .authcard .primary{color:#12233f}
 .login-stage .authcard .switch{width:auto;height:auto;position:static;background:none;border:0;text-align:center;margin:22px 0 0;font-size:15px;color:var(--m)}
 .login-stage .authcard .switch a{color:var(--c2);font-weight:600;cursor:pointer;text-decoration:none}
 .login-stage .authcard .switch a:hover{text-decoration:underline}
+.login-stage .authcard #forgotRow{text-align:right;margin:-6px 0 4px;font-size:14px}
+.login-stage .authcard #forgotRow[hidden]{display:none}
+.login-stage .authcard #forgotRow a{color:var(--c2);font-weight:600;text-decoration:none}
+.login-stage .authcard #forgotRow a:hover{text-decoration:underline}
 .login-stage .authdiv{display:flex;align-items:center;gap:14px;margin:24px 0 2px;color:var(--m);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 .login-stage .oauth{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 4px}
 .login-stage .oauth button{position:relative;font:inherit;font-weight:600;min-height:52px;padding:11px 8px;border-radius:16px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--t);font-size:14.5px}
@@ -161,6 +165,7 @@ html[data-theme="dark"] #devList .userrow .acts .lock{background:#472c27;color:#
       </button>
     </div>
   </div>
+  <p id="forgotRow"><a href="quen-mat-khau.html">Quên mật khẩu?</a></p>
   <button class="primary" id="go" type="button">Đăng nhập</button>
   <div id="devBox" hidden>
     <div class="autherr" id="devMsg"></div>
@@ -194,8 +199,8 @@ const go=document.getElementById('go'),err=document.getElementById('err'),tog=do
 const name=document.getElementById('name'),email=document.getElementById('email'),pw=document.getElementById('pw');
 function setMode(m){
   mode=m;err.textContent='';
-  if(m==='register'){title.textContent='Đăng ký';sub.textContent='Sau khi đăng ký, chờ Khánh duyệt rồi mới xem bài học.';reg.hidden=false;go.textContent='Đăng ký';tog.parentElement.innerHTML='Đã có tài khoản? <a id="tog">Đăng nhập</a>';document.getElementById('tog').onclick=()=>setMode('login');pw.autocomplete='new-password'}
-  else{title.textContent='Đăng nhập';sub.textContent='Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.';reg.hidden=true;go.textContent='Đăng nhập';document.getElementById('switch').innerHTML='Chưa có tài khoản? <a id="tog">Đăng ký</a>';document.getElementById('tog').onclick=()=>setMode('register');pw.autocomplete='current-password'}
+  if(m==='register'){title.textContent='Đăng ký';sub.textContent='Sau khi đăng ký, chờ Khánh duyệt rồi mới xem bài học.';reg.hidden=false;go.textContent='Đăng ký';tog.parentElement.innerHTML='Đã có tài khoản? <a id="tog">Đăng nhập</a>';document.getElementById('tog').onclick=()=>setMode('login');pw.autocomplete='new-password';document.getElementById('forgotRow').hidden=true}
+  else{title.textContent='Đăng nhập';sub.textContent='Dùng email để học. Tài khoản mới cần Khánh duyệt trước khi mở nội dung.';reg.hidden=true;go.textContent='Đăng nhập';document.getElementById('switch').innerHTML='Chưa có tài khoản? <a id="tog">Đăng ký</a>';document.getElementById('tog').onclick=()=>setMode('register');pw.autocomplete='current-password';document.getElementById('forgotRow').hidden=false}
 }
 tog.onclick=()=>setMode('register');
 // ===== Bị chặn vì tài khoản đã dùng đủ 2 thiết bị: chọn gỡ 1 thiết bị để vào =====
