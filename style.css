@@ -1090,3 +1090,31 @@ footer .site-title{font-weight:800;color:var(--t)}
   .level-card{padding-left:76px}
   .level-card .lv,.level-card .lv-jp{width:60px}
 }
+
+/* ============================================================
+   V3 LAYOUT — BỐ CỤC TRANG CHỦ THEO MẪU ĐÃ DUYỆT (01/11/2026)
+   Chỉ sắp xếp VỊ TRÍ khối (không đổi màu/da, không đổi hook JS):
+   hero → thẻ thành ngữ → lưới 2 cột trên máy tính
+   (trái: Học tiếp + Khóa học | phải: Top tuần + Mỗi ngày +
+   Luyện tập thêm). Điện thoại: 1 cột đúng thứ tự mẫu
+   (Học tiếp → Khóa học → Top tuần → Mỗi ngày → Luyện tập thêm).
+   Bố cục dark mode = bố cục sáng (rule thuần cấu trúc).
+   ============================================================ */
+.layout{display:flex;flex-direction:column;gap:26px;margin-top:26px}
+.col-main,.col-side{display:flex;flex-direction:column;gap:26px;min-width:0}
+.layout .block{margin:0}
+#hoctiep .continue-card{margin-top:0}
+#topWeek .st-topweek{margin:0}
+#moingay .tile{width:100%}
+#moingay .hn-gamesec{margin:14px 0 0}
+@media(min-width:900px){
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 356px;gap:24px;align-items:start}
+  /* Lưới chọn cấp trong cột trái: N5+N4 / N3+N2 / N1 trải ngang như mẫu */
+  #khoahoc .level-grid{grid-template-columns:1fr 1fr}
+  #khoahoc .level-grid .level-card:last-child{grid-column:span 2}
+  #khoahoc .cat-grid{grid-template-columns:repeat(2,1fr)}
+  /* Sảnh game trong cột phải hẹp: lưới 2 cột, thẻ nằm ngang như bản gốc */
+  #moingay .hn-gamesec-grid{grid-template-columns:repeat(2,1fr)}
+  #moingay .hn-gcard{flex-direction:row;text-align:left;gap:9px;padding:9px 10px}
+  #moingay .hn-gcard-tx small{margin-top:2px}
+}
