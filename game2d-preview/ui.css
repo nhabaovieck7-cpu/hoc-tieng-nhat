@@ -51,9 +51,7 @@ button { font-family: inherit; }
   border-radius: 999px; padding: 6px 14px; font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #objective.pulse { animation: pulse .6s ease; }
-#hud-hint { position: fixed; top: calc(192px + env(safe-area-inset-top)); left: 0; right: 0; z-index: 15;
-  text-align: center; color: rgba(253, 248, 236, .85); font-size: 11px; padding: 0 14px; pointer-events: none;
-  text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+/* (Lane P 01/11: dòng gợi ý điều khiển #hud-hint đã xoá hẳn — không còn CSS.) */
 
 /* Số chỉ số bay (+N / −N) */
 #floaters { position: fixed; top: calc(96px + env(safe-area-inset-top)); left: 0; right: 0; z-index: 40;
@@ -226,7 +224,6 @@ button { font-family: inherit; }
   #hud { padding-left: 18px; padding-right: 18px; }
   #stats-bar { max-width: 620px; }
   #objective { font-size: 13.5px; }
-  #hud-hint { top: auto; bottom: calc(86px + env(safe-area-inset-bottom)); font-size: 12px; }
   #dlg { padding-bottom: 26px; }
   #dlg-card { max-height: 66vh; }
   #dlg-jp { font-size: 19px; }
@@ -271,13 +268,16 @@ body.hud-full .stat .lb { display: block; }
 /* Mục tiêu pill cũ: ẩn hẳn — bảng hướng dẫn từng bước thay thế (guide.js vẫn
    bắt được chữ mục tiêu qua GAMEUI.setObjective để làm đường dự phòng). */
 #objective { display: none !important; }
-/* Dòng gợi ý điều khiển: hạ xuống sát đáy để không đè bảng hướng dẫn */
-#hud-hint { top: auto; bottom: calc(6px + env(safe-area-inset-bottom)); }
+/* (Lane P 01/11: quy tắc #hud-hint cũ ở đây đã gỡ cùng phần tử — xem ghi chú ở khối HUD trên.) */
 
-/* ---------- Bảng hướng dẫn từng bước (#guide — guide.js dựng nội dung) ---------- */
+/* ---------- Bảng hướng dẫn từng bước (#guide — guide.js dựng nội dung) ----------
+   Lane P (01/11, lệnh chủ trang 06:07): bảng ẨN HẲN theo mặc định (display:none —
+   không chiếm chỗ, không che cảnh/biển DEPARTURES); chỉ hiện dạng overlay khi
+   guide.js thêm class .open qua biểu tượng 🧭 #btn-guide. */
 #guide { position: fixed; left: 10px; top: calc(96px + env(safe-area-inset-top)); z-index: 21;
   width: min(292px, 78vw); background: rgba(28, 26, 44, .88); color: #fdf8ec;
-  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; display: none; }
+#guide.open { display: block; }
 #guide-head { display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 11px; }
 #guide-title { flex: 1; font-size: 12.5px; font-weight: 800; letter-spacing: .02em;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -296,7 +296,6 @@ body.hud-full .stat .lb { display: block; }
 #guide-steps li.done .gs-txt { text-decoration: line-through; }
 #guide-steps li.done .gs-num { background: var(--good); }
 #guide-steps li.done-all { opacity: 1; }
-#guide.closed #guide-steps { display: none; }
 @media (min-width: 900px) {
   #guide { left: 18px; top: 104px; }
 }
@@ -342,3 +341,73 @@ body.hud-full #hud-season { display: block; }
 body.hud-full #pc-name { max-width: 150px; }
 body.hud-full #pc-level { max-width: none; white-space: normal; overflow: visible; }
 body.hud-full #guide { top: calc(178px + env(safe-area-inset-top)); }
+
+/* =====================================================================
+   LANE Q — TỔNG DUYỆT BỐ CỤC & ĐỘ DỄ DÙNG (01/11, lệnh chủ trang 06:08:
+   "bố cục rõ ràng, dễ nhìn dễ chơi, đừng để anh phải sửa tý 1").
+   Kiểm kê bằng harness-ui-audit (đo thật trên 16 màn hình × 390/desktop):
+   nút HUD chỉ 30px, nút Mua/Kết bạn 30–33px, chip chọn 33px, nút đóng
+   điện thoại 22px — tất cả dưới ngưỡng chạm 44px; cỡ chữ phụ 12,5px hơi
+   nhỏ. Khối này CHỈ chỉnh cỡ/vùng bấm trên nền Lane H + Lane P (HUD mảnh,
+   guide ẩn sau 🧭 giữ nguyên) — không đổi cấu trúc hay màu sắc.
+   ===================================================================== */
+/* Nút HUD: 30 → 44px đúng ngưỡng chạm. Để HUD không phình, ở màn hẹp
+   (≤560px) XẾP LẠI THỨ TỰ: hàng 1 = thẻ người chơi + cụm nút, hàng 2 =
+   pill khu vực + thanh chỉ số — 2 hàng ỔN ĐỊNH ~81px ở 390px (trước đây
+   nhảy 73↔103px tuỳ độ dài tên bản đồ, có lúc 3 hàng). Desktop giữ 1 hàng. */
+.hud-btn { width: 44px; height: 44px; font-size: 17px; }
+body.hud-full .hud-btn { width: 44px; height: 44px; font-size: 17px; }
+#hud-area { max-width: 34vw; overflow: hidden; text-overflow: ellipsis; }
+body.hud-full #hud-area { max-width: none; }
+@media (max-width: 560px) {
+  /* Hàng 1 (thẻ + 5 nút 44px = 232px) chỉ vừa 390px khi thẻ thu còn ~130px:
+     cắt bề ngang tên/cấp ở thẻ thu gọn + giảm đệm mép. Hàng 2: khu vực + chỉ số. */
+  body:not(.hud-full) #hud { padding-left: 6px; padding-right: 6px; }
+  body:not(.hud-full) #hud-actions { order: 2; gap: 3px; }
+  body:not(.hud-full) #hud-area { order: 3; max-width: 40vw; }
+  body:not(.hud-full) #stats-bar { order: 4; }
+  body:not(.hud-full) #player-card { padding-right: 8px; }
+  body:not(.hud-full) #pc-name { max-width: 84px; }
+  body:not(.hud-full) #pc-level { max-width: 84px; }
+}
+/* Bảng hướng dẫn: nằm dưới HUD mới, nút đóng/nghe 34px */
+#guide { top: calc(100px + env(safe-area-inset-top)); }
+@media (min-width: 900px) { #guide { top: 60px; } }
+/* Desktop (chuột, không chạm): nút HUD 40px là đủ — giữ HUD desktop ≤46px
+   như chuẩn Lane H (harness-guide hudDesktopCompact); bản chạm 44px chỉ
+   áp cho màn hình hẹp/trung. */
+@media (min-width: 900px) {
+  .hud-btn { width: 40px; height: 40px; font-size: 16px; }
+  body.hud-full .hud-btn { width: 40px; height: 40px; }
+}
+body.hud-full #guide { top: calc(198px + env(safe-area-inset-top)); }
+#guide-head button { width: 34px; height: 34px; font-size: 14px; }
+#guide-steps li { font-size: 13.5px; }
+#guide-steps li .gs-num { width: 18px; height: 18px; font-size: 11px; }
+/* Nút bấm chung: mọi .btn cao tối thiểu 44px, chữ nút quầy hàng to hơn */
+.btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.shop-acts .btn { font-size: 13.5px; }
+.dlg-next { min-height: 44px; padding: 11px 22px; }
+.dlg-opt { min-height: 48px; padding: 12px 14px; }
+.opt-btn { min-height: 48px; padding: 12px 14px; }
+#btn-interact { min-height: 48px; }
+/* Chip chọn (ngoại hình / người đi cùng / ý kiến khi đi chơi) */
+.style-chip { min-height: 44px; padding: 9px 14px; font-size: 13.5px; display: inline-flex; align-items: center; }
+/* Điện thoại: nút quay lại + nút Đóng 44px, nút trả lời 44px */
+#phone-back { width: 44px; height: 44px; padding: 0; flex: none; }
+#phone-close { min-height: 44px; padding: 8px 14px; font-size: 12.5px; }
+.reply-btn { min-height: 44px; padding: 11px 15px; font-size: 14px; }
+/* Cài đặt: thanh trượt có vùng chạm cao hơn; chữ phụ trong modal 13px */
+.mrow input[type="range"] { height: 30px; }
+.modal-card .sub { font-size: 13px; }
+/* Màn hình bắt đầu: nút chọn tuyến + ô tên cao 48px, đoạn mở đầu dễ đọc hơn */
+.gender-btn { min-height: 48px; }
+#inp-name { min-height: 48px; }
+.start-sub { font-size: 13.5px; }
+/* Hàng nút chốt của modal DÍNH ở đáy thẻ (sticky): nội dung modal dài hơn
+   màn hình điện thoại thì nút Xong/Đóng vẫn luôn nhìn thấy + bấm được ngay,
+   khỏi cuộn xuống tận cuối mới thấy (trước đây ở 390px nút "Xong" của Cài
+   đặt bị đẩy khuất hẳn xuống dưới mép — bấm hụt là modal không đóng). */
+.modal-card .btnrow { position: sticky; bottom: -18px; z-index: 3;
+  margin: 6px -18px -18px; padding: 10px 18px 18px;
+  background: #fffaf0; border-top: 1px solid #eee2cc; border-radius: 0 0 18px 18px; }

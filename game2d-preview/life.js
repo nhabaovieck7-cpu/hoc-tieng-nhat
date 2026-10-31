@@ -126,7 +126,7 @@
   function lockReason(d) {
     var f = (window.FLOW && window.FLOW.flags) ? window.FLOW.flags() : {};
     if (d.mode === 'plane') return 'Quá xa — phải đi máy bay. Hệ bay nối từ hệ đi lại này sẽ mở ở đợt sau.';
-    if (!f.arrived) return 'Chưa tới Nhật/phòng trọ — xong nhịp tới nơi đã nhé.';
+    if (!f.arrived) return 'Chưa mở — tới Nhật và về phòng trọ trước đã.';
     if (d.mode === 'shinkansen' && !f.salaryDone) return 'Chặng xa tốn kém — đợi nhận LƯƠNG ĐẦU ở Chương 2 rồi hãy đi chơi xa.';
     return null;
   }
@@ -165,7 +165,7 @@
     var card = $('travel-card'); if (!card) return;
     card.innerHTML = '';
     card.appendChild(h('h3', null, '🚉 Máy bán vé — ga 新宿'));
-    card.appendChild(h('div', 'sub', 'Chọn điểm đến + người đi cùng, mua vé là lên tàu. Vé tàu điện vài trăm yên · Shinkansen chặng xa ¥8.000–14.000/chiều. 💴 Ví: ' + yen(moneyYen()) + ' · ' + SEASON_INFO[season()].emoji + ' ' + SEASON_INFO[season()].name));
+    card.appendChild(h('div', 'sub', 'Chọn điểm đến và người đi cùng — mua vé là lên tàu. 💴 Ví: ' + yen(moneyYen()) + ' · ' + SEASON_INFO[season()].emoji + ' ' + SEASON_INFO[season()].name));
     var sec = h('div', 'style-sec'); sec.appendChild(h('div', 'style-sec-t', '👥 Mục đích / người đi cùng')); card.appendChild(sec);
     var row = h('div', 'style-row'); sec.appendChild(row);
     companions().forEach(function (c) {

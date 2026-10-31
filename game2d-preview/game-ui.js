@@ -84,7 +84,7 @@
   function init(player) {
     $('pc-name').textContent = player.name;
     $('pc-ava').textContent = (player.name || '?').trim().charAt(0).toUpperCase();
-    $('pc-level').textContent = (player.gender === 'F' ? '👧' : '👦') + ' · Cấp JLPT N5 · Ngày lên đường sang Nhật';
+    $('pc-level').textContent = (player.gender === 'F' ? '👧' : '👦') + ' · JLPT N5 · Ngày lên đường';
     render();
     // Cài đặt
     $('set-bgm-on').checked = window.BGM.isOn();

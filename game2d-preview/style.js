@@ -223,7 +223,15 @@
   function chip(label, on, fn, color) {
     var b = h('button', 'style-chip' + (on ? ' on' : ''), label);
     b.type = 'button';
-    if (color) { b.style.background = color; b.style.color = '#fff'; b.style.textShadow = '0 1px 2px rgba(0,0,0,.45)'; }
+    if (color) {
+      b.style.background = color;
+      // Lane Q 01/11: chữ theo độ sáng nền — màu sáng (da sáng, áo trắng, vàng) dùng chữ ĐẬM,
+      // trước đây chữ trắng trên nền be/vàng nhạt gần như không đọc được.
+      var rgb = [1, 3, 5].map(function (i) { return parseInt(color.substr(i, 2), 16); });
+      var lum = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+      if (lum > 0.6) { b.style.color = '#2b2440'; b.style.textShadow = 'none'; }
+      else { b.style.color = '#fff'; b.style.textShadow = '0 1px 2px rgba(0,0,0,.45)'; }
+    }
     b.addEventListener('click', fn);
     return b;
   }
@@ -236,7 +244,7 @@
     card.innerHTML = '';
     card.appendChild(h('h3', null, '👗 Ngoại hình & tủ đồ'));
     var sub = h('div', 'sub');
-    sub.innerHTML = 'Chỉnh tóc / da / đồ cơ bản là <b>miễn phí</b>. Đồ mua ở trung tâm thương mại nằm trong tủ đồ phía dưới. Tuyến truyện giữ nguyên theo lựa chọn đầu game (' + (gender === 'F' ? '👧 tuyến nữ' : '👦 tuyến nam') + ') — trang phục ở đây tự do chọn kiểu <b>quần hoặc váy</b> cho cả hai tuyến.<br>⭐ ' + LEVEL_NAMES[level()] + ' · 💴 Ví: ' + yen(moneyYen()) + ' · ✨ Điểm phong cách (mỹ phẩm + nước hoa đang dùng): <b>' + stylePoints() + ' điểm</b>';
+    sub.innerHTML = 'Đồ cơ bản chỉnh <b>miễn phí</b> — đồ mua ở trung tâm thương mại nằm trong tủ đồ bên dưới.<br>⭐ ' + LEVEL_NAMES[level()] + ' · 💴 Ví: ' + yen(moneyYen()) + ' · ✨ Điểm phong cách: <b>' + stylePoints() + ' điểm</b>';
     card.appendChild(sub);
 
     var prevWrap = h('div', 'style-preview');
@@ -312,16 +320,16 @@
     card.innerHTML = '';
     card.appendChild(h('h3', null, C.emoji + ' Quầy ' + C.name + ' — ' + C.jp));
     var sub = h('div', 'sub');
-    sub.innerHTML = '<b>Nhân viên:</b> ' + C.greet + '<br>' + C.greetVi + '<br>⭐ ' + LEVEL_NAMES[level()] + ' · 💴 Ví: ' + yen(moneyYen()) + ' · Bán lại được 50% giá mua (món đang dùng thì phải bỏ ra trước).';
+    sub.innerHTML = '<b>Nhân viên:</b> ' + C.greet + '<br>' + C.greetVi + '<br>⭐ ' + LEVEL_NAMES[level()] + ' · 💴 Ví: ' + yen(moneyYen()) + ' · Bán lại 50% giá mua.';
     card.appendChild(sub);
     CATALOG.filter(function (it) { return it.counter === curCounter; }).forEach(function (it) {
       var rowEl = h('div', 'shop-item');
       var info = h('div', 'shop-info');
       info.appendChild(h('div', 'shop-name', it.emoji + ' ' + it.name));
-      info.appendChild(h('div', 'shop-jp', it.jp + (it.kind === 'fx' ? ' · ✨ +' + it.style + ' điểm phong cách khi dùng' : '') + ' · ↔ chuyển nhượng được')); // mọi món bán ở mall đều tradeable (instance có uid riêng)
-      var price = h('div', 'shop-price', yen(it.price));
-      if (level() < it.req) price.appendChild(h('span', 'shop-lock', ' 🔒 Cần Cấp ' + it.req));
-      info.appendChild(price);
+      // Lane Q 01/11: bỏ "· ↔ chuyển nhượng được" (thuật ngữ hệ thống kinh tế, người chơi
+      // không cần) và bỏ dòng khoá ĐỎ trùng — nút bên phải đã ghi rõ "🔒 Cấp N" rồi.
+      info.appendChild(h('div', 'shop-jp', it.jp + (it.kind === 'fx' ? ' · ✨ +' + it.style + ' điểm phong cách khi dùng' : '')));
+      info.appendChild(h('div', 'shop-price', yen(it.price)));
       rowEl.appendChild(info);
       var acts = h('div', 'shop-acts');
       if (!owned(it.id)) {

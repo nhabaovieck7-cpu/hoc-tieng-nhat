@@ -59,9 +59,14 @@
     var box = $('phone-replies'); box.innerHTML = '';
     var list = replies[id];
     if (!list || !list.length) {
-      box.innerHTML = '<div class="reply-note">Chạm vào tin nhắn khi có lựa chọn trả lời 👆</div>';
+      // Lane Q 01/11: bỏ hẳn dòng gợi ý ở chân điện thoại (vừa thừa vừa SAI — câu trả lời
+      // hiện thành nút ngay tại đây khi tới lượt, không phải "chạm vào tin nhắn").
+      // Không có lựa chọn thì vùng trả lời thu gọn hẳn, không chừa dải trống.
+      box.innerHTML = '';
+      box.style.display = 'none';
       return;
     }
+    box.style.display = '';
     list.forEach(function (r) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'reply-btn';
@@ -121,6 +126,7 @@
   function callAdvance() {
     if (!call) return;
     var box = $('phone-replies'); if (!box) return;
+    box.style.display = '';   // vùng trả lời có thể đang thu gọn (renderReplies rỗng) — cuộc gọi luôn cần hiện
     if (call.idx >= call.lines.length) {
       box.innerHTML = '';
       var end = document.createElement('button');
@@ -169,6 +175,7 @@
     body.innerHTML = '<div class="call-head"><div class="call-ava">' + (cfg.ava || '📞') + '</div>' +
       '<div class="call-name">' + cfg.name + '</div><div class="call-status" id="call-status">📞 Đang kết nối…</div></div>' +
       '<div id="call-log"></div>';
+    $('phone-replies').style.display = '';
     $('phone-replies').innerHTML = '<div class="reply-note">🔊 Đang kết nối…</div>';
     call.timer = setInterval(callTick, 1000);
     call.wait = setTimeout(function () { callAdvance(); }, 900);

@@ -287,8 +287,8 @@
       '  <div class="econ-head"><div class="econ-title">💴 Ví &amp; Chợ — Kinh tế người chơi</div>' +
       '  <span class="econ-badge">MÔ PHỎNG · XEM TRƯỚC P1</span>' +
       '  <button class="econ-close" id="econ-close" type="button">Đóng ✕</button></div>' +
-      '  <div class="econ-warn">🧪 <b>BẢN MÔ PHỎNG:</b> toàn bộ tiền, bạn bè và giao dịch ở đây là dữ liệu giả chạy ngay trên máy này — chưa có máy chủ thật. Ví này <b>tách riêng</b>, không phải tiền trong truyện. ' +
-      '⚠️ <b>Chỉ mua bán bằng nút trong game.</b> Ai rủ bạn chuyển đồ/tiền trước qua chat hoặc ra ngoài game đều là lừa đảo. Tiền trong game không đổi ra được bất cứ thứ gì ngoài game.</div>' +
+      '  <div class="econ-warn">🧪 <b>BẢN MÔ PHỎNG:</b> tiền và giao dịch ở đây là dữ liệu giả, ví <b>tách riêng</b> với tiền trong truyện. ' +
+      '⚠️ <b>Chỉ mua bán bằng nút trong game</b> — ai rủ chuyển đồ/tiền qua chat hay ra ngoài game đều là lừa đảo.</div>' +
       '  <div id="econ-top"></div>' +
       '  <div class="econ-tabs">' +
       '    <button class="econ-tab" data-tab="transfer" type="button">💸 Chuyển tiền</button>' +
@@ -328,7 +328,7 @@
     var bot = h('div', 'econ-wallet');
     bot.appendChild(h('div', 'who', '🤖 Ví của ' + BOT_NAME + ' — bạn mô phỏng'));
     bot.appendChild(h('div', 'bal', yen(S.bot.balance)));
-    bot.appendChild(h('div', 'sub', '= ' + man(S.bot.balance) + ' · bạn bè giả lập chạy cục bộ'));
+    bot.appendChild(h('div', 'sub', '= ' + man(S.bot.balance) + ' · bạn bè giả lập'));
     w.appendChild(mine); w.appendChild(bot); top.appendChild(w);
     var ue = unlockError();
     var lim = h('div', 'econ-limits');
@@ -458,7 +458,7 @@
   }
   function renderMarket(body) {
     body.appendChild(h('div', 'econ-sec-t', '🏪 Chợ người chơi — «Chợ đồ cũ & trao đổi» (mô phỏng)'));
-    body.appendChild(h('div', 'econ-hint', 'Rao bán món trong tủ đồ mô phỏng của bạn: món bị KHOÁ khi đang rao · tối đa ' + MAX_LISTINGS + ' tin · tin sống 7 ngày · phí chợ 10% trừ phía người bán (chìm). Lướt chợ xem được ở đây; khi lên máy chủ thật (P2), rao/mua tại khu chợ trong trung tâm thương mại.'));
+    body.appendChild(h('div', 'econ-hint', 'Rao bán món trong tủ đồ mô phỏng: món đang rao bị khoá · tối đa ' + MAX_LISTINGS + ' tin · tin sống 7 ngày · phí chợ 10% trừ phía người bán.'));
     var open = S.listings.filter(function (l) { return l.status === 'open'; });
     var closed = S.listings.filter(function (l) { return l.status !== 'open'; });
     if (!open.length) body.appendChild(h('div', 'econ-hint', 'Chợ đang trống.'));

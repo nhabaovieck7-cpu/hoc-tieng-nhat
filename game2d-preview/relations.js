@@ -507,12 +507,12 @@
     var f = (window.FLOW && window.FLOW.flags) ? window.FLOW.flags() : {};
     var g = genderNow();
     card.innerHTML = '';
-    card.appendChild(h('h3', null, '💞 Quan hệ — bạn bè, người yêu, cặp đôi'));
+    card.appendChild(h('h3', null, '💞 Quan hệ'));
     var lover = g === 'F' ? 'Hải' : 'Linh';
     var arcTxt = f.breakup === 'giu-duoc' ? ('💌 ' + lover + ' ở quê vẫn đang đợi — hai người đã giữ được nhau (điểm quan tâm ' + (f.lovecare != null ? f.lovecare : '—') + ').')
       : f.breakup === 'bi-da' ? ('💔 Đã chia tay với ' + lover + ' ở quê — người ở quê buông tay trước.')
       : f.breakup === 'cam-sung' ? ('💔 Đã chia tay với ' + lover + ' ở quê — phát hiện người thứ ba.')
-      : ('💌 ' + lover + ' ở quê đang đợi bạn (điểm quan tâm: ' + (f.lovecare != null ? f.lovecare : '—') + ') — cách bạn đối xử sẽ quyết định kết cục ở Chương 3.');
+      : ('💌 ' + lover + ' ở quê đang đợi (điểm quan tâm: ' + (f.lovecare != null ? f.lovecare : '—') + ') — cách đối xử sẽ quyết định kết cục ở Chương 3.');
     var arcDiv = h('div', 'sub'); arcDiv.innerHTML = '<b>Người yêu ở quê:</b> ' + arcTxt;
     card.appendChild(arcDiv);
     if (R8.partner8) {
@@ -524,16 +524,19 @@
       var p = PEOPLE8[id], st = dispStage(id), aff = affection(id);
       var box = h('div', 'shop-item');
       var info = h('div', 'shop-info');
-      info.appendChild(h('div', 'shop-name', p.ava + ' ' + p.name + ' — ' + STAGE_LABEL[st]));
-      info.appendChild(h('div', 'shop-jp', (p.candidate ? p.nat : 'Người quen trong đời sống ở Nhật') + ' · Thiện cảm: ' + aff + '/100 ' + '💗'.repeat(Math.round(aff / 20))));
-      if (!p.candidate) info.appendChild(h('div', 'shop-jp', 'Quan hệ với ' + p.short + ' dừng ở mức BẠN BÈ — không tỏ tình/kết đôi được.'));
+      // Lane Q 01/11: tên riêng một dòng (trước đây tên + mức quan hệ cùng cỡ chữ to, quấn
+      // 2 dòng lộn xộn); mức quan hệ xuống dòng phụ cùng hàng thiện cảm.
+      info.appendChild(h('div', 'shop-name', p.ava + ' ' + p.name));
+      info.appendChild(h('div', 'shop-jp', STAGE_LABEL[st] + ' · ' + (p.candidate ? p.nat : 'Người quen trong đời sống ở Nhật') + ' · Thiện cảm: ' + aff + '/100 ' + '💗'.repeat(Math.round(aff / 20))));
+      if (!p.candidate) info.appendChild(h('div', 'shop-jp', 'Chỉ kết bạn — không tỏ tình/kết đôi.'));
       var gifts = R8.gifts8[id];
       if (gifts.length) info.appendChild(h('div', 'shop-jp', '🎁 Đã tặng: ' + gifts.map(function (gid) { var it = ((window.STYLE && window.STYLE.catalog) ? window.STYLE.catalog() : []).filter(function (x) { return x.id === gid; })[0]; return it ? it.name : gid; }).join(', ')));
       box.appendChild(info);
       var acts = h('div', 'shop-acts');
       function mkBtn(label, cls, fn) { var b = h('button', 'btn ' + cls, label); b.type = 'button'; b.addEventListener('click', fn); acts.appendChild(b); return b; }
       if (st === 'quen') {
-        mkBtn(isMet(id) ? (aff >= BEFRIEND_AFF ? '🤝 Kết bạn' : '🤝 Kết bạn (cần 💗' + BEFRIEND_AFF + ')') : '🤝 Kết bạn (chưa gặp)', 'primary', function () { if (befriend(id)) { var m = $('modal-rel8'); if (m) m.classList.remove('show'); } });
+        var kb = mkBtn(isMet(id) ? (aff >= BEFRIEND_AFF ? '🤝 Kết bạn' : '🤝 Kết bạn (cần 💗' + BEFRIEND_AFF + ')') : '🤝 Kết bạn (chưa gặp)', 'primary', function () { if (befriend(id)) { var m = $('modal-rel8'); if (m) m.classList.remove('show'); } });
+        if (!isMet(id)) kb.style.opacity = '.55';   // chưa từng gặp: nút mờ đi cho khỏi tưởng bấm là kết bạn ngay được
       } else {
         mkBtn('🎤 Karaoke', 'ghost', function () { var m = $('modal-rel8'); if (m) m.classList.remove('show'); startOuting('karaoke', id); });
         mkBtn('🌳 Công viên', 'ghost', function () { var m = $('modal-rel8'); if (m) m.classList.remove('show'); startOuting('park', id); });
@@ -592,9 +595,9 @@
       if (rowEl && rowEl.parentNode && !$('set-rel8')) {
         var mrow = document.createElement('div');
         mrow.className = 'mrow';
-        mrow.innerHTML = '<span>💞 Quan hệ — bạn bè, người yêu, cặp đôi</span>';
+        mrow.innerHTML = '<span>💞 Quan hệ</span>';
         var b = document.createElement('button');
-        b.type = 'button'; b.className = 'btn ghost'; b.id = 'set-rel8'; b.textContent = 'Mở mục Quan hệ';
+        b.type = 'button'; b.className = 'btn ghost'; b.id = 'set-rel8'; b.textContent = 'Mở';
         b.addEventListener('click', function () {
           var s = $('modal-settings'); if (s) s.classList.remove('show');
           openPanel8();
@@ -610,7 +613,7 @@
       if (body && body.querySelector('.thread-item') && !$('rel8-entry')) {
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'thread-item'; btn.id = 'rel8-entry';
-        btn.innerHTML = '<span class="t-ava">💞</span><span><span class="t-name">Quan hệ — bạn bè, người yêu, cặp đôi</span><br><span class="t-last">Kết bạn, rủ đi chơi, kết đôi…</span></span>';
+        btn.innerHTML = '<span class="t-ava">💞</span><span><span class="t-name">Quan hệ</span><br><span class="t-last">Bạn bè · người yêu · cặp đôi</span></span>';
         btn.addEventListener('click', function () { if (window.PHONE) window.PHONE.close(); openPanel8(); });
         body.insertBefore(btn, body.firstChild);
       }

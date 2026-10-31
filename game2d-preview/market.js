@@ -112,7 +112,7 @@
     var S2 = SHELVES[curShelf];
     card.innerHTML = '';
     card.appendChild(h('h3', null, '🛒 Siêu thị 中野 — kệ ' + S2.name));
-    card.appendChild(h('div', 'sub', S2.jp + ' — chọn số lượng cho vào giỏ, ra QUẦY THU NGÂN (nhân viên ở làn レジ 1番) mới tính tiền được nhé. ' + cartLine()));
+    card.appendChild(h('div', 'sub', S2.jp + ' — bấm ＋ cho vào giỏ, tính tiền ở quầy thu ngân. ' + cartLine()));
     ITEMS.filter(function (it) { return it.shelf === curShelf; }).forEach(function (it) {
       var row = h('div', 'shop-item');
       var info = h('div', 'shop-info');
@@ -158,19 +158,8 @@
       var itemsTxt = Object.keys(P.cart).map(function (id) { var it = byId(id); return it.emoji + ' ' + it.jp + ' ×' + P.cart[id] + ' = ' + yen(it.price * P.cart[id]); }).join('<br>');
       lines.innerHTML = '<b>Thu ngân:</b> ありがとうございます。お会計いたします。<br>' + itemsTxt + '<br><b>Tổng hàng: ' + yen(cartTotal()) + '</b> · ' + cartLine();
       card.appendChild(lines);
-      var bagRow = h('div', 'btnrow');
-      var b1 = h('button', 'btn ' + (step === 'bag3' ? 'primary' : 'ghost'), '🛍️ Lấy túi nilon (+¥3)'); b1.type = 'button';
-      b1.addEventListener('click', function () { renderPay('bag3'); });
-      var b2 = h('button', 'btn ' + (step !== 'bag3' ? 'primary' : 'ghost'), '🎒 Không cần túi (có túi riêng)'); b2.type = 'button';
-      b2.addEventListener('click', function () { renderPay('nobag'); });
-      bagRow.appendChild(b1); bagRow.appendChild(b2); card.appendChild(bagRow);
-      var total = cartTotal() + (step === 'bag3' ? 3 : 0);
-      var charged = chargedYen(total);
-      card.appendChild(h('div', 'sub', (step === 'bag3' ? 'レジ袋 1枚 3円 — ' : '') + 'Tổng giỏ: ' + yen(total) + ' · Ví tính theo man (hạt 100 yên như mọi cảnh trong game) nên số trừ là ' + yen(charged) + ' (' + (charged / 10000).toFixed(2) + ' man).'));
-      var payBtn = h('button', 'btn primary', '💴 Thanh toán ' + yen(charged)); payBtn.type = 'button';
-      payBtn.addEventListener('click', function () { checkout(step === 'bag3'); });
-      var btnrow = h('div', 'btnrow'); btnrow.appendChild(payBtn); card.appendChild(btnrow);
-      if (moneyYen() < charged) card.appendChild(h('div', 'sub', '⚠️ Không đủ tiền (thiếu ' + yen(charged - moneyYen()) + ') — bỏ bớt món trong giỏ ở nút dưới rồi tính lại nhé.'));
+      // Lane Q 01/11: đưa danh sách món (kèm nút bỏ) LÊN TRƯỚC nút thanh toán — trước đây
+      // nút trả tiền nằm giữa màn hình còn chỗ sửa giỏ bị đẩy xuống dưới cùng, rất khó hiểu.
       Object.keys(P.cart).forEach(function (id) {
         var it = byId(id);
         var row = h('div', 'shop-item');
@@ -179,6 +168,19 @@
         rm.addEventListener('click', function () { P.cart[id]--; if (!P.cart[id]) delete P.cart[id]; persist(); renderPay(cartHasBeer() && payStep === 'age' ? 'age' : 'bag'); });
         row.appendChild(rm); card.appendChild(row);
       });
+      var total = cartTotal() + (step === 'bag3' ? 3 : 0);
+      var charged = chargedYen(total);
+      if (moneyYen() < charged) card.appendChild(h('div', 'sub', '⚠️ Không đủ tiền (thiếu ' + yen(charged - moneyYen()) + ') — bỏ bớt món ở trên rồi tính lại nhé.'));
+      var bagRow = h('div', 'btnrow');
+      var b1 = h('button', 'btn ' + (step === 'bag3' ? 'primary' : 'ghost'), '🛍️ Lấy túi nilon (+¥3)'); b1.type = 'button';
+      b1.addEventListener('click', function () { renderPay('bag3'); });
+      var b2 = h('button', 'btn ' + (step !== 'bag3' ? 'primary' : 'ghost'), '🎒 Không cần túi (có túi riêng)'); b2.type = 'button';
+      b2.addEventListener('click', function () { renderPay('nobag'); });
+      bagRow.appendChild(b1); bagRow.appendChild(b2); card.appendChild(bagRow);
+      card.appendChild(h('div', 'sub', (step === 'bag3' ? 'レジ袋 1枚 3円 — ' : '') + 'Tổng giỏ: ' + yen(total) + ' · Trừ ví: ' + yen(charged) + ' (làm tròn trăm yên).'));
+      var payBtn = h('button', 'btn primary', '💴 Thanh toán ' + yen(charged)); payBtn.type = 'button';
+      payBtn.addEventListener('click', function () { checkout(step === 'bag3'); });
+      var btnrow = h('div', 'btnrow'); btnrow.appendChild(payBtn); card.appendChild(btnrow);
     }
     var btnrow2 = h('div', 'btnrow');
     var done = h('button', 'btn ghost', 'Để sau'); done.type = 'button';
@@ -209,7 +211,7 @@
     var card = $('market-card'); if (!card) return;
     card.innerHTML = '';
     card.appendChild(h('h3', null, '🧊 Tủ lạnh & kho đồ — đồ mua ở siêu thị'));
-    card.appendChild(h('div', 'sub', 'Bấm Ăn/Uống để dùng ngay. Bữa chính +Sức khỏe nhiều · đồ uống +nhỏ · bia: vui vẻ xã giao nhưng uống nhiều trong ngày sẽ SAY (Sức khỏe −) tới khi ngủ qua ngày.' + (P.drunk ? '<br>🥴 <b>Đang SAY</b> — mặt đỏ, chân hơi loạng choạng… về futon ngủ một giấc tới sáng là hết.' : '')));
+    card.appendChild(h('div', 'sub', 'Bấm Ăn/Uống để dùng ngay — bữa chính +❤️ nhiều, đồ uống +ít. Bia từ lon 3 trong ngày sẽ SAY (−❤️) tới khi ngủ qua ngày.' + (P.drunk ? '<br>🥴 <b>Đang SAY</b> — về futon ngủ một giấc tới sáng là hết.' : '')));
     var ids = Object.keys(P.stock).filter(function (id) { return P.stock[id] > 0; });
     if (!ids.length) card.appendChild(h('div', 'style-note', 'Kho đang trống. Ra siêu thị 中野 ở phố mua sắm 浅草 chọn đồ theo kệ, ra quầy tính tiền rồi mang về nhé.'));
     ids.forEach(function (id) {

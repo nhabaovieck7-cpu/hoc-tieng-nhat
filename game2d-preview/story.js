@@ -309,6 +309,7 @@
     });
     var cn = $('chapter-next');
     if (cn) cn.addEventListener('click', function () {
+      if (window.BGM) window.BGM.mood(null);   // Lane V: khép cao trào đỗ thi, về nhạc bản đồ
       $('modal-chapter').classList.remove('show');
       var target = nextChapterTarget;
       S.chapter = target;
@@ -363,7 +364,7 @@
     var h3 = document.querySelector('#modal-exam h3');
     if (h3) h3.textContent = '🎓 Mốc thi JLPT ' + level + (level === 'N4' ? ' — cổng cuối Chương 2' : ' — cổng cuối Chương 1');
     var sub = document.querySelector('#modal-exam .sub');
-    if (sub) sub.innerHTML = 'Đề 12 câu: chữ &amp; từ vựng 4 · ngữ pháp 4 · đọc hiểu 2 · <b>NGHE 2</b> (clip ghi âm thật, nghe lại tối đa 2 lần/câu; lời thoại gốc hiện sau khi trả lời). Đỗ khi đúng ít nhất <b>7/12</b>. Trượt thì về phòng trọ ôn ở bàn học rồi thi lại (lệ phí thi lại 7.500 yên) — không bao giờ kẹt.';
+    if (sub) sub.innerHTML = '12 câu: từ vựng 4 · ngữ pháp 4 · đọc hiểu 2 · <b>NGHE 2</b> (nghe lại tối đa 2 lần/câu). Đỗ: đúng từ <b>7/12</b> — trượt thì ôn lại rồi thi lại (7.500 yên), không bao giờ kẹt.';
     examRun = { level: level, list: buildExamList(level), idx: 0, score: 0, locked: false, listenScore: 0, listenTotal: 0, plays: 0 };
     $('exam-chapter').style.display = 'none';
     $('modal-exam').classList.add('show');
@@ -422,6 +423,7 @@
     if (score > st8.best) st8.best = score;
     if (score >= EXAM_PASS) {
       st8.passed = true;
+      if (window.BGM) window.BGM.mood('climax');   // Lane V: đỗ mốc thi -> nhạc cao trào (gỡ khi bấm nút sang chương)
       examDoneLevel = level;
       addQuiz(isN4 ? 'exam-n4' : 'exam-n5');
       $('exam-q').textContent = isN4
@@ -582,6 +584,7 @@
         { from: 'them', who: 'Mẹ', text: 'Thôi, giao thừa điểm rồi con ạ — pháo hoa ngoài sân đây này, nghe thấy không? Năm mới chúc con của mẹ: khỏe mạnh, học hành đỗ đạt, gặp toàn người tốt. Ngủ ngon nghe con, mai mùng một lại gọi. Cả nhà thương con!' }
       ],
       onEnd: function () {
+        if (window.BGM) window.BGM.mood(null);   // Lane V: hết cuộc gọi Tết -> về nhạc bản đồ
         if (!S.ch2.tetDone) {
           S.ch2.tetDone = true;
           window.GAMEUI.toast('🧧 Đón giao thừa từ xa với bố mẹ xong — xa nhà mà lòng thì ở ngay mâm cơm nhà mình.');
@@ -641,6 +644,7 @@
         { from: 'them', who: 'Mẹ', text: 'Thôi, khuya rồi, con ngủ sớm đi mai còn đi làm thủ tục. Chủ nhật tuần sau lại gọi về giờ này nhé — cả nhà chờ điện thoại của con đấy. Ngủ ngon nghe con.' }
       ],
       onEnd: function () {
+        if (window.BGM) window.BGM.mood(null);   // Lane V: hết cuộc gọi về nhà -> về nhạc bản đồ
         if (!S.flags.callHomeDone) {
           S.flags.callHomeDone = true;
           window.GAMEUI.toast('📞 Gọi về nhà xong — nghe giọng bố mẹ, lòng nhẹ đi một nửa. (Cờ truyện: nhớ nhà lần 1)');
@@ -719,7 +723,36 @@
     }
     if (window.REL) window.REL.onGameStart(player);           // khôi phục tuyến tình cảm Ch3 đã lưu (rel.js tự nạp qua FLOW.getRel)
   }
+  /* ================= NHẠC THEO CẢNH (Lane V, 01/11) =================
+     Bảng cảnh -> mood: engine gọi FLOW.onSceneStart(id) đúng lúc cảnh thật sự chạy
+     (sau cổng FLOW.handleScene) nên cảnh bị chặn bằng toast không làm mood kẹt;
+     FLOW.onSceneEnd(id) — nơi mọi cảnh engine đóng — gỡ mood của đúng cảnh đó.
+     Các luồng KHÔNG qua engine (cuộc gọi về nhà, mốc thi) set/gỡ mood tại chỗ riêng. */
+  var SCENE_MOOD = {
+    'airport-intro': 'airport', 'airport-family': 'airport', 'airport-lover': 'airport',
+    'airport-checkin': 'airport', 'airport-gate': 'airport', 'flight': 'airport', 'flight-window': 'airport',
+    'sim-01-loi-ru': 'tense', 'sim-02-cua-hang': 'tense', 'sim-03-hoa-don': 'tense',
+    'sim-04-xu-ly': 'tense', 'sim-bill': 'tense', 'ch2-tv': 'tense',
+    'ch3-cam-do-nam': 'tense', 'ch3-cam-do-nu': 'tense',
+    'ch3-davut-nam': 'breakup', 'ch3-davut-nu': 'breakup',
+    'ch3-camsung-nam': 'breakup', 'ch3-camsung-nu': 'breakup', 'ch3-khoc': 'breakup',
+    'ch3-giu-duoc-nam': 'romance', 'ch3-giu-duoc-nu': 'romance', 'ch3-hoi-phuc': 'daily',
+    'ch2-yui': 'romance',
+    'hen-yui': 'romance', 'hen-hang': 'romance', 'hen-ren': 'romance', 'hen-khoi': 'romance',
+    've-nha-yui': 'romance', 've-nha-hang': 'romance', 've-nha-ren': 'romance', 've-nha-khoi': 'romance',
+    'to-tinh-yui': 'romance', 'to-tinh-hang': 'romance', 'to-tinh-ren': 'romance', 'to-tinh-khoi': 'romance',
+    'to-tinh-loi': 'romance',
+    'ket-doi-yui': 'romance', 'ket-doi-hang': 'romance', 'ket-doi-ren': 'romance', 'ket-doi-khoi': 'romance',
+    'karaoke-doi': 'romance', 'cong-vien-doi': 'romance',
+    'bonenkai': 'festival', 'dong-huong': 'festival', 'hanami': 'daily', 'momiji': 'daily'
+  };
+  var moodScene = null;
+  function onSceneStart(id) {
+    var m = SCENE_MOOD[id];
+    if (m) { moodScene = id; if (window.BGM) window.BGM.mood(m); }
+  }
   function onSceneEnd(id) {
+    if (moodScene === id) { moodScene = null; if (window.BGM) window.BGM.mood(null); }
     markDone(id);
     var f = S.flags, ret = null;
     if (id === 'airport-family' && !f.famDone) {
@@ -862,6 +895,7 @@
         window.GAMEUI.toast('🍻 Khoan gọi Tết đã — tháng 12 còn tiệc TẤT NIÊN 忘年会 với công ty ở quán nhậu 新橋 (bảng tin trong quán). Dự tiệc cuối năm xong rồi gọi về nhà đón giao thừa nhé!');
         return true;
       }
+      if (window.BGM) window.BGM.mood('home');   // Lane V: cuộc gọi về nhà/Tết phủ mood-home (gỡ ở onEnd của cuộc gọi)
       if (S.chapter >= 2 && S.ch2.romanceDone && !S.ch2.tetDone) { startTetCall(); return true; }
       startHomeCall(); return true;
     }
@@ -1018,7 +1052,7 @@
     return 0;
   }
   window.FLOW = {
-    onGameStart: onGameStart, onSceneEnd: onSceneEnd, handleScene: handleScene,
+    onGameStart: onGameStart, onSceneStart: onSceneStart, onSceneEnd: onSceneEnd, handleScene: handleScene,
     onMapEnter: onMapEnter, setFlag: setFlag,
     // Hệ ngoại hình (style.js) đọc/ghi trạng thái qua 2 cổng này — ghi xong là LƯU ngay
     getStyle: function () { return S.style ? JSON.parse(JSON.stringify(S.style)) : null; },

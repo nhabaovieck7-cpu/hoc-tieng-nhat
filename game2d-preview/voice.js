@@ -183,7 +183,7 @@
       replayBtn.id = 'voice-replay';
       replayBtn.textContent = '🔊 Nghe lại';
       replayBtn.style.cssText = 'border:1px solid #c9c2ab;background:#fffdf6;color:#2b3a67;' +
-        'font-weight:700;font-size:12.5px;border-radius:999px;padding:5px 12px;cursor:pointer;';
+        'font-weight:700;font-size:13.5px;border-radius:999px;padding:10px 16px;min-height:44px;cursor:pointer;';
       replayBtn.addEventListener('click', function () { VOICE.replay(); });
       bar.appendChild(replayBtn);
       var opts = document.getElementById('dlg-opts');

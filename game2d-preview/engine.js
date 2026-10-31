@@ -277,41 +277,84 @@
     var f = font || '700 12px sans-serif';
     blitPlate(g, cx, cy, plateBitmap(text, f, '#fff', 'rgba(20,20,30,.82)', 18));
   }
+  // Khoảng cách "≈N bước" THEO Ô TRÊN ĐƯỜNG ĐI (Lane R): BFS trên lưới ô đi
+  // được TĨNH của bản đồ hiện tại (cùng nguồn tileAt với findPath, bỏ qua NPC —
+  // chỉ là con số ước lượng); đích là vật thể nằm trên ô đặc (TV, bảng đen…)
+  // thì lấy ô kề đi được gần nhất. Không có đường (đích bị vây kín) → quay về
+  // khoảng cách Manhattan. Cache theo (bản đồ · ô người chơi · ô đích) nên chỉ
+  // tính lại khi người chơi hoặc đích đổi ô — không tốn FPS.
+  var guideDistCache = { key: '', val: -1 };
+  function guidePathDist(tx, ty) {
+    var sx = Math.floor(player.x / TILE), sy = Math.floor(player.y / TILE);
+    var key = cur.def.id + '|' + sx + ',' + sy + '>' + tx + ',' + ty;
+    if (guideDistCache.key === key) return guideDistCache.val;
+    var seen = {}, q = [[sx, sy]], val = -1;
+    seen[sx + ',' + sy] = 0;
+    while (q.length) {
+      var c = q.shift(), cx = c[0], cy = c[1], d0 = seen[cx + ',' + cy];
+      if (Math.abs(cx - tx) + Math.abs(cy - ty) <= 1) { val = d0; break; }
+      var dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+      for (var i = 0; i < 4; i++) {
+        var nx = cx + dirs[i][0], ny = cy + dirs[i][1], kk = nx + ',' + ny;
+        if (!(kk in seen) && !tileAt(nx, ny)) { seen[kk] = d0 + 1; q.push([nx, ny]); }
+      }
+    }
+    if (val < 0) val = Math.abs(tx - sx) + Math.abs(ty - sy);
+    guideDistCache = { key: key, val: val };
+    return val;
+  }
   // Mũi tên chỉ đường (Lane H): đích do guide.js cấp qua GUIDE.targetFor(mapId) —
   // tọa độ THẾ GIỚI của NPC/vật thể bước hiện tại, hoặc ô cửa đi đúng hướng.
+  // Lane R (01/11): mũi tên TO hơn + quầng sáng nhấp nháy nhẹ cho dễ thấy ngay cả
+  // khi đang bận; đích XUYÊN bản đồ (gt.hops ≥ 1) thì biển đi kèm ghi ĐÍCH CUỐI +
+  // số nơi còn phải qua (do guide.js soạn sẵn trong gt.label) và KHÔNG ghi số
+  // bước — số bước chỉ còn cho đích cùng bản đồ, tính theo đường đi (BFS ô).
   function drawGuideArrow(gt, camX, camY, vw, vh, now) {
     var tx = gt.x - camX, ty = gt.y - camY;
     var px = player.x - camX, py = player.y - camY;
-    var dist = Math.max(1, Math.round(Math.hypot(gt.x - player.x, gt.y - player.y) / TILE));
+    var cross = gt.hops != null && gt.hops >= 1;
+    var dist = cross ? 0 : Math.max(1, guidePathDist(Math.floor(gt.x / TILE), Math.floor(gt.y / TILE)));
     var bob = Math.sin(now / 260) * 3;
     var pulse = 0.65 + 0.35 * Math.sin(now / 300);
+    var breathe = 1 + 0.10 * Math.sin(now / 300);
     ctx.save();
     if (tx >= -16 && tx <= vw + 16 && ty >= -30 && ty <= vh + 16) {
       // Đích trong tầm nhìn: vòng sáng dưới chân + mũi tên nảy phát sáng phía trên
       ctx.fillStyle = 'rgba(255,205,64,' + (0.30 * pulse + 0.18).toFixed(3) + ')';
-      ctx.beginPath(); ctx.ellipse(tx, ty + 4, 17, 6, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(tx, ty + 4, 18 * breathe, 6.5, 0, 0, Math.PI * 2); ctx.fill();
       ctx.fillStyle = '#ffcd40';
-      ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.4;
+      ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.6;
       ctx.beginPath();
-      // Nâng lên trên biển tên (Lane H2): mũi tên ở ty-84..-72, biển tên NPC nằm ở
-      // ty-62..-48 — không còn đè lên tên nhân vật được chỉ tới.
-      ctx.moveTo(tx - 9, ty - 84 + bob); ctx.lineTo(tx + 9, ty - 84 + bob); ctx.lineTo(tx, ty - 72 + bob);
+      // Nâng lên trên biển tên (Lane H2): mũi tên ở ty-91..-75, biển tên NPC nằm ở
+      // ty-62..-48 — không còn đè lên tên nhân vật được chỉ tới. (Lane R: to hơn
+      // một cỡ — nửa rộng 12, cao 16.)
+      ctx.moveTo(tx - 12, ty - 91 + bob); ctx.lineTo(tx + 12, ty - 91 + bob); ctx.lineTo(tx, ty - 75 + bob);
       ctx.closePath(); ctx.fill(); ctx.stroke();
+      // Cửa trên tuyến xuyên bản đồ đang trong tầm nhìn: ghi luôn đích cuối phía
+      // trên mũi tên (biển cửa tại chỗ chỉ ghi nơi tới chặng kế — chưa đủ tin).
+      if (cross && gt.label) blitPlate(ctx, tx, ty - 106 + bob, plateBitmap(gt.label, '700 10px sans-serif', '#ffe9a8', 'rgba(20,20,30,.82)', 14));
     } else {
-      // Đích ngoài tầm nhìn: mũi tên ghim ở mép màn hình, xoay đúng hướng + số bước
+      // Đích ngoài tầm nhìn: mũi tên ghim ở mép màn hình, xoay đúng hướng.
+      // Lane R: phóng to ~1,35 lần + quầng sáng nhấp nháy sau lưng cho bắt mắt.
       var ex = clamp(tx, 34, vw - 34), ey = clamp(ty, 46, vh - 34);
       var ang = Math.atan2(ty - py, tx - px);
-      ctx.translate(ex, ey); ctx.rotate(ang);
+      ctx.translate(ex, ey);
+      ctx.fillStyle = 'rgba(255,205,64,' + (0.22 * pulse + 0.10).toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(0, 0, 19 * breathe, 0, Math.PI * 2); ctx.fill();
+      ctx.rotate(ang);
+      ctx.scale(1.35 * breathe, 1.35 * breathe);
       ctx.fillStyle = '#ffcd40';
       ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.4;
       ctx.beginPath();
       ctx.moveTo(13, 0); ctx.lineTo(-8, -9); ctx.lineTo(-3, 0); ctx.lineTo(-8, 9);
       ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.scale(1 / (1.35 * breathe), 1 / (1.35 * breathe));
       ctx.rotate(-ang);
-      // Kèm TÊN nơi/người cần tới (bổ sung 22:02) + số bước ước lượng — biển bitmap
-      // cache theo chuỗi (Lane H2): khỏi fillText mỗi khung.
-      var label = (gt.label ? gt.label + ' · ' : '') + '≈' + dist + ' bước';
-      blitPlate(ctx, 0, 20, plateBitmap(label, '700 10px sans-serif', '#ffe9a8', 'rgba(20,20,30,.78)', 14));
+      // Biển đi kèm — bitmap cache theo chuỗi (Lane H2): khỏi fillText mỗi khung.
+      // Cùng bản đồ: "Tên đích · ≈N bước" (bước theo đường đi). Xuyên bản đồ:
+      // nguyên nhãn của guide ("→ nơi kế · đích: … · qua N nơi nữa").
+      var label = cross ? (gt.label || '') : (gt.label ? gt.label + ' · ' : '') + '≈' + dist + ' bước';
+      if (label) blitPlate(ctx, 0, 24, plateBitmap(label, '700 11px sans-serif', '#ffe9a8', 'rgba(20,20,30,.82)', 15));
     }
     ctx.restore();
   }
@@ -601,6 +644,7 @@
         enterMap(res.moveTo.map, tx, ty, 'down');
       }
     };
+    if (sc && (sc.lines || sc.branch || sc.sayLines) && window.FLOW && window.FLOW.onSceneStart) window.FLOW.onSceneStart(id);   // Lane V: lớp truyện gắn mood nhạc theo cảnh
     if (sc && sc.lines) playKaiwa(sc, done);
     else if (sc && sc.branch) playBranch(sc, done);
     else if (sc && sc.sayLines) playSay(sc, done);
@@ -797,10 +841,16 @@
     appearanceSpec: function () { return player.appearanceSpec ? JSON.parse(JSON.stringify(player.appearanceSpec)) : null; }
   };
 
-  // Huy hiệu FPS
+  // Huy hiệu FPS — CHỈ hiện khi bật cờ gỡ lỗi (localStorage b2d_debug='1');
+  // người chơi thường KHÔNG thấy số FPS nữa (Lane Q 01/11: bỏ đồ nghề khỏi màn hình chơi).
+  // API __demo.fps() cho harness vẫn nguyên.
   setInterval(function () {
     var f = document.getElementById('hud-fps');
-    if (f) f.textContent = started ? (fpsNow + ' FPS') : '';
+    if (!f) return;
+    var dbg = false;
+    try { dbg = localStorage.getItem('b2d_debug') === '1'; } catch (e) {}
+    f.style.display = dbg ? 'block' : 'none';
+    if (dbg) f.textContent = started ? (fpsNow + ' FPS') : '';
   }, 500);
 
   requestAnimationFrame(loop);

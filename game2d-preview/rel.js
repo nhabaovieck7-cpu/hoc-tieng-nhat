@@ -429,7 +429,7 @@
       var info = h('div', 'shop-info');
       info.appendChild(h('div', 'shop-name', c.name + ' — ' + stageLabel(id) + (R.courting === id && !R.partner ? ' · 💘 đang theo đuổi' : '')));
       info.appendChild(h('div', 'shop-jp', c.sub));
-      info.appendChild(h('div', 'shop-jp', 'Thiện cảm: ' + a + '/100 ' + '💗'.repeat(Math.round(a / 20)) + ' (cờ affection.' + id + ')'));
+      info.appendChild(h('div', 'shop-jp', 'Thiện cảm: ' + a + '/100 ' + '💗'.repeat(Math.round(a / 20))));   // Lane Q: bỏ "(cờ affection.…)" — tên cờ nội bộ lọt ra mặt người chơi
       box.appendChild(info);
       var acts = h('div', 'btnrow');
       if (!R.met[id] && c.meetScene) {
