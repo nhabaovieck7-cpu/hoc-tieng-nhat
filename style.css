@@ -1140,3 +1140,63 @@ footer .site-title{font-weight:800;color:var(--t)}
 #tinhnang .tile::after{content:"›";margin-left:auto;align-self:center;font-size:22px;font-weight:700;color:var(--shu);line-height:1}
 #tinhnang .tile-arr{margin-left:auto;align-self:center;font-size:22px;font-weight:700;color:var(--shu);line-height:1}
 #tinhnang .tile:has(.tile-arr)::after{display:none}
+
+/* ===== V3 FINAL — GIỐNG HỆT MẪU (01/11, lệnh chủ trang ghi đè 2 khác biệt đợt bố cục) =====
+   1) Thẻ cấp: tên Việt + thanh tiến độ + % ĐÃ HỌC THẬT (renderPicker/lvPct trong index.html).
+   2) #moingay: thẻ tin tức kiểu mẫu + 1 banner "Sảnh game Edo" -> game/index.html.
+   3) Dark mode: chuyển tông nâu ấm -> navy sâu đúng mẫu v3-dark (#0B1120/#151E31). */
+/* --- 1) Thẻ cấp giống mẫu --- */
+.level-card{display:flex;align-items:center;padding:14px 16px 14px 82px}
+.level-card .lv{isolation:isolate}
+.level-card .lv::after{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle at 50% 0,transparent 10px,rgba(255,255,255,.09) 11px,rgba(255,255,255,.09) 12px,transparent 13px);background-size:34px}
+.level-card .lv-main{flex:1;min-width:0;display:block;padding-left:8px}
+.level-card .lv-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15.5px;font-weight:800;line-height:1.3}
+.level-card .lv-goal{display:inline-flex;align-items:center;font-size:10px;font-weight:800;color:#7A5A10;background:linear-gradient(145deg,#F6D87E,#EFD08A);padding:3px 8px;border-radius:999px;letter-spacing:.3px}
+.level-card .lv-sub{display:block;font-size:12px;color:var(--m);margin-top:2px}
+.level-card .lv-bar{display:block;height:7px;border-radius:6px;background:#EFEAE0;overflow:hidden;margin-top:10px;box-shadow:inset 0 1px 3px rgba(28,39,51,.10)}
+.level-card .lv-bar i{display:block;height:100%;border-radius:6px;position:relative;background:linear-gradient(90deg,var(--ai),var(--indigo2))}
+.level-card .lv-bar i::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 55%);border-radius:6px}
+.level-card[data-level="N5"] .lv-bar i{background:linear-gradient(90deg,var(--n5),var(--n5d))}
+.level-card[data-level="N4"] .lv-bar i{background:linear-gradient(90deg,var(--n4),var(--n4d))}
+.level-card[data-level="N3"] .lv-bar i{background:linear-gradient(90deg,var(--n3),var(--n3d))}
+.level-card[data-level="N2"] .lv-bar i{background:linear-gradient(90deg,var(--n2),var(--n2d))}
+.level-card[data-level="N1"] .lv-bar i{background:linear-gradient(90deg,var(--n1),var(--n1d))}
+.level-card .lv-pc{flex:none;align-self:center;padding:0 2px 0 10px;font-weight:900;font-size:17px;text-align:right;color:var(--t);display:block}
+.level-card .lv-pc small{display:block;color:var(--m);font-weight:700;font-size:10px;margin-top:1px}
+@media(max-width:899px){.level-card{padding-left:76px}.level-card .lv-main{padding-left:6px}}
+/* --- 2) Mỗi ngày giống mẫu --- */
+#moingay .mn-news{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden;text-decoration:none;color:var(--t)}
+#moingay .mn-news::after{content:"ニュース";position:absolute;right:12px;top:0;font-family:"Noto Serif JP",serif;font-weight:900;font-size:34px;color:rgba(43,58,103,.055);pointer-events:none}
+#moingay .mn-news-h{display:flex;align-items:center;gap:11px}
+#moingay .mn-ico{width:40px;height:40px;flex:none;border-radius:16px;background:rgba(199,62,46,.10);color:var(--shu);display:flex;align-items:center;justify-content:center}
+#moingay .mn-ico svg{width:20px;height:20px}
+#moingay .mn-news-h b{font-size:16px;font-weight:800}
+#moingay .mn-news-p{display:block;font-size:12.5px;color:var(--m);margin-top:7px;line-height:1.55}
+#moingay .mn-nw{display:inline-block;margin-top:12px;background:linear-gradient(150deg,#E0655A,var(--shu) 58%,#A93224);color:#fff;font-weight:800;font-size:12px;padding:8px 14px;border-radius:999px;box-shadow:0 8px 16px rgba(199,62,46,.3),inset 0 1px 0 rgba(255,255,255,.3)}
+#moingay .mn-game{margin-top:12px;padding:17px 18px;display:flex;align-items:center;gap:13px;color:#fff;border:none;position:relative;overflow:hidden;background:linear-gradient(125deg,#16264E,#2B4479);border-radius:20px;box-shadow:var(--shadow);text-decoration:none}
+#moingay .mn-game-pat{position:absolute;inset:0;background-image:radial-gradient(circle at 50% 0,transparent 13px,rgba(255,255,255,.05) 14px,rgba(255,255,255,.05) 15px,transparent 16px,rgba(255,255,255,.035) 21px,rgba(255,255,255,.035) 22px,transparent 23px),radial-gradient(circle at 0 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px),radial-gradient(circle at 100% 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px);background-size:56px 28px}
+#moingay .mn-torii{position:absolute;right:118px;top:50%;transform:translateY(-52%);height:70px;opacity:.27;pointer-events:none}
+#moingay .mn-game-ic{width:44px;height:44px;flex:none;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+#moingay .mn-game-ic svg{width:23px;height:23px}
+#moingay .mn-game-tx{position:relative;z-index:1;display:block;min-width:0}
+#moingay .mn-game-tx b{font-size:15.5px;font-weight:800;display:block}
+#moingay .mn-game-tx small{font-size:12px;color:#B9C6E4;margin-top:2px;display:block;line-height:1.45}
+#moingay #hnGameStars{color:#FFD98A;font-weight:700}
+#moingay .mn-game-btn{background:#fff;color:#233D63;font-weight:800;font-size:13.5px;padding:11px 19px;border-radius:999px;box-shadow:0 8px 18px rgba(0,0,0,.25);margin-left:auto;position:relative;z-index:1;white-space:nowrap;flex:none}
+@media(max-width:560px){#moingay .mn-torii{right:104px;height:54px;opacity:.2}#moingay .mn-game{padding:15px 14px;gap:10px}#moingay .mn-game-btn{padding:10px 14px}}
+/* --- 3) Dark mode navy như mẫu v3-dark --- */
+html[data-theme="dark"]{--bg:#0B1120;--card:#151E31;--t:#EDF1F8;--m:#97A3B8;--line:rgba(148,166,199,.16);--soft:#1B2539;--ai-soft:#1E2A44;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 26px rgba(0,0,0,.42)}
+html[data-theme="dark"] .topbar{background:linear-gradient(125deg,#0D1730,#1B2B52)}
+html[data-theme="dark"] .tabbar{background:rgba(11,17,32,.92)}
+html[data-theme="dark"] .tabbar a{color:#7C8DB0}
+html[data-theme="dark"] .gsbar{background:rgba(11,17,32,.97)}
+html[data-theme="dark"] .gsr{background:#151E31}
+html[data-theme="dark"] .gsm{border-bottom-color:rgba(148,166,199,.12)}
+html[data-theme="dark"] .gsa{border-bottom-color:rgba(148,166,199,.12)}
+html[data-theme="dark"] .gsa:hover,html[data-theme="dark"] .gsa:focus{background:#1E2A44}
+html[data-theme="dark"] .nav a:hover{background:#1E2A44}
+html[data-theme="dark"] .card:hover{border-color:rgba(148,166,199,.35)}
+html[data-theme="dark"] .lockscr{background:linear-gradient(160deg,#0B1120,#1D2C52)}
+html[data-theme="dark"] .filters input,html[data-theme="dark"] .filters select,html[data-theme="dark"] .authcard input,html[data-theme="dark"] .lockbox input,html[data-theme="dark"] .tr textarea,html[data-theme="dark"] .chatin textarea{background:#1B2539;border-color:rgba(148,166,199,.22);color:var(--t)}
+html[data-theme="dark"] .level-card .lv-bar{background:#24304A}
+html[data-theme="dark"] #moingay .mn-news::after{color:rgba(255,255,255,.05)}
