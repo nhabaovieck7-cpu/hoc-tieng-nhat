@@ -1310,3 +1310,21 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
   #homeNews{display:flex;flex-direction:column}
   #homeNews>.hnx-card{flex:1 1 auto}
 }
+
+/* ===== V3 FINAL 5 — CHỈNH THEO GHI CHÚ TAY CỦA CHỦ TRANG (01/11/2026) =====
+   1) Hàng dưới của trang chủ tách thành .layout2: Tin tức (trái) và
+      Luyện tập thêm (phải) cùng một hàng lưới trên máy tính — mép trên
+      thẳng hàng nhau; chiều cao cân đối do hnFit trong index.html nay
+      cân theo #tinhnang (trước cân theo #topWeek). Điện thoại: .layout2
+      xếp dọc, Luyện tập thêm trước Tin tức (order 5 < 6 sẵn có).
+   2) Khối #moingay bỏ hẳn tiêu đề "Mỗi ngày": thẻ Cộng đồng đứng đầu
+      khối; khối giữ padding chung của .block nên không hổng khoảng.
+   3) Khối Kaiwa độc lập cuối trang chủ đã gỡ (học Kaiwa trong từng
+      cấp của Khóa học); tiêu đề Khóa học thêm chữ Kaiwa. */
+.layout2 .block{margin:0}
+@media(min-width:900px){
+  .layout2{display:grid;grid-template-columns:minmax(0,1fr) 356px;gap:24px;align-items:start;margin-top:24px}
+}
+@media(max-width:899px){
+  .layout2{display:flex;flex-direction:column;gap:26px;margin-top:26px}
+}

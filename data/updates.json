@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-01-kaiwa-gop-khoa-hoc-tin-tuc-can-hang",
+   "date": "2026-11-01",
+   "type": "tinh-nang",
+   "title": "Trang chủ: Kaiwa gộp vào Khóa học + Tin tức cân hàng Luyện tập thêm",
+   "desc": "Theo góp ý của chủ trang: tiêu đề Khóa học nay kèm chữ Kaiwa; khối Kaiwa riêng ở cuối trang đã bỏ — các bài kaiwa nằm ngay trong từng cấp độ của Khóa học, mở cấp là thấy và bấm học như thường. Khối Tin tức nay thẳng hàng và cao bằng khối Luyện tập thêm trên máy tính; thẻ Cộng đồng bỏ chữ “học viên” và bỏ tiêu đề “Mỗi ngày” cho gọn.",
+   "link": "index.html"
+  },
+  {
    "id": "2026-11-01-sua-loi-kaiwa-luyen-tap-bo-cuc",
    "date": "2026-11-01",
    "type": "tinh-nang",
