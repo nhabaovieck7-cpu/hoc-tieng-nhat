@@ -142,10 +142,39 @@ var CSS='.hn-cb{position:relative;background:none;border:0;cursor:pointer;font-s
 +'.hn-nava{width:34px;height:34px;border-radius:50%;flex:0 0 34px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px}'
 +'.hn-ntx{flex:1;font-size:14px;line-height:1.45}.hn-ntm{color:var(--m);font-size:12px}'
 +'.hn-nall{display:block;width:100%;text-align:center;background:none;border:0;border-top:1px solid var(--line);padding:10px;font:inherit;font-weight:600;color:var(--c2);cursor:pointer}'
++'.hn-upd{border:1px solid var(--line);border-radius:14px;background:var(--soft);padding:10px 10px 6px;margin:2px 0 10px}'
++'.hn-upd h5{margin:0 0 4px;font-size:14px}'
++'.hn-upd-it{display:block;padding:7px 2px;border-top:1px dashed var(--line);color:var(--t);text-decoration:none}'
++'.hn-upd-meta{display:flex;gap:6px;align-items:center;margin-bottom:2px;flex-wrap:wrap}'
++'.hn-upd-date{font-size:12px;color:var(--m);font-weight:600}'
++'.hn-upd-tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px;background:#efede6;color:#5a6472;white-space:nowrap}'
++'.hn-upd-t-bai-hoc{background:var(--ai-soft);color:var(--ai)}'
++'.hn-upd-t-de-thi{background:#f3ead3;color:#8a6414}'
++'.hn-upd-t-tin-tuc{background:var(--shu-soft);color:var(--shu)}'
++'.hn-upd-t-game{background:#f0e9f7;color:#6c3483}'
++'.hn-upd-t-tinh-nang{background:#e6f4ec;color:#1d7a43}'
++'.hn-upd-t-he-thong{background:#efede6;color:#5a6472}'
++'html[data-theme="dark"] .hn-upd-t-de-thi{background:#4a3d1c;color:#e8c87a}'
++'html[data-theme="dark"] .hn-upd-t-game{background:#372b4d;color:#cdb2ec}'
++'html[data-theme="dark"] .hn-upd-t-tinh-nang{background:#1e4030;color:#8fd6ab}'
++'html[data-theme="dark"] .hn-upd-t-he-thong{background:#2b2620;color:#b7ae9e}'
++'.hn-upd-new{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--shu);color:#fff;white-space:nowrap}'
++'.hn-upd-ti{display:block;font-size:14px;font-weight:600;line-height:1.4}'
++'.hn-upd-de{display:block;font-size:13px;color:var(--m);line-height:1.45}'
++'.hn-upd-all{display:block;text-align:center;padding:8px 2px 4px;font-size:14px;font-weight:600;color:var(--c2);text-decoration:none}'
 +'.hn-navlink.on{color:var(--c)}';
 var COLORS=['#cf3a2e','#233d63','#2e7d4f','#8a5a00','#6a3fa0','#0f6f7a','#a03d63','#4c5866'];
 function color(id){var h=0,s=String(id||'');for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return COLORS[h%COLORS.length]}
 var NOTIFS=[],UNREAD={notifications:0,chat:0};
+var UPTYPES={'bai-hoc':'Bài học','de-thi':'Đề thi','tin-tuc':'Tin tức','game':'Trò chơi','tinh-nang':'Tính năng','he-thong':'Hệ thống'};
+var UPDSEC='',updP=null;
+function updLoad(){if(updP)return updP;updP=fetch('data/updates.json').then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json()}).then(function(j){
+ var items=((j&&j.items)||[]).slice().sort(function(a,b){return a.date<b.date?1:(a.date>b.date?-1:0)});if(!items.length)return;
+ var mx=items.reduce(function(m,x){return x.date>m?x.date:m},'');
+ var rows=items.slice(0,5).map(function(x){var p=String(x.date||'').split('-');var dl=p.length===3?((+p[2])+'/'+(+p[1])):esc(x.date||'');
+  var inner='<span class="hn-upd-meta"><span class="hn-upd-date">'+dl+'</span><span class="hn-upd-tag hn-upd-t-'+esc(x.type)+'">'+esc(UPTYPES[x.type]||x.type)+'</span>'+(x.date===mx?'<span class="hn-upd-new">Mới</span>':'')+'</span><span class="hn-upd-ti">'+esc(x.title)+'</span><span class="hn-upd-de">'+esc(x.desc)+'</span>';
+  return x.link?'<a class="hn-upd-it" href="'+esc(x.link)+'">'+inner+'</a>':'<div class="hn-upd-it">'+inner+'</div>'}).join('');
+ UPDSEC='<div class="hn-upd"><h5>🆕 Có gì mới</h5>'+rows+'<a class="hn-upd-all" href="cap-nhat.html">Tất cả cập nhật →</a></div>'}).catch(function(){UPDSEC=''});return updP}
 function badge(el,n){if(!el)return;el.textContent=n>99?'99+':n;el.classList.toggle('on',n>0)}
 async function refresh(){if(!sess())return;try{var j=await api('/community/unread');UNREAD=j;
  badge(document.querySelector('#hnbell .hn-cbdg'),(j.notifications||0)+(j.chat||0));
@@ -161,7 +190,7 @@ function when(t){try{var d=new Date(t),s=(Date.now()-d)/1000;if(s<60)return'vừ
 function renderDD(dd){var items=NOTIFS.map(function(n){var ini=n.actor&&n.actor.name?n.actor.name.trim().charAt(0).toUpperCase():'?';
   return '<button type="button" class="hn-nit'+(n.is_read?'':' un')+'" data-nid="'+esc(n.id)+'" data-post="'+esc(n.post_id||'')+'"><span class="hn-nava" style="background:'+color(n.actor&&n.actor.id)+'">'+esc(ini)+'</span><span class="hn-ntx">'+typeText(n)+'<br><span class="hn-ntm">'+when(n.created_at)+'</span></span></button>'}).join('');
  var chatLine=UNREAD.chat>0?'<button type="button" class="hn-nit un" data-gochat="1"><span class="hn-nava" style="background:#233d63">💬</span><span class="hn-ntx">'+(HNX.ai()?HNX.cap(HNX.ai())+' có':'Có')+' <b>'+UNREAD.chat+'</b> tin nhắn chưa đọc<br><span class="hn-ntm">Bấm để mở hộp tin nhắn</span></span></button>':'';
- dd.innerHTML='<h4>🔔 Thông báo</h4>'+chatLine+(items||'<p style="padding:6px 8px;color:var(--m);font-size:14px">Chưa có thông báo nào.</p>')
+ dd.innerHTML='<h4>🔔 Thông báo</h4>'+UPDSEC+chatLine+(items||'<p style="padding:6px 8px;color:var(--m);font-size:14px">Chưa có thông báo nào.</p>')
  +(NOTIFS.some(function(n){return !n.is_read})?'<button type="button" class="hn-nall" data-readall="1">Đánh dấu đã đọc tất cả</button>':'')}
 async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return;
  var nav=document.querySelector('.topbar .nav');
@@ -182,8 +211,8 @@ async function boot(){var w=document.querySelector('.topbar .wrap');if(!w)return
  if(tgl&&tgl.parentNode===w){w.insertBefore(chat,tgl);w.insertBefore(fr,tgl);w.insertBefore(wrap,tgl)}else{w.appendChild(chat);w.appendChild(fr);w.appendChild(wrap)}
  bell.addEventListener('click',async function(){if(!dd.hidden){dd.hidden=true;return}
   dd.hidden=false;dd.innerHTML='<h4>🔔 Thông báo</h4><p style="padding:6px 8px;color:var(--m);font-size:14px">Đang tải…</p>';
-  try{var j=await api('/community/notifications');NOTIFS=j.notifications||[];UNREAD.notifications=j.unread||0;renderDD(dd);
-   badge(document.querySelector('#hnbell .hn-cbdg'),UNREAD.notifications+UNREAD.chat)}catch(e){dd.innerHTML='<h4>🔔 Thông báo</h4><p style="padding:6px 8px;color:var(--m);font-size:14px">Không tải được thông báo.</p>'}});
+  await updLoad();try{var j=await api('/community/notifications');NOTIFS=j.notifications||[];UNREAD.notifications=j.unread||0;renderDD(dd);
+   badge(document.querySelector('#hnbell .hn-cbdg'),UNREAD.notifications+UNREAD.chat)}catch(e){dd.innerHTML='<h4>🔔 Thông báo</h4>'+UPDSEC+'<p style="padding:6px 8px;color:var(--m);font-size:14px">Không tải được thông báo.</p>'}});
  document.addEventListener('click',function(e){if(!wrap.contains(e.target))dd.hidden=true});
  dd.addEventListener('click',async function(e){var it=e.target.closest?e.target.closest('[data-nid],[data-gochat],[data-readall]'):null;if(!it)return;
   if(it.dataset.gochat){location.href='tin-nhan.html';return}
