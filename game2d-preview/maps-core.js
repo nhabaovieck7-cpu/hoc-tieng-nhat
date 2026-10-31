@@ -70,13 +70,22 @@
 
   window.MAPDEF = window.MAPDEF || {};
 
+  /* Hệ số SIÊU MẪU của canvas bản đồ tĩnh (Lane M — vá chữ mờ theo góp ý chủ trang
+     22:49 JST 31/10): trước đây nền tĩnh paint ở độ phân giải 1× (1 ô = 32px) rồi bị
+     engine phóng lên dpr(≤2) × zoom(1.35) ≈ 2,7 lần bằng nội suy mượt → mọi chữ vẽ
+     trong thế giới （大阪食品工場, biển ga…) đều nhòe. Nay paint ở ×3 (cùng nguyên tắc
+     bitmap cache ×3 của biển tên/nhãn cửa — Lane H2) rồi thu xuống khi blit: chữ nét.
+     Mã paint của từng bản đồ KHÔNG đổi (vẫn tọa độ thế giới) nhờ scale ngữ cảnh. */
+  var SS = 3;
+
   function build(id) {
     var def = window.MAPDEF[id];
     if (!def) throw new Error('Thiếu bản đồ: ' + id);
     var w = def.grid[0].length, h = def.grid.length;
     var c = document.createElement('canvas');
-    c.width = w * TILE; c.height = h * TILE + 40; // chừa 40px phía trên cho biển/cột vẽ vượt ô
+    c.width = w * TILE * SS; c.height = (h * TILE + 40) * SS; // chừa 40px phía trên cho biển/cột vẽ vượt ô
     var g = c.getContext('2d');
+    g.scale(SS, SS);
     g.translate(0, 40);
     var solid = {};
     for (var y = 0; y < h; y++) for (var x = 0; x < w; x++) {
@@ -89,8 +98,8 @@
     if (!def.objects) def.objects = [];
     if (!def.npcs) def.npcs = [];
     if (!def.doors) def.doors = {};
-    return { def: def, canvas: c, solid: solid, w: w, h: h };
+    return { def: def, canvas: c, solid: solid, w: w, h: h, ss: SS };
   }
 
-  window.MAPS2D = { TILE: TILE, defs: window.MAPDEF, build: build, H: H };
+  window.MAPS2D = { TILE: TILE, SS: SS, defs: window.MAPDEF, build: build, H: H };
 })();

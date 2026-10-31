@@ -12,24 +12,30 @@
   var timer = null;
 
   function ramp(target, done) {
+    // target có thể là HÀM (đích động): fade-in luôn hướng về `vol` HIỆN TẠI, để người
+    // chơi kéo thanh trượt GIỮA lúc fade thì nhạc theo đúng giá trị mới, không bị giá
+    // trị cũ chụp lúc bắt đầu fade ghi đè (Lane K, kiểm chứng harness-bgm-autoplay K3).
+    var getT = (typeof target === 'function') ? target : function () { return target; };
     clearInterval(timer);
     var from = el.volume, steps = 10, i = 0;
     timer = setInterval(function () {
       i++;
-      el.volume = Math.max(0, Math.min(1, from + (target - from) * (i / steps)));
-      if (i >= steps) { clearInterval(timer); if (done) done(); }
+      var t = getT();
+      el.volume = Math.max(0, Math.min(1, from + (t - from) * (i / steps)));
+      if (i >= steps) { clearInterval(timer); el.volume = Math.max(0, Math.min(1, t)); if (done) done(); }
     }, 45);
   }
+  function rampToVol(done) { ramp(function () { return vol; }, done); }
   function play(id) {
     if (!id) return;
     if (id === curTrack) {
-      if (on && el.paused) { el.volume = 0; el.play().catch(function () {}); ramp(vol); }
+      if (on && el.paused) { el.volume = 0; el.play().catch(function () {}); rampToVol(); }
       return;
     }
     curTrack = id;
     ramp(0, function () {
       el.src = 'bgm/' + id + '.mp3';
-      if (on) { el.play().catch(function () {}); ramp(vol); }
+      if (on) { el.play().catch(function () {}); rampToVol(); }
       else el.pause();
     });
   }
@@ -41,7 +47,7 @@
       if (!el.src) el.src = 'bgm/' + curTrack + '.mp3';
       el.volume = 0;
       el.play().catch(function () {});
-      ramp(vol);
+      rampToVol();
     }
   }
   function setVolume(v) {

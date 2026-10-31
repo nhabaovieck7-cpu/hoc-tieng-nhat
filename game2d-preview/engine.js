@@ -35,6 +35,18 @@
   var fade = 0;                   // hiệu ứng chuyển khu (0..1)
   var frameTimes = [];
   var fpsNow = 0;
+  /* Cỡ hình (Lane H): hệ số phóng của camera — mặc định 1.35 (to rõ hơn bản 1.0 cũ),
+     chỉnh ở Cài đặt qua WORLD2D.setZoom, lưu localStorage. Mọi phép tính camera làm
+     việc trong "đơn vị thế giới" vw/vh = kích thước CSS / zoom rồi scale khi vẽ. */
+  var ZOOM_KEY = 'tuoitre2d_zoom';
+  var zoom = 1.35;
+  try { var zv = parseFloat(localStorage.getItem(ZOOM_KEY)); if (zv >= 1 && zv <= 1.6) zoom = zv; } catch (e) {}
+  function viewW() { return view.w / zoom; }
+  function viewH() { return view.h / zoom; }
+  // Cache khung bản đồ đã phóng theo (bản đồ, camera, zoom, mùa) — camera đứng yên
+  // thì khỏi phải phóng lại cả vùng bản đồ mỗi khung (giữ FPS trên máy yếu).
+  var mapCache = document.createElement('canvas');
+  var mapCacheKey = '';
 
   function buildMap(id) {
     // Giai đoạn 6B: nền tĩnh được paint theo MÙA lúc dựng (tán cây đổi màu — maps-core
@@ -200,36 +212,166 @@
     else g.drawImage(img, x - 16, y - 46, 32, 48);
     g.restore();
   }
+  // Cache bề rộng chữ của biển tên (Lane H — đo 1 lần/tên, giữ FPS khi vẽ mỗi khung)
+  var plateWCache = {};
+  function plateWidth(g, text) {
+    var w = plateWCache[text];
+    if (w == null) { g.font = '600 10px sans-serif'; w = g.measureText(text).width + 12; plateWCache[text] = w; }
+    return w;
+  }
+  function plateWidthF(g, text, font) {
+    var key = font + '|' + text, w = plateWCache[key];
+    if (w == null) { g.font = font; w = g.measureText(text).width + 14; plateWCache[key] = w; }
+    return w;
+  }
+  // Nhãn NƠI ĐẾN tại điểm cửa (bổ sung chủ trang 22:02 — cửa phải ghi rõ ĐI ĐÂU):
+  // "🚪 → Đường phố 吉祥寺" = mô tả tiếng Việt (từ PLACES.label) + tên riêng nơi đến,
+  // lấy từ doors[].to → bảng đăng ký places.js (nguồn tên duy nhất).
+  function doorText(to) {
+    var P = (window.PLACES || {})[to];
+    if (!P) return '🚪 → …';
+    var desc = (P.label || '').split('—')[0].trim().replace(/^\S+\s+/, '');
+    return '🚪 → ' + (desc ? desc + ' ' : '') + P.jp;
+  }
+  // Cache BITMAP biển chữ (Lane H2 — tối ưu FPS): nền + chữ render 1 lần vào canvas
+  // riêng ở độ nét ×3, mỗi khung chỉ drawImage. fillText + roundRect lặp lại từng
+  // khung rất đắt trong trình duyệt render phần mềm (đo tại công viên 390px).
+  var plateBmpCache = {};
+  var plateBmpCount = 0;
+  var measCtx = document.createElement('canvas').getContext('2d');
+  function plateBitmap(text, font, fg, bg, hPx) {
+    var key = font + '|' + fg + '|' + bg + '|' + hPx + '|' + text;
+    var hit = plateBmpCache[key];
+    if (hit) return hit;
+    if (plateBmpCount > 240) { plateBmpCache = {}; plateBmpCount = 0; }
+    var S = 3;
+    measCtx.font = font;
+    var size = parseFloat((font.match(/(\d+(?:\.\d+)?)px/) || [0, 11])[1]);
+    var w = Math.ceil(measCtx.measureText(text).width) + Math.round(size * 1.4);
+    var h = hPx || Math.round(size * 1.55);
+    var c = document.createElement('canvas');
+    c.width = w * S; c.height = h * S;
+    var g = c.getContext('2d');
+    g.scale(S, S);
+    g.fillStyle = bg;
+    g.beginPath(); g.roundRect(0.75, 0.75, w - 1.5, h - 1.5, (h - 1.5) / 2); g.fill();
+    g.font = font; g.fillStyle = fg; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.fillText(text, w / 2, h / 2 + 0.5);
+    hit = { c: c, w: w, h: h };
+    plateBmpCache[key] = hit; plateBmpCount++;
+    return hit;
+  }
+  function blitPlate(g, cx, cy, bmp) { g.drawImage(bmp.c, cx - bmp.w / 2, cy - bmp.h / 2, bmp.w, bmp.h); }
+  // Biển tên NHÂN VẬT CHÍNH + người chơi khác: cỡ chuẩn, nổi nhất
   function drawNamePlate(g, x, y, text) {
-    g.font = '600 10px sans-serif';
-    var w = g.measureText(text).width + 12;
-    g.fillStyle = 'rgba(20,20,30,.72)';
-    g.beginPath(); g.roundRect(x - w / 2, y - 62, w, 14, 7); g.fill();
-    g.fillStyle = '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle';
-    g.fillText(text, x, y - 54.5);
+    blitPlate(g, x, y - 55, plateBitmap(text, '600 10px sans-serif', '#fff', 'rgba(20,20,30,.72)', 15));
+  }
+  // Biển tên NPC: NHỎ hơn biển nhân vật chính một bậc (phân cấp thị giác — Lane H2),
+  // nền trong hơn; vẫn đủ rõ để nhận ra Bố/Mẹ/Linh/Yui… từ xa.
+  function drawNpcNamePlate(g, x, y, text) {
+    blitPlate(g, x, y - 55, plateBitmap(text, '600 9px sans-serif', '#fff', 'rgba(20,20,30,.58)', 13));
+  }
+  // Biển nhỏ tự do (cửa ra vào — Lane H, nét bitmap Lane H2): tâm tại (cx, cy),
+  // chữ đậm TO rõ từ xa
+  function drawSignPlate(g, cx, cy, text, font) {
+    var f = font || '700 12px sans-serif';
+    blitPlate(g, cx, cy, plateBitmap(text, f, '#fff', 'rgba(20,20,30,.82)', 18));
+  }
+  // Mũi tên chỉ đường (Lane H): đích do guide.js cấp qua GUIDE.targetFor(mapId) —
+  // tọa độ THẾ GIỚI của NPC/vật thể bước hiện tại, hoặc ô cửa đi đúng hướng.
+  function drawGuideArrow(gt, camX, camY, vw, vh, now) {
+    var tx = gt.x - camX, ty = gt.y - camY;
+    var px = player.x - camX, py = player.y - camY;
+    var dist = Math.max(1, Math.round(Math.hypot(gt.x - player.x, gt.y - player.y) / TILE));
+    var bob = Math.sin(now / 260) * 3;
+    var pulse = 0.65 + 0.35 * Math.sin(now / 300);
+    ctx.save();
+    if (tx >= -16 && tx <= vw + 16 && ty >= -30 && ty <= vh + 16) {
+      // Đích trong tầm nhìn: vòng sáng dưới chân + mũi tên nảy phát sáng phía trên
+      ctx.fillStyle = 'rgba(255,205,64,' + (0.30 * pulse + 0.18).toFixed(3) + ')';
+      ctx.beginPath(); ctx.ellipse(tx, ty + 4, 17, 6, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#ffcd40';
+      ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      // Nâng lên trên biển tên (Lane H2): mũi tên ở ty-84..-72, biển tên NPC nằm ở
+      // ty-62..-48 — không còn đè lên tên nhân vật được chỉ tới.
+      ctx.moveTo(tx - 9, ty - 84 + bob); ctx.lineTo(tx + 9, ty - 84 + bob); ctx.lineTo(tx, ty - 72 + bob);
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+    } else {
+      // Đích ngoài tầm nhìn: mũi tên ghim ở mép màn hình, xoay đúng hướng + số bước
+      var ex = clamp(tx, 34, vw - 34), ey = clamp(ty, 46, vh - 34);
+      var ang = Math.atan2(ty - py, tx - px);
+      ctx.translate(ex, ey); ctx.rotate(ang);
+      ctx.fillStyle = '#ffcd40';
+      ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(13, 0); ctx.lineTo(-8, -9); ctx.lineTo(-3, 0); ctx.lineTo(-8, 9);
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.rotate(-ang);
+      // Kèm TÊN nơi/người cần tới (bổ sung 22:02) + số bước ước lượng — biển bitmap
+      // cache theo chuỗi (Lane H2): khỏi fillText mỗi khung.
+      var label = (gt.label ? gt.label + ' · ' : '') + '≈' + dist + ' bước';
+      blitPlate(ctx, 0, 20, plateBitmap(label, '700 10px sans-serif', '#ffe9a8', 'rgba(20,20,30,.78)', 14));
+    }
+    ctx.restore();
   }
   function render(now) {
-    ctx.fillStyle = '#20242a';
-    ctx.fillRect(0, 0, view.w, view.h);
-    if (!cur) return;
+    if (!cur) { ctx.fillStyle = '#20242a'; ctx.fillRect(0, 0, view.w, view.h); return; }
     var mapW = cur.w * TILE, mapH = cur.h * TILE;
-    var camX = mapW <= view.w ? (mapW - view.w) / 2 : clamp(player.x - view.w / 2, 0, mapW - view.w);
-    var camY = mapH <= view.h ? (mapH - view.h) / 2 : clamp(player.y - view.h / 2, 0, mapH - view.h);
-    // Chỉ blit vùng bản đồ đang nhìn thấy (tối ưu FPS)
-    var srcX = Math.max(0, camX), srcY = Math.max(0, camY + 40);
-    var dstX = srcX - camX, dstY = srcY - (camY + 40);
-    var srcW = Math.min(cur.canvas.width - srcX, view.w - dstX);
-    var srcH = Math.min(cur.canvas.height - srcY, view.h - dstY);
-    if (srcW > 0 && srcH > 0) ctx.drawImage(cur.canvas, srcX, srcY, srcW, srcH, dstX, dstY, srcW, srcH);
+    var vw = viewW(), vh = viewH();
+    var camX = mapW <= vw ? (mapW - vw) / 2 : clamp(player.x - vw / 2, 0, mapW - vw);
+    var camY = mapH <= vh ? (mapH - vh) / 2 : clamp(player.y - vh / 2, 0, mapH - vh);
+    // Bản đồ phủ kín khung hình thì khỏi tô nền toàn cảnh (tiết kiệm cho FPS);
+    // bản đồ nhỏ hơn khung vẫn tô nền như cũ để có viền tối quanh bản đồ.
+    if (mapW < vw || mapH < vh) { ctx.fillStyle = '#20242a'; ctx.fillRect(0, 0, view.w, view.h); }
+    ctx.save();
+    ctx.scale(zoom, zoom);
+    // Chỉ blit vùng bản đồ đang nhìn thấy (tối ưu FPS) — qua lớp cache: chỉ dựng lại
+    // khi bản đồ/camera/zoom/mùa đổi, còn lại dán nguyên khung (1:1, rất rẻ).
+    // Canvas bản đồ tĩnh được paint SIÊU MẪU ×cur.ss (Lane M — maps-core): tọa độ
+    // nguồn phải nhân hệ số này, kích thước đích giữ theo đơn vị thế giới (thu nhỏ
+    // từ bản siêu mẫu xuống = chữ/biển trong thế giới nét, hết nhòe do phóng to).
+    var mss = cur.ss || 1;
+    var srcX = Math.max(0, camX) * mss, srcY = Math.max(0, camY + 40) * mss;
+    var dstX = srcX / mss - camX, dstY = srcY / mss - (camY + 40);
+    var srcW = Math.min(cur.canvas.width - srcX, (vw - dstX) * mss);
+    var srcH = Math.min(cur.canvas.height - srcY, (vh - dstY) * mss);
+    if (srcW > 0 && srcH > 0) {
+      var cacheKey = cur.def.id + '|' + camX.toFixed(1) + '|' + camY.toFixed(1) + '|' + zoom + '|' + view.w + 'x' + view.h + '|' + view.dpr + '|' + ((window.SEASON && window.SEASON.current) ? window.SEASON.current() : '');
+      if (cacheKey !== mapCacheKey) {
+        mapCacheKey = cacheKey;
+        if (mapCache.width !== cv.width || mapCache.height !== cv.height) { mapCache.width = cv.width; mapCache.height = cv.height; }
+        var mc = mapCache.getContext('2d');
+        mc.setTransform(view.dpr * zoom, 0, 0, view.dpr * zoom, 0, 0);
+        mc.clearRect(0, 0, vw, vh);
+        mc.drawImage(cur.canvas, srcX, srcY, srcW, srcH, dstX, dstY, srcW / mss, srcH / mss);
+      }
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.drawImage(mapCache, 0, 0);
+      ctx.setTransform(view.dpr * zoom, 0, 0, view.dpr * zoom, 0, 0);
+    }
 
-    // Đánh dấu cửa (nhấp nháy nhẹ)
+    // Đánh dấu cửa NỔI BẬT (Lane H): vệt sáng ở sàn + mũi tên nảy to + biển tên nơi tới
+    // (tên lấy từ bảng đăng ký places.js) — đứng xa cũng thấy ngay chỗ ra vào.
     Object.keys(cur.def.doors).forEach(function (k) {
       var p = k.split(','), dx = +p[0] * TILE + 16 - camX, dy = +p[1] * TILE - camY;
-      var bob = Math.sin(now / 300) * 2.4;
-      ctx.fillStyle = 'rgba(255,205,64,.92)';
+      // Cắt cửa NGOÀI khung nhìn (Lane H2): bản đồ lớn có tới 16 cửa, vẽ tất cả mỗi
+      // khung là phí vô ích — chỉ vẽ cửa trong/viền khung hình.
+      if (dx < -90 || dx > vw + 90 || dy < -100 || dy > vh + 90) return;
+      var dest = cur.def.doors[k].to;
+      var bob = Math.sin(now / 300) * 3;
+      var pulse = 0.30 + 0.14 * Math.sin(now / 300);
+      ctx.fillStyle = 'rgba(255,205,64,' + pulse.toFixed(3) + ')';
+      ctx.beginPath(); ctx.ellipse(dx, dy + 28, 19, 6.5, 0, 0, Math.PI * 2); ctx.fill();
+      // Mũi tên chỉ xuống TO hơn hẳn (Lane H2 — chủ trang chê marker cũ quá nhỏ):
+      // rộng 22px, cao 15px, viền đậm.
+      ctx.fillStyle = '#ffcd40';
+      ctx.strokeStyle = 'rgba(90,60,0,.85)'; ctx.lineWidth = 1.6;
       ctx.beginPath();
-      ctx.moveTo(dx - 6, dy + 8 + bob); ctx.lineTo(dx + 6, dy + 8 + bob); ctx.lineTo(dx, dy + 15 + bob);
-      ctx.closePath(); ctx.fill();
+      ctx.moveTo(dx - 11, dy + 1 + bob); ctx.lineTo(dx + 11, dy + 1 + bob); ctx.lineTo(dx, dy + 16 + bob);
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+      // Biển TÊN NƠI ĐẾN ngay tại cửa (bổ sung 22:02): "🚪 → Đường phố 吉祥寺"
+      drawSignPlate(ctx, dx, dy - 15, doorText(dest));
     });
 
     // Vẽ thực thể theo thứ tự y
@@ -249,9 +391,20 @@
         drawNamePlate(ctx, e.r.x - camX, e.r.y - camY, e.r.name);
       } else {
         drawCharAt(ctx, e.n.sprite, e.n.dir, e.n.frame, e.n.x - camX, e.n.y - camY, true);
-        if (target && target.kind === 'npc' && target.ref === e.n) drawNamePlate(ctx, e.n.x - camX, e.n.y - camY, e.n.name);
+        // Tên trên đầu MỌI NPC (Lane H — góp ý chủ trang: nhân vật nào cũng phải có
+        // tên cho dễ nhìn, không chỉ nhân vật chính/người đang tương tác). Biển NPC
+        // nhỏ hơn biển nhân vật chính 1 bậc (Lane H2) + cắt khi ngoài khung nhìn.
+        var nx = e.n.x - camX, ny = e.n.y - camY;
+        if (e.n.name && nx > -80 && nx < vw + 80 && ny > -40 && ny < vh + 80) drawNpcNamePlate(ctx, nx, ny, e.n.name);
       }
     });
+
+    // Mũi tên chỉ đường tới bước hiện tại (Lane H — đích do guide.js cấp)
+    if (window.GUIDE && window.GUIDE.targetFor) {
+      var gt = window.GUIDE.targetFor(cur.def.id);
+      if (gt) drawGuideArrow(gt, camX, camY, vw, vh, now);
+    }
+    ctx.restore();
 
     if (fade > 0) {
       ctx.fillStyle = 'rgba(10,10,16,' + (fade * 0.9).toFixed(3) + ')';
@@ -288,7 +441,7 @@
   };
   function subs(s) { return String(s || '').replace(/\{name\}/g, player.name).replace(/\{call\}/g, player.call); }
   function openDlg() { dlgOpen = true; dlg.classList.add('show'); document.getElementById('btn-interact').classList.remove('show'); }
-  function closeDlg() { dlgOpen = false; dlg.classList.remove('show'); }
+  function closeDlg() { dlgOpen = false; dlg.classList.remove('show'); if (window.VOICE) window.VOICE.stop(); }
   function nextBtn(label, fn) {
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'dlg-next'; b.textContent = label;
@@ -314,6 +467,7 @@
           el.sp.textContent = '📖';
           el.jp.innerHTML = '';
           el.vi.textContent = subs(scene.outro);
+          if (window.VOICE) window.VOICE.playOutro(scene);
           el.act.innerHTML = '';
           el.act.appendChild(nextBtn('Đi tiếp ▶', function () { closeDlg(); if (onDone) onDone(); }));
         } else { closeDlg(); if (onDone) onDone(); }
@@ -330,6 +484,7 @@
         el.sp.textContent = ln.sp;
         el.jp.innerHTML = furiHtml(ln.jp);
         el.vi.textContent = ln.vi || '';
+        if (window.VOICE) window.VOICE.onStep(ln);
         el.act.appendChild(nextBtn('Tiếp ▶', function () { idx++; draw(); }));
         return;
       }
@@ -363,6 +518,7 @@
       }
       el.jp.innerHTML = furiHtml(ln.jp);
       el.vi.textContent = ln.vi || '';
+      if (window.VOICE) window.VOICE.onStep(ln);
       el.act.appendChild(nextBtn('💬 Nói câu này', function () { idx++; draw(); }));
     }
     draw();
@@ -380,6 +536,7 @@
       el.sp.textContent = ln.sp === 'narr' ? '📖' : ln.sp;
       el.jp.innerHTML = '';
       el.vi.textContent = subs(ln.text);
+      if (window.VOICE) window.VOICE.onStep(ln);
       var last = idx === lines.length - 1;
       el.act.appendChild(nextBtn(last ? 'Đi tiếp ▶' : 'Tiếp ▶', function () { idx++; draw(); }));
     }
@@ -402,6 +559,7 @@
         el.sp.textContent = player.name;
         el.jp.innerHTML = '';
         el.vi.textContent = subs(st.prompt || 'Chọn lời đáp của {name}:');
+        if (window.VOICE) window.VOICE.stop();
         st.choice.forEach(function (c) {
           var b = document.createElement('button');
           b.type = 'button'; b.className = 'dlg-opt choice';
@@ -421,6 +579,7 @@
       el.sp.textContent = st.sp === 'narr' ? '📖' : st.sp;
       el.jp.innerHTML = st.jp ? furiHtml(st.jp) : '';
       el.vi.textContent = subs(st.text || '');
+      if (window.VOICE) window.VOICE.onStep(st);
       var last = idx === steps.length - 1;
       el.act.appendChild(nextBtn(last ? 'Đi tiếp ▶' : 'Tiếp ▶', function () { idx++; draw(); }));
     }
@@ -475,9 +634,10 @@
     if (!started || dlgOpen) return;
     var rect = cv.getBoundingClientRect();
     var mapW = cur.w * TILE, mapH = cur.h * TILE;
-    var camX = mapW <= view.w ? (mapW - view.w) / 2 : clamp(player.x - view.w / 2, 0, mapW - view.w);
-    var camY = mapH <= view.h ? (mapH - view.h) / 2 : clamp(player.y - view.h / 2, 0, mapH - view.h);
-    var wx = e.clientX - rect.left + camX, wy = e.clientY - rect.top + camY;
+    var vw = viewW(), vh = viewH();
+    var camX = mapW <= vw ? (mapW - vw) / 2 : clamp(player.x - vw / 2, 0, mapW - vw);
+    var camY = mapH <= vh ? (mapH - vh) / 2 : clamp(player.y - vh / 2, 0, mapH - vh);
+    var wx = (e.clientX - rect.left) / zoom + camX, wy = (e.clientY - rect.top) / zoom + camY;
     var tx = Math.floor(wx / TILE), ty = Math.floor(wy / TILE);
     if (tileAt(tx, ty)) { // ô đặc: lùi về ô kề đi được gần người chơi nhất
       var dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]];
@@ -593,7 +753,16 @@
       var sp = d.spawnDefault || [2, 2];
       enterMap(id, (tx != null ? tx : sp[0]), (ty != null ? ty : sp[1]), 'down');
       return true;
-    }
+    },
+    // Cỡ hình (Lane H): hệ số phóng camera 1.0–1.6, lưu localStorage; guide.js
+    // (thanh trượt trong Cài đặt) chỉnh qua đây, engine đọc lại mỗi lần tải trang.
+    setZoom: function (z) {
+      z = clamp(Math.round((+z || 1.35) * 100) / 100, 1, 1.6);
+      zoom = z;
+      try { localStorage.setItem(ZOOM_KEY, String(z)); } catch (e) {}
+      return zoom;
+    },
+    getZoom: function () { return zoom; }
   };
 
   /* ---------- API cho harness kiểm thử ---------- */
@@ -610,6 +779,12 @@
     interact: function () { if (target && !dlgOpen) { startScene(target.kind === 'npc' ? target.ref.scene : target.scene); return true; } return false; },
     dlgOpen: function () { return dlgOpen; },
     fps: function () { return fpsNow; },
+    // Lane H (harness-guide): cỡ hình + NPC trên bản đồ + đích mũi tên chỉ đường
+    zoom: function () { return zoom; },
+    setZoom: function (z) { return window.WORLD2D.setZoom(z); },
+    npcs: function () { return npcs.map(function (n) { return { id: n.id, name: n.name, x: Math.round(n.x), y: Math.round(n.y) }; }); },
+    doors: function () { return Object.keys((cur && cur.def.doors) || {}).map(function (k) { var d = cur.def.doors[k]; return { at: k, to: d.to, label: doorText(d.to) }; }); },
+    guideTarget: function () { return (window.GUIDE && window.GUIDE.targetFor && cur) ? window.GUIDE.targetFor(cur.def.id) : null; },
     name: function () { return player.name; },
     player: function () { return { name: player.name, gender: player.gender, call: player.call }; },
     // Hệ ngoại hình (style.js): thay sprite nhân vật chính NGAY tại chỗ theo spec tự chỉnh

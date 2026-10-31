@@ -32,12 +32,24 @@
     </div>
     <div id="hud-actions">
       <button class="hud-btn" id="btn-phone" type="button" aria-label="Điện thoại">📱<span id="phone-badge">0</span></button>
+      <button class="hud-btn" id="btn-hud" type="button" aria-label="Thu/mở bảng chỉ số">▾</button>
       <button class="hud-btn" id="btn-menu" type="button" aria-label="Menu">☰</button>
     </div>
   </div>
   <div id="objective">📖 …</div>
   <div id="hud-season" style="font-size:12px;color:#8a8574;margin-top:2px"></div>
   <div id="hud-fps"></div>
+</div>
+<!-- Bảng HƯỚNG DẪN TỪNG BƯỚC (Lane H — thay thanh mục tiêu pill cũ): guide.js dựng
+     danh sách bước từ trạng thái máy truyện; nút 🔊 chỉ hiện khi lane âm thanh đã
+     nạp window.GUIDE_VOICE.playCurrent. -->
+<div id="guide">
+  <div id="guide-head">
+    <span id="guide-title">🧭 Hướng dẫn</span>
+    <button id="guide-voice" type="button" aria-label="Nghe hướng dẫn" style="display:none">🔊</button>
+    <button id="guide-toggle" type="button" aria-label="Thu/mở bảng hướng dẫn">▾</button>
+  </div>
+  <ol id="guide-steps"></ol>
 </div>
 <div id="hud-hint">📱💻 Chạm / nhấp vào nơi muốn tới để đi · WASD / phím mũi tên (phụ)</div>
 <div id="floaters"></div>
@@ -89,6 +101,9 @@
     <div class="mrow"><span>🎵 Nhạc nền theo khu vực</span>
       <label class="switch"><input type="checkbox" id="set-bgm-on"><span class="tr"></span></label></div>
     <div class="mrow"><span>🔈 Âm lượng nhạc</span><input type="range" id="set-bgm-vol" min="0" max="100" step="1"></div>
+    <div class="mrow"><span>🧭 Mũi tên chỉ đường</span>
+      <label class="switch"><input type="checkbox" id="set-guide-arrow" checked><span class="tr"></span></label></div>
+    <div class="mrow"><span>🔍 Cỡ hình — <b id="set-zoom-val">1.35×</b></span><input type="range" id="set-zoom" min="100" max="160" step="5" value="135"></div>
     <div class="mrow"><span>👗 Ngoại hình & tủ đồ</span>
       <button class="btn ghost" id="set-style" type="button">Chỉnh ngoại hình</button></div>
     <div class="mrow"><span>🎮 Chơi lại đoạn mẫu từ đầu</span>
@@ -287,5 +302,7 @@
 <script src="econ-preview.js"></script>
 <script src="rel.js"></script>
 <script src="relations.js"></script>
+<script src="voice.js"></script>
+<script src="guide.js"></script>
 </body>
 </html>
