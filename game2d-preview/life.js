@@ -213,6 +213,7 @@
     var clip = bank[Math.floor(Math.random() * bank.length)];
     if (clip) {
       var au = new Audio(clip.audio);
+      if (window.BGM && BGM.attachDuck) BGM.attachDuck(au);   // Lane W: ducking khi phát thông báo trên tàu
       var pb = h('button', 'btn ghost', '🔊 Nghe thông báo trên tàu'); pb.type = 'button';
       pb.addEventListener('click', function () { au.currentTime = 0; au.play().catch(function () {}); });
       card.appendChild(pb);

@@ -26,6 +26,8 @@
 
   var audio = new Audio(); audio.preload = 'auto';
   var gAudio = new Audio(); gAudio.preload = 'auto';
+  // Lane W: nhạc nền tự giảm (ducking) trong lúc thoại/hướng dẫn đang phát — cơ chế ở bgm.js.
+  if (window.BGM && BGM.attachDuck) { BGM.attachDuck(audio); BGM.attachDuck(gAudio); }
   var index = null;        // voice-index.json
   var guideIndex = null;   // voice/guide-index.json
   var cur = null;          // { scene, idx, file } clip thoại đang gắn với bước hiện tại

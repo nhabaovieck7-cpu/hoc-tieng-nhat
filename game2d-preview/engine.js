@@ -303,6 +303,77 @@
     guideDistCache = { key: key, val: val };
     return val;
   }
+  // VỆT CHẤM CHỈ ĐƯỜNG TRÊN MẶT ĐẤT (Lane X — 01/11, lệnh chủ trang 08:31):
+  // chấm vàng chạy dọc TUYẾN ĐI ĐƯỢC THẬT (findPath của chính engine — cùng
+  // tuyến người chơi chạm-để-đi sẽ đi, không xuyên tường) từ chân nhân vật tới
+  // đích/cửa mà guide.js chỉ định. Đích nằm trên ô đặc (vật thể: TV, bảng đen…)
+  // thì lấy ô kề đi được đầu tiên có đường. Cache theo (bản đồ · ô người chơi ·
+  // ô đích) như guidePathDist — chỉ tính lại khi đổi ô, không tốn FPS.
+  var trailCache = { key: '', pts: null };
+  var navFxState = { hero: false, trailDots: 0, trailPts: 0 };
+  function drawGuideTrail(gt, camX, camY, now) {
+    navFxState.trailDots = 0; navFxState.trailPts = 0;
+    var ttx = Math.floor(gt.x / TILE), tty = Math.floor(gt.y / TILE);
+    var ptx = Math.floor(player.x / TILE), pty = Math.floor(player.y / TILE);
+    var key = cur.def.id + '|' + ptx + ',' + pty + '>' + ttx + ',' + tty;
+    var pts;
+    if (trailCache.key === key) pts = trailCache.pts;
+    else {
+      pts = findPath(ttx, tty);
+      if (!pts) {
+        var dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+        for (var i = 0; i < 4 && !pts; i++) pts = findPath(ttx + dirs[i][0], tty + dirs[i][1]);
+      }
+      trailCache = { key: key, pts: pts };
+    }
+    if (!pts || !pts.length) return;
+    navFxState.trailPts = pts.length;
+    var SP = 16;                                   // khoảng cách giữa 2 chấm (px thế giới)
+    var nextAt = (now / 30) % SP;                  // pha trôi → chấm "chảy" về phía đích
+    var px0 = player.x, py0 = player.y, drawn = 0;
+    ctx.save();
+    ctx.fillStyle = 'rgba(255,205,64,.85)';
+    for (var s = 0; s < pts.length && drawn < 48; s++) {
+      var x1 = pts[s].x, y1 = pts[s].y;
+      var dx = x1 - px0, dy = y1 - py0, seg = Math.sqrt(dx * dx + dy * dy);
+      var d = nextAt;
+      while (d <= seg && drawn < 48) {
+        var cxp = px0 + dx * (seg ? d / seg : 0) - camX, cyp = py0 + dy * (seg ? d / seg : 0) - camY;
+        if (cxp > -10 && cxp < viewW() + 10 && cyp > -10 && cyp < viewH() + 10) {
+          ctx.beginPath(); ctx.arc(cxp, cyp, 2.6, 0, Math.PI * 2); ctx.fill();
+        }
+        drawn++; d += SP;
+      }
+      nextAt = d - seg;
+      px0 = x1; py0 = y1;
+    }
+    ctx.restore();
+    navFxState.trailDots = drawn;
+  }
+  // MŨI TÊN NỔI TRÊN ĐẦU NHÂN VẬT CHÍNH (Lane X): luôn chỉ đúng hướng đích
+  // (đích thật hoặc cửa đúng tuyến khi xuyên bản đồ — gt đã là tọa độ cần đi
+  // tới trong bản đồ hiện tại). Nằm CAO hơn biển tên (biển tên ở y-55, mũi tên
+  // ở y-76±9) nên không che tên; nhân vật luôn ở giữa khung nên mũi tên này
+  // không bao giờ bị HUD/thẻ thoại nuốt như mũi tên mép màn hình. Đích đã sát
+  // bên (< 0,75 ô) thì ẩn — vòng sáng + mũi tên nảy tại đích đã đủ rõ.
+  function drawHeroArrow(gt, camX, camY, now) {
+    navFxState.hero = false;
+    var dx = gt.x - player.x, dy = gt.y - player.y;
+    if (dx * dx + dy * dy < (TILE * 0.75) * (TILE * 0.75)) return;
+    var px = player.x - camX, py = player.y - camY;
+    var ang = Math.atan2(dy, dx);
+    var bob = Math.sin(now / 260) * 2;
+    ctx.save();
+    ctx.translate(px, py - 76 + bob);
+    ctx.rotate(ang + Math.PI / 2);
+    ctx.fillStyle = '#ffcd40';
+    ctx.strokeStyle = 'rgba(90,60,0,.9)'; ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.moveTo(0, -9); ctx.lineTo(7, 5); ctx.lineTo(0, 1); ctx.lineTo(-7, 5);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.restore();
+    navFxState.hero = true;
+  }
   // Mũi tên chỉ đường (Lane H): đích do guide.js cấp qua GUIDE.targetFor(mapId) —
   // tọa độ THẾ GIỚI của NPC/vật thể bước hiện tại, hoặc ô cửa đi đúng hướng.
   // Lane R (01/11): mũi tên TO hơn + quầng sáng nhấp nháy nhẹ cho dễ thấy ngay cả
@@ -394,6 +465,11 @@
       ctx.setTransform(view.dpr * zoom, 0, 0, view.dpr * zoom, 0, 0);
     }
 
+    // Đích dẫn đường của khung này (Lane X: tính MỘT lần — vệt chấm vẽ dưới
+    // chân nhân vật, cụm mũi tên vẽ trên cùng; trước đây chỉ tính ở cuối).
+    var gt = (window.GUIDE && window.GUIDE.targetFor) ? window.GUIDE.targetFor(cur.def.id) : null;
+    if (!gt) { navFxState.hero = false; navFxState.trailDots = 0; navFxState.trailPts = 0; }
+
     // Đánh dấu cửa NỔI BẬT (Lane H): vệt sáng ở sàn + mũi tên nảy to + biển tên nơi tới
     // (tên lấy từ bảng đăng ký places.js) — đứng xa cũng thấy ngay chỗ ra vào.
     Object.keys(cur.def.doors).forEach(function (k) {
@@ -416,6 +492,10 @@
       // Biển TÊN NƠI ĐẾN ngay tại cửa (bổ sung 22:02): "🚪 → Đường phố 吉祥寺"
       drawSignPlate(ctx, dx, dy - 15, doorText(dest));
     });
+
+    // Vệt chấm chỉ đường trên mặt đất (Lane X) — vẽ TRƯỚC thực thể để chấm
+    // nằm dưới chân người/NPC, không che ai.
+    if (gt) drawGuideTrail(gt, camX, camY, now);
 
     // Vẽ thực thể theo thứ tự y
     var ents = npcs.map(function (n) { return { y: n.y, n: n }; });
@@ -442,10 +522,12 @@
       }
     });
 
-    // Mũi tên chỉ đường tới bước hiện tại (Lane H — đích do guide.js cấp)
-    if (window.GUIDE && window.GUIDE.targetFor) {
-      var gt = window.GUIDE.targetFor(cur.def.id);
-      if (gt) drawGuideArrow(gt, camX, camY, vw, vh, now);
+    // Mũi tên chỉ đường tới bước hiện tại (Lane H — đích do guide.js cấp) +
+    // mũi tên nổi trên đầu nhân vật chính (Lane X — luôn thấy, không bị
+    // HUD/thẻ thoại nuốt như mũi tên mép).
+    if (gt) {
+      drawGuideArrow(gt, camX, camY, vw, vh, now);
+      drawHeroArrow(gt, camX, camY, now);
     }
     ctx.restore();
 
@@ -829,6 +911,8 @@
     npcs: function () { return npcs.map(function (n) { return { id: n.id, name: n.name, x: Math.round(n.x), y: Math.round(n.y) }; }); },
     doors: function () { return Object.keys((cur && cur.def.doors) || {}).map(function (k) { var d = cur.def.doors[k]; return { at: k, to: d.to, label: doorText(d.to) }; }); },
     guideTarget: function () { return (window.GUIDE && window.GUIDE.targetFor && cur) ? window.GUIDE.targetFor(cur.def.id) : null; },
+    // Lane X (harness-nav): hiệu ứng dẫn đường đã vẽ khung gần nhất
+    navFx: function () { return { hero: navFxState.hero, trailDots: navFxState.trailDots, trailPts: navFxState.trailPts }; },
     name: function () { return player.name; },
     player: function () { return { name: player.name, gender: player.gender, call: player.call }; },
     // Hệ ngoại hình (style.js): thay sprite nhân vật chính NGAY tại chỗ theo spec tự chỉnh

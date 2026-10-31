@@ -92,7 +92,7 @@
       box.appendChild(b);
     });
     $('modal-spotlisten').classList.add('show');
-    if (!audio) audio = new Audio();
+    if (!audio) { audio = new Audio(); if (window.BGM && BGM.attachDuck) BGM.attachDuck(audio); }   // Lane W: ducking khi phát câu nghe
     audio.src = cur.audio;
     $('spotlisten-play').onclick = function () {
       audio.currentTime = 0; audio.play().catch(function () {});

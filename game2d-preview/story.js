@@ -222,6 +222,7 @@
     $('modal-listen').classList.add('show');
     if (!listenAudio) {
       listenAudio = new Audio('audio/listen-ga-01.mp3');
+      if (window.BGM && BGM.attachDuck) BGM.attachDuck(listenAudio);   // Lane W: ducking khi phát clip nghe
       listenAudio.addEventListener('ended', function () { $('listen-eq').textContent = 'Đã phát xong — nghe lại nếu cần'; });
     }
     $('listen-play').onclick = function () {
@@ -386,6 +387,7 @@
       pb.type = 'button'; pb.className = 'play-big'; pb.id = 'exam-listen-play';
       pb.textContent = '▶ Nghe câu này (còn 2 lần nghe lại)';
       var au = new Audio(it.audio);
+      if (window.BGM && BGM.attachDuck) BGM.attachDuck(au);   // Lane W: ducking khi phát câu nghe trong thi
       pb.addEventListener('click', function () {
         if (examRun.plays >= 3) { pb.textContent = '🔇 Đã hết lượt nghe của câu này'; return; }
         examRun.plays++;

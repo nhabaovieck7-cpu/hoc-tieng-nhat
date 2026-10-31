@@ -91,6 +91,8 @@
     $('set-bgm-vol').value = Math.round(window.BGM.volume() * 100);
     $('set-bgm-on').addEventListener('change', function () { window.BGM.setEnabled(this.checked); toast(this.checked ? '🔊 Đã bật nhạc nền' : '🔇 Đã tắt nhạc nền'); });
     $('set-bgm-vol').addEventListener('input', function () { window.BGM.setVolume(this.value / 100); });
+    $('set-bgm-duck').checked = window.BGM.duckEnabled();
+    $('set-bgm-duck').addEventListener('change', function () { window.BGM.setDuckEnabled(this.checked); toast(this.checked ? '🔉 Đã bật: nhạc nhỏ lại khi có giọng đọc' : '🔊 Đã tắt tự giảm nhạc khi có giọng đọc'); });
     $('btn-menu').addEventListener('click', function () { $('modal-settings').classList.add('show'); });
     $('set-close').addEventListener('click', function () { $('modal-settings').classList.remove('show'); });
     $('set-restart').addEventListener('click', function () { location.reload(); });

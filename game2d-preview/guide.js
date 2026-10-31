@@ -24,6 +24,22 @@
 //      ô TRÊN ĐƯỜNG ĐI (BFS lưới) thay cho đường thẳng.
 //   3) HUD thu gọn: nút #btn-hud thu/mở bảng chỉ số (mặc định GỌN, lưu lựa chọn);
 //      cỡ hình (zoom) chỉnh ở Cài đặt (#set-zoom) qua WORLD2D.setZoom.
+//      Lane X (01/11, lệnh chủ trang 08:31–08:32 "có mũi tên đường đi chỉ mình
+//      phải đi đâu" + "phải làm gì điểm đến phải rõ ràng"): bản dò harness cho
+//      thấy 5 khe hở CÓ THẬT — (i) Chương 3 KHÔNG BAO GIỜ có mũi tên (bước Ch3
+//      luôn target=null, kể cả khi có người chưa gặp với meetMap rõ ràng trong
+//      REL.candidates); (ii) #objective bị display:none nên chữ mục tiêu Ch3
+//      chỉ nằm trong bảng 🧭 đang ẩn; (iii) tắt mũi tên trong Cài đặt lúc đang
+//      có nhiệm vụ thì im lặng hoàn toàn, không nhắc gì; (iv) mũi tên mép trên
+//      bị HUD (77px @390) phủ vì kẹp ở ~62px, mũi tên mép dưới bị thẻ thoại
+//      (279px) nuốt; (v) bước chờ/tự do không có chữ nào trên màn hình chính.
+//      Vá ở lane này: CHIP MỤC TIÊU 1 DÒNG #guide-chip luôn hiện khi đang chơi
+//      (bấm chip = mở bảng 🧭), CHUỖI DỰ PHÒNG ĐÍCH cho Chương 3 từ dữ liệu
+//      REL phơi ra (ứng viên chưa gặp → meetMap của họ), NHẮC 🧭 khi mũi tên
+//      đang tắt mà có nhiệm vụ, và trạng thái TỰ DO dứt khoát (chip "🌸 Tự do
+//      khám phá", hết nhấp nháy vô ích). Phần vẽ trên canvas (mũi tên nổi trên
+//      đầu nhân vật + vệt chấm theo đường đi) nằm ở engine.js (drawHeroArrow /
+//      drawGuideTrail) dùng cùng GUIDE.targetFor này.
 //   4) Điểm nối ÂM THANH HƯỚNG DẪN: nút 🔊 #guide-voice CHỈ hiện khi lane âm thanh
 //      đã nạp window.GUIDE_VOICE.playCurrent — bấm là gọi hàm đó; chưa có thì ẩn.
 // File này CHỈ đọc trạng thái (STORY.state / MAPDEF) và ghi DOM của chính nó —
@@ -40,6 +56,9 @@
   var arrowOn = lsGet(LS_ARROW, '1') !== '0';
   var objectiveText = '';
   var steps = [], curIdx = -1, curTgt = null;   // curTgt: {map,x,y} của bước hiện tại (đã phân giải)
+  var fbTgt = null;      // Lane X: đích DỰ PHÒNG (Chương 3 — ứng viên chưa gặp) khi bước không có đích
+  var isFree = false;    // Lane X: trạng thái TỰ DO dứt khoát (hết việc bắt buộc hiện có)
+  var lastChapter = 0, lastBook = {};
   var lastSig = '';
 
   /* ---------- Bắt mục tiêu hiện tại từ GAMEUI.setObjective (đường dự phòng) ---------- */
@@ -170,6 +189,56 @@
     }
     return null;
   }
+  /* ---------- Chuỗi dự phòng đích (Lane X) ---------- */
+  // Bước truyện không có đích không gian thì thử suy ra VIỆC-TIẾP-THEO từ dữ
+  // liệu game ĐÃ phơi ra — không bịa nội dung: Chương 3 do rel.js dẫn bằng chữ
+  // mục tiêu, nhưng dữ liệu ứng viên (REL.candidates: meetMap/meetScene) +
+  // trạng thái đã gặp (REL.state().met) cho một đích thật: người chưa gặp mà
+  // tuyến tình cảm đang mở cửa. Cổng mở bám đúng điều kiện rel.js dùng cho
+  // romanceOpen/objective: arc đã ngã ngũ (beats.resolved) hoặc đã buông tay
+  // từ sân bay (book.loiHuaSanBay), chưa có partner, qua khỏi nhịp khóc/hồi
+  // phục. Ngoài các trường hợp đó → null (nhịp điện thoại/chờ/tự do giữ
+  // nguyên cách nhắc nút + chip chữ như Lane R).
+  function relStateSafe() {
+    if (!window.REL || !window.REL.state) return null;
+    try { return window.REL.state(); } catch (e) { return null; }
+  }
+  function ch3Fallback(st) {
+    if (!window.REL || !window.REL.candidates) return null;
+    var R = relStateSafe(), cands;
+    try { cands = window.REL.candidates(); } catch (e) { return null; }
+    if (!R || !cands) return null;
+    var skipped = !!(st.book && st.book.loiHuaSanBay === 'buong-tay');
+    if (!skipped && !(R.beats && R.beats.resolved)) return null;
+    if (R.partner) return null;
+    if (R.breakup === 'giu-duoc') return null;                 // đã yên bề — tự do
+    if (R.breakup && !R.khocDone) return null;                  // nhịp khóc tự chạy theo giờ
+    if (R.breakup && !R.recovered) return null;                 // đang hồi phục — nhịp bạn bè/UI
+    var gender = 'M';
+    try { var pl = window.__demo && window.__demo.player && window.__demo.player(); if (pl && pl.gender) gender = pl.gender; } catch (e) {}
+    var order = ['yui', 'hang', 'ren', 'khoi'];
+    for (var i = 0; i < order.length; i++) {
+      var c = cands[order[i]];
+      if (!c || c.route !== gender || !c.meetScene || !c.meetMap) continue;
+      if (R.met && R.met[order[i]]) continue;
+      var t = resolveTarget({ map: c.meetMap });
+      if (t) { t.label = c.name; t.kind = 'meet'; return t; }
+    }
+    return null;
+  }
+  // Trạng thái TỰ DO dứt khoát: hết bước bắt buộc (curIdx<0) hoặc Chương 3 đã
+  // ngã ngũ êm (giữ được người ở quê / đã có partner) và không còn đích dự
+  // phòng — chip hiện "🌸 Tự do khám phá", mũi tên tắt, 🧭 hết nhấp nháy.
+  function computeFree(st) {
+    if (curIdx < 0) return true;
+    if (st.chapter >= 3 && !curTgt && !fbTgt) {
+      var R = relStateSafe();
+      if (R && R.beats && R.beats.resolved && (R.partner || R.breakup === 'giu-duoc')) return true;
+    }
+    return false;
+  }
+  function effTarget() { return curTgt || fbTgt; }
+
   // Đồ thị cửa: graph[from][to] = khóa ô cửa trong bản đồ `from`
   var graphCache = null;
   function doorGraph() {
@@ -239,19 +308,26 @@
       delete cueAnims[id];
     }
   }
-  var cueState = { active: false, phone: false, step: '' };
+  var cueState = { active: false, phone: false, step: '', arrowOff: false };
   function syncCues() {
     var phone = false, compass = false, label = '';
-    if (curIdx >= 0 && !curTgt) {
-      var s = steps[curIdx] || {};
-      label = s.label || '';
+    var T = effTarget();
+    if (curIdx >= 0) label = (steps[curIdx] || {}).label || '';
+    // Lane X (e): mũi tên đang TẮT (kể cả do bản lưu cũ) mà vẫn còn nhiệm vụ
+    // có đích → nhấp nháy 🧭 nhắc, thay vì im lặng như trước (bản dò: tắt mũi
+    // tên lúc đang có nhiệm vụ cho 0 animation, 0 cue). Tôn trọng lựa chọn
+    // tắt — chỉ nhắc, không tự bật lại.
+    var arrowOff = !!(!arrowOn && curIdx >= 0 && T);
+    if (arrowOff) compass = true;
+    if (curIdx >= 0 && !T && !isFree) {
       compass = true;
+      var s = steps[curIdx] || {};
       if (s.ui === 'phone') phone = true;
       // Chương 3: nhịp truyện do rel.js đẩy qua mục tiêu chữ — mục tiêu nhắc mở
       // ĐIỆN THOẠI thì cũng nhắc nút 📱.
       if (!phone && /📱|ĐIỆN THOẠI/i.test(objectiveText)) phone = true;
     }
-    cueState = { active: compass, phone: phone, step: label };
+    cueState = { active: compass, phone: phone, step: label, arrowOff: arrowOff };
     pulseBtn('btn-phone', phone);
     pulseBtn('btn-guide', compass);
   }
@@ -295,8 +371,86 @@
     curIdx = -1;
     for (var i = 0; i < steps.length; i++) { if (!steps[i].done()) { curIdx = i; break; } }
     curTgt = curIdx >= 0 ? resolveTarget(steps[curIdx].target) : null;
+    lastChapter = st.chapter || 0;
+    lastBook = st.book || {};
+    // Lane X: đích dự phòng chỉ khi bước hiện tại không có đích thật.
+    fbTgt = (!curTgt && lastChapter >= 3) ? ch3Fallback(st) : null;
+    isFree = computeFree(st);
     renderPanel();
     syncCues();
+    syncChip();
+  }
+
+  /* ---------- CHIP MỤC TIÊU 1 DÒNG (Lane X — lệnh bổ sung 08:32) ---------- */
+  // #objective bị ẩn hẳn (ui.css) nên chữ mục tiêu trước đây chỉ nằm trong
+  // bảng 🧭. Chip này là MỘT DÒNG duy nhất (≤ ~30px, bán trong suốt, dưới HUD,
+  // trên thẻ thoại z-30) luôn hiện khi đang chơi: "🎯 <việc> · Đích: <nơi>" —
+  // chữ lấy từ nhãn bước/mục tiêu sẵn có, chỉ RÚT GỌN (bỏ tiền tố chương, bỏ
+  // ghi chú nút, lấy vế đầu trước " — "), không bịa nội dung. Bấm chip = mở
+  // bảng 🧭 chi tiết như cũ. Hết việc → "🌸 Tự do khám phá" tĩnh, không nháy.
+  var chipEl = null, chipSig = '';
+  function gameStarted() {
+    try { return !!(window.__demo && window.__demo.started && window.__demo.started()); } catch (e) { return false; }
+  }
+  function curMapId() {
+    try { return (window.__demo && window.__demo.mapId && window.__demo.mapId()) || null; } catch (e) { return null; }
+  }
+  function shortTask(s, keepFull) {
+    s = String(s || '');
+    // Bỏ tiền tố "🌸 Chương 3 — " của mục tiêu rel.js (emoji là cặp surrogate
+    // nên không dùng character class — quét lười tới "Chương 3 — " ở đầu câu).
+    if (s.indexOf('Chương 3') >= 0 && s.indexOf('Chương 3') < 8) s = s.replace(/^.*?Chương 3\s*—\s*/, '');
+    s = s.replace(/\s*\(nút 📱 góc phải\)/g, '');
+    if (!keepFull) {
+      var head = s.split(' — ')[0];
+      if (head && head.length >= 10 && head.length < s.length) s = head;
+    }
+    return s.trim();
+  }
+  function destText() {
+    var T = effTarget();
+    if (!T) return '';
+    var nm = ((T.kind === 'npc' || T.kind === 'meet') && T.label) ? T.label : '';
+    var here = curMapId();
+    // Đích CÙNG bản đồ: chỉ ghi tên người/vật — người chơi đã ở nơi này rồi,
+    // ghi lại tên nơi chỉ tổ chật chip và làm cụt phần việc (bản chạy đầu cho
+    // ra "…chia tay với BỐ…" ở sân bay).
+    if (here && T.map === here) return nm || placeName(T.map);
+    var pl = placeName(T.map);
+    var dest = nm ? (pl ? nm + ' · ' + pl : nm) : pl;
+    if (here) {
+      var path = routePath(here, T.map);
+      if (path && path.length > 2) dest += ' · còn ' + (path.length - 2) + ' nơi';
+    }
+    return dest;
+  }
+  function chipInfo() {
+    if (!gameStarted()) return { visible: false, text: '', free: false };
+    if (isFree) return { visible: true, text: '🌸 Tự do khám phá', free: true };
+    if (curIdx < 0) return { visible: false, text: '', free: false };
+    var s = steps[curIdx] || {};
+    var T = effTarget();
+    var isPhone = !T && (s.ui === 'phone' || (lastChapter >= 3 && /📱|ĐIỆN THOẠI/i.test(objectiveText)));
+    var task = shortTask(s.label, isPhone);
+    var suffix = '';
+    if (T) { var d = destText(); if (d) suffix = 'Đích: ' + d; }
+    else if (isPhone) suffix = '📱 trong điện thoại';
+    // Cắt ở phần VIỆC để hậu tố ĐÍCH không bao giờ bị chém ngang (bản chạy đầu
+    // cho ra "…trong điện…" cụt nghĩa); toàn dòng ≤ ~62 ký tự.
+    var room = 62 - 3 - (suffix ? suffix.length + 3 : 0);
+    if (task.length > room) task = task.slice(0, Math.max(8, room - 1)).replace(/\s+\S*$/, '') + '…';
+    var text = '🎯 ' + task + (suffix ? ' · ' + suffix : '');
+    if (text.length > 64) text = text.slice(0, 63).replace(/\s+\S*$/, '') + '…';
+    return { visible: true, text: text, free: false };
+  }
+  function syncChip() {
+    if (!chipEl) return;
+    var info = chipInfo();
+    var sig = (info.visible ? '1' : '0') + '|' + info.text;
+    if (sig === chipSig) return;
+    chipSig = sig;
+    chipEl.textContent = info.text;
+    chipEl.classList.toggle('show', info.visible);
   }
 
   /* ---------- Điểm nối âm thanh hướng dẫn (lane âm thanh sẽ nạp GUIDE_VOICE) ---------- */
@@ -309,6 +463,19 @@
 
   /* ---------- Khởi tạo DOM: mở/đóng bảng (Lane P) + HUD gọn + cài đặt ---------- */
   function init() {
+    // Chip mục tiêu 1 dòng (Lane X): guide.js tự tạo phần tử (khỏi sửa
+    // index.html) — bấm chip = bật/tắt bảng 🧭 chi tiết như bấm #btn-guide.
+    if (!$('guide-chip')) {
+      chipEl = document.createElement('button');
+      chipEl.type = 'button';
+      chipEl.id = 'guide-chip';
+      chipEl.setAttribute('aria-label', 'Mục tiêu hiện tại — bấm để xem hướng dẫn chi tiết');
+      chipEl.addEventListener('click', function () {
+        var p = $('guide');
+        if (p) p.classList.toggle('open');
+      });
+      document.body.appendChild(chipEl);
+    } else chipEl = $('guide-chip');
     var panel = $('guide');
     if (panel) {
       // Lane P (01/11): bảng ẩn hẳn theo mặc định (CSS display:none, chỉ .open
@@ -321,7 +488,8 @@
       document.addEventListener('click', function (e) {
         if (!panel.classList.contains('open')) return;
         var t = e.target;
-        if (t && t.closest && (t.closest('#guide') || t.closest('#btn-guide'))) return;
+        // #guide-chip cũng là nút MỞ bảng (Lane X) — không tính là "bấm ra ngoài".
+        if (t && t.closest && (t.closest('#guide') || t.closest('#btn-guide') || t.closest('#guide-chip'))) return;
         panel.classList.remove('open');
       });
       var vb = $('guide-voice');
@@ -348,6 +516,8 @@
       sa.addEventListener('change', function () {
         arrowOn = sa.checked;
         lsSet(LS_ARROW, arrowOn ? '1' : '0');
+        syncCues();   // Lane X: nhắc 🧭 bật/tắt ngay, khỏi chờ refresh (refresh bỏ qua khi chữ ký không đổi)
+        syncChip();
       });
     }
     // Cài đặt: cỡ hình (zoom) — qua WORLD2D.setZoom của engine
@@ -363,7 +533,8 @@
     }
     refresh();
     syncVoiceBtn();
-    setInterval(function () { refresh(); syncVoiceBtn(); }, 400);
+    syncChip();
+    setInterval(function () { refresh(); syncVoiceBtn(); syncChip(); }, 400);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
@@ -380,6 +551,8 @@
       arrowOn = !!on;
       lsSet(LS_ARROW, arrowOn ? '1' : '0');
       var sa = $('set-guide-arrow'); if (sa) sa.checked = arrowOn;
+      syncCues();   // Lane X: cập nhật nhắc 🧭 ngay (refresh() bỏ qua khi chữ ký truyện không đổi)
+      syncChip();
     },
     // engine gọi mỗi khung hình: trả {x,y,label,hops} của đích cần chỉ trong bản
     // đồ `mapId` — đích thật nếu cùng bản đồ (hops=0, engine tự ghi "≈N bước"
@@ -387,9 +560,11 @@
     // CUỐI + số nơi còn phải qua, hops = số chặng còn lại (engine KHÔNG ghi số
     // bước cho trường hợp này — tránh hiểu lầm sắp tới đích).
     targetFor: function (mapId) {
-      if (!arrowOn || !curTgt) return null;
-      if (curTgt.map === mapId) return { x: curTgt.x, y: curTgt.y, label: curTgt.label || '', hops: 0 };
-      var path = routePath(mapId, curTgt.map);
+      if (!arrowOn) return null;
+      var T = effTarget();   // Lane X: đích thật của bước, else đích dự phòng Ch3
+      if (!T) return null;
+      if (T.map === mapId) return { x: T.x, y: T.y, label: T.label || '', hops: 0 };
+      var path = routePath(mapId, T.map);
       if (!path || path.length < 2) return null;
       var hop = path[1];
       var tile = doorTileFor(mapId, hop);
@@ -398,10 +573,10 @@
       if (path.length === 2) {
         // Cửa này vào thẳng nơi đích: biển cửa + tên người cần gặp (nếu là NPC).
         label = placeDoorText(hop);
-        if (curTgt.kind === 'npc' && curTgt.label) label += ' · ' + curTgt.label;
+        if ((T.kind === 'npc' || T.kind === 'meet') && T.label) label += ' · ' + T.label;
       } else {
-        var fin = placeName(curTgt.map);
-        if (curTgt.kind === 'npc' && curTgt.label) fin += ' — ' + curTgt.label;
+        var fin = placeName(T.map);
+        if ((T.kind === 'npc' || T.kind === 'meet') && T.label) fin += ' — ' + T.label;
         label = placeDoorText(hop) + ' · đích: ' + fin + ' · qua ' + (path.length - 2) + ' nơi nữa';
       }
       return { x: tile.x, y: tile.y, label: label, hops: path.length - 1 };
@@ -409,7 +584,11 @@
     // Lane R — cho harness/kiểm kê: tuyến BFS đầy đủ giữa hai bản đồ (hoặc null).
     route: function (fromMap, toMap) { return routePath(fromMap, toMap); },
     // Lane R — trạng thái nhắc nút khi bước hiện tại không có đích không gian.
-    uiCue: function () { return { active: cueState.active, phone: cueState.phone, step: cueState.step }; },
-    currentTarget: function () { return curTgt; }
+    // Lane X: thêm arrowOff (mũi tên đang tắt mà còn nhiệm vụ có đích → 🧭 đang nhắc).
+    uiCue: function () { return { active: cueState.active, phone: cueState.phone, step: cueState.step, arrowOff: cueState.arrowOff }; },
+    currentTarget: function () { return effTarget(); },
+    // Lane X — trạng thái chip mục tiêu 1 dòng + cờ tự do (cho harness).
+    chip: function () { var i = chipInfo(); return { visible: i.visible, text: i.text, free: i.free }; },
+    fallbackTarget: function () { return fbTgt; }
   };
 })();
