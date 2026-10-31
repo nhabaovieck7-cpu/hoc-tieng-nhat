@@ -454,6 +454,11 @@
 
   /* ---------- Điều khiển ---------- */
   window.addEventListener('keydown', function (e) {
+    // Đang gõ trong ô nhập liệu (ô tên #inp-name và mọi input/textarea/select/
+    // contentEditable khác trong game) thì để trình duyệt xử lý phím tự nhiên:
+    // KHÔNG preventDefault (gõ được dấu cách), KHÔNG kích hoạt phím tắt game.
+    var et = e.target;
+    if (et && (et.tagName === 'INPUT' || et.tagName === 'TEXTAREA' || et.tagName === 'SELECT' || et.isContentEditable)) return;
     keys[e.key.length === 1 ? e.key.toLowerCase() : e.key] = true;
     if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].indexOf(e.key) >= 0) e.preventDefault();
     if ((e.key === ' ' || e.key === 'Enter' || e.key === 'e') && target && !dlgOpen && started) startScene(target.kind === 'npc' ? target.ref.scene : target.scene);
