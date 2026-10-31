@@ -882,3 +882,211 @@ button.astat:hover{border-color:var(--c)}
 @media(max-width:560px){.astats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .tabs button .tabdot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#cf3a2e;margin-left:7px;vertical-align:2px;box-shadow:0 0 0 2px rgba(207,58,46,.25)}
 .acctbadge{display:inline-block;min-width:20px;height:20px;line-height:20px;padding:0 5px;margin-left:6px;border-radius:99px;background:#cf3a2e;color:#fff;font-size:.74rem;font-weight:800;text-align:center;vertical-align:1px;box-sizing:border-box}
+
+
+/* ============================================================
+   V3 — GIAO DIỆN MỚI "ĐẠI CA NIHONGO" (31/10/2026, chủ trang duyệt mẫu v3)
+   Lớp phủ thiết kế: token màu indigo/đỏ son/vàng kim, dải đầu trang
+   sóng seigaiha, thẻ bo 20–24px + bóng mềm nhiều lớp, huy chương
+   Top tuần, thanh tab mờ. Chỉ ĐỔI DIỆN MẠO qua biến + class sẵn có;
+   không đổi hook JS. Game (game/*.html) không nạp file này.
+   ============================================================ */
+:root{
+  --c:#c73e2e;--c2:#233d63;
+  --bg:#faf7f0;--card:#fff;--t:#1c2733;--m:#68707c;
+  --line:#ece6d8;--soft:#f4f1e8;--r:16px;
+  --ai:#2b3a67;--ai-soft:#e9edf5;
+  --shu:#c73e2e;--shu-soft:#faecea;--gold:#c99b3f;
+  --indigo:#2b3a67;--indigo2:#233d63;--deep:#131f42;--deep2:#1d2c52;--gold2:#d9a84e;
+  --n5:#3e8853;--n5d:#2e6b3f;--n4:#2e6da4;--n4d:#1f567f;--n3:#6c5b9e;--n3d:#524373;--n2:#b07d2b;--n2d:#8a5f1d;--n1:#c0392b;--n1d:#97291d;
+  --shadow:0 1px 2px rgba(28,39,51,.04),0 6px 14px rgba(28,39,51,.05),0 20px 40px rgba(28,39,51,.08);
+  --sh-lg:0 2px 4px rgba(28,39,51,.05),0 10px 22px rgba(28,39,51,.07),0 30px 56px rgba(28,39,51,.13);
+}
+[data-theme="dark"]{
+  --c:#e0655a;--c2:#9db1d8;
+  --bg:#0b1120;--card:#151e31;--t:#edf1f8;--m:#97a3b8;
+  --line:rgba(148,166,199,.16);--soft:#1b2539;
+  --ai:#8fb0e3;--ai-soft:#1e2a44;
+  --shu:#e0655a;--shu-soft:#33222b;--gold:#d9a84e;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 14px rgba(0,0,0,.35),0 20px 40px rgba(0,0,0,.45);
+  --sh-lg:0 2px 4px rgba(0,0,0,.35),0 10px 22px rgba(0,0,0,.45),0 30px 56px rgba(0,0,0,.55);
+  color-scheme:dark;
+}
+
+/* ---- Dải đầu trang (mọi trang): indigo + sóng seigaiha ---- */
+.topbar{background:linear-gradient(158deg,#0e1938 0%,#1d2c52 46%,#2b4479 100%);border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 14px 30px rgba(14,25,56,.22)}
+[data-theme="dark"] .topbar{background:linear-gradient(158deg,#060c1e 0%,#0c1734 46%,#1d2c52 100%)}
+.topbar::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:
+  radial-gradient(circle at 50% 0, transparent 13px, rgba(255,255,255,.05) 14px, rgba(255,255,255,.05) 15px, transparent 16px, rgba(255,255,255,.035) 21px, rgba(255,255,255,.035) 22px, transparent 23px),
+  radial-gradient(circle at 0 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px),
+  radial-gradient(circle at 100% 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px);
+  background-size:46px 24px}
+.topbar .wrap{position:relative;z-index:1;min-height:62px}
+.brand{color:#fff;display:inline-flex;align-items:center;gap:10px}
+.brand::before{content:"日";width:40px;height:40px;flex:none;border-radius:50%;background:linear-gradient(150deg,#d84a3c,#cf3a2e 58%,#a93224);color:#fff;font-family:"Noto Serif JP","Noto Sans JP",serif;font-weight:900;font-size:20px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(199,62,46,.4),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(90,10,0,.18)}
+.brand .st-s{color:#fff;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.brand .st-s::after{content:"日本語を学ぼう";display:block;font-size:11px;font-weight:500;color:#a9bbe0;letter-spacing:.06em;margin-top:1px}
+.nav a{color:#b9c6e4;font-weight:600}
+.nav a:hover{background:rgba(255,255,255,.13);color:#fff}
+.themetgl{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;backdrop-filter:blur(4px)}
+.hdr-av{border:2px solid rgba(255,255,255,.75);background:linear-gradient(145deg,#f6e3b2,#d9a84e);color:#5e430a;font-weight:900;box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.hdr-sq{color:#fff}
+.hn-cb{background:rgba(255,255,255,.1)!important;border:1px solid rgba(255,255,255,.28)!important;color:#fff!important;backdrop-filter:blur(4px)}
+#hdrmenu .hn-cb{background:transparent!important;color:var(--t)!important;border:0!important;backdrop-filter:none}
+.gsbar{background:rgba(13,23,50,.55);border-top:1px solid rgba(255,255,255,.1)}
+.gs input{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#fff}
+.gs input::placeholder{color:#93a7d4}
+.gs input:focus{border-color:var(--gold2);box-shadow:0 0 0 3px rgba(217,168,78,.25)}
+#gsr{background:var(--card);color:var(--t);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh-lg)}
+
+/* ---- Thanh tab dưới (mobile): mờ blur + mục chọn dạng viên thuốc ---- */
+.tabbar{background:var(--tabbg,rgba(250,247,240,.9));backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 -10px 30px rgba(28,39,51,.07)}
+[data-theme="dark"] .tabbar{background:rgba(11,17,32,.88)}
+.tabbar a{border-radius:999px;margin:4px 5px;padding:7px 2px 6px;min-height:50px}
+.tabbar a.on{color:#fff;background:linear-gradient(150deg,#31457c,#233d63);box-shadow:0 8px 18px rgba(35,61,99,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.tabbar a.on svg{stroke:#fff}
+
+/* ---- Nút chính: đỏ son chuyển sắc dạng viên thuốc ---- */
+.btn-primary{background:linear-gradient(150deg,#e0655a,#c73e2e 58%,#a93224);border-radius:999px;box-shadow:0 10px 20px rgba(199,62,46,.3),inset 0 1px 0 rgba(255,255,255,.38),inset 0 -2px 0 rgba(90,10,0,.18)}
+.btn-primary:hover{filter:brightness(1.05)}
+
+/* ---- Tiêu đề mục: gạch đứng đỏ son + chữ Nhật serif ---- */
+.block-h h2,.pagehead h1,.lhead h1{display:flex;align-items:center;gap:10px}
+.block-h h2::before,.pagehead h1::before,.lhead h1::before{content:"";width:5px;height:.95em;flex:none;border-radius:3px;background:linear-gradient(180deg,#e0655a,#c73e2e);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.h-jp{font-family:"Noto Serif JP",serif;color:var(--shu);letter-spacing:.12em}
+
+/* ---- Thẻ chung ---- */
+.box,.card{border-radius:20px;box-shadow:var(--shadow)}
+.card:hover{box-shadow:var(--sh-lg)}
+.tag{background:var(--ai-soft);color:var(--ai);font-weight:700}
+.tag.lv{background:var(--ai);color:#fff}
+.progress{background:#efeae0;box-shadow:inset 0 1px 3px rgba(28,39,51,.1)}
+.progress span{background:linear-gradient(90deg,#233d63,#4a6bc0)}
+[data-theme="dark"] .progress{background:#24304a}
+
+/* ================= TRANG CHỦ ================= */
+/* Dải hero: cùng ngôn ngữ dải đầu trang, bo 24px */
+.hero{position:relative;overflow:hidden;margin-top:16px;padding:26px 22px 22px;border-radius:24px;color:#fff;background:linear-gradient(158deg,#0e1938 0%,#1d2c52 46%,#2b4479 100%);box-shadow:0 22px 44px rgba(14,25,56,.3)}
+[data-theme="dark"] .hero{background:linear-gradient(158deg,#060c1e 0%,#0c1734 46%,#1d2c52 100%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:
+  radial-gradient(circle at 50% 0, transparent 13px, rgba(255,255,255,.05) 14px, rgba(255,255,255,.05) 15px, transparent 16px, rgba(255,255,255,.035) 21px, rgba(255,255,255,.035) 22px, transparent 23px),
+  radial-gradient(circle at 0 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px),
+  radial-gradient(circle at 100% 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px);
+  background-size:46px 24px}
+.hero>*{position:relative;z-index:1}
+.hero h1{color:#fff}
+.greeting-jp{color:#eea79c;letter-spacing:.32em}
+.hero .date-line{color:#a9bbe0}
+.hero .hn-name{background:linear-gradient(92deg,#f6d87e,#d9a84e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .hn-slogan{color:#e9d9a8}
+.hero .hn-khen,.hero .hn-moi,.hero .hn-line{color:#c4d0e8}
+.hero .dk-khen{color:#f0dca8}
+.hero #dkMember{color:#dce4f5}
+.hero #dkMember a,.hero .dk-cont a{color:#f6d87e}
+.hero-img{border:1px solid rgba(255,255,255,.3);border-radius:22px;box-shadow:0 20px 40px rgba(6,10,28,.42)}
+.hero .continue-card{border-radius:20px;box-shadow:0 18px 38px rgba(6,10,28,.35);margin-top:18px}
+.hero .stats .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#c4d0e8;border-radius:14px;backdrop-filter:blur(5px)}
+.hero .stats .stat b{color:#fff}
+.hero .hn-share{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(4px)}
+/* 3 ô thống kê kính của học viên (số thật từ /stats) */
+.hstats{display:flex;gap:9px;margin:16px 0 2px}
+.hstats[hidden]{display:none}
+.hstat{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-top:2px solid rgba(217,168,78,.55);border-radius:16px;padding:11px 4px 9px;text-align:center;backdrop-filter:blur(5px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.hstat b{display:flex;align-items:center;justify-content:center;gap:5px;font-size:17.5px;font-weight:900;color:#fff;letter-spacing:-.01em}
+.hstat .flame{width:15px;height:15px;flex:none}
+.hstat .hstat-lb{display:block;font-size:9.5px;color:#a9bbe0;font-weight:700;margin-top:3px;letter-spacing:.09em}
+
+/* Thẻ THÀNH NGỮ trang chủ (thay băng Từ của ngày) */
+.pvcard{position:relative;overflow:hidden;margin-top:26px;border-radius:24px;color:#fff;background:linear-gradient(140deg,#182a57 0%,#243a6b 58%,#2f4c8a 100%);box-shadow:var(--sh-lg),inset 0 0 0 1px rgba(217,168,78,.35);padding:20px 20px 24px}
+.pvcard[hidden]{display:none}
+[data-theme="dark"] .pvcard{background:linear-gradient(140deg,#101e42 0%,#182a57 58%,#22386b 100%)}
+.pvcard::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:
+  radial-gradient(circle at 50% 0, transparent 13px, rgba(255,255,255,.05) 14px, rgba(255,255,255,.05) 15px, transparent 16px, rgba(255,255,255,.035) 21px, rgba(255,255,255,.035) 22px, transparent 23px),
+  radial-gradient(circle at 0 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px),
+  radial-gradient(circle at 100% 12px, transparent 13px, rgba(255,255,255,.04) 14px, rgba(255,255,255,.04) 15px, transparent 16px);
+  background-size:46px 24px}
+.pvcard::after{content:"諺";position:absolute;right:86px;top:-30px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:120px;line-height:1;color:rgba(255,255,255,.05);pointer-events:none}
+.pvcard-in{position:relative;z-index:1;display:flex;align-items:center;gap:16px}
+.pvcard-tx{flex:1;min-width:0}
+.pvcard-head{display:flex;align-items:center;gap:7px;margin:0}
+.pvcard-leaf{width:16px;height:16px;color:var(--gold2);flex:none}
+.pvcard-head b{font-size:11px;letter-spacing:.22em;color:#e9d9a8;font-weight:800}
+.pvcard-head .jp{font-family:"Noto Serif JP",serif;color:#a9bbe0;font-size:12px;letter-spacing:.15em}
+.pvcard-jp{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:700;margin:12px 0 0;line-height:1.5}
+.pvcard-jp rt{color:#93a7d4;font-size:.46em;font-weight:500}
+.pvcard-vi{font-size:13.5px;color:#e6ecf7;margin:6px 0 0;line-height:1.55;font-weight:600}
+.pvcard-note{font-size:12.5px;color:#c4d0e8;margin:3px 0 0;line-height:1.55}
+.pvcard-playwrap{margin-left:auto;text-align:center;flex:none}
+.pvcard-play{width:54px;height:54px;border:0;cursor:pointer;border-radius:50%;background:linear-gradient(150deg,#e0655a,#c73e2e 58%,#a93224);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px rgba(199,62,46,.5),0 0 0 6px rgba(255,255,255,.1),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(90,10,0,.2)}
+.pvcard-play svg{width:22px;height:22px;fill:#fff;margin-left:2px}
+.pvcard-play.on{filter:brightness(1.15)}
+.pvcard-playwrap span{display:block;font-size:10px;color:#a9bbe0;font-weight:700;margin-top:7px;letter-spacing:.1em}
+
+/* Thẻ chọn cấp độ: dải màu cấp độ bên trái (rail) */
+.level-card{position:relative;padding:14px 14px 14px 82px;min-height:78px;overflow:hidden;border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}
+.level-card .lv{position:absolute;left:0;top:0;bottom:0;width:66px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:900;background:linear-gradient(180deg,var(--ai),var(--indigo2));padding-bottom:16px}
+.level-card .lv .dot{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.35)}
+.level-card .lv-jp{position:absolute;left:0;bottom:9px;width:66px;text-align:center;color:rgba(255,255,255,.88);font-family:"Noto Serif JP",serif;font-size:11px;margin:0}
+.level-card .lv-count{margin-top:2px}
+.level-card[data-level="N5"] .lv{background:linear-gradient(180deg,var(--n5),var(--n5d))}
+.level-card[data-level="N4"] .lv{background:linear-gradient(180deg,var(--n4),var(--n4d))}
+.level-card[data-level="N3"] .lv{background:linear-gradient(180deg,var(--n3),var(--n3d))}
+.level-card[data-level="N2"] .lv{background:linear-gradient(180deg,var(--n2),var(--n2d))}
+.level-card[data-level="N1"] .lv{background:linear-gradient(180deg,var(--n1),var(--n1d))}
+.level-card.selected{border-color:var(--ai);box-shadow:0 0 0 3px var(--ai-soft),var(--shadow)}
+.level-card[data-level="N5"].selected{border-color:var(--n5);box-shadow:0 0 0 3px rgba(62,136,83,.18),var(--shadow)}
+.level-card[data-level="N4"].selected{border-color:var(--n4);box-shadow:0 0 0 3px rgba(46,109,164,.18),var(--shadow)}
+.level-card[data-level="N3"].selected{border-color:var(--n3);box-shadow:0 0 0 3px rgba(108,91,158,.18),var(--shadow)}
+.level-card[data-level="N2"].selected{border-color:var(--n2);box-shadow:0 0 0 3px rgba(176,125,43,.2),var(--shadow)}
+.level-card[data-level="N1"].selected{border-color:var(--n1);box-shadow:0 0 0 3px rgba(192,57,43,.18),var(--shadow)}
+
+/* Top tuần: huy chương vàng/bạc/đồng */
+.st-topweek{border-radius:22px!important;box-shadow:var(--shadow);padding:18px 20px}
+.st-topweek .st-medal{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--soft);color:#8a7a4a;font-weight:900;font-size:13.5px;flex:none;position:relative;overflow:hidden}
+.st-topweek .st-medal::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.9),transparent 46%)}
+.st-topweek .st-medal.rk1{background:linear-gradient(145deg,#f6d87e,#d9a84e 60%,#b98534);color:#5e430a;box-shadow:0 5px 12px rgba(217,168,78,.5),inset 0 0 0 2px rgba(255,255,255,.35)}
+.st-topweek .st-medal.rk2{background:linear-gradient(145deg,#f4f6f9,#c9d1db 60%,#a7b2c2);color:#55606e;box-shadow:0 4px 10px rgba(120,135,155,.35),inset 0 0 0 2px rgba(255,255,255,.5)}
+.st-topweek .st-medal.rk3{background:linear-gradient(145deg,#f2d7bc,#d59a67 60%,#b57a44);color:#7a4a1e;box-shadow:0 4px 10px rgba(213,154,103,.4),inset 0 0 0 2px rgba(255,255,255,.4)}
+.st-tw-name{font-weight:700}
+.st-tw-val{color:var(--indigo)}
+[data-theme="dark"] .st-tw-val{color:#dce4f5}
+.st-av{border:2px solid rgba(255,255,255,.7);box-shadow:0 3px 8px rgba(28,39,51,.18)}
+
+/* Ô luyện tập thêm + thẻ bài học */
+.tile{border-radius:18px;box-shadow:var(--shadow);padding:14px}
+.tile-ico{border-radius:16px}
+.cat-card{border-radius:20px}
+
+/* Mục Game trên trang chủ: chuyển tím -> dải indigo như mẫu v3 */
+.hn-gamesec{background:linear-gradient(125deg,#16264e,#2b4479);border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 38px rgba(14,25,56,.28)}
+.hn-gamesec-t{color:#fff}
+.hn-gcard{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#fff}
+.hn-gcard-tx b{color:#fff}
+.hn-gcard-tx small{color:#b9c6e4}
+.hn-gcard-tx small.hn-gcard-star{color:#f6d87e}
+.hn-gcard-ic{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.18)}
+.hn-gamesec-foot a{color:#f6d87e}
+[data-theme="dark"] .hn-gamesec{border-color:rgba(255,255,255,.14);box-shadow:0 18px 38px rgba(0,0,0,.4)}
+[data-theme="dark"] .hn-gamesec-foot a{color:#f6d87e}
+
+/* ================= TRANG CON ================= */
+/* Cộng đồng + tin nhắn: thẻ bo lớn, bóng v3 (biến đã đổi ở :root) */
+.cd-card{border-radius:20px;box-shadow:var(--shadow)}
+.tn-card{border-radius:20px;box-shadow:var(--shadow)}
+/* Hộp khoá / đăng nhập */
+.lockbox{border-radius:22px;box-shadow:var(--sh-lg)}
+/* Footer */
+footer .site-title{font-weight:800;color:var(--t)}
+
+@media(min-width:861px){
+  .topbar .wrap{gap:12px}
+  .nav a{padding:9px 10px;white-space:nowrap}
+}
+@media(max-width:640px){
+  .hero{padding:22px 16px 18px;border-radius:22px}
+  .pvcard{padding:18px 16px 20px}
+  .pvcard-jp{font-size:23px}
+  .pvcard::after{right:70px;font-size:96px}
+  .level-card{padding-left:76px}
+  .level-card .lv,.level-card .lv-jp{width:60px}
+}

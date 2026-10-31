@@ -83,16 +83,27 @@
       var lb = await api('/stats/leaderboard?cat=week&limit=3');
       var urls = await avatarUrls((lb.list || []).map(function (r) { return r.avatar_file; }));
       var rows = (lb.list || []).map(function (r, i) {
-        return '<div class="st-tw-row"><span class="st-medal">' + MEDALS[i] + '</span>' + avHtml(r.name, urls[r.avatar_file])
+        return '<div class="st-tw-row"><span class="st-medal rk' + (i+1) + '">' + (i+1) + '</span>' + avHtml(r.name, urls[r.avatar_file])
           + '<span class="st-tw-name">' + esc(r.name) + (r.me ? '<span class="st-me-chip">'+HNX.chip()+'</span>' : '') + '</span>'
           + '<span class="st-tw-val">' + r.value + ' XP</span></div>';
       }).join('');
       var meLine = '';
-      if (lb.me && !lb.me.inTop) meLine = '<div class="st-tw-row"><span class="st-medal">' + lb.me.rank + '</span><span class="st-av st-av-t">' + esc((lb.me.name || '?').trim().charAt(0).toUpperCase()) + '</span><span class="st-tw-name">' + esc(lb.me.name) + '<span class="st-me-chip">'+HNX.chip()+'</span></span><span class="st-tw-val">' + lb.me.value + ' XP</span></div>';
+      if (lb.me && !lb.me.inTop) meLine = '<div class="st-tw-row"><span class="st-medal rkm">' + lb.me.rank + '</span><span class="st-av st-av-t">' + esc((lb.me.name || '?').trim().charAt(0).toUpperCase()) + '</span><span class="st-tw-name">' + esc(lb.me.name) + '<span class="st-me-chip">'+HNX.chip()+'</span></span><span class="st-tw-val">' + lb.me.value + ' XP</span></div>';
       mount.innerHTML = '<div class="st-topweek"><h2>🏆 Top tuần này</h2>'
         + '<p class="st-sub">XP học tập tuần này (Thứ Hai – Chủ nhật). Học đều mỗi ngày để leo hạng!</p>'
         + (rows || '<p class="st-sub">Chưa có dữ liệu tuần này — hãy là người đầu tiên!</p>') + meLine
         + '<a class="st-tw-link" href="xep-hang.html">Xem bảng xếp hạng đầy đủ →</a></div>';
+      // 3 ô thống kê kính trên dải đầu trang chủ (chuỗi ngày / XP tuần / hạng tuần) — số thật từ server
+      var hs = document.getElementById('hstats');
+      if (hs && me && me.stats) {
+        var rk = null;
+        (lb.list || []).forEach(function (r, i) { if (r.me) rk = i + 1; });
+        if (rk == null && lb.me && lb.me.rank) rk = lb.me.rank;
+        var e1 = document.getElementById('hsStreak'); if (e1) e1.textContent = me.stats.streakCur;
+        var e2 = document.getElementById('hsXp'); if (e2) e2.textContent = Number(me.stats.xpWeek || 0).toLocaleString('vi-VN');
+        var e3 = document.getElementById('hsRank'); if (e3) e3.textContent = rk ? ('#' + rk) : '–';
+        hs.hidden = false;
+      }
       // Chip 🔥 trong thẻ học tiếp: thay số local bằng số server (đã đồng bộ đa máy)
       if (me && me.stats) {
         var cell = document.querySelector('#pg .pgn>div');

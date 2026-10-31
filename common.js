@@ -77,7 +77,7 @@ document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e
 // chia sẻ web chính thức dùng được (Messenger bắt buộc app_id của Meta app, Zalo chỉ có
 // widget/SDK gắn app) nên đi qua "Sao chép liên kết" và Web Share API.
 (function(){
-var TITLE='Học tiếng Nhật cùng Khánh';
+var TITLE='Đại Ca Nihongo';
 var TEXT='Học tiếng Nhật miễn phí cho người Việt: khóa học N5–N1 gồm ngữ pháp, từ vựng, kanji, luyện nghe JLPT, tin tức mỗi ngày và trợ lý AI.';
 var HOME='https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/';
 var ov=null,copyBtn=null,note=null,curUrl=HOME;
@@ -89,7 +89,7 @@ function build(){if(ov)return;var eu=encodeURIComponent(curUrl),et=encodeURIComp
  ov=document.createElement('div');ov.className='hn-sh-ov';ov.hidden=true;
  ov.innerHTML='<div class="hn-sh-sheet" role="dialog" aria-modal="true" aria-label="Chia sẻ trang web">'
  +'<div class="hn-sh-h"><b>📤 Chia sẻ trang web</b><button type="button" class="hn-sh-x" aria-label="Đóng">✕</button></div>'
- +'<p class="hn-sh-t">Giới thiệu “Học tiếng Nhật cùng Khánh” tới bạn bè qua:</p>'
+ +'<p class="hn-sh-t">Giới thiệu “Đại Ca Nihongo” tới bạn bè qua:</p>'
  +'<div class="hn-sh-list">'
  +'<button type="button" class="hn-sh-item" data-act="copy"><span class="hn-sh-ic">🔗</span><span>Sao chép liên kết</span></button>'
  +'<a class="hn-sh-item" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u='+eu+'"><span class="hn-sh-ic">f</span><span>Facebook</span></a>'
