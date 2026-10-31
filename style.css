@@ -1118,3 +1118,25 @@ footer .site-title{font-weight:800;color:var(--t)}
   #moingay .hn-gcard{flex-direction:row;text-align:left;gap:9px;padding:9px 10px}
   #moingay .hn-gcard-tx small{margin-top:2px}
 }
+
+/* ============================================================
+   V3 LAYOUT — TINH CHỈNH KHỚP MẪU (01/11/2026, đợt 2)
+   Đối chiếu lại mẫu v3-mobile + v3-desktop sau phản hồi chủ web:
+   - Điện thoại: lưới chọn cấp xếp 1 CỘT DỌC như mẫu (N5→N1 lần
+     lượt, mỗi thẻ trải ngang) thay cho lưới 2 cột cũ.
+   - "Luyện tập thêm": gộp các ô rời thành 1 PANEL liền, các dòng
+     ngăn bằng đường kẻ mảnh + mũi tên › ở cuối dòng như mẫu.
+   - Thẻ thành ngữ nằm sát dải hero hơn như mẫu.
+   Chỉ chỉnh sắp xếp/khoảng cách; màu, hook JS, dữ liệu giữ nguyên.
+   ============================================================ */
+.pvcard{margin-top:16px}
+@media(max-width:899px){
+  #khoahoc .level-grid{grid-template-columns:1fr}
+  #khoahoc .level-grid .level-card:last-child{grid-column:auto}
+}
+#tinhnang .tiles{grid-template-columns:1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+#tinhnang .tile{background:transparent;border:0;border-radius:0;box-shadow:none;padding:14px 16px}
+#tinhnang .tile + .tile{border-top:1px solid var(--line)}
+#tinhnang .tile::after{content:"›";margin-left:auto;align-self:center;font-size:22px;font-weight:700;color:var(--shu);line-height:1}
+#tinhnang .tile-arr{margin-left:auto;align-self:center;font-size:22px;font-weight:700;color:var(--shu);line-height:1}
+#tinhnang .tile:has(.tile-arr)::after{display:none}
