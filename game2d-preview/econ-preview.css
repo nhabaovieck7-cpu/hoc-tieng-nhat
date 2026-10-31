@@ -1,0 +1,74 @@
+/* econ-preview.css — Bản xem trước P1: KINH TẾ GIỮA NGƯỜI CHƠI (Lane F, 31/10/2026).
+   CSS RIÊNG, mọi lớp đều có tiền tố econ- để không đụng ui.css của các lane khác.
+   Toàn bộ là dữ liệu MÔ PHỎNG chạy cục bộ — không máy chủ, không tiền truyện chính. */
+
+.econ-entry { display:block; width:100%; margin-top:12px; padding:12px 14px; border-radius:12px;
+  border:2px dashed #b7791f; background:#fff7dd; color:#7a4d00; font-weight:800; font-size:15px; cursor:pointer; }
+.econ-entry:active { transform:scale(.99); }
+
+#econ-overlay { position:fixed; inset:0; z-index:300; background:rgba(20,16,8,.62);
+  display:none; align-items:flex-start; justify-content:center; overflow-y:auto; padding:10px 6px 24px; }
+#econ-overlay.show { display:flex; }
+.econ-card { background:#fffdf6; color:#2c2620; width:100%; max-width:560px; border-radius:16px;
+  box-shadow:0 12px 40px rgba(0,0,0,.4); padding:14px 14px 16px; font-size:14px; line-height:1.45; }
+.econ-head { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.econ-title { font-size:18px; font-weight:900; flex:1 1 auto; }
+.econ-badge { background:#c0392b; color:#fff; font-weight:900; font-size:11px; letter-spacing:.4px;
+  padding:4px 8px; border-radius:999px; }
+.econ-close { border:1px solid #d8cfc0; background:#fff; border-radius:10px; padding:6px 10px; cursor:pointer; font-weight:700; }
+.econ-warn { margin-top:10px; background:#fdf0ec; border:1px solid #e5b4a6; border-radius:10px; padding:8px 10px; font-size:12.5px; }
+.econ-warn b { color:#a93226; }
+.econ-wallets { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+.econ-wallet { flex:1 1 150px; border:1.5px solid #e3d9c6; border-radius:12px; padding:9px 11px; background:#fff; }
+.econ-wallet .who { font-weight:800; font-size:13px; }
+.econ-wallet .bal { font-size:19px; font-weight:900; margin-top:2px; }
+.econ-wallet .sub { font-size:12px; color:#8a8574; }
+.econ-limits { margin-top:8px; font-size:12.5px; background:#f6f1e3; border-radius:10px; padding:8px 10px; }
+.econ-limits .ok { color:#1e8449; font-weight:800; }
+.econ-limits .bad { color:#c0392b; font-weight:800; }
+.econ-cond { margin-top:8px; border:1px dashed #cbbd9d; border-radius:10px; padding:6px 10px; background:#fffdf4; }
+.econ-cond summary { cursor:pointer; font-weight:800; font-size:13px; }
+.econ-cond-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 12px; margin-top:6px; font-size:13px; }
+.econ-cond-grid label { display:flex; align-items:center; gap:6px; }
+.econ-cond-grid input[type="number"] { width:56px; padding:3px 6px; border:1px solid #d8cfc0; border-radius:6px; }
+.econ-tabs { display:flex; gap:6px; margin-top:12px; flex-wrap:wrap; }
+.econ-tab { flex:1 1 auto; border:1.5px solid #d8cfc0; background:#fff; border-radius:10px; padding:8px 6px;
+  font-weight:800; cursor:pointer; font-size:13px; }
+.econ-tab.on { background:#3d5a99; border-color:#3d5a99; color:#fff; }
+.econ-msg { margin-top:10px; border-radius:10px; padding:8px 10px; font-size:13px; display:none; }
+.econ-msg.show { display:block; }
+.econ-msg.err { background:#fdecea; border:1px solid #e5b4a6; color:#7b241c; }
+.econ-msg.good { background:#eafaf1; border:1px solid #a9dfbf; color:#145a32; }
+.econ-code { display:inline-block; background:#7b241c; color:#fff; font-size:10.5px; font-weight:900;
+  border-radius:6px; padding:1px 6px; margin-right:6px; vertical-align:1px; }
+.econ-sec-t { font-weight:900; font-size:15px; margin:14px 0 6px; }
+.econ-friend { border:1.5px solid #e3d9c6; border-radius:12px; padding:10px; background:#fff; }
+.econ-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:8px; }
+.econ-row label { font-weight:700; font-size:13px; }
+.econ-inp { flex:1 1 120px; padding:9px 10px; border:1.5px solid #d8cfc0; border-radius:10px; font-size:15px; background:#fff; }
+.econ-sel { flex:1 1 160px; padding:9px; border:1.5px solid #d8cfc0; border-radius:10px; font-size:14px; background:#fff; }
+.econ-btn { border:none; border-radius:10px; padding:10px 14px; font-weight:900; cursor:pointer; font-size:14px; background:#3d5a99; color:#fff; }
+.econ-btn.ghost { background:#fff; color:#3d5a99; border:1.5px solid #3d5a99; }
+.econ-btn.warn { background:#b7791f; }
+.econ-btn.small { padding:6px 10px; font-size:12.5px; }
+.econ-btn:disabled { opacity:.45; cursor:not-allowed; }
+.econ-hint { font-size:12.5px; color:#6b6455; margin-top:6px; }
+.econ-confirm { margin-top:10px; border:2px solid #b7791f; background:#fff7dd; border-radius:12px; padding:10px 12px; }
+.econ-item { border:1.5px solid #e3d9c6; border-radius:12px; padding:9px 11px; background:#fff; margin-top:8px; }
+.econ-item .nm { font-weight:800; }
+.econ-item .meta { font-size:12.5px; color:#6b6455; }
+.econ-item .price { font-weight:900; font-size:16px; }
+.econ-tag { display:inline-block; font-size:10.5px; font-weight:900; border-radius:6px; padding:1px 6px; margin-left:6px; vertical-align:2px; }
+.econ-tag.mine { background:#eaf2f8; color:#21618c; }
+.econ-tag.sim { background:#f4ecf7; color:#7d3c98; }
+.econ-tag.open { background:#eafaf1; color:#1e8449; }
+.econ-tag.done { background:#eaeded; color:#616a6b; }
+.econ-tag.pend { background:#fef9e7; color:#9a7d0a; }
+.econ-tablewrap { overflow-x:auto; margin-top:8px; }
+.econ-table { width:100%; border-collapse:collapse; font-size:12px; min-width:480px; }
+.econ-table th, .econ-table td { border-bottom:1px solid #eee3cd; padding:5px 6px; text-align:left; vertical-align:top; }
+.econ-table th { background:#f6f1e3; font-size:11.5px; }
+.econ-plus { color:#1e8449; font-weight:800; }
+.econ-minus { color:#c0392b; font-weight:800; }
+.econ-foot { margin-top:14px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; }
+.econ-foot .note { font-size:11.5px; color:#8a8574; flex:1 1 220px; }

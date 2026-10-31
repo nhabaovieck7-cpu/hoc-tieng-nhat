@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Tuổi Trẻ Ở Nhật — Bản mẫu 2D chơi được</title>
+<link rel="stylesheet" href="ui.css">
+<link rel="stylesheet" href="econ-preview.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<!-- HUD -->
+<div id="hud">
+  <div id="hud-row">
+    <div id="player-card">
+      <div id="pc-ava">?</div>
+      <div id="pc-meta">
+        <div id="pc-name">Nhân vật</div>
+        <div id="pc-level">Cấp JLPT N5</div>
+      </div>
+    </div>
+    <div id="hud-area">🏠 Phòng trọ</div>
+  </div>
+  <div id="hud-row">
+    <div id="stats-bar">
+      <div class="stat"><span class="ic">📚</span><span class="vl" id="st-jp">–</span><span class="lb">TIẾNG NHẬT</span></div>
+      <div class="stat"><span class="ic">💴</span><span class="vl" id="st-money">–</span><span class="lb">TIỀN</span></div>
+      <div class="stat"><span class="ic">❤️</span><span class="vl" id="st-hp">–</span><span class="lb">SỨC KHỎE</span></div>
+      <div class="stat"><span class="ic">💗</span><span class="vl" id="st-love">–</span><span class="lb">TÌNH CẢM</span></div>
+      <div class="stat"><span class="ic">⚠️</span><span class="vl" id="st-risk">???</span><span class="lb">RỦI RO (ẩn)</span></div>
+    </div>
+    <div id="hud-actions">
+      <button class="hud-btn" id="btn-phone" type="button" aria-label="Điện thoại">📱<span id="phone-badge">0</span></button>
+      <button class="hud-btn" id="btn-menu" type="button" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div id="objective">📖 …</div>
+  <div id="hud-season" style="font-size:12px;color:#8a8574;margin-top:2px"></div>
+  <div id="hud-fps"></div>
+</div>
+<div id="hud-hint">📱💻 Chạm / nhấp vào nơi muốn tới để đi · WASD / phím mũi tên (phụ)</div>
+<div id="floaters"></div>
+
+<!-- (Đã GỠ HẲN thanh nhảy bối cảnh #mapbar theo lệnh chủ trang 13:33 JST 31/10/2026 —
+     tên địa điểm chỉ còn là BIỂN HIỆU gắn trên tòa nhà/cổng trong bản đồ, không dùng
+     danh sách nút tên nổi phủ màn hình. Xem luật ở KHUNG-GAME.md.) -->
+
+<!-- Nút tương tác -->
+<button id="btn-interact" type="button"></button>
+
+<!-- (Đã bỏ hẳn bàn phím ảo ▲▼◀▶ theo lệnh chủ trang 08:11 JST 31/10/2026 —
+     điều khiển chỉ còn chạm/ấn-để-đi có tìm đường + WASD/mũi tên phụ trợ.) -->
+
+<!-- Hộp hội thoại -->
+<div id="dlg">
+  <div id="dlg-card">
+    <div id="dlg-scene"></div>
+    <div id="dlg-sp"></div>
+    <div id="dlg-jp" class="jp"></div>
+    <div id="dlg-vi"></div>
+    <div id="dlg-opts"></div>
+    <div id="dlg-fb"></div>
+    <div id="dlg-act"></div>
+  </div>
+</div>
+
+<!-- Điện thoại trong game -->
+<div id="phone">
+  <div id="phone-frame">
+    <div id="phone-screen">
+      <div id="phone-status"><span id="phone-clock">21:47</span><span>📶 🔋</span></div>
+      <div id="phone-head">
+        <button id="phone-back" type="button">←</button>
+        <div id="phone-title">📱 Tin nhắn</div>
+        <button id="phone-close" type="button">Đóng ✕</button>
+      </div>
+      <div id="phone-body"></div>
+      <div id="phone-replies"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Cài đặt -->
+<div class="modal" id="modal-settings">
+  <div class="modal-card">
+    <h3>⚙️ Cài đặt</h3>
+    <div class="sub">Cài đặt âm thanh dùng chung cho toàn game (bản mẫu: lưu trong máy này).</div>
+    <div class="mrow"><span>🎵 Nhạc nền theo khu vực</span>
+      <label class="switch"><input type="checkbox" id="set-bgm-on"><span class="tr"></span></label></div>
+    <div class="mrow"><span>🔈 Âm lượng nhạc</span><input type="range" id="set-bgm-vol" min="0" max="100" step="1"></div>
+    <div class="mrow"><span>👗 Ngoại hình & tủ đồ</span>
+      <button class="btn ghost" id="set-style" type="button">Chỉnh ngoại hình</button></div>
+    <div class="mrow"><span>🎮 Chơi lại đoạn mẫu từ đầu</span>
+      <button class="btn ghost" id="set-restart" type="button">Chơi lại</button></div>
+    <div class="mrow"><span>📦 Phiên bản nội dung: <b id="set-content-ver">…</b></span>
+      <button class="btn ghost" id="set-news" type="button">🆕 Có gì mới</button></div>
+    <div class="btnrow"><button class="btn primary" id="set-close" type="button">Xong</button></div>
+  </div>
+</div>
+
+<!-- Có gì mới — nhật ký các đợt cập nhật nội dung (đọc từ bản kê gói, không chép tay) -->
+<div class="modal" id="modal-news">
+  <div class="modal-card">
+    <h3>🆕 Có gì mới</h3>
+    <div class="sub">Nội dung game được phát hành theo từng <b>gói dữ liệu</b> — mỗi đợt thêm bản đồ, cảnh hay sự kiện mới đều ghi ở đây. Phiên bản nội dung hiện tại: <b id="news-cur-ver">…</b></div>
+    <div id="news-list"></div>
+    <div class="btnrow"><button class="btn primary" id="news-close" type="button">Đóng</button></div>
+  </div>
+</div>
+
+<!-- Điểm nghe ở địa điểm (listen.js dựng nội dung) -->
+<div class="modal" id="modal-spotlisten">
+  <div class="modal-card">
+    <h3 id="spotlisten-title">🎧 Điểm nghe</h3>
+    <div class="sub">Nghe ghi âm thật (VOICEVOX) rồi trả lời. Lời thoại gốc chỉ hiện sau khi trả lời đúng để học lại.</div>
+    <button class="play-big" id="spotlisten-play" type="button">▶ Nghe <span class="eq" id="spotlisten-eq">Nhấn để phát</span></button>
+    <div style="font-size:16px;font-weight:700;margin:10px 0;line-height:1.5" id="spotlisten-q">…</div>
+    <div id="spotlisten-opts"></div>
+    <div class="fb-line" id="spotlisten-fb"></div>
+    <div class="sub" id="spotlisten-script" style="display:none"></div>
+    <div class="btnrow"><button class="btn primary" id="spotlisten-close" type="button" style="display:none">Xong ▶</button></div>
+  </div>
+</div>
+
+<!-- Câu hỏi nghe -->
+<div class="modal" id="modal-listen">
+  <div class="modal-card">
+    <h3>🎧 Câu hỏi nghe — Thông báo ở ga</h3>
+    <div class="sub">Nghe đoạn phát thanh (giọng ghi âm thật) rồi trả lời: <b>電車は何番線に来ますか。</b> (Tàu đến ở sân ga số mấy?)</div>
+    <button class="play-big" id="listen-play" type="button">▶ Nghe thông báo <span class="eq" id="listen-eq">Nhấn để phát</span></button>
+    <div id="listen-opts"></div>
+    <div class="fb-line" id="listen-fb"></div>
+    <div class="btnrow"><button class="btn primary" id="listen-close" type="button" style="display:none">Đi tiếp ▶</button></div>
+  </div>
+</div>
+
+<!-- Quiz phân loại rác -->
+<div class="modal" id="modal-quiz">
+  <div class="modal-card">
+    <h3>🗑️ Phân loại rác kiểu Nhật</h3>
+    <div class="sub" id="quiz-prog">…</div>
+    <div style="font-size:19px;font-weight:800;margin-bottom:12px" id="quiz-item">…</div>
+    <div id="quiz-opts"></div>
+    <div class="fb-line" id="quiz-fb"></div>
+    <div class="btnrow"><button class="btn primary" id="quiz-close" type="button" style="display:none">Xong ▶</button></div>
+  </div>
+</div>
+
+<!-- Tổng kết giữa chặng (giữ nhịp bản mẫu — hiện sau quiz rác) -->
+<div class="modal" id="modal-summary">
+  <div class="modal-card">
+    <h3>📊 Tổng kết giữa chặng</h3>
+    <div class="sub">Những ngày đầu ở Nhật đã qua. Chỉ số đã thay đổi từ đầu tới giờ:</div>
+    <div id="sum-body"></div>
+    <div class="btnrow"><button class="btn primary" id="sum-close" type="button">Đi tiếp ▶</button></div>
+  </div>
+</div>
+
+<!-- Mốc thi N5 (1.14) — đề thật của web, cổng cuối Chương 1 -->
+<div class="modal" id="modal-exam">
+  <div class="modal-card">
+    <h3>🎓 Mốc thi JLPT N5 — cổng cuối Chương 1</h3>
+    <div class="sub">Đề 12 câu: chữ &amp; từ vựng 4 · ngữ pháp 4 · đọc hiểu 2 · NGHE 2 (ghi âm thật). Đỗ khi đúng ít nhất <b>7/12</b>. Trượt thì về phòng trọ ôn ở bàn học rồi thi lại (lệ phí thi lại 7.500 yên) — không bao giờ kẹt.</div>
+    <div class="sub" id="exam-prog">…</div>
+    <div style="font-size:17px;font-weight:700;margin-bottom:12px;line-height:1.55" id="exam-q">…</div>
+    <div id="exam-opts"></div>
+    <div class="fb-line" id="exam-fb"></div>
+    <div class="btnrow">
+      <button class="btn primary" id="exam-next" type="button" style="display:none">Câu tiếp ▶</button>
+      <button class="btn primary" id="exam-chapter" type="button" style="display:none">🏆 Xem tổng kết Chương 1</button>
+      <button class="btn" id="exam-close" type="button">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tổng kết Chương 1 -->
+<div class="modal" id="modal-chapter">
+  <div class="modal-card">
+    <h3>🎉 Hoàn thành Chương 1 — Lớ ngớ</h3>
+    <div class="sub">Từ sân bay nước mắt tới mốc N5 đầu tiên — bạn đã đứng vững những bước đầu ở Nhật.</div>
+    <div id="ch1-detail"></div>
+    <div class="btnrow"><button class="btn primary" id="chapter-next" type="button">▶ Sang Chương 2 — Vào guồng</button></div>
+  </div>
+</div>
+
+<!-- Ngoại hình & tủ đồ (style.js dựng nội dung) -->
+<div class="modal" id="modal-style">
+  <div class="modal-card" id="style-card"></div>
+</div>
+
+<!-- Đi tàu (life.js dựng nội dung) + huy hiệu mùa trên HUD -->
+<div class="modal" id="modal-travel">
+  <div class="modal-card" id="travel-card"></div>
+</div>
+
+<!-- Siêu thị: kệ hàng / thanh toán / tủ lạnh (market.js dựng nội dung) -->
+<div class="modal" id="modal-market">
+  <div class="modal-card" id="market-card"></div>
+</div>
+
+<!-- Quầy mua sắm trong trung tâm thương mại (style.js dựng nội dung) -->
+<div class="modal" id="modal-shop">
+  <div class="modal-card" id="shop-card"></div>
+</div>
+
+<div id="toast"></div>
+
+<!-- Màn hình bắt đầu -->
+<div id="start-overlay">
+  <div class="start-card">
+    <div class="start-title">📖 TUỔI TRẺ Ở NHẬT</div>
+    <div class="start-sub"><b>Bản mẫu 2D chơi được</b> để duyệt cả 3 mặt: <b>bối cảnh</b> giống hệt Nhật + mở đầu ở Việt Nam (sân bay chia tay gia đình & người yêu → máy bay → phòng trọ, đường phố, ga, combini, nhà hàng, shiyakusho, phố mua sắm và thêm koban, bệnh viện, ngân hàng, bưu điện, siêu thị, công viên, karaoke, quán nhậu, nơi làm kaigo, chùa, trường tiếng) · <b>cách chơi</b> (chia tay ở sân bay → ngày đầu ở Nhật: gặp Hùng → diễn kaiwa combini → tin nhắn điện thoại → câu hỏi nghe ghi âm → phân loại rác) · <b>giao diện</b> thật của game. Chơi được trên cả điện thoại và máy tính.</div>
+    <label class="start-label" for="inp-name">✍️ Nhân vật chính tên là gì?</label>
+    <input id="inp-name" type="text" maxlength="20" placeholder="Tên hiển thị của anh/chị" autocomplete="off">
+    <div class="start-note">Trên web thật, tên lấy theo tên hiển thị của tài khoản; ở bản mẫu này anh/chị tự điền để xem trước.</div>
+    <div class="gender-row">
+      <button class="gender-btn" data-g="M" type="button">👦 Tuyến nam</button>
+      <button class="gender-btn" data-g="F" type="button">👧 Tuyến nữ</button>
+    </div>
+    <button id="btn-start" type="button">▶ Bắt đầu — ngày lên đường ở sân bay</button>
+    <div class="start-note">Đi lại: chạm / nhấp chuột vào nơi muốn tới (nhân vật tự tìm đường) — không còn nút điều hướng ảo; máy tính thêm WASD / phím mũi tên. Tên mỗi nơi đọc ngay trên biển hiệu gắn trên tòa nhà/cổng trong bản đồ.</div>
+  </div>
+</div>
+
+<script src="content.js"></script>
+<script src="data.js"></script>
+<script src="data-opening.js"></script>
+<script src="scenes-a.js"></script>
+<script src="scenes-b.js"></script>
+<script src="scenes-c.js"></script>
+<script src="scenes-d.js"></script>
+<script src="scenes-d1.js"></script>
+<script src="scenes-d2.js"></script>
+<script src="scenes-d3.js"></script>
+<script src="scenes-e.js"></script>
+<script src="scenes-f.js"></script>
+<script src="scenes-g.js"></script>
+<script src="scenes-h.js"></script>
+<script src="scenes-i.js"></script>
+<script src="scenes-j.js"></script>
+<script src="exam-n5.js"></script>
+<script src="exam-n4.js"></script>
+<script src="listen.js"></script>
+<script src="sprites.js"></script>
+<script src="maps-core.js"></script>
+<script src="maps-airport.js"></script>
+<script src="maps-plane.js"></script>
+<script src="maps-street.js"></script>
+<script src="maps-station.js"></script>
+<script src="maps-combini.js"></script>
+<script src="maps-restaurant.js"></script>
+<script src="maps-room.js"></script>
+<script src="maps-shiyakusho.js"></script>
+<script src="maps-shotengai.js"></script>
+<script src="maps-koban.js"></script>
+<script src="maps-bank.js"></script>
+<script src="maps-post.js"></script>
+<script src="maps-hospital.js"></script>
+<script src="maps-supermarket.js"></script>
+<script src="maps-park.js"></script>
+<script src="maps-karaoke.js"></script>
+<script src="maps-izakaya.js"></script>
+<script src="maps-kaigo.js"></script>
+<script src="maps-temple.js"></script>
+<script src="maps-school.js"></script>
+<script src="maps-genba.js"></script>
+<script src="maps-shokuhin.js"></script>
+<script src="maps-seizo.js"></script>
+<script src="maps-nogyo.js"></script>
+<script src="maps-hotel.js"></script>
+<script src="maps-soko.js"></script>
+<script src="maps-seibi.js"></script>
+<script src="maps-kitchen.js"></script>
+<script src="maps-shop.js"></script>
+<script src="maps-mall.js"></script>
+<script src="places.js"></script>
+<script src="content-manifest.js"></script>
+<script src="engine.js"></script>
+<script src="bgm.js"></script>
+<script src="game-ui.js"></script>
+<script src="phone.js"></script>
+<script src="story.js"></script>
+<script src="style.js"></script>
+<script src="market.js"></script>
+<script src="life.js"></script>
+<script src="econ-preview.js"></script>
+<script src="rel.js"></script>
+<script src="relations.js"></script>
+</body>
+</html>
