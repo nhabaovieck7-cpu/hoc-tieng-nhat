@@ -1,0 +1,268 @@
+{
+  "feature": "daily-test",
+  "date": "2026-11-01",
+  "level": "N3",
+  "duration_minutes": 25,
+  "questions": [
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "将来のために、毎日努力しています。「努力」の読み方として正しいものはどれですか。",
+      "choices": [
+        "どりき",
+        "どりょく",
+        "どりょう",
+        "とりょく"
+      ],
+      "answer": 1,
+      "explain_vi": "努力 đọc là どりょく, nghĩa là sự nỗ lực. Đây là từ thường gặp ở trình độ N3."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "「けんか」の漢字として正しいものはどれですか。",
+      "choices": [
+        "喧華",
+        "見嘩",
+        "見解",
+        "喧嘩"
+      ],
+      "answer": 3,
+      "explain_vi": "けんか viết là 喧嘩, nghĩa là cãi nhau. Cần chú ý chữ 喧 và 嘩, không nhầm với các chữ trông giống."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "彼は約束を（ ）、必ず来ます。",
+      "choices": [
+        "守る",
+        "破る",
+        "忘れる",
+        "遅れる"
+      ],
+      "answer": 0,
+      "explain_vi": "Giữ lời hứa dùng 守る: 約束を守る nghĩa là giữ lời hẹn. 破る là phá vỡ, 忘れる là quên, đều trái với ý câu."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "彼はみんなに（ ）人です。",
+      "choices": [
+        "疑われる",
+        "忘れられる",
+        "信頼される",
+        "怒られる"
+      ],
+      "answer": 2,
+      "explain_vi": "Được mọi người tin tưởng dùng 信頼される. 疑われる là bị nghi ngờ, 怒られる là bị mắng, đều không hợp với ý tích cực của câu."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "急に雨が降ってきたので、（ ）家に帰った。",
+      "choices": [
+        "急いで",
+        "ゆっくり",
+        "静かに",
+        "少しずつ"
+      ],
+      "answer": 0,
+      "explain_vi": "Vì mưa bất chợt nên phải về vội, dùng 急いで. ゆっくり là thong thả, 静かに là yên lặng, không hợp với tình huống gấp gáp."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "電気代を（ ）ために、使わない部屋の電気を消します。",
+      "choices": [
+        "増やす",
+        "捨てる",
+        "借りる",
+        "節約する"
+      ],
+      "answer": 3,
+      "explain_vi": "Tiết kiệm tiền điện dùng 節約する. 増やす là tăng lên, 捨てる là vứt bỏ, đều trái với mục đích trong câu."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "この本は初心者にも（ ）書かれています。",
+      "choices": [
+        "難しく",
+        "分かりやすく",
+        "分かりにくく",
+        "長く"
+      ],
+      "answer": 1,
+      "explain_vi": "Sách viết dễ hiểu cho người mới dùng 分かりやすく. 分かりにくく là khó hiểu, 難しく là khó, đều trái với ý câu."
+    },
+    {
+      "level": "N3",
+      "section": "文字・語彙",
+      "question": "彼女は毎日日記を書く習慣があります。「習慣」の読み方として正しいものはどれですか。",
+      "choices": [
+        "しゅかん",
+        "しゅうがん",
+        "しゅうかん",
+        "しゅうか"
+      ],
+      "answer": 2,
+      "explain_vi": "習慣 đọc là しゅうかん, nghĩa là thói quen. Âm しゅう kéo dài và chữ 慣 đọc là かん, cần đọc đủ cả hai phần."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "彼はもう帰った（ ）です。",
+      "choices": [
+        "はずだ",
+        "べきだ",
+        "かもしれない",
+        "ためだ"
+      ],
+      "answer": 2,
+      "explain_vi": "Phỏng đoán có thể xảy ra dùng 〜かもしれない: 帰ったかもしれない nghĩa là có thể anh ấy đã về rồi."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "明日までにレポートを（ ）なければなりません。",
+      "choices": [
+        "出さ",
+        "出し",
+        "出して",
+        "出す"
+      ],
+      "answer": 0,
+      "explain_vi": "Phải làm gì dùng 〜なければなりません với thể ない: 出さなければなりません nghĩa là phải nộp báo cáo."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "彼女は忙しい（ ）、いつも笑顔です。",
+      "choices": [
+        "から",
+        "ため",
+        "なら",
+        "のに"
+      ],
+      "answer": 3,
+      "explain_vi": "Dù… nhưng… dùng 〜のに: 忙しいのに nghĩa là dù bận rộn, cô ấy vẫn luôn mỉm cười."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "毎日練習したので、日本語が話せる（ ）なりました。",
+      "choices": [
+        "ような",
+        "ように",
+        "ようで",
+        "ようと"
+      ],
+      "answer": 1,
+      "explain_vi": "Trở nên có thể làm gì dùng 〜ようになる: 話せるようになりました nghĩa là đã trở nên nói được tiếng Nhật."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "この映画は見る（ ）があります。",
+      "choices": [
+        "意味",
+        "理由",
+        "予定",
+        "価値"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáng để xem dùng 価値がある: 見る価値がある nghĩa là bộ phim đáng xem. 意味 là ý nghĩa, 理由 là lý do, không hợp với mẫu câu này."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "雨が降っている（ ）、試合は行われます。",
+      "choices": [
+        "にもかかわらず",
+        "ために",
+        "ばかり",
+        "そうに"
+      ],
+      "answer": 0,
+      "explain_vi": "Dù… vẫn… ở mức trang trọng dùng 〜にもかかわらず: 雨が降っているにもかかわらず nghĩa là dù trời đang mưa, trận đấu vẫn diễn ra."
+    },
+    {
+      "level": "N3",
+      "section": "文法",
+      "question": "彼は来る（ ）言っていました。",
+      "choices": [
+        "が",
+        "を",
+        "と",
+        "で"
+      ],
+      "answer": 2,
+      "explain_vi": "Trích dẫn lời nói dùng 〜と: 来ると言っていました nghĩa là anh ấy đã nói rằng sẽ đến."
+    },
+    {
+      "level": "N3",
+      "section": "読解",
+      "question": "ゆかりさんはみどり市に住んでいます。毎朝六時に起きて、駅前の花屋で働いています。仕事は午前九時から午後五時までです。休みの日は、近くの川で散歩をしたり、友だちと料理を作ったりします。先月、新しい自転車を買いました。自転車で行くと、会社まで十五分かかります。\nゆかりさんはどこで働いていますか。",
+      "choices": [
+        "川の近く",
+        "駅前の花屋",
+        "料理教室",
+        "自転車屋"
+      ],
+      "answer": 1,
+      "explain_vi": "Đoạn văn nói 駅前の花屋で働いています, tức Yukari làm việc ở tiệm hoa trước ga. Sông là nơi đi dạo, không phải nơi làm việc."
+    },
+    {
+      "level": "N3",
+      "section": "読解",
+      "question": "ゆかりさんはみどり市に住んでいます。毎朝六時に起きて、駅前の花屋で働いています。仕事は午前九時から午後五時までです。休みの日は、近くの川で散歩をしたり、友だちと料理を作ったりします。先月、新しい自転車を買いました。自転車で行くと、会社まで十五分かかります。\n仕事は何時から何時までですか。",
+      "choices": [
+        "午前六時から午後五時まで",
+        "午前九時から午後九時まで",
+        "午前六時から午後九時まで",
+        "午前九時から午後五時まで"
+      ],
+      "answer": 3,
+      "explain_vi": "Đoạn văn nói 仕事は午前九時から午後五時までです, tức làm việc từ 9 giờ sáng đến 5 giờ chiều. Sáu giờ sáng là giờ thức dậy."
+    },
+    {
+      "level": "N3",
+      "section": "読解",
+      "question": "ゆかりさんはみどり市に住んでいます。毎朝六時に起きて、駅前の花屋で働いています。仕事は午前九時から午後五時までです。休みの日は、近くの川で散歩をしたり、友だちと料理を作ったりします。先月、新しい自転車を買いました。自転車で行くと、会社まで十五分かかります。\n自転車で行くと、会社まで何分かかりますか。",
+      "choices": [
+        "十五分",
+        "五分",
+        "九分",
+        "五十分"
+      ],
+      "answer": 0,
+      "explain_vi": "Đoạn văn nói 自転車で行くと、会社まで十五分かかります, tức đi xe đạp đến công ty mất 15 phút."
+    },
+    {
+      "level": "N3",
+      "section": "読解",
+      "question": "あさひ公民館は、水曜日から月曜日まで開いています。火曜日は休みです。午前十時から午後八時までです。料理教室は毎週土曜日の午後にあります。参加費は一人五百円です。申し込みは前の日までにしてください。\nあさひ公民館は何曜日に休みですか。",
+      "choices": [
+        "月曜日",
+        "水曜日",
+        "火曜日",
+        "土曜日"
+      ],
+      "answer": 2,
+      "explain_vi": "Đoạn văn nói 火曜日は休みです, tức trung tâm nghỉ thứ Ba. Thứ Bảy là ngày có lớp nấu ăn, không phải ngày nghỉ."
+    },
+    {
+      "level": "N3",
+      "section": "読解",
+      "question": "あさひ公民館は、水曜日から月曜日まで開いています。火曜日は休みです。午前十時から午後八時までです。料理教室は毎週土曜日の午後にあります。参加費は一人五百円です。申し込みは前の日までにしてください。\n料理教室の参加費はいくらですか。",
+      "choices": [
+        "千円",
+        "五百円",
+        "無料",
+        "五千円"
+      ],
+      "answer": 1,
+      "explain_vi": "Đoạn văn nói 参加費は一人五百円です, tức phí tham gia lớp nấu ăn là 500 yên mỗi người."
+    }
+  ]
+}
