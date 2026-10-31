@@ -1285,3 +1285,28 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
 .mn-time{margin-left:auto;flex:none;font-size:11.5px;color:var(--m)}
 .mn-post-b{font-size:13px;color:var(--m);line-height:1.5;margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .mn-post:hover .mn-post-h b{color:var(--shu)}
+
+/* ===== V3 FINAL 4 — SỬA 3 LỖI CHỦ TRANG PHÀN NÀN (01/11/2026) =====
+   1) Trang chủ bỏ cơ chế tab ht-panel (sửa trong index.html): Kaiwa và
+      Luyện tập thêm luôn hiện như mẫu, không còn bị giấu sau tab.
+   2) Mobile: thứ tự khối đúng mẫu v3-mobile (Học tiếp → Khóa học →
+      Top tuần → Mỗi ngày → Luyện tập thêm → Tin tức → Kaiwa): mở hai
+      cột thành một dòng chảy duy nhất bằng display:contents rồi gán
+      order cho từng khối. Desktop giữ nguyên bố cục hai cột.
+   3) Desktop: khối Tin tức (#homeNews) cao BẰNG khối Top tuần — hàm
+      hnFit trong index.html chỉnh số tin hiện sẵn + chốt chiều cao
+      khối; ở đây cho thẻ tin giãn đầy chiều cao khối để đáy hai khối
+      ngang nhau. */
+@media(max-width:899px){
+  .layout>.col-main,.layout>.col-side{display:contents}
+  #hoctiep{order:1}
+  #khoahoc{order:2}
+  #topWeek{order:3}
+  #moingay{order:4}
+  #tinhnang{order:5}
+  #homeNews{order:6}
+}
+@media(min-width:900px){
+  #homeNews{display:flex;flex-direction:column}
+  #homeNews>.hnx-card{flex:1 1 auto}
+}
