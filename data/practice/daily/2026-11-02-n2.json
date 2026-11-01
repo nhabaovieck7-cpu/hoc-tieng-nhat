@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-02",
+  "duration_minutes": 25,
+  "feature": "daily-test",
+  "level": "N2",
+  "questions": [
+    {
+      "answer": 1,
+      "choices": [
+        "けんねん",
+        "けねん",
+        "けね",
+        "けんえん"
+      ],
+      "explain_vi": "懸念 đọc là けねん, nghĩa là nỗi lo lắng, sự lo ngại về một việc có thể xảy ra.",
+      "level": "N2",
+      "question": "次の漢字の読み方として、最もよいものを選びなさい。「新しい制度に対する懸念が広がっている。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 2,
+      "choices": [
+        "明確",
+        "簡潔",
+        "曖昧",
+        "適切"
+      ],
+      "explain_vi": "曖昧（あいまい）nghĩa là mơ hồ, không rõ ràng. Câu nói trả lời mơ hồ nên người nghe không biết rốt cuộc anh ấy sẽ làm gì.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「彼の返事は（　）で、結局どうするのか分からなかった。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 0,
+      "choices": [
+        "惜しい",
+        "借しい",
+        "惜し",
+        "惜い"
+      ],
+      "explain_vi": "おしい trong nghĩa tiếc nuối viết là 惜しい. Các phương án còn lại không phải cách viết đúng của từ này.",
+      "level": "N2",
+      "question": "次の文のひらがなの部分を漢字に直すとき、最もよいものを選びなさい。「試合に負けて、とてもおしい。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 3,
+      "choices": [
+        "やめること",
+        "見守ること",
+        "任せること",
+        "真剣に進めること"
+      ],
+      "explain_vi": "取り組む nghĩa là bắt tay vào, nỗ lực giải quyết một việc. Vì vậy nghĩa gần nhất là 真剣に進めること.",
+      "level": "N2",
+      "question": "次の文の「取り組む」の意味として最も近いものはどれですか。「彼は新しい事業に取り組んでいる。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 1,
+      "choices": [
+        "さまたった",
+        "さまたげた",
+        "さまたえた",
+        "ぼうげた"
+      ],
+      "explain_vi": "妨げる đọc là さまたげる, dạng quá khứ là さまたげた, nghĩa là cản trở, gây trở ngại.",
+      "level": "N2",
+      "question": "次の漢字の読み方として、最もよいものを選びなさい。「大雨が工事を妨げた。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 2,
+      "choices": [
+        "いいかげんに",
+        "安易に",
+        "注意深く",
+        "急いで"
+      ],
+      "explain_vi": "慎重に nghĩa là một cách cẩn thận, thận trọng. Từ gần nghĩa nhất là 注意深く.",
+      "level": "N2",
+      "question": "次の文の「慎重に」の意味として最も近いものはどれですか。「彼女は慎重に計画を立てた。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 3,
+      "choices": [
+        "具体的",
+        "簡潔",
+        "明確",
+        "抽象的"
+      ],
+      "explain_vi": "抽象的（ちゅうしょうてき）nghĩa là trừu tượng, chung chung. Vì lời giải thích quá trừu tượng nên người nói muốn có ví dụ cụ thể.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「この説明は（　）すぎて、具体的な例がほしい。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 0,
+      "choices": [
+        "きよ",
+        "きょう",
+        "きょ",
+        "よき"
+      ],
+      "explain_vi": "寄与 đọc là きよ, nghĩa là đóng góp, góp phần vào sự phát triển của một việc gì đó.",
+      "level": "N2",
+      "question": "次の漢字の読み方として、最もよいものを選びなさい。「研究の発展に寄与する。」",
+      "section": "文字・語彙"
+    },
+    {
+      "answer": 2,
+      "choices": [
+        "わけにはいかない",
+        "べきだ",
+        "ざるを得ない",
+        "に決まっている"
+      ],
+      "explain_vi": "行かざるを得ない nghĩa là không còn cách nào khác ngoài việc đi. Mẫu này diễn tả sự bắt buộc vì hoàn cảnh, phù hợp với 約束した以上.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「約束した以上、行か（　）。」",
+      "section": "文法"
+    },
+    {
+      "answer": 0,
+      "choices": [
+        "かねない",
+        "ざるを得ない",
+        "にすぎない",
+        "わけがない"
+      ],
+      "explain_vi": "起こりかねない nghĩa là có khả năng xảy ra, thường dùng cho kết quả xấu có thể xảy ra. Đây là mẫu N2 diễn tả khả năng tiêu cực.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「このままでは、事故が起こり（　）。」",
+      "section": "文法"
+    },
+    {
+      "answer": 3,
+      "choices": [
+        "にすぎない",
+        "わけがない",
+        "ざるを得ない",
+        "に越したことはない"
+      ],
+      "explain_vi": "〜に越したことはない nghĩa là làm như vậy là tốt nhất, không có gì tốt hơn. Chuẩn bị sớm là lựa chọn tốt nhất nên dùng mẫu này.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「早めに準備しておく（　）。」",
+      "section": "文法"
+    },
+    {
+      "answer": 1,
+      "choices": [
+        "に伴って",
+        "を機に",
+        "ばかりか",
+        "につれて"
+      ],
+      "explain_vi": "〜を機に nghĩa là nhân cơ hội, nhân dịp một sự việc nào đó. Việc chuyển nhà là dịp để thay đồ nội thất nên dùng を機に.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「引っ越し（　）、家具を買い替えた。」",
+      "section": "文法"
+    },
+    {
+      "answer": 3,
+      "choices": [
+        "だけでなく",
+        "しか",
+        "だけ",
+        "ばかりか"
+      ],
+      "explain_vi": "〜ばかりか、〜も nghĩa là không chỉ... mà còn... Mẫu này nhấn mạnh rằng ngoài tiếng Anh, anh ấy còn nói được tiếng Pháp.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「彼は英語（　）、フランス語も話せる。」",
+      "section": "文法"
+    },
+    {
+      "answer": 0,
+      "choices": [
+        "に伴って",
+        "を機に",
+        "かねない",
+        "に越したことはない"
+      ],
+      "explain_vi": "〜に伴って nghĩa là cùng với, theo cùng với sự thay đổi nào đó. Lượng giao thông tăng lên cùng với sự tăng dân số nên dùng に伴って.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「人口の増加（　）、交通量も増えた。」",
+      "section": "文法"
+    },
+    {
+      "answer": 2,
+      "choices": [
+        "ざるを得ない",
+        "にすぎない",
+        "つつある",
+        "わけがない"
+      ],
+      "explain_vi": "〜つつある nghĩa là đang dần dần thay đổi. Kỹ năng của anh ấy đang dần được nâng cao nên dùng 向上しつつある.",
+      "level": "N2",
+      "question": "次の文の（　）に入れるのに最もよいものを選びなさい。「彼の技術は少しずつ向上し（　）。」",
+      "section": "文法"
+    },
+    {
+      "answer": 1,
+      "choices": [
+        "駅前の本屋",
+        "市立図書館",
+        "小学校",
+        "公園"
+      ],
+      "explain_vi": "Đoạn văn nói 市立図書館で働いており, tức Satoshi làm việc ở thư viện thành phố. Các địa điểm còn lại không được nhắc đến như nơi làm việc.",
+      "level": "N2",
+      "question": "さとしさんはあおぞら市に住んでいます。市立図書館で働いており、朝九時から夕方六時まで勤務しています。通勤には自転車を使い、家から図書館まで二十分ほどかかります。休みの日には、地域センターで子どもたちに本を読むボランティアをしています。先月、図書館の読書会が始まり、さとしさんはその企画を担当することになりました。読書会は毎月第一土曜日に開かれ、参加者は少しずつ増えています。\nさとしさんはどこで働いていますか。",
+      "section": "読解"
+    },
+    {
+      "answer": 3,
+      "choices": [
+        "山登り",
+        "買い物",
+        "料理教室",
+        "地域センターで子どもに本を読むボランティア"
+      ],
+      "explain_vi": "Đoạn văn nói 休みの日には、地域センターで子どもたちに本を読むボランティアをしています, tức vào ngày nghỉ anh ấy làm tình nguyện đọc sách cho trẻ em ở trung tâm cộng đồng.",
+      "level": "N2",
+      "question": "さとしさんはあおぞら市に住んでいます。市立図書館で働いており、朝九時から夕方六時まで勤務しています。通勤には自転車を使い、家から図書館まで二十分ほどかかります。休みの日には、地域センターで子どもたちに本を読むボランティアをしています。先月、図書館の読書会が始まり、さとしさんはその企画を担当することになりました。読書会は毎月第一土曜日に開かれ、参加者は少しずつ増えています。\nさとしさんは休みの日に何をしていますか。",
+      "section": "読解"
+    },
+    {
+      "answer": 0,
+      "choices": [
+        "自転車",
+        "バス",
+        "電車",
+        "歩いて"
+      ],
+      "explain_vi": "Đoạn văn nói 通勤には自転車を使い, tức Satoshi đi làm bằng xe đạp, mất khoảng hai mươi phút từ nhà đến thư viện.",
+      "level": "N2",
+      "question": "さとしさんはあおぞら市に住んでいます。市立図書館で働いており、朝九時から夕方六時まで勤務しています。通勤には自転車を使い、家から図書館まで二十分ほどかかります。休みの日には、地域センターで子どもたちに本を読むボランティアをしています。先月、図書館の読書会が始まり、さとしさんはその企画を担当することになりました。読書会は毎月第一土曜日に開かれ、参加者は少しずつ増えています。\nさとしさんは何で通勤していますか。",
+      "section": "読解"
+    },
+    {
+      "answer": 2,
+      "choices": [
+        "去年",
+        "3年前",
+        "2年前",
+        "5年前"
+      ],
+      "explain_vi": "Đoạn văn nói カフェを開いて、二年が経ちました, tức quán cà phê đã mở được hai năm, nghĩa là mở cách đây hai năm.",
+      "level": "N2",
+      "question": "みさきさんはほしみ町で小さなカフェを開いて、二年が経ちました。カフェでは、地元の果物を使った季節のケーキが人気です。開店当初は客が少なかったのですが、口コミで少しずつ知られるようになり、今では週末には行列ができるほどです。みさきさんは来月から、新しい季節のメニューを増やす予定です。材料はできるだけ地元の農家から仕入れ、地域とのつながりを大切にしたいと考えています。\nみさきさんのカフェはいつ開かれましたか。",
+      "section": "読解"
+    },
+    {
+      "answer": 1,
+      "choices": [
+        "店を閉める",
+        "新しい季節のメニューを増やす",
+        "引っ越す",
+        "従業員を減らす"
+      ],
+      "explain_vi": "Đoạn văn nói 来月から、新しい季節のメニューを増やす予定です, tức từ tháng tới Misaki dự định tăng thêm thực đơn theo mùa mới.",
+      "level": "N2",
+      "question": "みさきさんはほしみ町で小さなカフェを開いて、二年が経ちました。カフェでは、地元の果物を使った季節のケーキが人気です。開店当初は客が少なかったのですが、口コミで少しずつ知られるようになり、今では週末には行列ができるほどです。みさきさんは来月から、新しい季節のメニューを増やす予定です。材料はできるだけ地元の農家から仕入れ、地域とのつながりを大切にしたいと考えています。\nみさきさんは今後何をする予定ですか。",
+      "section": "読解"
+    }
+  ]
+}
