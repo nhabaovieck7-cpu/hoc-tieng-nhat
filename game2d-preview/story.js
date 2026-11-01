@@ -50,6 +50,10 @@
       sched: [],                     // sự kiện chờ: {id, at (mốc doneScenes), fired}
       exam: { attempts: 0, passed: false, best: 0, needReview: false },       // mốc thi N5 (1.14)
       exam2: { attempts: 0, passed: false, best: 0, needReview: false },      // mốc thi N4 (cuối Chương 2 — cùng khuôn N5)
+      exam3: { attempts: 0, passed: false, best: 0, needReview: false },      // mốc thi N3 (cuối Chương 3 — đợt SAGA 01/11)
+      exam4: { attempts: 0, passed: false, best: 0, needReview: false },      // mốc thi N2 (cuối Chương 4 — đợt SAGA)
+      exam5: { attempts: 0, passed: false, best: 0, needReview: false },      // mốc thi N1 (cuối Chương 5 — đợt SAGA)
+      saga: null,                    // TRẠNG THÁI TRUYỆN CHƯƠNG 3–5 (story2.js): {route, industry, indStage, interview, nyukan, c4, c5, ending…} — bản lưu cũ không có → null, story2.js tự dựng mặc định
       xp: 0, visited: []
     };
   }
@@ -73,7 +77,7 @@
         story: pubStory(),
         runtime: {
           chapter: S.chapter, flags: S.flags, book: S.book, tenancy: S.tenancy, ch2: S.ch2,
-          sched: S.sched, exam: S.exam, exam2: S.exam2, xp: S.xp, visited: S.visited, style: S.style, pantry: S.pantry, life: S.life, rel: S.rel
+          sched: S.sched, exam: S.exam, exam2: S.exam2, exam3: S.exam3, exam4: S.exam4, exam5: S.exam5, saga: S.saga, xp: S.xp, visited: S.visited, style: S.style, pantry: S.pantry, life: S.life, rel: S.rel
         },
         stats: window.GAMEUI ? window.GAMEUI.stats() : null,
         map: map, visitedMaps: S.visited.slice(), doneScenes: S.doneScenes.slice(),
@@ -96,6 +100,8 @@
       Object.assign(st.flags, r.flags || {}); Object.assign(st.book, r.book || {});
       Object.assign(st.tenancy, r.tenancy || {}); Object.assign(st.exam, r.exam || {});
       Object.assign(st.ch2, r.ch2 || {}); Object.assign(st.exam2, r.exam2 || {});   // bản lưu cũ (chưa có ch2/exam2) → nhận mặc định sạch từ newState()
+      Object.assign(st.exam3, r.exam3 || {}); Object.assign(st.exam4, r.exam4 || {}); Object.assign(st.exam5, r.exam5 || {});   // bản lưu cũ (chưa có exam3/4/5) → mặc định sạch
+      st.saga = (r.saga && typeof r.saga === 'object') ? r.saga : null;          // bản lưu cũ chưa có saga → null, story2.js tự dựng mặc định
       st.style = (r.style && typeof r.style === 'object') ? r.style : null;          // bản lưu cũ chưa có style → null, style.js tự dựng mặc định
       st.pantry = (r.pantry && typeof r.pantry === 'object') ? r.pantry : null;      // bản lưu cũ chưa có pantry → null, market.js tự dựng kho trống
       st.life = (r.life && typeof r.life === 'object') ? r.life : null;               // bản lưu cũ chưa có life → null, life.js tự dựng mặc định
@@ -160,6 +166,7 @@
   function advanceObjective() {
     var f = S.flags;
     if (S.chapter >= 3) {
+      if (window.SAGA && window.SAGA.objective && window.SAGA.objective()) return;   // truyện chính Ch3–5 (story2.js) — tự nhường khi arc tình cảm Ch3 chưa ngã ngũ
       if (window.REL && window.REL.objective && window.REL.objective()) return;   // tuyến tình cảm Ch3 (rel.js) dẫn nhịp ở chương này
       window.GAMEUI.setObjective('🌸 Chương 3 «Ngã rẽ» sẽ mở ở đợt truyện sau — thong thả khám phá các khu phố quanh nhà, ôn lại bài cũ, chờ những lựa chọn lớn');
       return;
@@ -311,7 +318,11 @@
       stopExamAudio();   // Lane AC: vào tổng kết là clip thi phải im — không chảy sang cảnh mở chương
       $('modal-exam').classList.remove('show');
       examRun = null;
-      if (examDoneLevel === 'N4') completeChapter2(); else completeChapter1();
+      if (examDoneLevel === 'N4') completeChapter2();
+      else if (examDoneLevel === 'N3') completeChapter3();
+      else if (examDoneLevel === 'N2') completeChapter4();
+      else if (examDoneLevel === 'N1') { if (window.SAGA) window.SAGA.finishGame(); }
+      else completeChapter1();
     });
     var cn = $('chapter-next');
     if (cn) cn.addEventListener('click', function () {
@@ -321,7 +332,7 @@
       S.chapter = target;
       save();
       advanceObjective();
-      setTimeout(function () { if (window.__demo) window.__demo.scene(target === 3 ? 'ch3-opening' : 'ch2-opening'); }, 600);
+      setTimeout(function () { if (window.__demo) window.__demo.scene('ch' + target + '-opening'); }, 600);   // đợt SAGA: tổng quát hoá — ch2/ch3-opening giữ nguyên id, thêm ch4/ch5-opening
     });
   });
 
@@ -349,7 +360,8 @@
     if (window.PLAYER_LEVEL) return window.PLAYER_LEVEL.bank();
     return level === 'N4' ? window.EXAM_N4 : window.EXAM_N5;
   }
-  function examState(level) { return level === 'N4' ? S.exam2 : S.exam; }
+  function examState(level) { return level === 'N4' ? S.exam2 : level === 'N3' ? S.exam3 : level === 'N2' ? S.exam4 : level === 'N1' ? S.exam5 : S.exam; }
+  var GATE_CH = { 'N5': 1, 'N4': 2, 'N3': 3, 'N2': 4, 'N1': 5 };   // cấp mốc → chương mà nó chốt (đợt SAGA: thêm N3/N2/N1)
   function buildExamList(level) {
     var qLevel = chosenQLevel(level);
     var bank = examBank(level), bySec = {};
@@ -385,7 +397,7 @@
     }
     var qLevel = chosenQLevel(level);   // Lane Z: chốt trình độ câu hỏi tại thời điểm mở bài — đổi cài đặt giữa bài không tác động bài đang làm
     var h3 = document.querySelector('#modal-exam h3');
-    if (h3) h3.textContent = '🎓 Bài thi mốc · trình độ ' + qLevel + (level === 'N4' ? ' — cổng cuối Chương 2 (mốc JLPT N4)' : ' — cổng cuối Chương 1 (mốc JLPT N5)');
+    if (h3) h3.textContent = '🎓 Bài thi mốc · trình độ ' + qLevel + ' — cổng cuối Chương ' + (GATE_CH[level] || 1) + ' (mốc JLPT ' + level + ')';
     var sub = document.querySelector('#modal-exam .sub');
     if (sub) sub.innerHTML = '12 câu: từ vựng 4 · ngữ pháp 4 · đọc hiểu 2 · <b>NGHE 2</b> (nghe lại tối đa 2 lần/câu). Đỗ: đúng từ <b>7/12</b> — trượt thì ôn lại rồi thi lại (7.500 yên), không bao giờ kẹt.';
     examRun = { level: level, qLevel: qLevel, list: buildExamList(level), idx: 0, score: 0, locked: false, listenScore: 0, listenTotal: 0, plays: 0 };
@@ -445,6 +457,7 @@
     var level = examRun.level, st8 = examState(level);
     var score = examRun.score, total = examRun.list.length;
     var isN4 = level === 'N4';
+    var gateCh = GATE_CH[level] || 1;
     $('exam-prog').textContent = 'Kết quả bài thi mốc · trình độ ' + (examRun.qLevel || level) + ': ' + score + '/' + total + ' · Phần nghe: ' + examRun.listenScore + '/' + examRun.listenTotal;
     $('exam-opts').innerHTML = '';
     $('exam-next').style.display = 'none';
@@ -454,16 +467,26 @@
       st8.passed = true;
       if (window.BGM) window.BGM.mood('climax');   // Lane V: đỗ mốc thi -> nhạc cao trào (gỡ khi bấm nút sang chương)
       examDoneLevel = level;
-      addQuiz(isN4 ? 'exam-n4' : 'exam-n5');
-      $('exam-q').textContent = isN4
-        ? '🎉 ĐỖ MỐC N4! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — từ lớ ngớ ngày đầu tới nói được cả câu dài: bạn đã thật sự "vào guồng" rồi.'
-        : '🎉 ĐỖ MỐC N5! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — tiếng Nhật của bạn đã đủ đứng vững ở mức đầu tiên.';
-      fb.textContent = isN4
-        ? 'Thầy Khánh gật gù: "Một năm, hai mốc thi. Chương 2 khép lại ở đây — xem tổng kết chương nhé."'
-        : 'Thầy Khánh gật gù: "Đấy, sai thì sửa, sợ gì. Chương 1 khép lại ở đây — xem tổng kết chương nhé."';
+      addQuiz('exam-' + level.toLowerCase());
+      var PASS_TEXT = {
+        'N5': '🎉 ĐỖ MỐC N5! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — tiếng Nhật của bạn đã đủ đứng vững ở mức đầu tiên.',
+        'N4': '🎉 ĐỖ MỐC N4! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — từ lớ ngớ ngày đầu tới nói được cả câu dài: bạn đã thật sự "vào guồng" rồi.',
+        'N3': '🎉 ĐỖ MỐC N3! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — mốc giữa chặng: từ nay những câu dài, những buổi phỏng vấn thật không còn là nỗi sợ nữa.',
+        'N2': '🎉 ĐỖ MỐC N2! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — qua hết sóng gió mà tiếng Nhật vẫn đứng vững: cấp này là tấm vé của người đi làm thật sự ở Nhật.',
+        'N1': '🎉 ĐỖ MỐC N1! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — cấp cao nhất. Từ câu chào học vẹt ở sân bay Nội Bài tới hôm nay: cả một đời người gói trong một tờ kết quả.'
+      };
+      $('exam-q').textContent = PASS_TEXT[level] || PASS_TEXT['N5'];
+      var PASS_FB = {
+        'N5': 'Thầy Khánh gật gù: "Đấy, sai thì sửa, sợ gì. Chương 1 khép lại ở đây — xem tổng kết chương nhé."',
+        'N4': 'Thầy Khánh gật gù: "Một năm, hai mốc thi. Chương 2 khép lại ở đây — xem tổng kết chương nhé."',
+        'N3': 'Thầy Khánh gật gù: "Ngã rẽ đã chọn, mốc N3 đã qua. Chương 3 khép lại ở đây — xem tổng kết chương nhé."',
+        'N2': 'Thầy Khánh gật gù: "Sóng gió qua rồi. Còn một chương cuối — đi nốt cho trọn nhé."',
+        'N1': 'Thầy Khánh im lặng một lúc, rồi cười: "Hết bài để dạy rồi đấy. Giờ thì xem đời sẽ kết câu chuyện này thế nào nhé."'
+      };
+      fb.textContent = PASS_FB[level] || PASS_FB['N5'];
       fb.className = 'fb-line ok';
       var btn = $('exam-chapter');
-      btn.textContent = isN4 ? '🏆 Xem tổng kết Chương 2' : '🏆 Xem tổng kết Chương 1';
+      btn.textContent = level === 'N1' ? '🏁 Xem kết cục của bạn' : '🏆 Xem tổng kết Chương ' + gateCh;
       btn.style.display = '';
     } else {
       st8.needReview = true;
@@ -528,6 +551,58 @@
       '<div class="sum-row"><span>💗 Tình cảm</span><b>' + st.love + '</b></div>' +
       '<div class="sub" style="margin-top:10px">Sổ lời hứa: với gia đình — <b>' + promiseLabel(S.book.loiHuaGiaDinh) + '</b> · với Linh — <b>' + promiseLabel(S.book.loiHuaSanBay) + '</b>' + (S.book.quaLuuNiem ? ' · quà lưu niệm: <b>' + promiseLabel(S.book.quaLuuNiem) + '</b>' : '') + '</div>' +
       '<div class="sub">Chương 3 «Ngã rẽ» ở phía trước: những lựa chọn lớn về con đường ở Nhật — chọn sớm thì đi thong thả, chọn muộn thì chạy hụt hơi.</div>';
+    $('modal-chapter').classList.add('show');
+    save();
+  }
+
+  /* ================= TỔNG KẾT CHƯƠNG 3 → MỞ CHƯƠNG 4 (đợt SAGA 01/11) ================= */
+  var ROUTE_LABEL = { 'tokutei': 'Thi Tokutei — đi làm chuyên ngành', 'du-hoc': 'Du học tiếp lên trường chuyên môn', 've-nuoc': 'Về nước (kết thúc sớm)' };
+  function completeChapter3() {
+    if (!has(S.chaptersDone, 3)) { S.chaptersDone.push(3); S.xp += 150; }
+    S.chapterPct[3] = 100;
+    nextChapterTarget = 4;
+    setChapterModal('🎉 Hoàn thành Chương 3 — Ngã rẽ', 'Đường đã chọn, việc đã có, hồ sơ đã qua cửa nyukan. Từ đây, đời ở Nhật bước vào những năm sóng gió nhất — và đáng sống nhất.', '▶ Sang Chương 4 — Sóng gió');
+    var st = window.GAMEUI.stats(), sg = S.saga || {};
+    var indName = '—';
+    if (sg.route === 'tokutei' && window.SAGA && window.SAGA.industryName) indName = window.SAGA.industryName(sg.industry);
+    if (sg.route === 'du-hoc') indName = 'Trường chuyên môn (du học)';
+    $('ch1-detail').innerHTML =
+      '<div class="sum-row"><span>🎓 Mốc thi N3</span><b>' + S.exam3.best + '/12 (thi ' + S.exam3.attempts + ' lần)</b></div>' +
+      '<div class="sum-row"><span>🧭 Ngã rẽ đã chọn</span><b>' + (ROUTE_LABEL[sg.route] || '—') + '</b></div>' +
+      '<div class="sum-row"><span>🏭 Ngành / hướng đi</span><b>' + indName + '</b></div>' +
+      '<div class="sum-row"><span>💼 Phỏng vấn xin việc</span><b>' + (sg.interview && sg.interview.passed ? 'Đỗ (thi ' + sg.interview.attempts + ' lần)' : '—') + '</b></div>' +
+      '<div class="sum-row"><span>🎬 Cảnh đã trải qua</span><b>' + S.doneScenes.length + ' cảnh</b></div>' +
+      '<div class="sum-row"><span>⭐ XP truyện</span><b>' + S.xp + '</b></div>' +
+      '<div class="sum-row"><span>📚 Tiếng Nhật</span><b>' + st.jp + '</b></div>' +
+      '<div class="sum-row"><span>💴 Tiền</span><b>' + st.money.toFixed(2).replace('.', ',') + ' man</b></div>' +
+      '<div class="sum-row"><span>❤️ Sức khỏe</span><b>' + st.hp + '</b></div>' +
+      '<div class="sum-row"><span>💗 Tình cảm</span><b>' + st.love + '</b></div>' +
+      '<div class="sub" style="margin-top:10px">Sổ lời hứa: với gia đình — <b>' + promiseLabel(S.book.loiHuaGiaDinh) + '</b> · với người yêu ở quê — <b>' + promiseLabel(S.book.loiHuaSanBay) + '</b></div>' +
+      '<div class="sub">Chương 4 «Sóng gió» ở phía trước: visa của bạn bè, tiền bạc của gia đình, và những lời rủ rê cũ quay lại đúng lúc người ta mệt nhất…</div>';
+    $('modal-chapter').classList.add('show');
+    save();
+  }
+
+  /* ================= TỔNG KẾT CHƯƠNG 4 → MỞ CHƯƠNG 5 (đợt SAGA 01/11) ================= */
+  function completeChapter4() {
+    if (!has(S.chaptersDone, 4)) { S.chaptersDone.push(4); S.xp += 150; }
+    S.chapterPct[4] = 100;
+    nextChapterTarget = 5;
+    setChapterModal('🎉 Hoàn thành Chương 4 — Sóng gió', 'Bạn đã đi qua những năm dữ dội nhất của đời xa xứ — và vẫn còn đứng đây, bằng chính đôi chân của mình.', '▶ Sang Chương 5 — Lớn rồi');
+    var st = window.GAMEUI.stats(), c4 = (S.saga && S.saga.c4) || {};
+    $('ch1-detail').innerHTML =
+      '<div class="sum-row"><span>🎓 Mốc thi N2</span><b>' + S.exam4.best + '/12 (thi ' + S.exam4.attempts + ' lần)</b></div>' +
+      '<div class="sum-row"><span>🛂 Bạn thân trượt visa</span><b>' + (c4.farewell ? 'Đã tiễn nhau ở ga — một lời hứa hẹn gặp lại' : '—') + '</b></div>' +
+      '<div class="sum-row"><span>🌐 Tuyến kinh tế</span><b>' + (c4.econChoice === 'o-lai' ? 'Quyết ở lại giữa lúc giá cả leo thang' : c4.econChoice === 've' ? 'Đã tính đường về — nhưng chưa phải lúc này' : '—') + '</b></div>' +
+      '<div class="sum-row"><span>🚗 Bằng lái</span><b>' + (c4.license ? 'Đã có bằng lái ở Nhật' : 'Chưa lấy bằng') + '</b></div>' +
+      '<div class="sum-row"><span>🎬 Cảnh đã trải qua</span><b>' + S.doneScenes.length + ' cảnh</b></div>' +
+      '<div class="sum-row"><span>⭐ XP truyện</span><b>' + S.xp + '</b></div>' +
+      '<div class="sum-row"><span>📚 Tiếng Nhật</span><b>' + st.jp + '</b></div>' +
+      '<div class="sum-row"><span>💴 Tiền</span><b>' + st.money.toFixed(2).replace('.', ',') + ' man</b></div>' +
+      '<div class="sum-row"><span>❤️ Sức khỏe</span><b>' + st.hp + '</b></div>' +
+      '<div class="sum-row"><span>💗 Tình cảm</span><b>' + st.love + '</b></div>' +
+      '<div class="sub" style="margin-top:10px">Sổ lời hứa: với gia đình — <b>' + promiseLabel(S.book.loiHuaGiaDinh) + '</b> · với người yêu ở quê — <b>' + promiseLabel(S.book.loiHuaSanBay) + '</b></div>' +
+      '<div class="sub">Chương 5 «Lớn rồi» ở phía trước: ngày được đứng ở phía bên kia của những câu hỏi phỏng vấn năm nào…</div>';
     $('modal-chapter').classList.add('show');
     save();
   }
@@ -772,13 +847,14 @@
       advanceObjective();
       window.GAMEUI.toast('💾 Đã khôi phục tiến độ đã lưu — chơi tiếp từ chỗ cũ nhé');
     } else {
-      var keepStyle = S.style, keepPantry = S.pantry, keepLife = S.life, keepRel = S.rel;   // ngoại hình/tủ đồ + kho siêu thị + đời sống + tình cảm không thuộc tiến độ truyện — reset mạch không được xoá
+      var keepStyle = S.style, keepPantry = S.pantry, keepLife = S.life, keepRel = S.rel, keepSaga = S.saga;   // ngoại hình/tủ đồ + kho siêu thị + đời sống + tình cảm + saga không thuộc tiến độ truyện — reset mạch không được xoá
       S = newState();
-      S.style = keepStyle; S.pantry = keepPantry; S.life = keepLife; S.rel = keepRel;
+      S.style = keepStyle; S.pantry = keepPantry; S.life = keepLife; S.rel = keepRel; S.saga = keepSaga;
       airportObjective();
       setTimeout(function () { if (window.__demo) window.__demo.scene('airport-intro'); }, 800);
     }
     if (window.REL) window.REL.onGameStart(player);           // khôi phục tuyến tình cảm Ch3 đã lưu (rel.js tự nạp qua FLOW.getRel)
+    if (window.SAGA) window.SAGA.onGameStart(player);         // khôi phục trạng thái truyện Ch3–5 đã lưu (story2.js tự nạp qua FLOW.getSaga)
   }
   /* ================= NHẠC THEO CẢNH (Lane V, 01/11) =================
      Bảng cảnh -> mood: engine gọi FLOW.onSceneStart(id) đúng lúc cảnh thật sự chạy
@@ -801,7 +877,23 @@
     'to-tinh-loi': 'romance',
     'ket-doi-yui': 'romance', 'ket-doi-hang': 'romance', 'ket-doi-ren': 'romance', 'ket-doi-khoi': 'romance',
     'karaoke-doi': 'romance', 'cong-vien-doi': 'romance',
-    'bonenkai': 'festival', 'dong-huong': 'festival', 'hanami': 'daily', 'momiji': 'daily'
+    'bonenkai': 'festival', 'dong-huong': 'festival', 'hanami': 'daily', 'momiji': 'daily',
+    /* Đợt SAGA (Ch3): ngã rẽ/phỏng vấn/nyukan/ngành — phỏng vấn là cao trào, nyukan căng, về quê là mood nhà */
+    'ch3-nga-re': 'daily', 'ch3-chon-nganh': 'daily', 'ch3-nyukan': 'tense',
+    'ch3-phong-van': 'climax', 'ch3-phong-van-duhoc': 'climax',
+    'ch3-ve-nuoc': 'home', 'ket-ve-que': 'home',
+    'ind-kaigo-1': 'work', 'ind-kaigo-2': 'work', 'ind-kaigo-3': 'work',
+    'ind-nha-hang-1': 'work', 'ind-nha-hang-2': 'work', 'ind-nha-hang-3': 'work',
+    'ind-genba-1': 'work', 'ind-genba-2': 'work', 'ind-genba-3': 'work',
+    'ind-khach-san-1': 'work', 'ind-khach-san-2': 'work', 'ind-khach-san-3': 'work',
+    'ind-shokuhin-1': 'work', 'ind-shokuhin-2': 'work', 'ind-shokuhin-3': 'work',
+    'ind-seizo-1': 'work', 'ind-seizo-2': 'work', 'ind-seizo-3': 'work',
+    'ind-seibi-1': 'work', 'ind-seibi-2': 'work', 'ind-seibi-3': 'work',
+    'ind-soko-1': 'work', 'ind-soko-2': 'work', 'ind-soko-3': 'work',
+    'ind-nogyo-1': 'work', 'ind-nogyo-2': 'work', 'ind-nogyo-3': 'work',
+    'ind-duhoc-1': 'daily', 'ind-duhoc-2': 'daily', 'ind-duhoc-3': 'daily',
+    'talk-kaigo': 'daily', 'talk-nha-hang': 'daily', 'talk-genba': 'daily', 'talk-khach-san': 'daily',
+    'talk-shokuhin': 'daily', 'talk-seizo': 'daily', 'talk-seibi': 'daily', 'talk-soko': 'daily', 'talk-nogyo': 'daily'
   };
   var moodScene = null;
   function onSceneStart(id) {
@@ -861,15 +953,13 @@
       f.officerDone = true;
       window.GAMEUI.toast('🏢 Đã đăng ký địa chỉ xong — một điều kiện của Chương 1 đã đủ!');
       advanceObjective();
-    } else if (id === 'room-desk' && (S.exam.needReview || S.exam2.needReview)) {
-      if (S.exam.needReview) {
-        S.exam.needReview = false;
-        window.GAMEUI.toast('📚 Ôn lại một lượt xong — đầu óc sáng ra rồi. Quay lại TRƯỜNG, xem bảng đen để thi lại mốc N5!');
-      }
-      if (S.exam2.needReview) {
-        S.exam2.needReview = false;
-        window.GAMEUI.toast('📚 Ôn lại một lượt xong — đầu óc sáng ra rồi. Quay lại TRƯỜNG, xem bảng đen để thi lại mốc N4!');
-      }
+    } else if (id === 'room-desk' && (S.exam.needReview || S.exam2.needReview || S.exam3.needReview || S.exam4.needReview || S.exam5.needReview)) {
+      [['exam', 'N5'], ['exam2', 'N4'], ['exam3', 'N3'], ['exam4', 'N2'], ['exam5', 'N1']].forEach(function (pr) {
+        if (S[pr[0]].needReview) {
+          S[pr[0]].needReview = false;
+          window.GAMEUI.toast('📚 Ôn lại một lượt xong — đầu óc sáng ra rồi. Quay lại TRƯỜNG, xem bảng đen để thi lại mốc ' + pr[1] + '!');
+        }
+      });
       advanceObjective();
     } else if (id === 'kaigo-mai' && !f.workDay1) {
       f.workDay1 = true;   // biến thể ngày làm đầu (ngành kaigo) của cảnh 1.7 — bản đồ việc làm chung chưa có
@@ -926,6 +1016,7 @@
         setTimeout(function () { window.STYLE.openShop(mc); }, 350);
       }
     }
+    if (window.SAGA) window.SAGA.onSceneEnd(id);   // truyện chính Ch3–5: tiến triển ngã rẽ/ngành/phỏng vấn/nyukan/kết cục (story2.js)
     if (window.REL) window.REL.onSceneEnd(id);   // tuyến tình cảm: thiện cảm từ cảnh đời sống + máy nhịp arc Chương 3 (rel.js)
     // Lane AC: SAU KHI rel.js đã cập nhật trạng thái arc (đổ vỡ/hồi phục/gặp
     // gỡ/hẹn hò…), làm tươi mục tiêu Chương 3 NGAY — trước đây advanceObjective
@@ -947,6 +1038,11 @@
       window.GAMEUI.toast('👋 Hai người đã quen nhau rồi — mở 💗 Tình cảm để rủ đi chơi nhé');
       return true;
     }
+    /* Đợt SAGA: máy truyện Ch3–5 (story2.js) được quyền chặn các móc cảnh của
+       mạch chính (thầy Khánh = ngã rẽ/chọn ngành/phỏng vấn du học · bảng tin &
+       người phụ trách ngành = chuỗi cảnh ngành + phỏng vấn · officer = nyukan…)
+       — không thuộc bước của nó thì trả false, cảnh đời thường chạy như cũ. */
+    if (window.SAGA && window.SAGA.handleScene && window.SAGA.handleScene(id)) return true;
     if (id === 'airport-gate') {
       if (f.famDone && f.loverDone) return false;  // đã chia tay xong → để engine chạy cảnh lên máy bay
       window.GAMEUI.toast(!f.famDone && !f.loverDone
@@ -971,6 +1067,37 @@
       startHomeCall(); return true;
     }
     if (id === 'school-board') {
+      /* Đợt SAGA: cổng thi N3/N2/N1 + tổng kết Ch3/Ch4 + kết cục Ch5 — điều kiện
+         "sẵn sàng thi" do story2.js quyết (gateReady): phỏng vấn + nyukan xong
+         (Ch3) / mạch Ch4 xong / mạch Ch5 xong. Đỗ rồi mà lỡ đóng modal → bảng
+         đen mở lại tổng kết, không bao giờ kẹt (đúng bài học Lane Y). */
+      if (S.chapter === 3 && S.exam3.passed) { completeChapter3(); return true; }
+      if (S.chapter === 3 && window.SAGA && window.SAGA.gateReady && window.SAGA.gateReady('N3')) {
+        if (S.exam3.needReview) {
+          window.GAMEUI.toast('📚 Thầy Khánh nhắc: ôn lại ở BÀN HỌC trong phòng trọ trước đã — học chưa vào thì thi lại cũng vậy thôi.');
+          return true;
+        }
+        openExam('N3');
+        return true;
+      }
+      if (S.chapter === 4 && S.exam4.passed) { completeChapter4(); return true; }
+      if (S.chapter === 4 && window.SAGA && window.SAGA.gateReady && window.SAGA.gateReady('N2')) {
+        if (S.exam4.needReview) {
+          window.GAMEUI.toast('📚 Thầy Khánh nhắc: ôn lại ở BÀN HỌC trong phòng trọ trước đã — học chưa vào thì thi lại cũng vậy thôi.');
+          return true;
+        }
+        openExam('N2');
+        return true;
+      }
+      if (S.chapter >= 5 && S.exam5.passed) { if (window.SAGA) window.SAGA.finishGame(); return true; }
+      if (S.chapter >= 5 && window.SAGA && window.SAGA.gateReady && window.SAGA.gateReady('N1')) {
+        if (S.exam5.needReview) {
+          window.GAMEUI.toast('📚 Thầy Khánh nhắc: ôn lại ở BÀN HỌC trong phòng trọ trước đã — học chưa vào thì thi lại cũng vậy thôi.');
+          return true;
+        }
+        openExam('N1');
+        return true;
+      }
       if (S.chapter >= 2 && S.ch2.tetDone && !S.exam2.passed) {   // MỐC THI N4 — cổng cuối Chương 2
         if (S.exam2.needReview) {
           window.GAMEUI.toast('📚 Thầy Khánh nhắc: ôn lại ở BÀN HỌC trong phòng trọ trước đã — học chưa vào thì thi lại cũng vậy thôi.');
@@ -1111,6 +1238,7 @@
     /* Lane AD: báo REL mỗi lần vào bản đồ — nhịp C (cám dỗ) và cảnh tán ngược ở cổng
        trường chỉ mở khi người chơi THẬT SỰ tới đúng nơi của chúng. */
     if (window.REL && window.REL.onMapEnter) { try { window.REL.onMapEnter(id); } catch (e) {} }
+    if (window.SAGA && window.SAGA.onMapEnter) { try { window.SAGA.onMapEnter(id); } catch (e) {} }
     save();
   }
   function setFlag(name, value) {
@@ -1122,6 +1250,7 @@
     else if (name === 'sim-xuly') S.tenancy.simXuly = value;
     else if (name === 'gui-tien') S.ch2.sent = value;
     else if (name === 'tuan-keo-2') S.ch2.tuan2 = value;
+    else if (name.indexOf('saga-') === 0) { if (window.SAGA && window.SAGA.setFlag) window.SAGA.setFlag(name.slice(5), value); }   // cờ của máy truyện Ch3–5 (story2.js): saga-route, saga-industry, saga-c4-*, saga-c5-*…
   }
   function currentStep() {   // tương thích harness cũ: suy step 0..9 từ cờ, khớp flow.js tại mọi thời điểm
     var f = S.flags;
@@ -1145,6 +1274,9 @@
     getLife: function () { return S.life ? JSON.parse(JSON.stringify(S.life)) : null; },
     getRel: function () { return S.rel ? JSON.parse(JSON.stringify(S.rel)) : null; },
     setRel: function (d) { S.rel = (d && typeof d === 'object') ? d : null; save(); },
+    getSaga: function () { return S.saga ? JSON.parse(JSON.stringify(S.saga)) : null; },
+    setSaga: function (d) { S.saga = (d && typeof d === 'object') ? d : null; save(); },
+    addEnding: function (n) { if (!has(S.endings, n)) { S.endings.push(n); S.xp += 150; } save(); },   // story2.js ghi kết cục đạt được vào sổ truyện chuẩn
     setLife: function (d) { S.life = (d && typeof d === 'object') ? d : null; save(); },
     setPantry: function (d) { S.pantry = (d && typeof d === 'object') ? d : null; save(); },
     setStyle: function (d) { S.style = (d && typeof d === 'object') ? d : null; save(); },
@@ -1155,6 +1287,8 @@
         officerDone: S.flags.officerDone, examPassed: S.exam.passed, chapter: S.chapter,
         salaryDone: S.ch2.salaryDone, sentChoice: S.ch2.sent, tvDone: S.ch2.tvDone, tuan2: S.ch2.tuan2,
         romanceDone: S.ch2.romanceDone, tetDone: S.ch2.tetDone, exam2Passed: S.exam2.passed, bonenkaiDone: S.ch2.bonenkaiDone,
+        exam3Passed: S.exam3.passed, exam4Passed: S.exam4.passed, exam5Passed: S.exam5.passed,
+        sagaRoute: S.saga ? S.saga.route : null, sagaIndustry: S.saga ? S.saga.industry : null, sagaEnding: S.saga ? S.saga.ending : null,
         simChoice: S.tenancy.simChoice, simTruth: S.tenancy.simTruth,
         loiHuaSanBay: S.book.loiHuaSanBay, quaLuuNiem: S.book.quaLuuNiem, loiHuaGiaDinh: S.book.loiHuaGiaDinh
       };
@@ -1173,7 +1307,7 @@
   };
   window.STORY = {
     version: 2,
-    state: function () { return JSON.parse(JSON.stringify({ chapter: S.chapter, flags: S.flags, book: S.book, tenancy: S.tenancy, ch2: S.ch2, exam: S.exam, exam2: S.exam2, xp: S.xp, rel: S.rel, story: pubStory() })); },
+    state: function () { return JSON.parse(JSON.stringify({ chapter: S.chapter, flags: S.flags, book: S.book, tenancy: S.tenancy, ch2: S.ch2, exam: S.exam, exam2: S.exam2, exam3: S.exam3, exam4: S.exam4, exam5: S.exam5, saga: S.saga, xp: S.xp, rel: S.rel, story: pubStory() })); },
     save: save,
     examAnswer: function () { return examRun ? examRun.list[examRun.idx].answer : -1; },   // phục vụ harness kiểm chứng
     examInfo: function () { return examRun ? { gate: examRun.level, qLevel: examRun.qLevel || examRun.level, idx: examRun.idx, score: examRun.score, list: examRun.list } : null; },   // Lane Z: phục vụ harness kiểm chứng trình độ câu hỏi

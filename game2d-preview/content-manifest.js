@@ -144,5 +144,29 @@
       'ket-doi-yui', 'ket-doi-hang', 'ket-doi-ren', 'ket-doi-khoi', 'karaoke-doi', 'cong-vien-doi']
   });
 
+  C.declare({
+    id: 'goi-chuong-3-nga-re', version: '1.9.0', date: '2026-11-01',
+    title: 'Chương 3 hoàn chỉnh — ngã rẽ, chín ngành Tokutei, phỏng vấn, nyukan, về quê',
+    notes: [
+      'Mới: NGÃ RẼ CHƯƠNG 3 — thầy Khánh tư vấn ba đường (Tokutei / du học tiếp / về nước) sau khi arc tình cảm ngã ngũ; đường về nước có kết cục sớm «Về quê» (kết cục 6) viết trọn, có quyền đổi ý phút chót.',
+      'Mới: CHÍN NGÀNH TOKUTEI, mỗi ngành một chuỗi 3 cảnh riêng + một cảnh chuyện phiếm nơi làm: kaigo (Thần Hộ), nhà hàng (Toyosu), công trường (Yokohama), khách sạn (Odaiba), thực phẩm (Osaka), chế tạo (Nagoya), ô tô (Toyota), kho vận (Chiba), nông nghiệp (Furano) — biến cố nghề thật, kaiwa đúng môi trường.',
+      'Mới: BOSS CHƯƠNG — phỏng vấn xin việc 9 câu hỏi chấm điểm thật (trả lời hụt là trượt, ôn lại ở bàn học phòng trọ rồi thi lại, từ lần hai tốn phí); tuyến du học có phỏng vấn đầu vào 6 câu riêng.',
+      'Mới: nộp hồ sơ đổi tư cách ở NYUKAN với tình huống thành thật khai thiếu giấy thuế; tuyến du học có chuỗi trường chuyên môn riêng (buổi học đầu, cám dỗ làm chui vượt trần 28 giờ, thuyết trình cuối kỳ).'
+    ],
+    maps: [],
+    scenes: ['ch3-nga-re', 'ch3-chon-nganh', 'ch3-phong-van', 'ch3-phong-van-duhoc', 'ch3-nyukan',
+      'ch3-ve-nuoc', 'ket-ve-que',
+      'ind-duhoc-1', 'ind-duhoc-2', 'ind-duhoc-3',
+      'ind-kaigo-1', 'ind-kaigo-2', 'ind-kaigo-3', 'talk-kaigo',
+      'ind-nha-hang-1', 'ind-nha-hang-2', 'ind-nha-hang-3', 'talk-nha-hang',
+      'ind-genba-1', 'ind-genba-2', 'ind-genba-3', 'talk-genba',
+      'ind-khach-san-1', 'ind-khach-san-2', 'ind-khach-san-3', 'talk-khach-san',
+      'ind-shokuhin-1', 'ind-shokuhin-2', 'ind-shokuhin-3', 'talk-shokuhin',
+      'ind-seizo-1', 'ind-seizo-2', 'ind-seizo-3', 'talk-seizo',
+      'ind-seibi-1', 'ind-seibi-2', 'ind-seibi-3', 'talk-seibi',
+      'ind-soko-1', 'ind-soko-2', 'ind-soko-3', 'talk-soko',
+      'ind-nogyo-1', 'ind-nogyo-2', 'ind-nogyo-3', 'talk-nogyo']
+  });
+
   C.finalize();
 })();

@@ -7199,18 +7199,4702 @@
    "skipped": {
     "3": "prompt"
    }
+  },
+  "ch3-chon-nganh": {
+   "steps": {
+    "0": {
+     "fileVn": "voice/ch3-chon-nganh-0-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Nghe kỹ từng ngành, thầy chỉ nói sự thật, không quảng cáo. KAIGO: chăm người già — cần trái tim và kính ngữ, việc ổn định nhất, chị Mai của {call} là người trong nghề đấy. NHÀ HÀNG: bếp nóng, giờ giấc thất thường, nhưng học được nghề nấu ăn mang đi đâu cũng sống.\""
+    },
+    "1": {
+     "fileVn": "voice/ch3-chon-nganh-1-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"CÔNG TRƯỜNG: nắng gió, lương khá, cần sức và kỷ luật an toàn. KHÁCH SẠN: mặt tiền của sự lịch sự — tiếng Nhật phải chuẩn, ca kíp xoay vòng. THỰC PHẨM: dây chuyền lạnh, ca đêm nhiều, việc đều như đồng hồ.\""
+    },
+    "2": {
+     "fileVn": "voice/ch3-chon-nganh-2-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"CHẾ TẠO: nhà máy cơ khí, kỷ luật từng giây, tay nghề lên nhanh. Ô TÔ: xưởng sửa xe, nghề càng làm càng có giá. KHO VẬN: phân loại hàng, ca đêm, cần nhanh và chính xác. NÔNG NGHIỆP: ra đồng từ 4 giờ sáng, sống chậm giữa thiên nhiên, tiền theo mùa vụ.\""
+    },
+    "3": {
+     "fileVn": "voice/ch3-chon-nganh-3-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Chọn ngành không phải chọn chỗ dễ nhất — chọn chỗ mà {call} chịu được cả ngày xấu nhất của nó. Chốt đi, thầy ghi hồ sơ.\""
+    },
+    "5": {
+     "fileVn": "voice/ch3-chon-nganh-5-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Kaigo. Việc của người tử tế. Chị Mai sẽ là người dẫn {call} vào nghề — tới viện dưỡng lão ở 神戸， gặp chị ấy ở bảng tin của viện.\""
+    },
+    "6": {
+     "fileVn": "voice/ch3-chon-nganh-6-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Vào bếp là vào lò lửa — theo cả hai nghĩa. Tới bếp nhà hàng ở 豊洲， xem bảng phân ca và chào bếp trưởng Sato.\""
+    },
+    "7": {
+     "fileVn": "voice/ch3-chon-nganh-7-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Công trường nuôi người bằng mồ hôi thật. Tới công trường ở 横浜， đọc bảng an toàn trước, rồi gặp sếp công trường.\""
+    },
+    "8": {
+     "fileVn": "voice/ch3-chon-nganh-8-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Khách sạn là nơi tiếng Nhật bị soi từng chữ — hợp với người chịu khó sửa mình. Tới khách sạn ở お台場， gặp chị senpai ở quầy lễ tân.\""
+    },
+    "9": {
+     "fileVn": "voice/ch3-chon-nganh-9-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Dây chuyền lạnh và ca đêm — việc đều, người phải bền. Tới nhà máy thực phẩm ở 大阪， xem bảng phân ca, gặp chị trưởng ca.\""
+    },
+    "10": {
+     "fileVn": "voice/ch3-chon-nganh-10-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Cơ khí trọng người nói thật — máy hỏng thì báo hỏng. Tới nhà máy ở 名古屋， xem bảng sản xuất và chào senpai Kudo.\""
+    },
+    "11": {
+     "fileVn": "voice/ch3-chon-nganh-11-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Nghề sửa xe càng làm càng đắt giá. Tới xưởng ở 豊田， gặp chủ xưởng — ông ấy ít nói nhưng nhìn người rất chuẩn.\""
+    },
+    "12": {
+     "fileVn": "voice/ch3-chon-nganh-12-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Kho vận cần nhanh và không được sai. Tới kho ở 千葉， gặp anh trưởng kho — người ta sẽ thử {call} ngay buổi đầu.\""
+    },
+    "13": {
+     "fileVn": "voice/ch3-chon-nganh-13-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Ra đồng từ 4 giờ sáng, ngủ theo mặt trời. Tới trang trại ở 富良野， xem bảng việc và chào hai bác chủ trại.\""
+    },
+    "14": {
+     "fileVn": "voice/ch3-chon-nganh-14-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Được — chuyện cả vài năm, nghĩ kỹ một đêm là đúng. Nhưng đừng để quá lâu: hồ sơ không chờ ai đâu. Mai quay lại đây chốt với thầy.\""
+    }
+   },
+   "skipped": {
+    "4": "prompt"
+   }
+  },
+  "ch3-nga-re": {
+   "steps": {
+    "0": {
+     "fileVn": "voice/ch3-nga-re-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi chiều, thầy Khánh gọi {name} ở lại sau giờ học. Trên bàn là một tờ lịch được khoanh đỏ: chặng đầu tiên ở Nhật sắp hết hạn — tờ tư cách lưu trú trong ví không còn tính bằng năm nữa, mà bằng tháng."
+    },
+    "1": {
+     "fileVn": "voice/ch3-nga-re-1-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Ngồi đi. Thầy nói thẳng như mọi khi nhé: tới đây là hết phần 'được dắt tay'. Từ giờ, đường đi là do {call} tự chọn — và tự chịu. Có ba cửa chính, thầy phân tích từng cửa, nghe kỹ rồi quyết.\""
+    },
+    "2": {
+     "fileVn": "voice/ch3-nga-re-2-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Cửa một: THI TOKUTEI. Chọn một ngành — kaigo, bếp, công trường, xưởng, kho, nông… — đi làm chuyên hẳn một nghề. Có lương tử tế, ở lại dài được, nhưng phải qua phỏng vấn xin việc thật và đổi tư cách ở nyukan. Sai ngành là khổ nhiều năm, nên chọn bằng cái đầu, không chọn bằng cái tai nghe người ta đồn.\""
+    },
+    "3": {
+     "fileVn": "voice/ch3-nga-re-3-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Cửa hai: DU HỌC TIẾP lên trường chuyên môn. Học thêm hai năm, tiếng lên hẳn một bậc, đường dài rộng hơn — nhưng học phí không rẻ, vừa học vừa làm thêm trong giới hạn 28 giờ một tuần, kỷ luật phải tự giữ. Cửa này hợp với người còn muốn đầu tư cho cái đầu.\""
+    },
+    "4": {
+     "fileVn": "voice/ch3-nga-re-4-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Cửa ba: VỀ NƯỚC. Nghe cho rõ: về không phải là thua. Có người về quê mở được việc riêng bằng vốn tiếng Nhật đã học, sống gần bố mẹ — một đời khác, không kém ai. Chỉ cần quyết bằng lòng mình, đừng quyết vì một phút nản.\""
+    },
+    "6": {
+     "fileVn": "voice/ch3-nga-re-6-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Được. Đi làm thì phải có nghề trong tay — không ai nuôi mình bằng lời hứa cả. Bước tiếp theo: chọn ngành. Ngành là thứ {call} sẽ sống cùng nó mười hai tiếng mỗi ngày, nên nghe thầy tư vấn từng ngành rồi hẵng chốt.\""
+    },
+    "7": {
+     "fileVn": "voice/ch3-nga-re-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thầy rút trong ngăn kéo ra một xấp tờ rơi của các công ty và trường dạy nghề, xếp thành hàng ngay ngắn trước mặt {name}. Một chặng đường mới bắt đầu từ việc chọn đúng cánh cửa đầu tiên."
+    },
+    "8": {
+     "fileVn": "voice/ch3-nga-re-8-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"Chọn học tiếp là chọn đường dài. Nhớ lời thầy: học phí kỳ đầu phải lo từ bây giờ, và làm thêm là để sống — không phải để quên mất mình sang đây học cái gì. Kỳ học mới bắt đầu ngay tại trường này: ba buổi đầu, thầy sẽ theo sát.\""
+    },
+    "9": {
+     "fileVn": "voice/ch3-nga-re-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} nhìn ra cửa sổ lớp học — sân trường chiều xuống, mấy bạn khóa dưới đang cười nói ra về. Mình sẽ ở lại nơi này thêm hai năm nữa, với tư cách một học trò thật sự."
+    },
+    "10": {
+     "fileVn": "voice/ch3-nga-re-10-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"…Thầy không cản. Nhưng quyết định lớn thì không ký trong một buổi chiều. Về phòng, gọi về nhà nói chuyện cho đàng hoàng, ngủ một đêm — mai quay lại đây nói với thầy tiếng cuối cùng. Nếu lòng vẫn vậy, thầy giúp làm thủ tục cho trọn vẹn.\""
+    },
+    "11": {
+     "fileVn": "voice/ch3-nga-re-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ra khỏi văn phòng, {name} đứng rất lâu ở hành lang. Ở lại hay về — lần đầu tiên từ ngày sang Nhật, câu hỏi này nằm hoàn toàn trong tay mình."
+    }
+   },
+   "skipped": {
+    "5": "prompt"
+   }
+  },
+  "ch3-nyukan": {
+   "steps": {
+    "1": {
+     "file": "voice/ch3-nyukan-1.mp3",
+     "sp": "Cán bộ nyukan",
+     "voice": "m",
+     "text": "在留資格変更許可申請ですね。書類を全部お出しください。"
+    },
+    "4": {
+     "file": "voice/ch3-nyukan-4.mp3",
+     "sp": "Cán bộ nyukan",
+     "voice": "m",
+     "text": "書類はよく揃っていますね。審査には一か月ほどかかります。"
+    },
+    "6": {
+     "file": "voice/ch3-nyukan-6.mp3",
+     "sp": "Cán bộ nyukan",
+     "voice": "m",
+     "text": "昨年の税金と年金は、全部払いましたか。証明書はありますか。"
+    },
+    "8": {
+     "file": "voice/ch3-nyukan-8.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "課税証明書だけ、まだ取れていません。正直にお伝えします。二週間以内に追加で出せます。",
+     "fileF": "voice/ch3-nyukan-8-f.mp3"
+    },
+    "9": {
+     "file": "voice/ch3-nyukan-9.mp3",
+     "sp": "Cán bộ nyukan",
+     "voice": "m",
+     "text": "わかりました。では、こちらに期限を書きます。必ず守ってください。隠すより、先に言うほうが審査は早いんですよ。"
+    },
+    "10": {
+     "file": "voice/ch3-nyukan-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "全部揃っています。大丈夫です。",
+     "fileF": "voice/ch3-nyukan-10-f.mp3"
+    },
+    "12": {
+     "file": "voice/ch3-nyukan-12.mp3",
+     "sp": "Cán bộ nyukan",
+     "voice": "m",
+     "text": "審査結果は、はがきで通知します。はがきが届いたら、収入印紙を買って、新しい在留カードを受け取りに来てください。"
+    },
+    "0": {
+     "fileVn": "voice/ch3-nyukan-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tòa nhà nyukan buổi sáng đông nghẹt, mùi giấy tờ và tiếng máy in chạy không nghỉ. Số thứ tự A-047. {name} ôm chặt bìa hồ sơ — bên trong là cả chặng đường vừa đi qua: kết quả phỏng vấn, hợp đồng (hoặc giấy báo nhập học), giấy tờ thuế."
+    },
+    "3": {
+     "fileVn": "voice/ch3-nyukan-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} đứng thẳng, đưa từng tập hồ sơ bằng hai tay: đơn xin, hợp đồng, giấy chứng nhận thuế, bảng lương. Cán bộ lật vài trang, không phải hỏi lại một lần nào về thứ tự giấy tờ."
+    },
+    "5": {
+     "fileVn": "voice/ch3-nyukan-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bìa hồ sơ trượt trên mặt quầy, mấy tờ giấy lệch ra ngoài. Cán bộ không nói gì nặng — chỉ đẩy nhẹ trả lại kèm một tờ danh mục: \"Xin anh/chị sắp xếp theo thứ tự này rồi nộp lại.\" Hàng người phía sau khẽ xì xào; {name} đỏ mặt làm lại từ đầu."
+    },
+    "11": {
+     "fileVn": "voice/ch3-nyukan-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cán bộ gõ bàn phím mười giây. Màn hình không nói dối: thiếu đúng một giấy. \"Anh/chị kiểm tra lại giúp tôi.\" — giọng vẫn đều đều, nhưng từ giây đó, mọi câu trả lời của {name} đều bị nghe bằng đôi tai khác hẳn. Hồ sơ không trượt — nhưng niềm tin thì vừa rạn một đường."
+    },
+    "13": {
+     "fileVn": "voice/ch3-nyukan-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ra khỏi tòa nhà, nắng trưa rọi thẳng xuống bậc thềm. {name} chụp ảnh lại tờ biên nhận nộp hồ sơ, gửi về nhóm gia đình kèm một dòng: \"Đã nộp. Giờ là chờ.\" Bên dưới, mẹ thả một tràng biểu tượng trái tim. Chặng đường mới — chính thức bắt đầu bằng một tờ biên nhận mỏng tang."
+    }
+   },
+   "skipped": {
+    "2": "prompt",
+    "7": "prompt"
+   }
+  },
+  "ch3-phong-van": {
+   "steps": {
+    "1": {
+     "file": "voice/ch3-phong-van-1.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "では、簡単に自己紹介をお願いします。"
+    },
+    "3": {
+     "file": "voice/ch3-phong-van-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "初めまして。私はベトナム出身で、日本語能力試験N3に合格しました。前の経験を生かして、御社で長く働きたいと考えています。",
+     "fileF": "voice/ch3-phong-van-3-f.mp3"
+    },
+    "5": {
+     "file": "voice/ch3-phong-van-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "私、ベトナムから来ました。日本語はペラペラです。よろしく！",
+     "fileF": "voice/ch3-phong-van-5-f.mp3"
+    },
+    "7": {
+     "file": "voice/ch3-phong-van-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "えーと、あのー、私は…えーと…",
+     "fileF": "voice/ch3-phong-van-7-f.mp3"
+    },
+    "9": {
+     "file": "voice/ch3-phong-van-9.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "なぜ日本で働きたいと思ったのですか。"
+    },
+    "11": {
+     "file": "voice/ch3-phong-van-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "日本の技術と働き方を学んで、将来は自分の専門として伸ばしたいからです。家族への仕送りも大切ですが、それだけではありません。",
+     "fileF": "voice/ch3-phong-van-11-f.mp3"
+    },
+    "13": {
+     "file": "voice/ch3-phong-van-13.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "日本は給料が高いからです。ベトナムの三倍ぐらいもらえます。",
+     "fileF": "voice/ch3-phong-van-13-f.mp3"
+    },
+    "15": {
+     "file": "voice/ch3-phong-van-15.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "日本の漫画とアニメが大好きだからです。秋葉原に住みたいです。",
+     "fileF": "voice/ch3-phong-van-15-f.mp3"
+    },
+    "17": {
+     "file": "voice/ch3-phong-van-17.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "たくさんある会社の中から、なぜ当社を選んだのですか。"
+    },
+    "19": {
+     "file": "voice/ch3-phong-van-19.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "御社の研修制度と、外国人スタッフが長く働いている実績を見て、ここなら成長できると感じました。見学のときの現場の雰囲気も明るかったです。",
+     "fileF": "voice/ch3-phong-van-19-f.mp3"
+    },
+    "21": {
+     "file": "voice/ch3-phong-van-21.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "家から一番近いからです。通勤が楽なのが一番大事だと思います。",
+     "fileF": "voice/ch3-phong-van-21-f.mp3"
+    },
+    "23": {
+     "file": "voice/ch3-phong-van-23.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "求人サイトで給料と休みだけ見て決めました。他の会社とあまり変わりません。",
+     "fileF": "voice/ch3-phong-van-23-f.mp3"
+    },
+    "25": {
+     "file": "voice/ch3-phong-van-25.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "あなたの長所と短所を教えてください。"
+    },
+    "27": {
+     "file": "voice/ch3-phong-van-27.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "長所は、約束したことは必ず守ることです。短所は、確認しすぎて少し時間がかかることですが、チェックリストを作って改善しています。",
+     "fileF": "voice/ch3-phong-van-27-f.mp3"
+    },
+    "29": {
+     "file": "voice/ch3-phong-van-29.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "短所はありません。何でもできますし、ミスもほとんどしません。",
+     "fileF": "voice/ch3-phong-van-29-f.mp3"
+    },
+    "31": {
+     "file": "voice/ch3-phong-van-31.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "長所は体力だけです。短所は、朝が弱くて、たまに遅刻します。でも最近は頑張っています。",
+     "fileF": "voice/ch3-phong-van-31-f.mp3"
+    },
+    "33": {
+     "file": "voice/ch3-phong-van-33.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "仕事で失敗した経験はありますか。そのとき、どうしましたか。"
+    },
+    "35": {
+     "file": "voice/ch3-phong-van-35.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "伝達ミスで作業をやり直したことがあります。すぐ上司に報告して、謝って、一緒に直しました。それ以来、復唱確認を必ずしています。",
+     "fileF": "voice/ch3-phong-van-35-f.mp3"
+    },
+    "37": {
+     "file": "voice/ch3-phong-van-37.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "失敗したことはありません。いつも運が良かったです。",
+     "fileF": "voice/ch3-phong-van-37-f.mp3"
+    },
+    "39": {
+     "file": "voice/ch3-phong-van-39.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "失敗は同僚のせいでした。私は悪くありませんでしたが、運悪く怒られました。",
+     "fileF": "voice/ch3-phong-van-39-f.mp3"
+    },
+    "41": {
+     "file": "voice/ch3-phong-van-41.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "N3に合格したそうですが、日本語の勉強はどう続けていますか。"
+    },
+    "43": {
+     "file": "voice/ch3-phong-van-43.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "毎日、仕事の言葉をノートに書いて復習しています。現場で分からない言葉は、その日のうちに聞いて覚えるようにしています。",
+     "fileF": "voice/ch3-phong-van-43-f.mp3"
+    },
+    "45": {
+     "file": "voice/ch3-phong-van-45.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "もうN3があるので、勉強はしていません。仕事で使えば自然に上手になると思います。",
+     "fileF": "voice/ch3-phong-van-45-f.mp3"
+    },
+    "47": {
+     "file": "voice/ch3-phong-van-47.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "アニメを見て勉強しています。セリフはだいたい分かります。",
+     "fileF": "voice/ch3-phong-van-47-f.mp3"
+    },
+    "49": {
+     "file": "voice/ch3-phong-van-49.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "将来は、どう考えていますか。日本に長く住みたいですか。"
+    },
+    "51": {
+     "file": "voice/ch3-phong-van-51.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "まずはこの仕事を一人前にできるようになって、資格も取りたいです。その先は、家族とも相談しながら、日本で長く働く方向で考えています。",
+     "fileF": "voice/ch3-phong-van-51-f.mp3"
+    },
+    "53": {
+     "file": "voice/ch3-phong-van-53.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "5年でお金を貯めて、必ずベトナムに帰ります。日本に残る気はありません。",
+     "fileF": "voice/ch3-phong-van-53-f.mp3"
+    },
+    "55": {
+     "file": "voice/ch3-phong-van-55.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "将来のことはまだ何も考えていません。何とかなるだろうと思います。",
+     "fileF": "voice/ch3-phong-van-55-f.mp3"
+    },
+    "57": {
+     "file": "voice/ch3-phong-van-57.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "残業や夜勤はありますが、大丈夫ですか。体力に自信はありますか。"
+    },
+    "59": {
+     "file": "voice/ch3-phong-van-59.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "大丈夫です。体調管理も仕事のうちだと思っています。ただ、続くときは早めに相談させてください。",
+     "fileF": "voice/ch3-phong-van-59-f.mp3"
+    },
+    "61": {
+     "file": "voice/ch3-phong-van-61.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "残業はできればしたくないです。夜勤も、体に悪いので避けたいです。",
+     "fileF": "voice/ch3-phong-van-61-f.mp3"
+    },
+    "63": {
+     "file": "voice/ch3-phong-van-63.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい！24時間でも働けます！睡眠は不要です！",
+     "fileF": "voice/ch3-phong-van-63-f.mp3"
+    },
+    "65": {
+     "file": "voice/ch3-phong-van-65.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "f",
+     "text": "最後に、何か質問はありますか。"
+    },
+    "67": {
+     "file": "voice/ch3-phong-van-67.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "入社後、最初の研修はどのぐらいの期間ですか。先輩についてもらえますか。",
+     "fileF": "voice/ch3-phong-van-67-f.mp3"
+    },
+    "69": {
+     "file": "voice/ch3-phong-van-69.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "質問はありません。全部理解しました。",
+     "fileF": "voice/ch3-phong-van-69-f.mp3"
+    },
+    "71": {
+     "file": "voice/ch3-phong-van-71.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ボーナスは年に何回ですか。有給はすぐ使えますか。",
+     "fileF": "voice/ch3-phong-van-71-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ch3-phong-van-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Phòng phỏng vấn nhỏ, sáng lạnh. Hai người ngồi sau bàn dài: một quản lý và một trưởng bộ phận. Trên bàn là hồ sơ của {name} — và một khoảng im lặng cố ý, kiểu im lặng để thử người đối diện có biết tự mở lời hay không."
+    },
+    "4": {
+     "fileVn": "voice/ch3-phong-van-4-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Ừm.\" — cây bút của người quản lý gạch một đường ngắn lên hồ sơ. Cái gạch ấy, ai đi phỏng vấn ở Nhật rồi cũng biết, là gạch TỐT."
+    },
+    "6": {
+     "fileVn": "voice/ch3-phong-van-6-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"…Vâng.\" — hai người phỏng vấn nhìn nhau. \"ペラペラ\" là từ khoe khoang, và câu chào cụt ngủn không kính ngữ vừa làm căn phòng lạnh đi một độ."
+    },
+    "8": {
+     "fileVn": "voice/ch3-phong-van-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Câu giới thiệu tập bao nhiêu lần trước gương lại tan ngay ở chữ đầu tiên. Người quản lý kiên nhẫn chờ thêm ba giây, rồi nhẹ nhàng chuyển sang câu hỏi khác — cơ hội đầu tiên đã trôi qua."
+    },
+    "12": {
+     "fileVn": "voice/ch3-phong-van-12-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Hừm.\" — lần này là trưởng bộ phận gật đầu. Câu trả lời có nghề nghiệp ở phía trước, gia đình ở phía sau: đúng thứ tự mà người Nhật tin tưởng."
+    },
+    "14": {
+     "fileVn": "voice/ch3-phong-van-14-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Thế nếu có công ty khác trả cao hơn thì bạn chuyển ngay à?\" — câu hỏi xoáy đáp lại ngay lập tức. Trong phòng phỏng vấn, nói thật về tiền không sai — nhưng chỉ có tiền thì là sai."
+    },
+    "16": {
+     "fileVn": "voice/ch3-phong-van-16-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Người quản lý khẽ mỉm cười — nụ cười của người nghe câu này đến lần thứ một trăm. Yêu văn hóa Nhật là điểm cộng ở quán cà phê, không phải ở bàn phỏng vấn."
+    },
+    "20": {
+     "fileVn": "voice/ch3-phong-van-20-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "Trưởng bộ phận ngả người ra sau một chút — dấu hiệu của người vừa nghe được câu trả lời có chuẩn bị. \"Bạn đã đến tham quan thật à.\" — cây bút lại gạch thêm một đường tốt."
+    },
+    "22": {
+     "fileVn": "voice/ch3-phong-van-22-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Nhàn\" — cái chữ ấy rơi xuống bàn nghe rất rõ. Không ai tuyển người vì người đó muốn nhàn."
+    },
+    "24": {
+     "fileVn": "voice/ch3-phong-van-24-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Không khác là mấy…\" — người quản lý nhắc lại khẽ khàng, rồi ghi gì đó rất dài vào hồ sơ. Thường ghi càng dài, tin càng xấu."
+    },
+    "28": {
+     "fileVn": "voice/ch3-phong-van-28-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Điểm yếu mà có sẵn cách sửa — thế mới là điểm yếu đáng nghe.\" Trưởng bộ phận nói nửa như đùa, nửa như thật."
+    },
+    "30": {
+     "fileVn": "voice/ch3-phong-van-30-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Căn phòng im phăng phắc hai giây. Người không có điểm yếu, trong mắt người tuyển dụng, là người chưa từng tự nhìn lại mình — hoặc đang nói dối."
+    },
+    "32": {
+     "fileVn": "voice/ch3-phong-van-32-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Đi muộn\" trong ngành nào cũng là từ cấm kỵ. \"Đang cố\" không phải là một kế hoạch — và cả phòng đều nghe thấy điều đó."
+    },
+    "36": {
+     "fileVn": "voice/ch3-phong-van-36-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"報告して、謝って、直して、仕組みにした。\" — trưởng bộ phận đếm bốn nhịp trên đầu ngón tay. \"Đó chính là cách làm việc của chúng tôi.\""
+    },
+    "38": {
+     "fileVn": "voice/ch3-phong-van-38-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"May mắn\" không phải là năng lực. Hai người phỏng vấn cúi xuống hồ sơ cùng lúc — và không hỏi thêm về chủ đề này nữa."
+    },
+    "40": {
+     "fileVn": "voice/ch3-phong-van-40-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Lỗi của đồng nghiệp\" — trong văn hóa làm việc của Nhật, câu đó tự nó đã là một thất bại khác."
+    },
+    "44": {
+     "fileVn": "voice/ch3-phong-van-44-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Hỏi trong ngày hôm đó — thói quen này đáng giá hơn cả tấm bằng.\" Người quản lý nói, và lần đầu tiên trong buổi, mỉm cười rõ rệt."
+    },
+    "46": {
+     "fileVn": "voice/ch3-phong-van-46-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Tự khắc giỏi\" — trong phòng này, người ta gọi đó là đứng yên. Và đứng yên trong một đội đang đi lên nghĩa là tụt lại."
+    },
+    "48": {
+     "fileVn": "voice/ch3-phong-van-48-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Ở nơi làm việc, \"đại khái\" là từ nguy hiểm nhất đấy.\" — câu đáp nhẹ nhàng mà sắc như dao cạo."
+    },
+    "52": {
+     "fileVn": "voice/ch3-phong-van-52-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Bàn với gia đình\" — ba chữ ấy làm câu trả lời thành thật. Người Nhật cũng vậy thôi: chẳng ai quyết đời mình một mình cả."
+    },
+    "54": {
+     "fileVn": "voice/ch3-phong-van-54-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thành thật là tốt — nhưng công ty sắp bỏ tiền đào tạo một người đã tuyên bố ngày ra đi ngay từ buổi đầu. Ánh mắt người quản lý trượt xuống dòng \"kế hoạch đào tạo\" trong hồ sơ."
+    },
+    "56": {
+     "fileVn": "voice/ch3-phong-van-56-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Rồi sẽ ổn\" — câu trả lời ổn nhất cho mọi câu hỏi, trừ câu hỏi đang được hỏi."
+    },
+    "60": {
+     "fileVn": "voice/ch3-phong-van-60-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Người nói trước được câu \"xin trao đổi sớm\" là người không bỏ việc giữa chừng.\" — trưởng bộ phận ghi thêm một dòng, lần này là dòng kết luận."
+    },
+    "62": {
+     "fileVn": "voice/ch3-phong-van-62-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Sự im lặng lần này dài hơn mọi lần. Yêu cầu ca kíp ghi rõ trong tin tuyển dụng — từ chối nó trong phòng phỏng vấn giống như xin việc nấu ăn mà chê khói bếp."
+    },
+    "64": {
+     "fileVn": "voice/ch3-phong-van-64-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"…Cảm ơn nhiệt tình của bạn.\" — người quản lý phải nén cười. Hứa điều không ai làm được không chứng minh sức khỏe; nó chứng minh người hứa chưa hiểu công việc."
+    },
+    "68": {
+     "fileVn": "voice/ch3-phong-van-68-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Ba tháng đầu, bạn sẽ đi cùng một senpai…\" — câu trả lời lần này dài và tử tế. Ai hỏi về cách được dạy, người đó đang hình dung mình trong công việc thật."
+    },
+    "70": {
+     "fileVn": "voice/ch3-phong-van-70-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Hiểu hết\" sau bốn mươi phút — người quản lý đóng hồ sơ lại, lịch sự và dứt khoát. Buổi phỏng vấn khép lại ở đúng khoảnh khắc {name} tưởng mình đã xong."
+    },
+    "72": {
+     "fileVn": "voice/ch3-phong-van-72-vn.mp3",
+     "sp": "Người phỏng vấn",
+     "voice": "vn-f",
+     "text": "\"Thưởng thì…\" — câu trả lời ngắn và khô. Hỏi về quyền lợi không sai; nhưng khi đó là câu hỏi DUY NHẤT, nó nói lên mọi thứ về thứ tự ưu tiên của người hỏi."
+    },
+    "73": {
+     "fileVn": "voice/ch3-phong-van-73-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cửa phòng phỏng vấn khép lại sau lưng. {name} đứng giữa hành lang vắng, nghe tim mình đập rõ từng nhịp: những câu trả lời tốt như những viên gạch xếp thẳng hàng, những câu hụt như bậc thang sụt dưới chân. Kết quả — đỗ hay trượt — nằm ở đếm lại từng câu mình vừa nói."
+    }
+   },
+   "skipped": {
+    "2": "prompt",
+    "10": "prompt",
+    "18": "prompt",
+    "26": "prompt",
+    "34": "prompt",
+    "42": "prompt",
+    "50": "prompt",
+    "58": "prompt",
+    "66": "prompt"
+   }
+  },
+  "ch3-phong-van-duhoc": {
+   "steps": {
+    "1": {
+     "file": "voice/ch3-phong-van-duhoc-1.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "なぜ当校で学びたいのですか。"
+    },
+    "3": {
+     "file": "voice/ch3-phong-van-duhoc-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "御校の実習が多く、卒業生が現場で働いている話を聞いて、実践的に学べると感じました。オープンキャンパスで授業も見学しました。",
+     "fileF": "voice/ch3-phong-van-duhoc-3-f.mp3"
+    },
+    "5": {
+     "file": "voice/ch3-phong-van-duhoc-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "学費が安いのと、家から近いからです。他の学校は調べていません。",
+     "fileF": "voice/ch3-phong-van-duhoc-5-f.mp3"
+    },
+    "7": {
+     "file": "voice/ch3-phong-van-duhoc-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "友達がこの学校に入るので、一緒がいいと思いました。",
+     "fileF": "voice/ch3-phong-van-duhoc-7-f.mp3"
+    },
+    "9": {
+     "file": "voice/ch3-phong-van-duhoc-9.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "アルバイトはしますか。勉強との両立はできますか。"
+    },
+    "11": {
+     "file": "voice/ch3-phong-van-duhoc-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、週28時間以内でします。試験の前はシフトを減らして、勉強を優先します。出席率が一番大事だと分かっています。",
+     "fileF": "voice/ch3-phong-van-duhoc-11-f.mp3"
+    },
+    "13": {
+     "file": "voice/ch3-phong-van-duhoc-13.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "たくさん働きたいです。週40時間ぐらいできれば、学費が楽になります。",
+     "fileF": "voice/ch3-phong-van-duhoc-13-f.mp3"
+    },
+    "15": {
+     "file": "voice/ch3-phong-van-duhoc-15.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "アルバイトはしません。親が全部出してくれるので大丈夫です。",
+     "fileF": "voice/ch3-phong-van-duhoc-15-f.mp3"
+    },
+    "17": {
+     "file": "voice/ch3-phong-van-duhoc-17.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "卒業後は、どうする予定ですか。"
+    },
+    "19": {
+     "file": "voice/ch3-phong-van-duhoc-19.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "学んだ専門を生かして、日本で就職したいです。そのために在学中から資格と日本語を伸ばします。",
+     "fileF": "voice/ch3-phong-van-duhoc-19-f.mp3"
+    },
+    "21": {
+     "file": "voice/ch3-phong-van-duhoc-21.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "卒業後のことはまだ考えていません。そのとき考えます。",
+     "fileF": "voice/ch3-phong-van-duhoc-21-f.mp3"
+    },
+    "23": {
+     "file": "voice/ch3-phong-van-duhoc-23.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "できれば日本でずっと暮らしたいです。理由は特にありません。",
+     "fileF": "voice/ch3-phong-van-duhoc-23-f.mp3"
+    },
+    "25": {
+     "file": "voice/ch3-phong-van-duhoc-25.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "授業は全部日本語です。専門用語も多いですが、ついていけますか。"
+    },
+    "27": {
+     "file": "voice/ch3-phong-van-duhoc-27.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "最初は大変だと思います。予習と復習をして、分からない言葉は授業のあとに必ず聞きます。録音の許可もお願いしたいです。",
+     "fileF": "voice/ch3-phong-van-duhoc-27-f.mp3"
+    },
+    "29": {
+     "file": "voice/ch3-phong-van-duhoc-29.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "N3があるので問題ありません。専門用語もすぐ覚えられます。",
+     "fileF": "voice/ch3-phong-van-duhoc-29-f.mp3"
+    },
+    "31": {
+     "file": "voice/ch3-phong-van-duhoc-31.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "友達にノートを借りれば大丈夫だと思います。",
+     "fileF": "voice/ch3-phong-van-duhoc-31-f.mp3"
+    },
+    "33": {
+     "file": "voice/ch3-phong-van-duhoc-33.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "学費の支払いの計画はどうなっていますか。"
+    },
+    "35": {
+     "file": "voice/ch3-phong-van-duhoc-35.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "親からの仕送りと、28時間以内のアルバイトで計画しています。明細も作ってあります。無理な月は早めに学校に相談します。",
+     "fileF": "voice/ch3-phong-van-duhoc-35-f.mp3"
+    },
+    "37": {
+     "file": "voice/ch3-phong-van-duhoc-37.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "何とかします。お金が足りなければ、もっと働きます。",
+     "fileF": "voice/ch3-phong-van-duhoc-37-f.mp3"
+    },
+    "39": {
+     "file": "voice/ch3-phong-van-duhoc-39.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "学費のことは親に聞いてください。私は知りません。",
+     "fileF": "voice/ch3-phong-van-duhoc-39-f.mp3"
+    },
+    "41": {
+     "file": "voice/ch3-phong-van-duhoc-41.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "m",
+     "text": "最後に、何か聞きたいことはありますか。"
+    },
+    "43": {
+     "file": "voice/ch3-phong-van-duhoc-43.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "留学生の先輩から話を聞く機会はありますか。進路の相談は担任の先生にできますか。",
+     "fileF": "voice/ch3-phong-van-duhoc-43-f.mp3"
+    },
+    "45": {
+     "file": "voice/ch3-phong-van-duhoc-45.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "特にありません。早く結果が知りたいです。",
+     "fileF": "voice/ch3-phong-van-duhoc-45-f.mp3"
+    },
+    "47": {
+     "file": "voice/ch3-phong-van-duhoc-47.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "休みはどれぐらいありますか。欠席しても大丈夫な日数を教えてください。",
+     "fileF": "voice/ch3-phong-van-duhoc-47-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ch3-phong-van-duhoc-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Phòng phỏng vấn của trường chuyên môn nhỏ hơn {name} tưởng. Thầy phụ trách tuyển sinh lật hồ sơ chậm rãi — người đàn ông này đã phỏng vấn hàng nghìn du học sinh, và nhìn một cái là biết ai sang để học, ai sang để… ở nhờ."
+    },
+    "4": {
+     "fileVn": "voice/ch3-phong-van-duhoc-4-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Đến dự giờ thật à.\" — thầy ghi một dấu tròn nhỏ. Du học sinh chịu đến tận nơi xem lớp học, hiếm hơn người ta tưởng."
+    },
+    "6": {
+     "fileVn": "voice/ch3-phong-van-duhoc-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Hai năm đời người mà quyết bằng rẻ và gần…\" Thầy không nói hết câu. Cái giá của sự hời hợt, ai cũng tự trả."
+    },
+    "8": {
+     "fileVn": "voice/ch3-phong-van-duhoc-8-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Bạn của bạn học cho bạn được không?\" — câu hỏi nhẹ như không, mà chặn đứng mọi lời bào chữa."
+    },
+    "12": {
+     "fileVn": "voice/ch3-phong-van-duhoc-12-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "Thầy gật đầu chậm rãi. \"28時間\" và \"出席率\" — hai từ khóa mà bất kỳ cán bộ tuyển sinh nào cũng chờ nghe."
+    },
+    "14": {
+     "fileVn": "voice/ch3-phong-van-duhoc-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Nụ cười của thầy phụ trách tắt hẳn. 40 giờ một tuần với visa du học không phải \"chăm chỉ\" — đó là phạm luật, và trường sẽ là nơi đầu tiên phải chịu trách nhiệm."
+    },
+    "16": {
+     "fileVn": "voice/ch3-phong-van-duhoc-16-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Vậy à.\" — thầy lật sang trang chứng minh tài chính trong hồ sơ, nhìn lại con số một lần nữa, chậm hơn lần đầu."
+    },
+    "20": {
+     "fileVn": "voice/ch3-phong-van-duhoc-20-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Đường đi rõ ràng.\" — một dấu tròn nữa. Người có đích đến hiếm khi lạc đường."
+    },
+    "22": {
+     "fileVn": "voice/ch3-phong-van-duhoc-22-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hai năm học phí, hai năm tuổi trẻ — và đích đến là \"tới lúc đó hẵng tính\". Thầy phụ trách khép nhẹ cây bút."
+    },
+    "24": {
+     "fileVn": "voice/ch3-phong-van-duhoc-24-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Ở lại một đất nước\" không phải dự định — đó là mong muốn. Trường tuyển học sinh đến học một nghề, không tuyển người đến ở."
+    },
+    "28": {
+     "fileVn": "voice/ch3-phong-van-duhoc-28-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Biết trước là vất vả, và có sẵn cách đối phó — đó mới là người theo kịp được.\" Thầy nói, lần này có cả nụ cười."
+    },
+    "30": {
+     "fileVn": "voice/ch3-phong-van-duhoc-30-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thầy phụ trách ngẩng lên nhìn thẳng. \"Vậy à. Thế em đọc thử dòng này trong giáo trình cho thầy nghe.\" — và một trang sách đầy thuật ngữ được đẩy qua bàn."
+    },
+    "32": {
+     "fileVn": "voice/ch3-phong-van-duhoc-32-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Vở của bạn, bằng của bạn. Hai thứ đó không đi cùng nhau được đâu.\" — câu nói khô khốc rơi xuống giữa bàn."
+    },
+    "36": {
+     "fileVn": "voice/ch3-phong-van-duhoc-36-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "Thầy xem qua bảng tính được đẩy qua bàn — từng tháng, từng khoản. \"Du học sinh mà tính được thế này thì ít khi bỏ học giữa chừng.\""
+    },
+    "38": {
+     "fileVn": "voice/ch3-phong-van-duhoc-38-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Motto hatarakimasu\" — thầy nhắc lại ba chữ ấy như nhắc một bản án. Với du học sinh, \"làm thêm nhiều hơn\" là con đường ngắn nhất tới buổi chia tay ở sân bay."
+    },
+    "40": {
+     "fileVn": "voice/ch3-phong-van-duhoc-40-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Người ngồi trong phòng này là em, không phải bố mẹ em.\" — nhẹ nhàng, và không thể cãi."
+    },
+    "44": {
+     "fileVn": "voice/ch3-phong-van-duhoc-44-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"Có chứ. Tháng sau có buổi gặp mặt du học sinh…\" — thầy vừa trả lời vừa viết nốt dòng cuối vào hồ sơ, nét chữ nhẹ hẳn đi."
+    },
+    "46": {
+     "fileVn": "voice/ch3-phong-van-duhoc-46-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thầy gật đầu cho qua, nhưng dấu tròn thứ ba đã không xuất hiện. Người không tò mò về nơi mình sắp sống hai năm — khó tin là họ đã nghĩ kỹ."
+    },
+    "48": {
+     "fileVn": "voice/ch3-phong-van-duhoc-48-vn.mp3",
+     "sp": "Thầy phụ trách tuyển sinh",
+     "voice": "vn-m",
+     "text": "\"…\" Câu hỏi về giới hạn vắng mặt, hỏi trước cả buổi học đầu tiên. Thầy không trả lời ngay — và sự im lặng ấy chính là câu trả lời."
+    },
+    "49": {
+     "fileVn": "voice/ch3-phong-van-duhoc-49-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi phỏng vấn kết thúc bằng cái cúi chào ở cửa. Xuống cầu thang, {name} mới nhận ra lưng áo mình ướt một mảng mồ hôi. Sáu câu hỏi — mỗi câu là một lần tiếng Nhật phải đứng vững thay cho cả tương lai hai năm tới."
+    }
+   },
+   "skipped": {
+    "2": "prompt",
+    "10": "prompt",
+    "18": "prompt",
+    "26": "prompt",
+    "34": "prompt",
+    "42": "prompt"
+   }
+  },
+  "ch3-ve-nuoc": {
+   "steps": {
+    "0": {
+     "fileVn": "voice/ch3-ve-nuoc-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một đêm suy nghĩ. {name} mở điện thoại: ảnh chụp cả nhà ngày tiễn ở sân bay Nội Bài vẫn là hình nền. Ở đầu dây bên kia là một mái nhà đã xa hơn hai năm — và ở đầu dây bên này là một tương lai chưa kịp thành hình."
+    },
+    "1": {
+     "fileVn": "voice/ch3-ve-nuoc-1-vn.mp3",
+     "sp": "Mẹ (điện thoại)",
+     "voice": "vn-f",
+     "text": "\"Con à, mẹ nói thật lòng: nhà mình không ai ép con ở lại. Con khỏe, con vui là nhà mừng rồi. Tiền bạc thiếu đủ tính sau — người ta có cả đời để kiếm, có mỗi cái thân này là không kiếm lại được thôi.\""
+    },
+    "2": {
+     "fileVn": "voice/ch3-ve-nuoc-2-vn.mp3",
+     "sp": "Bố (điện thoại)",
+     "voice": "vn-m",
+     "text": "\"Bố thì bố nghĩ thế này: đi được đến đây là con đã hơn bố cả một trời rồi. Về thì về cho đàng hoàng, đầu ngẩng cao — chả có gì phải xấu hổ với ai. Quyết đi con, nhà luôn có cơm chờ.\""
+    },
+    "3": {
+     "fileVn": "voice/ch3-ve-nuoc-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuộc gọi kết thúc. Căn phòng trọ im ắng đến mức nghe rõ tiếng tủ lạnh chạy. Sáng hôm sau, {name} trở lại văn phòng trường, đứng trước cửa phòng thầy Khánh — trong lòng đã có câu trả lời cuối cùng."
+    },
+    "5": {
+     "fileVn": "voice/ch3-ve-nuoc-5-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "\"…Thầy nghe rồi.\" Thầy Khánh tháo kính, day sống mũi, rồi gật đầu thật chậm. \"Vậy thầy giúp {call} làm trọn vẹn: rút hồ sơ đúng phép, nenkin lấy lại phần hoàn trả, hủy hợp đồng phòng — đi thế nào thì về cũng phải tươm tất thế ấy. Người Nhật quý nhất là người biết khép lại đàng hoàng.\""
+    },
+    "6": {
+     "fileVn": "voice/ch3-ve-nuoc-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thầy bắt tay {name} — cái bắt tay của hai người đàn ông/đồng nghiệp hơn là thầy trò. \"Về rồi mà nhớ tiếng Nhật, thì tiếng Nhật không bỏ mình đâu. Nó sẽ nuôi {call} theo một cách khác.\""
+    },
+    "7": {
+     "fileVn": "voice/ch3-ve-nuoc-7-vn.mp3",
+     "sp": "Thầy Khánh",
+     "voice": "vn-m",
+     "text": "Thầy Khánh bật cười lớn: \"Ha! Đứng trước cửa phòng thầy mà quay xe — thế mới là thanh niên. Thôi được, quyết định cả đời người thì cho phép đổi ý đúng một lần này. Về suy nghĩ lại cho kỹ: ở lại đi đường nào, nói thầy nghe.\""
+    },
+    "8": {
+     "fileVn": "voice/ch3-ve-nuoc-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} ra về với tờ lịch chưa khoanh thêm nét nào. Có những quyết định không phải để trốn — mà để khi quyết rồi, không còn ngoảnh lại."
+    }
+   },
+   "skipped": {
+    "4": "prompt"
+   }
+  },
+  "ind-duhoc-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-duhoc-1-0.mp3",
+     "sp": "Thầy chủ nhiệm",
+     "voice": "m",
+     "text": "新入生のみなさん、ようこそ。ここからは全部日本語の授業です。まず、一人ずつ自己紹介をしてください。"
+    },
+    "1": {
+     "file": "voice/ind-duhoc-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "初めまして、私はベトナムから来た留学生です。日本語を生かした仕事に就くために、この学校を選びました。よろしくお願いします。",
+     "fileF": "voice/ind-duhoc-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-duhoc-1-2.mp3",
+     "sp": "Thầy chủ nhiệm",
+     "voice": "m",
+     "text": "いい紹介だね。当校で一番大事なのは出席率。理由があっても、休みが多いと進級できません。体調管理も勉強のうちだよ。"
+    },
+    "3": {
+     "file": "voice/ind-duhoc-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、分かりました。出席を一番に考えて、遅刻もしないようにします。",
+     "fileF": "voice/ind-duhoc-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-duhoc-1-4.mp3",
+     "sp": "Bạn cùng lớp",
+     "voice": "f",
+     "text": "ねえ、さっきの自己紹介、すごく上手だったね。私、ネパールから来たアーシャ。一緒のクラスだね。"
+    },
+    "5": {
+     "file": "voice/ind-duhoc-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとう、アーシャさん。専門用語が難しそうで、少し不安です。分からない言葉があったら、授業の後に一緒に先生に聞きませんか。",
+     "fileF": "voice/ind-duhoc-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-duhoc-1-6.mp3",
+     "sp": "Bạn cùng lớp",
+     "voice": "f",
+     "text": "もちろん！私も一人だと聞きにくかったから、うれしい。じゃあ放課後、図書室で復習しよう。"
+    },
+    "7": {
+     "file": "voice/ind-duhoc-1-7.mp3",
+     "sp": "Thầy chủ nhiệm",
+     "voice": "m",
+     "text": "では最初の授業を始めます。教科書の三ページを開いてください。"
+    },
+    "8": {
+     "fileVn": "voice/ind-duhoc-1-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi học đầu tiên trôi qua nhanh hơn nỗi lo ban đầu. Có thêm một người bạn cùng cảnh ngộ, một lời hẹn ôn bài ở thư viện — và cảm giác rất rõ ràng: hai năm tới sẽ không dễ, nhưng sẽ không cô độc."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-duhoc-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-duhoc-2-1.mp3",
+     "sp": "Anh quản lý cửa hàng",
+     "voice": "m",
+     "text": "ねえ、今月人手が足りなくてさ。夜も入ってくれない？現金で払うから、学校には分からないよ。"
+    },
+    "3": {
+     "file": "voice/ind-duhoc-2-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。でも、留学生は週28時間までと決まっていて、再来週は試験なんです。今のシフトは今まで通り頑張りますので、夜はお断りさせてください。",
+     "fileF": "voice/ind-duhoc-2-3-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-duhoc-2-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "週28時間までなら、あと4時間だけ増やせます。日曜の昼なら入れますが、夜は試験勉強のために空けさせてください。",
+     "fileF": "voice/ind-duhoc-2-6-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-duhoc-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Kỳ thi giữa kỳ cách hai tuần. Một buổi tối ở chỗ làm thêm, quản lý cửa hàng kéo {name} ra góc quầy, hạ giọng như sắp chia một món hời: \"Tháng này thiếu người. Em làm thêm buổi đêm giúp anh — tiền mặt trao tay, không qua sổ sách gì đâu. Bạn em bên kho cũng làm thế cả.\""
+    },
+    "4": {
+     "fileVn": "voice/ind-duhoc-2-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Quản lý nhìn {name} vài giây, rồi cười khà: \"Luật thuộc nằm lòng thế thì anh chịu.\" Công việc được giữ nguyên, cái gật đầu tôn trọng còn hơn — và kỳ thi giữa kỳ, {name} bước vào phòng thi với cái đầu tỉnh táo."
+    },
+    "5": {
+     "fileVn": "voice/ind-duhoc-2-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ba tuần làm đêm. Ví dày lên trông thấy — nhưng mắt cũng thâm quầng, và buổi học sáng bắt đầu bằng những cái ngáp không giấu nổi. Một sáng, thầy chủ nhiệm gọi {name} lại cuối giờ: \"Tháng này em ngủ gật ba lần rồi đấy. Có chuyện gì không?\" Câu hỏi nhẹ tênh ấy khiến lưng {name} lạnh toát: chỉ cần trường hoặc nyukan hỏi tới bảng lương, mọi thứ xây được bấy lâu có thể đổ trong một buổi chiều."
+    },
+    "7": {
+     "fileVn": "voice/ind-duhoc-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Bốn giờ cũng quý.\" Quản lý ghi thêm vào bảng ca. Không phải lời từ chối nào cũng làm mất lòng — từ chối có con số và có phương án thay thế, đó là thương lượng của người trưởng thành."
+    },
+    "8": {
+     "fileVn": "voice/ind-duhoc-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Trên đường về phòng trọ, {name} nghĩ về cái gật đầu suýt nữa của mình. Có những cái bẫy không trông giống bẫy — chúng trông giống cơ hội, trả bằng tiền mặt và nói bằng giọng thân tình."
+    }
+   },
+   "skipped": {
+    "2": "prompt"
+   }
+  },
+  "ind-duhoc-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-duhoc-3-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "私は卒業後、日本語と専門の両方を使える仕事に就きたいです。日本で学んだことは、技術だけではありません。約束を守ること、時間を大切にすること、そして、分からないことを恥ずかしがらずに聞く勇気です。",
+     "fileF": "voice/ind-duhoc-3-1-f.mp3"
+    },
+    "3": {
+     "file": "voice/ind-duhoc-3-3.mp3",
+     "sp": "Thầy chủ nhiệm",
+     "voice": "m",
+     "text": "上手な日本語より、伝わる日本語。そして、伝わる話の裏には、いつも生きてきた時間がある。あんたの話には、それがあったよ。"
+    },
+    "0": {
+     "fileVn": "voice/ind-duhoc-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuối học kỳ, mỗi sinh viên phải thuyết trình năm phút bằng tiếng Nhật về \"nghề nghiệp tôi muốn làm\". Đến lượt {name}: slide cuối cùng chỉ có một dòng chữ — và cả lớp im lặng chờ nghe từ chính miệng người nói."
+    },
+    "2": {
+     "fileVn": "voice/ind-duhoc-3-2-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tiếng vỗ tay vang lên — to nhất từ hàng ghế của Asha. Thầy chủ nhiệm đứng dậy, chỉnh lại một lỗi trợ từ nhỏ trong bài, rồi nói câu mà cả lớp cùng ghi vào vở:"
+    },
+    "5": {
+     "fileVn": "voice/ind-duhoc-3-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hai đứa du học sinh, hai đất nước, một quán ăn nhỏ và một lời hẹn: dù sau này ở lại hay về, mỗi năm một lần phải gặp nhau — ở Tokyo, Kathmandu hay Hà Nội cũng được. Tình bạn của người xa xứ, hóa ra, là một loại quê hương di động."
+    },
+    "6": {
+     "fileVn": "voice/ind-duhoc-3-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Để xem đã\" — câu trả lời an toàn nhất và trống rỗng nhất. Asha cười cho qua, nhưng {name} biết: đến một lúc nào đó, người ta phải dám nói ra điều mình muốn, ít nhất là với bạn bè — và với chính mình."
+    },
+    "7": {
+     "fileVn": "voice/ind-duhoc-3-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Học kỳ khép lại bằng một buổi thuyết trình năm phút. Năm phút ngắn ngủi — nhưng là năm phút đầu tiên {name} nói về tương lai của mình bằng tiếng Nhật, trước một phòng đầy người, mà không cần nhìn giấy."
+    }
+   },
+   "skipped": {
+    "4": "prompt"
+   }
+  },
+  "ind-genba-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-genba-1-0.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "おはようございます。今日から一緒に働く仲間です。まず安全、それから仕事ですよ。"
+    },
+    "1": {
+     "file": "voice/ind-genba-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "今日からお世話になります。安全に気をつけて頑張りますので、よろしくお願いします。",
+     "fileF": "voice/ind-genba-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-genba-1-2.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "じゃあ、まずヘルメットと安全靴を渡すね。サイズが合うか、かぶってみて。"
+    },
+    "3": {
+     "file": "voice/ind-genba-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。ヘルメットは少しきついです。もう少し大きいのはありますか。",
+     "fileF": "voice/ind-genba-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-genba-1-4.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "うん、大きいのと交換しよう。朝礼ではKY活動をするよ。KYは「危険を予知する」という意味だ。"
+    },
+    "5": {
+     "file": "voice/ind-genba-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "KY活動ですね。危険な場所を先に考える、という意味ですか。",
+     "fileF": "voice/ind-genba-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-genba-1-6.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "大丈夫、最初はみんなそうだよ。分からないことは、作業の前に聞いてね。始まってからだと危ないからさ。"
+    },
+    "7": {
+     "file": "voice/ind-genba-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、分からないときは、必ず前に聞きます。勝手に触りません。",
+     "fileF": "voice/ind-genba-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-genba-1-8.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "その心構えが一番大事だね。あと、合図や報告は大きな声でね。"
+    },
+    "9": {
+     "file": "voice/ind-genba-1-9.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "じゃあ、みんなで指差し確認だ。足場よし、頭上よし。"
+    },
+    "10": {
+     "file": "voice/ind-genba-1-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "足場よし、頭上よし。ご安全に！",
+     "fileF": "voice/ind-genba-1-10-f.mp3"
+    },
+    "11": {
+     "file": "voice/ind-genba-1-11.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "いい声だ。その調子でいこう。"
+    },
+    "12": {
+     "fileVn": "voice/ind-genba-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi sáng đầu tiên ở công trường 横浜, {name} đội chiếc mũ còn thơm mùi mới, hô vang 「ご安全に！」 cùng cả đội. Ở genba, câu chào không phải “chúc làm tốt” — mà là “chúc nhau trở về nguyên vẹn”. {call} nhớ kỹ điều đó trước cả cách cầm dụng cụ."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-genba-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-genba-2-1.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "あれ…なんか目まいがする。少し気持ち悪いかも。"
+    },
+    "5": {
+     "file": "voice/ind-genba-2-5.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "よく叫んだ。その一言で助かったよ。"
+    },
+    "7": {
+     "file": "voice/ind-genba-2-7.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "人を助けたい気持ちは分かる。でも、吊り荷の下に入るのは絶対にだめだ。まず声だ、声。"
+    },
+    "9": {
+     "file": "voice/ind-genba-2-9.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "見て見ぬふりが、一番の事故のもとだ。次は声を出せ。"
+    },
+    "10": {
+     "file": "voice/ind-genba-2-10.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "クレーン作業は一旦中止。全員、日陰に集まれ。水分を取れ。"
+    },
+    "14": {
+     "file": "voice/ind-genba-2-14.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "ありがとう。少し落ち着いたよ。頭も軽くなった。"
+    },
+    "16": {
+     "file": "voice/ind-genba-2-16.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "「大丈夫」は本人が言うな。周りが判断するんだ。熱中症は甘く見るな。"
+    },
+    "17": {
+     "file": "voice/ind-genba-2-17.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "午後の作業は日陰の多い場所に変更する。具合が悪いと感じたら、我慢せず言え。"
+    },
+    "19": {
+     "file": "voice/ind-genba-2-19.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "吊り荷の下には、絶対に入らない。荷が揺れたら、まず止まる、離れる、声を出す。"
+    },
+    "20": {
+     "file": "voice/ind-genba-2-20.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "あとはさ、暑い日は塩飴な。ポケットに入れとくと違うよ。"
+    },
+    "25": {
+     "file": "voice/ind-genba-2-25.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "じゃあ、今日はここまで。明日も、ご安全に。"
+    },
+    "0": {
+     "fileVn": "voice/ind-genba-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Trưa tháng bảy ở 横浜, nắng đổ lửa xuống mặt bê tông. Nhiệt độ ngoài trời chạm 35 độ, gió biển cũng nóng hầm hập. Giờ nghỉ vừa hết, cả đội quay lại việc. {name} đang bê thùng đinh thì thấy Hùng ở phía trước loạng choạng, mặt trắng bệch, tay ôm đầu."
+    },
+    "2": {
+     "fileVn": "voice/ind-genba-2-2-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đúng lúc đó, {name} ngẩng lên: trên cao, cần cẩu đang di chuyển một bó thép dài. Sợi cáp rung lắc, bó thép chao đảo — và nó đang treo lơ lửng ngay phía trên lối đi mà Hùng sắp bước vào. Gió vừa thốc lên một cơn nữa."
+    },
+    "4": {
+     "fileVn": "voice/ind-genba-2-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} lấy hết hơi, hét vang cả một góc công trường: 「危ない！止まって！頭上注意！」 (Nguy hiểm! Dừng lại! Chú ý phía trên đầu!). Hùng giật mình khựng lại ngay mép lối đi. Anh thợ cả gần đó lập tức giơ tay ra hiệu dừng cẩu. Bó thép từ từ được hạ xuống khu vực trống, cách chỗ Hùng đứng chưa đầy hai mét."
+    },
+    "6": {
+     "fileVn": "voice/ind-genba-2-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Không kịp nghĩ, {name} lao thẳng vào lối đi, túm áo kéo Hùng ngã nhào ra ngoài. Bó thép sượt qua, hạ xuống đúng chỗ hai người vừa đứng. Hùng thoát nạn — nhưng tim {name} đập thình thịch: nếu bó thép rơi sớm nửa giây, người nằm dưới đó đã là cả hai."
+    },
+    "8": {
+     "fileVn": "voice/ind-genba-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} sững người, tay chân như bị chôn xuống đất. May thay, anh thợ cả phía bên kia cũng nhìn thấy, hét lên và ra hiệu dừng cẩu kịp lúc. Bó thép được hạ xuống an toàn, Hùng được dìu ra khỏi lối đi. Không ai bị thương — nhưng ánh mắt cả đội nhìn {name} sau đó khiến {call} chỉ muốn độn thổ: ở công trường, nhìn thấy nguy hiểm mà im lặng cũng là một lỗi."
+    },
+    "11": {
+     "fileVn": "voice/ind-genba-2-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hùng được dìu vào lán nghỉ có quạt, nới lỏng cổ áo. Mặt Hùng vẫn tái, mồ hôi túa ra nhưng người thì lạnh. Mọi người nhìn {name} — người đứng gần Hùng nhất lúc này."
+    },
+    "13": {
+     "fileVn": "voice/ind-genba-2-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} làm đúng bài đã học ở buổi tập huấn: đưa Hùng nằm chỗ mát nhất, lấy khăn ướt chườm cổ, nách và bẹn — những chỗ có mạch máu lớn — rồi cho uống nước điện giải từng ngụm nhỏ. Mười phút sau, sắc mặt Hùng hồng hào trở lại, mở mắt cười yếu: “Tưởng đâu gục luôn rồi…”"
+    },
+    "15": {
+     "fileVn": "voice/ind-genba-2-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hùng gượng đứng dậy, miệng nói không sao — nhưng mới đi được ba bước đã khuỵu xuống, may mà anh thợ cả đỡ kịp. Cả lán nhốn nháo. Sếp công trường quát lên một tiếng khiến ai cũng im bặt, rồi tự tay dìu Hùng vào chỗ mát."
+    },
+    "18": {
+     "fileVn": "voice/ind-genba-2-18-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiều hôm đó, tiến độ chậm lại một chút nhưng không một ai phàn nàn. Hùng được cho về sớm nghỉ ngơi, trước khi về còn quay lại cảm ơn cả đội. Sự cố “suýt nữa” được cả công trường nhắc đến trong buổi họp cuối ngày như một bài học chung."
+    },
+    "22": {
+     "fileVn": "voice/ind-genba-2-22-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} ghi hết, không giấu một chữ: bó thép đung đưa, Hùng say nắng, và cả khoảnh khắc mình chần chừ. Sếp đọc xong, gật đầu: “Ghi được như vậy thì lần sau sẽ không lặp lại. Sự cố suýt xảy ra — ヒヤリハット — là tài sản của cả đội, không phải lỗi của một người.”"
+    },
+    "23": {
+     "fileVn": "voice/ind-genba-2-23-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} chỉ ghi vỏn vẹn “hôm nay hơi nắng, cần chú ý”. Sếp đọc lướt qua, nhíu mày nhưng không nói gì thêm, chỉ gõ nhẹ cây bút lên tờ giấy. Tối về, {name} cứ thấy cấn trong lòng: một bài học lớn như vậy mà ghi qua loa, chẳng khác nào tự tước của mình cơ hội nhớ nó cho kỹ."
+    },
+    "24": {
+     "fileVn": "voice/ind-genba-2-24-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Trên đường về, hoàng hôn đỏ rực phía vịnh 横浜. Ngày hôm nay dài hơn mọi ngày — {name} học được rằng ở công trường, phản xạ và tiếng nói của mình có thể là ranh giới giữa một ngày bình thường và một tai nạn không thể quay lại."
+    },
+    "26": {
+     "fileVn": "voice/ind-genba-2-26-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đêm đó {name} nằm nghĩ mãi về ba chữ sếp dặn: 止まる・離れる・声を出す — dừng lại, tránh xa, cất tiếng. Công trường dạy {call} rằng dũng cảm không phải là lao vào, mà là phản ứng đúng trong đúng một giây cần thiết."
+    }
+   },
+   "skipped": {
+    "3": "prompt",
+    "12": "prompt",
+    "21": "prompt"
+   }
+  },
+  "ind-genba-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-genba-3-1.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "今日から、簡単な図面を読んでみよう。まずこの数字、何ミリか分かるか。"
+    },
+    "2": {
+     "file": "voice/ind-genba-3-2.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "図面はさ、記号を覚えれば半分読めたも同然だよ。焦らなくていい。"
+    },
+    "7": {
+     "file": "voice/ind-genba-3-7.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "図面の分からない記号は、占いじゃないんだから、聞いてくれよな。"
+    },
+    "8": {
+     "file": "voice/ind-genba-3-8.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "うん、読めている。寸法も合っているよ。"
+    },
+    "12": {
+     "file": "voice/ind-genba-3-12.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "すげえ、もう一人前じゃん。最初の日の人とは別人だよ。"
+    },
+    "14": {
+     "file": "voice/ind-genba-3-14.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "ご安全に！…って、俺たちより様になってるよ。"
+    },
+    "15": {
+     "file": "voice/ind-genba-3-15.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "一か月でここまでくれば、上出来だよ。本当にさ。"
+    },
+    "16": {
+     "file": "voice/ind-genba-3-16.mp3",
+     "sp": "Sếp công trường",
+     "voice": "m",
+     "text": "来月から、朝の点呼は任せる。頼んだぞ。"
+    },
+    "0": {
+     "fileVn": "voice/ind-genba-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một tháng trôi qua nhanh như một cái chớp mắt. {name} giờ đã thuộc lòng đường đi trong công trường, biết tên từng người trong đội, và không còn giật mình mỗi khi tiếng cẩu kêu nữa. Sáng nay, sếp công trường gọi {name} lại bàn làm việc trong lán chỉ huy."
+    },
+    "3": {
+     "fileVn": "voice/ind-genba-3-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cúi sát bản vẽ: những đường thẳng, con số và ký hiệu từng trông như mê cung giờ dần có nghĩa. Chỗ này là cột, chỗ kia là khoảng cách giữa hai điểm neo. Sếp khoanh tròn một ký hiệu lạ ở góc bản vẽ và nhìn {name}."
+    },
+    "5": {
+     "fileVn": "voice/ind-genba-3-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} chỉ vào ký hiệu, hỏi thẳng. Sếp gật đầu hài lòng rồi giải thích: đó là ký hiệu điểm dừng kiểm tra — tới bước đó phải gọi người có trách nhiệm tới xác nhận mới được làm tiếp. “Tốt. Không biết mà hỏi là giỏi. Không biết mà đoán mới là tai nạn.” Câu nói của sếp làm cả lán cười, còn {name} thì ghi ngay vào sổ tay."
+    },
+    "6": {
+     "fileVn": "voice/ind-genba-3-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} đoán ký hiệu đó là “làm tiếp” và bắt tay vào việc. Mười phút sau anh thợ cả đi qua, huýt sáo một tiếng rồi khoát tay dừng lại: đó là điểm phải chờ kiểm tra mới được qua. May mà chưa có gì hỏng — chỉ phải tháo ra làm lại từ đầu, giữa cái nắng ban trưa."
+    },
+    "9": {
+     "fileVn": "voice/ind-genba-3-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chưa kịp mừng xong, sếp đã đưa cho {name} cuốn sổ điểm danh an toàn của buổi sáng hôm sau và nói một câu khiến {name} đứng hình mất hai giây: mai, {name} sẽ là người hô điểm danh an toàn thay cho cả đội."
+    },
+    "11": {
+     "fileVn": "voice/ind-genba-3-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Giọng {name} vang lên giữa sân công trường buổi sớm: từng mục một — mũ, giày, dây an toàn, sức khoẻ — hô tới đâu, cả đội đáp “よし！” tới đó, rền vang. Hô xong, mấy anh thợ vỗ tay rần rần. Hùng huýt sáo: “Oách chưa kìa!”"
+    },
+    "13": {
+     "fileVn": "voice/ind-genba-3-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} đọc một mạch như trả bài, giọng nhỏ dần về cuối. Sếp giơ tay ra hiệu dừng, bước lên đứng cạnh: “Điểm danh không phải thủ tục. Là lúc mỗi người tự kiểm lại mình. Làm lại nào, anh hô cùng.” Hai người cùng hô lại từ đầu, lần này cả đội đáp vang dội. {name} đỏ mặt — nhưng thuộc bài."
+    },
+    "17": {
+     "fileVn": "voice/ind-genba-3-17-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiều tan ca, cả đội rôm rả bàn chuyện cuối tuần đi ăn cùng nhau — một quán thịt nướng bình dân gần ga, chia đều, ai cũng có phần. Anh thợ cả quay sang {name}: “Đi nhé, tân binh được công nhận thì phải khao một chầu chứ — đùa thôi, đội trả!”"
+    },
+    "19": {
+     "fileVn": "voice/ind-genba-3-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Quán thịt nướng khói bay mù mịt, tiếng xèo xèo trên vỉ và tiếng cười nói át cả tiếng tàu chạy qua. Sếp công trường — người nghiêm nhất công trường — gắp cho {name} miếng thịt đầu tiên: “Ăn đi, tháng này vất vả rồi.” Ngồi giữa những con người rám nắng và tốt bụng này, {name} thấy công trường không còn là nơi xa lạ nữa. Nó là một đội. Và {call} ở trong đội đó."
+    },
+    "20": {
+     "fileVn": "voice/ind-genba-3-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cảm ơn cả đội và hẹn lần sau chắc chắn sẽ đi. Không ai giận, anh thợ cả còn dúi theo hộp cơm: “Vậy cầm cái này về ăn, đừng bỏ bữa.” Về tới phòng, {name} mở hộp cơm ra ăn chậm rãi, lòng ấm lạ — hoá ra được một đội quý mến là cảm giác như thế này."
+    },
+    "21": {
+     "fileVn": "voice/ind-genba-3-21-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tối đó, {name} lật lại cuốn sổ tay: trang đầu tiên là dòng chữ nguệch ngoạc “ご安全に！” ghi trong ngày đầu bỡ ngỡ. Trang hôm nay là một bản vẽ đã đọc được và một dòng chữ mới: “được giao điểm danh”. Một tháng ở công trường, đổi lại là một vị trí thật sự trong lòng một tập thể."
+    },
+    "22": {
+     "fileVn": "voice/ind-genba-3-22-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Từ cậu/cô tân binh đội mũ còn chật đến người được cả đội tin tưởng giao hô điểm danh — {name} đã đi một chặng đường không dài mà rất thật. Công trường 横浜 khắc nghiệt, nhưng tình đồng đội ở đó thì ấm như nắng sớm sau cơn mưa."
+    }
+   },
+   "skipped": {
+    "4": "prompt",
+    "10": "prompt",
+    "18": "prompt"
+   }
+  },
+  "ind-kaigo-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-kaigo-1-0.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "おはよう。今日からよろしくね。まず利用者さんへの挨拶は、目線を合わせて、ゆっくり、笑顔で。これが介護の最初の技術よ。"
+    },
+    "1": {
+     "file": "voice/ind-kaigo-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます。今日からお世話になります。ご指導、よろしくお願いいたします。",
+     "fileF": "voice/ind-kaigo-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-kaigo-1-2.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "いい挨拶。じゃあ、ハルさんの体調確認から。声のかけ方、見ていてね。ハルさん、おはようございます。昨夜はよく眠れましたか。"
+    },
+    "3": {
+     "file": "voice/ind-kaigo-1-3.mp3",
+     "sp": "Cụ Haru",
+     "voice": "f",
+     "text": "おはよう。眠れたよ、夢も見なかった。あんた、新しい人かい。優しそうな顔だねえ。"
+    },
+    "4": {
+     "file": "voice/ind-kaigo-1-4.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ハルさん、おはようございます。今朝の体調はいかがですか。熱っぽさや、痛いところはありませんか。",
+     "fileF": "voice/ind-kaigo-1-4-f.mp3"
+    },
+    "5": {
+     "file": "voice/ind-kaigo-1-5.mp3",
+     "sp": "Cụ Haru",
+     "voice": "f",
+     "text": "大丈夫、大丈夫。膝が少し重いくらいだ。あんたの声、聞きやすいね。外国の人は丁寧だねえ。"
+    },
+    "6": {
+     "file": "voice/ind-kaigo-1-6.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "じゃあ朝食の介助。ハルさん、喉が渇いていませんかって、先に水のこと、聞いてみて。"
+    },
+    "7": {
+     "file": "voice/ind-kaigo-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ハルさん、朝食の前に、お水を少し飲みませんか。喉が潤うと、食べやすくなります。",
+     "fileF": "voice/ind-kaigo-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-kaigo-1-8.mp3",
+     "sp": "Cụ Haru",
+     "voice": "f",
+     "text": "おお、気が利くねえ。じゃあ少しもらおうか。…うん、美味しい。ただの水なのにねえ。"
+    },
+    "9": {
+     "file": "voice/ind-kaigo-1-9.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "食べる速さは、その人のペース。急がせるのが一番いけない。ハルさん、今日のおかゆ、味はどうですか。"
+    },
+    "10": {
+     "file": "voice/ind-kaigo-1-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ハルさん、一口ずつでいいですよ。熱いので、ふうふうしてから食べてくださいね。",
+     "fileF": "voice/ind-kaigo-1-10-f.mp3"
+    },
+    "11": {
+     "file": "voice/ind-kaigo-1-11.mp3",
+     "sp": "Cụ Haru",
+     "voice": "f",
+     "text": "あんたが来て、この部屋が明るくなったよ。明日も来ておくれ。"
+    },
+    "12": {
+     "fileVn": "voice/ind-kaigo-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một buổi sáng trôi qua bằng những câu nói nhỏ: hỏi thăm giấc ngủ, mời ngụm nước, chờ một miếng cháo. {name} chợt hiểu nghề kaigo không bắt đầu bằng kỹ thuật — nó bắt đầu bằng việc người già chịu mở lời với mình. Và hôm nay, cụ Haru đã mở lời."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-kaigo-2": {
+   "steps": {
+    "3": {
+     "file": "voice/ind-kaigo-2-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ヤマダさん、家の話、聞かせてください。どんな家だったんですか。奥さんのごはん、何が一番美味しかったですか。",
+     "fileF": "voice/ind-kaigo-2-3-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-kaigo-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ca tối. Hành lang viện chỉ còn ánh đèn vàng nhạt. Cụ Yamada — người cả tháng nay ít nói — đang ngồi xe lăn trước cửa phòng, áo khoác mặc sẵn, tay ôm một chiếc túi vải cũ. \"Đêm nay tôi về nhà. Con gái tôi đang đợi cơm.\" Vấn đề là: nhà cũ của cụ đã bán từ ba năm trước, và con gái cụ sống tận Hokkaido."
+    },
+    "1": {
+     "fileVn": "voice/ind-kaigo-2-1-vn.mp3",
+     "sp": "Chị Mai",
+     "voice": "vn-f",
+     "text": "\"Đây gọi là 帰宅願望 — nỗi muốn về nhà của người lẫn. Đừng cãi đúng sai với cụ, vô ích và tàn nhẫn. Nghe cụ trước đã. {name}, em thử nói chuyện với cụ xem.\""
+    },
+    "4": {
+     "fileVn": "voice/ind-kaigo-2-4-vn.mp3",
+     "sp": "Ông Yamada",
+     "voice": "vn-m",
+     "text": "\"…Canh miso với ngao. Bà ấy nấu canh miso ngao ngon lắm. Nhà tôi có cây hồng trước sân — mùa này chắc chín rồi…\" Giọng cụ chậm dần. Chiếc túi vải trên tay nới lỏng ra."
+    },
+    "5": {
+     "fileVn": "voice/ind-kaigo-2-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} pha một ấm trà ấm, rót mời cụ. Hơn một tiếng sau, cụ tự nói: \"Muộn rồi nhỉ. Thôi, mai về cũng được.\" — và chịu để đẩy xe về phòng. Không ai thắng cụ trong một cuộc cãi lý. Cụ chỉ cần một người chịu ngồi xuống nghe."
+    },
+    "6": {
+     "fileVn": "voice/ind-kaigo-2-6-vn.mp3",
+     "sp": "Chị Mai",
+     "voice": "vn-f",
+     "text": "\"Đêm nay em vừa làm được việc mà nhiều người làm nghề năm năm chưa làm được.\" Chị Mai nói khẽ, ghi vào sổ bàn giao một dòng dài."
+    },
+    "7": {
+     "fileVn": "voice/ind-kaigo-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Màn hình sáng lên giữa hành lang đêm. Khuôn mặt người con gái hiện ra, ngái ngủ mà mừng rỡ: \"Bố! Bố chưa ngủ à?\" Cụ Yamada nhìn chằm chằm, tay run run chạm lên màn hình."
+    },
+    "8": {
+     "fileVn": "voice/ind-kaigo-2-8-vn.mp3",
+     "sp": "Ông Yamada",
+     "voice": "vn-m",
+     "text": "\"…À, con đấy à. Bố tưởng con đợi cơm. Ừ, bố ăn rồi. Con ngủ đi, lạnh thế này…\" Cuộc gọi ngắt. Cụ ngáp dài — nỗi nhớ nhà, hóa ra, chỉ cần một giọng nói thật là dịu xuống."
+    },
+    "9": {
+     "fileVn": "voice/ind-kaigo-2-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Sự thật — nói sai cách — trở thành một nhát dao. Cụ vùng dậy, giọng lạc đi: \"Nói dối! Nhà tôi vẫn ở đó!\" Cả hành lang sáng đèn. Mất thêm hai tiếng, với sự giúp sức của cả ca trực, cụ mới dịu lại trong nước mắt. Chị Mai không trách, chỉ nói một câu:"
+    },
+    "10": {
+     "fileVn": "voice/ind-kaigo-2-10-vn.mp3",
+     "sp": "Chị Mai",
+     "voice": "vn-f",
+     "text": "\"Với người lẫn, đúng sự thật không quan trọng bằng đúng cảm xúc. Nhớ lấy đêm nay — nó đáng giá hơn mười buổi học.\""
+    },
+    "11": {
+     "fileVn": "voice/ind-kaigo-2-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đèn phòng cụ Yamada tắt lúc gần sáng. {name} ngồi ghi sổ bàn giao ca đêm, tay vẫn còn hơi run — không phải vì mệt, mà vì lần đầu tiên chạm tới phần sâu nhất của nghề này: chăm một con người, không phải một ca bệnh."
+    }
+   },
+   "skipped": {
+    "2": "prompt"
+   }
+  },
+  "ind-kaigo-3": {
+   "steps": {
+    "2": {
+     "file": "voice/ind-kaigo-3-2.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ハルさん、今日は窓まで歩いてみましょう。私の腕につかまってください。一歩ずつ、焦らなくて大丈夫です。",
+     "fileF": "voice/ind-kaigo-3-2-f.mp3"
+    },
+    "5": {
+     "file": "voice/ind-kaigo-3-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "あと少しです、ハルさん。窓の外、桜が咲き始めましたよ。見に行きましょう。",
+     "fileF": "voice/ind-kaigo-3-5-f.mp3"
+    },
+    "9": {
+     "file": "voice/ind-kaigo-3-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "報告します。ハルさんは今日、介助ありで4メートル歩行できました。表情も明るく、食欲も良好です。",
+     "fileF": "voice/ind-kaigo-3-9-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-kaigo-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ba tháng sau ngày tai biến nhẹ, hôm nay cụ Haru tập đi lại buổi đầu tiên: từ giường tới cửa sổ — quãng đường bốn mét mà cả phòng hồi hộp như xem một cuộc thi."
+    },
+    "1": {
+     "fileVn": "voice/ind-kaigo-3-1-vn.mp3",
+     "sp": "Chị Mai",
+     "voice": "vn-f",
+     "text": "\"{name} dẫn cụ hôm nay. Nhớ: đi bên phía yếu hơn, tay để cụ vịn — không bế, không kéo. Cụ tự đi được bước nào, bước đó là của cụ.\""
+    },
+    "3": {
+     "fileVn": "voice/ind-kaigo-3-3-vn.mp3",
+     "sp": "Cụ Haru",
+     "voice": "vn-f",
+     "text": "\"…Được. Đi.\" — Bước một. Bước hai. Đến bước thứ ba, đầu gối cụ run lên bần bật. Cả căn phòng nín thở."
+    },
+    "6": {
+     "fileVn": "voice/ind-kaigo-3-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bước bốn. Bước năm. Tay cụ bám chặt tay {name} — rồi cửa sổ hiện ra trước mặt, và cả một trời hoa anh đào hồng nhạt. Cụ Haru đứng lặng rất lâu, nước mắt chảy mà miệng thì cười: \"Tôi… tự đi được rồi.\" Tiếng vỗ tay vang khắp phòng bệnh."
+    },
+    "7": {
+     "fileVn": "voice/ind-kaigo-3-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Thôi, hôm nay tới đây.\" {name} đỡ cụ ngồi xuống ghế đã kéo sẵn. Cụ Haru thở hổn hển, nhìn hai mét còn lại đầy tiếc nuối — rồi gật đầu: \"Mai đi tiếp, hứa đấy.\" An toàn không lãng mạn, nhưng là điều giữ cho ngày mai còn có thể."
+    },
+    "8": {
+     "fileVn": "voice/ind-kaigo-3-8-vn.mp3",
+     "sp": "Chị Mai",
+     "voice": "vn-f",
+     "text": "\"Hôm nay đến lượt {name} ghi sổ 記録 và báo cáo trong buổi họp ca đấy. Viết và nói như những gì em làm — đừng thêm, đừng bớt.\""
+    },
+    "10": {
+     "fileVn": "voice/ind-kaigo-3-10-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi chiều, cụ Haru nhờ {name} một việc riêng: viết giúp cụ một lá thư cho đứa cháu ngoại sắp vào đại học — chữ cụ run, mà ý thì rõ từng lời. Viết xong, cụ ký tên ở cuối thư, tay run run, nét nào ra nét nấy. \"Cảm ơn cháu. Ở cái tuổi này, còn được người ta cần tới — quý lắm.\""
+    }
+   },
+   "skipped": {
+    "4": "prompt"
+   }
+  },
+  "ind-khach-san-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-khach-san-1-0.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "今日からフロントですね。まずは笑顔と、ていねいな言葉。それがホテルの入口ですよ。"
+    },
+    "1": {
+     "file": "voice/ind-khach-san-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "よろしくお願いいたします。フロントの仕事、一生懸命覚えます。",
+     "fileF": "voice/ind-khach-san-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-khach-san-1-2.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "すみません、チェックインをお願いしたいのですが。予約をしています。"
+    },
+    "3": {
+     "file": "voice/ind-khach-san-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いらっしゃいませ。かしこまりました。ご予約のお名前をお聞かせいただけますか。",
+     "fileF": "voice/ind-khach-san-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-khach-san-1-4.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "たなかです。今日から一泊で、禁煙のお部屋を予約しました。"
+    },
+    "5": {
+     "file": "voice/ind-khach-san-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "たなか様、ありがとうございます。禁煙のお部屋、一泊でございますね。少々お待ちくださいませ。",
+     "fileF": "voice/ind-khach-san-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-khach-san-1-6.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "ありがとう。あの、朝食は何時からですか。"
+    },
+    "7": {
+     "file": "voice/ind-khach-san-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "朝食は朝六時半から九時半まで、一階のレストランでございます。",
+     "fileF": "voice/ind-khach-san-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-khach-san-1-8.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "エレベーターはロビーの奥にございます。お荷物はお持ちちいたしましょうか。"
+    },
+    "9": {
+     "file": "voice/ind-khach-san-1-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "こちらがカードキーでございます。お部屋は六階の六〇二号室でございます。",
+     "fileF": "voice/ind-khach-san-1-9-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-khach-san-1-10.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "どうもありがとう。とてもていねいですね。"
+    },
+    "11": {
+     "file": "voice/ind-khach-san-1-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。ご不明な点がございましたら、いつでもフロントまでお声がけください。よいご滞在を。",
+     "fileF": "voice/ind-khach-san-1-11-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-khach-san-1-12.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "初めてとは思えないくらい、落ち着いていましたよ。その調子です。"
+    },
+    "13": {
+     "fileVn": "voice/ind-khach-san-1-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Khách lên phòng, sảnh lại yên tĩnh. {name} nhìn xuống đôi tay mình — vẫn còn hơi run sau ca check-in đầu tiên, nhưng câu keigo nào cũng đã ra đúng chỗ. Ở quầy lễ tân, sự chu đáo không nằm ở việc nói hay, mà ở việc khách cảm thấy được đón tiếp thật lòng."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-khach-san-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-khach-san-2-1.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "禁煙の部屋を予約したのに、タバコのにおいがするんです。窓を開けても、全然消えなくて。"
+    },
+    "3": {
+     "file": "voice/ind-khach-san-2-3.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "まず謝ること。言い訳はその後。順番を間違えないで。"
+    },
+    "6": {
+     "file": "voice/ind-khach-san-2-6.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "…そこまでしてくれるなら、部屋を変えてください。においさえなければ、いいんです。"
+    },
+    "8": {
+     "file": "voice/ind-khach-san-2-8.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "あの、謝ってほしいんじゃなくて、どうにかしてほしいんです。"
+    },
+    "10": {
+     "file": "voice/ind-khach-san-2-10.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "お客様の前で、他の部署のせいにしてはいけません。ホテルは一つですよ。"
+    },
+    "12": {
+     "file": "voice/ind-khach-san-2-12.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "状況を教えてください。お客様には、どう対応しましたか。"
+    },
+    "16": {
+     "file": "voice/ind-khach-san-2-16.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "謝罪で大切なのは、言い訳より先に、相手の気持ちを受け止めることです。"
+    },
+    "18": {
+     "file": "voice/ind-khach-san-2-18.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "こちらのお部屋は、においがしませんね。窓からの景色もきれい。"
+    },
+    "22": {
+     "file": "voice/ind-khach-san-2-22.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "ありがとうございました。最初はがっかりしたけど、最後は安心しました。"
+    },
+    "23": {
+     "file": "voice/ind-khach-san-2-23.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "謝るのは恥じゃありません。誠実に向き合うことが、信頼に変わるんですよ。"
+    },
+    "25": {
+     "file": "voice/ind-khach-san-2-25.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "今日の対応、よく見ていましたよ。明日もフロント、お願いしますね。"
+    },
+    "0": {
+     "fileVn": "voice/ind-khach-san-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ca chiều ở sảnh khách sạn お台場. Một vị khách nữ vừa nhận phòng được mười phút đã quay xuống quầy, tay cầm thẻ phòng, gương mặt mệt và khó chịu thấy rõ. Chị senpai ra hiệu cho {name}: lần này, {call} sẽ là người tiếp nhận phàn nàn."
+    },
+    "2": {
+     "fileVn": "voice/ind-khach-san-2-2-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tấm xác nhận đặt phòng trên tay khách ghi rõ ràng: 禁煙 — cấm hút thuốc. Đây là lỗi của khách sạn, không thể chối cãi. Khách đi cả một chặng đường dài, về phòng đầu tiên lại gặp phải chuyện này. Cả sảnh như lặng đi một nhịp."
+    },
+    "5": {
+     "fileVn": "voice/ind-khach-san-2-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cúi đầu thật sâu, trước hết nhận lỗi trọn vẹn: khách đã đặt phòng cấm hút mà khách sạn lại để xảy ra chuyện này, thành thật xin lỗi. Rồi {call} đề xuất ngay phương án cụ thể: đổi sang phòng cấm hút ở tầng khác đã kiểm tra kỹ, nhân viên sẽ mang hành lý lên giúp, và khách sạn xin gửi tặng voucher bữa sáng như một lời xin lỗi nhỏ."
+    },
+    "7": {
+     "fileVn": "voice/ind-khach-san-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cúi đầu nói “thành thật xin lỗi” đến lần thứ ba, nhưng ngoài câu xin lỗi ra không có một phương án nào được đưa ra. Vai khách nữ chùng xuống thấy rõ: điều khách cần không phải thêm một lời xin lỗi nữa, mà là một căn phòng không có mùi thuốc để được nghỉ ngơi."
+    },
+    "9": {
+     "fileVn": "voice/ind-khach-san-2-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Câu “đây là lỗi của bộ phận buồng phòng” vừa thoát ra, nét mặt khách nữ sầm lại. Với khách, khách sạn là một — ai trực tiếp làm sai không quan trọng bằng việc không ai chịu đứng ra nhận trách nhiệm. Chị senpai đứng bên khẽ hắng giọng, một tín hiệu cảnh báo rất rõ."
+    },
+    "11": {
+     "fileVn": "voice/ind-khach-san-2-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Dù theo cách nào, cuối cùng một phòng cấm hút khác cũng được chuẩn bị: chị quản lý yêu cầu kiểm tra phòng mới thật kỹ trước khi mời khách lên — mở cửa, kiểm tra mùi, kiểm tra khăn và nước uống. “Đừng để khách phải phàn nàn đến lần thứ hai về cùng một chuyện.”"
+    },
+    "14": {
+     "fileVn": "voice/ind-khach-san-2-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} báo cáo rành mạch từng ý: phòng được xếp sai loại, khách đã được xin lỗi và đổi phòng, voucher đã được đề xuất, phòng mới đã kiểm tra xong. Chị quản lý gật đầu, ghi chép lại: “Báo cáo như vậy là được. Có sự cố không đáng sợ — đáng sợ là giấu sự cố.”"
+    },
+    "15": {
+     "fileVn": "voice/ind-khach-san-2-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} chỉ nói “đã đổi phòng cho khách rồi ạ” và lướt nhanh qua phần còn lại. Chị quản lý nhìn lên từ cuốn sổ, hỏi lại đúng hai câu — và cả hai câu đều chạm vào phần {call} vừa né. Báo cáo nửa vời không giấu được ai lâu, nó chỉ làm người nghe phải hỏi thêm và mất niềm tin thêm."
+    },
+    "17": {
+     "fileVn": "voice/ind-khach-san-2-17-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Phòng mới ở tầng cao hơn, cửa sổ nhìn ra vịnh. Nhân viên mang hành lý lên, {name} đích thân đi cùng để mở cửa phòng cho khách — theo lời dặn của chị quản lý: “Người gây ra sự bất tiện thì cũng nên là người tiễn khách vào căn phòng tử tế.”"
+    },
+    "20": {
+     "fileVn": "voice/ind-khach-san-2-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} để lại trên bàn một tấm thiệp nhỏ viết tay: xin lỗi về sự bất tiện đầu tiên, chúc khách một buổi tối yên tĩnh, và số máy lẻ của quầy lễ tân nếu cần bất cứ điều gì. Chiều hôm sau, khi trả phòng, khách nữ nhắc đích danh tấm thiệp đó: “Chi tiết nhỏ vậy thôi mà tôi thấy mình được coi trọng.”"
+    },
+    "21": {
+     "fileVn": "voice/ind-khach-san-2-21-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} chào khách rồi quay về quầy, chìm vào đống việc tiếp theo. Mọi thứ có vẻ đã ổn — nhưng tối đó chị senpai hỏi một câu khiến {call} khựng lại: “Em có biết sau khi đổi phòng, khách có thực sự hài lòng không?” Xử lý sự cố mà không có bước xác nhận cuối, giống như chữa bệnh mà không tái khám."
+    },
+    "24": {
+     "fileVn": "voice/ind-khach-san-2-24-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuối ca, {name} ngồi viết bản tường trình sự cố trong phòng nghỉ nhân viên. Tay viết chậm rãi từng dòng — hôm nay {call} học được một bài học mà không trường lớp nào dạy trọn vẹn: ở Nhật, lời xin lỗi đúng cách không làm mình thấp đi, nó làm niềm tin của người đối diện cao lên."
+    },
+    "26": {
+     "fileVn": "voice/ind-khach-san-2-26-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Trên đường về qua cầu vòm お台場 lấp lánh đèn, {name} nhẩm lại thứ tự của ngày hôm nay: xin lỗi trước, giải thích sau; nhận trách nhiệm trước, đề xuất phương án ngay sau đó. 謝罪 không phải là cúi đầu cho qua chuyện — là cách một khách sạn nói với khách rằng: cảm xúc của bạn quan trọng hơn sĩ diện của chúng tôi."
+    }
+   },
+   "skipped": {
+    "4": "prompt",
+    "13": "prompt",
+    "19": "prompt"
+   }
+  },
+  "ind-khach-san-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-khach-san-3-1.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "予約の通り、静かな高層階でお願いします。あと、明日の朝食は六時に部屋まで持ってきてください。"
+    },
+    "2": {
+     "file": "voice/ind-khach-san-3-2.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "要望が多いお客様ほど、一つずつ確認するのが大事ですよ。"
+    },
+    "5": {
+     "file": "voice/ind-khach-san-3-5.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "ふむ、落ち着いているね。要望を一つも落としていない。"
+    },
+    "9": {
+     "file": "voice/ind-khach-san-3-9.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "準備がいいですね。お客様からの評価が、楽しみです。"
+    },
+    "10": {
+     "file": "voice/ind-khach-san-3-10.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "この辺りで、静かに食事ができる店はありますか。明日の夜、一人で行きたいんです。"
+    },
+    "13": {
+     "file": "voice/ind-khach-san-3-13.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "よく分かっているね。明日、行ってみよう。"
+    },
+    "16": {
+     "file": "voice/ind-khach-san-3-16.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "この方の対応が、とてもよかったです。要望をよく聞いて、約束を守ってくれた。また来たときも、お願いしたいですね。"
+    },
+    "17": {
+     "file": "voice/ind-khach-san-3-17.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "来週から、フロントの主担当を任せます。シフトも少し増やしましょう。"
+    },
+    "22": {
+     "file": "voice/ind-khach-san-3-22.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "おめでとう。主担当のバッジ、よく似合っていますよ。"
+    },
+    "24": {
+     "file": "voice/ind-khach-san-3-24.mp3",
+     "sp": "Chị quản lý",
+     "voice": "f",
+     "text": "これからも、その丁寧さを忘れないでくださいね。"
+    },
+    "0": {
+     "fileVn": "voice/ind-khach-san-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một buổi chiều mưa ở お台場. Sảnh khách sạn thơm mùi trà, và chị quản lý vừa thông báo nhỏ với cả ca: chiều nay có một vị khách VIP — một vị khách rất khó tính, nổi tiếng là chi tiết đến từng ly từng tí — sẽ đến nhận phòng. Mọi ánh mắt ở quầy đều đổ dồn về phía {name}."
+    },
+    "4": {
+     "fileVn": "voice/ind-khach-san-3-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} mở sổ, xác nhận lại từng ý một bằng giọng rõ ràng: phòng yên tĩnh tầng cao — đã ghi; bữa sáng 6 giờ mang lên phòng — đã ghi; và hỏi thêm một câu về món dị ứng. Khách nam ngẩng lên nhìn {call} lâu hơn một nhịp — cái nhìn của người quen được phục vụ qua loa, nay bất ngờ gặp người làm việc có hệ thống."
+    },
+    "6": {
+     "fileVn": "voice/ind-khach-san-3-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Câu “cứ để tôi lo” nghe rất tự tin — cho đến hai mươi phút sau, khi {name} đứng giữa ca mà không nhớ nổi bữa sáng của khách là 6 giờ hay 6 giờ rưỡi, mang lên phòng hay ăn ở nhà hàng. Chị senpai phải lặng lẽ gọi điện xác nhận lại với khách, một cuộc gọi mà lẽ ra không bao giờ nên tồn tại."
+    },
+    "7": {
+     "fileVn": "voice/ind-khach-san-3-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Vừa nghe tới bữa sáng mang lên phòng lúc 6 giờ, {name} đã lắc đầu nói nhà hàng chưa mở cửa nên không làm được. Khách nam nhíu mày: “Chưa kiểm tra đã từ chối sao?” Hoá ra bộ phận nhà hàng hoàn toàn có thể chuẩn bị hộp bữa sáng từ tối hôm trước — điều mà {call} sẽ biết nếu chịu hỏi trước khi trả lời."
+    },
+    "8": {
+     "fileVn": "voice/ind-khach-san-3-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Mọi yêu cầu sau khi xác nhận đều được chuyển tới các bộ phận liên quan kèm giờ giấc cụ thể. Phòng tầng cao yên tĩnh đã sẵn sàng, hộp bữa sáng được nhà hàng hẹn giờ chuẩn bị. Ca trực tưởng như căng thẳng lại trôi đi trơn tru một cách bất ngờ."
+    },
+    "12": {
+     "fileVn": "voice/ind-khach-san-3-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} không vội đọc thuộc lòng danh sách quán, mà hỏi lại hai câu ngắn: khách thích món Nhật hay món Âu, và muốn đi bộ hay đi tàu một bến. Từ hai câu trả lời, {call} gợi ý đúng hai quán — một quán Nhật nhỏ yên tĩnh cách hai con phố, kèm giờ đóng cửa và lời khuyên nên đặt bàn trước. Khách nam gật đầu ghi lại vào điện thoại."
+    },
+    "14": {
+     "fileVn": "voice/ind-khach-san-3-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} giới thiệu ngay quán nổi tiếng nhất trong trung tâm thương mại gần khách sạn. Khách nam nghe xong chỉ “ừm” một tiếng: quán đó ồn ào, toàn khách du lịch theo đoàn — đúng thứ khách vừa nói là muốn tránh. Gợi ý không sai về độ nổi tiếng, nhưng sai hoàn toàn về con người đang đứng trước mặt."
+    },
+    "15": {
+     "fileVn": "voice/ind-khach-san-3-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Sáng hôm sau, hộp bữa sáng được mang lên phòng đúng 6 giờ không lệch một phút. Khi trả phòng, khách nam dừng lại ở quầy lâu hơn thường lệ, nhìn bảng tên trên ngực áo {name} rồi quay sang chị quản lý đang đứng phía sau."
+    },
+    "19": {
+     "fileVn": "voice/ind-khach-san-3-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cảm ơn chị quản lý, nhận vị trí mới, và khéo léo xác nhận luôn hai ngày nghỉ cố định trong tuần để còn giữ sức và thời gian học tiếng Nhật. Chị quản lý cười: “Biết giữ sức mới làm được lâu. Chốt như vậy nhé.” Tăng giờ đồng nghĩa tăng thu nhập — và tăng cả sự tin tưởng."
+    },
+    "20": {
+     "fileVn": "voice/ind-khach-san-3-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Nghe tới tăng giờ là {name} gật đầu ngay với mọi ca được đề xuất, kể cả những ca tối muộn nối sáng sớm. Tiền thì đúng là nhiều hơn thật — nhưng mới ba ngày sau, đôi mắt thâm quầng đã bán đứng {call} ngay tại quầy, và chị senpai phải nhắc khẽ: “Phục vụ khách bằng bộ mặt kiệt sức thì không gọi là omotenashi đâu em.”"
+    },
+    "21": {
+     "fileVn": "voice/ind-khach-san-3-21-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} ngập ngừng rồi từ chối khéo, nói muốn làm phụ thêm một thời gian nữa. Chị quản lý không ép, chỉ gật đầu — nhưng cánh cửa cơ hội không phải lúc nào cũng mở hai lần. Tối về, {name} cứ nghĩ mãi về ánh mắt của vị khách VIP lúc khen mình: người ta đã tin mình đến thế, sao mình lại không tin chính mình?"
+    },
+    "23": {
+     "fileVn": "voice/ind-khach-san-3-23-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tối đó, đứng ở quầy lễ tân chính lần đầu tiên với tư cách người phụ trách, {name} nhìn sảnh khách sạn lên đèn, vịnh お台場 ngoài kia lấp lánh. Từ một người mới run tay ngày đầu, tới người được khách khó tính nhất khen đích danh — chặng đường ấy được dệt bằng từng câu keigo đúng lúc và từng lời hứa được giữ đúng giờ."
+    },
+    "25": {
+     "fileVn": "voice/ind-khach-san-3-25-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Omotenashi — lòng hiếu khách của người Nhật — hoá ra không phải là nghi lễ cầu kỳ. Nó là việc nhớ đúng một yêu cầu nhỏ, giữ đúng một lời hứa nhỏ, và để khách ra về với cảm giác “người đó thật sự để tâm tới mình”. {name} đã bắt đầu được nhớ đến ở khách sạn này, bằng chính cái tên của mình."
+    }
+   },
+   "skipped": {
+    "3": "prompt",
+    "11": "prompt",
+    "18": "prompt"
+   }
+  },
+  "ind-nha-hang-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-nha-hang-1-0.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "m",
+     "text": "おう、新しいのが来たな。厨房の朝は挨拶からだ。大きな声で、もう一回。"
+    },
+    "1": {
+     "file": "voice/ind-nha-hang-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます！今日もよろしくお願いします！",
+     "fileF": "voice/ind-nha-hang-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-nha-hang-1-2.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "m",
+     "text": "よし、その声だ。最初は皿洗いと野菜の下処理からだ。包丁はまだ早い。焦るな、順番がある。"
+    },
+    "3": {
+     "file": "voice/ind-nha-hang-1-3.mp3",
+     "sp": "Anh đầu bếp",
+     "voice": "m",
+     "text": "サトウさんはいつもああ言うけど、皿洗いが一番、店の腕が分かるんだよ。割らず、早く、静かに。やってみな。"
+    },
+    "4": {
+     "file": "voice/ind-nha-hang-1-4.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "包丁はまだ使えませんが、野菜の皮むきなら任せてください。家でも毎日料理しています。",
+     "fileF": "voice/ind-nha-hang-1-4-f.mp3"
+    },
+    "5": {
+     "file": "voice/ind-nha-hang-1-5.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "m",
+     "text": "ほう、自信があるのはいい。ただし、家の料理と店の料理は別物だ。味見の仕方から教える。この味噌汁、どうだ。"
+    },
+    "6": {
+     "file": "voice/ind-nha-hang-1-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "出汁がよく出ています。塩味は少し薄いかもしれません。常連さん向けなら、このくらいが落ち着く味でしょうか。",
+     "fileF": "voice/ind-nha-hang-1-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-nha-hang-1-7.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "m",
+     "text": "…ほう。味のことを言葉で言える新しいのは珍しいな。よし、昼のまかないはお前が手伝え。見てやる。"
+    },
+    "8": {
+     "fileVn": "voice/ind-nha-hang-1-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi sáng đầu tiên ở bếp kết thúc bằng một đặc ân nhỏ: được phụ nấu bữa trưa cho cả quán. Trong bếp Nhật, được đứng gần nồi là được tin thêm một bước — và bước đầu tiên ấy bắt đầu bằng một lời chào đủ to, đủ rõ."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-nha-hang-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-nha-hang-2-1.mp3",
+     "sp": "Anh khách",
+     "voice": "m",
+     "text": "しょっぱすぎるよ、これ。待たせすぎだし。店長を呼んでくれる？"
+    },
+    "3": {
+     "file": "voice/ind-nha-hang-2-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "申し訳ございません。味付けの確認が不足していました。すぐ新しいものを作り直します。お待たせしたお詫びに、まず温かいお茶をお持ちします。",
+     "fileF": "voice/ind-nha-hang-2-3-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-nha-hang-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Giờ trưa cao điểm. Một vị khách trung niên gọi {name} lại, chỉ vào đĩa cá kho đưa lên bàn được mười phút: \"Món này mặn quá. Mà tôi chờ gần ba mươi phút rồi đấy.\" Cả khu vực bàn xung quanh bắt đầu ngẩng lên nghe."
+    },
+    "4": {
+     "fileVn": "voice/ind-nha-hang-2-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Vị khách hơi khựng lại — người ta khó mà giận tiếp một người vừa nhận lỗi gọn gàng vừa có giải pháp rõ ràng. Quản lý tới nơi, nghe lại sự việc, cúi chào lần nữa và quyết định miễn phí món làm lại kèm món tráng miệng. Khi ra về, vị khách để lại một câu qua cửa: \"Anh nhân viên nước ngoài kia… được đấy.\""
+    },
+    "5": {
+     "fileVn": "voice/ind-nha-hang-2-5-vn.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "vn-m",
+     "text": "\"Nghe thấy chưa. クレームは店の敵じゃない — lời phàn nàn xử lý tốt còn quý hơn lời khen. Hôm nay mày cứu quán một bàn khách quen đấy.\""
+    },
+    "6": {
+     "fileVn": "voice/ind-nha-hang-2-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "\"Thế à, công thức à?\" — giọng vị khách to lên một nấc. Trong nghề dịch vụ, giải thích đúng đến mấy mà đặt trước lời xin lỗi cũng thành sai. Quản lý phải bước ra cúi đầu tới lần thứ ba sự việc mới lắng xuống, và tên của {name} được nhắc trong buổi họp cuối ngày — theo cách không ai muốn."
+    },
+    "7": {
+     "fileVn": "voice/ind-nha-hang-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Không cãi, không phân bua — {name} cúi đầu, mang đĩa vào trong. Anh đầu bếp nếm thử, khẽ chau mày: \"Hơi mặn thật.\" Món mới được làm lại với vị chấn chỉnh, quản lý mang ra kèm lời xin lỗi chính thức. Hơi chậm một nhịp, nhưng không ai bị tổn thương thêm — và {name} ghi nhớ: trong bếp, biết mình chưa đủ tầm để tự xử lý cũng là một loại khôn."
+    },
+    "8": {
+     "fileVn": "voice/ind-nha-hang-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuối ca, bếp trưởng ghé qua chỗ {name} đang lau bếp, nói một câu ngắn mà {name} chép nguyên văn vào cuốn sổ tay nghề: \"Xin lỗi không phải là thua. Xin lỗi là giữ lại một người khách.\""
+    }
+   },
+   "skipped": {
+    "2": "prompt"
+   }
+  },
+  "ind-nha-hang-3": {
+   "steps": {
+    "0": {
+     "fileVn": "voice/ind-nha-hang-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một buổi tối, anh đầu bếp phụ trách món cá bị cảm đột ngột. Bếp trưởng nhìn quanh gian bếp đang vào guồng giờ cao điểm — rồi dừng ánh mắt ở {name}."
+    },
+    "1": {
+     "fileVn": "voice/ind-nha-hang-3-1-vn.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "vn-m",
+     "text": "\"{name}. Tối nay mày đứng món cá nướng. Sợ không?\""
+    },
+    "3": {
+     "fileVn": "voice/ind-nha-hang-3-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hai tiếng đồng hồ như một trận đấu. \"Cá thu một! Cá saba hai!\" — tiếng gọi món bay liên hồi. Tay {name} run ở đĩa đầu tiên, vững từ đĩa thứ năm, và đến đĩa thứ hai mươi thì nhịp lật cá đã thành phản xạ. Bếp trưởng đứng sau lưng suốt, không đỡ một tay — chỉ thỉnh thoảng gật đầu rất khẽ."
+    },
+    "4": {
+     "fileVn": "voice/ind-nha-hang-3-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bếp trưởng gật đầu, không ép: \"Biết mình đứng đâu cũng là tay nghề.\" Đêm đó {name} phụ bếp chính xác tới từng đĩa rau trang trí — và học được nhiều hơn cả một tuần đứng xem, vì mọi thứ diễn ra ngay trong tầm tay."
+    },
+    "5": {
+     "fileVn": "voice/ind-nha-hang-3-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Khách cuối cùng ra về. Một vị khách quen ghé qua cửa bếp, chìa tay qua quầy: \"Món cá hôm nay — ngon như mọi khi. Ai nướng thế?\" Bếp trưởng hất hàm về phía {name}, nói gọn lỏn: \"Đệ tử của tôi.\""
+    },
+    "6": {
+     "fileVn": "voice/ind-nha-hang-3-6-vn.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "vn-m",
+     "text": "\"{name}, nghề bếp không có đường tắt: nếm nghìn lần, sai trăm lần. Nhưng có một thứ không dạy được — là cái bụng muốn làm cho người ăn vui. Mày có thứ đó. Giữ lấy.\""
+    },
+    "7": {
+     "fileVn": "voice/ind-nha-hang-3-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} tháo tạp dề, bước ra khỏi bếp vào con phố đêm Toyosu. Mùi khói và dầu mỡ bám trên áo — mùi của một nghề đang dần trở thành của mình."
+    }
+   },
+   "skipped": {
+    "2": "prompt"
+   }
+  },
+  "ind-nogyo-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-nogyo-1-0.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "おう、よく 来た。富良野の 朝は 四時からだ。空を みろ、もう 明るいぞ。"
+    },
+    "1": {
+     "file": "voice/ind-nogyo-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます。本日から お世話になります。早起きには 慣れて おきますので、よろしく お願いします。",
+     "fileF": "voice/ind-nogyo-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-nogyo-1-2.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "はい、ぼうし。日が でたら あついからね。まず 野菜の 名前から 覚えようか。"
+    },
+    "3": {
+     "file": "voice/ind-nogyo-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。これは メロン、こちらは トウモロコシですね。葉の 形で 見分けるんですか。",
+     "fileF": "voice/ind-nogyo-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-nogyo-1-4.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "そうそう。あっちは かぼちゃ、そっちは 大根。土の 中が 本体だから 葉を みるの。"
+    },
+    "5": {
+     "file": "voice/ind-nogyo-1-5.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "つぎは 道具だ。これは 収穫バサミ、こっちは 鍬。名前を まちがえると 作業が 止まるぞ。"
+    },
+    "6": {
+     "file": "voice/ind-nogyo-1-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "わかりました。収穫バサミと 鍬ですね。使う 前に 名前を 声に だして 確認します。",
+     "fileF": "voice/ind-nogyo-1-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-nogyo-1-7.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "いい 子だねえ。さあ 畑に でよう。今日は メロンの 様子を みるよ。"
+    },
+    "8": {
+     "file": "voice/ind-nogyo-1-8.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、ぼうしを かぶりました。長靴も はきました。いつでも でられます。",
+     "fileF": "voice/ind-nogyo-1-8-f.mp3"
+    },
+    "9": {
+     "file": "voice/ind-nogyo-1-9.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "よし、その 格好なら 一人前だ。畑は 待って くれない、行くぞ。"
+    },
+    "10": {
+     "file": "voice/ind-nogyo-1-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。今日の 作業が おわったら、野菜の 名前を ノートに まとめます。",
+     "fileF": "voice/ind-nogyo-1-10-f.mp3"
+    },
+    "11": {
+     "file": "voice/ind-nogyo-1-11.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "まじめだねえ。お昼は うちの 味噌汁だよ、たのしみに してて。"
+    },
+    "12": {
+     "fileVn": "voice/ind-nogyo-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bốn giờ sáng, trời Furano sáng dần trên những luống dưa thẳng tắp. {name} còn ngái ngủ, nhưng mùi đất và mùi lá ngô xanh đã đánh thức {call} theo cách cà phê không làm được. Buổi trưa, bát canh miso của bà chủ trại được hứa hẹn như một phần thưởng đầu mùa."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-nogyo-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-nogyo-2-1.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "台風が 早まった。明日の 午後には くる。メロン、今日中に とりきれるか…。"
+    },
+    "2": {
+     "file": "voice/ind-nogyo-2-2.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "だめだよ 二人じゃ。隣の 田中さんにも 声を かけて みよう。"
+    },
+    "4": {
+     "file": "voice/ind-nogyo-2-4.mp3",
+     "sp": "Anh hàng xóm trại",
+     "voice": "m",
+     "text": "おう、台風の 前の 収穫は 村の 共同作業だ。遠慮は なしだぞ。"
+    },
+    "5": {
+     "file": "voice/ind-nogyo-2-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。おれは 軽い メロンから 運びます。重いのは 一緒に もちましょう。",
+     "fileF": "voice/ind-nogyo-2-5-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-nogyo-2-8.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "はい、休憩。おにぎり たべて。これ、梅干しと 塩むすび。食べないと たおれるよ。"
+    },
+    "9": {
+     "file": "voice/ind-nogyo-2-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。いただきます。…この おにぎり、力が でます。",
+     "fileF": "voice/ind-nogyo-2-9-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-nogyo-2-10.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "田舎の ありがとうはね、よく 働いて よく 食べること。それで じゅうぶんなの。"
+    },
+    "11": {
+     "file": "voice/ind-nogyo-2-11.mp3",
+     "sp": "Anh hàng xóm trại",
+     "voice": "m",
+     "text": "いい ペースだ。農作業は 長距離だからな。最後まで たつやつが つよい。"
+    },
+    "12": {
+     "file": "voice/ind-nogyo-2-12.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "はい、おにぎり。あんたは 無理を しない 子だね。長く たのしめるよ、そういうのは。"
+    },
+    "14": {
+     "file": "voice/ind-nogyo-2-14.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "だが、田中さんの 畑は 半分 やられたそうだ。明日、手伝いに いくぞ。"
+    },
+    "16": {
+     "file": "voice/ind-nogyo-2-16.mp3",
+     "sp": "Anh hàng xóm trại",
+     "voice": "m",
+     "text": "おまえ、昨日 あれだけ 働いて、また きたのか。…ありがとう。借りは かえすぞ、いつか。"
+    },
+    "17": {
+     "file": "voice/ind-nogyo-2-17.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "昨日 たすけて もらったのは こちらです。畑の 恩は 畑で かえします。",
+     "fileF": "voice/ind-nogyo-2-17-f.mp3"
+    },
+    "18": {
+     "file": "voice/ind-nogyo-2-18.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "体が 資本だからな、休むのも 仕事だ。だが 一言、田中さんに あいさつだけ いって こい。"
+    },
+    "21": {
+     "file": "voice/ind-nogyo-2-21.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "今日の メロンは 市場で いい 値段が ついたそうだ。全員の おかげだ。"
+    },
+    "22": {
+     "file": "voice/ind-nogyo-2-22.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "国は ちがっても、畑の 人間は おなじだねえ。たすけ合って、食べ合って。"
+    },
+    "0": {
+     "fileVn": "voice/ind-nogyo-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Dự báo thời tiết đổi trong đêm: cơn bão đáng lẽ cuối tuần mới tới, giờ chiều mai đã ập vào Hokkaido. Cả ruộng dưa lưới chín tới mà chưa thu."
+    },
+    "3": {
+     "fileVn": "voice/ind-nogyo-2-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chưa đầy một giờ sau, anh hàng xóm Tanaka kéo cả nhà sang, rồi thêm hai hộ nữa ở cuối xóm. Người Nhật ở nông thôn gọi nhau bằng một tiếng hô qua hàng rào, không cần hẹn trước."
+    },
+    "7": {
+     "fileVn": "voice/ind-nogyo-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} cắn răng khiêng từng sọt dưa ra xe, đếm thầm trong đầu để quên cơn mỏi. Cả xóm thành một dây chuyền người giữa ruộng."
+    },
+    "13": {
+     "fileVn": "voice/ind-nogyo-2-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ba giờ chiều, sọt dưa cuối cùng lên xe. Cả xóm ngồi bệt bên bờ ruộng, áo ai cũng ướt, mà cười nói râm ran. Sáng hôm sau bão quét qua: ruộng nhà bác chủ trại nguyên vẹn, chỉ ướt đẫm."
+    },
+    "19": {
+     "fileVn": "voice/ind-nogyo-2-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} sang chào, hứa cuối tuần quay lại phụ. Anh hàng xóm gật đầu, nụ cười quay về được một nửa."
+    },
+    "20": {
+     "fileVn": "voice/ind-nogyo-2-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiều xuống, cả xóm ngồi lại ở sân nhà bác chủ trại. Bà chủ trại bê ra nồi canh lớn — phần thưởng không ai hẹn trước cho một ngày bão gió."
+    },
+    "23": {
+     "fileVn": "voice/ind-nogyo-2-23-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tối đó {name} ngủ say như chưa từng ngủ — giấc ngủ của người biết mình vừa được một xóm làng xa lạ nhận vào."
+    }
+   },
+   "skipped": {
+    "6": "prompt",
+    "15": "prompt"
+   }
+  },
+  "ind-nogyo-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-nogyo-3-1.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "おう、最後の 日だ。これ、今季の 給料と、ほんの 少しの 寸志だ。受けとって くれ。"
+    },
+    "2": {
+     "file": "voice/ind-nogyo-3-2.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。寸志まで いただけるなんて…。大切に 使います。",
+     "fileF": "voice/ind-nogyo-3-2-f.mp3"
+    },
+    "3": {
+     "file": "voice/ind-nogyo-3-3.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "あと これ、野菜の 箱。へやに もって かえって、友達と たべて。うちの 畑の 味だよ。"
+    },
+    "6": {
+     "file": "voice/ind-nogyo-3-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "来年の 季節も、ぜひ よんで ください。畑の 帰り道は もう 覚えました。",
+     "fileF": "voice/ind-nogyo-3-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-nogyo-3-7.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "おう、約束だ。おまえの ぼうし、ここに かけて おくからな。"
+    },
+    "8": {
+     "file": "voice/ind-nogyo-3-8.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "もらうのも 礼儀だよ。あんたの 汗が この 畑に しみて いるんだから。"
+    },
+    "9": {
+     "file": "voice/ind-nogyo-3-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "…ありがとうございます。ありがたく、いただきます。",
+     "fileF": "voice/ind-nogyo-3-9-f.mp3"
+    },
+    "11": {
+     "file": "voice/ind-nogyo-3-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "この ノート、次の 季節に くる 人のために おいて いきます。おれが 覚えたことです。",
+     "fileF": "voice/ind-nogyo-3-11-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-nogyo-3-12.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "まあ…。字も 丁寧だねえ。これは 畑の 宝物に なるよ。"
+    },
+    "13": {
+     "file": "voice/ind-nogyo-3-13.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "そうか、元気でな。…手紙くらい、たまには くれよ。"
+    },
+    "15": {
+     "file": "voice/ind-nogyo-3-15.mp3",
+     "sp": "Anh hàng xóm trại",
+     "voice": "m",
+     "text": "おう、帰るのか。駅まで おれの 軽トラで おくってくよ。荷物 おもいだろ。"
+    },
+    "18": {
+     "file": "voice/ind-nogyo-3-18.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "どうだ、富良野の 朝日は。…その 顔、もう ここの 人間だな。"
+    },
+    "19": {
+     "file": "voice/ind-nogyo-3-19.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。言葉に できませんが、胸に もって かえります。また きます、必ず。",
+     "fileF": "voice/ind-nogyo-3-19-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-nogyo-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ngày cuối vụ. Sọt dưa cuối cùng của mùa đã lên xe từ chiều qua, ruộng giờ trống trải, chỉ còn mùi đất và tiếng côn trùng cuối hạ."
+    },
+    "4": {
+     "fileVn": "voice/ind-nogyo-3-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Thùng rau nặng trĩu: ngô, bí đỏ, củ cải, và hai quả dưa lưới đẹp nhất mùa — bà chủ trại chọn từ lúc nào {name} cũng không hay."
+    },
+    "14": {
+     "fileVn": "voice/ind-nogyo-3-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuốn sổ — hay lá thư còn chưa viết — dù thế nào, sợi dây giữa {name} và ruộng đất này đã buộc chặt thêm một nút nữa."
+    },
+    "16": {
+     "fileVn": "voice/ind-nogyo-3-16-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Trước khi đi, {name} xin hai bác cho ra ruộng một mình lúc trời chưa sáng. Không để làm gì cả — chỉ để nhìn."
+    },
+    "17": {
+     "fileVn": "voice/ind-nogyo-3-17-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Năm giờ kém. Mặt trời lên từ sau dãy núi xa, ánh sáng tràn qua những luống đất trống như nước. Lần đầu tiên, {name} thấy bình minh trên cánh đồng đẹp tới lặng người — đẹp kiểu không chụp ảnh được, chỉ đứng yên mà nhớ."
+    }
+   },
+   "skipped": {
+    "5": "prompt",
+    "10": "prompt"
+   }
+  },
+  "ind-seibi-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-seibi-1-0.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "おはよう。ここは 豊田の 小さい 工場だが、車は 命を のせる 物だ。丁寧に な。"
+    },
+    "1": {
+     "file": "voice/ind-seibi-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます。本日から お世話になります。わからないことは 確認してから 作業します。",
+     "fileF": "voice/ind-seibi-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-seibi-1-2.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "よし。ちょうど お客さまが きた。受付を たのむ。まず 話を よく 聞くんだ。"
+    },
+    "3": {
+     "file": "voice/ind-seibi-1-3.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "あのさ、走ってると カラカラって 音が するんだよ。止まるときは しないんだ。"
+    },
+    "4": {
+     "file": "voice/ind-seibi-1-4.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "かしこまりました。カラカラという 音は、走行中だけで、停止時は しないですね。速度で 変わりますか。",
+     "fileF": "voice/ind-seibi-1-4-f.mp3"
+    },
+    "5": {
+     "file": "voice/ind-seibi-1-5.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "ああ、早く 走ると 音も 早く なる。朝の 寒いときが とくに ひどいな。"
+    },
+    "6": {
+     "file": "voice/ind-seibi-1-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。音の 出る 条件を 受付表に くわしく 書きました。点検の 結果は お電話で ご連絡します。",
+     "fileF": "voice/ind-seibi-1-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-seibi-1-7.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "お、丁寧だね。じゃあ たのむよ。夕方までに わかると たすかる。"
+    },
+    "8": {
+     "file": "voice/ind-seibi-1-8.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "いい 受付だった。整備は 直す 前に 聞くことから はじまるんだ。"
+    },
+    "9": {
+     "file": "voice/ind-seibi-1-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。音の 情報が あると、点検の 順番が 決めやすいですね。",
+     "fileF": "voice/ind-seibi-1-9-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-seibi-1-10.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "その 通り。じゃあ 道具の 名前から 覚えよう。レンチ、ドライバー、ジャッキだ。"
+    },
+    "11": {
+     "file": "voice/ind-seibi-1-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、使った 道具は そのつど 元の 場所に 戻します。",
+     "fileF": "voice/ind-seibi-1-11-f.mp3"
+    },
+    "12": {
+     "fileVn": "voice/ind-seibi-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiếc phiếu tiếp nhận đầu tiên của {name} kín chữ, không một dòng đoán mò. Chủ xưởng đọc xong chỉ gật đầu, nhưng cái gật ấy nặng hơn mọi lời khen. {call} hiểu ra: ở xưởng này, nghe khách cho hết câu cũng là một kỹ thuật."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-seibi-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-seibi-2-1.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "どうだ、原因は 特定できたか。"
+    },
+    "2": {
+     "file": "voice/ind-seibi-2-2.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "たぶん この 部品ですが、まだ 百パーセントでは ありません。音の 出かたが すこし ちがいます。",
+     "fileF": "voice/ind-seibi-2-2-f.mp3"
+    },
+    "5": {
+     "file": "voice/ind-seibi-2-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "お電話ありがとうございます。確認させて ください。音は 右に まがるときも 出ますか。",
+     "fileF": "voice/ind-seibi-2-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-seibi-2-6.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "いや、まがるときは 出ないな。真っすぐ 走るとき だけだ。あと、荷物を のせると 大きく なる。"
+    },
+    "7": {
+     "file": "voice/ind-seibi-2-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "それは 大きな 手がかりです。ありがとうございます。もう 一度 点検してから ご連絡します。",
+     "fileF": "voice/ind-seibi-2-7-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-seibi-2-10.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "音、まだ してるじゃないか。八万円も かかったのに。"
+    },
+    "11": {
+     "file": "voice/ind-seibi-2-11.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "すみません、これは わたしたちの 確認不足です。費用は いただきません。"
+    },
+    "12": {
+     "file": "voice/ind-seibi-2-12.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "しゃちょう、判断に 自信が ありません。交換の 前に みて いただけますか。",
+     "fileF": "voice/ind-seibi-2-12-f.mp3"
+    },
+    "13": {
+     "file": "voice/ind-seibi-2-13.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "よく 言った。高い 部品ほど 急ぐな。まず 荷物を のせて 走って みよう。"
+    },
+    "17": {
+     "file": "voice/ind-seibi-2-17.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "お客様、部品の 用意が できました。これから 交換して、試運転まで します。",
+     "fileF": "voice/ind-seibi-2-17-f.mp3"
+    },
+    "18": {
+     "file": "voice/ind-seibi-2-18.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "よし、在庫の 補充は おれが 手配する。おまえは 作業に 集中しろ。"
+    },
+    "19": {
+     "file": "voice/ind-seibi-2-19.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "おい、在庫しらべは あとだ。待ってる お客様が 先。順番を まちがえるな。"
+    },
+    "20": {
+     "file": "voice/ind-seibi-2-20.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "すみません、すぐ 交換に もどります。",
+     "fileF": "voice/ind-seibi-2-20-f.mp3"
+    },
+    "22": {
+     "file": "voice/ind-seibi-2-22.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "整備士の 仕事は 当てることじゃ ない。外さないように 確認を かさねることだ。"
+    },
+    "23": {
+     "file": "voice/ind-seibi-2-23.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。自信が ないときほど、止まって 確認します。",
+     "fileF": "voice/ind-seibi-2-23-f.mp3"
+    },
+    "25": {
+     "file": "voice/ind-seibi-2-25.mp3",
+     "sp": "Khách nam",
+     "voice": "m",
+     "text": "お、音が きえた。安く すんで たすかったよ。ありがとうな。"
+    },
+    "26": {
+     "file": "voice/ind-seibi-2-26.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "こちらこそ、ご協力ありがとうございました。また 何か あれば すぐ ご連絡ください。",
+     "fileF": "voice/ind-seibi-2-26-f.mp3"
+    },
+    "27": {
+     "file": "voice/ind-seibi-2-27.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "電話の 向こうの 声だけで 判断するのは 難しい。だが、それが できるのが プロだ。"
+    },
+    "0": {
+     "fileVn": "voice/ind-seibi-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi chiều, {name} nâng xe của vị khách nam lên cầu. Tiếng lạch cạch được khoanh vùng: một bộ phận truyền động giá gần tám man yên, thay là hết kêu — có lẽ vậy."
+    },
+    "3": {
+     "fileVn": "voice/ind-seibi-2-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bộ phận thay thế đã đặt, ngày mai giao. Nếu thay nhầm, khách mất tám man oan, xưởng mất uy tín. Đồng hồ đã gần năm giờ."
+    },
+    "8": {
+     "fileVn": "voice/ind-seibi-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Có đồ trên xe thì tiếng to hơn — không phải truyền động, mà là giảm xóc sau đã yếu. Bộ phận cần thay rẻ bằng một phần ba, mà quan trọng hơn: đúng bệnh."
+    },
+    "9": {
+     "fileVn": "voice/ind-seibi-2-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bộ phận mới lắp xong, xe chạy thử: tiếng lạch cạch vẫn nguyên. Mặt {name} tái đi."
+    },
+    "14": {
+     "fileVn": "voice/ind-seibi-2-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chất bao cát lên xe, tiếng kêu to hẳn khi qua gờ giảm tốc. Chủ xưởng chỉ tay về phía giảm xóc sau: đúng bệnh, rẻ hơn nhiều."
+    },
+    "15": {
+     "fileVn": "voice/ind-seibi-2-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Phán đoán cuối cùng đã rõ, nhưng bộ phận giảm xóc đúng chủng loại chỉ còn một cái trong kho, khách thì cần xe ngay tối nay."
+    },
+    "21": {
+     "fileVn": "voice/ind-seibi-2-21-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tiếng máy thử đều trong sân xưởng. Trên bàn, cuốn sổ ghi chép của {name} thêm một trang kín chữ."
+    },
+    "24": {
+     "fileVn": "voice/ind-seibi-2-24-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tối đó, {name} ghi vào sổ tay một dòng: “Bộ phận càng đắt, càng không được vội.” Chữ hơi run vì tay còn dính dầu."
+    }
+   },
+   "skipped": {
+    "4": "prompt",
+    "16": "prompt"
+   }
+  },
+  "ind-seibi-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-seibi-3-1.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "すみません、途中で エンジンが 止まってしまって。明日の 朝、車で 出勤しないと いけないんです。"
+    },
+    "2": {
+     "file": "voice/ind-seibi-3-2.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "だいじょうぶ、みんなで みよう。閉店は あとまわしだ。"
+    },
+    "3": {
+     "file": "voice/ind-seibi-3-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "かしこまりました。まず 電気の 流れから 確認します。お客様は 中で お待ちください。",
+     "fileF": "voice/ind-seibi-3-3-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-seibi-3-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "しゃちょう、端子が さびて 接触が 悪いです。みがいて つなぎ直せば かかるはずです。",
+     "fileF": "voice/ind-seibi-3-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-seibi-3-7.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "よく みつけた。高い 部品の 前に、まず 足元だ。やって みろ。"
+    },
+    "9": {
+     "file": "voice/ind-seibi-3-9.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "まてまて、交換は まだ 早い。端子を みたか。ほら、さびで 真っ白だ。"
+    },
+    "10": {
+     "file": "voice/ind-seibi-3-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "すみません、また 急ぎました。足元から 確認します。",
+     "fileF": "voice/ind-seibi-3-10-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-seibi-3-12.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いちど 一緒に 走って みましょう。もし また かかりが 悪ければ、すぐ 店に 電話して ください。",
+     "fileF": "voice/ind-seibi-3-12-f.mp3"
+    },
+    "13": {
+     "file": "voice/ind-seibi-3-13.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "そこまで して くれるんですか。心強いです。"
+    },
+    "14": {
+     "file": "voice/ind-seibi-3-14.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "まて、試運転なしの 引きわたしは なしだ。五分の 確認が 信用に なるんだ。"
+    },
+    "16": {
+     "file": "voice/ind-seibi-3-16.mp3",
+     "sp": "Chị khách",
+     "voice": "f",
+     "text": "ありがとうございます。夜に こんなに 丁寧に みて もらえるなんて。明日 安心して 出勤できます。"
+    },
+    "17": {
+     "file": "voice/ind-seibi-3-17.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "おい、片付けは おれが やる。おまえ、鍵を あずけるから 戸締まり たのむ。"
+    },
+    "19": {
+     "file": "voice/ind-seibi-3-19.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、責任を もって 預かります。朝、一番に きて 開けます。",
+     "fileF": "voice/ind-seibi-3-19-f.mp3"
+    },
+    "20": {
+     "file": "voice/ind-seibi-3-20.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "ん。それでいい。車も 店も、人に あずけられるやつが プロだ。"
+    },
+    "0": {
+     "fileVn": "voice/ind-seibi-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tám giờ tối, mưa lất phất. Xe cứu hộ kéo vào sân một chiếc xe chết máy giữa đường, chủ xe là một vị khách nữ còn mặc nguyên đồng phục đi làm."
+    },
+    "4": {
+     "fileVn": "voice/ind-seibi-3-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cả xưởng chia việc không cần ai phân công: người soi đèn, người đo điện, {name} kiểm tra từng đầu nối — bài học “chồng lớp xác nhận” của hôm nào giờ thành nhịp thở."
+    },
+    "8": {
+     "fileVn": "voice/ind-seibi-3-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tiếng máy nổ giòn trong tiếng mưa. Chị khách bật cười nhẹ nhõm, hai tay còn nắm chặt quai túi."
+    },
+    "15": {
+     "fileVn": "voice/ind-seibi-3-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiếc xe lăn bánh ra khỏi sân trong mưa đã tạnh, đèn hậu đỏ dần về phía đường lớn."
+    },
+    "18": {
+     "fileVn": "voice/ind-seibi-3-18-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chùm chìa khóa — có cả chìa xe nâng và chìa cửa xưởng — nằm gọn trong tay {name}, nặng hơn vẻ ngoài của nó nhiều. Đó không phải chìa khóa, đó là lòng tin."
+    }
+   },
+   "skipped": {
+    "5": "prompt",
+    "11": "prompt"
+   }
+  },
+  "ind-seizo-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-seizo-1-0.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おはよう。今日から 同じ ラインだな。まず 工場長に あいさつして こい。"
+    },
+    "1": {
+     "file": "voice/ind-seizo-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます。本日から お世話になります。よろしく お願いいたします。",
+     "fileF": "voice/ind-seizo-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-seizo-1-2.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "ようこそ 名古屋 工場へ。ここは 一秒の おくれが 全体に ひびく。分からないことは すぐ 聞いて ください。"
+    },
+    "3": {
+     "file": "voice/ind-seizo-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "機械から いつもと 違う 音が したら、どう 報告すれば いいですか。",
+     "fileF": "voice/ind-seizo-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-seizo-1-4.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "いい 質問だ。異常が あったら、まず 止める、呼ぶ、待つ。自分で 判断するな。"
+    },
+    "5": {
+     "file": "voice/ind-seizo-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "了解しました。異常が あったら すぐ 止めて、先輩を 呼んで、指示を 待ちます。",
+     "fileF": "voice/ind-seizo-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-seizo-1-6.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "そうだ。あと 5S、言えるか。整理、整頓、清掃、清潔、しつけだ。"
+    },
+    "7": {
+     "file": "voice/ind-seizo-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。使わない 物を 分けて、道具は 決まった 場所に 戻して、いつも きれいに します。",
+     "fileF": "voice/ind-seizo-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-seizo-1-8.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "よし。安全が 一番だ。手袋と 保護 メガネを わすれるな。"
+    },
+    "9": {
+     "file": "voice/ind-seizo-1-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、身に つけました。ラインが 止まったら、勝手に さわらず すぐ 報告します。",
+     "fileF": "voice/ind-seizo-1-9-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-seizo-1-10.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "その 言葉、わすれるなよ。じゃあ、今日は おれの 横で 部品の 確認からだ。"
+    },
+    "11": {
+     "file": "voice/ind-seizo-1-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。しっかり 覚えますので、よろしく お願いします。",
+     "fileF": "voice/ind-seizo-1-11-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-seizo-1-12.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "ん。声が でかいのは いいことだ。工場は 声で まわるからな。"
+    },
+    "13": {
+     "fileVn": "voice/ind-seizo-1-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Buổi đầu, {name} chưa chạm vào máy mà đã học được bài quan trọng nhất: ở xưởng này, báo cáo nhanh và trung thực còn quý hơn tay nghề. Senpai Kudo ít lời, nhưng ánh mắt đã bớt lạnh. {call} tự nhủ, cứ đúng ba bước dừng — gọi — chờ, rồi mọi thứ sẽ ổn."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-seizo-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-seizo-2-1.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "どうした、手が 止まってるぞ。"
+    },
+    "2": {
+     "file": "voice/ind-seizo-2-2.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "あの、先輩。これ、ねじ山が つぶれて います。他のも 確認させて ください。",
+     "fileF": "voice/ind-seizo-2-2-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-seizo-2-4.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "出荷まで あと 一時間だ。遅れたら 先方に 迷惑が かかる。"
+    },
+    "7": {
+     "file": "voice/ind-seizo-2-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "工場長、申し訳ありません。不良が 見つかりました。出荷を 止めて、全部 確認させて ください。",
+     "fileF": "voice/ind-seizo-2-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-seizo-2-8.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "……よく 言った。止めるぞ、全員 確認に まわれ。"
+    },
+    "9": {
+     "file": "voice/ind-seizo-2-9.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おれも 一緒に みる。おまえは 悪くない、見つけたのが すごいんだ。"
+    },
+    "11": {
+     "file": "voice/ind-seizo-2-11.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "……さっきの、なんか あったか。まあいい、終わったことだ。"
+    },
+    "12": {
+     "file": "voice/ind-seizo-2-12.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "やめろ！そこは 新人が さわっちゃ いけない 場所だ。手を はなせ。"
+    },
+    "13": {
+     "file": "voice/ind-seizo-2-13.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "直したい 気持ちは わかる。だが 安全の ルールを 破るのが 一番 怖いんだ。"
+    },
+    "16": {
+     "file": "voice/ind-seizo-2-16.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "二人で みましょう。おれが みて、先輩が チェックして ください。もれが なくなります。",
+     "fileF": "voice/ind-seizo-2-16-f.mp3"
+    },
+    "17": {
+     "file": "voice/ind-seizo-2-17.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "いい 考えだ。目は 四つ あるほうが つよい。"
+    },
+    "19": {
+     "file": "voice/ind-seizo-2-19.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "ほらな、一人の 目には 限界が ある。助けを 借りるのも 仕事だ。"
+    },
+    "21": {
+     "file": "voice/ind-seizo-2-21.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "原因は こっちだ。型の 位置が ほんの すこし ずれてた。おまえの 目が 正解だ。"
+    },
+    "22": {
+     "file": "voice/ind-seizo-2-22.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "先輩、ありがとうございます。次からも おかしいと 思ったら すぐ 言います。",
+     "fileF": "voice/ind-seizo-2-22-f.mp3"
+    },
+    "23": {
+     "file": "voice/ind-seizo-2-23.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "今日の 遅れは 工場の 責任だ。一人の せいじゃ ない。帰って いいぞ。"
+    },
+    "25": {
+     "file": "voice/ind-seizo-2-25.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おい、明日も 同じ ラインだ。おそい 朝ごはんは ぬくなよ。"
+    },
+    "0": {
+     "fileVn": "voice/ind-seizo-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chiều thứ sáu, chuyền chạy nước rút cho lô hàng xuất lúc năm giờ. {name} cầm một chi tiết lên soi dưới đèn, tim khựng lại."
+    },
+    "3": {
+     "fileVn": "voice/ind-seizo-2-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} kiểm tra nhanh mười chi tiết: ba cái lỗi ren giống hệt. Hộp đã đóng được hơn nửa, xe tải đang chờ ngoài cổng."
+    },
+    "5": {
+     "fileVn": "voice/ind-seizo-2-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Nếu báo ngay, cả lô phải khui ra kiểm lại, tiến độ hôm nay coi như mất. Nếu để qua, không ai biết — trừ lương tâm của {name}. Còn tự ý động vào máy chỉnh lại thì khu vực này người mới bị cấm chạm tuyệt đối."
+    },
+    "10": {
+     "fileVn": "voice/ind-seizo-2-10-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} nuốt nước bọt, đặt chi tiết lỗi xuống đáy hộp và đóng nắp lại. Xe tải lăn bánh đúng giờ, nhưng suốt buổi tối hình ảnh cái ren móp cứ hiện lên."
+    },
+    "14": {
+     "fileVn": "voice/ind-seizo-2-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cả chuyền ở lại thêm bốn mươi phút. Từng hộp được khui ra, soi lại từng chi tiết dưới đèn trắng."
+    },
+    "18": {
+     "fileVn": "voice/ind-seizo-2-18-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} soi một mình đến hoa mắt. Đến hộp cuối, senpai cầm lên một chi tiết {name} vừa cho qua: ren vẫn móp nhẹ ở rìa."
+    },
+    "20": {
+     "fileVn": "voice/ind-seizo-2-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Từng cặp mắt rà qua từng hộp. Khi hộp cuối được đóng lại, đồng hồ chỉ đúng giờ xe tải phải rời cổng."
+    },
+    "24": {
+     "fileVn": "voice/ind-seizo-2-24-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ra khỏi cổng xưởng, trời Nagoya đã tối. {name} đói meo, chân mỏi, nhưng trong lòng nhẹ hẳn."
+    }
+   },
+   "skipped": {
+    "6": "prompt",
+    "15": "prompt"
+   }
+  },
+  "ind-seizo-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-seizo-3-1.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "今日から 三番の 機械は おまえが 担当だ。名札も つけて おいた。"
+    },
+    "2": {
+     "file": "voice/ind-seizo-3-2.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。責任を もって、大切に 使います。",
+     "fileF": "voice/ind-seizo-3-2-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-seizo-3-4.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "あと 一人、今日から 新人が はいる。おまえが 教えて やれ。"
+    },
+    "7": {
+     "file": "voice/ind-seizo-3-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "まず 止める、呼ぶ、待つ。自分で さわらないのが 一番 大事だよ。おれも 最初は そう 教わった。",
+     "fileF": "voice/ind-seizo-3-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-seizo-3-8.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "……いい 教えかただ。おまえも もう 先輩だな。"
+    },
+    "10": {
+     "file": "voice/ind-seizo-3-10.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おい、教えるってのは 自分が ハッとした 言葉を そのまま わたすことだぞ。"
+    },
+    "12": {
+     "file": "voice/ind-seizo-3-12.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "だいじょうぶ、おれが うしろに いる。止めるのは 怖いことじゃ ない、守ることだ。",
+     "fileF": "voice/ind-seizo-3-12-f.mp3"
+    },
+    "13": {
+     "file": "voice/ind-seizo-3-13.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "早すぎる。新人の 目は まだ おまえの 手に おいついて ないぞ。"
+    },
+    "14": {
+     "file": "voice/ind-seizo-3-14.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "じゃあ、一緒に 一回 やって みよう。音が 変わったら、この ボタンを おして。",
+     "fileF": "voice/ind-seizo-3-14-f.mp3"
+    },
+    "16": {
+     "file": "voice/ind-seizo-3-16.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "声が でかいのは いいことだ。工場は 声で まわるからな。"
+    },
+    "18": {
+     "file": "voice/ind-seizo-3-18.mp3",
+     "sp": "Sếp xưởng",
+     "voice": "m",
+     "text": "来月から 三番 ラインの 朝の 点検も たのむ。期待してるぞ。"
+    },
+    "19": {
+     "file": "voice/ind-seizo-3-19.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、お任せ ください。点検表を 前の 日に 用意して おきます。",
+     "fileF": "voice/ind-seizo-3-19-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-seizo-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một tháng sau, buổi họp sáng, sếp xưởng gọi tên {name} trước cả chuyền."
+    },
+    "3": {
+     "fileVn": "voice/ind-seizo-3-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bảng tên nhỏ gắn trên máy, ghi tên {name}. Chỉ là một tấm nhựa, mà {call} cứ đưa tay chạm vào mãi."
+    },
+    "5": {
+     "fileVn": "voice/ind-seizo-3-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bạn kohai mới đứng ở cửa, mặt tái vì hồi hộp, tay ôm cuốn sổ ghi chép — y hệt {name} của ngày đầu tiên."
+    },
+    "9": {
+     "fileVn": "voice/ind-seizo-3-9-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Kohai gật đầu mà mắt vẫn đầy dấu hỏi. Senpai Kudo đứng phía sau nghe hết, khẽ lắc đầu."
+    },
+    "15": {
+     "fileVn": "voice/ind-seizo-3-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Kohai bấm thử nút dừng, hô to câu báo cáo đầu tiên trong đời đi làm ở Nhật: giọng còn run, nhưng rõ ràng từng chữ."
+    },
+    "17": {
+     "fileVn": "voice/ind-seizo-3-17-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Câu nói y hệt ngày đầu senpai nói với {name}. Lần này {call} nghe mà bật cười — hóa ra mình đã đi được một đoạn thật rồi."
+    }
+   },
+   "skipped": {
+    "6": "prompt",
+    "11": "prompt"
+   }
+  },
+  "ind-shokuhin-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-shokuhin-1-0.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "おはようございます。食品工場で一番大事なのは、衛生です。まず手洗いからいきましょう。"
+    },
+    "1": {
+     "file": "voice/ind-shokuhin-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "おはようございます。よろしくお願いします。手は決められた順番で、しっかり洗います。",
+     "fileF": "voice/ind-shokuhin-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-shokuhin-1-2.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "洗ったら、アルコールで消毒。帽子から髪が出ていたら、入る前に直してくださいね。"
+    },
+    "3": {
+     "file": "voice/ind-shokuhin-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "分かりました。髪が出ていたら、鏡で確認して直してから入ります。",
+     "fileF": "voice/ind-shokuhin-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-shokuhin-1-4.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "ラインは思ったより速いけど、慣れれば大丈夫だよ。最初は数より、落とさないことが大事だからね。"
+    },
+    "5": {
+     "file": "voice/ind-shokuhin-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。今、百個終わりました。残りはあと五十個です。",
+     "fileF": "voice/ind-shokuhin-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-shokuhin-1-6.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "いいですね。数は区切りのいいところで報告してください。あと、不良は見つけましたか。"
+    },
+    "7": {
+     "file": "voice/ind-shokuhin-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、容器が一つ、角が欠けています。ラインから外して、赤いケースに入れました。",
+     "fileF": "voice/ind-shokuhin-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-shokuhin-1-8.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "その判断で正解です。不良は隠さず、すぐ報告。それが食べる人を守ることですよ。"
+    },
+    "9": {
+     "file": "voice/ind-shokuhin-1-9.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "このライン、冷たいからさ、中に一枚多く着てくるといいよ。明日からな。"
+    },
+    "10": {
+     "file": "voice/ind-shokuhin-1-10.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。明日からそうします。今日の分、最後まで頑張ります。",
+     "fileF": "voice/ind-shokuhin-1-10-f.mp3"
+    },
+    "11": {
+     "file": "voice/ind-shokuhin-1-11.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "よし、その調子で。分からないことは、ラインが動いている時でも声をかけてくださいね。"
+    },
+    "12": {
+     "fileVn": "voice/ind-shokuhin-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ca đầu tiên kết thúc, {name} tháo găng tay, đôi tay đỏ lên vì lạnh nhưng lòng thì nhẹ nhõm: số lượng khớp, lỗi đã báo, không có gì phải giấu. Ở nhà máy thực phẩm, “làm đúng” không phải là khẩu hiệu treo tường — nó nằm trong từng chiếc hộp sẽ đến tay một người xa lạ nào đó."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-shokuhin-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-shokuhin-2-1.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "夜中のラインは眠さとの勝負だね。でも、目だけは落としちゃだめだよ。"
+    },
+    "5": {
+     "file": "voice/ind-shokuhin-2-5.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "よく止めてくれました。止める勇気が、一番の品質です。"
+    },
+    "7": {
+     "file": "voice/ind-shokuhin-2-7.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "一つ見つけたということは、全部が怪しいということです。隠すと、範囲が分からなくなりますよ。"
+    },
+    "9": {
+     "file": "voice/ind-shokuhin-2-9.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "食べる人の顔を思い浮かべてください。私たちの仕事は、その人の健康そのものです。"
+    },
+    "11": {
+     "file": "voice/ind-shokuhin-2-11.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "詳しく教えてください。発見したのは何時頃で、対象はどのロットですか。"
+    },
+    "15": {
+     "file": "voice/ind-shokuhin-2-15.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "では、ロット全部を保留にします。出荷は確認が終わるまで止めます。"
+    },
+    "17": {
+     "file": "voice/ind-shokuhin-2-17.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "正直、止まったときは焦ったけどさ、今は止まってよかったと思うよ。"
+    },
+    "21": {
+     "file": "voice/ind-shokuhin-2-21.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "今夜の対応、採点ではなく事実として記録に残します。よくやってくれました。"
+    },
+    "22": {
+     "file": "voice/ind-shokuhin-2-22.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "さあ、朝だ。外、明るいよ。コンビニでなんか食べて帰ろう。"
+    },
+    "24": {
+     "file": "voice/ind-shokuhin-2-24.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "お疲れさまでした。今日はよく寝てくださいね。次のシフトでまた会いましょう。"
+    },
+    "0": {
+     "fileVn": "voice/ind-shokuhin-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hai giờ sáng. Dây chuyền lạnh ở nhà máy 大阪 chạy đều đều trong tiếng máy rì rầm, hơi lạnh phả ra từ kho bảo quản khiến kính bảo hộ của {name} mờ đi từng nhịp. Ca đêm là ca của sự tỉnh táo — và của những sai sót rất dễ bị bỏ qua khi ai cũng đã mệt."
+    },
+    "2": {
+     "fileVn": "voice/ind-shokuhin-2-2-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đúng lúc đó, một khay hàng chạy qua trước mặt {name}. Hạn dùng in trên nhãn là ngày hôm qua so với phiếu sản xuất treo ở đầu chuyền — lệch hẳn một ngày. {name} nhìn lại lần nữa cho chắc: không nhầm được. Cả khay này, và có thể cả lô hàng quanh nó, đã bị in sai hạn dùng."
+    },
+    "4": {
+     "fileVn": "voice/ind-shokuhin-2-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} bấm nút dừng chuyền và gọi lớn về phía đầu ca. Tiếng máy dừng lại, cả chuyền ngẩng lên — nhưng không một ai khó chịu. Chị trưởng ca tới nơi, xem nhãn, xem phiếu sản xuất, rồi gật đầu dứt khoát: toàn bộ lô hàng trong ca này sẽ bị giữ lại kiểm tra. Một phần hàng phải bỏ đi, tốn kém thật — nhưng không một hộp sai hạn nào lọt ra khỏi cổng nhà máy đêm nay."
+    },
+    "6": {
+     "fileVn": "voice/ind-shokuhin-2-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} nhanh tay nhấc khay đó ra, bụng nghĩ vậy là xong. Nhưng mười phút sau, anh công nhân ở cuối chuyền phát hiện thêm hai khay nữa cùng lô — sai hạn không nằm ở một khay, nó nằm ở cả lô hàng. Chị trưởng ca phải dừng chuyền trong tình trạng không ai biết sai sót bắt đầu từ lúc nào, và câu hỏi đầu tiên của chị là: “Có ai thấy gì bất thường trước đó không?”"
+    },
+    "8": {
+     "fileVn": "voice/ind-shokuhin-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} nhìn khay hàng trôi qua, tự nhủ phía cuối chuyền còn người kiểm tra. Nhưng ca đêm mệt mỏi, và khay hàng đó đã lọt qua cả vòng kiểm tra cuối cùng. Sáng hôm sau, cả lô hàng bị thu hồi khẩn cấp từ kho, nhà máy phải làm việc với bên phân phối, và cuộc họp kiểm điểm kéo dài tới trưa. Một khoảnh khắc “để mặc kệ” ở hai giờ sáng hoá thành hậu quả mà cả nhà máy phải gánh."
+    },
+    "10": {
+     "fileVn": "voice/ind-shokuhin-2-10-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chuyền dừng, đèn vàng báo hiệu bật lên. Toàn bộ hàng trong khung giờ nghi ngờ được chuyển sang khu vực cách ly dán nhãn đỏ, chờ kiểm tra lại từng khay. Không khí trong xưởng căng mà trật tự — ai cũng hiểu đây là lúc nhà máy chứng minh mình đáng tin."
+    },
+    "13": {
+     "fileVn": "voice/ind-shokuhin-2-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} báo cáo từng ý: giờ phát hiện, số khay tận mắt thấy, và nói rõ phần lô hàng phía trước đó mình chưa kiểm chứng. Chị trưởng ca gật đầu ghi chép: báo cáo tách bạch được “điều đã chắc” và “điều chưa chắc” giúp khâu kiểm tra khoanh vùng nhanh gấp nhiều lần."
+    },
+    "14": {
+     "fileVn": "voice/ind-shokuhin-2-14-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Câu “chắc chỉ vài khay thôi” thốt ra nhẹ tênh, nhưng chị trưởng ca dừng bút, nhìn thẳng: “‘Chắc’ là bao nhiêu? Ba khay hay ba mươi khay?” Trong an toàn thực phẩm, những con số đoán mò nguy hiểm không kém gì sự im lặng — vì người nghe sẽ ra quyết định dựa trên chính những con số đó."
+    },
+    "16": {
+     "fileVn": "voice/ind-shokuhin-2-16-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đội ca đêm chia nhau kiểm lại từng khay dưới ánh đèn sáng trưng. Việc mất thêm gần một giờ, lưng ai cũng mỏi — nhưng khi khay cuối cùng được xếp lại gọn gàng vào khu cách ly, có một cảm giác rất lạ lan ra trong xưởng: mệt, mà yên tâm."
+    },
+    "19": {
+     "fileVn": "voice/ind-shokuhin-2-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} ở lại thêm mười phút, viết tường trình rõ ràng: lô nào bị giữ, kiểm tra tới đâu, còn phần nào ca sáng phải làm tiếp — rồi bàn giao tận tay người phụ trách ca sáng, chỉ vào khu cách ly cho họ thấy tận mắt. Người ca sáng gật đầu: “Rõ ràng thế này thì bọn tôi đỡ khổ rồi.”"
+    },
+    "20": {
+     "fileVn": "voice/ind-shokuhin-2-20-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Mảnh giấy ghi vội “lô tối qua có vấn đề, hỏi trưởng ca” đến trưa hôm sau mới được người ta tìm thấy dưới đáy cốc nước. May mà chị trưởng ca đã tự bàn giao miệng từ sớm — nhưng bài học thì rõ ràng: sự cố càng lớn, bàn giao càng không được phép qua loa."
+    },
+    "23": {
+     "fileVn": "voice/ind-shokuhin-2-23-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bước ra khỏi cổng nhà máy khi thành phố 大阪 vừa thức giấc, {name} hít một hơi dài. Đêm nay {call} hiểu ra một điều: nút dừng chuyền không phải là nút “gây rắc rối” — nó là nút bảo vệ bữa ăn của hàng nghìn người mà mình không bao giờ gặp mặt."
+    },
+    "25": {
+     "fileVn": "voice/ind-shokuhin-2-25-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Về tới phòng, {name} ngủ một giấc dài không mộng mị. Trong sổ tay có thêm một dòng mới: “Thấy sai — dừng, báo, ghi lại. Không có ngoại lệ, kể cả lúc hai giờ sáng.” An toàn thực phẩm không được xây bằng những ngày thuận lợi; nó được xây bằng chính những đêm như đêm nay."
+    }
+   },
+   "skipped": {
+    "3": "prompt",
+    "12": "prompt",
+    "18": "prompt"
+   }
+  },
+  "ind-shokuhin-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-shokuhin-3-1.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "今日から、ラインの最後の検査をお願いします。印、日付、重さ。三つを見てください。"
+    },
+    "2": {
+     "file": "voice/ind-shokuhin-3-2.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "お、検査担当か。最初の日に数を数えてた人と別人だな。"
+    },
+    "7": {
+     "file": "voice/ind-shokuhin-3-7.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "その目の細かさが、検査の力です。続けてください。"
+    },
+    "9": {
+     "file": "voice/ind-shokuhin-3-9.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "あの新しい方に、まず一つだけ、日本語の報告の言葉を教えてあげてください。"
+    },
+    "14": {
+     "file": "voice/ind-shokuhin-3-14.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "教えることは、自分の勉強にもなります。来週からも、お願いしますね。"
+    },
+    "18": {
+     "file": "voice/ind-shokuhin-3-18.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "ほら、もう先輩の顔してる。来月は新しい人が、あんたを見て覚えるんだよ。"
+    },
+    "20": {
+     "file": "voice/ind-shokuhin-3-20.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "お疲れさまでした。明日も、よろしくお願いします。"
+    },
+    "0": {
+     "fileVn": "voice/ind-shokuhin-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một tháng sau đêm sự cố sai hạn. Hôm nay chị trưởng ca gọi {name} lại trước giờ vào ca, trao cho {call} một chiếc bảng kẹp hồ sơ và cây bút đỏ — bộ đồ nghề của người kiểm phẩm cuối chuyền, vị trí mà ở nhà máy này chỉ giao cho người đã được tin tưởng."
+    },
+    "3": {
+     "fileVn": "voice/ind-shokuhin-3-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đứng ở cuối chuyền, {name} mới thấy hết trách nhiệm của vị trí này: mọi sản phẩm đi qua tay mình là đi thẳng ra thế giới ngoài kia. Niêm phong phải kín, ngày tháng phải đúng, trọng lượng phải khớp. Từng khay, từng khay — chậm rãi mà không được phép lơ là."
+    },
+    "5": {
+     "fileVn": "voice/ind-shokuhin-3-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} giữ gói hàng lại, đặt lên cân kiểm tra lần hai: đúng là thiếu trọng lượng. Gói hàng được chuyển sang khu chờ xử lý và ghi vào sổ. Chị trưởng ca đi ngang, nhìn thấy, chỉ gật đầu một cái — cái gật đầu của người biết mình đã giao đúng việc cho đúng người."
+    },
+    "6": {
+     "fileVn": "voice/ind-shokuhin-3-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Gói hàng nhẹ cân trôi qua tay {name} và biến mất vào dòng hàng phía trước. Nhưng suốt phần ca còn lại, hình ảnh chiếc kim cân lệch đi một chút cứ quay lại trong đầu. Người kiểm phẩm mà bắt đầu biết nói “chắc không sao đâu” — thì đó là ngày chất lượng bắt đầu trượt dốc, chậm và lặng lẽ."
+    },
+    "8": {
+     "fileVn": "voice/ind-shokuhin-3-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Giữa ca, nhà máy đón một bạn nhân viên mới — cũng là người Việt, cũng bỡ ngỡ y như {name} ngày đầu, đứng nép ở cửa xưởng không dám bước vào. Chị Mai, người vào trước vài tháng, đã ra đón bạn ấy. Chị trưởng ca quay sang {name} và giao thêm một việc nhỏ mà ý nghĩa không nhỏ chút nào."
+    },
+    "11": {
+     "fileVn": "voice/ind-shokuhin-3-11-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} viết câu mẫu ra giấy, đọc chậm từng chữ: 「数えました。今、百個です」 — “Em đếm rồi ạ. Hiện tại là 100 cái.” Bạn mới lẩm nhẩm đọc theo, lần đầu ngượng nghịu, lần thứ ba đã rõ tiếng. Khi bạn ấy tự mình báo cáo thành công lần đầu tiên cho chị trưởng ca, cả hai người cùng cười — một nụ cười mà {name} nhận ra: nó giống hệt nụ cười của mình một tháng trước."
+    },
+    "12": {
+     "fileVn": "voice/ind-shokuhin-3-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} dịch qua loa ý nghĩa rồi quay lại chuyền của mình. Mười phút sau, bạn mới đứng khựng giữa xưởng, tay cầm khay hàng mà không biết báo cáo với ai, bằng câu gì. Anh công nhân phải dừng tay ra giúp. {name} chợt nhớ lại ngày đầu của chính mình — và nhớ rằng mình đã may mắn thế nào khi có người chịu chỉ cho từng câu một."
+    },
+    "13": {
+     "fileVn": "voice/ind-shokuhin-3-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cuối ca, sổ kiểm phẩm của {name} không một dòng bỏ trống. Ở trang cuối, chị trưởng ca đã viết sẵn một dòng chữ nhỏ từ lúc nào: vị trí kiểm phẩm cuối chuyền — phụ trách chính thức từ tuần sau, kèm theo vai trò kèm cặp người mới khi có bạn mới vào."
+    },
+    "16": {
+     "fileVn": "voice/ind-shokuhin-3-16-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} gật đầu nhận lời. Trên đường về, {call} nhắn tin khoe với gia đình một câu ngắn: “Con được giao việc quan trọng rồi, còn được dạy người mới nữa.” Vòng tròn cứ thế khép lại — người từng được dắt tay qua ngày đầu bỡ ngỡ, giờ dang tay ra dắt người tiếp theo."
+    },
+    "17": {
+     "fileVn": "voice/ind-shokuhin-3-17-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "{name} thật thà nói mình muốn chắc tay ở khâu kiểm phẩm trước đã, rồi hãy kèm người mới. Chị trưởng ca gật đầu tôn trọng: “Biết rõ giới hạn của mình cũng là một loại giỏi.” Việc kèm cặp được hẹn lại sau hai tuần — không vội, nhưng cũng không trốn tránh."
+    },
+    "19": {
+     "fileVn": "voice/ind-shokuhin-3-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Cổng nhà máy 大阪 mở ra, nắng chiều rải vàng trên con đường về trạm tàu. {name} đi chậm hơn mọi ngày một chút — không phải vì mệt, mà vì muốn giữ lâu hơn cảm giác của ngày hôm nay: ngày {call} thôi là “người mới” và bắt đầu trở thành “người đi trước” của ai đó."
+    },
+    "21": {
+     "fileVn": "voice/ind-shokuhin-3-21-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Một tháng ở nhà máy thực phẩm 大阪 dạy {name} một vòng tròn đẹp: được chỉ dạy, làm được việc, rồi chỉ dạy lại. Kiến thức không mất đi khi truyền lại — nó nhân lên. Và từ hôm nay, ở cuối dây chuyền lạnh ấy, có một người kiểm phẩm mà cả ca đều tin tưởng."
+    }
+   },
+   "skipped": {
+    "4": "prompt",
+    "10": "prompt",
+    "15": "prompt"
+   }
+  },
+  "ind-soko-1": {
+   "steps": {
+    "0": {
+     "file": "voice/ind-soko-1-0.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "ようこそ 夜勤へ。ここは 千葉の 物流センター。夜のうちに 荷物を さばくのが 仕事だ。"
+    },
+    "1": {
+     "file": "voice/ind-soko-1-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "よろしく お願いします。初めての 夜勤なので、ルールを 一つずつ 覚えます。",
+     "fileF": "voice/ind-soko-1-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-soko-1-2.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "まず 荷物の 番号を 声に だして 読むの。呼び合わせって いうんだよ。"
+    },
+    "3": {
+     "file": "voice/ind-soko-1-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "わかりました。番号を 声に だして 読んで、相方と 確認し合います。",
+     "fileF": "voice/ind-soko-1-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/ind-soko-1-4.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "そうだ。つぎは スキャン。バーコードを よませて、画面の 色を みる。赤は エラーだ。"
+    },
+    "5": {
+     "file": "voice/ind-soko-1-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "スキャンの あと 画面を 確認します。赤く なったら すぐ 止まって 報告します。",
+     "fileF": "voice/ind-soko-1-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-soko-1-6.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "いいね。方面別に わけるのが 最後。この ベルトは 船橋、あっちは 市川 ゆきだよ。"
+    },
+    "7": {
+     "file": "voice/ind-soko-1-7.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、行き先の 札を みてから ベルトに のせます。迷ったら 手を 止めて 聞きます。",
+     "fileF": "voice/ind-soko-1-7-f.mp3"
+    },
+    "8": {
+     "file": "voice/ind-soko-1-8.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "その 姿勢で いい。夜は 眠いのが 敵だ。こまったら 声を かけ合おう。"
+    },
+    "9": {
+     "file": "voice/ind-soko-1-9.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。休憩の ときに 体を うごかして、最後まで 集中します。",
+     "fileF": "voice/ind-soko-1-9-f.mp3"
+    },
+    "10": {
+     "file": "voice/ind-soko-1-10.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "じゃあ 最初の 一箱、一緒に やろう。番号、読んで みて。"
+    },
+    "11": {
+     "file": "voice/ind-soko-1-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。ゼロ、八、三、五、二。船橋 ゆきで あって いますか。",
+     "fileF": "voice/ind-soko-1-11-f.mp3"
+    },
+    "12": {
+     "fileVn": "voice/ind-soko-1-12-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đêm đầu tiên, {name} học được rằng kho vận không chạy bằng sức mà chạy bằng tiếng hô và sự đối chiếu. Mỗi kiện hàng qua tay đều có một người đang chờ ở đầu kia. {call} hô mã đến khản giọng, mà thấy mình thuộc về ê-kíp này nhanh hơn tưởng tượng."
+    }
+   },
+   "skipped": {}
+  },
+  "ind-soko-2": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-soko-2-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "あれ、この 荷物、さっき おれが ラベルを はったやつだ。行き先が ちがう…。",
+     "fileF": "voice/ind-soko-2-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/ind-soko-2-2.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "どうしたの、顔色 悪いよ。車、あと 五分で でるよ。"
+    },
+    "5": {
+     "file": "voice/ind-soko-2-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "リーダー、すみません。おれが ラベルを まちがえました。車を 止めて ください、一箱だけ 確認させて ください。",
+     "fileF": "voice/ind-soko-2-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-soko-2-6.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "わかった、止める。よく 言った、それが 一番 早い 直しかただ。"
+    },
+    "9": {
+     "file": "voice/ind-soko-2-9.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "ねえ、さっきの 荷物の こと、まだ 気に してる でしょ。顔に かいて あるよ。"
+    },
+    "10": {
+     "file": "voice/ind-soko-2-10.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "おい、車の 周りは 立ち入り 禁止だ。なにを してる。"
+    },
+    "11": {
+     "file": "voice/ind-soko-2-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "すみません、ラベルを なおそうと…。順番を まちがえました、まず 報告でした。",
+     "fileF": "voice/ind-soko-2-11-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-soko-2-12.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "直したい 気持ちは わかる。でも 安全の ルートを とおらない 修正は 事故の もとだ。"
+    },
+    "14": {
+     "file": "voice/ind-soko-2-14.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "あった、この 箱だよ。ラベル、たしかに 違う。間に合ったね。"
+    },
+    "16": {
+     "file": "voice/ind-soko-2-16.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "これからは 番号を 二回 よんで、となりの 人にも みて もらいます。",
+     "fileF": "voice/ind-soko-2-16-f.mp3"
+    },
+    "17": {
+     "file": "voice/ind-soko-2-17.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "いい 提案だ。その ルール、この エリア 全体で つかおう。"
+    },
+    "18": {
+     "file": "voice/ind-soko-2-18.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "決心だけじゃ 眠気には かてないよ。仕組みに しないと。"
+    },
+    "20": {
+     "file": "voice/ind-soko-2-20.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ゼロ、八、三、五、二。もう 一度、ゼロ、八、三、五、二。船橋、合ってます。",
+     "fileF": "voice/ind-soko-2-20-f.mp3"
+    },
+    "21": {
+     "file": "voice/ind-soko-2-21.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "全員、今日の ことを 覚えて おけ。間違いは 起きる。隠すかどうかで 人が わかるんだ。"
+    },
+    "22": {
+     "file": "voice/ind-soko-2-22.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "ほら、あったかい コーヒー。次は 眠いときこそ 声を だして 読むんだよ。"
+    },
+    "23": {
+     "file": "voice/ind-soko-2-23.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。眠気が きたら、必ず 声に だして、となりの 人と 確認します。",
+     "fileF": "voice/ind-soko-2-23-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-soko-2-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hai giờ sáng, xe tuyến cuối sắp lăn bánh. {name} chợt nhìn thấy một kiện quen quen trên băng: nhãn ghi Ichikawa, nhưng mã kiện mình vừa hô lúc nãy lại thuộc tuyến Funabashi."
+    },
+    "3": {
+     "fileVn": "voice/ind-soko-2-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chính tay {name} dán nhầm nhãn khi cơn buồn ngủ ập tới. Kiện hàng là thuốc cần giao buổi sáng cho một hiệu thuốc ở Funabashi. Ba lối đi hiện ra cùng lúc."
+    },
+    "7": {
+     "fileVn": "voice/ind-soko-2-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Kiện hàng được kéo ra ở phút thứ tư, dán lại nhãn Funabashi trước mắt cả đội. Không ai cười — ai làm ca đêm cũng từng có một đêm như thế."
+    },
+    "8": {
+     "fileVn": "voice/ind-soko-2-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Xe lăn bánh vào màn đêm. {name} quay lại băng chuyền, tay vẫn quét mã mà đầu chỉ nghĩ đến một hiệu thuốc ở Funabashi sáng mai mở cửa không có thuốc."
+    },
+    "13": {
+     "fileVn": "voice/ind-soko-2-13-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Xe được giữ lại thêm mười phút. Cả khu vực đóng gói nín thở nhìn kiện hàng bị dán nhầm được kéo xuống khỏi thùng xe."
+    },
+    "19": {
+     "fileVn": "voice/ind-soko-2-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Từ lúc đó, tiếng hô mã ở khu vực của {name} vang hai lần liên tiếp, đều đặn như nhịp trống trong đêm."
+    },
+    "24": {
+     "fileVn": "voice/ind-soko-2-24-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ba giờ sáng, hiệu thuốc ở Funabashi nhận kiện đúng giờ. Không ai ở đó biết đêm nay nó suýt đi lạc — trừ ê-kíp ca đêm và lương tâm vừa nhẹ đi của {name}."
+    }
+   },
+   "skipped": {
+    "4": "prompt",
+    "15": "prompt"
+   }
+  },
+  "ind-soko-3": {
+   "steps": {
+    "1": {
+     "file": "voice/ind-soko-3-1.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "今夜は 山だ。だが、うちの チームは 先月も こえた。焦らず、正確に いこう。"
+    },
+    "2": {
+     "file": "voice/ind-soko-3-2.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "わたしは 入り口の スキャン、そちらは 方面別の 最後の 確認で いい。"
+    },
+    "3": {
+     "file": "voice/ind-soko-3-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、最後の 砦は おれが みます。赤が でたら その 場で 止めます。",
+     "fileF": "voice/ind-soko-3-3-f.mp3"
+    },
+    "6": {
+     "file": "voice/ind-soko-3-6.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "こっち、半分 もらうよ。番号は 声に だして、焦ったら 深呼吸。これで いこう。",
+     "fileF": "voice/ind-soko-3-6-f.mp3"
+    },
+    "7": {
+     "file": "voice/ind-soko-3-7.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "お、流れが もどった。教えながら 自分の 分も こなすなんて、もう 戦力だね。"
+    },
+    "9": {
+     "file": "voice/ind-soko-3-9.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "チームの 記録は 全員の 足並みで きまる。次は 声を かけて やれ。"
+    },
+    "11": {
+     "file": "voice/ind-soko-3-11.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "みんな、声を あわせよう。三十分ごとに 場所を かわって、眠気を ちらそう。",
+     "fileF": "voice/ind-soko-3-11-f.mp3"
+    },
+    "12": {
+     "file": "voice/ind-soko-3-12.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "その 声、夜の 倉庫に ひびいて いいね。あと すこし、がんばろう。"
+    },
+    "13": {
+     "file": "voice/ind-soko-3-13.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "早いのは いいが、チームの 呼吸が くずれる。夜勤は リレーだと いっただろ。"
+    },
+    "14": {
+     "file": "voice/ind-soko-3-14.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "集計が でたぞ。今夜、エラー ゼロ。うちの チームの 新記録だ。"
+    },
+    "16": {
+     "file": "voice/ind-soko-3-16.mp3",
+     "sp": "Anh trưởng kho",
+     "voice": "m",
+     "text": "よし、特別だ。カップ麺、全員 おれの おごりだ。五分だけ 座ろう。"
+    },
+    "17": {
+     "file": "voice/ind-soko-3-17.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "夜中 二時の カップ麺って、なんで こんなに おいしいんだろうね。"
+    },
+    "18": {
+     "file": "voice/ind-soko-3-18.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "みんなで 食べるからだと 思います。今夜のことは わすれません。",
+     "fileF": "voice/ind-soko-3-18-f.mp3"
+    },
+    "0": {
+     "fileVn": "voice/ind-soko-3-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Đêm cuối tháng, lượng hàng gấp đôi ngày thường. Đây là đêm cao điểm mà cả kho nhắc tới từ đầu tuần với vẻ vừa ngán vừa tự hào."
+    },
+    "4": {
+     "fileVn": "voice/ind-soko-3-4-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hàng đổ về như sóng. Tiếng hô mã, tiếng bíp quét mã và tiếng băng chuyền quyện thành một thứ nhạc nền chỉ ca đêm mới có."
+    },
+    "8": {
+     "fileVn": "voice/ind-soko-3-8-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chốt của {name} không một lỗi nào. Nhưng mắt {call} cứ liếc sang khu vực đang dồn ứ, và cái liếc ấy nặng dần theo từng giờ."
+    },
+    "15": {
+     "fileVn": "voice/ind-soko-3-15-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tiếng reo nhỏ vang trong kho lúc hai giờ sáng — nhỏ thôi, vì ai cũng mệt, mà ấm lạ thường."
+    },
+    "19": {
+     "fileVn": "voice/ind-soko-3-19-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Năm phút mì ly giữa kho hàng lạnh, hơi nóng bốc lên mờ cả kính. Tình anh em ca đêm hóa ra có vị như thế: mặn, nóng, và đến đúng lúc mệt nhất."
+    }
+   },
+   "skipped": {
+    "5": "prompt",
+    "10": "prompt"
+   }
+  },
+  "ket-ve-que": {
+   "steps": {
+    "0": {
+     "fileVn": "voice/ket-ve-que-0-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chuyến bay đêm đáp xuống Nội Bài. Sân bay quê nhà ồn ào, ấm và đầy tiếng Việt — thứ âm thanh mà hai năm qua {name} chỉ được nghe qua màn hình điện thoại. Bố đứng chờ ở cửa ra, già đi một chút, cười nhiều hơn một chút. Mẹ ôm chầm lấy, câu đầu tiên không phải \"kiếm được bao nhiêu\" — mà là \"gầy đi rồi đấy\"."
+    },
+    "1": {
+     "fileVn": "voice/ket-ve-que-1-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ba tháng sau. {name} không ngồi chơi: tiếng Nhật và kinh nghiệm hai năm xứ người biến thành một công việc thật — dạy kèm tiếng Nhật cho lứa đàn em sắp sang, nhận thêm việc dịch tài liệu cho một công ty có vốn Nhật ở khu công nghiệp gần nhà. Thu nhập không bằng bên kia, nhưng mỗi tối được ăn cơm nhà."
+    },
+    "2": {
+     "fileVn": "voice/ket-ve-que-2-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Có những chiều, điện thoại lại sáng lên tin nhắn từ nước Nhật xa: chị Mai hỏi thăm, thầy Khánh gửi một đường link tuyển dụng \"để dành, biết đâu đấy\". {name} mỉm cười trả lời — quá khứ ấy không phải đoạn đời bỏ đi; nó là hành trang."
+    },
+    "3": {
+     "fileVn": "voice/ket-ve-que-3-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "🌅 KẾT CỤC 6 — «VỀ QUÊ». Không phải ai đi xa cũng phải ở lại mới gọi là thành công. Có người mang nước Nhật về nhà trong vốn tiếng, trong nếp làm việc, trong cách cúi chào và giữ lời hứa — và xây đời mình ngay trên mảnh đất đã sinh ra mình. Câu chuyện của {name} khép lại ở đây: không dang dở, chỉ là rẽ sang một con đường khác — con đường có cơm nhà mỗi tối. (Đạt được bằng lựa chọn của chính bạn ở ngã rẽ Chương 3. Chơi lại và chọn ở lại, để xem những kết cục khác mở ra thế nào.)"
+    }
+   },
+   "skipped": {}
+  },
+  "talk-genba": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-genba-0.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "おー、昼だ昼だ。今日はコンビニの唐揚げ弁当にしたよ。当たりかも。"
+    },
+    "1": {
+     "file": "voice/talk-genba-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "私も同じ弁当です。美味しいですね。午後も頑張れそうです。",
+     "fileF": "voice/talk-genba-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-genba-2.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "食べたら少し横になれよ。昼寝は午後の安全にもつながるからな。"
+    },
+    "3": {
+     "file": "voice/talk-genba-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "週末は何をしますか。私は部屋の掃除をして、ゆっくり休みたいです。",
+     "fileF": "voice/talk-genba-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-genba-4.mp3",
+     "sp": "Hùng",
+     "voice": "m",
+     "text": "俺は海の近くを走るよ。横浜の朝の海、けっこういいんだぜ。"
+    },
+    "5": {
+     "file": "voice/talk-genba-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いいですね。今度、私も一緒に行きたいです。",
+     "fileF": "voice/talk-genba-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/talk-genba-6.mp3",
+     "sp": "Anh thợ cả",
+     "voice": "m",
+     "text": "よし、決まりだな。でも月曜の朝は寝坊するなよ。"
+    },
+    "7": {
+     "fileVn": "voice/talk-genba-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Giờ nghỉ trưa ngắn ngủi giữa công trường ồn ào hoá ra là khoảng lặng quý giá nhất ngày: một hộp cơm, mấy câu chuyện phiếm, và cảm giác mình thuộc về một đội. {name} gấp vỏ hộp cơm lại, đội mũ lên — buổi chiều lại bắt đầu bằng câu hô quen thuộc."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-kaigo": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-kaigo-0.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "午前中おつかれさま。立ちっぱなしで足が痛いでしょ。はい、お茶。少し座りなさい。"
+    },
+    "1": {
+     "file": "voice/talk-kaigo-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。正直、まだ体が慣れていなくて、家に帰るとすぐ寝てしまいます。",
+     "fileF": "voice/talk-kaigo-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-kaigo-2.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "それ、みんな同じ。私も最初はそうだった。でもね、この仕事は体より先に、心が慣れるの。ハルさん、あなたのこと気に入ったみたいよ。"
+    },
+    "3": {
+     "file": "voice/talk-kaigo-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ハルさんの笑顔を見ると、疲れが飛びます。不思議ですね。",
+     "fileF": "voice/talk-kaigo-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-kaigo-4.mp3",
+     "sp": "Chị Mai",
+     "voice": "f",
+     "text": "不思議じゃないのよ。それがこの仕事の給料より高い部分。大事にしなさいね。"
+    },
+    "5": {
+     "fileVn": "voice/talk-kaigo-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Chén trà nóng giữa ca trực — và một câu nói của chị Mai mà {name} sẽ nhớ rất lâu: lương của nghề kaigo có một phần không nằm trong phong bì."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-khach-san": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-khach-san-0.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "少し休みましょう。雨の日はロビーも静かになりますね。"
+    },
+    "1": {
+     "file": "voice/talk-khach-san-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "そうですね。窓の外の海が、今日はグレーの色ですね。",
+     "fileF": "voice/talk-khach-san-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-khach-san-2.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "昨日の小さいお客様、帰るとき深くお辞儀をしてくれたんですよ。かわいかったなあ。"
+    },
+    "3": {
+     "file": "voice/talk-khach-san-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "かわいいですね。お辞儀をされると、疲れが少し消えますね。",
+     "fileF": "voice/talk-khach-san-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-khach-san-4.mp3",
+     "sp": "Chị senpai khách sạn",
+     "voice": "f",
+     "text": "その気持ちがあれば、大丈夫。さあ、あと半分、いきましょうか。"
+    },
+    "5": {
+     "file": "voice/talk-khach-san-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、頑張ります。お茶、ごちそうさまでした。",
+     "fileF": "voice/talk-khach-san-5-f.mp3"
+    },
+    "6": {
+     "fileVn": "voice/talk-khach-san-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Tách trà ấm giữa ca, một câu chuyện nhỏ về vị khách nhí — nghề lễ tân có những khoảng lặng dịu dàng như vậy, đủ để {name} mỉm cười quay lại quầy, sẵn sàng cúi chào vị khách tiếp theo bằng cả tấm lòng."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-nha-hang": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-nha-hang-0.mp3",
+     "sp": "Anh đầu bếp",
+     "voice": "m",
+     "text": "まかない出来たよ。今日は余った魚でアラ汁。いただきます、先に食べな。"
+    },
+    "1": {
+     "file": "voice/talk-nha-hang-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いただきます。…おいしい！残り物でこんなに美味しくなるんですね。さすが料理人です。",
+     "fileF": "voice/talk-nha-hang-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-nha-hang-2.mp3",
+     "sp": "Anh đầu bếp",
+     "voice": "m",
+     "text": "はは、料理人はな、捨てる部分から一番美味しい物を作るのが腕なんだ。人生も同じだよ、たぶん。"
+    },
+    "3": {
+     "file": "voice/talk-nha-hang-3.mp3",
+     "sp": "Bếp trưởng Sato",
+     "voice": "m",
+     "text": "おい、哲学はいいから食え。午後は仕込みが山ほどあるぞ。"
+    },
+    "4": {
+     "file": "voice/talk-nha-hang-4.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい！午後もよろしくお願いします。",
+     "fileF": "voice/talk-nha-hang-4-f.mp3"
+    },
+    "5": {
+     "fileVn": "voice/talk-nha-hang-5-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Bữa trưa của người làm bếp chỉ có mười lăm phút, ăn đứng quanh nồi canh bốc khói. Vậy mà trong mười lăm phút ấy có đủ cả: một bài học nghề, một câu triết lý nửa đùa, và cảm giác mình đã là người của gian bếp này."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-nogyo": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-nogyo-0.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "はい、麦茶。畑の あとは これが いちばん。故郷の 話、聞かせて。"
+    },
+    "1": {
+     "file": "voice/talk-nogyo-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。故郷も 田んぼが ひろくて、朝は 鳥の 声で おきます。",
+     "fileF": "voice/talk-nogyo-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-nogyo-2.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "あら、じゃあ ここも あんまり かわらないね。冬は どうして いるの、あっちは。"
+    },
+    "3": {
+     "file": "voice/talk-nogyo-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "冬でも ゆきは ふりません。北海道の 冬を みるのが たのしみです。",
+     "fileF": "voice/talk-nogyo-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-nogyo-4.mp3",
+     "sp": "Bác chủ trại",
+     "voice": "m",
+     "text": "はは、楽しみは 最初の 三日だけだぞ。雪かきで 腰を やられる。"
+    },
+    "5": {
+     "file": "voice/talk-nogyo-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "それでも 一度は みて みたいです。おばさんの 味噌汁も、冬の 味が しそうです。",
+     "fileF": "voice/talk-nogyo-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/talk-nogyo-6.mp3",
+     "sp": "Bà chủ trại",
+     "voice": "f",
+     "text": "うまいこと いうねえ。冬に きたら、鍋を たいて あげるよ。"
+    },
+    "7": {
+     "fileVn": "voice/talk-nogyo-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Ly trà lúa mạch cạn dần trong tiếng ve cuối buổi chiều. {name} kể chuyện quê nhà có ruộng, có tiếng chim buổi sáng, và nhận ra Furano xa xôi này giống quê mình hơn bất cứ nơi nào từng đi qua. {call} đã có thêm một lời hẹn mùa đông: một nồi lẩu đang chờ."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-seibi": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-seibi-0.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "よし、休憩だ。好きなの 飲め、おれの おごりだ。"
+    },
+    "1": {
+     "file": "voice/talk-seibi-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いいんですか。じゃあ この コーヒーを いただきます。しゃちょうは 車の 仕事、長いんですか。",
+     "fileF": "voice/talk-seibi-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-seibi-2.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "四十年だな。初めて さわった 車は もう 走ってないが、手は 覚えてるよ。"
+    },
+    "3": {
+     "file": "voice/talk-seibi-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "四十年は すごいですね。休みの 日は なにを して いますか。",
+     "fileF": "voice/talk-seibi-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-seibi-4.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "畑だよ。車と 違って、野菜は 急いで くれないからな。ははは。"
+    },
+    "5": {
+     "file": "voice/talk-seibi-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "それも いいですね。今度 畑の 話も 聞かせて ください。",
+     "fileF": "voice/talk-seibi-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/talk-seibi-6.mp3",
+     "sp": "Chủ xưởng",
+     "voice": "m",
+     "text": "いいとも。収穫の ときは 人手が いるから、おまえも 呼ぶぞ。"
+    },
+    "7": {
+     "fileVn": "voice/talk-seibi-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Lon cà phê ấm trong tay, {name} nghĩ về bốn mươi năm của chủ xưởng: tay nhớ cả những chiếc xe không còn chạy nữa. {call} mong một ngày tay mình cũng nhớ được như thế — và biết đâu bắt đầu từ chính chùm chìa khóa vừa được giao."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-seizo": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-seizo-0.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おい、昼だ。食堂の 味噌カツ、今日は あたりだぞ。"
+    },
+    "1": {
+     "file": "voice/talk-seizo-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "本当ですか。名古屋に きてから 味噌の 味が 好きに なりました。",
+     "fileF": "voice/talk-seizo-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-seizo-2.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "はは、いい 舌してるな。休みの 日は なに してるんだ。"
+    },
+    "3": {
+     "file": "voice/talk-seizo-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "先週は 川の ちかくを さんぽしました。先輩は お休みは どうして いますか。",
+     "fileF": "voice/talk-seizo-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-seizo-4.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "おれは 息子の サッカーの 応援だ。声を だしすぎて 月曜は ガラガラだよ。"
+    },
+    "5": {
+     "file": "voice/talk-seizo-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "それで 月曜の 朝礼の 声が…。あ、すみません、なんでも ないです。",
+     "fileF": "voice/talk-seizo-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/talk-seizo-6.mp3",
+     "sp": "Senpai Kudo",
+     "voice": "m",
+     "text": "バレてたか。まあ、家族の ためなら 声くらい くれて やるよ。"
+    },
+    "7": {
+     "fileVn": "voice/talk-seizo-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Giờ nghỉ chỉ bốn mươi lăm phút, mà {name} biết thêm một điều: senpai khô khan kia hóa ra là ông bố hét khản cổ bên sân bóng mỗi cuối tuần. Chiều vào ca, hai người lại hô báo cáo như thường, chỉ khác là tiếng hô nghe thân hơn một chút."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-shokuhin": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-shokuhin-0.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "休憩だ。夜中のカップラーメン、格別だよな。"
+    },
+    "1": {
+     "file": "voice/talk-shokuhin-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "そうですね。寒いラインの後だから、温かさが体にしみます。",
+     "fileF": "voice/talk-shokuhin-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-shokuhin-2.mp3",
+     "sp": "Chị trưởng ca",
+     "voice": "f",
+     "text": "無理をしないで、休憩はしっかり休んでくださいね。後半も長いですよ。"
+    },
+    "3": {
+     "file": "voice/talk-shokuhin-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい。さっき家族からメッセージが来て、元気が出ました。",
+     "fileF": "voice/talk-shokuhin-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-shokuhin-4.mp3",
+     "sp": "Anh công nhân",
+     "voice": "m",
+     "text": "それが一番の薬だよ。さあ、食べたらもうひと頑張りだ。"
+    },
+    "5": {
+     "file": "voice/talk-shokuhin-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "はい、頑張ります。あと少しで朝ですね。",
+     "fileF": "voice/talk-shokuhin-5-f.mp3"
+    },
+    "6": {
+     "fileVn": "voice/talk-shokuhin-6-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Hơi mì ly bốc lên giữa phòng nghỉ lúc ba giờ sáng, quyện với câu chuyện quê nhà nói dở. Ca đêm ở 大阪 dài thật, nhưng {name} chưa bao giờ phải đi qua nó một mình."
+    }
+   },
+   "skipped": {}
+  },
+  "talk-soko": {
+   "steps": {
+    "0": {
+     "file": "voice/talk-soko-0.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "はい、休憩。コンビニの 新作 パン、買って きたよ。半分 あげる。"
+    },
+    "1": {
+     "file": "voice/talk-soko-1.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "ありがとうございます。夜勤に なれて きましたが、休憩の パンが いちばんの たのしみです。",
+     "fileF": "voice/talk-soko-1-f.mp3"
+    },
+    "2": {
+     "file": "voice/talk-soko-2.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "わかるわかる。家の 子はね、わたしが 夜 はたらく 理由を まだ しらないの。"
+    },
+    "3": {
+     "file": "voice/talk-soko-3.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "そうなんですか。朝 かえると、子どもさんは よろこびますか。",
+     "fileF": "voice/talk-soko-3-f.mp3"
+    },
+    "4": {
+     "file": "voice/talk-soko-4.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "うん、寝ぼけながら くっついて くる。それで 疲れが とぶんだよね。"
+    },
+    "5": {
+     "file": "voice/talk-soko-5.mp3",
+     "sp": "hero",
+     "voice": "m",
+     "text": "いいですね。おれも 休みの 日は 昼まで ねて、夕方は さんぽに いきます。",
+     "fileF": "voice/talk-soko-5-f.mp3"
+    },
+    "6": {
+     "file": "voice/talk-soko-6.mp3",
+     "sp": "Chị nhân viên kho",
+     "voice": "f",
+     "text": "その リズム、大事に してね。さあ、後半も 声 だして いこう。"
+    },
+    "7": {
+     "fileVn": "voice/talk-soko-7-vn.mp3",
+     "sp": "narr",
+     "voice": "vn-f",
+     "text": "Nửa cái bánh mì combini và câu chuyện về đứa trẻ ngái ngủ bám mẹ lúc sáng sớm — ca đêm của {name} có thêm một lý do để hô mã cho thật chuẩn: ở cuối mỗi kiện hàng, luôn có một mái nhà đang chờ. {call} quay lại băng chuyền, giọng hô đầu tiên của nửa sau ca nghe chắc hẳn."
+    }
+   },
+   "skipped": {}
   }
  },
  "stats": {
-  "recorded": 459,
-  "heroF": 135,
-  "synthCalls": 87,
-  "skippedVn": 0,
-  "skippedPrompt": 85,
-  "vnRecorded": 597,
+  "recorded": 882,
+  "heroF": 303,
+  "synthCalls": 591,
+  "skippedVn": 874,
+  "skippedPrompt": 145,
+  "vnRecorded": 874,
   "vnHeroF": 30,
   "vnRejected": 0,
-  "vnSynthCalls": 510
+  "vnSynthCalls": 281
  },
  "vn": {
   "engine": "Microsoft Edge TTS (edge-tts protocol, custom WS transport — work/edge_ws.py)",
