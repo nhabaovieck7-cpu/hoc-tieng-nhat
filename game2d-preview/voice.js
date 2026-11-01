@@ -42,6 +42,10 @@
      nào dừng nguồn nào. Nay mọi nguồn GIỌNG (không tính nhạc nền — nhạc đã có
      ducking riêng ở bgm.js) phải qua bus trọng tài này: claim(id) = dừng TẤT
      CẢ nguồn khác ngay lập tức; nguồn nào bắt đầu phát cũng phải claim trước.
+     Lane AF (01/11): claim/release/stopAll còn nối sang ducking của bgm.js
+     (duckBusStart/duckBusEnd) — bus là lớp giữ duck trung tâm thứ hai, và bản
+     thân việc duck nay chạy bằng Web Audio gain node trong bgm.js vì chỉnh
+     .volume của <audio> là thao tác rỗng trên iOS Safari (xem đầu file bgm.js).
      Các file nạp TRƯỚC voice.js (listen.js/story.js/life.js) gọi qua
      window.VOICE_BUS ở thời điểm chạy (runtime) nên vẫn an toàn. */
   var busStops = {};       // id -> hàm dừng nguồn đó
@@ -63,11 +67,21 @@
         if (only && only.indexOf(k) < 0) return;
         try { busStops[k](); } catch (e) {}
       });
+      // Lane AF: giành sàn = nhạc nền DUCK ngay tại bus trung tâm (bgm.js giữ bằng
+      // duckBusStart, cộng dồn với giữ theo phần tử attachDuck) — đường tiếng nào
+      // claim mà quên gắn duck cho phần tử của mình cũng không lọt được nữa.
+      if (window.BGM && BGM.duckBusStart) BGM.duckBusStart();
     },
-    release: function (id) { if (busOwner === id) busOwner = null; },
+    release: function (id) {
+      if (busOwner === id) {
+        busOwner = null;
+        if (window.BGM && BGM.duckBusEnd) BGM.duckBusEnd();   // Lane AF: nhả sàn → nhả giữ-bus
+      }
+    },
     stopAll: function () {
       busOwner = null;
       Object.keys(busStops).forEach(function (k) { try { busStops[k](); } catch (e) {} });
+      if (window.BGM && BGM.duckBusEnd) BGM.duckBusEnd();   // Lane AF
     },
     owner: function () { return busOwner; },
     sources: function () { return Object.keys(busStops); }
@@ -123,7 +137,9 @@
     audio.src = file;
     audio.volume = vol;
     var p = audio.play();
-    if (p && p.catch) p.catch(function () {});
+    // Lane AF: play() bị từ chối (autoplay/chính sách trình duyệt) thì phần tử không
+    // bắn ended/pause — phải nhả sàn + giữ-duck ngay tại đây, nhạc khỏi kẹt duck.
+    if (p && p.catch) p.catch(function () { BUS.release('dlg'); });
   }
 
   function showBar(show) { if (bar) bar.style.display = show ? 'flex' : 'none'; }
@@ -206,7 +222,7 @@
       gAudio.src = e.file;
       gAudio.volume = vol;
       var p = gAudio.play();
-      if (p && p.catch) p.catch(function () {});
+      if (p && p.catch) p.catch(function () { BUS.release('guide'); });   // Lane AF: bị từ chối phát → nhả sàn/duck ngay
       return true;
     },
     stop: function () { try { gAudio.pause(); } catch (e) {} },
