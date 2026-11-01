@@ -1465,3 +1465,21 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
   #kaiwa{flex:none;min-height:0}
   .kw-scroll{flex:1 1 auto;min-height:0}
 }
+
+/* ===== V112 (01/11/2026): TRANG KAIWA RIENG + DAU THE KAIWA LA LIEN KET =====
+   Chu trang chon (11:49): an vao Kaiwa -> sang TRANG RIENG chi co bai
+   Kaiwa. Them trang kaiwa.html (liet ke toan bo bai loai 'Hoi thoai/kaigo'
+   tu du lieu that, nhom theo cap, trang thai Da hoc, an bai -> lesson.html;
+   khung trang nhu cac trang goc: topbar, nut Quay lai, tabbar mobile,
+   dark mode, style.css dung chung; da vao SHELL cua sw.js).
+   O trang chu: dau the #kaiwa (tieu de + dong so bai) boc trong the <a>
+   .kw-head tro sang kaiwa.html, cuoi hang tieu de co chi thi "Xem tat ca
+   bai ->" (.kw-go). Cac bai ben trong the nam NGOAI the <a> nay (trong
+   #kwBody) nen an tung bai van vao lesson.html nhu cu, khong bi lien ket
+   dau the nuot. Toan bo co che v111 giu nguyen: hnFit chot chieu cao
+   #kaiwa, .kw-scroll cuon trong, vi tri cot phai khong doi. */
+.kw-head{display:block;text-decoration:none;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.kw-head .kw-go{color:var(--ai);font-weight:700;font-size:.92rem;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.kw-head .kw-go-ar{font-weight:800;transition:transform .15s ease}
+.kw-head:hover .kw-go-ar,.kw-head:focus-visible .kw-go-ar{transform:translateX(3px)}
+.kw-head:focus-visible{outline:2px solid var(--ai);outline-offset:3px;border-radius:8px}

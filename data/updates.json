@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-01-trang-kaiwa-rieng",
+   "date": "2026-11-01",
+   "type": "tinh-nang",
+   "title": "Mới: trang Kaiwa riêng — xem tất cả bài hội thoại",
+   "desc": "Trang Kaiwa riêng vừa ra mắt: liệt kê toàn bộ 19 bài hội thoại theo từng cấp độ, có đánh dấu bài đã học. Ở trang chủ, bấm vào đầu thẻ Kaiwa (Xem tất cả bài →) là sang trang Kaiwa; bấm từng bài trong thẻ vẫn vào thẳng bài học như trước.",
+   "link": "kaiwa.html"
+  },
+  {
    "id": "2026-11-01-sua-kaiwa-phinh-cot-phai",
    "date": "2026-11-01",
    "type": "tinh-nang",
