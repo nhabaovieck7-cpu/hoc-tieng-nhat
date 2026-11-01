@@ -41,7 +41,12 @@
         friendVisa: false, farewell: false, crisis: null, crisisDone: false,
         econ: false, econChoice: null, licenseStage: 0, license: false,
         bully: null, bar: false, homesick3: false, tuan: null, gambled: null,
-        phoneLie: false, trip: false, payday: 0, health: false, daCap: null, hong: null, bbq: false, bien: false
+        phoneLie: false, trip: false, payday: 0, health: false, daCap: null, hong: null, bbq: false, bien: false,
+        // Pha 2 (Chương 4) — trường bổ sung, bản lưu cũ được hợp nhất mặc định trong onGameStart:
+        visaStage: 0, visaDone: false, econShop: false, ind4: 0,
+        couple: 0, couplePend: 0, ld: 0, ldPend: 0, crisisPhone: false,
+        licRoute: null, licReview: false, licLogMark: 0, licTried2: false, licTried3: false,
+        tuanFired: false, darkStage: 0
       },
       c5: { success: 0, married: false, spouse: null, baby: false, baby2: false, finalInterview: false, finalChoice: null },
       darkPath: false,           // đã đi theo anh Tuấn ở đỉnh cám dỗ Ch4 (nhánh đen)
@@ -105,8 +110,37 @@
     return null;
   }
 
-  /* ================= MÁY BƯỚC CHƯƠNG 4 (đợt Pha 2 sẽ lấp đầy) ================= */
-  function step4() { return 'c4-next'; }
+  /* ================= MÁY BƯỚC CHƯƠNG 4 «SÓNG GIÓ» (Pha 2) =================
+     Chuỗi chính: visa của mình → bạn trượt visa → tiễn bạn → việc năm 2 (1) →
+     khủng hoảng quê nhà → kinh tế (siêu thị → tranh luận → tiễn người về) →
+     việc năm 2 (2) → bạo hành nơi làm (dấy lên → giải quyết) → bằng lái
+     (chọn đường → hiểu biết luật → thực hành) → cám dỗ đỉnh điểm (anh Tuấn;
+     đi theo = nhánh đen → kết cục 5) → cờ bạc → bar/karaoke → nhớ nhà 3 → thi N2. */
+  function step4() {
+    var c = G.c4;
+    if (G.ending) return 'done';
+    if (!c.visaDone) return c.visaStage === 1 ? 'visa2' : 'visa1';
+    if (!c.friendVisa) return 'friend';
+    if (!c.farewell) return 'farewell';
+    if (c.ind4 < 1) return 'work1';
+    if (!c.crisisDone) return 'crisis';
+    if (!c.econShop) return 'econ1';
+    if (!c.econChoice) return 'econ2';
+    if (!c.econ) return 'econ3';
+    if (c.ind4 < 2) return 'work2';
+    if (!c.bully) return 'bully1';
+    if (c.bully === 'dang' || c.bully === 'chiu-dung') return 'bully2';
+    if (!c.license) {
+      if (!c.licRoute) return 'lic1';
+      return c.licenseStage >= 2 ? 'lic3' : 'lic2';
+    }
+    if (!c.tuan) return 'tuan';
+    if (G.darkPath) return c.darkStage >= 1 ? 'dark2' : 'dark1';
+    if (!c.gambled) return 'gamble';
+    if (!c.bar) return 'bar';
+    if (!c.homesick3) return 'homesick';
+    return 'exam';
+  }
   /* ================= MÁY BƯỚC CHƯƠNG 5 (đợt Pha 3 sẽ lấp đầy) ================= */
   function step5() { return 'c5-next'; }
 
@@ -117,7 +151,7 @@
     if (level === 'N1') return chapter() >= 5 && gate5();
     return false;
   }
-  function gate4() { return false; }   // Pha 2 lấp đầy
+  function gate4() { return !G.ending && chapter() === 4 && step4() === 'exam'; }
   function gate5() { return false; }   // Pha 3 lấp đầy
 
   /* ================= MỤC TIÊU (story.js advanceObjective hỏi trước rel.js) ================= */
@@ -145,7 +179,41 @@
       }
       return null;
     }
-    if (ch === 4) return '🌊 Chương 4 «Sóng gió» đang tới gần… (bản xem trước của đợt này dừng ở đây — chương 4 mở ở đợt xây kế tiếp)';
+    if (ch === 4) {
+      var c = G.c4, d = routeDef();
+      var place = d ? d.place : 'nơi làm', hook = d ? d.hookName : 'quản lý';
+      switch (s) {
+        case 'done': return G.ending === 5 ? '🌑 Kết cục đen — con đường tắt đã khép lại. Chơi lại và đi đường thẳng, để thấy một đời khác mở ra thế nào' : '🌸 Tự do khám phá';
+        case 'visa1': return '🛂 Chương 4 «Sóng gió» — tới SHIYAKUSHO nộp hồ sơ GIA HẠN tư cách lưu trú: gặp CÁN BỘ ở quầy, giấy tờ mang đủ, trả lời thành thật';
+        case 'visa2': return '🛂 Quay lại SHIYAKUSHO — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI của mình';
+        case 'friend': return '🍶 Ra PHỐ gặp HÙNG "sẹo" — anh ấy đang chờ để báo một tin không vui về Đức, bạn cùng ký túc';
+        case 'farewell': return '🚃 Ra GA tiễn Đức về nước — đi sớm kẻo lỡ chuyến tàu ra sân bay của bạn';
+        case 'work1': return '🏭 Tới ' + place + ' — gặp ' + hook + ': một ngày làm của NĂM THỨ HAI, khi người ta bắt đầu giao việc thật cho mình';
+        case 'crisis': return '📱 Tin dữ từ quê nhà: bố ốm, cần tiền gấp. Tới ' + place + ' gặp ' + hook + ' — xoay tiền giúp bố bằng một trong ba cách: tăng ca · vay bạn · xin ứng lương';
+        case 'econ1': return '🛒 Vào SIÊU THỊ xem kệ hàng — giá cả dạo này lạ lắm, tận mắt xem mới hiểu chuyện gì đang tới';
+        case 'econ2': return '🌐 Ra PHỐ gặp HÙNG — đêm nay cả ký túc xá tranh luận một chuyện lớn: Ở LẠI HAY VỀ';
+        case 'econ3': return '🚃 Ra GA tiễn Sơn — người bạn quyết định về nước giữa cơn sóng giá';
+        case 'work2': return '🏭 Tới ' + place + ' — gặp ' + hook + ': ngày thể hiện tay nghề của năm thứ hai';
+        case 'bully1': return G.route === 'du-hoc'
+          ? '😠 Ở quán baito đang có chuyện không lành — tới COMBINI chỗ làm thêm xem chuyện gì'
+          : '😠 Ở ' + place + ' đang có chuyện không lành — tới ' + hook + ' xem chuyện gì đang xảy ra với đồng nghiệp của mình';
+        case 'bully2': return '⚖️ Tới ĐỒN CẢNH SÁT (koban) — mang theo chứng cứ và sự bình tĩnh: giải quyết vụ bắt nạt nơi làm bằng con đường đúng';
+        case 'lic1': return '🪪 Ra PHỐ — tới BIỂN TRUNG TÂM SÁT HẠCH BẰNG LÁI ở đầu phố: tìm hiểu hai con đường lấy bằng lái ở Nhật';
+        case 'lic2': return c.licReview
+          ? '📚 Phần hiểu biết luật chưa qua — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại luật giao thông, rồi quay lại trung tâm sát hạch'
+          : '🪪 Tới TRUNG TÂM SÁT HẠCH BẰNG LÁI — ngày thi HIỂU BIẾT LUẬT giao thông';
+        case 'lic3': return c.licReview
+          ? '📚 Thi thực hành chưa qua — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại, rồi quay lại trung tâm sát hạch'
+          : '🪪 Tới TRUNG TÂM SÁT HẠCH BẰNG LÁI — THI THỰC HÀNH: lấy tấm bằng lái Nhật về tay';
+        case 'tuan': return '🌑 Ra PHỐ gặp HÙNG — và một người còn đáng sợ hơn đang chờ ở đó: anh Tuấn "môi giới" đã quay lại…';
+        case 'dark1': case 'dark2': return '🌑 Con đường tắt đang nuốt dần những ngày tháng… (cảnh tự mở, cứ sinh hoạt bình thường)';
+        case 'gamble': return '🎰 Lời rủ pachinko/cá độ của anh Tuấn vẫn lởn vởn đâu đây — cảnh sẽ tự tới, cứ sinh hoạt bình thường';
+        case 'bar': return '🎤 Tới KARAOKE — xả stress với hội bạn một đêm cho đáng, mà vẫn phải biết điểm dừng';
+        case 'homesick': return '🌸 Ra CÔNG VIÊN, tới gốc anh đào lớn — có một nỗi nhớ nhà lần thứ ba đang chờ ở đó';
+        case 'exam': return '🎓 Sóng gió đã qua — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để thi MỐC JLPT N2, cổng cuối Chương 4';
+      }
+      return '🌊 Chương 4 «Sóng gió» — cứ sống tiếp những ngày ở Nhật, truyện sẽ tự tìm tới';
+    }
     if (ch >= 5) return '🌅 Chương 5 «Lớn rồi»… (bản xem trước của đợt này dừng ở đây)';
     return null;
   }
@@ -191,7 +259,38 @@
       return out;
     }
     if (ch === 4) {
-      return [{ label: 'Chương 4 «Sóng gió» — mở ở đợt xây kế tiếp', target: null, done: false }];
+      var c = G.c4, d = routeDef(), out = [];
+      var boardT = d ? { scene: d.board } : { scene: 'school-teacher' };
+      var bossT = d ? { scene: d.boss } : { scene: 'school-teacher' };
+      var place = d ? d.place : 'nơi làm';
+      out.push({ label: 'Tới SHIYAKUSHO — nộp hồ sơ GIA HẠN tư cách lưu trú ở quầy cán bộ nyukan', target: { scene: 'officer' }, done: c.visaStage >= 1 || !!c.visaDone });
+      out.push({ label: 'Quay lại SHIYAKUSHO — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI', target: { scene: 'officer' }, done: !!c.visaDone });
+      out.push({ label: 'Ra PHỐ — gặp HÙNG "sẹo": có tin dữ về visa của Đức, bạn cùng ký túc', target: { scene: 'hung' }, done: !!c.friendVisa });
+      out.push({ label: 'Ra GA — tiễn Đức về nước, một lời hứa hẹn gặp lại', target: { scene: 'station' }, done: !!c.farewell });
+      out.push({ label: (G.route === 'du-hoc' ? 'Buổi học đầu tiên của năm mới — tới trường tiếng gặp thầy Khánh' : 'Ngày làm đầu tiên của năm thứ hai — tới ' + place), target: boardT, done: c.ind4 >= 1 });
+      out.push({ label: 'Tin dữ từ quê: bố ốm cần tiền gấp — tới ' + (G.route === 'du-hoc' ? 'trường tiếng gặp thầy Khánh' : place + ' gặp người quản lý') + ' để xoay tiền giúp bố', target: bossT, done: !!c.crisisDone });
+      out.push({ label: 'Vào SIÊU THỊ — xem kệ hàng: giá cả leo thang thấy bằng mắt', target: { scene: 'super-shelf' }, done: !!c.econShop });
+      out.push({ label: 'Ra PHỐ — gặp HÙNG: đêm ký túc tranh luận Ở LẠI HAY VỀ', target: { scene: 'hung' }, done: !!c.econChoice });
+      out.push({ label: 'Ra GA — tiễn Sơn, người bạn quyết về nước giữa cơn sóng giá', target: { scene: 'station' }, done: !!c.econ });
+      out.push({ label: (G.route === 'du-hoc' ? 'Buổi học thứ hai của năm mới — thuyết trình và hướng nghiệp ở trường tiếng' : 'Ngày thể hiện tay nghề năm thứ hai — tới ' + place), target: bossT, done: c.ind4 >= 2 });
+      out.push({ label: G.route === 'du-hoc' ? 'Tới COMBINI chỗ làm thêm — chuyện bắt nạt ở quán baito cần được nhìn thẳng' : 'Tới ' + place + ' — chuyện bắt nạt nơi làm cần được nhìn thẳng', target: G.route === 'du-hoc' ? { scene: 'combini' } : boardT, done: !!c.bully });
+      out.push({ label: 'Tới ĐỒN CẢNH SÁT (koban) — trình bày chứng cứ, gọi tổng đài hỗ trợ lao động: giải quyết vụ bắt nạt bằng đường đúng', target: { scene: 'koban' }, done: c.bully === 'xong-dung' || c.bully === 'xong-chiu' });
+      out.push({ label: 'Ra PHỐ — tới BIỂN TRUNG TÂM SÁT HẠCH BẰNG LÁI: chọn đường lấy bằng (học trường lái / đổi bằng gaimen kirikae)', target: { scene: 'license-center' }, done: !!c.licRoute });
+      out.push({ label: 'Tới TRUNG TÂM SÁT HẠCH — ngày thi HIỂU BIẾT LUẬT giao thông', target: { scene: 'license-center' }, done: c.licenseStage >= 2 || !!c.license });
+      if (c.licReview) out.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại luật giao thông trước khi thi tiếp', target: { scene: 'room-desk' }, done: !c.licReview });
+      out.push({ label: 'Tới TRUNG TÂM SÁT HẠCH — THI THỰC HÀNH lấy bằng lái Nhật', target: { scene: 'license-center' }, done: !!c.license });
+      out.push({ label: 'Ra PHỐ — gặp HÙNG… và anh Tuấn "môi giới" quay lại với kèo bỏ trốn lương gấp đôi', target: { scene: 'hung' }, done: !!c.tuan });
+      if (G.darkPath) {
+        out.push({ label: 'Con đường tắt đã chọn — những ngày sống chui phía trước…', target: null, done: !!G.ending });
+      } else {
+        out.push({ label: 'Lời rủ pachinko/cá độ của anh Tuấn — cảnh tự mở, cứ sinh hoạt bình thường', target: null, done: !!c.gambled });
+        out.push({ label: 'Tới KARAOKE — xả stress với hội bạn, vui có chừng mực', target: { scene: 'karaoke-reception' }, done: !!c.bar });
+        out.push({ label: 'Ra CÔNG VIÊN — gốc anh đào lớn: nhớ nhà lần thứ ba', target: { scene: 'hanami' }, done: !!c.homesick3 });
+      }
+      if (ex4.needReview) out.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại bài, rồi quay lại trường thi tiếp', target: { scene: 'room-desk' }, done: !!ex4.passed });
+      out.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N2, cổng cuối Chương 4', target: { scene: 'school-board' }, done: !!ex4.passed });
+      if (ex4.passed) out.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để mở TỔNG KẾT Chương 4', target: { scene: 'school-board' }, done: ch >= 5 });
+      return out;
     }
     return [{ label: 'Chương 5 «Lớn rồi» — mở ở đợt xây kế tiếp', target: null, done: false }];
   }
@@ -234,11 +333,163 @@
     persist();
   }
 
+  /* ================= BẰNG LÁI — mở kỳ sát hạch + chấm điểm qua sổ log ================= */
+  function fireLicense(sceneId) {
+    var c = G.c4;
+    if (c.licReview) {
+      window.GAMEUI.toast('📚 Thầy Khánh nhắc: thi chưa qua là do luật chưa thuộc — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn một lượt đã, rồi hẵng thi tiếp.');
+      return true;
+    }
+    var triedKey = sceneId === 'c4-lic-2' ? 'licTried2' : sceneId === 'c4-lic-3' ? 'licTried3' : null;
+    if (triedKey) {
+      if (c[triedKey]) {
+        var st = stats();
+        if (st.money >= 0.3) window.GAMEUI.apply({ money: -0.3 }, 'Lệ phí thi lại sát hạch — 3.000 yên');
+        else window.GAMEUI.toast('🪪 Tiền không đủ đóng lệ phí thi lại — thầy Khánh đóng hộ lần này. Thi cho đỗ nhé!');
+      }
+      c[triedKey] = true;
+      c.licLogMark = window.GAMEUI.log().length;
+    }
+    persist();
+    playNow(sceneId);
+    return true;
+  }
+  function scoreLicense(sceneId) {
+    var c = G.c4;
+    var lg = window.GAMEUI.log(), ok = 0, ng = 0;
+    for (var i = Math.max(0, c.licLogMark); i < lg.length; i++) {
+      var n = lg[i].note || '';
+      if (n.indexOf('Bằng lái: đúng') === 0) ok++;
+      else if (n.indexOf('Bằng lái: sai') === 0) ng++;
+    }
+    var need = 4;
+    if (ok >= need) {
+      c.licReview = false;
+      if (sceneId === 'c4-lic-2') {
+        c.licenseStage = 2;
+        window.GAMEUI.apply({ jp: 3 }, 'Qua phần hiểu biết luật giao thông');
+        window.GAMEUI.toast('🪪 PHẦN HIỂU BIẾT LUẬT: ĐẠT (' + ok + ' câu đúng)! Còn cửa cuối: thi THỰC HÀNH — quay lại trung tâm sát hạch khi sẵn sàng.');
+      } else {
+        c.license = true; c.licenseStage = 3;
+        window.GAMEUI.apply({ jp: 4 }, 'Đỗ thi thực hành — có bằng lái Nhật');
+        window.GAMEUI.toast('🪪 THI THỰC HÀNH: ĐẠT (' + ok + ' tình huống đúng)! Tấm bằng lái Nhật sắp về tay…');
+        deferScene('c4-lic-done', 1000);
+      }
+    } else {
+      c.licReview = true;
+      window.GAMEUI.toast('🪪 Chưa đạt (' + ok + ' câu/tình huống đúng, cần ' + need + '). Về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại luật, rồi quay lại thi tiếp — thi lại tốn 3.000 yên lệ phí.');
+    }
+    persist();
+  }
+
+  /* ================= CÁM DỖ ĐỈNH ĐIỂM — anh Tuấn quay lại ================= */
+  function fireTuan() {
+    if (G.c4.tuanFired) return true;
+    G.c4.tuanFired = true;
+    persist();
+    playNow('c4-tuan-1');
+    return true;
+  }
+
+  /* ================= ĐIỆN THOẠI KHỦNG HOẢNG QUÊ NHÀ (bố ốm) ================= */
+  function maybeCrisisPhone() {
+    var c = G.c4;
+    if (chapter() !== 4 || G.ending || c.crisisPhone || c.crisisDone) return;
+    if (step4() !== 'crisis') return;
+    c.crisisPhone = true;
+    persist();
+    if (window.PHONE && window.PHONE.receive) {
+      window.PHONE.receive('family', ['Mẹ: Con ơi… bố con nhập viện từ tối qua. Bác sĩ nói phải mổ, nhà mình cần gấp khoảng 10 man để đóng viện phí đợt đầu. Con đừng hoảng — mẹ chỉ báo để con biết, anh chị em ở nhà đang chạy vậy khắp nơi rồi…']);
+      if (window.PHONE.setReplies) window.PHONE.setReplies('family', [
+        { text: 'Mẹ đừng lo, để con xoay ngay. Con sẽ gửi tiền về trong tuần này — mẹ cứ yên tâm lo cho bố, phần tiền để con gánh!', fx: { deltas: { love: 2, pressure: 2 }, note: 'Hứa xoay tiền chữa bệnh cho bố — gánh nặng nhận về mình' }, follow: ['Mẹ: Con ơi… mẹ biết ngay là chỉ trông vào con được thôi. Con nhớ giữ sức khỏe đấy, đừng có gồng quá nghe chưa. Bố tỉnh là mẹ gọi lại liền.'] },
+        { text: 'Trời ơi… bố có nặng lắm không mẹ? Con… con để con tính đã, con gọi lại mẹ sau nhé.', fx: { deltas: { pressure: 3 }, note: 'Hoảng loạn khi nghe tin bố nhập viện' }, follow: ['Mẹ: Bố qua cơn nguy hiểm rồi con ạ, chỉ là tiền thì… Thôi con cứ bình tĩnh tính, mẹ đợi tin con.'] }
+      ]);
+    }
+    window.GAMEUI.toast('📱 Tin KHẨN từ Mẹ — mở điện thoại đọc ngay!');
+  }
+
   /* ================= CHẶN CẢNH (story.js uỷ quyền) ================= */
   function handleScene(id) {
     var ch = chapter();
     if (ch < 3 || G.ending) return false;
     var s = step();
+    /* ============ CHƯƠNG 4 «SÓNG GIÓ» (Pha 2) ============ */
+    if (ch === 4) {
+      var c = G.c4, d = routeDef();
+      if (id === 'officer') {
+        if (s === 'visa1') { playNow('c4-visa-1'); return true; }
+        if (s === 'visa2') { playNow('c4-visa-2'); return true; }
+        return false;
+      }
+      if (id === 'hung') {
+        if (s === 'friend') { playNow('c4-friend-1'); return true; }
+        if (s === 'econ2') { playNow('c4-econ-2'); return true; }
+        if (s === 'tuan') return fireTuan();
+        if (c.farewell && !c.hong && s !== 'friend' && s !== 'econ2' && s !== 'tuan') { playNow('c4-hong'); return true; }   // cảnh phụ §6c: rủ trộm hồng — sau khi tiễn Đức, Hùng rủ rê kiểu bạn bè
+        return false;
+      }
+      if (id === 'station') {
+        if (s === 'farewell') { playNow('c4-friend-2'); return true; }
+        if (s === 'econ3') { playNow('c4-econ-3'); return true; }
+        if (c.econ && !c.daCap) { playNow('c4-dacap'); return true; }       // cảnh phụ §6c: rủ rê đa cấp ở ga
+        if (c.homesick3 && !c.trip) { playNow('c4-trip'); return true; }     // cảnh phụ §6c: chuyến đi onsen sau khi qua cơn nhớ nhà
+        return false;
+      }
+      if (id === 'super-shelf') {
+        if (s === 'econ1') { playNow('c4-econ-1'); return true; }
+        return false;
+      }
+      if (id === 'karaoke-reception') {
+        if (s === 'bar') { playNow('c4-bar'); return true; }
+        return false;
+      }
+      if (id === 'hanami') {
+        if (s === 'homesick') { playNow('c4-homesick'); return true; }
+        return false;
+      }
+      if (id === 'koban') {
+        if (s === 'bully2') { playNow(c.bully === 'chiu-dung' ? 'c4-bully-2b' : 'c4-bully-2'); return true; }
+        return false;
+      }
+      if (id === 'license-center') {
+        if (s === 'lic1') { playNow('c4-lic-1'); return true; }
+        if (s === 'lic2') return fireLicense('c4-lic-2');
+        if (s === 'lic3') return fireLicense('c4-lic-3');
+        return false;   // ngoài bước sát hạch → cảnh thông tin 'license-center' trong DEMO_DATA chạy như thường
+      }
+      if (id === 'bank-counter') {
+        if (!c.payday && c.crisisDone) { playNow('c4-gui-tien'); return true; }   // cảnh phụ §6c: ngày lương — gửi hết về nhà, cuối tháng ăn trứng
+        return false;
+      }
+      if (id === 'hospital-reception') {
+        if (!c.health) { playNow('c4-health'); return true; }   // cảnh phụ §6c: khám sức khỏe định kỳ
+        return false;
+      }
+      if (id === 'dong-huong') {
+        if (!c.bbq) { playNow('c4-bbq'); return true; }          // cảnh phụ §6c: BBQ bị cứu hỏa tới
+        if (!c.bien) { playNow('c4-bien'); return true; }        // cảnh phụ §6c: đi biển bắt hàu ngao
+        return false;
+      }
+      if (id === 'combini') {
+        if (G.route === 'du-hoc' && s === 'bully1') { playNow('c4-bully-dh'); return true; }   // bạo hành ở quán baito của du học sinh
+        return false;
+      }
+      if (G.route === 'du-hoc' && id === 'school-teacher') {
+        if (s === 'work1') { playNow('ind4-duhoc-1'); return true; }
+        if (s === 'crisis') { playNow('c4-crisis-dh'); return true; }
+        if (s === 'work2') { playNow('ind4-duhoc-2'); return true; }
+        return false;
+      }
+      if (d && G.route === 'tokutei' && (id === d.board || id === d.boss)) {
+        if (s === 'work1' && id === d.board) { playNow('ind4-' + G.industry + '-1'); return true; }
+        if (s === 'crisis' && id === d.boss) { playNow('c4-crisis'); return true; }
+        if (s === 'work2' && id === d.boss) { playNow('ind4-' + G.industry + '-2'); return true; }
+        if (s === 'bully1' && id === d.board) { playNow('c4-bully-1'); return true; }
+        if (s === 'exam' && id === d.board) { playNow('talk-' + G.industry); return true; }   // kaiwa đời thường nơi làm, lặp lại được ở cuối chương
+        return false;
+      }
+      return false;
+    }
     if (id === 'school-teacher') {
       if (ch !== 3) return false;
       if (s === 'route') {
@@ -282,6 +533,69 @@
       persist();
       return;
     }
+    /* ============ TIẾN TRIỂN CHƯƠNG 4 (Pha 2) ============ */
+    if (id === 'room-desk' && G.c4.licReview) {
+      G.c4.licReview = false;
+      window.GAMEUI.toast('📚 Ôn lại luật giao thông xong — những biển báo và quy tắc nhường đường đã vào đầu. Quay lại trung tâm sát hạch thi tiếp nhé!');
+      persist();
+      return;
+    }
+    var c4 = G.c4;
+    if (id === 'c4-visa-1') { c4.visaStage = 1; persist(); maybeCrisisPhone(); return; }
+    if (id === 'c4-visa-2') { c4.visaDone = true; c4.visaStage = 2; window.GAMEUI.apply({ jp: 3 }, 'Gia hạn visa thành công — thở phào'); persist(); return; }
+    if (id === 'c4-friend-1') { c4.friendVisa = true; persist(); return; }
+    if (id === 'c4-friend-2') { c4.farewell = true; persist(); return; }
+    if (id.indexOf('ind4-') === 0) {
+      var m4 = id.match(/^ind4-([a-z-]+)-(\d)$/);
+      if (m4) { var stg4 = parseInt(m4[2], 10); if (stg4 === c4.ind4 + 1) { c4.ind4 = stg4; persist(); } }
+      maybeCrisisPhone();
+      return;
+    }
+    if (id === 'c4-crisis' || id === 'c4-crisis-dh') {
+      if (!c4.crisis) c4.crisis = 'tang-ca';
+      c4.crisisDone = true;
+      persist();
+      if (window.PHONE && window.PHONE.receive) window.PHONE.receive('family', ['Mẹ: Con ơi, tiền tới nơi rồi! Bố con mổ xong, qua cơn nguy hiểm rồi con ạ. Cả nhà mang ơn con… Con ở bên đó cũng phải giữ sức khỏe, đừng gồng quá nghe chưa.']);
+      window.GAMEUI.toast('📱 Mẹ nhắn: bố đã qua cơn nguy hiểm — mở điện thoại đọc đi');
+      return;
+    }
+    if (id === 'c4-econ-1') { c4.econShop = true; persist(); return; }
+    if (id === 'c4-econ-3') { c4.econ = true; persist(); return; }
+    if (id === 'c4-bully-1' || id === 'c4-bully-dh') { if (!c4.bully) c4.bully = 'dang'; persist(); return; }
+    if (id === 'c4-bully-2') { c4.bully = 'xong-dung'; window.GAMEUI.apply({ jp: 3, love: 2 }, 'Giải quyết vụ bắt nạt bằng đường đúng — cả nơi làm nể thêm'); persist(); return; }
+    if (id === 'c4-bully-2b') { c4.bully = 'xong-chiu'; window.GAMEUI.apply({ jp: 2 }, 'Đứng ra muộn còn hơn không bao giờ — bài học về sự im lặng'); persist(); return; }
+    if (id === 'c4-lic-1') { if (c4.licRoute && c4.licenseStage < 1) { c4.licenseStage = 1; persist(); } return; }
+    if (id === 'c4-lic-2' || id === 'c4-lic-3') { scoreLicense(id); return; }
+    if (id === 'c4-tuan-1') {
+      if (!c4.tuan) { c4.tuan = 'nghe'; persist(); }
+      if (c4.tuan === 'theo') {
+        G.darkPath = true; persist();
+        window.GAMEUI.toast('🌑 Quyết định đã rơi xuống — con đường tắt bắt đầu từ đêm nay…');
+        deferScene('c4-dark-1', 1400);
+      } else {
+        deferScene('c4-gamble', 1700);
+      }
+      return;
+    }
+    if (id === 'c4-gamble') { if (c4.gambled === 'choi') { c4.phoneLie = true; persist(); } return; }
+    if (id === 'c4-dark-1') { c4.darkStage = 1; persist(); deferScene('c4-dark-2', 1400); return; }
+    if (id === 'c4-dark-2') {
+      G.ending = 5;
+      if (window.FLOW && window.FLOW.addEnding) window.FLOW.addEnding(5);
+      persist();
+      window.GAMEUI.toast('🌑 Kết cục 5 — «Kết cục đen»: con đường tắt kết thúc ở cửa trục xuất…');
+      deferScene('ket-den', 1000);
+      return;
+    }
+    if (id === 'c4-bar') { c4.bar = true; persist(); return; }
+    if (id === 'c4-homesick') { c4.homesick3 = true; persist(); return; }
+    if (id === 'c4-bbq') { c4.bbq = true; persist(); return; }
+    if (id === 'c4-bien') { c4.bien = true; persist(); return; }
+    if (id === 'c4-health') { c4.health = true; persist(); return; }
+    if (id === 'c4-trip') { c4.trip = true; persist(); return; }
+    if (id === 'c4-gui-tien') { c4.payday = 1; persist(); return; }
+    if (id.indexOf('c4-couple-') === 0) { c4.couple = c4.couplePend || (c4.couple + 1); c4.couplePend = 0; persist(); return; }
+    if (id.indexOf('c4-ld-') === 0) { c4.ld = c4.ldPend || (c4.ld + 1); c4.ldPend = 0; persist(); return; }
     if (id === 'ch3-ve-nuoc') {
       if (G.route !== 've-nuoc') return;   // người chơi đổi ý ngay trong cảnh quyết định (cờ saga-route='reset') — không chốt kết cục
       G.ending = 6;
@@ -310,6 +624,17 @@
       else if (value === 'tokutei' || value === 'du-hoc' || value === 've-nuoc') { G.route = value; persist(); }
     } else if (name === 'industry') {
       if (value && INDUSTRIES[value]) { G.industry = value; G.indStage = 0; persist(); }
+    } else if (name === 'c4') {
+      var p = String(value).split(':'), k = p[0], v = p[1], c = G.c4;
+      if (k === 'econ') c.econChoice = v;
+      else if (k === 'crisis') c.crisis = v;
+      else if (k === 'tuan') { c.tuan = v; if (v === 'theo') G.darkPath = true; }
+      else if (k === 'gamble') c.gambled = v;
+      else if (k === 'bully') c.bully = (v === 'chiu-dung') ? 'chiu-dung' : 'dang';
+      else if (k === 'lic') c.licRoute = v;
+      else if (k === 'hong') c.hong = v;
+      else if (k === 'dacap') c.daCap = v;
+      persist();
     }
   }
 
@@ -331,7 +656,36 @@
     }
     persist();
   }
-  function onMapEnter(id) { /* Pha 1: chưa có nhịp theo bản đồ — Ch4/Ch5 sẽ dùng */ }
+  function onMapEnter(id) {
+    if (chapter() !== 4 || G.ending) return;
+    var c = G.c4, s = step4();
+    maybeCrisisPhone();
+    // Anh Tuấn tự tìm tới khi người chơi ra phố ở bước cám dỗ (móc 'hung' là đường dự phòng)
+    if (id === 'street' && s === 'tuan' && !c.tuanFired) {
+      c.tuanFired = true; persist();
+      deferScene('c4-tuan-1', 1100);
+      return;
+    }
+    // Nhịp đời sống cặp đôi / yêu xa — mở khi về phòng trọ đúng mốc truyện
+    if (id === 'room') {
+      var R = (window.REL && window.REL.state) ? window.REL.state() : null;
+      if (!R) return;
+      if (R.partner && !c.couplePend && c.couple < 3) {
+        var gate = [!!c.farewell, !!c.econ, !!c.tuan][c.couple];
+        if (gate) {
+          c.couplePend = c.couple + 1; persist();
+          var malePartner = (R.partner === 'ren' || R.partner === 'khoi');
+          deferScene('c4-couple-' + (c.couple + 1) + (malePartner ? 'm' : ''), 1200);
+        }
+      } else if (R.breakup === 'giu-duoc' && !c.ldPend && c.ld < 2) {
+        var gateLd = [!!c.crisisDone, !!c.bar][c.ld];
+        if (gateLd) {
+          c.ldPend = c.ld + 1; persist();
+          deferScene('c4-ld-' + (c.ld + 1) + (gender === 'F' ? '-nu' : ''), 1200);
+        }
+      }
+    }
+  }
 
   /* ================= KẾT THÚC GAME (Pha 3 lấp đầy) ================= */
   function finishGame() {

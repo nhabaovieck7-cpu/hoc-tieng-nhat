@@ -243,6 +243,11 @@
     RR(22 * T + 8, 4 * T + 17, 16, 4, 1, '#c73e3a');                // …viền đỏ chót = giấy nhắc vi phạm
     TX('!', 22 * T + 16, 4 * T + 25, 8, '#c73e3a');
     vending(42 * T, 4 * T + 16, '#31517d', '#1d3350');             // máy bán hàng TRANG TRÍ cạnh combini (42,4)
+    // biển đứng TRUNG TÂM SÁT HẠCH BẰNG LÁI (34,4) — tương tác 'license-center' (Chương 4):
+    // cọc + bảng xanh trắng kiểu biển chỉ dẫn hành chính, thêm pictogram vô-lăng
+    L(34 * T + 16, 4 * T + 30, 34 * T + 16, 4 * T + 4, '#5d646b', 3);
+    RR(34 * T + 1, 4 * T - 4, 30, 17, 2, '#1f4e79'); TX('運転免許', 34 * T + 16, 4 * T + 2, 9, '#fff');
+    RR(34 * T + 4, 4 * T + 14, 24, 9, 1, '#eef4fa'); TX('試験場→', 34 * T + 16, 4 * T + 18, 7, '#1f4e79');
     tree(7, 4); tree(27, 4); tree(44, 4);                          // cây xanh vỉa hè
     // bảng thực đơn đứng của nhà hàng (16,4)
     RR(16 * T + 5, 4 * T + 2, 22, 28, 2, '#5d4630'); RR(16 * T + 8, 4 * T + 5, 16, 20, 1, '#fdf6e0');
@@ -355,6 +360,7 @@
       [16, 4, 1, 1],   // bảng thực đơn đứng
       [18, 4, 1, 1],   // cột biển消火栓
       [38, 4, 1, 1],   // biển đứng combini
+      [34, 4, 1, 1],   // biển trung tâm sát hạch bằng lái
       [50, 4, 4, 1],   // dãy xe đạp ở bãi
       [54, 4, 1, 1],   // cột biển駐輪場
       [54, 6, 1, 1],   // cột biển tốc độ / tên đường (tránh ô spawn 53,6 từ ga)
@@ -384,7 +390,8 @@
     objects: [
       { tx: 20, ty: 4, tw: 1, th: 1, interact: { scene: 'vending', label: '🥤 Xem máy bán hàng' } },
       { tx: 21, ty: 4, tw: 1, th: 1, interact: { scene: 'gomi', label: '🗑️ Điểm tập kết rác' } },
-      { tx: 22, ty: 4, tw: 1, th: 1, interact: { scene: 'gomi-apology', label: '📄 Túi rác bị dán giấy nhắc đỏ' } }
+      { tx: 22, ty: 4, tw: 1, th: 1, interact: { scene: 'gomi-apology', label: '📄 Túi rác bị dán giấy nhắc đỏ' } },
+      { tx: 34, ty: 4, tw: 1, th: 1, interact: { scene: 'license-center', label: '🪪 Biển trung tâm sát hạch bằng lái — đường đi thi lấy bằng' } }
     ],
     spawnDefault: [6, 6]
   };

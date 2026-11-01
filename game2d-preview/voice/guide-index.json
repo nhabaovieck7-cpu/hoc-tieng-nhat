@@ -127,12 +127,12 @@
    "status": "edge-tts"
   },
   "🌸 Chương 3 «Ngã rẽ» — chuyện ở quê đã buông tay từ sân bay. Mở mục 💗 Tình cảm (cạnh nút điện thoại) để làm quen những người ở Nhật": {
-   "file": null,
-   "status": "vn-qc-rejected"
+   "file": "voice/guide-32.mp3",
+   "status": "edge-tts"
   },
   "🌸 Chương 3 — 📱": {
-   "file": null,
-   "status": "vn-qc-rejected"
+   "file": "voice/guide-33.mp3",
+   "status": "edge-tts"
   },
   "vừa nhắn tin — mở ĐIỆN THOẠI trả lời người yêu ở quê": {
    "file": "voice/guide-34.mp3",

@@ -168,5 +168,32 @@
       'ind-nogyo-1', 'ind-nogyo-2', 'ind-nogyo-3', 'talk-nogyo']
   });
 
+  C.declare({
+    id: 'goi-chuong-4-song-gio', version: '2.0.0', date: '2026-11-01',
+    title: 'Chương 4 «Sóng gió» — visa, bão giá, bằng lái, cám dỗ quay lại, đời sống sau kết đôi',
+    notes: [
+      'Mới: CHUỖI GIA HẠN VISA ở nyukan (nộp hồ sơ, khám lại giấy thiếu, ngày nhận thẻ mới) và bi kịch bạn cùng phòng thi trượt visa — cảnh tiễn nhau lần hai ở ga, nặng hơn sân bay đầu truyện.',
+      'Mới: TUYẾN BÃO GIÁ — siêu thị tăng giá tận mắt, yên mất giá, tiền gửi về teo lại; hội bạn ký túc tranh luận Ở LẠI HAY VỀ, có người về thật; lựa chọn của người chơi lưu trạng thái cho các chương sau.',
+      'Mới: KHỦNG HOẢNG QUÊ NHÀ (bố nhập viện, cần ~10 man) với ba hướng xoay tiền; bài học tăng ca không cứu được tất cả.',
+      'Mới: BẰNG LÁI — hai đường trường lái (học phí 1.5 man) và đổi bằng gaimen kirikae (phí 0.3 man), thi lý thuyết 21 câu chấm điểm thật, trượt ôn lại ở bàn học rồi thi lại.',
+      'Mới: CÁM DỖ TÁI XUẤT — Anh Tuấn quay lại rủ làm chui; theo là sa vào con đường tối dẫn tới KẾT CỤC 5 «Đường tối». Cờ bạc và cú điện thoại nói dối. Bạo hành nơi làm việc xử lý đúng luật: thu thập chứng cứ, tổng đài, nghiệp đoàn.',
+      'Mới: CÔNG VIỆC CHƯƠNG 4 cho đủ 9 ngành Tokutei + tuyến du học (mỗi ngành 2 cảnh riêng, không reskin); đời sống cặp đôi 3 nhịp + tuyến người yêu xa 2 nhịp; cảnh phụ: trộm hồng, BBQ cháy, tắm biển dính vỏ sò, đa cấp, khám sức khoẻ, chuyến đi xa, gửi tiền kiểu trứng.'
+    ],
+    maps: [],
+    scenes: ['ch4-opening', 'c4-visa-1', 'c4-visa-2', 'c4-friend-1', 'c4-friend-2', 'c4-crisis', 'c4-crisis-dh',
+      'c4-econ-1', 'c4-econ-2', 'c4-econ-3', 'c4-lic-1', 'c4-lic-2', 'c4-lic-3', 'c4-lic-done', 'license-center',
+      'c4-tuan-1', 'c4-gamble', 'c4-dark-1', 'c4-dark-2', 'ket-den',
+      'c4-bully-1', 'c4-bully-dh', 'c4-bully-2', 'c4-bully-2b',
+      'c4-couple-1', 'c4-couple-1m', 'c4-couple-2', 'c4-couple-2m', 'c4-couple-3', 'c4-couple-3m',
+      'c4-ld-1', 'c4-ld-1-nu', 'c4-ld-2', 'c4-ld-2-nu',
+      'c4-bar', 'c4-homesick',
+      'c4-hong', 'c4-bbq', 'c4-bien', 'c4-dacap', 'c4-health', 'c4-trip', 'c4-gui-tien',
+      'ind4-kaigo-1', 'ind4-kaigo-2', 'ind4-nha-hang-1', 'ind4-nha-hang-2',
+      'ind4-genba-1', 'ind4-genba-2', 'ind4-khach-san-1', 'ind4-khach-san-2',
+      'ind4-shokuhin-1', 'ind4-shokuhin-2', 'ind4-seizo-1', 'ind4-seizo-2',
+      'ind4-seibi-1', 'ind4-seibi-2', 'ind4-soko-1', 'ind4-soko-2',
+      'ind4-nogyo-1', 'ind4-nogyo-2', 'ind4-duhoc-1', 'ind4-duhoc-2']
+  });
+
   C.finalize();
 })();
