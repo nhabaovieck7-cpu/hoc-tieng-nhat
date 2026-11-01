@@ -1,0 +1,295 @@
+/* =====================================================================
+   THEMES.CSS — 4 giao diện TRANG CHỦ (chỉ index.html nạp file này)
+   Cùng một DOM + dữ liệu thật của trang chủ v112; mỗi giao diện là một
+   "bộ khung" CSS theo html[data-skin]. Chọn bởi theme.js (HNSKIN):
+   mặc định tự đổi theo ngày (JST), người dùng chọn tay thì giữ lựa chọn.
+   Trang con KHÔNG nạp file này — chỉ đổi tông màu qua biến trong style.css.
+   ===================================================================== */
+
+/* ---------- Chung cho mọi giao diện ---------- */
+html[data-skin] .hero{position:relative}
+html[data-skin] .hero-img{display:none}
+html[data-skin] .hero-grid{grid-template-columns:1fr}
+.skin-art{display:none;pointer-events:none}
+html[data-skin] .skin-art{display:block;position:absolute;top:14px;right:18px;width:170px;text-align:center;z-index:1}
+html[data-skin] .hero-main{position:relative;z-index:2}
+@media(min-width:900px){html[data-skin] .hero-main{padding-right:180px}}
+.skin-art>div{display:none}
+.skin-art img{max-width:100%;height:auto}
+.sa-word{display:block;font-weight:900;line-height:1}
+@media(max-width:899px){
+  html[data-skin] .skin-art{position:static;width:auto;margin:2px auto 6px}
+  .skin-art img{height:104px;width:auto}
+}
+
+/* =====================================================================
+   1) MANGA — truyện tranh: trắng/halftone, viền đen 3px, bóng cứng, hồng nóng
+   ===================================================================== */
+html[data-skin="manga"]{--c:#FF2E63;--ai:#141414;--gold:#c98a1b;--shu:#FF2E63}
+html[data-skin="manga"] body{background-color:#fcfcf4;background-image:radial-gradient(rgba(20,20,20,.10) 1.2px,transparent 1.3px);background-size:15px 15px}
+html[data-skin="manga"] .topbar{background:#141414;border-bottom:3px solid #000;backdrop-filter:none}
+html[data-skin="manga"] .topbar .brand,html[data-skin="manga"] .topbar .nav a{color:#fff}
+html[data-skin="manga"] .topbar .nav a:hover{color:#FF2E63}
+html[data-skin="manga"] .gsbar{background:#fff;border-bottom:3px solid #141414}
+html[data-skin="manga"] .gs input{border:2.5px solid #141414;border-radius:999px}
+html[data-skin="manga"] .hero{background:#fff;border:3px solid #141414;border-radius:8px;box-shadow:9px 9px 0 #141414;padding:26px 24px 20px;margin-top:20px;overflow:hidden}
+html[data-skin="manga"] .hero::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from -12deg at 88% -10%,rgba(255,46,99,.10) 0 9deg,transparent 9deg 18deg);pointer-events:none}
+html[data-skin="manga"] .skin-art .sa-manga{display:block}
+html[data-skin="manga"] .sa-manga .sa-word{font-size:2rem;color:#FF2E63;transform:rotate(6deg);text-shadow:2px 2px 0 #141414}
+html[data-skin="manga"] .greeting-jp{color:#FF2E63;font-weight:900}
+html[data-skin="manga"] .hero h1{text-transform:uppercase;letter-spacing:.01em;font-weight:800}
+html[data-skin="manga"] .hero h1 .hn-name{background:#FF2E63;color:#fff;padding:0 10px;display:inline-block;transform:rotate(-1.2deg);border:2.5px solid #141414;box-shadow:3px 3px 0 #141414}
+html[data-skin="manga"] .hstat{background:#fff;border:2.5px solid #141414;border-radius:10px;box-shadow:4px 4px 0 #141414;color:#141414;backdrop-filter:none}
+html[data-skin="manga"] .hstat:nth-child(1){background:#FF2E63;color:#fff}
+html[data-skin="manga"] .hstat:nth-child(2){background:#141414;color:#fff}
+html[data-skin="manga"] .hstat .hstat-lb{color:inherit;opacity:.85}
+html[data-skin="manga"] .stats .stat{border:2px solid #141414;border-radius:8px;background:#fff;font-weight:600}
+html[data-skin="manga"] .pvcard{background:#141414;border:3px solid #141414;border-radius:8px;box-shadow:9px 9px 0 #FF2E63}
+html[data-skin="manga"] .pvcard-play{background:#FF2E63;border:2.5px solid #fff}
+html[data-skin="manga"] .block-h h2{display:inline-block;background:#141414;color:#fff;padding:5px 14px 7px;transform:rotate(-.7deg);box-shadow:4px 4px 0 #FF2E63}
+html[data-skin="manga"] .block-h h2 .h-jp{color:#FF8fab}
+html[data-skin="manga"] .continue-card,html[data-skin="manga"] .cat-card,html[data-skin="manga"] .hnx-card,html[data-skin="manga"] .kw-block,html[data-skin="manga"] .mn-feed,html[data-skin="manga"] .st-topweek{background:#fff;border:3px solid #141414;border-radius:8px;box-shadow:7px 7px 0 rgba(20,20,20,.92)}
+html[data-skin="manga"] .btn-primary{background:#FF2E63;border:2.5px solid #141414;border-radius:8px;box-shadow:4px 4px 0 #141414;text-transform:uppercase;letter-spacing:.02em}
+html[data-skin="manga"] .progress{border:2px solid #141414;border-radius:999px;height:14px;background:#fff;overflow:hidden}
+html[data-skin="manga"] .progress>span{background:repeating-linear-gradient(45deg,#FF2E63 0 10px,#ff6b95 10px 20px)}
+html[data-skin="manga"] .level-card{background:#fff;border:3px solid #141414;border-radius:8px;box-shadow:5px 5px 0 #141414}
+html[data-skin="manga"] .level-card.selected{background:#fff0f5;box-shadow:5px 5px 0 #FF2E63}
+html[data-skin="manga"] .level-card .lv{color:#FF2E63}
+html[data-skin="manga"] .level-card .lv-bar>i{background:#FF2E63}
+html[data-skin="manga"] .cat-glyph{border:2.5px solid #141414;box-shadow:3px 3px 0 #141414}
+html[data-skin="manga"] .list li a{border-bottom:2px dashed rgba(20,20,20,.25)}
+html[data-skin="manga"] .lstate{border:2px solid #141414;background:#FFD93D;color:#141414;border-radius:6px}
+html[data-skin="manga"] .tiles .tile{background:#fff;border:3px solid #141414;border-radius:10px;box-shadow:5px 5px 0 #141414}
+html[data-skin="manga"] .tile-ico{border:2.5px solid #141414}
+html[data-skin="manga"] .mn-game{background:#141414;border:3px solid #141414;border-radius:8px;box-shadow:7px 7px 0 #FF2E63}
+html[data-skin="manga"] .mn-game-btn{background:#FF2E63;border:2px solid #fff}
+html[data-skin="manga"] .hnx-tab{border:2px solid #141414;border-radius:6px}
+html[data-skin="manga"] .hnx-tab.jp{background:#141414;color:#fff}
+html[data-skin="manga"] .hnx-tab.vj{background:#FF2E63;color:#fff}
+html[data-skin="manga"] .kw-head .kw-go{color:#FF2E63}
+html[data-skin="manga"] .tabbar{background:#141414;border-top:3px solid #000;backdrop-filter:none}
+html[data-skin="manga"] .tabbar a{color:#cfcfcf}
+html[data-skin="manga"] .tabbar a.on{color:#FF2E63}
+html[data-skin="manga"] footer{color:#141414}
+
+/* =====================================================================
+   2) BENTO — hộp cơm onigiri: pastel, khung nâu sô-cô-la, bo góc to, bóng mềm
+   ===================================================================== */
+html[data-skin="bento"]{--c:#e0567f;--ai:#6B4226;--gold:#d98a1f;--shu:#e0567f}
+html[data-skin="bento"] body{background:linear-gradient(165deg,#ffe9f1 0%,#fdf6ec 45%,#e4f6ec 100%)}
+html[data-skin="bento"] .topbar{background:#fffdf8;border-bottom:3px solid #6B4226;backdrop-filter:none}
+html[data-skin="bento"] .topbar .brand{color:#6B4226}
+html[data-skin="bento"] .topbar .nav a{color:#6B4226;border-radius:999px}
+html[data-skin="bento"] .topbar .nav a:first-child{background:#f7a8bc;color:#fff}
+html[data-skin="bento"] .gsbar{background:transparent;border:none}
+html[data-skin="bento"] .gs input{border:2px solid #eec9b8;border-radius:999px;background:#fff}
+html[data-skin="bento"] .hero{background:#fff;border:3px solid #6B4226;border-radius:28px;box-shadow:0 10px 0 rgba(107,66,38,.16);padding:26px 24px 20px;margin-top:20px}
+html[data-skin="bento"] .skin-art .sa-bento{display:block}
+html[data-skin="bento"] .greeting-jp{color:#e0567f}
+html[data-skin="bento"] .hero h1{color:#6B4226}
+html[data-skin="bento"] .hero h1 .hn-name{color:#e0567f}
+html[data-skin="bento"] .hstat{border:2.5px solid #6B4226;border-radius:18px;color:#6B4226;backdrop-filter:none;box-shadow:0 4px 0 rgba(107,66,38,.25)}
+html[data-skin="bento"] .hstat:nth-child(1){background:#ffe3ec}
+html[data-skin="bento"] .hstat:nth-child(2){background:#fff3c4}
+html[data-skin="bento"] .hstat:nth-child(3){background:#dff3ff}
+html[data-skin="bento"] .hstat .hstat-lb{color:#9a6a4a}
+html[data-skin="bento"] .stats .stat{border:2px solid #eec9b8;border-radius:999px;background:#fff;color:#6B4226}
+html[data-skin="bento"] .pvcard{background:linear-gradient(140deg,#f48fb1,#b39ddb);border:3px solid #6B4226;border-radius:28px;box-shadow:0 10px 0 rgba(107,66,38,.16)}
+html[data-skin="bento"] .block-h h2{color:#6B4226}
+html[data-skin="bento"] .block-h h2 .h-jp{color:#e0567f}
+html[data-skin="bento"] .continue-card,html[data-skin="bento"] .cat-card,html[data-skin="bento"] .hnx-card,html[data-skin="bento"] .kw-block,html[data-skin="bento"] .mn-feed,html[data-skin="bento"] .st-topweek{background:#fff;border:3px solid #6B4226;border-radius:24px;box-shadow:0 8px 0 rgba(107,66,38,.14)}
+html[data-skin="bento"] .btn-primary{background:#f27ea9;border:2.5px solid #6B4226;border-radius:999px;box-shadow:0 4px 0 #6B4226;color:#fff}
+html[data-skin="bento"] .progress{border:2px solid #6B4226;border-radius:999px;background:#fff;overflow:hidden}
+html[data-skin="bento"] .progress>span{background:linear-gradient(90deg,#f7a8bc,#ffb35c)}
+html[data-skin="bento"] .level-card{background:#fff;border:3px solid #6B4226;border-radius:24px;box-shadow:0 6px 0 rgba(107,66,38,.16)}
+html[data-skin="bento"] .level-card.selected{background:#fff5f8}
+html[data-skin="bento"] .level-card:nth-child(1) .lv{color:#43a35f}
+html[data-skin="bento"] .level-card:nth-child(2) .lv{color:#3f8fd2}
+html[data-skin="bento"] .level-card:nth-child(3) .lv{color:#9a6ad2}
+html[data-skin="bento"] .level-card:nth-child(4) .lv{color:#d98a1f}
+html[data-skin="bento"] .level-card:nth-child(5) .lv{color:#e0567f}
+html[data-skin="bento"] .level-card .lv-bar>i{background:linear-gradient(90deg,#f7a8bc,#ffb35c)}
+html[data-skin="bento"] .cat-glyph{border:2.5px solid #6B4226}
+html[data-skin="bento"] .lstate{background:#fff3c4;border:2px solid #6B4226;color:#6B4226;border-radius:999px}
+html[data-skin="bento"] .tiles .tile{background:#fff;border:2.5px solid #6B4226;border-radius:22px;box-shadow:0 5px 0 rgba(107,66,38,.16)}
+html[data-skin="bento"] .tile-ico{border:2px solid #eec9b8}
+html[data-skin="bento"] .mn-game{background:linear-gradient(120deg,#b388ff,#f48fb1);border:3px solid #6B4226;border-radius:24px;box-shadow:0 8px 0 rgba(107,66,38,.16)}
+html[data-skin="bento"] .mn-game-btn{background:#fff;color:#6B4226;border:2px solid #6B4226}
+html[data-skin="bento"] .hnx-tab{border-radius:999px;border:2px solid #6B4226;color:#6B4226}
+html[data-skin="bento"] .hnx-tab.jp{background:#a5d8ff}
+html[data-skin="bento"] .hnx-tab.vj{background:#ffd6a5}
+html[data-skin="bento"] .tabbar{background:#fffdf8;border-top:3px solid #6B4226;backdrop-filter:none}
+html[data-skin="bento"] .tabbar a{color:#9a6a4a}
+html[data-skin="bento"] .tabbar a.on{color:#e0567f}
+html[data-skin="bento"] footer{color:#6B4226}
+
+/* =====================================================================
+   3) FUJI — áp-phích retro: kem, đỏ son, vàng, navy; tem hanko; bóng lệch
+   ===================================================================== */
+html[data-skin="fuji"]{--c:#e8442e;--ai:#173a5e;--gold:#b07d2b;--shu:#e8442e}
+html[data-skin="fuji"] body{background-color:#f7efdc;background-image:radial-gradient(rgba(23,58,94,.08) 1.1px,transparent 1.2px);background-size:16px 16px}
+html[data-skin="fuji"] .topbar{background:#ffcf3f;border-bottom:3px solid #173a5e;backdrop-filter:none}
+html[data-skin="fuji"] .topbar .brand,html[data-skin="fuji"] .topbar .nav a{color:#173a5e;font-weight:700}
+html[data-skin="fuji"] .gsbar{background:#fff8ea;border-bottom:3px solid #173a5e}
+html[data-skin="fuji"] .gs input{border:2.5px solid #173a5e;border-radius:8px}
+html[data-skin="fuji"] .hero{background:#fff8ea;border:3px solid #173a5e;border-radius:10px;box-shadow:8px 8px 0 #173a5e;padding:26px 24px 20px;margin-top:20px}
+html[data-skin="fuji"] .skin-art .sa-fuji{display:block}
+html[data-skin="fuji"] .greeting-jp{color:#e8442e;font-weight:900}
+html[data-skin="fuji"] .hero h1{color:#173a5e;font-weight:800}
+html[data-skin="fuji"] .hero h1 .hn-name{color:#e8442e}
+html[data-skin="fuji"] .hstat{border:2.5px solid #173a5e;border-radius:10px;box-shadow:4px 4px 0 #173a5e;color:#173a5e;backdrop-filter:none}
+html[data-skin="fuji"] .hstat:nth-child(1){background:#ffcf3f}
+html[data-skin="fuji"] .hstat:nth-child(2){background:#ff9fb2}
+html[data-skin="fuji"] .hstat:nth-child(3){background:#a8d8ff}
+html[data-skin="fuji"] .hstat .hstat-lb{color:#173a5e;opacity:.75}
+html[data-skin="fuji"] .stats .stat{border:2px solid #173a5e;border-radius:8px;background:#fffdf4;color:#173a5e;font-weight:600}
+html[data-skin="fuji"] .pvcard{background:linear-gradient(140deg,#e8442e,#c22f1d);border:3px solid #173a5e;border-radius:10px;box-shadow:8px 8px 0 #173a5e}
+html[data-skin="fuji"] .block-h h2{color:#173a5e}
+html[data-skin="fuji"] .block-h h2 .h-jp{color:#e8442e}
+html[data-skin="fuji"] .cat-card,html[data-skin="fuji"] .hnx-card,html[data-skin="fuji"] .kw-block,html[data-skin="fuji"] .mn-feed,html[data-skin="fuji"] .st-topweek{background:#fffdf4;border:3px solid #173a5e;border-radius:10px;box-shadow:6px 6px 0 rgba(23,58,94,.9)}
+html[data-skin="fuji"] .continue-card{background:#173a5e;color:#f4ecd8;border:3px solid #0d2440;border-radius:10px;box-shadow:7px 7px 0 rgba(13,36,64,.55);position:relative}
+html[data-skin="fuji"] .continue-card::after{content:"今日の印";position:absolute;top:12px;right:14px;color:#ff6b57;border:2.5px solid #ff6b57;border-radius:6px;padding:2px 7px;font-weight:900;font-size:.8rem;transform:rotate(8deg);letter-spacing:.08em}
+html[data-skin="fuji"] .continue-card .continue-title{color:#fff}
+html[data-skin="fuji"] .continue-card .continue-meta,html[data-skin="fuji"] .continue-card .continue-count,html[data-skin="fuji"] .continue-card .mut{color:#c9d6ee}
+html[data-skin="fuji"] .continue-card .pgn b{color:#ffcf3f}
+html[data-skin="fuji"] .continue-card .pgn span{color:#c9d6ee}
+html[data-skin="fuji"] .continue-card .progress{border-color:#0d2440;background:#0d2440}
+html[data-skin="fuji"] .continue-card .progress>span{background:repeating-linear-gradient(45deg,#ffcf3f 0 10px,#ffb703 10px 20px)}
+html[data-skin="fuji"] .btn-primary{background:#e8442e;border:2.5px solid #173a5e;border-radius:8px;box-shadow:4px 4px 0 #173a5e;color:#fff}
+html[data-skin="fuji"] .continue-card .btn-primary{background:#ffcf3f;color:#173a5e;border-color:#0d2440;box-shadow:4px 4px 0 #0d2440}
+html[data-skin="fuji"] .progress{border:2px solid #173a5e;border-radius:999px;background:#fff;overflow:hidden}
+html[data-skin="fuji"] .progress>span{background:#e8442e}
+html[data-skin="fuji"] .level-card{background:#fffdf4;border:3px solid #173a5e;border-radius:10px;box-shadow:5px 5px 0 #173a5e}
+html[data-skin="fuji"] .level-card.selected{background:#fff3d6}
+html[data-skin="fuji"] .level-card .lv{color:#e8442e}
+html[data-skin="fuji"] .level-card .lv-bar>i{background:#e8442e}
+html[data-skin="fuji"] .cat-glyph{border:2.5px solid #173a5e;box-shadow:3px 3px 0 #173a5e}
+html[data-skin="fuji"] .lstate{border:2px solid #173a5e;background:#ffcf3f;color:#173a5e;border-radius:6px}
+html[data-skin="fuji"] .tiles .tile{background:#fffdf4;border:3px solid #173a5e;border-radius:10px;box-shadow:4px 4px 0 rgba(23,58,94,.85)}
+html[data-skin="fuji"] .tile-ico{border:2.5px solid #173a5e}
+html[data-skin="fuji"] .mn-game{background:linear-gradient(120deg,#e8442e,#c22f1d);border:3px solid #173a5e;border-radius:10px;box-shadow:6px 6px 0 #173a5e}
+html[data-skin="fuji"] .mn-game-btn{background:#ffcf3f;color:#173a5e;border:2px solid #173a5e}
+html[data-skin="fuji"] .hnx-tab{border:2px solid #173a5e;border-radius:6px;color:#173a5e}
+html[data-skin="fuji"] .hnx-tab.jp{background:#a8d8ff}
+html[data-skin="fuji"] .hnx-tab.vj{background:#ffcf3f}
+html[data-skin="fuji"] .tabbar{background:#fff8ea;border-top:3px solid #173a5e;backdrop-filter:none}
+html[data-skin="fuji"] .tabbar a{color:#5b7292}
+html[data-skin="fuji"] .tabbar a.on{color:#e8442e}
+html[data-skin="fuji"] footer{color:#173a5e}
+
+/* =====================================================================
+   4) NEON — phố đêm Tokyo: nền navy tối, thẻ kính, phát sáng hồng/cyan
+   (Giao diện này tự nó là giao diện TỐI cho trang chủ; trang con giữ
+   chế độ sáng/tối riêng, chỉ mượn màu nhấn — xem khối [data-skin] ở
+   cuối style.css.)
+   ===================================================================== */
+html[data-skin="neon"]{--c:#ff2e88;--ai:#22d3ee;--gold:#ffd166;--shu:#ff2e88;--card:#141a42;--t:#e8ecff;--m:#9fb0e8;--line:#2e3a75;--soft:#1a2150;--ai-soft:#16264d;--shu-soft:#3d1440}
+html[data-skin="neon"] body{background:linear-gradient(160deg,#181243 0%,#0b1026 46%,#0a1a33 100%);color:#e8ecff}
+html[data-skin="neon"] .topbar{background:rgba(9,11,30,.92);border-bottom:1px solid #2a3565;backdrop-filter:blur(10px)}
+html[data-skin="neon"] .topbar .brand{color:#fff}
+html[data-skin="neon"] .topbar .nav a{color:#aab4e8}
+html[data-skin="neon"] .topbar .nav a:hover{color:#22d3ee}
+html[data-skin="neon"] .gsbar{background:rgba(9,11,30,.92);border-color:#2a3565}
+html[data-skin="neon"] .gs input{background:#141b45;color:#fff;border:1.5px solid #2a3565;border-radius:12px}
+html[data-skin="neon"] .hero{background:linear-gradient(150deg,rgba(255,46,136,.13),rgba(34,211,238,.08) 55%,rgba(123,92,255,.10)),#12173d;border:1px solid #33408a;border-radius:22px;box-shadow:0 0 34px rgba(80,60,255,.32);padding:26px 24px 20px;margin-top:20px;color:#eef1ff}
+html[data-skin="neon"] .skin-art .sa-neon{display:block}
+html[data-skin="neon"] .sa-neon .sa-word{font-size:2.6rem;background:linear-gradient(92deg,#ffd166,#7CFC9B);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px rgba(255,209,102,.45))}
+html[data-skin="neon"] .sa-neon .sa-signs{margin-top:8px;font-size:.78rem;font-weight:800;letter-spacing:.14em}
+html[data-skin="neon"] .sa-neon .sa-signs span{display:inline-block;margin:2px;padding:2px 7px;border-radius:6px;border:1.5px solid currentColor}
+html[data-skin="neon"] .sa-neon .sg1{color:#22d3ee;text-shadow:0 0 8px rgba(34,211,238,.8)}
+html[data-skin="neon"] .sa-neon .sg2{color:#ff2e88;text-shadow:0 0 8px rgba(255,46,136,.8)}
+html[data-skin="neon"] .sa-neon .sg3{color:#ffd166;text-shadow:0 0 8px rgba(255,209,102,.8)}
+html[data-skin="neon"] .greeting-jp{color:#22d3ee;text-shadow:0 0 12px rgba(34,211,238,.65);font-weight:900}
+html[data-skin="neon"] .hero h1{color:#fff}
+html[data-skin="neon"] .hero h1 .hn-name{color:#ff2e88;text-shadow:0 0 14px rgba(255,46,136,.55)}
+html[data-skin="neon"] .hero .date-line{color:#9fb0e8}
+html[data-skin="neon"] .hstat{background:rgba(7,9,28,.72);border:1px solid #33408a;border-radius:16px;color:#fff;box-shadow:0 0 16px rgba(50,60,180,.35)}
+html[data-skin="neon"] .hstat:nth-child(1) b{color:#ff2e88;text-shadow:0 0 10px rgba(255,46,136,.7)}
+html[data-skin="neon"] .hstat:nth-child(2) b{color:#22d3ee;text-shadow:0 0 10px rgba(34,211,238,.7)}
+html[data-skin="neon"] .hstat:nth-child(3) b{color:#ffd166;text-shadow:0 0 10px rgba(255,209,102,.7)}
+html[data-skin="neon"] .hstat .hstat-lb{color:#9fb0e8}
+html[data-skin="neon"] .stats .stat{border:1px solid #33408a;border-radius:12px;background:rgba(10,13,36,.6);color:#cdd6ff}
+html[data-skin="neon"] .pvcard{background:linear-gradient(140deg,#2a1052,#12173d 70%);border:1px solid #7b5cff;border-radius:22px;box-shadow:0 0 28px rgba(123,92,255,.4)}
+html[data-skin="neon"] .pvcard-play{background:linear-gradient(135deg,#ff2e88,#7b5cff);border:none;box-shadow:0 0 16px rgba(255,46,136,.6)}
+html[data-skin="neon"] .block-h h2{color:#fff}
+html[data-skin="neon"] .block-h h2 .h-jp{color:#22d3ee}
+html[data-skin="neon"] .block .lead{color:#9fb0e8}
+html[data-skin="neon"] .continue-card,html[data-skin="neon"] .cat-card,html[data-skin="neon"] .hnx-card,html[data-skin="neon"] .kw-block,html[data-skin="neon"] .mn-feed,html[data-skin="neon"] .st-topweek{background:#141a42;border:1px solid #2e3a75;border-radius:18px;box-shadow:0 10px 30px rgba(2,4,20,.55);color:#e8ecff}
+html[data-skin="neon"] .continue-card .continue-meta,html[data-skin="neon"] .continue-card .continue-count,html[data-skin="neon"] .continue-card .mut,html[data-skin="neon"] .cat-stats,html[data-skin="neon"] .cat-foot,html[data-skin="neon"] .st-sub,html[data-skin="neon"] .hnx-date,html[data-skin="neon"] .mn-time{color:#9fb0e8}
+html[data-skin="neon"] .btn-primary{background:linear-gradient(90deg,#22d3ee,#38f2c8);color:#052635;border:none;border-radius:12px;box-shadow:0 0 18px rgba(34,211,238,.5);font-weight:800}
+html[data-skin="neon"] .progress{background:#0a0e2c;border:1px solid #2e3a75;border-radius:999px;overflow:hidden}
+html[data-skin="neon"] .progress>span{background:linear-gradient(90deg,#22d3ee,#ff2e88);box-shadow:0 0 12px rgba(255,46,136,.65)}
+html[data-skin="neon"] .level-card{background:#141a42;border:1px solid #2e3a75;border-radius:18px;box-shadow:0 10px 30px rgba(2,4,20,.55);color:#e8ecff}
+html[data-skin="neon"] .level-card.selected{border-color:#22d3ee;box-shadow:0 0 20px rgba(34,211,238,.35)}
+html[data-skin="neon"] .level-card .lv{color:#22d3ee;text-shadow:0 0 10px rgba(34,211,238,.6)}
+html[data-skin="neon"] .level-card .lv-name,html[data-skin="neon"] .level-card .lv-pc{color:#e8ecff}
+html[data-skin="neon"] .level-card .lv-sub{color:#9fb0e8}
+html[data-skin="neon"] .level-card .lv-bar{background:#0a0e2c}
+html[data-skin="neon"] .level-card .lv-bar>i{background:linear-gradient(90deg,#22d3ee,#7b5cff)}
+html[data-skin="neon"] .cat-card h3{color:#fff}
+html[data-skin="neon"] .list li a{color:#e8ecff;border-bottom:1px solid #26305e}
+html[data-skin="neon"] .lstate{background:#1d2650;color:#ffd166;border:1px solid #2e3a75;border-radius:999px}
+html[data-skin="neon"] .tiles .tile{background:#141a42;border:1px solid #2e3a75;border-radius:18px;color:#e8ecff;box-shadow:0 10px 30px rgba(2,4,20,.5)}
+html[data-skin="neon"] .tiles .tile small{color:#9fb0e8}
+html[data-skin="neon"] .tile-ico{border:1px solid #2e3a75}
+html[data-skin="neon"] .mn-game{background:linear-gradient(120deg,#3b1160,#7b1e5e);border:1px solid #7b5cff;border-radius:18px;box-shadow:0 0 26px rgba(123,92,255,.4)}
+html[data-skin="neon"] .mn-game-btn{background:#fff;color:#3b1160}
+html[data-skin="neon"] .hnx-item{border-color:#26305e;color:#e8ecff}
+html[data-skin="neon"] .hnx-tab.jp{background:rgba(34,211,238,.14);color:#22d3ee;border:1px solid #22d3ee;border-radius:999px}
+html[data-skin="neon"] .hnx-tab.vj{background:rgba(255,46,136,.14);color:#ff8fab;border:1px solid #ff2e88;border-radius:999px}
+html[data-skin="neon"] .kw-lvh{color:#fff}
+html[data-skin="neon"] .st-tw-name{color:#e8ecff}
+html[data-skin="neon"] .st-tw-val{color:#ffd166}
+html[data-skin="neon"] .tabbar{background:rgba(9,11,30,.94);border-top:1px solid #2a3565;backdrop-filter:blur(10px)}
+html[data-skin="neon"] .tabbar a{color:#8e9bd8}
+html[data-skin="neon"] .tabbar a.on{color:#22d3ee}
+html[data-skin="neon"] .share-end h2{color:#fff}
+html[data-skin="neon"] .share-end p{color:#9fb0e8}
+html[data-skin="neon"] footer{color:#8e9bd8}
+html[data-skin="neon"] .switch{border-color:#2e3a75}
+
+/* ---------- Tinh chỉnh điện thoại cho mọi giao diện ---------- */
+@media(max-width:899px){
+  html[data-skin] .hero{padding:20px 16px 16px}
+  html[data-skin="manga"] .block-h h2{font-size:1.22rem}
+  html[data-skin="neon"] .sa-neon .sa-word{font-size:2rem}
+}
+
+/* Giao diện SÁNG (Manga / Hộp cơm / Fuji) tự mang bảng màu sáng riêng ở
+   trang chủ — không phụ thuộc chế độ tối của máy (Neon là giao diện tối). */
+html[data-skin="manga"],html[data-skin="bento"],html[data-skin="fuji"]{--t:#1c2430;--m:#4c5866;--card:#ffffff;--line:#e3e0d6;--soft:#f4f1ea}
+
+/* ---------- Vá tương phản HERO cho 3 giao diện sáng ----------
+   Hero của bản v3 vốn là panel TỐI nên nhiều chữ con để màu sáng
+   (#fff, #c4d0e8, #a9bbe0). Ba giao diện sáng phải ép lại màu đậm. */
+html[data-skin="manga"] .hero h1{color:#141414}
+html[data-skin="manga"] .hero .hn-line{color:#141414}
+html[data-skin="bento"] .hero .hn-line{color:#6B4226}
+html[data-skin="fuji"] .hero .hn-line{color:#173a5e}
+html[data-skin="manga"] .hero .date-line{color:#555c63}
+html[data-skin="bento"] .hero .date-line{color:#9a6a4a}
+html[data-skin="fuji"] .hero .date-line{color:#33506e}
+html[data-skin="manga"] .hstat b{color:#141414}
+html[data-skin="manga"] .hstat:nth-child(1) b,html[data-skin="manga"] .hstat:nth-child(2) b{color:#fff}
+html[data-skin="bento"] .hstat b{color:#6B4226}
+html[data-skin="fuji"] .hstat b{color:#173a5e}
+html[data-skin="manga"] .hero .stats .stat{color:#141414}
+html[data-skin="bento"] .hero .stats .stat{color:#6B4226}
+html[data-skin="fuji"] .hero .stats .stat{color:#173a5e}
+html[data-skin="manga"] .hn-share{border:2.5px solid #141414;color:#141414;background:#fff}
+html[data-skin="bento"] .hn-share{border:2.5px solid #6B4226;color:#6B4226;background:#fff}
+html[data-skin="fuji"] .hn-share{border:2.5px solid #173a5e;color:#173a5e;background:#fffdf4}
+html[data-skin="neon"] .hn-share{border:1.5px solid #33408a;color:#cdd6ff;background:rgba(10,13,36,.6)}
+html[data-skin="manga"] .hero .dk-card,html[data-skin="bento"] .hero .dk-card,html[data-skin="fuji"] .hero .dk-card{color:#1c2430}
+
+/* Dòng khen/mời trong hero (KHEN) — bản gốc để màu sáng cho hero tối */
+html[data-skin="manga"] .hero .hn-khen{color:#141414}
+html[data-skin="manga"] .hero .hn-moi{color:#FF2E63}
+html[data-skin="bento"] .hero .hn-khen{color:#6B4226}
+html[data-skin="bento"] .hero .hn-moi{color:#e0567f}
+html[data-skin="fuji"] .hero .hn-khen{color:#173a5e}
+html[data-skin="fuji"] .hero .hn-moi{color:#e8442e}
+html[data-skin="neon"] .hero .hn-khen{color:#e8ecff}
+html[data-skin="neon"] .hero .hn-moi{color:#ff8fab}
+html[data-skin="neon"] .st-tw-link{color:#22d3ee}
+html[data-skin="neon"] .continue-card .mut a,html[data-skin="neon"] .hnx-foot a{color:#7dd7f7}

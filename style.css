@@ -1483,3 +1483,16 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
 .kw-head .kw-go-ar{font-weight:800;transition:transform .15s ease}
 .kw-head:hover .kw-go-ar,.kw-head:focus-visible .kw-go-ar{transform:translateX(3px)}
 .kw-head:focus-visible{outline:2px solid var(--ai);outline-offset:3px;border-radius:8px}
+
+/* ===== Tông màu theo GIAO DIỆN [data-skin] — áp cho TRANG CON =====
+   Chỉ đổi màu NHẤN (nút, liên kết, điểm nhấn) theo giao diện đang chọn
+   (theme.js đặt data-skin từ localStorage hn_skin_v1 / tự đổi theo ngày).
+   Nền sáng/tối của trang con vẫn theo chế độ dark/light riêng như trước:
+   - Máy đang để chế độ TỐI: giữ nguyên bảng màu tối cũ (chỉ riêng Neon
+     nhuộm thêm nhấn hồng/cyan phát sáng).
+   - Trang chủ không dùng khối này — nó có themes.css riêng. */
+html[data-skin="manga"]:not([data-theme="dark"]){--c:#FF2E63;--c2:#141414;--ai:#141414;--shu:#FF2E63;--gold:#c98a1b;--shu-soft:#ffe9f1;--ai-soft:#f1f1ea}
+html[data-skin="bento"]:not([data-theme="dark"]){--c:#e0567f;--c2:#6B4226;--ai:#6B4226;--shu:#e0567f;--gold:#d98a1f;--shu-soft:#fdeef3;--ai-soft:#f7ecdf}
+html[data-skin="fuji"]:not([data-theme="dark"]){--c:#e8442e;--c2:#173a5e;--ai:#173a5e;--shu:#e8442e;--shu-soft:#fdeee9;--ai-soft:#e9eff7}
+html[data-skin="neon"]:not([data-theme="dark"]){--c:#ff2e88;--ai:#0e7f9e;--shu:#ff2e88;--shu-soft:#ffe9f4;--ai-soft:#e2f6fb}
+html[data-theme="dark"][data-skin="neon"]{--c:#ff2e88;--ai:#22d3ee;--shu:#ff2e88;--gold:#ffd166;--ai-soft:#16264d;--shu-soft:#3d1440}

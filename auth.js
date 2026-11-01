@@ -429,7 +429,10 @@ function hnMkSync(CFG){
   if(typeof AUTH!='undefined'&&AUTH.session())pull();
   return {pull:pull,push:push,isKey:isKey,touched:touched,removedKey:removedKey,call:call,rawSet:rawSet,_merge:{srs:mergeSRS,prog:mergeProg,val:mergeVal}};
 }
-const HNSYNC=hnMkSync({path:'/progress',meta:'hn_sync_meta',isKey:k=>typeof k==='string'&&(k==='hn_prog_v1'||k==='hn_srs_v1'||k==='hn_game_v1'||k.indexOf('hn_choukai_')===0)});
+// Giao diện (theme.js/HNSKIN): khóa riêng hn_skin_v1 = {c,t} cũng đồng bộ qua /progress,
+// gộp bằng mergeVal mặc định (mốc thời gian mới hơn thắng). Đây là ngoại lệ chủ đích so với
+// nhóm tuỳ chọn thiết bị ở trên: giao diện là lựa chọn của TÀI KHOẢN, phải theo người dùng qua máy.
+const HNSYNC=hnMkSync({path:'/progress',meta:'hn_sync_meta',isKey:k=>typeof k==='string'&&(k==='hn_prog_v1'||k==='hn_srs_v1'||k==='hn_game_v1'||k==='hn_skin_v1'||k.indexOf('hn_choukai_')===0)});
 // ===== Đồng bộ Hồ sơ cá nhân theo tài khoản (qua Worker /hoso, bảng riêng tư user_hoso) =====
 // Chỉ chủ tài khoản đọc được. Khách / chưa đăng nhập: không gửi gì. 404 / mất mạng: coi như offline.
 const HNHOSO=(()=>{
