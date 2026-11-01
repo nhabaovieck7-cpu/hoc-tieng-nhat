@@ -92,7 +92,8 @@
     }
     if (st.chapter >= 2) {
       var d = [];
-      d.push({ label: 'Ra PHỐ MUA SẮM — gặp anh Tuấn "môi giới" gần cửa ngân hàng', target: { scene: 'sim-01-loi-ru' }, done: function () { return !!t.simChoice; } });
+      d.push({ label: 'Ra PHỐ MUA SẮM — gặp anh Tuấn "môi giới" gần cửa ngân hàng', target: { scene: 'sim-01-loi-ru' }, done: function () { return !!t.simChoice || t.simDi === 'di'; } });
+      if (t.simDi === 'di' && !t.simChoice) d.push({ label: 'Đi theo anh Tuấn vào CỬA HÀNG ĐIỆN THOẠI — xem kỹ bộ giấy tờ, cân nhắc thật kỹ trước khi ký (cảnh nối tự mở, đừng nói chuyện lại với anh Tuấn)', target: null, ui: 'free', done: function () { return !!t.simChoice; } });
       if (t.simChoice === 'ky') d.push({ label: 'Kèo SIM sẽ để lại hậu quả — cứ sinh hoạt bình thường, chờ diễn biến', target: null, ui: 'free', done: function () { return !!t.simBillFired; } });
       if (t.simTruthPending) d.push({ label: 'Mở ĐIỆN THOẠI (nút 📱 góc phải) — đọc và trả lời tin nhắn của mẹ', target: null, ui: 'phone', done: function () { return !t.simTruthPending; } });
       d.push({ label: 'Tới NGÂN HÀNG ở phố mua sắm — quầy giao dịch: lĩnh LƯƠNG ĐẦU và gửi tiền về nhà', target: { scene: 'bank-counter' }, done: function () { return !!c.salaryDone; } });

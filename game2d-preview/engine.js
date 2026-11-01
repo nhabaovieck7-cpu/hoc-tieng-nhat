@@ -262,14 +262,44 @@
     return hit;
   }
   function blitPlate(g, cx, cy, bmp) { g.drawImage(bmp.c, cx - bmp.w / 2, cy - bmp.h / 2, bmp.w, bmp.h); }
+  // Dải che ở mép trên khung hình do CHIP MỤC TIÊU (DOM #guide-chip, Lane X) chiếm —
+  // tính theo đơn vị view (thế giới), cache 250ms: biển tên nào vẽ lên phía trên mà
+  // lọt vào dải này sẽ bị chip đè mất chữ (chủ trang gặp thật ở trường tiếng 01/11:
+  // chip nuốt biển "Cô giáo chủ nhiệm" khi bản đồ bị camera kẹp sát mép trên).
+  var chipBandCache = { t: 0, v: 0, top: 0 };
+  function topBandView() {
+    var now = performance.now();
+    if (now - chipBandCache.t < 250) return chipBandCache.v;
+    chipBandCache.t = now;
+    var v = 0, top = 0;
+    try {
+      var chip = document.getElementById('guide-chip');
+      var cr = cv.getBoundingClientRect();
+      top = cr.top;
+      if (chip && chip.classList.contains('show')) {
+        var r = chip.getBoundingClientRect();
+        v = Math.max(0, (r.bottom - cr.top + 6) / zoom);
+      }
+    } catch (e) {}
+    chipBandCache.v = v; chipBandCache.top = top;
+    return v;
+  }
+  // Vị trí biển tên của khung gần nhất (CSS px, cho harness đối chiếu đè chữ).
+  var plateRects = [];
+  function placePlate(g, x, y, text, bmp, flipDrop) {
+    var cy = y - 55, flipped = false;
+    if (cy - bmp.h / 2 < topBandView()) { cy = y + flipDrop; flipped = true; }   // lật biển XUỐNG DƯỚI thân khi phía trên bị chip che
+    blitPlate(g, x, cy, bmp);
+    plateRects.push({ name: text, top: Math.round((cy - bmp.h / 2) * zoom + chipBandCache.top), bottom: Math.round((cy + bmp.h / 2) * zoom + chipBandCache.top), flipped: flipped });
+  }
   // Biển tên NHÂN VẬT CHÍNH + người chơi khác: cỡ chuẩn, nổi nhất
   function drawNamePlate(g, x, y, text) {
-    blitPlate(g, x, y - 55, plateBitmap(text, '600 10px sans-serif', '#fff', 'rgba(20,20,30,.72)', 15));
+    placePlate(g, x, y, text, plateBitmap(text, '600 10px sans-serif', '#fff', 'rgba(20,20,30,.72)', 15), 24);
   }
   // Biển tên NPC: NHỎ hơn biển nhân vật chính một bậc (phân cấp thị giác — Lane H2),
   // nền trong hơn; vẫn đủ rõ để nhận ra Bố/Mẹ/Linh/Yui… từ xa.
   function drawNpcNamePlate(g, x, y, text) {
-    blitPlate(g, x, y - 55, plateBitmap(text, '600 9px sans-serif', '#fff', 'rgba(20,20,30,.58)', 13));
+    placePlate(g, x, y, text, plateBitmap(text, '600 9px sans-serif', '#fff', 'rgba(20,20,30,.58)', 13), 22);
   }
   // Biển nhỏ tự do (cửa ra vào — Lane H, nét bitmap Lane H2): tâm tại (cx, cy),
   // chữ đậm TO rõ từ xa
@@ -498,6 +528,7 @@
     if (gt) drawGuideTrail(gt, camX, camY, now);
 
     // Vẽ thực thể theo thứ tự y
+    plateRects.length = 0;   // Lane Y: ghi lại biển tên của khung này cho harness đối chiếu đè chữ
     var ents = npcs.map(function (n) { return { y: n.y, n: n }; });
     Object.keys(remotes).forEach(function (id) {
       var r = remotes[id];
@@ -913,6 +944,8 @@
     guideTarget: function () { return (window.GUIDE && window.GUIDE.targetFor && cur) ? window.GUIDE.targetFor(cur.def.id) : null; },
     // Lane X (harness-nav): hiệu ứng dẫn đường đã vẽ khung gần nhất
     navFx: function () { return { hero: navFxState.hero, trailDots: navFxState.trailDots, trailPts: navFxState.trailPts }; },
+    // Lane Y (harness-board): biển tên đã vẽ khung gần nhất — {name, top, bottom (CSS px), flipped}
+    plates: function () { return plateRects.slice(); },
     name: function () { return player.name; },
     player: function () { return { name: player.name, gender: player.gender, call: player.call }; },
     // Hệ ngoại hình (style.js): thay sprite nhân vật chính NGAY tại chỗ theo spec tự chỉnh

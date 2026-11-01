@@ -187,6 +187,7 @@
     else if (!S.exam.passed) window.GAMEUI.setObjective(S.exam.needReview
       ? '📚 Thi lại mốc N5: về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại đã — rồi quay lại trường thi tiếp'
       : '🎓 Mốc thi JLPT N5 đã mở — tới TRƯỜNG TIẾNG (qua phố chính), xem BẢNG ĐEN trong lớp để vào thi, cổng cuối Chương 1');
+    else window.GAMEUI.setObjective('🏆 Đã qua mốc N5 — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để mở TỔNG KẾT Chương 1');
   }
   function examGateOpen() {
     return S.flags.gomiDone && S.flags.callHomeDone && S.flags.officerDone && !S.exam.passed;
@@ -328,16 +329,24 @@
   var EXAM_N = 12, EXAM_PASS = 7, EXAM_FEE = 0.75;   // từ giai đoạn 5 (31/10): mỗi lượt 12 câu = chữ 4 + pháp 4 + đọc 2 + NGHE 2; đỗ ≥ 7/12   // lệ phí thi lại 7.500 yên — mức lệ phí JLPT hiện hành tại Nhật
   var examRun = null, examDoneLevel = 'N5', nextChapterTarget = 2;
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  function examBank(level) { return level === 'N4' ? window.EXAM_N4 : window.EXAM_N5; }
+  // Lane Z (01/11): ngân hàng CÂU HỎI đi theo TRÌNH ĐỘ NGƯỜI CHƠI ĐÃ CHỌN (level.js —
+  // window.PLAYER_LEVEL, mặc định N5), KHÔNG còn đi theo cấp mốc của chương: tham số
+  // `level` của các hàm thi chỉ còn là CỔNG CHƯƠNG (trạng thái đỗ/trượt, lệ phí, tổng kết).
+  function chosenQLevel(gateLevel) { return window.PLAYER_LEVEL ? window.PLAYER_LEVEL.get() : gateLevel; }
+  function examBank(level) {
+    if (window.PLAYER_LEVEL) return window.PLAYER_LEVEL.bank();
+    return level === 'N4' ? window.EXAM_N4 : window.EXAM_N5;
+  }
   function examState(level) { return level === 'N4' ? S.exam2 : S.exam; }
   function buildExamList(level) {
+    var qLevel = chosenQLevel(level);
     var bank = examBank(level), bySec = {};
     (bank ? bank.questions : []).forEach(function (q) { (bySec[q.section] = bySec[q.section] || []).push(q); });
     var want = [['文字・語彙', 4], ['文法', 4], ['読解', 2]], picked = [];
-    // PHẦN NGHE (giai đoạn 5): rút 2 câu nghe từ ngân hàng LISTEN_N5/N4 (listen.js — clip VOICEVOX thật)
-    var lBank = level === 'N4' ? window.LISTEN_N4 : window.LISTEN_N5;
+    // PHẦN NGHE (giai đoạn 5 + Lane Z): rút 2 câu nghe từ ngân hàng nghe ĐÚNG TRÌNH ĐỘ ĐÃ CHỌN (clip VOICEVOX thật)
+    var lBank = window.PLAYER_LEVEL ? window.PLAYER_LEVEL.listenBank() : (level === 'N4' ? window.LISTEN_N4 : window.LISTEN_N5);
     if (lBank) shuffle(lBank.slice()).slice(0, 2).forEach(function (q) {
-      picked.push({ section: '聴解', question: q.q, audio: q.audio, script: q.script, explain_vi: q.explain, choices: q.choices.slice(), answer: q.answer, listen: true });
+      picked.push({ section: '聴解', level: q.level || qLevel, question: q.q, audio: q.audio, script: q.script, explain_vi: q.explain, choices: q.choices.slice(), answer: q.answer, listen: true });
     });
     want.forEach(function (w) { shuffle((bySec[w[0]] || []).slice()).slice(0, w[1]).forEach(function (q) { picked.push(q); }); });
     if (picked.length < EXAM_N) {   // bù từ phần còn dư nếu một phần thiếu câu
@@ -347,7 +356,7 @@
     return shuffle(picked).map(function (q) {
       if (q.listen) return q;   // câu nghe giữ nguyên thứ tự lựa chọn đã soạn (đã cân bằng vị trí đáp án trong ngân hàng)
       var order = shuffle(q.choices.map(function (_, i) { return i; }));
-      return { section: q.section, question: q.question, explain_vi: q.explain_vi || '',
+      return { section: q.section, level: q.level || qLevel, question: q.question, explain_vi: q.explain_vi || '',
                choices: order.map(function (oi) { return q.choices[oi]; }), answer: order.indexOf(q.answer) };
     });
   }
@@ -362,11 +371,12 @@
       if (st.money >= EXAM_FEE) window.GAMEUI.apply({ money: -EXAM_FEE }, 'Lệ phí thi lại mốc ' + level + ' — 7.500 yên');
       else window.GAMEUI.toast('🎓 Tiền không đủ đóng lệ phí thi lại — thầy Khánh đóng hộ lần này. Cố mà đỗ nhé!');
     }
+    var qLevel = chosenQLevel(level);   // Lane Z: chốt trình độ câu hỏi tại thời điểm mở bài — đổi cài đặt giữa bài không tác động bài đang làm
     var h3 = document.querySelector('#modal-exam h3');
-    if (h3) h3.textContent = '🎓 Mốc thi JLPT ' + level + (level === 'N4' ? ' — cổng cuối Chương 2' : ' — cổng cuối Chương 1');
+    if (h3) h3.textContent = '🎓 Bài thi mốc · trình độ ' + qLevel + (level === 'N4' ? ' — cổng cuối Chương 2 (mốc JLPT N4)' : ' — cổng cuối Chương 1 (mốc JLPT N5)');
     var sub = document.querySelector('#modal-exam .sub');
     if (sub) sub.innerHTML = '12 câu: từ vựng 4 · ngữ pháp 4 · đọc hiểu 2 · <b>NGHE 2</b> (nghe lại tối đa 2 lần/câu). Đỗ: đúng từ <b>7/12</b> — trượt thì ôn lại rồi thi lại (7.500 yên), không bao giờ kẹt.';
-    examRun = { level: level, list: buildExamList(level), idx: 0, score: 0, locked: false, listenScore: 0, listenTotal: 0, plays: 0 };
+    examRun = { level: level, qLevel: qLevel, list: buildExamList(level), idx: 0, score: 0, locked: false, listenScore: 0, listenTotal: 0, plays: 0 };
     $('exam-chapter').style.display = 'none';
     $('modal-exam').classList.add('show');
     drawExamQ();
@@ -376,7 +386,7 @@
     var it = examRun.list[examRun.idx];
     examRun.locked = false;
     examRun.plays = 0;
-    $('exam-prog').textContent = 'Mốc ' + examRun.level + ' · Câu ' + (examRun.idx + 1) + '/' + examRun.list.length + ' · Phần: ' + it.section + ' · Đã đúng: ' + examRun.score;
+    $('exam-prog').textContent = 'Bài thi mốc · trình độ ' + (examRun.qLevel || examRun.level) + ' · Câu ' + (examRun.idx + 1) + '/' + examRun.list.length + ' · Phần: ' + it.section + ' · Đã đúng: ' + examRun.score;
     $('exam-q').innerHTML = '';
     it.question.split('\n').forEach(function (ln, i) { if (i) $('exam-q').appendChild(document.createElement('br')); $('exam-q').appendChild(document.createTextNode(ln)); });
     var fb = $('exam-fb'); fb.textContent = ''; fb.className = 'fb-line';
@@ -418,7 +428,7 @@
     var level = examRun.level, st8 = examState(level);
     var score = examRun.score, total = examRun.list.length;
     var isN4 = level === 'N4';
-    $('exam-prog').textContent = 'Kết quả mốc thi ' + level + ': ' + score + '/' + total + ' · Phần nghe: ' + examRun.listenScore + '/' + examRun.listenTotal;
+    $('exam-prog').textContent = 'Kết quả bài thi mốc · trình độ ' + (examRun.qLevel || level) + ': ' + score + '/' + total + ' · Phần nghe: ' + examRun.listenScore + '/' + examRun.listenTotal;
     $('exam-opts').innerHTML = '';
     $('exam-next').style.display = 'none';
     var fb = $('exam-fb');
@@ -429,8 +439,8 @@
       examDoneLevel = level;
       addQuiz(isN4 ? 'exam-n4' : 'exam-n5');
       $('exam-q').textContent = isN4
-        ? '🎉 ĐỖ MỐC N4! ' + score + '/' + total + ' — từ lớ ngớ ngày đầu tới nói được cả câu dài: bạn đã thật sự "vào guồng" rồi.'
-        : '🎉 ĐỖ MỐC N5! ' + score + '/' + total + ' — tiếng Nhật của bạn đã đủ đứng vững ở mức đầu tiên.';
+        ? '🎉 ĐỖ MỐC N4! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — từ lớ ngớ ngày đầu tới nói được cả câu dài: bạn đã thật sự "vào guồng" rồi.'
+        : '🎉 ĐỖ MỐC N5! ' + score + '/' + total + ' (câu hỏi trình độ ' + (examRun.qLevel || level) + ') — tiếng Nhật của bạn đã đủ đứng vững ở mức đầu tiên.';
       fb.textContent = isN4
         ? 'Thầy Khánh gật gù: "Một năm, hai mốc thi. Chương 2 khép lại ở đây — xem tổng kết chương nhé."'
         : 'Thầy Khánh gật gù: "Đấy, sai thì sửa, sợ gì. Chương 1 khép lại ở đây — xem tổng kết chương nhé."';
@@ -440,7 +450,7 @@
       btn.style.display = '';
     } else {
       st8.needReview = true;
-      $('exam-q').textContent = '📚 Chưa đạt mốc ' + level + ': ' + score + '/' + total + ' (cần ít nhất ' + EXAM_PASS + '). Phần nghe: ' + examRun.listenScore + '/' + examRun.listenTotal + '. Không sao — đây không phải đường cụt.';
+      $('exam-q').textContent = '📚 Chưa đạt mốc ' + level + ': ' + score + '/' + total + ' (cần ít nhất ' + EXAM_PASS + '; câu hỏi trình độ ' + (examRun.qLevel || level) + '). Phần nghe: ' + examRun.listenScore + '/' + examRun.listenTotal + '. Không sao — đây không phải đường cụt.';
       fb.textContent = 'Thầy Khánh: "Trượt mốc thì ôn lại rồi thi lại, chuyện thường ở huyện. Về phòng trọ, ngồi vào BÀN HỌC ôn một lượt, rồi quay lại đây thi tiếp. Lệ phí thi lại 7.500 yên — thầy ghi sổ trước cũng được."';
       fb.className = 'fb-line ng';
     }
@@ -659,6 +669,30 @@
     });
   }
 
+  /* ================= MỞ CẢNH NỐI — CHỜ THOẠI ĐÓNG MỚI MỞ (Lane Y/AA 01/11) =================
+     Lỗi cũ: setTimeout trần gọi __demo.scene() sau 900–1000ms — nếu lúc đó người chơi
+     đang mở một hộp thoại khác, cảnh nối bị NUỐT (không mở, không hẹn lại) → mất nhịp
+     truyện, có thể kẹt vòng (sim-01 phát lại mãi). Cơ chế mới: hẹn 1 lần duy nhất cho
+     mỗi cảnh; tới giờ mà thoại/cuộc gọi còn mở thì chờ tiếp từng 400ms tới khi trống;
+     cảnh đã diễn rồi (có trong doneScenes) thì không mở lại. */
+  var pendingSceneTimers = {};
+  function startSceneDeferred(sceneId, delayMs) {
+    if (pendingSceneTimers[sceneId]) return;
+    if (S.doneScenes.indexOf(sceneId) >= 0) return;
+    pendingSceneTimers[sceneId] = true;
+    setTimeout(function () {
+      var tries = 0;
+      (function attempt() {
+        if (S.doneScenes.indexOf(sceneId) >= 0) { delete pendingSceneTimers[sceneId]; return; }
+        var dlgOpen = !!(window.__demo && window.__demo.dlgOpen && window.__demo.dlgOpen());
+        var callOn = !!(window.PHONE && window.PHONE.callActive && window.PHONE.callActive());
+        if ((dlgOpen || callOn) && tries < 60) { tries++; setTimeout(attempt, 400); return; }
+        delete pendingSceneTimers[sceneId];
+        if (window.__demo) window.__demo.scene(sceneId);
+      })();
+    }, delayMs || 0);
+  }
+
   /* ================= SỰ KIỆN CHỜ (hậu quả đến sau — nhịp 4 của SIM) ================= */
   function checkSched() {
     S.sched.forEach(function (ev) {
@@ -667,7 +701,7 @@
       if (ev.id === 'sim-bill' && !S.tenancy.simBillFired) {
         S.tenancy.simBillFired = true;
         save();
-        setTimeout(function () { if (window.__demo) window.__demo.scene('sim-03-hoa-don'); }, 1000);
+        startSceneDeferred('sim-03-hoa-don', 1000);
       }
     });
   }
@@ -822,7 +856,7 @@
       advanceObjective();
     } else if (id === 'sim-01-loi-ru') {
       if (S.tenancy.simDi === 'di') {
-        setTimeout(function () { if (window.__demo) window.__demo.scene('sim-02-cua-hang'); }, 900);
+        startSceneDeferred('sim-02-cua-hang', 900);
       } else if (S.tenancy.simDi === 'khong') {
         S.tenancy.simChoice = 'tu-choi';
         advanceObjective();
@@ -838,7 +872,7 @@
       }
     } else if (id === 'sim-03-hoa-don') {
       if (S.tenancy.simXuly === 'ngay') {
-        setTimeout(function () { if (window.__demo) window.__demo.scene('sim-04-xu-ly'); }, 900);
+        startSceneDeferred('sim-04-xu-ly', 900);
       } else {
         triggerSimPhoneBeat();   // đường "để sau": nhịp điện thoại về nhà vẫn tới ngay
       }
@@ -910,7 +944,8 @@
         openExam('N4');
         return true;
       }
-      if (S.chapter >= 2 && S.exam2.passed && !has(S.chaptersDone, 2)) { completeChapter2(); return true; }   // đỗ rồi mà lỡ tay đóng modal tổng kết → mở lại tại đây, không kẹt
+      if (S.chapter >= 2 && S.chapter < 3 && S.exam2.passed) { completeChapter2(); return true; }   // đỗ N4 rồi → TỔNG KẾT Ch2 mở tại bảng đen; kể cả khi đã lỡ đóng/mất modal tổng kết (completeChapter2 tự chống cộng trùng XP bằng has()) — không kẹt
+      if (S.chapter < 2 && S.exam.passed) { completeChapter1(); return true; }   // đỗ N5 rồi → TỔNG KẾT Ch1 mở tại bảng đen. TRƯỚC ĐÂY THIẾU NHÁNH NÀY (Lane Y 01/11): đỗ xong mà đóng modal thi bằng nút "Đóng" là bảng đen rơi xuống cảnh đọc thông tin thuần tuý, đọc xong không qua bước — KẸT VĨNH VIỄN (chủ trang gặp thật 01/11)
       if (examGateOpen()) {
         if (S.exam.needReview) {
           window.GAMEUI.toast('📚 Thầy Khánh nhắc: ôn lại ở BÀN HỌC trong phòng trọ trước đã — học chưa vào thì thi lại cũng vậy thôi.');
@@ -944,7 +979,7 @@
     if (id === 'combini') {
       // Rung động đầu: lần ghé combini sau bản tin TV ở Chương 2 là cảnh riêng với Yui
       if (S.chapter >= 2 && S.ch2.salaryDone && S.ch2.tvDone && !S.ch2.romanceDone) {
-        setTimeout(function () { if (window.__demo) window.__demo.scene('ch2-yui'); }, 60);
+        startSceneDeferred('ch2-yui', 60);
         return true;
       }
       return false;
@@ -956,6 +991,16 @@
       }
       if (S.tenancy.simChoice) {
         window.GAMEUI.toast('📱 Anh Tuấn đã đi tìm người khác rồi — chuyện "kèo điện thoại" ở phố này tạm lắng.');
+        return true;
+      }
+      if (S.tenancy.simDi === 'di') {
+        // Đã đồng ý đi theo ở cuối sim-01, cảnh nối sim-02 chưa kịp mở (hoặc bị lỡ nhịp):
+        // KHÔNG phát lại sim-01 — mở ngay cảnh nối qua cơ chế chờ thoại đóng (Lane Y/AA 01/11).
+        startSceneDeferred('sim-02-cua-hang', 0);
+        return true;
+      }
+      if (S.tenancy.simDi === 'khong') {
+        window.GAMEUI.toast('📱 Anh Tuấn gật đầu quay đi tìm người khác — kèo đó coi như bỏ qua.');
         return true;
       }
       return false;
@@ -1093,6 +1138,7 @@
     state: function () { return JSON.parse(JSON.stringify({ chapter: S.chapter, flags: S.flags, book: S.book, tenancy: S.tenancy, ch2: S.ch2, exam: S.exam, exam2: S.exam2, xp: S.xp, rel: S.rel, story: pubStory() })); },
     save: save,
     examAnswer: function () { return examRun ? examRun.list[examRun.idx].answer : -1; },   // phục vụ harness kiểm chứng
+    examInfo: function () { return examRun ? { gate: examRun.level, qLevel: examRun.qLevel || examRun.level, idx: examRun.idx, score: examRun.score, list: examRun.list } : null; },   // Lane Z: phục vụ harness kiểm chứng trình độ câu hỏi
     wipe: function () { try { localStorage.removeItem(SAVE_KEY); } catch (e) {} location.reload(); }
   };
 })();

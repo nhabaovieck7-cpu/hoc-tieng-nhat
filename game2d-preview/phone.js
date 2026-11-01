@@ -185,6 +185,11 @@
     var cb = call.cfg.onEnd;
     clearInterval(call.timer); clearTimeout(call.wait);
     call = null;
+    // Lane Y/AA 01/11: cuộc gọi kết thúc là khung điện thoại TỰ ĐÓNG — người chơi thấy
+    // lại thế giới ngay, khỏi phải tự bấm "Đóng ✕". Đóng TRƯỚC khi chạy onEnd để nếu
+    // onEnd mở cuộc gọi/màn hình mới thì thao tác đó thắng. Nút đóng thủ công vẫn giữ
+    // cho các màn hình điện thoại khác (danh sách tin nhắn, đọc tin…).
+    $('phone').classList.remove('show');
     renderList();
     if (cb) cb();
   }
