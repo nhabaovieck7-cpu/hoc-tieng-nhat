@@ -1,0 +1,71 @@
+/* MANGA THEME (redesign-manga, 01/11/2026) — lop phu giao dien, KHONG doi logic.
+   Nap SAU style.css. Xoa 2 dong <link manga.css>/<script manga.js> la ve giao dien cu. */
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+:root{--c:#ff2e63;--c2:#111;--bg:#fffdf8;--card:#fff;--t:#111;--m:#444;--line:#111;--soft:#ffe3ea;--r:6px;
+ --mg-ink:#111;--mg-hot:#ff2e63;--mg-yel:#ffd60a;--mg-cy:#00b4d8;
+ --mg-shout:"Dela Gothic One","Noto Sans CJK JP","Noto Sans JP","Be Vietnam Pro",Impact,system-ui,sans-serif}
+body{background-color:var(--bg);background-image:radial-gradient(#0000000f 1.2px,transparent 1.3px);background-size:10px 10px}
+.mg-kj{font-family:"Noto Sans CJK JP","Noto Sans JP",sans-serif;font-weight:900}
+/* header */
+.topbar{background:#fff;border-bottom:3px solid var(--mg-ink);backdrop-filter:none}
+.brand{font-family:var(--mg-shout);letter-spacing:.02em}.brand b{color:var(--mg-hot)}
+.nav a{color:var(--mg-ink);font-weight:700;border-radius:0;border:2px solid transparent}
+.nav a:hover,.nav a.on{background:var(--mg-yel);color:var(--mg-ink);border-color:var(--mg-ink);box-shadow:3px 3px 0 var(--mg-ink)}
+/* khung o truyen cho the/box/block */
+.block,.box,.card,.continue-card,.level-card,.mn-game,.hnx-item,.mn-post{border:3px solid var(--mg-ink)!important;border-radius:6px!important;box-shadow:5px 5px 0 var(--mg-ink)!important}
+.block-h h2,h1,h2{font-family:var(--mg-shout);font-weight:400;letter-spacing:.01em}
+.btn,button.primary,.lockbox button,.lockcta,.acctin{border:2px solid var(--mg-ink)!important;border-radius:4px!important;box-shadow:3px 3px 0 var(--mg-ink);font-weight:800}
+.acctin{background:var(--mg-hot);color:#fff!important;text-decoration:none;padding:6px 12px}
+/* tabbar 5 o */
+.tabbar{background:#fff;border-top:3px solid var(--mg-ink);backdrop-filter:none}
+.tabbar a{color:var(--mg-ink);font-weight:800}
+.tabbar a .mg-tk{font-family:"Noto Sans CJK JP","Noto Sans JP",sans-serif;font-weight:900;font-size:20px;line-height:1}
+.tabbar a.on{color:#fff;background:var(--mg-hot)}
+@media(min-width:861px){.tabbar{display:none!important}}
+/* bot thanh noi trung lap */
+body.mg-home #backBtnFixed{display:none!important}
+.ht-reg{display:none!important}
+/* ===== HERO TRANG CHU ===== */
+.mg-hero{position:relative;margin:18px auto 6px;max-width:1040px;padding:0 18px}
+.mg-panel{position:relative;background:#fff;border:4px solid var(--mg-ink);box-shadow:8px 8px 0 var(--mg-ink);padding:22px 22px 20px;overflow:hidden;
+ background-image:repeating-conic-gradient(from 0deg at 85% 40%,#0000 0 4deg,#00000010 4deg 6deg)}
+.mg-tag{display:inline-block;background:var(--mg-ink);color:#fff;font-weight:800;font-size:12px;padding:3px 10px;transform:skew(-10deg);letter-spacing:.06em}
+.mg-shout{font-family:var(--mg-shout);font-size:clamp(34px,8vw,64px);line-height:1.02;margin:10px 0 6px;color:var(--mg-ink);text-shadow:3px 3px 0 var(--mg-yel);word-break:break-word}
+.mg-shout em{font-style:normal;color:var(--mg-hot)}
+.mg-balloon{position:relative;display:inline-block;max-width:560px;background:#fff;border:3px solid var(--mg-ink);border-radius:22px;padding:10px 16px;font-weight:600;margin:6px 0 12px}
+.mg-balloon:after{content:"";position:absolute;left:28px;bottom:-14px;border:12px solid transparent;border-top-color:var(--mg-ink);border-bottom:0}
+.mg-sfx{position:absolute;right:16px;top:8px;font-family:"Noto Sans CJK JP",sans-serif;font-weight:900;font-size:44px;color:var(--mg-hot);-webkit-text-stroke:2px var(--mg-ink);transform:rotate(12deg);pointer-events:none}
+.mg-stats{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 14px}
+.mg-stat{border:3px solid var(--mg-ink);background:var(--mg-yel);padding:6px 12px;font-weight:800;box-shadow:3px 3px 0 var(--mg-ink)}
+.mg-stat b{font-family:var(--mg-shout);font-weight:400;font-size:20px;margin-right:4px}
+.mg-cta{display:flex;flex-wrap:wrap;gap:10px}
+.mg-btn{display:inline-flex;align-items:center;gap:6px;border:3px solid var(--mg-ink);background:var(--mg-hot);color:#fff;text-decoration:none;font-weight:900;padding:10px 16px;box-shadow:4px 4px 0 var(--mg-ink);transition:transform .1s}
+.mg-btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--mg-ink)}
+.mg-btn.alt{background:#fff;color:var(--mg-ink)}
+.mg-cont{display:block;margin-top:12px;font-weight:700;color:var(--mg-ink)}
+.mg-sec{max-width:1040px;margin:26px auto 0;padding:0 18px}
+.mg-h{font-family:var(--mg-shout);font-weight:400;font-size:26px;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.mg-h small{font-family:"Be Vietnam Pro",sans-serif;font-size:13px;font-weight:700;background:var(--mg-hot);color:#fff;padding:2px 8px;transform:skew(-10deg)}
+.mg-road{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.mg-ch{position:relative;display:block;text-decoration:none;color:var(--mg-ink);background:#fff;border:3px solid var(--mg-ink);box-shadow:5px 5px 0 var(--mg-ink);padding:12px 10px 10px;min-height:128px;overflow:hidden}
+.mg-ch:nth-child(odd){background-image:radial-gradient(#ff2e6330 1.4px,transparent 1.5px);background-size:8px 8px}
+.mg-ch .lv{font-family:var(--mg-shout);font-size:30px;line-height:1}
+.mg-ch .kj{display:block;font-family:"Noto Serif CJK JP","Noto Sans CJK JP",serif;font-weight:900;font-size:24px;white-space:nowrap;margin:4px 0}
+.mg-ch .ds{font-size:12.5px;font-weight:600;color:#333;line-height:1.35}
+.mg-ch .bar{height:8px;border:2px solid var(--mg-ink);margin-top:8px;background:#fff}.mg-ch .bar i{display:block;height:100%;background:var(--mg-hot)}
+.mg-tools{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mg-tool{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--mg-ink);background:#fff;border:3px solid var(--mg-ink);box-shadow:4px 4px 0 var(--mg-ink);padding:12px}
+.mg-tool .ic{font-size:26px}.mg-tool b{font-weight:900}.mg-tool span{font-size:12.5px;color:#444;line-height:1.35}
+.mg-tool:hover,.mg-ch:hover{background-color:var(--mg-yel)}
+.mn-game{background:#111!important;color:#fff!important;background-image:repeating-conic-gradient(from 0deg at 50% 50%,#0000 0 5deg,#ffffff14 5deg 7deg)!important}
+@media(max-width:860px){.mg-road{grid-template-columns:repeat(2,1fr)}.mg-road .mg-ch:last-child{grid-column:span 2}.mg-tools{grid-template-columns:repeat(2,1fr)}.mg-sfx{font-size:32px}.mg-panel{padding:18px 14px}}
+/* sheet "Toi" */
+.mg-sheet{position:fixed;inset:0;z-index:950;background:#0008;display:flex;align-items:flex-end;justify-content:center}
+.mg-sheet[hidden]{display:none}
+.mg-sheet-in{background:#fff;border:3px solid var(--mg-ink);border-bottom:0;width:100%;max-width:520px;padding:16px 16px calc(16px + env(safe-area-inset-bottom))}
+.mg-sheet-in h3{font-family:var(--mg-shout);font-weight:400;margin:0 0 10px}
+.mg-sheet-in a,.mg-sheet-in button{display:block;width:100%;text-align:left;padding:11px 10px;border:0;border-bottom:2px dashed #ccc;background:none;font:inherit;font-weight:700;color:var(--mg-ink);text-decoration:none;cursor:pointer}
+/* Trang chu: an phan chao cu trung voi hero manga (giu nguyen DOM cho script cu) */
+body.mg-home .hero #greetingJp,body.mg-home .hero #greetingVi,body.mg-home .hero #dateLine,body.mg-home .hero #hstats{display:none!important}
+body.mg-home #guestHello,body.mg-home #guestLine{display:none!important}
+section.mg-hero,section.mg-sec{border:0!important;box-shadow:none!important;background:none!important;border-radius:0!important}section.mg-sec h2.mg-h{border:0!important;padding-left:0!important}section.mg-sec h2.mg-h:before{display:none!important}
