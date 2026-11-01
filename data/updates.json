@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-01-nut-kaiwa-va-hang-duoi-trang-chu",
+   "date": "2026-11-01",
+   "type": "tinh-nang",
+   "title": "Trang chủ: nút Kaiwa cạnh Khóa học + Tin tức cùng hàng Luyện tập thêm",
+   "desc": "Theo ý chủ trang: Kaiwa nay là một nút ngay cạnh tiêu đề Khóa học — không ấn không hiện gì, ấn vào mới mở danh sách 19 bài kaiwa ngay dưới Khóa học (bỏ nhóm Kaiwa trong từng cấp). Hàng dưới trang chủ: Tin tức cùng một hàng với Sảnh game Edo và Luyện tập thêm, thẳng hàng và cân chiều cao; Tin tức thu gọn hiện 4 tin; Cộng đồng giữ nguyên kích thước.",
+   "link": "index.html"
+  },
+  {
    "id": "2026-11-01-kaiwa-gop-khoa-hoc-tin-tuc-can-hang",
    "date": "2026-11-01",
    "type": "tinh-nang",

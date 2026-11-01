@@ -1323,8 +1323,72 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
       cấp của Khóa học); tiêu đề Khóa học thêm chữ Kaiwa. */
 .layout2 .block{margin:0}
 @media(min-width:900px){
-  .layout2{display:grid;grid-template-columns:minmax(0,1fr) 356px;gap:24px;align-items:start;margin-top:24px}
+  .layout2{display:grid;grid-template-columns:minmax(0,1fr) 356px;gap:24px;align-items:start;margin-top:26px}
 }
 @media(max-width:899px){
   .layout2{display:flex;flex-direction:column;gap:26px;margin-top:26px}
+}
+
+/* ===== V109 (01/11/2026): NÚT KAIWA CẠNH KHÓA HỌC + HÀNG DƯỚI TRANG CHỦ =====
+   1) Kaiwa là một NÚT "Kaiwa 会話" ngay cạnh tiêu đề "Khóa học": không ấn
+      không hiện gì; ấn nút → panel #kwPanel mở ngay dưới khối Khóa học với
+      19 bài kaiwa nhóm theo cấp; ấn lại → thu gọn; ấn bài → vào bài học.
+   2) Cộng đồng để nguyên kích thước tự nhiên (bỏ cơ chế giãn/fit cũ).
+   3) Hàng dưới trang chủ là MỘT hàng lưới: Tin tức (trái) + ô phải
+      .cell-low-r gồm Sảnh game Edo xếp chồng ngay trên Luyện tập thêm
+      (cách đúng 26px); style .mn-game khai lại dưới scope .cell-low-r,
+      giữ nguyên từng giá trị của bản gốc #moingay.
+   4) Tin tức thu gọn hiện 4 tin (HN_SHOW=4 trong index.html) + chỉnh
+      padding trong của khối tin để chiều cao cân bằng ô phải (đo ở
+      1280px: mép trên trùng nhau, cao 917 = 917, đáy ngang nhau);
+      "Xem thêm ▾" vẫn mở rộng tại chỗ, "Tất cả tin tức →" giữ nguyên.
+   5) #levelDesc ẩn khi rỗng (:empty). */
+.kh-l{display:flex;align-items:center;gap:14px;min-width:0;flex-wrap:wrap}
+/* Nut Kaiwa dung lai style .kw-tgl san co cua trang (JS nap kem): pill trang, chu indigo, vien --line. */
+.kw-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px}
+.kw-panel[hidden]{display:none}
+.kw-panel .lead{margin:0 0 6px}
+#kwBody{margin-top:4px}
+.kw-lvh{font-size:15px;font-weight:800;margin:16px 0 4px;display:flex;align-items:baseline;gap:9px;color:var(--t)}
+.kw-lvh:first-child{margin-top:8px}
+.kw-lvn{font-size:12.5px;font-weight:600;color:var(--m)}
+.kw-list{margin:0}
+@media(max-width:899px){
+  #kwPanel{order:2}
+  #topWeek{order:4}
+  #moingay{order:5}
+  #tinhnang{order:6}
+  #homeNews{order:7}
+}
+.level-desc:empty{display:none}
+.cell-low-r{display:flex;flex-direction:column;gap:26px;min-width:0}
+.cell-low-r .mn-game{margin-top:0;padding:17px 18px;display:flex;align-items:center;gap:13px;color:#fff;border:none;position:relative;overflow:hidden;background:linear-gradient(125deg,#16264E,#2B4479);border-radius:20px;box-shadow:var(--shadow);text-decoration:none}
+.cell-low-r .mn-game-pat{position:absolute;inset:0;background-image:radial-gradient(circle at 50% 0,transparent 13px,rgba(255,255,255,.05) 14px,rgba(255,255,255,.05) 15px,transparent 16px,rgba(255,255,255,.035) 21px,rgba(255,255,255,.035) 22px,transparent 23px),radial-gradient(circle at 0 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px),radial-gradient(circle at 100% 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px);background-size:56px 28px}
+.cell-low-r .mn-torii{position:absolute;right:118px;top:50%;transform:translateY(-52%);height:70px;opacity:.27;pointer-events:none}
+.cell-low-r .mn-game-ic{width:44px;height:44px;flex:none;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.cell-low-r .mn-game-ic svg{width:23px;height:23px}
+.cell-low-r .mn-game-tx{position:relative;z-index:1;display:block;min-width:0}
+.cell-low-r .mn-game-tx b{font-size:15.5px;font-weight:800;display:block}
+.cell-low-r .mn-game-tx small{font-size:12px;color:#B9C6E4;margin-top:2px;display:block;line-height:1.45}
+.cell-low-r #hnGameStars{color:#FFD98A;font-weight:700}
+.cell-low-r .mn-game-btn{background:#fff;color:#233D63;font-weight:800;font-size:13.5px;padding:11px 19px;border-radius:999px;box-shadow:0 8px 18px rgba(0,0,0,.25);margin-left:auto;position:relative;z-index:1;white-space:nowrap;flex:none}
+@media(max-width:560px){.cell-low-r .mn-torii{right:104px;height:54px;opacity:.2}.cell-low-r .mn-game{padding:15px 14px;gap:10px}.cell-low-r .mn-game-btn{padding:10px 14px}}
+@media(max-width:560px){.cell-low-r .mn-game{padding:17px 18px;gap:13px}.cell-low-r .mn-game-btn{padding:11px 19px}}
+@media(min-width:900px){
+  .layout{grid-template-areas:"main side" "news lowr";row-gap:26px}
+  .col-main{grid-area:main}
+  .col-side{grid-area:side}
+  #homeNews{grid-area:news;display:block}
+  #homeNews>.hnx-card{flex:none}
+  .cell-low-r{grid-area:lowr}
+  /* Can chieu cao khoi tin (4 tin) theo o phai 917px: chinh padding trong */
+  #homeNews .hnx-card{padding:6px 18px 10px}
+  #homeNews .hnx-item{padding:6px 0}
+  #homeNews .hnx-meta{margin-bottom:1px}
+  #homeNews .hnx-title{line-height:1.5}
+  #homeNews .hnx-foot{margin-top:2px;padding-top:7px}
+}
+@media(max-width:899px){
+  .cell-low-r{display:contents}
+  .cell-low-r>.mn-game{order:5}
 }
