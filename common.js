@@ -360,8 +360,10 @@ function tb(){var av=document.querySelector('.topbar .hdr-av'),who=document.quer
 
 // ===== Khung chat thu gọn (dock) dùng chung toàn trang — bản NHIỀU CỬA SỔ =====
 // Gắn qua common.js: học viên nhắn tin ngay trong trang đang học, không phải
-// rời sang trang Tin nhắn. Thu gọn = nút tròn (máy tính) / thanh mỏng ngay
-// trên thanh tab (điện thoại); bung ra = danh sách hội thoại.
+// rời sang trang Tin nhắn. Thu gọn = MỘT nút tròn nổi duy nhất (cả máy tính
+// lẫn điện thoại; điện thoại đặt góc phải ngay trên thanh tab) — lệnh chủ
+// trang 01/11/2026: BỎ hẳn thanh ngang xem trước tin nhắn ở đáy, chỉ ấn vào
+// nút tròn mới hiện khung chat. Bung ra = danh sách hội thoại.
 // Máy tính (≥1000px): bấm vào một hội thoại mở một CỬA SỔ CHAT NỔI riêng ở
 // góc dưới phải, mở được tối đa 4 cửa sổ cùng lúc (kiểu Messenger); mở người
 // thứ 5 thì cửa sổ ít hoạt động nhất tự thu nhỏ thành thẻ (chip) xếp dọc
@@ -400,7 +402,6 @@ var CSS=''
 +'.hdk{font-size:15px;color:var(--t)}'
 +'.hdk-fab{position:fixed;right:20px;bottom:20px;z-index:72;width:56px;height:56px;border-radius:50%;border:0;background:var(--c2);color:#fff;font-size:25px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(20,26,38,.35);display:flex;align-items:center;justify-content:center;transition:transform .18s ease,background .18s ease}'
 +'.hdk-fab:hover{transform:translateY(-2px)}'
-+'.hdk-bar{display:none}'
 +'.hdk-bdg{position:absolute;top:-3px;right:-3px;background:var(--c);color:#fff;border-radius:999px;min-width:20px;height:20px;font-size:11.5px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 5px;border:2px solid var(--card)}'
 +'.hdk-bdg.on{display:inline-flex}'
 +'.hdk-panel{margin:0;padding:0;position:fixed;right:20px;bottom:88px;z-index:72;width:340px;max-width:calc(100vw - 24px);height:min(520px,calc(100vh - 120px));background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 48px rgba(15,20,30,.28);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .22s ease,transform .22s ease,visibility .22s}'
@@ -490,14 +491,9 @@ var CSS=''
 +'@media(min-width:1000px){.hdk-tabs{display:none!important}}'
 +'@media(max-width:999px){.hdk-wins,.hdk-chips{display:none!important}}'
 +'@media(max-width:860px){'
-+'.hdk-fab{display:none}'
-+'.hdk-bar{display:flex;position:fixed;left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));z-index:72;height:42px;border:0;border-top:1px solid var(--line);background:var(--card);color:var(--t);font:inherit;font-size:14.5px;align-items:center;gap:8px;padding:0 14px;cursor:pointer;box-shadow:0 -4px 14px rgba(15,20,30,.07)}'
-+'.hdk-bar .hdk-bdg{position:static;border:0}'
-+'.hdk-bar-tx{font-weight:700;flex:0 0 auto}'
-+'.hdk-bar-pv{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--m);text-align:left}'
-+'body.hdk-on{padding-bottom:calc(118px + env(safe-area-inset-bottom,0px))}'
++'.hdk-fab{right:14px;bottom:calc(74px + env(safe-area-inset-bottom,0px))}'
 +'.hdk-panel{left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));top:60px;width:auto;max-width:none;height:auto;border-radius:18px 18px 0 0;border-bottom:0}'
-+'.hdk.hdk-lift .hdk-bar{bottom:calc(124px + env(safe-area-inset-bottom,0px))}'
++'.hdk.hdk-lift .hdk-fab{bottom:calc(136px + env(safe-area-inset-bottom,0px))}'
 +'.hdk.hdk-lift .hdk-panel{bottom:calc(124px + env(safe-area-inset-bottom,0px))}'
 +'}';
 
@@ -509,7 +505,7 @@ function byAct(a,b){return (a.lastAct-b.lastAct)||((a.seq||0)-(b.seq||0))}
 var S={open:false,view:'list'};
 var WINS=[],activeId=null;
 var CONVS=[],STORAGE=false,dead=false,timers=[],saveT=null;
-var root,fabEl,barEl,barPv,bdgEls,panel,listBox,chatBox,msgBox,inEl,errEl,chipEl,phTitle,phSub,tabsEl,winsEl,chipsEl;
+var root,fabEl,bdgEls,panel,listBox,chatBox,msgBox,inEl,errEl,chipEl,phTitle,phSub,tabsEl,winsEl,chipsEl;
 var FURL={};
 var paintActive=null;
 
@@ -542,8 +538,6 @@ async function resolveFiles(scope){if(!scope)return;var ids=[];scope.querySelect
   scope.querySelectorAll('[data-hdkf]').forEach(function(el){var id=el.getAttribute('data-hdkf');if(id&&FURL[id]){if(el.tagName==='A')el.href=FURL[id];else el.src=FURL[id]}})}catch(e){}}
 function convPreview(c){var t=String(c.last_text||'');if(c.last_kind==='post')t='↗️ Đã chia sẻ một bài viết';if(!t)t='Chưa có tin nhắn';return (c.last_mine?'Bạn: ':'')+t}
 function setBadge(n){bdgEls.forEach(function(b){b.textContent=n>99?'99+':String(n);b.classList.toggle('on',n>0)})}
-function renderBar(){var c=CONVS[0];if(!c){barPv.textContent='Nhắn tin với bạn học';return}
- barPv.textContent=((c.other&&c.other.name)?c.other.name+': ':'')+convPreview(c)}
 function convHTML(c){var p=c.other||{};var on=isOn(p)||isOn(c);var adm=c.is_admin||p.admin;
  return '<button type="button" class="hdk-it'+(c.unread?' un':'')+'" data-conv="'+esc(c.id)+'">'
  +avaHTML(p)
@@ -632,7 +626,7 @@ function paint(){if(!root)return;
  if(modeWin())S.view='list';
  if(S.view==='chat'&&!activeWin())S.view='list';
  root.dataset.state=S.open?(S.view==='chat'?'chat':'list'):'closed';
- fabEl.setAttribute('aria-expanded',S.open?'true':'false');barEl.setAttribute('aria-expanded',S.open?'true':'false');
+ fabEl.setAttribute('aria-expanded',S.open?'true':'false');
  listBox.style.display=S.view==='chat'?'none':'';chatBox.style.display=S.view==='chat'?'flex':'none';
  var ph=document.getElementById('hdkphList'),pc=document.getElementById('hdkphChat');
  ph.style.display=S.view==='chat'?'none':'flex';pc.style.display=S.view==='chat'?'flex':'none';
@@ -691,7 +685,7 @@ function syncFromConvs(){WINS.forEach(function(w){var c=null;for(var i=0;i<CONVS
  if(modeWin()||S.view!=='chat')renderList()}
 async function loadConvs(quiet){try{var j=await api('/chat/conversations');CONVS=j.conversations||[];STORAGE=!!j.storage_enabled;
  root.querySelectorAll('.hdk-imgb').forEach(function(b){b.style.display=STORAGE?'':'none'});
- renderBar();syncFromConvs();
+ syncFromConvs();
  }catch(e){if(e.status===401||e.status===403){dead=true;unmount()}
   else if(!quiet){listBox.innerHTML='<div class="hdk-empty">Không tải được danh sách hội thoại.<br>Đóng khung rồi mở lại để thử lại nhé.</div>'}}}
 function showErrEl(el,t){if(!el)return;el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on')},4000)}
@@ -740,7 +734,6 @@ function mount(){
  root=document.createElement('div');root.className='hdk';root.id='hdk';root.dataset.state='closed';
  root.innerHTML=''
  +'<button type="button" class="hdk-fab" id="hdkFab" aria-label="Mở khung nhắn tin" aria-expanded="false">💬<span class="hdk-bdg"></span></button>'
- +'<button type="button" class="hdk-bar" id="hdkBar" aria-label="Mở khung nhắn tin" aria-expanded="false">💬<span class="hdk-bar-tx">Tin nhắn</span><span class="hdk-bar-pv">Nhắn tin với bạn học</span><span class="hdk-bdg"></span></button>'
  +'<div class="hdk-panel" role="dialog" aria-label="Khung nhắn tin">'
  +'<div class="hdk-ph" id="hdkphList"><b>💬 Tin nhắn</b><a class="hdk-ic" href="tin-nhan.html" title="Mở trang Tin nhắn đầy đủ" aria-label="Mở trang Tin nhắn đầy đủ">↗</a><button type="button" class="hdk-ic" id="hdkX1" aria-label="Thu gọn">✕</button></div>'
  +'<div class="hdk-ph" id="hdkphChat" style="display:none"><button type="button" class="hdk-ic" id="hdkBack" aria-label="Về danh sách">‹</button><span id="hdkChatAva"></span><span style="flex:1;min-width:0"><b id="hdkName"></b><br><span class="hdk-status" id="hdkStatus"></span></span><a class="hdk-ic" id="hdkFull" href="tin-nhan.html" title="Mở trong trang Tin nhắn" aria-label="Mở trong trang Tin nhắn">↗</a><button type="button" class="hdk-ic" id="hdkX2" aria-label="Thu gọn">✕</button></div>'
@@ -756,14 +749,13 @@ function mount(){
  +'<div class="hdk-wins" id="hdkWins"></div>';
  document.body.appendChild(root);
  document.body.classList.add('hdk-on');
- fabEl=root.querySelector('#hdkFab');barEl=root.querySelector('#hdkBar');barPv=root.querySelector('.hdk-bar-pv');
- bdgEls=[root.querySelector('#hdkFab .hdk-bdg'),root.querySelector('#hdkBar .hdk-bdg')];
+ fabEl=root.querySelector('#hdkFab');
+ bdgEls=[root.querySelector('#hdkFab .hdk-bdg')];
  panel=root.querySelector('.hdk-panel');listBox=root.querySelector('#hdkList');chatBox=root.querySelector('#hdkChat');
  msgBox=root.querySelector('#hdkMsgs');inEl=root.querySelector('#hdkIn');errEl=root.querySelector('#hdkErr');chipEl=root.querySelector('#hdkChip');
  phTitle=root.querySelector('#hdkName');phSub=root.querySelector('#hdkStatus');
  tabsEl=root.querySelector('#hdkTabs');winsEl=root.querySelector('#hdkWins');chipsEl=root.querySelector('#hdkChips');
  fabEl.addEventListener('click',function(){S.open?closeDock():openDock()});
- barEl.addEventListener('click',function(){S.open?closeDock():openDock()});
  root.querySelector('#hdkX1').addEventListener('click',closeDock);
  root.querySelector('#hdkX2').addEventListener('click',closeDock);
  root.querySelector('#hdkBack').addEventListener('click',function(){harvestPanelDraft();S.view='list';paint();renderList()});

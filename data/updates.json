@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-01",
+   "desc": "Bỏ thanh ngang xem trước tin nhắn ở cuối trang — khung chat thu gọn giờ chỉ còn một nút tròn 💬 ở góc dưới, ấn vào mới mở ra. Có tin chưa đọc thì hiện số đỏ ngay trên nút.",
+   "id": "2026-11-01-chat-nut-tron",
+   "link": "index.html",
+   "title": "Khung chat gọn hơn: chỉ còn nút tròn",
+   "type": "tinh-nang"
+  },
+  {
+   "date": "2026-11-01",
    "desc": "Trang chủ có 4 giao diện (Manga, Hộp cơm, Núi Fuji, Neon) tự đổi theo ngày; muốn giữ một kiểu thì chọn bằng nút 🎨 hoặc trong mục Giao diện ở Hồ sơ.",
    "id": "2026-11-01-4-giao-dien",
    "link": "index.html",
