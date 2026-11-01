@@ -328,9 +328,34 @@
       // ĐIỆN THOẠI thì cũng nhắc nút 📱.
       if (!phone && /📱|ĐIỆN THOẠI/i.test(objectiveText)) phone = true;
     }
-    cueState = { active: compass, phone: phone, step: label, arrowOff: arrowOff };
+    // Lane AC: đã TỚI ĐÚNG NƠI gặp (đích dự phòng kiểu 'meet' cùng bản đồ) —
+    // cuộc gặp mở bằng nút 💗 Tình cảm (cảnh gặp do rel.js chạy), nên nhắc
+    // đúng nút đó thay vì để người chơi đứng giữa quán không biết làm gì.
+    var relPulse = meetPulseNow();
+    // `active` = "đang có cue HÀNH ĐỘNG chạy" (la bàn 🧭 hoặc nút 💗) — trước
+    // đây active chỉ là kênh la bàn nên ở bước quan hệ nó luôn false dù xung
+    // 💗 đang chạy, cổng QA đọc active=false tưởng cue chết (harness-nav
+    // liveRelPulse). pulseBtn của 🧭 vẫn chỉ do compass điều khiển như cũ.
+    cueState = { active: compass || relPulse, compass: compass, phone: phone, step: label, arrowOff: arrowOff, rel: relPulse };
     pulseBtn('btn-phone', phone);
     pulseBtn('btn-guide', compass);
+    pulseBtn('btn-rel', relPulse);
+  }
+  /* Điều kiện xung 💗 TÍNH TRỰC TIẾP (không qua cache của refresh): đích dự
+     phòng là người chưa gặp + người chơi ĐÃ Ở ĐÚNG bản đồ của người đó.
+     cueState chỉ cập nhật khi refresh qua cổng chữ ký nên trên máy chậm mẫu
+     cue lấy được có thể cũ hơn chip (chip tính trực tiếp mỗi lần đọc) — đó là
+     lý do cổng QA bắt được rel=false chớp nhoáng ở izakaya 2 lượt liên tiếp
+     trong khi chữ chip luôn đúng. uiCue() + syncRelCue() dùng hàm này. */
+  function meetPulseNow() {
+    return !!(!curTgt && fbTgt && fbTgt.kind === 'meet' && curMapId() === fbTgt.map);
+  }
+  function syncRelCue() {
+    var rel = meetPulseNow();
+    if (rel === cueState.rel) return;
+    cueState.rel = rel;
+    cueState.active = !!cueState.compass || rel;
+    pulseBtn('btn-rel', rel);
   }
 
   /* ---------- Vẽ bảng hướng dẫn ---------- */
@@ -365,7 +390,28 @@
     var st;
     try { st = window.STORY.state(); } catch (e) { return; }
     var f = st.flags || {}, c = st.ch2 || {}, t = st.tenancy || {};
-    var sig = JSON.stringify([st.chapter, f, c, t.simChoice, t.simBillFired, t.simTruthPending, st.exam, st.exam2, objectiveText]);
+    // Lane AC: chữ ký TRƯỚC ĐÂY không chứa trạng thái REL — mà toàn bộ diễn
+    // biến Chương 3 (nhịp A/B/C, đổ vỡ, khóc, hồi phục, đã gặp ai, partner)
+    // sống trong REL. Hệ quả trên bản thật: sang Ch3 là guide ĐÔNG CỨNG ở
+    // trạng thái lúc mở chương — đích dự phòng (người chưa gặp) không bao giờ
+    // xuất hiện, cue/chip không đổi nữa ("đến đây rồi mất hướng dẫn luôn").
+    // Nay đưa cả rel của STORY.state lẫn bản tóm tắt REL.state() vào chữ ký:
+    // bất kỳ thay đổi nào của arc cũng tính lại bước/đích/cue/chip ngay.
+    var relDig = '';
+    var RS0 = relStateSafe();
+    if (RS0) {
+      try { relDig = JSON.stringify([RS0.beats, RS0.breakup, RS0.khocDone, RS0.recovered, RS0.partner, RS0.met, RS0.courting, RS0.flirted]); } catch (e) { relDig = ''; }
+    }
+    // Lane AC: đưa cả BẢN ĐỒ HIỆN TẠI vào chữ ký — các cue phụ thuộc bản đồ
+    // (vd nút 💗 nhấp nháy khi ĐÃ TỚI nơi gặp) phải tính lại ngay khi bước qua
+    // cửa, dù trạng thái truyện không đổi; thiếu nó thì cue đứng ở giá trị của
+    // bản đồ trước.
+    // Lane AC (đợt QA): thêm simDi/simKy — THIẾU simDi là gốc của lỗi chip sai
+    // trong KHOẢNG CHỜ sim-02: sim-01 kết thúc chỉ đổi simDi (null→'di'), chữ
+    // ký cũ không đổi nên refresh bỏ qua, danh sách bước không dựng lại, bước
+    // chờ "CỬA HÀNG ĐIỆN THOẠI" (buildSteps) không bao giờ thành bước hiện tại
+    // — chip kẹt ở bước gặp Tuấn (harness-simfix gapStepIsSim02Wait/gapChipClear).
+    var sig = JSON.stringify([st.chapter, f, c, t.simDi, t.simKy, t.simChoice, t.simBillFired, t.simTruthPending, st.exam, st.exam2, st.rel, relDig, objectiveText, curMapId()]);
     if (sig === lastSig) return;
     lastSig = sig;
     steps = buildSteps(st);
@@ -431,6 +477,24 @@
     if (curIdx < 0) return { visible: false, text: '', free: false };
     var s = steps[curIdx] || {};
     var T = effTarget();
+    // Lane AC: đích dự phòng là NGƯỜI CHƯA GẶP (kind 'meet') — chip phải nói
+    // thẳng VIỆC cần làm là đi gặp ai + gặp bằng cách nào, thay vì mượn nhãn
+    // bước mơ hồ của rel.js. ĐÃ ở đúng nơi gặp: cuộc gặp mở qua mục 💗 Tình
+    // cảm (không có NPC đứng chờ trên bản đồ — vd Ren ở izakaya chỉ gặp qua
+    // mục đó), chip ghi đúng thao tác; CHƯA tới nơi: ghi người + nơi như đích
+    // thường.
+    if (!curTgt && fbTgt && fbTgt.kind === 'meet') {
+      var meetName = fbTgt.label || 'người ấy';
+      if (curMapId() === fbTgt.map) {
+        return { visible: true, text: '🎯 Gặp ' + meetName + ' — mở 💗 Tình cảm, chọn “Gặp”', free: false };
+      }
+      var mPlace = placeName(fbTgt.map), mSuffix = mPlace;
+      var mHere = curMapId();
+      if (mHere) { var mPath = routePath(mHere, fbTgt.map); if (mPath && mPath.length > 2) mSuffix += ' · còn ' + (mPath.length - 2) + ' nơi'; }
+      var mText = '🎯 Tới gặp ' + meetName + (mSuffix ? ' · Đích: ' + mSuffix : '');
+      if (mText.length > 64) mText = mText.slice(0, 63).replace(/\s+\S*$/, '') + '…';
+      return { visible: true, text: mText, free: false };
+    }
     var isPhone = !T && (s.ui === 'phone' || (lastChapter >= 3 && /📱|ĐIỆN THOẠI/i.test(objectiveText)));
     var task = shortTask(s.label, isPhone);
     var suffix = '';
@@ -535,7 +599,7 @@
     refresh();
     syncVoiceBtn();
     syncChip();
-    setInterval(function () { refresh(); syncVoiceBtn(); syncChip(); }, 400);
+    setInterval(function () { refresh(); syncRelCue(); syncVoiceBtn(); syncChip(); }, 400);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
@@ -564,6 +628,11 @@
       if (!arrowOn) return null;
       var T = effTarget();   // Lane X: đích thật của bước, else đích dự phòng Ch3
       if (!T) return null;
+      // Lane AC: đích 'meet' MÀ NGƯỜI CHƠI ĐÃ Ở ĐÚNG BẢN ĐỒ ĐÓ — KHÔNG chỉ
+      // mũi tên vào điểm spawn trống (ở đó không có ai đứng chờ; cuộc gặp mở
+      // qua 💗 Tình cảm). Trả null để mũi tên/vệt chấm tắt hẳn, chip + nút 💗
+      // nhấp nháy gánh phần chỉ dẫn (đúng bản chất thao tác).
+      if (T.kind === 'meet' && T.map === mapId) return null;
       if (T.map === mapId) return { x: T.x, y: T.y, label: T.label || '', hops: 0 };
       var path = routePath(mapId, T.map);
       if (!path || path.length < 2) return null;
@@ -586,7 +655,7 @@
     route: function (fromMap, toMap) { return routePath(fromMap, toMap); },
     // Lane R — trạng thái nhắc nút khi bước hiện tại không có đích không gian.
     // Lane X: thêm arrowOff (mũi tên đang tắt mà còn nhiệm vụ có đích → 🧭 đang nhắc).
-    uiCue: function () { return { active: cueState.active, phone: cueState.phone, step: cueState.step, arrowOff: cueState.arrowOff }; },
+    uiCue: function () { var rel = meetPulseNow(); return { active: !!cueState.compass || rel, phone: cueState.phone, step: cueState.step, arrowOff: cueState.arrowOff, rel: rel }; },
     currentTarget: function () { return effTarget(); },
     // Lane X — trạng thái chip mục tiêu 1 dòng + cờ tự do (cho harness).
     chip: function () { var i = chipInfo(); return { visible: i.visible, text: i.text, free: i.free }; },

@@ -224,9 +224,11 @@
     if (!listenAudio) {
       listenAudio = new Audio('audio/listen-ga-01.mp3');
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(listenAudio);   // Lane W: ducking khi phát clip nghe
+      if (window.VOICE_BUS) VOICE_BUS.register('station', function () { if (listenAudio) { try { listenAudio.pause(); } catch (e) {} } });   // Lane AC: bus một-giọng
       listenAudio.addEventListener('ended', function () { $('listen-eq').textContent = 'Đã phát xong — nghe lại nếu cần'; });
     }
     $('listen-play').onclick = function () {
+      if (window.VOICE_BUS) VOICE_BUS.claim('station');   // Lane AC: dừng mọi giọng khác trước khi phát
       listenAudio.currentTime = 0;
       listenAudio.play().catch(function () {});
       $('listen-eq').textContent = '🔊 Đang phát…';
@@ -296,15 +298,17 @@
       setTimeout(function () { window.GAMEUI.showSummary(); }, 700);   // giữ nhịp tổng kết giữa chặng của bản mẫu
     });
     var ec = $('exam-close');
-    if (ec) ec.addEventListener('click', function () { $('modal-exam').classList.remove('show'); examRun = null; advanceObjective(); });
+    if (ec) ec.addEventListener('click', function () { stopExamAudio(); $('modal-exam').classList.remove('show'); examRun = null; advanceObjective(); });
     var en = $('exam-next');
     if (en) en.addEventListener('click', function () {
       if (!examRun) return;
+      stopExamAudio();   // Lane AC: qua câu khác là clip đang phát dừng ngay, không chảy chồng
       examRun.idx++;
       if (examRun.idx >= examRun.list.length) finishExam(); else drawExamQ();
     });
     var ech = $('exam-chapter');
     if (ech) ech.addEventListener('click', function () {
+      stopExamAudio();   // Lane AC: vào tổng kết là clip thi phải im — không chảy sang cảnh mở chương
       $('modal-exam').classList.remove('show');
       examRun = null;
       if (examDoneLevel === 'N4') completeChapter2(); else completeChapter1();
@@ -328,6 +332,14 @@
      (không đủ tiền thì thầy đóng hộ) — không bao giờ kẹt chết. */
   var EXAM_N = 12, EXAM_PASS = 7, EXAM_FEE = 0.75;   // từ giai đoạn 5 (31/10): mỗi lượt 12 câu = chữ 4 + pháp 4 + đọc 2 + NGHE 2; đỗ ≥ 7/12   // lệ phí thi lại 7.500 yên — mức lệ phí JLPT hiện hành tại Nhật
   var examRun = null, examDoneLevel = 'N5', nextChapterTarget = 2;
+  /* Lane AC: clip nghe của bài thi — trước đây mỗi câu tạo một Audio RIÊNG và
+     KHÔNG có điểm dừng nào: bấm nghe rồi qua câu/kết bài ngay là clip cũ chảy
+     tiếp, đè clip câu sau và chảy sang cả tổng kết + cảnh mở chương mới (đúng
+     phàn nàn "cuối chương âm thanh đọc chồng lên nhau"). Nay giữ MỘT tham chiếu
+     hiện hành: tạo clip mới thì dừng clip cũ; sang câu / kết bài / đóng modal
+     đều dừng; và đăng ký vào VOICE_BUS để mọi giọng khác claim là nó dừng. */
+  var examAudio = null, examBusReg = false;
+  function stopExamAudio() { if (examAudio) { try { examAudio.pause(); } catch (e) {} } }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   // Lane Z (01/11): ngân hàng CÂU HỎI đi theo TRÌNH ĐỘ NGƯỜI CHƠI ĐÃ CHỌN (level.js —
   // window.PLAYER_LEVEL, mặc định N5), KHÔNG còn đi theo cấp mốc của chương: tham số
@@ -396,11 +408,15 @@
       var pb = document.createElement('button');
       pb.type = 'button'; pb.className = 'play-big'; pb.id = 'exam-listen-play';
       pb.textContent = '▶ Nghe câu này (còn 2 lần nghe lại)';
+      stopExamAudio();   // Lane AC: câu mới hiện = clip câu trước dừng ngay (dù chưa bấm nghe câu mới)
       var au = new Audio(it.audio);
+      examAudio = au;
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(au);   // Lane W: ducking khi phát câu nghe trong thi
+      if (window.VOICE_BUS && !examBusReg) { examBusReg = true; VOICE_BUS.register('exam', stopExamAudio); }   // Lane AC: bus một-giọng
       pb.addEventListener('click', function () {
         if (examRun.plays >= 3) { pb.textContent = '🔇 Đã hết lượt nghe của câu này'; return; }
         examRun.plays++;
+        if (window.VOICE_BUS) VOICE_BUS.claim('exam');   // Lane AC: dừng mọi giọng khác trước khi phát
         au.currentTime = 0; au.play().catch(function () {});
         pb.textContent = examRun.plays >= 3 ? '🔊 Đang phát… (lần cuối)' : '▶ Nghe câu này (còn ' + (3 - examRun.plays) + ' lần nghe lại)';
       });
@@ -425,6 +441,7 @@
     });
   }
   function finishExam() {
+    stopExamAudio();   // Lane AC: hiện kết quả là clip câu cuối dừng ngay
     var level = examRun.level, st8 = examState(level);
     var score = examRun.score, total = examRun.list.length;
     var isN4 = level === 'N4';
@@ -740,6 +757,10 @@
           save();
         }
       }
+      // Lane AC: ở Chương 3, trả lời tin nhắn/cuộc gọi là NHỊP TRUYỆN (nhịp A/B
+      // của rel.js) — làm tươi mục tiêu ngay tại đây, nếu không chip/dẫn đường
+      // đứng yên ở câu mục tiêu cũ suốt cả arc (xem thêm ở onSceneEnd).
+      if (S.chapter >= 3) advanceObjective();
     });
     var restored = bootSave;
     if (restored && (restored.state.doneScenes.length || restored.state.flags.boarded)) {
@@ -906,6 +927,13 @@
       }
     }
     if (window.REL) window.REL.onSceneEnd(id);   // tuyến tình cảm: thiện cảm từ cảnh đời sống + máy nhịp arc Chương 3 (rel.js)
+    // Lane AC: SAU KHI rel.js đã cập nhật trạng thái arc (đổ vỡ/hồi phục/gặp
+    // gỡ/hẹn hò…), làm tươi mục tiêu Chương 3 NGAY — trước đây advanceObjective
+    // chỉ chạy ở các nhánh Ch1/Ch2 nên sang Ch3 mục tiêu (và theo đó là chip +
+    // đích dự phòng của guide.js) ĐÔNG CỨNG ở câu cũ từ lúc mở chương, người
+    // chơi đi tiếp mà không còn chỉ dẫn nào cập nhật ("đến đây rồi mất hướng
+    // dẫn luôn" — chủ trang, izakaya 01/11).
+    if (S.chapter >= 3) advanceObjective();
     checkSched();
     save();
     return ret;

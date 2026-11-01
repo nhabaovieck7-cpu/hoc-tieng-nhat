@@ -101,15 +101,19 @@ button { font-family: inherit; }
 #phone { position: fixed; inset: 0; z-index: 45; display: none; align-items: center; justify-content: center;
   background: rgba(18, 16, 30, .55); padding: 12px; }
 #phone.show { display: flex; }
-#phone-frame { width: min(350px, 94vw); height: min(640px, 86vh); background: #17141f; border-radius: 38px;
+/* Lane AC (Lỗi 1): khung dùng gần hết chiều cao màn hình (94dvh thay 86vh) —
+   trên cửa sổ NGANG THẤP của người chơi thật, 86vh làm vùng đọc tin bị bóp
+   hẳn; dvh tính đúng chiều cao nhìn thấy trên di động (vh thường/ cũ giữ làm
+   dự phòng ở dòng trước). */
+#phone-frame { width: min(360px, 96vw); height: min(680px, 94vh); height: min(680px, 94dvh); background: #17141f; border-radius: 38px;
   padding: 10px; box-shadow: var(--shadow); }
 #phone-screen { height: 100%; background: var(--ivory); border-radius: 29px; overflow: hidden; display: flex; flex-direction: column; }
-#phone-status { display: flex; justify-content: space-between; padding: 7px 18px 3px; font-size: 11px; font-weight: 700; color: var(--ink2); }
+#phone-status { display: flex; justify-content: space-between; padding: 5px 18px 2px; font-size: 11px; font-weight: 700; color: var(--ink2); }
 #phone-head { display: flex; align-items: center; gap: 8px; padding: 7px 12px; background: var(--indigo); color: #fff; }
 #phone-back { border: none; background: none; color: #fff; font-size: 17px; cursor: pointer; padding: 2px 6px; }
 #phone-title { font-weight: 800; font-size: 14.5px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #phone-close { border: none; background: rgba(255,255,255,.2); color: #fff; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 700; cursor: pointer; }
-#phone-body { flex: 1; overflow-y: auto; padding: 10px; }
+#phone-body { flex: 1; overflow-y: auto; padding: 12px 10px 14px; }
 .thread-item { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; border: 1px solid var(--line);
   background: #fff; border-radius: 14px; padding: 11px 12px; margin-bottom: 8px; cursor: pointer; }
 .thread-item .t-ava { font-size: 22px; }
@@ -118,10 +122,18 @@ button { font-family: inherit; }
 .thread-item .t-dot { margin-left: auto; background: var(--verm); color: #fff; border-radius: 999px; min-width: 20px; height: 20px;
   display: none; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
 .thread-item .t-dot.show { display: flex; }
-.msg { max-width: 82%; border-radius: 16px; padding: 8px 12px; margin-bottom: 8px; font-size: 13.5px; line-height: 1.5; }
+/* Lane AC (Lỗi 1): chữ tin nhắn 13.5px là quá nhỏ để đọc thoải mái (chủ trang
+   phản ánh trực tiếp) — lên 15.5px, giãn dòng 1.55, đệm thoáng hơn. Áp cho cả
+   bong bóng trong NHẬT KÝ CUỘC GỌI (cùng class .msg). */
+.msg { max-width: 84%; border-radius: 16px; padding: 10px 13px; margin-bottom: 9px; font-size: 15.5px; line-height: 1.55; }
 .msg.them { background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 5px; margin-right: auto; }
 .msg.me { background: var(--indigo); color: #fff; border-bottom-right-radius: 5px; margin-left: auto; }
-#phone-replies { padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 6px; background: var(--ivory); }
+/* Lane AC (Lỗi 1 — gốc rễ của "ô tin nhắn nhỏ"): vùng nút trả lời trước đây
+   KHÔNG có trần chiều cao — 3 lựa chọn dài của nhịp tin nhắn (vd nhịp A Ch3)
+   phình lên chiếm hơn nửa khung, bóp vùng đọc tin còn một dải hẹp. Nay vùng
+   trả lời bị chặn ở 46% chiều cao khung và TỰ CUỘN bên trong; vùng đọc tin
+   luôn giữ phần còn lại. */
+#phone-replies { flex: none; max-height: 46%; overflow-y: auto; padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 6px; background: var(--ivory); }
 /* --- Màn hình CUỘC GỌI THOẠI trong điện thoại (cảnh 1.9) --- */
 .call-head { text-align: center; padding: 16px 0 10px; }
 .call-ava { width: 74px; height: 74px; margin: 0 auto 8px; border-radius: 50%; background: var(--indigo); color: #fff;
@@ -136,7 +148,7 @@ button { font-family: inherit; }
 .call-jp rt { font-size: 8.5px; }
 .reply-btn.call-end { background: #c73e3a; color: #fff; border-color: #a02c28; }
 .reply-btn { border: 1.5px solid var(--indigo); background: #fff; color: var(--indigo); border-radius: 999px;
-  padding: 9px 13px; font-size: 13.5px; font-weight: 700; cursor: pointer; text-align: center; }
+  padding: 9px 13px; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; min-height: 44px; flex: none; }
 .reply-btn:active { background: #eceafd; }
 .reply-note { text-align: center; font-size: 11px; color: var(--ink2); }
 

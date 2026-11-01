@@ -214,8 +214,13 @@
     if (clip) {
       var au = new Audio(clip.audio);
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(au);   // Lane W: ducking khi phát thông báo trên tàu
+      // Lane AC: thông báo tàu cũng là GIỌNG — đăng ký vào VOICE_BUS (mỗi thẻ
+      // tàu một Audio riêng nên dừng theo NHÓM 'life': claim/dừng theo nhóm,
+      // và bấm nghe ở thẻ này thì các clip tàu khác cũng im).
+      (window.__lifeAudios = window.__lifeAudios || []).push(au);
+      if (window.VOICE_BUS) VOICE_BUS.register('life', function () { (window.__lifeAudios || []).forEach(function (a) { try { a.pause(); } catch (e) {} }); });
       var pb = h('button', 'btn ghost', '🔊 Nghe thông báo trên tàu'); pb.type = 'button';
-      pb.addEventListener('click', function () { au.currentTime = 0; au.play().catch(function () {}); });
+      pb.addEventListener('click', function () { if (window.VOICE_BUS) VOICE_BUS.claim('life'); (window.__lifeAudios || []).forEach(function (a) { if (a !== au) { try { a.pause(); } catch (e) {} } }); au.currentTime = 0; au.play().catch(function () {}); });
       card.appendChild(pb);
     }
     var acts = h('div', 'btnrow');

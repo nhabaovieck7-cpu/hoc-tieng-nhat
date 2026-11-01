@@ -757,6 +757,10 @@
         enterMap(res.moveTo.map, tx, ty, 'down');
       }
     };
+    // Lane AC: cảnh MỚI bắt đầu = sàn giọng phải trống — dừng mọi giọng còn sót
+    // của cảnh/modal trước (clip nghe trong thi, giọng hướng dẫn…) để câu thoại
+    // đầu cảnh không bị đè. Các bước thoại của cảnh tự claim lại qua VOICE.
+    if (window.VOICE_BUS) window.VOICE_BUS.stopAll();
     if (sc && (sc.lines || sc.branch || sc.sayLines) && window.FLOW && window.FLOW.onSceneStart) window.FLOW.onSceneStart(id);   // Lane V: lớp truyện gắn mood nhạc theo cảnh
     if (sc && sc.lines) playKaiwa(sc, done);
     else if (sc && sc.branch) playBranch(sc, done);

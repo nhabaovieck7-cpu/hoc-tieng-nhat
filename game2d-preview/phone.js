@@ -39,6 +39,17 @@
     });
     $('phone-replies').innerHTML = '';
   }
+  /* Lane AC (Lỗi 1 — "ô tin nhắn nhỏ quá không đọc được"): ghim đáy thread
+     PHẢI chắc — đặt scrollTop ngay lúc dựng DOM rồi ghim LẠI sau 2 khung hình
+     (lúc đó bố cục + font đã ổn định) và khi font sẵn sàng; nếu không, tin mới
+     nhất có thể bị khuất một nửa dưới mép vùng đọc đúng lúc mở thread. */
+  function pinBottom() {
+    var body = $('phone-body'); if (!body) return;
+    var pin = function () { body.scrollTop = body.scrollHeight; };
+    pin();
+    if (window.requestAnimationFrame) requestAnimationFrame(function () { requestAnimationFrame(pin); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(pin, function () {});
+  }
   function renderThread(id) {
     current = id;
     var t = threads[id];
@@ -52,7 +63,7 @@
       d.textContent = m.text;
       body.appendChild(d);
     });
-    body.scrollTop = body.scrollHeight;
+    pinBottom();
     renderReplies(id);
   }
   function renderReplies(id) {
@@ -114,7 +125,7 @@
     if (text) h += '<div>' + text + '</div>';
     d.innerHTML = h;
     log.appendChild(d);
-    var body = $('phone-body'); body.scrollTop = body.scrollHeight;
+    pinBottom();
   }
   function callStatus(t) { var s = $('call-status'); if (s) s.textContent = t; }
   function callTick() {
@@ -166,6 +177,9 @@
   }
   function startCall(cfg) {
     if (call) return;
+    // Lane AC: cuộc gọi bắt đầu = sàn giọng trống (dừng thoại/hướng dẫn/clip
+    // nghe còn sót) — cuộc gọi đọc bằng chữ, không để giọng nào nói đè.
+    if (window.VOICE_BUS) window.VOICE_BUS.stopAll();
     call = { cfg: cfg, lines: (cfg.lines || []).slice(), idx: 0, sec: 0, timer: null, wait: null };
     open();
     current = null;

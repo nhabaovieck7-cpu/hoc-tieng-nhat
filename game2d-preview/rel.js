@@ -130,6 +130,7 @@
     if (R.beats.aDone) return;
     R.careA = kind === 'am' ? 2 : kind === 'thuong' ? 1 : -1;
     R.beats.aDone = true; persist();
+    objective();   // Lane AC: mục tiêu sang nhịp B ngay — guide/chip không đứng yên ở câu cũ
     setTimeout(function () { advanceStory(); }, 800);
   }
   function deliverBeatB() {
@@ -161,6 +162,7 @@
     if (R.beats.bDone) return;
     R.careB = beatBChoice === 'tan-tam' ? 2 : 0;
     R.beats.bDone = true; persist();
+    objective();   // Lane AC: mục tiêu sang nhịp C ngay
     setTimeout(function () { advanceStory(); }, 800);
   }
   function deliverBeatC() {
@@ -177,6 +179,7 @@
     if (note.indexOf('đã tiến tới') >= 0) { R.flirted = true; R.careC = -3; }
     else { R.careC = 1; }
     R.beats.cDone = true; persist();
+    objective();   // Lane AC
     setTimeout(function () { advanceStory(); }, 800);
   }
 
@@ -184,11 +187,12 @@
   function resolveArc() {
     if (R.beats.resolved) return;
     R.beats.resolved = true;
-    if (arcSkipped()) { R.recovered = true; persist(); return; }
+    if (arcSkipped()) { R.recovered = true; persist(); objective(); return; }
     if (R.flirted) R.breakup = 'cam-sung';
     else if (loveCare() >= 5) R.breakup = 'giu-duoc';
     else R.breakup = 'bi-da';
     persist();
+    objective();   // Lane AC: mục tiêu theo kết cục arc ngay khi ngã ngũ
     var g = gender === 'F' ? 'nu' : 'nam';
     setTimeout(function () {
       if (R.breakup === 'cam-sung') {
@@ -224,6 +228,7 @@
       }
     }
     R.recovered = true; persist();
+    objective();   // Lane AC: vừa hồi phục là mục tiêu/đích gặp người mới phải hiện ngay
     if (R.hoiPhuc === 'nhau') window.GAMEUI.toast('🍺 Chị Mai đã nói rồi đấy — uống để quên chỉ quên được một đêm. Từ mai, sống tử tế lại nhé.');
   }
   function deliverTanNguoc() {
@@ -519,6 +524,11 @@
     }
     if (chapter() >= 3) { computeCareBase(); setTimeout(function () { advanceStory(); }, 2500); }
     persist();
+    // Lane AC: dòng mục tiêu Ch3 có thể đã bị tính từ lúc KHÔI PHỤC SAVE —
+    // khi đó `gender` còn là mặc định 'M' nên tuyến NỮ hiện sai tên người yêu
+    // ("Linh" thay vì "Hải") và đứng nguyên tới nhịp trả lời đầu tiên. Vừa nạp
+    // xong giới tính thật là tính lại mục tiêu ngay (objective() tự chắn < Ch3).
+    objective();
   }
 
   window.REL = {

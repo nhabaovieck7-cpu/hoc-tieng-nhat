@@ -33,6 +33,47 @@
   var cur = null;          // { scene, idx, file } clip thoại đang gắn với bước hiện tại
   var bar = null, replayBtn = null;
 
+  /* ---------------- LUẬT MỘT GIỌNG TẠI MỘT THỜI ĐIỂM (Lane AC, 01/11) ----------------
+     Bối cảnh: cuối Chương 2 các giọng ĐỌC CHỒNG LÊN NHAU (chủ trang phản ánh
+     "phần âm thanh đọc chồng lên nhau nên khó nghe") — clip nghe trong bài thi
+     mốc không có điểm dừng nên chảy sang tổng kết/chuyển chương, giọng hướng
+     dẫn (gAudio) phát đè câu thoại đầu cảnh mới, cảnh nối hẹn giờ mở thoại đè
+     giọng hướng dẫn… vì mỗi nguồn giữ một phần tử Audio RIÊNG và không nguồn
+     nào dừng nguồn nào. Nay mọi nguồn GIỌNG (không tính nhạc nền — nhạc đã có
+     ducking riêng ở bgm.js) phải qua bus trọng tài này: claim(id) = dừng TẤT
+     CẢ nguồn khác ngay lập tức; nguồn nào bắt đầu phát cũng phải claim trước.
+     Các file nạp TRƯỚC voice.js (listen.js/story.js/life.js) gọi qua
+     window.VOICE_BUS ở thời điểm chạy (runtime) nên vẫn an toàn. */
+  var busStops = {};       // id -> hàm dừng nguồn đó
+  var busOwner = null;     // id đang giữ "sàn" (chỉ để truy vấn/kiểm chứng)
+  var BUS = {
+    register: function (id, stopFn) { if (id && typeof stopFn === 'function') busStops[id] = stopFn; },
+    // claim(id, only): giành sàn — dừng mọi nguồn khác; nếu truyền `only`
+    // (mảng id) thì CHỈ dừng các nguồn trong mảng. Dùng cho giọng HƯỚNG DẪN:
+    // nó là giọng gợi ý, chỉ giành sàn với THOẠI (đối tác va chạm thật trong
+    // mạch truyện cuối chương) — KHÔNG cắt ngang clip nghe người chơi CHỦ
+    // ĐỘNG mở (nghe điểm/thi/ga/tàu): cắt ngang làm giữ-duck của clip bị nhả
+    // oan giữa chừng và bộ đếm duck hỏng (harness-duck d7, cổng QA 01/11).
+    // Chiều ngược lại không đổi: thoại/nghe/thi claim TOÀN PHẦN, vẫn dừng cả
+    // giọng hướng dẫn — mạch truyện giữ luật một-giọng tuyệt đối.
+    claim: function (id, only) {
+      busOwner = id || null;
+      Object.keys(busStops).forEach(function (k) {
+        if (k === id) return;
+        if (only && only.indexOf(k) < 0) return;
+        try { busStops[k](); } catch (e) {}
+      });
+    },
+    release: function (id) { if (busOwner === id) busOwner = null; },
+    stopAll: function () {
+      busOwner = null;
+      Object.keys(busStops).forEach(function (k) { try { busStops[k](); } catch (e) {} });
+    },
+    owner: function () { return busOwner; },
+    sources: function () { return Object.keys(busStops); }
+  };
+  window.VOICE_BUS = BUS;
+
   function gender() {
     try {
       if (window.__demo && window.__demo.player) return window.__demo.player().gender === 'F' ? 'F' : 'M';
@@ -78,6 +119,7 @@
   }
 
   function play(file) {
+    BUS.claim('dlg');   // Lane AC: thoại bắt đầu = dừng mọi giọng khác (hướng dẫn/nghe/thi…)
     audio.src = file;
     audio.volume = vol;
     var p = audio.play();
@@ -155,8 +197,12 @@
   var GUIDE_VOICE = {
     playCurrent: function () {
       if (!guideOn) return false;
+      // Lane AC: đang trong CUỘC GỌI điện thoại thì không đọc hướng dẫn đè lên
+      // (cuộc gọi không có giọng thu sẵn — giữ yên tĩnh để người chơi đọc thoại).
+      if (window.PHONE && window.PHONE.callActive && window.PHONE.callActive()) return false;
       var e = guideEntry();
       if (!e || !e.file) return false;
+      BUS.claim('guide', ['dlg']);   // Lane AC: hướng dẫn chỉ giành sàn với THOẠI — không cắt clip nghe đang mở (xem BUS.claim)
       gAudio.src = e.file;
       gAudio.volume = vol;
       var p = gAudio.play();
@@ -172,6 +218,14 @@
     }
   };
   window.GUIDE_VOICE = GUIDE_VOICE;
+
+  /* Lane AC: đăng ký hai nguồn giọng của chính file này vào bus trọng tài —
+     nguồn khác claim thì thoại/hướng dẫn đang phát phải dừng ngay (VOICE.stop
+     cũng ẩn thanh nghe lại + xoá `cur`, GUIDE_VOICE.stop chỉ pause). */
+  BUS.register('dlg', function () { VOICE.stop(); });
+  BUS.register('guide', function () { GUIDE_VOICE.stop(); });
+  audio.addEventListener('ended', function () { BUS.release('dlg'); });
+  gAudio.addEventListener('ended', function () { BUS.release('guide'); });
 
   /* ---------------- giao diện: thanh nghe lại + hàng cài đặt ---------------- */
   function buildUI() {
