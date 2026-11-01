@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-01-sua-kaiwa-phinh-cot-phai",
+   "date": "2026-11-01",
+   "type": "tinh-nang",
+   "title": "Trang chủ: sửa thẻ Kaiwa bị phình, chốt chiều cao cho cân hai cột",
+   "desc": "Thẻ Kaiwa ở cột phải nay được chốt chiều cao vừa đúng phần cột còn thiếu (tự tính theo chiều cao thật của hai cột), danh sách 19 bài cuộn dọc bên trong thẻ nên không còn phình dài làm lệch bố cục; hai cột luôn cân xứng nhau.",
+   "link": "index.html"
+  },
+  {
    "id": "2026-11-01-kaiwa-cot-phai-tin-tuc-cuon-trong",
    "date": "2026-11-01",
    "type": "tinh-nang",

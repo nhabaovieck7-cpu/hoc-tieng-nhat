@@ -1432,6 +1432,8 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
   .layout{grid-template-areas:"main side";align-items:stretch}
   #kaiwa{flex:1 1 auto}
   .kw-scroll{flex:1 1 auto}
+  /* V111: #kaiwa KHONG con dua vao flex de chan chieu cao (xem section
+     V111 o cuoi file): chieu cao do JS hnFit trong index.html chot. */
   #homeNews{margin-top:auto;display:flex;flex-direction:column}
   #homeNews .hnx-card{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
   #hnxList{flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
@@ -1446,4 +1448,20 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
   #homeNews .hnx-card{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
   #hnxList{flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
   .kw-scroll{max-height:380px}
+}
+
+/* ===== V111 (01/11/2026): KAIWA CHOT CHIEU CAO BANG JS - BO PHU THUOC FLEX =====
+   Loi v110 tren may that: #kaiwa phinh toan bo 19 bai, cot phai dai ngoang,
+   cot trai hong khoang trong lon. Nguyen nhan: .col-side la flex column
+   nhung chieu cao cua no do NOI DUNG quyet dinh (hang luoi cao theo noi
+   dung lon nhat), nen flex:1 cua #kaiwa khong bi chan - the cu dai theo
+   danh sach. V111 bo han co che flex cho #kaiwa o desktop: JS hnFit trong
+   index.html do chieu cao render that cua hai cot roi chot style.height
+   cho #kaiwa (san 240px); the la flex column co dinh, .kw-scroll flex:1 +
+   min-height:0 + overflow-y:auto nen danh sach chi cuon BEN TRONG the,
+   khong con duong nao phinh ra ngoai. Mobile giu nguyen nhu v110
+   (.kw-scroll max-height:380px) va JS go height tuong minh duoi 900px. */
+@media(min-width:900px){
+  #kaiwa{flex:none;min-height:0}
+  .kw-scroll{flex:1 1 auto;min-height:0}
 }
