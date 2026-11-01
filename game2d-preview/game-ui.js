@@ -25,18 +25,108 @@
     var cell = s.closest('.stat'); if (!cell) return;
     cell.classList.remove('pulse'); void cell.offsetWidth; cell.classList.add('pulse');
   }
+  /* Lane AE — HÀNG ĐỢI TOAST/FLOATER: #toast z-50 và #floaters z-40 đều nằm trên
+     thẻ thoại (#dlg z-30) và modal (z-46) nên toast/floater bắn ra trong lúc thoại
+     đang mở sẽ ĐÈ chữ dẫn truyện + nút Nghe (ảnh ad-date-ren-restaurant-390: toast
+     chuyến đi + floater "−0,20 man" đè thẻ thoại/chip). Luật mới: khi thẻ thoại
+     hoặc một modal đang mở → toast/floater XẾP HÀNG, không hiện; thoại/modal đóng
+     → xả lần lượt như bình thường. Toast đang hiện mà thoại/modal mở ra đè lên →
+     cất đi, đưa lại đầu hàng đợi, đóng xong hiện lại. Ngoài lúc bị chặn, hành vi
+     giữ nguyên hệt cũ (toast mới thay toast cũ ngay, thời lượng không đổi). */
   var toastTimer = null;
-  function toast(text, ms) {
-    var t = $('toast'); t.textContent = text; t.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { t.classList.remove('show'); }, ms || 2600);
+  var toastShown = null;      // {text, ms} đang hiện
+  var toastQueue = [];        // {text, ms} đang chờ xả
+  var floaterQueue = [];      // {text, neg} đang chờ xả (cùng luật với toast)
+  function uiBlocked() {
+    var d = $('dlg');
+    if (d && d.classList.contains('show')) return true;
+    return !!document.querySelector('.modal.show');
   }
-  function floater(text, neg) {
+  function showToastNow(text, ms) {
+    var t = $('toast');
+    toastShown = { text: text, ms: ms || 2600 };
+    t.textContent = text; t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToastNow, toastShown.ms);
+  }
+  function hideToastNow() {
+    clearTimeout(toastTimer); toastTimer = null;
+    $('toast').classList.remove('show');
+    toastShown = null;
+    drainToastQueue();
+  }
+  function showFloaterNow(text, neg) {
     var f = document.createElement('div');
     f.className = 'floater' + (neg ? ' neg' : '');
     f.textContent = text;
     $('floaters').appendChild(f);
     setTimeout(function () { f.remove(); }, 2300);
+  }
+  function drainToastQueue() {
+    if (uiBlocked()) return;
+    while (floaterQueue.length) { var fq = floaterQueue.shift(); showFloaterNow(fq.text, fq.neg); }
+    if (!toastShown && toastQueue.length) {
+      var n = toastQueue.shift();
+      showToastNow(n.text, n.ms);
+    }
+  }
+  function onUiBlockChange() {
+    if (uiBlocked()) {
+      if (toastShown) {
+        var cur = toastShown;
+        clearTimeout(toastTimer); toastTimer = null;
+        // Tắt hẳn ngay lập tức (bỏ qua 0,25s fade của CSS) — thoại vừa mở là
+        // toast phải biến mất trong chính khung hình đó, không để vệt mờ đè chữ.
+        var tEl = $('toast');
+        tEl.style.transition = 'none';
+        tEl.classList.remove('show');
+        void tEl.offsetWidth;
+        tEl.style.transition = '';
+        toastShown = null;
+        toastQueue.unshift(cur);
+      }
+      // Floater đang hiện (vd "−0,20 man" vừa trừ tiền buổi hẹn) cũng cất đi,
+      // xếp lại trước hàng đợi floater — timer gỡ node cũ bắn vào node đã detach
+      // là no-op vô hại; khi xả sẽ tạo node mới với trọn thời lượng như thường.
+      var fl = $('floaters');
+      if (fl && fl.children.length) {
+        var stash = [];
+        Array.prototype.forEach.call(fl.children, function (f) {
+          stash.push({ text: f.textContent, neg: f.classList.contains('neg') });
+        });
+        fl.innerHTML = '';
+        floaterQueue = stash.concat(floaterQueue);
+      }
+      return;
+    }
+    drainToastQueue();
+  }
+  var blockWatchReady = false;
+  function watchUiBlock() {
+    if (blockWatchReady) return;
+    var targets = [];
+    var d = $('dlg'); if (d) targets.push(d);
+    Array.prototype.forEach.call(document.querySelectorAll('.modal'), function (m) { targets.push(m); });
+    if (!targets.length) return;   // DOM chưa sẵn — init() sẽ gọi lại
+    blockWatchReady = true;
+    if (typeof MutationObserver !== 'undefined') {
+      var mo = new MutationObserver(onUiBlockChange);
+      var opts = { attributes: true, attributeFilter: ['class'] };
+      targets.forEach(function (t) { mo.observe(t, opts); });
+    }
+    setInterval(onUiBlockChange, 350);   // chốt chặn dự phòng nếu sót sự kiện class
+  }
+  function toast(text, ms) {
+    // Đang có hàng đợi (vừa bị chặn xong, đang xả) thì xếp tiếp vào đuôi để giữ
+    // đúng thứ tự xả — toast bắn đúng khoảnh khắc thoại đóng không được nhảy cóc
+    // lên trước các toast đã chờ từ trước. Hàng đợi rỗng + không bị chặn: hiện
+    // ngay như hành vi cũ.
+    if (uiBlocked() || toastQueue.length) { toastQueue.push({ text: text, ms: ms }); drainToastQueue(); return; }
+    showToastNow(text, ms);
+  }
+  function floater(text, neg) {
+    if (uiBlocked()) { floaterQueue.push({ text: text, neg: neg }); return; }
+    showFloaterNow(text, neg);
   }
   // deltas: {jp, money, hp, love, risk, pressure} — risk & pressure nhận nhưng không hiển thị
   function apply(deltas, note) {
@@ -82,6 +172,7 @@
     $('modal-summary').classList.add('show');
   }
   function init(player) {
+    watchUiBlock();
     $('pc-name').textContent = player.name;
     $('pc-ava').textContent = (player.name || '?').trim().charAt(0).toUpperCase();
     $('pc-level').textContent = (player.gender === 'F' ? '👧' : '👦') + ' · JLPT N5 · Ngày lên đường';
@@ -128,6 +219,7 @@
     }
     $('sum-close').addEventListener('click', function () { $('modal-summary').classList.remove('show'); });
   }
+  watchUiBlock();
   window.GAMEUI = {
     init: init, apply: apply, render: render, toast: toast,
     setObjective: setObjective, setPhoneBadge: setPhoneBadge, showSummary: showSummary,

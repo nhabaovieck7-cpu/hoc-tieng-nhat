@@ -940,6 +940,13 @@
   }
   function handleScene(id) {
     var f = S.flags;
+    /* Lane AD: cảnh GẶP LẦN ĐẦU của ứng viên — đã quen nhau rồi thì NPC vẫn đứng đó
+       cho người chơi thấy mặt, nhưng bấm lại KHÔNG phát lại cảnh làm quen (chỉ chào). */
+    var MEET2 = { 'ch3-hang-vo': 'hang', 'ch3-ren-gap': 'ren', 'ch3-khoi-gap': 'khoi' };
+    if (MEET2[id] && window.REL && window.REL.state && window.REL.state().met && window.REL.state().met[MEET2[id]]) {
+      window.GAMEUI.toast('👋 Hai người đã quen nhau rồi — mở 💗 Tình cảm để rủ đi chơi nhé');
+      return true;
+    }
     if (id === 'airport-gate') {
       if (f.famDone && f.loverDone) return false;  // đã chia tay xong → để engine chạy cảnh lên máy bay
       window.GAMEUI.toast(!f.famDone && !f.loverDone
@@ -1101,6 +1108,9 @@
       S.flags.arrived = true;
       setTimeout(function () { if (window.__demo) window.__demo.scene('intro'); }, 900);
     }
+    /* Lane AD: báo REL mỗi lần vào bản đồ — nhịp C (cám dỗ) và cảnh tán ngược ở cổng
+       trường chỉ mở khi người chơi THẬT SỰ tới đúng nơi của chúng. */
+    if (window.REL && window.REL.onMapEnter) { try { window.REL.onMapEnter(id); } catch (e) {} }
     save();
   }
   function setFlag(name, value) {

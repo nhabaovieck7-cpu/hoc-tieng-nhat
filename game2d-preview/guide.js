@@ -209,20 +209,46 @@
     var R = relStateSafe(), cands;
     try { cands = window.REL.candidates(); } catch (e) { return null; }
     if (!R || !cands) return null;
+    var gender = 'M';
+    try { var pl = window.__demo && window.__demo.player && window.__demo.player(); if (pl && pl.gender) gender = pl.gender; } catch (e) {}
+    var order = ['yui', 'hang', 'ren', 'khoi'];
+    /* Lane AD — hai đích phải hiện NGAY CẢ KHI nhịp điện thoại chưa ngã ngũ:
+       (1) nhịp C (cám dỗ) đang chờ mở ở đúng nơi của nó → đích là NGƯỜI đang chờ
+           ở đó (Yui ở combini / Ren ở quán nhậu), để người chơi tự đi tới nơi
+           thì cảnh mới mở — luật địa điểm của rel.js;
+       (2) người chơi đang ĐỨNG ở đúng nơi gặp của một ứng viên chưa quen → đích
+           là chính người đó. Trước đây vào lớp giữa nhịp điện thoại thì không
+           có đích nào, Khôi lại chưa có NPC trong lớp → vào lớp rồi đứng ngơ. */
+    if (window.REL && window.REL.camDoTarget) {
+      var cd = null; try { cd = window.REL.camDoTarget(); } catch (e) {}
+      if (cd) {
+        var ct = resolveTarget({ scene: cd.npcScene });
+        if (ct) { ct.kind = 'npc'; return ct; }
+        var cm = resolveTarget({ map: cd.map });
+        if (cm) { cm.kind = 'npc'; cm.label = cd.name; return cm; }
+      }
+    }
+    var hereId = curMapId();
+    if (hereId) {
+      for (var h = 0; h < order.length; h++) {
+        var hc = cands[order[h]];
+        if (!hc || hc.route !== gender || !hc.meetScene || hc.meetMap !== hereId) continue;
+        if (R.met && R.met[order[h]]) continue;
+        var ht = resolveTarget({ scene: hc.meetScene }) || resolveTarget({ map: hc.meetMap });
+        if (ht) { ht.label = hc.name; ht.kind = 'meet'; return ht; }
+      }
+    }
     var skipped = !!(st.book && st.book.loiHuaSanBay === 'buong-tay');
     if (!skipped && !(R.beats && R.beats.resolved)) return null;
     if (R.partner) return null;
     if (R.breakup === 'giu-duoc') return null;                 // đã yên bề — tự do
     if (R.breakup && !R.khocDone) return null;                  // nhịp khóc tự chạy theo giờ
     if (R.breakup && !R.recovered) return null;                 // đang hồi phục — nhịp bạn bè/UI
-    var gender = 'M';
-    try { var pl = window.__demo && window.__demo.player && window.__demo.player(); if (pl && pl.gender) gender = pl.gender; } catch (e) {}
-    var order = ['yui', 'hang', 'ren', 'khoi'];
     for (var i = 0; i < order.length; i++) {
       var c = cands[order[i]];
       if (!c || c.route !== gender || !c.meetScene || !c.meetMap) continue;
       if (R.met && R.met[order[i]]) continue;
-      var t = resolveTarget({ map: c.meetMap });
+      var t = resolveTarget({ scene: c.meetScene }) || resolveTarget({ map: c.meetMap });   // Lane AD: chỉ tới NGƯỜI THẬT (vị trí NPC), không chỉ điểm spawn trống
       if (t) { t.label = c.name; t.kind = 'meet'; return t; }
     }
     return null;

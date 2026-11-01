@@ -143,7 +143,11 @@
     ],
     doors: { '9,10': { to: 'shotengai', spawn: [53, 4] } },
     npcs: [
-      { id: 'izakaya-master', name: 'Chủ quán nhậu', sprite: 'chef', tx: 9, ty: 2, behavior: 'stand', scene: 'izakaya-master', label: '💬 Gọi chủ quán', range: 96 }
+      { id: 'izakaya-master', name: 'Chủ quán nhậu', sprite: 'chef', tx: 9, ty: 2, behavior: 'stand', scene: 'izakaya-master', label: '💬 Gọi chủ quán', range: 96 },
+      /* Lane AD: Ren (ứng viên tuyến nữ) có NPC THẬT đứng bên bếp từ Chương 3
+         (engine lọc theo relCand) — trước đây quán chỉ có chủ quán, người chơi
+         vào quán không thấy Ren đâu dù chip bảo «gặp Ren». */
+      { id: 'rel-ren', relCand: 'ren', name: 'Ren', sprite: 'heroM', tx: 5, ty: 2, behavior: 'stand', scene: 'ch3-ren-gap', label: '💬 Làm quen với Ren', range: 96 }
     ],
     objects: [
       { tx: 16, ty: 5, tw: 1, th: 2, interact: { scene: 'izakaya-menu', label: '📜 Xem thực đơn viết tay' } }

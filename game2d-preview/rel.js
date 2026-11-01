@@ -32,11 +32,17 @@
   var LSKEY = 'tuoitre2d_rel_v1';
 
   /* ================= ĐĂNG KÝ ỨNG VIÊN ================= */
+  /* Lane AD: mỗi ứng viên có MỘT nơi hẹn «chữ ký» gắn với nội dung cảnh hen-* của họ
+     (Yui: phố 浅草+ công viên · Hằng: phố sách cũ + trà · Ren: chợ cá 築地 + nhà hàng ·
+     Khôi: công viên + quán Việt) và một nơi tỏ tình gắn với cảnh to-tinh-* của họ.
+     Buổi hẹn LUÔN diễn ở nơi chữ ký — người chơi không còn chọn một nơi rồi xem cảnh
+     ở nơi khác (lỗi chủ trang gặp 01/11: vào karaoke mà bung cảnh chợ cá). dateTier
+     chỉ còn là MỨC GIÁ của buổi hẹn (giữ nguyên reason sổ tiền date.<tier>). */
   var CANDS = {
-    yui:  { name: 'Yui',  sub: '🇯🇵 Gái Nhật — nhân viên combini 秋葉原', gender: 'F', route: 'M', sprite: 'heroF', fav: ['jewelry', 'perfume'], meetMap: 'combini', meetScene: null },
-    hang: { name: 'Hằng', sub: '🇻🇳 Gái Việt — bạn cùng lớp tiếng',      gender: 'F', route: 'M', sprite: 'heroF', fav: ['cosmetics', 'fashion'], meetMap: 'school', meetScene: 'ch3-hang-vo' },
-    ren:  { name: 'Ren',  sub: '🇯🇵 Trai Nhật — đầu bếp quán nhậu 新橋', gender: 'M', route: 'F', sprite: 'heroM', fav: ['fashion'], meetMap: 'izakaya', meetScene: 'ch3-ren-gap' },
-    khoi: { name: 'Khôi', sub: '🇻🇳 Trai Việt — bạn học mới, làm kho vận', gender: 'M', route: 'F', sprite: 'heroM', fav: ['fashion', 'cosmetics'], meetMap: 'school', meetScene: 'ch3-khoi-gap' }
+    yui:  { name: 'Yui',  sub: '🇯🇵 Gái Nhật — nhân viên combini 秋葉原', gender: 'F', route: 'M', sprite: 'heroF', fav: ['jewelry', 'perfume'], meetMap: 'combini', meetScene: null, dateMap: 'shotengai', dateTier: 'park', dateLabel: '🌸 Dạo phố mua sắm 浅草 rồi vào công viên với Yui', confessMap: 'combini' },
+    hang: { name: 'Hằng', sub: '🇻🇳 Gái Việt — bạn cùng lớp tiếng',      gender: 'F', route: 'M', sprite: 'heroF', fav: ['cosmetics', 'fashion'], meetMap: 'school', meetScene: 'ch3-hang-vo', dateMap: 'shotengai', dateTier: 'karaoke', dateLabel: '📚 Phố sách cũ 神保町 rồi ghé quán trà với Hằng', confessMap: 'school' },
+    ren:  { name: 'Ren',  sub: '🇯🇵 Trai Nhật — đầu bếp quán nhậu 新橋', gender: 'M', route: 'F', sprite: 'heroM', fav: ['fashion'], meetMap: 'izakaya', meetScene: 'ch3-ren-gap', dateMap: 'restaurant', dateTier: 'restaurant', dateLabel: '🐟 Đi chợ cá 築地 buổi sáng, trưa ghé nhà hàng của Ren', confessMap: 'izakaya' },
+    khoi: { name: 'Khôi', sub: '🇻🇳 Trai Việt — bạn học mới, làm kho vận', gender: 'M', route: 'F', sprite: 'heroM', fav: ['fashion', 'cosmetics'], meetMap: 'school', meetScene: 'ch3-khoi-gap', dateMap: 'park', dateTier: 'park', dateLabel: '🌳 Công viên 代々木 rồi ghé quán Việt gần ga với Khôi', confessMap: 'station' }
   };
   var VENUES = {
     park:       { map: 'park',       yen: 1200, label: '🌳 Công viên 代々木 — picnic & đi dạo' },
@@ -55,8 +61,8 @@
       stage: { yui: 'quen', hang: 'quen', ren: 'quen', khoi: 'quen' },
       partner: null, courting: null,
       careBase: null, careA: null, careB: null, careC: null, flirted: false,
-      beats: { aSent: false, aDone: false, bStarted: false, bDone: false, cStarted: false, cDone: false, resolved: false },
-      breakup: null, breakupFired: false, khocDone: false, recovered: false, hoiPhuc: null, tanNguocDone: false,
+      beats: { aSent: false, aDone: false, bStarted: false, bDone: false, cStarted: false, cPending: false, cDone: false, resolved: false },
+      breakup: null, breakupFired: false, khocDone: false, recovered: false, hoiPhuc: null, tanNguocDone: false, tanNguocPending: false,
       gifts: [], dates: 0, homes: 0, ledger: []
     };
   }
@@ -71,6 +77,23 @@
   function loverName() { return gender === 'F' ? 'Hải' : 'Linh'; }
   function flags() { return (window.FLOW && window.FLOW.flags) ? window.FLOW.flags() : {}; }
   function chapter() { var st = (window.STORY && window.STORY.state) ? window.STORY.state() : {}; return st.chapter || 0; }
+  /* Lane AD — LUẬT ĐỊA ĐIỂM: cảnh gắn với một nơi chỉ được mở khi người chơi ĐÃ TỚI
+     đúng bản đồ đó và không còn thoại nào đang mở. fireSceneAt chờ tới nơi (tối đa
+     ~42 giây) rồi mới bung cảnh — thay hẳn kiểu hẹn giờ mù «bấm là 900ms sau nổ cảnh
+     ở bất cứ đâu» (gốc của lỗi chợ cá trong quán karaoke). */
+  function fireSceneAt(mapId, sceneId, tries) {
+    tries = tries || 0;
+    var snap = (window.WORLD2D && window.WORLD2D.snapshot) ? window.WORLD2D.snapshot() : null;
+    var busy = !!(window.__demo && window.__demo.dlgOpen && window.__demo.dlgOpen());
+    if (snap && snap.map === mapId && !busy && window.__demo) { window.__demo.scene(sceneId); return true; }
+    if (tries < 120) setTimeout(function () { fireSceneAt(mapId, sceneId, tries + 1); }, 350);   // trần ~42s: đủ cho một thoại đang đọc dở đóng lại, cảnh đã trả tiền không bị mất
+    return false;
+  }
+  /* engine.js hỏi trước khi đặt NPC ứng viên vào bản đồ: chỉ hiện đúng tuyến + từ Ch3. */
+  function npcVisible(id) {
+    var c = CANDS[id]; if (!c) return true;
+    return chapter() >= 3 && c.route === gender;
+  }
   function moneyYen() { return Math.round((window.GAMEUI ? window.GAMEUI.stats().money : 0) * 10000); }
   function yen(n) { return '¥' + n.toLocaleString('en-US'); }
   function moneyTxn(yenDelta, reason, note) {   // CỬA DUY NHẤT đổi tiền của tuyến tình cảm
@@ -165,13 +188,36 @@
     objective();   // Lane AC: mục tiêu sang nhịp C ngay
     setTimeout(function () { advanceStory(); }, 800);
   }
+  /* Lane AD — nhịp C (cám dỗ) diễn ở MỘT nơi cố định: tuyến nam ở combini (Yui hết ca),
+     tuyến nữ ở quán nhậu (Ren sau ca). Trước đây cảnh hẹn giờ 1,4s rồi bung ở BẤT CỨ
+     bản đồ nào người chơi đang đứng — sai luật địa điểm. Nay nhịp chỉ «chín» (cPending)
+     và mở khi người chơi THẬT SỰ tới nơi đó (REL.onMapEnter do story.js gọi), hoặc
+     mở ngay nếu lúc nhịp chín người chơi đã đứng sẵn ở đó. */
   function deliverBeatC() {
     if (R.beats.cStarted || chapter() < 3) return;
-    R.beats.cStarted = true; persist();
-    setTimeout(function () {
-      window.GAMEUI.toast('🌙 Tối nay có một cuộc gặp không ngờ ở phía trước…');
-      if (window.__demo) window.__demo.scene(gender === 'F' ? 'ch3-cam-do-nu' : 'ch3-cam-do-nam');
-    }, 1400);
+    R.beats.cStarted = true; R.beats.cPending = true; persist();
+    objective();
+    setTimeout(function () { tryFireCamDo(); }, 1400);
+  }
+  function camDoMap() { return gender === 'F' ? 'izakaya' : 'combini'; }
+  function tryFireCamDo() {
+    if (!R.beats.cPending) return;
+    var snap = (window.WORLD2D && window.WORLD2D.snapshot) ? window.WORLD2D.snapshot() : null;
+    if (!snap || snap.map !== camDoMap()) return;   // chưa tới nơi — chờ onMapEnter gọi lại
+    if (window.__demo && window.__demo.dlgOpen && window.__demo.dlgOpen()) { setTimeout(tryFireCamDo, 700); return; }
+    R.beats.cPending = false; persist();
+    window.GAMEUI.toast('🌙 Tối nay có một cuộc gặp không ngờ…');
+    if (window.__demo) window.__demo.scene(gender === 'F' ? 'ch3-cam-do-nu' : 'ch3-cam-do-nam');
+  }
+  function camDoTarget() {   // guide.js dùng để chỉ đường tới người đang chờ ở nhịp C
+    if (!R.beats.cPending) return null;
+    return gender === 'F'
+      ? { map: 'izakaya', npcScene: 'ch3-ren-gap', name: 'Ren' }
+      : { map: 'combini', npcScene: 'combini', name: 'Yui' };
+  }
+  function onMapEnter(mapId) {   // story.js gọi mỗi lần người chơi vào một bản đồ
+    if (mapId === camDoMap()) tryFireCamDo();
+    if (mapId === 'school' && R.tanNguocPending) deliverTanNguoc();
   }
   function finishBeatC() {
     var lg = window.GAMEUI.log(), note = '';
@@ -211,7 +257,9 @@
   function afterBreakupScene() {
     setTimeout(function () {
       window.GAMEUI.toast('🌧 Về phòng trọ thôi… tối nay, cứ khóc cho hết đã.');
-      if (window.__demo) window.__demo.scene('ch3-khoc');
+      // Lane AD: cảnh khóc mở đầu bằng «Về tới phòng trọ…» — phải ĐƯA người chơi về phòng thật, không khóc giữa phố.
+      if (window.WORLD2D && window.WORLD2D.gotoMap) window.WORLD2D.gotoMap('room');
+      fireSceneAt('room', 'ch3-khoc');
     }, 1300);
   }
   function afterKhocScene() {
@@ -233,7 +281,19 @@
   }
   function deliverTanNguoc() {
     if (R.tanNguocDone || !R.recovered || R.breakup === 'giu-duoc' || arcSkipped()) return;
-    R.tanNguocDone = true; persist();
+    var id = gender === 'F' ? 'khoi' : 'hang';
+    /* Lane AD: nội dung cảnh tán ngược BÁM buổi gặp đầu («Từ hôm cho mượn vở…» /
+       «Từ hôm chuyển lớp tới…») — chưa từng gặp nhau thì cảnh vô nghĩa. Chưa gặp:
+       ghi chờ (tanNguocPending), cảnh sẽ mở ngay sau cảnh làm quen (onSceneEnd)
+       hoặc khi quay lại trường. */
+    if (!R.met[id]) { R.tanNguocPending = true; persist(); return; }
+    if (gender === 'F') {
+      // Cảnh nữ diễn ở CỔNG TRƯỜNG (Khôi đứng chờ sẵn hai ly cà phê) — chỉ mở khi đang ở trường.
+      var snap = (window.WORLD2D && window.WORLD2D.snapshot) ? window.WORLD2D.snapshot() : null;
+      if (!snap || snap.map !== 'school') { R.tanNguocPending = true; persist(); return; }
+      if (window.__demo && window.__demo.dlgOpen && window.__demo.dlgOpen()) { setTimeout(deliverTanNguoc, 800); return; }
+    }
+    R.tanNguocDone = true; R.tanNguocPending = false; persist();
     setTimeout(function () { if (window.__demo) window.__demo.scene(gender === 'F' ? 'ch3-tan-nguoc-nu' : 'ch3-tan-nguoc-nam'); }, 1500);
   }
   function afterTanNguocScene() {
@@ -283,15 +343,21 @@
   }
   function startDate(id, venueId) {
     var gate = romanceOpen(); if (!gate.ok) { window.GAMEUI.toast('💗 ' + gate.msg); return gate; }
-    var v = VENUES[venueId]; if (!v || !CANDS[id]) return { ok: false, why: 'input' };
-    if (!moneyTxn(-v.yen, 'date.' + venueId, 'Rủ ' + CANDS[id].name + ' đi chơi — ' + v.label + ' — ' + yen(v.yen) + ' (vé + ăn uống)')) return { ok: false, why: 'money' };
+    var c = CANDS[id]; if (!c) return { ok: false, why: 'input' };
+    /* Lane AD: venueId giờ CHỈ định mức giá (tier). Đích đến LUÔN là nơi hẹn chữ ký của
+       ứng viên (c.dateMap) — nơi nội dung cảnh hen-* thật sự diễn ra. Trước đây game đưa
+       tới bản đồ của venue được chọn nhưng cảnh hen-* có nội dung cố định ở nơi khác
+       → chọn karaoke mà xem cảnh chợ cá. */
+    var v = VENUES[venueId] || VENUES[c.dateTier]; if (!v) return { ok: false, why: 'input' };
+    if (!moneyTxn(-v.yen, 'date.' + (VENUES[venueId] ? venueId : c.dateTier), 'Rủ ' + c.name + ' đi chơi — ' + c.dateLabel + ' — ' + yen(v.yen) + ' (vé + ăn uống)')) return { ok: false, why: 'money' };
     setCourting(id);
     logMark = window.GAMEUI.log().length;
     closePanel();
-    window.WORLD2D.gotoMap(v.map);
+    window.WORLD2D.gotoMap(c.dateMap);
     startFollower(id);
     R.dates++; persist();
-    setTimeout(function () { if (window.__demo) window.__demo.scene('hen-' + id); }, 900);
+    window.GAMEUI.toast('💗 ' + c.dateLabel + ' — ' + c.name + ' đang chờ ở đó');
+    fireSceneAt(c.dateMap, 'hen-' + id);
     return { ok: true };
   }
   function afterDateScene(id) {
@@ -315,7 +381,7 @@
     startFollower(id);
     R.homes++; persist();
     if (bonus) addAff(id, bonus, 'bữa cơm nấu bằng đồ tủ lạnh ngon');
-    setTimeout(function () { if (window.__demo) window.__demo.scene('ve-nha-' + id); }, 900);
+    fireSceneAt('room', 've-nha-' + id);   // Lane AD: cảnh chỉ mở khi đã về tới phòng (luật địa điểm)
     return { ok: true };
   }
   function afterHomeScene(id) {
@@ -349,8 +415,12 @@
     if (R.courting !== id) { window.GAMEUI.toast('💌 Hãy theo đuổi ' + CANDS[id].name + ' một cách rõ ràng trước (đi chơi / về nhà chơi / tặng quà) rồi hãy tỏ tình.'); return { ok: false, why: 'courting' }; }
     var a = R.aff[id] || 0;
     closePanel();
-    if (a >= 60) { setTimeout(function () { if (window.__demo) window.__demo.scene('to-tinh-' + id); }, 500); return { ok: true, will: 'ok' }; }
-    if (a >= 40) { setTimeout(function () { if (window.__demo) window.__demo.scene('to-tinh-loi'); }, 500); return { ok: true, will: 'fail' }; }
+    /* Lane AD: mỗi cảnh tỏ tình diễn ở MỘT nơi gắn với người ấy (Yui: trước combini ·
+       Hằng: sân trường sau giờ học · Ren: quán nhậu sau giờ đóng cửa · Khôi: bến ga).
+       Trước đây cảnh bung ngay tại chỗ người chơi đang đứng — nay game ĐƯA tới đúng
+       nơi đó rồi mới mở cảnh (cả khi thành lẫn khi bị từ chối). */
+    if (a >= 60) { if (window.WORLD2D && window.WORLD2D.gotoMap) window.WORLD2D.gotoMap(CANDS[id].confessMap); fireSceneAt(CANDS[id].confessMap, 'to-tinh-' + id); return { ok: true, will: 'ok' }; }
+    if (a >= 40) { if (window.WORLD2D && window.WORLD2D.gotoMap) window.WORLD2D.gotoMap(CANDS[id].confessMap); fireSceneAt(CANDS[id].confessMap, 'to-tinh-loi'); return { ok: true, will: 'fail' }; }
     window.GAMEUI.toast('💌 Thiện cảm mới ' + a + '/100 — nói ra lúc này chắc chắn bị từ chối. Đi chơi với nhau thêm đã.');
     return { ok: false, why: 'aff' };
   }
@@ -363,10 +433,17 @@
 
   /* ================= GẮN VÀO CẢNH CÓ SẴN (thiện cảm từ đời sống) ================= */
   var SCENE_AFF = { 'combini': ['yui', 3], 'ch2-yui': ['yui', 8], 'ch3-hang-vo': ['hang', 6], 'ch3-ren-gap': ['ren', 6], 'ch3-khoi-gap': ['khoi', 6] };
-  var SCENE_MET = { 'hung': 'hung', 'kaigo-mai': 'mai', 'combini': 'yui', 'school-teacher': 'hang', 'ch3-hang-vo': 'hang', 'ch3-ren-gap': 'ren', 'ch3-khoi-gap': 'khoi' };
+  /* Lane AD: BỎ khóa 'school-teacher' → 'hang'. Cảnh thầy giáo ở Ch1 KHÔNG có Hằng,
+     nhưng khóa này khiến tuyến nam bị đánh dấu «đã gặp Hằng» ngay từ Ch1 → nút làm
+     quen mất, đích dự phòng bỏ qua Hằng, buổi hẹn thành lần gặp đầu. Gặp Hằng chỉ
+     tính khi chơi đúng cảnh làm quen ch3-hang-vo. */
+  var SCENE_MET = { 'hung': 'hung', 'kaigo-mai': 'mai', 'combini': 'yui', 'ch3-hang-vo': 'hang', 'ch3-ren-gap': 'ren', 'ch3-khoi-gap': 'khoi' };
   function onSceneEnd(id) {
     if (SCENE_MET[id] && !R.met[SCENE_MET[id]]) { R.met[SCENE_MET[id]] = true; persist(); }
     if (SCENE_AFF[id]) addAff(SCENE_AFF[id][0], SCENE_AFF[id][1], 'qua những lần gặp gỡ');
+    // Lane AD: vừa làm quen xong mà cảnh tán ngược đang chờ (đã hồi phục) → mở luôn,
+    // lúc này hai người đã biết nhau nên nội dung cảnh mới có nghĩa.
+    if ((id === 'ch3-khoi-gap' || id === 'ch3-hang-vo') && !R.tanNguocDone) setTimeout(function () { deliverTanNguoc(); }, 1600);
     if (chapter() >= 3) {
       if (id === 'ch3-cam-do-nam' || id === 'ch3-cam-do-nu') { finishBeatC(); return; }
       if (R.beats.resolved && !R.breakupFired) return;
@@ -390,7 +467,7 @@
       return true;
     }
     if (!R.beats.resolved) {
-      window.GAMEUI.setObjective(!R.beats.aDone ? '🌸 Chương 3 — 📱 ' + loverName() + ' vừa nhắn tin — mở ĐIỆN THOẠI trả lời người yêu ở quê' : !R.beats.bDone ? '🌸 Chương 3 — 📞 ' + loverName() + ' sắp gọi video — để ý điện thoại nhé' : '🌸 Chương 3 — 🌙 Tối nay ở Nhật có một cuộc gặp không ngờ đang chờ…');
+      window.GAMEUI.setObjective(!R.beats.aDone ? '🌸 Chương 3 — 📱 ' + loverName() + ' vừa nhắn tin — mở ĐIỆN THOẠI trả lời người yêu ở quê' : !R.beats.bDone ? '🌸 Chương 3 — 📞 ' + loverName() + ' sắp gọi video — để ý điện thoại nhé' : R.beats.cPending ? '🌸 Chương 3 — 🌙 một cuộc gặp không ngờ đang chờ ở ' + (gender === 'F' ? 'quán nhậu 新橋 — tới đó gặp Ren' : 'combini 秋葉原 — tới đó gặp Yui') : '🌸 Chương 3 — 🌙 Tối nay ở Nhật có một cuộc gặp không ngờ đang chờ…');
       return true;
     }
     if (R.breakup === 'giu-duoc') { window.GAMEUI.setObjective('🌸 Chương 3 — 💗 ' + loverName() + ' vẫn đợi ở quê — hai người đã đặt mốc rõ ràng với nhau. Chương 3 còn những lựa chọn lớn khác đang chờ'); return true; }
@@ -439,7 +516,7 @@
       var acts = h('div', 'btnrow');
       if (!R.met[id] && c.meetScene) {
         var meet = h('button', 'btn primary', 'Gặp gỡ làm quen'); meet.type = 'button';
-        meet.addEventListener('click', function () { closePanel(); window.WORLD2D.gotoMap(c.meetMap); setTimeout(function () { if (window.__demo) window.__demo.scene(c.meetScene); }, 900); });
+        meet.addEventListener('click', function () { closePanel(); window.WORLD2D.gotoMap(c.meetMap); fireSceneAt(c.meetMap, c.meetScene); });   // Lane AD: chờ tới nơi mới mở cảnh (luật địa điểm)
         acts.appendChild(meet);
       } else if (!gate.ok) {
         acts.appendChild(h('div', 'shop-jp', '🔒 ' + gate.msg));
@@ -471,14 +548,17 @@
   }
   function renderVenues(id) {
     var card = $('rel-card'); if (!card) return;
+    var c = CANDS[id]; if (!c) return;
     var sec = h('div', 'style-sec');
-    sec.appendChild(h('div', 'style-sec-t', '🎡 Rủ ' + CANDS[id].name + ' đi đâu? (vé + ăn uống tính một lượt)'));
-    Object.keys(VENUES).forEach(function (k) {
-      var v = VENUES[k];
-      var b = h('button', 'btn ghost', v.label + ' — ' + yen(v.yen)); b.type = 'button';
-      b.addEventListener('click', function () { startDate(id, k); });
-      sec.appendChild(b);
-    });
+    /* Lane AD: bỏ hẳn danh sách 5 nơi chọn tự do — nó HỨA một nơi nhưng cảnh lại diễn
+       ở nơi khác. Mỗi người chỉ có MỘT chuyến đi chữ ký, đúng nơi cảnh của họ diễn ra;
+       bấm là game đưa tới đó. */
+    sec.appendChild(h('div', 'style-sec-t', '🎡 Chuyến đi chơi với ' + c.name + ' (vé + ăn uống tính một lượt)'));
+    var v = VENUES[c.dateTier] || VENUES.park;
+    var b = h('button', 'btn ghost', c.dateLabel + ' — ' + yen(v.yen)); b.type = 'button';
+    b.addEventListener('click', function () { startDate(id, c.dateTier); });
+    sec.appendChild(b);
+    sec.appendChild(h('div', 'shop-jp', 'Mỗi người có một nơi hẹn riêng gắn với câu chuyện của họ — bấm là game đưa bạn tới đúng nơi đó, ' + c.name + ' đang chờ ở đó.'));
     card.appendChild(sec);
     card.scrollTop = card.scrollHeight;
   }
@@ -509,6 +589,11 @@
     if (window.FLOW && window.FLOW.getRel) d = window.FLOW.getRel();
     if (!d) { try { d = JSON.parse(localStorage.getItem(LSKEY)); } catch (e) {} }
     if (d && typeof d === 'object') { var f = freshState(); Object.keys(f).forEach(function (k) { if (d[k] !== undefined) f[k] = d[k]; }); R = f; }
+    /* Lane AD — di trú bản lưu cũ: SCENE_MET từng gán nhầm «đã gặp Hằng» chỉ vì người
+       chơi học cảnh thầy giáo ở Ch1. Nếu chưa hề có thiện cảm/cột mốc nào với Hằng thì
+       coi như CHƯA gặp, để cảnh làm quen ch3-hang-vo + NPC Hằng ở lớp còn có nghĩa.
+       (Bản lưu đã chơi cảnh làm quen thật luôn có affection.hang ≥ 6 qua SCENE_AFF.) */
+    if (gender === 'M' && R.met.hang && (R.aff.hang || 0) === 0 && R.stage.hang === 'quen' && R.courting !== 'hang' && R.partner !== 'hang' && !R.tanNguocDone) R.met.hang = false;
     if (window.PHONE && window.PHONE.addThread) window.PHONE.addThread('ban-be', { name: '👥 Bạn bè', ava: '👥' });
     if (window.PHONE && window.PHONE.setThreadName && gender === 'F') window.PHONE.setThreadName('lover', '💗 Hải');
     if (!started) {
@@ -533,6 +618,7 @@
 
   window.REL = {
     onGameStart: onGameStart, onSceneEnd: onSceneEnd, objective: objective,
+    onMapEnter: onMapEnter, npcVisible: npcVisible, camDoTarget: camDoTarget,
     state: function () { return serialize(); },
     loveCare: loveCare, addAff: addAff,
     answerBeatA: answerBeatA, answerBeatB: answerBeatB, resolveArc: resolveArc,

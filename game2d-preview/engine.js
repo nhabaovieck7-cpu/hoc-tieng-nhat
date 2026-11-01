@@ -87,7 +87,14 @@
     player.y = spawnTy * TILE + TILE / 2;
     player.dir = dir || 'down';
     path = [];
-    npcs = cur.def.npcs.map(function (n) {
+    npcs = cur.def.npcs.filter(function (n) {
+      /* Lane AD: NPC ứng viên tình cảm (def có relCand) chỉ hiện khi REL cho phép
+         (đúng tuyến + từ Chương 3) — trước đây Khôi/Hằng/Ren KHÔNG hề có NPC trong
+         bản đồ nên người chơi vào lớp/quán đứng ngơ không thấy ai. Fail-closed:
+         REL chưa sẵn sàng thì ẩn. */
+      if (n.relCand) return !!(window.REL && window.REL.npcVisible && window.REL.npcVisible(n.relCand));
+      return true;
+    }).map(function (n) {
       return {
         def: n, id: n.id, name: n.name, scene: n.scene, label: n.label,
         sprite: window.SPRITES[n.sprite](),

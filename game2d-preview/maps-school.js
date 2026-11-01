@@ -35,7 +35,13 @@ window.MAPDEF['school'] = {
   ],
   doors: { '25,6': { to: 'street', spawn: [1, 6] } },
   npcs: [
-    { id: 'school-teacher', name: 'Cô giáo chủ nhiệm', sprite: 'teacher', tx: 7, ty: 3, behavior: 'stand', scene: 'school-teacher', label: '💬 Chào cô giáo', range: 72 }
+    { id: 'school-teacher', name: 'Cô giáo chủ nhiệm', sprite: 'teacher', tx: 7, ty: 3, behavior: 'stand', scene: 'school-teacher', label: '💬 Chào cô giáo', range: 72 },
+    /* Lane AD: hai ứng viên «bạn học» có NPC THẬT đứng trong lớp từ Chương 3 (engine
+       lọc theo relCand: Khôi chỉ hiện ở tuyến nữ, Hằng chỉ ở tuyến nam). Trước đây
+       không có NPC nào — người chơi vào lớp không thấy ai, cảnh gặp chỉ tới được
+       qua nút trong bảng 💗. */
+    { id: 'rel-khoi', relCand: 'khoi', name: 'Khôi', sprite: 'heroM', tx: 13, ty: 3, behavior: 'stand', scene: 'ch3-khoi-gap', label: '💬 Làm quen với Khôi', range: 96 },
+    { id: 'rel-hang', relCand: 'hang', name: 'Hằng', sprite: 'heroF', tx: 4, ty: 3, behavior: 'stand', scene: 'ch3-hang-vo', label: '💬 Làm quen với Hằng', range: 96 }
   ],
   objects: [
     { tx: 2, ty: 1, tw: 5, th: 1, interact: { scene: 'school-board', label: '📚 Xem bảng đen / thông báo' } }
