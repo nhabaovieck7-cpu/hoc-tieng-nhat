@@ -1,0 +1,115 @@
+{
+  "lesson": 20,
+  "topic": "Cuối tuần đi siêu thị và nấu ăn ở nhà",
+  "lines": [
+    {
+      "speaker": "健太",
+      "ja": "あ、さくら、今日さ、スーパー行かない？冷蔵庫、ほぼ空っぽなんだよね。",
+      "vi": "À, Sakura, hôm nay cậu có đi siêu thị không? Tủ lạnh tớ gần như trống rỗng rồi."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "あ、いいよ。私もさ、卵も牛乳も切れちゃってさ。何時くらいに行く？",
+      "vi": "À, được đấy. Tớ cũng hết trứng với sữa rồi. Cậu đi khoảng mấy giờ?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "うーん、3時くらいはどう？午前中はさ、混んでるじゃん。",
+      "vi": "Ừm, khoảng 3 giờ thì sao? Buổi sáng thì đông mà."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "だね。じゃあさ、3時に駅前のスーパーで待ち合わせしよっか。",
+      "vi": "Ừ nhỉ. Vậy hẹn nhau lúc 3 giờ ở siêu thị trước ga nhé."
+    },
+    {
+      "speaker": "健太",
+      "ja": "おっけー。あ、そうだ、今日さ、夜ごはん、うちで作らない？鍋とかさ。",
+      "vi": "Ok. À, đúng rồi, tối nay cậu có nấu ăn ở nhà tớ không? Kiểu lẩu chẳng hạn."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "え、いいの？じゃあさ、私、野菜、買ってくよ。白菜とキノコとさ。",
+      "vi": "Ơ, được à? Vậy tớ mua rau nhé. Cải thảo với nấm các thứ."
+    },
+    {
+      "speaker": "健太",
+      "ja": "助かる。じゃあさ、俺、肉と豆腐、買っとくよ。あ、うどんもさ。",
+      "vi": "Giúp tớ quá. Vậy tớ mua thịt với đậu phụ nhé. À, cả udon nữa."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "うん。あ、鍋の素さ、家にあったっけ？",
+      "vi": "Ừ. À, gói gia vị lẩu, ở nhà cậu còn không nhỉ?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "あー、たぶん、ないかも。スーパーで見てみよっか。辛いのと、普通のと、どっちがいい？",
+      "vi": "À, chắc là không còn đâu. Ra siêu thị xem thử nhé. Vị cay với vị thường, cậu thích cái nào?"
+    },
+    {
+      "speaker": "さくら",
+      "ja": "うーん、辛いの、ちょっと苦手なんだよね。普通のでいいよ。",
+      "vi": "Ừm, vị cay tớ hơi không giỏi. Vị thường là được rồi."
+    },
+    {
+      "speaker": "健太",
+      "ja": "了解。じゃあさ、普通のにしとくね。あ、そういえばさ、昨日、スーパーでさ、卵、めっちゃ安かったんだよ。",
+      "vi": "Rõ. Vậy lấy vị thường nhé. À, nhân tiện, hôm qua ở siêu thị trứng rẻ cực luôn đấy."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "マジで？いくらだったの？",
+      "vi": "Thật á? Bao nhiêu tiền vậy?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "10個でさ、198円。びっくりしちゃったよ。",
+      "vi": "10 quả mà có 198 yên. Tớ giật mình luôn."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "安っ！じゃあさ、今日も安かったら、2パック買っちゃおうかな。",
+      "vi": "Rẻ thế! Vậy hôm nay nếu vẫn rẻ thì mua 2 vỉ luôn nhỉ."
+    },
+    {
+      "speaker": "健太",
+      "ja": "だね。あ、でもさ、賞味期限、ちゃんと見といてね。買いすぎちゃうとさ。",
+      "vi": "Ừ nhỉ. Nhưng nhớ xem kỹ hạn sử dụng nhé. Mua nhiều quá thì…"
+    },
+    {
+      "speaker": "さくら",
+      "ja": "うん、わかってるって。あ、そうだ、デザートさ、プリン、買ってかない？",
+      "vi": "Ừ, tớ biết mà. À, đúng rồi, món tráng miệng mua pudding nhé?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "いいね。じゃあさ、プリンと、ついでにアイスもさ。鍋のあとってさ、アイス、食べたくなるじゃん。",
+      "vi": "Hay đấy. Vậy pudding với tiện thể cả kem nữa. Sau khi ăn lẩu thì lại thèm kem mà."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "わかるわかる。じゃあさ、3時にね。遅れそうだったら、連絡するよ。",
+      "vi": "Hiểu hiểu. Vậy 3 giờ nhé. Nếu có vẻ trễ thì tớ liên lạc."
+    },
+    {
+      "speaker": "健太",
+      "ja": "うん、よろしく。あ、エコバッグ、忘れないでね。俺、すぐ忘れちゃうんだよね。",
+      "vi": "Ừ, nhờ cậu nhé. À, đừng quên túi sinh thái nhé. Tớ hay quên lắm."
+    },
+    {
+      "speaker": "さくら",
+      "ja": "はーい。じゃあ、あとでね。",
+      "vi": "Vâng vâng. Vậy lát gặp nhé."
+    }
+  ],
+  "notes": [
+    "「〜じゃん」: khẳng định thân mật kiểu 'mà', 'đấy chứ' — dùng với bạn bè thân thiết, không dùng với cấp trên hay người mới quen.",
+    "「しよっか／しとく／買っとく／見といて」: dạng rút gọn của 「しようか／しておく／買っておく／見ておいて」 — làm sẵn, chuẩn bị sẵn; 「〜しよっか」 là rủ rê thân mật.",
+    "「マジで？／安っ！／わかるわかる」: phản ứng suồng sã thể hiện ngạc nhiên, đồng cảm — 「安っ」 là tính từ rút gọn (安い → 安っ), rất hay gặp trong nói chuyện hàng ngày.",
+    "「〜んだよね／〜かも／〜っけ」: 「んだよね」 giải thích + tìm đồng tình; 「かも」 phỏng đoán nhẹ; 「あったっけ」 là tự hỏi lại trí nhớ ('có còn không nhỉ').",
+    "「ついでに」: 'tiện thể' — mua thêm thứ gì đó nhân lúc đang mua thứ khác; dùng rất nhiều khi đi mua sắm.",
+    "「おっけー／はーい」: cách đáp suồng sã, kéo dài âm cuối cho nhẹ nhàng — khác với 「はい」 lịch sự khi nói với cấp trên hay khách hàng.",
+    "Chuyển đổi lịch sự: với bạn bè nói 「行かない？」 nhưng khi rủ người mới quen hoặc cấp trên thì nói 「行きませんか」 — cùng ý rủ rê, khác mức độ lịch sự."
+  ]
+}
