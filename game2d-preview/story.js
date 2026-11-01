@@ -328,6 +328,8 @@
     if (cn) cn.addEventListener('click', function () {
       if (window.BGM) window.BGM.mood(null);   // Lane V: khép cao trào đỗ thi, về nhạc bản đồ
       $('modal-chapter').classList.remove('show');
+      // Pha 3 (story2.js): modal đang là TỔNG KẾT TOÀN TRUYỆN (đã chốt kết cục ở Chương 5) — đóng modal là SỐNG TIẾP, không sang chương, không phát lại cảnh mở chương.
+      if (S.chapter >= 5 && S.saga && S.saga.ending) { advanceObjective(); return; }
       var target = nextChapterTarget;
       S.chapter = target;
       save();
@@ -893,7 +895,24 @@
     'ind-nogyo-1': 'work', 'ind-nogyo-2': 'work', 'ind-nogyo-3': 'work',
     'ind-duhoc-1': 'daily', 'ind-duhoc-2': 'daily', 'ind-duhoc-3': 'daily',
     'talk-kaigo': 'daily', 'talk-nha-hang': 'daily', 'talk-genba': 'daily', 'talk-khach-san': 'daily',
-    'talk-shokuhin': 'daily', 'talk-seizo': 'daily', 'talk-seibi': 'daily', 'talk-soko': 'daily', 'talk-nogyo': 'daily'
+    'talk-shokuhin': 'daily', 'talk-seizo': 'daily', 'talk-seibi': 'daily', 'talk-soko': 'daily', 'talk-nogyo': 'daily',
+    /* Pha 3 (Ch5 «Lớn rồi»): thành công = work/climax · cưới & con = romance/home · phỏng vấn cuối = climax · quầy cuối = tense · kết cục theo sắc thái */
+    'ch5-opening': 'daily',
+    'c5-succ-kaigo-1': 'work', 'c5-succ-kaigo-2': 'work', 'c5-succ-kaigo-3': 'climax',
+    'c5-succ-nha-hang-1': 'work', 'c5-succ-nha-hang-2': 'work', 'c5-succ-nha-hang-3': 'climax',
+    'c5-succ-genba-1': 'work', 'c5-succ-genba-2': 'work', 'c5-succ-genba-3': 'climax',
+    'c5-succ-khach-san-1': 'work', 'c5-succ-khach-san-2': 'work', 'c5-succ-khach-san-3': 'climax',
+    'c5-succ-shokuhin-1': 'work', 'c5-succ-shokuhin-2': 'work', 'c5-succ-shokuhin-3': 'climax',
+    'c5-succ-seizo-1': 'work', 'c5-succ-seizo-2': 'work', 'c5-succ-seizo-3': 'climax',
+    'c5-succ-seibi-1': 'work', 'c5-succ-seibi-2': 'work', 'c5-succ-seibi-3': 'climax',
+    'c5-succ-soko-1': 'work', 'c5-succ-soko-2': 'work', 'c5-succ-soko-3': 'climax',
+    'c5-succ-nogyo-1': 'work', 'c5-succ-nogyo-2': 'work', 'c5-succ-nogyo-3': 'climax',
+    'c5-succ-duhoc-1': 'daily', 'c5-succ-duhoc-2': 'daily', 'c5-succ-duhoc-3': 'climax',
+    'c5-marry-yui': 'romance', 'c5-marry-hang': 'romance', 'c5-marry-ren': 'romance', 'c5-marry-khoi': 'romance', 'c5-marry-ld': 'romance',
+    'c5-baby-1': 'home', 'c5-baby-2': 'home', 'c5-baby-3': 'daily',
+    'c5-single-1': 'daily', 'c5-single-2': 'home', 'c5-single-3': 'daily',
+    'c5-final-1': 'climax', 'c5-visa-final': 'tense',
+    'ket-1': 'home', 'ket-2': 'home', 'ket-3': 'night', 'ket-4': 'night'
   };
   var moodScene = null;
   function onSceneStart(id) {

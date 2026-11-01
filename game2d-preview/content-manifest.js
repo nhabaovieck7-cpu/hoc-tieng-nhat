@@ -195,5 +195,32 @@
       'ind4-nogyo-1', 'ind4-nogyo-2', 'ind4-duhoc-1', 'ind4-duhoc-2']
   });
 
+  C.declare({
+    id: 'goi-chuong-5-lon-roi', version: '2.1.0', date: '2026-11-02',
+    title: 'Chương 5 «Lớn rồi» (N1) — thành đạt, hôn nhân, con cái và 6 kết cục của đời xa xứ',
+    notes: [
+      'Mới: TUYẾN THÀNH CÔNG trọn vẹn cho đủ 9 ngành Tokutei + tuyến du học — được giao việc quan trọng, dìu hậu bối mới sang phạm đúng lỗi mình từng phạm ngày đầu (cảnh đối gương), được khen trước cả đội, thưởng tăng và công ty bảo lãnh nâng visa.',
+      'Mới: GIA ĐÌNH — kết hôn theo từng tuyến người yêu (đăng ký ở shiyakusho, hai nhà gặp nhau qua lời phiên dịch của chính người chơi, đám cưới xa xứ, đoàn tụ ở sân bay Narita), sinh con ở bệnh viện, làm giấy khai sinh và đặt tên con nối hai quê hương; tuyến độc thân có mạch riêng trọn vẹn, không thua thiệt.',
+      'Mới: TRẬN PHỎNG VẤN CUỐI đối gương ngày đầu — cùng một câu hỏi tự giới thiệu, nay trả lời ở đẳng cấp N1, kèm đàm phán lương chấm điểm thật (trượt thì ôn lại ở bàn học rồi thi lại); quầy nyukan cuối và LỰA CHỌN HƯỚNG ĐI cuối cùng của đời xa xứ.',
+      'Mới: ĐỦ 6 KẾT CỤC ghi vào Sổ kết cục (mở trong ⚙️ Cài đặt): «An cư xứ người», «Vinh quy», «Lưng chừng», «Tay trắng», «Kết cục đen», «Về quê» — mỗi kết cục truy từ chính lựa chọn thật tích lũy cả truyện (hướng đi cuối, vết rủi ro, tình cảm, gia đình); khép truyện vẫn sống tiếp tự do được.'
+    ],
+    maps: [],
+    scenes: ['ch5-opening',
+      'c5-succ-kaigo-1', 'c5-succ-kaigo-2', 'c5-succ-kaigo-3',
+      'c5-succ-nha-hang-1', 'c5-succ-nha-hang-2', 'c5-succ-nha-hang-3',
+      'c5-succ-genba-1', 'c5-succ-genba-2', 'c5-succ-genba-3',
+      'c5-succ-khach-san-1', 'c5-succ-khach-san-2', 'c5-succ-khach-san-3',
+      'c5-succ-shokuhin-1', 'c5-succ-shokuhin-2', 'c5-succ-shokuhin-3',
+      'c5-succ-seizo-1', 'c5-succ-seizo-2', 'c5-succ-seizo-3',
+      'c5-succ-seibi-1', 'c5-succ-seibi-2', 'c5-succ-seibi-3',
+      'c5-succ-soko-1', 'c5-succ-soko-2', 'c5-succ-soko-3',
+      'c5-succ-nogyo-1', 'c5-succ-nogyo-2', 'c5-succ-nogyo-3',
+      'c5-succ-duhoc-1', 'c5-succ-duhoc-2', 'c5-succ-duhoc-3',
+      'c5-marry-yui', 'c5-marry-hang', 'c5-marry-ren', 'c5-marry-khoi', 'c5-marry-ld', 'c5-marry-ld-nu',
+      'c5-baby-1', 'c5-baby-2', 'c5-baby-3',
+      'c5-single-1', 'c5-single-2', 'c5-single-3',
+      'c5-final-1', 'c5-visa-final', 'ket-1', 'ket-2', 'ket-3', 'ket-4']
+  });
+
   C.finalize();
 })();

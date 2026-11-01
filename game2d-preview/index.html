@@ -116,6 +116,8 @@
       <button class="btn ghost" id="set-restart" type="button">Chơi lại</button></div>
     <div class="mrow"><span>📦 Phiên bản nội dung: <b id="set-content-ver">…</b></span>
       <button class="btn ghost" id="set-news" type="button">🆕 Có gì mới</button></div>
+    <div class="mrow"><span>🏆 Sổ kết cục — 6 cái kết của đời xa xứ</span>
+      <button class="btn ghost" id="set-endings" type="button">Xem sổ kết cục</button></div>
     <div class="btnrow"><button class="btn primary" id="set-close" type="button">Xong</button></div>
   </div>
 </div>
@@ -127,6 +129,16 @@
     <div class="sub">Nội dung game được phát hành theo từng <b>gói dữ liệu</b> — mỗi đợt thêm bản đồ, cảnh hay sự kiện mới đều ghi ở đây. Phiên bản nội dung hiện tại: <b id="news-cur-ver">…</b></div>
     <div id="news-list"></div>
     <div class="btnrow"><button class="btn primary" id="news-close" type="button">Đóng</button></div>
+  </div>
+</div>
+
+<!-- Sổ kết cục — 6 kết cục của truyện, mở dần theo các đường chơi (story2.js nạp danh sách) -->
+<div class="modal" id="modal-endings">
+  <div class="modal-card">
+    <h3>🏆 Sổ kết cục</h3>
+    <div class="sub">Một đời xa xứ có thể khép lại theo 6 cách — mỗi đường lựa chọn thật của bạn dẫn tới một cái kết khác nhau. Chơi lại, đi đường khác, mở nốt những kết cục còn lại.</div>
+    <div id="endings-list"></div>
+    <div class="btnrow"><button class="btn primary" id="endings-close" type="button">Đóng</button></div>
   </div>
 </div>
 
@@ -270,6 +282,10 @@
 <script src="scenes-l3.js"></script>
 <script src="scenes-l4.js"></script>
 <script src="scenes-l5.js"></script>
+<script src="scenes-m1.js"></script>
+<script src="scenes-m2.js"></script>
+<script src="scenes-m3.js"></script>
+<script src="scenes-m4.js"></script>
 <script src="exam-n5.js"></script>
 <script src="exam-n4.js"></script>
 <script src="listen.js"></script>

@@ -48,7 +48,7 @@
         licRoute: null, licReview: false, licLogMark: 0, licTried2: false, licTried3: false,
         tuanFired: false, darkStage: 0
       },
-      c5: { success: 0, married: false, spouse: null, baby: false, baby2: false, finalInterview: false, finalChoice: null },
+      c5: { success: 0, married: false, spouse: null, baby: false, baby2: false, baby3: false, fam: 0, babyName: null, finalInterview: false, finalChoice: null, finAttempts: 0, finReview: false, finMark: 0 },
       darkPath: false,           // đã đi theo anh Tuấn ở đỉnh cám dỗ Ch4 (nhánh đen)
       ending: null               // null | 1..6
     };
@@ -141,8 +141,39 @@
     if (!c.homesick3) return 'homesick';
     return 'exam';
   }
-  /* ================= MÁY BƯỚC CHƯƠNG 5 (đợt Pha 3 sẽ lấp đầy) ================= */
-  function step5() { return 'c5-next'; }
+  /* ================= MÁY BƯỚC CHƯƠNG 5 «LỚN RỒI» (Pha 3) =================
+     Chuỗi chính: thành công ★ (giao việc quan trọng → dạy hậu bối → khen trước
+     đội + thưởng + bảo lãnh nâng visa) → gia đình 3 nhịp (kết hôn / đời độc
+     thân · sinh con / gọi về nhà · khai sinh đặt tên / buổi chiều bạn bè) →
+     phỏng vấn cuối (chấm điểm như phỏng vấn Ch3) → nyukan: xin vĩnh trú +
+     CHỌN HƯỚNG CUỐI → thi N1 → finishGame() chốt kết cục 1–4. */
+  function relState() { return (window.REL && window.REL.state) ? window.REL.state() : null; }
+  function spousePath() {
+    var R = relState();
+    if (R && R.partner) return 'partner';
+    if (R && R.breakup === 'giu-duoc') return 'ld';
+    return 'single';
+  }
+  var SPOUSE_NAME = { yui: 'Yui', hang: 'Hằng', ren: 'Ren', khoi: 'Khôi' };
+  function spouseName() {
+    var R = relState();
+    if (R && R.partner) return SPOUSE_NAME[R.partner] || 'người yêu';
+    if (spousePath() === 'ld') return gender === 'F' ? 'Hải' : 'Linh';
+    return null;
+  }
+  function step5() {
+    var c = G.c5;
+    if (G.ending) return 'done';
+    if (c.success < 1) return 'succ1';
+    if (c.success < 2) return 'succ2';
+    if (c.success < 3) return 'succ3';
+    if (c.fam < 1) return 'fam1';
+    if (c.fam < 2) return 'fam2';
+    if (c.fam < 3) return 'fam3';
+    if (!c.finalInterview) return 'final';
+    if (!c.finalChoice) return 'visa';
+    return 'exam';
+  }
 
   /* ================= CỔNG THI (story.js hỏi trước khi mở đề ở bảng đen) ================= */
   function gateReady(level) {
@@ -152,9 +183,17 @@
     return false;
   }
   function gate4() { return !G.ending && chapter() === 4 && step4() === 'exam'; }
-  function gate5() { return false; }   // Pha 3 lấp đầy
+  function gate5() { return !G.ending && chapter() >= 5 && step5() === 'exam'; }
 
   /* ================= MỤC TIÊU (story.js advanceObjective hỏi trước rel.js) ================= */
+  var ENDING_OBJ = {
+    1: '🏡 Kết cục «An cư xứ người» đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại, và sống tiếp những ngày bình yên ở Nhật',
+    2: '🎋 Kết cục «Vinh quy» đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại; nước Nhật vẫn ở đây mỗi khi bạn quay lại thăm',
+    3: '🌙 Kết cục «Lưng chừng» đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại; một đời vẫn còn dài để viết tiếp những chương khác',
+    4: '✉️ Kết cục «Tay trắng» đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại; chơi lại và đi đường thẳng để thấy một cái kết khác',
+    5: '🌑 Kết cục đen đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại. Chơi lại và đi đường thẳng, để thấy một đời khác mở ra thế nào',
+    6: '🏠 Kết thúc sớm «Về quê» đã mở — mở ⚙️ Cài đặt → «Sổ kết cục» để xem lại, hoặc chơi lại từ đầu để đi một đường khác'
+  };
   function objText() {
     var ch = chapter(), s = step();
     if (ch < 3 || !s) return null;
@@ -214,7 +253,34 @@
       }
       return '🌊 Chương 4 «Sóng gió» — cứ sống tiếp những ngày ở Nhật, truyện sẽ tự tìm tới';
     }
-    if (ch >= 5) return '🌅 Chương 5 «Lớn rồi»… (bản xem trước của đợt này dừng ở đây)';
+    if (ch >= 5) {
+      var c5 = G.c5, d5 = routeDef();
+      var place5 = d5 ? d5.place : 'nơi làm', hook5 = d5 ? d5.hookName : 'quản lý';
+      var path5 = spousePath(), sn5 = spouseName();
+      switch (s) {
+        case 'done': return ENDING_OBJ[G.ending] || '🌸 Tự do khám phá — đời ở Nhật vẫn tiếp diễn';
+        case 'succ1': return '🌟 Chương 5 «Lớn rồi» — tới ' + place5 + ' gặp ' + hook5 + ': sau bao năm, người ta sắp giao cho mình một VIỆC QUAN TRỌNG';
+        case 'succ2': return '🌱 Tới ' + place5 + ' gặp ' + hook5 + ': có HẬU BỐI mới sang đang chờ mình dìu — như ngày nào người ta dìu mình';
+        case 'succ3': return '🏅 Tới ' + place5 + ' gặp ' + hook5 + ': buổi tổng kết năm — nghe nói có chuyện thưởng và chuyện visa được công ty bảo lãnh';
+        case 'fam1': return path5 === 'partner'
+          ? '💒 Tới SHIYAKUSHO cùng ' + sn5 + ' — ngày ĐĂNG KÝ KẾT HÔN: tờ giấy nhỏ, đời người lớn'
+          : path5 === 'ld'
+            ? '📞 Về PHÒNG TRỌ, dùng điện thoại trên bàn thấp — chuyện trăm năm với ' + sn5 + ' ở quê: đã đến lúc quyết định cho trọn lời hứa sân bay'
+            : '🌿 Về PHÒNG TRỌ — một buổi tối yên tĩnh cho riêng mình: người trưởng thành cũng có hạnh phúc của người trưởng thành';
+        case 'fam2': return c5.married
+          ? '🏥 Tới BỆNH VIỆN — ngày đón đứa con đầu lòng chào đời, ngày làm cha/mẹ bắt đầu'
+          : '📞 Về PHÒNG TRỌ, dùng điện thoại trên bàn thấp — gọi về nhà cho bố mẹ: có những chuyện chỉ nói được khi mình đã thật sự lớn';
+        case 'fam3': return c5.married
+          ? '🛂 Tới SHIYAKUSHO — làm GIẤY KHAI SINH cho con và chọn cái tên mang cả hai quê hương'
+          : '🌸 Ra CÔNG VIÊN — một buổi chiều với những người bạn đã thành gia đình thứ hai ở đất khách';
+        case 'final': return c5.finReview
+          ? '📚 Phỏng vấn cuối chưa qua — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại cách trả lời, rồi quay lại (thi lại tốn 5.000 yên lệ phí hồ sơ)'
+          : '💼 Tới ' + place5 + ' gặp ' + hook5 + ': TRẬN PHỎNG VẤN CUỐI — đàm phán lương và vị trí bằng thứ tiếng Nhật của người đã lớn';
+        case 'visa': return '🛂 Tới SHIYAKUSHO — nộp hồ sơ ở quầy cán bộ và CHỌN HƯỚNG ĐI CUỐI CÙNG: xin vĩnh trú ở lại, hay gói ghém hồi hương dựng nghiệp';
+        case 'exam': return '🎓 Mọi cửa đã qua — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để thi MỐC JLPT N1, cổng cuối của cả hành trình';
+      }
+      return '🌅 Chương 5 «Lớn rồi» — cứ sống tiếp, cái kết đang tự viết ra từ chính những lựa chọn của mình';
+    }
     return null;
   }
   function objective() {
@@ -292,7 +358,35 @@
       if (ex4.passed) out.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để mở TỔNG KẾT Chương 4', target: { scene: 'school-board' }, done: ch >= 5 });
       return out;
     }
-    return [{ label: 'Chương 5 «Lớn rồi» — mở ở đợt xây kế tiếp', target: null, done: false }];
+    if (ch >= 5) {
+      var c5 = G.c5, d5 = routeDef(), out5 = [];
+      var boardT5 = d5 ? { scene: d5.board } : { scene: 'school-teacher' };
+      var bossT5 = d5 ? { scene: d5.boss } : { scene: 'school-teacher' };
+      var place5 = d5 ? d5.place : 'nơi làm';
+      var path5 = spousePath(), sn5 = spouseName();
+      out5.push({ label: 'Tới ' + place5 + ' — VIỆC QUAN TRỌNG đầu tiên được giao cho người đã đứng vững', target: boardT5, done: c5.success >= 1 });
+      out5.push({ label: 'Tới ' + place5 + ' — dìu dắt HẬU BỐI mới sang, như ngày nào mình được dìu dắt', target: bossT5, done: c5.success >= 2 });
+      out5.push({ label: 'Tới ' + place5 + ' — buổi tổng kết: lời khen trước cả đội, tiền thưởng và bảo lãnh nâng visa', target: boardT5, done: c5.success >= 3 });
+      if (path5 === 'partner') out5.push({ label: 'Tới SHIYAKUSHO cùng ' + sn5 + ' — ĐĂNG KÝ KẾT HÔN ở quầy cán bộ', target: { scene: 'officer' }, done: c5.fam >= 1 });
+      else if (path5 === 'ld') out5.push({ label: 'Về PHÒNG TRỌ — gọi về nhà: quyết định chuyện trăm năm với ' + sn5, target: { scene: 'call-home' }, done: c5.fam >= 1 });
+      else out5.push({ label: 'Về PHÒNG TRỌ — buổi tối của riêng mình: con đường của người trưởng thành độc thân', target: null, done: c5.fam >= 1 });
+      if (path5 !== 'single') {
+        out5.push({ label: 'Tới BỆNH VIỆN — đón đứa con đầu lòng chào đời', target: { scene: 'hospital-reception' }, done: c5.fam >= 2 });
+        out5.push({ label: 'Tới SHIYAKUSHO — làm GIẤY KHAI SINH và đặt tên cho con', target: { scene: 'officer' }, done: c5.fam >= 3 });
+      } else {
+        out5.push({ label: 'Về PHÒNG TRỌ — gọi về nhà cho bố mẹ: chuyện của người đã lớn', target: { scene: 'call-home' }, done: c5.fam >= 2 });
+        out5.push({ label: 'Ra CÔNG VIÊN — buổi chiều với những người bạn đã thành gia đình', target: { scene: 'hanami' }, done: c5.fam >= 3 });
+      }
+      out5.push({ label: 'Tới ' + place5 + ' — TRẬN PHỎNG VẤN CUỐI: đàm phán bằng tiếng Nhật của người đã lớn', target: bossT5, done: !!c5.finalInterview });
+      if (c5.finReview) out5.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại cách trả lời phỏng vấn cuối', target: { scene: 'room-desk' }, done: !c5.finReview });
+      out5.push({ label: 'Tới SHIYAKUSHO — quầy cán bộ: nộp hồ sơ và CHỌN HƯỚNG ĐI CUỐI (vĩnh trú / hồi hương)', target: { scene: 'officer' }, done: !!c5.finalChoice });
+      if (ex5.needReview) out5.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại bài, rồi quay lại trường thi tiếp', target: { scene: 'room-desk' }, done: !!ex5.passed });
+      out5.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N1, cổng cuối của hành trình', target: { scene: 'school-board' }, done: !!ex5.passed });
+      if (ex5.passed) out5.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để mở KẾT CỤC của đời xa xứ này', target: { scene: 'school-board' }, done: !!G.ending });
+      if (G.ending) out5.push({ label: '🏆 Truyện chính đã khép — mở ⚙️ Cài đặt → «Sổ kết cục» xem các kết cục đã mở, hoặc sống tiếp tự do ở Nhật', target: null, done: true });
+      return out5;
+    }
+    return null;
   }
 
   /* ================= PHỎNG VẤN — chấm điểm qua sổ log (tiền lệ rel.js) ================= */
@@ -329,6 +423,41 @@
     } else {
       iv.needReview = true;
       window.GAMEUI.toast('💼 Phỏng vấn chưa đạt (' + ok + ' câu ổn). Không sao — về phòng trọ, ngồi vào BÀN HỌC ôn lại cách trả lời, rồi quay lại phỏng vấn. Thi lại tốn 5.000 yên lệ phí hồ sơ.');
+    }
+    persist();
+  }
+
+  /* ================= PHỎNG VẤN CUỐI CHƯƠNG 5 — chấm điểm qua sổ log ================= */
+  function fireFinal(sceneId) {
+    var c = G.c5;
+    if (c.finReview) {
+      window.GAMEUI.toast('📚 Thầy Khánh nhắc: phỏng vấn cuối chưa qua là do trả lời chưa đủ tầm — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn một lượt đã, rồi hẵng thi lại.');
+      return true;
+    }
+    c.finAttempts++;
+    if (c.finAttempts > 1) {
+      var st = stats();
+      if (st.money >= 0.5) window.GAMEUI.apply({ money: -0.5 }, 'Lệ phí hồ sơ phỏng vấn lại — 5.000 yên');
+      else window.GAMEUI.toast('💼 Tiền không đủ đóng lệ phí hồ sơ phỏng vấn lại — thầy Khánh đóng hộ lần này. Cố mà đỗ nhé!');
+    }
+    c.finMark = window.GAMEUI.log().length;
+    persist();
+    playNow(sceneId);
+    return true;
+  }
+  function scoreFinal() {
+    var c = G.c5;
+    var lg = window.GAMEUI.log(), ok = 0;
+    for (var i = Math.max(0, c.finMark); i < lg.length; i++) {
+      if ((lg[i].note || '').indexOf('Phỏng vấn cuối: đúng') === 0) ok++;
+    }
+    if (ok >= 5) {
+      c.finalInterview = true; c.finReview = false;
+      window.GAMEUI.apply({ jp: 6 }, 'Đỗ phỏng vấn cuối — đàm phán như người đã lớn');
+      window.GAMEUI.toast('💼 PHỎNG VẤN CUỐI: ĐẠT! ' + ok + ' câu trả lời ở đẳng cấp khác hẳn năm đầu. Chỉ còn một cửa: quầy cán bộ và hướng đi cuối cùng.');
+    } else {
+      c.finReview = true;
+      window.GAMEUI.toast('💼 Phỏng vấn cuối chưa đạt (' + ok + ' câu ổn, cần 5). Về phòng trọ, ngồi vào BÀN HỌC ôn lại cách trả lời, rồi quay lại — thi lại tốn 5.000 yên lệ phí hồ sơ.');
     }
     persist();
   }
@@ -413,6 +542,39 @@
     var ch = chapter();
     if (ch < 3 || G.ending) return false;
     var s = step();
+    /* ============ CHƯƠNG 5 «LỚN RỒI» (Pha 3) ============ */
+    if (ch === 5) {
+      var c5 = G.c5, d5 = routeDef(), path5 = spousePath();
+      if (id === 'officer') {
+        if (s === 'fam1' && path5 === 'partner') { var R5 = relState(); playNow('c5-marry-' + R5.partner); return true; }
+        if (s === 'fam3' && c5.married) { playNow('c5-baby-2'); return true; }
+        if (s === 'visa') { playNow('c5-visa-final'); return true; }
+        return false;
+      }
+      if (id === 'call-home') {
+        if (s === 'fam1' && path5 === 'ld') { playNow(gender === 'F' ? 'c5-marry-ld-nu' : 'c5-marry-ld'); return true; }
+        if (s === 'fam2' && path5 === 'single') { playNow('c5-single-2'); return true; }
+        return false;
+      }
+      if (id === 'hospital-reception') {
+        if (s === 'fam2' && c5.married) { playNow('c5-baby-1'); return true; }
+        return false;
+      }
+      if (id === 'hanami') {
+        if (s === 'fam3' && path5 === 'single') { playNow('c5-single-3'); return true; }
+        return false;
+      }
+      if (d5 && (id === d5.board || id === d5.boss)) {
+        var ind5 = G.route === 'du-hoc' ? 'duhoc' : G.industry;
+        if (s === 'succ1' && id === d5.board) { playNow('c5-succ-' + ind5 + '-1'); return true; }
+        if (s === 'succ2' && id === d5.boss) { playNow('c5-succ-' + ind5 + '-2'); return true; }
+        if (s === 'succ3' && id === d5.board) { playNow('c5-succ-' + ind5 + '-3'); return true; }
+        if (s === 'final' && id === d5.boss) return fireFinal('c5-final-1');
+        if (s === 'exam' && id === d5.board && G.route === 'tokutei') { playNow('talk-' + G.industry); return true; }   // kaiwa đời thường nơi làm, lặp lại được ở cuối chương
+        return false;
+      }
+      return false;
+    }
     /* ============ CHƯƠNG 4 «SÓNG GIÓ» (Pha 2) ============ */
     if (ch === 4) {
       var c = G.c4, d = routeDef();
@@ -533,6 +695,30 @@
       persist();
       return;
     }
+    if (id === 'room-desk' && G.c5.finReview) {
+      G.c5.finReview = false;
+      window.GAMEUI.toast('📚 Ôn lại cách trả lời phỏng vấn cuối xong — lần này sẽ khác. Quay lại nơi làm, gặp người phụ trách để thi lại nhé!');
+      persist();
+      return;
+    }
+    /* ============ TIẾN TRIỂN CHƯƠNG 5 (Pha 3) ============ */
+    var c5o = G.c5;
+    var ms5 = id.match(/^c5-succ-([a-z-]+)-(\d)$/);
+    if (ms5) { var stg5 = parseInt(ms5[2], 10); if (stg5 === c5o.success + 1) { c5o.success = stg5; persist(); } return; }
+    if (id === 'c5-marry-yui' || id === 'c5-marry-hang' || id === 'c5-marry-ren' || id === 'c5-marry-khoi') {
+      c5o.married = true; c5o.spouse = id.slice('c5-marry-'.length); c5o.fam = 1;
+      window.GAMEUI.apply({ love: 3 }, 'Đăng ký kết hôn — từ nay đi đâu cũng có nhau');
+      persist(); return;
+    }
+    if (id === 'c5-marry-ld' || id === 'c5-marry-ld-nu') { c5o.married = true; c5o.spouse = 'ld'; c5o.fam = 1; window.GAMEUI.apply({ love: 3 }, 'Lời hứa sân bay năm nào — hôm nay thành vợ chồng'); persist(); return; }
+    if (id === 'c5-single-1') { c5o.fam = 1; persist(); return; }
+    if (id === 'c5-baby-1') { c5o.baby = true; c5o.fam = 2; window.GAMEUI.apply({ love: 3 }, 'Đón con đầu lòng — đời người sang một trang mới'); persist(); return; }
+    if (id === 'c5-single-2') { c5o.fam = 2; persist(); return; }
+    if (id === 'c5-baby-2') { c5o.baby2 = true; c5o.fam = 3; persist(); return; }
+    if (id === 'c5-single-3') { c5o.fam = 3; persist(); return; }
+    if (id === 'c5-baby-3') { c5o.baby3 = true; persist(); return; }
+    if (id === 'c5-final-1') { scoreFinal(); return; }
+    if (id === 'ket-1' || id === 'ket-2' || id === 'ket-3' || id === 'ket-4') { setTimeout(showFinalSummary, 700); return; }
     /* ============ TIẾN TRIỂN CHƯƠNG 4 (Pha 2) ============ */
     if (id === 'room-desk' && G.c4.licReview) {
       G.c4.licReview = false;
@@ -635,6 +821,11 @@
       else if (k === 'hong') c.hong = v;
       else if (k === 'dacap') c.daCap = v;
       persist();
+    } else if (name === 'c5') {
+      var p5 = String(value).split(':'), k5 = p5[0], v5 = p5[1], cc5 = G.c5;
+      if (k5 === 'final') cc5.finalChoice = v5;          // 'eiju' | 've' — hướng đi cuối ở quầy nyukan
+      else if (k5 === 'babyname') cc5.babyName = v5;     // tên con chọn ở cảnh khai sinh
+      persist();
     }
   }
 
@@ -657,6 +848,11 @@
     persist();
   }
   function onMapEnter(id) {
+    if (chapter() === 5 && !G.ending) {
+      var c5m = G.c5, s5 = step5();
+      if (id === 'room' && s5 === 'fam1' && spousePath() === 'single') { deferScene('c5-single-1', 1200); return; }
+      if (id === 'park' && c5m.married && c5m.baby2 && !c5m.baby3) { deferScene('c5-baby-3', 1200); return; }
+    }
     if (chapter() !== 4 || G.ending) return;
     var c = G.c4, s = step4();
     maybeCrisisPhone();
@@ -687,10 +883,90 @@
     }
   }
 
-  /* ================= KẾT THÚC GAME (Pha 3 lấp đầy) ================= */
-  function finishGame() {
-    window.GAMEUI.toast('🏁 Mốc N1 đã qua — phần kết cục mở ở đợt xây cuối của truyện.');
+  /* ================= KẾT CỤC 1–4 + TỔNG KẾT TOÀN TRUYỆN (Pha 3) =================
+     Kết cục truy từ LỰA CHỌN THẬT tích lũy cả truyện:
+       · hướng cuối người chơi tự chọn ở quầy nyukan (c5.finalChoice: eiju/ve);
+       · chỉ số Rủi ro ẩn tích lũy từ mọi đường tắt (SIM, cờ bạc, trộm hồng, đa
+         cấp…) — hồ sơ có vết thì cửa vĩnh trú bị từ chối ở chặng cuối → Tay trắng;
+       · tình cảm/gia đình: đã kết hôn · còn người yêu · giữ được yêu xa · chỉ
+         số Tình cảm — quyết «An cư» (đủ đầy) hay «Lưng chừng» (ở lại mà rạn vỡ). */
+  var ENDING_NAME = { 1: 'An cư xứ người', 2: 'Vinh quy', 3: 'Lưng chừng', 4: 'Tay trắng', 5: 'Kết cục đen', 6: 'Về quê' };
+  var ENDING_DESC = {
+    1: 'Vĩnh trú trong tay, nhà nhỏ ấm đèn, con vào lớp 1 ở Nhật. Cuối game, quay lại combini năm xưa — người thương cười: "Ngày đầu cậu chẳng hiểu gì đâu."',
+    2: 'Về Việt Nam dựng nghiệp bằng vốn liếng và tiếng Nhật: mở quán/công ty, làm cầu nối hai nước, dạy lớp trẻ đi Nhật "đi đường thẳng như mình".',
+    3: 'Ở lại được, tiền cũng có — nhưng tình cảm rạn vỡ, Tết ăn một mình. Một cái kết buồn nhẹ cho người giỏi kiếm tiền hơn giữ người.',
+    4: 'Trượt cửa cuối vì những vết trong hồ sơ, về nước khi món nợ vẫn chưa trả hết. Không bi lụy — chỉ để lại một lá thư: "nếu được làm lại".',
+    5: 'Bỏ trốn, làm chui, bị bắt và trục xuất, cấm quay lại. Kết cục cảnh báo — chỉ mở từ những lựa chọn đường tắt.',
+    6: 'Kết thúc sớm ở Chương 3: về quê, một đời bình thường ở quê nhà — và thỉnh thoảng mơ thấy chuyến tàu năm ấy.'
+  };
+  function decideEnding() {
+    var st = stats(), c = G.c5, R = relState();
+    if (c.finalChoice === 've') return 2;
+    if (st.risk >= 12) return 4;
+    var familyStrong = c.married || (R && R.partner) || (R && R.breakup === 'giu-duoc') || st.love >= 60;
+    return familyStrong ? 1 : 3;
   }
+  function finishGame() {
+    if (!G.ending) {
+      var n = decideEnding();
+      G.ending = n;
+      if (!G.c5.finalChoice) G.c5.finalChoice = 'eiju';
+      if (window.FLOW && window.FLOW.addEnding) window.FLOW.addEnding(n);
+      persist();
+      window.GAMEUI.toast('🏁 Kết cục ' + n + ' — «' + ENDING_NAME[n] + '» đang mở ra…');
+      deferScene('ket-' + n, 1000);
+    } else {
+      showFinalSummary();
+    }
+  }
+  function showFinalSummary() {
+    var h3 = document.querySelector('#modal-chapter h3'); if (!h3) return;
+    var st = (window.STORY && window.STORY.state) ? window.STORY.state() : {};
+    var pub = st.story || {}, statsNow = stats(), sg = st.saga || {}, c5 = sg.c5 || {};
+    var n = G.ending || sg.ending;
+    h3.textContent = '🏁 Tổng kết toàn truyện — «Tuổi Trẻ Ở Nhật»';
+    var sb = document.querySelector('#modal-chapter .sub');
+    if (sb) sb.textContent = 'Kết cục ' + n + ' — «' + (ENDING_NAME[n] || '') + '». Từ tờ vé một chiều năm ấy tới hôm nay: một đời xa xứ đã khép lại trọn vẹn.';
+    var btn = document.getElementById('chapter-next'); if (btn) btn.textContent = '🌸 Sống tiếp — đời ở Nhật vẫn tiếp diễn';
+    var indName = '—';
+    if (sg.route === 'tokutei') indName = industryName(sg.industry);
+    if (sg.route === 'du-hoc') indName = 'Trường chuyên môn (du học)';
+    var spouseTxt = c5.married
+      ? ('Đã kết hôn' + (c5.spouse === 'ld' ? ' với người yêu từ quê nhà' : (c5.spouse ? ' với ' + (SPOUSE_NAME[c5.spouse] || '') : '')) + (c5.babyName ? ' · con: ' + c5.babyName : (c5.baby ? ' · đã có con đầu lòng' : '')))
+      : 'Độc thân — tự do và tự trọng';
+    var el = document.getElementById('ch1-detail');
+    if (el) el.innerHTML =
+      '<div class="sum-row"><span>🏆 Kết cục đạt được</span><b>' + n + ' — ' + (ENDING_NAME[n] || '') + '</b></div>' +
+      '<div class="sum-row"><span>📖 Sổ kết cục đã mở</span><b>' + ((pub.endings || []).length) + '/6 kết cục</b></div>' +
+      '<div class="sum-row"><span>🎓 Mốc thi N1</span><b>' + ((st.exam5 && st.exam5.best) || 0) + '/12 (thi ' + ((st.exam5 && st.exam5.attempts) || 0) + ' lần)</b></div>' +
+      '<div class="sum-row"><span>🧭 Con đường đã đi</span><b>' + (sg.route === 'tokutei' ? 'Tokutei' : sg.route === 'du-hoc' ? 'Du học' : '—') + (sg.route ? ' · ' + indName : '') + '</b></div>' +
+      '<div class="sum-row"><span>👨‍👩‍👧 Gia đình</span><b>' + spouseTxt + '</b></div>' +
+      '<div class="sum-row"><span>🎬 Cảnh đã trải qua</span><b>' + ((pub.doneScenes || []).length) + ' cảnh</b></div>' +
+      '<div class="sum-row"><span>⭐ XP truyện</span><b>' + (st.xp || 0) + '</b></div>' +
+      '<div class="sum-row"><span>📚 Tiếng Nhật</span><b>' + statsNow.jp + '</b></div>' +
+      '<div class="sum-row"><span>💴 Tiền</span><b>' + Number(statsNow.money || 0).toFixed(2).replace('.', ',') + ' man</b></div>' +
+      '<div class="sum-row"><span>❤️ Sức khỏe</span><b>' + statsNow.hp + '</b></div>' +
+      '<div class="sum-row"><span>💗 Tình cảm</span><b>' + statsNow.love + '</b></div>' +
+      '<div class="sub" style="margin-top:10px">Truyện chính đã khép lại — nhưng đời thì chưa: cứ sống tiếp tự do ở khu phố này (đi làm, hẹn hò, mua sắm, ôn thi), xem «Sổ kết cục» trong ⚙️ Cài đặt, hoặc chơi lại từ đầu để đi một đường khác và mở nốt những kết cục còn lại.</div>';
+    var m = document.getElementById('modal-chapter'); if (m) m.classList.add('show');
+  }
+  /* Sổ kết cục — mục trong ⚙️ Cài đặt (index.html: #set-endings / #modal-endings) */
+  function wireEndingsBook() {
+    var btn = document.getElementById('set-endings'); if (!btn) return;
+    btn.addEventListener('click', function () {
+      var st = (window.STORY && window.STORY.state) ? window.STORY.state() : {};
+      var got = ((st.story || {}).endings) || [];
+      var list = document.getElementById('endings-list'); if (!list) return;
+      list.innerHTML = [1, 2, 3, 4, 5, 6].map(function (n) {
+        var has = got.indexOf(n) >= 0;
+        return '<div class="sum-row"><span>' + (has ? '🏆' : '🔒') + ' Kết cục ' + n + ' — ' + ENDING_NAME[n] + '</span><b>' + (has ? 'Đã mở' : 'Chưa mở') + '</b></div>' + (has ? '<div class="sub">' + ENDING_DESC[n] + '</div>' : '');
+      }).join('');
+      var m = document.getElementById('modal-endings'); if (m) m.classList.add('show');
+    });
+    var cl = document.getElementById('endings-close');
+    if (cl) cl.addEventListener('click', function () { var m = document.getElementById('modal-endings'); if (m) m.classList.remove('show'); });
+  }
+  document.addEventListener('DOMContentLoaded', wireEndingsBook);
 
   window.SAGA = {
     onGameStart: onGameStart, onSceneEnd: onSceneEnd, onMapEnter: onMapEnter,
