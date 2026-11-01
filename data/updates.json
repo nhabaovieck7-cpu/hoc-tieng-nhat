@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-01-kaiwa-cot-phai-tin-tuc-cuon-trong",
+   "date": "2026-11-01",
+   "type": "tinh-nang",
+   "title": "Trang chủ: Kaiwa thành thẻ riêng ở cột phải + Tin tức cuộn trong thẻ",
+   "desc": "Theo ý chủ trang: bỏ nút Kaiwa ở Khóa học; Kaiwa nay là một thẻ riêng ở cột phải, nằm giữa Cộng đồng và Sảnh game Edo, danh sách 19 bài cuộn dọc bên trong thẻ và thẻ tự lấp đầy chiều cao cột nên hai cột cân nhau, không còn khoảng trống. Tin tức chuyển về dưới Khóa học, cao đúng bằng Luyện tập thêm và cuộn dọc trong thẻ để xem hết tin.",
+   "link": "index.html"
+  },
+  {
    "id": "2026-11-01-nut-kaiwa-va-hang-duoi-trang-chu",
    "date": "2026-11-01",
    "type": "tinh-nang",

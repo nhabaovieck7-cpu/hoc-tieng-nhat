@@ -1392,3 +1392,58 @@ html[data-theme="dark"] .mn-lv{color:#8db8ee}
   .cell-low-r{display:contents}
   .cell-low-r>.mn-game{order:5}
 }
+
+/* ===== V110 (01/11/2026): KAIWA SANG CỘT PHẢI + TIN TỨC CUỘN TRONG, CĂN MÉP LUYỆN TẬP THÊM =====
+   Theo chỉ đạo trực tiếp của chủ trang (10:38, sau khi xem v109 trên máy
+   thật: cột phải hổng một ô trống lớn vì thẻ Cộng đồng trống ngắn hơn hẳn
+   bản xem trước):
+   1) Gỡ nút Kaiwa khỏi hàng tiêu đề Khóa học. Kaiwa thành THẺ RIÊNG
+      #kaiwa ở cột phải, giữa thẻ Cộng đồng (#mnFeed) và banner Sảnh game
+      Edo. Cột phải là flex column; #kaiwa flex:1 lấp đúng phần chênh
+      chiều cao giữa hai cột → đáy hai cột ngang nhau, không còn ô trống;
+      danh sách bài kaiwa cuộn dọc bên trong thẻ (.kw-scroll).
+   2) Banner Sảnh game + #tinhnang rời .cell-low-r, thành con trực tiếp
+      của .col-side; toàn bộ style .mn-game khai lại dưới scope
+      .col-side giữ nguyên từng giá trị của bản .cell-low-r (v109).
+   3) Tin tức (#homeNews) về cuối cột trái: JS hnFit trong index.html
+      chốt height của #homeNews = offsetHeight render thật của #tinhnang
+      (chỉ desktop); danh sách tin cuộn dọc trong thẻ (#hnxList
+      overflow-y:auto), bỏ nút "Xem thêm" mở rộng tại chỗ, giữ link
+      "Tất cả tin tức →". Đáy hai cột ngang nhau (nhờ #kaiwa flex:1) +
+      #homeNews cao đúng bằng #tinhnang và nằm cuối cột trái
+      (margin-top:auto) ⇒ mép trên Tin tức trùng mép trên Luyện tập thêm. */
+.kw-block{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;display:flex;flex-direction:column;min-height:0}
+.kw-block .block-h{margin-bottom:10px}
+.kw-block .kw-meta{margin:0 0 6px}
+.kw-scroll{min-height:0;overflow-y:auto;scrollbar-width:thin}
+.col-side>.mn-game{margin-top:0;padding:17px 18px;display:flex;align-items:center;gap:13px;color:#fff;border:none;position:relative;overflow:hidden;background:linear-gradient(125deg,#16264E,#2B4479);border-radius:20px;box-shadow:var(--shadow);text-decoration:none}
+.col-side .mn-game-pat{position:absolute;inset:0;background-image:radial-gradient(circle at 50% 0,transparent 13px,rgba(255,255,255,.05) 14px,rgba(255,255,255,.05) 15px,transparent 16px,rgba(255,255,255,.035) 21px,rgba(255,255,255,.035) 22px,transparent 23px),radial-gradient(circle at 0 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px),radial-gradient(circle at 100% 12px,transparent 13px,rgba(255,255,255,.04) 14px,rgba(255,255,255,.04) 15px,transparent 16px);background-size:56px 28px}
+.col-side .mn-torii{position:absolute;right:118px;top:50%;transform:translateY(-52%);height:70px;opacity:.27;pointer-events:none}
+.col-side .mn-game-ic{width:44px;height:44px;flex:none;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.col-side .mn-game-ic svg{width:23px;height:23px}
+.col-side .mn-game-tx{position:relative;z-index:1;display:block;min-width:0}
+.col-side .mn-game-tx b{font-size:15.5px;font-weight:800;display:block}
+.col-side .mn-game-tx small{font-size:12px;color:#B9C6E4;margin-top:2px;display:block;line-height:1.45}
+.col-side #hnGameStars{color:#FFD98A;font-weight:700}
+.col-side .mn-game-btn{background:#fff;color:#233D63;font-weight:800;font-size:13.5px;padding:11px 19px;border-radius:999px;box-shadow:0 8px 18px rgba(0,0,0,.25);margin-left:auto;position:relative;z-index:1;white-space:nowrap;flex:none}
+@media(max-width:560px){.col-side .mn-torii{right:104px;height:54px;opacity:.2}.col-side>.mn-game{padding:15px 14px;gap:10px}.col-side .mn-game-btn{padding:10px 14px}}
+@media(max-width:560px){.col-side>.mn-game{padding:17px 18px;gap:13px}.col-side .mn-game-btn{padding:11px 19px}}
+@media(min-width:900px){
+  .layout{grid-template-areas:"main side";align-items:stretch}
+  #kaiwa{flex:1 1 auto}
+  .kw-scroll{flex:1 1 auto}
+  #homeNews{margin-top:auto;display:flex;flex-direction:column}
+  #homeNews .hnx-card{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+  #hnxList{flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
+}
+@media(max-width:899px){
+  #topWeek{order:3}
+  #moingay{order:4}
+  #kaiwa{order:5}
+  .col-side>.mn-game{order:6}
+  #tinhnang{order:7}
+  #homeNews{order:8;display:flex;flex-direction:column;max-height:520px}
+  #homeNews .hnx-card{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+  #hnxList{flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
+  .kw-scroll{max-height:380px}
+}
