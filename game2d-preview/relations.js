@@ -288,17 +288,23 @@
     cv.getContext('2d').drawImage(set.frames.down[0], 0, 0);
   }
   function ensureModals8() {
+    /* Lane AH (01/11): thẻ TÁCH như bảng 💗 — thân cuộn riêng, chân nút cố định
+       NGOÀI vùng cuộn (hết dải sticky đục đè nút Mua tặng/Thử đồ ở đáy thẻ —
+       lỗi chạm chập chờn chủ trang báo từ iPhone). Nút chân gắn listener MỘT
+       lần ở đây; renderer chỉ bơm nội dung vào vùng cuộn. */
     if (!$('modal-rel8')) {
       var m1 = document.createElement('div');
       m1.className = 'modal'; m1.id = 'modal-rel8';
-      m1.innerHTML = '<div class="modal-card" id="rel8-card"></div>';
+      m1.innerHTML = '<div class="modal-card card-split"><div class="card-scroll" id="rel8-card"></div><div class="card-foot"><button type="button" class="btn primary" id="rel8-close">Đóng</button></div></div>';
       document.body.appendChild(m1);
+      m1.querySelector('#rel8-close').addEventListener('click', function () { m1.classList.remove('show'); });
     }
     if (!$('modal-rel8-shop')) {
       var m2 = document.createElement('div');
       m2.className = 'modal'; m2.id = 'modal-rel8-shop';
-      m2.innerHTML = '<div class="modal-card" id="rel8-shop-card"></div>';
+      m2.innerHTML = '<div class="modal-card card-split"><div class="card-scroll" id="rel8-shop-card"></div><div class="card-foot"><button type="button" class="btn primary" id="rel8-shop-done">Xong — đi tiếp</button></div></div>';
       document.body.appendChild(m2);
+      m2.querySelector('#rel8-shop-done').addEventListener('click', function () { m2.classList.remove('show'); shopCtx8 = null; });
     }
   }
   function openShopPanel8() {
@@ -384,11 +390,7 @@
       rowEl.appendChild(acts2);
       card.appendChild(rowEl);
     });
-    var done = h('div', 'btnrow');
-    var db = h('button', 'btn primary', 'Xong — đi tiếp'); db.type = 'button';
-    db.addEventListener('click', function () { $('modal-rel8-shop').classList.remove('show'); shopCtx8 = null; });
-    done.appendChild(db);
-    card.appendChild(done);
+    /* Lane AH: nút "Xong — đi tiếp" nay là chân cố định của thẻ tách (ensureModals8). */
   }
   function giftItem8(item) {
     if (!outing8 || !item) return false;
@@ -527,7 +529,9 @@
       // Lane Q 01/11: tên riêng một dòng (trước đây tên + mức quan hệ cùng cỡ chữ to, quấn
       // 2 dòng lộn xộn); mức quan hệ xuống dòng phụ cùng hàng thiện cảm.
       info.appendChild(h('div', 'shop-name', p.ava + ' ' + p.name));
-      info.appendChild(h('div', 'shop-jp', STAGE_LABEL[st] + ' · ' + (p.candidate ? p.nat : 'Người quen trong đời sống ở Nhật') + ' · Thiện cảm: ' + aff + '/100 ' + '💗'.repeat(Math.round(aff / 20))));
+      var affLine8 = h('div', 'shop-jp', STAGE_LABEL[st] + ' · ' + (p.candidate ? p.nat : 'Người quen trong đời sống ở Nhật') + ' · Thiện cảm: ' + aff + '/100 ');
+      affLine8.appendChild(h('span', 'aff-hearts', '💗'.repeat(Math.round(aff / 20))));   // Lane AH: tim một hàng ngang gọn (aff-hearts nowrap)
+      info.appendChild(affLine8);
       if (!p.candidate) info.appendChild(h('div', 'shop-jp', 'Chỉ kết bạn — không tỏ tình/kết đôi.'));
       var gifts = R8.gifts8[id];
       if (gifts.length) info.appendChild(h('div', 'shop-jp', '🎁 Đã tặng: ' + gifts.map(function (gid) { var it = ((window.STYLE && window.STYLE.catalog) ? window.STYLE.catalog() : []).filter(function (x) { return x.id === gid; })[0]; return it ? it.name : gid; }).join(', ')));
@@ -546,10 +550,7 @@
       box.appendChild(acts);
       card.appendChild(box);
     });
-    var btnrow = h('div', 'btnrow');
-    var done = h('button', 'btn primary', 'Đóng'); done.type = 'button';
-    done.addEventListener('click', function () { $('modal-rel8').classList.remove('show'); });
-    btnrow.appendChild(done); card.appendChild(btnrow);
+    /* Lane AH: nút Đóng nay là chân cố định của thẻ tách (ensureModals8). */
     $('modal-rel8').classList.add('show');
   }
 

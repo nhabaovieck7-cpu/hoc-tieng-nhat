@@ -419,25 +419,47 @@ body.hud-full #guide { top: calc(198px + env(safe-area-inset-top)); }
 /* Hàng nút chốt của modal DÍNH ở đáy thẻ (sticky): nội dung modal dài hơn
    màn hình điện thoại thì nút Xong/Đóng vẫn luôn nhìn thấy + bấm được ngay,
    khỏi cuộn xuống tận cuối mới thấy (trước đây ở 390px nút "Xong" của Cài
-   đặt bị đẩy khuất hẳn xuống dưới mép — bấm hụt là modal không đóng). */
-.modal-card .btnrow { position: sticky; bottom: -18px; z-index: 3;
-  margin: 6px -18px -18px; padding: 10px 18px 18px;
-  background: #fffaf0; border-top: 1px solid #eee2cc; border-radius: 0 0 18px 18px; }
+   đặt bị đẩy khuất hẳn xuống dưới mép — bấm hụt là modal không đóng).
+   Lane AH (01/11, chủ trang báo từ iPhone thật: "mấy chỗ ấn mua đồ bị lag ấn
+   không được"): dải sticky CŨ kéo full-width + nền đục #fffaf0 + z-index 3 —
+   một DẢI CHẾT ~72px ở đáy thẻ: nút Mua nào đang nằm trong dải lúc người
+   chơi chạm là bị dải nuốt cú chạm (chập chờn theo vị trí cuộn; harness cũ
+   bấm bằng .click() lập trình — bỏ qua hit-test — nên không bao giờ bắt
+   được). Nay: hàng chốt thu thành PILL gọn ở góc phải dưới (chỉ còn che
+   đúng ô của chính nút Đóng — nút đó tự bấm được), nền pill vẫn đục để đọc
+   rõ; thẻ có scroll-padding-bottom lớn để cuộn-tới không dừng mục tiêu
+   ngay sát đáy. Các bảng dài quan trọng nhất (💗 Tình cảm, 💞 Quan hệ,
+   shop khi đi cùng nhau) dùng cấu trúc tách .card-split ở dưới — chân nằm
+   NGOÀI vùng cuộn, không còn phần tử nào đè lên nút mua nữa. */
+.modal-card > .btnrow:last-child { position: sticky; bottom: 8px; z-index: 3;
+  width: fit-content; margin: 6px -6px -6px auto; padding: 6px;
+  background: #fffaf0; border: 1px solid #eee2cc; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(40, 32, 10, .18); }
+.modal-card { scroll-padding-bottom: 96px; }
+.modal-card .btn, .modal-card .shop-item { scroll-margin-bottom: 96px; }
 
-/* ---------- CHIP MỤC TIÊU 1 DÒNG (Lane X — 01/11, lệnh chủ trang 08:32) ----------
-   guide.js tự tạo #guide-chip: MỘT dòng duy nhất, cao 28px, bán trong suốt,
-   ghim giữa mép trên NGAY DƯỚI HUD (không che nhân vật/khung cảnh), z-index 34
-   = trên thẻ thoại (30) để đang thoại vẫn đọc được việc cần làm, dưới điện
-   thoại (45) và modal (46). Tràn chữ thì … (JS cũng cắt ở ~62 ký tự). KHÔNG
-   quay lại banner nhiều dòng — chi tiết vẫn ở bảng 🧭 (bấm chip là mở). */
-#guide-chip { position: fixed; left: 50%; transform: translateX(-50%); box-sizing: border-box;
-  top: calc(86px + env(safe-area-inset-top)); z-index: 34; display: none;
-  max-width: min(94vw, 540px); height: 28px; line-height: 28px; padding: 0 13px;
-  border-radius: 999px; border: 1px solid rgba(255, 205, 64, .45);
-  background: rgba(24, 22, 40, .78); color: #ffe9a8;
-  font-size: 12.5px; font-weight: 700; letter-spacing: .01em;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
-#guide-chip.show { display: block; }
-#guide-chip:active { background: rgba(50, 44, 84, .88); }
-@media (min-width: 900px) { #guide-chip { top: 54px; font-size: 13px; } }
-body.hud-full #guide-chip { top: calc(208px + env(safe-area-inset-top)); }
+/* ---------- THẺ TÁCH: vùng cuộn + chân cố định NGOÀI vùng cuộn (Lane AH) ----------
+   Cho các bảng mà renderer bơm lại nội dung liên tục (rel.js / relations.js):
+   .card-split là .modal-card dạng flex cột, KHÔNG tự cuộn; .card-scroll cuộn
+   phần thân; .card-foot là hàng nút chốt tĩnh — không sticky, không overlay,
+   không phần tử nào che được nút trong vùng cuộn tại bất kỳ vị trí cuộn nào. */
+.modal-card.card-split { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+.card-split .card-scroll { overflow-y: auto; padding: 18px; flex: 1 1 auto; min-height: 0; }
+.card-split .card-foot { flex: none; display: flex; justify-content: flex-end; gap: 8px;
+  padding: 10px 18px 14px; background: #fffaf0; border-top: 1px solid #eee2cc; }
+/* Hàng tim thiện cảm: LUÔN một hàng ngang gọn — trước đây 5 trái tim ở mức
+   100/100 bị bẻ thành CỘT DỌC làm thẻ ứng viên phình cao bất thường (ảnh
+   iPhone của chủ trang 19:20 01/11). */
+.aff-hearts { white-space: nowrap; letter-spacing: 1px; font-size: 11px; }
+/* Thẻ ứng viên trong bảng 💗: bố cục DỌC — thông tin full-width ở trên, hàng
+   nút hành động nằm dưới. Bố cục ngang cũ ép cột tên còn ~90px ở 390px (hàng
+   nút 3 chiếc chiếm hết bề ngang), chữ bẻ một từ một dòng, thẻ cao bất
+   thường (ảnh đối chiếu r-panel/ah-p4 — Lane AH). Chỉ áp trong #rel-card,
+   không đụng .shop-item của siêu thị/mall/REL8. */
+#rel-card .shop-item { flex-direction: column; align-items: stretch; }
+#rel-card .shop-item .btnrow { justify-content: flex-start; margin-top: 10px; }
+
+/* ---------- CHIP MỤC TIÊU 1 DÒNG — ĐÃ GỠ (Lane AI, 01/11) ----------
+   Chủ trang lệnh 20:50 "bỏ cái hướng dẫn này đi": toàn bộ CSS #guide-chip
+   đã xoá và guide.js không còn tạo phần tử này nữa. Mục tiêu/hướng dẫn vẫn
+   xem trong bảng 🧭 (nút #btn-guide); mũi tên + vệt chấm giữ nguyên. */

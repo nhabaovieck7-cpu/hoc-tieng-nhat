@@ -21,10 +21,36 @@
 // .volume cũ. Thêm lớp bảo hiểm thứ hai: duck còn được giữ bởi BUS GIỌNG NÓI trung tâm
 // (VOICE_BUS.claim → BGM.duckBusStart, nhả sàn → duckBusEnd) để không đường phát tiếng
 // nào quên duck được nữa; attachDuck theo phần tử vẫn giữ nguyên.
+// Lane AG (01/11): iPHONE MẤT LUÔN NHẠC sau bản AF — chẩn đoán hai lớp, đều có bằng chứng:
+// (1) CORS LÀ KẺ GIẾT CHÍNH: bản preview chạy ở origin rawcdn.githack.com NHƯNG file
+// nhạc bị githack REDIRECT sang raw.githubusercontent.com (curl xác minh: 1 redirect,
+// đầu cuối có Access-Control-Allow-Origin: *). Phần tử nhạc KHÔNG đặt crossOrigin →
+// media bị "tainted" → theo spec HTML, MediaElementAudioSourceNode cho ra TOÀN SỐ 0
+// (câm tuyệt đối) dù AudioContext 'running'. Harness local cùng-origin nên không bao
+// giờ tái hiện. Thuốc: el.crossOrigin = 'anonymous' TRƯỚC mọi lần gán src.
+// (2) ĐỒ THỊ SINH NGOÀI CỬ CHỈ: ensureGraph() trước đây chỉ tới được qua resumeCtx(),
+// mà applyTarget() (timer fade/tự phát theo mood khi nạp bản lưu) và setEnabled() đều
+// gọi resumeCtx() NGOÀI stack cử chỉ chạm → trên iOS, AudioContext sinh ra ngoài cử
+// chỉ có thể kẹt 'suspended'/'interrupted' và NUỐT toàn bộ tiếng đã định tuyến — và
+// code cũ không có bất kỳ đường thoát nào (createMediaElementSource là một chiều).
+// THIẾT KẾ LANE AG — "KHÔNG BAO GIỜ MẤT NHẠC":
+//  • Đồ thị CHỈ sinh đồng bộ bên trong handler cử chỉ chạm thật (pointerdown/touchend/
+//    click, capture) + resume đồng bộ ngay trong cùng stack; các đường gọi ngoài cử
+//    chỉ (applyTarget/setEnabled/visibilitychange) TUYỆT ĐỐI không sinh đồ thị, chỉ
+//    resume nếu đồ thị đã có. Chưa có đồ thị = nhạc phát THẲNG qua phần tử (an toàn).
+//  • Watchdog tự chữa (1s/nhịp): chen AnalyserNode vào đồ thị để ĐO MỨC RA THẬT.
+//    Track đang phát mà ctx không 'running' hoặc mức đo ≈ 0 liên tục 3 nhịp → thử
+//    resume; vẫn chết → TỰ RƠI VỀ PHÁT THẲNG bằng một phần tử audio DỰ PHÒNG SẠCH
+//    (chưa từng bị createMediaElementSource — phần tử cũ không gỡ định tuyến được).
+//    Ở chế độ rơi về, duck hy sinh qua cơ chế .volume cũ — ưu tiên tuyệt đối: CÓ NHẠC.
+//  • Mọi trạng thái phơi ra window.__bgmDiag (+ BGM.diag()) để harness đọc: mode,
+//    ctxState, ai sinh đồ thị, nhịp câm, lý do rơi về, nhật ký watchdog.
 (function () {
   'use strict';
   var el = new Audio();
+  el.crossOrigin = 'anonymous';   // Lane AG: BẮT BUỘC trước mọi gán src — không có dòng này, file nhạc cross-origin (githack→githubusercontent) làm MediaElementSource câm tuyệt đối
   el.loop = true; el.preload = 'auto';
+  var elD = null;           // Lane AG: phần tử DỰ PHÒNG phát thẳng khi rơi về — không bao giờ bị định tuyến
   var curTrack = null;      // track của BẢN ĐỒ hiện tại — BGM.current() trả cái này (hợp đồng harness cũ)
   var moodName = null;      // Lane V: mood truyện đang phủ ('airport','tense',...) — null = không phủ
   var effTrack = null;      // track THẬT đang nạp trong phần tử audio (mood nếu có, không thì track bản đồ)
@@ -33,46 +59,141 @@
   if (isNaN(vol)) vol = 0.45;
   var timer = null;
 
-  /* ---- Lane AF: định tuyến Web Audio (gain node mới là núm âm lượng THẬT) ----
+  /* ---- Lane AF + AG: định tuyến Web Audio (gain node mới là núm âm lượng THẬT) ----
      outLevel = mức ra loa hiện tại (vai trò cũ của el.volume). setOut() là CHỖ DUY
-     NHẤT ghi mức ra: đã định tuyến → ghi gain node; chưa/không định tuyến được →
-     ghi el.volume như cũ. Đồ thị được dựng LƯỜI ở thao tác chạm đầu tiên (đúng luật
-     autoplay của iOS/Chrome: AudioContext phải sinh/resume trong cử chỉ người dùng;
-     game luôn bắt đầu bằng chạm nút Bắt đầu) và resume lại ở mọi lần play + mỗi chạm
-     sau đó, phòng context bị treo (suspended) khi ẩn/hiện tab. */
-  var actx = null, srcNode = null, gainNode = null, routed = false, routeFailed = false;
-  var outLevel = 1;   // khớp giá trị mặc định của el.volume lúc mới tạo
+     NHẤT ghi mức ra: mode 'routed' → ghi gain node; 'direct'/'fallback' → ghi
+     .volume của phần tử đang hoạt động. */
+  var actx = null, srcNode = null, gainNode = null, anlNode = null, routed = false, routeFailed = false;
+  var mode = 'direct';      // Lane AG: 'direct' (phát thẳng, chưa có đồ thị) | 'routed' (qua gain) | 'fallback' (đồ thị chết → phát thẳng bằng elD)
+  var outLevel = 1;         // khớp giá trị mặc định của el.volume lúc mới tạo
+  var diag = {
+    mode: 'direct', ctxState: null, graphBornInGesture: false, graphBornAt: 0,
+    lastGestureAt: 0, silentTicks: 0, fallbackReason: null, fallbackPendingPlay: false,
+    watchdog: []
+  };
+  window.__bgmDiag = diag;
+  function wlog(msg) {
+    diag.watchdog.push(new Date().toISOString().slice(11, 19) + ' ' + msg);
+    if (diag.watchdog.length > 12) diag.watchdog.shift();
+  }
+  function activeEl() { return mode === 'fallback' ? (elD || el) : el; }
   function clamp01(v) { return Math.max(0, Math.min(1, v)); }
   function setOut(v) {
     outLevel = clamp01(v);
-    if (routed && gainNode) { try { gainNode.gain.value = outLevel; } catch (e) {} }
-    else { el.volume = outLevel; }
+    if (mode === 'routed' && gainNode) { try { gainNode.gain.value = outLevel; } catch (e) {} }
+    else { activeEl().volume = outLevel; }
   }
-  function ensureGraph() {
+  function measureOut() {
+    // Lane AG: mức ra THẬT đo ở đầu ra đồ thị (sau gain). null khi chưa định tuyến.
+    if (mode !== 'routed' || !anlNode || !actx) return null;
+    try {
+      var buf = new Uint8Array(anlNode.fftSize), sum = 0;
+      anlNode.getByteTimeDomainData(buf);
+      for (var i = 0; i < buf.length; i++) { var d = (buf[i] - 128) / 128; sum += d * d; }
+      return Math.sqrt(sum / buf.length);
+    } catch (e) { return null; }
+  }
+  function ensureGraph(inGesture) {
     if (routed) return true;
-    if (routeFailed) return false;
+    if (routeFailed || mode === 'fallback') return false;
     try {
       var AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) { routeFailed = true; return false; }
+      if (!AC) { routeFailed = true; wlog('no-web-audio → direct'); return false; }
       actx = new AC();
       srcNode = actx.createMediaElementSource(el);
       gainNode = actx.createGain();
       gainNode.gain.value = outLevel;   // nạp mức hiện tại TRƯỚC khi nối ra loa — không phọt tiếng
+      anlNode = actx.createAnalyser(); anlNode.fftSize = 2048;
       srcNode.connect(gainNode);
-      gainNode.connect(actx.destination);
+      gainNode.connect(anlNode);
+      anlNode.connect(actx.destination);
       el.volume = 1;   // ghim: từ nay gain node quyết định toàn bộ mức ra
-      routed = true;
+      routed = true; mode = 'routed'; diag.mode = 'routed';
+      diag.graphBornInGesture = !!inGesture; diag.graphBornAt = Date.now();
+      diag.ctxState = actx.state;
+      try { actx.onstatechange = function () { diag.ctxState = actx.state; }; } catch (e) {}
+      wlog('graph-born gesture=' + !!inGesture + ' state=' + actx.state);
       return true;
-    } catch (e) { routeFailed = true; actx = null; srcNode = null; gainNode = null; return false; }
+    } catch (e) { routeFailed = true; actx = null; srcNode = null; gainNode = null; anlNode = null; wlog('graph-failed: ' + (e && e.message || e)); return false; }
   }
-  function resumeCtx() {
-    if (!ensureGraph()) return;
-    if (actx && actx.state === 'suspended') { var p = actx.resume(); if (p && p.catch) p.catch(function () {}); }
+  function tryResume() {
+    if (actx && actx.state !== 'running') {
+      try { var p = actx.resume(); if (p && p.catch) p.catch(function () {}); } catch (e) {}
+    }
+    if (actx) diag.ctxState = actx.state;
+  }
+  /* Lane AG: mở khóa ĐỒNG BỘ trong stack cử chỉ chạm — sinh đồ thị (nếu chưa có) +
+     resume + phát nốt nhạc đang chờ, tất cả trong cùng call stack của cử chỉ thật.
+     Đây là đường DUY NHẤT được phép sinh đồ thị. */
+  function unlockGesture() {
+    diag.lastGestureAt = Date.now();
+    if (mode === 'fallback') {
+      if (diag.fallbackPendingPlay) {
+        diag.fallbackPendingPlay = false;
+        tryPlayActive('gesture-fallback');
+      }
+      return;
+    }
+    if (!routed && !routeFailed) { if (ensureGraph(true)) tryResume(); }
+    else tryResume();
+    if (on && effTrack && activeEl().paused) tryPlayActive('gesture');
   }
   ['pointerdown', 'touchend', 'click'].forEach(function (evName) {
-    document.addEventListener(evName, resumeCtx, true);
+    document.addEventListener(evName, unlockGesture, true);
   });
-  document.addEventListener('visibilitychange', function () { if (!document.hidden) resumeCtx(); });
+  function tryPlayActive(why) {
+    var a = activeEl();
+    if (!a.src && effTrack) a.src = 'bgm/' + effTrack + '.mp3';
+    var p = a.play();
+    if (p && p.catch) p.catch(function () { wlog('play-rejected(' + why + ')'); });
+  }
+  /* Các đường gọi NGOÀI cử chỉ (applyTarget/setEnabled/visibilitychange): chỉ resume
+     nếu đồ thị ĐÃ có — tuyệt đối không sinh đồ thị ở đây (bài học Lane AG mục 2). */
+  function resumeCtx() {
+    if (actx) { tryResume(); }
+    if (actx) diag.ctxState = actx.state;
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) { resumeCtx(); if (on && effTrack && mode !== 'routed' && activeEl().paused) tryPlayActive('visible'); }
+  });
+
+  /* ---- Lane AG: rơi về phát thẳng (tự chữa khi đồ thị chết/câm) ---- */
+  function enterFallback(reason) {
+    if (mode === 'fallback') return;
+    mode = 'fallback'; diag.mode = 'fallback'; diag.fallbackReason = reason;
+    diag.silentTicks = 0;
+    wlog('FALLBACK: ' + reason);
+    try { el.pause(); } catch (e) {}
+    if (!elD) { elD = new Audio(); elD.loop = true; elD.preload = 'auto'; }
+    if (effTrack) {
+      var want = 'bgm/' + effTrack + '.mp3';
+      if ((elD.getAttribute('src') || '') !== want) elD.src = want;
+      try { if (isFinite(el.currentTime) && el.currentTime > 0) elD.currentTime = el.currentTime; } catch (e) {}
+    }
+    elD.volume = outLevel;
+    if (on && effTrack) {
+      var p = elD.play();
+      if (p && p.catch) p.catch(function () { diag.fallbackPendingPlay = true; wlog('fallback-play-rejected → chờ cử chỉ'); });
+    }
+  }
+  /* Watchdog 1s: track ĐANG phát mà đầu ra câm (ctx không running / analyser ≈ 0)
+     3 nhịp liên tục → thử resume; vẫn câm → rơi về phát thẳng. Chỉ chạy khi mode
+     'routed' — mode 'direct' phát thẳng vốn đã an toàn, 'fallback' là đích cuối. */
+  setInterval(function () {
+    diag.ctxState = actx ? actx.state : null;
+    if (mode !== 'routed' || !on || !effTrack) { diag.silentTicks = 0; return; }
+    if (el.paused || el.ended) { diag.silentTicks = 0; return; }   // chưa phát (autoplay bị chặn) — cử chỉ sẽ mở, không phải lỗi đồ thị
+    var dead = false, why = '';
+    if (!actx || actx.state !== 'running') { dead = true; why = 'ctx-' + (actx ? actx.state : 'null'); tryResume(); }
+    else {
+      var m = measureOut();
+      if (m !== null && m < 0.002 && el.readyState >= 3) { dead = true; why = 'output-silent'; }
+    }
+    if (!dead) { diag.silentTicks = 0; return; }
+    diag.silentTicks++;
+    wlog('silent-tick ' + diag.silentTicks + ' (' + why + ')');
+    if (diag.silentTicks >= 3) enterFallback(why);
+  }, 1000);
 
   /* ---- Lane W: ducking (tự giảm nhạc khi có giọng đọc) ---- */
   var duckOn = localStorage.getItem('b2d_bgm_duck') !== '0';   // mặc định BẬT
@@ -106,16 +227,16 @@
   function rampToVol(done, stepsN) { ramp(function () { return effVol(); }, done, stepsN); }
   function duckStart() {
     duckCount++;
-    if (duckCount === 1 && on && !el.paused) rampToVol(null, 7);   // 7×45ms ≈ 0,3s
+    if (duckCount === 1 && on && !activeEl().paused) rampToVol(null, 7);   // 7×45ms ≈ 0,3s
   }
   function duckEnd() {
     if (duckCount > 0) duckCount--;
-    if (duckCount === 0 && on && !el.paused) rampToVol(null, 7);
+    if (duckCount === 0 && on && !activeEl().paused) rampToVol(null, 7);
   }
   function setDuckEnabled(v) {
     duckOn = !!v;
     localStorage.setItem('b2d_bgm_duck', duckOn ? '1' : '0');
-    if (on && !el.paused) rampToVol(null, 7);   // tắt giữa lúc duck → khôi phục ngay; bật giữa clip → hạ ngay
+    if (on && !activeEl().paused) rampToVol(null, 7);   // tắt giữa lúc duck → khôi phục ngay; bật giữa clip → hạ ngay
   }
   /* ---- Lane AF: duck giữ bởi BUS GIỌNG NÓI (lớp bảo hiểm trung tâm) ----
      VOICE_BUS.claim() (voice.js) gọi duckBusStart — bất kỳ giọng nào giành sàn là
@@ -168,11 +289,12 @@
   // dùng chung ramp() với ramp âm lượng — duckEnd/duckStart gọi rampToVol chen vào đúng
   // lúc gỡ mood/đổi bản đồ sẽ huỷ callback đổi src, nhạc kẹt ở track cũ (harness-bgm-mood
   // M4 bắt được). Fade đổi track nay độc lập hoàn toàn với ramp âm lượng.
-  function applyTarget() {   // nạp/phát track hiệu dụng (mood phủ > bản đồ), fade như cũ
+  function applyTarget() {   // nạp/phát track hiệu dụng (mood phủ > bản đồ), fade như cũ — Lane AG: luôn qua activeEl()
+    var a = activeEl();
     var t = effId();
     if (!t) return;
     if (t === effTrack) {
-      if (on && el.paused && el.src) { setOut(0); resumeCtx(); el.play().catch(function () {}); rampToVol(); }
+      if (on && a.paused && a.src) { setOut(0); resumeCtx(); tryPlayActive('applyTarget'); rampToVol(); }
       return;
     }
     effTrack = t;
@@ -183,9 +305,10 @@
       setOut(from * (1 - i / 10));
       if (i >= 10) {
         clearInterval(fadeTimer); fadeTimer = null;
-        el.src = 'bgm/' + t + '.mp3';
-        if (on) { resumeCtx(); el.play().catch(function () {}); rampToVol(); }
-        else el.pause();
+        activeEl().src = 'bgm/' + t + '.mp3';
+        diag.silentTicks = 0;   // track mới cần thời gian nạp — watchdog không đếm oan trong lúc chuyển bản
+        if (on) { resumeCtx(); tryPlayActive('applyTarget-fade'); rampToVol(); }
+        else activeEl().pause();
       }
     }, 45);
   }
@@ -203,19 +326,20 @@
   function setEnabled(v) {
     on = !!v;
     localStorage.setItem('b2d_bgm_on', on ? '1' : '0');
-    if (!on) { ramp(0, function () { el.pause(); }); }
+    if (!on) { ramp(0, function () { activeEl().pause(); }); }
     else if (effId()) {
-      if (!el.src) el.src = 'bgm/' + effId() + '.mp3';
+      var a = activeEl();
+      if (!a.src) a.src = 'bgm/' + effId() + '.mp3';
       setOut(0);
       resumeCtx();
-      el.play().catch(function () {});
+      tryPlayActive('setEnabled');
       rampToVol();
     }
   }
   function setVolume(v) {
     vol = Math.max(0, Math.min(1, v));
     localStorage.setItem('b2d_bgm_vol', String(vol));
-    if (on && !el.paused) setOut(effVol());   // đang duck thì theo giá trị mới × hệ số
+    if (on && !activeEl().paused) setOut(effVol());   // đang duck thì theo giá trị mới × hệ số
   }
   window.BGM = {
     play: play, mood: mood, setEnabled: setEnabled, setVolume: setVolume,
@@ -226,14 +350,19 @@
     duckCount: function () { return duckCount; },
     effVolume: function () { return effVol(); },
     // Lane AF: số đo trên CẤU TRÚC THẬT cho harness/người kiểm — mức ra loa hiện tại
-    // (gain node khi đã định tuyến Web Audio; el.volume khi rơi về cơ chế cũ).
-    outputLevel: function () { return (routed && gainNode) ? gainNode.gain.value : el.volume; },
-    gainValue: function () { return (routed && gainNode) ? gainNode.gain.value : null; },
-    usingWebAudio: function () { return routed; },
+    // (gain node khi đã định tuyến Web Audio; .volume của phần tử đang hoạt động khi
+    // phát thẳng/rơi về — Lane AG).
+    outputLevel: function () { return (mode === 'routed' && gainNode) ? gainNode.gain.value : activeEl().volume; },
+    gainValue: function () { return (mode === 'routed' && gainNode) ? gainNode.gain.value : null; },
+    usingWebAudio: function () { return mode === 'routed'; },
     ctxState: function () { return actx ? actx.state : null; },
+    // Lane AG: đo mức ra THẬT ở đầu ra đồ thị (analyser) + chẩn đoán đầy đủ cho harness.
+    measureOut: measureOut,
+    diag: function () { return JSON.parse(JSON.stringify(diag)); },
     isOn: function () { return on; }, volume: function () { return vol; },
     current: function () { return curTrack; },
     moodCurrent: function () { return moodName; },
     effective: function () { return effTrack; }
   };
 })();
+

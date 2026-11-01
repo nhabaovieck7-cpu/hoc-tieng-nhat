@@ -74,21 +74,47 @@
 
   /* ---------- Dữ liệu bước theo mạch truyện ---------- */
   function examStep(st, n) {
-    var ex = n === 1 ? st.exam : st.exam2;
+    var ex = n === 1 ? st.exam : n === 2 ? st.exam2 : n === 3 ? st.exam3 : n === 4 ? st.exam4 : st.exam5;
+    ex = ex || {};
     if (!ex.passed && ex.needReview) return {
       label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại bài, rồi quay lại trường thi tiếp',
       target: { scene: 'room-desk' }, done: function () { return ex.passed; }
     };
     return {
-      label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N' + (n === 1 ? '5' : '4') + ', cổng cuối Chương ' + n,
+      label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N' + (6 - n) + ', cổng cuối Chương ' + n,
       target: { scene: 'school-board' }, done: function () { return ex.passed; }
     };
   }
   function buildSteps(st) {
     var f = st.flags || {}, c = st.ch2 || {}, t = st.tenancy || {};
     if (st.chapter >= 3) {
+      // Đợt SAGA (01/11): truyện chính Ch3–5 do story2.js dẫn — nó tự cung cấp
+      // danh sách bước thật (ngã rẽ → ngành → phỏng vấn → nyukan → thi mốc…)
+      // qua SAGA.guideSteps() ngay khi nó tiếp quản (arc tình cảm Ch3 đã ngã
+      // ngũ hoặc người chơi đã chọn ngã rẽ; Ch4/Ch5 luôn tiếp quản). done ở
+      // đây là ẢNH CHỤP tại lúc dựng bước — refresh() dựng lại mỗi khi chữ ký
+      // (có chứa st.saga + st.exam3/4/5) đổi, nên trạng thái luôn tươi.
+      if (window.SAGA && window.SAGA.guideSteps) {
+        var ss = null;
+        try { ss = window.SAGA.guideSteps(); } catch (e) { ss = null; }
+        if (ss && ss.length) {
+          return ss.map(function (s) {
+            var dn = !!s.done;
+            return { label: s.label, target: s.target || null, ui: s.ui || null, done: function () { return dn; } };
+          });
+        }
+      }
       // Tuyến Chương 3 do rel.js dẫn nhịp qua mục tiêu — hiện mục tiêu làm bước duy nhất.
-      return [{ label: objectiveText || '🌸 Tự do khám phá — tuyến Chương 3 đang mở dần', target: null, done: function () { return false; } }];
+      // Lane AH (01/11): khi arc đã ngã ngũ ÊM (đã có partner / giữ được người yêu ở
+      // quê) thì bước này phải DONE — trước đây done() luôn false nên bảng 🧭 kẹt ở
+      // "bước 1/1" vĩnh viễn với câu mục tiêu hứa "lựa chọn lớn đang chờ" (nội dung
+      // chưa hề có), người chơi tưởng game còn đường mà đi mãi không tới — một gốc
+      // của báo cáo "tán được Yui rồi không chơi tiếp được". Nay bảng hiện thẳng
+      // "🎉 Đã xong các bước chính — tự do khám phá" khớp với chip tự do (computeFree
+      // dùng đúng cùng điều kiện này).
+      var r3 = st.rel || {};
+      var ch3Done = !!(r3.beats && r3.beats.resolved && (r3.partner || r3.breakup === 'giu-duoc'));
+      return [{ label: objectiveText || '🌸 Tự do khám phá — tuyến Chương 3 đang mở dần', target: null, done: function () { return ch3Done; } }];
     }
     if (st.chapter >= 2) {
       var d = [];
@@ -437,7 +463,7 @@
     // ký cũ không đổi nên refresh bỏ qua, danh sách bước không dựng lại, bước
     // chờ "CỬA HÀNG ĐIỆN THOẠI" (buildSteps) không bao giờ thành bước hiện tại
     // — chip kẹt ở bước gặp Tuấn (harness-simfix gapStepIsSim02Wait/gapChipClear).
-    var sig = JSON.stringify([st.chapter, f, c, t.simDi, t.simKy, t.simChoice, t.simBillFired, t.simTruthPending, st.exam, st.exam2, st.rel, relDig, objectiveText, curMapId()]);
+    var sig = JSON.stringify([st.chapter, f, c, t.simDi, t.simKy, t.simChoice, t.simBillFired, t.simTruthPending, st.exam, st.exam2, st.exam3, st.exam4, st.exam5, st.saga, st.rel, relDig, objectiveText, curMapId()]);
     if (sig === lastSig) return;
     lastSig = sig;
     steps = buildSteps(st);
@@ -455,12 +481,11 @@
   }
 
   /* ---------- CHIP MỤC TIÊU 1 DÒNG (Lane X — lệnh bổ sung 08:32) ---------- */
-  // #objective bị ẩn hẳn (ui.css) nên chữ mục tiêu trước đây chỉ nằm trong
-  // bảng 🧭. Chip này là MỘT DÒNG duy nhất (≤ ~30px, bán trong suốt, dưới HUD,
-  // trên thẻ thoại z-30) luôn hiện khi đang chơi: "🎯 <việc> · Đích: <nơi>" —
-  // chữ lấy từ nhãn bước/mục tiêu sẵn có, chỉ RÚT GỌN (bỏ tiền tố chương, bỏ
-  // ghi chú nút, lấy vế đầu trước " — "), không bịa nội dung. Bấm chip = mở
-  // bảng 🧭 chi tiết như cũ. Hết việc → "🌸 Tự do khám phá" tĩnh, không nháy.
+  // LANE AI (01/11, lệnh chủ trang 20:50 "bỏ cái hướng dẫn này đi"): DẢI
+  // HIỂN THỊ #guide-chip ĐÃ GỠ HẲN — guide.js không tạo phần tử nữa, CSS đã
+  // xoá khỏi ui.css, chipEl vĩnh viễn null nên syncChip() bất hoạt. Toàn bộ
+  // logic bên dưới (chipInfo()/GUIDE.chip(), objective, routing, mũi tên,
+  // vệt chấm, bảng 🧭) GIỮ NGUYÊN — chỉ bỏ lớp hiển thị dải chip.
   var chipEl = null, chipSig = '';
   function gameStarted() {
     try { return !!(window.__demo && window.__demo.started && window.__demo.started()); } catch (e) { return false; }
@@ -535,7 +560,7 @@
     return { visible: true, text: text, free: false };
   }
   function syncChip() {
-    if (!chipEl) return;
+    if (!chipEl) return;   // Lane AI: chipEl luôn null sau khi gỡ dải chip → hàm này bất hoạt, giữ lại để các điểm gọi cũ không phải sửa.
     var info = chipInfo();
     var sig = (info.visible ? '1' : '0') + '|' + info.text;
     if (sig === chipSig) return;
@@ -554,19 +579,8 @@
 
   /* ---------- Khởi tạo DOM: mở/đóng bảng (Lane P) + HUD gọn + cài đặt ---------- */
   function init() {
-    // Chip mục tiêu 1 dòng (Lane X): guide.js tự tạo phần tử (khỏi sửa
-    // index.html) — bấm chip = bật/tắt bảng 🧭 chi tiết như bấm #btn-guide.
-    if (!$('guide-chip')) {
-      chipEl = document.createElement('button');
-      chipEl.type = 'button';
-      chipEl.id = 'guide-chip';
-      chipEl.setAttribute('aria-label', 'Mục tiêu hiện tại — bấm để xem hướng dẫn chi tiết');
-      chipEl.addEventListener('click', function () {
-        var p = $('guide');
-        if (p) p.classList.toggle('open');
-      });
-      document.body.appendChild(chipEl);
-    } else chipEl = $('guide-chip');
+    // Lane AI (01/11): KHÔNG tạo #guide-chip nữa — dải chip đã gỡ theo lệnh
+    // chủ trang 20:50. Bảng 🧭 mở bằng nút #btn-guide như cũ.
     var panel = $('guide');
     if (panel) {
       // Lane P (01/11): bảng ẩn hẳn theo mặc định (CSS display:none, chỉ .open
@@ -579,8 +593,7 @@
       document.addEventListener('click', function (e) {
         if (!panel.classList.contains('open')) return;
         var t = e.target;
-        // #guide-chip cũng là nút MỞ bảng (Lane X) — không tính là "bấm ra ngoài".
-        if (t && t.closest && (t.closest('#guide') || t.closest('#btn-guide') || t.closest('#guide-chip'))) return;
+        if (t && t.closest && (t.closest('#guide') || t.closest('#btn-guide'))) return;
         panel.classList.remove('open');
       });
       var vb = $('guide-voice');

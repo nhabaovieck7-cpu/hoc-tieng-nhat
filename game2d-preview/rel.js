@@ -463,17 +463,17 @@
   function objective() {
     if (chapter() < 3) return false;
     if (arcSkipped()) {
-      window.GAMEUI.setObjective(R.partner ? '💑 Chương 3 — đã có người yêu mới ở Nhật. Những lựa chọn lớn của «Ngã rẽ» vẫn đang chờ ở phía trước' : '🌸 Chương 3 «Ngã rẽ» — chuyện ở quê đã buông tay từ sân bay. Mở mục 💗 Tình cảm (cạnh nút điện thoại) để làm quen những người ở Nhật');
+      window.GAMEUI.setObjective(R.partner ? '💑 Chương 3 — đã có người yêu mới ở Nhật. Mở 💞 Quan hệ (trong ⚙️ Cài đặt, hoặc mục đầu danh sách tin nhắn) để kết đôi chính thức, rủ nhau đi chơi — mạch chính sẽ tiếp ở đợt truyện sau' : '🌸 Chương 3 «Ngã rẽ» — chuyện ở quê đã buông tay từ sân bay. Mở mục 💗 Tình cảm (cạnh nút điện thoại) để làm quen những người ở Nhật');
       return true;
     }
     if (!R.beats.resolved) {
       window.GAMEUI.setObjective(!R.beats.aDone ? '🌸 Chương 3 — 📱 ' + loverName() + ' vừa nhắn tin — mở ĐIỆN THOẠI trả lời người yêu ở quê' : !R.beats.bDone ? '🌸 Chương 3 — 📞 ' + loverName() + ' sắp gọi video — để ý điện thoại nhé' : R.beats.cPending ? '🌸 Chương 3 — 🌙 một cuộc gặp không ngờ đang chờ ở ' + (gender === 'F' ? 'quán nhậu 新橋 — tới đó gặp Ren' : 'combini 秋葉原 — tới đó gặp Yui') : '🌸 Chương 3 — 🌙 Tối nay ở Nhật có một cuộc gặp không ngờ đang chờ…');
       return true;
     }
-    if (R.breakup === 'giu-duoc') { window.GAMEUI.setObjective('🌸 Chương 3 — 💗 ' + loverName() + ' vẫn đợi ở quê — hai người đã đặt mốc rõ ràng với nhau. Chương 3 còn những lựa chọn lớn khác đang chờ'); return true; }
+    if (R.breakup === 'giu-duoc') { window.GAMEUI.setObjective('🌸 Chương 3 — 💗 ' + loverName() + ' vẫn đợi ở quê — hai người đã đặt mốc rõ ràng với nhau. Thong thả sống tiếp ở Nhật — mạch chính sẽ tiếp ở đợt truyện sau'); return true; }
     if (R.breakup && !R.khocDone) { window.GAMEUI.setObjective('🌸 Chương 3 — 🌧 Một mình trong phòng trọ tối nay… cứ khóc cho hết đã'); return true; }
     if (R.breakup && !R.recovered) { window.GAMEUI.setObjective('🌸 Chương 3 — 🌤 Bạn bè đang ở bên — chọn một cách để gượng dậy'); return true; }
-    if (R.partner) { window.GAMEUI.setObjective('💑 Chương 3 — đã có ' + CANDS[R.partner].name + ' ở bên. Những lựa chọn lớn của «Ngã rẽ» vẫn đang chờ'); return true; }
+    if (R.partner) { window.GAMEUI.setObjective('💑 Chương 3 — đã có ' + CANDS[R.partner].name + ' ở bên. Mở 💞 Quan hệ (trong ⚙️ Cài đặt, hoặc mục đầu danh sách tin nhắn) để kết đôi chính thức, rủ nhau đi chơi — mạch chính sẽ tiếp ở đợt truyện sau'); return true; }
     window.GAMEUI.setObjective('🌸 Chương 3 — 💗 Lòng đã lành dần — mở mục 💗 Tình cảm (cạnh nút điện thoại): ở Nhật này có những người đang chờ được làm quen');
     return true;
   }
@@ -485,8 +485,14 @@
     if (panel) return;
     panel = document.createElement('div');
     panel.className = 'modal'; panel.id = 'modal-rel';
-    panel.innerHTML = '<div class="modal-card" id="rel-card"></div>';
+    /* Lane AH (01/11): thẻ TÁCH — thân cuộn riêng (#rel-card), chân Đóng cố định
+       NGOÀI vùng cuộn. Cấu trúc cũ: hàng Đóng là .btnrow trong cùng thẻ cuộn,
+       CSS sticky biến nó thành dải đục full-width đè lên ~72px đáy thẻ — nút
+       Mua tặng/Rủ đi chơi nào nằm trong dải là chạm chết/chập chờn trên iPhone
+       (chủ trang báo 19:20). Nay không phần tử nào đè lên nút trong vùng cuộn. */
+    panel.innerHTML = '<div class="modal-card card-split"><div class="card-scroll" id="rel-card"></div><div class="card-foot"><button type="button" class="btn primary" id="rel-close">Đóng</button></div></div>';
     document.body.appendChild(panel);
+    panel.querySelector('#rel-close').addEventListener('click', closePanel);
   }
   function closePanel() { if (panel) panel.classList.remove('show'); giftFor = null; }
   function stageLabel(id) {
@@ -511,7 +517,10 @@
       var info = h('div', 'shop-info');
       info.appendChild(h('div', 'shop-name', c.name + ' — ' + stageLabel(id) + (R.courting === id && !R.partner ? ' · 💘 đang theo đuổi' : '')));
       info.appendChild(h('div', 'shop-jp', c.sub));
-      info.appendChild(h('div', 'shop-jp', 'Thiện cảm: ' + a + '/100 ' + '💗'.repeat(Math.round(a / 20))));   // Lane Q: bỏ "(cờ affection.…)" — tên cờ nội bộ lọt ra mặt người chơi
+      var affLine = h('div', 'shop-jp', 'Thiện cảm: ' + a + '/100 ');
+      var hearts = h('span', 'aff-hearts', '💗'.repeat(Math.round(a / 20)));   // Lane AH: tim LUÔN một hàng ngang (class aff-hearts nowrap) — 100/100 từng bị bẻ cột dọc làm thẻ phình cao
+      affLine.appendChild(hearts);
+      info.appendChild(affLine);   // Lane Q: bỏ "(cờ affection.…)" — tên cờ nội bộ lọt ra mặt người chơi
       box.appendChild(info);
       var acts = h('div', 'btnrow');
       if (!R.met[id] && c.meetScene) {
@@ -540,10 +549,21 @@
       card.appendChild(box);
     });
     if (giftFor) renderGiftList(card);
-    var btnrow = h('div', 'btnrow');
-    var done = h('button', 'btn primary', 'Đóng'); done.type = 'button';
-    done.addEventListener('click', closePanel);
-    btnrow.appendChild(done); card.appendChild(btnrow);
+    /* Lane AH: nút Đóng nay là chân cố định của thẻ tách (ensurePanel) — không
+       còn .btnrow trong vùng cuộn. ĐÃ CÓ NGƯỜI YÊU: chỉ rõ bước tiếp theo còn
+       thiếu — KẾT ĐÔI CHÍNH THỨC ở mục 💞 Quan hệ (trước đây không chỗ nào
+       trong bảng 💗 nhắc tới, người chơi tỏ tình xong không thấy đường đi
+       tiếp — một phần lý do báo cáo "tán được Yui rồi không chơi tiếp được"). */
+    if (R.partner) {
+      var cp = CANDS[R.partner];
+      var tip = h('div', 'sub', '💑 Đã là người yêu với ' + cp.name + '. Bước tiếp theo: mở 💞 Quan hệ (trong ⚙️ Cài đặt, hoặc mục đầu danh sách tin nhắn trong 📱 Điện thoại) để KẾT ĐÔI CHÍNH THỨC — từ đó rủ nhau đi hát karaoke, đi công viên, đi cửa hàng và mua ÁO ĐÔI ở trung tâm thương mại.');
+      card.appendChild(tip);
+      if (window.REL8 && window.REL8.openPanel) {
+        var go = h('button', 'btn primary', '💞 Mở mục Quan hệ — kết đôi chính thức'); go.type = 'button';
+        go.addEventListener('click', function () { closePanel(); window.REL8.openPanel(); });
+        card.appendChild(go);
+      }
+    }
     panel.classList.add('show');
   }
   function renderVenues(id) {
