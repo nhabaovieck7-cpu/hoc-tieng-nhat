@@ -188,6 +188,32 @@
     } catch (e) { return {}; }
   }
 
+  /* Gộp 2 bản hồ sơ hn_dk_ho_so TỪNG MỤC theo dấu thời gian _t (ms) —
+     chép đúng quy tắc mergeHoSo của auth.js (trang chính): mỗi mục lấy
+     bản có _t mới hơn; hoà thì ưu tiên a (bản local). Mục rỗng bị bỏ,
+     _t giữ mốc lớn hơn. BẮT BUỘC dùng mỗi khi trang game định ghi blob
+     hồ sơ (xuống localStorage hay POST lên /hoso): bản máy chủ có thể
+     CŨ HƠN thay đổi người dùng vừa lưu trên máy này mà lần đẩy nền của
+     trang chính chưa kịp đưa lên (chờ 2,5s, phiên bị thu hồi, mất mạng)
+     — ghi đè nguyên văn sẽ làm mất thay đổi đó vĩnh viễn (lỗi "đổi tên
+     trong Hồ sơ rồi thoát web vào lại thì mất" đã gặp 02/11). */
+  function mergeHosoBlobs(a, b) {
+    a = (a && typeof a === 'object') ? a : {};
+    b = (b && typeof b === 'object') ? b : {};
+    var ta = a._t || {}, tb = b._t || {}, out = {}, t = {};
+    var fs = new Set(Object.keys(a).concat(Object.keys(b), Object.keys(ta), Object.keys(tb)));
+    fs.delete('_t');
+    fs.forEach(function (f) {
+      var x = +ta[f] || 0, y = +tb[f] || 0, v;
+      if (x !== y) v = x > y ? a[f] : b[f];
+      else v = (a[f] != null && a[f] !== '') ? a[f] : b[f];
+      if (v != null && v !== '') out[f] = v;
+      if (x || y) t[f] = Math.max(x, y);
+    });
+    if (Object.keys(t).length) out._t = t;
+    return out;
+  }
+
   function fireGameUserEvent() {
     try { window.dispatchEvent(new CustomEvent('hn-game-user', { detail: GAME_USER_DATA })); } catch (e) { /* bỏ qua */ }
   }
@@ -195,10 +221,11 @@
   async function resolveGameUser() {
     // ĐỢT SỬA GAME 30/10 — việc 4 (đồng bộ tên): KHÔNG còn cache tên theo
     // phiên (bản cũ cache sessionStorage 'hn_game_user_cache' khiến đổi tên
-    // trong hồ sơ rồi quay lại game vẫn hiện tên cũ trong cùng phiên) và
-    // LUÔN lấy hồ sơ MỚI NHẤT từ máy chủ /hoso khi có phiên; bản local
-    // 'hn_dk_ho_so' chỉ là dự phòng khi mất mạng, và được cập nhật ngược
-    // mỗi khi lấy được bản máy chủ.
+    // trong hồ sơ rồi quay lại game vẫn hiện tên cũ trong cùng phiên).
+    // ĐỢT SỬA 02/11: hồ sơ lấy từ máy chủ /hoso phải GỘP với bản local
+    // theo _t từng mục (mergeHosoBlobs) rồi mới ghi xuống local — cách
+    // cũ ghi đè nguyên văn bản máy chủ đã làm mất thay đổi hồ sơ người
+    // dùng vừa lưu mà chưa kịp đẩy lên máy chủ.
     try { sessionStorage.removeItem('hn_game_user_cache'); } catch (e) { /* dọn cache cũ */ }
     if (!gameSession()) {
       Object.assign(GAME_USER_DATA, GUEST_USER, { loaded: true });
@@ -212,16 +239,21 @@
       var u = (me && me.user) || {};
       name = String(u.name || '').trim();
     } catch (e) { /* mất mạng: vẫn coi là đã đăng nhập, gọi theo hồ sơ local nếu có */ }
-    // Hồ sơ: ưu tiên bản MÁY CHỦ /hoso (mới nhất), thiếu/mất mạng mới dùng
-    // bản local. Khóa đúng theo handleHoso: hn_dk_ho_so (JSON), hn_dk_level.
+    // Hồ sơ: GỘP bản máy chủ /hoso với bản local theo _t từng mục (xem
+    // mergeHosoBlobs) — không còn ghi đè nguyên văn bản máy chủ lên local
+    // như trước (nguồn gốc lỗi mất thay đổi hồ sơ chưa kịp đẩy lên máy
+    // chủ). Mất mạng/không có bản máy chủ mới dùng riêng bản local.
+    // Khóa đúng theo handleHoso: hn_dk_ho_so (JSON), hn_dk_level.
     var hoso = {}, gotServerHoso = false;
     try {
       var hj = await gameApi('/hoso');
       var items = (hj && hj.items) || {};
       if (items.hn_dk_ho_so && items.hn_dk_ho_so.v) {
-        hoso = parseHosoStr(items.hn_dk_ho_so.v);
+        var locHoso = {};
+        try { locHoso = parseHosoStr(localStorage.getItem('hn_dk_ho_so')); } catch (e) { locHoso = {}; }
+        hoso = mergeHosoBlobs(locHoso, parseHosoStr(items.hn_dk_ho_so.v));
         gotServerHoso = true;
-        try { localStorage.setItem('hn_dk_ho_so', items.hn_dk_ho_so.v); } catch (e) { /* bỏ qua */ }
+        try { localStorage.setItem('hn_dk_ho_so', JSON.stringify(hoso)); } catch (e) { /* bỏ qua */ }
       }
       if (items.hn_dk_level && items.hn_dk_level.v) {
         level = items.hn_dk_level.v;
@@ -544,6 +576,10 @@
         var hj = await gameApi('/hoso');
         var items = (hj && hj.items) || {};
         var hoso = items.hn_dk_ho_so ? parseHosoStr(items.hn_dk_ho_so.v) : {};
+        // Gộp với bản local theo _t trước khi POST lại cả blob: blob vừa
+        // GET có thể cũ hơn thay đổi hồ sơ vừa lưu trên máy này mà chưa
+        // kịp đẩy lên — POST nguyên văn sẽ làm máy chủ mất thay đổi đó.
+        try { hoso = mergeHosoBlobs(parseHosoStr(localStorage.getItem('hn_dk_ho_so')), hoso); } catch (e) { /* bỏ qua */ }
         hoso.game_avatar = JSON.stringify(cfg);
         hoso._t = (hoso._t && typeof hoso._t === 'object') ? hoso._t : {};
         hoso._t.game_avatar = Date.now();

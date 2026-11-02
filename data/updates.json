@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-02",
+   "desc": "Đã sửa lỗi trong Hồ sơ cá nhân: đổi tên xong, qua Sảnh game rồi quay lại có thể bị mất tên vừa đổi. Nay tên đã lưu được giữ nguyên ở mọi nơi, kể cả khi mạng chập chờn hay phiên đăng nhập bị thu hồi.",
+   "id": "2026-11-02-sua-loi-luu-ten-ho-so",
+   "link": "index.html",
+   "title": "Sửa lỗi lưu tên trong Hồ sơ cá nhân",
+   "type": "tinh-nang"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Trang bài học: phần tiếng Nhật trong tiêu đề bài (ví dụ các bài Kaiwa) trước đây bị vỡ thành nhiều cột dọc rất khó đọc, nay nằm gọn thành một dòng chạy ngang ngay dưới tiêu đề chính, furigana vẫn đầy đủ trên từng chữ.",
    "id": "2026-11-02-tieu-de-bai-hoc-chay-ngang",
    "link": "index.html#khoahoc",
