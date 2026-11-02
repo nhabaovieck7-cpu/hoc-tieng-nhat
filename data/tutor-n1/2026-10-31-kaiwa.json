@@ -1,0 +1,116 @@
+{
+  "lesson": 19,
+  "topic": "Buổi sáng ở day service — Đón khách, tắm, ăn trưa và cuộc gọi của người nhà",
+  "summary": "Một buổi sáng mưa ở trung tâm day service: hai nhân viên 大輔 và 結衣 chốt lại lịch đón khách （送迎）, thứ tự tắm, bữa trưa và việc thuốc men theo cuộc gọi của người nhà. Đây là bài 'hai lớp ngôn ngữ' điển hình của nghề kaigo: nói với đồng nghiệp thì suồng sã (〜じゃん・しとく・ほんとそれ), nhưng hễ nhắc tới người sử dụng dịch vụ và người nhà là tự động chuyển sang lớp lịch sự （ご家族・お薬・お迎え). Điểm khó hơn Bài 18 là phải nghe ra ranh giới hai lớp ngay trong cùng một đoạn hội thoại — và câu nói với bác 佐藤 ở cuối bài là mẫu chuyển lớp hoàn chỉnh.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（Buổi sáng — xe đưa đón trễ vì mưa)",
+      "stage": "（8 giờ sáng tại văn phòng trung tâm; bên ngoài mưa to)",
+      "lines": [
+        {"speaker": "大輔", "ja": "おはよー。{今日|きょう}さ、{雨|あめ}すごいね。{送迎|そうげい}、{遅|おく}れそうじゃない？", "vi": "Chào buổi sáng. Hôm nay mưa to nhỉ. Xe đưa đón có vẻ sẽ trễ đúng không?"},
+        {"speaker": "結衣", "ja": "おはよう。うん、さっき{運転手|うんてんしゅ}さんから{連絡|れんらく}あってさ、{佐藤|さとう}さんのお{迎|むか}え、15{分|ふん}くらい{遅|おく}れるって。", "vi": "Chào buổi sáng. Ừ, vừa nãy tài xế có liên lạc, bảo là đón bác Sato sẽ trễ khoảng 15 phút."},
+        {"speaker": "大輔", "ja": "そっか。じゃあさ、{午前|ごぜん}の{入浴|にゅうよく}の{順番|じゅんばん}、ちょっと{入れ替|いれか}えとこうか。{佐藤|さとう}さん、{最後|さいご}のほうにしとけばいいじゃん。", "vi": "Thế à. Vậy thì đổi thứ tự tắm buổi sáng một chút nhé. Để bác Sato vào tốp cuối là được mà."},
+        {"speaker": "結衣", "ja": "だね。あ、それとさ、{佐藤|さとう}さん、{昨日|きのう}からちょっと{咳|せき}してたじゃん。{今日|きょう}の{体調|たいちょう}、ちゃんとチェックしといてね。", "vi": "Ừ nhỉ. À, còn nữa, bác Sato từ hôm qua hơi ho đúng không. Hôm nay nhớ kiểm tra sức khỏe cẩn thận nhé."},
+        {"speaker": "大輔", "ja": "うん、{了解|りょうかい}。{熱|ねつ}{測|はか}って、{顔色|かおいろ}も{見|み}とくよ。あ、ご{家族|かぞく}からさ、{朝|あさ}{電話|でんわ}あった？", "vi": "Ừ, rõ. Tớ đo nhiệt độ, xem cả sắc mặt nữa. À, người nhà có gọi điện sáng nay không?"}
+      ]
+    },
+    {
+      "title": "Hội thoại 2（Tắm, bữa trưa và dặn dò của người nhà)",
+      "stage": "（Chốt các việc buổi sáng: thuốc men, 入浴・昼食介助)",
+      "lines": [
+        {"speaker": "結衣", "ja": "あったあった。お{薬|くすり}のことでさ、「{昼食|ちゅうしょく}{後|ご}に{飲|の}ませてほしい」って。メモ、{事務|じむ}{所|しょ}のボードに{貼|は}っといたよ。", "vi": "Có có. Về thuốc ấy, người nhà bảo 'muốn nhờ cho uống sau bữa trưa'. Tớ đã dán ghi chú lên bảng ở văn phòng rồi."},
+        {"speaker": "大輔", "ja": "{助|たす}かる。じゃあさ、{昼食|ちゅうしょく}のとき、{俺|おれ}が{声|こえ}かけとくよ。あ、{今日|きょう}の{昼|ひる}ごはん、{何|なん}だっけ？", "vi": "Giúp tớ quá. Vậy lúc ăn trưa tớ sẽ nhắc nhé. À, trưa nay ăn gì nhỉ?"},
+        {"speaker": "結衣", "ja": "{今日|きょう}はさ、{鮭|さけ}の{塩焼|しおや}きとお{味噌|みそ}{汁|しる}だよ。{佐藤|さとう}さん、{魚|さかな}はさ、{骨|ほね}、{気|き}をつけないとね。", "vi": "Hôm nay là cá hồi nướng muối với súp miso. Bác Sato với cá ấy, phải cẩn thận xương nhé."},
+        {"speaker": "大輔", "ja": "だよね。{骨|ほね}、ちゃんと{取|と}ってあげないと。あとさ、ごはん、{少|すこ}し{柔|やわ}らかめにしといてって、ご{家族|かぞく}から{言|い}われてたっけ？", "vi": "Đúng rồi. Phải gỡ xương cẩn thận cho bác. Với lại, cơm nấu mềm hơn một chút, người nhà có dặn thế đúng không nhỉ?"},
+        {"speaker": "結衣", "ja": "うん、そうそう。{厨房|ちゅうぼう}にも{伝|つた}えといたから{大丈夫|だいじょうぶ}。あ、{午後|ごご}のレクさ、{今日|きょう}は{歌|うた}だよ。{佐藤|さとう}さん、{歌|うた}、{好|す}きじゃん。", "vi": "Ừ, đúng đúng. Tớ đã báo cho bếp rồi nên không sao. À, hoạt động giải trí buổi chiều hôm nay là hát đấy. Bác Sato thích hát mà."},
+        {"speaker": "大輔", "ja": "いいね。{佐藤|さとう}さん、{歌|うた}うとさ、すっごい{元気|げんき}になるよね。じゃあ、{前|まえ}のほうの{席|せき}、{取|と}っといてあげようよ。", "vi": "Hay đấy. Bác Sato khi hát thì trở nên rất khỏe khoắn nhỉ. Vậy giữ ghế phía trước cho bác nhé."},
+        {"speaker": "結衣", "ja": "うん、そうしよう。あ、そうだ、{送迎|そうげい}の{帰|かえ}りさ、{雨|あめ}、まだ{降|ふ}ってたら、{玄関|げんかん}、{滑|すべ}りやすいから{気|き}をつけてね。", "vi": "Ừ, làm thế đi. À, đúng rồi, lúc xe đưa về nếu mưa vẫn còn rơi thì lối vào dễ trơn, cẩn thận nhé."},
+        {"speaker": "大輔", "ja": "ほんとそれ。マット、もう{一枚|いちまい}{出|だ}しとくよ。あ、{佐藤|さとう}さん、{到着|とうちゃく}したらさ、まず{声|こえ}かけるの、{俺|おれ}やっとくね。", "vi": "Đúng thật. Tớ lấy thêm một tấm thảm ra nhé. À, khi bác Sato đến, việc chào hỏi trước tiên để tớ làm nhé."},
+        {"speaker": "結衣", "ja": "お{願|ねが}い。あ、ご{家族|かぞく}への{連絡|れんらく}{帳|ちょう}さ、{今日|きょう}の{体調|たいちょう}とお{薬|くすり}のこと、ちゃんと{書|か}いといてね。", "vi": "Nhờ cậu nhé. À, sổ liên lạc với người nhà ấy, nhớ ghi cẩn thận chuyện sức khỏe hôm nay và thuốc nhé."}
+      ]
+    },
+    {
+      "title": "Hội thoại 3（Hoạt động buổi chiều và đón khách đến)",
+      "stage": "（Bàn レク tuần sau; bác 佐藤 sắp tới nơi — để ý câu chào của 大輔 chuyển hẳn sang kính ngữ)",
+      "lines": [
+        {"speaker": "大輔", "ja": "うん、{書|か}いとく。{咳|せき}のことと、{昼食|ちゅうしょく}{後|ご}のお{薬|くすり}のこと、ね。あ、そういえばさ、{来週|らいしゅう}のレク、{何|なん}するんだっけ？", "vi": "Ừ, tớ ghi. Chuyện ho và thuốc sau bữa trưa, đúng không. À, nhân tiện, hoạt động tuần sau làm gì nhỉ?"},
+        {"speaker": "結衣", "ja": "{来週|らいしゅう}はさ、{折り紙|おりがみ}だよ。{季節|きせつ}の{花|はな}、{折|お}るんだって。{佐藤|さとう}さん、{細|こま}かい{作業|さぎょう}、{得意|とくい}じゃん。", "vi": "Tuần sau là gấp giấy origami. Nghe nói gấp hoa theo mùa. Bác Sato khéo mấy việc tỉ mỉ mà."},
+        {"speaker": "大輔", "ja": "あ、いいね。じゃあさ、{材料|ざいりょう}、{今週|こんしゅう}{中|ちゅう}に{用意|ようい}しとかないとね。", "vi": "À, hay đấy. Vậy phải chuẩn bị nguyên liệu trong tuần này mới được."},
+        {"speaker": "結衣", "ja": "だね。あ、{佐藤|さとう}さん、もうすぐ{着|つ}くって。{玄関|げんかん}、{行|い}ってあげて。", "vi": "Ừ nhỉ. À, bác Sato sắp đến rồi đấy. Ra lối vào đón bác đi."},
+        {"speaker": "大輔", "ja": "はーい、{行|い}ってくる。{佐藤|さとう}さーん、おはようございます。{今日|きょう}もよろしくお{願|ねが}いしますね。", "vi": "Vâng, tớ đi đây. Bác Sato ơi, chào buổi sáng ạ. Hôm nay cũng nhờ bác giúp đỡ nhé."},
+        {"speaker": "結衣", "ja": "（{小声|こごえ}で）あ、{傘|かさ}、{玄関|げんかん}に{置|お}いといて。{濡|ぬ}れたままだと、{床|ゆか}、{滑|すべ}っちゃうから。", "vi": "(Nói nhỏ) À, để ô ở lối vào nhé. Để ướt như thế thì sàn trơn mất."}
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {"textbook": "佐藤さんのお迎えが15分ほど遅れるそうです。", "real": "佐藤さんのお迎え、15分くらい遅れるって。", "why": "Với đồng nghiệp, trích dẫn 〜って là đủ nhanh; khi báo cho người nhà phải quay về 〜そうです／ご連絡いたします."},
+    {"textbook": "入浴の順番を入れ替えておきましょうか。", "real": "入れ替えとこうか。", "why": "〜ておく → 〜とく và cắt trợ từ: chốt việc nội bộ nói gọn, không cần đuôi lịch sự."},
+    {"textbook": "体調を確認しておいてください。", "real": "体調、チェックしといてね。", "why": "Từ mượn 'check' + しといてね — nhờ vả đồng nghiệp mềm hơn hẳn mệnh lệnh 〜てください."},
+    {"textbook": "ご家族からお電話がありましたか。", "real": "ご家族からさ、朝電話あった？", "why": "Dù câu hỏi rút gọn suồng sã, phần kính ngữ nằm ở danh từ ご家族・お電話 vẫn phải giữ — kính ngữ trong kaigo dính vào danh từ chỉ người/việc của khách."},
+    {"textbook": "（nội bộ) 佐藤さん、もうすぐ着くそうです。", "real": "（với khách) 佐藤さん、おはようございます。今日もよろしくお願いします。", "why": "Cùng một người, hai lớp nói: trong nội bộ là って・thể thường; bước ra 玄関 đón khách là です・ます + お〜 ngay lập tức."}
+  ],
+  "spoken_dict": [
+    {"form": "ご家族", "in_lesson": "ご家族から朝電話あった？", "original": "家族", "vi": "'Người nhà' — cách gọi lịch sự, trung tính, không nêu quan hệ cụ thể.", "use": "Luôn dùng khi nói về gia đình của người sử dụng dịch vụ.", "avoid": "Gọi tên quan hệ cụ thể （お嫁さん・奥さん…) khi chưa chắc chắn."},
+    {"form": "声かける", "in_lesson": "俺が声かけとくよ", "original": "声をかける", "vi": "Bắt chuyện, chào hỏi, nhắc nhở nhẹ nhàng.", "use": "Việc hằng ngày ở day service: chào khách, nhắc uống thuốc.", "avoid": "Không đồng nghĩa 注意する (răn dạy, quở trách)."},
+    {"form": "レク", "in_lesson": "午後のレク・来週のレク", "original": "レクリエーション", "vi": "Hoạt động giải trí — từ viết tắt nội bộ của ngành.", "use": "Giữa nhân viên với nhau.", "avoid": "Khi giải thích cho người nhà (nói đầy đủ レクリエーション hoặc 活動)."},
+    {"form": "〜しとく系", "in_lesson": "入れ替えとこうか・貼っといた・伝えといた", "original": "〜しておく", "vi": "Chuẩn bị sẵn, làm sẵn để ca sau/người sau không phải lo.", "use": "Đồng nghiệp cùng cấp.", "avoid": "Với cấp trên và người nhà (dùng 〜しておきます・〜いたしました)."},
+    {"form": "ほんとそれ", "in_lesson": "ほんとそれ。マット出しとくよ", "original": "本当にそうですね", "vi": "'Đúng thật đấy' — đồng tình mạnh, rất suồng sã.", "use": "Đồng nghiệp thân thiết.", "avoid": "Tuyệt đối tránh với người nhà của khách và cấp trên."},
+    {"form": "お迎え", "in_lesson": "佐藤さんのお迎え", "original": "迎え", "vi": "Việc đón (khách) — thêm お để lịch sự.", "use": "Khi nói về việc đón người sử dụng dịch vụ.", "avoid": "Dùng 迎え trần khi báo cáo với người nhà."},
+    {"form": "連絡帳", "in_lesson": "ご家族への連絡帳", "original": "連絡ノート", "vi": "Sổ liên lạc gửi người nhà — kênh báo cáo chính thức của day service.", "use": "Gọi đúng tên gọi của cơ sở mình.", "avoid": "Gọi là メモ khi nói với người nhà (nghe qua loa, thiếu tin cậy)."}
+  ],
+  "common_phrases": [
+    {"expr": "{入|い}れ{替|か}えておく", "reading": "いれかえておく", "vi": "Đổi/tráo sẵn thứ tự cho phù hợp tình hình.", "example_ja": "{送迎|そうげい}が{遅|おく}れるので、{入浴|にゅうよく}の{順番|じゅんばん}を{入|い}れ{替|か}えておきます。", "example_vi": "Vì xe đón trễ nên đổi sẵn thứ tự tắm."},
+    {"expr": "{気|き}をつけないと", "reading": "きをつけないと", "vi": "Phải cẩn thận ~ (không thì nguy).", "example_ja": "{魚|さかな}の{骨|ほね}、{気|き}をつけないとね。", "example_vi": "Xương cá phải cẩn thận đấy."},
+    {"expr": "{取|と}ってあげる", "reading": "とってあげる", "vi": "Lấy/gỡ giúp cho (làm ơn cho người khác).", "example_ja": "{骨|ほね}はちゃんと{取|と}ってあげてください。", "example_vi": "Xương thì gỡ giúp bác cẩn thận nhé."},
+    {"expr": "{声|こえ}をかける", "reading": "こえをかける", "vi": "Chào hỏi, bắt chuyện, nhắc nhẹ.", "example_ja": "{到着|とうちゃく}したら、まず{声|こえ}をかけてね。", "example_vi": "Khi bác tới thì chào hỏi trước nhé."},
+    {"expr": "〜てあげよう", "reading": "〜てあげよう", "vi": "'Để tớ ~ giúp cho' — ý chí + làm ơn cho người khác.", "example_ja": "{前|まえ}のほうの{席|せき}、{取|と}っといてあげよう。", "example_vi": "Ghế phía trước để tớ giữ giúp cho."},
+    {"expr": "{行|い}ってくる", "reading": "いってくる", "vi": "Đi (làm việc gì gần đó) rồi quay lại.", "example_ja": "{玄関|げんかん}に{行|い}ってくる。", "example_vi": "Tớ ra lối vào (đón khách) rồi quay lại ngay."}
+  ],
+  "mindset": [
+    "Day service vận hành bằng 報連相 (báo cáo – liên lạc – bàn bạc) ở mức rất nhỏ: một cuộc gọi của người nhà về thuốc lập tức thànhメモ dán lên bảng văn phòng, được nhắc lại lúc ăn trưa và ghi vào 連絡帳 cuối ngày. Thông tin không nằm trong đầu một người — nó nằm trên bảng, trên giấy, để bất cứ ai vào ca sau cũng nắm được. Đó là lý do bài hội thoại này đầy những câu 'đã làm sẵn' (〜しといた・伝えといた・貼っといた).",
+    "Với người sử dụng dịch vụ, nhân viên Nhật giữ khoảng cách lịch sự rất rõ: luôn 佐藤さん + です・ます, còn sự thân mật thể hiện qua hành động — nhớ bác thích hát, giữ ghế phía trước cho bác, để ý tiếng ho của bác từ hôm qua — chứ không qua xưng hô suồng sã. Ở nơi làm việc kaigo, 'quan tâm' nghĩa là nhớ chi tiết, không phải nói gần gũi."
+  ],
+  "mistakes": [
+    "Mang 〜じゃん・ほんとそれ ra nói với người nhà của khách: chỉ một lần là mất niềm tin; với ご家族 luôn です・ます và giữ các danh từ lịch sự ご家族・お薬・お迎え.",
+    "Dịch ご家族 thành một quan hệ cụ thể ('vợ', 'con gái'…) khi chưa biết chắc: cứ giữ 'người nhà' cho an toàn và đúng văn phong kaigo.",
+    "Dùng 注意する khi muốn nhắc khách: từ này mang tính răn dạy; nhắc nhẹ dùng 声をかける, đề nghị dùng 〜していただけますか.",
+    "Quên lớp kính ngữ ở danh từ: dù câu rút gọn với đồng nghiệp （電話あった？), các từ ご家族・お薬・お迎え vẫn phải giữ nguyên dạng lịch sự."
+  ],
+  "speaking_practice": [
+    "Báo cáo cho đồng nghiệp: xe đón bác 佐藤 trễ 15 phút vì mưa, đề xuất đổi thứ tự tắm và nhờ kiểm tra thể trạng (bác ho từ hôm qua).",
+    "Đóng vai gọi điện cho người nhà: xác nhận việc cho uống thuốc sau bữa trưa bằng kính ngữ （お薬の件、承知いたしました。昼食後にお飲みいただきます).",
+    "Đón khách ở 玄関 vào ngày mưa: chào bác 佐藤 bằng です・ます, nhắc cẩn thận sàn trơn và nhận ô của bác để vào chỗ quy định."
+  ],
+  "lines": [
+    {"speaker": "大輔", "ja": "おはよー。今日さ、雨すごいね。送迎、遅れそうじゃない？", "vi": "Chào buổi sáng. Hôm nay mưa to nhỉ. Xe đưa đón có vẻ sẽ trễ đúng không?"},
+    {"speaker": "結衣", "ja": "おはよう。うん、さっき運転手さんから連絡あってさ、佐藤さんのお迎え、15分くらい遅れるって。", "vi": "Chào buổi sáng. Ừ, vừa nãy tài xế có liên lạc, bảo là đón bác Sato sẽ trễ khoảng 15 phút."},
+    {"speaker": "大輔", "ja": "そっか。じゃあさ、午前の入浴の順番、ちょっと入れ替えとこうか。佐藤さん、最後のほうにしとけばいいじゃん。", "vi": "Thế à. Vậy thì đổi thứ tự tắm buổi sáng một chút nhé. Để bác Sato vào tốp cuối là được mà."},
+    {"speaker": "結衣", "ja": "だね。あ、それとさ、佐藤さん、昨日からちょっと咳してたじゃん。今日の体調、ちゃんとチェックしといてね。", "vi": "Ừ nhỉ. À, còn nữa, bác Sato từ hôm qua hơi ho đúng không. Hôm nay nhớ kiểm tra sức khỏe cẩn thận nhé."},
+    {"speaker": "大輔", "ja": "うん、了解。熱測って、顔色も見とくよ。あ、ご家族からさ、朝電話あった？", "vi": "Ừ, rõ. Tớ đo nhiệt độ, xem cả sắc mặt nữa. À, người nhà có gọi điện sáng nay không?"},
+    {"speaker": "結衣", "ja": "あったあった。お薬のことでさ、「昼食後に飲ませてほしい」って。メモ、事務所のボードに貼っといたよ。", "vi": "Có có. Về thuốc ấy, người nhà bảo 'muốn nhờ cho uống sau bữa trưa'. Tớ đã dán ghi chú lên bảng ở văn phòng rồi."},
+    {"speaker": "大輔", "ja": "助かる。じゃあさ、昼食のとき、俺が声かけとくよ。あ、今日の昼ごはん、何だっけ？", "vi": "Giúp tớ quá. Vậy lúc ăn trưa tớ sẽ nhắc nhé. À, trưa nay ăn gì nhỉ?"},
+    {"speaker": "結衣", "ja": "今日はさ、鮭の塩焼きとお味噌汁だよ。佐藤さん、魚はさ、骨、気をつけないとね。", "vi": "Hôm nay là cá hồi nướng muối với súp miso. Bác Sato với cá ấy, phải cẩn thận xương nhé."},
+    {"speaker": "大輔", "ja": "だよね。骨、ちゃんと取ってあげないと。あとさ、ごはん、少し柔らかめにしといてって、ご家族から言われてたっけ？", "vi": "Đúng rồi. Phải gỡ xương cẩn thận cho bác. Với lại, cơm nấu mềm hơn một chút, người nhà có dặn thế đúng không nhỉ?"},
+    {"speaker": "結衣", "ja": "うん、そうそう。厨房にも伝えといたから大丈夫。あ、午後のレクさ、今日は歌だよ。佐藤さん、歌、好きじゃん。", "vi": "Ừ, đúng đúng. Tớ đã báo cho bếp rồi nên không sao. À, hoạt động giải trí buổi chiều hôm nay là hát đấy. Bác Sato thích hát mà."},
+    {"speaker": "大輔", "ja": "いいね。佐藤さん、歌うとさ、すっごい元気になるよね。じゃあ、前のほうの席、取っといてあげようよ。", "vi": "Hay đấy. Bác Sato khi hát thì trở nên rất khỏe khoắn nhỉ. Vậy giữ ghế phía trước cho bác nhé."},
+    {"speaker": "結衣", "ja": "うん、そうしよう。あ、そうだ、送迎の帰りさ、雨、まだ降ってたら、玄関、滑りやすいから気をつけてね。", "vi": "Ừ, làm thế đi. À, đúng rồi, lúc xe đưa về nếu mưa vẫn còn rơi thì lối vào dễ trơn, cẩn thận nhé."},
+    {"speaker": "大輔", "ja": "ほんとそれ。マット、もう一枚出しとくよ。あ、佐藤さん、到着したらさ、まず声かけるの、俺やっとくね。", "vi": "Đúng thật. Tớ lấy thêm một tấm thảm ra nhé. À, khi bác Sato đến, việc chào hỏi trước tiên để tớ làm nhé."},
+    {"speaker": "結衣", "ja": "お願い。あ、ご家族への連絡帳さ、今日の体調とお薬のこと、ちゃんと書いといてね。", "vi": "Nhờ cậu nhé. À, sổ liên lạc với người nhà ấy, nhớ ghi cẩn thận chuyện sức khỏe hôm nay và thuốc nhé."},
+    {"speaker": "大輔", "ja": "うん、書いとく。咳のことと、昼食後のお薬のこと、ね。あ、そういえばさ、来週のレク、何するんだっけ？", "vi": "Ừ, tớ ghi. Chuyện ho và thuốc sau bữa trưa, đúng không. À, nhân tiện, hoạt động tuần sau làm gì nhỉ?"},
+    {"speaker": "結衣", "ja": "来週はさ、折り紙だよ。季節の花、折るんだって。佐藤さん、細かい作業、得意じゃん。", "vi": "Tuần sau là gấp giấy origami. Nghe nói gấp hoa theo mùa. Bác Sato khéo mấy việc tỉ mỉ mà."},
+    {"speaker": "大輔", "ja": "あ、いいね。じゃあさ、材料、今週中に用意しとかないとね。", "vi": "À, hay đấy. Vậy phải chuẩn bị nguyên liệu trong tuần này mới được."},
+    {"speaker": "結衣", "ja": "だね。あ、佐藤さん、もうすぐ着くって。玄関、行ってあげて。", "vi": "Ừ nhỉ. À, bác Sato sắp đến rồi đấy. Ra lối vào đón bác đi."},
+    {"speaker": "大輔", "ja": "はーい、行ってくる。佐藤さーん、おはようございます。今日もよろしくお願いしますね。", "vi": "Vâng, tớ đi đây. Bác Sato ơi, chào buổi sáng ạ. Hôm nay cũng nhờ bác giúp đỡ nhé."},
+    {"speaker": "結衣", "ja": "（小声で）あ、傘、玄関に置いといて。濡れたままだと、床、滑っちゃうから。", "vi": "(Nói nhỏ) À, để ô ở lối vào nhé. Để ướt như thế thì sàn trơn mất."}
+  ],
+  "notes": [
+    "「〜じゃん」: khẳng định thân mật kiểu 'mà', 'đấy chứ' — dùng với đồng nghiệp thân thiết, không dùng với cấp trên hay khách hàng.",
+    "「〜って」: trích dẫn suồng sã (〜と言っていた → 〜って). Ví dụ: 「遅れるって」= bảo là sẽ trễ.",
+    "「しとく／しとけば／取っといて」: dạng rút gọn của 「しておく／しておけば／取っておいて」 — làm sẵn, chuẩn bị sẵn cho tiện.",
+    "「そっか・だね・ほんとそれ」: từ đệm giữ nhịp, thể hiện đồng tình — trong giao tiếp công việc, dùng với đồng nghiệp cùng cấp, không dùng khi nói với người nhà của khách hàng (khi đó chuyển sang lịch sự).",
+    "「ご家族」: cách gọi người nhà của người sử dụng dịch vụ trong ngành kaigo — trung tính, lịch sự; trong hội thoại mẫu, bản dịch dùng 'người nhà', không dùng từ chỉ quan hệ cụ thể.",
+    "「声かける／声かけとく」: bắt chuyện, nhắc nhở nhẹ nhàng — từ rất hay gặp ở day service, khác với 「注意する」 mang tính răn dạy.",
+    "「レク」: viết tắt của レクリエーション (hoạt động giải trí) — từ lóng trong ngành, dùng nội bộ giữa nhân viên.",
+    "Chuyển đổi lịch sự: với đồng nghiệp nói 「しといてね」 nhưng với người nhà thì nói 「お薬の件、承知いたしました」 — cùng một nội dung, khác mức độ lịch sự tùy đối tượng."
+  ]
+}

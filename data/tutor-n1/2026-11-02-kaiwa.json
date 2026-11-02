@@ -1,0 +1,109 @@
+{
+  "lesson": 20,
+  "topic": "Cuối tuần đi siêu thị và nấu ăn ở nhà",
+  "summary": "Cuối tuần: 健太 rủ さくら đi siêu thị vì tủ lạnh gần như trống rỗng; hai người chốt giờ hẹn, chia nhau mua đồ cho nồi lẩu tối nay và xuýt xoa vì trứng rẻ bất ngờ. Bài luyện phản xạ văn nói bạn bè: rủ rê 〜ない？・〜しよっか, phản ứng tức thì （マジで？・安っ！・わかるわかる） và phỏng đoán nhẹ 〜かも・〜っけ. Thanh điệu suồng sã từ đầu đến cuối; điểm khó của bài là tốc độ — câu nào cũng cắt ngắn, phải dựa vào ngữ cảnh để hiểu phần bị lược (như câu nhắc hạn sử dụng bị cắt ở '買いすぎちゃうとさ…').",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（Rủ nhau đi siêu thị)",
+      "stage": "（Trưa cuối tuần; 健太 gọi điện rủ さくら)",
+      "lines": [
+        {"speaker": "健太", "ja": "あ、さくら、{今日|きょう}さ、スーパー{行|い}かない？{冷蔵|れいぞう}{庫|こ}、ほぼ{空|から}っぽなんだよね。", "vi": "À, Sakura, hôm nay cậu có đi siêu thị không? Tủ lạnh tớ gần như trống rỗng rồi."},
+        {"speaker": "さくら", "ja": "あ、いいよ。{私|わたし}もさ、{卵|たまご}も{牛乳|ぎゅうにゅう}も{切|き}れちゃってさ。{何時|なんじ}くらいに{行|い}く？", "vi": "À, được đấy. Tớ cũng hết trứng với sữa rồi. Cậu đi khoảng mấy giờ?"},
+        {"speaker": "健太", "ja": "うーん、3{時|じ}くらいはどう？{午前|ごぜん}{中|ちゅう}はさ、{混|こ}んでるじゃん。", "vi": "Ừm, khoảng 3 giờ thì sao? Buổi sáng thì đông mà."},
+        {"speaker": "さくら", "ja": "だね。じゃあさ、3{時|じ}に{駅前|えきまえ}のスーパーで{待|ま}ち{合|あ}わせしよっか。", "vi": "Ừ nhỉ. Vậy hẹn nhau lúc 3 giờ ở siêu thị trước ga nhé."},
+        {"speaker": "健太", "ja": "おっけー。あ、そうだ、{今日|きょう}さ、{夜|よる}ごはん、うちで{作|つく}らない？{鍋|なべ}とかさ。", "vi": "Ok. À, đúng rồi, tối nay cậu có nấu ăn ở nhà tớ không? Kiểu lẩu chẳng hạn."}
+      ]
+    },
+    {
+      "title": "Hội thoại 2（Chia nhau mua đồ cho nồi lẩu)",
+      "stage": "（Chốt danh sách mua sắm qua điện thoại: rau, thịt, gia vị lẩu và món tráng miệng)",
+      "lines": [
+        {"speaker": "さくら", "ja": "え、いいの？じゃあさ、{私|わたし}、{野菜|やさい}、{買|か}ってくよ。{白菜|はくさい}とキノコとさ。", "vi": "Ơ, được à? Vậy tớ mua rau nhé. Cải thảo với nấm các thứ."},
+        {"speaker": "健太", "ja": "{助|たす}かる。じゃあさ、{俺|おれ}、{肉|にく}と{豆腐|とうふ}、{買|か}っとくよ。あ、うどんもさ。", "vi": "Giúp tớ quá. Vậy tớ mua thịt với đậu phụ nhé. À, cả udon nữa."},
+        {"speaker": "さくら", "ja": "うん。あ、{鍋|なべ}の{素|もと}さ、{家|いえ}にあったっけ？", "vi": "Ừ. À, gói gia vị lẩu, ở nhà cậu còn không nhỉ?"},
+        {"speaker": "健太", "ja": "あー、たぶん、ないかも。スーパーで{見|み}てみよっか。{辛|から}いのと、{普通|ふつう}のと、どっちがいい？", "vi": "À, chắc là không còn đâu. Ra siêu thị xem thử nhé. Vị cay với vị thường, cậu thích cái nào?"},
+        {"speaker": "さくら", "ja": "うーん、{辛|から}いの、ちょっと{苦手|にがて}なんだよね。{普通|ふつう}のでいいよ。", "vi": "Ừm, vị cay tớ hơi không giỏi. Vị thường là được rồi."},
+        {"speaker": "健太", "ja": "{了解|りょうかい}。じゃあさ、{普通|ふつう}のにしとくね。あ、そういえばさ、{昨日|きのう}、スーパーでさ、{卵|たまご}、めっちゃ{安|やす}かったんだよ。", "vi": "Rõ. Vậy lấy vị thường nhé. À, nhân tiện, hôm qua ở siêu thị trứng rẻ cực luôn đấy."},
+        {"speaker": "さくら", "ja": "マジで？いくらだったの？", "vi": "Thật á? Bao nhiêu tiền vậy?"},
+        {"speaker": "健太", "ja": "10{個|こ}でさ、198{円|えん}。びっくりしちゃったよ。", "vi": "10 quả mà có 198 yên. Tớ giật mình luôn."},
+        {"speaker": "さくら", "ja": "{安|やす}っ！じゃあさ、{今日|きょう}も{安|やす}かったら、2パック{買|か}っちゃおうかな。", "vi": "Rẻ thế! Vậy hôm nay nếu vẫn rẻ thì mua 2 vỉ luôn nhỉ."},
+        {"speaker": "健太", "ja": "だね。あ、でもさ、{賞味|しょうみ}{期限|きげん}、ちゃんと{見|み}といてね。{買|か}いすぎちゃうとさ。", "vi": "Ừ nhỉ. Nhưng nhớ xem kỹ hạn sử dụng nhé. Mua nhiều quá thì…"},
+        {"speaker": "さくら", "ja": "うん、わかってるって。あ、そうだ、デザートさ、プリン、{買|か}ってかない？", "vi": "Ừ, tớ biết mà. À, đúng rồi, món tráng miệng mua pudding nhé?"},
+        {"speaker": "健太", "ja": "いいね。じゃあさ、プリンと、ついでにアイスもさ。{鍋|なべ}のあとってさ、アイス、{食|た}べたくなるじゃん。", "vi": "Hay đấy. Vậy pudding với tiện thể cả kem nữa. Sau khi ăn lẩu thì lại thèm kem mà."},
+        {"speaker": "さくら", "ja": "わかるわかる。じゃあさ、3{時|じ}にね。{遅|おく}れそうだったら、{連絡|れんらく}するよ。", "vi": "Hiểu hiểu. Vậy 3 giờ nhé. Nếu có vẻ trễ thì tớ liên lạc."},
+        {"speaker": "健太", "ja": "うん、よろしく。あ、エコバッグ、{忘|わす}れないでね。{俺|おれ}、すぐ{忘|わす}れちゃうんだよね。", "vi": "Ừ, nhờ cậu nhé. À, đừng quên túi sinh thái nhé. Tớ hay quên lắm."},
+        {"speaker": "さくら", "ja": "はーい。じゃあ、あとでね。", "vi": "Vâng vâng. Vậy lát gặp nhé."}
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {"textbook": "スーパーに行きませんか。", "real": "スーパー行かない？", "why": "Rủ rê bạn bè chỉ cần thể thường + lên giọng cuối câu; 行きませんか dành cho người mới quen và cấp trên."},
+    {"textbook": "3時に駅前のスーパーで待ち合わせをしましょう。", "real": "3時に駅前のスーパーで待ち合わせしよっか。", "why": "〜しよっか (rút gọn của しようか） — chốt hẹn kiểu bạn bè, nhẹ và nhanh."},
+    {"textbook": "卵も牛乳もなくなってしまいました。", "real": "卵も牛乳も切れちゃってさ。", "why": "Văn nói dùng 切れる ('hết, đứt') cho đồ dùng cạn kiệt + ちゃって — ngắn hơn hẳn câu sách vở."},
+    {"textbook": "本当ですか。いくらでしたか。", "real": "マジで？いくらだったの？", "why": "Phản ứng ngạc nhiên của bạn trẻ: マジで？ ngắn, mạnh và tức thì hơn 本当ですか."},
+    {"textbook": "安いですね！", "real": "安っ！", "why": "Tính từ rút thành một tiếng thốt — chỉ tồn tại trong văn nói rất suồng sã."}
+  ],
+  "spoken_dict": [
+    {"form": "〜しよっか", "in_lesson": "待ち合わせしよっか", "original": "〜しましょうか", "vi": "Rủ rê/chốt việc kiểu bạn bè: 'làm ~ nhé?'", "use": "Bạn thân, người nhà.", "avoid": "Cấp trên, người mới quen (dùng 〜しましょうか・〜ませんか)."},
+    {"form": "〜ちゃう", "in_lesson": "切れちゃって・買っちゃおうかな", "original": "〜てしまう", "vi": "Hết mất, làm luôn mất — sắc thái tiếc nuối hoặc dứt khoát nhẹ.", "use": "Văn nói thân mật.", "avoid": "Văn bản, báo cáo công việc (giữ 〜てしまう)."},
+    {"form": "〜っけ", "in_lesson": "家にあったっけ？", "original": "〜でしたか", "vi": "Tự hỏi lại trí nhớ của mình: 'có ~ không nhỉ?'", "use": "Tự nói với mình hoặc hỏi người thật thân.", "avoid": "Hỏi cấp trên (nghe như đang nói một mình)."},
+    {"form": "〜かも", "in_lesson": "たぶん、ないかも", "original": "〜かもしれない", "vi": "Phỏng đoán nhẹ: 'chắc là ~'.", "use": "Bạn bè, người nhà.", "avoid": "Báo cáo công việc (dùng 〜と思われます・可能性があります)."},
+    {"form": "ついでに", "in_lesson": "ついでにアイスもさ", "original": "（từ đời sống)", "vi": "Tiện thể — mua/làm thêm nhân lúc đang làm việc chính.", "use": "Mọi ngữ cảnh thân mật; dùng rất nhiều khi mua sắm.", "avoid": "Ngữ cảnh trang trọng dùng ついでながら."},
+    {"form": "マジで？", "in_lesson": "マジで？いくらだったの？", "original": "本当ですか", "vi": "'Thật á?' — ngạc nhiên mạnh, tức thì.", "use": "Bạn bè trẻ.", "avoid": "Người lớn tuổi, cấp trên, khách hàng."},
+    {"form": "おっけー・はーい", "in_lesson": "おっけー。／はーい。じゃあ、あとでね", "original": "はい・分かりました", "vi": "Cách đáp suồng sã, kéo dài âm cuối cho nhẹ nhàng.", "use": "Bạn thân, người nhà.", "avoid": "Với khách và cấp trên dùng はい."}
+  ],
+  "common_phrases": [
+    {"expr": "{切|き}れちゃう", "reading": "きれちゃう", "vi": "Hết sạch (đồ dùng, thực phẩm).", "example_ja": "{牛乳|ぎゅうにゅう}、{切|き}れちゃったから{買|か}ってきて。", "example_vi": "Sữa hết rồi nên mua về giúp tớ."},
+    {"expr": "{待|ま}ち{合|あ}わせしよう", "reading": "まちあわせしよう", "vi": "Hẹn gặp nhau ở một điểm.", "example_ja": "{駅前|えきまえ}で{待|ま}ち{合|あ}わせしよう。", "example_vi": "Hẹn nhau ở trước ga nhé."},
+    {"expr": "{買|か}ってく", "reading": "かってく", "vi": "Mua mang về （買ってくる rút gọn).", "example_ja": "{野菜|やさい}、{私|わたし}が{買|か}ってくよ。", "example_vi": "Rau để tớ mua mang về cho."},
+    {"expr": "〜が{苦手|にがて}", "reading": "〜がにがて", "vi": "Không giỏi/không ăn được ~ — cách nói mềm thay cho 'ghét, không thích'.", "example_ja": "{辛|から}いの、ちょっと{苦手|にがて}なんだ。", "example_vi": "Vị cay tớ hơi không ăn được."},
+    {"expr": "{賞味期限|しょうみきげん}を{見|み}ておく", "reading": "しょうみきげんをみておく", "vi": "Xem trước hạn sử dụng.", "example_ja": "{安|やす}くても、{賞味期限|しょうみきげん}は{見|み}といてね。", "example_vi": "Dù rẻ cũng nhớ xem hạn sử dụng nhé."},
+    {"expr": "{遅|おく}れそうだったら{連絡|れんらく}して", "reading": "おくれそうだったられんらくして", "vi": "Nếu có vẻ trễ thì liên lạc nhé.", "example_ja": "{遅|おく}れそうだったら{連絡|れんらく}してね。", "example_vi": "Nếu thấy trễ thì nhắn tớ nhé."}
+  ],
+  "mindset": [
+    "Đi siêu thị ở Nhật là việc 'có kế hoạch': hẹn giờ tránh lúc đông, chia nhau danh sách từ trước, để ý ngày giảm giá và hạn sử dụng — mua nhiều vì rẻ mà để hết hạn bị coi là lãng phí hơn cả mua đắt. Câu nhắc của 健太 dừng lửng ở '買いすぎちゃうとさ…' là cách người Nhật nhắc nhau mà không cần nói hết ý: người nghe tự hiểu phần còn lại.",
+    "Nồi lẩu （鍋） là món của việc 'ăn cùng nhau': bàn xem ai mua rau, ai mua thịt không chỉ là chia việc mà là cách bạn bè xác nhận một buổi tối chung. Và 'sau lẩu lại thèm kem' — 鍋のあとってアイス食べたくなるじゃん — là kiểu đồng cảm văn hóa nhỏ mà hai người bạn cùng gật gù."
+  ],
+  "mistakes": [
+    "Dùng マジで？・おっけー với người mới quen: đây là từ của bạn rất thân; lần đầu gặp hãy dùng 本当ですか・分かりました.",
+    "Đọc 辛い là つらい khi nói đồ ăn: 'cay' là からい, còn つらい nghĩa là 'khổ sở, mệt mỏi' — nhầm một âm là đổi hẳn nghĩa.",
+    "Dịch 〜ちゃう lúc nào cũng là 'mất, tiếc nuối': nhiều khi nó chỉ là 'làm luôn cho xong' （買っちゃおう = mua luôn đi) với sắc thái dứt khoát nhẹ.",
+    "Quên エコバッグ: siêu thị ở Nhật tính tiền túi nilon, nên đi mua đồ mà không mang túi là thiếu sót thực tế — trong bài chính 健太 cũng tự nhận 'すぐ忘れちゃう'."
+  ],
+  "speaking_practice": [
+    "Rủ bạn đi siêu thị chiều nay: nêu lý do (tủ lạnh trống, hết trứng và sữa), chốt giờ và điểm hẹn tránh giờ đông.",
+    "Chia danh sách mua cho nồi lẩu: bạn mua rau (cải thảo, nấm), nhờ bạn mua thịt, đậu phụ, udon và gói gia vị vị thường.",
+    "Xuýt xoa khi nghe trứng 10 quả chỉ 198 yên: hỏi lại giá （マジで？いくら？), đề xuất mua 2 vỉ và nhắc xem 賞味期限."
+  ],
+  "lines": [
+    {"speaker": "健太", "ja": "あ、さくら、今日さ、スーパー行かない？冷蔵庫、ほぼ空っぽなんだよね。", "vi": "À, Sakura, hôm nay cậu có đi siêu thị không? Tủ lạnh tớ gần như trống rỗng rồi."},
+    {"speaker": "さくら", "ja": "あ、いいよ。私もさ、卵も牛乳も切れちゃってさ。何時くらいに行く？", "vi": "À, được đấy. Tớ cũng hết trứng với sữa rồi. Cậu đi khoảng mấy giờ?"},
+    {"speaker": "健太", "ja": "うーん、3時くらいはどう？午前中はさ、混んでるじゃん。", "vi": "Ừm, khoảng 3 giờ thì sao? Buổi sáng thì đông mà."},
+    {"speaker": "さくら", "ja": "だね。じゃあさ、3時に駅前のスーパーで待ち合わせしよっか。", "vi": "Ừ nhỉ. Vậy hẹn nhau lúc 3 giờ ở siêu thị trước ga nhé."},
+    {"speaker": "健太", "ja": "おっけー。あ、そうだ、今日さ、夜ごはん、うちで作らない？鍋とかさ。", "vi": "Ok. À, đúng rồi, tối nay cậu có nấu ăn ở nhà tớ không? Kiểu lẩu chẳng hạn."},
+    {"speaker": "さくら", "ja": "え、いいの？じゃあさ、私、野菜、買ってくよ。白菜とキノコとさ。", "vi": "Ơ, được à? Vậy tớ mua rau nhé. Cải thảo với nấm các thứ."},
+    {"speaker": "健太", "ja": "助かる。じゃあさ、俺、肉と豆腐、買っとくよ。あ、うどんもさ。", "vi": "Giúp tớ quá. Vậy tớ mua thịt với đậu phụ nhé. À, cả udon nữa."},
+    {"speaker": "さくら", "ja": "うん。あ、鍋の素さ、家にあったっけ？", "vi": "Ừ. À, gói gia vị lẩu, ở nhà cậu còn không nhỉ?"},
+    {"speaker": "健太", "ja": "あー、たぶん、ないかも。スーパーで見てみよっか。辛いのと、普通のと、どっちがいい？", "vi": "À, chắc là không còn đâu. Ra siêu thị xem thử nhé. Vị cay với vị thường, cậu thích cái nào?"},
+    {"speaker": "さくら", "ja": "うーん、辛いの、ちょっと苦手なんだよね。普通のでいいよ。", "vi": "Ừm, vị cay tớ hơi không giỏi. Vị thường là được rồi."},
+    {"speaker": "健太", "ja": "了解。じゃあさ、普通のにしとくね。あ、そういえばさ、昨日、スーパーでさ、卵、めっちゃ安かったんだよ。", "vi": "Rõ. Vậy lấy vị thường nhé. À, nhân tiện, hôm qua ở siêu thị trứng rẻ cực luôn đấy."},
+    {"speaker": "さくら", "ja": "マジで？いくらだったの？", "vi": "Thật á? Bao nhiêu tiền vậy?"},
+    {"speaker": "健太", "ja": "10個でさ、198円。びっくりしちゃったよ。", "vi": "10 quả mà có 198 yên. Tớ giật mình luôn."},
+    {"speaker": "さくら", "ja": "安っ！じゃあさ、今日も安かったら、2パック買っちゃおうかな。", "vi": "Rẻ thế! Vậy hôm nay nếu vẫn rẻ thì mua 2 vỉ luôn nhỉ."},
+    {"speaker": "健太", "ja": "だね。あ、でもさ、賞味期限、ちゃんと見といてね。買いすぎちゃうとさ。", "vi": "Ừ nhỉ. Nhưng nhớ xem kỹ hạn sử dụng nhé. Mua nhiều quá thì…"},
+    {"speaker": "さくら", "ja": "うん、わかってるって。あ、そうだ、デザートさ、プリン、買ってかない？", "vi": "Ừ, tớ biết mà. À, đúng rồi, món tráng miệng mua pudding nhé?"},
+    {"speaker": "健太", "ja": "いいね。じゃあさ、プリンと、ついでにアイスもさ。鍋のあとってさ、アイス、食べたくなるじゃん。", "vi": "Hay đấy. Vậy pudding với tiện thể cả kem nữa. Sau khi ăn lẩu thì lại thèm kem mà."},
+    {"speaker": "さくら", "ja": "わかるわかる。じゃあさ、3時にね。遅れそうだったら、連絡するよ。", "vi": "Hiểu hiểu. Vậy 3 giờ nhé. Nếu có vẻ trễ thì tớ liên lạc."},
+    {"speaker": "健太", "ja": "うん、よろしく。あ、エコバッグ、忘れないでね。俺、すぐ忘れちゃうんだよね。", "vi": "Ừ, nhờ cậu nhé. À, đừng quên túi sinh thái nhé. Tớ hay quên lắm."},
+    {"speaker": "さくら", "ja": "はーい。じゃあ、あとでね。", "vi": "Vâng vâng. Vậy lát gặp nhé."}
+  ],
+  "notes": [
+    "「〜じゃん」: khẳng định thân mật kiểu 'mà', 'đấy chứ' — dùng với bạn bè thân thiết, không dùng với cấp trên hay người mới quen.",
+    "「しよっか／しとく／買っとく／見といて」: dạng rút gọn của 「しようか／しておく／買っておく／見ておいて」 — làm sẵn, chuẩn bị sẵn; 「〜しよっか」 là rủ rê thân mật.",
+    "「マジで？／安っ！／わかるわかる」: phản ứng suồng sã thể hiện ngạc nhiên, đồng cảm — 「安っ」 là tính từ rút gọn (安い → 安っ), rất hay gặp trong nói chuyện hàng ngày.",
+    "「〜んだよね／〜かも／〜っけ」: 「んだよね」 giải thích + tìm đồng tình; 「かも」 phỏng đoán nhẹ; 「あったっけ」 là tự hỏi lại trí nhớ ('có còn không nhỉ').",
+    "「ついでに」: 'tiện thể' — mua thêm thứ gì đó nhân lúc đang mua thứ khác; dùng rất nhiều khi đi mua sắm.",
+    "「おっけー／はーい」: cách đáp suồng sã, kéo dài âm cuối cho nhẹ nhàng — khác với 「はい」 lịch sự khi nói với cấp trên hay khách hàng.",
+    "Chuyển đổi lịch sự: với bạn bè nói 「行かない？」 nhưng khi rủ người mới quen hoặc cấp trên thì nói 「行きませんか」 — cùng ý rủ rê, khác mức độ lịch sự."
+  ]
+}
