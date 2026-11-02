@@ -23,6 +23,12 @@
       "file": "2026-11-02-n2.json",
       "level": "N2",
       "questions": 20
+    },
+    {
+      "date": "2026-11-03",
+      "file": "2026-11-03-n1.json",
+      "level": "N1",
+      "questions": 20
     }
   ]
 }
