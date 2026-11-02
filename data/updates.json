@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-02",
+   "desc": "Trang bài học: phần tiếng Nhật trong tiêu đề bài (ví dụ các bài Kaiwa) trước đây bị vỡ thành nhiều cột dọc rất khó đọc, nay nằm gọn thành một dòng chạy ngang ngay dưới tiêu đề chính, furigana vẫn đầy đủ trên từng chữ.",
+   "id": "2026-11-02-tieu-de-bai-hoc-chay-ngang",
+   "link": "index.html#khoahoc",
+   "title": "Sửa tiêu đề bài học: tiếng Nhật chạy ngang",
+   "type": "tinh-nang"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Trang bài học đã dễ đọc hơn: cột Mục lục được thu hẹp lại (trước đây chiếm hơn nửa màn hình), phần bài học mở rộng ra gần như toàn bộ bề ngang nên chữ không còn bị dồn chật. Trên điện thoại, mục lục cũng gọn lại và cuộn riêng, bài học hiện ngay bên dưới.",
    "id": "2026-11-02-sua-muc-luc-bai-hoc",
    "link": "index.html#khoahoc",
