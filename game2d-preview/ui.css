@@ -92,7 +92,20 @@ button { font-family: inherit; }
 .dlg-opt.bad { border-color: var(--verm); background: #fbe9e5; opacity: .65; }
 .dlg-opt.hint { border-color: var(--good); background: #e8f5ec; box-shadow: 0 0 0 2px rgba(46,125,79,.25); }
 #dlg-fb { margin-top: 8px; font-size: 13px; color: var(--verm); font-weight: 600; }
-#dlg-act { margin-top: 11px; display: flex; justify-content: flex-end; }
+/* Lane AK (02/11): bước thoại dài làm thẻ thoại (max-height 62vh, tự cuộn) đẩy
+   hàng nút Tiếp — vốn nằm ở CUỐI vùng cuộn — khuất xuống dưới mép màn hình,
+   người chơi không bấm qua bước được (bắt tại c5-succ-khach-san-1, bước dài
+   nhất 695 ký tự; vết CDP: tâm nút ở y=854 > viewport 844, elementFromPoint
+   = null từ bước 6, bot bấm hụt 295 lần). Ghim hàng nút kiểu pill như modal
+   (Lane AH): chỉ che đúng ô của nút, nền trùng màu thẻ; hàng nút TRỐNG (bước
+   lựa chọn) thì ẩn hẳn. */
+#dlg-act { margin-top: 11px; display: flex; justify-content: flex-end;
+  position: sticky; bottom: 8px; z-index: 3;
+  width: fit-content; margin-left: auto; margin-right: -6px; margin-bottom: -6px;
+  padding: 6px; background: var(--ivory2); border: 1px solid #eee2cc; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(40, 32, 10, .18); }
+#dlg-act:empty { display: none; }
+#dlg-card { scroll-padding-bottom: 84px; }
 .dlg-next { border: none; border-radius: 999px; padding: 10px 20px; background: var(--indigo); color: #fff;
   font-size: 14px; font-weight: 800; cursor: pointer; }
 .dlg-next:active { background: var(--indigo2); }

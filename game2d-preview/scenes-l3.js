@@ -404,7 +404,7 @@
     branch: [
       { sp: 'narr', text: 'Chủ nhật đẹp trời, hội đồng hương rủ nhau ra bờ sông nướng BBQ: thịt ướp sẵn, bếp ga mini, bia mát lạnh. Cả nhóm đang vui thì khói um lên theo gió — tạt thẳng vào khu dân cư phía trên bờ kè.' },
       { sp: 'narr', text: 'Mười lăm phút sau, một xe cứu hoả và một xe cảnh sát dừng lại ở đầu dốc. Không còi hú ầm ĩ, không bắt bớ — nhưng cả nhóm bỗng im bặt, mặt ai cũng tái đi một nhịp: ở Nhật, nướng lửa ngoài trời chỉ được phép ở những khu vực quy định, và khói làm phiền dân cư là chuyện người ta báo thật.' },
-      { sp: 'Hùng', jp: 'ねえ、この{辺|あた}り、バーベキューの{看板|かんぽん}が{見|み}当たらないけど、{本当|ほんとう}に{大丈夫|だいじょうぶ}かな。{住宅|じゅうたく}も{近|ちか}いし。', text: '"Này, quanh đây mình không thấy biển cho phép nướng BBQ, liệu có thật sự ổn không? Nhà dân cũng gần lắm."' },
+      { sp: 'Hùng', jp: 'ねえ、この{辺|あた}り、バーベキューの{看板|かんばん}が{見|み}{当|あ}たらないけど、{本当|ほんとう}に{大丈夫|だいじょうぶ}かな。{住宅|じゅうたく}も{近|ちか}いし。', text: '"Này, quanh đây mình không thấy biển cho phép nướng BBQ, liệu có thật sự ổn không? Nhà dân cũng gần lắm."' },
       { sp: 'narr', text: 'Cả nhóm xua tay: "Chỗ này năm ngoái cũng có người nướng mà." — cái lý do muôn thuở của mọi rắc rối: người khác làm được thì mình cũng làm được. Bếp vẫn đỏ lửa, thịt vẫn xèo xèo, và không một ai chịu đứng lên đi đọc tấm biển ở đầu dốc.' },
       { sp: 'narr', text: 'Tấm biển ấy — mà sau này cả nhóm mới chịu đọc — ghi rất rõ: khu vực này cấm lửa trại và nướng ngoài trời, vì khói và tàn lửa ảnh hưởng tới khu dân cư phía trên bờ kè.' },
       { sp: 'Cảnh sát', jp: 'すみません、ここはバーベキュー{禁止|きんし}の{場所|ばしょ}なんです。{近所|きんじょ}から{煙|けむり}の{通報|つうほう}がありました。{火|ひ}を{消|け}して、{片付|かたづ}けをお{願|ねが}いします。', text: '"Xin lỗi, đây là nơi cấm nướng BBQ. Có người dân gần đây báo về khói. Xin các bạn tắt lửa và dọn dẹp giúp."' },
@@ -421,7 +421,7 @@
     branch: [
       { sp: 'narr', text: 'Nghỉ lễ, cả hội kéo nhau ra biển: xô, cào nhỏ, găng tay — mục tiêu là một bữa hải sản "tự bắt tự ăn". Tới nơi mới thấy bờ biển chia hai phía: một bãi có biển hướng dẫn khu vực được phép bắt, một bãi yên tĩnh hơn hẳn… và có một tấm biển đỏ mà không phải ai trong nhóm cũng chịu đọc kỹ.' },
       { sp: 'Hùng', text: '"Bãi vắng kia trông nhiều hàu hơn hẳn. Bãi có biển hướng dẫn thì đông người, tranh nhau từng con ngao." Hùng chỉ tay về hai phía, làm cả nhóm dừng lại giữa đường xuống bãi cát.' },
-      { sp: 'hero', jp: 'まず{看板|かんぽん}をよく{読|よ}もう。{赤|あか}い{看板|かんぽん}は{禁止|きんし}のことが{多|おお}いから、{確認|かくにん}してから{決|き}めよう。', text: '"Trước hết mình đọc kỹ biển báo đã. Biển đỏ thường là cấm, nên xác nhận xong rồi hẵng quyết."' },
+      { sp: 'hero', jp: 'まず{看板|かんばん}をよく{読|よ}もう。{赤|あか}い{看板|かんばん}は{禁止|きんし}のことが{多|おお}いから、{確認|かくにん}してから{決|き}めよう。', text: '"Trước hết mình đọc kỹ biển báo đã. Biển đỏ thường là cấm, nên xác nhận xong rồi hẵng quyết."' },
       { sp: 'narr', text: 'Đó là một phút dừng lại rất đáng giá — dù quyết định cuối cùng của cả hội có nghe theo nó hay không.' },
       {
         prompt: 'Cả hội chọn bãi nào để bắt hàu, bắt ngao?',
@@ -430,7 +430,7 @@
             { sp: 'narr', text: 'Theo đúng biển chỉ dẫn, cả hội cào ngao, gỡ hàu ở khu vực cho phép, giữ đúng số lượng quy định. Tối đó, bữa tiệc hải sản mở ngay sân ký túc: ngao hấp, hàu nướng — thành quả lao động hợp pháp bao giờ cũng ngon hơn một bậc. "Của mình bắt, ở chỗ được bắt, ăn mới yên cái bụng." Hùng kết luận với miệng đầy ngao.' } ] },
           { label: 'Bãi cấm có biển báo — "bãi này vắng, chắc bắt nhanh rồi đi"', flag: 'saga-c4', value: 'bien:cam', fx: { money: -0.3, risk: 1 }, note: 'C4 cảnh phụ: vào nhầm bãi cấm — bị nhắc nhở, phạt nhẹ, học về quyền đánh bắt', say: [
             { sp: 'narr', text: 'Chưa đầy mười phút, một người của hợp tác xã ngư nghiệp địa phương đã tới nơi. Ông không quát — ông chỉ vào tấm biển và giải thích rõ ràng: bãi này là nơi ngư dân nuôi trồng, quyền đánh bắt thuộc về hợp tác xã; bắt ở đây, dù ít, cũng là xâm phạm quyền của người ta.' },
-            { sp: 'hero', jp: 'すみません、{看板|かんぽん}をよく{読|よ}みませんでした。{取|と}った{分|ぶん}は{全部|ぜんぶ}お{返|かえ}しします。{本当|ほんとう}に{申|もう}し{訳|わけ}ありません。', text: '"Xin lỗi, chúng tôi đã không đọc kỹ biển báo. Phần đã bắt, chúng tôi xin trả lại toàn bộ. Thành thật xin lỗi ạ."' },
+            { sp: 'hero', jp: 'すみません、{看板|かんばん}をよく{読|よ}みませんでした。{取|と}った{分|ぶん}は{全部|ぜんぶ}お{返|かえ}しします。{本当|ほんとう}に{申|もう}し{訳|わけ}ありません。', text: '"Xin lỗi, chúng tôi đã không đọc kỹ biển báo. Phần đã bắt, chúng tôi xin trả lại toàn bộ. Thành thật xin lỗi ạ."' },
             { sp: 'narr', text: 'Số hàu ngao bắt được phải thả lại hết, kèm một khoản phạt hành chính nhẹ 0.3 man và một buổi giải thích về 漁業権 — quyền đánh bắt của ngư dân. Cả hội ra về tay không mà đầu óc đầy thêm một bài học: biển không phải của chung vô chủ — bãi nào được bắt, bãi nào không, biển báo đã ghi rõ từ đầu.' } ] }
         ]
       },

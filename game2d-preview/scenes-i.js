@@ -12,7 +12,7 @@
       scene: '🍻 忘年会 — tiệc tất niên với công ty (tháng 12)',
       branch: [
         { sp: 'narr', text: 'Giữa tháng 12, trung tâm kaigo 神戸 tổ chức 忘年会 (bōnenkai — tiệc "quên năm cũ") ở quán nhậu 新橋. Sếp Tanaka đã đặt phòng tatami riêng. Công ty trả phần lớn tiền tiệc — người mới như {name} được mời hẳn, không phải góp đồng nào. Vừa vào phòng, cả bàn đã ngồi gần kín: sếp Tanaka ở trong cùng, các senpai ngồi hai bên.' },
-        { sp: 'Sếp Tanaka', jp: '今年も一年、お疲れ様でした。今日は無礼講でいきましょう。乾杯！', text: 'Sếp Tanaka nâng ly, nói kính ngữ chuẩn mực: "Một năm qua mọi người đã vất vả rồi. Hôm nay cứ thoải mái không câu nệ nhé. Cạn ly!" — 無礼講 (bureikō) là lệ của tiệc Nhật: trong tiệc thì không phân cấp bậc, nói cười tự nhiên.' },
+        { sp: 'Sếp Tanaka', jp: '{今年|ことし}も{一年|いちねん}、{お疲れ様|おつかれさま}でした。{今日|きょう}は{無礼講|ぶれいこう}でいきましょう。{乾杯|かんぱい}！', text: 'Sếp Tanaka nâng ly, nói kính ngữ chuẩn mực: "Một năm qua mọi người đã vất vả rồi. Hôm nay cứ thoải mái không câu nệ nhé. Cạn ly!" — 無礼講 (bureikō) là lệ của tiệc Nhật: trong tiệc thì không phân cấp bậc, nói cười tự nhiên.' },
         {
           prompt: 'Vị trí còn trống: trong cùng cạnh sếp (上座 — ghế danh dự phía xa cửa) và gần cửa ra vào (下座). {name} là người mới, vào sau cùng — ngồi đâu cho phải phép?',
           choice: [
@@ -30,8 +30,8 @@
           prompt: 'Sếp Tanaka vừa uống cạn ly. {name} làm gì?',
           choice: [
             { label: 'Cầm bình bằng hai tay, rót cho sếp: 「お注ぎしますね」', fx: { jp: 3, love: 2 }, note: 'Bōnenkai: rót rượu お酌 đúng cách cho cấp trên', say: [
-              { sp: 'hero', jp: '部長、お注ぎしてもいいですか。', text: '{name} cầm bình sake bằng hai tay, hơi nghiêng người: "Thưa sếp, cho phép em rót thêm cho sếp ạ."' },
-              { sp: 'Sếp Tanaka', jp: 'おお、ありがとう。君もよく頑張っているね。今年の新人で一番丁寧だよ。', text: 'Sếp Tanaka nâng ly đón bằng hai tay, gật gù: "Ồ, cảm ơn em. Em cũng làm rất tốt đấy. Trong các bạn mới năm nay, em là người chu đáo nhất." — Một cái rót rượu đúng lúc, đúng cách, đôi khi nói thay cả trăm lời giới thiệu.' }
+              { sp: 'hero', jp: '{部長|ぶちょう}、お{注|つ}ぎしてもいいですか。', text: '{name} cầm bình sake bằng hai tay, hơi nghiêng người: "Thưa sếp, cho phép em rót thêm cho sếp ạ."' },
+              { sp: 'Sếp Tanaka', jp: 'おお、ありがとう。{君|きみ}もよく{頑張|がんば}っているね。{今年|ことし}の{新人|しんじん}で{一番|いちばん}{丁寧|ていねい}だよ。', text: 'Sếp Tanaka nâng ly đón bằng hai tay, gật gù: "Ồ, cảm ơn em. Em cũng làm rất tốt đấy. Trong các bạn mới năm nay, em là người chu đáo nhất." — Một cái rót rượu đúng lúc, đúng cách, đôi khi nói thay cả trăm lời giới thiệu.' }
             ] },
             { label: 'Ngồi ăn phần mình, ai uống kệ ai', fx: { pressure: 1 }, note: 'Bōnenkai: bỏ qua lệ お酌', say: [
               { sp: 'narr', text: '{name} cắm cúi ăn, chẳng để ý ly của ai vơi. Chị Mai lặng lẽ cầm bình rót thay cho cả hai phía, lát sau ghé tai nhắc nhỏ: "Ở tiệc công ty, để ý ly của sếp một chút — rót cho người ta là cách nói cảm ơn không lời đấy." {name} gật đầu, lần sau sẽ khác.' }
@@ -42,8 +42,8 @@
           prompt: 'Được rót tới ly thứ ba, đầu {name} đã hơi lâng lâng. Sếp lại giơ bình lên. Từ chối sao cho khéo?',
           choice: [
             { label: 'Che miệng ly nhẹ nhàng: 「すみません、今日はこのぐらいにしておきます」', fx: { jp: 3, hp: 1 }, note: 'Bōnenkai: từ chối rượu khéo bằng kính ngữ', say: [
-              { sp: 'hero', jp: 'すみません、今日はこのぐらいにしておきます。ありがとうございます。', text: '{name} khẽ che miệng ly, cười ái ngại: "Xin lỗi sếp, hôm nay em xin dừng ở đây ạ. Cảm ơn sếp nhiều." — Câu 「このぐらいにしておきます」 (xin dừng ở mức này) là mẫu từ chối rượu lịch sự kinh điển: không chê rượu, không phá vui, chỉ nói giới hạn của mình.' },
-              { sp: 'Sếp Tanaka', jp: 'そうか、無理はしなくていいよ。お茶に変えようか。', text: 'Sếp gật đầu ngay: "Vậy à, đừng cố quá nhé. Đổi sang trà nhé." — Ở Nhật, từ chối khéo một lần không làm mất lòng ai cả; uống tới say khướt giữa tiệc công ty mới là điều người ta nhớ theo cách không hay.' }
+              { sp: 'hero', jp: 'すみません、{今日|きょう}はこのぐらいにしておきます。ありがとうございます。', text: '{name} khẽ che miệng ly, cười ái ngại: "Xin lỗi sếp, hôm nay em xin dừng ở đây ạ. Cảm ơn sếp nhiều." — Câu 「このぐらいにしておきます」 (xin dừng ở mức này) là mẫu từ chối rượu lịch sự kinh điển: không chê rượu, không phá vui, chỉ nói giới hạn của mình.' },
+              { sp: 'Sếp Tanaka', jp: 'そうか、{無理|むり}はしなくていいよ。お{茶|ちゃ}に{変|か}えようか。', text: 'Sếp gật đầu ngay: "Vậy à, đừng cố quá nhé. Đổi sang trà nhé." — Ở Nhật, từ chối khéo một lần không làm mất lòng ai cả; uống tới say khướt giữa tiệc công ty mới là điều người ta nhớ theo cách không hay.' }
             ] },
             { label: 'Uống cố cho vui nhà vui cửa', fx: { hp: -3, pressure: 2 }, note: 'Bōnenkai: uống cố quá chén', say: [
               { sp: 'narr', text: '{name} nốc cạn ly thứ ba, thứ tư… Mặt đỏ bừng, tiếng cười to dần, đầu óc quay như chong chóng. Chị Mai phải đỡ về tận cửa quán, dúi cho chai nước: "Mai còn ca sáng đấy, về ngủ ngay đi." Vui thì vui thật — nhưng sáng mai cái đầu sẽ nhắc lại từng ly một. Uống chừng mực, từ chối khéo, mới là người lớn ở bàn tiệc.' }
@@ -57,7 +57,7 @@
               { sp: 'narr', text: 'Phòng karaoke nhỏ mà ấm. Tới lượt, {name} run run chọn một bài hát Nhật chậm rãi — phát âm còn vụng, cả phòng vỗ tay theo nhịp, sếp Tanaka còn hát bè câu cuối. Tan tăng hai lúc gần 11 giờ, ai cũng bắt tay chúc nhau 良いお年を (yoi otoshi wo — chúc một năm mới tốt lành). Đêm tất niên đầu tiên ở Nhật khép lại bằng cảm giác: mình không còn là người ngoài ở nơi làm này nữa.' }
             ] },
             { label: 'Chào mọi người về sớm — mai còn ca sáng, giữ sức', fx: { hp: 3 }, note: 'Bōnenkai: về sớm giữ sức', say: [
-              { sp: 'hero', jp: 'すみません、明日は朝のシフトなので、今日はこのあたりで失礼します。ありがとうございました。', text: '{name} đứng dậy chào đúng phép: "Xin lỗi mọi người, mai em có ca sáng nên xin phép về trước tại đây ạ. Cảm ơn mọi người nhiều." Cả bàn vẫy tay: "お疲れ様！良いお年を！" Về sớm ở tiệc Nhật hoàn toàn bình thường — chỉ cần chào một câu tử tế, không ai giữ, không ai giận.' }
+              { sp: 'hero', jp: 'すみません、{明日|あした}は{朝|あさ}のシフトなので、{今日|きょう}はこのあたりで{失礼|しつれい}します。ありがとうございました。', text: '{name} đứng dậy chào đúng phép: "Xin lỗi mọi người, mai em có ca sáng nên xin phép về trước tại đây ạ. Cảm ơn mọi người nhiều." Cả bàn vẫy tay: "お疲れ様！良いお年を！" Về sớm ở tiệc Nhật hoàn toàn bình thường — chỉ cần chào một câu tử tế, không ai giữ, không ai giận.' }
             ] }
           ]
         }
@@ -113,7 +113,7 @@
       scene: '🌸 Hanami — ngắm hoa anh đào ở công viên 代々木 (mùa xuân)',
       branch: [
         { sp: 'narr', text: 'Tháng ba, anh đào ở công viên 代々木 bung nở rợp trời. {name} trải tấm chiếu picnic dưới tán cây, bày đồ ăn mang theo. Người Nhật có lệ 花見 (hanami) từ cả nghìn năm: ngồi dưới hoa, ăn uống, nói chuyện — hoa chỉ nở chừng một tuần, nên khoảnh khắc nào cũng quý.' },
-        { sp: 'narr', jp: '桜が満開ですね。今年も見られて、よかったです。', text: 'Một bà cụ ngồi chiếu bên cạnh bắt chuyện: "Anh đào nở rộ rồi nhỉ. Năm nay lại được ngắm hoa, thật là tốt." — 満開 (mankai) là lúc hoa nở rộ nhất, cũng là lúc đẹp nhất và ngắn nhất.' },
+        { sp: 'narr', jp: '{桜|さくら}が{満開|まんかい}ですね。{今年|ことし}も{見|み}られて、よかったです。', text: 'Một bà cụ ngồi chiếu bên cạnh bắt chuyện: "Anh đào nở rộ rồi nhỉ. Năm nay lại được ngắm hoa, thật là tốt." — 満開 (mankai) là lúc hoa nở rộ nhất, cũng là lúc đẹp nhất và ngắn nhất.' },
         {
           prompt: 'Ngắm hoa một mình giữa biển người vui vẻ, {name} thấy…',
           choice: [
@@ -133,7 +133,7 @@
       scene: '🍁 Ngắm lá đỏ ở 鎌倉 (mùa thu)',
       branch: [
         { sp: 'narr', text: 'Cuối thu, lá phong ở chùa 鎌倉 đỏ rực cả sườn đồi. Người Nhật gọi thú đi ngắm lá đỏ là 紅葉狩り (momijigari — "săn lá đỏ"). {name} đi chậm trên con đường lát đá, tiếng lá khô xào xạc dưới chân, khói hương từ chánh điện thoang thoảng.' },
-        { sp: 'Sư thầy', jp: '紅葉は、散る時が一番美しいんですよ。', text: 'Sư thầy quét sân gần đó mỉm cười: "Lá đỏ lúc lìa cành là lúc đẹp nhất đấy." — Một câu nói nhẹ mà {name} cứ nghĩ mãi: có những thứ đẹp nhất đúng vào lúc buông xuống.' },
+        { sp: 'Sư thầy', jp: '{紅葉|こうよう}は、{散|ち}る{時|とき}が{一番|いちばん}{美|うつく}しいんですよ。', text: 'Sư thầy quét sân gần đó mỉm cười: "Lá đỏ lúc lìa cành là lúc đẹp nhất đấy." — Một câu nói nhẹ mà {name} cứ nghĩ mãi: có những thứ đẹp nhất đúng vào lúc buông xuống.' },
         {
           prompt: 'Một chiếc lá phong đỏ thắm vừa rơi xuống lòng bàn tay. {name}:',
           choice: [

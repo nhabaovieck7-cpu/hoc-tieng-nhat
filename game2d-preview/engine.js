@@ -625,6 +625,7 @@
         (perfect === interact ? 'Diễn trôi chảy như người Nhật thật! Mẫu câu đã ghi vào danh sách ôn tập.' :
           'Diễn xong — có ' + (interact - perfect) + ' lượt phải gợi ý. Mẫu câu đã ghi vào danh sách ôn tập, về ôn lại nhé.');
       el.opts.innerHTML = ''; el.fb.innerHTML = ''; el.act.innerHTML = '';
+      var dc = document.getElementById('dlg-card'); if (dc) dc.scrollTop = 0;
       el.act.appendChild(nextBtn('Tiếp ▶', function () {
         if (scene.outro) {
           el.sp.textContent = '📖';
@@ -638,6 +639,7 @@
     }
     function draw() {
       el.fb.innerHTML = ''; el.opts.innerHTML = ''; el.act.innerHTML = '';
+      var dc = document.getElementById('dlg-card'); if (dc) dc.scrollTop = 0;
       if (idx >= lines.length) { finish(); return; }
       var ln = lines[idx];
       var hero = ln.sp === 'hero';
@@ -694,6 +696,7 @@
     var lines = scene.sayLines, idx = 0;
     function draw() {
       el.opts.innerHTML = ''; el.fb.innerHTML = ''; el.act.innerHTML = '';
+      var dc = document.getElementById('dlg-card'); if (dc) dc.scrollTop = 0;
       if (idx >= lines.length) { closeDlg(); if (onDone) onDone(); return; }
       var ln = lines[idx];
       el.sp.textContent = ln.sp === 'narr' ? '📖' : ln.sp;
@@ -716,6 +719,7 @@
     var steps = (scene.branch || []).slice(), idx = 0;
     function draw() {
       el.opts.innerHTML = ''; el.fb.innerHTML = ''; el.act.innerHTML = '';
+      var dc = document.getElementById('dlg-card'); if (dc) dc.scrollTop = 0;
       if (idx >= steps.length) { closeDlg(); if (onDone) onDone(); return; }
       var st = steps[idx];
       if (st.choice) {

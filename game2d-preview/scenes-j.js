@@ -357,12 +357,12 @@
     scene: '🎡 Đi chơi với Yui — một ngày nghỉ hiếm hoi',
     branch: [
       { sp: 'narr', text: 'Ngày nghỉ của Yui và ngày nghỉ của {name} hiếm hoi trùng nhau. Hai người hẹn ở trước ga, đi dạo phố mua sắm 浅草 rồi ghé công viên. Yui mặc thường phục — không còn bộ đồng phục combini — trông khác hẳn: như một cô gái Nhật bình thường trong một ngày nghỉ bình thường, chỉ có nụ cười là vẫn quen thuộc.' },
-      { sp: 'Yui', jp: '今日は{休|やす}みだから、{店|みせ}のことは{忘|わす}れよう。…あ、でも、{一緒|いっしょ}にいると、つい「いらっしゃいませ」って{言|い}いそうになる。', text: '(Hôm nay là ngày nghỉ, quên chuyện cửa hàng đi nhé. …À mà ở cạnh bạn, tôi cứ suýt buột miệng "kính chào quý khách" thôi.) — Cả hai cùng bật cười.' },
+      { sp: 'Yui', jp: '{今日|きょう}は{休|やす}みだから、{店|みせ}のことは{忘|わす}れよう。…あ、でも、{一緒|いっしょ}にいると、つい「いらっしゃいませ」って{言|い}いそうになる。', text: '(Hôm nay là ngày nghỉ, quên chuyện cửa hàng đi nhé. …À mà ở cạnh bạn, tôi cứ suýt buột miệng "kính chào quý khách" thôi.) — Cả hai cùng bật cười.' },
       {
         prompt: 'Đi ngang một quầy bánh ngọt xếp hàng dài, Yui nhìn vào với ánh mắt thèm thuồng. {name} sẽ…',
         choice: [
           { label: 'Xếp hàng mua hai phần — một cho Yui, một cho mình', fx: { love: 2 }, note: 'Buổi hẹn với Yui: xếp hàng mua bánh cho cô ấy', say: [
-            { sp: 'Yui', jp: 'え、私の{分|ぶん}まで…？ ありがとう。…{並|なら}んでまで{買|か}ってくれるなんて、{思|おも}わなかった。', text: '(Ơ, cả phần của tôi nữa à…? Cảm ơn bạn. …Tôi không ngờ bạn chịu xếp hàng mua cho tôi như thế.) — Yui cầm hộp bánh bằng hai tay, ăn miếng đầu tiên rồi nhắm mắt gật gù. Một hàng người dài mười lăm phút, đổi lấy nụ cười đó — rẻ chán.' }
+            { sp: 'Yui', jp: 'え、{私|わたし}の{分|ぶん}まで…？ ありがとう。…{並|なら}んでまで{買|か}ってくれるなんて、{思|おも}わなかった。', text: '(Ơ, cả phần của tôi nữa à…? Cảm ơn bạn. …Tôi không ngờ bạn chịu xếp hàng mua cho tôi như thế.) — Yui cầm hộp bánh bằng hai tay, ăn miếng đầu tiên rồi nhắm mắt gật gù. Một hàng người dài mười lăm phút, đổi lấy nụ cười đó — rẻ chán.' }
           ] },
           { label: 'Rủ Yui vào quán trà gần đó ngồi nghỉ chân, nói chuyện thong thả', fx: { jp: 2 }, note: 'Buổi hẹn với Yui: ngồi quán trà nói chuyện', say: [
             { sp: 'narr', text: 'Trong quán trà nhỏ, Yui kể chuyện quê nhà ở tỉnh xa, chuyện ước mơ mở một tiệm bánh sau này. {name} kể chuyện Việt Nam, chuyện sân bay, chuyện những ngày đầu lớ ngớ. Hai thứ tiếng, hai quê — mà ngồi cạnh nhau, khoảng cách hóa ra chỉ bằng một ấm trà.' }
@@ -373,7 +373,7 @@
         prompt: 'Chiều xuống, buổi đi chơi sắp hết. Ấn tượng của {name} về hôm nay:',
         choice: [
           { label: 'Một ngày trọn vẹn — rủ Yui lần sau đi tiếp', fx: { love: 3 }, note: 'Điểm buổi hẹn: trọn vẹn', say: [
-            { sp: 'Yui', jp: '今日は{本当|ほんとう}に{楽|たの}しかった。…また、{誘|さそ}ってくれる？', text: '(Hôm nay tôi thật sự rất vui. …Lần sau, bạn lại rủ tôi nhé?) — Yui hỏi mà mắt không dám nhìn thẳng. {name} gật đầu ngay, nhanh hơn cả lúc gật bừa ở combini ngày đầu mới sang.' }
+            { sp: 'Yui', jp: '{今日|きょう}は{本当|ほんとう}に{楽|たの}しかった。…また、{誘|さそ}ってくれる？', text: '(Hôm nay tôi thật sự rất vui. …Lần sau, bạn lại rủ tôi nhé?) — Yui hỏi mà mắt không dám nhìn thẳng. {name} gật đầu ngay, nhanh hơn cả lúc gật bừa ở combini ngày đầu mới sang.' }
           ] },
           { label: 'Vui, nhưng hơi tiếc vì mình còn nói chưa được nhiều', fx: { love: 1, jp: 1 }, note: 'Điểm buổi hẹn: ổn', say: [
             { sp: 'narr', text: 'Trên tàu về, {name} mở sổ tay ghi lại mấy từ mới học được từ Yui hôm nay. Tiếng Nhật tiến bộ nhất không phải ở lớp — là ở những buổi đi chơi mà mình muốn nói thật nhiều mà nói chưa đủ thế này.' }
@@ -440,7 +440,7 @@
         prompt: 'Buổi sáng ở chợ cá kết thúc. Ấn tượng của {name} về hôm nay:',
         choice: [
           { label: 'Một buổi sáng trọn vẹn — hẹn Ren lần sau đi tiếp', fx: { love: 3 }, note: 'Điểm buổi hẹn: trọn vẹn', say: [
-            { sp: 'Ren', jp: '今日は…{楽|たの}しかった。{仕事|しごと}の{日|ひ}より、{早|はや}く{起|お}きたのにね。', text: '(Hôm nay… tôi rất vui. Dù phải dậy còn sớm hơn cả ngày đi làm.) — Ren cười, dúi vào tay {name} một phần cá tươi gói cẩn thận: "Phần này mang về, tối nấu ăn thử đi."' }
+            { sp: 'Ren', jp: '{今日|きょう}は…{楽|たの}しかった。{仕事|しごと}の{日|ひ}より、{早|はや}く{起|お}きたのにね。', text: '(Hôm nay… tôi rất vui. Dù phải dậy còn sớm hơn cả ngày đi làm.) — Ren cười, dúi vào tay {name} một phần cá tươi gói cẩn thận: "Phần này mang về, tối nấu ăn thử đi."' }
           ] },
           { label: 'Vui và được mở mang — nghề bếp hóa ra sâu hơn mình tưởng', fx: { love: 1, jp: 1 }, note: 'Điểm buổi hẹn: ổn', say: [
             { sp: 'narr', text: 'Về phòng, {name} ghi vào sổ: cách chọn cá tươi, tên các loại cá theo mùa. Một buổi đi chơi vừa vui vừa thêm một nghề tay trái trong đầu — kiểu đi chơi rất "Ren".' }

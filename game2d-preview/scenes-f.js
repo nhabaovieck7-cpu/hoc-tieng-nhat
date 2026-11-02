@@ -72,7 +72,7 @@
     scene: '🏬 Cửa hàng điện thoại — bộ giấy tờ',
     branch: [
       { sp: 'narr', text: 'Cửa hàng điện thoại sáng đèn giữa phố, nhân viên cúi chào lịch sự. Anh Tuấn nói nhỏ vài câu, nhân viên gật đầu rồi mang ra một tập giấy dày, hai chiếc điện thoại mới nguyên seal đặt ngay ngắn trên quầy.' },
-      { sp: 'Nhân viên cửa hàng', jp: 'いらっしゃいませ。本日は{契約|けいやく}の{手続|てつづ}きですね。こちらが{契約書|けいやくしょ}と{重要事項説明書|じゅうようじこうせつめいしょ}でございます。ご{不明|ふめい}な{点|てん}がございましたら、{何|なん}でもお{聞|き}きください。', text: '(Kính chào quý khách. Hôm nay mình làm thủ tục hợp đồng đúng không ạ. Đây là hợp đồng và bản giải thích các điều khoản quan trọng. Có điểm nào chưa rõ, quý khách cứ hỏi tôi bất cứ điều gì.)' },
+      { sp: 'Nhân viên cửa hàng', jp: 'いらっしゃいませ。{本日|ほんじつ}は{契約|けいやく}の{手続|てつづ}きですね。こちらが{契約書|けいやくしょ}と{重要事項説明書|じゅうようじこうせつめいしょ}でございます。ご{不明|ふめい}な{点|てん}がございましたら、{何|なん}でもお{聞|き}きください。', text: '(Kính chào quý khách. Hôm nay mình làm thủ tục hợp đồng đúng không ạ. Đây là hợp đồng và bản giải thích các điều khoản quan trọng. Có điểm nào chưa rõ, quý khách cứ hỏi tôi bất cứ điều gì.)' },
       { sp: 'Anh Tuấn', text: 'Đấy chú thấy chưa, người ta tiếp đàng hoàng thế này cơ mà. Ký vào mấy chỗ anh đánh dấu là xong. Nhanh lên, còn qua cửa hàng thứ hai nữa.' },
       { sp: 'narr', text: 'Tập giấy toàn tiếng Nhật, chữ nhỏ li ti. Nhân viên đặt cây bút ngay trước mặt bạn. Đây là khoảnh khắc quyết định: đọc, hay ký?' },
       {
@@ -81,7 +81,7 @@
           { label: 'Xin vài phút ĐỌC KỸ tập giấy — đặc biệt phần chữ nhỏ', say: [
             { sp: 'hero', jp: 'すみません、{少|すこ}し {時間|じかん}をください。{全部|ぜんぶ} {読|よ}んでから サインします。', text: '(Xin lỗi, cho tôi ít phút. Tôi sẽ đọc hết rồi mới ký.)' },
             { sp: 'narr', text: 'Bạn đọc chậm rãi, tra từng chữ. Và đây là những gì tập giấy THẬT SỰ nói — bằng tiếng Nhật khô khốc của hợp đồng:' },
-            { sp: 'narr', jp: '「本契約の名義人は、端末代金および月々の通信料金の一切について支払義務を負うものとする。分割支払金の残額は、2台分合計で 264,000円。途中解約の場合、残額は一括で請求される。」', text: '(Người đứng tên hợp đồng chịu nghĩa vụ trả TOÀN BỘ tiền máy và cước hằng tháng. Tổng tiền máy trả góp còn lại của 2 máy: 264.000 yên. Nếu hủy ngang, toàn bộ số còn lại sẽ bị đòi một lần.)' },
+            { sp: 'narr', jp: '「{本契約|ほんけいやく}の{名義人|めいぎにん}は、{端末|たんまつ}{代金|だいきん}および{月々|つきづき}の{通信料金|つうしんりょうきん}の{一切|いっさい}について{支払義務|しはらいぎむ}を{負|お}うものとする。{分割支払金|ぶんかつしはらいきん}の{残額|ざんがく}は、2{台分|だいぶん}{合計|ごうけい}で 264,000{円|えん}。{途中解約|とちゅうかいやく}の{場合|ばあい}、{残額|ざんがく}は{一括|いっかつ}で{請求|せいきゅう}される。」', text: '(Người đứng tên hợp đồng chịu nghĩa vụ trả TOÀN BỘ tiền máy và cước hằng tháng. Tổng tiền máy trả góp còn lại của 2 máy: 264.000 yên. Nếu hủy ngang, toàn bộ số còn lại sẽ bị đòi một lần.)' },
             { sp: 'narr', text: 'Bạn nhân nhanh trong đầu: mới 2 máy ở cửa hàng này đã 26,4 man tiền máy — chưa kể cước tháng. Bốn máy ở hai cửa hàng… con số nợ đứng tên có thể lên tới gần 200 man. "Cước họ đóng" — nhưng trên giấy, người nợ là BẠN.' },
             { sp: 'hero', text: '(Hóa ra là thế. Mình đứng tên, mình là người nợ. Nếu họ biến mất, 200 man này đổ hết lên đầu mình… Tay mình đang run.)' }
           ] },
