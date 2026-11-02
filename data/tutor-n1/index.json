@@ -47,6 +47,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 20 — Cuối tuần đi siêu thị và nấu ăn ở nhà",
       "file": "2026-11-02-kaiwa.json"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 03/11/2026（問題13・統合理解）",
+      "file": "2026-11-03-n1-set.json"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 03/11/2026（短文）",
+      "file": "2026-11-03-reading.json"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 21 — 友達の新居を訪ねる",
+      "file": "2026-11-03-kaiwa.json"
     }
   ]
 }

@@ -1,0 +1,115 @@
+{
+  "lesson": 21,
+  "topic": "友達の新居を訪ねる",
+  "lines": [
+    {
+      "speaker": "健太",
+      "ja": "おじゃましまーす！わあ、新居、めっちゃきれいじゃん！",
+      "vi": "Xin phép vào nhà nhé! Wow, nhà mới đẹp quá trời luôn!"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "来てくれてありがとう！上がって上がって。スリッパそこね。",
+      "vi": "Cảm ơn cậu đã đến! Vào đi vào đi. Dép đi trong nhà ở chỗ đó đấy."
+    },
+    {
+      "speaker": "健太",
+      "ja": "すごっ、リビング広っ！前の部屋より全然いいね。",
+      "vi": "Tuyệt thật, phòng khách rộng quá! Hơn hẳn căn phòng trước đây nhỉ."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "でしょー？駅からも近いし、ほんとここにしてよかったよ。",
+      "vi": "Đúng không? Gần ga nữa, thật sự chọn chỗ này là đúng đắn."
+    },
+    {
+      "speaker": "健太",
+      "ja": "引っ越し、大変だったでしょ？荷物、片付いた？",
+      "vi": "Chuyển nhà vất vả lắm đúng không? Đồ đạc dọn xong chưa?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "いや〜、まだ段ボール何箱か残ってるんだよね。週末にちょこちょこ片付けてる感じ。",
+      "vi": "Trời ơi, vẫn còn mấy thùng các-tông chưa dọn ấy. Kiểu cuối tuần dọn dần từng chút một."
+    },
+    {
+      "speaker": "健太",
+      "ja": "あ、これ引っ越し祝い。そんな大したもんじゃないけど、タオルセット。",
+      "vi": "À, đây là quà mừng tân gia. Cũng chẳng có gì to tát đâu, bộ khăn tắm thôi."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "えー、ありがとう！気が利くね〜。ちょうどタオル買い足そうと思ってたの。",
+      "vi": "Ôi, cảm ơn nhé! Cậu tinh ý thật đấy. Đúng lúc tớ đang định mua thêm khăn."
+    },
+    {
+      "speaker": "健太",
+      "ja": "で、この辺ってスーパーとかどう？買い物しやすそう？",
+      "vi": "Mà khu này siêu thị các thứ thì sao? Có vẻ dễ mua sắm nhỉ?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "うん、歩いて5分んとこに大きいスーパーあるし、コンビニも近くて便利だよ。",
+      "vi": "Ừ, đi bộ 5 phút là có siêu thị lớn, cửa hàng tiện lợi cũng gần nên tiện lắm."
+    },
+    {
+      "speaker": "健太",
+      "ja": "いいな〜。ゴミの分別とか、こっち細かくない？",
+      "vi": "Thích thật. Phân loại rác các thứ, bên này có chi li không?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "あー、それね。燃えるゴミとプラの分け方が前の区とちょっと違うのよ。最初、まじで戸惑った。",
+      "vi": "À, cái đó đấy. Cách phân rác cháy được với nhựa hơi khác quận trước. Lúc đầu tớ thực sự bối rối luôn."
+    },
+    {
+      "speaker": "健太",
+      "ja": "わかるわかる。うちの区もさ、曜日ごとに細かく決まっててさ。",
+      "vi": "Hiểu hiểu. Quận nhà tớ cũng thế, quy định chi li theo từng ngày trong tuần ấy."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "ね。あ、コーヒー淹れるけど、飲む？ケーキもあるよ。",
+      "vi": "Đúng không. À, tớ pha cà phê nhé, cậu uống không? Có cả bánh nữa đấy."
+    },
+    {
+      "speaker": "健太",
+      "ja": "お、いいね。じゃあ、いただきます。あ、このケーキうまっ！どこの？",
+      "vi": "Ồ, hay đấy. Vậy tớ xin phép nhé. Ôi, bánh này ngon quá! Của tiệm nào thế?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "駅前のケーキ屋さん。ここのシュークリームも絶品だよ。今度一緒に買いに行こうよ。",
+      "vi": "Tiệm bánh trước ga đấy. Bánh su kem ở đây cũng tuyệt phẩm luôn. Lần tới cùng đi mua nhé."
+    },
+    {
+      "speaker": "健太",
+      "ja": "行こう行こう。あ、そういえばさ、この辺、夜って静か？",
+      "vi": "Đi đi. À, nói mới nhớ, khu này buổi tối có yên tĩnh không?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "うん、めっちゃ静か。前のとこは道路沿いでうるさかったから、ほんと快適。",
+      "vi": "Ừ, yên tĩnh cực. Chỗ trước ở ven đường nên ồn ào, thật sự bây giờ thoải mái lắm."
+    },
+    {
+      "speaker": "健太",
+      "ja": "最高じゃん。じゃあ、また遊びに来ていい？",
+      "vi": "Tuyệt vời luôn. Vậy tớ lại đến chơi nữa được không?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "もちろん！今度は鍋でもしようよ。ゆっくりしていってね。",
+      "vi": "Tất nhiên rồi! Lần tới cùng ăn lẩu nhé. Cứ thong thả ở lại chơi nhé."
+    }
+  ],
+  "notes": [
+    "「おじゃましまーす」: おじゃましますを伸ばして言うことで、親しい友達の家に入るときの気軽さが出る。かしこまった場面では「おじゃまします」と短く言う。",
+    "「〜じゃん」「すごっ・広っ」: じゃんは「〜じゃないか」のくだけた形で、感動や確認に使う。すごっ・広っは語尾を詰まらせた言い方で、思わず出た驚きを表す。目上の人には使わない。",
+    "「でしょー？」「いいな〜」: 語尾を伸ばすと、同意を求めたりうらやましさを表したりする柔らかい響きになる。教科書の「でしょう」より会話らしい。",
+    "「ちょこちょこ」「まじで」: ちょこちょこは「少しずつ何度も」のくだけた表現。まじでは「本当に」の若者言葉で、驚きや本気度を強調する。どちらも友達同士の会話で自然。",
+    "「5分んとこ」「こっち」: 「5分のところ」を「5分んとこ」と縮めるのは日常会話でよくある音の脱落。「こっち」は「この地域」を指すくだけた言い方。",
+    "「いただきます」: 家でごちそうになるときは、かしこまらずに軽く「いただきます」と言うだけで十分自然。無言で食べ始めるよりずっと感じがいい。",
+    "誘い方「〜しようよ」「行こう行こう」: 「今度は鍋でもしようよ」「行こう行こう」のように、相手の提案に繰り返しで応じると、乗り気な気持ちが伝わる。断るときは「今度ね」などとやわらかく言う。"
+  ]
+}
