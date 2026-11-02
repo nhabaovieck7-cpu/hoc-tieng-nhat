@@ -1509,12 +1509,12 @@
      "exVi": "Đếm lượng hàng tồn kho."
     },
     {
-     "w": "{採掘場|さいくつじょう}",
-     "read": "さいくつじょう",
-     "hv": "thải quật trường",
-     "vi": "bãi khai thác, khu vực đào",
-     "ex": "{採掘場|さいくつじょう}の{入口|いりぐち}で{名前|なまえ}を{書|か}きます。",
-     "exVi": "Ghi tên tại cổng bãi khai thác."
+     "ex": "{発破技士|はっぱぎし}が{装薬|そうやく}を{担当|たんとう}します。",
+     "exVi": "Kỹ thuật viên nổ mìn phụ trách khâu nạp thuốc.",
+     "hv": "phát phá kỹ sĩ",
+     "read": "はっぱぎし",
+     "vi": "kỹ thuật viên nổ mìn có chứng chỉ quốc gia, người được làm các khâu khoan, nạp thuốc, kích nổ",
+     "w": "{発破技士|はっぱぎし}"
     },
     {
      "w": "{発破時刻|はっぱじこく}",
@@ -1573,12 +1573,12 @@
      "exVi": "Xem kỹ mặt vách có đá treo hay không."
     },
     {
-     "w": "{掘削面|くっさくめん}",
-     "read": "くっさくめん",
-     "hv": "quật tước diện",
-     "vi": "mặt đào, bề mặt đang đào",
-     "ex": "{掘削面|くっさくめん}の{下|した}に{立|た}たないでください。",
-     "exVi": "Đừng đứng dưới mặt đào."
+     "ex": "ジョークラッシャーで{原石|げんせき}を{砕|くだ}きます。",
+     "exVi": "Nghiền đá nguyên khối bằng máy nghiền hàm.",
+     "hv": "",
+     "read": "じょーくらっしゃー",
+     "vi": "máy nghiền hàm, máy nghiền sơ cấp đập đá nguyên khối lớn",
+     "w": "ジョークラッシャー"
     },
     {
      "w": "{落石防止網|らくせきぼうしもう}",
@@ -1907,6 +1907,14 @@
      "vi": "sổ ghi chép nổ mìn",
      "ex": "{発破記録|はっぱきろく}に{薬量|やくりょう}と{時刻|じこく}を{書|か}きます。",
      "exVi": "Ghi lượng thuốc và giờ nổ vào sổ nổ mìn."
+    },
+    {
+     "ex": "{岩石採取場|がんせきさいしゅじょう}には{採石業務管理者|さいせきぎょうむかんりしゃ}を{置|お}きます。",
+     "exVi": "Bãi khai thác đá phải bố trí người quản lý nghiệp vụ khai thác đá.",
+     "hv": "thải thạch nghiệp vụ quản lý giả",
+     "read": "さいせきぎょうむかんりしゃ",
+     "vi": "người quản lý nghiệp vụ khai thác đá có chứng chỉ quốc gia, bãi khai thác đá bắt buộc phải bố trí",
+     "w": "{採石業務管理者|さいせきぎょうむかんりしゃ}"
     }
    ],
    "phrases": [
@@ -4025,12 +4033,12 @@
      "exVi": "Có làm thêm giờ."
     },
     {
-     "w": "{公証|こうしょう}",
-     "read": "こうしょう",
-     "hv": "công chứng",
-     "vi": "công chứng",
-     "ex": "この{書類|しょるい}は{公証|こうしょう}が{必要|ひつよう}です。",
-     "exVi": "Tài liệu này cần công chứng."
+     "ex": "{公正証書|こうせいしょうしょ}は{公証役場|こうしょうやくば}で{作|つく}ります。",
+     "exVi": "Văn bản công chứng được lập tại phòng công chứng.",
+     "hv": "công chính chứng thư",
+     "read": "こうせいしょうしょ",
+     "vi": "văn bản công chứng (lập tại phòng công chứng)",
+     "w": "{公正証書|こうせいしょうしょ}"
     },
     {
      "w": "{証拠|しょうこ}",
@@ -4137,12 +4145,12 @@
      "exVi": "Niêm yết bảng lịch làm việc của tháng sau."
     },
     {
-     "w": "{出勤簿|しゅっきんぼ}",
-     "read": "しゅっきんぼ",
-     "hv": "xuất cần bộ",
-     "vi": "sổ chấm công, sổ điểm danh",
-     "ex": "{出勤簿|しゅっきんぼ}に{出勤時間|しゅっきんじかん}を{書|か}きます。",
-     "exVi": "Ghi giờ đến làm vào sổ chấm công."
+     "ex": "{出勤|しゅっきん}と{退勤|たいきん}はカードで{打刻|だこく}します。",
+     "exVi": "Giờ vào và giờ ra được bấm bằng thẻ.",
+     "hv": "đả khắc",
+     "read": "だこく",
+     "vi": "bấm giờ chấm công (quẹt thẻ/ghi giờ vào ra)",
+     "w": "{打刻|だこく}"
     },
     {
      "w": "{強|つよ}み",
@@ -4423,6 +4431,22 @@
      "vi": "thước cuộn",
      "ex": "{巻尺|まきじゃく}で{距離|きょり}を{測|はか}ります。",
      "exVi": "Đo khoảng cách bằng thước cuộn."
+    },
+    {
+     "ex": "{適格請求書|てきかくせいきゅうしょ}には{登録番号|とうろくばんごう}を{書|か}きます。",
+     "exVi": "Trên hóa đơn hợp lệ ghi số đăng ký.",
+     "hv": "thích cách thỉnh cầu thư",
+     "read": "てきかくせいきゅうしょ",
+     "vi": "hóa đơn hợp lệ theo chế độ invoice (インボイス)",
+     "w": "{適格請求書|てきかくせいきゅうしょ}"
+    },
+    {
+     "ex": "トータルステーションで{距離|きょり}と{角度|かくど}を{測|はか}ります。",
+     "exVi": "Đo khoảng cách và góc bằng máy toàn đạc điện tử.",
+     "hv": "",
+     "read": "とーたるすてーしょん",
+     "vi": "máy toàn đạc điện tử (đo góc và khoảng cách khi trắc địa)",
+     "w": "トータルステーション"
     }
    ],
    "phrases": [
@@ -6610,6 +6634,22 @@
      "vi": "hóa đơn, biên lai tại quầy",
      "ex": "レシートはレジで{受|う}け{取|と}ります。",
      "exVi": "Nhận hóa đơn tại quầy thu ngân."
+    },
+    {
+     "ex": "{払込取扱票|はらいこみとりあつかいひょう}に{金額|きんがく}と{名前|なまえ}を{書|か}きます。",
+     "exVi": "Viết số tiền và họ tên vào phiếu nộp tiền.",
+     "hv": "phất nhập thủ trát phiếu",
+     "read": "はらいこみとりあつかいひょう",
+     "vi": "tờ phiếu nộp tiền tại bưu điện (mẫu giấy để chuyển tiền, trả tiền)",
+     "w": "{払込取扱票|はらいこみとりあつかいひょう}"
+    },
+    {
+     "ex": "ゆうゆう{窓口|まどぐち}は{夜|よる}でも{荷物|にもつ}を{受|う}け{付|つ}けます。",
+     "exVi": "Quầy ngoài giờ ban đêm vẫn tiếp nhận bưu kiện.",
+     "hv": "song khẩu",
+     "read": "ゆうゆうまどぐち",
+     "vi": "quầy bưu điện ngoài giờ (nhận gửi, nhận đồ khi quầy chính đóng)",
+     "w": "ゆうゆう{窓口|まどぐち}"
     }
    ],
    "phrases": [

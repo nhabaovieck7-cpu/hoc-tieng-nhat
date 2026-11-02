@@ -2265,12 +2265,12 @@
      "exVi": "Việc này sẽ mang về xem xét tiếp."
     },
     {
-     "w": "{代替|だいたい}{案|あん}",
-     "read": "だいたいあん",
-     "hv": "ĐẠI THẾ ÁN",
-     "vi": "phương án thay thế",
-     "ex": "{代替案|だいたいあん}も{用意|ようい}しました。",
-     "exVi": "Tôi cũng đã chuẩn bị phương án thay thế."
+     "ex": "リリースに{失敗|しっぱい}したら{切|き}り{戻|もど}しをします。",
+     "exVi": "Nếu phát hành thất bại thì sẽ quay lui về bản trước.",
+     "hv": "",
+     "read": "きりもどし",
+     "vi": "quay lui bản phát hành (rollback khi release gặp sự cố)",
+     "w": "{切|き}り{戻|もど}し"
     },
     {
      "w": "DNS",
@@ -2289,12 +2289,12 @@
      "exVi": "Kết nối vào mạng công ty bằng VPN."
     },
     {
-     "w": "スイッチングハブ",
-     "read": "すいっちんぐはぶ",
+     "ex": "アクセスポイントを{再起動|さいきどう}したらWi-Fiがつながりました。",
+     "exVi": "Khởi động lại điểm truy cập Wi-Fi thì đã kết nối được.",
      "hv": "",
-     "vi": "thiết bị chia mạng (switching hub)",
-     "ex": "スイッチングハブのランプが{消|き}えています。",
-     "exVi": "Đèn của thiết bị chia mạng đang tắt."
+     "read": "あくせすぽいんと",
+     "vi": "điểm truy cập Wi-Fi (thiết bị mạng không dây tại văn phòng)",
+     "w": "アクセスポイント"
     },
     {
      "w": "{死活|しかつ}{監視|かんし}",
@@ -2401,12 +2401,12 @@
      "exVi": "Có dấu vết đăng nhập trái phép."
     },
     {
-     "w": "ウイルス{対策|たいさく}ソフト",
-     "read": "ういるすたいさくそふと",
+     "ex": "EDRで{端末|たんまつ}の{不審|ふしん}な{動|うご}きを{検知|けんち}しました。",
+     "exVi": "EDR đã phát hiện hoạt động đáng ngờ trên thiết bị đầu cuối.",
      "hv": "",
-     "vi": "phần mềm diệt virus",
-     "ex": "ウイルス{対策|たいさく}ソフトを{最新|さいしん}にしてください。",
-     "exVi": "Xin hãy cập nhật phần mềm diệt virus lên bản mới nhất."
+     "read": "いーでぃーあーる",
+     "vi": "hệ thống phát hiện và ứng phó tại thiết bị đầu cuối (EDR)",
+     "w": "EDR"
     },
     {
      "w": "なりすまし",
@@ -2559,6 +2559,30 @@
      "vi": "tải xuống (download)",
      "ex": "{資料|しりょう}はサイトからダウンロードできます。",
      "exVi": "Tài liệu có thể tải xuống từ trang web."
+    },
+    {
+     "ex": "{新入社員|しんにゅうしゃいん}のパソコンをキッティングしています。",
+     "exVi": "Tôi đang cài đặt ban đầu máy tính cho nhân viên mới.",
+     "hv": "",
+     "read": "きってぃんぐ",
+     "vi": "cài đặt, thiết lập ban đầu máy tính cho nhân viên (kitting)",
+     "w": "キッティング"
+    },
+    {
+     "ex": "シングルサインオンで{業務|ぎょうむ}システムにログインします。",
+     "exVi": "Đăng nhập vào hệ thống công việc bằng đăng nhập một lần (SSO).",
+     "hv": "",
+     "read": "しんぐるさいんおん",
+     "vi": "đăng nhập một lần vào nhiều hệ thống (SSO)",
+     "w": "シングルサインオン"
+    },
+    {
+     "ex": "アカウントロックの{解除|かいじょ}を{依頼|いらい}してください。",
+     "exVi": "Xin hãy yêu cầu mở khóa tài khoản.",
+     "hv": "",
+     "read": "あかうんとろっく",
+     "vi": "khóa tài khoản (do nhập sai mật khẩu nhiều lần)",
+     "w": "アカウントロック"
     }
    ],
    "phrases": [
@@ -5201,12 +5225,12 @@
      "exVi": "Tôi đã gửi hồ sơ yêu cầu chi trả tiền bảo hiểm."
     },
     {
-     "w": "{事故|じこ}{連絡|れんらく}",
-     "read": "じこれんらく",
-     "hv": "SỰ CỐ LIÊN LẠC",
-     "vi": "thông báo tai nạn (cho công ty bảo hiểm)",
-     "ex": "{事故|じこ}{連絡|れんらく}は24{時間|じかん}{受|う}け{付|つ}けています。",
-     "exVi": "Việc thông báo tai nạn được tiếp nhận 24 giờ."
+     "ex": "{口座|こうざ}{開設|かいせつ}の{前|まえ}に{反社|はんしゃ}チェックを{行|おこな}います。",
+     "exVi": "Trước khi mở tài khoản sẽ tiến hành kiểm tra phản xã hội.",
+     "hv": "PHẢN XÃ",
+     "read": "はんしゃちぇっく",
+     "vi": "kiểm tra thế lực phản xã hội (sàng lọc bắt buộc khi mở tài khoản, cho vay)",
+     "w": "{反社|はんしゃ}チェック"
     },
     {
      "w": "レッカー",
@@ -5233,12 +5257,12 @@
      "exVi": "Tôi giới thiệu xưởng sửa chữa gần đây."
     },
     {
-     "w": "{支払|しはら}い{審査|しんさ}",
-     "read": "しはらいしんさ",
-     "hv": "",
-     "vi": "thẩm định chi trả",
-     "ex": "{支払|しはら}い{審査|しんさ}には1{週間|しゅうかん}ほどかかります。",
-     "exVi": "Việc thẩm định chi trả mất khoảng 1 tuần."
+     "ex": "{支払|しはらい}{査定|さてい}の{結果|けっか}は{来週|らいしゅう}ご{連絡|れんらく}します。",
+     "exVi": "Kết quả thẩm định chi trả sẽ được liên lạc vào tuần sau.",
+     "hv": "CHI PHẤT TRA ĐỊNH",
+     "read": "しはらいさてい",
+     "vi": "thẩm định chi trả (bảo hiểm)",
+     "w": "{支払|しはらい}{査定|さてい}"
     },
     {
      "w": "{請求|せいきゅう}{期限|きげん}",
@@ -5345,12 +5369,12 @@
      "exVi": "Tôi đã dán thông báo ở lối vào."
     },
     {
-     "w": "{夜間|やかん}{金庫|きんこ}",
-     "read": "やかんきんこ",
-     "hv": "DẠ GIAN KIM KHỐ",
-     "vi": "két gửi tiền ban đêm (của ngân hàng)",
-     "ex": "{夜間|やかん}{金庫|きんこ}は{閉店後|へいてんご}も{使|つか}えます。",
-     "exVi": "Két gửi tiền ban đêm dùng được cả sau giờ đóng cửa."
+     "ex": "キャッシュカードの{磁気|じき}{不良|ふりょう}でATMが{使|つか}えません。",
+     "exVi": "Do lỗi từ tính của thẻ tiền mặt nên không dùng được ATM.",
+     "hv": "TỪ KHÍ BẤT LƯƠNG",
+     "read": "じきふりょう",
+     "vi": "lỗi từ tính (thẻ/sổ ngân hàng không đọc được ở ATM)",
+     "w": "{磁気|じき}{不良|ふりょう}"
     },
     {
      "w": "{現金|げんきん}{輸送|ゆそう}",
@@ -5415,6 +5439,30 @@
      "vi": "khấu trừ thuế tại nguồn",
      "ex": "{配当|はいとう}からは{源泉|げんせん}{徴収|ちょうしゅう}されます。",
      "exVi": "Cổ tức sẽ bị khấu trừ thuế tại nguồn."
+    },
+    {
+     "ex": "{相続|そうぞく}の{手続|てつづ}きには{戸籍|こせき}{謄本|とうほん}が{必要|ひつよう}です。",
+     "exVi": "Thủ tục thừa kế cần có bản sao sổ hộ tịch.",
+     "hv": "TƯƠNG TỤC THỦ TỤC",
+     "read": "そうぞくてつづき",
+     "vi": "thủ tục thừa kế (xử lý tài khoản của khách đã qua đời)",
+     "w": "{相続|そうぞく}{手続|てつづ}き"
+    },
+    {
+     "ex": "{口座|こうざ}{振替|ふりかえ}{依頼書|いらいしょ}に{銀行|ぎんこう}の{届出印|とどけでいん}を{押|お}してください。",
+     "exVi": "Xin đóng con dấu đã đăng ký với ngân hàng vào giấy yêu cầu trích nợ tài khoản.",
+     "hv": "KHẨU TỌA CHẤN THẾ Y LẠI THƯ",
+     "read": "こうざふりかえいらいしょ",
+     "vi": "giấy yêu cầu trích nợ tự động qua tài khoản (biểu mẫu thật khách điền tại quầy)",
+     "w": "{口座|こうざ}{振替|ふりかえ}{依頼書|いらいしょ}"
+    },
+    {
+     "ex": "{等級|とうきゅう}が{上|あ}がると{保険料|ほけんりょう}が{安|やす}くなります。",
+     "exVi": "Cấp bậc tăng thì phí bảo hiểm sẽ rẻ hơn.",
+     "hv": "ĐẲNG CẤP",
+     "read": "のんふりーととうきゅう",
+     "vi": "cấp bậc phí bảo hiểm ô tô (càng cao phí càng rẻ, thay đổi theo lịch sử tai nạn)",
+     "w": "ノンフリート{等級|とうきゅう}"
     }
    ],
    "phrases": [

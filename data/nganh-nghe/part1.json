@@ -4479,28 +4479,28 @@
      "exVi": "Khi cụ hoang tưởng bị lấy cắp ví, trước hết hãy lắng nghe cụ nói."
     },
     {
-     "w": "{取|と}り{繕|つくろ}い",
-     "read": "とりつくろい",
-     "hv": "thủ thiện",
-     "vi": "nói chữa, che giấu sự lú lẫn khi trò chuyện",
-     "ex": "{初|はじ}めての{人|ひと}の{前|まえ}では{取|と}り{繕|つくろ}いが{見|み}られます。",
-     "exVi": "Trước người lạ, cụ thường nói chữa để che sự lú lẫn."
+     "ex": "サービス{提供票|ていきょうひょう}に{確認|かくにん}のサインをいただきます。",
+     "exVi": "Em xin chữ ký xác nhận vào phiếu cung cấp dịch vụ ạ.",
+     "hv": "đề cung phiếu",
+     "read": "さーびすていきょうひょう",
+     "vi": "phiếu cung cấp dịch vụ (ケアマネ phát hành hằng tháng, ghi ngày/giờ/nội dung dịch vụ đã dùng, làm căn cứ thanh toán)",
+     "w": "サービス{提供票|ていきょうひょう}"
     },
     {
-     "w": "バリデーション",
-     "read": "ばりでーしょん",
-     "hv": "",
-     "vi": "liệu pháp công nhận (đón nhận cảm xúc của người sa sút trí tuệ)",
-     "ex": "バリデーションで{気持|きも}ちを{受|う}け{止|と}めます。",
-     "exVi": "Dùng liệu pháp công nhận để đón nhận cảm xúc của cụ."
+     "ex": "{周辺症状|しゅうへんしょうじょう}が{強|つよ}い{日|ひ}は、{申|もう}し{送|おく}りで{共有|きょうゆう}します。",
+     "exVi": "Ngày triệu chứng xung quanh nặng, em chia sẻ trong phần giao ca.",
+     "hv": "chu biên chứng trạng",
+     "read": "しゅうへんしょうじょう",
+     "vi": "triệu chứng xung quanh (BPSD) của sa sút trí tuệ: lo âu, lang thang, kích động... (ghi trong hồ sơ, bàn trong họp)",
+     "w": "{周辺症状|しゅうへんしょうじょう}"
     },
     {
-     "w": "ユマニチュード",
-     "read": "ゆまにちゅーど",
-     "hv": "",
-     "vi": "Humanitude (kỹ thuật giao tiếp chăm sóc người sa sút trí tuệ)",
-     "ex": "ユマニチュードを{意識|いしき}して、{目|め}を{見|み}て{話|はな}します。",
-     "exVi": "Ý thức Humanitude, nhìn vào mắt cụ khi nói chuyện."
+     "ex": "{実務者研修|じつむしゃけんしゅう}の{授業|じゅぎょう}があるので、シフトを{調整|ちょうせい}してもらいました。",
+     "exVi": "Vì có buổi học của khóa thực vụ giả nên em nhờ điều chỉnh ca làm.",
+     "hv": "thực vụ giả nghiên tu",
+     "read": "じつむしゃけんしゅう",
+     "vi": "khóa đào tạo thực vụ giả (phải học xong khóa này mới đủ điều kiện thi chứng chỉ quốc gia 介護福祉士 theo diện kinh nghiệm thực tế)",
+     "w": "{実務者研修|じつむしゃけんしゅう}"
     },
     {
      "w": "{馴染|なじ}み",
@@ -4645,6 +4645,54 @@
      "vi": "khóa cửa nẻo (kiểm tra cửa đã khóa)",
      "ex": "{戸締|とじま}りを{確認|かくにん}してから{失礼|しつれい}します。",
      "exVi": "Em kiểm tra khóa cửa rồi mới xin phép ra về."
+    },
+    {
+     "ex": "{来年|らいねん}、{介護福祉士|かいごふくしし}の{国家試験|こっかしけん}を{受|う}けます。",
+     "exVi": "Năm sau em sẽ thi kỳ thi quốc gia介護福祉士.",
+     "hv": "giới hộ phúc chỉ sĩ",
+     "read": "かいごふくしし",
+     "vi": "người có chứng chỉ quốc gia ngành chăm sóc (bằng quốc gia; điều kiện thi theo diện kinh nghiệm: 3 năm thực tế + học xong 実務者研修)",
+     "w": "{介護福祉士|かいごふくしし}"
+    },
+    {
+     "ex": "{喀痰吸引|かくたんきゅういん}は{研修|けんしゅう}を{終|お}えた{職員|しょくいん}が{行|おこな}います。",
+     "exVi": "Việc hút đờm do nhân viên đã học xong khóa đào tạo thực hiện.",
+     "hv": "khách đàm hấp dẫn",
+     "read": "かくたんきゅういん",
+     "vi": "hút đờm (thao tác nhân viên chăm sóc chỉ được làm sau khi học xong khóa 喀痰吸引等研修 và được chứng nhận)",
+     "w": "{喀痰吸引|かくたんきゅういん}"
+    },
+    {
+     "ex": "{利用|りよう}の{申|もう}し{込|こ}みは{生活相談員|せいかつそうだんいん}が{対応|たいおう}します。",
+     "exVi": "Đăng ký sử dụng dịch vụ do nhân viên tư vấn đời sống phụ trách.",
+     "hv": "sinh hoạt tương đàm viên",
+     "read": "せいかつそうだんいん",
+     "vi": "nhân viên tư vấn đời sống (vị trí bắt buộc tại day service: tiếp nhận tư vấn, thủ tục ký hợp đồng, liên lạc người nhà)",
+     "w": "{生活相談員|せいかつそうだんいん}"
+    },
+    {
+     "ex": "{通所介護計画書|つうしょかいごけいかくしょ}の{内容|ないよう}をご{家族|かぞく}に{説明|せつめい}します。",
+     "exVi": "Em giải thích nội dung bản kế hoạch chăm sóc day service cho người nhà.",
+     "hv": "thông sở giới hộ kế hoạch thư",
+     "read": "つうしょかいごけいかくしょ",
+     "vi": "bản kế hoạch chăm sóc tại day service (cơ sở lập dựa trên ケアプラン, giải thích và xin đồng ý của cụ/người nhà)",
+     "w": "{通所介護計画書|つうしょかいごけいかくしょ}"
+    },
+    {
+     "ex": "{月|つき}の{初|はじ}めに{介護保険負担割合証|かいごほけんふたんわりあいしょう}を{確認|かくにん}します。",
+     "exVi": "Đầu tháng em kiểm tra thẻ tỷ lệ tự chi trả bảo hiểm chăm sóc.",
+     "hv": "giới hộ bảo hiểm phụ đam cát hợp chứng",
+     "read": "かいごほけんふたんわりあいしょう",
+     "vi": "thẻ tỷ lệ tự chi trả bảo hiểm chăm sóc (1〜3割; cơ sở kiểm tra mỗi tháng cùng thẻ bảo hiểm chăm sóc khi làm thanh toán)",
+     "w": "{介護保険負担割合証|かいごほけんふたんわりあいしょう}"
+    },
+    {
+     "ex": "{身体拘束|しんたいこうそく}をしないケアを、{会議|かいぎ}で{確認|かくにん}しました。",
+     "exVi": "Trong cuộc họp đã xác nhận chăm sóc không ràng buộc thân thể.",
+     "hv": "thân thể câu thúc",
+     "read": "しんたいこうそく",
+     "vi": "ràng buộc thân thể (buộc cụ vào giường/xe lăn — về nguyên tắc bị cấm; cơ sở phải họp ủy ban thích chính hóa và ghi hồ sơ nếu bất đắc dĩ)",
+     "w": "{身体拘束|しんたいこうそく}"
     }
    ],
    "phrases": [
@@ -4854,14 +4902,14 @@
      "note": "Trò chuyện với cụ về thời tiết, rủ đi dạo, 丁寧語"
     },
     {
-     "ja": "{今日|きょう}のお{昼|ひる}は{何|なに}が{食|た}べたいですか。",
-     "vi": "Trưa nay bác muốn ăn gì ạ?",
-     "note": "Hỏi nguyện vọng bữa ăn của cụ, 丁寧語"
+     "ja": "{今日|きょう}の{昼食|ちゅうしょく}は{献立表|こんだてひょう}のとおり、{魚|さかな}の{煮付|につ}けです。{食堂|しょくどう}へ{行|い}きましょう。",
+     "note": "Tại cơ sở: báo thực đơn cố định của ngày cho cụ trước bữa ăn, 丁寧語",
+     "vi": "Bữa trưa hôm nay theo thực đơn là cá kho ạ. Mình ra phòng ăn nhé."
     },
     {
-     "ja": "{好|す}きなテレビ{番組|ばんぐみ}は{何|なん}ですか。",
-     "vi": "Chương trình tivi bác thích là gì ạ?",
-     "note": "Trò chuyện thường ngày với cụ về tivi, 丁寧語"
+     "ja": "{体操|たいそう}の{時間|じかん}です。{皆|みな}さん、{一緒|いっしょ}に{体|からだ}を{動|うご}かしましょう。",
+     "note": "Thông báo giờ thể dục tập thể tại day service, hoạt động hằng ngày, 丁寧語",
+     "vi": "Đến giờ tập thể dục rồi ạ. Mọi người cùng vận động cơ thể với em nhé."
     },
     {
      "ja": "お{孫|まご}さんはおいくつになりましたか。",

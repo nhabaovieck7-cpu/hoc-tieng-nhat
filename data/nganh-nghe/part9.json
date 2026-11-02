@@ -2519,12 +2519,12 @@
      "exVi": "Tất cả cùng xác nhận quy trình thao tác mới."
     },
     {
-     "w": "{安全帯|あんぜんたい}",
-     "read": "あんぜんたい",
-     "hv": "An toàn đái",
-     "vi": "dây đai an toàn khi làm trên cao",
-     "ex": "{高|たか}い{所|ところ}では{安全帯|あんぜんたい}を{使|つか}います。",
-     "exVi": "Ở chỗ cao thì dùng dây đai an toàn."
+     "ex": "{高|たか}い{所|ところ}ではフルハーネスを{着|つ}けます。",
+     "exVi": "Ở nơi cao thì đeo đai an toàn toàn thân.",
+     "hv": "",
+     "read": "ふるはーねす",
+     "vi": "đai an toàn toàn thân (đeo cả vai và đùi, bắt buộc khi làm trên cao)",
+     "w": "フルハーネス"
     },
     {
      "w": "{脚立|きゃたつ}",
@@ -2565,6 +2565,22 @@
      "vi": "sắp xếp gọn gàng ngăn nắp",
      "ex": "{道具|どうぐ}は{整理整頓|せいりせいとん}して{片付|かたづ}けます。",
      "exVi": "Dụng cụ được sắp xếp gọn gàng rồi cất đi."
+    },
+    {
+     "ex": "{警備員指導教育責任者|けいびいんしどうきょういくせきにんしゃ}が{新任|しんにん}の{教育|きょういく}を{担当|たんとう}します。",
+     "exVi": "Người phụ trách đào tạo bảo vệ đảm nhận việc đào tạo nhân viên mới.",
+     "hv": "Cảnh bị viên chỉ đạo giáo dục trách nhiệm giả",
+     "read": "けいびいんしどうきょういくせきにんしゃ",
+     "vi": "người phụ trách hướng dẫn, đào tạo nhân viên bảo vệ (chứng chỉ quốc gia bắt buộc theo luật nghiệp vụ bảo vệ)",
+     "w": "{警備員指導教育責任者|けいびいんしどうきょういくせきにんしゃ}"
+    },
+    {
+     "ex": "{建築物環境衛生管理技術者|けんちくぶつかんきょうえいせいかんりぎじゅつしゃ}は{空気|くうき}と{水|みず}の{管理|かんり}をします。",
+     "exVi": "Kỹ thuật viên quản lý vệ sinh tòa nhà quản lý không khí và nước.",
+     "hv": "Kiến trúc vật hoàn cảnh vệ sinh quản lý kỹ thuật giả",
+     "read": "けんちくぶつかんきょうえいせいかんりぎじゅつしゃ",
+     "vi": "kỹ thuật viên quản lý vệ sinh môi trường tòa nhà (chứng chỉ quốc gia, thường gọi là ビル管)",
+     "w": "{建築物環境衛生管理技術者|けんちくぶつかんきょうえいせいかんりぎじゅつしゃ}"
     }
    ],
    "phrases": [
@@ -4885,12 +4901,12 @@
      "exVi": "Chuyển người bị thương bằng cáng."
     },
     {
-     "w": "{酸素|さんそ}",
-     "read": "さんそ",
-     "hv": "Toan tố",
-     "vi": "oxy dùng trong cấp cứu",
-     "ex": "{呼吸|こきゅう}が{苦|くる}しい{人|ひと}に{酸素|さんそ}を{与|あた}えます。",
-     "exVi": "Cho người khó thở thở oxy."
+     "ex": "{空気呼吸器|くうきこきゅうき}を{背負|せお}って{中|なか}に{入|はい}ります。",
+     "exVi": "Đeo máy thở khí nén trên lưng rồi vào bên trong.",
+     "hv": "Không khí hô hấp khí",
+     "read": "くうきこきゅうき",
+     "vi": "máy thở khí nén của lính cứu hỏa (đeo khi vào nơi có khói)",
+     "w": "{空気呼吸器|くうきこきゅうき}"
     },
     {
      "w": "{避難場所|ひなんばしょ}",
@@ -5115,6 +5131,30 @@
      "vi": "đọc truyện cho trẻ nghe",
      "ex": "{土曜日|どようび}に{絵本|えほん}の{読|よ}み{聞|き}かせがあります。",
      "exVi": "Thứ Bảy có buổi đọc truyện tranh cho trẻ nghe."
+    },
+    {
+     "ex": "コンビニ{交付|こうふ}なら{土曜日|どようび}も{証明書|しょうめいしょ}が{取|と}れます。",
+     "exVi": "Với dịch vụ cấp tại cửa hàng tiện lợi, thứ Bảy cũng lấy được giấy chứng nhận.",
+     "hv": "Giao phó",
+     "read": "こんびにこうふ",
+     "vi": "cấp giấy chứng nhận tại cửa hàng tiện lợi bằng thẻ My Number",
+     "w": "コンビニ{交付|こうふ}"
+    },
+    {
+     "ex": "{住民票|じゅうみんひょう}の{写|うつ}しは{三百円|さんびゃくえん}で{発行|はっこう}します。",
+     "exVi": "Bản sao giấy đăng ký cư trú được cấp với phí 300 yên.",
+     "hv": "Trú dân phiếu tả",
+     "read": "じゅうみんひょうのうつし",
+     "vi": "bản sao giấy đăng ký cư trú (bản được cấp cho người dân)",
+     "w": "{住民票|じゅうみんひょう}の{写|うつ}し"
+    },
+    {
+     "ex": "{期日前投票|きじつぜんとうひょう}は{市役所|しやくしょ}でできます。",
+     "exVi": "Bỏ phiếu sớm có thể thực hiện tại tòa thị chính.",
+     "hv": "Kỳ nhật tiền đầu phiếu",
+     "read": "きじつぜんとうひょう",
+     "vi": "bỏ phiếu sớm trước ngày bầu cử",
+     "w": "{期日前投票|きじつぜんとうひょう}"
     }
    ],
    "phrases": [

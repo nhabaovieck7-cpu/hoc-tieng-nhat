@@ -2701,12 +2701,12 @@
      "exVi": "Khi bản vẽ thay đổi đến thì thay cho bản vẽ cũ."
     },
     {
-     "w": "{凡例|はんれい}",
-     "read": "はんれい",
-     "hv": "phàm lệ",
-     "vi": "phần chú thích ký hiệu trên bản vẽ",
-     "ex": "{図面|ずめん}の{凡例|はんれい}で{記号|きごう}を{確認|かくにん}します。",
-     "exVi": "Đối chiếu ký hiệu bằng phần chú thích trên bản vẽ."
+     "ex": "グリーンファイルの{書類|しょるい}に{名前|なまえ}を{書|か}きます。",
+     "exVi": "Viết tên vào giấy tờ trong hồ sơ an toàn nộp thầu chính.",
+     "hv": "",
+     "read": "ぐりーんふぁいる",
+     "vi": "hồ sơ an toàn lao động nộp cho thầu chính (green file)",
+     "w": "グリーンファイル"
     },
     {
      "w": "{縮尺|しゅくしゃく}",
@@ -2717,12 +2717,12 @@
      "exVi": "Xem tỉ lệ bản vẽ để tính chiều dài thực tế."
     },
     {
-     "w": "{方位|ほうい}",
-     "read": "ほうい",
-     "hv": "phương vị",
-     "vi": "phương hướng trên bản vẽ (bắc, nam, đông, tây)",
-     "ex": "{方位|ほうい}を{見|み}て{北側|きたがわ}を{確認|かくにん}します。",
-     "exVi": "Xem phương hướng để xác nhận phía bắc."
+     "ex": "{朝|あさ}、{現場|げんば}で{建設|けんせつ}キャリアアップシステムのカードをタッチします。",
+     "exVi": "Buổi sáng chạm thẻ của hệ thống CCUS tại công trường.",
+     "hv": "kiến thiết",
+     "read": "けんせつきゃりああっぷしすてむ",
+     "vi": "hệ thống nâng cao nghề nghiệp xây dựng CCUS, thẻ chạm điểm danh tại công trường",
+     "w": "{建設|けんせつ}キャリアアップシステム"
     },
     {
      "w": "{仮設|かせつ}トイレ",
@@ -2891,6 +2891,22 @@
      "vi": "đi làm vào ngày nghỉ",
      "ex": "{休日出勤|きゅうじつしゅっきん}は{手当|てあて}がつきます。",
      "exVi": "Đi làm ngày nghỉ sẽ có phụ cấp."
+    },
+    {
+     "ex": "{足場|あしば}の{組立|くみた}ては{作業主任者|さぎょうしゅにんしゃ}が{指揮|しき}します。",
+     "exVi": "Việc lắp dựng giàn giáo do trưởng ca phụ trách chỉ huy.",
+     "hv": "túc trường tổ lập đẳng tác nghiệp chủ nhiệm giả",
+     "read": "あしばのくみたてとうさぎょうしゅにんしゃ",
+     "vi": "trưởng ca phụ trách lắp dựng giàn giáo (chứng chỉ作業主任者 bắt buộc)",
+     "w": "{足場|あしば}の{組立|くみた}て{等|とう}{作業|さぎょう}{主任者|しゅにんしゃ}"
+    },
+    {
+     "ex": "バックホウに{乗|の}るには{車両系建設機械運転技能講習|しゃりょうけいけんせつきかいうんてんぎのうこうしゅう}が{必要|ひつよう}です。",
+     "exVi": "Muốn lái máy xúc thì cần chứng chỉ đào tạo lái máy xây dựng tự hành.",
+     "hv": "xa lượng hệ kiến thiết cơ giới vận chuyển kỹ năng giảng tập",
+     "read": "しゃりょうけいけんせつきかいうんてんぎのうこうしゅう",
+     "vi": "khóa đào tạo kỹ năng lái máy xây dựng tự hành (xúc, ủi) — chứng chỉ bắt buộc để lái máy",
+     "w": "{車両系|しゃりょうけい}{建設機械|けんせつきかい}{運転|うんてん}{技能|ぎのう}{講習|こうしゅう}"
     }
    ],
    "phrases": [
@@ -5828,12 +5844,12 @@
      "w": "{予備品|よびひん}"
     },
     {
-     "ex": "{軸受|じくう}けから{異音|いおん}がするので{交換|こうかん}します。",
-     "exVi": "Ổ trục phát ra tiếng lạ nên sẽ thay mới.",
-     "hv": "trục thụ",
-     "read": "じくうけ",
-     "vi": "ổ trục, vòng bi đỡ trục",
-     "w": "{軸受|じくう}け"
+     "ex": "ベアリングのガタが{大|おお}きいので{交換|こうかん}します。",
+     "exVi": "Vòng bi bị rơ lớn nên sẽ thay mới.",
+     "hv": "",
+     "read": "べありんぐ",
+     "vi": "vòng bi, ổ bi (tên gọi hiện trường của 軸受け)",
+     "w": "ベアリング"
     },
     {
      "ex": "{今日|きょう}の{不良率|ふりょうりつ}は1パーセント{以下|いか}です。",
@@ -6028,12 +6044,12 @@
      "w": "ラジエーター"
     },
     {
-     "ex": "ナンバープレートを{正|ただ}しく{取|と}り{付|つ}けます。",
-     "exVi": "Gắn biển số xe đúng cách.",
+     "ex": "{異常|いじょう}があったらアンドンを{引|ひ}いてラインを{止|と}めます。",
+     "exVi": "Có bất thường thì kéo dây andon để dừng line.",
      "hv": "",
-     "read": "なんばーぷれーと",
-     "vi": "biển số xe",
-     "w": "ナンバープレート"
+     "read": "あんどん",
+     "vi": "hệ thống andon: dây/bảng báo bất thường để dừng line gọi hỗ trợ",
+     "w": "アンドン"
     },
     {
      "ex": "{製品|せいひん}は{金属探知機|きんぞくたんちき}を{通|とお}してから{箱詰|はこづ}めします。",
@@ -6114,6 +6130,22 @@
      "read": "みしん",
      "vi": "máy may công nghiệp",
      "w": "ミシン"
+    },
+    {
+     "ex": "フォークリフト{運転技能講習|うんてんぎのうこうしゅう}を{修了|しゅうりょう}してからフォークリフトに{乗|の}ります。",
+     "exVi": "Hoàn thành khóa đào tạo lái xe nâng rồi mới lái xe nâng.",
+     "hv": "vận chuyển kỹ năng giảng tập",
+     "read": "ふぉーくりふとうんてんぎのうこうしゅう",
+     "vi": "khóa đào tạo kỹ năng lái xe nâng — chứng chỉ bắt buộc để lái xe nâng từ 1 tấn",
+     "w": "フォークリフト{運転|うんてん}{技能|ぎのう}{講習|こうしゅう}"
+    },
+    {
+     "ex": "{塗装|とそう}の{現場|げんば}では{有機溶剤作業主任者|ゆうきようざいさぎょうしゅにんしゃ}を{選任|せんにん}します。",
+     "exVi": "Tại khu vực sơn phải cử người phụ trách công việc dung môi hữu cơ.",
+     "hv": "hữu cơ dung tễ tác nghiệp chủ nhiệm giả",
+     "read": "ゆうきようざいさぎょうしゅにんしゃ",
+     "vi": "trưởng ca phụ trách công việc dùng dung môi hữu cơ (chứng chỉ bắt buộc ở xưởng sơn, hóa chất)",
+     "w": "{有機溶剤|ゆうきようざい}{作業|さぎょう}{主任者|しゅにんしゃ}"
     }
    ],
    "phrases": [

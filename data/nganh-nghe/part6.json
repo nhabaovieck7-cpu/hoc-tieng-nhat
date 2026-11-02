@@ -2033,12 +2033,12 @@
      "exVi": "Bên cạnh chỗ rửa mặt có chỗ đặt máy giặt."
     },
     {
-     "w": "{冷蔵庫|れいぞうこ}",
-     "read": "れいぞうこ",
-     "hv": "LÃNH TÀNG KHỐ",
-     "vi": "tủ lạnh",
-     "ex": "{台所|だいどころ}に{冷蔵庫|れいぞうこ}を{置|お}けます。",
-     "exVi": "Có thể đặt tủ lạnh trong bếp."
+     "ex": "{浴室|よくしつ}には{乾燥機|かんそうき}が{付|つ}いています。",
+     "exVi": "Phòng tắm có gắn máy sấy khô.",
+     "hv": "DỤC THẤT CAN TÁO CƠ",
+     "read": "よくしつかんそうき",
+     "vi": "máy sưởi/sấy khô phòng tắm (thiết bị ghi trong tin rao và được hỏi khi xem nhà)",
+     "w": "{浴室|よくしつ}{乾燥機|かんそうき}"
     },
     {
      "w": "インターネット{無料|むりょう}",
@@ -2185,12 +2185,12 @@
      "exVi": "Gần đây có bãi xe thuê theo tháng ạ."
     },
     {
-     "w": "{水道管|すいどうかん}",
-     "read": "すいどうかん",
-     "hv": "THỦY ĐẠO QUẢN",
-     "vi": "đường ống nước",
-     "ex": "{水道管|すいどうかん}から{水|みず}が{漏|も}れています。",
-     "exVi": "Nước đang rò từ đường ống nước."
+     "ex": "{給水管|きゅうすいかん}の{劣化|れっか}で{水圧|すいあつ}が{下|さ}がっています。",
+     "exVi": "Ống cấp nước xuống cấp nên áp lực nước giảm.",
+     "hv": "CẤP THỦY QUẢN",
+     "read": "きゅうすいかん",
+     "vi": "đường ống cấp nước (đưa nước vào nhà)",
+     "w": "{給水管|きゅうすいかん}"
     },
     {
      "w": "ガス{漏|も}れ",
@@ -2225,12 +2225,12 @@
      "exVi": "Trên trần có vết ố do dột mưa."
     },
     {
-     "w": "{壁|かべ}",
-     "read": "かべ",
-     "hv": "BÍCH",
-     "vi": "tường trong phòng",
-     "ex": "{壁|かべ}に{小|ちい}さな{穴|あな}があいています。",
-     "exVi": "Trên tường có một lỗ nhỏ."
+     "ex": "クロスの{汚|よご}れは{退去時|たいきょじ}に{確認|かくにん}します。",
+     "exVi": "Vết bẩn trên giấy dán tường sẽ được xác nhận khi trả nhà.",
+     "hv": "",
+     "read": "くろす",
+     "vi": "giấy dán tường (vật liệu tường khi xem nhà và tính khôi phục nguyên trạng)",
+     "w": "クロス"
     },
     {
      "w": "リモコン",
@@ -2329,12 +2329,12 @@
      "exVi": "Phiếu cư trú lấy được tại tòa thị chính."
     },
     {
-     "w": "{印鑑|いんかん}{証明|しょうめい}",
-     "read": "いんかんしょうめい",
-     "hv": "ẤN GIÁM CHỨNG MINH",
-     "vi": "chứng nhận con dấu đã đăng ký",
-     "ex": "{契約者|けいやくしゃ}の{印鑑|いんかん}{証明|しょうめい}が{必要|ひつよう}です。",
-     "exVi": "Cần chứng nhận con dấu của người ký hợp đồng."
+     "ex": "{売買|ばいばい}の{契約時|けいやくじ}は{印鑑|いんかん}{登録|とうろく}{証明書|しょうめいしょ}が{必要|ひつよう}です。",
+     "exVi": "Khi ký hợp đồng mua bán cần có giấy chứng nhận đăng ký con dấu.",
+     "hv": "ẤN GIÁM ĐĂNG LỤC CHỨNG MINH THƯ",
+     "read": "いんかんとうろくしょうめいしょ",
+     "vi": "giấy chứng nhận đăng ký con dấu (tên chính thức của giấy thường gọi tắt là印鑑証明)",
+     "w": "{印鑑|いんかん}{登録|とうろく}{証明書|しょうめいしょ}"
     },
     {
      "w": "{電子|でんし}{署名|しょめい}",
@@ -2399,6 +2399,30 @@
      "vi": "pin sạc dự phòng cho thuê",
      "ex": "モバイルバッテリーは{受付|うけつけ}でお{貸|か}しします。",
      "exVi": "Pin dự phòng cho mượn tại quầy tiếp tân."
+    },
+    {
+     "ex": "レインズで{新|あたら}しい{物件|ぶっけん}を{検索|けんさく}します。",
+     "exVi": "Tôi tìm kiếm căn mới trên REINS.",
+     "hv": "",
+     "read": "れいんず",
+     "vi": "REINS — hệ thống thông tin lưu thông bất động sản mà môi giới dùng để đăng ký và tìm物件 hằng ngày",
+     "w": "レインズ"
+    },
+    {
+     "ex": "IT{重説|じゅうせつ}はオンラインで{行|おこな}えます。",
+     "exVi": "Việc giải thích các điều khoản quan trọng qua trực tuyến có thể thực hiện online.",
+     "hv": "TRỌNG THUYẾT",
+     "read": "あいてぃーじゅうせつ",
+     "vi": "giải thích các điều khoản quan trọng qua trực tuyến (hình thức đang áp dụng cho cả thuê và mua bán)",
+     "w": "IT{重説|じゅうせつ}"
+    },
+    {
+     "ex": "{契約|けいやく}{不適合|ふてきごう}{責任|せきにん}についてご{説明|せつめい}します。",
+     "exVi": "Tôi sẽ giải thích về trách nhiệm khi tài sản không phù hợp hợp đồng.",
+     "hv": "KHẾ ƯỚC BẤT THÍCH HỢP TRÁCH NHIỆM",
+     "read": "けいやくふてきごうせきにん",
+     "vi": "trách nhiệm khi tài sản không phù hợp hợp đồng (thuật ngữ luật hiện hành, thay cho瑕疵担保責任 cũ)",
+     "w": "{契約|けいやく}{不適合|ふてきごう}{責任|せきにん}"
     }
    ],
    "phrases": [
@@ -4944,12 +4968,12 @@
      "exVi": "Sẽ sắp xếp hội trường cho buổi tiễn biệt."
     },
     {
-     "w": "{葬儀場|そうぎじょう}",
-     "read": "そうぎじょう",
-     "hv": "TÁNG NGHI TRƯỜNG",
-     "vi": "nhà tang lễ, nơi tổ chức tang lễ",
-     "ex": "{葬儀場|そうぎじょう}は{駅|えき}から{車|くるま}で10{分|ふん}です。",
-     "exVi": "Nhà tang lễ cách ga 10 phút đi xe."
+     "ex": "{一日葬|いちにちそう}は{通夜|つや}をせず、{一日|いちにち}で{終|お}わります。",
+     "exVi": "Tang lễ một ngày không tổ chức lễ đêm, kết thúc trong một ngày.",
+     "hv": "NHẤT NHẬT TÁNG",
+     "read": "いちにちそう",
+     "vi": "tang lễ một ngày (không lễ đêm, gồm lễ tiễn biệt và hỏa táng trong một ngày)",
+     "w": "{一日葬|いちにちそう}"
     },
     {
      "w": "{飲|の}み{放題|ほうだい}",
@@ -4976,12 +5000,12 @@
      "exVi": "Xuất trình thẻ học sinh sẽ được giảm giá học sinh."
     },
     {
-     "w": "ゲーム{機|き}",
-     "read": "げーむき",
-     "hv": "CƠ",
-     "vi": "máy chơi game tại game center",
-     "ex": "{新|あたら}しいゲーム{機|き}が{入|はい}りました。",
-     "exVi": "Máy game mới đã được đưa vào."
+     "ex": "{筐体|きょうたい}の{画面|がめん}がつかないと{店員|てんいん}に{連絡|れんらく}がありました。",
+     "exVi": "Có liên lạc tới nhân viên rằng màn hình của máy game không sáng.",
+     "hv": "KHUÔNG THỂ",
+     "read": "きょうたい",
+     "vi": "thân máy game (máy arcade đặt tại game center)",
+     "w": "{筐体|きょうたい}"
     },
     {
      "w": "{景品|けいひん}{交換|こうかん}",
@@ -5110,6 +5134,22 @@
      "vi": "huấn luyện, dạy nề nếp cho thú cưng",
      "ex": "しつけ{教室|きょうしつ}は{日曜日|にちようび}にあります。",
      "exVi": "Lớp huấn luyện thú cưng vào Chủ nhật."
+    },
+    {
+     "ex": "{次回予約|じかいよやく}をすると{料金|りょうきん}が{少|すこ}し{安|やす}くなります。",
+     "exVi": "Đặt lịch lần tới ngay thì giá sẽ rẻ hơn một chút.",
+     "hv": "THỨ HỒI DỰ ƯỚC",
+     "read": "じかいよやく",
+     "vi": "đặt lịch lần tới ngay tại tiệm (trước khi về)",
+     "w": "{次回予約|じかいよやく}"
+    },
+    {
+     "ex": "{直葬|ちょくそう}では{葬儀|そうぎ}をせずに{火葬|かそう}します。",
+     "exVi": "Với hỏa táng trực tiếp, không tổ chức tang lễ mà hỏa táng luôn.",
+     "hv": "TRỰC TÁNG",
+     "read": "ちょくそう",
+     "vi": "hỏa táng trực tiếp (không tổ chức lễ viếng và lễ tiễn biệt)",
+     "w": "{直葬|ちょくそう}"
     }
    ],
    "phrases": [

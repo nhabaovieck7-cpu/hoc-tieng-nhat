@@ -2551,12 +2551,12 @@
      "exVi": "Đeo găng tay vải rồi bê hàng."
     },
     {
-     "w": "フォークリフト{免許|めんきょ}",
-     "read": "ふぉーくりふとめんきょ",
-     "hv": "",
-     "vi": "bằng lái xe nâng",
-     "ex": "フォークリフトの{免許|めんきょ}を{取|と}りました。",
-     "exVi": "Đã lấy được bằng lái xe nâng."
+     "ex": "フォークリフト{運転技能講習|うんてんぎのうこうしゅう}を{修了|しゅうりょう}しないと、フォークリフトに{乗|の}れません。",
+     "exVi": "Chưa hoàn thành khóa đào tạo kỹ năng lái xe nâng thì không được lái xe nâng.",
+     "hv": "VẬN CHUYỂN KỸ NĂNG GIẢNG TẬP",
+     "read": "ふぉーくりふとうんてんぎのうこうしゅう",
+     "vi": "khóa đào tạo kỹ năng lái xe nâng (hoàn thành khóa này mới được lái xe nâng; không phải bằng lái quốc gia)",
+     "w": "フォークリフト{運転技能講習|うんてんぎのうこうしゅう}"
     },
     {
      "w": "ローラーコンベア",
@@ -2743,12 +2743,12 @@
      "exVi": "Nhận giấy chứng nhận trễ tàu ở ga."
     },
     {
-     "w": "{普通|ふつう}{電車|でんしゃ}",
-     "read": "ふつうでんしゃ",
-     "hv": "PHỔ THÔNG ĐIỆN XA",
-     "vi": "tàu thường, tàu địa phương",
-     "ex": "{普通|ふつう}{電車|でんしゃ}で{三十分|さんじゅっぷん}かかります。",
-     "exVi": "Đi tàu thường mất 30 phút."
+     "ex": "{次|つぎ}の{普通列車|ふつうれっしゃ}は{五分|ごふん}ほど{遅|おく}れています。",
+     "exVi": "Chuyến tàu thường tiếp theo chậm khoảng 5 phút.",
+     "hv": "PHỔ THÔNG LIỆT XA",
+     "read": "ふつうれっしゃ",
+     "vi": "tàu thường (tên gọi chính thức trong thông báo ga và bảng giờ tàu)",
+     "w": "{普通列車|ふつうれっしゃ}"
     },
     {
      "w": "{車内|しゃない}",
@@ -2885,6 +2885,22 @@
      "vi": "ca muộn",
      "ex": "{遅番|おそばん}は{昼|ひる}から{始|はじ}まります。",
      "exVi": "Ca muộn bắt đầu từ trưa."
+    },
+    {
+     "ex": "ドライブレコーダーの{映像|えいぞう}を{事故|じこ}のあとで{確認|かくにん}します。",
+     "exVi": "Sau tai nạn kiểm tra lại hình ảnh camera hành trình.",
+     "hv": "",
+     "read": "どらいぶれこーだー",
+     "vi": "camera hành trình trên xe (trang bị phổ biến/bắt buộc trên xe tải, taxi)",
+     "w": "ドライブレコーダー"
+    },
+    {
+     "ex": "ETCカードを{車|くるま}に{入|い}れてから{出発|しゅっぱつ}します。",
+     "exVi": "Cắm thẻ ETC vào xe rồi mới xuất phát.",
+     "hv": "",
+     "read": "いーてぃーしー",
+     "vi": "hệ thống thu phí tự động không dừng trên cao tốc",
+     "w": "ETC"
     }
    ],
    "phrases": [
@@ -5325,12 +5341,12 @@
      "exVi": "Chở gỗ tròn đến xưởng xẻ."
     },
     {
-     "w": "{索道|さくどう}",
-     "read": "さくどう",
-     "hv": "SÁCH ĐẠO",
-     "vi": "cáp treo vận chuyển gỗ trên núi",
-     "ex": "{索道|さくどう}で{木材|もくざい}を{下|お}ろします。",
-     "exVi": "Hạ gỗ xuống bằng cáp treo."
+     "ex": "スイングヤーダで{斜面|しゃめん}の{丸太|まるた}を{集|あつ}めます。",
+     "exVi": "Dùng máy swing yarder gom gỗ tròn trên sườn dốc.",
+     "hv": "",
+     "read": "すいんぐやーだ",
+     "vi": "máy gom gỗ bằng cáp có cần xoay, kiểu máy gom gỗ bằng đường cáp đang dùng phổ biến hiện nay",
+     "w": "スイングヤーダ"
     },
     {
      "w": "{安全帯|あんぜんたい}",
@@ -5451,6 +5467,30 @@
      "vi": "viêm vú ở bò sữa",
      "ex": "{乳房炎|にゅうぼうえん}の{牛|うし}を{獣医|じゅうい}に{見|み}せます。",
      "exVi": "Cho bác sĩ thú y khám con bò bị viêm vú."
+    },
+    {
+     "ex": "{収穫前|しゅうかくまえ}に{防除記録|ぼうじょきろく}を{確認|かくにん}します。",
+     "exVi": "Trước khi thu hoạch thì kiểm tra hồ sơ phòng trừ.",
+     "hv": "PHÒNG TRỪ KÝ LỤC",
+     "read": "ぼうじょきろく",
+     "vi": "sổ ghi chép phun phòng trừ (ngày phun, tên thuốc, nồng độ pha, số ngày an toàn trước thu hoạch), JA kiểm tra khi xuất hàng",
+     "w": "{防除記録|ぼうじょきろく}"
+    },
+    {
+     "ex": "{電気柵|でんきさく}の{周|まわ}りの{草|くさ}を{刈|か}ります。",
+     "exVi": "Cắt cỏ quanh hàng rào điện để không bị rò điện.",
+     "hv": "ĐIỆN KHÍ SÁCH",
+     "read": "でんきさく",
+     "vi": "hàng rào điện chống thú rừng (heo rừng, khỉ) phá hoại mùa màng",
+     "w": "{電気柵|でんきさく}"
+    },
+    {
+     "ex": "プロセッサで{枝|えだ}を{払|はら}って、{玉切|たまぎ}りします。",
+     "exVi": "Dùng máy processor tỉa cành rồi cắt khúc gỗ.",
+     "hv": "",
+     "read": "ぷろせっさ",
+     "vi": "máy xử lý gỗ tại bãi tập kết: tỉa cành, cắt khúc và đo gỗ tự động",
+     "w": "プロセッサ"
     }
    ],
    "phrases": [

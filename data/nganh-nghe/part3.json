@@ -2741,12 +2741,12 @@
      "w": "{三角巾|さんかくきん}"
     },
     {
-     "ex": "{体温計|たいおんけい}で{熱|ねつ}を{測|はか}ります。",
-     "exVi": "Đo sốt bằng nhiệt kế.",
-     "hv": "thể ôn kế",
-     "read": "たいおんけい",
-     "vi": "nhiệt kế đo thân nhiệt",
-     "w": "{体温計|たいおんけい}"
+     "ex": "{朝|あさ}と{夕方|ゆうがた}に{冷蔵庫|れいぞうこ}の{温度記録表|おんどきろくひょう}を{書|か}きます。",
+     "exVi": "Ghi bảng nhiệt độ tủ lạnh vào buổi sáng và chiều tối.",
+     "hv": "ôn độ ký lục biểu",
+     "read": "おんどきろくひょう",
+     "vi": "bảng ghi nhiệt độ (tủ lạnh/tủ đông, ghi theo HACCP mỗi ngày)",
+     "w": "{温度記録表|おんどきろくひょう}"
     },
     {
      "ex": "ペーパータオルで{手|て}を{拭|ふ}きます。",
@@ -2877,12 +2877,12 @@
      "w": "{印刷|いんさつ}"
     },
     {
-     "ex": "データのバックアップを{取|と}ります。",
-     "exVi": "Sao lưu dữ liệu.",
-     "hv": "",
-     "read": "ばっくあっぷ",
-     "vi": "sao lưu (dữ liệu)",
-     "w": "バックアップ"
+     "ex": "チェックアウトはロビーの{自動精算機|じどうせいさんき}でできます。",
+     "exVi": "Có thể trả phòng tại máy tự thanh toán ở sảnh.",
+     "hv": "tự động tinh toán cơ",
+     "read": "じどうせいさんき",
+     "vi": "máy tự thanh toán (khách sạn tự check-out, siêu thị)",
+     "w": "{自動精算機|じどうせいさんき}"
     },
     {
      "ex": "データをパソコンに{保存|ほぞん}します。",
@@ -2891,6 +2891,22 @@
      "read": "でーた",
      "vi": "dữ liệu",
      "w": "データ"
+    },
+    {
+     "ex": "{防火管理者|ぼうかかんりしゃ}が{避難訓練|ひなんくんれん}の{計画|けいかく}を{作|つく}ります。",
+     "exVi": "Người quản lý phòng cháy lập kế hoạch diễn tập sơ tán.",
+     "hv": "phòng hỏa quản lý giả",
+     "read": "ぼうかかんりしゃ",
+     "vi": "người quản lý phòng cháy (bắt buộc phải cử tại khách sạn, nhà hàng đạt quy mô nhất định)",
+     "w": "{防火管理者|ぼうかかんりしゃ}"
+    },
+    {
+     "ex": "お{席|せき}のQRコードからモバイルオーダーできます。",
+     "exVi": "Có thể đặt món bằng điện thoại từ mã QR tại bàn.",
+     "hv": "",
+     "read": "もばいるおーだー",
+     "vi": "đặt món bằng điện thoại của khách (quét mã QR tại bàn)",
+     "w": "モバイルオーダー"
     }
    ],
    "phrases": [
@@ -5940,28 +5956,28 @@
      "w": "ウェットティッシュ"
     },
     {
-     "ex": "{安全在庫|あんぜんざいこ}を{下回|したまわ}ったら{発注|はっちゅう}します。",
-     "exVi": "Nếu xuống dưới mức tồn an toàn thì đặt hàng.",
-     "hv": "an toàn tồn khố",
-     "read": "あんぜんざいこ",
-     "vi": "mức tồn kho an toàn",
-     "w": "{安全在庫|あんぜんざいこ}"
+     "ex": "{夕方|ゆうがた}に{惣菜|そうざい}の{見|み}{切|き}りを{始|はじ}めます。",
+     "exVi": "Buổi chiều bắt đầu hạ giá bán nhanh đồ ăn chế biến sẵn.",
+     "hv": "",
+     "read": "みきり",
+     "vi": "hạ giá bán nhanh hàng tươi sắp hết hạn (việc quầy thực phẩm làm mỗi chiều)",
+     "w": "{見|み}{切|き}り"
     },
     {
-     "ex": "{適正在庫|てきせいざいこ}を{守|まも}ります。",
-     "exVi": "Giữ mức tồn kho hợp lý.",
-     "hv": "thích chính tồn khố",
-     "read": "てきせいざいこ",
-     "vi": "mức tồn kho hợp lý",
-     "w": "{適正在庫|てきせいざいこ}"
+     "ex": "{棚割|たなわ}りが{変|か}わったので、{商品|しょうひん}を{並|なら}べ{直|なお}します。",
+     "exVi": "Sơ đồ kệ thay đổi nên xếp lại hàng.",
+     "hv": "",
+     "read": "たなわり",
+     "vi": "sơ đồ phân bổ kệ (mặt hàng nào đặt ở đoạn kệ nào)",
+     "w": "{棚割|たなわ}り"
     },
     {
-     "ex": "{発注点|はっちゅうてん}に{達|たっ}したら{発注|はっちゅう}します。",
-     "exVi": "Khi chạm điểm đặt hàng thì đặt hàng lại.",
-     "hv": "phát chú điểm",
-     "read": "はっちゅうてん",
-     "vi": "điểm đặt hàng lại",
-     "w": "{発注点|はっちゅうてん}"
+     "ex": "{先月|せんげつ}のロス{率|りつ}が{上|あ}がったので、{発注|はっちゅう}を{見直|みなお}します。",
+     "exVi": "Tỷ lệ hao hụt tháng trước tăng nên xem lại việc đặt hàng.",
+     "hv": "suất",
+     "read": "ろすりつ",
+     "vi": "tỷ lệ hao hụt (hàng hỏng, hết hạn phải bỏ, mất hàng)",
+     "w": "ロス{率|りつ}"
     },
     {
      "ex": "{在庫管理|ざいこかんり}はタブレットでします。",
@@ -6098,6 +6114,22 @@
      "read": "けんしゅう",
      "vi": "đào tạo nhân viên",
      "w": "{研修|けんしゅう}"
+    },
+    {
+     "ex": "セミセルフレジは{店員|てんいん}がスキャンして、お{客様|きゃくさま}が{払|はら}います。",
+     "exVi": "Ở quầy bán tự động, nhân viên quét hàng còn khách tự thanh toán.",
+     "hv": "",
+     "read": "せみせるふれじ",
+     "vi": "quầy thanh toán bán tự động (nhân viên quét mã, khách tự trả tiền ở máy thanh toán)",
+     "w": "セミセルフレジ"
+    },
+    {
+     "ex": "{電子棚札|でんしだなふだ}はパソコンから{値段|ねだん}を{変|か}えられます。",
+     "exVi": "Thẻ giá điện tử có thể đổi giá từ máy tính.",
+     "hv": "điện tử bằng trát",
+     "read": "でんしだなふだ",
+     "vi": "thẻ giá điện tử trên kệ (đổi giá từ hệ thống, không cần thay giấy)",
+     "w": "{電子棚札|でんしだなふだ}"
     }
    ],
    "phrases": [

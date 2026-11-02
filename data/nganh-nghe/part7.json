@@ -2233,12 +2233,12 @@
      "exVi": "Hãy nộp đơn xin nghỉ học cho giáo viên chủ nhiệm."
     },
     {
-     "w": "{遅刻届|ちこくとどけ}",
-     "read": "ちこくとどけ",
-     "hv": "Trì khắc giới",
-     "vi": "Đơn báo đi muộn",
-     "ex": "{遅刻届|ちこくとどけ}を{職員室|しょくいんしつ}に{持|も}ってきます。",
-     "exVi": "Mang đơn báo đi muộn đến phòng giáo viên."
+     "ex": "{治癒証明書|ちゆしょうめいしょ}は{病院|びょういん}でもらって{学校|がっこう}に{出|だ}します。",
+     "exVi": "Nhận giấy chứng nhận đã khỏi bệnh tại bệnh viện rồi nộp cho trường.",
+     "hv": "Trị dũ chứng minh thư",
+     "read": "ちゆしょうめいしょ",
+     "vi": "giấy chứng nhận đã khỏi bệnh (nộp khi đi học lại sau bệnh truyền nhiễm)",
+     "w": "{治癒証明書|ちゆしょうめいしょ}"
     },
     {
      "w": "{個人面談|こじんめんだん}",
@@ -2251,7 +2251,7 @@
     {
      "w": "{学年便|がくねんだよ}り",
      "read": "がくねんだより",
-     "hv": "",
+     "hv": "Học niên",
      "vi": "Bản tin khối lớp gửi phụ huynh",
      "ex": "{学年便|がくねんだよ}りで{来月|らいげつ}の{行事|ぎょうじ}を{知|し}らせます。",
      "exVi": "Thông báo sự kiện tháng tới qua bản tin khối lớp."
@@ -2559,6 +2559,22 @@
      "vi": "Mũ trùm bảo hộ chống thiên tai cho học sinh",
      "ex": "{防災頭巾|ぼうさいずきん}は{椅子|いす}の{横|よこ}にあります。",
      "exVi": "Mũ trùm bảo hộ để bên cạnh ghế ngồi."
+    },
+    {
+     "ex": "{指導要録|しどうようろく}は{卒業|そつぎょう}のあと{五年|ごねん}{保存|ほぞん}します。",
+     "exVi": "Sổ học bạ được lưu giữ 5 năm sau khi tốt nghiệp.",
+     "hv": "Chỉ đạo yếu lục",
+     "read": "しどうようろく",
+     "vi": "sổ học bạ, sổ ghi chép hướng dẫn chính thức của học sinh (trường lưu)",
+     "w": "{指導要録|しどうようろく}"
+    },
+    {
+     "ex": "{学習指導要領|がくしゅうしどうようりょう}に{沿|そ}って{授業|じゅぎょう}を{計画|けいかく}します。",
+     "exVi": "Lập kế hoạch bài giảng dựa theo chuẩn chương trình quốc gia.",
+     "hv": "Học tập chỉ đạo yếu lĩnh",
+     "read": "がくしゅうしどうようりょう",
+     "vi": "chuẩn chương trình giảng dạy quốc gia (của Bộ Giáo dục)",
+     "w": "{学習指導要領|がくしゅうしどうようりょう}"
     }
    ],
    "phrases": [
@@ -4786,12 +4802,12 @@
      "exVi": "Đặt túi giữ lạnh lên trên thùng."
     },
     {
-     "w": "{海面養殖|かいめんようしょく}",
-     "read": "かいめんようしょく",
-     "hv": "Hải diện dưỡng thực",
-     "vi": "Nuôi trồng thuỷ sản trên mặt biển",
-     "ex": "{海面養殖|かいめんようしょく}のカキを{育|そだ}てます。",
-     "exVi": "Nuôi hàu theo hình thức nuôi trên mặt biển."
+     "ex": "{生簀|いけす}の{網替|あみが}えは{来週|らいしゅう}です。",
+     "exVi": "Việc thay lưới lồng bè cá là vào tuần sau.",
+     "hv": "",
+     "read": "あみがえ",
+     "vi": "thay lưới lồng bè nuôi cá khi lưới bị hà, rong bám làm nước kém lưu thông",
+     "w": "{網替|あみが}え"
     },
     {
      "w": "{筏|いかだ}",
@@ -4944,6 +4960,22 @@
      "vi": "Kiểm định tàu thuyền",
      "ex": "{船舶検査|せんぱくけんさ}は{来月|らいげつ}です。",
      "exVi": "Kiểm định tàu thuyền vào tháng tới."
+    },
+    {
+     "ex": "{漁獲番号|ぎょかくばんごう}を{箱|はこ}のラベルに{貼|は}ります。",
+     "exVi": "Dán mã số đánh bắt lên nhãn của thùng hàng.",
+     "hv": "Ngư hoạch phiên hiệu",
+     "read": "ぎょかくばんごう",
+     "vi": "mã số đánh bắt gắn cho lô hải sản theo luật lưu thông thuỷ sản (bắt buộc với bào ngư, hải sâm...), phải truyền kèm khi mua bán",
+     "w": "{漁獲番号|ぎょかくばんごう}"
+    },
+    {
+     "ex": "{魚|さかな}をスラリーアイスで{冷|ひ}やします。",
+     "exVi": "Làm lạnh cá bằng đá bùn.",
+     "hv": "",
+     "read": "すらりーあいす",
+     "vi": "đá bùn (hỗn hợp đá mịn và nước biển) làm lạnh cá rất nhanh, đang dùng tại các cảng cá để giữ độ tươi",
+     "w": "スラリーアイス"
     }
    ],
    "phrases": [
@@ -7122,12 +7154,12 @@
      "exVi": "Trước khi chuyển nhà, tôi liên lạc để ngừng sử dụng."
     },
     {
-     "w": "{口座番号|こうざばんごう}",
-     "read": "こうざばんごう",
-     "hv": "Khẩu tọa phiên hiệu",
-     "vi": "số tài khoản ngân hàng",
-     "ex": "{口座番号|こうざばんごう}を{確認|かくにん}してから{申|もう}し{込|こ}みます。",
-     "exVi": "Kiểm tra số tài khoản rồi mới đăng ký."
+     "ex": "お{問|と}い{合|あ}わせにはお{客|きゃく}さま{番号|ばんごう}が{必要|ひつよう}です。",
+     "exVi": "Khi liên hệ hỏi đáp thì cần có mã số khách hàng.",
+     "hv": "Khách phiên hiệu",
+     "read": "おきゃくさまばんごう",
+     "vi": "mã số khách hàng in trên phiếu đọc số và hoá đơn điện, gas, nước; phải đọc mã này khi liên hệ hỏi đáp",
+     "w": "お{客|きゃく}さま{番号|ばんごう}"
     },
     {
      "w": "{柱上変圧器|ちゅうじょうへんあつき}",
@@ -7162,12 +7194,12 @@
      "exVi": "Ghi lại lượng điện phát hôm nay."
     },
     {
-     "w": "{送電損失|そうでんそんしつ}",
-     "read": "そうでんそんしつ",
-     "hv": "Tống điện tổn thất",
-     "vi": "tổn hao khi truyền tải điện",
-     "ex": "{送電損失|そうでんそんしつ}を{減|へ}らす{工夫|くふう}をします。",
-     "exVi": "Tìm cách giảm tổn hao truyền tải điện."
+     "ex": "バケット{車|しゃ}の{上|うえ}で{配電線|はいでんせん}を{直|なお}します。",
+     "exVi": "Sửa đường dây phân phối từ trên giỏ xe nâng người.",
+     "hv": "Xa",
+     "read": "ばけっとしゃ",
+     "vi": "xe nâng người có giỏ (xe bucket) để làm việc trên cột điện",
+     "w": "バケット{車|しゃ}"
     },
     {
      "w": "{無停電電源装置|むていでんでんげんそうち}",
@@ -7346,12 +7378,12 @@
      "exVi": "Công trình thay ống cũ xuống cấp bắt đầu."
     },
     {
-     "w": "{内視鏡|ないしきょう}カメラ",
-     "read": "ないしきょうかめら",
-     "hv": "Nội thị kính",
-     "vi": "camera nội soi đường ống",
-     "ex": "{内視鏡|ないしきょう}カメラで{管|くだ}の{中|なか}を{調|しら}べます。",
-     "exVi": "Dùng camera nội soi để kiểm tra trong ống."
+     "ex": "テレビカメラ{調査|ちょうさ}で{下水管|げすいかん}の{亀裂|きれつ}を{見|み}つけました。",
+     "exVi": "Qua khảo sát bằng camera truyền hình đã phát hiện vết nứt trong ống thoát nước.",
+     "hv": "Điều tra",
+     "read": "てれびかめらちょうさ",
+     "vi": "khảo sát trong ống thoát nước bằng camera truyền hình tự hành, cách kiểm tra ống chính thức của các công ty cấp thoát nước",
+     "w": "テレビカメラ{調査|ちょうさ}"
     },
     {
      "w": "{高圧洗浄機|こうあつせんじょうき}",
@@ -7464,6 +7496,30 @@
      "vi": "thiếu oxy (trong hố, bể kín)",
      "ex": "マンホールの{中|なか}は{酸素欠乏|さんそけつぼう}の{危険|きけん}があります。",
      "exVi": "Bên trong hố ga có nguy cơ thiếu oxy."
+    },
+    {
+     "ex": "{電気主任技術者|でんきしゅにんぎじゅつしゃ}がキュービクルを{月|つき}に{一度|いちど}{点検|てんけん}します。",
+     "exVi": "Kỹ thuật viên trưởng về điện kiểm tra tủ điện cao áp mỗi tháng một lần.",
+     "hv": "Điện khí chủ nhiệm kỹ thuật giả",
+     "read": "でんきしゅにんぎじゅつしゃ",
+     "vi": "kỹ thuật viên trưởng về điện có chứng chỉ quốc gia, người giám sát an toàn bắt buộc cho tủ điện cao áp và thiết bị điện tự dùng",
+     "w": "{電気主任技術者|でんきしゅにんぎじゅつしゃ}"
+    },
+    {
+     "ex": "ガス{消費機器設置工事監督者|しょうひききせっちこうじかんとくしゃ}の{監督|かんとく}で{給湯器|きゅうとうき}を{取|と}り{替|か}えます。",
+     "exVi": "Thay máy nước nóng dưới sự giám sát của người có chứng chỉ giám sát thi công thiết bị gas.",
+     "hv": "Tiêu phí cơ khí thiết trí công sự giám đốc giả",
+     "read": "がすしょうひききせっちこうじかんとくしゃ",
+     "vi": "người giám sát thi công lắp đặt thiết bị dùng gas có chứng chỉ quốc gia, bắt buộc phải giám sát khi lắp máy nước nóng, thiết bị gas chuyên dụng",
+     "w": "ガス{消費機器設置工事監督者|しょうひききせっちこうじかんとくしゃ}"
+    },
+    {
+     "ex": "{給水装置工事主任技術者|きゅうすいそうちこうじしゅにんぎじゅつしゃ}が{給水管|きゅうすいかん}の{工事|こうじ}を{管理|かんり}します。",
+     "exVi": "Kỹ thuật viên trưởng thi công thiết bị cấp nước quản lý công trình ống cấp nước.",
+     "hv": "Cấp thủy trang trí công sự chủ nhiệm kỹ thuật giả",
+     "read": "きゅうすいそうちこうじしゅにんぎじゅつしゃ",
+     "vi": "kỹ thuật viên trưởng thi công thiết bị cấp nước có chứng chỉ quốc gia, bắt buộc đối với công trình ống cấp nước vào nhà",
+     "w": "{給水装置工事主任技術者|きゅうすいそうちこうじしゅにんぎじゅつしゃ}"
     }
    ],
    "phrases": [
