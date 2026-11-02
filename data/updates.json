@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-02",
+   "desc": "Sửa đúng kiến thức thủ tục trong game truyện: hồ sơ ĐỔI tư cách lưu trú, GIA HẠN và xin VĨNH TRÚ đều nộp ở NYUKAN (入管局 — Cục quản lý xuất nhập cảnh), không phải ở shiyakusho. Shiyakusho chỉ làm đăng ký địa chỉ, đăng ký kết hôn, giấy khai sinh và giấy tờ thuế — hướng dẫn trong game đã được sửa đúng theo thực tế.",
+   "id": "2026-11-02-nyukan-dung-noi",
+   "link": "game-truyen/index.html",
+   "title": "Sửa đúng nơi nộp hồ sơ lưu trú: NYUKAN (入管局)",
+   "type": "game"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Đã sửa lỗi trong Hồ sơ cá nhân: đổi tên xong, qua Sảnh game rồi quay lại có thể bị mất tên vừa đổi. Nay tên đã lưu được giữ nguyên ở mọi nơi, kể cả khi mạng chập chờn hay phiên đăng nhập bị thu hồi.",
    "id": "2026-11-02-sua-loi-luu-ten-ho-so",
    "link": "index.html",

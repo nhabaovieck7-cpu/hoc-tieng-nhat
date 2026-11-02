@@ -213,7 +213,7 @@
           : (G.route === 'du-hoc'
             ? '🎓 PHỎNG VẤN ĐẦU VÀO trường chuyên môn — tới TRƯỜNG TIẾNG gặp THẦY KHÁNH: nói rõ kế hoạch học và đường đi của mình'
             : '💼 PHỎNG VẤN XIN VIỆC ở ' + d.place + ' — gặp ' + d.hookName + ': trận hội thoại quyết định, trả lời thành thật và đúng mực');
-        case 'nyukan': return '🛂 Tới SHIYAKUSHO (ủy ban phường) nộp hồ sơ đổi tư cách lưu trú — gặp CÁN BỘ ở quầy: họ sẽ hỏi xoáy đúng chỗ yếu của hồ sơ, cứ thành thật mà đáp';
+        case 'nyukan': return '🛂 Tới NYUKAN (入管局 — Cục quản lý xuất nhập cảnh) nộp hồ sơ đổi tư cách lưu trú — gặp CÁN BỘ NYUKAN ở quầy: họ sẽ hỏi xoáy đúng chỗ yếu của hồ sơ, cứ thành thật mà đáp';
         case 'exam': return '🎓 Mọi cửa đã qua — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để thi MỐC JLPT N3, cổng cuối Chương 3';
       }
       return null;
@@ -223,8 +223,8 @@
       var place = d ? d.place : 'nơi làm', hook = d ? d.hookName : 'quản lý';
       switch (s) {
         case 'done': return G.ending === 5 ? '🌑 Kết cục đen — con đường tắt đã khép lại. Chơi lại và đi đường thẳng, để thấy một đời khác mở ra thế nào' : '🌸 Tự do khám phá';
-        case 'visa1': return '🛂 Chương 4 «Sóng gió» — tới SHIYAKUSHO nộp hồ sơ GIA HẠN tư cách lưu trú: gặp CÁN BỘ ở quầy, giấy tờ mang đủ, trả lời thành thật';
-        case 'visa2': return '🛂 Quay lại SHIYAKUSHO — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI của mình';
+        case 'visa1': return '🛂 Chương 4 «Sóng gió» — tới NYUKAN (入管局) nộp hồ sơ GIA HẠN tư cách lưu trú: gặp CÁN BỘ NYUKAN ở quầy, giấy tờ mang đủ, trả lời thành thật';
+        case 'visa2': return '🛂 Quay lại NYUKAN — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI của mình';
         case 'friend': return '🍶 Ra PHỐ gặp HÙNG "sẹo" — anh ấy đang chờ để báo một tin không vui về Đức, bạn cùng ký túc';
         case 'farewell': return '🚃 Ra GA tiễn Đức về nước — đi sớm kẻo lỡ chuyến tàu ra sân bay của bạn';
         case 'work1': return '🏭 Tới ' + place + ' — gặp ' + hook + ': một ngày làm của NĂM THỨ HAI, khi người ta bắt đầu giao việc thật cho mình';
@@ -276,7 +276,7 @@
         case 'final': return c5.finReview
           ? '📚 Phỏng vấn cuối chưa qua — về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại cách trả lời, rồi quay lại (thi lại tốn 5.000 yên lệ phí hồ sơ)'
           : '💼 Tới ' + place5 + ' gặp ' + hook5 + ': TRẬN PHỎNG VẤN CUỐI — đàm phán lương và vị trí bằng thứ tiếng Nhật của người đã lớn';
-        case 'visa': return '🛂 Tới SHIYAKUSHO — nộp hồ sơ ở quầy cán bộ và CHỌN HƯỚNG ĐI CUỐI CÙNG: xin vĩnh trú ở lại, hay gói ghém hồi hương dựng nghiệp';
+        case 'visa': return '🛂 Tới NYUKAN (入管局) — nộp hồ sơ ở quầy cán bộ nyukan và CHỌN HƯỚNG ĐI CUỐI CÙNG: xin vĩnh trú ở lại, hay gói ghém hồi hương dựng nghiệp';
         case 'exam': return '🎓 Mọi cửa đã qua — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để thi MỐC JLPT N1, cổng cuối của cả hành trình';
       }
       return '🌅 Chương 5 «Lớn rồi» — cứ sống tiếp, cái kết đang tự viết ra từ chính những lựa chọn của mình';
@@ -318,7 +318,7 @@
         });
         if (G.interview.needReview) out.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại cách trả lời phỏng vấn', target: { scene: 'room-desk' }, done: !G.interview.needReview });
       }
-      out.push({ label: 'Tới SHIYAKUSHO — nộp hồ sơ đổi tư cách lưu trú ở quầy cán bộ', target: { scene: 'officer' }, done: G.nyukan });
+      out.push({ label: 'Tới NYUKAN (入管局) — nộp hồ sơ đổi tư cách lưu trú ở quầy cán bộ nyukan', target: { scene: 'officer' }, done: G.nyukan });
       if (ex3.needReview) out.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại bài, rồi quay lại trường thi tiếp', target: { scene: 'room-desk' }, done: !!ex3.passed });
       out.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N3, cổng cuối Chương 3', target: { scene: 'school-board' }, done: !!ex3.passed });
       if (ex3.passed) out.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để mở TỔNG KẾT Chương 3', target: { scene: 'school-board' }, done: ch >= 4 });
@@ -329,8 +329,8 @@
       var boardT = d ? { scene: d.board } : { scene: 'school-teacher' };
       var bossT = d ? { scene: d.boss } : { scene: 'school-teacher' };
       var place = d ? d.place : 'nơi làm';
-      out.push({ label: 'Tới SHIYAKUSHO — nộp hồ sơ GIA HẠN tư cách lưu trú ở quầy cán bộ nyukan', target: { scene: 'officer' }, done: c.visaStage >= 1 || !!c.visaDone });
-      out.push({ label: 'Quay lại SHIYAKUSHO — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI', target: { scene: 'officer' }, done: !!c.visaDone });
+      out.push({ label: 'Tới NYUKAN (入管局) — nộp hồ sơ GIA HẠN tư cách lưu trú ở quầy cán bộ nyukan', target: { scene: 'officer' }, done: c.visaStage >= 1 || !!c.visaDone });
+      out.push({ label: 'Quay lại NYUKAN — bổ sung giấy còn thiếu và NHẬN THẺ LƯU TRÚ MỚI', target: { scene: 'officer' }, done: !!c.visaDone });
       out.push({ label: 'Ra PHỐ — gặp HÙNG "sẹo": có tin dữ về visa của Đức, bạn cùng ký túc', target: { scene: 'hung' }, done: !!c.friendVisa });
       out.push({ label: 'Ra GA — tiễn Đức về nước, một lời hứa hẹn gặp lại', target: { scene: 'station' }, done: !!c.farewell });
       out.push({ label: (G.route === 'du-hoc' ? 'Buổi học đầu tiên của năm mới — tới trường tiếng gặp thầy Khánh' : 'Ngày làm đầu tiên của năm thứ hai — tới ' + place), target: boardT, done: c.ind4 >= 1 });
@@ -379,7 +379,7 @@
       }
       out5.push({ label: 'Tới ' + place5 + ' — TRẬN PHỎNG VẤN CUỐI: đàm phán bằng tiếng Nhật của người đã lớn', target: bossT5, done: !!c5.finalInterview });
       if (c5.finReview) out5.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại cách trả lời phỏng vấn cuối', target: { scene: 'room-desk' }, done: !c5.finReview });
-      out5.push({ label: 'Tới SHIYAKUSHO — quầy cán bộ: nộp hồ sơ và CHỌN HƯỚNG ĐI CUỐI (vĩnh trú / hồi hương)', target: { scene: 'officer' }, done: !!c5.finalChoice });
+      out5.push({ label: 'Tới NYUKAN (入管局) — quầy cán bộ nyukan: nộp hồ sơ và CHỌN HƯỚNG ĐI CUỐI (vĩnh trú / hồi hương)', target: { scene: 'officer' }, done: !!c5.finalChoice });
       if (ex5.needReview) out5.push({ label: 'Về PHÒNG TRỌ — ngồi vào BÀN HỌC ôn lại bài, rồi quay lại trường thi tiếp', target: { scene: 'room-desk' }, done: !!ex5.passed });
       out5.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để thi mốc JLPT N1, cổng cuối của hành trình', target: { scene: 'school-board' }, done: !!ex5.passed });
       if (ex5.passed) out5.push({ label: 'Tới TRƯỜNG TIẾNG — xem BẢNG ĐEN để mở KẾT CỤC của đời xa xứ này', target: { scene: 'school-board' }, done: !!G.ending });
