@@ -259,6 +259,18 @@
   ];
   var CATS = ['♻️ 資源ゴミ (rác tái chế)', '🔥 燃えるゴミ (rác đốt được)', '🚯 燃えないゴミ (rác không đốt)'];
   var gomiIdx = 0, gomiScore = 0;
+  // Chốt hoàn thành phân loại rác NGAY khi hiện kết quả (không chờ nút Đóng):
+  // đóng modal bằng đường nào thì nhiệm vụ cũng đã được ghi nhận, hướng dẫn
+  // chuyển bước ngay — tránh kẹt oan nếu người chơi thoát modal khác cách.
+  function completeGomi() {
+    if (S.flags.gomiDone) return;
+    S.flags.gomiDone = true;
+    addQuiz('gomi'); S.xp += 10;
+    if (gomiScore === GOMI.length) window.GAMEUI.apply({ jp: 3, hp: 2 }, 'Phân loại rác chuẩn Nhật');
+    else window.GAMEUI.apply({ jp: 1 }, 'Đã thử phân loại rác — về xem lại bảng hướng dẫn nhé');
+    advanceObjective();
+    save();
+  }
   function openGomi() {
     gomiIdx = 0; gomiScore = 0;
     $('quiz-close').style.display = 'none';
@@ -272,6 +284,7 @@
       $('quiz-item').textContent = gomiScore === GOMI.length ? '🎉 Chuẩn như người Nhật! Hàng xóm nhìn là nể.' : 'Xong rồi — ở Nhật, vứt sai loại là bị trả lại tận cửa kèm giấy nhắc đấy.';
       $('quiz-opts').innerHTML = '';
       $('quiz-close').style.display = '';
+      completeGomi();
       return;
     }
     var it = GOMI[gomiIdx];
@@ -294,15 +307,10 @@
     var qc = $('quiz-close');
     if (qc) qc.addEventListener('click', function () {
       $('modal-quiz').classList.remove('show');
-      if (!S.flags.gomiDone) {
-        S.flags.gomiDone = true;
-        addQuiz('gomi'); S.xp += 10;
-        if (gomiScore === GOMI.length) window.GAMEUI.apply({ jp: 3, hp: 2 }, 'Phân loại rác chuẩn Nhật');
-        else window.GAMEUI.apply({ jp: 1 }, 'Đã thử phân loại rác — về xem lại bảng hướng dẫn nhé');
-      }
+      completeGomi();   // thường đã chốt từ lúc hiện kết quả — gọi lại là no-op an toàn
       advanceObjective();
       save();
-      setTimeout(function () { window.GAMEUI.showSummary(); }, 700);   // giữ nhịp tổng kết giữa chặng của bản mẫu
+      setTimeout(function () { window.GAMEUI.showSummary(); }, 700);   // giữ nhịp tổng kết giữa chặng của bản mẫu (harness-story coi đây là điểm mốc của Ch1 — đừng bỏ)
     });
     var ec = $('exam-close');
     if (ec) ec.addEventListener('click', function () { stopExamAudio(); $('modal-exam').classList.remove('show'); examRun = null; advanceObjective(); });
@@ -1073,6 +1081,14 @@
     if (id === 'gomi') {
       if (f.listenDone && !f.gomiDone) { openGomi(); return true; }
       window.GAMEUI.toast('🗑️ Điểm tập kết rác của khu nhà — vứt đúng ngày, đúng loại, buộc túi gọn nhé.');
+      return true;
+    }
+    if (id === 'gomi-apology' && f.listenDone && !f.gomiDone) {
+      // Ô túi rác giấy đỏ nằm SÁT ô phân loại rác: đúng cửa sổ nhiệm vụ này người
+      // chơi rất dễ bấm nhầm ô phụ, chơi hết cảnh rồi tưởng đã xong nhiệm vụ mà
+      // hướng dẫn không nhúc nhích (chủ trang báo kẹt 02/11/2026). Chặn cảnh phụ
+      // trong cửa sổ này, lái về quiz phân loại trước; xong quiz thì mở lại tự do.
+      window.GAMEUI.toast('📄 Túi rác nhà ai bị dán giấy nhắc đỏ… Việc của mình trước: qua ô ĐIỂM TẬP KẾT RÁC ngay bên cạnh để phân loại rác đã.');
       return true;
     }
     if (id === 'call-home') {
