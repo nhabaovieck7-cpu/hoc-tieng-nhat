@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-02",
+   "desc": "Game truyện «Tuổi Trẻ Ở Nhật» có thêm đường về: ở màn hình bắt đầu có dòng về trang chủ, và trong Cài đặt (nút ☰) có nút Trang chủ + Sảnh game để quay lại trang học bất cứ lúc nào, không cần nút quay lại của trình duyệt.",
+   "id": "2026-11-02-nut-ve-trang-chu",
+   "link": "game-truyen/index.html",
+   "title": "Game truyện có nút về Trang chủ",
+   "type": "game"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Đã sửa lỗi kẹt ở ĐIỂM TẬP KẾT RÁC (Chương 1 của game truyện): hai ô tương tác nằm sát nhau khiến nhiều người bấm nhầm ô phụ và tưởng đã xong nhiệm vụ. Nay ô phụ chỉ mở sau khi phân loại rác xong, và nhiệm vụ được ghi nhận ngay khi hiện kết quả phân loại.",
    "id": "2026-11-02-sua-ket-diem-rac",
    "link": "game-truyen/index.html",
