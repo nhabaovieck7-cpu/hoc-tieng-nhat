@@ -1496,3 +1496,16 @@ html[data-skin="bento"]:not([data-theme="dark"]){--c:#e0567f;--c2:#6B4226;--ai:#
 html[data-skin="fuji"]:not([data-theme="dark"]){--c:#e8442e;--c2:#173a5e;--ai:#173a5e;--shu:#e8442e;--shu-soft:#fdeee9;--ai-soft:#e9eff7}
 html[data-skin="neon"]:not([data-theme="dark"]){--c:#ff2e88;--ai:#0e7f9e;--shu:#ff2e88;--shu-soft:#ffe9f4;--ai-soft:#e2f6fb}
 html[data-theme="dark"][data-skin="neon"]{--c:#ff2e88;--ai:#22d3ee;--shu:#ff2e88;--gold:#ffd166;--ai-soft:#16264d;--shu-soft:#3d1440}
+
+/* ===== FIX TỈ LỆ KHUNG BÀI HỌC (02/11/2026) =====
+   Các rule .layout của trang chủ (V3, phía trên) từng ghi đè khung trang bài học
+   (lesson.html): cột Mục lục phình ra ~60% bề ngang, cột bài học bị bóp còn 356px.
+   Khoanh vùng bằng :has(>nav.toc) — chỉ trang bài học có nav.toc là con trực tiếp
+   của .layout; trang chủ và các trang khác không bị ảnh hưởng.
+   Desktop: Mục lục cố định 292px (vẫn sticky + cuộn dọc riêng như rule .toc gốc),
+   bài học chiếm toàn bộ phần còn lại. Mobile: 1 cột, Mục lục giới hạn 240px cuộn trong. */
+.layout:has(>nav.toc){display:grid;grid-template-columns:292px minmax(0,1fr);grid-template-areas:none;gap:24px;align-items:start}
+@media(max-width:860px){
+.layout:has(>nav.toc){grid-template-columns:minmax(0,1fr)}
+.layout:has(>nav.toc)>nav.toc{position:static;max-height:240px;overflow:auto}
+}

@@ -2,6 +2,14 @@
  "items": [
   {
    "date": "2026-11-02",
+   "desc": "Trang bài học đã dễ đọc hơn: cột Mục lục được thu hẹp lại (trước đây chiếm hơn nửa màn hình), phần bài học mở rộng ra gần như toàn bộ bề ngang nên chữ không còn bị dồn chật. Trên điện thoại, mục lục cũng gọn lại và cuộn riêng, bài học hiện ngay bên dưới.",
+   "id": "2026-11-02-sua-muc-luc-bai-hoc",
+   "link": "index.html#khoahoc",
+   "title": "Sửa bố cục trang bài học: mục lục gọn, bài học rộng",
+   "type": "tinh-nang"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Game truyện «Tuổi Trẻ Ở Nhật» có thêm đường về: ở màn hình bắt đầu có dòng về trang chủ, và trong Cài đặt (nút ☰) có nút Trang chủ + Sảnh game để quay lại trang học bất cứ lúc nào, không cần nút quay lại của trình duyệt.",
    "id": "2026-11-02-nut-ve-trang-chu",
    "link": "game-truyen/index.html",
