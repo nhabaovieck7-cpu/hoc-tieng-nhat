@@ -1,20 +1,28 @@
 {
  "items": [
   {
-   "id": "2026-11-02-nganh-nghe-o-nhat",
    "date": "2026-11-02",
-   "type": "tinh-nang",
-   "title": "Mới: Ngành nghề ở Nhật — từ vựng & kaiwa theo 19 ngành",
-   "desc": "Chuyên mục mới: 19 ngành theo phân loại chuẩn Nhật Bản — 236 nghề cụ thể, 5.947 từ vựng, 685 mẫu câu và 62 hội thoại mẫu dùng thật ở nơi làm việc, có furigana và ví dụ kèm bản dịch.",
-   "link": "nganh-nghe.html"
+   "desc": "Game truyện 2D mới trong Sảnh game: nhập vai một bạn trẻ sang Nhật — đi học, đi làm thêm, chọn ngành Tokutei, yêu đương, lập gia đình… 5 chương, 266 cảnh, kaiwa đời sống có giọng đọc tiếng Nhật và tiếng Việt, 6 kết cục tùy lựa chọn.",
+   "id": "2026-11-02-game-truyen-tuoi-tre",
+   "link": "game/index.html",
+   "title": "Game truyện mới: Tuổi Trẻ Ở Nhật",
+   "type": "game"
   },
   {
-   "id": "2026-11-02-on-n1-gia-su-lam-lai",
    "date": "2026-11-02",
-   "type": "tinh-nang",
-   "title": "Ôn N1 cùng gia sư: bài kaiwa & đọc hiểu được làm lại đầy đủ",
+   "desc": "Chuyên mục mới: 19 ngành theo phân loại chuẩn Nhật Bản — 236 nghề cụ thể, 5.947 từ vựng, 685 mẫu câu và 62 hội thoại mẫu dùng thật ở nơi làm việc, có furigana và ví dụ kèm bản dịch.",
+   "id": "2026-11-02-nganh-nghe-o-nhat",
+   "link": "nganh-nghe.html",
+   "title": "Mới: Ngành nghề ở Nhật — từ vựng & kaiwa theo 19 ngành",
+   "type": "tinh-nang"
+  },
+  {
+   "date": "2026-11-02",
    "desc": "Các bài kaiwa và đọc hiểu trong mục Ôn N1 cùng gia sư (trang Thi thử) đã được làm lại theo định dạng chuẩn: kaiwa có tóm tắt, hội thoại theo cảnh, bảng đối chiếu cách người Nhật nói thật, từ điển văn nói, cụm hay dùng và phần luyện nói; đọc hiểu đủ 5 phần — đề làm như thi thật, phần học có dịch từng câu và giải thích từng phương án.",
-   "link": "thi-thu.html"
+   "id": "2026-11-02-on-n1-gia-su-lam-lai",
+   "link": "thi-thu.html",
+   "title": "Ôn N1 cùng gia sư: bài kaiwa & đọc hiểu được làm lại đầy đủ",
+   "type": "tinh-nang"
   },
   {
    "date": "2026-11-01",
@@ -33,108 +41,108 @@
    "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-trang-kaiwa-rieng",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Mới: trang Kaiwa riêng — xem tất cả bài hội thoại",
    "desc": "Trang Kaiwa riêng vừa ra mắt: liệt kê toàn bộ 19 bài hội thoại theo từng cấp độ, có đánh dấu bài đã học. Ở trang chủ, bấm vào đầu thẻ Kaiwa (Xem tất cả bài →) là sang trang Kaiwa; bấm từng bài trong thẻ vẫn vào thẳng bài học như trước.",
-   "link": "kaiwa.html"
+   "id": "2026-11-01-trang-kaiwa-rieng",
+   "link": "kaiwa.html",
+   "title": "Mới: trang Kaiwa riêng — xem tất cả bài hội thoại",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-sua-kaiwa-phinh-cot-phai",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: sửa thẻ Kaiwa bị phình, chốt chiều cao cho cân hai cột",
    "desc": "Thẻ Kaiwa ở cột phải nay được chốt chiều cao vừa đúng phần cột còn thiếu (tự tính theo chiều cao thật của hai cột), danh sách 19 bài cuộn dọc bên trong thẻ nên không còn phình dài làm lệch bố cục; hai cột luôn cân xứng nhau.",
-   "link": "index.html"
+   "id": "2026-11-01-sua-kaiwa-phinh-cot-phai",
+   "link": "index.html",
+   "title": "Trang chủ: sửa thẻ Kaiwa bị phình, chốt chiều cao cho cân hai cột",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-kaiwa-cot-phai-tin-tuc-cuon-trong",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: Kaiwa thành thẻ riêng ở cột phải + Tin tức cuộn trong thẻ",
    "desc": "Theo ý chủ trang: bỏ nút Kaiwa ở Khóa học; Kaiwa nay là một thẻ riêng ở cột phải, nằm giữa Cộng đồng và Sảnh game Edo, danh sách 19 bài cuộn dọc bên trong thẻ và thẻ tự lấp đầy chiều cao cột nên hai cột cân nhau, không còn khoảng trống. Tin tức chuyển về dưới Khóa học, cao đúng bằng Luyện tập thêm và cuộn dọc trong thẻ để xem hết tin.",
-   "link": "index.html"
+   "id": "2026-11-01-kaiwa-cot-phai-tin-tuc-cuon-trong",
+   "link": "index.html",
+   "title": "Trang chủ: Kaiwa thành thẻ riêng ở cột phải + Tin tức cuộn trong thẻ",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-nut-kaiwa-va-hang-duoi-trang-chu",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: nút Kaiwa cạnh Khóa học + Tin tức cùng hàng Luyện tập thêm",
    "desc": "Theo ý chủ trang: Kaiwa nay là một nút ngay cạnh tiêu đề Khóa học — không ấn không hiện gì, ấn vào mới mở danh sách 19 bài kaiwa ngay dưới Khóa học (bỏ nhóm Kaiwa trong từng cấp). Hàng dưới trang chủ: Tin tức cùng một hàng với Sảnh game Edo và Luyện tập thêm, thẳng hàng và cân chiều cao; Tin tức thu gọn hiện 4 tin; Cộng đồng giữ nguyên kích thước.",
-   "link": "index.html"
+   "id": "2026-11-01-nut-kaiwa-va-hang-duoi-trang-chu",
+   "link": "index.html",
+   "title": "Trang chủ: nút Kaiwa cạnh Khóa học + Tin tức cùng hàng Luyện tập thêm",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-kaiwa-gop-khoa-hoc-tin-tuc-can-hang",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: Kaiwa gộp vào Khóa học + Tin tức cân hàng Luyện tập thêm",
    "desc": "Theo góp ý của chủ trang: tiêu đề Khóa học nay kèm chữ Kaiwa; khối Kaiwa riêng ở cuối trang đã bỏ — các bài kaiwa nằm ngay trong từng cấp độ của Khóa học, mở cấp là thấy và bấm học như thường. Khối Tin tức nay thẳng hàng và cao bằng khối Luyện tập thêm trên máy tính; thẻ Cộng đồng bỏ chữ “học viên” và bỏ tiêu đề “Mỗi ngày” cho gọn.",
-   "link": "index.html"
+   "id": "2026-11-01-kaiwa-gop-khoa-hoc-tin-tuc-can-hang",
+   "link": "index.html",
+   "title": "Trang chủ: Kaiwa gộp vào Khóa học + Tin tức cân hàng Luyện tập thêm",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-sua-loi-kaiwa-luyen-tap-bo-cuc",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Sửa lỗi mở bài Kaiwa/Luyện tập + chỉnh bố cục trang chủ",
    "desc": "Đã sửa lỗi bấm vào mục Kaiwa và Luyện tập thêm mà không thấy bài: nay Kaiwa mở sẵn danh sách bài, các mục luyện tập bấm là vào thẳng. Trên điện thoại khối Top tuần trở lại đúng vị trí sau Khóa học; trên máy tính khối Tin tức cao bằng khối Top tuần cho bố cục thống nhất.",
-   "link": "index.html"
+   "id": "2026-11-01-sua-loi-kaiwa-luyen-tap-bo-cuc",
+   "link": "index.html",
+   "title": "Sửa lỗi mở bài Kaiwa/Luyện tập + chỉnh bố cục trang chủ",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-trang-chu-tin-tuc-va-cong-dong",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: khối Tin tức mới + bài đăng Cộng đồng",
    "desc": "Trang chủ nay có khối Tin tức ở cột khóa học — bấm Xem thêm để mở rộng đọc thêm tin ngay tại chỗ, bấm vào tin để mở bài; mục Mỗi ngày thay ô tin cũ bằng các bài đăng mới nhất của cộng đồng học viên.",
-   "link": "index.html"
+   "id": "2026-11-01-trang-chu-tin-tuc-va-cong-dong",
+   "link": "index.html",
+   "title": "Trang chủ: khối Tin tức mới + bài đăng Cộng đồng",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-de-thi-thu-theo-cap-do",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang Đề thi thử gom đề theo 5 cấp N5–N1",
    "desc": "Đề ngắn mỗi ngày và đề chính thức thứ 7 nay được gom vào từng mục riêng theo cấp độ — vào đúng cấp của mình là thấy mọi đề của cấp đó, tiêu đề cấp kèm tên tiếng Nhật như thẻ Khóa học.",
-   "link": "thi-thu.html"
+   "id": "2026-11-01-de-thi-thu-theo-cap-do",
+   "link": "thi-thu.html",
+   "title": "Trang Đề thi thử gom đề theo 5 cấp N5–N1",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-the-gia-su-khoa-hoc-thu-gon",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ: thêm thẻ Ôn N1 cùng gia sư, khóa học chạm để mở",
    "desc": "Cột khóa học trên máy tính nay có thêm thẻ Ôn N1 cùng gia sư hiện bộ mới nhất để hai cột cân xứng; các thẻ cấp N5–N1 ở trang chủ mặc định thu gọn, chạm vào cấp nào thì cấp đó mới mở danh sách bài.",
-   "link": "thi-thu.html"
+   "id": "2026-11-01-the-gia-su-khoa-hoc-thu-gon",
+   "link": "thi-thu.html",
+   "title": "Trang chủ: thêm thẻ Ôn N1 cùng gia sư, khóa học chạm để mở",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-giong-het-mau-v3",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ giống hệt mẫu thiết kế mới",
    "desc": "Thẻ khóa học nay hiện phần trăm đã học thật của bạn kèm thanh tiến độ từng cấp; mục Mỗi ngày gộp các game thành một banner Sảnh game Edo bấm vào là tới sảnh game; chế độ tối chuyển sang tông xanh navy đúng mẫu thiết kế mới.",
-   "link": null
+   "id": "2026-11-01-giong-het-mau-v3",
+   "link": null,
+   "title": "Trang chủ giống hệt mẫu thiết kế mới",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-bo-cuc-khop-mau-dot-2",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ tinh chỉnh bố cục khớp mẫu hơn nữa",
    "desc": "Các thẻ cấp độ N5–N1 trên điện thoại nay xếp thành một cột dọc rõ ràng như bản mẫu; mục Luyện tập thêm gộp thành một bảng liền, mỗi dòng có mũi tên ở cuối; thẻ Thành ngữ nằm sát phần chào hơn. Trên máy tính, cột bên phải cũng dùng bảng liền giống mẫu.",
-   "link": "index.html"
+   "id": "2026-11-01-bo-cuc-khop-mau-dot-2",
+   "link": "index.html",
+   "title": "Trang chủ tinh chỉnh bố cục khớp mẫu hơn nữa",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-11-01-bo-cuc-trang-chu-theo-mau",
    "date": "2026-11-01",
-   "type": "tinh-nang",
-   "title": "Trang chủ sắp xếp lại đúng mẫu thiết kế mới",
    "desc": "Bố cục trang chủ nay khớp mẫu đã duyệt: trên máy tính chia 2 cột — bên trái là Học tiếp và Khóa học (thẻ cấp độ xếp N5+N4, N3+N2, N1 trải ngang), bên phải là Top tuần, mục Mỗi ngày (tin tức + sảnh game) và Luyện tập thêm; trên điện thoại là 1 cột theo đúng thứ tự: thẻ Thành ngữ, Học tiếp, Khóa học, Top tuần, Mỗi ngày, Luyện tập thêm.",
-   "link": "index.html"
+   "id": "2026-11-01-bo-cuc-trang-chu-theo-mau",
+   "link": "index.html",
+   "title": "Trang chủ sắp xếp lại đúng mẫu thiết kế mới",
+   "type": "tinh-nang"
   },
   {
-   "id": "2026-10-31-giao-dien-moi-dai-ca-nihongo",
    "date": "2026-10-31",
-   "type": "tinh-nang",
-   "title": "Giao diện mới — trang đổi tên thành Đại Ca Nihongo",
    "desc": "Trang khoác giao diện mới: dải đầu trang indigo họa tiết sóng Nhật, thẻ khóa học viền màu theo cấp độ, huy chương Top tuần. Trang chủ có thẻ Thành ngữ mỗi ngày — sáng một câu, chiều tự đổi câu khác, bấm nghe phát âm. Tên trang mới: Đại Ca Nihongo.",
-   "link": null
+   "id": "2026-10-31-giao-dien-moi-dai-ca-nihongo",
+   "link": null,
+   "title": "Giao diện mới — trang đổi tên thành Đại Ca Nihongo",
+   "type": "tinh-nang"
   },
   {
    "date": "2026-10-31",

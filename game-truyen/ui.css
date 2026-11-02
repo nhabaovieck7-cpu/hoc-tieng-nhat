@@ -1,0 +1,478 @@
+/* ui.css — Giao diện THẬT của game «TUỔI TRẺ Ở NHẬT» (bản mẫu 2D để duyệt).
+   Phong cách khớp web chính: nền ngà ấm, chàm (indigo) chủ đạo, đỏ son (vermillion) nhấn,
+   thẻ bo góc 16px, bóng mềm. Mobile-first 375/390. */
+:root {
+  --ivory: #fdf8ec; --ivory2: #fffdf6; --ink: #2b2440; --ink2: #5b5470;
+  --indigo: #33398f; --indigo2: #2a2f78; --verm: #bf3b2b; --verm2: #a52e21;
+  --gold: #d9a441; --good: #2e7d4f; --line: #e7dcc3;
+  --shadow: 0 10px 30px rgba(30, 25, 60, .28);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; overflow: hidden; background: #23222e; }
+body { font-family: "Hiragino Sans", "Noto Sans JP", -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+button { font-family: inherit; }
+#game { position: fixed; inset: 0; display: block; touch-action: none; }
+
+/* ---------- HUD trên ---------- */
+#hud { position: fixed; top: 0; left: 0; right: 0; z-index: 20; pointer-events: none;
+  padding: calc(8px + env(safe-area-inset-top)) 10px 0; display: flex; flex-direction: column; gap: 6px; }
+#hud-row { display: flex; align-items: flex-start; gap: 8px; }
+#player-card { pointer-events: auto; display: flex; align-items: center; gap: 8px; background: var(--ivory2);
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px 4px 4px; box-shadow: var(--shadow); }
+#pc-ava { width: 34px; height: 34px; border-radius: 50%; background: var(--indigo); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
+#pc-meta { line-height: 1.15; }
+#pc-name { font-weight: 800; font-size: 13.5px; max-width: 130px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#pc-level { font-size: 10.5px; color: var(--indigo); font-weight: 700; }
+#hud-area { pointer-events: auto; margin-left: auto; background: rgba(35, 34, 46, .82); color: #fdf8ec;
+  border-radius: 999px; padding: 7px 12px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+#hud-fps { position: absolute; top: calc(8px + env(safe-area-inset-top)); right: 10px; transform: translateY(40px);
+  background: rgba(35,34,46,.55); color: #b7f0c0; border-radius: 8px; padding: 2px 7px; font-size: 10.5px; font-weight: 700; }
+#hud-actions { pointer-events: auto; margin-left: auto; display: flex; gap: 8px; }
+.hud-btn { position: relative; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--ivory2); font-size: 18px; cursor: pointer; box-shadow: var(--shadow); }
+.hud-btn:active { transform: scale(.94); }
+#phone-badge { position: absolute; top: -4px; right: -4px; min-width: 19px; height: 19px; border-radius: 999px;
+  background: var(--verm); color: #fff; font-size: 11px; font-weight: 800; display: none; align-items: center; justify-content: center; padding: 0 5px; }
+#phone-badge.show { display: flex; animation: pop .3s ease; }
+#btn-phone.ring { animation: ring 1s ease infinite; }
+@keyframes ring { 0%,100% { transform: rotate(0); } 20% { transform: rotate(12deg); } 40% { transform: rotate(-10deg); } 60% { transform: rotate(8deg); } }
+@keyframes pop { from { transform: scale(.4); } to { transform: scale(1); } }
+
+#stats-bar { pointer-events: auto; display: flex; gap: 5px; background: var(--ivory);
+  border: 1px solid var(--line); border-radius: 16px; padding: 6px 8px; box-shadow: var(--shadow); }
+.stat { flex: 1; text-align: center; border-radius: 10px; padding: 2px 0; position: relative; }
+.stat .ic { font-size: 14px; }
+.stat .vl { display: block; font-weight: 800; font-size: 13px; }
+.stat .lb { display: block; font-size: 9px; color: var(--ink2); font-weight: 700; letter-spacing: .02em; }
+.stat.pulse { animation: pulse .6s ease; background: #fdf0d5; }
+@keyframes pulse { 0% { transform: scale(1); } 40% { transform: scale(1.12); } 100% { transform: scale(1); } }
+#objective { pointer-events: none; align-self: center; max-width: 94%; background: var(--indigo); color: #fff;
+  border-radius: 999px; padding: 6px 14px; font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#objective.pulse { animation: pulse .6s ease; }
+/* (Lane P 01/11: dòng gợi ý điều khiển #hud-hint đã xoá hẳn — không còn CSS.) */
+
+/* Số chỉ số bay (+N / −N) */
+#floaters { position: fixed; top: calc(96px + env(safe-area-inset-top)); left: 0; right: 0; z-index: 40;
+  display: flex; justify-content: center; gap: 8px; pointer-events: none; }
+.floater { background: var(--ivory2); border: 1.5px solid var(--good); color: var(--good); font-weight: 800;
+  font-size: 13px; border-radius: 999px; padding: 4px 11px; box-shadow: var(--shadow); animation: floatUp 2.2s ease forwards; }
+.floater.neg { border-color: var(--verm); color: var(--verm); }
+@keyframes floatUp { 0% { opacity: 0; transform: translateY(10px); } 15% { opacity: 1; transform: translateY(0); } 80% { opacity: 1; } 100% { opacity: 0; transform: translateY(-16px); } }
+
+/* ---------- Nút tương tác + bàn phím ảo ---------- */
+#btn-interact { position: fixed; right: 14px; bottom: calc(118px + env(safe-area-inset-bottom)); z-index: 25;
+  display: none; max-width: 62vw; border: none; border-radius: 999px; padding: 13px 18px;
+  background: var(--verm); color: #fff; font-size: 14.5px; font-weight: 800; cursor: pointer; box-shadow: var(--shadow); }
+#btn-interact.show { display: block; }
+#btn-interact:active { background: var(--verm2); }
+/* (Đã bỏ #dpad — nút điều hướng ảo — theo lệnh chủ trang 08:11 JST 31/10/2026.) */
+
+/* (Đã GỠ #mapbar — thanh nút tên địa điểm nổi — theo lệnh chủ trang 13:33 JST 31/10/2026:
+   trên điện thoại nó quấn thành cột nút phủ đầy màn hình, che cả bản đồ lẫn hộp hội thoại.
+   Tên địa điểm chỉ thể hiện bằng biển hiệu trong canvas, gắn trên tòa nhà/cổng — KHUNG-GAME.md.) */
+
+/* ---------- Hộp hội thoại ---------- */
+#dlg { position: fixed; inset: 0; z-index: 30; display: none; align-items: flex-end; justify-content: center;
+  padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); background: linear-gradient(transparent 55%, rgba(20, 18, 35, .35)); }
+#dlg.show { display: flex; }
+#dlg-card { width: 100%; max-width: 560px; max-height: 62vh; overflow-y: auto; background: var(--ivory2);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 13px 15px 15px; }
+#dlg-scene { font-size: 11px; font-weight: 800; color: var(--verm); letter-spacing: .03em; margin-bottom: 5px; }
+#dlg-sp { display: inline-block; background: var(--indigo); color: #fff; font-size: 12px; font-weight: 800;
+  border-radius: 999px; padding: 3px 11px; margin-bottom: 7px; }
+#dlg-jp { font-size: 17.5px; line-height: 1.65; font-weight: 600; }
+#dlg-jp ruby rt { font-size: 9.5px; color: var(--ink2); font-weight: 400; }
+#dlg-vi { margin-top: 5px; font-size: 13.5px; line-height: 1.55; color: var(--ink2); }
+#dlg-opts { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+.dlg-opt { text-align: left; border: 1.5px solid var(--indigo); background: #fff; color: var(--ink);
+  border-radius: 12px; padding: 10px 12px; font-size: 15.5px; line-height: 1.5; cursor: pointer; }
+.dlg-opt:active { background: #eceafd; }
+.dlg-opt.bad { border-color: var(--verm); background: #fbe9e5; opacity: .65; }
+.dlg-opt.hint { border-color: var(--good); background: #e8f5ec; box-shadow: 0 0 0 2px rgba(46,125,79,.25); }
+#dlg-fb { margin-top: 8px; font-size: 13px; color: var(--verm); font-weight: 600; }
+/* Lane AK (02/11): bước thoại dài làm thẻ thoại (max-height 62vh, tự cuộn) đẩy
+   hàng nút Tiếp — vốn nằm ở CUỐI vùng cuộn — khuất xuống dưới mép màn hình,
+   người chơi không bấm qua bước được (bắt tại c5-succ-khach-san-1, bước dài
+   nhất 695 ký tự; vết CDP: tâm nút ở y=854 > viewport 844, elementFromPoint
+   = null từ bước 6, bot bấm hụt 295 lần). Ghim hàng nút kiểu pill như modal
+   (Lane AH): chỉ che đúng ô của nút, nền trùng màu thẻ; hàng nút TRỐNG (bước
+   lựa chọn) thì ẩn hẳn. */
+#dlg-act { margin-top: 11px; display: flex; justify-content: flex-end;
+  position: sticky; bottom: 8px; z-index: 3;
+  width: fit-content; margin-left: auto; margin-right: -6px; margin-bottom: -6px;
+  padding: 6px; background: var(--ivory2); border: 1px solid #eee2cc; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(40, 32, 10, .18); }
+#dlg-act:empty { display: none; }
+#dlg-card { scroll-padding-bottom: 84px; }
+.dlg-next { border: none; border-radius: 999px; padding: 10px 20px; background: var(--indigo); color: #fff;
+  font-size: 14px; font-weight: 800; cursor: pointer; }
+.dlg-next:active { background: var(--indigo2); }
+
+/* ---------- Điện thoại trong game ---------- */
+#phone { position: fixed; inset: 0; z-index: 45; display: none; align-items: center; justify-content: center;
+  background: rgba(18, 16, 30, .55); padding: 12px; }
+#phone.show { display: flex; }
+/* Lane AC (Lỗi 1): khung dùng gần hết chiều cao màn hình (94dvh thay 86vh) —
+   trên cửa sổ NGANG THẤP của người chơi thật, 86vh làm vùng đọc tin bị bóp
+   hẳn; dvh tính đúng chiều cao nhìn thấy trên di động (vh thường/ cũ giữ làm
+   dự phòng ở dòng trước). */
+#phone-frame { width: min(360px, 96vw); height: min(680px, 94vh); height: min(680px, 94dvh); background: #17141f; border-radius: 38px;
+  padding: 10px; box-shadow: var(--shadow); }
+#phone-screen { height: 100%; background: var(--ivory); border-radius: 29px; overflow: hidden; display: flex; flex-direction: column; }
+#phone-status { display: flex; justify-content: space-between; padding: 5px 18px 2px; font-size: 11px; font-weight: 700; color: var(--ink2); }
+#phone-head { display: flex; align-items: center; gap: 8px; padding: 7px 12px; background: var(--indigo); color: #fff; }
+#phone-back { border: none; background: none; color: #fff; font-size: 17px; cursor: pointer; padding: 2px 6px; }
+#phone-title { font-weight: 800; font-size: 14.5px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#phone-close { border: none; background: rgba(255,255,255,.2); color: #fff; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 700; cursor: pointer; }
+#phone-body { flex: 1; overflow-y: auto; padding: 12px 10px 14px; }
+.thread-item { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; border: 1px solid var(--line);
+  background: #fff; border-radius: 14px; padding: 11px 12px; margin-bottom: 8px; cursor: pointer; }
+.thread-item .t-ava { font-size: 22px; }
+.thread-item .t-name { font-weight: 800; font-size: 14px; }
+.thread-item .t-last { font-size: 12px; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 210px; }
+.thread-item .t-dot { margin-left: auto; background: var(--verm); color: #fff; border-radius: 999px; min-width: 20px; height: 20px;
+  display: none; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
+.thread-item .t-dot.show { display: flex; }
+/* Lane AC (Lỗi 1): chữ tin nhắn 13.5px là quá nhỏ để đọc thoải mái (chủ trang
+   phản ánh trực tiếp) — lên 15.5px, giãn dòng 1.55, đệm thoáng hơn. Áp cho cả
+   bong bóng trong NHẬT KÝ CUỘC GỌI (cùng class .msg). */
+.msg { max-width: 84%; border-radius: 16px; padding: 10px 13px; margin-bottom: 9px; font-size: 15.5px; line-height: 1.55; }
+.msg.them { background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 5px; margin-right: auto; }
+.msg.me { background: var(--indigo); color: #fff; border-bottom-right-radius: 5px; margin-left: auto; }
+/* Lane AC (Lỗi 1 — gốc rễ của "ô tin nhắn nhỏ"): vùng nút trả lời trước đây
+   KHÔNG có trần chiều cao — 3 lựa chọn dài của nhịp tin nhắn (vd nhịp A Ch3)
+   phình lên chiếm hơn nửa khung, bóp vùng đọc tin còn một dải hẹp. Nay vùng
+   trả lời bị chặn ở 46% chiều cao khung và TỰ CUỘN bên trong; vùng đọc tin
+   luôn giữ phần còn lại. */
+#phone-replies { flex: none; max-height: 46%; overflow-y: auto; padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 6px; background: var(--ivory); }
+/* --- Màn hình CUỘC GỌI THOẠI trong điện thoại (cảnh 1.9) --- */
+.call-head { text-align: center; padding: 16px 0 10px; }
+.call-ava { width: 74px; height: 74px; margin: 0 auto 8px; border-radius: 50%; background: var(--indigo); color: #fff;
+  font-size: 36px; display: flex; align-items: center; justify-content: center; animation: callPulse 1.6s ease-in-out infinite; }
+@keyframes callPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(38,49,96,.35); } 50% { box-shadow: 0 0 0 12px rgba(38,49,96,0); } }
+.call-name { font-weight: 800; font-size: 16px; color: var(--ink); }
+.call-status { font-size: 12.5px; color: var(--ink2); margin-top: 3px; font-weight: 700; }
+#call-log { display: flex; flex-direction: column; gap: 2px; padding-bottom: 8px; }
+#call-log .msg { max-width: 88%; }
+.call-who { font-size: 10.5px; font-weight: 800; opacity: .75; margin-bottom: 2px; }
+.call-jp { font-size: 14.5px; line-height: 1.65; margin-bottom: 2px; }
+.call-jp rt { font-size: 8.5px; }
+.reply-btn.call-end { background: #c73e3a; color: #fff; border-color: #a02c28; }
+.reply-btn { border: 1.5px solid var(--indigo); background: #fff; color: var(--indigo); border-radius: 999px;
+  padding: 9px 13px; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; min-height: 44px; flex: none; }
+.reply-btn:active { background: #eceafd; }
+.reply-note { text-align: center; font-size: 11px; color: var(--ink2); }
+
+/* ---------- Hộp thoại modal chung (cài đặt / nghe / quiz / tổng kết) ---------- */
+.modal { position: fixed; inset: 0; z-index: 46; display: none; align-items: center; justify-content: center;
+  background: rgba(18, 16, 30, .55); padding: 14px; }
+.modal.show { display: flex; }
+.modal-card { width: min(430px, 95vw); max-height: 86vh; overflow-y: auto; background: var(--ivory2);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 18px; }
+.modal-card h3 { font-size: 16.5px; margin-bottom: 4px; }
+.modal-card .sub { font-size: 12.5px; color: var(--ink2); margin-bottom: 12px; line-height: 1.5; }
+.mrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+.mrow input[type="range"] { flex: 1; accent-color: var(--indigo); }
+.switch { position: relative; width: 50px; height: 28px; flex: none; }
+.switch input { opacity: 0; width: 100%; height: 100%; position: absolute; margin: 0; cursor: pointer; z-index: 2; }
+.switch .tr { position: absolute; inset: 0; background: #cfc7ae; border-radius: 999px; transition: .2s; }
+.switch .tr::after { content: ""; position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #fff; top: 3px; left: 3px; transition: .2s; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+.switch input:checked + .tr { background: var(--indigo); }
+.switch input:checked + .tr::after { left: 25px; }
+.btn { border: none; border-radius: 999px; padding: 11px 18px; font-size: 14px; font-weight: 800; cursor: pointer; }
+.btn.primary { background: var(--indigo); color: #fff; }
+.btn.verm { background: var(--verm); color: #fff; }
+.btn.ghost { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
+.btnrow { display: flex; gap: 8px; justify-content: flex-end; margin-top: 14px; flex-wrap: wrap; }
+.play-big { display: flex; align-items: center; gap: 10px; width: 100%; border: none; border-radius: 14px;
+  background: var(--indigo); color: #fff; padding: 14px 16px; font-size: 15px; font-weight: 800; cursor: pointer; margin-bottom: 12px; }
+.play-big .eq { margin-left: auto; font-size: 12px; opacity: .85; font-weight: 600; }
+.opt-btn { display: block; width: 100%; text-align: left; border: 1.5px solid var(--indigo); background: #fff;
+  border-radius: 12px; padding: 11px 13px; font-size: 15px; margin-bottom: 8px; cursor: pointer; }
+.opt-btn.right { border-color: var(--good); background: #e8f5ec; }
+.opt-btn.wrong { border-color: var(--verm); background: #fbe9e5; opacity: .7; }
+.fb-line { font-size: 13.5px; font-weight: 600; min-height: 20px; margin-top: 4px; }
+.sum-row { display: flex; justify-content: space-between; gap: 12px; padding: 7px 2px; border-bottom: 1px dashed rgba(90,80,60,.25); font-size: 14px; }
+.sum-row b { white-space: nowrap; }
+.fb-line.ok { color: var(--good); } .fb-line.ng { color: var(--verm); }
+.sum-line { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+.sum-line b.pos { color: var(--good); } .sum-line b.neg { color: var(--verm); }
+
+/* ---------- Ngoại hình & tủ đồ + quầy mall (style.js) ---------- */
+#style-card, #shop-card { width: min(480px, 95vw); }
+.style-preview { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; margin-bottom: 6px; }
+.style-preview canvas { width: 64px; height: 96px; image-rendering: pixelated; background: linear-gradient(#cfe6f2, #e9e2cc); border-radius: 10px; }
+.style-prev-note { font-size: 12.5px; color: var(--ink2); line-height: 1.5; }
+.style-sec { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.style-sec-t { font-weight: 800; font-size: 14px; margin-bottom: 8px; }
+.style-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 7px; }
+.style-chip { border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; padding: 8px 13px; font-size: 13px; font-weight: 700; cursor: pointer; }
+.style-chip.on { border-color: var(--indigo); box-shadow: 0 0 0 2px rgba(38,49,96,.3); background: #eceafd; }
+.style-note { font-size: 12.5px; color: var(--ink2); line-height: 1.5; margin: 4px 0 8px; }
+.shop-item { display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); background: #fff; border-radius: 14px; padding: 10px 12px; margin-bottom: 8px; }
+.shop-info { flex: 1; min-width: 0; }
+.shop-name { font-weight: 800; font-size: 14.5px; }
+.shop-jp { font-size: 12px; color: var(--ink2); margin-top: 1px; }
+.shop-price { font-weight: 800; color: var(--indigo); margin-top: 3px; font-size: 14px; }
+.shop-lock { color: var(--verm); font-size: 12.5px; }
+.shop-acts { display: flex; flex-direction: column; gap: 6px; }
+.shop-acts .btn { padding: 8px 13px; font-size: 12.5px; white-space: nowrap; }
+
+/* ---------- Toast ---------- */
+#toast { position: fixed; left: 50%; transform: translateX(-50%) translateY(20px); bottom: calc(86px + env(safe-area-inset-bottom));
+  z-index: 50; background: #262238; color: #fdf8ec; border-radius: 999px; padding: 10px 17px; font-size: 13.5px;
+  font-weight: 700; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: .25s; max-width: 92vw; text-align: center; }
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---------- Màn hình bắt đầu ---------- */
+#start-overlay { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(120% 100% at 50% 0%, #454ba8 0%, #2a2f78 55%, #1d2050 100%); padding: 16px; }
+#start-overlay.hide { display: none; }
+.start-card { width: min(430px, 94vw); max-height: 92vh; overflow-y: auto; background: var(--ivory2); border-radius: 16px;
+  box-shadow: var(--shadow); padding: 22px 20px; text-align: center; border-top: 6px solid var(--verm); }
+.start-title { font-size: 21px; font-weight: 900; letter-spacing: .04em; color: var(--indigo); }
+.start-sub { font-size: 13px; color: var(--ink2); line-height: 1.6; margin: 9px 0 14px; text-align: left; }
+.start-label { display: block; text-align: left; font-size: 13px; font-weight: 800; margin-bottom: 6px; }
+#inp-name { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 13px; font-size: 15px; background: #fff; }
+.start-note { font-size: 11.5px; color: var(--ink2); margin-top: 7px; line-height: 1.5; text-align: left; }
+.gender-row { display: flex; gap: 8px; margin: 14px 0 10px; }
+.gender-btn { flex: 1; border: 1.5px solid var(--line); background: #fff; border-radius: 12px; padding: 11px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.gender-btn.on { border-color: var(--indigo); background: #eceafd; color: var(--indigo); }
+#btn-start { width: 100%; border: none; border-radius: 999px; padding: 14px; background: var(--verm); color: #fff;
+  font-size: 16px; font-weight: 900; cursor: pointer; margin-top: 6px; }
+#btn-start:active { background: var(--verm2); }
+
+/* ---------- Máy tính (màn hình rộng) ---------- */
+@media (min-width: 900px) {
+  #hud { padding-left: 18px; padding-right: 18px; }
+  #stats-bar { max-width: 620px; }
+  #objective { font-size: 13.5px; }
+  #dlg { padding-bottom: 26px; }
+  #dlg-card { max-height: 66vh; }
+  #dlg-jp { font-size: 19px; }
+  #btn-interact { bottom: 110px; right: 22px; }
+  .modal-card h3 { font-size: 18px; }
+}
+
+/* Đi tàu (life.js) — cửa sổ tàu chạy cảnh */
+.train-window{position:relative;height:110px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#bfe3ff 0%,#e8f6ff 55%,#9ec49a 56%,#7fb069 100%);margin:10px 0}
+.train-stripes{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(60,90,60,.35) 46px 52px);animation:trainmove 1.1s linear infinite}
+@keyframes trainmove{from{transform:translateX(0)}to{transform:translateX(-52px)}}
+.train-note{position:absolute;left:10px;bottom:8px;right:10px;font-size:12.5px;color:#1d3557;background:rgba(255,255,255,.75);border-radius:8px;padding:4px 8px}
+
+/* =====================================================================
+   LANE H — HUD GỌN + BẢNG HƯỚNG DẪN TỪNG BƯỚC (góp ý chơi thử 31/10 21:39)
+   - Bảng chỉ số mặc định THU GỌN (1 dải mảnh, nền trong suốt nhẹ), nút ▾/▴
+     (#btn-hud) bung đủ dạng cũ qua body.hud-full. Không còn che biển/bảng chữ.
+   - Thanh mục tiêu pill cũ (#objective) ẨN — thay bằng bảng #guide bên dưới.
+   ===================================================================== */
+#hud { gap: 4px; }
+#player-card { padding: 3px 10px 3px 3px; background: rgba(255, 253, 246, .9); }
+#pc-ava { width: 26px; height: 26px; font-size: 12px; }
+#pc-name { font-size: 12px; max-width: 112px; }
+#pc-level { font-size: 9.5px; }
+#hud-area { padding: 5px 10px; font-size: 11.5px; background: rgba(35, 34, 46, .72); }
+.hud-btn { width: 34px; height: 34px; font-size: 15px; }
+#hud-fps { transform: translateY(34px); }
+#stats-bar { padding: 3px 6px; border-radius: 12px; background: rgba(253, 248, 236, .88); gap: 2px; }
+.stat { display: flex; align-items: center; justify-content: center; gap: 3px; padding: 1px 2px; }
+.stat .ic { font-size: 12px; }
+.stat .vl { display: inline; font-size: 12px; }
+.stat .lb { display: none; }
+/* Bung đủ chỉ số (bấm #btn-hud) — gần dạng cũ nhưng vẫn gọn hơn */
+body.hud-full #player-card { padding: 4px 12px 4px 4px; }
+body.hud-full #pc-ava { width: 34px; height: 34px; font-size: 15px; }
+body.hud-full #pc-name { font-size: 13.5px; max-width: 150px; }
+body.hud-full #pc-level { font-size: 10.5px; }
+body.hud-full #stats-bar { padding: 6px 8px; border-radius: 16px; }
+body.hud-full .stat { display: block; padding: 2px 0; }
+body.hud-full .stat .vl { display: block; font-size: 13px; }
+body.hud-full .stat .lb { display: block; }
+/* Mục tiêu pill cũ: ẩn hẳn — bảng hướng dẫn từng bước thay thế (guide.js vẫn
+   bắt được chữ mục tiêu qua GAMEUI.setObjective để làm đường dự phòng). */
+#objective { display: none !important; }
+/* (Lane P 01/11: quy tắc #hud-hint cũ ở đây đã gỡ cùng phần tử — xem ghi chú ở khối HUD trên.) */
+
+/* ---------- Bảng hướng dẫn từng bước (#guide — guide.js dựng nội dung) ----------
+   Lane P (01/11, lệnh chủ trang 06:07): bảng ẨN HẲN theo mặc định (display:none —
+   không chiếm chỗ, không che cảnh/biển DEPARTURES); chỉ hiện dạng overlay khi
+   guide.js thêm class .open qua biểu tượng 🧭 #btn-guide. */
+#guide { position: fixed; left: 10px; top: calc(96px + env(safe-area-inset-top)); z-index: 21;
+  width: min(292px, 78vw); background: rgba(28, 26, 44, .88); color: #fdf8ec;
+  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; display: none; }
+#guide.open { display: block; }
+#guide-head { display: flex; align-items: center; gap: 6px; padding: 7px 8px 7px 11px; }
+#guide-title { flex: 1; font-size: 12.5px; font-weight: 800; letter-spacing: .02em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#guide-head button { flex: none; width: 26px; height: 26px; border-radius: 50%; border: none;
+  background: rgba(255, 255, 255, .16); color: #fdf8ec; font-size: 13px; cursor: pointer; }
+#guide-head button:active { background: rgba(255, 255, 255, .3); }
+#guide-steps { list-style: none; padding: 0 10px 9px; display: flex; flex-direction: column; gap: 5px; }
+#guide-steps li { display: flex; gap: 7px; align-items: flex-start; font-size: 12.5px; line-height: 1.4; opacity: .72; }
+#guide-steps li .gs-num { flex: none; width: 17px; height: 17px; border-radius: 50%; margin-top: 1px;
+  background: #454ba8; color: #fff; font-size: 10.5px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; }
+#guide-steps li.cur { opacity: 1; font-weight: 800; background: rgba(255, 205, 64, .17);
+  border-radius: 9px; padding: 4px 6px; margin: 0 -6px; }
+#guide-steps li.cur .gs-num { background: var(--verm); }
+#guide-steps li.done { opacity: .5; }
+#guide-steps li.done .gs-txt { text-decoration: line-through; }
+#guide-steps li.done .gs-num { background: var(--good); }
+#guide-steps li.done-all { opacity: 1; }
+@media (min-width: 900px) {
+  #guide { left: 18px; top: 104px; }
+}
+
+/* =====================================================================
+   LANE H — BỔ SUNG 22:02 (chủ trang nhấn mạnh lần 2): HUD MẶC ĐỊNH CHỈ 1 HÀNG
+   MẢNH — avatar + tên + khu vực + TIỀN/SỨC KHỎE/TIẾNG NHẬT dạng chip nhỏ +
+   nút bấm; toàn bộ 5 chỉ số + nhãn chữ chỉ hiện khi bấm mở rộng (body.hud-full).
+   Chiều cao mặc định ≈ 38–42px desktop; mobile xuống 2 hàng mảnh ≈ 72px.
+   ===================================================================== */
+#hud { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 4px 6px;
+  padding: calc(5px + env(safe-area-inset-top)) 10px 0; }
+#hud-row { display: contents; }
+#player-card { order: 1; }
+#hud-area { order: 2; margin-left: 0; }
+#stats-bar { order: 3; margin-left: auto; padding: 2px 5px; border-radius: 999px; gap: 1px; }
+#hud-actions { order: 4; margin-left: 0; gap: 6px; }
+.hud-btn { width: 30px; height: 30px; font-size: 14px; }
+#stats-bar .stat { flex: none; display: flex; align-items: center; justify-content: center; gap: 3px; padding: 1px 4px; }
+#stats-bar .stat .vl { display: inline; }
+#stats-bar .stat:nth-child(4), #stats-bar .stat:nth-child(5) { display: none; }
+#hud-season { display: none; }
+/* Thẻ người chơi thu gọn: cắt dòng cấp/trạng thái bằng … để thẻ không phình,
+   HUD mobile giữ đúng 2 hàng mảnh (nội dung đầy đủ hiện khi mở rộng). */
+#pc-name { max-width: 118px; }
+#pc-level { max-width: 118px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Bảng hướng dẫn nằm DƯỚI lớp HUD: nếu còn chạm nhau ở mép, nút HUD luôn bấm được */
+#guide { z-index: 19; }
+#hud-fps { transform: translateY(30px); }
+/* Bảng hướng dẫn nhích lên sát HUD mảnh mới */
+#guide { top: calc(82px + env(safe-area-inset-top)); }
+@media (min-width: 900px) { #guide { top: 54px; } }
+/* Trạng thái MỞ RỘNG: trở lại bố cục cột đầy đủ như trước */
+body.hud-full #hud { flex-direction: column; align-items: stretch; gap: 6px;
+  padding: calc(8px + env(safe-area-inset-top)) 10px 0; }
+body.hud-full #hud-row { display: flex; }
+body.hud-full #hud-area { margin-left: auto; }
+body.hud-full #stats-bar { margin-left: 0; padding: 6px 8px; border-radius: 16px; gap: 2px; }
+body.hud-full #stats-bar .stat { display: block; flex: 1; padding: 2px 0; }
+body.hud-full #hud-actions { margin-left: auto; }
+body.hud-full .hud-btn { width: 34px; height: 34px; font-size: 15px; }
+body.hud-full #hud-season { display: block; }
+body.hud-full #pc-name { max-width: 150px; }
+body.hud-full #pc-level { max-width: none; white-space: normal; overflow: visible; }
+body.hud-full #guide { top: calc(178px + env(safe-area-inset-top)); }
+
+/* =====================================================================
+   LANE Q — TỔNG DUYỆT BỐ CỤC & ĐỘ DỄ DÙNG (01/11, lệnh chủ trang 06:08:
+   "bố cục rõ ràng, dễ nhìn dễ chơi, đừng để anh phải sửa tý 1").
+   Kiểm kê bằng harness-ui-audit (đo thật trên 16 màn hình × 390/desktop):
+   nút HUD chỉ 30px, nút Mua/Kết bạn 30–33px, chip chọn 33px, nút đóng
+   điện thoại 22px — tất cả dưới ngưỡng chạm 44px; cỡ chữ phụ 12,5px hơi
+   nhỏ. Khối này CHỈ chỉnh cỡ/vùng bấm trên nền Lane H + Lane P (HUD mảnh,
+   guide ẩn sau 🧭 giữ nguyên) — không đổi cấu trúc hay màu sắc.
+   ===================================================================== */
+/* Nút HUD: 30 → 44px đúng ngưỡng chạm. Để HUD không phình, ở màn hẹp
+   (≤560px) XẾP LẠI THỨ TỰ: hàng 1 = thẻ người chơi + cụm nút, hàng 2 =
+   pill khu vực + thanh chỉ số — 2 hàng ỔN ĐỊNH ~81px ở 390px (trước đây
+   nhảy 73↔103px tuỳ độ dài tên bản đồ, có lúc 3 hàng). Desktop giữ 1 hàng. */
+.hud-btn { width: 44px; height: 44px; font-size: 17px; }
+body.hud-full .hud-btn { width: 44px; height: 44px; font-size: 17px; }
+#hud-area { max-width: 34vw; overflow: hidden; text-overflow: ellipsis; }
+body.hud-full #hud-area { max-width: none; }
+@media (max-width: 560px) {
+  /* Hàng 1 (thẻ + 5 nút 44px = 232px) chỉ vừa 390px khi thẻ thu còn ~130px:
+     cắt bề ngang tên/cấp ở thẻ thu gọn + giảm đệm mép. Hàng 2: khu vực + chỉ số. */
+  body:not(.hud-full) #hud { padding-left: 6px; padding-right: 6px; }
+  body:not(.hud-full) #hud-actions { order: 2; gap: 3px; }
+  body:not(.hud-full) #hud-area { order: 3; max-width: 40vw; }
+  body:not(.hud-full) #stats-bar { order: 4; }
+  body:not(.hud-full) #player-card { padding-right: 8px; }
+  body:not(.hud-full) #pc-name { max-width: 84px; }
+  body:not(.hud-full) #pc-level { max-width: 84px; }
+}
+/* Bảng hướng dẫn: nằm dưới HUD mới, nút đóng/nghe 34px */
+#guide { top: calc(100px + env(safe-area-inset-top)); }
+@media (min-width: 900px) { #guide { top: 60px; } }
+/* Desktop (chuột, không chạm): nút HUD 40px là đủ — giữ HUD desktop ≤46px
+   như chuẩn Lane H (harness-guide hudDesktopCompact); bản chạm 44px chỉ
+   áp cho màn hình hẹp/trung. */
+@media (min-width: 900px) {
+  .hud-btn { width: 40px; height: 40px; font-size: 16px; }
+  body.hud-full .hud-btn { width: 40px; height: 40px; }
+}
+body.hud-full #guide { top: calc(198px + env(safe-area-inset-top)); }
+#guide-head button { width: 34px; height: 34px; font-size: 14px; }
+#guide-steps li { font-size: 13.5px; }
+#guide-steps li .gs-num { width: 18px; height: 18px; font-size: 11px; }
+/* Nút bấm chung: mọi .btn cao tối thiểu 44px, chữ nút quầy hàng to hơn */
+.btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.shop-acts .btn { font-size: 13.5px; }
+.dlg-next { min-height: 44px; padding: 11px 22px; }
+.dlg-opt { min-height: 48px; padding: 12px 14px; }
+.opt-btn { min-height: 48px; padding: 12px 14px; }
+#btn-interact { min-height: 48px; }
+/* Chip chọn (ngoại hình / người đi cùng / ý kiến khi đi chơi) */
+.style-chip { min-height: 44px; padding: 9px 14px; font-size: 13.5px; display: inline-flex; align-items: center; }
+/* Điện thoại: nút quay lại + nút Đóng 44px, nút trả lời 44px */
+#phone-back { width: 44px; height: 44px; padding: 0; flex: none; }
+#phone-close { min-height: 44px; padding: 8px 14px; font-size: 12.5px; }
+.reply-btn { min-height: 44px; padding: 11px 15px; font-size: 14px; }
+/* Cài đặt: thanh trượt có vùng chạm cao hơn; chữ phụ trong modal 13px */
+.mrow input[type="range"] { height: 30px; }
+.modal-card .sub { font-size: 13px; }
+/* Màn hình bắt đầu: nút chọn tuyến + ô tên cao 48px, đoạn mở đầu dễ đọc hơn */
+.gender-btn { min-height: 48px; }
+#inp-name { min-height: 48px; }
+.start-sub { font-size: 13.5px; }
+/* Hàng nút chốt của modal DÍNH ở đáy thẻ (sticky): nội dung modal dài hơn
+   màn hình điện thoại thì nút Xong/Đóng vẫn luôn nhìn thấy + bấm được ngay,
+   khỏi cuộn xuống tận cuối mới thấy (trước đây ở 390px nút "Xong" của Cài
+   đặt bị đẩy khuất hẳn xuống dưới mép — bấm hụt là modal không đóng).
+   Lane AH (01/11, chủ trang báo từ iPhone thật: "mấy chỗ ấn mua đồ bị lag ấn
+   không được"): dải sticky CŨ kéo full-width + nền đục #fffaf0 + z-index 3 —
+   một DẢI CHẾT ~72px ở đáy thẻ: nút Mua nào đang nằm trong dải lúc người
+   chơi chạm là bị dải nuốt cú chạm (chập chờn theo vị trí cuộn; harness cũ
+   bấm bằng .click() lập trình — bỏ qua hit-test — nên không bao giờ bắt
+   được). Nay: hàng chốt thu thành PILL gọn ở góc phải dưới (chỉ còn che
+   đúng ô của chính nút Đóng — nút đó tự bấm được), nền pill vẫn đục để đọc
+   rõ; thẻ có scroll-padding-bottom lớn để cuộn-tới không dừng mục tiêu
+   ngay sát đáy. Các bảng dài quan trọng nhất (💗 Tình cảm, 💞 Quan hệ,
+   shop khi đi cùng nhau) dùng cấu trúc tách .card-split ở dưới — chân nằm
+   NGOÀI vùng cuộn, không còn phần tử nào đè lên nút mua nữa. */
+.modal-card > .btnrow:last-child { position: sticky; bottom: 8px; z-index: 3;
+  width: fit-content; margin: 6px -6px -6px auto; padding: 6px;
+  background: #fffaf0; border: 1px solid #eee2cc; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(40, 32, 10, .18); }
+.modal-card { scroll-padding-bottom: 96px; }
+.modal-card .btn, .modal-card .shop-item { scroll-margin-bottom: 96px; }
+
+/* ---------- THẺ TÁCH: vùng cuộn + chân cố định NGOÀI vùng cuộn (Lane AH) ----------
+   Cho các bảng mà renderer bơm lại nội dung liên tục (rel.js / relations.js):
+   .card-split là .modal-card dạng flex cột, KHÔNG tự cuộn; .card-scroll cuộn
+   phần thân; .card-foot là hàng nút chốt tĩnh — không sticky, không overlay,
+   không phần tử nào che được nút trong vùng cuộn tại bất kỳ vị trí cuộn nào. */
+.modal-card.card-split { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+.card-split .card-scroll { overflow-y: auto; padding: 18px; flex: 1 1 auto; min-height: 0; }
+.card-split .card-foot { flex: none; display: flex; justify-content: flex-end; gap: 8px;
+  padding: 10px 18px 14px; background: #fffaf0; border-top: 1px solid #eee2cc; }
+/* Hàng tim thiện cảm: LUÔN một hàng ngang gọn — trước đây 5 trái tim ở mức
+   100/100 bị bẻ thành CỘT DỌC làm thẻ ứng viên phình cao bất thường (ảnh
+   iPhone của chủ trang 19:20 01/11). */
+.aff-hearts { white-space: nowrap; letter-spacing: 1px; font-size: 11px; }
+/* Thẻ ứng viên trong bảng 💗: bố cục DỌC — thông tin full-width ở trên, hàng
+   nút hành động nằm dưới. Bố cục ngang cũ ép cột tên còn ~90px ở 390px (hàng
+   nút 3 chiếc chiếm hết bề ngang), chữ bẻ một từ một dòng, thẻ cao bất
+   thường (ảnh đối chiếu r-panel/ah-p4 — Lane AH). Chỉ áp trong #rel-card,
+   không đụng .shop-item của siêu thị/mall/REL8. */
+#rel-card .shop-item { flex-direction: column; align-items: stretch; }
+#rel-card .shop-item .btnrow { justify-content: flex-start; margin-top: 10px; }
+
+/* ---------- CHIP MỤC TIÊU 1 DÒNG — ĐÃ GỠ (Lane AI, 01/11) ----------
+   Chủ trang lệnh 20:50 "bỏ cái hướng dẫn này đi": toàn bộ CSS #guide-chip
+   đã xoá và guide.js không còn tạo phần tử này nữa. Mục tiêu/hướng dẫn vẫn
+   xem trong bảng 🧭 (nút #btn-guide); mũi tên + vệt chấm giữ nguyên. */

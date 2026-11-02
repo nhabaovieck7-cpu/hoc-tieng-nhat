@@ -1,0 +1,194 @@
+{
+ "version": 1,
+ "note": "Câu mục tiêu tĩnh: đã thu bằng Microsoft Edge TTS vi-VN-HoaiMyNeural (Lane N, 31/10/2026) — GUIDE_VOICE.playCurrent() phát được thật.",
+ "guides": {
+  "💞 Chia tay ở sân bay: tới chỗ BỐ MẸ (trái sảnh) và LINH (góc cà phê phải sảnh)": {
+   "file": "voice/guide-01.mp3",
+   "status": "edge-tts"
+  },
+  "💞 Còn bố mẹ đang chờ ở phía trái sảnh — tới nói lời chia tay với bố mẹ": {
+   "file": "voice/guide-02.mp3",
+   "status": "edge-tts"
+  },
+  "💗 Còn Linh đang chờ ở góc cà phê bên phải sảnh": {
+   "file": "voice/guide-03.mp3",
+   "status": "edge-tts"
+  },
+  "✈️ Đã nói hết lời chia tay — tới CỬA AN NINH ở tường phía đông sảnh để lên máy bay": {
+   "file": "voice/guide-04.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 «Ngã rẽ» sẽ mở ở đợt truyện sau — thong thả khám phá các khu phố quanh nhà, ôn lại bài cũ, chờ những lựa chọn lớn": {
+   "file": "voice/guide-05.mp3",
+   "status": "edge-tts"
+  },
+  "📱 Ra phố mua sắm — anh Tuấn \"môi giới\" đang chờ gần cửa ngân hàng, nghe nói có \"kèo thơm\" cho người mới": {
+   "file": "voice/guide-06.mp3",
+   "status": "edge-tts"
+  },
+  "📅 Những ngày bình thường trôi qua… Hãy cứ sinh hoạt, ghé vài nơi trong thị trấn — đời sống ở Nhật vẫn đang tiếp diễn": {
+   "file": "voice/guide-07.mp3",
+   "status": "edge-tts"
+  },
+  "📱 Mẹ vừa nhắn tin hỏi thăm — mở điện thoại đọc và trả lời mẹ": {
+   "file": "voice/guide-08.mp3",
+   "status": "edge-tts"
+  },
+  "💴 Tới kỳ lĩnh LƯƠNG ĐẦU rồi — ra NGÂN HÀNG ở phố mua sắm, tới QUẦY GIAO DỊCH kiểm tra tài khoản và gửi tiền về nhà": {
+   "file": "voice/guide-09.mp3",
+   "status": "edge-tts"
+  },
+  "📱 Mẹ nhắn tin sau khi nhận được tiền gửi — mở điện thoại đọc và trả lời mẹ": {
+   "file": "voice/guide-10.mp3",
+   "status": "edge-tts"
+  },
+  "📺 Tối nay về phòng trọ sớm — bật chiếc TV NHỎ trên kệ (tường phía đông phòng trọ) xem bản tin buổi tối": {
+   "file": "voice/guide-11.mp3",
+   "status": "edge-tts"
+  },
+  "🏪 Ghé combini 秋葉原マート mua đồ tối — dạo này hình như Yui bắt đầu nhớ mặt khách quen rồi đấy": {
+   "file": "voice/guide-12.mp3",
+   "status": "edge-tts"
+  },
+  "🍻 Tháng 12 rồi — công ty mở tiệc TẤT NIÊN 忘年会 ở quán nhậu 新橋 (bảng tin trong quán) — đi dự tiệc cuối năm với sếp và đồng nghiệp đã": {
+   "file": "voice/guide-13.mp3",
+   "status": "edge-tts"
+  },
+  "🧧 Tết sắp tới rồi — về PHÒNG TRỌ, dùng chiếc điện thoại trên bàn thấp gọi về nhà đón giao thừa từ xa với bố mẹ": {
+   "file": "voice/guide-14.mp3",
+   "status": "edge-tts"
+  },
+  "📚 Thi lại mốc N4: về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại đã — rồi quay lại trường thi tiếp": {
+   "file": "voice/guide-15.mp3",
+   "status": "edge-tts"
+  },
+  "🎓 Mốc thi JLPT N4 đã mở — tới TRƯỜNG TIẾNG (qua phố chính), xem BẢNG ĐEN trong lớp để vào thi, cổng cuối Chương 2": {
+   "file": "voice/guide-16.mp3",
+   "status": "edge-tts"
+  },
+  "🏆 Đã qua mốc N4 — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để mở TỔNG KẾT Chương 2": {
+   "file": "voice/guide-17.mp3",
+   "status": "edge-tts"
+  },
+  "🌙 Trời tối rồi — về PHÒNG TRỌ, bấm vào chiếc điện thoại trên bàn thấp để gọi về nhà cho bố mẹ": {
+   "file": "voice/guide-18.mp3",
+   "status": "edge-tts"
+  },
+  "🏢 Còn thủ tục ĐĂNG KÝ ĐỊA CHỈ ở shiyakusho (ủy ban phường) — hạn 14 ngày từ khi tới Nhật, làm xong mới yên ổn": {
+   "file": "voice/guide-19.mp3",
+   "status": "edge-tts"
+  },
+  "📚 Thi lại mốc N5: về PHÒNG TRỌ ngồi vào BÀN HỌC ôn lại đã — rồi quay lại trường thi tiếp": {
+   "file": "voice/guide-20.mp3",
+   "status": "edge-tts"
+  },
+  "🎓 Mốc thi JLPT N5 đã mở — tới TRƯỜNG TIẾNG (qua phố chính), xem BẢNG ĐEN trong lớp để vào thi, cổng cuối Chương 1": {
+   "file": "voice/guide-21.mp3",
+   "status": "edge-tts"
+  },
+  "🏆 Đã qua mốc N5 — tới TRƯỜNG TIẾNG xem BẢNG ĐEN để mở TỔNG KẾT Chương 1": {
+   "file": "voice/guide-22.mp3",
+   "status": "edge-tts"
+  },
+  "🗑️ Về điểm tập kết rác (cạnh máy bán hàng đỏ) — thử phân loại rác": {
+   "file": "voice/guide-23.mp3",
+   "status": "edge-tts"
+  },
+  "🚉 Ra ga (đi hết phố về phía đông) — nghe thông báo, trả lời câu hỏi nghe": {
+   "file": "voice/guide-24.mp3",
+   "status": "edge-tts"
+  },
+  "✈️ Chuyến bay 5 tiếng sang Nhật…": {
+   "file": "voice/guide-25.mp3",
+   "status": "edge-tts"
+  },
+  "🛬 Máy bay đã hạ cánh xuống Narita — ra cửa ở đầu đông khoang để \"về phòng trọ\"": {
+   "file": "voice/guide-26.mp3",
+   "status": "edge-tts"
+  },
+  "🚶 Ra đường qua cửa phòng — gặp anh Hùng \"sẹo\" đang đi dạo": {
+   "file": "voice/guide-27.mp3",
+   "status": "edge-tts"
+  },
+  "🏪 Vào combini 秋葉原マート — nói chuyện với Yui ở quầy": {
+   "file": "voice/guide-28.mp3",
+   "status": "edge-tts"
+  },
+  "📱 Mở điện thoại — trả lời tin nhắn của Linh": {
+   "file": "voice/guide-29.mp3",
+   "status": "edge-tts"
+  },
+  "🎉 Hoàn thành đoạn mẫu — chờ duyệt phong cách": {
+   "file": "voice/guide-30.mp3",
+   "status": "edge-tts"
+  },
+  "💑 Chương 3 — đã có người yêu mới ở Nhật. Mở 💞 Quan hệ (trong ⚙️ Cài đặt, hoặc mục đầu danh sách tin nhắn) để kết đôi chính thức, rủ nhau đi chơi — mạch chính sẽ tiếp ở đợt truyện sau": {
+   "file": "voice/guide-31.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 «Ngã rẽ» — chuyện ở quê đã buông tay từ sân bay. Mở mục 💗 Tình cảm (cạnh nút điện thoại) để làm quen những người ở Nhật": {
+   "file": "voice/guide-32.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 📱": {
+   "file": "voice/guide-33.mp3",
+   "status": "edge-tts"
+  },
+  "vừa nhắn tin — mở ĐIỆN THOẠI trả lời người yêu ở quê": {
+   "file": "voice/guide-34.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 📞": {
+   "file": "voice/guide-35.mp3",
+   "status": "edge-tts"
+  },
+  "sắp gọi video — để ý điện thoại nhé": {
+   "file": "voice/guide-36.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 🌙 một cuộc gặp không ngờ đang chờ ở": {
+   "file": "voice/guide-37.mp3",
+   "status": "edge-tts"
+  },
+  "quán nhậu 新橋 — tới đó gặp Ren": {
+   "file": "voice/guide-38.mp3",
+   "status": "edge-tts"
+  },
+  "combini 秋葉原 — tới đó gặp Yui": {
+   "file": "voice/guide-39.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 🌙 Tối nay ở Nhật có một cuộc gặp không ngờ đang chờ…": {
+   "file": "voice/guide-40.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 💗": {
+   "file": "voice/guide-41.mp3",
+   "status": "edge-tts"
+  },
+  "vẫn đợi ở quê — hai người đã đặt mốc rõ ràng với nhau. Thong thả sống tiếp ở Nhật — mạch chính sẽ tiếp ở đợt truyện sau": {
+   "file": "voice/guide-42.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 🌧 Một mình trong phòng trọ tối nay… cứ khóc cho hết đã": {
+   "file": "voice/guide-43.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 🌤 Bạn bè đang ở bên — chọn một cách để gượng dậy": {
+   "file": "voice/guide-44.mp3",
+   "status": "edge-tts"
+  },
+  "💑 Chương 3 — đã có": {
+   "file": "voice/guide-45.mp3",
+   "status": "edge-tts"
+  },
+  "ở bên. Mở 💞 Quan hệ (trong ⚙️ Cài đặt, hoặc mục đầu danh sách tin nhắn) để kết đôi chính thức, rủ nhau đi chơi — mạch chính sẽ tiếp ở đợt truyện sau": {
+   "file": "voice/guide-46.mp3",
+   "status": "edge-tts"
+  },
+  "🌸 Chương 3 — 💗 Lòng đã lành dần — mở mục 💗 Tình cảm (cạnh nút điện thoại): ở Nhật này có những người đang chờ được làm quen": {
+   "file": "voice/guide-47.mp3",
+   "status": "edge-tts"
+  }
+ }
+}
