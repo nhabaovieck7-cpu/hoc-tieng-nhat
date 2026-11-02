@@ -267,6 +267,13 @@ function $(id){return document.getElementById(id)}
 var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
 var box=$('pt');if(!box)return;
 var KIND={'n1-set':{label:'Bộ câu hỏi N1',icon:'🧩'},'reading':{label:'Đọc hiểu',icon:'📖'},'sat-set':{label:'Bộ dài thứ Bảy',icon:'🗓'},'kaiwa':{label:'Kaiwa',icon:'💬'}};
+function furi(s){return esc(s).replace(/\{([^{}|]+)\|([^{}]+)\}/g,function(m,a,b){return '<ruby>'+a+'<rt>'+b+'</rt></ruby>'})}
+function tx(s){return esc(s).replace(/\n/g,'<br>')}
+function kwTable(head,rows){
+ var h='<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;margin:6px 0"><tr>'+head.map(function(x){return '<th style="border:1px solid #999;padding:6px;text-align:left">'+esc(x)+'</th>'}).join('')+'</tr>';
+ rows.forEach(function(r){h+='<tr>'+r.map(function(x){return '<td style="border:1px solid #999;padding:6px;vertical-align:top">'+x+'</td>'}).join('')+'</tr>'});
+ return h+'</table></div>';
+}
 var items=null;
 function dmy(iso){var p=String(iso||'').split('-');return p.length===3?p[2]+'/'+p[1]+'/'+p[0]:String(iso||'')}
 function lastTutor(id){try{var o=JSON.parse(localStorage.getItem('hn_practice_v1')||'{}');return (o.tutor||{})[id]||null}catch(e){return null}}
@@ -293,15 +300,94 @@ function openItem(it){
   box.querySelector('[data-b]').onclick=menu;return;
  }
  var k=KIND[it.kind]||{label:it.kind,icon:'📄'};
- window.__pracStartExam(box,{kind:'tutor',base:'data/tutor-n1/',file:it.file,date:it.date,level:'N1',icon:k.icon,title:(it.title||k.label),onMenu:menu});
+ var cfg={kind:'tutor',base:'data/tutor-n1/',file:it.file,date:it.date,level:'N1',icon:k.icon,title:(it.title||k.label),onMenu:menu};
+ if(it.kind!=='reading'){window.__pracStartExam(box,cfg);return}
+ box.innerHTML='<div class="box" style="margin-top:12px">Đang tải bài đọc…</div>';
+ fetch('data/tutor-n1/'+it.file).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+  if(!d||Object.prototype.toString.call(d)==='[object Array]'||!d.study){window.__pracStartExam(box,cfg);return}
+  renderReadingV2(it,d,cfg);
+ }).catch(function(){window.__pracStartExam(box,cfg)});
+}
+function renderReadingV2(it,d,cfg){
+ var st=d.study||{};
+ var h='<div class="box" style="margin-top:12px"><h3>📖 '+esc(it.title||'Đọc hiểu')+'</h3>';
+ if(d.intro)h+='<h4 style="margin:10px 0 6px">Phần 0 · Giới thiệu</h4><p>'+tx(d.intro)+'</p>';
+ h+='</div><div class="box" style="margin-top:12px"><h4 style="margin:4px 0 0">Phần 1 · Làm bài như thi thật (bài đọc không furigana)</h4></div><div data-exam></div>';
+ if(d.tips&&d.tips.length){
+  h+='<div class="box" style="margin-top:12px"><h4 style="margin:4px 0 8px">Phần 2 · Mẹo làm bài nhanh</h4>'+d.tips.map(function(t){return '<p style="margin:10px 0 4px"><b>'+esc(t.h||'')+'</b></p><p style="margin:0 0 6px">'+tx(t.body||'')+'</p>'}).join('')+'</div>';
+ }
+ if(st.sentence_pairs&&st.sentence_pairs.length){
+  h+='<div class="box" style="margin-top:12px"><h4 style="margin:4px 0 8px">Phần 3 · Nguyên văn có furigana + dịch từng câu</h4>'+(st.passage_title?'<p><b>'+esc(st.passage_title)+'</b></p>':'');
+  st.sentence_pairs.forEach(function(sp){
+   h+='<div style="margin:10px 0"><div class="mut">Đoạn '+esc(sp.para)+' · câu '+esc(sp.no)+'</div><div>'+furi(sp.ja||'')+'</div><div class="mut">'+esc(sp.vi||'')+'</div></div>';
+  });
+  h+='</div>';
+ }
+ h+='<div class="box" style="margin-top:12px"><h4 style="margin:4px 0 8px">Phần 4 · Đáp án và phân tích chi tiết</h4>';
+ if(st.answer_key)h+='<p><b>Đáp án: '+esc(st.answer_key)+'</b></p>';
+ if(st.structure)h+='<p style="margin:10px 0 4px"><b>Cấu trúc bài</b></p><p style="margin:0 0 6px">'+tx(st.structure)+'</p>';
+ if(st.per_question&&st.per_question.length){
+  st.per_question.forEach(function(pq){
+   h+='<div style="margin:14px 0 6px"><b>Câu '+esc(pq.q)+' — đáp án '+(+pq.answer+1)+'</b>'+(pq.locator?' <span class="mut">(bằng chứng: '+esc(pq.locator)+')</span>':'')+'</div>';
+   (pq.options||[]).forEach(function(o,i){
+    var ok=o.verdict==='ĐÚNG';
+    h+='<div style="margin:6px 0 6px 10px"><span style="font-weight:bold;color:'+(ok?'#1a7f37':'#b3261e')+'">'+(ok?'✅ ĐÚNG':'❌ SAI')+'</span> <b>'+(i+1)+'.</b> '+esc(o.text||'')+'<div class="mut">'+tx(o.reason||'')+'</div></div>';
+   });
+  });
+ }
+ if(st.vocab&&st.vocab.length){
+  h+='<p style="margin:14px 0 4px"><b>Từ vựng trong bài</b></p>'+kwTable(['Từ','Đọc','Hán Việt','Nghĩa'],st.vocab.map(function(v){return [furi(v.word||''),esc(v.reading||''),esc(v.hanviet||''),esc(v.vi||'')]}));
+ }
+ if(st.grammar&&st.grammar.length){
+  h+='<p style="margin:14px 0 4px"><b>Ngữ pháp trong bài</b></p>'+kwTable(['Mẫu','Nghĩa','Trong bài'],st.grammar.map(function(g){return [furi(g.pattern||''),esc(g.vi||''),furi(g.in_text||'')]}));
+ }
+ if(st.compare&&st.compare.length){
+  st.compare.forEach(function(c){
+   h+='<p style="margin:14px 0 4px"><b>So sánh mẫu gần nghĩa: '+furi(c.pattern||'')+'</b></p>'+kwTable(['Dạng','Kết hợp','Nghĩa','Điểm khác','Ví dụ'],(c.rows||[]).map(function(r){return [furi(r.form||''),esc(r.join||''),esc(r.vi||''),esc(r.diff||''),furi(r.example_ja||'')+(r.example_vi?'<br><span class="mut">'+esc(r.example_vi)+'</span>':'')]}));
+  });
+ }
+ h+='<button class="btn2" data-b style="margin-top:10px">← Danh sách bài</button></div>';
+ box.innerHTML=h;
+ box.querySelector('[data-b]').onclick=menu;
+ window.__pracStartExam(box.querySelector('[data-exam]'),cfg);
+ scrollTo(0,box.offsetTop);
 }
 function openKaiwa(it){
  box.innerHTML='<div class="box" style="margin-top:12px">Đang tải bài kaiwa…</div>';
  fetch('data/tutor-n1/'+it.file).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
   var h='<div class="box" style="margin-top:12px"><h3>💬 '+(d.lesson!=null?'Kaiwa bài '+esc(d.lesson)+' · ':'Kaiwa · ')+esc(d.topic||it.title||'')+'</h3>';
-  (d.lines||[]).forEach(function(L){
-   h+='<div style="margin:10px 0"><b>'+esc(L.speaker||'')+'</b><div>'+esc(L.ja||'')+'</div><div class="mut">'+esc(L.vi||'')+'</div></div>';
-  });
+  if(d.scenes&&d.scenes.length){
+   if(d.summary)h+='<p>'+tx(d.summary)+'</p>';
+   d.scenes.forEach(function(sc){
+    h+='<h4 style="margin:16px 0 6px">'+esc(sc.title||'Hội thoại')+'</h4>';
+    if(sc.stage)h+='<p class="mut" style="margin:0 0 6px"><i>'+esc(sc.stage)+'</i></p>';
+    (sc.lines||[]).forEach(function(L){
+     h+='<div style="margin:10px 0"><b>'+esc(L.speaker||'')+'</b><div>'+furi(L.ja||'')+'</div><div class="mut">'+esc(L.vi||'')+'</div></div>';
+    });
+   });
+   if(d.textbook_vs_real&&d.textbook_vs_real.length){
+    h+='<h4 style="margin:18px 0 6px">Sách giáo khoa vs người Nhật nói thật</h4>'+kwTable(['Sách giáo khoa','Người Nhật nói thật','Vì sao'],d.textbook_vs_real.map(function(r){return [furi(r.textbook||''),furi(r.real||''),esc(r.why||'')]}));
+   }
+   if(d.spoken_dict&&d.spoken_dict.length){
+    h+='<h4 style="margin:18px 0 6px">📖 Từ điển văn nói trong bài: dùng lúc nào, tránh lúc nào</h4>'+kwTable(['Cách nói','Trong bài','Nghĩa / dạng gốc','✅ Dùng được','❌ Tránh'],d.spoken_dict.map(function(r){return [furi(r.form||''),furi(r.in_lesson||''),esc(r.vi||'')+(r.original?'<br>Dạng gốc: '+furi(r.original):''),esc(r.use||''),esc(r.avoid||'')]}));
+   }
+   if(d.common_phrases&&d.common_phrases.length){
+    h+='<h4 style="margin:18px 0 6px">'+d.common_phrases.length+' cụm hay dùng</h4><ol style="margin:6px 0 0;padding-left:22px">'+d.common_phrases.map(function(p){return '<li style="margin:8px 0"><b>'+furi(p.expr||'')+'</b>'+(p.reading?'（'+esc(p.reading)+'）':'')+': '+esc(p.vi||'')+(p.example_ja?'<br>'+furi(p.example_ja)+(p.example_vi?'<br><span class="mut">'+esc(p.example_vi)+'</span>':''):'')+'</li>'}).join('')+'</ol>';
+   }
+   if(d.mindset&&d.mindset.length){
+    h+='<h4 style="margin:18px 0 6px">🧠 Người Nhật nghĩ gì</h4>'+d.mindset.map(function(p){return '<p>'+tx(p)+'</p>'}).join('');
+   }
+   if(d.mistakes&&d.mistakes.length){
+    h+='<h4 style="margin:18px 0 6px">⚠️ Lưu ý dễ sai</h4><ul style="margin:6px 0 0;padding-left:20px">'+d.mistakes.map(function(p){return '<li style="margin:6px 0">'+tx(p)+'</li>'}).join('')+'</ul>';
+   }
+   if(d.speaking_practice&&d.speaking_practice.length){
+    h+='<h4 style="margin:18px 0 6px">🎤 Luyện tập nói</h4><ol style="margin:6px 0 0;padding-left:22px">'+d.speaking_practice.map(function(p){return '<li style="margin:6px 0">'+tx(p)+'</li>'}).join('')+'</ol>';
+   }
+  }else{
+   (d.lines||[]).forEach(function(L){
+    h+='<div style="margin:10px 0"><b>'+esc(L.speaker||'')+'</b><div>'+esc(L.ja||'')+'</div><div class="mut">'+esc(L.vi||'')+'</div></div>';
+   });
+  }
   if(d.notes&&d.notes.length)h+='<div style="margin-top:12px"><b>Ghi chú</b><ul style="margin:6px 0 0;padding-left:20px">'+d.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join('')+'</ul></div>';
   h+='<button class="btn2" data-b style="margin-top:10px">← Danh sách bài</button></div>';
   box.innerHTML=h;

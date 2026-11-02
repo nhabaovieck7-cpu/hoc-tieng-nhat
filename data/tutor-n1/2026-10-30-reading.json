@@ -1,41 +1,147 @@
-[
-  {
-    "level": "N1",
-    "section": "読解（主張理解）",
-    "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n筆者が最も言いたいことは何か。",
-    "choices": [
-      "便利さは生活の質を高めたのだから、さらに効率を追求すべきだ。",
-      "便利さだけを価値基準にせず、あえて不便を選ぶ余裕を取り戻すべきだ。",
-      "便利な技術は人々の記憶力を低下させるため、使用を制限すべきだ。",
-      "手紙や徒歩といった昔の生活様式に全面的に戻るべきだ。"
+{
+  "kind": "reading",
+  "intro": "Dạng bài: 読解（主張理解） — câu hỏi cốt lõi là 'tác giả muốn nói gì nhất'. Đặc điểm của dạng này: cả bài chỉ phục vụ một主張 ở đoạn cuối; các đoạn trước là khâu đặt vấn đề, nêu ví dụ và rào trước phản đề. Cách học bài này: Phần 1 làm như thi thật (mục tiêu luyện tập 8–10 phút cho 3 câu, bài đọc không furigana), sang Phần 2 học mẹo, Phần 3 đọc lại nguyên văn có furigana kèm dịch từng câu, Phần 4 xem chấm điểm từng phương án để học cách đề ra bẫy.",
+  "tips": [
+    {"h": "1. Đọc câu hỏi trước, xác định dạng", "body": "Cả 3 câu của bài này đều xoay quanh主張 của tác giả. Trước khi đọc bài, nhìn câu hỏi cuối （筆者が最も言いたいこと） để biết mình đang đi săn 'kết luận', không phải chi tiết vụn."},
+    {"h": "2. Kết luận nằm ở đoạn cuối, sau だからこそ・つまり", "body": "Trong bài 主張理解， đoạn cuối gần như luôn chứa主張. Cụm だからこそ là đèn hiệu: câu ngay sau nó chính là đáp án của câu hỏi về主張."},
+    {"h": "3. Gạch chân các câu 'phanh' của tác giả", "body": "Các câu kiểu '〜そのものを否定するつもりはない' là chỗ tác giả tự giới hạn lập trường của mình. Lựa chọn nào vượt qua giới hạn đó (phủ định toàn bộ, đòi quay hẳn về lối sống xưa) đều sai."},
+    {"h": "4. Săn từ cực đoan trong lựa chọn", "body": "全面的に・常に・必ず・完全に là nhóm từ 'nâng mức' kinh điển. Bài gốc thường dùng mức mềm （時として・むしろ・〜ていく）; lựa chọn chứa từ cực đoan mà bài không có = bẫy."},
+    {"h": "5. Phân biệt 'ý của số đông' với 'ý của tác giả'", "body": "Bài nghị luận hay mượn quan điểm của xã hội để phản biện ('〜として切り捨てられてきた' — bị coi là vô ích mà gạt bỏ). Đừng lấy câu mô tả quan điểm người khác làm quan điểm của tác giả."},
+    {"h": "6. Câu 'nội dung khớp' — kiểm từng lựa chọn độc lập", "body": "Với câu 本文の内容と合っているもの, mỗi lựa chọn phải tự đứng vững bằng một câu bằng chứng trong bài. Kiểm lần lượt cả 4 lựa chọn, loại dần 3 cái sai thay vì vội tìm cái đúng."},
+    {"h": "Áp dụng ngay vào bài hôm nay", "body": "Câu 1: đáp án nằm ở câu kết luận đoạn 3 （だからこそ…). Câu 2: bằng chứng ở câu cuối đoạn 2. Câu 3: có đủ 3 loại bẫy — cực đoan hoá （全面的に・常に）, đảo ngược (đòi theo đuổi hiệu quả hơn nữa) và ngoài bài (nói về trí nhớ suy giảm). Nhận diện được tên bẫy là đã làm xong nửa bài."}
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "便利さは生活の質を高めたのだから、さらに効率を追求すべきだ。",
+        "便利さだけを価値基準にせず、あえて不便を選ぶ余裕を取り戻すべきだ。",
+        "便利な技術は人々の記憶力を低下させるため、使用を制限すべきだ。",
+        "手紙や徒歩といった昔の生活様式に全面的に戻るべきだ。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án 2: đoạn cuối kết luận 「だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある」 — đây là主張 cốt lõi của tác giả. Phân tích đủ 4 phương án ở Phần 4."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n筆者は「待つこと」や「迷うこと」をどのように捉えているか。",
+      "choices": [
+        "効率を妨げる無駄な経験であり、できるだけ排除すべきもの。",
+        "昔の生活では避けられなかったが、今では意味を持たないもの。",
+        "便利な技術によって完全に代替できるもの。",
+        "記憶に残る出来事を生み出す、価値のある経験。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án 4: đoạn 2 viết điều còn lại trong ký ức chính là những việc xảy ra trong vòng vèo và công sức ấy — tác giả nhìn chờ đợi/lạc đường như trải nghiệm có giá trị."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n本文の内容と合っているものはどれか。",
+      "choices": [
+        "筆者は速さや手軽さだけを追い求めると、生活が平坦になると考えている。",
+        "筆者は便利さそのものを否定している。",
+        "筆者は偶然や発見は計画的な生活からは生まれないと考えている。",
+        "筆者は不便を選ぶことが常に正しいと考えている。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án 1: đoạn 3 ghi rõ 「速さや手軽さだけを追い求めれば、生活は平坦になり」. Ba lựa chọn còn lại hoặc trái nguyên văn, hoặc bị cực đoan hoá — xem Phần 4."
+    }
+  ],
+  "study": {
+    "passage_title": "Bài văn: Sự tiện lợi và những điều ta lặng lẽ đánh mất",
+    "structure": "Đoạn 1 — đặt vấn đề: cuộc sống tiện lợi chưa từng có, nhưng 'chúng ta đang lặng lẽ đánh mất điều gì đó chăng'. Đoạn 2 — nêu tên điều bị mất: trải nghiệm 'chờ đợi' và 'lạc đường', kèm ví dụ (chờ cuốn sách, hỏi đường) và kết luận nhỏ: điều còn lại trong ký ức chính là những vòng vèo ấy. Đoạn 3 — phản đề + kết luận: tác giả KHÔNG phủ định tiện lợi; vấn đề là nó trở thành tiêu chuẩn giá trị duy nhất; kết luận là hãy lấy lại余裕 để đôi khi cố ý chọn bất tiện. Đây là bố cục 起–承–転–結 mẫu mực của bài 主張理解：主張 chỉ nằm gọn ở câu kết luận đoạn cuối.",
+    "sentence_pairs": [
+      {"para": 1, "no": 1, "ja": "{私|わたし}たちの{生活|せいかつ}は、かつてないほど{便利|べんり}になった。", "vi": "Cuộc sống của chúng ta đã trở nên tiện lợi hơn bao giờ hết."},
+      {"para": 1, "no": 2, "ja": "{買い物|かいもの}は{指|ゆび}{一本|いっぽん}で{済|す}み、{分|わ}からないことはその{場|ば}で{調|しら}べられ、{移動|いどう}も{予約|よやく}もすべて{画面|がめん}の{中|なか}で{完結|かんけつ}する。", "vi": "Mua sắm chỉ cần một ngón tay, điều gì không biết thì tra ngay tại chỗ, di chuyển hay đặt chỗ đều hoàn tất trong màn hình."},
+      {"para": 1, "no": 3, "ja": "{便利|べんり}さは{確|たし}かに{生活|せいかつ}の{質|しつ}を{高|たか}めた。", "vi": "Sự tiện lợi quả thật đã nâng cao chất lượng cuộc sống."},
+      {"para": 1, "no": 4, "ja": "だが、その{一方|いっぽう}で、{私|わたし}たちは{何|なん}かを{静|しず}かに{失|うしな}ってきたのではないだろうか。", "vi": "Thế nhưng, mặt khác, phải chăng chúng ta đã lặng lẽ đánh mất điều gì đó?"},
+      {"para": 2, "no": 1, "ja": "それは「{待|ま}つこと」や「{迷|まよ}うこと」の{経験|けいけん}である。", "vi": "Đó là trải nghiệm 'chờ đợi' và 'lạc đường'."},
+      {"para": 2, "no": 2, "ja": "かつて、{欲|ほ}しい{本|ほん}が{手|て}に{入|はい}るまでには{何日|なんにち}も{待|ま}たなければならず、その{待|ま}ち{時間|じかん}の{中|なか}で{期待|きたい}は{膨|ふく}らんだ。", "vi": "Ngày trước, để có được cuốn sách mình muốn phải chờ nhiều ngày, và trong thời gian chờ ấy, sự háo hức cứ lớn dần."},
+      {"para": 2, "no": 3, "ja": "{道|みち}に{迷|まよ}えば{人|ひと}に{尋|たず}ね、{思|おも}いがけない{場所|ばしょ}に{出会|であ}った。", "vi": "Lạc đường thì hỏi người qua đường, và bắt gặp những nơi chốn không ngờ tới."},
+      {"para": 2, "no": 4, "ja": "{効率|こうりつ}を{追求|ついきゅう}するあまり、こうした{迂回|うかい}や{手間|てま}は「{無駄|むだ}」として{切り捨|きりす}てられてきた。", "vi": "Vì theo đuổi hiệu quả quá mức, những vòng vèo và công sức như thế đã bị gạt bỏ như là 'vô ích'."},
+      {"para": 2, "no": 5, "ja": "だが、{振り返|ふりかえ}ってみると、{記憶|きおく}に{残|のこ}っているのは、むしろその{迂回|うかい}や{手間|てま}の{中|なか}で{起|お}きた{出来事|できごと}のほうではないか。", "vi": "Thế nhưng nhìn lại, điều còn đọng trong ký ức lại chính là những chuyện xảy ra trong những vòng vèo và công sức ấy, chẳng phải sao."},
+      {"para": 3, "no": 1, "ja": "もちろん、{便利|べんり}さそのものを{否定|ひてい}するつもりはない。", "vi": "Dĩ nhiên, tác giả không hề có ý phủ định chính sự tiện lợi."},
+      {"para": 3, "no": 2, "ja": "{問題|もんだい}なのは、{便利|べんり}さが{唯一|ゆいいつ}の{価値|かち}{基準|きじゅん}になってしまったことである。", "vi": "Vấn đề nằm ở chỗ sự tiện lợi đã trở thành tiêu chuẩn giá trị duy nhất."},
+      {"para": 3, "no": 3, "ja": "{速|はや}さや{手軽|てがる}さだけを{追い求|おいもと}めれば、{生活|せいかつ}は{平坦|へいたん}になり、{偶然|ぐうぜん}や{発見|はっけん}の{余地|よち}は{狭|せば}まっていく。", "vi": "Nếu chỉ theo đuổi tốc độ và sự dễ dàng, cuộc sống sẽ thành phẳng lặng, và dư địa cho tình cờ và khám phá sẽ hẹp dần."},
+      {"para": 3, "no": 4, "ja": "だからこそ、{私|わたし}たちは{時|とき}として、あえて{不便|ふべん}を{選|えら}ぶ{余裕|よゆう}を{取り戻|とりもど}す{必要|ひつよう}がある。", "vi": "Chính vì thế, chúng ta cần lấy lại sự dư dả để đôi khi cố ý chọn lấy bất tiện."},
+      {"para": 3, "no": 5, "ja": "{手紙|てがみ}を{書|か}く、{遠回|とおまわ}りをして{歩|ある}く、すぐに{調|しら}べずにまず{考|かんが}えてみる。", "vi": "Viết một lá thư, đi đường vòng, hay thử nghĩ trước thay vì tra cứu ngay."},
+      {"para": 3, "no": 6, "ja": "そうした{小|ちい}さな{不便|ふべん}の{中|なか}にこそ、{生活|せいかつ}の{手触|てざわ}りや{深|ふか}みが{宿|やど}っていると、{筆者|ひっしゃ}は{考|かんが}えている。", "vi": "Tác giả cho rằng chính trong những bất tiện nhỏ bé ấy mới trú ngụ chất cảm và chiều sâu của cuộc sống."}
     ],
-    "answer": 1,
-    "explain_vi": "最終段落の「だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある」が主張の核心。1は筆者と逆、3は本文にない論点、4は「全面的に」戻るという極端化で、筆者は便利さ自体を否定していない。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（主張理解）",
-    "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n筆者は「待つこと」や「迷うこと」をどのように捉えているか。",
-    "choices": [
-      "効率を妨げる無駄な経験であり、できるだけ排除すべきもの。",
-      "記憶に残る出来事を生み出す、価値のある経験。",
-      "昔の生活では避けられなかったが、今では意味を持たないもの。",
-      "便利な技術によって完全に代替できるもの。"
+    "answer_key": "Câu 1 – đáp án 2 · Câu 2 – đáp án 4 · Câu 3 – đáp án 1",
+    "per_question": [
+      {
+        "q": 1, "answer": 1, "locator": "Đ3 câu 4",
+        "options": [
+          {"text": "便利さは生活の質を高めたのだから、さらに効率を追求すべきだ。", "verdict": "SAI", "reason": "Đảo ngược主張： đoạn 1 đúng là có thừa nhận tiện lợi nâng chất lượng sống, nhưng kết luận đoạn 3 đi ngược hẳn (chỉ đuổi theo tốc độ thì đời sống thành phẳng lặng). Bẫy kinh điển: lấy một nửa ý đúng ở đoạn đầu làm đáp án."},
+          {"text": "便利さだけを価値基準にせず、あえて不便を選ぶ余裕を取り戻すべきだ。", "verdict": "ĐÚNG", "reason": "Khớp nguyên văn câu kết luận đoạn 3 câu 4 'あえて不便を選ぶ余裕を取り戻す必要がある' và ý đoạn 3 câu 2 'vấn đề là tiện lợi thành tiêu chuẩn giá trị duy nhất'."},
+          {"text": "便利な技術は人々の記憶力を低下させるため、使用を制限すべきだ。", "verdict": "SAI", "reason": "Ngoài bài: bài không hề nói công nghệ làm giảm trí nhớ hay cần hạn chế sử dụng. Chữ 'ký ức' trong bài là về trải nghiệm đáng nhớ, không phải 'trí nhớ suy giảm'."},
+          {"text": "手紙や徒歩といった昔の生活様式に全面的に戻るべきだ。", "verdict": "SAI", "reason": "Cực đoan hoá: chữ '全面的に' (toàn diện) giết chết phương án này. Tác giả chỉ nêu viết thư, đi bộ đường vòng như ví dụ của việc 'đôi khi' （時として） chọn bất tiện, và nói rõ không phủ định tiện lợi."}
+        ]
+      },
+      {
+        "q": 2, "answer": 3, "locator": "Đ2 câu 5",
+        "options": [
+          {"text": "効率を妨げる無駄な経験であり、できるだけ排除すべきもの。", "verdict": "SAI", "reason": "Đây là cách nhìn của 'xã hội chuộng hiệu quả' mà tác giả đang phản biện （「無駄」として切り捨てられてきた ở Đ2 câu 4), không phải quan điểm của tác giả."},
+          {"text": "昔の生活では避けられなかったが、今では意味を持たないもの。", "verdict": "SAI", "reason": "Nửa đầu đúng (ngày xưa không tránh được), nửa sau trái bài: tác giả cho rằng ngày nay chúng vẫn có ý nghĩa và cần được chọn lại một cách chủ động."},
+          {"text": "便利な技術によって完全に代替できるもの。", "verdict": "SAI", "reason": "Ngoài bài + cực đoan ('完全に'): bài không nói công nghệ thay thế được trải nghiệm chờ đợi/lạc đường; ngược lại, chính vì công nghệ xoá chúng quá sạch nên ta mới mất đi điều quý giá."},
+          {"text": "記憶に残る出来事を生み出す、価値のある経験。", "verdict": "ĐÚNG", "reason": "Đ2 câu 5: 'điều còn lại trong ký ức chính là những việc xảy ra trong vòng vèo và công sức ấy' — tác giả nhìn chờ đợi/lạc đường như trải nghiệm sinh ra kỷ niệm, có giá trị."}
+        ]
+      },
+      {
+        "q": 3, "answer": 0, "locator": "Đ3 câu 3",
+        "options": [
+          {"text": "筆者は速さや手軽さだけを追い求めると、生活が平坦になると考えている。", "verdict": "ĐÚNG", "reason": "Khớp nguyên văn Đ3 câu 3: '速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく'."},
+          {"text": "筆者は便利さそのものを否定している。", "verdict": "SAI", "reason": "Trái nguyên văn Đ3 câu 1: 'もちろん、便利さそのものを否定するつもりはない' (không hề có ý phủ định chính sự tiện lợi)."},
+          {"text": "筆者は偶然や発見は計画的な生活からは生まれないと考えている。", "verdict": "SAI", "reason": "Biến tướng ý: bài nói đuổi theo tốc độ làm 'dư địa cho tình cờ và khám phá hẹp lại' — hẹp lại khác hẳn 'không sinh ra'; đồng thời khái niệm 'cuộc sống có kế hoạch' không hề xuất hiện trong bài."},
+          {"text": "筆者は不便を選ぶことが常に正しいと考えている。", "verdict": "SAI", "reason": "Cực đoan hoá bằng '常に' (luôn luôn): bài nói '時として' (đôi khi). Chỉ một chữ cũng đủ đổi hẳn lập trường của tác giả."}
+        ]
+      }
     ],
-    "answer": 1,
-    "explain_vi": "第2段落に「記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか」とある。筆者はそれを肯定的に捉えている。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（主張理解）",
-    "question": "私たちの生活は、かつてないほど便利になった。買い物は指一本で済み、分からないことはその場で調べられ、移動も予約もすべて画面の中で完結する。便利さは確かに生活の質を高めた。だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。\nそれは「待つこと」や「迷うこと」の経験である。かつて、欲しい本が手に入るまでには何日も待たなければならず、その待ち時間の中で期待は膨らんだ。道に迷えば人に尋ね、思いがけない場所に出会った。効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。だが、振り返ってみると、記憶に残っているのは、むしろその迂回や手間の中で起きた出来事のほうではないか。\nもちろん、便利さそのものを否定するつもりはない。問題なのは、便利さが唯一の価値基準になってしまったことである。速さや手軽さだけを追い求めれば、生活は平坦になり、偶然や発見の余地は狭まっていく。だからこそ、私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。手紙を書く、遠回りをして歩く、すぐに調べずにまず考えてみる。そうした小さな不便の中にこそ、生活の手触りや深みが宿っていると、筆者は考えている。\n本文の内容と合っているものはどれか。",
-    "choices": [
-      "筆者は便利さそのものを否定している。",
-      "筆者は速さや手軽さだけを追い求めると、生活が平坦になると考えている。",
-      "筆者は偶然や発見は計画的な生活からは生まれないと考えている。",
-      "筆者は不便を選ぶことが常に正しいと考えている。"
+    "vocab": [
+      {"word": "{迂回|うかい}", "reading": "うかい", "hanviet": "Vu Hồi", "vi": "Đi đường vòng, sự vòng vèo"},
+      {"word": "{手間|てま}", "reading": "てま", "hanviet": "Thủ Gian", "vi": "Công sức và thời gian bỏ ra"},
+      {"word": "{膨|ふく}らむ", "reading": "ふくらむ", "hanviet": "Bành", "vi": "Phồng lên, lớn dần (kỳ vọng dâng lên)"},
+      {"word": "{追求|ついきゅう}", "reading": "ついきゅう", "hanviet": "Truy Cầu", "vi": "Theo đuổi, truy cầu"},
+      {"word": "{切り捨|きりす}てる", "reading": "きりすてる", "hanviet": "Thiết Xả", "vi": "Cắt bỏ, gạt bỏ"},
+      {"word": "{振り返|ふりかえ}る", "reading": "ふりかえる", "hanviet": "Chấn Phản", "vi": "Nhìn lại, ngoảnh lại"},
+      {"word": "{否定|ひてい}", "reading": "ひてい", "hanviet": "Phủ Định", "vi": "Phủ định"},
+      {"word": "{価値基準|かちきじゅん}", "reading": "かちきじゅん", "hanviet": "Giá Trị Cơ Chuẩn", "vi": "Tiêu chuẩn giá trị"},
+      {"word": "{平坦|へいたん}", "reading": "へいたん", "hanviet": "Bình Đản", "vi": "Phẳng lặng, đơn điệu"},
+      {"word": "{余地|よち}", "reading": "よち", "hanviet": "Dư Địa", "vi": "Dư địa, chỗ trống dành cho ~"},
+      {"word": "あえて", "reading": "あえて", "hanviet": "—", "vi": "Cố ý (biết là ngược xu hướng, khó, vẫn làm)"},
+      {"word": "{余裕|よゆう}", "reading": "よゆう", "hanviet": "Dư Dụ", "vi": "Sự dư dả (thời gian, tiền bạc, tâm thế)"},
+      {"word": "{取り戻|とりもど}す", "reading": "とりもどす", "hanviet": "Thủ Lệ", "vi": "Lấy lại, khôi phục lại"},
+      {"word": "{手触|てざわ}り", "reading": "てざわり", "hanviet": "Thủ Xúc", "vi": "Cảm giác khi chạm vào; 'chất cảm' của đời sống"},
+      {"word": "{宿|やど}る", "reading": "やどる", "hanviet": "Túc", "vi": "Trú ngụ, ẩn chứa"}
     ],
-    "answer": 1,
-    "explain_vi": "第3段落に「速さや手軽さだけを追い求めれば、生活は平坦になり」と明記されている。1は「便利さそのものを否定するつもりはない」と矛盾、4の「常に」は極端化。"
+    "grammar": [
+      {"pattern": "〜のではないだろうか", "vi": "Không phải là ~ hay sao — đưa主張 của mình ra dạng tự hỏi, mềm và thuyết phục.", "in_text": "だが、その一方で、私たちは何かを静かに失ってきたのではないだろうか。"},
+      {"pattern": "〜あまり", "vi": "Vì quá ~ (nên dẫn tới kết quả ngoài ý muốn).", "in_text": "効率を追求するあまり、こうした迂回や手間は「無駄」として切り捨てられてきた。"},
+      {"pattern": "〜そのものを否定するつもりはない", "vi": "Không hề có ý phủ định chính bản thân ~ (câu 'phanh' giới hạn lập trường).", "in_text": "もちろん、便利さそのものを否定するつもりはない。"},
+      {"pattern": "あえて〜", "vi": "Cố ý ~ (biết là ngược đời, vẫn chọn).", "in_text": "私たちは時として、あえて不便を選ぶ余裕を取り戻す必要がある。"},
+      {"pattern": "〜にこそ", "vi": "Chính trong/chính ở ~ (nhấn mạnh nơi chứa giá trị).", "in_text": "そうした小さな不便の中にこそ、生活の手触りや深みが宿っている。"}
+    ],
+    "compare": [
+      {
+        "pattern": "あえて và các cách nói 'cố ý'",
+        "rows": [
+          {"form": "あえて", "join": "Đặt trước động từ", "vi": "Cố ý làm điều khó/ngược xu hướng", "diff": "Mang sắc thái thách thức: biết khó vẫn làm — chính là mẫu trong bài.", "example_ja": "あえて遠回りをして歩く。", "example_vi": "Cố ý đi đường vòng."},
+          {"form": "わざわざ", "join": "Đặt trước động từ", "vi": "Cố tình bỏ công làm riêng một việc", "diff": "Nhấn mạnh 'bỏ công riêng ra làm'; tuỳ ngữ cảnh có thể mang ý châm biếm nhẹ.", "example_ja": "わざわざ手紙を書いて送った。", "example_vi": "Bỏ công viết thư gửi đi."},
+          {"form": "好んで", "join": "Đặt trước động từ", "vi": "Thích mà làm, tự nguyện chọn", "diff": "Thiên về sở thích cá nhân, không có sắc thái 'vượt khó' như あえて.", "example_ja": "彼は好んで不便な旅をする。", "example_vi": "Anh ấy thích chọn những chuyến đi bất tiện."}
+        ]
+      },
+      {
+        "pattern": "〜なければならない và nhóm 'buộc phải'",
+        "rows": [
+          {"form": "〜なければならない", "join": "V-nai + なければならない", "vi": "Phải ~ (nghĩa vụ)", "diff": "Trung tính, dùng trong mọi văn cảnh — mẫu trong bài ở dạng nối câu 〜なければならず.", "example_ja": "何日も待たなければならなかった。", "example_vi": "Đã phải chờ nhiều ngày."},
+          {"form": "〜ざるを得ない", "join": "V-nai (bỏ い) + ざるを得ない", "vi": "Không còn cách nào khác ngoài ~", "diff": "Văn viết, trang trọng; sắc thái 'bị hoàn cảnh ép buộc' mạnh hơn.", "example_ja": "予定を変更せざるを得ない。", "example_vi": "Buộc phải thay đổi kế hoạch."},
+          {"form": "〜ほかない", "join": "V-phổ thông + ほかない", "vi": "Chỉ còn cách ~", "diff": "Nhấn mạnh không còn lựa chọn nào khác ngoài việc đó.", "example_ja": "バスを待つほかない。", "example_vi": "Chỉ còn cách chờ xe buýt."}
+        ]
+      }
+    ]
   }
-]
+}

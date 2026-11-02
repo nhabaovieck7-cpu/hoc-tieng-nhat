@@ -1,97 +1,99 @@
 {
   "lesson": 18,
   "topic": "Tối nay ăn gì? — Chuyện bếp núc, giao hàng nhầm và kế hoạch cuối tuần",
-  "lines": [
+  "summary": "Buổi tối ở nhà: 翔太 vừa về thì phát hiện một kiện hàng giao nhầm trong hộp nhận đồ （宅配ボックス） của tòa nhà; hai người vừa nấu bữa tối (gà teriyaki) vừa bàn kế hoạch thứ Bảy. Bài luyện văn nói gia đình thuần chất: câu hỏi rút gọn （どうする？), trích dẫn suồng sã 〜って, khẳng định thân mật 〜じゃん và loạt rút gọn 〜しとく・〜ちゃう. Thanh điệu 100% thể thường giữa người nhà — điểm khó hơn các bài trước là rất nhiều câu cắt cụt trợ từ và chủ ngữ, phải bám nhịp đệm さ・ね・よ mới bắt được ý. Bài không có kính ngữ; muốn nói với người ngoài hay người lớn tuổi thì tra lại bảng đối chiếu cuối bài.",
+  "scenes": [
     {
-      "speaker": "翔太",
-      "ja": "ただいまー。あ、今日さ、宅配ボックスに変な荷物入ってたんだけど。",
-      "vi": "Em về rồi đây. À, hôm nay này, trong hộp nhận đồ có một kiện hàng lạ."
+      "title": "Hội thoại 1（Ở nhà buổi tối — kiện hàng giao nhầm và bữa tối)",
+      "stage": "（翔太 vừa đi làm về, đứng ở cửa ra vào; 美咲 đang lúi húi trong bếp)",
+      "lines": [
+        {"speaker": "翔太", "ja": "ただいまー。あ、{今日|きょう}さ、{宅配|たくはい}ボックスに{変|へん}な{荷物|にもつ}{入|はい}ってたんだけど。", "vi": "Em về rồi đây. À, hôm nay này, trong hộp nhận đồ có một kiện hàng lạ."},
+        {"speaker": "美咲", "ja": "え、なにそれ？　うちのじゃないの？", "vi": "Hả, cái gì thế? Không phải đồ nhà mình à?"},
+        {"speaker": "翔太", "ja": "いや、{宛名|あてな}{見|み}たらさ、{隣|となり}の{棟|とう}の{人|ひと}だった。{部屋|へや}{番号|ばんごう}がさ、{似|に}てるんだよね、うちと。", "vi": "Không, nhìn tên người nhận thì là người tòa bên cạnh. Số phòng ấy, giống nhà mình."},
+        {"speaker": "美咲", "ja": "あー、よくあるよね、それ。で、どうしたの？　{置|お}いといた？", "vi": "À, chuyện đó hay gặp mà. Rồi sao, cậu để nguyên đó à?"},
+        {"speaker": "翔太", "ja": "ううん、{管理|かんり}{人|にん}{室|しつ}に{届|とど}けといた。ついでにさ、{今日|きょう}の{晩|ばん}ごはんどうする？", "vi": "Không, tớ mang qua phòng quản lý rồi. Tiện thể này, tối nay ăn gì?"},
+        {"speaker": "美咲", "ja": "んー、{冷蔵|れいぞう}{庫|こ}にさ、{鶏肉|とりにく}あるじゃん。あれでなんか{作|つく}らない？", "vi": "Ừm, trong tủ lạnh có thịt gà mà. Nấu gì với nó đi?"},
+        {"speaker": "翔太", "ja": "いいね。じゃあさ、{照|て}り{焼|や}きにしちゃう？　ごはん{炊|た}いとくよ。", "vi": "Hay đấy. Thế làm gà teriyaki nhé? Tớ nấu cơm trước."},
+        {"speaker": "美咲", "ja": "あ、でもさ、うちの{人|ひと}、{今日|きょう}{遅|おそ}くなるって{言|い}ってたよ。{帰|かえ}り、9{時|じ}{過|す}ぎるって。", "vi": "À, nhưng mà người nhà tớ bảo hôm nay về muộn. Về thì cũng quá 9 giờ."},
+        {"speaker": "翔太", "ja": "そっか。じゃあさ、{先|さき}に{二人|ふたり}で{食|た}べちゃって、{取り置|とりお}きしとけばいいじゃん。", "vi": "Thế à. Vậy thì hai đứa mình ăn trước, phần để lại là được mà."}
+      ]
     },
     {
-      "speaker": "美咲",
-      "ja": "え、なにそれ？　うちのじゃないの？",
-      "vi": "Hả, cái gì thế? Không phải đồ nhà mình à?"
-    },
-    {
-      "speaker": "翔太",
-      "ja": "いや、宛名見たらさ、隣の棟の人だった。部屋番号がさ、似てるんだよね、うちと。",
-      "vi": "Không, nhìn tên người nhận thì là người tòa bên cạnh. Số phòng ấy, giống nhà mình."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "あー、よくあるよね、それ。で、どうしたの？　置いといた？",
-      "vi": "À, chuyện đó hay gặp mà. Rồi sao, cậu để nguyên đó à?"
-    },
-    {
-      "speaker": "翔太",
-      "ja": "ううん、管理人室に届けといた。ついでにさ、今日の晩ごはんどうする？",
-      "vi": "Không, tớ mang qua phòng quản lý rồi. Tiện thể này, tối nay ăn gì?"
-    },
-    {
-      "speaker": "美咲",
-      "ja": "んー、冷蔵庫にさ、鶏肉あるじゃん。あれでなんか作らない？",
-      "vi": "Ừm, trong tủ lạnh có thịt gà mà. Nấu gì với nó đi?"
-    },
-    {
-      "speaker": "翔太",
-      "ja": "いいね。じゃあさ、照り焼きにしちゃう？　ごはん炊いとくよ。",
-      "vi": "Hay đấy. Thế làm gà teriyaki nhé? Tớ nấu cơm trước."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "あ、でもさ、うちの人、今日遅くなるって言ってたよ。帰り、9時過ぎるって。",
-      "vi": "À, nhưng mà người nhà tớ bảo hôm nay về muộn. Về thì cũng quá 9 giờ."
-    },
-    {
-      "speaker": "翔太",
-      "ja": "そっか。じゃあさ、先に二人で食べちゃって、取り置きしとけばいいじゃん。",
-      "vi": "Thế à. Vậy thì hai đứa mình ăn trước, phần để lại là được mà."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "だね。あ、それとさ、週末の話なんだけど、土曜どうする？",
-      "vi": "Ừ nhỉ. À, còn chuyện cuối tuần, thứ Bảy tính sao?"
-    },
-    {
-      "speaker": "翔太",
-      "ja": "土曜？　あー、天気よさそうだし、どっか出かけない？　ほら、前から行きたがってたあのカフェ。",
-      "vi": "Thứ Bảy á? À, thời tiết có vẻ đẹp, đi đâu chơi không? Này, cái quán cà phê mà cậu bảo muốn đi từ lâu ấy."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "あ、あそこね！　行きたーい。でもさ、混んでそうじゃない？　予約できるかな。",
-      "vi": "À, chỗ đó hả! Muốn đi quá. Nhưng mà chắc đông nhỉ? Không biết có đặt chỗ được không."
-    },
-    {
-      "speaker": "翔太",
-      "ja": "まあ、ダメだったらその辺ぶらぶらすればいいって。とりあえず明日、電話してみるよ。",
-      "vi": "Thôi, nếu không được thì đi loanh quanh gần đó cũng được mà. Tạm thời ngày mai tớ gọi điện thử."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "うん、お願い。あ、ごはん炊けた？　なんかいい匂いしてきた。",
-      "vi": "Ừ, nhờ cậu nhé. À, cơm chín chưa? Thấy thơm thơm rồi."
-    },
-    {
-      "speaker": "翔太",
-      "ja": "もうすぐだよ。はい、鶏肉切るの手伝って。ねぎも刻んどいて。",
-      "vi": "Sắp xong rồi. Này, phụ tớ cắt thịt gà đi. Hành cũng thái sẵn giúp nhé."
-    },
-    {
-      "speaker": "美咲",
-      "ja": "はーい。ねえ、照り焼きのタレさ、甘めがいいな。砂糖、ちょっと多めで。",
-      "vi": "Vâng ạ. Này, nước sốt teriyaki ấy, tớ thích ngọt một chút. Cho đường nhiều hơn tí nhé."
-    },
-    {
-      "speaker": "翔太",
-      "ja": "了解。あ、そうだ、明日の朝さ、ゴミ出し当番、俺だっけ？",
-      "vi": "Rõ. À, đúng rồi, sáng mai đến lượt ai đổ rác nhỉ, tớ à?"
-    },
-    {
-      "speaker": "美咲",
-      "ja": "ううん、明日は私。だから安心して寝てていいよ。ほら、早く食べよ。",
-      "vi": "Không, mai là lượt tớ. Nên cứ yên tâm mà ngủ nhé. Nào, ăn nhanh thôi."
+      "title": "Hội thoại 2（Kế hoạch cuối tuần)",
+      "stage": "（Vừa nấu ăn vừa nói chuyện; 美咲 gợi chuyện thứ Bảy)",
+      "lines": [
+        {"speaker": "美咲", "ja": "だね。あ、それとさ、{週末|しゅうまつ}の{話|はなし}なんだけど、{土曜|とよう}どうする？", "vi": "Ừ nhỉ. À, còn chuyện cuối tuần, thứ Bảy tính sao?"},
+        {"speaker": "翔太", "ja": "{土曜|とよう}？　あー、{天気|てんき}よさそうだし、どっか{出|で}かけない？　ほら、{前|まえ}から{行|い}きたがってたあのカフェ。", "vi": "Thứ Bảy á? À, thời tiết có vẻ đẹp, đi đâu chơi không? Này, cái quán cà phê mà cậu bảo muốn đi từ lâu ấy."},
+        {"speaker": "美咲", "ja": "あ、あそこね！　{行|い}きたーい。でもさ、{混|こ}んでそうじゃない？　{予約|よやく}できるかな。", "vi": "À, chỗ đó hả! Muốn đi quá. Nhưng mà chắc đông nhỉ? Không biết có đặt chỗ được không."},
+        {"speaker": "翔太", "ja": "まあ、ダメだったらその{辺|へん}ぶらぶらすればいいって。とりあえず{明日|あした}、{電話|でんわ}してみるよ。", "vi": "Thôi, nếu không được thì đi loanh quanh gần đó cũng được mà. Tạm thời ngày mai tớ gọi điện thử."},
+        {"speaker": "美咲", "ja": "うん、お{願|ねが}い。あ、ごはん{炊|た}けた？　なんかいい{匂|にお}いしてきた。", "vi": "Ừ, nhờ cậu nhé. À, cơm chín chưa? Thấy thơm thơm rồi."},
+        {"speaker": "翔太", "ja": "もうすぐだよ。はい、{鶏肉|とりにく}{切|き}るの{手伝|てつだ}って。ねぎも{刻|きざ}んどいて。", "vi": "Sắp xong rồi. Này, phụ tớ cắt thịt gà đi. Hành cũng thái sẵn giúp nhé."},
+        {"speaker": "美咲", "ja": "はーい。ねえ、{照|て}り{焼|や}きのタレさ、{甘|あま}めがいいな。{砂糖|さとう}、ちょっと{多|おお}めで。", "vi": "Vâng ạ. Này, nước sốt teriyaki ấy, tớ thích ngọt một chút. Cho đường nhiều hơn tí nhé."},
+        {"speaker": "翔太", "ja": "{了解|りょうかい}。あ、そうだ、{明日|あした}の{朝|あさ}さ、ゴミ{出|だ}し{当番|とうばん}、{俺|おれ}だっけ？", "vi": "Rõ. À, đúng rồi, sáng mai đến lượt ai đổ rác nhỉ, tớ à?"},
+        {"speaker": "美咲", "ja": "ううん、{明日|あした}は{私|わたし}。だから{安心|あんしん}して{寝|ね}てていいよ。ほら、{早|はや}く{食|た}べよ。", "vi": "Không, mai là lượt tớ. Nên cứ yên tâm mà ngủ nhé. Nào, ăn nhanh thôi."}
+      ]
     }
+  ],
+  "textbook_vs_real": [
+    {"textbook": "今日の晩ごはんはどうしますか。", "real": "今日の晩ごはんどうする？", "why": "Bỏ trợ từ は và thể lịch sự, thêm nhịp đệm さ — câu hỏi trong nhà ngắn gọn, thân mật."},
+    {"textbook": "遅くなると言っていました。", "real": "遅くなるって言ってた。", "why": "Trích dẫn 〜って thay cho 〜と, 言っていた rút thành 言ってた — văn nói rút gọn hai lớp."},
+    {"textbook": "冷蔵庫に鶏肉がありますよ。", "real": "冷蔵庫にさ、鶏肉あるじゃん。", "why": "〜じゃん khẳng định điều cả hai cùng biết ('có mà'), thay cho câu thông báo kiểu sách vở."},
+    {"textbook": "管理人室に届けておきました。", "real": "管理人室に届けといた。", "why": "〜ておく → 〜とく: mẫu rút gọn phổ biến bậc nhất trong văn nói."},
+    {"textbook": "明日は私がゴミ出しをします。", "real": "明日は私。", "why": "Cắt cả cụm vị ngữ khi ngữ cảnh đã rõ — chỉ còn lại chủ đề và người."},
+    {"textbook": "ごはんが炊けましたか。", "real": "ごはん炊けた？", "why": "Thể thường + lên giọng cuối câu thay cho trợ từ か — hỏi người nhà không cần か."}
+  ],
+  "spoken_dict": [
+    {"form": "〜じゃん", "in_lesson": "鶏肉あるじゃん", "original": "〜があるでしょう", "vi": "Khẳng định thân mật kiểu 'mà, đấy chứ' — nhắc điều người nghe cũng đã biết.", "use": "Bạn bè, người nhà, đồng nghiệp thân.", "avoid": "Cấp trên, người mới quen, khách hàng."},
+    {"form": "〜って", "in_lesson": "遅くなるって", "original": "〜と言っていた", "vi": "Trích dẫn suồng sã: 'bảo là ~'.", "use": "Bạn bè, người nhà.", "avoid": "Báo cáo, nói với cấp trên (dùng 〜とのことです／〜そうです)."},
+    {"form": "〜しとく", "in_lesson": "届けといた・ごはん炊いとく", "original": "〜しておく", "vi": "Làm sẵn, để sẵn cho tiện.", "use": "Mọi ngữ cảnh thân mật; trong nhà dùng hằng ngày.", "avoid": "Khi nói với khách hoặc cấp trên (giữ 〜しておきます)."},
+    {"form": "どうする？・どうしたの？", "in_lesson": "晩ごはんどうする？", "original": "どうするのですか", "vi": "Câu hỏi rút gọn, bỏ trợ từ và đuôi lịch sự.", "use": "Trong nhà, bạn thân.", "avoid": "Người lớn tuổi, người mới quen."},
+    {"form": "取り置き", "in_lesson": "取り置きしとけばいいじゃん", "original": "（từ đời sống, không có dạng sách riêng)", "vi": "Để phần (đồ ăn) lại cho người về sau.", "use": "Đời sống gia đình, quán ăn nhỏ.", "avoid": "Không nhầm với 予約 (đặt trước dịch vụ/thời gian)."},
+    {"form": "ぶらぶらする", "in_lesson": "その辺ぶらぶらすれば", "original": "散歩する", "vi": "Đi dạo loanh quanh không mục đích cụ thể, sắc thái thư giãn.", "use": "Bạn bè, gia đình.", "avoid": "Văn bản và ngữ cảnh trang trọng."},
+    {"form": "うちの人", "in_lesson": "うちの人、今日遅くなるって", "original": "家族・身内", "vi": "'Người nhà' — cách gọi trung tính chỉ người thân sống cùng, không nêu quan hệ cụ thể.", "use": "Nói chuyện thường ngày.", "avoid": "Giấy tờ, giới thiệu trang trọng khi cần nêu rõ quan hệ."},
+    {"form": "だね・そっか・まあ", "in_lesson": "そっか。じゃあさ…", "original": "そうですか", "vi": "Từ đệm giữ nhịp hội thoại, tỏ đồng tình hoặc đang suy nghĩ.", "use": "Bạn bè, người nhà.", "avoid": "Với cấp trên nên dùng そうですね・なるほど."}
+  ],
+  "common_phrases": [
+    {"expr": "{取|と}り{置|お}きしておく", "reading": "とりおきしておく", "vi": "Để phần sẵn (đồ ăn) cho người về muộn.", "example_ja": "{帰|かえ}りが{遅|おそ}い{人|ひと}の{分|ぶん}は、{取|と}り{置|お}きしといてね。", "example_vi": "Phần của người về muộn thì để phần sẵn nhé."},
+    {"expr": "ついでに", "reading": "ついでに", "vi": "Tiện thể — nhân lúc đang làm việc này thì làm luôn việc kia.", "example_ja": "{買|か}い{物|もの}のついでに、{薬局|やっきょく}にも{寄|よ}ってきて。", "example_vi": "Tiện đi mua đồ, ghé luôn hiệu thuốc nhé."},
+    {"expr": "〜しちゃう", "reading": "〜しちゃう", "vi": "Làm luôn/làm mất (rút gọn của 〜してしまう) — trong nhà mang sắc thái nhẹ nhàng, dứt khoát.", "example_ja": "{先|さき}に{食|た}べちゃおうか。", "example_vi": "Mình ăn trước luôn nhé?"},
+    {"expr": "とりあえず", "reading": "とりあえず", "vi": "Tạm thời/trước mắt cứ ~ đã, tính sau.", "example_ja": "とりあえず{明日|あした}、{電話|でんわ}してみるよ。", "example_vi": "Trước mắt ngày mai tớ gọi điện thử xem."},
+    {"expr": "{手伝|てつだ}って", "reading": "てつだって", "vi": "Phụ giúp ~ đi — mệnh lệnh mềm bằng て形, dùng trong nhà.", "example_ja": "{鶏肉|とりにく}{切|き}るの{手伝|てつだ}って。", "example_vi": "Phụ tớ cắt thịt gà đi."},
+    {"expr": "〜だっけ？", "reading": "〜だっけ", "vi": "'Là ~ nhỉ?' — tự hỏi lại trí nhớ của chính mình.", "example_ja": "{明日|あした}のゴミ{出|だ}し、{俺|おれ}だっけ？", "example_vi": "Sáng mai đổ rác là lượt tớ nhỉ?"}
+  ],
+  "mindset": [
+    "Người Nhật rất coi trọng việc không để người khác phải bận tâm vì mình: kiện hàng giao nhầm không phải của mình thì mang ngay xuống phòng quản lý （管理人室）, không mở ra xem, cũng không để kệ trong hộp nhận đồ chung — vì 宅配ボックス là tài sản chung của cả tòa nhà, một kiện để sai chỗ có thể khiến người khác không nhận được đồ của họ.",
+    "Trong bữa ăn gia đình, 取り置き (để phần) là cách thể hiện quan tâm lặng lẽ: người về muộn vẫn có phần cơm chờ sẵn. Cùng với đó là ゴミ出し当番 (luân phiên đổ rác) — việc nhà ở Nhật gắn với lịch thu gom rác rất nghiêm của khu phố, nên câu chuyện 'mai lượt ai đổ rác' là chi tiết rất thật trong mọi gia đình Nhật."
+  ],
+  "mistakes": [
+    "Dùng 〜じゃん với cấp trên hoặc người mới quen: 〜じゃん chỉ dành cho người thật thân; với người trên, chuyển sang 〜ですよ・〜がありますよ.",
+    "Đọc 私 là わたくし trong nhà sẽ nghe rất xa lạ, cứng nhắc; ở nhà dùng わたし, nam giới trong ngữ cảnh thân mật dùng 俺／僕 tùy quan hệ.",
+    "Dịch sát từng từ đệm （さ・ね・よ) khiến câu tiếng Việt bị vụn: các từ này giữ nhịp chứ không mang nghĩa riêng — hãy dịch theo cả câu.",
+    "Nhầm 取り置き với 予約： 取り置き là để phần đồ đã có sẵn (thường là đồ ăn), còn 予約 là đặt trước dịch vụ hoặc thời gian."
+  ],
+  "speaking_practice": [
+    "Báo với người nhà: hôm nay bạn về muộn khoảng 9 giờ, nhờ để phần cơm （取り置き) và nói rõ lý do, bằng văn nói thân mật.",
+    "Phát hiện kiện hàng giao nhầm trong 宅配ボックス: giải thích cho bạn cùng nhà chuyện số phòng giống nhau và đề xuất mang xuống 管理人室.",
+    "Bàn kế hoạch cuối tuần: rủ đi quán cà phê đã muốn đi từ lâu và dự phòng phương án nếu không đặt được chỗ （ぶらぶら quanh khu đó)."
+  ],
+  "lines": [
+    {"speaker": "翔太", "ja": "ただいまー。あ、今日さ、宅配ボックスに変な荷物入ってたんだけど。", "vi": "Em về rồi đây. À, hôm nay này, trong hộp nhận đồ có một kiện hàng lạ."},
+    {"speaker": "美咲", "ja": "え、なにそれ？　うちのじゃないの？", "vi": "Hả, cái gì thế? Không phải đồ nhà mình à?"},
+    {"speaker": "翔太", "ja": "いや、宛名見たらさ、隣の棟の人だった。部屋番号がさ、似てるんだよね、うちと。", "vi": "Không, nhìn tên người nhận thì là người tòa bên cạnh. Số phòng ấy, giống nhà mình."},
+    {"speaker": "美咲", "ja": "あー、よくあるよね、それ。で、どうしたの？　置いといた？", "vi": "À, chuyện đó hay gặp mà. Rồi sao, cậu để nguyên đó à?"},
+    {"speaker": "翔太", "ja": "ううん、管理人室に届けといた。ついでにさ、今日の晩ごはんどうする？", "vi": "Không, tớ mang qua phòng quản lý rồi. Tiện thể này, tối nay ăn gì?"},
+    {"speaker": "美咲", "ja": "んー、冷蔵庫にさ、鶏肉あるじゃん。あれでなんか作らない？", "vi": "Ừm, trong tủ lạnh có thịt gà mà. Nấu gì với nó đi?"},
+    {"speaker": "翔太", "ja": "いいね。じゃあさ、照り焼きにしちゃう？　ごはん炊いとくよ。", "vi": "Hay đấy. Thế làm gà teriyaki nhé? Tớ nấu cơm trước."},
+    {"speaker": "美咲", "ja": "あ、でもさ、うちの人、今日遅くなるって言ってたよ。帰り、9時過ぎるって。", "vi": "À, nhưng mà người nhà tớ bảo hôm nay về muộn. Về thì cũng quá 9 giờ."},
+    {"speaker": "翔太", "ja": "そっか。じゃあさ、先に二人で食べちゃって、取り置きしとけばいいじゃん。", "vi": "Thế à. Vậy thì hai đứa mình ăn trước, phần để lại là được mà."},
+    {"speaker": "美咲", "ja": "だね。あ、それとさ、週末の話なんだけど、土曜どうする？", "vi": "Ừ nhỉ. À, còn chuyện cuối tuần, thứ Bảy tính sao?"},
+    {"speaker": "翔太", "ja": "土曜？　あー、天気よさそうだし、どっか出かけない？　ほら、前から行きたがってたあのカフェ。", "vi": "Thứ Bảy á? À, thời tiết có vẻ đẹp, đi đâu chơi không? Này, cái quán cà phê mà cậu bảo muốn đi từ lâu ấy."},
+    {"speaker": "美咲", "ja": "あ、あそこね！　行きたーい。でもさ、混んでそうじゃない？　予約できるかな。", "vi": "À, chỗ đó hả! Muốn đi quá. Nhưng mà chắc đông nhỉ? Không biết có đặt chỗ được không."},
+    {"speaker": "翔太", "ja": "まあ、ダメだったらその辺ぶらぶらすればいいって。とりあえず明日、電話してみるよ。", "vi": "Thôi, nếu không được thì đi loanh quanh gần đó cũng được mà. Tạm thời ngày mai tớ gọi điện thử."},
+    {"speaker": "美咲", "ja": "うん、お願い。あ、ごはん炊けた？　なんかいい匂いしてきた。", "vi": "Ừ, nhờ cậu nhé. À, cơm chín chưa? Thấy thơm thơm rồi."},
+    {"speaker": "翔太", "ja": "もうすぐだよ。はい、鶏肉切るの手伝って。ねぎも刻んどいて。", "vi": "Sắp xong rồi. Này, phụ tớ cắt thịt gà đi. Hành cũng thái sẵn giúp nhé."},
+    {"speaker": "美咲", "ja": "はーい。ねえ、照り焼きのタレさ、甘めがいいな。砂糖、ちょっと多めで。", "vi": "Vâng ạ. Này, nước sốt teriyaki ấy, tớ thích ngọt một chút. Cho đường nhiều hơn tí nhé."},
+    {"speaker": "翔太", "ja": "了解。あ、そうだ、明日の朝さ、ゴミ出し当番、俺だっけ？", "vi": "Rõ. À, đúng rồi, sáng mai đến lượt ai đổ rác nhỉ, tớ à?"},
+    {"speaker": "美咲", "ja": "ううん、明日は私。だから安心して寝てていいよ。ほら、早く食べよ。", "vi": "Không, mai là lượt tớ. Nên cứ yên tâm mà ngủ nhé. Nào, ăn nhanh thôi."}
   ],
   "notes": [
     "「〜じゃん」: cách nói khẳng định thân mật, tương đương 'mà', 'đấy chứ' — dùng với bạn bè, người thân, không dùng với cấp trên.",

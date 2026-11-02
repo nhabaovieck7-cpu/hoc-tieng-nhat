@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "id": "2026-11-02-nganh-nghe-o-nhat",
+   "date": "2026-11-02",
+   "type": "tinh-nang",
+   "title": "Mới: Ngành nghề ở Nhật — từ vựng & kaiwa theo 19 ngành",
+   "desc": "Chuyên mục mới: 19 ngành theo phân loại chuẩn Nhật Bản — 236 nghề cụ thể, 5.947 từ vựng, 685 mẫu câu và 62 hội thoại mẫu dùng thật ở nơi làm việc, có furigana và ví dụ kèm bản dịch.",
+   "link": "nganh-nghe.html"
+  },
+  {
+   "id": "2026-11-02-on-n1-gia-su-lam-lai",
+   "date": "2026-11-02",
+   "type": "tinh-nang",
+   "title": "Ôn N1 cùng gia sư: bài kaiwa & đọc hiểu được làm lại đầy đủ",
+   "desc": "Các bài kaiwa và đọc hiểu trong mục Ôn N1 cùng gia sư (trang Thi thử) đã được làm lại theo định dạng chuẩn: kaiwa có tóm tắt, hội thoại theo cảnh, bảng đối chiếu cách người Nhật nói thật, từ điển văn nói, cụm hay dùng và phần luyện nói; đọc hiểu đủ 5 phần — đề làm như thi thật, phần học có dịch từng câu và giải thích từng phương án.",
+   "link": "thi-thu.html"
+  },
+  {
    "date": "2026-11-01",
    "desc": "Bỏ thanh ngang xem trước tin nhắn ở cuối trang — khung chat thu gọn giờ chỉ còn một nút tròn 💬 ở góc dưới, ấn vào mới mở ra. Có tin chưa đọc thì hiện số đỏ ngay trên nút.",
    "id": "2026-11-01-chat-nut-tron",
