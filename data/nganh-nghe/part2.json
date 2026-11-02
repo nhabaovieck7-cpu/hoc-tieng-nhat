@@ -2491,6 +2491,406 @@
      "read": "してき",
      "vi": "điểm bị chỉ ra cần sửa (trong nghiệm thu, kiểm tra an toàn)",
      "w": "{指摘|してき}"
+    },
+    {
+     "w": "カラーコーン",
+     "read": "からーこーん",
+     "hv": "",
+     "vi": "cọc tiêu hình nón, nón giao thông",
+     "ex": "カラーコーンを{並|なら}べて{立入禁止|たちいりきんし}にします。",
+     "exVi": "Xếp cọc tiêu nón thành hàng để làm khu vực cấm vào."
+    },
+    {
+     "w": "バリケード",
+     "read": "ばりけーど",
+     "hv": "",
+     "vi": "rào chắn tạm",
+     "ex": "バリケードの{前|まえ}に{看板|かんばん}を{置|お}きます。",
+     "exVi": "Đặt biển báo trước rào chắn tạm."
+    },
+    {
+     "w": "{誘導員|ゆうどういん}",
+     "read": "ゆうどういん",
+     "hv": "dụ đạo viên",
+     "vi": "người hướng dẫn, điều tiết xe và người qua lại",
+     "ex": "{誘導員|ゆうどういん}の{合図|あいず}でダンプを{止|と}めます。",
+     "exVi": "Dừng xe ben theo tín hiệu của người hướng dẫn."
+    },
+    {
+     "w": "{合図|あいず}",
+     "read": "あいず",
+     "hv": "",
+     "vi": "tín hiệu, ám hiệu bằng tay khi cẩu hàng, điều khiển máy",
+     "ex": "クレーンは{合図|あいず}を{見|み}てから{動|うご}かします。",
+     "exVi": "Chỉ cho cần cẩu di chuyển sau khi nhìn thấy tín hiệu."
+    },
+    {
+     "w": "{開口部|かいこうぶ}",
+     "read": "かいこうぶ",
+     "hv": "khai khẩu bộ",
+     "vi": "lỗ mở trên sàn (hố thang, lỗ thông tầng) dễ gây ngã",
+     "ex": "{開口部|かいこうぶ}の{周|まわ}りにロープを{張|は}ります。",
+     "exVi": "Căng dây quanh lỗ mở sàn để cảnh báo."
+    },
+    {
+     "w": "{柱|はしら}",
+     "read": "はしら",
+     "hv": "trụ",
+     "vi": "cột (nhà, khung kết cấu)",
+     "ex": "{柱|はしら}を{垂直|すいちょく}に{立|た}てます。",
+     "exVi": "Dựng cột cho thẳng đứng."
+    },
+    {
+     "w": "{梁|はり}",
+     "read": "はり",
+     "hv": "lương",
+     "vi": "dầm ngang",
+     "ex": "{梁|はり}をクレーンで{上|あ}げます。",
+     "exVi": "Dùng cần cẩu nâng dầm lên."
+    },
+    {
+     "w": "{筋交|すじか}い",
+     "read": "すじかい",
+     "hv": "cân",
+     "vi": "thanh giằng chéo chống xô lệch khung gỗ",
+     "ex": "{筋交|すじか}いをビスで{止|と}めます。",
+     "exVi": "Cố định thanh giằng chéo bằng vít."
+    },
+    {
+     "w": "{土台|どだい}",
+     "read": "どだい",
+     "hv": "thổ đài",
+     "vi": "gỗ nền đặt trên móng để dựng cột",
+     "ex": "{土台|どだい}を{基礎|きそ}の{上|うえ}に{据|す}えます。",
+     "exVi": "Đặt gỗ nền lên trên móng."
+    },
+    {
+     "w": "{間柱|まばしら}",
+     "read": "まばしら",
+     "hv": "gian trụ",
+     "vi": "cột phụ nằm giữa hai cột chính",
+     "ex": "{間柱|まばしら}の{間隔|かんかく}を{測|はか}ります。",
+     "exVi": "Đo khoảng cách giữa các cột phụ."
+    },
+    {
+     "w": "{丁張|ちょうは}り",
+     "read": "ちょうはり",
+     "hv": "đinh trương",
+     "vi": "căng dây, đóng cọc định vị vị trí và cao độ thi công",
+     "ex": "{朝|あさ}に{丁張|ちょうは}りをして{位置|いち}を{出|だ}します。",
+     "exVi": "Buổi sáng căng dây định vị để lấy vị trí thi công."
+    },
+    {
+     "w": "{水糸|みずいと}",
+     "read": "みずいと",
+     "hv": "thủy mịch",
+     "vi": "dây căng lấy thẳng và cao độ",
+     "ex": "{水糸|みずいと}を{張|は}って{高|たか}さをそろえます。",
+     "exVi": "Căng dây lấy mực để chỉnh cao độ cho đều."
+    },
+    {
+     "w": "{路肩|ろかた}",
+     "read": "ろかた",
+     "hv": "lộ kiên",
+     "vi": "lề đường, vai đường",
+     "ex": "{路肩|ろかた}にカラーコーンを{置|お}きます。",
+     "exVi": "Đặt cọc tiêu nón ở lề đường."
+    },
+    {
+     "w": "{歩道|ほどう}",
+     "read": "ほどう",
+     "hv": "bộ đạo",
+     "vi": "vỉa hè, lối đi bộ",
+     "ex": "{歩道|ほどう}は{歩行者|ほこうしゃ}が{通|とお}れるよう{空|あ}けます。",
+     "exVi": "Chừa lối trên vỉa hè để người đi bộ đi qua được."
+    },
+    {
+     "w": "{車道|しゃどう}",
+     "read": "しゃどう",
+     "hv": "xa đạo",
+     "vi": "lòng đường dành cho xe chạy",
+     "ex": "{車道|しゃどう}の{舗装|ほそう}は{夜|よる}にします。",
+     "exVi": "Phần rải mặt lòng đường sẽ làm vào ban đêm."
+    },
+    {
+     "w": "{結束線|けっそくせん}",
+     "read": "けっそくせん",
+     "hv": "kết thúc tuyến",
+     "vi": "dây thép buộc cốt thép",
+     "ex": "{結束線|けっそくせん}で{鉄筋|てっきん}をしばります。",
+     "exVi": "Dùng dây thép buộc để buộc cốt thép."
+    },
+    {
+     "w": "バール",
+     "read": "ばーる",
+     "hv": "",
+     "vi": "xà beng, thanh nạy để nhổ đinh, bẩy ván",
+     "ex": "バールで{釘|くぎ}を{抜|ぬ}きます。",
+     "exVi": "Dùng xà beng để nhổ đinh."
+    },
+    {
+     "w": "{釘|くぎ}",
+     "read": "くぎ",
+     "hv": "đinh",
+     "vi": "đinh (đóng gỗ, cốp pha)",
+     "ex": "{釘|くぎ}をまっすぐ{打|う}ちます。",
+     "exVi": "Đóng đinh cho thẳng."
+    },
+    {
+     "w": "ビス",
+     "read": "びす",
+     "hv": "",
+     "vi": "vít, đinh vít",
+     "ex": "ビスをインパクトドライバーで{締|し}めます。",
+     "exVi": "Siết vít bằng máy vặn vít."
+    },
+    {
+     "w": "{墨|すみ}つぼ",
+     "read": "すみつぼ",
+     "hv": "mặc",
+     "vi": "hộp mực, bình mực để bật dây đánh dấu",
+     "ex": "{墨|すみ}つぼで{線|せん}を{引|ひ}きます。",
+     "exVi": "Dùng hộp mực để kẻ đường mực."
+    },
+    {
+     "w": "{仮設電気|かせつでんき}",
+     "read": "かせつでんき",
+     "hv": "giả thiết điện khí",
+     "vi": "điện tạm phục vụ thi công",
+     "ex": "{仮設電気|かせつでんき}のケーブルは{上|うえ}に{回|まわ}します。",
+     "exVi": "Cáp điện tạm đi vòng phía trên cao."
+    },
+    {
+     "w": "{延長|えんちょう}コード",
+     "read": "えんちょうこーど",
+     "hv": "diên trường",
+     "vi": "dây điện nối dài, ổ nối dài",
+     "ex": "{延長|えんちょう}コードは{束|たば}ねずに{伸|の}ばします。",
+     "exVi": "Dây nối dài không bó lại mà trải thẳng ra."
+    },
+    {
+     "w": "{投光器|とうこうき}",
+     "read": "とうこうき",
+     "hv": "đầu quang khí",
+     "vi": "đèn pha chiếu sáng công trường",
+     "ex": "{夕方|ゆうがた}は{投光器|とうこうき}をつけます。",
+     "exVi": "Buổi chiều tối thì bật đèn pha công trường."
+    },
+    {
+     "w": "{発電機|はつでんき}",
+     "read": "はつでんき",
+     "hv": "phát điện cơ",
+     "vi": "máy phát điện",
+     "ex": "{発電機|はつでんき}の{燃料|ねんりょう}を{確認|かくにん}します。",
+     "exVi": "Kiểm tra nhiên liệu của máy phát điện."
+    },
+    {
+     "w": "エルボ",
+     "read": "えるぼ",
+     "hv": "",
+     "vi": "co nối ống, cút cong đổi hướng ống",
+     "ex": "エルボで{配管|はいかん}の{向|む}きを{変|か}えます。",
+     "exVi": "Dùng co nối để đổi hướng đường ống."
+    },
+    {
+     "w": "{変更図|へんこうず}",
+     "read": "へんこうず",
+     "hv": "biến canh đồ",
+     "vi": "bản vẽ thay đổi, bản vẽ sửa đổi",
+     "ex": "{変更図|へんこうず}が{届|とど}いたら{古|ふる}い{図面|ずめん}と{替|か}えます。",
+     "exVi": "Khi bản vẽ thay đổi đến thì thay cho bản vẽ cũ."
+    },
+    {
+     "w": "{凡例|はんれい}",
+     "read": "はんれい",
+     "hv": "phàm lệ",
+     "vi": "phần chú thích ký hiệu trên bản vẽ",
+     "ex": "{図面|ずめん}の{凡例|はんれい}で{記号|きごう}を{確認|かくにん}します。",
+     "exVi": "Đối chiếu ký hiệu bằng phần chú thích trên bản vẽ."
+    },
+    {
+     "w": "{縮尺|しゅくしゃく}",
+     "read": "しゅくしゃく",
+     "hv": "súc xích",
+     "vi": "tỉ lệ bản vẽ",
+     "ex": "{縮尺|しゅくしゃく}を{見|み}て{長|なが}さを{計算|けいさん}します。",
+     "exVi": "Xem tỉ lệ bản vẽ để tính chiều dài thực tế."
+    },
+    {
+     "w": "{方位|ほうい}",
+     "read": "ほうい",
+     "hv": "phương vị",
+     "vi": "phương hướng trên bản vẽ (bắc, nam, đông, tây)",
+     "ex": "{方位|ほうい}を{見|み}て{北側|きたがわ}を{確認|かくにん}します。",
+     "exVi": "Xem phương hướng để xác nhận phía bắc."
+    },
+    {
+     "w": "{仮設|かせつ}トイレ",
+     "read": "かせつといれ",
+     "hv": "giả thiết",
+     "vi": "nhà vệ sinh tạm ở công trường",
+     "ex": "{仮設|かせつ}トイレは{毎日|まいにち}{掃除|そうじ}します。",
+     "exVi": "Nhà vệ sinh tạm phải dọn vệ sinh mỗi ngày."
+    },
+    {
+     "w": "{出来形|できがた}",
+     "read": "できがた",
+     "hv": "xuất lai hình",
+     "vi": "kích thước, hình dạng thực tế sau khi thi công xong",
+     "ex": "{出来形|できがた}をスケールで{測|はか}ります。",
+     "exVi": "Đo kích thước thực tế sau thi công bằng thước."
+    },
+    {
+     "w": "{面一|つらいち}",
+     "read": "つらいち",
+     "hv": "diện nhất",
+     "vi": "bằng mặt, phẳng mặt với nhau (không lồi lõm lệch mặt)",
+     "ex": "タイルを{面一|つらいち}にそろえます。",
+     "exVi": "Chỉnh gạch ốp cho bằng mặt nhau."
+    },
+    {
+     "w": "{不陸|ふりく}",
+     "read": "ふりく",
+     "hv": "bất lục",
+     "vi": "độ không bằng phẳng của sàn, mặt nền",
+     "ex": "{床|ゆか}の{不陸|ふりく}を{定規|じょうぎ}で{見|み}ます。",
+     "exVi": "Kiểm tra độ không bằng phẳng của sàn bằng thước thẳng."
+    },
+    {
+     "w": "{目視|もくし}",
+     "read": "もくし",
+     "hv": "mục thị",
+     "vi": "kiểm tra bằng mắt thường",
+     "ex": "{仕上|しあ}がりを{目視|もくし}で{確認|かくにん}します。",
+     "exVi": "Kiểm tra bề mặt hoàn thiện bằng mắt."
+    },
+    {
+     "w": "{色|いろ}むら",
+     "read": "いろむら",
+     "hv": "sắc",
+     "vi": "loang màu, màu không đều (sơn, hoàn thiện)",
+     "ex": "{塗装|とそう}に{色|いろ}むらがないか{見|み}ます。",
+     "exVi": "Xem lớp sơn có bị loang màu không."
+    },
+    {
+     "w": "{内装解体|ないそうかいたい}",
+     "read": "ないそうかいたい",
+     "hv": "nội trang giải thể",
+     "vi": "phá dỡ phần nội thất bên trong",
+     "ex": "{内装解体|ないそうかいたい}は{手壊|てこわ}しでします。",
+     "exVi": "Phá dỡ nội thất làm bằng tay."
+    },
+    {
+     "w": "{搬出|はんしゅつ}",
+     "read": "はんしゅつ",
+     "hv": "ban xuất",
+     "vi": "việc đưa vật, phế liệu ra khỏi công trường",
+     "ex": "がれきの{搬出|はんしゅつ}は{午後|ごご}からです。",
+     "exVi": "Việc chuyển xà bần ra ngoài bắt đầu từ buổi chiều."
+    },
+    {
+     "w": "{積込|つみこ}み",
+     "read": "つみこみ",
+     "hv": "tích",
+     "vi": "việc bốc xếp lên xe tải",
+     "ex": "{廃材|はいざい}をダンプに{積込|つみこ}みます。",
+     "exVi": "Bốc phế liệu lên xe ben."
+    },
+    {
+     "w": "{床下|ゆかした}",
+     "read": "ゆかした",
+     "hv": "sàng hạ",
+     "vi": "khoảng dưới sàn nhà",
+     "ex": "{床下|ゆかした}の{配管|はいかん}を{調|しら}べます。",
+     "exVi": "Kiểm tra đường ống dưới sàn."
+    },
+    {
+     "w": "{天井裏|てんじょううら}",
+     "read": "てんじょううら",
+     "hv": "thiên tỉnh lý",
+     "vi": "khoảng trên trần, trong trần",
+     "ex": "{天井裏|てんじょううら}の{水漏|みずも}れを{見|み}ます。",
+     "exVi": "Kiểm tra chỗ rò nước trên khoảng trần."
+    },
+    {
+     "w": "{職長|しょくちょう}",
+     "read": "しょくちょう",
+     "hv": "chức trưởng",
+     "vi": "tổ trưởng đội thi công",
+     "ex": "{分|わ}からないことは{職長|しょくちょう}に{聞|き}きます。",
+     "exVi": "Việc gì không rõ thì hỏi tổ trưởng."
+    },
+    {
+     "w": "{監督|かんとく}",
+     "read": "かんとく",
+     "hv": "giám đốc",
+     "vi": "người giám sát hiện trường",
+     "ex": "{監督|かんとく}に{今日|きょう}の{作業|さぎょう}を{報告|ほうこく}します。",
+     "exVi": "Báo cáo công việc hôm nay cho giám sát."
+    },
+    {
+     "w": "{現場代理人|げんばだいりにん}",
+     "read": "げんばだいりにん",
+     "hv": "hiện trường đại lý nhân",
+     "vi": "người đại diện hiện trường của nhà thầu",
+     "ex": "{現場代理人|げんばだいりにん}が{朝礼|ちょうれい}で{話|はな}します。",
+     "exVi": "Người đại diện hiện trường sẽ phát biểu trong họp sáng."
+    },
+    {
+     "w": "{近隣住民|きんりんじゅうみん}",
+     "read": "きんりんじゅうみん",
+     "hv": "cận lân trụ dân",
+     "vi": "cư dân sống xung quanh công trường",
+     "ex": "{近隣住民|きんりんじゅうみん}に{工事|こうじ}の{時間|じかん}を{伝|つた}えます。",
+     "exVi": "Thông báo giờ thi công cho cư dân xung quanh."
+    },
+    {
+     "w": "{発注|はっちゅう}",
+     "read": "はっちゅう",
+     "hv": "phát chú",
+     "vi": "việc đặt hàng, đặt vật tư",
+     "ex": "{材料|ざいりょう}の{発注|はっちゅう}は{金曜日|きんようび}までです。",
+     "exVi": "Việc đặt vật liệu hạn chót là thứ Sáu."
+    },
+    {
+     "w": "{残業|ざんぎょう}",
+     "read": "ざんぎょう",
+     "hv": "tàn nghiệp",
+     "vi": "làm thêm giờ, tăng ca",
+     "ex": "{今日|きょう}は{残業|ざんぎょう}で{七時|しちじ}までします。",
+     "exVi": "Hôm nay tăng ca làm đến 7 giờ."
+    },
+    {
+     "w": "{夜勤|やきん}",
+     "read": "やきん",
+     "hv": "dạ cần",
+     "vi": "ca đêm",
+     "ex": "{来週|らいしゅう}は{三日|みっか}{夜勤|やきん}があります。",
+     "exVi": "Tuần sau có ba ngày làm ca đêm."
+    },
+    {
+     "w": "{早出|はやで}",
+     "read": "はやで",
+     "hv": "tảo xuất",
+     "vi": "đi làm sớm hơn giờ thường, ca sớm",
+     "ex": "{早出|はやで}の{日|ひ}は{六時|ろくじ}に{現場|げんば}へ{行|い}きます。",
+     "exVi": "Ngày đi sớm thì 6 giờ có mặt ở công trường."
+    },
+    {
+     "w": "{交代|こうたい}",
+     "read": "こうたい",
+     "hv": "giao đại",
+     "vi": "đổi ca, thay phiên nhau",
+     "ex": "{夜勤|やきん}と{交代|こうたい}で{休憩|きゅうけい}します。",
+     "exVi": "Thay phiên nhau với ca đêm để nghỉ giải lao."
+    },
+    {
+     "w": "{休日出勤|きゅうじつしゅっきん}",
+     "read": "きゅうじつしゅっきん",
+     "hv": "hưu nhật xuất cần",
+     "vi": "đi làm vào ngày nghỉ",
+     "ex": "{休日出勤|きゅうじつしゅっきん}は{手当|てあて}がつきます。",
+     "exVi": "Đi làm ngày nghỉ sẽ có phụ cấp."
     }
    ],
    "phrases": [
@@ -2633,6 +3033,56 @@
      "ja": "{戸締|とじま}りと{火|ひ}の{元|もと}を{確認|かくにん}しました。",
      "vi": "Đã kiểm tra khóa cửa và nguồn lửa rồi ạ.",
      "note": "Báo kiểm tra cuối ngày trước khi rời hiện trường."
+    },
+    {
+     "ja": "クレーンで{荷|に}を{吊|つ}りますので、{下|した}には{入|はい}らないでください。",
+     "vi": "Tôi sẽ cẩu tải lên nên xin đừng vào phía dưới ạ.",
+     "note": "Cảnh báo khi cẩu hàng, nói to rõ để mọi người tránh xa khu vực dưới tải."
+    },
+    {
+     "ja": "めまいがするので、{今日|きょう}は{高|たか}い{所|ところ}には{上|のぼ}れません。",
+     "vi": "Tôi bị chóng mặt nên hôm nay không leo lên chỗ cao được ạ.",
+     "note": "Báo ngay khi chóng mặt, tuyệt đối không cố làm việc trên cao."
+    },
+    {
+     "ja": "{配管|はいかん}から{水|みず}が{漏|も}れています。{止水栓|しすいせん}を{閉|し}めてください。",
+     "vi": "Đường ống đang rò nước ạ. Xin khóa van nước lại giúp.",
+     "note": "Báo sự cố rò nước và nhờ xử lý bước đầu, sau đó báo ngay cho tổ trưởng."
+    },
+    {
+     "ja": "この{材料|ざいりょう}はどこに{置|お}けばいいですか。",
+     "vi": "Vật liệu này để ở đâu thì được ạ?",
+     "note": "Hỏi vị trí tập kết khi đưa vật liệu vào, tránh để bừa cản lối đi."
+    },
+    {
+     "ja": "インパクトドライバーを{貸|か}してもらえますか。",
+     "vi": "Cho tôi mượn máy vặn vít được không ạ?",
+     "note": "Mượn dụng cụ của đồng nghiệp, nói lịch sự và trả lại ngay sau khi dùng."
+    },
+    {
+     "ja": "{次|つぎ}はどの{作業|さぎょう}をすればいいですか。",
+     "vi": "Tiếp theo tôi nên làm công việc nào ạ?",
+     "note": "Hỏi việc tiếp theo khi đã xong phần được giao, tránh đứng chờ không có việc."
+    },
+    {
+     "ja": "{結束線|けっそくせん}がなくなりそうなので、{注文|ちゅうもん}をお{願|ねが}いします。",
+     "vi": "Dây thép buộc sắp hết nên nhờ anh/chị đặt thêm giúp ạ.",
+     "note": "Báo sớm khi vật tư sắp hết để không bị gián đoạn thi công."
+    },
+    {
+     "ja": "{重|おも}いので、{一緒|いっしょ}に{持|も}ってもらえますか。",
+     "vi": "Nặng quá, anh/chị khiêng cùng tôi được không ạ?",
+     "note": "Nhờ phụ khiêng đồ nặng, tránh cố khiêng một mình gây chấn thương lưng."
+    },
+    {
+     "ja": "{作業|さぎょう}が{終|お}わりましたので、{道具|どうぐ}を{片付|かたづ}けます。",
+     "vi": "Công việc đã xong nên tôi sẽ dọn dụng cụ ạ.",
+     "note": "Báo kết thúc việc và dọn dẹp cuối ca."
+    },
+    {
+     "ja": "{明日|あした}の{集合時間|しゅうごうじかん}と{集合場所|しゅうごうばしょ}を{教|おし}えてください。",
+     "vi": "Xin cho tôi biết giờ tập trung và địa điểm tập trung ngày mai ạ.",
+     "note": "Xác nhận trước giờ và điểm tập trung của ngày hôm sau, nhất là khi đổi hiện trường."
     }
    ],
    "dialogues": [
@@ -5264,6 +5714,406 @@
      "read": "しゅりんくほうそう",
      "vi": "đóng gói bằng màng co nhiệt cho thành phẩm",
      "w": "シュリンク{包装|ほうそう}"
+    },
+    {
+     "ex": "{班長|はんちょう}に{今日|きょう}の{進捗|しんちょく}を{報告|ほうこく}します。",
+     "exVi": "Báo cáo tiến độ hôm nay cho tổ trưởng ca.",
+     "hv": "ban trưởng",
+     "read": "はんちょう",
+     "vi": "tổ trưởng ca, trưởng nhóm line",
+     "w": "{班長|はんちょう}"
+    },
+    {
+     "ex": "シフト{表|ひょう}で{来週|らいしゅう}の{夜勤|やきん}を{確認|かくにん}します。",
+     "exVi": "Xem bảng phân ca để xác nhận ca đêm tuần sau.",
+     "hv": "biểu",
+     "read": "しふとひょう",
+     "vi": "bảng phân ca, lịch ca",
+     "w": "シフト{表|ひょう}"
+    },
+    {
+     "ex": "{生産|せいさん}の{進捗|しんちょく}をボードに{書|か}きます。",
+     "exVi": "Viết tiến độ sản xuất lên bảng.",
+     "hv": "tiến bộ",
+     "read": "しんちょく",
+     "vi": "tiến độ sản xuất",
+     "w": "{進捗|しんちょく}"
+    },
+    {
+     "ex": "{前工程|ぜんこうてい}から{部品|ぶひん}が{届|とど}いていません。",
+     "exVi": "Linh kiện từ công đoạn trước chưa đến.",
+     "hv": "tiền công trình",
+     "read": "ぜんこうてい",
+     "vi": "công đoạn trước",
+     "w": "{前工程|ぜんこうてい}"
+    },
+    {
+     "ex": "{完成|かんせい}したものを{後工程|こうこうてい}へ{送|おく}ります。",
+     "exVi": "Chuyển sản phẩm đã hoàn thành sang công đoạn sau.",
+     "hv": "hậu công trình",
+     "read": "こうこうてい",
+     "vi": "công đoạn sau",
+     "w": "{後工程|こうこうてい}"
+    },
+    {
+     "ex": "ハンドリフトでパレットを{倉庫|そうこ}まで{運|はこ}びます。",
+     "exVi": "Dùng xe nâng tay chở pallet đến kho.",
+     "hv": "",
+     "read": "はんどりふと",
+     "vi": "xe nâng tay, xe kéo pallet bằng tay",
+     "w": "ハンドリフト"
+    },
+    {
+     "ex": "ストレッチフィルムをパレットに{巻|ま}いて{固定|こてい}します。",
+     "exVi": "Quấn màng chít quanh pallet để cố định.",
+     "hv": "",
+     "read": "すとれっちふぃるむ",
+     "vi": "màng quấn pallet, màng chít",
+     "w": "ストレッチフィルム"
+    },
+    {
+     "ex": "ガムテープでダンボールの{口|くち}を{閉|し}めます。",
+     "exVi": "Dùng băng dính dán kín miệng thùng carton.",
+     "hv": "",
+     "read": "がむてーぷ",
+     "vi": "băng dính đóng thùng carton",
+     "w": "ガムテープ"
+    },
+    {
+     "ex": "{荷札|にふだ}に{品番|ひんばん}と{数量|すうりょう}を{書|か}きます。",
+     "exVi": "Ghi mã hàng và số lượng lên thẻ hàng.",
+     "hv": "hà trát",
+     "read": "にふだ",
+     "vi": "thẻ hàng, nhãn treo ghi mã hàng và số lượng",
+     "w": "{荷札|にふだ}"
+    },
+    {
+     "ex": "トラックへの{積|つ}み{込|こ}みは{午前中|ごぜんちゅう}に{終|お}わります。",
+     "exVi": "Việc bốc hàng lên xe tải sẽ xong trong buổi sáng.",
+     "hv": "",
+     "read": "つみこみ",
+     "vi": "việc bốc xếp hàng lên xe",
+     "w": "{積|つ}み{込|こ}み"
+    },
+    {
+     "ex": "{危|あぶ}ないときは{非常停止|ひじょうていし}ボタンを{押|お}します。",
+     "exVi": "Khi nguy hiểm thì nhấn nút dừng khẩn cấp.",
+     "hv": "phi thường đình chỉ",
+     "read": "ひじょうていし",
+     "vi": "dừng khẩn cấp (nút dừng khẩn trên máy)",
+     "w": "{非常停止|ひじょうていし}"
+    },
+    {
+     "ex": "アラームが{鳴|な}ったらラインを{止|と}めて{呼|よ}んでください。",
+     "exVi": "Chuông báo lỗi kêu thì dừng line và gọi người phụ trách.",
+     "hv": "",
+     "read": "あらーむ",
+     "vi": "chuông, còi báo lỗi của máy",
+     "w": "アラーム"
+    },
+    {
+     "ex": "{消耗品|しょうもうひん}が{少|すく}なくなったら{早|はや}めに{注文|ちゅうもん}します。",
+     "exVi": "Vật tư tiêu hao sắp hết thì đặt hàng sớm.",
+     "hv": "tiêu hao phẩm",
+     "read": "しょうもうひん",
+     "vi": "vật tư tiêu hao (dao cắt, mũi khoan, giấy nhám)",
+     "w": "{消耗品|しょうもうひん}"
+    },
+    {
+     "ex": "{予備品|よびひん}は{棚|たな}の{上|うえ}に{置|お}いてあります。",
+     "exVi": "Phụ tùng dự phòng để ở trên kệ.",
+     "hv": "dự bị phẩm",
+     "read": "よびひん",
+     "vi": "phụ tùng dự phòng, linh kiện để sẵn thay thế",
+     "w": "{予備品|よびひん}"
+    },
+    {
+     "ex": "{軸受|じくう}けから{異音|いおん}がするので{交換|こうかん}します。",
+     "exVi": "Ổ trục phát ra tiếng lạ nên sẽ thay mới.",
+     "hv": "trục thụ",
+     "read": "じくうけ",
+     "vi": "ổ trục, vòng bi đỡ trục",
+     "w": "{軸受|じくう}け"
+    },
+    {
+     "ex": "{今日|きょう}の{不良率|ふりょうりつ}は1パーセント{以下|いか}です。",
+     "exVi": "Tỷ lệ lỗi hôm nay dưới 1 phần trăm.",
+     "hv": "bất lương suất",
+     "read": "ふりょうりつ",
+     "vi": "tỷ lệ hàng lỗi",
+     "w": "{不良率|ふりょうりつ}"
+    },
+    {
+     "ex": "{手直|てなお}しが{必要|ひつよう}なものは{青|あお}い{箱|はこ}に{分|わ}けます。",
+     "exVi": "Hàng cần sửa lại thì phân vào thùng xanh.",
+     "hv": "",
+     "read": "てなおし",
+     "vi": "sửa lại hàng lỗi, làm lại chỗ chưa đạt",
+     "w": "{手直|てなお}し"
+    },
+    {
+     "ex": "{直|なお}せない{不良品|ふりょうひん}は{許可|きょか}を{取|と}って{廃棄|はいき}します。",
+     "exVi": "Hàng lỗi không sửa được thì xin phép rồi hủy bỏ.",
+     "hv": "phế khí",
+     "read": "はいき",
+     "vi": "hủy bỏ hàng lỗi không sửa được",
+     "w": "{廃棄|はいき}"
+    },
+    {
+     "ex": "{判断|はんだん}できないものは{保留|ほりゅう}にして{上司|じょうし}に{聞|き}きます。",
+     "exVi": "Hàng chưa phán định được thì tạm giữ lại và hỏi cấp trên.",
+     "hv": "bảo lưu",
+     "read": "ほりゅう",
+     "vi": "tạm giữ lại chờ phán định, chưa cho qua",
+     "w": "{保留|ほりゅう}"
+    },
+    {
+     "ex": "{手直|てなお}しのあとは{再検査|さいけんさ}をします。",
+     "exVi": "Sau khi sửa lại thì kiểm tra lại.",
+     "hv": "tái kiểm tra",
+     "read": "さいけんさ",
+     "vi": "kiểm tra lại",
+     "w": "{再検査|さいけんさ}"
+    },
+    {
+     "ex": "{工場|こうじょう}ではヘルメットをかぶります。",
+     "exVi": "Trong nhà máy phải đội mũ bảo hộ.",
+     "hv": "",
+     "read": "へるめっと",
+     "vi": "mũ bảo hộ lao động",
+     "w": "ヘルメット"
+    },
+    {
+     "ex": "{濡|ぬ}れた{手|て}で{配線|はいせん}を{触|さわ}ると{感電|かんでん}します。",
+     "exVi": "Tay ướt chạm vào dây điện sẽ bị điện giật.",
+     "hv": "cảm điện",
+     "read": "かんでん",
+     "vi": "điện giật, bị điện giật",
+     "w": "{感電|かんでん}"
+    },
+    {
+     "ex": "{暑|あつ}い{日|ひ}は{水分|すいぶん}をとって{熱中症|ねっちゅうしょう}を{防|ふせ}ぎます。",
+     "exVi": "Ngày nóng thì uống nước để phòng sốc nhiệt.",
+     "hv": "nhiệt trung chứng",
+     "read": "ねっちゅうしょう",
+     "vi": "say nắng, sốc nhiệt",
+     "w": "{熱中症|ねっちゅうしょう}"
+    },
+    {
+     "ex": "{朝礼|ちょうれい}で{危険予知|きけんよち}をします。",
+     "exVi": "Trong buổi họp sáng sẽ làm hoạt động dự đoán nguy hiểm.",
+     "hv": "nguy hiểm dự tri",
+     "read": "きけんよち",
+     "vi": "dự đoán nguy hiểm trước khi làm (hoạt động KY)",
+     "w": "{危険予知|きけんよち}"
+    },
+    {
+     "ex": "{非常|ひじょう}ベルが{鳴|な}ったら{避難|ひなん}します。",
+     "exVi": "Chuông khẩn cấp kêu thì sơ tán.",
+     "hv": "phi thường",
+     "read": "ひじょうべる",
+     "vi": "chuông báo cháy, chuông khẩn cấp",
+     "w": "{非常|ひじょう}ベル"
+    },
+    {
+     "ex": "ドリルで{鉄板|てっぱん}に{穴|あな}をあけます。",
+     "exVi": "Dùng khoan khoan lỗ trên tấm thép.",
+     "hv": "",
+     "read": "どりる",
+     "vi": "mũi khoan, máy khoan cầm tay",
+     "w": "ドリル"
+    },
+    {
+     "ex": "ボール{盤|ばん}を{使|つか}うときは{手袋|てぶくろ}をしません。",
+     "exVi": "Khi dùng máy khoan bàn thì không đeo găng tay.",
+     "hv": "bàn",
+     "read": "ぼーるばん",
+     "vi": "máy khoan bàn",
+     "w": "ボール{盤|ばん}"
+    },
+    {
+     "ex": "グラインダーでバリを{取|と}ります。",
+     "exVi": "Dùng máy mài cầm tay để lấy bavia.",
+     "hv": "",
+     "read": "ぐらいんだー",
+     "vi": "máy mài cầm tay",
+     "w": "グラインダー"
+    },
+    {
+     "ex": "ボルトとナットをセットで{使|つか}います。",
+     "exVi": "Dùng bu-lông và đai ốc theo bộ.",
+     "hv": "",
+     "read": "なっと",
+     "vi": "đai ốc, ê-cu",
+     "w": "ナット"
+    },
+    {
+     "ex": "ワッシャーを{入|い}れてからナットを{締|し}めます。",
+     "exVi": "Cho vòng đệm vào rồi mới siết đai ốc.",
+     "hv": "",
+     "read": "わっしゃー",
+     "vi": "vòng đệm, long đền",
+     "w": "ワッシャー"
+    },
+    {
+     "ex": "ヒューズが{切|き}れたら{同|おな}じ{規格|きかく}のものに{替|か}えます。",
+     "exVi": "Cầu chì đứt thì thay bằng cầu chì cùng quy cách.",
+     "hv": "",
+     "read": "ひゅーず",
+     "vi": "cầu chì",
+     "w": "ヒューズ"
+    },
+    {
+     "ex": "ブレーカーが{落|お}ちたら{原因|げんいん}を{調|しら}べます。",
+     "exVi": "Aptomat nhảy thì kiểm tra nguyên nhân.",
+     "hv": "",
+     "read": "ぶれーかー",
+     "vi": "aptomat, cầu dao tự động ngắt điện",
+     "w": "ブレーカー"
+    },
+    {
+     "ex": "テスターで{電圧|でんあつ}を{測|はか}ります。",
+     "exVi": "Dùng đồng hồ đo để đo điện áp.",
+     "hv": "",
+     "read": "てすたー",
+     "vi": "đồng hồ đo điện, máy kiểm tra mạch",
+     "w": "テスター"
+    },
+    {
+     "ex": "ニッパーでリードを{短|みじか}く{切|き}ります。",
+     "exVi": "Dùng kìm cắt cắt ngắn chân linh kiện.",
+     "hv": "",
+     "read": "にっぱー",
+     "vi": "kìm cắt (cắt chân linh kiện, dây nhỏ)",
+     "w": "ニッパー"
+    },
+    {
+     "ex": "ピンセットで{小|ちい}さい{部品|ぶひん}をつまみます。",
+     "exVi": "Dùng nhíp gắp linh kiện nhỏ.",
+     "hv": "",
+     "read": "ぴんせっと",
+     "vi": "nhíp gắp linh kiện nhỏ",
+     "w": "ピンセット"
+    },
+    {
+     "ex": "バッテリーの{電圧|でんあつ}を{点検|てんけん}します。",
+     "exVi": "Kiểm tra điện áp ắc quy.",
+     "hv": "",
+     "read": "ばってりー",
+     "vi": "ắc quy ô tô",
+     "w": "バッテリー"
+    },
+    {
+     "ex": "ウインカーが{点滅|てんめつ}するか{確認|かくにん}します。",
+     "exVi": "Kiểm tra đèn xi-nhan có nhấp nháy không.",
+     "hv": "",
+     "read": "ういんかー",
+     "vi": "đèn xi-nhan",
+     "w": "ウインカー"
+    },
+    {
+     "ex": "エアバッグは{衝撃|しょうげき}で{開|ひら}きます。",
+     "exVi": "Túi khí bung ra khi có va chạm.",
+     "hv": "",
+     "read": "えあばっぐ",
+     "vi": "túi khí ô tô",
+     "w": "エアバッグ"
+    },
+    {
+     "ex": "ラジエーターの{水|みず}の{量|りょう}を{見|み}ます。",
+     "exVi": "Xem lượng nước trong két nước.",
+     "hv": "",
+     "read": "らじえーたー",
+     "vi": "két nước làm mát động cơ",
+     "w": "ラジエーター"
+    },
+    {
+     "ex": "ナンバープレートを{正|ただ}しく{取|と}り{付|つ}けます。",
+     "exVi": "Gắn biển số xe đúng cách.",
+     "hv": "",
+     "read": "なんばーぷれーと",
+     "vi": "biển số xe",
+     "w": "ナンバープレート"
+    },
+    {
+     "ex": "{製品|せいひん}は{金属探知機|きんぞくたんちき}を{通|とお}してから{箱詰|はこづ}めします。",
+     "exVi": "Sản phẩm qua máy dò kim loại rồi mới đóng thùng.",
+     "hv": "kim thuộc thám tri cơ",
+     "read": "きんぞくたんちき",
+     "vi": "máy dò kim loại (kiểm tra dị vật kim loại trong thực phẩm)",
+     "w": "{金属探知機|きんぞくたんちき}"
+    },
+    {
+     "ex": "{白衣|はくい}と{帽子|ぼうし}を{着|き}てから{入室|にゅうしつ}します。",
+     "exVi": "Mặc áo trắng và đội mũ rồi mới vào phòng.",
+     "hv": "bạch y",
+     "read": "はくい",
+     "vi": "áo blouse trắng của công nhân thực phẩm",
+     "w": "{白衣|はくい}"
+    },
+    {
+     "ex": "{冷蔵庫|れいぞうこ}の{温度管理|おんどかんり}を{毎日|まいにち}します。",
+     "exVi": "Quản lý nhiệt độ tủ lạnh mỗi ngày.",
+     "hv": "ôn độ quản lý",
+     "read": "おんどかんり",
+     "vi": "quản lý nhiệt độ (kho lạnh, tủ bảo quản)",
+     "w": "{温度管理|おんどかんり}"
+    },
+    {
+     "ex": "{入室前|にゅうしつまえ}に{粘着|ねんちゃく}ローラーでほこりを{取|と}ります。",
+     "exVi": "Trước khi vào phòng dùng cây lăn dính lấy bụi.",
+     "hv": "niêm trứ",
+     "read": "ねんちゃくろーらー",
+     "vi": "cây lăn dính bụi, tóc trên quần áo",
+     "w": "{粘着|ねんちゃく}ローラー"
+    },
+    {
+     "ex": "{衛生帽|えいせいぼう}から{髪|かみ}が{出|で}ないようにします。",
+     "exVi": "Đội mũ vệ sinh sao cho tóc không lộ ra ngoài.",
+     "hv": "vệ sinh mạo",
+     "read": "えいせいぼう",
+     "vi": "mũ vệ sinh trùm tóc (trong xưởng thực phẩm)",
+     "w": "{衛生帽|えいせいぼう}"
+    },
+    {
+     "ex": "ペレットは{使|つか}う{前|まえ}に{乾燥|かんそう}させます。",
+     "exVi": "Hạt nhựa phải sấy khô trước khi dùng.",
+     "hv": "can táo",
+     "read": "かんそう",
+     "vi": "sấy khô, làm khô (hạt nhựa, giấy, vải)",
+     "w": "{乾燥|かんそう}"
+    },
+    {
+     "ex": "{添加剤|てんかざい}の{量|りょう}を{間違|まちが}えないでください。",
+     "exVi": "Đừng nhầm lượng chất phụ gia.",
+     "hv": "thêm gia tễ",
+     "read": "てんかざい",
+     "vi": "chất phụ gia",
+     "w": "{添加剤|てんかざい}"
+    },
+    {
+     "ex": "ホッパーにペレットを{補充|ほじゅう}します。",
+     "exVi": "Bổ sung hạt nhựa vào phễu cấp liệu.",
+     "hv": "",
+     "read": "ほっぱー",
+     "vi": "phễu cấp liệu của máy ép nhựa",
+     "w": "ホッパー"
+    },
+    {
+     "ex": "{生地|きじ}の{汚|よご}れを{確認|かくにん}してから{裁断|さいだん}します。",
+     "exVi": "Kiểm tra vết bẩn trên vải rồi mới cắt.",
+     "hv": "",
+     "read": "きじ",
+     "vi": "vải mộc, vải nền chưa nhuộm, chưa in",
+     "w": "{生地|きじ}"
+    },
+    {
+     "ex": "ミシンの{針|はり}が{折|お}れたらすぐ{交換|こうかん}します。",
+     "exVi": "Kim máy may gãy thì thay ngay.",
+     "hv": "",
+     "read": "みしん",
+     "vi": "máy may công nghiệp",
+     "w": "ミシン"
     }
    ],
    "phrases": [
@@ -5406,6 +6256,56 @@
      "ja": "この{作業|さぎょう}は{初|はじ}めてなので、{見本|みほん}を{見|み}せていただけますか。",
      "vi": "Việc này tôi làm lần đầu, cho tôi xem mẫu được không ạ?",
      "note": "Xin xem mẫu khi làm việc mới, lịch sự."
+    },
+    {
+     "ja": "{二|ふた}つの{作業|さぎょう}が{重|かさ}なりました。どちらを{先|さき}にすればいいですか。",
+     "note": "Hỏi thứ tự ưu tiên khi hai việc cùng đến một lúc.",
+     "vi": "Hai việc chồng nhau. Tôi nên làm việc nào trước ạ?"
+    },
+    {
+     "ja": "こちらの{作業|さぎょう}は{終|お}わりました。{次|つぎ}は{何|なに}をすればいいですか。",
+     "note": "Báo hoàn thành và hỏi việc tiếp theo, tránh đứng chờ không việc.",
+     "vi": "Việc bên này tôi làm xong rồi. Tiếp theo tôi làm gì ạ?"
+    },
+    {
+     "ja": "1{時間|じかん}に{何個|なんこ}{作|つく}ればいいですか。",
+     "note": "Xác nhận định mức số lượng theo giờ khi vào việc mới.",
+     "vi": "Một giờ cần làm bao nhiêu cái ạ?"
+    },
+    {
+     "ja": "{刃物|はもの}が{摩耗|まもう}しています。{交換|こうかん}してもいいですか。",
+     "note": "Xin phép thay dao cụ khi thấy đã mòn, trước khi ra hàng lỗi.",
+     "vi": "Dao cắt đã mòn. Tôi thay mới được không ạ?"
+    },
+    {
+     "ja": "{機械|きかい}がいつもより{熱|あつ}いです。{温度|おんど}を{確認|かくにん}してください。",
+     "note": "Báo máy quá nhiệt, nhờ tổ trưởng hoặc bảo trì kiểm tra.",
+     "vi": "Máy nóng hơn bình thường. Xin kiểm tra nhiệt độ giúp ạ."
+    },
+    {
+     "ja": "{材料|ざいりょう}があと{少|すこ}しでなくなります。{補充|ほじゅう}をお{願|ねが}いします。",
+     "note": "Báo sắp hết nguyên liệu ngay tại line để được bổ sung kịp, khác với báo tồn kho để phát chú.",
+     "vi": "Nguyên liệu sắp hết rồi. Xin bổ sung giúp ạ."
+    },
+    {
+     "ja": "{使|つか}う{工具|こうぐ}が{見|み}つかりません。{予備|よび}はありますか。",
+     "note": "Báo thiếu dụng cụ và hỏi đồ dự phòng, tránh tự ý lấy của line khác.",
+     "vi": "Tôi không tìm thấy dụng cụ cần dùng. Có cái dự phòng không ạ?"
+    },
+    {
+     "ja": "{図面|ずめん}のこの{寸法|すんぽう}が{読|よ}めません。{教|おし}えてください。",
+     "note": "Hỏi ngay khi không đọc được bản vẽ, trước khi làm tiếp.",
+     "vi": "Tôi không đọc được kích thước này trên bản vẽ. Xin chỉ giúp ạ."
+    },
+    {
+     "ja": "すみません、トイレに{行|い}きたいです。{少|すこ}し{離|はな}れてもいいですか。",
+     "note": "Xin phép rời line đi vệ sinh; ở xưởng Nhật phải báo trước khi rời vị trí.",
+     "vi": "Xin lỗi, tôi muốn đi vệ sinh. Tôi rời line một chút được không ạ?"
+    },
+    {
+     "ja": "{手|て}が{痛|いた}いので、できれば{別|べつ}の{工程|こうてい}に{代|か}わってもいいですか。",
+     "note": "Xin đổi vị trí khi đau mỏi; báo sớm với tổ trưởng thay vì cố làm.",
+     "vi": "Tay tôi đau, nếu được thì cho tôi đổi sang công đoạn khác được không ạ?"
     }
    ],
    "dialogues": [

@@ -4085,6 +4085,566 @@
      "vi": "tư thế đứng, việc giữ đứng",
      "ex": "{立位|りつい}を{保|たも}つ{練習|れんしゅう}をします。",
      "exVi": "Luyện giữ tư thế đứng."
+    },
+    {
+     "w": "{送迎車|そうげいしゃ}",
+     "read": "そうげいしゃ",
+     "hv": "tống nghênh xa",
+     "vi": "xe đưa đón cụ",
+     "ex": "{送迎車|そうげいしゃ}が{着|つ}きましたよ。ゆっくり{降|お}りましょう。",
+     "exVi": "Xe đưa đón đến rồi ạ. Mình xuống xe từ từ nhé."
+    },
+    {
+     "w": "おしぼり",
+     "read": "おしぼり",
+     "hv": "",
+     "vi": "khăn ẩm (lau tay trước ăn)",
+     "ex": "おしぼりで{手|て}を{拭|ふ}いてくださいね。",
+     "exVi": "Bác lau tay bằng khăn ẩm nhé."
+    },
+    {
+     "w": "コップ",
+     "read": "こっぷ",
+     "hv": "",
+     "vi": "cốc uống nước",
+     "ex": "コップに{水|みず}を{入|い}れますね。",
+     "exVi": "Em rót nước vào cốc cho bác nhé."
+    },
+    {
+     "w": "ストロー",
+     "read": "すとろー",
+     "hv": "",
+     "vi": "ống hút",
+     "ex": "ストローでゆっくり{飲|の}んでくださいね。",
+     "exVi": "Bác uống từ từ bằng ống hút nhé."
+    },
+    {
+     "w": "{白湯|さゆ}",
+     "read": "さゆ",
+     "hv": "bạch thang",
+     "vi": "nước ấm (nước đun sôi để ấm, cho cụ uống buổi sáng/khi uống thuốc)",
+     "ex": "{朝|あさ}はまず{白湯|さゆ}をどうぞ。",
+     "exVi": "Buổi sáng bác uống nước ấm trước nhé."
+    },
+    {
+     "w": "{湯呑|ゆの}み",
+     "read": "ゆのみ",
+     "hv": "thang thôn",
+     "vi": "cốc uống trà (không quai)",
+     "ex": "{湯呑|ゆの}みは{熱|あつ}いので、{気|き}をつけてくださいね。",
+     "exVi": "Cốc trà còn nóng, bác cẩn thận nhé."
+    },
+    {
+     "w": "{水筒|すいとう}",
+     "read": "すいとう",
+     "hv": "thủy đồng",
+     "vi": "bình nước cá nhân",
+     "ex": "{水筒|すいとう}に{名前|なまえ}を{書|か}いておきますね。",
+     "exVi": "Em ghi tên lên bình nước cho bác nhé."
+    },
+    {
+     "w": "ハンカチ",
+     "read": "はんかち",
+     "hv": "",
+     "vi": "khăn tay",
+     "ex": "ハンカチはポケットに{入|い}れておきましょう。",
+     "exVi": "Mình để khăn tay vào túi nhé."
+    },
+    {
+     "w": "{上履|うわば}き",
+     "read": "うわばき",
+     "hv": "thượng lý",
+     "vi": "dép đi trong nhà, trong cơ sở",
+     "ex": "{上履|うわば}きに{履|は}き{替|か}えて、{部屋|へや}に{入|はい}りましょう。",
+     "exVi": "Mình thay dép đi trong nhà rồi vào phòng nhé."
+    },
+    {
+     "w": "{名札|なふだ}",
+     "read": "なふだ",
+     "hv": "danh trát",
+     "vi": "thẻ tên (đeo trên áo)",
+     "ex": "{名札|なふだ}をつけて、レクリエーションに{参加|さんか}しましょう。",
+     "exVi": "Đeo thẻ tên rồi cùng tham gia hoạt động giải trí nhé."
+    },
+    {
+     "w": "{貼|は}り{薬|ぐすり}",
+     "read": "はりぐすり",
+     "hv": "thiếp dược",
+     "vi": "thuốc dán (dán ngoài da)",
+     "ex": "{腰|こし}に{貼|は}り{薬|ぐすり}を{貼|は}りますね。",
+     "exVi": "Em dán thuốc dán vào lưng cho bác nhé."
+    },
+    {
+     "w": "{軟膏|なんこう}",
+     "read": "なんこう",
+     "hv": "nhuyễn cao",
+     "vi": "thuốc mỡ (bôi ngoài da)",
+     "ex": "{傷|きず}に{軟膏|なんこう}を{塗|ぬ}りますね。",
+     "exVi": "Em bôi thuốc mỡ lên vết thương cho bác nhé."
+    },
+    {
+     "w": "{点眼|てんがん}",
+     "read": "てんがん",
+     "hv": "điểm nhãn",
+     "vi": "nhỏ thuốc mắt; việc nhỏ mắt",
+     "ex": "{点眼|てんがん}をしますよ。{上|うえ}を{向|む}いてくださいね。",
+     "exVi": "Em nhỏ mắt cho bác nhé. Bác nhìn lên trên nhé."
+    },
+    {
+     "w": "インスリン",
+     "read": "いんすりん",
+     "hv": "",
+     "vi": "insulin (tiêm trước bữa ăn cho người tiểu đường)",
+     "ex": "{食前|しょくぜん}のインスリンを{確認|かくにん}します。",
+     "exVi": "Em kiểm tra insulin trước bữa ăn ạ."
+    },
+    {
+     "w": "{点滴|てんてき}",
+     "read": "てんてき",
+     "hv": "điểm tích",
+     "vi": "truyền dịch",
+     "ex": "{点滴|てんてき}の{間|あいだ}は{静|しず}かにしていてくださいね。",
+     "exVi": "Trong lúc truyền dịch, bác nằm yên nghỉ ngơi nhé."
+    },
+    {
+     "w": "{酸素|さんそ}",
+     "read": "さんそ",
+     "hv": "toan tố",
+     "vi": "oxy (thở oxy qua ống)",
+     "ex": "{酸素|さんそ}のチューブが{外|はず}れていないか{確認|かくにん}します。",
+     "exVi": "Em kiểm tra xem ống oxy có bị tuột không."
+    },
+    {
+     "w": "{経管栄養|けいかんえいよう}",
+     "read": "けいかんえいよう",
+     "hv": "kinh quản dinh dưỡng",
+     "vi": "nuôi ăn qua ống (sonde mũi/dạ dày)",
+     "ex": "{経管栄養|けいかんえいよう}の{前|まえ}に{姿勢|しせい}を{整|ととの}えます。",
+     "exVi": "Trước khi cho ăn qua ống, em chỉnh tư thế cho cụ."
+    },
+    {
+     "w": "{胃|い}ろう",
+     "read": "いろう",
+     "hv": "vị",
+     "vi": "ống thông dạ dày qua da bụng (PEG)",
+     "ex": "{胃|い}ろうの{周|まわ}りをきれいにしますね。",
+     "exVi": "Em vệ sinh quanh ống thông dạ dày cho bác nhé."
+    },
+    {
+     "w": "{残薬|ざんやく}",
+     "read": "ざんやく",
+     "hv": "tàn dược",
+     "vi": "thuốc còn dư, còn thừa chưa uống",
+     "ex": "{残薬|ざんやく}が{多|おお}いので、{看護師|かんごし}に{伝|つた}えます。",
+     "exVi": "Thuốc còn dư nhiều nên em sẽ báo cho điều dưỡng."
+    },
+    {
+     "w": "{体重測定|たいじゅうそくてい}",
+     "read": "たいじゅうそくてい",
+     "hv": "thể trọng trắc định",
+     "vi": "đo cân nặng (định kỳ hằng tháng)",
+     "ex": "{月|つき}に{一度|いちど}{体重測定|たいじゅうそくてい}をします。",
+     "exVi": "Mỗi tháng đo cân nặng một lần."
+    },
+    {
+     "w": "{座位|ざい}",
+     "read": "ざい",
+     "hv": "tọa vị",
+     "vi": "tư thế ngồi",
+     "ex": "まず{座位|ざい}でしばらく{休|やす}んでから{立|た}ちましょう。",
+     "exVi": "Ngồi nghỉ một lúc rồi hãy đứng dậy nhé."
+    },
+    {
+     "w": "つかまり{立|だ}ち",
+     "read": "つかまりだち",
+     "hv": "lập",
+     "vi": "đứng vịn (tay vịn vào giường/thanh vịn)",
+     "ex": "つかまり{立|だ}ちの{練習|れんしゅう}をします。",
+     "exVi": "Mình tập đứng vịn nhé."
+    },
+    {
+     "w": "{寝返|ねがえ}り",
+     "read": "ねがえり",
+     "hv": "tẩm phản",
+     "vi": "trở mình, lăn mình trên giường",
+     "ex": "{寝返|ねがえ}りのお{手伝|てつだ}いをしますね。",
+     "exVi": "Em hỗ trợ bác trở mình nhé."
+    },
+    {
+     "w": "{麻痺|まひ}",
+     "read": "まひ",
+     "hv": "ma tý",
+     "vi": "liệt, tê liệt (một bên người/tay chân)",
+     "ex": "{麻痺|まひ}のある{側|がわ}を{下|した}にして{寝|ね}ないようにします。",
+     "exVi": "Tránh nằm đè lên phía bị liệt."
+    },
+    {
+     "w": "むくみ",
+     "read": "むくみ",
+     "hv": "",
+     "vi": "phù, sưng phù (chân/mặt)",
+     "ex": "{足|あし}のむくみを{毎朝|まいあさ}{確認|かくにん}します。",
+     "exVi": "Em kiểm tra phù chân mỗi sáng."
+    },
+    {
+     "w": "{関節|かんせつ}",
+     "read": "かんせつ",
+     "hv": "quan tiết",
+     "vi": "khớp",
+     "ex": "{関節|かんせつ}をゆっくり{動|うご}かしますね。",
+     "exVi": "Em cử động khớp từ từ cho bác nhé."
+    },
+    {
+     "w": "{筋力|きんりょく}",
+     "read": "きんりょく",
+     "hv": "cân lực",
+     "vi": "sức cơ",
+     "ex": "{足|あし}の{筋力|きんりょく}を{保|たも}つために{歩|ある}きましょう。",
+     "exVi": "Để giữ sức cơ chân, mình cùng đi bộ nhé."
+    },
+    {
+     "w": "バランス",
+     "read": "ばらんす",
+     "hv": "",
+     "vi": "thăng bằng",
+     "ex": "バランスを{崩|くず}さないように、ゆっくり{歩|ある}きましょう。",
+     "exVi": "Để không mất thăng bằng, mình đi từ từ nhé."
+    },
+    {
+     "w": "{滑|すべ}り{止|ど}め",
+     "read": "すべりどめ",
+     "hv": "hoạt chỉ",
+     "vi": "(tấm/miếng) chống trượt",
+     "ex": "お{風呂|ふろ}の{床|ゆか}に{滑|すべ}り{止|ど}めマットを{敷|し}きます。",
+     "exVi": "Em trải thảm chống trượt trên sàn phòng tắm."
+    },
+    {
+     "w": "ポジショニング",
+     "read": "ぽじしょにんぐ",
+     "hv": "",
+     "vi": "định vị tư thế (đặt gối/đệm giữ tư thế, phòng loét)",
+     "ex": "ポジショニングで{体|からだ}の{負担|ふたん}を{減|へ}らします。",
+     "exVi": "Định vị tư thế để giảm áp lực lên cơ thể."
+    },
+    {
+     "w": "{誤飲|ごいん}",
+     "read": "ごいん",
+     "hv": "ngộ ẩm",
+     "vi": "uống nhầm, nuốt nhầm (thuốc/vật lạ)",
+     "ex": "{誤飲|ごいん}を{防|ふせ}ぐため、{薬|くすり}は{手|て}の{届|とど}かない{所|ところ}に{置|お}きます。",
+     "exVi": "Để phòng uống nhầm, để thuốc ngoài tầm tay của cụ."
+    },
+    {
+     "w": "{離設|りせつ}",
+     "read": "りせつ",
+     "hv": "ly thiết",
+     "vi": "cụ tự rời khỏi cơ sở không ai biết (sự cố)",
+     "ex": "{離設|りせつ}に{気|き}づいたら、すぐ{職員|しょくいん}みんなで{探|さが}します。",
+     "exVi": "Khi phát hiện cụ rời cơ sở, tất cả nhân viên cùng tìm ngay."
+    },
+    {
+     "w": "{発疹|はっしん}",
+     "read": "はっしん",
+     "hv": "phát chẩn",
+     "vi": "phát ban, nổi mẩn trên da",
+     "ex": "{背中|せなか}に{発疹|はっしん}が{出|で}ているので、{看護師|かんごし}に{見|み}てもらいます。",
+     "exVi": "Lưng cụ nổi ban nên em nhờ điều dưỡng xem."
+    },
+    {
+     "w": "かゆみ",
+     "read": "かゆみ",
+     "hv": "",
+     "vi": "ngứa",
+     "ex": "かゆみが{強|つよ}い{時|とき}は、かかないで{教|おし}えてくださいね。",
+     "exVi": "Khi ngứa nhiều, bác đừng gãi mà hãy nói cho em nhé."
+    },
+    {
+     "w": "{打撲|だぼく}",
+     "read": "だぼく",
+     "hv": "đả phác",
+     "vi": "va đập, bầm dập do ngã/đụng",
+     "ex": "{転|ころ}んだ{所|ところ}に{打撲|だぼく}のあとがないか{確認|かくにん}します。",
+     "exVi": "Em kiểm tra chỗ bị ngã có vết bầm do va đập không."
+    },
+    {
+     "w": "{擦|す}り{傷|きず}",
+     "read": "すりきず",
+     "hv": "sát thương",
+     "vi": "vết trầy xước da",
+     "ex": "{擦|す}り{傷|きず}を{水|みず}で{洗|あら}って{消毒|しょうどく}します。",
+     "exVi": "Rửa vết trầy bằng nước rồi sát khuẩn."
+    },
+    {
+     "w": "{手指消毒|しゅししょうどく}",
+     "read": "しゅししょうどく",
+     "hv": "thủ chỉ tiêu độc",
+     "vi": "sát khuẩn tay (bằng cồn)",
+     "ex": "{食事|しょくじ}の{前|まえ}に{手指消毒|しゅししょうどく}をしましょう。",
+     "exVi": "Mình sát khuẩn tay trước bữa ăn nhé."
+    },
+    {
+     "w": "{消毒液|しょうどくえき}",
+     "read": "しょうどくえき",
+     "hv": "tiêu độc dịch",
+     "vi": "dung dịch sát khuẩn",
+     "ex": "{消毒液|しょうどくえき}でテーブルを{拭|ふ}きます。",
+     "exVi": "Em lau bàn bằng dung dịch sát khuẩn."
+    },
+    {
+     "w": "{加湿器|かしつき}",
+     "read": "かしつき",
+     "hv": "gia thấp khí",
+     "vi": "máy tạo ẩm",
+     "ex": "{冬|ふゆ}は{加湿器|かしつき}をつけて{部屋|へや}の{乾燥|かんそう}を{防|ふせ}ぎます。",
+     "exVi": "Mùa đông bật máy tạo ẩm để phòng khô phòng."
+    },
+    {
+     "w": "{介護記録|かいごきろく}",
+     "read": "かいごきろく",
+     "hv": "giới hộ ký lục",
+     "vi": "hồ sơ ghi chép chăm sóc",
+     "ex": "{介護記録|かいごきろく}に{今日|きょう}の{様子|ようす}を{書|か}きます。",
+     "exVi": "Em ghi tình trạng hôm nay vào hồ sơ chăm sóc."
+    },
+    {
+     "w": "ケアマネジャー",
+     "read": "けあまねじゃー",
+     "hv": "",
+     "vi": "quản lý chăm sóc (care manager, người lập kế hoạch)",
+     "ex": "ケアマネジャーにプランの{変更|へんこう}を{相談|そうだん}します。",
+     "exVi": "Em trao đổi với care manager về việc thay đổi kế hoạch."
+    },
+    {
+     "w": "チェック{表|ひょう}",
+     "read": "ちぇっくひょう",
+     "hv": "biểu",
+     "vi": "bảng kiểm (checklist)",
+     "ex": "チェック{表|ひょう}を{見|み}ながら{薬|くすり}を{確認|かくにん}します。",
+     "exVi": "Nhìn bảng kiểm để kiểm tra thuốc."
+    },
+    {
+     "w": "{勤務表|きんむひょう}",
+     "read": "きんむひょう",
+     "hv": "cần vụ biểu",
+     "vi": "bảng phân ca làm việc",
+     "ex": "{勤務表|きんむひょう}で{来週|らいしゅう}のシフトを{確認|かくにん}します。",
+     "exVi": "Em kiểm tra ca tuần tới trên bảng phân ca."
+    },
+    {
+     "w": "シフト",
+     "read": "しふと",
+     "hv": "",
+     "vi": "ca làm việc, lịch ca",
+     "ex": "シフトは{月|つき}の{終|お}わりに{決|き}まります。",
+     "exVi": "Lịch ca được chốt vào cuối tháng."
+    },
+    {
+     "w": "{夜勤|やきん}",
+     "read": "やきん",
+     "hv": "dạ cần",
+     "vi": "ca đêm",
+     "ex": "{夜勤|やきん}の{日|ひ}は{日中|にっちゅう}ゆっくり{休|やす}みます。",
+     "exVi": "Ngày trực đêm thì ban ngày nghỉ ngơi thong thả."
+    },
+    {
+     "w": "{日勤|にっきん}",
+     "read": "にっきん",
+     "hv": "nhật cần",
+     "vi": "ca ngày",
+     "ex": "{日勤|にっきん}の{日|ひ}は{送迎|そうげい}に{行|い}きます。",
+     "exVi": "Ngày ca ngày thì em đi đưa đón cụ."
+    },
+    {
+     "w": "{休憩|きゅうけい}",
+     "read": "きゅうけい",
+     "hv": "hưu khế",
+     "vi": "nghỉ giải lao; giờ nghỉ",
+     "ex": "{休憩|きゅうけい}の{時間|じかん}に{昼食|ちゅうしょく}を{食|た}べます。",
+     "exVi": "Em ăn trưa vào giờ nghỉ."
+    },
+    {
+     "w": "{残業|ざんぎょう}",
+     "read": "ざんぎょう",
+     "hv": "tàn nghiệp",
+     "vi": "làm thêm giờ",
+     "ex": "{今日|きょう}は{記録|きろく}が{多|おお}くて{少|すこ}し{残業|ざんぎょう}になりました。",
+     "exVi": "Hôm nay nhiều hồ sơ nên phải làm thêm một chút."
+    },
+    {
+     "w": "{物盗|ものと}られ{妄想|もうそう}",
+     "read": "ものとられもうそう",
+     "hv": "vật đạo vọng tưởng",
+     "vi": "hoang tưởng bị lấy cắp đồ",
+     "ex": "「{財布|さいふ}を{盗|と}られた」と{物盗|ものと}られ{妄想|もうそう}が{出|で}たら、まず{話|はなし}を{聞|き}きます。",
+     "exVi": "Khi cụ hoang tưởng bị lấy cắp ví, trước hết hãy lắng nghe cụ nói."
+    },
+    {
+     "w": "{取|と}り{繕|つくろ}い",
+     "read": "とりつくろい",
+     "hv": "thủ thiện",
+     "vi": "nói chữa, che giấu sự lú lẫn khi trò chuyện",
+     "ex": "{初|はじ}めての{人|ひと}の{前|まえ}では{取|と}り{繕|つくろ}いが{見|み}られます。",
+     "exVi": "Trước người lạ, cụ thường nói chữa để che sự lú lẫn."
+    },
+    {
+     "w": "バリデーション",
+     "read": "ばりでーしょん",
+     "hv": "",
+     "vi": "liệu pháp công nhận (đón nhận cảm xúc của người sa sút trí tuệ)",
+     "ex": "バリデーションで{気持|きも}ちを{受|う}け{止|と}めます。",
+     "exVi": "Dùng liệu pháp công nhận để đón nhận cảm xúc của cụ."
+    },
+    {
+     "w": "ユマニチュード",
+     "read": "ゆまにちゅーど",
+     "hv": "",
+     "vi": "Humanitude (kỹ thuật giao tiếp chăm sóc người sa sút trí tuệ)",
+     "ex": "ユマニチュードを{意識|いしき}して、{目|め}を{見|み}て{話|はな}します。",
+     "exVi": "Ý thức Humanitude, nhìn vào mắt cụ khi nói chuyện."
+    },
+    {
+     "w": "{馴染|なじ}み",
+     "read": "なじみ",
+     "hv": "thuần nhiễm",
+     "vi": "quen thuộc, thân quen (người/đồ vật/việc)",
+     "ex": "{馴染|なじ}みの{歌|うた}をかけると{笑顔|えがお}になります。",
+     "exVi": "Khi mở bài hát quen thuộc, cụ mỉm cười."
+    },
+    {
+     "w": "{安心感|あんしんかん}",
+     "read": "あんしんかん",
+     "hv": "an tâm cảm",
+     "vi": "cảm giác an tâm",
+     "ex": "{安心感|あんしんかん}を{持|も}ってもらえるように、ゆっくり{話|はな}します。",
+     "exVi": "Em nói chuyện từ từ để cụ cảm thấy an tâm."
+    },
+    {
+     "w": "{落|お}ち{着|つ}く",
+     "read": "おちつく",
+     "hv": "lạc trứ",
+     "vi": "bình tĩnh lại, yên tâm lại",
+     "ex": "{少|すこ}し{落|お}ち{着|つ}くまで、そばで{見守|みまも}ります。",
+     "exVi": "Em ở bên theo dõi cho đến khi cụ bình tĩnh lại."
+    },
+    {
+     "w": "{笑顔|えがお}",
+     "read": "えがお",
+     "hv": "tiếu nhan",
+     "vi": "nụ cười, gương mặt tươi cười",
+     "ex": "{笑顔|えがお}で「おはようございます」と{声|こえ}をかけます。",
+     "exVi": "Em mỉm cười chào buổi sáng ạ."
+    },
+    {
+     "w": "{保険証|ほけんしょう}",
+     "read": "ほけんしょう",
+     "hv": "bảo hiểm chứng",
+     "vi": "thẻ bảo hiểm y tế",
+     "ex": "ご{家族|かぞく}に{保険証|ほけんしょう}の{写|うつ}しをいただきます。",
+     "exVi": "Em xin người nhà bản sao thẻ bảo hiểm."
+    },
+    {
+     "w": "{診察券|しんさつけん}",
+     "read": "しんさつけん",
+     "hv": "chẩn sát khoán",
+     "vi": "thẻ khám bệnh (của bệnh viện/phòng khám)",
+     "ex": "{病院|びょういん}の{診察券|しんさつけん}を{忘|わす}れずに{持|も}って{行|い}きます。",
+     "exVi": "Nhớ mang theo thẻ khám của bệnh viện."
+    },
+    {
+     "w": "お{迎|むか}え",
+     "read": "おむかえ",
+     "hv": "nghênh",
+     "vi": "việc đón; người nhà đến đón",
+     "ex": "ご{家族|かぞく}のお{迎|むか}えは{五時|ごじ}ごろだそうです。",
+     "exVi": "Người nhà sẽ đến đón khoảng 5 giờ ạ."
+    },
+    {
+     "w": "{荷物|にもつ}",
+     "read": "にもつ",
+     "hv": "hà vật",
+     "vi": "hành lý, đồ đạc (người nhà mang đến/nhận về)",
+     "ex": "ご{家族|かぞく}からの{荷物|にもつ}を{確|たし}かにお{預|あず}かりしました。",
+     "exVi": "Em đã nhận đồ người nhà gửi ạ."
+    },
+    {
+     "w": "{洗濯物|せんたくもの}",
+     "read": "せんたくもの",
+     "hv": "tẩy trạc vật",
+     "vi": "quần áo, đồ giặt",
+     "ex": "{洗濯物|せんたくもの}は{名前|なまえ}を{確認|かくにん}してから{返|かえ}します。",
+     "exVi": "Em kiểm tra tên rồi mới trả đồ giặt."
+    },
+    {
+     "w": "{請求書|せいきゅうしょ}",
+     "read": "せいきゅうしょ",
+     "hv": "thỉnh cầu thư",
+     "vi": "hóa đơn thanh toán (phí dịch vụ hằng tháng)",
+     "ex": "{今月|こんげつ}の{請求書|せいきゅうしょ}をご{家族|かぞく}に{送|おく}ります。",
+     "exVi": "Em gửi hóa đơn tháng này cho người nhà."
+    },
+    {
+     "w": "{後見人|こうけんにん}",
+     "read": "こうけんにん",
+     "hv": "hậu kiến nhân",
+     "vi": "người giám hộ",
+     "ex": "{後見人|こうけんにん}の{方|かた}にも{同|おな}じ{説明|せつめい}をします。",
+     "exVi": "Em giải thích tương tự cho cả người giám hộ."
+    },
+    {
+     "w": "{合鍵|あいかぎ}",
+     "read": "あいかぎ",
+     "hv": "hợp kiện",
+     "vi": "chìa khóa dự phòng",
+     "ex": "{合鍵|あいかぎ}はキーボックスで{大切|たいせつ}に{管理|かんり}します。",
+     "exVi": "Chìa khóa dự phòng được quản lý cẩn thận trong hộp khóa."
+    },
+    {
+     "w": "キーボックス",
+     "read": "きーぼっくす",
+     "hv": "",
+     "vi": "hộp đựng chìa khóa có mã số (đặt trước cửa nhà cụ)",
+     "ex": "キーボックスの{番号|ばんごう}は{他人|たにん}に{教|おし}えません。",
+     "exVi": "Không cho người khác biết mã hộp đựng chìa khóa."
+    },
+    {
+     "w": "{郵便物|ゆうびんもの}",
+     "read": "ゆうびんもの",
+     "hv": "bưu tiện vật",
+     "vi": "thư từ, bưu phẩm trong hộp thư",
+     "ex": "{郵便物|ゆうびんもの}はテーブルの{上|うえ}に{置|お}いておきますね。",
+     "exVi": "Em để thư từ lên trên bàn cho bác nhé."
+    },
+    {
+     "w": "{電子|でんし}レンジ",
+     "read": "でんしれんじ",
+     "hv": "điện tử",
+     "vi": "lò vi sóng",
+     "ex": "{電子|でんし}レンジでスープを{温|あたた}めますね。",
+     "exVi": "Em hâm súp bằng lò vi sóng nhé."
+    },
+    {
+     "w": "ガスコンロ",
+     "read": "がすこんろ",
+     "hv": "",
+     "vi": "bếp ga",
+     "ex": "ガスコンロの{火|ひ}が{消|き}えているか{確認|かくにん}します。",
+     "exVi": "Em kiểm tra xem bếp ga đã tắt lửa chưa."
+    },
+    {
+     "w": "{火|ひ}の{元|もと}",
+     "read": "ひのもと",
+     "hv": "hỏa nguyên",
+     "vi": "nguồn lửa (bếp ga, lửa trong nhà cần kiểm tra khi ra về)",
+     "ex": "{帰|かえ}る{前|まえ}に{火|ひ}の{元|もと}を{確認|かくにん}します。",
+     "exVi": "Trước khi về, em kiểm tra nguồn lửa."
+    },
+    {
+     "w": "{戸締|とじま}り",
+     "read": "とじまり",
+     "hv": "hộ đế",
+     "vi": "khóa cửa nẻo (kiểm tra cửa đã khóa)",
+     "ex": "{戸締|とじま}りを{確認|かくにん}してから{失礼|しつれい}します。",
+     "exVi": "Em kiểm tra khóa cửa rồi mới xin phép ra về."
     }
    ],
    "phrases": [
@@ -4287,6 +4847,56 @@
      "ja": "{記録|きろく}に{書|か}いておきましたので、ご{確認|かくにん}ください。",
      "vi": "Tôi đã ghi vào hồ sơ rồi, xin hãy kiểm tra.",
      "note": "Kết thúc bàn giao, chỉ rõ nơi xem lại"
+    },
+    {
+     "ja": "{今日|きょう}はいい{天気|てんき}ですね。お{散歩|さんぽ}に{行|い}きましょうか。",
+     "vi": "Hôm nay trời đẹp quá ạ. Mình đi dạo nhé?",
+     "note": "Trò chuyện với cụ về thời tiết, rủ đi dạo, 丁寧語"
+    },
+    {
+     "ja": "{今日|きょう}のお{昼|ひる}は{何|なに}が{食|た}べたいですか。",
+     "vi": "Trưa nay bác muốn ăn gì ạ?",
+     "note": "Hỏi nguyện vọng bữa ăn của cụ, 丁寧語"
+    },
+    {
+     "ja": "{好|す}きなテレビ{番組|ばんぐみ}は{何|なん}ですか。",
+     "vi": "Chương trình tivi bác thích là gì ạ?",
+     "note": "Trò chuyện thường ngày với cụ về tivi, 丁寧語"
+    },
+    {
+     "ja": "お{孫|まご}さんはおいくつになりましたか。",
+     "vi": "Cháu của bác được mấy tuổi rồi ạ?",
+     "note": "Trò chuyện với cụ về người nhà, 丁寧語"
+    },
+    {
+     "ja": "{桜|さくら}が{咲|さ}きましたよ。{外|そと}に{見|み}に{行|い}きましょう。",
+     "vi": "Hoa anh đào nở rồi ạ. Mình ra ngoài ngắm nhé.",
+     "note": "Trò chuyện theo mùa khi đi dạo cùng cụ, 丁寧語"
+    },
+    {
+     "ja": "お{茶|ちゃ}とコーヒー、どちらがいいですか。",
+     "vi": "Bác dùng trà hay cà phê ạ?",
+     "note": "Hỏi lựa chọn đồ uống cho cụ, 丁寧語"
+    },
+    {
+     "ja": "{夜間|やかん}は{特|とく}に{変|か}わりありませんでした。",
+     "vi": "Ban đêm không có gì đặc biệt thay đổi ạ.",
+     "note": "Giao ca: báo cáo đêm yên ổn"
+    },
+    {
+     "ja": "{次|つぎ}の{検温|けんおん}は{三時|さんじ}にお{願|ねが}いします。",
+     "vi": "Lần đo nhiệt độ tiếp theo nhờ anh/chị lúc 3 giờ ạ.",
+     "note": "Giao ca: nhờ việc cho ca sau, 丁寧語"
+    },
+    {
+     "ja": "{先日|せんじつ}の{転倒|てんとう}の{件|けん}で、ご{家族|かぞく}にご{報告|ほうこく}がございます。",
+     "vi": "Về vụ ngã hôm trước, em có việc cần báo cáo với gia đình ạ.",
+     "note": "Mở đầu cuộc liên lạc với người nhà về sự cố, 丁寧語"
+    },
+    {
+     "ja": "{体調|たいちょう}に{変化|へんか}がありましたら、すぐお{電話|でんわ}いたします。",
+     "vi": "Nếu sức khỏe của cụ có thay đổi, em sẽ gọi điện ngay ạ.",
+     "note": "Cam kết liên lạc với người nhà khi có thay đổi, 丁寧語"
     }
    ],
    "dialogues": [

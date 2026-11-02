@@ -2159,6 +2159,406 @@
      "vi": "chứng chỉ, bằng cấp",
      "ex": "ITの{資格|しかく}を{取|と}りました。",
      "exVi": "Tôi đã lấy chứng chỉ IT."
+    },
+    {
+     "w": "フロントエンド",
+     "read": "ふろんとえんど",
+     "hv": "",
+     "vi": "phần giao diện người dùng (frontend)",
+     "ex": "フロントエンドの{画面|がめん}を{作|つく}っています。",
+     "exVi": "Tôi đang làm màn hình phía frontend."
+    },
+    {
+     "w": "バックエンド",
+     "read": "ばっくえんど",
+     "hv": "",
+     "vi": "phần xử lý phía máy chủ (backend)",
+     "ex": "バックエンドの{処理|しょり}を{直|なお}しています。",
+     "exVi": "Tôi đang sửa phần xử lý phía backend."
+    },
+    {
+     "w": "フレームワーク",
+     "read": "ふれーむわーく",
+     "hv": "",
+     "vi": "khung thư viện nền (framework)",
+     "ex": "このフレームワークで{開発|かいはつ}します。",
+     "exVi": "Phát triển bằng framework này."
+    },
+    {
+     "w": "ライブラリ",
+     "read": "らいぶらり",
+     "hv": "",
+     "vi": "thư viện lập trình",
+     "ex": "ライブラリを{新|あたら}しいバージョンにしました。",
+     "exVi": "Tôi đã nâng thư viện lên phiên bản mới."
+    },
+    {
+     "w": "{引数|ひきすう}",
+     "read": "ひきすう",
+     "hv": "DẪN SỐ",
+     "vi": "đối số (của hàm)",
+     "ex": "この{関数|かんすう}には{引数|ひきすう}が2つあります。",
+     "exVi": "Hàm này có 2 đối số."
+    },
+    {
+     "w": "{戻|もど}り{値|ち}",
+     "read": "もどりち",
+     "hv": "",
+     "vi": "giá trị trả về (của hàm)",
+     "ex": "{戻|もど}り{値|ち}を{確認|かくにん}してください。",
+     "exVi": "Xin hãy xác nhận giá trị trả về."
+    },
+    {
+     "w": "{例外|れいがい}{処理|しょり}",
+     "read": "れいがいしょり",
+     "hv": "LỆ NGOẠI XỬ LÝ",
+     "vi": "xử lý ngoại lệ",
+     "ex": "{例外|れいがい}{処理|しょり}を{追加|ついか}しました。",
+     "exVi": "Tôi đã thêm xử lý ngoại lệ."
+    },
+    {
+     "w": "リファクタリング",
+     "read": "りふぁくたりんぐ",
+     "hv": "",
+     "vi": "tái cấu trúc code (refactoring)",
+     "ex": "{来週|らいしゅう}はリファクタリングをします。",
+     "exVi": "Tuần sau tôi sẽ tái cấu trúc code."
+    },
+    {
+     "w": "{朝会|あさかい}",
+     "read": "あさかい",
+     "hv": "TRIỀU HỘI",
+     "vi": "họp sáng (stand-up đầu ngày)",
+     "ex": "{朝会|あさかい}は9{時|じ}からです。",
+     "exVi": "Họp sáng từ 9 giờ."
+    },
+    {
+     "w": "{振|ふ}り{返|かえ}り",
+     "read": "ふりかえり",
+     "hv": "",
+     "vi": "buổi nhìn lại, rút kinh nghiệm (retrospective)",
+     "ex": "スプリントの{振|ふ}り{返|かえ}りを{行|おこな}います。",
+     "exVi": "Sẽ tổ chức buổi nhìn lại của sprint."
+    },
+    {
+     "w": "スプリント",
+     "read": "すぷりんと",
+     "hv": "",
+     "vi": "chu kỳ phát triển ngắn (sprint)",
+     "ex": "このスプリントは2{週間|しゅうかん}です。",
+     "exVi": "Sprint này kéo dài 2 tuần."
+    },
+    {
+     "w": "バックログ",
+     "read": "ばっくろぐ",
+     "hv": "",
+     "vi": "danh sách việc tồn đọng (backlog)",
+     "ex": "バックログにタスクを{追加|ついか}しました。",
+     "exVi": "Tôi đã thêm task vào backlog."
+    },
+    {
+     "w": "{持|も}ち{帰|かえ}り",
+     "read": "もちかえり",
+     "hv": "",
+     "vi": "việc mang về xem xét tiếp (chưa quyết tại họp)",
+     "ex": "この{件|けん}は{持|も}ち{帰|かえ}りにします。",
+     "exVi": "Việc này sẽ mang về xem xét tiếp."
+    },
+    {
+     "w": "{代替|だいたい}{案|あん}",
+     "read": "だいたいあん",
+     "hv": "ĐẠI THẾ ÁN",
+     "vi": "phương án thay thế",
+     "ex": "{代替案|だいたいあん}も{用意|ようい}しました。",
+     "exVi": "Tôi cũng đã chuẩn bị phương án thay thế."
+    },
+    {
+     "w": "DNS",
+     "read": "でぃーえぬえす",
+     "hv": "",
+     "vi": "hệ thống phân giải tên miền (DNS)",
+     "ex": "DNSの{設定|せってい}を{変|か}えました。",
+     "exVi": "Tôi đã thay đổi cài đặt DNS."
+    },
+    {
+     "w": "VPN",
+     "read": "ぶいぴーえぬ",
+     "hv": "",
+     "vi": "mạng riêng ảo (VPN)",
+     "ex": "VPNで{会社|かいしゃ}のネットワークにつなぎます。",
+     "exVi": "Kết nối vào mạng công ty bằng VPN."
+    },
+    {
+     "w": "スイッチングハブ",
+     "read": "すいっちんぐはぶ",
+     "hv": "",
+     "vi": "thiết bị chia mạng (switching hub)",
+     "ex": "スイッチングハブのランプが{消|き}えています。",
+     "exVi": "Đèn của thiết bị chia mạng đang tắt."
+    },
+    {
+     "w": "{死活|しかつ}{監視|かんし}",
+     "read": "しかつかんし",
+     "hv": "TỬ HOẠT GIÁM THỊ",
+     "vi": "giám sát trạng thái sống/chết của hệ thống",
+     "ex": "{死活|しかつ}{監視|かんし}でサーバーの{状態|じょうたい}を{見|み}ています。",
+     "exVi": "Tôi theo dõi trạng thái máy chủ bằng giám sát sống/chết."
+    },
+    {
+     "w": "{定期|ていき}{点検|てんけん}",
+     "read": "ていきてんけん",
+     "hv": "ĐỊNH KỲ ĐIỂM KIỂM",
+     "vi": "kiểm tra định kỳ",
+     "ex": "{月|つき}に1{回|かい}{定期|ていき}{点検|てんけん}をします。",
+     "exVi": "Kiểm tra định kỳ mỗi tháng một lần."
+    },
+    {
+     "w": "{予備|よび}{回線|かいせん}",
+     "read": "よびかいせん",
+     "hv": "DỰ BỊ HỒI TUYẾN",
+     "vi": "đường truyền dự phòng",
+     "ex": "{回線|かいせん}が{切|き}れたら{予備|よび}{回線|かいせん}に{切|き}り{替|か}えます。",
+     "exVi": "Nếu đường truyền bị đứt thì chuyển sang đường dự phòng."
+    },
+    {
+     "w": "ディスク{使用率|しようりつ}",
+     "read": "でぃすくしようりつ",
+     "hv": "",
+     "vi": "tỷ lệ sử dụng đĩa",
+     "ex": "ディスク{使用率|しようりつ}が90パーセントを{超|こ}えました。",
+     "exVi": "Tỷ lệ sử dụng đĩa đã vượt 90%."
+    },
+    {
+     "w": "メモリ{不足|ふそく}",
+     "read": "めもりふそく",
+     "hv": "",
+     "vi": "thiếu bộ nhớ (RAM)",
+     "ex": "メモリ{不足|ふそく}でアプリが{落|お}ちました。",
+     "exVi": "Ứng dụng bị sập vì thiếu bộ nhớ."
+    },
+    {
+     "w": "{画面|がめん}{共有|きょうゆう}",
+     "read": "がめんきょうゆう",
+     "hv": "HỌA DIỆN CỘNG HỮU",
+     "vi": "chia sẻ màn hình",
+     "ex": "{画面|がめん}{共有|きょうゆう}で{一緒|いっしょ}に{確認|かくにん}しましょう。",
+     "exVi": "Hãy cùng xác nhận bằng chia sẻ màn hình."
+    },
+    {
+     "w": "{再現|さいげん}{手順|てじゅん}",
+     "read": "さいげんてじゅん",
+     "hv": "TÁI HIỆN THỦ THUẬN",
+     "vi": "các bước tái hiện (lỗi)",
+     "ex": "エラーの{再現|さいげん}{手順|てじゅん}を{教|おし}えてください。",
+     "exVi": "Xin cho tôi biết các bước tái hiện lỗi."
+    },
+    {
+     "w": "{暫定|ざんてい}{対応|たいおう}",
+     "read": "ざんていたいおう",
+     "hv": "TẠM ĐỊNH ĐỐI ỨNG",
+     "vi": "xử lý tạm thời (workaround)",
+     "ex": "まず{暫定|ざんてい}{対応|たいおう}で{使|つか}えるようにします。",
+     "exVi": "Trước hết xử lý tạm thời để dùng được đã."
+    },
+    {
+     "w": "{恒久|こうきゅう}{対応|たいおう}",
+     "read": "こうきゅうたいおう",
+     "hv": "HẰNG CỬU ĐỐI ỨNG",
+     "vi": "xử lý triệt để, lâu dài",
+     "ex": "{恒久|こうきゅう}{対応|たいおう}は{来週|らいしゅう}のメンテナンスで{行|おこな}います。",
+     "exVi": "Việc xử lý triệt để sẽ làm trong đợt bảo trì tuần sau."
+    },
+    {
+     "w": "{対応|たいおう}{履歴|りれき}",
+     "read": "たいおうりれき",
+     "hv": "ĐỐI ỨNG LÝ LỊCH",
+     "vi": "lịch sử xử lý (của ticket)",
+     "ex": "チケットの{対応|たいおう}{履歴|りれき}を{残|のこ}してください。",
+     "exVi": "Xin hãy lưu lại lịch sử xử lý của ticket."
+    },
+    {
+     "w": "パスワードリセット",
+     "read": "ぱすわーどりせっと",
+     "hv": "",
+     "vi": "đặt lại mật khẩu (password reset)",
+     "ex": "パスワードリセットのメールを{送|おく}りました。",
+     "exVi": "Tôi đã gửi email đặt lại mật khẩu."
+    },
+    {
+     "w": "{折|お}り{返|かえ}し",
+     "read": "おりかえし",
+     "hv": "",
+     "vi": "gọi lại, liên lạc lại sau",
+     "ex": "{担当者|たんとうしゃ}から{折|お}り{返|かえ}しご{連絡|れんらく}します。",
+     "exVi": "Người phụ trách sẽ liên lạc lại sau."
+    },
+    {
+     "w": "{不正|ふせい}ログイン",
+     "read": "ふせいろぐいん",
+     "hv": "",
+     "vi": "đăng nhập trái phép",
+     "ex": "{不正|ふせい}ログインの{形跡|けいせき}があります。",
+     "exVi": "Có dấu vết đăng nhập trái phép."
+    },
+    {
+     "w": "ウイルス{対策|たいさく}ソフト",
+     "read": "ういるすたいさくそふと",
+     "hv": "",
+     "vi": "phần mềm diệt virus",
+     "ex": "ウイルス{対策|たいさく}ソフトを{最新|さいしん}にしてください。",
+     "exVi": "Xin hãy cập nhật phần mềm diệt virus lên bản mới nhất."
+    },
+    {
+     "w": "なりすまし",
+     "read": "なりすまし",
+     "hv": "",
+     "vi": "mạo danh, giả danh",
+     "ex": "なりすましのメールに{注意|ちゅうい}してください。",
+     "exVi": "Xin hãy chú ý email mạo danh."
+    },
+    {
+     "w": "{添付|てんぷ}ファイル",
+     "read": "てんぷふぁいる",
+     "hv": "",
+     "vi": "tệp đính kèm",
+     "ex": "{添付|てんぷ}ファイルは{開|ひら}く{前|まえ}に{確認|かくにん}します。",
+     "exVi": "Tôi xác nhận tệp đính kèm trước khi mở."
+    },
+    {
+     "w": "{迷惑|めいわく}メール",
+     "read": "めいわくめーる",
+     "hv": "",
+     "vi": "thư rác, thư làm phiền (spam)",
+     "ex": "{迷惑|めいわく}メールは{開|ひら}かずに{消|け}してください。",
+     "exVi": "Thư rác xin đừng mở, hãy xóa đi."
+    },
+    {
+     "w": "{生体|せいたい}{認証|にんしょう}",
+     "read": "せいたいにんしょう",
+     "hv": "SINH THỂ NHẬN CHỨNG",
+     "vi": "xác thực sinh trắc học",
+     "ex": "{指紋|しもん}による{生体|せいたい}{認証|にんしょう}でログインします。",
+     "exVi": "Đăng nhập bằng xác thực sinh trắc học qua vân tay."
+    },
+    {
+     "w": "ワンタイムパスワード",
+     "read": "わんたいむぱすわーど",
+     "hv": "",
+     "vi": "mật khẩu dùng một lần (OTP)",
+     "ex": "ワンタイムパスワードを{入力|にゅうりょく}してください。",
+     "exVi": "Xin hãy nhập mật khẩu dùng một lần."
+    },
+    {
+     "w": "{貸与|たいよ}{品|ひん}",
+     "read": "たいよひん",
+     "hv": "THẢI DỮ PHẨM",
+     "vi": "vật phẩm được công ty cho mượn",
+     "ex": "パソコンは{会社|かいしゃ}からの{貸与品|たいよひん}です。",
+     "exVi": "Máy tính là vật phẩm công ty cho mượn."
+    },
+    {
+     "w": "{返却|へんきゃく}{期限|きげん}",
+     "read": "へんきゃくきげん",
+     "hv": "PHẢN KHƯỚC KỲ HẠN",
+     "vi": "hạn trả (thiết bị mượn)",
+     "ex": "{貸与品|たいよひん}の{返却|へんきゃく}{期限|きげん}は{月末|げつまつ}です。",
+     "exVi": "Hạn trả vật phẩm mượn là cuối tháng."
+    },
+    {
+     "w": "{在庫|ざいこ}{管理|かんり}",
+     "read": "ざいこかんり",
+     "hv": "TẠI KHỐ QUẢN LÝ",
+     "vi": "quản lý tồn kho (thiết bị)",
+     "ex": "ノートパソコンの{在庫|ざいこ}{管理|かんり}をしています。",
+     "exVi": "Tôi đang quản lý tồn kho laptop."
+    },
+    {
+     "w": "{発注|はっちゅう}",
+     "read": "はっちゅう",
+     "hv": "PHÁT CHÚ",
+     "vi": "đặt hàng (thiết bị, giấy phép)",
+     "ex": "モニターを5{台|だい}{発注|はっちゅう}しました。",
+     "exVi": "Tôi đã đặt hàng 5 màn hình."
+    },
+    {
+     "w": "{納品|のうひん}{書|しょ}",
+     "read": "のうひんしょ",
+     "hv": "NẠP PHẨM THƯ",
+     "vi": "phiếu bàn giao hàng",
+     "ex": "{納品書|のうひんしょ}にサインをお{願|ねが}いします。",
+     "exVi": "Xin ký vào phiếu bàn giao hàng."
+    },
+    {
+     "w": "{利用|りよう}{申請|しんせい}",
+     "read": "りようしんせい",
+     "hv": "LỢI DỤNG THÂN THỈNH",
+     "vi": "đơn xin sử dụng (phần mềm, hệ thống)",
+     "ex": "ソフトの{利用|りよう}{申請|しんせい}はポータルからできます。",
+     "exVi": "Đơn xin sử dụng phần mềm có thể nộp từ cổng nội bộ."
+    },
+    {
+     "w": "サムネイル",
+     "read": "さむねいる",
+     "hv": "",
+     "vi": "ảnh thu nhỏ đại diện (thumbnail)",
+     "ex": "サムネイルを{目立|めだ}つデザインにしました。",
+     "exVi": "Tôi đã làm thumbnail với thiết kế nổi bật."
+    },
+    {
+     "w": "ハッシュタグ",
+     "read": "はっしゅたぐ",
+     "hv": "",
+     "vi": "thẻ hashtag",
+     "ex": "ハッシュタグを3つ{付|つ}けました。",
+     "exVi": "Tôi đã gắn 3 hashtag."
+    },
+    {
+     "w": "フォロワー",
+     "read": "ふぉろわー",
+     "hv": "",
+     "vi": "người theo dõi (follower)",
+     "ex": "フォロワーが1{万人|まんにん}{増|ふ}えました。",
+     "exVi": "Số người theo dõi đã tăng 10.000 người."
+    },
+    {
+     "w": "アクセス{解析|かいせき}",
+     "read": "あくせすかいせき",
+     "hv": "",
+     "vi": "phân tích truy cập",
+     "ex": "アクセス{解析|かいせき}でよく{見|み}られるページが{分|わ}かりました。",
+     "exVi": "Nhờ phân tích truy cập mà biết được trang được xem nhiều."
+    },
+    {
+     "w": "インプレッション",
+     "read": "いんぷれっしょん",
+     "hv": "",
+     "vi": "lượt hiển thị (impression)",
+     "ex": "この{投稿|とうこう}のインプレッションは1{万|まん}です。",
+     "exVi": "Lượt hiển thị của bài đăng này là 10.000."
+    },
+    {
+     "w": "エンゲージメント",
+     "read": "えんげーじめんと",
+     "hv": "",
+     "vi": "mức tương tác (engagement)",
+     "ex": "エンゲージメントが{先月|せんげつ}より{上|あ}がりました。",
+     "exVi": "Mức tương tác đã tăng so với tháng trước."
+    },
+    {
+     "w": "アップロード",
+     "read": "あっぷろーど",
+     "hv": "",
+     "vi": "tải lên (upload)",
+     "ex": "{動画|どうが}をアップロードしました。",
+     "exVi": "Tôi đã tải video lên."
+    },
+    {
+     "w": "ダウンロード",
+     "read": "だうんろーど",
+     "hv": "",
+     "vi": "tải xuống (download)",
+     "ex": "{資料|しりょう}はサイトからダウンロードできます。",
+     "exVi": "Tài liệu có thể tải xuống từ trang web."
     }
    ],
    "phrases": [
@@ -2281,6 +2681,56 @@
      "ja": "ご{不明|ふめい}な{点|てん}があれば、お{気軽|きがる}にお{問|と}い{合|あ}わせください。",
      "vi": "Nếu có điểm nào chưa rõ, xin cứ thoải mái liên hệ.",
      "note": "Kết thúc hỗ trợ"
+    },
+    {
+     "ja": "リリースは{今夜|こんや}10{時|じ}からです。{作業中|さぎょうちゅう}はシステムが{使|つか}えません。",
+     "vi": "Việc phát hành từ 22 giờ tối nay. Trong lúc làm, hệ thống không dùng được.",
+     "note": "Thông báo lịch release cho team/khách nội bộ"
+    },
+    {
+     "ja": "テストで{新|あたら}しいバグが3{件|けん}{見|み}つかりました。",
+     "vi": "Trong kiểm thử đã tìm thấy 3 bug mới.",
+     "note": "Báo kết quả test"
+    },
+    {
+     "ja": "この{作業|さぎょう}は{私|わたし}が{担当|たんとう}します。{金曜日|きんようび}までに{終|お}わらせます。",
+     "vi": "Công việc này tôi sẽ phụ trách. Tôi sẽ hoàn thành trước thứ Sáu.",
+     "note": "Nhận việc và cam kết hạn trong họp"
+    },
+    {
+     "ja": "スプリントの{振|ふ}り{返|かえ}りは{金曜日|きんようび}の{午後|ごご}です。",
+     "vi": "Buổi nhìn lại sprint vào chiều thứ Sáu.",
+     "note": "Thông báo lịch retrospective"
+    },
+    {
+     "ja": "VPNに{接続|せつぞく}できないときは、まず{回線|かいせん}を{確認|かくにん}してください。",
+     "vi": "Khi không kết nối được VPN, trước hết xin kiểm tra đường truyền.",
+     "note": "Hướng dẫn xử lý bước đầu qua điện thoại"
+    },
+    {
+     "ja": "{画面|がめん}を{共有|きょうゆう}していただけますか。{一緒|いっしょ}に{見|み}ながらご{案内|あんない}します。",
+     "vi": "Anh/chị chia sẻ màn hình giúp tôi được không ạ? Tôi sẽ vừa xem vừa hướng dẫn.",
+     "note": "Hỗ trợ từ xa, nhờ user chia sẻ màn hình"
+    },
+    {
+     "ja": "パスワードは{誰|だれ}にも{教|おし}えないでください。",
+     "vi": "Xin đừng cho bất kỳ ai biết mật khẩu.",
+     "note": "Nhắc bảo mật cho người dùng"
+    },
+    {
+     "ja": "{不審|ふしん}なメールの{添付|てんぷ}ファイルは{開|ひら}かないでください。",
+     "vi": "Xin đừng mở tệp đính kèm của email đáng ngờ.",
+     "note": "Cảnh báo an toàn thông tin toàn công ty"
+    },
+    {
+     "ja": "サーバーに{高|たか}い{負荷|ふか}がかかっています。ただいま{監視|かんし}を{続|つづ}けています。",
+     "vi": "Máy chủ đang chịu tải cao. Hiện chúng tôi đang tiếp tục theo dõi.",
+     "note": "Báo tình trạng khi vận hành/giám sát"
+    },
+    {
+     "ja": "{動画|どうが}のサムネイルを{新|あたら}しいものに{変|か}えました。",
+     "vi": "Tôi đã đổi thumbnail của video sang cái mới.",
+     "note": "Báo việc nội dung số trong team"
     }
    ],
    "dialogues": [
@@ -4565,6 +5015,406 @@
      "vi": "đóng cửa chi nhánh",
      "ex": "{閉店|へいてん}{時間|じかん}は{午後|ごご}3{時|じ}です。",
      "exVi": "Giờ đóng cửa là 3 giờ chiều."
+    },
+    {
+     "w": "{口座|こうざ}{開設|かいせつ}",
+     "read": "こうざかいせつ",
+     "hv": "KHẨU TỌA KHAI THIẾT",
+     "vi": "mở tài khoản",
+     "ex": "{口座|こうざ}{開設|かいせつ}は{窓口|まどぐち}でできます。",
+     "exVi": "Việc mở tài khoản có thể làm tại quầy."
+    },
+    {
+     "w": "{残高|ざんだか}{証明書|しょうめいしょ}",
+     "read": "ざんだかしょうめいしょ",
+     "hv": "TÀN CAO CHỨNG MINH THƯ",
+     "vi": "giấy chứng nhận số dư",
+     "ex": "{残高|ざんだか}{証明書|しょうめいしょ}は{即日|そくじつ}{発行|はっこう}できます。",
+     "exVi": "Giấy chứng nhận số dư có thể cấp trong ngày."
+    },
+    {
+     "w": "{振込|ふりこみ}{予約|よやく}",
+     "read": "ふりこみよやく",
+     "hv": "CHẤN NHẬP DỰ ƯỚC",
+     "vi": "đặt lịch chuyển khoản trước",
+     "ex": "{振込|ふりこみ}{予約|よやく}はアプリからもできます。",
+     "exVi": "Đặt lịch chuyển khoản cũng làm được từ ứng dụng."
+    },
+    {
+     "w": "{引|ひ}き{落|お}とし",
+     "read": "ひきおとし",
+     "hv": "",
+     "vi": "trừ tiền tự động khỏi tài khoản (ghi nợ)",
+     "ex": "{家賃|やちん}は{口座|こうざ}から{引|ひ}き{落|お}としされます。",
+     "exVi": "Tiền nhà được trừ tự động từ tài khoản."
+    },
+    {
+     "w": "{口座|こうざ}{振替|ふりかえ}",
+     "read": "こうざふりかえ",
+     "hv": "KHẨU TỌA CHẤN THẾ",
+     "vi": "thanh toán tự động qua tài khoản (trích nợ định kỳ)",
+     "ex": "{電気代|でんきだい}を{口座|こうざ}{振替|ふりかえ}にしました。",
+     "exVi": "Tôi đã chuyển tiền điện sang thanh toán tự động qua tài khoản."
+    },
+    {
+     "w": "{為替|かわせ}レート",
+     "read": "かわせれーと",
+     "hv": "",
+     "vi": "tỷ giá hối đoái",
+     "ex": "{今日|きょう}の{為替|かわせ}レートを{確認|かくにん}します。",
+     "exVi": "Tôi xác nhận tỷ giá hôm nay."
+    },
+    {
+     "w": "デビットカード",
+     "read": "でびっとかーど",
+     "hv": "",
+     "vi": "thẻ ghi nợ (debit card)",
+     "ex": "デビットカードで{支払|しはら}えます。",
+     "exVi": "Có thể thanh toán bằng thẻ ghi nợ."
+    },
+    {
+     "w": "クレジットカード",
+     "read": "くれじっとかーど",
+     "hv": "",
+     "vi": "thẻ tín dụng",
+     "ex": "クレジットカードの{申|もう}し{込|こ}みもできます。",
+     "exVi": "Cũng có thể đăng ký thẻ tín dụng."
+    },
+    {
+     "w": "{住宅|じゅうたく}ローン",
+     "read": "じゅうたくろーん",
+     "hv": "",
+     "vi": "khoản vay mua nhà",
+     "ex": "{住宅|じゅうたく}ローンの{相談|そうだん}をしています。",
+     "exVi": "Đang tư vấn khoản vay mua nhà."
+    },
+    {
+     "w": "{教育|きょういく}ローン",
+     "read": "きょういくろーん",
+     "hv": "",
+     "vi": "khoản vay giáo dục",
+     "ex": "{教育|きょういく}ローンは{入学前|にゅうがくまえ}に{申|もう}し{込|こ}めます。",
+     "exVi": "Khoản vay giáo dục có thể đăng ký trước khi nhập học."
+    },
+    {
+     "w": "マイカーローン",
+     "read": "まいかーろーん",
+     "hv": "",
+     "vi": "khoản vay mua ô tô",
+     "ex": "マイカーローンの{金利|きんり}を{比|くら}べました。",
+     "exVi": "Tôi đã so sánh lãi suất vay mua ô tô."
+    },
+    {
+     "w": "{借|か}り{換|か}え",
+     "read": "かりかえ",
+     "hv": "",
+     "vi": "vay mới để trả khoản cũ (đảo nợ, refinancing)",
+     "ex": "{金利|きんり}の{低|ひく}いローンに{借|か}り{換|か}えました。",
+     "exVi": "Tôi đã chuyển sang khoản vay có lãi suất thấp hơn."
+    },
+    {
+     "w": "{返済|へんさい}シミュレーション",
+     "read": "へんさいしみゅれーしょん",
+     "hv": "",
+     "vi": "mô phỏng khoản trả nợ",
+     "ex": "{返済|へんさい}シミュレーションを{一緒|いっしょ}に{見|み}ましょう。",
+     "exVi": "Chúng ta cùng xem bảng mô phỏng trả nợ nhé."
+    },
+    {
+     "w": "{法人|ほうじん}カード",
+     "read": "ほうじんかーど",
+     "hv": "",
+     "vi": "thẻ doanh nghiệp",
+     "ex": "{法人|ほうじん}カードは{経費|けいひ}の{支払|しはら}いに{使|つか}います。",
+     "exVi": "Thẻ doanh nghiệp dùng để thanh toán chi phí."
+    },
+    {
+     "w": "インターネットバンキング",
+     "read": "いんたーねっとばんきんぐ",
+     "hv": "",
+     "vi": "ngân hàng trực tuyến (internet banking)",
+     "ex": "インターネットバンキングで{振込|ふりこみ}ができます。",
+     "exVi": "Có thể chuyển khoản bằng ngân hàng trực tuyến."
+    },
+    {
+     "w": "{終身|しゅうしん}{保険|ほけん}",
+     "read": "しゅうしんほけん",
+     "hv": "CHUNG THÂN BẢO HIỂM",
+     "vi": "bảo hiểm trọn đời",
+     "ex": "{終身|しゅうしん}{保険|ほけん}は{一生涯|いっしょうがい}{保障|ほしょう}が{続|つづ}きます。",
+     "exVi": "Bảo hiểm trọn đời có bảo đảm kéo dài suốt đời."
+    },
+    {
+     "w": "{学資|がくし}{保険|ほけん}",
+     "read": "がくしほけん",
+     "hv": "HỌC TƯ BẢO HIỂM",
+     "vi": "bảo hiểm học vấn (cho con)",
+     "ex": "{子|こ}どもの{教育費|きょういくひ}には{学資|がくし}{保険|ほけん}が{人気|にんき}です。",
+     "exVi": "Để dành chi phí giáo dục cho con, bảo hiểm học vấn được ưa chuộng."
+    },
+    {
+     "w": "{年金|ねんきん}{保険|ほけん}",
+     "read": "ねんきんほけん",
+     "hv": "NIÊN KIM BẢO HIỂM",
+     "vi": "bảo hiểm hưu trí cá nhân (annuity)",
+     "ex": "{老後|ろうご}の{備|そな}えに{年金|ねんきん}{保険|ほけん}を{検討|けんとう}します。",
+     "exVi": "Tôi cân nhắc bảo hiểm hưu trí để chuẩn bị cho tuổi già."
+    },
+    {
+     "w": "{加入|かにゅう}",
+     "read": "かにゅう",
+     "hv": "GIA NHẬP",
+     "vi": "tham gia (bảo hiểm), đăng ký tham gia",
+     "ex": "この{保険|ほけん}は65{歳|さい}まで{加入|かにゅう}できます。",
+     "exVi": "Bảo hiểm này có thể tham gia đến 65 tuổi."
+    },
+    {
+     "w": "{加入|かにゅう}{条件|じょうけん}",
+     "read": "かにゅうじょうけん",
+     "hv": "GIA NHẬP ĐIỀU KIỆN",
+     "vi": "điều kiện tham gia",
+     "ex": "{加入|かにゅう}{条件|じょうけん}を{確認|かくにん}します。",
+     "exVi": "Tôi xác nhận điều kiện tham gia."
+    },
+    {
+     "w": "プラン",
+     "read": "ぷらん",
+     "hv": "",
+     "vi": "gói, phương án (plan)",
+     "ex": "おすすめのプランを2つご{紹介|しょうかい}します。",
+     "exVi": "Tôi xin giới thiệu 2 gói được khuyến nghị."
+    },
+    {
+     "w": "{保険料|ほけんりょう}{試算|しさん}",
+     "read": "ほけんりょうしさん",
+     "hv": "BẢO HIỂM LIỆU THÍ TOÁN",
+     "vi": "tính thử phí bảo hiểm",
+     "ex": "{保険料|ほけんりょう}の{試算|しさん}を{出|だ}します。",
+     "exVi": "Tôi sẽ tính thử phí bảo hiểm."
+    },
+    {
+     "w": "{保険金|ほけんきん}{請求|せいきゅう}",
+     "read": "ほけんきんせいきゅう",
+     "hv": "BẢO HIỂM KIM THỈNH CẦU",
+     "vi": "yêu cầu chi trả tiền bảo hiểm",
+     "ex": "{保険金|ほけんきん}{請求|せいきゅう}の{書類|しょるい}を{送|おく}りました。",
+     "exVi": "Tôi đã gửi hồ sơ yêu cầu chi trả tiền bảo hiểm."
+    },
+    {
+     "w": "{事故|じこ}{連絡|れんらく}",
+     "read": "じこれんらく",
+     "hv": "SỰ CỐ LIÊN LẠC",
+     "vi": "thông báo tai nạn (cho công ty bảo hiểm)",
+     "ex": "{事故|じこ}{連絡|れんらく}は24{時間|じかん}{受|う}け{付|つ}けています。",
+     "exVi": "Việc thông báo tai nạn được tiếp nhận 24 giờ."
+    },
+    {
+     "w": "レッカー",
+     "read": "れっかー",
+     "hv": "",
+     "vi": "xe cứu hộ kéo xe (tow truck)",
+     "ex": "レッカーを{呼|よ}んでください。",
+     "exVi": "Xin hãy gọi xe cứu hộ kéo xe."
+    },
+    {
+     "w": "{代車|だいしゃ}",
+     "read": "だいしゃ",
+     "hv": "ĐẠI XA",
+     "vi": "xe thay thế (khi xe đang sửa)",
+     "ex": "{修理中|しゅうりちゅう}は{代車|だいしゃ}を{使|つか}えます。",
+     "exVi": "Trong lúc sửa xe có thể dùng xe thay thế."
+    },
+    {
+     "w": "{修理|しゅうり}{工場|こうじょう}",
+     "read": "しゅうりこうじょう",
+     "hv": "TU LÝ CÔNG TRƯỜNG",
+     "vi": "xưởng sửa chữa",
+     "ex": "{近|ちか}くの{修理|しゅうり}{工場|こうじょう}を{紹介|しょうかい}します。",
+     "exVi": "Tôi giới thiệu xưởng sửa chữa gần đây."
+    },
+    {
+     "w": "{支払|しはら}い{審査|しんさ}",
+     "read": "しはらいしんさ",
+     "hv": "",
+     "vi": "thẩm định chi trả",
+     "ex": "{支払|しはら}い{審査|しんさ}には1{週間|しゅうかん}ほどかかります。",
+     "exVi": "Việc thẩm định chi trả mất khoảng 1 tuần."
+    },
+    {
+     "w": "{請求|せいきゅう}{期限|きげん}",
+     "read": "せいきゅうきげん",
+     "hv": "THỈNH CẦU KỲ HẠN",
+     "vi": "thời hạn yêu cầu (chi trả)",
+     "ex": "{請求|せいきゅう}{期限|きげん}は{事故|じこ}から3{年|ねん}です。",
+     "exVi": "Thời hạn yêu cầu là 3 năm kể từ ngày tai nạn."
+    },
+    {
+     "w": "{在留|ざいりゅう}{期間|きかん}",
+     "read": "ざいりゅうきかん",
+     "hv": "TẠI LƯU KỲ GIAN",
+     "vi": "thời gian lưu trú (trên thẻ lưu trú)",
+     "ex": "{在留|ざいりゅう}{期間|きかん}を{確認|かくにん}させてください。",
+     "exVi": "Xin cho phép tôi xác nhận thời gian lưu trú."
+    },
+    {
+     "w": "{署名|しょめい}{欄|らん}",
+     "read": "しょめいらん",
+     "hv": "THỰ DANH LAN",
+     "vi": "ô ký tên",
+     "ex": "こちらの{署名|しょめい}{欄|らん}にお{名前|なまえ}をお{願|ねが}いします。",
+     "exVi": "Xin quý khách ký vào ô ký tên này."
+    },
+    {
+     "w": "{記入|きにゅう}{例|れい}",
+     "read": "きにゅうれい",
+     "hv": "KÝ NHẬP LỆ",
+     "vi": "mẫu điền sẵn (ví dụ cách điền)",
+     "ex": "{記入|きにゅう}{例|れい}を{見|み}ながら{書|か}いてください。",
+     "exVi": "Xin hãy vừa xem mẫu điền vừa viết."
+    },
+    {
+     "w": "{訂正|ていせい}{印|いん}",
+     "read": "ていせいいん",
+     "hv": "ĐÍNH CHÍNH ẤN",
+     "vi": "con dấu sửa chữa (đóng lên chỗ sửa)",
+     "ex": "{間違|まちが}えたら{訂正|ていせい}{印|いん}を{押|お}してください。",
+     "exVi": "Nếu viết sai, xin đóng con dấu sửa chữa."
+    },
+    {
+     "w": "{二重|にじゅう}{線|せん}",
+     "read": "にじゅうせん",
+     "hv": "NHỊ TRÙNG TUYẾN",
+     "vi": "gạch hai đường (để sửa chữ sai)",
+     "ex": "{間違|まちが}えた{文字|もじ}に{二重|にじゅう}{線|せん}を{引|ひ}いてください。",
+     "exVi": "Xin gạch hai đường lên chữ đã viết sai."
+    },
+    {
+     "w": "{保管|ほかん}{期限|きげん}",
+     "read": "ほかんきげん",
+     "hv": "BẢO QUẢN KỲ HẠN",
+     "vi": "thời hạn lưu giữ (hồ sơ)",
+     "ex": "この{書類|しょるい}の{保管|ほかん}{期限|きげん}は5{年|ねん}です。",
+     "exVi": "Thời hạn lưu giữ hồ sơ này là 5 năm."
+    },
+    {
+     "w": "{取引|とりひき}{目的|もくてき}",
+     "read": "とりひきもくてき",
+     "hv": "THỦ DẪN MỤC ĐÍCH",
+     "vi": "mục đích giao dịch",
+     "ex": "{取引|とりひき}{目的|もくてき}をお{聞|き}かせください。",
+     "exVi": "Xin cho tôi biết mục đích giao dịch."
+    },
+    {
+     "w": "{札|さつ}{詰|づ}まり",
+     "read": "さつづまり",
+     "hv": "",
+     "vi": "kẹt tiền giấy (trong ATM)",
+     "ex": "ATMで{札|さつ}{詰|づ}まりが{起|お}きました。",
+     "exVi": "Tại ATM đã xảy ra kẹt tiền giấy."
+    },
+    {
+     "w": "{復旧|ふっきゅう}{作業|さぎょう}",
+     "read": "ふっきゅうさぎょう",
+     "hv": "PHỤC CỰU TÁC NGHIỆP",
+     "vi": "công việc khôi phục (sau sự cố)",
+     "ex": "{復旧|ふっきゅう}{作業|さぎょう}を{急|いそ}いでいます。",
+     "exVi": "Đang khẩn trương khôi phục."
+    },
+    {
+     "w": "{代替|だいたい}{手続|てつづ}き",
+     "read": "だいたいてつづき",
+     "hv": "ĐẠI THẾ THỦ TỤC",
+     "vi": "thủ tục thay thế (khi hệ thống dừng)",
+     "ex": "システム{停止中|ていしちゅう}は{代替|だいたい}{手続|てつづ}きで{対応|たいおう}します。",
+     "exVi": "Trong lúc hệ thống dừng, chúng tôi xử lý bằng thủ tục thay thế."
+    },
+    {
+     "w": "{営業|えいぎょう}{再開|さいかい}",
+     "read": "えいぎょうさいかい",
+     "hv": "DOANH NGHIỆP TÁI KHAI",
+     "vi": "mở cửa hoạt động trở lại",
+     "ex": "3{時|じ}から{営業|えいぎょう}を{再開|さいかい}します。",
+     "exVi": "Từ 3 giờ sẽ mở cửa hoạt động trở lại."
+    },
+    {
+     "w": "{掲示|けいじ}",
+     "read": "けいじ",
+     "hv": "YẾT THỊ",
+     "vi": "thông báo dán, bảng thông báo",
+     "ex": "{入口|いりぐち}に{掲示|けいじ}を{出|だ}しました。",
+     "exVi": "Tôi đã dán thông báo ở lối vào."
+    },
+    {
+     "w": "{夜間|やかん}{金庫|きんこ}",
+     "read": "やかんきんこ",
+     "hv": "DẠ GIAN KIM KHỐ",
+     "vi": "két gửi tiền ban đêm (của ngân hàng)",
+     "ex": "{夜間|やかん}{金庫|きんこ}は{閉店後|へいてんご}も{使|つか}えます。",
+     "exVi": "Két gửi tiền ban đêm dùng được cả sau giờ đóng cửa."
+    },
+    {
+     "w": "{現金|げんきん}{輸送|ゆそう}",
+     "read": "げんきんゆそう",
+     "hv": "HIỆN KIM THÂU TỐNG",
+     "vi": "vận chuyển tiền mặt",
+     "ex": "{現金|げんきん}{輸送|ゆそう}は{警備員|けいびいん}が{行|おこな}います。",
+     "exVi": "Việc vận chuyển tiền mặt do nhân viên bảo vệ thực hiện."
+    },
+    {
+     "w": "チャート",
+     "read": "ちゃーと",
+     "hv": "",
+     "vi": "biểu đồ (giá cổ phiếu)",
+     "ex": "{株価|かぶか}のチャートを{毎日|まいにち}{見|み}ています。",
+     "exVi": "Tôi xem biểu đồ giá cổ phiếu mỗi ngày."
+    },
+    {
+     "w": "{損|そん}{切|ぎ}り",
+     "read": "そんぎり",
+     "hv": "",
+     "vi": "cắt lỗ (stop-loss)",
+     "ex": "{損|そん}{切|ぎ}りのルールを{先|さき}に{決|き}めます。",
+     "exVi": "Quyết định nguyên tắc cắt lỗ trước."
+    },
+    {
+     "w": "{利確|りかく}",
+     "read": "りかく",
+     "hv": "LỢI XÁC",
+     "vi": "chốt lời (ghi lãi)",
+     "ex": "{利確|りかく}のタイミングを{逃|のが}しました。",
+     "exVi": "Tôi đã lỡ thời điểm chốt lời."
+    },
+    {
+     "w": "{分配|ぶんぱい}{金|きん}",
+     "read": "ぶんぱいきん",
+     "hv": "PHÂN PHỐI KIM",
+     "vi": "tiền phân phối (của quỹ đầu tư)",
+     "ex": "この{投資|とうし}{信託|しんたく}は{年|ねん}に2{回|かい}{分配金|ぶんぱいきん}が{出|で}ます。",
+     "exVi": "Quỹ ủy thác đầu tư này có tiền phân phối 2 lần mỗi năm."
+    },
+    {
+     "w": "{信託|しんたく}{報酬|ほうしゅう}",
+     "read": "しんたくほうしゅう",
+     "hv": "TÍN THÁC BÁO THÙ",
+     "vi": "phí quản lý quỹ (phí ủy thác)",
+     "ex": "{信託|しんたく}{報酬|ほうしゅう}は{年|ねん}0.2パーセントです。",
+     "exVi": "Phí quản lý quỹ là 0,2% mỗi năm."
+    },
+    {
+     "w": "{運用|うんよう}{報告書|ほうこくしょ}",
+     "read": "うんようほうこくしょ",
+     "hv": "VẬN DỤNG BÁO CÁO THƯ",
+     "vi": "báo cáo vận hành (của quỹ)",
+     "ex": "{運用|うんよう}{報告書|ほうこくしょ}が{届|とど}きました。",
+     "exVi": "Báo cáo vận hành của quỹ đã được gửi đến."
+    },
+    {
+     "w": "{源泉|げんせん}{徴収|ちょうしゅう}",
+     "read": "げんせんちょうしゅう",
+     "hv": "NGUYÊN TUYỀN TRƯNG THU",
+     "vi": "khấu trừ thuế tại nguồn",
+     "ex": "{配当|はいとう}からは{源泉|げんせん}{徴収|ちょうしゅう}されます。",
+     "exVi": "Cổ tức sẽ bị khấu trừ thuế tại nguồn."
     }
    ],
    "phrases": [
@@ -4687,6 +5537,56 @@
      "ja": "またのご{来店|らいてん}をお{待|ま}ちしております。",
      "vi": "Rất mong được đón tiếp quý khách lần tới.",
      "note": "Chào tạm biệt tại quầy"
+    },
+    {
+     "ja": "{口座|こうざ}{開設|かいせつ}には{在留|ざいりゅう}カードとマイナンバーカードが{必要|ひつよう}です。",
+     "vi": "Để mở tài khoản cần thẻ lưu trú và thẻ My Number.",
+     "note": "Giải thích giấy tờ mở tài khoản, kính ngữ với khách"
+    },
+    {
+     "ja": "{引|ひ}き{落|お}とし{日|び}は{毎月|まいつき}27{日|にち}でございます。",
+     "vi": "Ngày trừ tiền tự động là ngày 27 hàng tháng ạ.",
+     "note": "Giải thích ngày trích nợ tự động"
+    },
+    {
+     "ja": "{為替|かわせ}レートは{本日|ほんじつ}1ドル150{円|えん}でございます。",
+     "vi": "Tỷ giá hôm nay là 1 đô la bằng 150 yên ạ.",
+     "note": "Thông báo tỷ giá tại quầy"
+    },
+    {
+     "ja": "こちらが{記入例|きにゅうれい}です。{見本|みほん}を{見|み}ながらお{書|か}きください。",
+     "vi": "Đây là mẫu điền ạ. Xin quý khách vừa xem mẫu vừa viết.",
+     "note": "Đưa mẫu điền cho khách, đặc biệt hữu ích với khách nước ngoài"
+    },
+    {
+     "ja": "{間違|まちが}えた{所|ところ}は{二重線|にじゅうせん}を{引|ひ}いて{訂正印|ていせいいん}をお{願|ねが}いいたします。",
+     "vi": "Chỗ viết sai xin gạch hai đường và đóng con dấu sửa chữa ạ.",
+     "note": "Hướng dẫn sửa giấy tờ tại quầy, kính ngữ"
+    },
+    {
+     "ja": "がん{保険|ほけん}は{入院|にゅういん}だけでなく{通院|つういん}でも{給付金|きゅうふきん}が{出|で}ます。",
+     "vi": "Bảo hiểm ung thư không chỉ khi nằm viện mà cả khi đi khám ngoại trú cũng được chi trả tiền quyền lợi.",
+     "note": "Giải thích phạm vi bảo đảm khi tư vấn"
+    },
+    {
+     "ja": "{事故|じこ}のご{連絡|れんらく}ありがとうございます。まずお{怪我|けが}はございませんか。",
+     "vi": "Cảm ơn quý khách đã liên lạc báo tai nạn. Trước hết, quý khách có bị thương không ạ?",
+     "note": "Tiếp nhận báo tai nạn qua điện thoại, hỏi thăm trước tiên"
+    },
+    {
+     "ja": "レッカーの{手配|てはい}ができました。{到着|とうちゃく}まで40{分|ふん}ほどかかります。",
+     "vi": "Đã sắp xếp được xe cứu hộ ạ. Xe đến nơi mất khoảng 40 phút.",
+     "note": "Báo sắp xếp cứu hộ trong bồi thường ô tô"
+    },
+    {
+     "ja": "ATMが{故障|こしょう}のため、{窓口|まどぐち}でお{手続|てつづ}きいただけます。",
+     "vi": "Do ATM bị hỏng, xin quý khách làm thủ tục tại quầy ạ.",
+     "note": "Hướng dẫn khách khi ATM/sự cố hệ thống"
+    },
+    {
+     "ja": "{投資|とうし}には{元本割|がんぽんわ}れのリスクがございます。ご{理解|りかい}のうえお{申|もう}し{込|こ}みください。",
+     "vi": "Đầu tư có rủi ro lỗ vốn. Xin quý khách đăng ký sau khi đã hiểu rõ ạ.",
+     "note": "Giải thích rủi ro bắt buộc khi tư vấn đầu tư, kính ngữ"
     }
    ],
    "dialogues": [
