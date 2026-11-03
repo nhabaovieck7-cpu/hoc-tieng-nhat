@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-03-do-rong-bai-hoc-toan-web",
+   "date": "2026-11-03",
+   "type": "tinh-nang",
+   "title": "Chỉnh độ rộng bài học trên toàn web, mặc định đã rộng hơn",
+   "desc": "Bộ chọn độ rộng bài học (Vừa · Rộng · Toàn màn hình) nay có ở mọi nơi đọc nội dung: bài học, Ngành nghề, Đời sống và Đề thi thử — chọn một lần là mọi trang cùng theo. Riêng trang bài học, mức Vừa mặc định đã nới phần đọc lên ~980px (trước ~820px) mà mục lục vẫn gọn 292px, và thanh chọn độ rộng hiện rõ thành một dải ngay dưới tiêu đề bài học.",
+   "link": "kaiwa.html"
+  },
+  {
    "id": "2026-11-03-chu-luon-chay-ngang",
    "date": "2026-11-03",
    "type": "tinh-nang",

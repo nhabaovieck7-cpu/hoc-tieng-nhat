@@ -1567,3 +1567,25 @@ html[data-rw="full"] .layout.toc-open:has(>nav.toc)>nav.toc{display:block;positi
 @media(max-width:700px){
 .list small{flex:1 1 100%;max-width:none;text-align:left;margin-left:0;padding-left:0}
 }
+
+/* ===== V126: ĐỘ RỘNG BÀI HỌC TOÀN WEB + MẶC ĐỊNH LỚN HƠN (03/11/2026) =====
+   Mở rộng bộ chỉnh độ rộng của V124 (khối phía trên) theo lệnh chủ trang
+   21:33: "cả phần khóa học và tất cả các phần khác trong web nữa — chỉnh
+   kích thước bài học lớn ra, có thể điều chỉnh kích thước mình muốn,
+   phụ lục bé thôi".
+   1) Thanh .rwbar nổi rõ thành một dải công cụ (nền thẻ + viền + đệm,
+      căn trái) nằm ngay dưới tiêu đề — trước đây chỉ là dòng chữ nhỏ
+      căn phải nên rất khó thấy trên màn rộng.
+   2) lesson.html: mức mặc định "Vừa" (không có data-rw) nới .wrap lên
+      1340px → cột bài học ~980px ở màn >=1400px (trước: 1180px → ~820px);
+      cột mục lục giữ nguyên 292px của V120 ("phụ lục bé thôi"). Mức
+      Rộng/Toàn màn hình và lựa chọn đã lưu hn_rw_v1 không thay đổi.
+   3) Mọi trang có .rwbar (lesson.html, nganh-nghe.html, doi-song.html,
+      thi-thu.html) dùng CHUNG khóa nhớ hn_rw_v1: mức Rộng nới .wrap lên
+      1560px, mức Toàn màn hình bỏ giới hạn (đệm 12px) — chọn ở trang
+      này thì sang trang khác vẫn theo mức đó. */
+.rwbar{justify-content:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 12px;margin:14px 0 18px;box-shadow:0 2px 10px rgba(30,10,16,.05)}
+.rwbar .rw-lab{font-size:.9rem}
+html:not([data-rw]) body:has(.lhead) .wrap{max-width:1340px}
+html[data-rw="wide"] body:has(.rwbar) .wrap{max-width:1560px}
+html[data-rw="full"] body:has(.rwbar) .wrap{max-width:none;padding-left:12px;padding-right:12px}
