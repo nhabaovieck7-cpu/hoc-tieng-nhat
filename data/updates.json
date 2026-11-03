@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-03-kaiwa-18-dich-tung-cau",
+   "date": "2026-11-03",
+   "type": "he-thong",
+   "title": "Kaiwa Bài 18 đã có dịch từng câu và giọng đọc đầy đủ",
+   "desc": "Bài Kaiwa 18 (Gọi điện cho phòng khám nhi đặt lịch khám cho con) trước đây bị thiếu phần dịch từng câu và không nghe được âm thanh; nay đã bổ sung bản dịch tiếng Việt dưới từng câu hội thoại (42 câu) cùng bản ghi VOICEVOX đúng giọng nhân vật — tiếp tân giọng nữ, Nam và bác sĩ giọng nam — bấm loa nghe từng câu hoặc đọc cả đoạn như các bài Kaiwa khác.",
+   "link": "kaiwa.html"
+  },
+  {
    "id": "2026-11-03-co-chu-bai-hoc",
    "date": "2026-11-03",
    "type": "tinh-nang",
