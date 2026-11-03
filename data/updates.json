@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-03-de-thi-cac-nam",
+   "date": "2026-11-03",
+   "type": "tinh-nang",
+   "title": "Mục mới: Đề thi các năm (đề thật JLPT)",
+   "desc": "Trang Thi thử có thêm mục Đề thi các năm: 102 đề thi JLPT chính thức các kỳ 2010–2025 đủ 5 cấp N5–N1, bấm vào từng kỳ để làm bài theo giờ thi thật và xem đáp án, điểm thang 180 tại trang nguồn.",
+   "link": "thi-thu.html"
+  },
+  {
    "id": "2026-11-03-kaiwa-18-dich-tung-cau",
    "date": "2026-11-03",
    "type": "he-thong",

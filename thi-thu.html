@@ -232,7 +232,7 @@ function startExam(box,cfg){
 }
 window.__pracStartExam=startExam;
 /* ---------- Đề luyện tập + đề chính thức: gom theo cấp N5→N1 ---------- */
-var pdBox=$('pd'),pfBox=$('pf'),dailyTests=null,fullExams=null;
+var pdBox=$('pd'),pfBox=$('pf'),dailyTests=null,fullExams=null,pastExams=null;
 var LVLIST=['N5','N4','N3','N2','N1'];
 var LVCOL={'N5':'var(--n5)','N4':'var(--n4)','N3':'var(--n3)','N2':'var(--n2)','N1':'var(--n1)'};
 var LVJP={'N5':'入門','N4':'初級','N3':'中級への橋','N2':'中上級','N1':'上級'};
@@ -261,6 +261,17 @@ function pracRender(){
   h+='</div>';
  });
  h+='</div>';
+ if(pastExams){
+  h+='<div class="box" style="margin-top:12px"><h3>🗂️ Đề thi các năm (đề thật JLPT)</h3><p class="mut">Đề thi JLPT chính thức các kỳ từ 2010 đến 2025, tổng hợp theo từng cấp — bấm vào kỳ thi để làm bài theo giờ thi thật, nộp bài có ngay đáp án và điểm thang 180 tại trang nguồn (mimichan.app). Lưu ý: phần Nghe hiểu ở trang nguồn hiện nhiều câu chưa có file nghe; Từ vựng · Ngữ pháp · Đọc hiểu làm và chấm đáp án bình thường.</p>';
+  LVLIST.forEach(function(lv){
+   var xs=pastExams[lv]||[];
+   if(!xs.length)return;
+   h+='<div style="margin-top:14px;border-top:3px solid '+LVCOL[lv]+';padding-top:8px"><div class="pdlv-h" data-level="'+lv+'"><span class="pdlv-dot"></span><span class="pdlv-t">'+lv+'</span><span class="pdlv-jp">'+LVJP[lv]+'</span><span class="mut">'+xs.length+' đề</span></div><div style="margin-top:8px">';
+   xs.forEach(function(x){h+='<a class="pill" href="'+esc(x.url)+'" target="_blank" rel="noopener" style="margin:2px;display:inline-block;text-decoration:none">Tháng '+x.month+'/'+x.year+' · 📝 '+x.count+' câu ↗</a>'});
+   h+='</div></div>';
+  });
+  h+='</div>';
+ }
  pdBox.innerHTML=h;
  pdBox.querySelectorAll('[data-file]').forEach(function(b){
   b.onclick=function(){
@@ -282,6 +293,7 @@ function fullMenu(){
 }
 dailyMenu();
 fullMenu();
+fetch('data/past-exams/index.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(m){pastExams=(m&&m.levels)||null;pracMaybeRender()}).catch(function(){});
 })();
 </script>
 
