@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-04-go-de-lien-ket-ngoai",
+   "date": "2026-11-04",
+   "type": "thay-doi",
+   "title": "Gỡ mục đề thi các năm liên kết ngoài",
+   "desc": "Theo yêu cầu của chủ trang, mục Đề thi các năm (liên kết sang trang khác) đã được gỡ khỏi trang Thi thử. Từ nay trang chỉ dùng kho đề do chính web soạn: Đề thi thử theo format đề thật, đề chính thức thứ 7 và đề luyện tập hằng ngày.",
+   "link": "thi-thu.html"
+  },
+  {
    "id": "2026-11-04-kho-de-thi-thu-trong-tam",
    "date": "2026-11-04",
    "type": "tinh-nang",
