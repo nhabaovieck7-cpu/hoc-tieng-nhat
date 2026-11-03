@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-03-co-chu-bai-hoc",
+   "date": "2026-11-03",
+   "type": "tinh-nang",
+   "title": "Chỉnh cỡ chữ bài học to nhỏ tùy ý trên toàn web",
+   "desc": "Thanh công cụ của bài học nay có thêm cụm Cỡ chữ (A- · Vừa · A+ · A++): toàn bộ chữ trong bài — câu hội thoại và dòng dịch, bảng từ vựng, đáp án và giải thích — phóng to thu nhỏ theo ý bạn, furigana lớn theo đúng tỉ lệ. Có ở trang bài học (mọi bài khóa học và Kaiwa), Ngành nghề, Đời sống và Đề thi thử; chọn một lần là mọi trang cùng theo.",
+   "link": "kaiwa.html"
+  },
+  {
    "id": "2026-11-03-do-rong-bai-hoc-toan-web",
    "date": "2026-11-03",
    "type": "tinh-nang",
