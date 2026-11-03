@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-04-mo-khoa-mien-phi-toan-web",
+   "date": "2026-11-04",
+   "type": "tinh-nang",
+   "title": "Mở khóa toàn bộ: học miễn phí không cần đăng nhập",
+   "desc": "Toàn bộ bài học khóa học, kaiwa, tin tức, ngành nghề, đời sống, thi thử và game nay mở miễn phí cho mọi người — không cần tài khoản vẫn học và chơi trọn vẹn. Đăng nhập (miễn phí) để lưu tiến độ, chat, tham gia cộng đồng và chỉnh trang cá nhân; khách học thì tiến độ chỉ hiển thị trong phiên đang mở, không lưu lại.",
+   "link": "index.html"
+  },
+  {
    "id": "2026-11-03-de-thi-cac-nam",
    "date": "2026-11-03",
    "type": "tinh-nang",

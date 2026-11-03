@@ -66,6 +66,22 @@ main.wrap{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
     </div>
   </div>
 
+  <h2 style="margin-top:34px">📊 Thống kê truy cập</h2>
+  <div class="hv">
+    <div class="hv-stats">
+      <div class="astat"><span class="astat-n" id="tvToday">—</span><span class="astat-l">👀 Lượt xem hôm nay</span></div>
+      <div class="astat"><span class="astat-n" id="tv7">—</span><span class="astat-l">📅 Lượt xem 7 ngày</span></div>
+      <div class="astat"><span class="astat-n" id="tvTotal">—</span><span class="astat-l">🌐 Tổng lượt xem</span></div>
+      <div class="astat"><span class="astat-n" id="tvOnline">—</span><span class="astat-l">🟢 Đang trực tuyến (15 phút)</span></div>
+    </div>
+    <p class="meta" id="tvSplit" style="margin:2px 0 10px"></p>
+    <div class="hv-grid">
+      <section class="hv-card"><h3 style="margin-top:0">👤 Thành viên đang vào gần đây (1 giờ)</h3><div id="tvMembers"><p class="empty-note">Đang tải…</p></div><p class="meta">Khách vãng lai chỉ được đếm ẩn danh (số lượng + trang xem), không ghi danh tính.</p></section>
+      <section class="hv-card"><h3 style="margin-top:0">🔥 Trang được xem nhiều nhất (7 ngày)</h3><div id="tvTop"><p class="empty-note">Đang tải…</p></div></section>
+    </div>
+    <section class="hv-card" style="margin-top:12px"><h3 style="margin-top:0">📈 Lượt xem theo ngày (30 ngày gần nhất)</h3><div id="tvChart"><p class="empty-note">Đang tải…</p></div></section>
+  </div>
+
   <h2 style="margin-top:34px">👥 Kiểm duyệt Cộng đồng</h2>
   <div class="tabs" id="cmPostTabs">
     <button type="button" data-f="all" class="on">Tất cả bài</button>
@@ -110,7 +126,7 @@ main.wrap{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
   <div id="cmLog"><p class="empty-note">Đang tải…</p></div>
 </div>
 </main>
-<script src="config.js?v=755aff7d"></script><script src="common.js?v=e1290d7c"></script><script src="auth.js?v=2fdce514"></script>
+<script src="config.js?v=755aff7d"></script><script src="common.js?v=c938d137"></script><script src="auth.js?v=60babd84"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 const loginBox=document.getElementById('loginBox'),panel=document.getElementById('panel');
@@ -132,6 +148,23 @@ function paintStats(c,online){
     if(b.dataset.t==='pending'&&n>0){const d=document.createElement('span');d.className='tabdot';d.title='Có '+n+' tài khoản chờ duyệt';b.appendChild(d)}
   });
 }
+function agoTxt(t){if(!t)return '—';const s=Math.max(0,(Date.now()-new Date(t).getTime())/1000);if(s<90)return 'vừa xong';if(s<3600)return Math.floor(s/60)+' phút trước';if(s<86400)return Math.floor(s/3600)+' giờ trước';return Math.floor(s/86400)+' ngày trước'}
+// ===== Thống kê truy cập (beacon /track/view -> j.traffic trong /auth/admin/stats) =====
+function paintTraffic(tr){
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
+  const mem=document.getElementById('tvMembers'),top=document.getElementById('tvTop'),ch=document.getElementById('tvChart'),sp=document.getElementById('tvSplit');
+  if(!mem||!top||!ch)return;
+  if(!tr){set('tvToday','—');set('tv7','—');set('tvTotal','—');set('tvOnline','—');mem.innerHTML='<p class="empty-note">Chưa có dữ liệu truy cập.</p>';top.innerHTML='<p class="empty-note">—</p>';ch.innerHTML='<p class="empty-note">—</p>';if(sp)sp.textContent='';return}
+  set('tvToday',String(tr.today.views));set('tv7',String(tr.last7.views));set('tvTotal',String(tr.total.views));
+  set('tvOnline',String((tr.online.guests||0)+(tr.online.members||0)));
+  if(sp)sp.textContent='Hôm nay: '+tr.today.guests+' lượt của khách · '+tr.today.members+' lượt của thành viên. Đang trực tuyến: '+tr.online.guests+' khách · '+tr.online.members+' thành viên.';
+  mem.innerHTML=(tr.recentMembers&&tr.recentMembers.length)?tr.recentMembers.map(m=>'<div class="userrow"><b>'+esc(m.name)+'</b>'+(m.online?' <span class="meta">🟢 đang trực tuyến</span>':'')+'<div class="meta">Đang xem / xem gần nhất: '+esc(m.path)+' · '+agoTxt(m.last_seen)+'</div></div>').join(''):'<p class="empty-note">Chưa có thành viên nào vào gần đây.</p>';
+  top.innerHTML=(tr.topPages&&tr.topPages.length)?tr.topPages.map(t=>'<div class="meta" style="padding:3px 0">'+esc(t.path)+' — <b>'+t.views+'</b> lượt</div>').join(''):'<p class="empty-note">Chưa có dữ liệu.</p>';
+  const sr=(tr.series||[]).slice(-30);
+  if(!sr.length){ch.innerHTML='<p class="empty-note">Chưa có dữ liệu.</p>';return}
+  const mx=Math.max.apply(null,sr.map(d=>d.views).concat([1]));
+  ch.innerHTML='<div style="display:flex;align-items:flex-end;gap:3px;height:120px;padding-top:6px">'+sr.map(d=>'<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0" title="'+esc(d.day)+': '+d.views+' lượt (khách '+d.guests+' · thành viên '+d.members+')"><span class="meta" style="font-size:10px">'+d.views+'</span><div style="width:70%;max-width:22px;height:'+Math.max(3,Math.round(80*d.views/mx))+'px;background:var(--brand,#4f7cff);border-radius:5px 5px 0 0"></div><span class="meta" style="font-size:9px">'+esc(String(d.day).slice(5))+'</span></div>').join('')+'</div>';
+}
 async function loadStats(){
   let c=null,online=null;
   try{
@@ -140,6 +173,7 @@ async function loadStats(){
       c={pending:+j.counts.pending||0,approved:+j.counts.approved||0,rejected:+j.counts.rejected||0,locked:+j.counts.locked||0};
       c.total=j.counts.total!=null?(+j.counts.total||0):c.pending+c.approved+c.rejected+c.locked;
       online=j.online==null?null:(+j.online||0);
+      paintTraffic(j.traffic||null);
     }
   }catch(e){c=null}
   if(!c){

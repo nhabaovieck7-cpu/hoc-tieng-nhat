@@ -175,7 +175,7 @@ const AUTH=(()=>{
     }
 
     if(!session()){
-      paint('<a class="acctin" href="dang-nhap.html">Đăng nhập</a>');
+      paint('<a class="acctin" href="dang-nhap.html">Đăng nhập / Đăng ký</a>');
       return;
     }
 
@@ -194,7 +194,7 @@ const AUTH=(()=>{
       if(e.status===401||e.status===403){
         // Máy chủ xác nhận phiên hết hạn/không hợp lệ → mới xoá phiên.
         setSession('');
-        paint('<a class="acctin" href="dang-nhap.html">Đăng nhập</a>');
+        paint('<a class="acctin" href="dang-nhap.html">Đăng nhập / Đăng ký</a>');
       }else{
         // Lỗi mạng/tạm thời: giữ nguyên phiên, đừng bắt đăng nhập lại oan.
         paint(
@@ -463,3 +463,26 @@ try{
   Storage.prototype.setItem=function(k,v){_set.call(this,k,v);if(this===localStorage){k=String(k);HNSYNC.touched(k);HNHOSO.touched(k)}};
   Storage.prototype.removeItem=function(k){_rem.call(this,k);if(this===localStorage){k=String(k);HNSYNC.removedKey(k);HNHOSO.removedKey(k)}};
 }catch(e){}
+
+// ===== GUESTOPEN (03/11/2026): khách KHÔNG lưu tiến độ =====
+// Lệnh chủ trang: "tiến độ thì phải đăng nhập mới lưu được". Khi trình duyệt
+// KHÔNG có phiên đăng nhập (cả user lẫn admin), mọi lần đọc/ghi các khoá
+// TIẾN ĐỘ + HỒ SƠ dưới đây được chuyển sang sessionStorage: vẫn hiển thị/vận
+// hành bình thường trong phiên đang mở, đóng tab/phiên là mất, và khách
+// đăng nhập sau không có gì để gộp từ thời khách. Có phiên -> chạm đúng
+// localStorage như cũ (mọi cơ chế lưu/đồng bộ của thành viên giữ nguyên).
+// Cùng một cơ chế gác cổng được gắn ở game/game.js và game-truyen/content.js
+// cho hai realm game (cờ __hnGuestGuard chống gắn trùng).
+(function(){
+  try{
+    if(Storage.prototype.__hnGuestGuard)return;
+    Storage.prototype.__hnGuestGuard=1;
+    const EXACT={hn_prog_v1:1,hn_srs_v1:1,hn_game_v1:1,hn_game_progress:1,hn_game_scores_local:1,hn_game_campaign:1,hn_practice_v1:1,hn_dk_done:1,hn_dk_streak:1,hn_dk_lastlesson:1,hn_dk_level:1,hn_dk_goal:1,hn_dk_ho_so:1,hn_dk_avatar:1,hn_game_user:1,b2d_level:1};
+    const isProg=k=>typeof k==='string'&&(!!EXACT[k]||k.indexOf('hn_choukai_')===0||k.indexOf('tuoitre2d_')===0);
+    const _get=Storage.prototype.getItem,_set=Storage.prototype.setItem,_rem=Storage.prototype.removeItem;
+    const guestNow=()=>{try{return !_get.call(localStorage,'hn_sess_v1')&&!_get.call(localStorage,'hn_admin_sess_v1')}catch(e){return false}};
+    Storage.prototype.getItem=function(k){if(this===localStorage&&isProg(k)&&guestNow()){try{return _get.call(sessionStorage,k)}catch(e){}}return _get.call(this,k)};
+    Storage.prototype.setItem=function(k,v){if(this===localStorage&&isProg(k)&&guestNow()){try{_set.call(sessionStorage,k,v);return}catch(e){}}return _set.call(this,k,v)};
+    Storage.prototype.removeItem=function(k){if(this===localStorage&&isProg(k)&&guestNow()){try{_rem.call(sessionStorage,k);return}catch(e){}}return _rem.call(this,k)};
+  }catch(e){}
+})();

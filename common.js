@@ -851,3 +851,22 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  if(document.body)add();
  else document.addEventListener('DOMContentLoaded',add);
 })();
+
+// ===== Thống kê truy cập (03/11/2026): beacon lượt xem nhẹ cho trang admin =====
+// Bất đồng bộ, fire-and-forget: đường dẫn trang + định danh phiên khách ẩn
+// danh (sessionStorage). Có phiên thì đính token để Worker ghi nhận thành
+// viên. Mọi lỗi đều bỏ qua êm — không bao giờ ảnh hưởng trang.
+(function(){
+  try{
+    var PAGE=(location.pathname||'').split('/').pop()||'index.html';
+    if(PAGE==='admin.html')return;
+    var EP=((typeof SITE!=='undefined'&&SITE&&SITE.aiEndpoint)||'https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev').replace(/\/$/,'');
+    var sid='';try{sid=sessionStorage.getItem('hn_guest_sid')||'';if(!sid){sid='g'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);sessionStorage.setItem('hn_guest_sid',sid)}}catch(e){}
+    var p=location.pathname.replace(/^\/hoc-tieng-nhat\//,'').replace(/^\//,'');
+    var id=new URLSearchParams(location.search).get('id');if(id)p+='?id='+String(id).slice(0,60);
+    var h={'Content-Type':'application/json'};
+    var tok='';try{tok=localStorage.getItem('hn_sess_v1')||localStorage.getItem('hn_admin_sess_v1')||''}catch(e){}
+    if(tok)h.Authorization='Bearer '+tok;
+    fetch(EP+'/track/view',{method:'POST',headers:h,body:JSON.stringify({p:p,s:sid}),keepalive:true}).catch(function(){});
+  }catch(e){}
+})();

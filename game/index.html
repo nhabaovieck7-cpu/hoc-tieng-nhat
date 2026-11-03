@@ -173,6 +173,30 @@ document.getElementById('modeGrid').innerHTML = MODES.map(function (m) {
     '<span class="arr" aria-hidden="true">›</span></a>';
 }).join('');
 
+/* GUESTOPEN (03/11): Phòng nhóm · Đối kháng + Thách đấu là tính năng TÀI
+   KHOẢN (máy chủ cần phiên đăng nhập để tạo phòng/mã). Khách bấm vào ->
+   hiện lời mời ngay tại sảnh, không chuyển trang; thành viên bấm như cũ. */
+document.getElementById('modeGrid').addEventListener('click', function (ev) {
+  var a = ev.target && ev.target.closest ? ev.target.closest('a.mode-card') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  if (!/(phong-nhom|thach-dau)\.html$/.test(href)) return;
+  var hasSess = false;
+  try { hasSess = !!localStorage.getItem('hn_sess_v1'); } catch (e) {}
+  if (hasSess) return;
+  ev.preventDefault();
+  var note = document.getElementById('guestModeNote');
+  if (!note) {
+    note = document.createElement('p');
+    note.id = 'guestModeNote';
+    note.className = 'lb-empty';
+    note.style.margin = '10px 0';
+    document.getElementById('modeGrid').after(note);
+  }
+  note.innerHTML = '🔒 Chế độ này cần tài khoản: <a href="../dang-nhap.html">đăng nhập</a> để tạo phòng chơi cùng bạn bè và gửi thách đấu. Các chế độ chơi đơn vẫn mở miễn phí cho khách — chơi ngay không cần tài khoản.';
+  note.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+});
+
 /* ---------- Intro cốt truyện ---------- */
 var INTRO_KEY = 'hn_game_intro_seen';
 var introIdx = 0;

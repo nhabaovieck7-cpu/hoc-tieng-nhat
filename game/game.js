@@ -1,3 +1,40 @@
+
+// ===== GUESTOPEN (03/11/2026): khách KHÔNG lưu tiến độ (bản gắn cho realm game) =====
+// Khi trình duyệt KHÔNG có phiên đăng nhập, đọc/ghi các khoá TIẾN ĐỘ + HỒ SƠ
+// được chuyển sang sessionStorage (chỉ sống trong phiên mở trang). Có phiên
+// -> localStorage như cũ. Xem bản gốc của cơ chế này ở auth.js của trang chính.
+(function(){
+  try{
+    if(Storage.prototype.__hnGuestGuard)return;
+    Storage.prototype.__hnGuestGuard=1;
+    var EXACT={hn_prog_v1:1,hn_srs_v1:1,hn_game_v1:1,hn_game_progress:1,hn_game_scores_local:1,hn_game_campaign:1,hn_practice_v1:1,hn_dk_done:1,hn_dk_streak:1,hn_dk_lastlesson:1,hn_dk_level:1,hn_dk_goal:1,hn_dk_ho_so:1,hn_dk_avatar:1,hn_game_user:1,b2d_level:1};
+    var isProg=function(k){return typeof k==='string'&&(!!EXACT[k]||k.indexOf('hn_choukai_')===0||k.indexOf('tuoitre2d_')===0)};
+    var _get=Storage.prototype.getItem,_set=Storage.prototype.setItem,_rem=Storage.prototype.removeItem;
+    var guestNow=function(){try{return !_get.call(localStorage,'hn_sess_v1')&&!_get.call(localStorage,'hn_admin_sess_v1')}catch(e){return false}};
+    Storage.prototype.getItem=function(k){if(this===localStorage&&isProg(k)&&guestNow()){try{return _get.call(sessionStorage,k)}catch(e){}}return _get.call(this,k)};
+    Storage.prototype.setItem=function(k,v){if(this===localStorage&&isProg(k)&&guestNow()){try{_set.call(sessionStorage,k,v);return}catch(e){}}return _set.call(this,k,v)};
+    Storage.prototype.removeItem=function(k){if(this===localStorage&&isProg(k)&&guestNow()){try{_rem.call(sessionStorage,k);return}catch(e){}}return _rem.call(this,k)};
+  }catch(e){}
+})();
+
+// ===== Thống kê truy cập (03/11/2026): beacon lượt xem nhẹ cho trang admin =====
+// Bất đồng bộ, fire-and-forget: đường dẫn trang + định danh phiên khách ẩn
+// danh (sessionStorage). Có phiên thì đính token để Worker ghi nhận thành
+// viên. Mọi lỗi đều bỏ qua êm — không bao giờ ảnh hưởng trang.
+(function(){
+  try{
+    var PAGE=(location.pathname||'').split('/').pop()||'index.html';
+    if(PAGE==='admin.html')return;
+    var EP=((typeof SITE!=='undefined'&&SITE&&SITE.aiEndpoint)||'https://hoc-tieng-nhat-ai.nhabaovieck7.workers.dev').replace(/\/$/,'');
+    var sid='';try{sid=sessionStorage.getItem('hn_guest_sid')||'';if(!sid){sid='g'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);sessionStorage.setItem('hn_guest_sid',sid)}}catch(e){}
+    var p=location.pathname.replace(/^\/hoc-tieng-nhat\//,'').replace(/^\//,'');
+    var id=new URLSearchParams(location.search).get('id');if(id)p+='?id='+String(id).slice(0,60);
+    var h={'Content-Type':'application/json'};
+    var tok='';try{tok=localStorage.getItem('hn_sess_v1')||localStorage.getItem('hn_admin_sess_v1')||''}catch(e){}
+    if(tok)h.Authorization='Bearer '+tok;
+    fetch(EP+'/track/view',{method:'POST',headers:h,body:JSON.stringify({p:p,s:sid}),keepalive:true}).catch(function(){});
+  }catch(e){}
+})();
 /* =====================================================================
    game.js — Hạ tầng dùng chung cho game "Hành trình đến Edo" (Nhánh 1)
    ---------------------------------------------------------------------

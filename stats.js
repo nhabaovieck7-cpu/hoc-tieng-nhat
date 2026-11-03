@@ -73,12 +73,10 @@
   async function homeTopWeek(me) {
     var mount = document.getElementById('topWeek');
     if (!mount) return;
-    if (!tok()) {
-      mount.innerHTML = '<div class="st-topweek"><h2>🏆 Bảng xếp hạng học viên</h2>'
-        + '<p class="st-sub">Ai học chăm nhất tuần này? Đăng nhập để xem thứ hạng và huy hiệu của bạn.</p>'
-        + '<a class="st-tw-link" href="dang-nhap.html">Đăng nhập →</a> · <a class="st-tw-link" href="xep-hang.html">Xem bảng xếp hạng →</a></div>';
-      return;
-    }
+    // GUESTOPEN (03/11): bảng xếp hạng là dữ liệu công khai — khách chưa đăng
+    // nhập cũng xem được Top tuần (Worker đã mở /stats/leaderboard cho khách);
+    // phần "của bạn" (thứ hạng/huy hiệu/số kính) vẫn chỉ có khi đăng nhập.
+    var guest = !tok();
     try {
       var lb = await api('/stats/leaderboard?cat=week&limit=3');
       var urls = await avatarUrls((lb.list || []).map(function (r) { return r.avatar_file; }));
@@ -90,7 +88,7 @@
       var meLine = '';
       if (lb.me && !lb.me.inTop) meLine = '<div class="st-tw-row"><span class="st-medal rkm">' + lb.me.rank + '</span><span class="st-av st-av-t">' + esc((lb.me.name || '?').trim().charAt(0).toUpperCase()) + '</span><span class="st-tw-name">' + esc(lb.me.name) + '<span class="st-me-chip">'+HNX.chip()+'</span></span><span class="st-tw-val">' + lb.me.value + ' XP</span></div>';
       mount.innerHTML = '<div class="st-topweek"><h2>🏆 Top tuần này</h2>'
-        + '<p class="st-sub">XP học tập tuần này (Thứ Hai – Chủ nhật). Học đều mỗi ngày để leo hạng!</p>'
+        + '<p class="st-sub">XP học tập tuần này (Thứ Hai – Chủ nhật). ' + (guest ? 'Bạn đang xem với tư cách khách — <a href="dang-nhap.html">đăng nhập</a> để lưu tiến độ và có tên trên bảng.' : 'Học đều mỗi ngày để leo hạng!') + '</p>'
         + (rows || '<p class="st-sub">Chưa có dữ liệu tuần này — hãy là người đầu tiên!</p>') + meLine
         + '<a class="st-tw-link" href="xep-hang.html">Xem bảng xếp hạng đầy đủ →</a></div>';
       // 3 ô thống kê kính trên dải đầu trang chủ (chuỗi ngày / XP tuần / hạng tuần) — số thật từ server
@@ -167,15 +165,18 @@
   async function page() {
     var root = document.getElementById('xhRoot');
     if (!root) return;
-    if (!tok()) {
-      root.innerHTML = '<section class="xh-card"><h2>🏆 Bảng xếp hạng học viên</h2><p>Bảng xếp hạng dành cho học viên đã đăng nhập — điểm tính từ tiến độ học đã đồng bộ theo tài khoản.</p><p><a class="btn-primary" href="dang-nhap.html">Đăng nhập để xem thứ hạng của bạn →</a></p></section>';
-      return;
-    }
+    // GUESTOPEN (03/11): khách xem được bảng xếp hạng (không có panel thành
+    // tích cá nhân); kèm thẻ mời đăng nhập để lưu tiến độ.
+    var guest = !tok();
     var me = null;
-    try { me = await api('/stats/me'); } catch (e) { }
-    if (!me) { root.innerHTML = '<section class="xh-card"><p>Không tải được dữ liệu thành tích (mất mạng hoặc tài khoản chưa được duyệt).</p></section>'; return; }
-    badgeToasts(me);
-    root.innerHTML = myPanel(me)
+    if (!guest) {
+      try { me = await api('/stats/me'); } catch (e) { }
+      if (!me) { root.innerHTML = '<section class="xh-card"><p>Không tải được dữ liệu thành tích (mất mạng hoặc tài khoản chưa được duyệt).</p></section>'; return; }
+      badgeToasts(me);
+    }
+    root.innerHTML = (guest
+      ? '<section class="xh-card"><h2>👋 Bạn đang xem với tư cách khách</h2><p>Bảng xếp hạng dưới đây xem được tự do. <a href="dang-nhap.html"><b>Đăng nhập</b></a> để lưu tiến độ học, xem thành tích cá nhân và có tên trên bảng xếp hạng.</p></section>'
+      : myPanel(me))
       + '<section class="xh-card"><h2>🏆 Bảng xếp hạng</h2>'
       + '<div class="xh-tabs" id="xhTabs">' + CATS.map(function (ct, i) { return '<button type="button" data-cat="' + ct[0] + '"' + (i === 0 ? ' class="on"' : '') + '>' + ct[1] + '</button>'; }).join('') + '</div>'
       + '<div id="xhBoard"></div><div id="xhPin"></div>'

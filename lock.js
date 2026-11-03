@@ -1,4 +1,9 @@
-// Khoá trang: chỉ mở khi phiên đăng nhập hợp lệ (học viên đã duyệt hoặc admin).
+// Khoá trang: GUESTOPEN (03/11/2026) — toàn bộ nội dung học mở MIỄN PHÍ cho
+// mọi người: khách không đăng nhập được Worker cấp khoá nội dung công khai
+// qua POST /auth/guest rồi mở như thành viên. Phiên đăng nhập hợp lệ (học
+// viên đã duyệt hoặc admin) vẫn đi đường cũ và được ưu tiên trước. Chỉ các
+// trang TÀI KHOẢN (opt.account: chat/cộng đồng/bạn bè) là không dùng khoá
+// khách — khách thấy màn mời đăng nhập riêng.
 // Mã hoá AES-GCM giữ nguyên; WEB_PASSWORD chỉ dùng lúc build (không nhập trên web).
 const LOCK=(()=>{const KS='hn_key_v1',SS='hn_sess_v1',AS='hn_admin_sess_v1';let key=null,meta=null,netFail=false;
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
@@ -76,16 +81,35 @@ async function load(name){const m=await getMeta();
  const s=document.createElement('script');s.textContent=t;document.head.appendChild(s)}
 function lockAgain(){clearStoredKey();location.reload()}
 function screen(){
-  return new Promise(()=>{ // không resolve — phải đăng nhập
+  return new Promise(()=>{ // không resolve — chờ người dùng thử lại/đăng nhập
     if(document.querySelector('.lockscr'))return;
     const d=document.createElement('div');d.className='lockscr';
     const title=(typeof SITE!='undefined'?SITE.title:'');
     d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+title+'</h1>'+
-      '<p>Chưa đăng nhập thì không xem được nội dung. Hãy đăng nhập bằng tài khoản đã được duyệt để học.</p>'+
+      '<p>Chưa mở được nội dung lúc này — có thể do mạng chập chờn. Mọi nội dung trên trang đều mở miễn phí, bạn thử tải lại sau ít phút nhé.</p>'+
       '<a class="lockcta" href="dang-nhap.html">Đăng nhập / Đăng ký</a>'+
+      '<p class="lkalt"><a href="#" onclick="location.reload();return false">Thử lại</a> · <a href="index.html">Trang chủ</a></p>'+
       '<div class="lkerr" id="lkerr"></div></div>';
     document.body.appendChild(d);
   });
+}
+// GUESTOPEN: màn mời cho trang TÀI KHOẢN (chat/cộng đồng/bạn bè/hồ sơ) khi
+// chưa có phiên hợp lệ — thân thiện, không khoá cứng, chỉ rõ: nội dung học
+// vẫn mở miễn phí; tính năng này mới cần tài khoản.
+function inviteScreen(){
+  if(document.querySelector('.lockscr'))return;
+  document.documentElement.classList.remove('locked');
+  let hasSess=false;
+  try{hasSess=!!(localStorage.getItem(SS)||localStorage.getItem(AS))}catch(e){}
+  const d=document.createElement('div');d.className='lockscr';
+  const title=(typeof SITE!='undefined'?SITE.title:'');
+  d.innerHTML='<div class="lockbox"><div class="lockico">💬</div><h1>'+title+'</h1>'+
+    (hasSess
+      ? '<p>Tài khoản của bạn chưa được duyệt nên chưa dùng được tính năng này (chat, cộng đồng, bạn bè, trang cá nhân). Trong lúc chờ duyệt, bạn vẫn học toàn bộ bài học, bài thi và game miễn phí như bình thường.</p>'
+      : '<p>Tính năng này (chat, cộng đồng, bạn bè, trang cá nhân) dành cho thành viên đã đăng nhập. Mọi bài học, bài thi và game vẫn mở miễn phí — không cần tài khoản.</p>')+
+    '<a class="lockcta" href="dang-nhap.html">Đăng nhập / Đăng ký</a>'+
+    '<p class="lkalt"><a href="index.html">Về trang chủ học tiếp</a></p></div>';
+  document.body.appendChild(d);
 }
 function errScreen(msg){
   if(document.querySelector('.lockscr'))return;
@@ -101,11 +125,25 @@ function errScreen(msg){
 function guestLock(e){
   if(document.querySelector('.lockscr'))return;
   const d=document.createElement('div');d.className='lockscr';
-  d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+((e&&e.title)||'Bài này cần đăng ký')+'</h1>'+
-    '<p>'+((e&&e.msg)||'Bài học thử miễn phí: N5 toàn bộ, N4 nửa đầu, N3–N1 bài 1 mỗi phần. Đăng ký bằng Google, Khánh duyệt là học được hết.')+'</p>'+
-    '<a class="lockcta" href="dang-nhap.html">Đăng ký để học tiếp</a>'+
-    '<p class="lkalt"><a href="hoc-thu.html">Xem các bài học thử</a> · <a href="index.html">Trang chủ</a></p></div>';
+  d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+((e&&e.title)||'Chưa mở được bài này')+'</h1>'+
+    '<p>'+((e&&e.msg)||'Tất cả bài học đều đang mở miễn phí cho mọi người. Nếu bài này chưa mở được, kiểm tra mạng rồi bấm Thử lại.')+'</p>'+
+    '<a class="lockcta" href="#" onclick="location.reload();return false">Thử lại</a>'+
+    '<p class="lkalt"><a href="hoc-thu.html">Xem các bài gợi ý</a> · <a href="index.html">Trang chủ</a></p></div>';
   document.body.appendChild(d);
+}
+// GUESTOPEN: xin khoá nội dung công khai cho khách từ Worker (/auth/guest).
+// Thành công -> importContentKey như đường đăng nhập (khoá được kiểm chứng
+// bằng blob "check" của enc/meta.json trong importContentKey).
+let guestOpen=false;
+async function fetchGuestKey(){
+  const ep=(typeof SITE!='undefined'&&SITE.aiEndpoint)||'';
+  if(!ep)return null;
+  try{
+    const r=await fetch(ep.replace(/\/$/,'')+'/auth/guest',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.contentKey){await importContentKey(j.contentKey);guestOpen=true;return key}
+  }catch(e){}
+  return null;
 }
 // Gọi API học thử công khai; 429 thì chờ đúng Retry-After (tối đa 2 lần).
 async function free(path){
@@ -136,8 +174,47 @@ async function run(files,opt){
       errScreen('Đang mất kết nối mạng và máy này chưa lưu sẵn khoá nội dung nên chưa mở được bài học. Hãy nối mạng rồi bấm Thử lại.');
       return;
     }
+    // GUESTOPEN (03/11): trang TÀI KHOẢN (opt.account) không dùng khoá khách:
+    // khách/tài khoản chưa duyệt thấy màn mời đăng nhập riêng, #main không chạy.
+    if(opt&&opt.account){
+      clearStoredKey();
+      if(opt.guest){
+        window.HN_GUEST=true;document.documentElement.classList.add('guest');
+        let r;
+        try{r=await opt.guest()}catch(e){
+          errScreen((e&&e.message)||'Không tải được trang. Kiểm tra mạng rồi bấm Thử lại.');return;
+        }
+        document.documentElement.classList.remove('locked');
+        if(r!==false){const m=document.getElementById('main');if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}}
+        dispatchEvent(new Event('guest'));
+        return;
+      }
+      inviteScreen();
+      return;
+    }
+    // GUESTOPEN (03/11): khách -> xin khoá nội dung công khai, mở TOÀN BỘ
+    // nội dung như thành viên. Cố ý KHÔNG đặt HN_GUEST để các trang không
+    // rơi về nhánh học-thử giới hạn (/free/*). Tiến độ của khách chỉ sống
+    // trong phiên (cơ chế gác cổng lưu trữ ở auth.js).
+    key=await fetchGuestKey();
+    if(key){
+      try{
+        for(const f of files)await load(f);
+      }catch(e){
+        errScreen('Không tải được nội dung của trang này — gói dữ liệu lỗi hoặc mạng chập chờn. Nếu bạn mở từ một liên kết bài học cũ, bài có thể đã đổi địa chỉ; hãy vào lại từ trang chủ.');
+        return;
+      }
+      document.documentElement.classList.remove('locked');
+      document.documentElement.classList.add('guestopen');
+      const m=document.getElementById('main');
+      if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}
+      dispatchEvent(new Event('unlocked'));
+      dispatchEvent(new Event('guestopen'));
+      return;
+    }
     clearStoredKey();
-    // Học thử (29/10): trang nào cho khách thì opt.guest() nạp dữ liệu công khai (Worker /free/*), không cần khoá.
+    // Dự phòng cuối (chỉ còn gặp khi Worker không cấp được khoá khách):
+    // trang nào cho khách thì opt.guest() nạp dữ liệu công khai (Worker /free/*).
     if(opt&&opt.guest){
       window.HN_GUEST=true;document.documentElement.classList.add('guest');
       let r;
@@ -164,4 +241,4 @@ async function run(files,opt){
   if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}
   dispatchEvent(new Event('unlocked'));
 }
-return {run,free,guestLock,load,lockAgain,importContentKey,verifySession,clearStoredKey,netFailed:()=>netFail}})();
+return {run,free,guestLock,load,lockAgain,importContentKey,verifySession,clearStoredKey,netFailed:()=>netFail,isGuestOpen:()=>guestOpen}})();
