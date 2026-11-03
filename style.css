@@ -1509,3 +1509,37 @@ html[data-theme="dark"][data-skin="neon"]{--c:#ff2e88;--ai:#22d3ee;--shu:#ff2e88
 .layout:has(>nav.toc){grid-template-columns:minmax(0,1fr)}
 .layout:has(>nav.toc)>nav.toc{position:static;max-height:240px;overflow:auto}
 }
+
+/* ===== BỘ CHỈNH ĐỘ RỘNG KHUNG BÀI HỌC (03/11/2026) =====
+   Chủ web: "phần bài học có thể kéo cho rộng ra hoặc toàn màn hình nếu muốn"
+   — áp cho bài Kaiwa và mọi bài dùng khung đọc .layout>nav.toc (lesson.html).
+   3 mức qua thuộc tính data-rw trên <html> (init sớm trong <head> của
+   lesson.html; lựa chọn nhớ bằng localStorage hn_rw_v1):
+   - Không có data-rw (mức "Vừa"): giữ nguyên hiện trạng — rule V120 phía trên
+     và vá tiêu đề V121 không bị chạm.
+   - data-rw="wide" (mức "Rộng"): nới .wrap lên 1560px → cột nội dung ~1200px,
+     mục lục vẫn 292px.
+   - data-rw="full" (mức "Toàn màn hình"): .wrap bỏ giới hạn, đệm 12px mỗi bên;
+     dưới 1600px mục lục ẩn mặc định, mở bằng nút "☰ Mục lục" (.rw-tocbtn)
+     dạng panel cố định trượt đè lên nội dung, bấm lại/ra ngoài/vào mục là đóng.
+   Khoanh vùng bằng .lhead (chỉ lesson.html có) + :has(>nav.toc) như V120. */
+.rwbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin:16px 0 2px}
+.rwbar .rw-lab{font-size:.85rem;font-weight:600;color:var(--m)}
+.rwseg{display:inline-flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.rwseg button{border:0;background:transparent;font:inherit;font-size:.85rem;font-weight:600;color:var(--m);padding:5px 13px;border-radius:999px;cursor:pointer;line-height:1.4}
+.rwseg button:hover{color:var(--c)}
+.rwseg button.on{background:var(--c);color:#fff}
+.rw-tocbtn{display:none;border:1.5px solid var(--c);background:var(--card);color:var(--c);font:inherit;font-size:.85rem;font-weight:700;padding:6px 14px;border-radius:999px;cursor:pointer;line-height:1.4;margin-right:auto}
+.rw-tocbtn:hover{background:var(--c);color:#fff}
+html[data-rw="wide"] body:has(.lhead) .wrap{max-width:1560px}
+html[data-rw="full"] body:has(.lhead) .wrap{max-width:none;padding-left:12px;padding-right:12px}
+@media(max-width:1599.98px){
+html[data-rw="full"] body:has(.lhead) .rw-tocbtn{display:inline-block}
+html[data-rw="full"] .layout:has(>nav.toc){grid-template-columns:minmax(0,1fr)}
+html[data-rw="full"] .layout:has(>nav.toc)>nav.toc{display:none}
+html[data-rw="full"] .layout.toc-open:has(>nav.toc)>nav.toc{display:block;position:fixed;top:70px;left:12px;z-index:80;width:min(300px,86vw);max-height:calc(100vh - 92px);overflow:auto;box-shadow:0 18px 50px rgba(30,10,16,.28)}
+}
+@media(max-width:860px){
+.rwbar{justify-content:flex-start}
+.rw-tocbtn{margin-right:0}
+}

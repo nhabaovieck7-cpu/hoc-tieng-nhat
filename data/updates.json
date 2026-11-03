@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "date": "2026-11-03",
+   "desc": "Trang bài học có thêm bộ chọn độ rộng ngay đầu bài: Vừa (như cũ), Rộng (phần đọc nới tới ~1200px) và Toàn màn hình (bài chiếm gần trọn bề ngang, mục lục ẩn — bấm nút ☰ Mục lục khi cần xem). Áp dụng cho bài Kaiwa và mọi bài học; lựa chọn được nhớ cho những lần học sau.",
+   "id": "2026-11-03-do-rong-bai-hoc",
+   "link": "kaiwa.html",
+   "title": "Chỉnh được độ rộng bài học: Vừa · Rộng · Toàn màn hình",
+   "type": "tinh-nang"
+  },
+  {
    "date": "2026-11-02",
    "desc": "Sửa đúng kiến thức thủ tục trong game truyện: hồ sơ ĐỔI tư cách lưu trú, GIA HẠN và xin VĨNH TRÚ đều nộp ở NYUKAN (入管局 — Cục quản lý xuất nhập cảnh), không phải ở shiyakusho. Shiyakusho chỉ làm đăng ký địa chỉ, đăng ký kết hôn, giấy khai sinh và giấy tờ thuế — hướng dẫn trong game đã được sửa đúng theo thực tế.",
    "id": "2026-11-02-nyukan-dung-noi",
