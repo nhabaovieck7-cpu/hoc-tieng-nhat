@@ -232,7 +232,10 @@ function startExam(box,cfg){
 }
 window.__pracStartExam=startExam;
 /* ---------- Đề luyện tập + đề chính thức: gom theo cấp N5→N1 ---------- */
-var pdBox=$('pd'),pfBox=$('pf'),dailyTests=null,fullExams=null,pastExams=null;
+var pdBox=$('pd'),pfBox=$('pf'),dailyTests=null,fullExams=null,pastExams=null,mockExams=null,pastStruct=null;
+var TTCNT={'N5':{vocab:637,grammar:127,kanji:123},'N4':{vocab:826,grammar:125,kanji:183},'N3':{vocab:1404,grammar:120,kanji:360},'N2':{vocab:80,grammar:154,kanji:408},'N1':{vocab:96,grammar:201,kanji:1245}};
+var PASSMARK={'N1':'Tổng ≥ 100/180 · mỗi phần ≥ 19/60','N2':'Tổng ≥ 90/180 · mỗi phần ≥ 19/60','N3':'Tổng ≥ 95/180 · mỗi phần ≥ 19/60','N4':'Tổng ≥ 90/180 · phần kiến thức ngôn ngữ + đọc hiểu ≥ 38/120 · nghe ≥ 19/60','N5':'Tổng ≥ 80/180 · phần kiến thức ngôn ngữ + đọc hiểu ≥ 38/120 · nghe ≥ 19/60'};
+function fur(s){return esc(s).replace(/\{([^{}|]+)\|([^{}]+)\}/g,function(m,a,b){return '<ruby>'+a+'<rt>'+b+'</rt></ruby>'})}
 var LVLIST=['N5','N4','N3','N2','N1'];
 var LVCOL={'N5':'var(--n5)','N4':'var(--n4)','N3':'var(--n3)','N2':'var(--n2)','N1':'var(--n1)'};
 var LVJP={'N5':'入門','N4':'初級','N3':'中級への橋','N2':'中上級','N1':'上級'};
@@ -261,13 +264,34 @@ function pracRender(){
   h+='</div>';
  });
  h+='</div>';
+ if(mockExams){
+  h+='<div class="box" style="margin-top:12px"><h3>🎯 Đề thi thử theo format đề thật</h3><p class="mut">Đề tự soạn đúng khung đề JLPT (đủ các 問題, số câu và thời gian như format chuẩn), làm bài và chấm điểm ngay trên web, có giải thích tiếng Việt từng câu. Đây là phần thi viết — chưa gồm phần nghe.</p>';
+  LVLIST.forEach(function(lv){
+   var ms=mockExams.filter(function(e){return e.level===lv});
+   if(!ms.length)return;
+   h+='<div style="margin-top:14px;border-top:3px solid '+LVCOL[lv]+';padding-top:8px"><div class="pdlv-h" data-level="'+lv+'"><span class="pdlv-dot"></span><span class="pdlv-t">'+lv+'</span><span class="pdlv-jp">'+LVJP[lv]+'</span></div><div style="margin-top:8px">';
+   ms.forEach(function(e){var r=lastResult('full',e.label+'-'+e.level);h+='<button type="button" class="pill" data-mock="'+esc(e.file)+'" data-id="'+esc(e.label)+'" data-lv="'+esc(e.level)+'" data-dur="'+(+e.duration_minutes||0)+'" style="margin:2px">🎯 '+esc(e.label)+' · '+esc(e.level)+' · 📝 '+e.questions+' câu · ⏱ '+e.duration_minutes+' phút'+(r?' · lần gần nhất '+r.score+'/'+r.total+(r.pass!=null?(r.pass?' · ĐẠT ✓':' · chưa đạt'):''):'')+'</button>'});
+   h+='</div></div>';
+  });
+  h+='</div>';
+ }
+ h+='<div class="box" style="margin-top:12px"><h3>⭐ Từ vựng · Ngữ pháp · Kanji trọng tâm ôn thi</h3><p class="mut">Chọn lọc từ chính các khóa học N5–N1 của web — 6.089 mục kèm cách đọc và nghĩa tiếng Việt. Bấm vào từng mục để mở danh sách ngay tại đây.</p>';
+ LVLIST.forEach(function(lv){
+  var c=TTCNT[lv];
+  h+='<div style="margin-top:14px;border-top:3px solid '+LVCOL[lv]+';padding-top:8px"><div class="pdlv-h" data-level="'+lv+'"><span class="pdlv-dot"></span><span class="pdlv-t">'+lv+'</span><span class="pdlv-jp">'+LVJP[lv]+'</span></div><div style="margin-top:8px">'
+   +'<button type="button" class="pill" data-tt="vocab" data-lv="'+lv+'" style="margin:2px">📚 Từ vựng · '+c.vocab+' mục</button>'
+   +'<button type="button" class="pill" data-tt="grammar" data-lv="'+lv+'" style="margin:2px">✏️ Ngữ pháp · '+c.grammar+' mẫu</button>'
+   +'<button type="button" class="pill" data-tt="kanji" data-lv="'+lv+'" style="margin:2px">🈳 Kanji · '+c.kanji+' chữ</button>'
+   +'</div></div>';
+ });
+ h+='<div id="ttView" style="margin-top:10px"></div></div>';
  if(pastExams){
-  h+='<div class="box" style="margin-top:12px"><h3>🗂️ Đề thi các năm (đề thật JLPT)</h3><p class="mut">Đề thi JLPT chính thức các kỳ từ 2010 đến 2025, tổng hợp theo từng cấp — bấm vào kỳ thi để làm bài theo giờ thi thật, nộp bài có ngay đáp án và điểm thang 180 tại trang nguồn (mimichan.app). Lưu ý: phần Nghe hiểu ở trang nguồn hiện nhiều câu chưa có file nghe; Từ vựng · Ngữ pháp · Đọc hiểu làm và chấm đáp án bình thường.</p>';
+  h+='<div class="box" style="margin-top:12px"><h3>🗂️ Đề thi các năm (đề thật JLPT)</h3><p class="mut">Đề thi JLPT chính thức các kỳ từ 2010 đến 2025, tổng hợp theo từng cấp — bấm vào kỳ thi để xem tờ đề toàn cảnh ngay tại đây (toàn bộ cấu trúc đề trong một trang), từ tờ đề có nút sang làm bài và xem đáp án tại trang nguồn (mimichan.app). Lưu ý: phần Nghe hiểu ở trang nguồn hiện nhiều câu chưa có file nghe; Từ vựng · Ngữ pháp · Đọc hiểu làm và chấm đáp án bình thường.</p>';
   LVLIST.forEach(function(lv){
    var xs=pastExams[lv]||[];
    if(!xs.length)return;
    h+='<div style="margin-top:14px;border-top:3px solid '+LVCOL[lv]+';padding-top:8px"><div class="pdlv-h" data-level="'+lv+'"><span class="pdlv-dot"></span><span class="pdlv-t">'+lv+'</span><span class="pdlv-jp">'+LVJP[lv]+'</span><span class="mut">'+xs.length+' đề</span></div><div style="margin-top:8px">';
-   xs.forEach(function(x){h+='<a class="pill" href="'+esc(x.url)+'" target="_blank" rel="noopener" style="margin:2px;display:inline-block;text-decoration:none">Tháng '+x.month+'/'+x.year+' · 📝 '+x.count+' câu ↗</a>'});
+   xs.forEach(function(x){h+='<button type="button" class="pill" data-sheet="'+esc(x.slug)+'" style="margin:2px">Tháng '+x.month+'/'+x.year+' · 📝 '+x.count+' câu</button>'});
    h+='</div></div>';
   });
   h+='</div>';
@@ -279,6 +303,37 @@ function pracRender(){
    else startExam(pdBox,{kind:'full',base:'data/practice/full/',file:b.dataset.file,date:b.dataset.date,level:b.dataset.lv,duration:+b.dataset.dur||0,icon:'🏆',title:'Đề chính thức thứ 7',onMenu:fullMenu});
   };
  });
+ pdBox.querySelectorAll('[data-mock]').forEach(function(b){b.onclick=function(){startExam(pdBox,{kind:'full',base:'data/practice/mock/',file:b.dataset.mock,date:b.dataset.id,level:b.dataset.lv,duration:+b.dataset.dur||0,icon:'🎯',title:'Đề thi thử',onMenu:function(){pracRender()}})}});
+ pdBox.querySelectorAll('[data-sheet]').forEach(function(b){b.onclick=function(){openSheet(b.dataset.sheet)}});
+ pdBox.querySelectorAll('[data-tt]').forEach(function(b){b.onclick=function(){openTT(b.dataset.lv,b.dataset.tt)}});
+}
+var ttData=null;
+function openSheet(slug){
+ if(!pastStruct||!pastStruct[slug]||!pastExams)return;
+ var e=pastStruct[slug];var idx=null;(pastExams[e.level]||[]).forEach(function(x){if(x.slug===slug)idx=x});
+ if(!idx)return;
+ var h='<div class="box" style="margin-top:12px"><button type="button" class="btn2" id="sheetBack">← Danh sách đề</button><h3 style="margin-top:10px">📄 Đề JLPT '+e.level+' — Tháng '+idx.month+'/'+idx.year+'</h3><p class="mut">'+e.total_questions+' câu · '+e.total_minutes+' phút · Mốc đỗ: '+PASSMARK[e.level]+'</p>';
+ e.sections.forEach(function(sec){var tot=sec.items.reduce(function(a,i){return a+i.count},0);h+='<p style="margin:12px 0 4px"><b>'+esc(sec.name)+'</b> <span class="mut">('+sec.minutes+' phút · '+tot+' câu)</span></p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px">';sec.items.forEach(function(i){h+='<tr><td style="border:1px solid #ccc;padding:5px 8px;width:90px"><b>'+esc(i.label)+'</b></td><td style="border:1px solid #ccc;padding:5px 8px">'+esc(i.kind)+'</td><td style="border:1px solid #ccc;padding:5px 8px;text-align:right;width:80px">'+i.count+' câu</td></tr>'});h+='</table></div>'});
+ h+='<p style="margin-top:14px"><a class="pill" href="'+esc(idx.url)+'" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;padding:8px 14px">▶ Làm bài + xem đáp án tại nguồn ↗</a></p><p class="mut">Tờ đề này cho xem toàn bộ cấu trúc của kỳ thi thật trong một trang. Nội dung câu hỏi và đáp án thuộc đơn vị tổ chức thi nên web chỉ liên kết sang trang nguồn, không sao chép.</p></div>';
+ pdBox.innerHTML=h;window.scrollTo(0,pdBox.offsetTop);
+ pdBox.querySelector('#sheetBack').onclick=function(){pracRender()};
+}
+function openTT(lv,kind){
+ var view=pdBox.querySelector('#ttView');if(!view)return;
+ view.innerHTML='<p class="mut">Đang tải danh sách…</p>';
+ function render(){
+  var items=(ttData&&ttData[lv]&&ttData[lv][kind])||[];
+  var names={vocab:'Từ vựng',grammar:'Ngữ pháp',kanji:'Kanji'};
+  var h='<div style="border-top:2px solid #ccc;margin-top:8px;padding-top:8px"><p><b>'+names[kind]+' trọng tâm · '+lv+'</b> <span class="mut">('+items.length+' mục)</span></p><p><input type="search" id="ttQ" placeholder="Tìm nhanh trong danh sách…" style="width:100%;padding:8px;border:1px solid #bbb;border-radius:8px;box-sizing:border-box"></p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px">';
+  if(kind==='grammar'){h+='<tr><th style="border:1px solid #ccc;padding:5px 8px;text-align:left">Mẫu</th><th style="border:1px solid #ccc;padding:5px 8px;text-align:left">Nghĩa</th></tr>';items.forEach(function(it){h+='<tr class="ttr"><td style="border:1px solid #ccc;padding:5px 8px">'+fur(it.p)+'</td><td style="border:1px solid #ccc;padding:5px 8px">'+esc(it.vi||'')+'</td></tr>'})}
+  else{var hd=kind==='kanji'?'Chữ':'Từ';h+='<tr><th style="border:1px solid #ccc;padding:5px 8px;text-align:left">'+hd+'</th><th style="border:1px solid #ccc;padding:5px 8px;text-align:left">Cách đọc</th><th style="border:1px solid #ccc;padding:5px 8px;text-align:left">Nghĩa</th></tr>';items.forEach(function(it){var w=kind==='kanji'?it.k:it.w;h+='<tr class="ttr"><td style="border:1px solid #ccc;padding:5px 8px"><b>'+esc(w)+'</b></td><td style="border:1px solid #ccc;padding:5px 8px">'+esc(it.r||'')+'</td><td style="border:1px solid #ccc;padding:5px 8px">'+esc(it.vi||'')+'</td></tr>'})}
+  h+='</table></div></div>';
+  view.innerHTML=h;
+  var q=view.querySelector('#ttQ');
+  q.oninput=function(){var v=q.value.trim().toLowerCase();view.querySelectorAll('.ttr').forEach(function(r){r.style.display=(!v||r.textContent.toLowerCase().indexOf(v)>=0)?'':'none'})};
+ }
+ if(ttData)render();
+ else fetch('data/trong-tam/hay-ra.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(m){ttData=m;render()}).catch(function(){view.innerHTML='<p class="mut">Chưa tải được danh sách — kiểm tra kết nối mạng rồi thử lại nhé.</p>'});
 }
 function pracMaybeRender(){if(dailyTests&&fullExams)pracRender()}
 function dailyMenu(){
@@ -294,6 +349,8 @@ function fullMenu(){
 dailyMenu();
 fullMenu();
 fetch('data/past-exams/index.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(m){pastExams=(m&&m.levels)||null;pracMaybeRender()}).catch(function(){});
+fetch('data/practice/mock/index.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(m){mockExams=(m&&m.exams)||null;pracMaybeRender()}).catch(function(){});
+fetch('data/past-exams/structure.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(m){pastStruct=m||null}).catch(function(){});
 })();
 </script>
 

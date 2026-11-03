@@ -1,0 +1,11073 @@
+{
+ "n5-2024-07": {
+  "level": "N5",
+  "total_questions": 58,
+  "total_minutes": 90,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 20,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 1
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n5-2021-12": {
+  "level": "N5",
+  "total_questions": 67,
+  "total_minutes": 90,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 20,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n5-2017-07": {
+  "level": "N5",
+  "total_questions": 89,
+  "total_minutes": 90,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 20,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 16
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n5-2013-07": {
+  "level": "N5",
+  "total_questions": 91,
+  "total_minutes": 90,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 20,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 12
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 16
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n5-2012-12": {
+  "level": "N5",
+  "total_questions": 91,
+  "total_minutes": 90,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 20,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 12
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 16
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2024-12": {
+  "level": "N4",
+  "total_questions": 85,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 4
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2024-07": {
+  "level": "N4",
+  "total_questions": 85,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 13
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 4
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2023-07": {
+  "level": "N4",
+  "total_questions": 85,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 4
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2021-12": {
+  "level": "N4",
+  "total_questions": 84,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 4
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2021-07": {
+  "level": "N4",
+  "total_questions": 85,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 4
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2017-07": {
+  "level": "N4",
+  "total_questions": 97,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 15
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2014-07": {
+  "level": "N4",
+  "total_questions": 98,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 15
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2013-12": {
+  "level": "N4",
+  "total_questions": 98,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 15
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2013-07": {
+  "level": "N4",
+  "total_questions": 98,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 10
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 15
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n4-2012-12": {
+  "level": "N4",
+  "total_questions": 97,
+  "total_minutes": 115,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 25,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 9
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 15
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 35,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2024-12": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2024-07": {
+  "level": "N3",
+  "total_questions": 92,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2023-12": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2023-07": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2022-12": {
+  "level": "N3",
+  "total_questions": 104,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2022-07": {
+  "level": "N3",
+  "total_questions": 100,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2021-12": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2021-07": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 7
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2020-12": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2019-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2019-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2018-12": {
+  "level": "N3",
+  "total_questions": 107,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2018-07": {
+  "level": "N3",
+  "total_questions": 105,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2017-12": {
+  "level": "N3",
+  "total_questions": 107,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2017-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2016-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2016-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2015-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2015-07": {
+  "level": "N3",
+  "total_questions": 100,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 6
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2014-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2014-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2013-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2013-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2012-12": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2012-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2011-12": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2011-07": {
+  "level": "N3",
+  "total_questions": 101,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 8
+     }
+    ]
+   }
+  ]
+ },
+ "n3-2010-07": {
+  "level": "N3",
+  "total_questions": 102,
+  "total_minutes": 140,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙）",
+    "minutes": 30,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 8
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 11
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "言語知識（文法）・読解",
+    "minutes": 70,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Ngữ pháp",
+      "count": 13
+     },
+     {
+      "label": "問題2",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Đọc hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題6",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題7",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 40,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 9
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2024-12": {
+  "level": "N2",
+  "total_questions": 101,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2024-07": {
+  "level": "N2",
+  "total_questions": 101,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2023-12": {
+  "level": "N2",
+  "total_questions": 101,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2023-07": {
+  "level": "N2",
+  "total_questions": 94,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 10
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2022-12": {
+  "level": "N2",
+  "total_questions": 94,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 4
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 10
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2022-07": {
+  "level": "N2",
+  "total_questions": 102,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2021-12": {
+  "level": "N2",
+  "total_questions": 99,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2021-07": {
+  "level": "N2",
+  "total_questions": 102,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2020-12": {
+  "level": "N2",
+  "total_questions": 102,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2019-12": {
+  "level": "N2",
+  "total_questions": 89,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 2
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 1
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2019-07": {
+  "level": "N2",
+  "total_questions": 103,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2018-12": {
+  "level": "N2",
+  "total_questions": 103,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 3
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2018-07": {
+  "level": "N2",
+  "total_questions": 105,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2017-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2017-07": {
+  "level": "N2",
+  "total_questions": 105,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 22
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 2
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2016-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2016-07": {
+  "level": "N2",
+  "total_questions": 104,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2015-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2015-07": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2014-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2014-07": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2013-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2013-07": {
+  "level": "N2",
+  "total_questions": 106,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2012-12": {
+  "level": "N2",
+  "total_questions": 106,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2012-07": {
+  "level": "N2",
+  "total_questions": 106,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2011-12": {
+  "level": "N2",
+  "total_questions": 106,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2011-07": {
+  "level": "N2",
+  "total_questions": 106,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2010-12": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n2-2010-07": {
+  "level": "N2",
+  "total_questions": 107,
+  "total_minutes": 155,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 105,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題5",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題6",
+      "kind": "Từ vựng",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 12
+     },
+     {
+      "label": "問題8",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題9",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題14",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 50,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 12
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2025-07": {
+  "level": "N1",
+  "total_questions": 79,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 2
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2024-12": {
+  "level": "N1",
+  "total_questions": 96,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2024-07": {
+  "level": "N1",
+  "total_questions": 96,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2023-12": {
+  "level": "N1",
+  "total_questions": 89,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2023-07": {
+  "level": "N1",
+  "total_questions": 94,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2022-12": {
+  "level": "N1",
+  "total_questions": 96,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 11
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2022-07": {
+  "level": "N1",
+  "total_questions": 88,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2021-12": {
+  "level": "N1",
+  "total_questions": 104,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2021-07": {
+  "level": "N1",
+  "total_questions": 104,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2020-12": {
+  "level": "N1",
+  "total_questions": 103,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 4
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2019-12": {
+  "level": "N1",
+  "total_questions": 104,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2019-07": {
+  "level": "N1",
+  "total_questions": 104,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 8
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2018-12": {
+  "level": "N1",
+  "total_questions": 105,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2018-07": {
+  "level": "N1",
+  "total_questions": 105,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2017-12": {
+  "level": "N1",
+  "total_questions": 105,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2017-07": {
+  "level": "N1",
+  "total_questions": 105,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2016-12": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2016-07": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2015-12": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2015-07": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2014-12": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2014-07": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2013-12": {
+  "level": "N1",
+  "total_questions": 106,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2013-07": {
+  "level": "N1",
+  "total_questions": 106,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2012-12": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2012-07": {
+  "level": "N1",
+  "total_questions": 106,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2011-12": {
+  "level": "N1",
+  "total_questions": 106,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2011-07": {
+  "level": "N1",
+  "total_questions": 106,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 2
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 13
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2010-12": {
+  "level": "N1",
+  "total_questions": 107,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 5
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ },
+ "n1-2010-07": {
+  "level": "N1",
+  "total_questions": 108,
+  "total_minutes": 165,
+  "sections": [
+   {
+    "name": "言語知識（文字・語彙・文法）・読解",
+    "minutes": 110,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Từ vựng",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Từ vựng",
+      "count": 6
+     },
+     {
+      "label": "問題5",
+      "kind": "Ngữ pháp",
+      "count": 10
+     },
+     {
+      "label": "問題6",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題7",
+      "kind": "Ngữ pháp",
+      "count": 5
+     },
+     {
+      "label": "問題8",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題9",
+      "kind": "Đọc hiểu",
+      "count": 9
+     },
+     {
+      "label": "問題10",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題11",
+      "kind": "Đọc hiểu",
+      "count": 3
+     },
+     {
+      "label": "問題12",
+      "kind": "Đọc hiểu",
+      "count": 4
+     },
+     {
+      "label": "問題13",
+      "kind": "Đọc hiểu",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "聴解",
+    "minutes": 55,
+    "items": [
+     {
+      "label": "問題1",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題2",
+      "kind": "Nghe hiểu",
+      "count": 7
+     },
+     {
+      "label": "問題3",
+      "kind": "Nghe hiểu",
+      "count": 6
+     },
+     {
+      "label": "問題4",
+      "kind": "Nghe hiểu",
+      "count": 14
+     },
+     {
+      "label": "問題5",
+      "kind": "Nghe hiểu",
+      "count": 4
+     }
+    ]
+   }
+  ]
+ }
+}

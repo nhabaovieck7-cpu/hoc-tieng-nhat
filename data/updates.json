@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-04-kho-de-thi-thu-trong-tam",
+   "date": "2026-11-04",
+   "type": "tinh-nang",
+   "title": "Kho đề thi thử theo format đề thật + mục Trọng tâm ôn thi",
+   "desc": "Trang Thi thử có thêm: Đề thi thử 1 cho đủ 5 cấp N5–N1 (310 câu, đúng khung đề JLPT, làm và chấm điểm ngay trên web, có giải thích tiếng Việt); mục Từ vựng · Ngữ pháp · Kanji trọng tâm ôn thi 6.089 mục từ chính khóa học; và tờ đề toàn cảnh cho 102 kỳ thi thật — xem toàn bộ cấu trúc đề trong một trang.",
+   "link": "thi-thu.html"
+  },
+  {
    "id": "2026-11-04-mo-khoa-mien-phi-toan-web",
    "date": "2026-11-04",
    "type": "tinh-nang",
