@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-03-chu-luon-chay-ngang",
+   "date": "2026-11-03",
+   "type": "tinh-nang",
+   "title": "Chữ trong danh sách bài luôn chạy ngang, không còn cột dọc",
+   "desc": "Sửa lỗi một số hàng bài (như bài Kaiwa N3 đầu tiên) bị bóp thành cột hẹp làm chữ xếp dọc từng từ: nay tiêu đề bài luôn được ưu tiên bề rộng và chạy ngang ở mọi danh sách bài — trang Kaiwa, thẻ Kaiwa và các cấp học ở trang chủ, trên cả máy tính lẫn điện thoại.",
+   "link": "kaiwa.html"
+  },
+  {
    "date": "2026-11-03",
    "desc": "Trang bài học có thêm bộ chọn độ rộng ngay đầu bài: Vừa (như cũ), Rộng (phần đọc nới tới ~1200px) và Toàn màn hình (bài chiếm gần trọn bề ngang, mục lục ẩn — bấm nút ☰ Mục lục khi cần xem). Áp dụng cho bài Kaiwa và mọi bài học; lựa chọn được nhớ cho những lần học sau.",
    "id": "2026-11-03-do-rong-bai-hoc",

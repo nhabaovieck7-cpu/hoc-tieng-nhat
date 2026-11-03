@@ -1543,3 +1543,27 @@ html[data-rw="full"] .layout.toc-open:has(>nav.toc)>nav.toc{display:block;positi
 .rwbar{justify-content:flex-start}
 .rw-tocbtn{margin-right:0}
 }
+
+/* ===== V125: HÀNG BÀI .list — CHỮ LUÔN CHẠY NGANG (03/11/2026) =====
+   Gốc lỗi: .list a là flex ngang, mà <small> mô tả bị white-space:nowrap
+   (không xuống dòng, không co được). Khi tiêu đề (nhất là tiêu đề dài có
+   phần tiếng Nhật + furigana) cộng mô tả dài hơn bề ngang hàng, flex chỉ
+   còn cách ép ô tiêu đề <span> xuống bề rộng tối thiểu -> chữ xếp dọc
+   từng từ thành cột ~60-90px (thấy rõ nhất ở kaiwa.html bài N3 đầu tiên;
+   trên điện thoại thì mọi hàng .list đều dính).
+   Sửa ở kiểu dùng chung của hàng bài (áp cho kaiwa.html, thẻ Kaiwa và
+   danh sách bài trong các cấp ở trang chủ — mọi nơi dùng .list):
+   - Ô tiêu đề được ưu tiên: flex grow + min-width:0, ngắt dòng theo từ
+     trong bề rộng đầy đủ của hàng.
+   - Mô tả bỏ nowrap: được co lại và tự xuống dòng trong phần của mình
+     (tối đa 46% bề ngang hàng, căn phải như cũ).
+   - Nhãn trạng thái .lstate không co.
+   - Điện thoại (<=700px): mô tả xuống hẳn dòng riêng dưới tiêu đề,
+     tiêu đề chiếm gần trọn bề ngang. */
+.list a{flex-wrap:wrap}
+.list a>span:not(.lstate){flex:1 1 180px;min-width:0}
+.list small{white-space:normal;text-align:right;flex:0 1 auto;min-width:0;max-width:46%}
+.list .lstate{flex:none}
+@media(max-width:700px){
+.list small{flex:1 1 100%;max-width:none;text-align:left;margin-left:0;padding-left:0}
+}
