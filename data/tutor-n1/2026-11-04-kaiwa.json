@@ -1,6 +1,279 @@
 {
   "lesson": 22,
-  "topic": "紅葉を見に行く計画",
+  "topic": "Lên kế hoạch đi ngắm lá đỏ cuối tuần",
+  "summary": "Bài 22: 健太 rủ 美咲 cuối tuần này đi ngắm 紅葉 trên núi — đang vào 見頃. Hai người chốt đi 電車 cho nhàn, tập trung 9 giờ ở ga, mang おにぎり với trà nóng, nhắc nhau マフラー và 手袋, còn định ghé 温泉 ngâm 足湯 trên đường về. Văn nói bạn bè rất dày: rủ rê 〜ない？・〜よっか, rút gọn 持ってく・持ってこ・〜ちゃダメ, đồng tình ほんとそれ・了解！. Điểm đáng học nhất là cách lên kế hoạch kiểu Nhật: luôn có phương án dự phòng khi mưa （カフェでゆっくり・また今度にしよ) và hẹn kiểm tra lại 天気予報 vào tối thứ Sáu trước khi chốt hẳn.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（Lên kế hoạch ngắm lá đỏ)",
+      "stage": "（Gần cuối tuần; 健太 rủ 美咲 đi ngắm lá đỏ — bàn cách di chuyển và giờ tập trung)",
+      "lines": [
+        {
+          "speaker": "健太",
+          "ja": "ねーねー、{今週末|こんしゅうまつ}さ、{紅葉|もみじ}{見|み}に{行|い}かない？{山|やま}の{方|ほう}、そろそろ{見頃|みごろ}らしいよ。",
+          "vi": "Này này, cuối tuần này đi ngắm lá đỏ không? Phía núi nghe nói sắp đến lúc đẹp nhất rồi đấy."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "えー、いいね！{行|い}きたい{行|い}きたい。どこ{行|い}くの？",
+          "vi": "Ồ, hay đấy! Muốn đi muốn đi. Đi đâu thế?"
+        },
+        {
+          "speaker": "健太",
+          "ja": "うーん、まだ{決|き}めてないんだよね。{電車|でんしゃ}で{行|い}けるとこが{楽|らく}かなーって。",
+          "vi": "Ừm, vẫn chưa quyết đâu. Tớ nghĩ chỗ nào đi bằng tàu được thì nhàn hơn."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{確|たし}かに。{車|くるま}だと{駐車場|ちゅうしゃじょう}{混|こ}むしね。{朝|あさ}{早|はや}めに{出|で}よっか。",
+          "vi": "Đúng thật. Đi ô tô thì bãi đỗ đông lắm. Mình xuất phát sớm sớm nhé."
+        },
+        {
+          "speaker": "健太",
+          "ja": "そうしよ。9{時|じ}くらいに{駅|えき}{集合|しゅうごう}でどう？",
+          "vi": "Thế nhé. Tầm 9 giờ tập trung ở ga thì sao?"
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（Chuẩn bị cơm trưa và đồ giữ ấm)",
+      "stage": "（Chốt chuyện cơm trưa mang theo, trà nóng và nhắc nhau khăn quàng, găng tay)",
+      "lines": [
+        {
+          "speaker": "美咲",
+          "ja": "9{時|じ}ね、オッケー。お{昼|ひる}はどうする？おにぎり{持|も}ってく？",
+          "vi": "9 giờ nhé, ok. Trưa thì sao? Mang cơm nắm đi không?"
+        },
+        {
+          "speaker": "健太",
+          "ja": "あ、それいいじゃん！コンビニで{買|か}ってくのもありだし。あったかいお{茶|ちゃ}も{持|も}ってこ。",
+          "vi": "À, ý hay đấy chứ! Mua ở cửa hàng tiện lợi mang đi cũng được. Mang cả trà nóng đi nữa."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{寒|さむ}くなってきたしねー。マフラー{忘|わす}れちゃダメだよ？",
+          "vi": "Trời cũng lạnh dần rồi nhỉ. Đừng có quên khăn quàng đấy nhé?"
+        },
+        {
+          "speaker": "健太",
+          "ja": "はいはい、{忘|わす}れないって。{美咲|みさき}こそ、また{手袋|てぶくろ}{忘|わす}れそうじゃん。",
+          "vi": "Rồi rồi, không quên đâu mà. Chính cậu ấy, lại sắp quên găng tay đấy chứ."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "うっ、バレた？{去年|きょねん}も{忘|わす}れたんだよねー。{気|き}をつけるってば。",
+          "vi": "Á, bị phát hiện rồi à? Năm ngoái tớ cũng quên thật. Tớ sẽ cẩn thận mà."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（Suối nước nóng, chụp ảnh và phương án khi mưa)",
+      "stage": "（Nảy ý ghé suối nước nóng trên đường về, chuyện máy ảnh, phương án nếu mưa và hẹn kiểm tra lại thời tiết tối thứ Sáu)",
+      "lines": [
+        {
+          "speaker": "健太",
+          "ja": "あはは。でさ、{帰|かえ}りに{温泉|おんせん}{寄|よ}ってくのもよくない？{足湯|あしゆ}だけでもさ。",
+          "vi": "Haha. Mà này, lúc về ghé qua suối nước nóng cũng hay đấy chứ? Chỉ ngâm chân thôi cũng được mà."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "え、{最高|さいこう}じゃん！{冷|ひ}えた{体|からだ}に{温泉|おんせん}、{染|し}みるよね〜。",
+          "vi": "Ôi, tuyệt nhất luôn! Cơ thể lạnh cóng mà được ngâm nước nóng thì thấm lắm luôn ấy."
+        },
+        {
+          "speaker": "健太",
+          "ja": "でしょ？{写真|しゃしん}もいっぱい{撮|と}ろ。{美咲|みさき}、カメラ{持|も}ってくんでしょ？",
+          "vi": "Đúng không? Chụp thật nhiều ảnh nhé. Cậu mang máy ảnh đi đúng không?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "もちろん！{最近|さいきん}あんま{撮|と}ってなかったし、{久々|ひさびさ}に{本気|ほんき}{出|だ}すよ。",
+          "vi": "Đương nhiên rồi! Dạo này tớ ít chụp lắm, lâu lắm mới nghiêm túc trở lại đây."
+        },
+        {
+          "speaker": "健太",
+          "ja": "お、{楽|たの}しみにしてるわ。{雨|あめ}{降|ふ}ったらどうする？",
+          "vi": "Ồ, tớ mong chờ đấy. Mà nếu mưa thì sao?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{雨|あめ}だったらさ、カフェでゆっくりして、また{今度|こんど}にしよ。{無理|むり}しなくていいし。",
+          "vi": "Nếu mưa thì mình thong thả ở quán cà phê rồi để dịp khác. Không cần cố quá đâu."
+        },
+        {
+          "speaker": "健太",
+          "ja": "うん、それがいいね。じゃあ{天気|てんき}{予報|よほう}、{金曜|きんよう}の{夜|よる}にまたチェックしよ。",
+          "vi": "Ừ, thế là hay đấy. Vậy tối thứ Sáu mình kiểm tra lại dự báo thời tiết nhé."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{了解|りょうかい}！{楽|たの}しみだな〜。{早|はや}く{週末|しゅうまつ}になんないかな。",
+          "vi": "Rõ! Mong chờ quá đi. Ước gì nhanh đến cuối tuần."
+        },
+        {
+          "speaker": "健太",
+          "ja": "ほんとそれ。じゃあ{金曜|きんよう}にまた{連絡|れんらく}するね。",
+          "vi": "Đúng thế thật. Vậy thứ Sáu tớ lại liên lạc nhé."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "うん、よろしくね！じゃあねー。",
+          "vi": "Ừ, nhờ cậu nhé! Bye bye nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "今週末、紅葉を見に行きませんか。",
+      "real": "今週末さ、紅葉見に行かない？",
+      "why": "Rủ rê bạn bè chỉ cần thể thường + từ đệm さ và lên giọng cuối câu; 行きませんか nghe như mời người mới quen hoặc cấp trên."
+    },
+    {
+      "textbook": "朝早く出発しましょうか。",
+      "real": "朝早めに出よっか。",
+      "why": "〜よっか là rút gọn của 〜ようか — chốt việc cùng làm kiểu bạn bè, gọn và nhẹ hơn hẳn 出発しましょうか."
+    },
+    {
+      "textbook": "マフラーを忘れてはいけませんよ。",
+      "real": "マフラー忘れちゃダメだよ？",
+      "why": "〜ては thu gọn thành 〜ちゃ + ダメ — nhắc nhở thân mật giữa bạn bè; 忘れてはいけません là văn sách giáo khoa, cứng và xa cách."
+    },
+    {
+      "textbook": "温泉は最高ですね。",
+      "real": "え、最高じゃん！冷えた体に温泉、染みるよね〜。",
+      "why": "Cảm thán của bạn trẻ cộng thêm じゃん và một hình ảnh cụ thể （染みる = hơi ấm thấm vào cơ thể đang lạnh) thay cho một tính từ chung chung."
+    },
+    {
+      "textbook": "分かりました。楽しみにしています。",
+      "real": "了解！楽しみだな〜。",
+      "why": "Đáp gọn 了解！ rồi để cảm xúc bật ra thành 楽しみだな〜 — tự nhiên giữa bạn bè; bản sách giáo khoa quá trịnh trọng cho ngữ cảnh này."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜らしい",
+      "in_lesson": "そろそろ見頃らしいよ",
+      "original": "〜だそうです",
+      "vi": "Nghe nói là ~ — truyền đạt thông tin nghe được, kèm chút không chắc chắn.",
+      "use": "Bạn bè, đồng nghiệp thân thiết.",
+      "avoid": "Thông báo chính thức, báo cáo (dùng 〜とのことです)."
+    },
+    {
+      "form": "〜よっか・しよ",
+      "in_lesson": "朝早めに出よっか・そうしよ",
+      "original": "〜ましょうか・そうしましょう",
+      "vi": "Dạng rút gọn của thể ý chí: rủ rê hoặc chốt việc cùng nhau.",
+      "use": "Bạn thân, người nhà.",
+      "avoid": "Cấp trên (dùng 〜しましょうか・〜ませんか)."
+    },
+    {
+      "form": "持ってく・持ってこ",
+      "in_lesson": "おにぎり持ってく？・お茶も持ってこ",
+      "original": "持ってくる",
+      "vi": "Rút gọn của 持ってくる — mang theo (đến chỗ nói chuyện/điểm hẹn).",
+      "use": "Văn nói thân mật hằng ngày.",
+      "avoid": "Văn viết và ngữ cảnh trang trọng (giữ 持ってくる)."
+    },
+    {
+      "form": "〜ちゃダメ",
+      "in_lesson": "マフラー忘れちゃダメだよ？",
+      "original": "〜てはいけません",
+      "vi": "'Đừng có ~ đấy' — nhắc nhở/cấm nhẹ kiểu bạn bè.",
+      "use": "Bạn bè, người nhà, trẻ em.",
+      "avoid": "Với cấp trên dùng 〜ないでください."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "それいいじゃん！・最高じゃん！・忘れそうじゃん",
+      "original": "〜ではないですか",
+      "vi": "Khẳng định thân mật: 'hay đấy chứ!', 'tuyệt luôn!' — vừa nói vừa tìm sự đồng tình.",
+      "use": "Bạn rất thân.",
+      "avoid": "Người mới quen, cấp trên — dễ nghe thành suồng sã quá mức."
+    },
+    {
+      "form": "〜ってば",
+      "in_lesson": "気をつけるってば",
+      "original": "気をつけます",
+      "vi": "Nhấn mạnh kiểu phân trần, hơi nũng nịu: 'tớ sẽ cẩn thận mà!'",
+      "use": "Khi bị trêu hoặc bị nhắc lại, với bạn thân/người nhà.",
+      "avoid": "Ngữ cảnh nghiêm túc và công việc."
+    },
+    {
+      "form": "〜もあり",
+      "in_lesson": "コンビニで買ってくのもありだし",
+      "original": "〜もよい・〜もかまわない",
+      "vi": "'~ cũng được, cũng là một phương án' — công nhận một lựa chọn là khả thi.",
+      "use": "Bạn bè, người nhà khi đang cân nhắc phương án.",
+      "avoid": "Văn bản trang trọng (dùng 〜も選択肢の一つです)."
+    },
+    {
+      "form": "ほんとそれ",
+      "in_lesson": "ほんとそれ。じゃあ金曜にまた連絡するね",
+      "original": "本当にそうですね",
+      "vi": "'Đúng thế thật' — đồng tình toàn phần, rất cửa miệng của giới trẻ.",
+      "use": "Bạn bè trẻ.",
+      "avoid": "Người lớn tuổi, cấp trên (dùng 本当にそうですね)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{見頃|みごろ}",
+      "reading": "みごろ",
+      "vi": "Lúc đẹp nhất — hoa hoặc lá đỏ vào độ rực rỡ nhất.",
+      "example_ja": "{桜|さくら}は{今週|こんしゅう}が{見頃|みごろ}だよ。",
+      "example_vi": "Hoa anh đào tuần này đang lúc đẹp nhất đấy."
+    },
+    {
+      "expr": "{駅|えき}{集合|しゅうごう}",
+      "reading": "えきしゅうごう",
+      "vi": "Tập trung ở ga — cách nói gọn khi hẹn điểm gặp.",
+      "example_ja": "9{時|じ}に{駅|えき}{集合|しゅうごう}ね。",
+      "example_vi": "9 giờ tập trung ở ga nhé."
+    },
+    {
+      "expr": "{忘|わす}れちゃダメ",
+      "reading": "わすれちゃダメ",
+      "vi": "Đừng có quên đấy — nhắc nhở thân mật.",
+      "example_ja": "{傘|かさ}、{忘|わす}れちゃダメだよ。",
+      "example_vi": "Ô thì đừng có quên đấy nhé."
+    },
+    {
+      "expr": "{足湯|あしゆ}",
+      "reading": "あしゆ",
+      "vi": "Ngâm chân nước nóng — dịch vụ hay có ở điểm suối nước nóng và nhà ga.",
+      "example_ja": "{帰|かえ}りに{足湯|あしゆ}だけ{寄|よ}ってこう。",
+      "example_vi": "Lúc về mình chỉ ghé ngâm chân thôi nhé."
+    },
+    {
+      "expr": "{久々|ひさびさ}に{本気|ほんき}を{出|だ}す",
+      "reading": "ひさびさにほんきをだす",
+      "vi": "Lâu lắm mới nghiêm túc, hết mình trở lại với một việc.",
+      "example_ja": "{久々|ひさびさ}に{本気|ほんき}{出|だ}して{撮|と}るよ。",
+      "example_vi": "Lâu lắm tớ mới chụp ảnh nghiêm túc trở lại đấy."
+    },
+    {
+      "expr": "{無理|むり}しなくていい",
+      "reading": "むりしなくていい",
+      "vi": "Không cần cố quá đâu — nói để đối phương nhẹ lòng khi đổi kế hoạch.",
+      "example_ja": "{雨|あめ}なら{無理|むり}しなくていいよ。",
+      "example_vi": "Nếu mưa thì không cần cố đâu."
+    }
+  ],
+  "mindset": [
+    "Lên kế hoạch đi chơi kiểu Nhật luôn có 'phương án B' và được nói ra ngay từ đầu: mưa thì thong thả ở quán cà phê, dời chuyến đi sang dịp khác — kèm câu 無理しなくていいし để không ai phải áy náy. Kế hoạch cũng không chốt cứng từ đầu tuần: hai người hẹn kiểm tra lại 天気予報 vào tối thứ Sáu, tức quyết định cuối cùng được để đến khi có thông tin mới nhất.",
+    "Những chi tiết giữ ấm （マフラー・手袋・あったかいお茶） xuất hiện ngay giữa cuộc trò chuyện vui vẻ là cách bạn bè Nhật quan tâm nhau rất thực tế: 健太 còn nhớ cả chuyện năm ngoái 美咲 quên găng tay — trêu một chút （バレた？) nhưng là quan tâm thật. Và 温泉・足湯 trên đường về đóng vai trò 'phần thưởng' quen thuộc sau một ngày đi bộ ngoài trời lạnh."
+  ],
+  "mistakes": [
+    "Đọc 紅葉 là こうよう trong mọi ngữ cảnh: khi nói về việc đi NGẮM lá đỏ, người Nhật thường đọc もみじ （紅葉を見る・紅葉狩り); こうよう là cách đọc chỉ trạng thái lá chuyển màu nói chung.",
+    "Dịch 染みる thành 'nhuộm, thấm màu': trong 冷えた体に温泉、染みるよね〜, 染みる là cảm giác dễ chịu 'thấm sâu vào tận người' — không liên quan đến màu sắc.",
+    "Dùng 了解！ với cấp trên hoặc khách hàng: giữa bạn bè thì ngắn gọn, thân thiện; trong công việc phải dùng 承知しました・かしこまりました.",
+    "Hiểu 〜じゃん thành câu hỏi: 最高じゃん！ là khẳng định cảm thán ('tuyệt nhất luôn!'), không phải đang hỏi — đừng tự thêm dấu chấm hỏi khi dịch."
+  ],
+  "speaking_practice": [
+    "Rủ bạn cuối tuần đi ngắm lá đỏ: nêu thời điểm đang 見頃, đề xuất đi tàu điện cho nhàn và hẹn tập trung ở ga lúc 9 giờ.",
+    "Chốt chuyện ăn uống và giữ ấm: cơm nắm mua ở combini mang đi cũng được, nhớ trà nóng, nhắc bạn đừng quên マフラー và 手袋.",
+    "Đề xuất ghé 足湯 trên đường về và phương án nếu mưa: thong thả ở quán cà phê, dời sang dịp khác, tối thứ Sáu kiểm tra lại 天気予報."
+  ],
   "lines": [
     {
       "speaker": "健太",

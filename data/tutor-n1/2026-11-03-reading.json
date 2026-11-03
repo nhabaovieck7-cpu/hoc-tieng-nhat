@@ -1,54 +1,360 @@
-[
-  {
-    "level": "N1",
-    "section": "読解（短文）",
-    "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者が最も言いたいことは何か。",
-    "choices": [
-      "待つことは、相手への思いやりや自分の思考を深める大切な営みである",
-      "便利な時代になったので、待つことはもう必要ない",
-      "手紙はメールよりも優れているので、手紙に戻るべきだ",
-      "返信が遅い相手は、思いやりがないので責めるべきだ"
+{
+  "kind": "reading",
+  "intro": "Dạng bài: 読解（短文） — đoạn nghị luận ngắn (khoảng 250–300 chữ) với 4 câu hỏi kinh điển: ý chính của tác giả, nghĩa của một cách nói trong bài, lý do nêu ví dụ, và quan điểm khớp với tác giả. Đoạn ngắn nhưng bẫy sâu: đáp án đúng thường là cách DIỄN ĐẠT LẠI câu kết luận ở cuối đoạn, còn đáp án sai hay 'thổi phồng' một ý phụ (ví dụ biến ví dụ thư tay thành lời kêu gọi quay về viết thư) hoặc đảo ngược lập trường tác giả. Phần 1 làm như thi thật (không furigana); Phần 3 bóc tách từng câu để học khung lập luận đối lập 便利 ↔ 待つ của tác giả.",
+  "tips": [
+    {
+      "h": "1. Đọc câu đầu và câu cuối trước",
+      "body": "Đoạn 短文 thường mở đầu bằng một nhận định về thời đại và chốt lại bằng kết luận ở 1–2 câu cuối. Câu hỏi 'tác giả muốn nói gì nhất' gần như luôn khớp với câu kết — hãy đọc chúng trước để có 'la bàn', rồi mới đọc phần giữa."
+    },
+    {
+      "h": "2. Đánh dấu các từ nối đảo chiều",
+      "body": "だが・その反面・〜あまり・のではないか là các điểm gãy của lập luận. Ý nằm SAU những từ này mới là ý tác giả thật sự theo đuổi; ý trước đó thường chỉ là 'nhượng bộ'. Chọn đáp án lấy ý nhượng bộ làm kết luận là cái bẫy kinh điển của dạng bài này."
+    },
+    {
+      "h": "3. Ví dụ là bằng chứng, không phải kết luận",
+      "body": "Khi câu hỏi hỏi 'vì sao tác giả nêu ví dụ X', đáp án đúng luôn chỉ về VAI TRÒ của ví dụ (nó chứng minh cho luận điểm nào), không phải nội dung chi tiết của ví dụ. Đáp án kể lại chi tiết ví dụ, hay suy ra lời khuyên từ ví dụ, đều là bẫy."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Cả 4 câu đều xoay quanh một trục duy nhất: câu kết '待つことは…大切な営みである'. Câu 1 hỏi thẳng kết luận đó; câu 2 hỏi cụm '考えるための余白' — được giải thích ngay bằng câu liền sau; câu 3 hỏi vai trò của ví dụ thư; câu 4 là dạng 'hợp với tác giả' — đáp án đúng là bản diễn đạt lại của cảnh báo 効率を追い求めるあまり, ba đáp án còn lại đều đảo ngược ý tác giả."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "待つことは、相手への思いやりや自分の思考を深める大切な営みである",
+        "便利な時代になったので、待つことはもう必要ない",
+        "手紙はメールよりも優れているので、手紙に戻るべきだ",
+        "返信が遅い相手は、思いやりがないので責めるべきだ"
+      ],
+      "answer": 0,
+      "explain_vi": "筆者は最後に「待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである」と結論づけている。手紙への回帰や相手への非難は主張されていない。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n本文における「考えるための余白」の意味として最も近いものはどれか。",
+      "choices": [
+        "ゆっくり考えたり想像したりするための時間的なゆとり",
+        "効率を上げるために予定を詰め込むこと",
+        "何も考えずにぼんやりと過ごす時間",
+        "返信を催促するための待ち時間"
+      ],
+      "answer": 0,
+      "explain_vi": "「待つ時間は、かつては考えるための余白だった」とあり、その直後に相手の気持ちを想像し、自分の言葉を吟味したことが挙げられている。つまり考えるためのゆとりである。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者が手紙の例を挙げた理由として正しいものはどれか。",
+      "choices": [
+        "待つ時間が、相手を想像し言葉を吟味する機会だったことを示すため",
+        "手紙のほうがメールよりも速く届くことを証明するため",
+        "昔の人は手紙を書くのが好きだったことを説明するため",
+        "返信の遅れが不安を生むのは昔も同じだったと示すため"
+      ],
+      "answer": 0,
+      "explain_vi": "手紙の例は、待つ間に相手の気持ちを想像し、自分の言葉を吟味したという、待つことの価値を示す証拠である。速さや好みの説明ではない。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者の考えと合うものはどれか。",
+      "choices": [
+        "効率ばかりを追い求めると、大切なものを失うおそれがある",
+        "便利な社会では、考える必要はまったくなくなった",
+        "待つことは時間の無駄なので、できるだけ避けるべきだ",
+        "返信が遅いことは、相手への思いやりがない証拠である"
+      ],
+      "answer": 0,
+      "explain_vi": "筆者は「効率を追い求めるあまり、考える余白を失ってしまったのではないか」と問題提起し、待つことの価値を説いている。効率の全面否定ではなく、効率偏重への警鐘である。"
+    }
+  ],
+  "study": {
+    "passage_title": "Bài đọc ngắn: 「待つ力」— giá trị của việc chờ đợi (đoạn nghị luận tự soạn theo dạng 短文）",
+    "structure": "Đoạn văn dựng theo khung đối lập ba lớp. Lớp 1 — hiện trạng (2 câu đầu): thời đại tức thì, tra cứu vài giây, giao hàng ngay hôm sau. Lớp 2 — bước ngoặt và quá khứ (3 câu tiếp): sau nhượng bộ '便利になったことは確かだが' và từ nối その反面, tác giả nhìn lại quá khứ — chờ đợi từng là 'khoảng trống để suy nghĩ', minh họa bằng ví dụ chờ thư hồi âm. Lớp 3 — hiện tại suy thoái và kết luận (4 câu cuối): ngày nay người ta bất an và trách móc khi hồi âm chậm; câu hỏi tu từ '〜のではないか' đặt vấn đề, rồi hai câu cuối phủ định định kiến cũ (chờ đợi ≠ lãng phí) và đưa ra định nghĩa mới: chờ đợi là営み để quan tâm đến đối phương và đào sâu suy nghĩ. Nắm được khung 'nhượng bộ → đảo chiều → kết luận ở cuối' là đọc được hầu hết các đoạn 短文 nghị luận.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{何|なん}でもすぐに{手|て}に{入|はい}る{時代|じだい}になった。",
+        "vi": "Đã trở thành thời đại mà bất cứ thứ gì cũng có ngay trong tay."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{調|しら}べたいことは{数秒|すうびょう}で{検索|けんさく}でき、{買|か}い{物|もの}も{翌日|よくじつ}には{届|とど}く。",
+        "vi": "Điều muốn tra cứu thì tìm được trong vài giây, mua sắm thì ngày hôm sau đã được giao đến."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{便利|べんり}になったことは{確|たし}かだが、その{反面|はんめん}、{私|わたし}たちは「{待|ま}つ」ことをしなくなった。",
+        "vi": "Đúng là đã trở nên tiện lợi, nhưng mặt khác, chúng ta đã không còn 'chờ đợi' nữa."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "{待|ま}つ{時間|じかん}は、かつては{考|かんが}えるための{余白|よはく}だった。",
+        "vi": "Thời gian chờ đợi ngày xưa từng là khoảng trống để suy nghĩ."
+      },
+      {
+        "para": 1,
+        "no": 5,
+        "ja": "{手紙|てがみ}の{返事|へんじ}を{待|ま}つ{間|あいだ}、{相手|あいて}の{気持|きも}ちを{想像|そうぞう}し、{自分|じぶん}の{言葉|ことば}を{吟味|ぎんみ}した。",
+        "vi": "Trong lúc chờ hồi âm thư tay, người ta tưởng tượng tâm trạng của đối phương và cân nhắc kỹ từng lời của mình."
+      },
+      {
+        "para": 1,
+        "no": 6,
+        "ja": "いまは{返信|へんしん}が{遅|おそ}いだけで{不安|ふあん}になり、{相手|あいて}を{責|せ}める。",
+        "vi": "Ngày nay, chỉ việc hồi âm chậm thôi cũng khiến người ta bất an và quay ra trách đối phương."
+      },
+      {
+        "para": 1,
+        "no": 7,
+        "ja": "{効率|こうりつ}を{追|お}い{求|もと}めるあまり、{考|かんが}える{余白|よはく}を{失|うしな}ってしまったのではないか。",
+        "vi": "Phải chăng vì quá theo đuổi hiệu quả, chúng ta đã đánh mất khoảng trống để suy nghĩ?"
+      },
+      {
+        "para": 1,
+        "no": 8,
+        "ja": "{待|ま}つことは、{単|たん}なる{時間|じかん}の{浪費|ろうひ}ではない。",
+        "vi": "Chờ đợi không đơn thuần là sự lãng phí thời gian."
+      },
+      {
+        "para": 1,
+        "no": 9,
+        "ja": "{相手|あいて}を{思|おも}いやり、{自分|じぶん}の{考|かんが}えを{深|ふか}めるための{大切|たいせつ}な{営|いとな}みである。",
+        "vi": "Đó là một việc làm quan trọng — để biết quan tâm đến đối phương và đào sâu suy nghĩ của chính mình."
+      }
     ],
-    "answer": 0,
-    "explain_vi": "筆者は最後に「待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである」と結論づけている。手紙への回帰や相手への非難は主張されていない。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（短文）",
-    "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n本文における「考えるための余白」の意味として最も近いものはどれか。",
-    "choices": [
-      "ゆっくり考えたり想像したりするための時間的なゆとり",
-      "効率を上げるために予定を詰め込むこと",
-      "何も考えずにぼんやりと過ごす時間",
-      "返信を催促するための待ち時間"
+    "answer_key": "Câu 1 – đáp án 1 · Câu 2 – đáp án 1 · Câu 3 – đáp án 1 · Câu 4 – đáp án 1",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 0,
+        "locator": "Hai câu cuối đoạn: '待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。'",
+        "options": [
+          {
+            "text": "待つことは、相手への思いやりや自分の思考を深める大切な営みである",
+            "verdict": "ĐÚNG",
+            "reason": "Gần như trích nguyên văn câu kết của bài: '相手を思いやり、自分の考えを深めるための大切な営みである'. Câu hỏi '筆者が最も言いたいこと' luôn bám vào câu kết luận ở cuối đoạn."
+          },
+          {
+            "text": "便利な時代になったので、待つことはもう必要ない",
+            "verdict": "SAI",
+            "reason": "Đảo ngược hoàn toàn lập trường tác giả. 'Tiện lợi' chỉ là ý nhượng bộ ở đầu bài; tác giả khẳng định chờ đợi vẫn cần thiết. Bẫy: thổi ý nhượng bộ thành kết luận."
+          },
+          {
+            "text": "手紙はメールよりも優れているので、手紙に戻るべきだ",
+            "verdict": "SAI",
+            "reason": "Bài không hề so sánh thư với email, cũng không kêu gọi quay về viết thư. Ví dụ thư chỉ là bằng chứng cho luận điểm. Bẫy: biến ví dụ thành lời khuyên."
+          },
+          {
+            "text": "返信が遅い相手は、思いやりがないので責めるべきだ",
+            "verdict": "SAI",
+            "reason": "Việc 'trách người trả lời chậm' được bài nêu ra như biểu hiện mất kiên nhẫn của ngày nay — điều tác giả phê phán, không phải điều tác giả cổ vũ. Bẫy đảo ngược."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Câu 4–5: '待つ時間は、かつては考えるための余白だった' và câu giải thích ngay sau đó",
+        "options": [
+          {
+            "text": "ゆっくり考えたり想像したりするための時間的なゆとり",
+            "verdict": "ĐÚNG",
+            "reason": "Câu ngay sau định nghĩa đã giải thích: chờ thư là lúc '相手の気持ちを想像し、自分の言葉を吟味した' — tức khoảng thời gian có dư dả để suy nghĩ và tưởng tượng."
+          },
+          {
+            "text": "効率を上げるために予定を詰め込むこと",
+            "verdict": "SAI",
+            "reason": "Ngược nghĩa: 詰め込む (nhồi kín lịch trình) là lấp hết 余白 chứ không phải là 余白. Bẫy: mượn lại từ '効率' của bài để đánh lạc hướng."
+          },
+          {
+            "text": "何も考えずにぼんやりと過ごす時間",
+            "verdict": "SAI",
+            "reason": "余白 ở đây là khoảng trống ĐỂ suy nghĩ (cân nhắc 吟味 từng lời), không phải thời gian trống rỗng không nghĩ gì. Bẫy: hiểu 余白 theo nghĩa đen là 'khoảng trắng vô ích'."
+          },
+          {
+            "text": "返信を催促するための待ち時間",
+            "verdict": "SAI",
+            "reason": "Không có chuyện 'thúc giục' trong phần nói về quá khứ; thúc giục/trách móc thuộc phần hiện tại tiêu cực. Bẫy: ghép nhầm ý giữa hai nửa bài."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "Câu 5: ví dụ chờ thư hồi âm '手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した'",
+        "options": [
+          {
+            "text": "待つ時間が、相手を想像し言葉を吟味する機会だったことを示すため",
+            "verdict": "ĐÚNG",
+            "reason": "Ví dụ thư là bằng chứng cụ thể cho luận điểm ở câu ngay trước: chờ đợi từng là 'khoảng trống để suy nghĩ'. Câu hỏi về ví dụ luôn được trả lời bằng VAI TRÒ chứng minh của nó."
+          },
+          {
+            "text": "手紙のほうがメールよりも速く届くことを証明するため",
+            "verdict": "SAI",
+            "reason": "Sai cả về sự thật lẫn nội dung bài: thư chậm hơn hẳn và bài không hề so sánh tốc độ thư với email. Bẫy: bịa ra một so sánh không có trong văn."
+          },
+          {
+            "text": "昔の人は手紙を書くのが好きだったことを説明するため",
+            "verdict": "SAI",
+            "reason": "Bài không nói người xưa 'thích' viết thư; yếu tố sở thích không hề xuất hiện. Bẫy: thêm một yếu tố cảm xúc không có căn cứ trong bài."
+          },
+          {
+            "text": "返信の遅れが不安を生むのは昔も同じだったと示すため",
+            "verdict": "SAI",
+            "reason": "Đảo trục thời gian: bất an vì hồi âm chậm là chuyện của 'いま' (hiện tại), đối lập với quá khứ; ví dụ thư thuộc về phía quá khứ. Bẫy đảo ngược quá khứ/hiện tại."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 0,
+        "locator": "Câu 7: '効率を追い求めるあまり、考える余白を失ってしまったのではないか'",
+        "options": [
+          {
+            "text": "効率ばかりを追い求めると、大切なものを失うおそれがある",
+            "verdict": "ĐÚNG",
+            "reason": "Diễn đạt lại đúng mức độ của câu hỏi tu từ '〜あまり…失ってしまったのではないか': tác giả cảnh báo nguy cơ đánh mất điều quan trọng (おそれがある), chứ không phủ định hiệu quả một cách toàn diện."
+          },
+          {
+            "text": "便利な社会では、考える必要はまったくなくなった",
+            "verdict": "SAI",
+            "reason": "Bài khẳng định ngược lại: suy nghĩ vẫn cần thiết, chờ đợi chính là営み để đào sâu nó. Từ tuyệt đối 'まったく' là dấu hiệu quen thuộc của đáp án sai. Bẫy đảo ngược + tuyệt đối hoá."
+          },
+          {
+            "text": "待つことは時間の無駄なので、できるだけ避けるべきだ",
+            "verdict": "SAI",
+            "reason": "Bài viết nguyên văn phủ định đúng ý này: '待つことは、単なる時間の浪費ではない'. Đây là lựa chọn đảo ngược trắng trợn câu kết luận."
+          },
+          {
+            "text": "返信が遅いことは、相手への思いやりがない証拠である",
+            "verdict": "SAI",
+            "reason": "Tác giả phê phán người TRÁCH MÓC, không hề kết luận người trả lời chậm là thiếu quan tâm. Bẫy: gán cho tác giả chính thái độ mà bài đang phê phán."
+          }
+        ]
+      }
     ],
-    "answer": 0,
-    "explain_vi": "「待つ時間は、かつては考えるための余白だった」とあり、その直後に相手の気持ちを想像し、自分の言葉を吟味したことが挙げられている。つまり考えるためのゆとりである。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（短文）",
-    "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者が手紙の例を挙げた理由として正しいものはどれか。",
-    "choices": [
-      "待つ時間が、相手を想像し言葉を吟味する機会だったことを示すため",
-      "手紙のほうがメールよりも速く届くことを証明するため",
-      "昔の人は手紙を書くのが好きだったことを説明するため",
-      "返信の遅れが不安を生むのは昔も同じだったと示すため"
+    "vocab": [
+      {
+        "word": "{余白|よはく}",
+        "reading": "よはく",
+        "hanviet": "Dư Bạch",
+        "vi": "Khoảng trống, phần dư — trong bài: khoảng thời gian trống dành để suy nghĩ"
+      },
+      {
+        "word": "{吟味|ぎんみ}",
+        "reading": "ぎんみ",
+        "hanviet": "Ngâm Vị",
+        "vi": "Cân nhắc, xem xét kỹ lưỡng từng chi tiết"
+      },
+      {
+        "word": "{反面|はんめん}",
+        "reading": "はんめん",
+        "hanviet": "Phản Diện",
+        "vi": "Mặt khác — mặt trái của cùng một vấn đề"
+      },
+      {
+        "word": "{営|いとな}み",
+        "reading": "いとなみ",
+        "hanviet": "Doanh",
+        "vi": "Hoạt động, việc làm được duy trì một cách có ý nghĩa"
+      },
+      {
+        "word": "{浪費|ろうひ}",
+        "reading": "ろうひ",
+        "hanviet": "Lãng Phí",
+        "vi": "Sự lãng phí (thời gian, tiền bạc)"
+      },
+      {
+        "word": "{責|せ}める",
+        "reading": "せめる",
+        "hanviet": "Trách",
+        "vi": "Trách móc, đổ lỗi cho ai"
+      },
+      {
+        "word": "{返信|へんしん}",
+        "reading": "へんしん",
+        "hanviet": "Phản Tín",
+        "vi": "Sự hồi âm, trả lời tin nhắn/thư"
+      },
+      {
+        "word": "{想像|そうぞう}",
+        "reading": "そうぞう",
+        "hanviet": "Tưởng Tượng",
+        "vi": "Sự tưởng tượng, hình dung trong đầu"
+      },
+      {
+        "word": "{効率|こうりつ}",
+        "reading": "こうりつ",
+        "hanviet": "Hiệu Suất",
+        "vi": "Hiệu quả, hiệu suất công việc"
+      },
+      {
+        "word": "{確|たし}か",
+        "reading": "たしか",
+        "hanviet": "Xác",
+        "vi": "Đúng là, quả thật — thường dùng để nhượng bộ trước khi đảo ý"
+      },
+      {
+        "word": "{手紙|てがみ}",
+        "reading": "てがみ",
+        "hanviet": "Thủ Chỉ",
+        "vi": "Thư tay, thư viết"
+      }
     ],
-    "answer": 0,
-    "explain_vi": "手紙の例は、待つ間に相手の気持ちを想像し、自分の言葉を吟味したという、待つことの価値を示す証拠である。速さや好みの説明ではない。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（短文）",
-    "question": "何でもすぐに手に入る時代になった。調べたいことは数秒で検索でき、買い物も翌日には届く。便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。待つ時間は、かつては考えるための余白だった。手紙の返事を待つ間、相手の気持ちを想像し、自分の言葉を吟味した。いまは返信が遅いだけで不安になり、相手を責める。効率を追い求めるあまり、考える余白を失ってしまったのではないか。待つことは、単なる時間の浪費ではない。相手を思いやり、自分の考えを深めるための大切な営みである。\n筆者の考えと合うものはどれか。",
-    "choices": [
-      "効率ばかりを追い求めると、大切なものを失うおそれがある",
-      "便利な社会では、考える必要はまったくなくなった",
-      "待つことは時間の無駄なので、できるだけ避けるべきだ",
-      "返信が遅いことは、相手への思いやりがない証拠である"
+    "grammar": [
+      {
+        "pattern": "〜反面",
+        "vi": "Mặt khác — nêu mặt trái của cùng một hiện tượng vừa được nói tới.",
+        "in_text": "便利になったことは確かだが、その反面、私たちは「待つ」ことをしなくなった。"
+      },
+      {
+        "pattern": "〜あまり",
+        "vi": "Vì quá ~ nên… (dẫn tới kết quả không mong muốn). Nối với thể thường của động từ/tính từ.",
+        "in_text": "効率を追い求めるあまり、考える余白を失ってしまったのではないか。"
+      },
+      {
+        "pattern": "〜のではないか",
+        "vi": "Phải chăng ~ — đặt vấn đề một cách mềm mỏng, rủ người đọc cùng suy ngẫm thay vì khẳng định thẳng.",
+        "in_text": "考える余白を失ってしまったのではないか。"
+      },
+      {
+        "pattern": "単なる〜ではない",
+        "vi": "Không đơn thuần chỉ là ~ — phủ định cách hiểu hạ thấp giá trị của sự vật.",
+        "in_text": "待つことは、単なる時間の浪費ではない。"
+      }
     ],
-    "answer": 0,
-    "explain_vi": "筆者は「効率を追い求めるあまり、考える余白を失ってしまったのではないか」と問題提起し、待つことの価値を説いている。効率の全面否定ではなく、効率偏重への警鐘である。"
+    "compare": [
+      {
+        "pattern": "単なる〜ではない và 〜にすぎない",
+        "rows": [
+          {
+            "form": "単なる〜ではない",
+            "join": "Danh từ + ではない",
+            "vi": "'Không đơn thuần là ~' — phủ định cách đánh giá thấp",
+            "diff": "Người nói BÁC BỎ cách nhìn coi thường, chuẩn bị nâng giá trị của sự vật lên (trong bài: chờ đợi là営み大切).",
+            "example_ja": "これは{単|たん}なるミスではない。",
+            "example_vi": "Đây không đơn thuần là một lỗi sai."
+          },
+          {
+            "form": "〜にすぎない",
+            "join": "Danh từ / động từ thể thường + にすぎない",
+            "vi": "'Chỉ là ~ mà thôi' — khẳng định cách đánh giá thấp",
+            "diff": "Người nói CHỦ ĐỘNG hạ thấp giá trị: sự vật không hơn gì mức đó. Nghĩa gần như ngược với mẫu trên, dù cả hai cùng bắt đầu từ ý 'chỉ là'.",
+            "example_ja": "それは{言|い}い{訳|わけ}にすぎない。",
+            "example_vi": "Đó chỉ là một lời ngụy biện mà thôi."
+          }
+        ]
+      }
+    ]
   }
-]
+}

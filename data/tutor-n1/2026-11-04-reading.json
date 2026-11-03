@@ -1,54 +1,428 @@
-[
-  {
-    "level": "N1",
-    "section": "読解（中文）",
-    "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者が最も懸念していることは何か。",
-    "choices": [
-      "AIに任せることで、書く過程における考える作業そのものが省略されること",
-      "AIの出力する文章の質が低いこと",
-      "報告書やメールの作成に時間がかかること",
-      "AIの使い方が難しく、誰も使いこなせないこと"
+{
+  "kind": "reading",
+  "intro": "Dạng bài: 読解（中文） — bài nghị luận độ dài trung bình (2 đoạn, 4 câu hỏi). Dạng này hỏi cả chi tiết lẫn mạch lập luận: điều tác giả lo ngại nhất, điểm bị coi là vấn đề, quan điểm khớp với tác giả và vai trò của ví dụ. Phần 1 làm như thi thật (không furigana); Phần 3 là phần học sâu — dịch từng câu, bóc tách từng lựa chọn ĐÚNG/SAI kèm dẫn chứng và loại bẫy. Mục tiêu: 8–10 phút cho cả bài.",
+  "tips": [
+    {
+      "h": "1. Đọc câu hỏi trước, khoanh các cụm mang lập trường",
+      "body": "Đọc 4 câu hỏi trước để biết bài sẽ hỏi gì. Khi đọc bài, gạch chân các điểm chuyển hướng và khẳng định lập trường: しかし (rẽ hướng sang luận điểm thật), もちろん〜ない (nhượng bộ có giới hạn), 問題は (chỉ đích danh vấn đề) — đáp án thường nằm ngay quanh các cụm này."
+    },
+    {
+      "h": "2. Tách hai tầng: việc AI làm thay 'việc' và việc AI làm thay 'nghĩ'",
+      "body": "Bài này dựng đối lập hai tầng: giao cho AI phần VIỆC (làm nháp, thu thập tài liệu) được tác giả chấp nhận là '有効な使い方'; giao cả phần NGHĨ mới bị phản đối. Lựa chọn nào gộp hai tầng làm một đều là bẫy."
+    },
+    {
+      "h": "3. Cảnh giác lựa chọn tuyệt đối hoá hoặc đảo cực",
+      "body": "Lựa chọn sai kinh điển ở N1 thường mạnh hơn văn bản một nấc: もうなくなった・何もない・すべて否定すべきだ. Tác giả viết ở mức vừa phải （つもりはない・必要がある) — lựa chọn nào cực đoan hơn tác giả thì loại."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Câu 1: đáp án nằm ở câu mở đoạn 2 「この考える過程そのものが省略されてしまう」. Câu 2: đối chiếu 「有効な使い方だ」 với 「問題は〜ことである」. Câu 3: khớp gần nguyên văn câu 「〜姿勢が欠かせない」. Câu 4: ví dụ viết văn là BẰNG CHỨNG cho luận điểm 'viết là quá trình suy nghĩ', không phải kết luận của bài."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者が最も懸念していることは何か。",
+      "choices": [
+        "AIに任せることで、書く過程における考える作業そのものが省略されること",
+        "AIの出力する文章の質が低いこと",
+        "報告書やメールの作成に時間がかかること",
+        "AIの使い方が難しく、誰も使いこなせないこと"
+      ],
+      "answer": 0,
+      "explain_vi": "筆者は「考える過程そのものが省略されてしまう」と述べ、それが「本当に自分の考えなのか、自信を持って言えない」事態につながると懸念している。AIの文章の質の低さは指摘されていない。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n「考える手間までもAIに渡してしまうこと」とあるが、筆者が問題だと考える点は何か。",
+      "choices": [
+        "下書きの作成をAIに任せること",
+        "資料集めにAIを使うこと",
+        "AIの出力を参考にすること",
+        "考える作業までAIに任せ、自分の頭で検討しなくなること"
+      ],
+      "answer": 3,
+      "explain_vi": "筆者は、下書き作成や資料集めといった道具としての利用は「有効な使い方」だと認めている。問題なのは、考える手間まで渡し、自分の頭で検討しなくなることである。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者の考えと合うものはどれか。",
+      "choices": [
+        "書く過程で考えを整理する必要は、もうなくなった",
+        "便利さを追求すれば、失われるものは何もない",
+        "AIの出力をそのまま受け取らず、自分の頭で検討し書き直す姿勢が欠かせない",
+        "AIを道具として使うことは、すべて否定すべきだ"
+      ],
+      "answer": 2,
+      "explain_vi": "筆者は「AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない」と述べている。道具としての利用の全面否定は、筆者が明確に退けている見方である。"
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者が文章作成の例を挙げた理由として正しいものはどれか。",
+      "choices": [
+        "文章を書く作業がなくなると主張するため",
+        "書く過程で考えが整理され、意見が明確になることを示すため",
+        "AIが報告書を速く作れることを自慢するため",
+        "メールの文面を書くのが面倒だと訴えるため"
+      ],
+      "answer": 1,
+      "explain_vi": "文章作成の例は、書く過程で考えを整理し、自分の意見と向き合うという、書くことの本質を示す証拠である。速さの自慢や、作業がなくなるという主張ではない。"
+    }
+  ],
+  "study": {
+    "passage_title": "Bài luận: 文章を書く作業と生成AI (công việc viết văn bản và AI tạo sinh — bài tự soạn)",
+    "structure": "Bài gồm 2 đoạn. Đoạn 1 — đặt vấn đề: AI tạo sinh đang thay đổi lớn công việc viết (nháp báo cáo, email xong trong vài giây), sự tiện lợi là thật, nhưng tác giả dừng lại đặt câu hỏi 'viết có phải chỉ là xếp chữ?' và khẳng định viết là quá trình sắp xếp suy nghĩ, đối diện với ý kiến của mình và nhận ra mâu thuẫn logic. Đoạn 2 — luận điểm chính: nếu giao tất cả cho AI, chính quá trình suy nghĩ bị lược bỏ (nỗi lo lớn nhất); tác giả nhượng bộ rằng dùng AI như công cụ (làm nháp, thu thập tài liệu) là hiệu quả, rồi chốt vấn đề nằm ở việc giao luôn cả công sức suy nghĩ, và kết luận bằng thái độ cần có: tự xem xét bằng đầu óc của mình và viết lại.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{文章|ぶんしょう}を{書|か}く{作業|さぎょう}は、{大|おお}きく{変|か}わろうとしている。",
+        "vi": "Công việc viết văn bản đang thay đổi lớn."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{生成|せいせい}AIに{指示|しじ}を{出|だ}せば、{報告書|ほうこくしょ}の{下書|したが}きも、メールの{文面|ぶんめん}も、{数秒|すうびょう}で{出来上|できあ}がる。",
+        "vi": "Chỉ cần ra chỉ thị cho AI tạo sinh, thì bản nháp báo cáo hay nội dung email cũng hoàn thành trong vài giây."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{書|か}く{手間|てま}が{省|はぶ}けるのは{確|たし}かに{便利|べんり}だ。",
+        "vi": "Việc tiết kiệm được công sức viết lách đúng là tiện lợi."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "しかし、ここで{立|た}ち{止|ど}まって{考|かんが}えてみたい。",
+        "vi": "Tuy nhiên, hãy dừng lại ở đây và thử suy nghĩ."
+      },
+      {
+        "para": 1,
+        "no": 5,
+        "ja": "{書|か}くという{行為|こうい}は、{単|たん}に{文字|もじ}を{並|なら}べる{作業|さぎょう}だろうか。",
+        "vi": "Hành vi viết có đơn thuần là công việc sắp xếp chữ cái hay không?"
+      },
+      {
+        "para": 1,
+        "no": 6,
+        "ja": "{書|か}く{過程|かてい}で、{私|わたし}たちは{考|かんが}えを{整理|せいり}し、{自分|じぶん}の{意見|いけん}と{向|む}き{合|あ}っている。",
+        "vi": "Trong quá trình viết, chúng ta sắp xếp suy nghĩ và đối diện với ý kiến của chính mình."
+      },
+      {
+        "para": 1,
+        "no": 7,
+        "ja": "{書|か}きながら、{論理|ろんり}の{矛盾|むじゅん}に{気|き}づき、{言|い}いたいことが{少|すこ}しずつ{明確|めいかく}になっていくのである。",
+        "vi": "Vừa viết, chúng ta vừa nhận ra mâu thuẫn trong logic, và điều muốn nói dần dần trở nên rõ ràng."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{生成|せいせい}AIにすべてを{任|まか}せれば、この{考|かんが}える{過程|かてい}そのものが{省略|しょうりゃく}されてしまう。",
+        "vi": "Nếu giao phó tất cả cho AI tạo sinh, chính quá trình suy nghĩ này sẽ bị lược bỏ."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{出来上|できあ}がった{文章|ぶんしょう}は{整|ととの}っているのに、それが{本当|ほんとう}に{自分|じぶん}の{考|かんが}えなのか、{自信|じしん}を{持|も}って{言|い}えない。",
+        "vi": "Văn bản hoàn thành thì chỉnh chu, vậy mà liệu đó có thật sự là suy nghĩ của mình hay không, ta không thể tự tin mà khẳng định."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "そんな{事態|じたい}が{増|ふ}えていくのではないだろうか。",
+        "vi": "Phải chăng tình trạng như vậy sẽ ngày càng tăng lên?"
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "もちろん、AIを{道具|どうぐ}として{使|つか}うこと{自体|じたい}を{否定|ひてい}するつもりはない。",
+        "vi": "Tất nhiên, tôi không hề có ý phủ nhận bản thân việc dùng AI như một công cụ."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "{下書|したが}きを{作|つく}らせ、{資料|しりょう}を{集|あつ}めさせるのは{有効|ゆうこう}な{使|つか}い{方|かた}だ。",
+        "vi": "Cho AI làm bản nháp, cho AI thu thập tài liệu là cách dùng hiệu quả."
+      },
+      {
+        "para": 2,
+        "no": 6,
+        "ja": "{問題|もんだい}は、{考|かんが}える{手間|てま}までもAIに{渡|わた}してしまうことである。",
+        "vi": "Vấn đề là việc giao luôn cả công sức suy nghĩ cho AI."
+      },
+      {
+        "para": 2,
+        "no": 7,
+        "ja": "{書|か}く{力|ちから}を{保|たも}つためには、AIの{出力|しゅつりょく}をそのまま{受|う}け{取|と}るのではなく、{自分|じぶん}の{頭|あたま}で{検討|けんとう}し、{書|か}き{直|なお}す{姿勢|しせい}が{欠|か}かせない。",
+        "vi": "Để giữ được năng lực viết, không thể thiếu thái độ dùng chính đầu óc của mình để xem xét và viết lại, thay vì tiếp nhận nguyên vẹn đầu ra của AI."
+      },
+      {
+        "para": 2,
+        "no": 8,
+        "ja": "{便利|べんり}さの{裏側|うらがわ}で{失|うしな}われるものに、{目|め}を{向|む}ける{必要|ひつよう}がある。",
+        "vi": "Cần phải hướng mắt tới những thứ bị đánh mất ở mặt sau của sự tiện lợi."
+      }
     ],
-    "answer": 0,
-    "explain_vi": "筆者は「考える過程そのものが省略されてしまう」と述べ、それが「本当に自分の考えなのか、自信を持って言えない」事態につながると懸念している。AIの文章の質の低さは指摘されていない。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（中文）",
-    "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n「考える手間までもAIに渡してしまうこと」とあるが、筆者が問題だと考える点は何か。",
-    "choices": [
-      "下書きの作成をAIに任せること",
-      "資料集めにAIを使うこと",
-      "AIの出力を参考にすること",
-      "考える作業までAIに任せ、自分の頭で検討しなくなること"
+    "answer_key": "Câu 1 – đáp án 1 · Câu 2 – đáp án 4 · Câu 3 – đáp án 3 · Câu 4 – đáp án 2",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 0,
+        "locator": "Đoạn 2 — câu mở đầu 「生成AIにすべてを任せれば…」",
+        "options": [
+          {
+            "text": "AIに任せることで、書く過程における考える作業そのものが省略されること",
+            "verdict": "ĐÚNG",
+            "reason": "Khớp trực tiếp với đoạn 2: 「この考える過程そのものが省略されてしまう」, kèm hệ quả 「本当に自分の考えなのか、自信を持って言えない」. Đây là mối lo được tác giả dành nhiều câu nhất để triển khai."
+          },
+          {
+            "text": "AIの出力する文章の質が低いこと",
+            "verdict": "SAI",
+            "reason": "Bài viết ngược lại: 「出来上がった文章は整っている」 — văn bản AI tạo ra được thừa nhận là chỉnh chu. Bẫy 'thêm thông tin ngoài bài': tự suy diễn rằng AI viết kém."
+          },
+          {
+            "text": "報告書やメールの作成に時間がかかること",
+            "verdict": "SAI",
+            "reason": "Ngược hẳn bài: báo cáo và email do AI làm chỉ mất 「数秒」. Bẫy 'đảo ngược sự thật' — lấy chi tiết tiện lợi ở đoạn 1 rồi gán thành nỗi lo."
+          },
+          {
+            "text": "AIの使い方が難しく、誰も使いこなせないこと",
+            "verdict": "SAI",
+            "reason": "Bài không hề nhắc đến độ khó khi dùng AI — chỉ cần 「指示を出せば」 là có kết quả. Bẫy 'thông tin không có trong bài'."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 3,
+        "locator": "Đoạn 2 — 「問題は、考える手間までもAIに渡してしまうことである」",
+        "options": [
+          {
+            "text": "下書きの作成をAIに任せること",
+            "verdict": "SAI",
+            "reason": "Tác giả gọi việc này là 「有効な使い方だ」 (cách dùng hiệu quả). Bẫy 'lấy phần được chấp nhận gán thành vấn đề' — nhầm tầng công cụ với tầng suy nghĩ."
+          },
+          {
+            "text": "資料集めにAIを使うこと",
+            "verdict": "SAI",
+            "reason": "Cũng thuộc nhóm được tác giả công nhận là hữu ích, trong cùng câu 「下書きを作らせ、資料を集めさせるのは有効な使い方だ」. Cùng loại bẫy với lựa chọn 1."
+          },
+          {
+            "text": "AIの出力を参考にすること",
+            "verdict": "SAI",
+            "reason": "Bài không cấm việc tham khảo đầu ra của AI; điều bị phản đối là 「そのまま受け取る」 — tiếp nhận nguyên vẹn mà không xem xét. Bẫy 'lệch mức độ': đổi 'nguyên vẹn, không xem xét' thành 'tham khảo' chung chung."
+          },
+          {
+            "text": "考える作業までAIに任せ、自分の頭で検討しなくなること",
+            "verdict": "ĐÚNG",
+            "reason": "Khớp nguyên văn 「問題は、考える手間までもAIに渡してしまうことである」 và câu chốt 「自分の頭で検討し、書き直す姿勢が欠かせない」 — vấn đề là giao cả phần NGHĨ và ngừng tự xem xét."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 2,
+        "locator": "Đoạn 2 — câu áp chót 「〜姿勢が欠かせない」",
+        "options": [
+          {
+            "text": "書く過程で考えを整理する必要は、もうなくなった",
+            "verdict": "SAI",
+            "reason": "Ngược luận điểm trung tâm: đoạn 1 khẳng định viết là quá trình 「考えを整理し」, đoạn 2 lo ngại quá trình ấy bị lược bỏ. Bẫy 'đảo ngược luận điểm' cộng tuyệt đối hoá bằng もう."
+          },
+          {
+            "text": "便利さを追求すれば、失われるものは何もない",
+            "verdict": "SAI",
+            "reason": "Câu cuối của bài là 「便利さの裏側で失われるものに、目を向ける必要がある」 — tác giả nói rõ CÓ thứ bị đánh mất. Bẫy 'phủ định toàn bộ' bằng cụm 何もない."
+          },
+          {
+            "text": "AIの出力をそのまま受け取らず、自分の頭で検討し書き直す姿勢が欠かせない",
+            "verdict": "ĐÚNG",
+            "reason": "Gần như nguyên văn: 「AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない」. Đây là thái độ tác giả kết luận ở cuối bài."
+          },
+          {
+            "text": "AIを道具として使うことは、すべて否定すべきだ",
+            "verdict": "SAI",
+            "reason": "Tác giả viết thẳng 「道具として使うこと自体を否定するつもりはない」. Bẫy 'tuyệt đối hoá' bằng すべて否定すべきだ — mạnh hơn hẳn văn bản gốc."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đoạn 1 — từ 「書くという行為は…」 đến hết đoạn",
+        "options": [
+          {
+            "text": "文章を書く作業がなくなると主張するため",
+            "verdict": "SAI",
+            "reason": "Bài mở đầu bằng 「大きく変わろうとしている」 (đang thay đổi lớn), không hề nói việc viết sẽ biến mất. Bẫy 'nói quá một nấc': đổi 'thay đổi' thành 'không còn'."
+          },
+          {
+            "text": "書く過程で考えが整理され、意見が明確になることを示すため",
+            "verdict": "ĐÚNG",
+            "reason": "Ví dụ viết văn là bằng chứng cho luận điểm: 「書く過程で、私たちは考えを整理し…言いたいことが少しずつ明確になっていく」. Ví dụ phục vụ luận điểm 'viết là quá trình suy nghĩ' — nền cho nỗi lo ở đoạn 2."
+          },
+          {
+            "text": "AIが報告書を速く作れることを自慢するため",
+            "verdict": "SAI",
+            "reason": "Tốc độ （数秒で出来上がる） chỉ là tiền đề về sự tiện lợi; giọng điệu của bài là cảnh báo chứ không hề 'khoe' khả năng của AI. Bẫy 'sai mục đích của ví dụ'."
+          },
+          {
+            "text": "メールの文面を書くのが面倒だと訴えるため",
+            "verdict": "SAI",
+            "reason": "メール chỉ là một ví dụ về thứ AI tạo ra trong vài giây; bài không hề than phiền chuyện viết email vất vả. Bẫy 'lấy chi tiết phụ làm mục đích chính'."
+          }
+        ]
+      }
     ],
-    "answer": 3,
-    "explain_vi": "筆者は、下書き作成や資料集めといった道具としての利用は「有効な使い方」だと認めている。問題なのは、考える手間まで渡し、自分の頭で検討しなくなることである。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（中文）",
-    "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者の考えと合うものはどれか。",
-    "choices": [
-      "書く過程で考えを整理する必要は、もうなくなった",
-      "便利さを追求すれば、失われるものは何もない",
-      "AIの出力をそのまま受け取らず、自分の頭で検討し書き直す姿勢が欠かせない",
-      "AIを道具として使うことは、すべて否定すべきだ"
+    "vocab": [
+      {
+        "word": "{生成|せいせい}AI",
+        "reading": "せいせいエーアイ",
+        "hanviet": "Sinh Thành",
+        "vi": "AI tạo sinh — AI sinh ra nội dung mới (văn bản, hình ảnh)"
+      },
+      {
+        "word": "{下書|したが}き",
+        "reading": "したがき",
+        "hanviet": "Hạ Thư",
+        "vi": "Bản nháp"
+      },
+      {
+        "word": "{文面|ぶんめん}",
+        "reading": "ぶんめん",
+        "hanviet": "Văn Diện",
+        "vi": "Nội dung văn bản (của thư, email)"
+      },
+      {
+        "word": "{手間|てま}",
+        "reading": "てま",
+        "hanviet": "Thủ Gian",
+        "vi": "Công sức, thời gian bỏ ra để làm một việc"
+      },
+      {
+        "word": "{省|はぶ}ける",
+        "reading": "はぶける",
+        "hanviet": "Tỉnh",
+        "vi": "Tiết kiệm được, lược bỏ được (công sức, thời gian)"
+      },
+      {
+        "word": "{行為|こうい}",
+        "reading": "こうい",
+        "hanviet": "Hành Vi",
+        "vi": "Hành vi, hành động"
+      },
+      {
+        "word": "{過程|かてい}",
+        "reading": "かてい",
+        "hanviet": "Quá Trình",
+        "vi": "Quá trình"
+      },
+      {
+        "word": "{矛盾|むじゅん}",
+        "reading": "むじゅん",
+        "hanviet": "Mâu Thuẫn",
+        "vi": "Mâu thuẫn (trong lập luận)"
+      },
+      {
+        "word": "{省略|しょうりゃく}",
+        "reading": "しょうりゃく",
+        "hanviet": "Tỉnh Lược",
+        "vi": "Lược bỏ, cắt bỏ"
+      },
+      {
+        "word": "{事態|じたい}",
+        "reading": "じたい",
+        "hanviet": "Sự Thái",
+        "vi": "Tình trạng, tình hình (thường theo hướng nghiêm trọng)"
+      },
+      {
+        "word": "{出力|しゅつりょく}",
+        "reading": "しゅつりょく",
+        "hanviet": "Xuất Lực",
+        "vi": "Đầu ra — kết quả mà máy/AI đưa ra"
+      },
+      {
+        "word": "{裏側|うらがわ}",
+        "reading": "うらがわ",
+        "hanviet": "Lý Trắc",
+        "vi": "Mặt sau, mặt trái (của một vấn đề)"
+      }
     ],
-    "answer": 2,
-    "explain_vi": "筆者は「AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない」と述べている。道具としての利用の全面否定は、筆者が明確に退けている見方である。"
-  },
-  {
-    "level": "N1",
-    "section": "読解（中文）",
-    "question": "文章を書く作業は、大きく変わろうとしている。生成AIに指示を出せば、報告書の下書きも、メールの文面も、数秒で出来上がる。書く手間が省けるのは確かに便利だ。しかし、ここで立ち止まって考えてみたい。書くという行為は、単に文字を並べる作業だろうか。書く過程で、私たちは考えを整理し、自分の意見と向き合っている。書きながら、論理の矛盾に気づき、言いたいことが少しずつ明確になっていくのである。\n生成AIにすべてを任せれば、この考える過程そのものが省略されてしまう。出来上がった文章は整っているのに、それが本当に自分の考えなのか、自信を持って言えない。そんな事態が増えていくのではないだろうか。もちろん、AIを道具として使うこと自体を否定するつもりはない。下書きを作らせ、資料を集めさせるのは有効な使い方だ。問題は、考える手間までもAIに渡してしまうことである。書く力を保つためには、AIの出力をそのまま受け取るのではなく、自分の頭で検討し、書き直す姿勢が欠かせない。便利さの裏側で失われるものに、目を向ける必要がある。\n筆者が文章作成の例を挙げた理由として正しいものはどれか。",
-    "choices": [
-      "文章を書く作業がなくなると主張するため",
-      "書く過程で考えが整理され、意見が明確になることを示すため",
-      "AIが報告書を速く作れることを自慢するため",
-      "メールの文面を書くのが面倒だと訴えるため"
+    "grammar": [
+      {
+        "pattern": "〜自体",
+        "vi": "Bản thân ~ (nhấn mạnh chính đối tượng đang xét).",
+        "in_text": "AIを道具として使うこと自体を否定するつもりはない"
+      },
+      {
+        "pattern": "〜つもりはない",
+        "vi": "Không hề có ý ~ (phủ định ý định một cách dứt khoát).",
+        "in_text": "否定するつもりはない"
+      },
+      {
+        "pattern": "〜のではなく",
+        "vi": "Không phải ~ mà là ~ (bác cách hiểu sai rồi đưa cách hiểu đúng).",
+        "in_text": "AIの出力をそのまま受け取るのではなく、自分の頭で検討し"
+      },
+      {
+        "pattern": "〜ためには",
+        "vi": "Để ~ thì (nêu điều kiện cần cho một mục đích).",
+        "in_text": "書く力を保つためには"
+      },
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "Phải chăng ~ (đưa ra lo ngại, dự đoán một cách mềm).",
+        "in_text": "そんな事態が増えていくのではないだろうか"
+      }
     ],
-    "answer": 1,
-    "explain_vi": "文章作成の例は、書く過程で考えを整理し、自分の意見と向き合うという、書くことの本質を示す証拠である。速さの自慢や、作業がなくなるという主張ではない。"
+    "compare": [
+      {
+        "pattern": "〜てしまう và 〜ていく",
+        "rows": [
+          {
+            "form": "〜てしまう",
+            "join": "Động từ thể て + しまう",
+            "vi": "Xảy ra mất — kết quả không mong muốn, ngoài ý định.",
+            "diff": "Trong bài: 「省略されてしまう」 — quá trình suy nghĩ bị lược bỏ MẤT, mang sắc thái tiếc nuối và cảnh báo.",
+            "example_ja": "考える過程が省略されてしまう。",
+            "example_vi": "Quá trình suy nghĩ bị lược bỏ mất."
+          },
+          {
+            "form": "〜ていく",
+            "join": "Động từ thể て + いく",
+            "vi": "Dần dần ~ — thay đổi tiếp diễn về phía trước.",
+            "diff": "Bài dùng hai lần với hai sắc thái khác nhau: 「明確になっていく」 (dần rõ ràng — tích cực) và 「増えていく」 (ngày càng tăng — đáng lo); bản thân mẫu không mang nghĩa xấu.",
+            "example_ja": "言いたいことが明確になっていく。",
+            "example_vi": "Điều muốn nói dần trở nên rõ ràng."
+          }
+        ]
+      },
+      {
+        "pattern": "省ける và 省略される — cùng gốc 省, sắc thái ngược nhau",
+        "rows": [
+          {
+            "form": "省ける",
+            "join": "Thể khả năng của 省く",
+            "vi": "Tiết kiệm được (chủ động, tích cực).",
+            "diff": "Đoạn 1: 「書く手間が省けるのは確かに便利だ」 — mặt TỐT của việc bỏ bớt: người dùng chủ động được lợi.",
+            "example_ja": "書く手間が省ける。",
+            "example_vi": "Tiết kiệm được công sức viết."
+          },
+          {
+            "form": "省略される",
+            "join": "Thể bị động của 省略する",
+            "vi": "Bị lược bỏ (đối tượng chịu tác động).",
+            "diff": "Đoạn 2: 「考える過程そのものが省略されてしまう」 — mặt XẤU: thứ bị mất là quá trình suy nghĩ của chính người viết. Phân biệt được hai câu này là nắm được chìa khóa của cả bài.",
+            "example_ja": "過程そのものが省略されてしまう。",
+            "example_vi": "Chính quá trình đó bị lược bỏ mất."
+          }
+        ]
+      }
+    ]
   }
-]
+}

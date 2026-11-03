@@ -1,6 +1,272 @@
 {
   "lesson": 21,
   "topic": "友達の新居を訪ねる",
+  "summary": "健太 đến thăm nhà mới của 美咲： khen phòng khách rộng, gần ga, tặng bộ khăn tắm làm quà tân gia, rồi hai người trò chuyện về siêu thị quanh khu, chuyện phân loại rác khác nhau theo từng quận và hẹn lần tới cùng ăn lẩu. Bài là mẫu văn nói bạn bè điển hình trong tình huống thăm nhà: cảm thán rút gọn （すごっ・広っ・うまっ), 〜じゃん, まじで và hàng loạt câu bị lược chủ ngữ — không bám ngữ cảnh thì không theo kịp.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（Đến nhà mới và tặng quà tân gia)",
+      "stage": "（健太 đến trước cửa nhà mới của 美咲； chào nhau, bước vào phòng khách và trao quà mừng tân gia)",
+      "lines": [
+        {
+          "speaker": "健太",
+          "ja": "おじゃましまーす！わあ、{新居|しんきょ}、めっちゃきれいじゃん！",
+          "vi": "Xin phép vào nhà nhé! Wow, nhà mới đẹp quá trời luôn!"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{来|き}てくれてありがとう！{上|あ}がって{上|あ}がって。スリッパそこね。",
+          "vi": "Cảm ơn cậu đã đến! Vào đi vào đi. Dép đi trong nhà ở chỗ đó đấy."
+        },
+        {
+          "speaker": "健太",
+          "ja": "すごっ、リビング{広|ひろ}っ！{前|まえ}の{部屋|へや}より{全然|ぜんぜん}いいね。",
+          "vi": "Tuyệt thật, phòng khách rộng quá! Hơn hẳn căn phòng trước đây nhỉ."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "でしょー？{駅|えき}からも{近|ちか}いし、ほんとここにしてよかったよ。",
+          "vi": "Đúng không? Gần ga nữa, thật sự chọn chỗ này là đúng đắn."
+        },
+        {
+          "speaker": "健太",
+          "ja": "{引|ひ}っ{越|こ}し、{大変|たいへん}だったでしょ？{荷物|にもつ}、{片付|かたづ}いた？",
+          "vi": "Chuyển nhà vất vả lắm đúng không? Đồ đạc dọn xong chưa?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "いや〜、まだ{段|だん}ボール{何箱|なんばこ}か{残|のこ}ってるんだよね。{週末|しゅうまつ}にちょこちょこ{片付|かたづ}けてる{感|かん}じ。",
+          "vi": "Trời ơi, vẫn còn mấy thùng các-tông chưa dọn ấy. Kiểu cuối tuần dọn dần từng chút một."
+        },
+        {
+          "speaker": "健太",
+          "ja": "あ、これ{引|ひ}っ{越|こ}し{祝|いわ}い。そんな{大|たい}したもんじゃないけど、タオルセット。",
+          "vi": "À, đây là quà mừng tân gia. Cũng chẳng có gì to tát đâu, bộ khăn tắm thôi."
+        },
+        {
+          "speaker": "美咲",
+          "ja": "えー、ありがとう！{気|き}が{利|き}くね〜。ちょうどタオル{買|か}い{足|た}そうと{思|おも}ってたの。",
+          "vi": "Ôi, cảm ơn nhé! Cậu tinh ý thật đấy. Đúng lúc tớ đang định mua thêm khăn."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（Hỏi chuyện khu phố và phân loại rác)",
+      "stage": "（Hai người ngồi xuống trò chuyện: siêu thị quanh khu có tiện không, và quy định phân loại rác của quận mới khác quận cũ thế nào)",
+      "lines": [
+        {
+          "speaker": "健太",
+          "ja": "で、この{辺|へん}ってスーパーとかどう？{買|か}い{物|もの}しやすそう？",
+          "vi": "Mà khu này siêu thị các thứ thì sao? Có vẻ dễ mua sắm nhỉ?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "うん、{歩|ある}いて5{分|ふん}んとこに{大|おお}きいスーパーあるし、コンビニも{近|ちか}くて{便利|べんり}だよ。",
+          "vi": "Ừ, đi bộ 5 phút là có siêu thị lớn, cửa hàng tiện lợi cũng gần nên tiện lắm."
+        },
+        {
+          "speaker": "健太",
+          "ja": "いいな〜。ゴミの{分別|ぶんべつ}とか、こっち{細|こま}かくない？",
+          "vi": "Thích thật. Phân loại rác các thứ, bên này có chi li không?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "あー、それね。{燃|も}えるゴミとプラの{分|わ}け{方|かた}が{前|まえ}の{区|く}とちょっと{違|ちが}うのよ。{最初|さいしょ}、まじで{戸惑|とまど}った。",
+          "vi": "À, cái đó đấy. Cách phân rác cháy được với nhựa hơi khác quận trước. Lúc đầu tớ thực sự bối rối luôn."
+        },
+        {
+          "speaker": "健太",
+          "ja": "わかるわかる。うちの{区|く}もさ、{曜日|ようび}ごとに{細|こま}かく{決|き}まっててさ。",
+          "vi": "Hiểu hiểu. Quận nhà tớ cũng thế, quy định chi li theo từng ngày trong tuần ấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（Cà phê, bánh và lời hẹn lần sau)",
+      "stage": "（美咲 pha cà phê, mời bánh của tiệm trước ga; hai người nói chuyện khu phố về đêm và hẹn lần tới ăn lẩu)",
+      "lines": [
+        {
+          "speaker": "美咲",
+          "ja": "ね。あ、コーヒー{淹|い}れるけど、{飲|の}む？ケーキもあるよ。",
+          "vi": "Đúng không. À, tớ pha cà phê nhé, cậu uống không? Có cả bánh nữa đấy."
+        },
+        {
+          "speaker": "健太",
+          "ja": "お、いいね。じゃあ、いただきます。あ、このケーキうまっ！どこの？",
+          "vi": "Ồ, hay đấy. Vậy tớ xin phép nhé. Ôi, bánh này ngon quá! Của tiệm nào thế?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "{駅前|えきまえ}のケーキ{屋|や}さん。ここのシュークリームも{絶品|ぜっぴん}だよ。{今度|こんど}{一緒|いっしょ}に{買|か}いに{行|い}こうよ。",
+          "vi": "Tiệm bánh trước ga đấy. Bánh su kem ở đây cũng tuyệt phẩm luôn. Lần tới cùng đi mua nhé."
+        },
+        {
+          "speaker": "健太",
+          "ja": "{行|い}こう{行|い}こう。あ、そういえばさ、この{辺|へん}、{夜|よる}って{静|しず}か？",
+          "vi": "Đi đi. À, nói mới nhớ, khu này buổi tối có yên tĩnh không?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "うん、めっちゃ{静|しず}か。{前|まえ}のとこは{道路|どうろ}{沿|ぞ}いでうるさかったから、ほんと{快適|かいてき}。",
+          "vi": "Ừ, yên tĩnh cực. Chỗ trước ở ven đường nên ồn ào, thật sự bây giờ thoải mái lắm."
+        },
+        {
+          "speaker": "健太",
+          "ja": "{最高|さいこう}じゃん。じゃあ、また{遊|あそ}びに{来|き}ていい？",
+          "vi": "Tuyệt vời luôn. Vậy tớ lại đến chơi nữa được không?"
+        },
+        {
+          "speaker": "美咲",
+          "ja": "もちろん！{今度|こんど}は{鍋|なべ}でもしようよ。ゆっくりしていってね。",
+          "vi": "Tất nhiên rồi! Lần tới cùng ăn lẩu nhé. Cứ thong thả ở lại chơi nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "おじゃまします。",
+      "real": "おじゃましまーす！",
+      "why": "Kéo dài âm cuối biến lời chào thành kiểu thân mật của bạn thân khi bước vào nhà; おじゃまします ngắn gọn dành cho lần đầu đến nhà hoặc nhà người lớn tuổi."
+    },
+    {
+      "textbook": "新居はとてもきれいですね。",
+      "real": "新居、めっちゃきれいじゃん！",
+      "why": "めっちゃ （とても suồng sã) + じゃん thay cho cấu trúc trang trọng — cảm thán tức thì, rủ người nghe đồng ý ngay."
+    },
+    {
+      "textbook": "リビングが広いですね。",
+      "real": "リビング広っ！",
+      "why": "Bỏ trợ từ が, tính từ ngắt cụt thành một tiếng thốt '広っ！' — ngạc nhiên bật ra miệng, chỉ có trong văn nói."
+    },
+    {
+      "textbook": "引っ越しは大変でしたか。",
+      "real": "引っ越し、大変だったでしょ？",
+      "why": "〜でしょ？ vừa hỏi vừa đoán sẵn câu trả lời để tỏ đồng cảm; 大変でしたか nghe như đang phỏng vấn."
+    },
+    {
+      "textbook": "今度は鍋をしましょう。",
+      "real": "今度は鍋でもしようよ。",
+      "why": "Thêm でも ('lẩu chẳng hạn') làm lời rủ nhẹ hẳn đi, không áp đặt; しようよ là rủ rê thân mật thay cho しましょう."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜じゃん",
+      "in_lesson": "きれいじゃん・最高じゃん",
+      "original": "〜じゃないか",
+      "vi": "Khẳng định kèm cảm thán và tìm đồng tình: 'đẹp quá còn gì', 'tuyệt còn gì'.",
+      "use": "Bạn bè thân, người nhà.",
+      "avoid": "Cấp trên, người mới quen (dùng 〜ですね・〜でしょう)."
+    },
+    {
+      "form": "すごっ・広っ・うまっ",
+      "in_lesson": "すごっ、リビング広っ！／このケーキうまっ！",
+      "original": "すごい・広い・うまい",
+      "vi": "Tính từ bị ngắt cụt thành tiếng thốt — ngạc nhiên, thích thú bật ra tức thì.",
+      "use": "Văn nói rất suồng sã giữa bạn thân.",
+      "avoid": "Mọi ngữ cảnh cần lịch sự; văn viết không bao giờ dùng."
+    },
+    {
+      "form": "でしょー？",
+      "in_lesson": "でしょー？駅からも近いし",
+      "original": "でしょう？",
+      "vi": "'Đúng không nào?' — kéo dài âm cuối để rủ người nghe gật đầu theo mình.",
+      "use": "Bạn bè, người nhà.",
+      "avoid": "Cấp trên (dùng でしょう・ですよね)."
+    },
+    {
+      "form": "ちょこちょこ",
+      "in_lesson": "週末にちょこちょこ片付けてる",
+      "original": "少しずつ",
+      "vi": "Từng chút một, làm dần qua nhiều lần — sắc thái nhẹ nhàng, đời thường.",
+      "use": "Văn nói thân mật khi kể việc nhà, việc lặt vặt.",
+      "avoid": "Báo cáo công việc (dùng 少しずつ・順次)."
+    },
+    {
+      "form": "まじで",
+      "in_lesson": "最初、まじで戸惑った",
+      "original": "本当に",
+      "vi": "'Thật sự luôn đấy' — nhấn mạnh cảm xúc thật, hơi mang màu sắc giới trẻ.",
+      "use": "Bạn bè trẻ tuổi.",
+      "avoid": "Người lớn tuổi, cấp trên, khách hàng (dùng 本当に)."
+    },
+    {
+      "form": "〜んとこ",
+      "in_lesson": "歩いて5分んとこ",
+      "original": "〜のところ",
+      "vi": "Rút gọn のところ thành んとこ — nói nơi chốn một cách suồng sã.",
+      "use": "Chỉ đường, nói chuyện địa điểm với bạn bè.",
+      "avoid": "Chỉ đường cho khách hay người lạ (nói đầy đủ 〜のところ)."
+    },
+    {
+      "form": "気が利く",
+      "in_lesson": "気が利くね〜",
+      "original": "気が利いている",
+      "vi": "Tinh ý, biết ý — khen người để tâm đúng lúc đến điều người khác đang cần.",
+      "use": "Khen bạn bè, đồng nghiệp ngang hàng.",
+      "avoid": "Không dùng để tự khen mình; với cấp trên dùng お心遣いありがとうございます."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{気|き}が{利|き}く",
+      "reading": "きがきく",
+      "vi": "Tinh ý, biết để ý đúng lúc.",
+      "example_ja": "プレゼントにタオルをくれるなんて、{気|き}が{利|き}くね。",
+      "example_vi": "Tặng khăn làm quà thế này, tinh ý thật đấy."
+    },
+    {
+      "expr": "{片付|かたづ}ける",
+      "reading": "かたづける",
+      "vi": "Dọn dẹp, thu xếp đồ đạc cho gọn gàng.",
+      "example_ja": "{週末|しゅうまつ}に{段|だん}ボールを{片付|かたづ}けるつもり。",
+      "example_vi": "Cuối tuần tớ định dọn mấy thùng các-tông."
+    },
+    {
+      "expr": "ゴミの{分別|ぶんべつ}",
+      "reading": "ごみのぶんべつ",
+      "vi": "Việc phân loại rác theo quy định của từng khu.",
+      "example_ja": "この{区|く}はゴミの{分別|ぶんべつ}が{細|こま}かい。",
+      "example_vi": "Quận này phân loại rác chi li lắm."
+    },
+    {
+      "expr": "{絶品|ぜっぴん}",
+      "reading": "ぜっぴん",
+      "vi": "Tuyệt phẩm — ngon/xuất sắc đến mức phải khen.",
+      "example_ja": "あの{店|みせ}のシュークリームは{絶品|ぜっぴん}だよ。",
+      "example_vi": "Bánh su kem của tiệm đó là tuyệt phẩm đấy."
+    },
+    {
+      "expr": "{遊|あそ}びに{来|く}る",
+      "reading": "あそびにくる",
+      "vi": "Đến chơi (nhà ai đó), ghé thăm chơi.",
+      "example_ja": "{今度|こんど}うちに{遊|あそ}びに{来|き}てね。",
+      "example_vi": "Lần tới đến nhà tớ chơi nhé."
+    },
+    {
+      "expr": "ゆっくりしていく",
+      "reading": "ゆっくりしていく",
+      "vi": "Cứ thong thả ở lại chơi — lời mời thân mật của chủ nhà.",
+      "example_ja": "{時間|じかん}があるから、ゆっくりしていって。",
+      "example_vi": "Còn thời gian mà, cứ thong thả ở lại chơi đi."
+    }
+  ],
+  "mindset": [
+    "Đến thăm nhà mới ở Nhật, quà tân gia （引っ越し祝い) thường nhỏ mà thiết thực — khăn tắm, đồ dùng nhà bếp — và luôn kèm câu khiêm tốn '大したもんじゃないけど' (chẳng có gì to tát đâu) để người nhận không thấy nợ nần. Khen nhà là phép lịch sự bắt buộc, nhưng khen CỤ THỂ — phòng khách rộng, gần ga, đêm yên tĩnh — mới cho thấy mình thật sự để ý; và khách không tự ý đi ngắm khắp nhà, chỉ ở khu vực được chủ nhà mời vào.",
+    "Phân loại rác là 'bài kiểm tra đầu tiên' khi chuyển đến một khu mới ở Nhật: mỗi quận/phường có lịch thu và cách chia rác riêng, phân sai là rác bị để lại kèm giấy nhắc nhở. Việc 美咲 kể 'lúc đầu thật sự bối rối' （最初、まじで戸惑った) cho thấy người Nhật coi việc học quy tắc của khu mình sống là trách nhiệm cá nhân — chuyển nhà không chỉ là dời đồ đạc, mà là 'gia nhập' một cộng đồng mới."
+  ],
+  "mistakes": [
+    "Kéo dài おじゃましまーす chỉ hợp với bạn rất thân; đến nhà người lớn tuổi hay lần đầu gặp mặt, hãy nói おじゃまします ngắn gọn, rõ ràng.",
+    "Nhầm 気が利く với 薬が効く: cả hai cùng đọc きく, nhưng 利く là 'tinh ý', còn 効く là 'có tác dụng' — sai một chữ kanji là sai hẳn nghĩa.",
+    "Dùng まじで・めっちゃ với người mới quen hoặc lớn tuổi: đây là từ của bạn bè trẻ; thay bằng 本当に・とても thì an toàn trong mọi tình huống.",
+    "Nghe ゆっくりしていってね mà ở lại đến khuya: đó là lời mời thân mật, nhưng khách vẫn phải để ý giờ giấc — nhất là khi hôm sau là ngày làm việc."
+  ],
+  "speaking_practice": [
+    "Đến nhà bạn mới chuyển: chào おじゃましまーす ở cửa, khen nhà mới (phòng khách rộng, gần ga), rồi trao quà tân gia kèm câu '大したもんじゃないけど'.",
+    "Hỏi chuyện khu phố mới: siêu thị có gần không, phân loại rác có khắt khe không, buổi tối có yên tĩnh không — và kể lại chuyện mình từng 戸惑った ở quận cũ.",
+    "Nhận lời mời cà phê và bánh: khen bánh うまっ！, hỏi bánh của tiệm nào, rồi đáp lại lời rủ đi mua cùng bằng '行こう行こう'.",
+    "Trước khi ra về: cảm ơn chủ nhà, hỏi また遊びに来ていい？ và hẹn lần tới cùng ăn lẩu để giữ nhịp thân thiết."
+  ],
   "lines": [
     {
       "speaker": "健太",
