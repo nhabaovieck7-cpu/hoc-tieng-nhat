@@ -1,0 +1,114 @@
+{
+  "lesson": 22,
+  "topic": "紅葉を見に行く計画",
+  "lines": [
+    {
+      "speaker": "健太",
+      "ja": "ねーねー、今週末さ、紅葉見に行かない？山の方、そろそろ見頃らしいよ。",
+      "vi": "Này này, cuối tuần này đi ngắm lá đỏ không? Phía núi nghe nói sắp đến lúc đẹp nhất rồi đấy."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "えー、いいね！行きたい行きたい。どこ行くの？",
+      "vi": "Ồ, hay đấy! Muốn đi muốn đi. Đi đâu thế?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "うーん、まだ決めてないんだよね。電車で行けるとこが楽かなーって。",
+      "vi": "Ừm, vẫn chưa quyết đâu. Tớ nghĩ chỗ nào đi bằng tàu được thì nhàn hơn."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "確かに。車だと駐車場混むしね。朝早めに出よっか。",
+      "vi": "Đúng thật. Đi ô tô thì bãi đỗ đông lắm. Mình xuất phát sớm sớm nhé."
+    },
+    {
+      "speaker": "健太",
+      "ja": "そうしよ。9時くらいに駅集合でどう？",
+      "vi": "Thế nhé. Tầm 9 giờ tập trung ở ga thì sao?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "9時ね、オッケー。お昼はどうする？おにぎり持ってく？",
+      "vi": "9 giờ nhé, ok. Trưa thì sao? Mang cơm nắm đi không?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "あ、それいいじゃん！コンビニで買ってくのもありだし。あったかいお茶も持ってこ。",
+      "vi": "À, ý hay đấy chứ! Mua ở cửa hàng tiện lợi mang đi cũng được. Mang cả trà nóng đi nữa."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "寒くなってきたしねー。マフラー忘れちゃダメだよ？",
+      "vi": "Trời cũng lạnh dần rồi nhỉ. Đừng có quên khăn quàng đấy nhé?"
+    },
+    {
+      "speaker": "健太",
+      "ja": "はいはい、忘れないって。美咲こそ、また手袋忘れそうじゃん。",
+      "vi": "Rồi rồi, không quên đâu mà. Chính cậu ấy, lại sắp quên găng tay đấy chứ."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "うっ、バレた？去年も忘れたんだよねー。気をつけるってば。",
+      "vi": "Á, bị phát hiện rồi à? Năm ngoái tớ cũng quên thật. Tớ sẽ cẩn thận mà."
+    },
+    {
+      "speaker": "健太",
+      "ja": "あはは。でさ、帰りに温泉寄ってくのもよくない？足湯だけでもさ。",
+      "vi": "Haha. Mà này, lúc về ghé qua suối nước nóng cũng hay đấy chứ? Chỉ ngâm chân thôi cũng được mà."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "え、最高じゃん！冷えた体に温泉、染みるよね〜。",
+      "vi": "Ôi, tuyệt nhất luôn! Cơ thể lạnh cóng mà được ngâm nước nóng thì thấm lắm luôn ấy."
+    },
+    {
+      "speaker": "健太",
+      "ja": "でしょ？写真もいっぱい撮ろ。美咲、カメラ持ってくんでしょ？",
+      "vi": "Đúng không? Chụp thật nhiều ảnh nhé. Cậu mang máy ảnh đi đúng không?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "もちろん！最近あんま撮ってなかったし、久々に本気出すよ。",
+      "vi": "Đương nhiên rồi! Dạo này tớ ít chụp lắm, lâu lắm mới nghiêm túc trở lại đây."
+    },
+    {
+      "speaker": "健太",
+      "ja": "お、楽しみにしてるわ。雨降ったらどうする？",
+      "vi": "Ồ, tớ mong chờ đấy. Mà nếu mưa thì sao?"
+    },
+    {
+      "speaker": "美咲",
+      "ja": "雨だったらさ、カフェでゆっくりして、また今度にしよ。無理しなくていいし。",
+      "vi": "Nếu mưa thì mình thong thả ở quán cà phê rồi để dịp khác. Không cần cố quá đâu."
+    },
+    {
+      "speaker": "健太",
+      "ja": "うん、それがいいね。じゃあ天気予報、金曜の夜にまたチェックしよ。",
+      "vi": "Ừ, thế là hay đấy. Vậy tối thứ Sáu mình kiểm tra lại dự báo thời tiết nhé."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "了解！楽しみだな〜。早く週末になんないかな。",
+      "vi": "Rõ! Mong chờ quá đi. Ước gì nhanh đến cuối tuần."
+    },
+    {
+      "speaker": "健太",
+      "ja": "ほんとそれ。じゃあ金曜にまた連絡するね。",
+      "vi": "Đúng thế thật. Vậy thứ Sáu tớ lại liên lạc nhé."
+    },
+    {
+      "speaker": "美咲",
+      "ja": "うん、よろしくね！じゃあねー。",
+      "vi": "Ừ, nhờ cậu nhé! Bye bye nhé."
+    }
+  ],
+  "notes": [
+    "「ねーねー」「行きたい行きたい」の繰り返し:会話の冒頭で相手の注意を引き、気持ちを強調する言い方。教科書の「ねえ」よりくだけた響きになる。",
+    "「〜じゃん」「〜だよね」「でしょ？」:同意や確認を求める文末表現。友達同士の会話では「〜ですよね」ではなく、こうした形が自然。",
+    "「〜とく」「〜ちゃダメ」「〜しよ」「〜よっか」:「ておく→とく」「ては→ちゃ」「しよう→しよ」など、音が縮んだ形。話し言葉では普通に使われる。",
+    "「まじ」「やばい」に頼らない感情表現:「最高じゃん」「染みるよね〜」「楽しみだな〜」のように、場面に合った具体的な言葉で気持ちを表すと自然に聞こえる。",
+    "「無理しなくていいし」「また今度にしよ」:計画変更を提案するとき、相手に負担をかけない言い方。断るときも角が立たない。",
+    "「了解！」「ほんとそれ」:「わかりました」より短く、共感を示す返事。友達同士では十分丁寧で、会話のテンポも良くなる。"
+  ]
+}
