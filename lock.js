@@ -96,6 +96,20 @@ function screen(){
 // GUESTOPEN: màn mời cho trang TÀI KHOẢN (chat/cộng đồng/bạn bè/hồ sơ) khi
 // chưa có phiên hợp lệ — thân thiện, không khoá cứng, chỉ rõ: nội dung học
 // vẫn mở miễn phí; tính năng này mới cần tài khoản.
+// Màn khoá khi admin bật chế độ "Khoá như cũ": khách không đăng nhập thì
+// không xem được nội dung — phải đăng nhập bằng tài khoản đã được duyệt.
+function modeLockScreen(){
+  if(document.querySelector('.lockscr'))return;
+  document.documentElement.classList.remove('locked');
+  const d=document.createElement('div');d.className='lockscr';
+  const title=(typeof SITE!='undefined'?SITE.title:'');
+  d.innerHTML='<div class="lockbox"><div class="lockico">🔒</div><h1>'+title+'</h1>'+
+    '<p>Chưa đăng nhập thì không xem được nội dung. Hãy <b>đăng nhập bằng tài khoản đã được duyệt</b> để học.</p>'+
+    '<p>Tài khoản mới đăng ký xong là dùng được ngay. Nếu tài khoản bị khoá hoặc bị từ chối thì chỉ Khánh mới mở lại được.</p>'+
+    '<a class="lockcta" href="dang-nhap.html">Đăng nhập / Đăng ký</a>'+
+    '<p class="lkalt"><a href="#" onclick="location.reload();return false">Thử lại</a> · <a href="index.html">Trang chủ</a></p></div>';
+  document.body.appendChild(d);
+}
 function inviteScreen(){
   if(document.querySelector('.lockscr'))return;
   document.documentElement.classList.remove('locked');
@@ -105,7 +119,7 @@ function inviteScreen(){
   const title=(typeof SITE!='undefined'?SITE.title:'');
   d.innerHTML='<div class="lockbox"><div class="lockico">💬</div><h1>'+title+'</h1>'+
     (hasSess
-      ? '<p>Tài khoản của bạn chưa được duyệt nên chưa dùng được tính năng này (chat, cộng đồng, bạn bè, trang cá nhân). Trong lúc chờ duyệt, bạn vẫn học toàn bộ bài học, bài thi và game miễn phí như bình thường.</p>'
+      ? '<p>Tài khoản của bạn chưa được mở quyền nên chưa dùng được tính năng này (chat, cộng đồng, bạn bè, trang cá nhân). Tài khoản mới được duyệt tự động — nếu gặp thông báo này thì tài khoản đang bị khoá hoặc bị từ chối, chỉ Khánh mới mở lại được. Bạn vẫn học toàn bộ bài học, bài thi và game miễn phí như bình thường.</p>'
       : '<p>Tính năng này (chat, cộng đồng, bạn bè, trang cá nhân) dành cho thành viên đã đăng nhập. Mọi bài học, bài thi và game vẫn mở miễn phí — không cần tài khoản.</p>')+
     '<a class="lockcta" href="dang-nhap.html">Đăng nhập / Đăng ký</a>'+
     '<p class="lkalt"><a href="index.html">Về trang chủ học tiếp</a></p></div>';
@@ -134,13 +148,16 @@ function guestLock(e){
 // GUESTOPEN: xin khoá nội dung công khai cho khách từ Worker (/auth/guest).
 // Thành công -> importContentKey như đường đăng nhập (khoá được kiểm chứng
 // bằng blob "check" của enc/meta.json trong importContentKey).
-let guestOpen=false;
+let guestOpen=false,siteLocked=false;
 async function fetchGuestKey(){
   const ep=(typeof SITE!='undefined'&&SITE.aiEndpoint)||'';
   if(!ep)return null;
   try{
     const r=await fetch(ep.replace(/\/$/,'')+'/auth/guest',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
     const j=await r.json().catch(()=>({}));
+    // Admin bật "Khoá như cũ" (site_mode='locked' phía Worker): khách bị
+    // từ chối kèm code 'site_locked' -> run() hiện lại màn khoá cũ.
+    if(!r.ok&&j.code==='site_locked')siteLocked=true;
     if(r.ok&&j.contentKey){await importContentKey(j.contentKey);guestOpen=true;return key}
   }catch(e){}
   return null;
@@ -197,6 +214,9 @@ async function run(files,opt){
     // rơi về nhánh học-thử giới hạn (/free/*). Tiến độ của khách chỉ sống
     // trong phiên (cơ chế gác cổng lưu trữ ở auth.js).
     key=await fetchGuestKey();
+    // Chế độ "Khoá như cũ" đang bật: khách dừng ở màn khoá, không rơi
+    // xuống nhánh học thử /free/* hay màn lỗi.
+    if(!key&&siteLocked){modeLockScreen();return}
     if(key){
       try{
         for(const f of files)await load(f);

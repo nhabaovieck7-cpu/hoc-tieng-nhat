@@ -180,17 +180,17 @@ html[data-theme="dark"] #devList .userrow .acts .lock{background:#472c27;color:#
     <button type="button" data-p="line" id="btnLine" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 3.5C6.8 3.5 2.6 6.9 2.6 11.1c0 3.8 3.3 6.9 7.8 7.6.3.1.7.2.8.5.1.3 0 .7 0 1l-.1 1.1c0 .3-.2.7.5.4.7-.4 3.9-2.3 5.3-4 .2-.1.4-.4.4-.6 1.3-1.3 2.1-3 2.1-5C21.4 6.9 17.2 3.5 12 3.5z"/></svg>Tiếp tục với LINE</button>
     <button type="button" data-p="apple" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c0-2.4 1.96-3.55 2.05-3.6-1.12-1.64-2.86-1.86-3.48-1.89-1.48-.15-2.89.87-3.64.87-.75 0-1.9-.85-3.13-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.9-.43 7.2 1.2 9.56.8 1.16 1.75 2.46 3 2.41 1.2-.05 1.66-.78 3.12-.78s1.87.78 3.14.75c1.3-.02 2.12-1.18 2.92-2.34.92-1.35 1.3-2.65 1.32-2.72-.03-.01-2.54-.98-2.57-3.81zM14.65 5.4c.66-.8 1.1-1.91.98-3.02-.95.04-2.1.63-2.78 1.43-.61.71-1.15 1.84-.98 2.92 1.06.08 2.14-.54 2.78-1.33z"/></svg>Apple <span class="soon">Sắp có</span></button>
   </div>
-  <p class="honest">Không cần tài khoản vẫn học được toàn bộ bài học, bài thi và game. Tài khoản (được Khánh duyệt) dùng để lưu tiến độ, chat, cộng đồng và trang cá nhân.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
+  <p class="honest">Không cần tài khoản vẫn học được toàn bộ bài học, bài thi và game. Tài khoản (đăng ký xong dùng ngay, không chờ duyệt) dùng để lưu tiến độ, chat, cộng đồng và trang cá nhân.<br><a href="chinh-sach.html" style="font-size:.85em">Chính sách quyền riêng tư</a></p>
 <aside class="dk-auth in">
 <h2>Đăng ký diễn ra thế nào?</h2>
-<ol class="dk-how"><li><b>Bạn đăng ký</b> bằng email (hoặc Google), hoàn toàn miễn phí.</li><li><b>Khánh duyệt thủ công</b> từng tài khoản để lớp học luôn an toàn — thường trong ngày, đôi khi lâu hơn một chút, mong bạn thông cảm ạ.</li><li><b>Được duyệt</b> là bạn lưu được tiến độ trên mọi máy, chat và tham gia cộng đồng. Trong lúc chờ duyệt, bạn vẫn học toàn bộ nội dung miễn phí.</li></ol>
+<ol class="dk-how"><li><b>Bạn đăng ký</b> bằng email (hoặc Google), hoàn toàn miễn phí.</li><li><b>Duyệt tự động:</b> đăng ký xong là dùng được ngay, không phải chờ Khánh duyệt. Khánh có thể <b>khoá</b> tài khoản dùng sai quy định — bị khoá thì chỉ Khánh mở lại được.</li><li><b>Có tài khoản</b> là bạn lưu được tiến độ trên mọi máy, chat và tham gia cộng đồng. Chưa có tài khoản, bạn vẫn học toàn bộ nội dung miễn phí.</li></ol>
 <p>Trong lúc chờ, bạn cứ học thử thoải mái nhé — không cần đăng nhập.</p>
 <a class="dk-btn big" href="hoc-thu.html">Học thử miễn phí trong lúc chờ</a>
 <p class="dk-priv">🔒 Trang chỉ dùng tên và email bạn nhập để đăng nhập, không thu thập thêm. Tiến độ học thử lưu trên máy này của bạn.</p></aside></div>
 <p class="lfoot">Tiến độ học được đồng bộ theo tài khoản — học tiếp ở máy nào cũng được.</p>
 </main>
 </div>
-<script src="config.js?v=755aff7d"></script><script src="common.js?v=c938d137"></script><script src="auth.js?v=60babd84"></script><script src="lock.js?v=ca139984"></script>
+<script src="config.js?v=755aff7d"></script><script src="common.js?v=c938d137"></script><script src="auth.js?v=60babd84"></script><script src="lock.js?v=00478c71"></script>
 <script>
 document.querySelectorAll('.site-title').forEach(e=>e.textContent=SITE.title);
 let mode='login';
@@ -199,7 +199,7 @@ const go=document.getElementById('go'),err=document.getElementById('err'),tog=do
 const name=document.getElementById('name'),email=document.getElementById('email'),pw=document.getElementById('pw');
 function setMode(m){
   mode=m;err.textContent='';
-  if(m==='register'){title.textContent='Đăng ký';sub.textContent='Đăng ký miễn phí để lưu tiến độ, chat và tham gia cộng đồng. Tài khoản mới cần Khánh duyệt trước khi dùng các tính năng tài khoản — nội dung học thì mở sẵn cho mọi người.';reg.hidden=false;go.textContent='Đăng ký';tog.parentElement.innerHTML='Đã có tài khoản? <a id="tog">Đăng nhập</a>';document.getElementById('tog').onclick=()=>setMode('login');pw.autocomplete='new-password';document.getElementById('forgotRow').hidden=true}
+  if(m==='register'){title.textContent='Đăng ký';sub.textContent='Đăng ký miễn phí để lưu tiến độ, chat và tham gia cộng đồng. Đăng ký xong dùng ngay, không cần chờ duyệt — nội dung học thì mở sẵn cho mọi người.';reg.hidden=false;go.textContent='Đăng ký';tog.parentElement.innerHTML='Đã có tài khoản? <a id="tog">Đăng nhập</a>';document.getElementById('tog').onclick=()=>setMode('login');pw.autocomplete='new-password';document.getElementById('forgotRow').hidden=true}
   else{title.textContent='Đăng nhập';sub.textContent='Mọi nội dung học đều mở miễn phí — không cần tài khoản. Đăng nhập để lưu tiến độ, chat và tham gia cộng đồng.';reg.hidden=true;go.textContent='Đăng nhập';document.getElementById('switch').innerHTML='Chưa có tài khoản? <a id="tog">Đăng ký</a>';document.getElementById('tog').onclick=()=>setMode('register');pw.autocomplete='current-password';document.getElementById('forgotRow').hidden=false}
 }
 tog.onclick=()=>setMode('register');

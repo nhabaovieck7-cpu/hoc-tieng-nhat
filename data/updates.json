@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "2026-11-04-duyet-tu-dong-cong-tac-che-do",
+   "date": "2026-11-04",
+   "type": "thay-doi",
+   "title": "Đăng ký dùng ngay + công tắc Mở miễn phí / Khoá trang",
+   "desc": "Tài khoản mới nay được duyệt tự động: đăng ký xong là dùng ngay chat, cộng đồng và lưu tiến độ, không phải chờ duyệt. Khánh vẫn khoá được tài khoản dùng sai quy định — bị khoá thì chỉ Khánh mở lại được, đổi mật khẩu cũng không tự mở được. Trang quản trị có thêm công tắc chế độ trang: Mở miễn phí (khách học không cần đăng nhập) hoặc Khoá như cũ (chỉ tài khoản đã duyệt mới xem được nội dung).",
+   "link": "dang-nhap.html"
+  },
+  {
    "id": "2026-11-04-go-de-lien-ket-ngoai",
    "date": "2026-11-04",
    "type": "thay-doi",

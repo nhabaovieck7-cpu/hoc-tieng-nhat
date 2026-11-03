@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"></noscript>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><script>(function(){var c='auto';try{var o=JSON.parse(localStorage.getItem('hn_skin_v1')||'null');if(o&&o.c)c=String(o.c)}catch(e){}var S=['manga','bento','fuji','neon'];if(S.indexOf(c)<0){var n=new Date(Date.now()+9*36e5),y=n.getUTCFullYear();c=S[Math.floor((Date.UTC(y,n.getUTCMonth(),n.getUTCDate())-Date.UTC(y,0,0))/864e5)%4]}document.documentElement.dataset.skin=c})()</script><link rel="stylesheet" href="style.css?v=36023925"><title>Admin duyệt tài khoản – Đại Ca Nihongo</title><meta name="description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:title" content="Admin duyệt tài khoản – Đại Ca Nihongo"><meta property="og:description" content="Trang quản lý: duyệt, khóa và mở khóa tài khoản học viên."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"><style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><script>(function(){var c='auto';try{var o=JSON.parse(localStorage.getItem('hn_skin_v1')||'null');if(o&&o.c)c=String(o.c)}catch(e){}var S=['manga','bento','fuji','neon'];if(S.indexOf(c)<0){var n=new Date(Date.now()+9*36e5),y=n.getUTCFullYear();c=S[Math.floor((Date.UTC(y,n.getUTCMonth(),n.getUTCDate())-Date.UTC(y,0,0))/864e5)%4]}document.documentElement.dataset.skin=c})()</script><link rel="stylesheet" href="style.css?v=36023925"><title>Admin quản lý tài khoản – Đại Ca Nihongo</title><meta name="description" content="Trang quản lý: khoá, mở lại tài khoản học viên và chuyển chế độ mở/khoá trang."><meta property="og:title" content="Admin quản lý tài khoản – Đại Ca Nihongo"><meta property="og:description" content="Trang quản lý: khoá, mở lại tài khoản học viên và chuyển chế độ mở/khoá trang."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/icons/icon-512.png"><style>
 .hv-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px}
 .hv-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
 .hv-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r,16px);padding:12px;min-width:0}
@@ -28,7 +28,7 @@ main.wrap{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
 <div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
 <a href="index.html">Trang chủ</a><a class="on" href="admin.html">Admin</a></nav></div></div>
 <main class="wrap" style="max-width:720px;padding-bottom:40px">
-<div class="pagehead"><h1>👤 Duyệt tài khoản</h1><p>Chỉ Khánh dùng trang này. Học viên đăng ký sẽ hiện ở tab Chờ duyệt.</p></div>
+<div class="pagehead"><h1>👤 Quản lý tài khoản</h1><p>Chỉ Khánh dùng trang này. Tài khoản mới được <b>duyệt tự động</b> — ở đây Khánh khoá/mở lại tài khoản, đổi chế độ mở/khoá trang và xem số liệu.</p></div>
 
 <div class="authcard" id="loginBox">
   <h1>Đăng nhập admin</h1>
@@ -54,6 +54,15 @@ main.wrap{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
     <button type="button" class="astat" id="astatPending" title="Xem danh sách chờ duyệt"><span class="astat-n" id="astatPendingN">—</span><span class="astat-l">⏳ Chờ duyệt</span></button>
     <div class="astat"><span class="astat-n" id="astatApprovedN">—</span><span class="astat-l">✅ Đã duyệt</span></div>
     <div class="astat"><span class="astat-n" id="astatOnlineN">—</span><span class="astat-l">🟢 Đang trực tuyến</span></div>
+  </div>
+  <div class="authcard" style="margin-top:14px;text-align:left">
+    <h3 style="margin:2px 0 6px">🌐 Chế độ trang web</h3>
+    <p class="meta" id="smodeNow" style="margin:0 0 10px">Đang đọc chế độ hiện tại…</p>
+    <div class="acts">
+      <button class="ok" id="smodeOpen" type="button">🔓 MỞ MIỄN PHÍ</button>
+      <button class="lock" id="smodeLock" type="button">🔒 KHÓA NHƯ CŨ</button>
+    </div>
+    <p class="meta" style="margin:10px 0 0">🔓 <b>Mở miễn phí:</b> khách không cần đăng nhập vẫn học được mọi nội dung.<br>🔒 <b>Khoá như cũ:</b> chỉ tài khoản đã được duyệt mới xem được nội dung; khách gặp màn hình yêu cầu đăng nhập. Thành viên đã đăng nhập <b>không bị ảnh hưởng</b> ở cả hai chế độ. Bấm là có hiệu lực ngay toàn trang.</p>
   </div>
   <div id="list"></div>
 
@@ -194,7 +203,7 @@ async function load(){
       <b>${esc(u.display_name||u.name||'')}</b>
       <div class="meta">📧 ${esc(u.email)} · Tên tài khoản: ${esc(u.name||'')} · Cách: ${esc(u.method)} · Đăng ký: ${fmt(u.created_at)}<br>Lần vào gần nhất: ${fmt(u.last_visit)} · 📱 <span class="devcnt">${u.device_count||0}</span>/2 thiết bị</div>
       <div class="acts">
-        ${tab!=='approved'?`<button class="ok" data-a="approve">Duyệt</button>`:''}
+        ${tab!=='approved'?`<button class="ok" data-a="approve">${tab==='locked'?'🔓 Mở khóa':tab==='rejected'?'Duyệt lại':'Duyệt'}</button>`:''}
         ${tab!=='rejected'?`<button class="no" data-a="reject">Từ chối</button>`:''}
         ${tab!=='locked'?`<button class="lock" data-a="lock">Khoá</button>`:''}
         <button class="lock" data-a="devices">Thiết bị</button>
@@ -207,7 +216,12 @@ async function load(){
       if(act==='reject'||act==='lock'){
         const u=us.find(x=>String(x.id)===String(id))||{};
         const who=((u.display_name||u.name||'').trim()||'—')+' ('+(u.email||'không rõ email')+')';
-        if(!confirm((act==='reject'?'Từ chối':'Khoá')+' tài khoản '+who+'?'))return;
+        if(!confirm((act==='reject'?'Từ chối':'Khoá')+' tài khoản '+who+'?'+(act==='lock'?' Người dùng sẽ bị đăng xuất ở mọi thiết bị và chỉ vào lại được khi Khánh mở khoá.':'')))return;
+      }
+      if(act==='approve'&&(tab==='locked'||tab==='rejected')){
+        const u=us.find(x=>String(x.id)===String(id))||{};
+        const who=((u.display_name||u.name||'').trim()||'—')+' ('+(u.email||'không rõ email')+')';
+        if(!confirm((tab==='locked'?'Mở khóa':'Duyệt lại')+' tài khoản '+who+'? Họ sẽ đăng nhập và dùng lại được ngay.'))return;
       }
       b.disabled=true;
       try{await AUTH.adminAction(id,act);await load()}catch(e){alert(e.message);b.disabled=false}
@@ -250,7 +264,26 @@ async function renderDevices(row,uid){
   }
 }
 function showLogin(){panel.hidden=true;loginBox.hidden=false}
-function showPanel(){loginBox.hidden=true;panel.hidden=false;load();hvLoad()}
+function showPanel(){loginBox.hidden=true;panel.hidden=false;load();hvLoad();loadSiteMode()}
+// ===== Chế độ trang web (GET/POST /auth/admin/site-mode, chỉ admin; đổi là hiệu lực ngay toàn trang) =====
+async function loadSiteMode(){
+  const el=document.getElementById('smodeNow');if(!el)return;
+  try{
+    const j=await AUTH.api('/auth/admin/site-mode',{admin:true});
+    const m=(j&&j.mode)||'open';
+    el.innerHTML='Chế độ đang chạy: '+(m==='locked'?'🔒 <b>KHÓA NHƯ CŨ</b> — chỉ tài khoản đã duyệt mới xem được nội dung.':'🔓 <b>MỞ MIỄN PHÍ</b> — khách học được mọi nội dung, không cần đăng nhập.');
+  }catch(e){el.textContent='Không đọc được chế độ hiện tại ('+(e.message||'lỗi')+').';}
+}
+async function setSiteMode(m){
+  if(!confirm(m==='locked'?'Chuyển sang 🔒 KHÓA NHƯ CŨ?\nKhách chưa đăng nhập sẽ không xem được nội dung nữa. Thành viên đã đăng nhập không bị ảnh hưởng.':'Chuyển sang 🔓 MỞ MIỄN PHÍ?\nMọi người đều học được nội dung mà không cần đăng nhập.'))return;
+  try{
+    await AUTH.api('/auth/admin/site-mode',{admin:true,method:'POST',body:{mode:m}});
+    await loadSiteMode();
+    alert(m==='locked'?'Đã chuyển sang KHÓA NHƯ CŨ 🔒':'Đã chuyển sang MỞ MIỄN PHÍ 🔓');
+  }catch(e){alert(e.message||'Không đổi được chế độ');}
+}
+document.getElementById('smodeOpen').onclick=()=>setSiteMode('open');
+document.getElementById('smodeLock').onclick=()=>setSiteMode('locked');
 document.getElementById('alogin').onclick=async()=>{
   aerr.textContent='';
   try{await AUTH.adminLogin(document.getElementById('apw').value.trim());document.getElementById('apw').value='';showPanel()}
