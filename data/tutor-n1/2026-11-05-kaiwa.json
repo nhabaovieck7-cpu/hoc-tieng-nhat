@@ -1,0 +1,374 @@
+{
+  "lesson": 23,
+  "topic": "部屋の片づけとフリマ出品 (dọn phòng và bán đồ cũ trên app)",
+  "summary": "Bối cảnh: cuối tuần, 莉子 sang phòng 拓海 phụ dọn dẹp vì phòng chật kín đồ cũ. Hai người vừa phân loại đồ vừa mở app chợ đồ cũ để đăng bán: cái nào giữ, cái nào bỏ, cái nào bán được, bán giá bao nhiêu, rồi hẹn nhau hôm sau đi gửi hàng ở cửa hàng tiện lợi. Kỹ năng luyện: văn nói bạn bè — rủ rê và nhờ vả nhẹ nhàng, thương lượng giá cả (trả giá, chốt giá, nhượng bộ), quyết định giữ/bỏ dứt khoát mà không làm mất lòng. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và lặp từ nhấn mạnh. Điểm khó/điểm mới so với bài trước: cách nói giá tiền và phí ship kiểu đời thường (〜込み, 手数料引いたら〜), cách từ chối khéo một món đồ của bạn mình (いや、それはちょっと…), và cách chốt hẹn cụ thể mà vẫn để ngỏ (明日、行けたら行こう).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（dọn phòng và phân loại đồ）",
+      "stage": "（Cuối tuần, phòng của 拓海. Thùng giấy, túi nilon bày la liệt giữa phòng. 莉子 vừa mở tủ vừa lắc đầu.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "うわ、やば。ここ、{足|あし}の{踏|ふ}み{場|みば}もないじゃん。",
+          "vi": "Trời ơi, kinh thật. Chỗ này đến chỗ đặt chân cũng không có luôn ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まじで？いや、ほら、ちょっと{散|ち}らかってるだけでさ。",
+          "vi": "Thật á? Không, này, chỉ hơi bừa một tí thôi mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ちょっとじゃないって。これ、もう{何|なん}{年|ねん}{着|き}てないの？",
+          "vi": "Một tí gì chứ. Cái này, cậu đã mấy năm không mặc rồi?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えーっと…まあ、2{年|ねん}くらい？でも、まだ{着|き}れるしさ。",
+          "vi": "Ừm… thì, khoảng 2 năm? Nhưng mà vẫn mặc được mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "2{年|ねん}{着|き}てなかったら、もう{着|き}ないって。はい、{売|う}る{箱|はこ}ね。",
+          "vi": "2 năm không mặc thì là không mặc nữa rồi. Đây, cho vào thùng bán này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ちょ、ちょ、{待|ま}って{待|ま}って。せめてこのジャケットだけはさ。",
+          "vi": "Khoan, khoan, đợi đã đợi đã. Ít nhất thì giữ lại mỗi cái áo khoác này thôi chứ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "だめだめ。{去年|きょねん}も{同|おな}じこと{言|い}ってたじゃん。",
+          "vi": "Không được không được. Năm ngoái cậu cũng nói y hệt thế còn gì."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うっ…バレたか。じゃあ、これは{売|う}る、これは{捨|す}てる、でいいよ。",
+          "vi": "Ự… bị lộ rồi à. Thôi được, cái này bán, cái này vứt, thế nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうそう、その{調子|ちょうし}。その{箱|はこ}、もうパンパンだよ。",
+          "vi": "Đúng đúng, cứ thế đi. Cái thùng kia đã đầy ứ rồi kìa."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あとこのゲーム{機|き}、どうする？{動|うご}くけど、もう{遊|あそ}ばないし。",
+          "vi": "Còn cái máy game này thì sao? Vẫn chạy nhưng mà giờ không chơi nữa."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（đăng bán trên app và hẹn đi gửi hàng）",
+      "stage": "（Hai người ngồi bệt xuống sàn, mở app chợ đồ cũ. 拓海 chụp ảnh đồ, 莉子 gợi ý giá.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "これ、フリマに{出|だ}しちゃえば？{送料|そうりょう}{込|ご}みで3,000{円|えん}くらいどう？",
+          "vi": "Cái này đăng lên app bán đồ cũ luôn đi? Bao ship khoảng 3.000 yên thì sao?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "3,000{円|えん}？いやいや、{高|たか}すぎでしょ。2,000{円|えん}でもいいよ。",
+          "vi": "3.000 yên á? Không không, đắt quá đi. 2.000 yên cũng được mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "でもさ、{手数|てすう}{料|りょう}{引|ひ}いたら{全然|ぜんぜん}{残|のこ}んないよ？2,500{円|えん}でいこうよ。",
+          "vi": "Nhưng mà này, trừ phí đi thì có còn lại bao nhiêu đâu? Chốt 2.500 yên đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うーん、まあ、2,500{円|えん}ならありかな。よし、それで{出|だ}してみる。",
+          "vi": "Ừm, thì, 2.500 yên thì cũng được đấy. Được rồi, đăng thử giá đó xem sao."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{写真|しゃしん}、もっと{明|あか}るいとこで{撮|と}ったほうがいいよ。ほら、{窓際|まどぎわ}で。",
+          "vi": "Ảnh thì chụp ở chỗ sáng hơn thì tốt hơn đấy. Này, ra chỗ gần cửa sổ ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いい{感|かん}じじゃん。{説明|せつめい}{文|ぶん}は…「{美品|びひん}です」って{書|か}いとけばいい？",
+          "vi": "Ồ, trông ổn phết nhỉ. Phần mô tả thì… cứ viết là “hàng đẹp” là được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、それと「{傷|きず}なし」も{入|い}れといて。すぐ{売|う}れるよ、たぶん。",
+          "vi": "Ừ, với cả thêm “không xước” vào nữa. Chắc bán nhanh thôi, có lẽ thế."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{売|う}れたらさ、{明日|あす}コンビニで{発送|はっそう}しに{行|い}かない？",
+          "vi": "Nếu bán được ấy, mai cậu đi gửi hàng ở cửa hàng tiện lợi với tớ không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいよ。{明日|あす}、{行|い}けたら{行|い}こう。{午前|ごぜん}{中|ちゅう}が{空|あ}いてるし。",
+          "vi": "Được thôi. Mai, nếu đi được thì đi. Buổi sáng tớ rảnh mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{決|き}まりね。{終|お}わったら、ご{飯|はん}でも{行|い}こうよ。おごるからさ。",
+          "vi": "Chốt nhé. Xong việc thì đi ăn gì đó đi. Tớ bao cho."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "この部屋はとても散らかっていますね。",
+      "real": "うわ、やば。ここ、足の踏み場もないじゃん。",
+      "why": "Sách giáo khoa nói lịch sự, đầy đủ chủ ngữ và dùng ています. Nói thật thì thốt lên cảm xúc trước (うわ、やば), bỏ chủ ngữ, dùng じゃん để xác nhận chung — nghe như bạn bè thật, không như đang đọc văn mẫu."
+    },
+    {
+      "textbook": "ちょっと待ってください。",
+      "real": "ちょ、ちょ、待って待って。",
+      "why": "Khi vội hoặc hoảng, người Nhật rút gọn ちょっと thành ちょ và lặp lại động từ (待って待って) để nhấn mạnh. Dạng đầy đủ nghe chậm và trịnh trọng, không hợp lúc đang giằng co với bạn."
+    },
+    {
+      "textbook": "2年間着ていなかったら、もう着ないでしょう。",
+      "real": "2年着てなかったら、もう着ないって。",
+      "why": "Văn nói rút ている thành てる, bỏ 間 và trợ từ thừa, kết câu bằng って để khẳng định như một chân lý hiển nhiên. Nghe gọn, dứt khoát, đúng kiểu thuyết phục bạn bè."
+    },
+    {
+      "textbook": "手数料を引いたら、あまり残りませんよ。",
+      "real": "手数料引いたら全然残んないよ？",
+      "why": "Văn nói bỏ trợ từ を, rút ない thành んない, thêm 全然 để nhấn mạnh mức độ ít, và kết bằng よ？ với giọng lên để rủ đối phương đồng tình. Sách giáo khoa thì trung tính, không có lực thuyết phục này."
+    },
+    {
+      "textbook": "明日、行くことができたら一緒に行きましょう。",
+      "real": "明日、行けたら行こう。",
+      "why": "Bạn bè dùng thể khả năng rút gọn (行けたら) và thể ý chí rủ rê (行こう) thay vì cấu trúc dài ことができる＋ましょう. Ngắn, nhẹ, vẫn để ngỏ nếu mai bận — đúng kiểu hẹn kiểu Nhật không gây áp lực."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "じゃん",
+      "in_lesson": "足の踏み場もないじゃん",
+      "original": "じゃないか",
+      "vi": "…còn gì / …mà — xác nhận điều hiển nhiên, rủ đối phương đồng tình.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "まじで？",
+      "in_lesson": "まじで？",
+      "original": "本当に？",
+      "vi": "Thật á? — tỏ ngạc nhiên, mức độ suồng sã cao hơn 本当に.",
+      "use": "Dùng với bạn bè cùng trang lứa.",
+      "avoid": "Tránh với cấp trên, người lớn tuổi không thân, và trong công việc chính thức."
+    },
+    {
+      "form": "〜てる / 〜てた",
+      "in_lesson": "散らかってる、着てなかったら",
+      "original": "〜ている / 〜ていた",
+      "vi": "Rút gọn của ている: đang… / đã từng…; văn nói thường ngày gần như luôn dùng dạng rút gọn.",
+      "use": "Dùng với bạn bè, gia đình, đồng nghiệp thân.",
+      "avoid": "Tránh trong văn viết, thuyết trình, và khi nói với cấp trên trong bối cảnh trang trọng."
+    },
+    {
+      "form": "〜んない",
+      "in_lesson": "全然残んないよ",
+      "original": "〜ない",
+      "vi": "Dạng phủ định rút gọn, nhấn mạnh: không còn lại gì cả.",
+      "use": "Dùng với bạn bè thân.",
+      "avoid": "Tránh với cấp trên, khách hàng, và trong văn viết."
+    },
+    {
+      "form": "〜とく / 〜といて",
+      "in_lesson": "書いとけばいい、入れといて",
+      "original": "〜ておく / 〜ておいて",
+      "vi": "Làm trước để chuẩn bị: cứ viết sẵn / thêm vào trước đi.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nhờ cấp trên (khi đó dùng 〜ておいてください)."
+    },
+    {
+      "form": "ちょ",
+      "in_lesson": "ちょ、ちょ、待って",
+      "original": "ちょっと",
+      "vi": "Rút gọn của ちょっと khi vội, hoảng hoặc đùa: khoan khoan.",
+      "use": "Dùng với bạn bè thân, trong tình huống nhẹ nhàng.",
+      "avoid": "Tránh với cấp trên và trong tình huống nghiêm túc cần lịch sự."
+    },
+    {
+      "form": "〜かな",
+      "in_lesson": "2,500円ならありかな",
+      "original": "〜だろうか / 〜かもしれない",
+      "vi": "Tự hỏi, phân vân nhẹ: …nhỉ / …cũng được đấy chứ.",
+      "use": "Dùng với bạn bè, hoặc tự nói một mình; dùng được với người thân thiết ở mức trung tính.",
+      "avoid": "Tránh khi cần quyết định dứt khoát với cấp trên hoặc khách hàng."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{足|あし}の{踏|ふ}み{場|みば}もない",
+      "reading": "あしのふみばもない",
+      "vi": "Đến chỗ đặt chân cũng không có — diễn tả phòng bừa bộn đến mức không còn chỗ đứng.",
+      "example_ja": "{引|ひ}っ{越|っこ}し{前|まえ}は{荷物|にもつ}だらけで、{足|あし}の{踏|ふ}み{場|みば}もなかったよ。",
+      "example_vi": "Trước khi chuyển nhà, đồ đạc chất đầy nên đến chỗ đặt chân cũng không có."
+    },
+    {
+      "expr": "その{調子|ちょうし}",
+      "reading": "そのちょうし",
+      "vi": "Cứ thế đi / đúng rồi, giữ đà đó — khen và động viên đối phương tiếp tục.",
+      "example_ja": "そうそう、その{調子|ちょうし}！あと{少|すこ}しで{終|お}わるよ。",
+      "example_vi": "Đúng đúng, cứ thế đi! Còn một chút nữa là xong rồi."
+    },
+    {
+      "expr": "{送料|そうりょう}{込|ご}み",
+      "reading": "そうりょうこみ",
+      "vi": "Đã bao gồm phí ship — cách ghi giá quen thuộc trên app chợ đồ cũ.",
+      "example_ja": "このバッグ、{送料|そうりょう}{込|ご}みで2,000{円|えん}です。",
+      "example_vi": "Chiếc túi này, bao ship là 2.000 yên."
+    },
+    {
+      "expr": "{手数|てすう}{料|りょう}{引|ひ}いたら",
+      "reading": "てすうりょうひいたら",
+      "vi": "Trừ phí đi thì… — khi tính tiền thực nhận sau khi app trừ hoa hồng.",
+      "example_ja": "{手数|てすう}{料|りょう}{引|ひ}いたら、{手元|てもと}に{残|のこ}るのは1,800{円|えん}くらいだね。",
+      "example_vi": "Trừ phí đi thì số tiền thực nhận còn khoảng 1.800 yên thôi."
+    },
+    {
+      "expr": "{行|い}けたら{行|い}こう",
+      "reading": "いけたらいこう",
+      "vi": "Nếu đi được thì đi — cách hẹn kiểu Nhật: chốt ý định nhưng vẫn để ngỏ, không ép buộc.",
+      "example_ja": "{明日|あす}、{行|い}けたら{行|い}こう。{無理|むり}しなくていいからね。",
+      "example_vi": "Mai nếu đi được thì đi nhé. Không cần cố quá đâu."
+    },
+    {
+      "expr": "おごるからさ",
+      "reading": "おごるからさ",
+      "vi": "Tớ bao cho mà — rủ rê kèm lời mời trả tiền, làm cho lời mời dễ nhận hơn.",
+      "example_ja": "{終|お}わったらラーメンでも{行|い}こうよ。おごるからさ。",
+      "example_vi": "Xong việc thì đi ăn ramen gì đó đi. Tớ bao cho mà."
+    }
+  ],
+  "mindset": [
+    "Người Nhật khi dọn phòng thường phân loại rất dứt khoát: giữ — bán — bỏ. Đồ còn dùng được mà mình không dùng nữa thì bán lại trên app chợ đồ cũ thay vì vứt đi, vừa đỡ phí vừa đỡ rác. Trong hội thoại, 莉子 không nói thẳng “vứt đi” mà đẩy đồ vào “thùng bán” — cách này giúp 拓海 bớt tiếc đồ, vì bán đi vẫn cảm giác đồ còn có ích cho ai đó.",
+    "Thương lượng giá kiểu bạn bè không phải là mặc cả gay gắt mà là tìm điểm chung: một bên đưa giá cao, một bên trả thấp, rồi gặp nhau ở giữa (2,500円). Cách nói 2,500円でいこうよ vừa chốt giá vừa giữ không khí vui vẻ. Và khi hẹn đi gửi hàng, người Nhật hay chốt kiểu để ngỏ (行けたら行こう) thay vì ép buộc — nếu mai bận thì hủy cũng không mất lòng, đó là cách giữ quan hệ thoải mái."
+  ],
+  "mistakes": [
+    "Đừng dịch 送料込み thành “phí ship riêng”: 込み nghĩa là đã bao gồm trong giá đó. Muốn nói ship tính riêng phải nói 送料別.",
+    "Đừng dùng まじで với cấp trên hoặc khách hàng: đây là từ lóng của giới trẻ, trong công việc hãy dùng 本当に hoặc 本当ですか.",
+    "Đừng nói 手数料引いたら mà quên mất chủ ngữ tiền: trong văn nói thì được lược, nhưng khi viết mô tả bán hàng thì phải viết đầy đủ (手数料を引いた金額) kẻo người mua hiểu lầm.",
+    "Đừng chốt hẹn kiểu mệnh lệnh (明日、絶対行こう) với người Nhật mới quen: kiểu để ngỏ 行けたら行こう an toàn hơn, vì nó cho đối phương đường lui mà không làm mất mặt."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn sang phòng một người bạn và thấy phòng rất bừa. Hãy mở đầu bằng một câu cảm thán tự nhiên, rồi thuyết phục bạn ấy cho một món đồ đã 2 năm không dùng vào thùng bán.",
+    "Tình huống 2: Bạn muốn bán một chiếc túi cũ trên app. Hãy đề xuất giá bao ship, nghe bạn mình trả giá thấp hơn, rồi chốt ở mức giữa — dùng câu thương lượng kiểu 行けたら… / 〜でいこうよ.",
+    "Tình huống 3: Sau khi dọn phòng xong, hãy rủ bạn mình mai đi gửi hàng ở cửa hàng tiện lợi, chốt hẹn kiểu để ngỏ, rồi mời bạn ấy đi ăn và nói rõ mình sẽ trả tiền."
+  ],
+  "lines": [
+    {
+      "speaker": "莉子",
+      "ja": "うわ、やば。ここ、{足|あし}の{踏|ふ}み{場|みば}もないじゃん。",
+      "vi": "Trời ơi, kinh thật. Chỗ này đến chỗ đặt chân cũng không có luôn ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まじで？いや、ほら、ちょっと{散|ち}らかってるだけでさ。",
+      "vi": "Thật á? Không, này, chỉ hơi bừa một tí thôi mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ちょっとじゃないって。これ、もう{何|なん}{年|ねん}{着|き}てないの？",
+      "vi": "Một tí gì chứ. Cái này, cậu đã mấy năm không mặc rồi?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えーっと…まあ、2{年|ねん}くらい？でも、まだ{着|き}れるしさ。",
+      "vi": "Ừm… thì, khoảng 2 năm? Nhưng mà vẫn mặc được mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "2{年|ねん}{着|き}てなかったら、もう{着|き}ないって。はい、{売|う}る{箱|はこ}ね。",
+      "vi": "2 năm không mặc thì là không mặc nữa rồi. Đây, cho vào thùng bán này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ちょ、ちょ、{待|ま}って{待|ま}って。せめてこのジャケットだけはさ。",
+      "vi": "Khoan, khoan, đợi đã đợi đã. Ít nhất thì giữ lại mỗi cái áo khoác này thôi chứ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "だめだめ。{去年|きょねん}も{同|おな}じこと{言|い}ってたじゃん。",
+      "vi": "Không được không được. Năm ngoái cậu cũng nói y hệt thế còn gì."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うっ…バレたか。じゃあ、これは{売|う}る、これは{捨|す}てる、でいいよ。",
+      "vi": "Ự… bị lộ rồi à. Thôi được, cái này bán, cái này vứt, thế nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうそう、その{調子|ちょうし}。その{箱|はこ}、もうパンパンだよ。",
+      "vi": "Đúng đúng, cứ thế đi. Cái thùng kia đã đầy ứ rồi kìa."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あとこのゲーム{機|き}、どうする？{動|うご}くけど、もう{遊|あそ}ばないし。",
+      "vi": "Còn cái máy game này thì sao? Vẫn chạy nhưng mà giờ không chơi nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "これ、フリマに{出|だ}しちゃえば？{送料|そうりょう}{込|ご}みで3,000{円|えん}くらいどう？",
+      "vi": "Cái này đăng lên app bán đồ cũ luôn đi? Bao ship khoảng 3.000 yên thì sao?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "3,000{円|えん}？いやいや、{高|たか}すぎでしょ。2,000{円|えん}でもいいよ。",
+      "vi": "3.000 yên á? Không không, đắt quá đi. 2.000 yên cũng được mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "でもさ、{手数|てすう}{料|りょう}{引|ひ}いたら{全然|ぜんぜん}{残|のこ}んないよ？2,500{円|えん}でいこうよ。",
+      "vi": "Nhưng mà này, trừ phí đi thì có còn lại bao nhiêu đâu? Chốt 2.500 yên đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うーん、まあ、2,500{円|えん}ならありかな。よし、それで{出|だ}してみる。",
+      "vi": "Ừm, thì, 2.500 yên thì cũng được đấy. Được rồi, đăng thử giá đó xem sao."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{写真|しゃしん}、もっと{明|あか}るいとこで{撮|と}ったほうがいいよ。ほら、{窓際|まどぎわ}で。",
+      "vi": "Ảnh thì chụp ở chỗ sáng hơn thì tốt hơn đấy. Này, ra chỗ gần cửa sổ ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いい{感|かん}じじゃん。{説明|せつめい}{文|ぶん}は…「{美品|びひん}です」って{書|か}いとけばいい？",
+      "vi": "Ồ, trông ổn phết nhỉ. Phần mô tả thì… cứ viết là “hàng đẹp” là được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、それと「{傷|きず}なし」も{入|い}れといて。すぐ{売|う}れるよ、たぶん。",
+      "vi": "Ừ, với cả thêm “không xước” vào nữa. Chắc bán nhanh thôi, có lẽ thế."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{売|う}れたらさ、{明日|あす}コンビニで{発送|はっそう}しに{行|い}かない？",
+      "vi": "Nếu bán được ấy, mai cậu đi gửi hàng ở cửa hàng tiện lợi với tớ không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいよ。{明日|あす}、{行|い}けたら{行|い}こう。{午前|ごぜん}{中|ちゅう}が{空|あ}いてるし。",
+      "vi": "Được thôi. Mai, nếu đi được thì đi. Buổi sáng tớ rảnh mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{決|き}まりね。{終|お}わったら、ご{飯|はん}でも{行|い}こうよ。おごるからさ。",
+      "vi": "Chốt nhé. Xong việc thì đi ăn gì đó đi. Tớ bao cho."
+    }
+  ],
+  "notes": [
+    "足の踏み場もない: cách nói hình ảnh, dùng khi phòng bừa đến mức không còn chỗ đứng — mạnh hơn 散らかっている.",
+    "Lặp từ để nhấn mạnh (待って待って、だめだめ、ちょ、ちょ) là đặc trưng của văn nói khi vội hoặc đùa, không phải lỗi lặp.",
+    "〜でいこうよ: mẫu chốt phương án chung, vừa quyết định vừa rủ rê — rất hợp khi hai người cùng làm một việc.",
+    "送料込み / 送料別 là cặp từ bắt buộc phải phân biệt khi mua bán online ở Nhật.",
+    "美品・傷なし là từ mô tả hàng quen thuộc trên app đồ cũ; dùng đúng giúp hàng bán nhanh hơn.",
+    "行けたら行こう: mẫu hẹn để ngỏ, thể hiện sự tinh tế kiểu Nhật — chốt ý định nhưng không gây áp lực.",
+    "おごる: động từ suồng sã nghĩa là “bao, trả tiền hộ”; với cấp trên hãy dùng ごちそうします."
+  ]
+}

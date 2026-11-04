@@ -83,6 +83,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 21 — 紅葉を見に行く計画",
       "file": "2026-11-04-kaiwa.json"
+    },
+    {
+      "date": "2026-11-05",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 05/11/2026（問題11・中文）",
+      "file": "2026-11-05-n1-set.json"
+    },
+    {
+      "date": "2026-11-05",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 05/11/2026（長文）",
+      "file": "2026-11-05-reading.json"
+    },
+    {
+      "date": "2026-11-05",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 23 — 部屋の片づけとフリマ出品 (dọn phòng và bán đồ cũ trên app)",
+      "file": "2026-11-05-kaiwa.json"
     }
   ]
 }

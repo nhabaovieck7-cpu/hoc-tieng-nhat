@@ -1,0 +1,551 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 長文 trong phần đọc hiểu của đề N1 thật: một đoạn văn dài, luận thuyết trừu tượng, đòi hỏi nắm mạch lập luận tổng thể chứ không chỉ hiểu từng câu lẻ. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc lướt nắm chủ trương rồi mới trả lời; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 12–14 phút (đọc + 4 câu hỏi). Trong đề thật, 長文 thường nằm ở phần đọc hiểu dài, sau 短文 và 中文, và là nơi dễ mất điểm vì các lựa chọn nhiễu rất sát nghĩa.",
+  "tips": [
+    {
+      "h": "Đọc câu đầu và câu cuối mỗi đoạn trước",
+      "body": "Luận thuyết N1 thường lộ chủ trương ở đầu đoạn (nêu vấn đề) và cuối đoạn (kết luận, chuyển ý). Đọc khung này trước sẽ giúp bạn biết tác giả đang phản đối hay ủng hộ điều gì, tránh bị lựa chọn đảo ngược ý kéo đi."
+    },
+    {
+      "h": "Gạch chân từ chuyển ý: しかし・だが・もちろん・だからこそ",
+      "body": "Những từ này báo hiệu mạch lập luận đổi hướng: phản bác, nhượng bộ rồi phản bác lại, hoặc kết luận. Câu chứa しかし／だが thường chứa ý thật của tác giả, còn câu trước đó chỉ là ý kiến chung hoặc tiền đề."
+    },
+    {
+      "h": "Phân biệt 'tác giả nói' và 'người ta nói'",
+      "body": "Nhiều bẫy lấy ý kiến chung (ví dụ: xã hội cho là bình thường) gán thành quan điểm tác giả, hoặc ngược lại. Khi gặp lựa chọn, hãy hỏi: đây là điều tác giả khẳng định, hay chỉ là điều tác giả đang dẫn ra để phê phán?"
+    },
+    {
+      "h": "Cảnh giác với lựa chọn 'quá đà' và 'tuyệt đối hóa'",
+      "body": "Các từ như すべて、絶対に、必ず、誰もが、完全に thường là dấu hiệu của suy diễn quá đà. Tác giả N1 hiếm khi khẳng định tuyệt đối; nếu trong bài chỉ nói 'nhiều trường hợp' hay 'có thể', lựa chọn tuyệt đối hóa gần như chắc chắn sai."
+    },
+    {
+      "h": "Đừng chọn theo cảm giác đúng ngoài đời",
+      "body": "Lựa chọn nghe hợp lý, đúng đạo lý ngoài đời chưa chắc là đáp án nếu bài không nói thế. Đáp án phải có căn cứ trực tiếp trong bài; nếu phải suy thêm một bước không có trong bài, đó là bẫy suy diễn quá đà."
+    },
+    {
+      "h": "Đối chiếu lựa chọn với đoạn chứa bằng chứng, không đối chiếu với trí nhớ",
+      "body": "Sau khi chọn, quay lại đúng đoạn chứa bằng chứng và đọc lại câu đó. Nếu lựa chọn đổi một từ quan trọng (ví dụ: 'lễ nghi tối thiểu' thành 'mọi chuẩn mực', 'hoài nghi' thành 'từ chối hoàn toàn'), hãy loại ngay."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có cấu trúc điển hình: đoạn 1 đặt câu hỏi 'ai quyết định chuẩn bình thường'; đoạn 2 định nghĩa 'bình thường' chỉ là lối sống của đa số; đoạn 3 nêu cái giá (áp lực vô hình, đánh mất cảm giác của bản thân); đoạn 4 nhượng bộ — chuẩn chung vẫn cần cho lễ nghi tối thiểu — rồi tách bạch hai loại chuẩn; đoạn 5 kết luận: hãy hoài nghi và tự chọn. Khi làm câu hỏi, hãy bám vào sự tách bạch ở đoạn 4 và kết luận ở đoạn 5: tác giả không phủ nhận mọi chuẩn mực, cũng không khuyên chạy theo đa số để yên ổn — tác giả khuyên giữ góc nhìn hoài nghi và tự mình lựa chọn."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「普通でいい」「普通に生きればいい」。私たちは日常的にこうした言葉を口にし、また耳にする。しかし、「普通」とは一体何なのだろうか。誰がその基準を決めたのかを考えたことがある人は、意外に少ないのではないか。その答えを探ることが、自分らしい生き方を考える出発点になる。\n「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。朝起きて働き、結婚して子どもを持ち、老後を穏やかに過ごす。そうした人生の型が「普通」として描かれ、それから外れる生き方は「変わっている」と見なされがちである。だが、多数派であることは正しさの証明にはならない。かつて「普通」とされた慣習の多くが、今では時代遅れとされていることが、その証拠である。多数派の基準は、時代が変われば静かに入れ替わっていくものでもある。\n問題は、この基準が目に見えない圧力として働く点にある。人々は「普通」から外れることを恐れ、本当は望んでいない選択を自らに強いる。周囲と同じ大学に進み、同じような職場に勤め、同じタイミングで結婚する。そうすることで安心は得られるかもしれない。しかし、その安心の代償は大きい。自分の感覚や欲求を後回しにし続ければ、いつしか何が自分にとって大切だったのかが分からなくなってしまうからである。その結果、他人から見れば順調な人生でも、本人だけが理由の分からない空虚さを抱えることになる。\nもちろん、基準そのものがすべて悪いわけではない。社会が円滑に機能するためには、ある程度の共通の了解が必要である。挨拶をし、約束を守り、他者に迷惑をかけない。こうした「普通」は、他者との信頼を支える土台である。批判すべきは、こうした最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。前者は社会を守り、後者は個人の自由を奪う。だから、問題は基準の有無ではなく、どの基準をどこまで自分の人生に持ち込むかという線引きにある。\n大切なのは、「普通」を疑う視点を持つことである。誰かにとっての「普通」が、自分にとっても「普通」であるとは限らない。基準は時代や場所によって変わるものであり、絶対的なものではない。だからこそ、私たちは時折立ち止まり、自分が本当に望む生き方とは何かを問い直す必要がある。「普通」に従うか従わないかではなく、自分で選び取ること。それこそが、「普通」という言葉に振り回されないための第一歩ではないだろうか。\n筆者によれば、「普通」とはどのようなものか。",
+      "choices": [
+        "古くから受け継がれ、誰もが守るべき絶対的な社会のルールである。",
+        "個人の自由を守るために社会が定めた最低限の礼儀のことである。",
+        "多くの場合、多数派の生活様式や価値観を指すにすぎないもの。",
+        "時代や場所に関係なく、すべての人に共通する普遍的な価値観である。"
+      ],
+      "answer": 2,
+      "explain_vi": "Đáp án ở đoạn 2 câu 1: 「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。Các lựa chọn tuyệt đối hóa ('ai cũng phải tuân theo', 'phổ quát bất kể thời đại/nơi chốn') đều đi ngược đoạn 5 câu 3."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「普通でいい」「普通に生きればいい」。私たちは日常的にこうした言葉を口にし、また耳にする。しかし、「普通」とは一体何なのだろうか。誰がその基準を決めたのかを考えたことがある人は、意外に少ないのではないか。その答えを探ることが、自分らしい生き方を考える出発点になる。\n「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。朝起きて働き、結婚して子どもを持ち、老後を穏やかに過ごす。そうした人生の型が「普通」として描かれ、それから外れる生き方は「変わっている」と見なされがちである。だが、多数派であることは正しさの証明にはならない。かつて「普通」とされた慣習の多くが、今では時代遅れとされていることが、その証拠である。多数派の基準は、時代が変われば静かに入れ替わっていくものでもある。\n問題は、この基準が目に見えない圧力として働く点にある。人々は「普通」から外れることを恐れ、本当は望んでいない選択を自らに強いる。周囲と同じ大学に進み、同じような職場に勤め、同じタイミングで結婚する。そうすることで安心は得られるかもしれない。しかし、その安心の代償は大きい。自分の感覚や欲求を後回しにし続ければ、いつしか何が自分にとって大切だったのかが分からなくなってしまうからである。その結果、他人から見れば順調な人生でも、本人だけが理由の分からない空虚さを抱えることになる。\nもちろん、基準そのものがすべて悪いわけではない。社会が円滑に機能するためには、ある程度の共通の了解が必要である。挨拶をし、約束を守り、他者に迷惑をかけない。こうした「普通」は、他者との信頼を支える土台である。批判すべきは、こうした最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。前者は社会を守り、後者は個人の自由を奪う。だから、問題は基準の有無ではなく、どの基準をどこまで自分の人生に持ち込むかという線引きにある。\n大切なのは、「普通」を疑う視点を持つことである。誰かにとっての「普通」が、自分にとっても「普通」であるとは限らない。基準は時代や場所によって変わるものであり、絶対的なものではない。だからこそ、私たちは時折立ち止まり、自分が本当に望む生き方とは何かを問い直す必要がある。「普通」に従うか従わないかではなく、自分で選び取ること。それこそが、「普通」という言葉に振り回されないための第一歩ではないだろうか。\n「普通」が問題になるのはなぜか。",
+      "choices": [
+        "目に見えない圧力として働き、人々が望まない選択を自らに強いるから。",
+        "多数派の価値観が急速に変化し、人々がそれについていけなくなるから。",
+        "社会の共通の了解が失われ、他者との信頼が成り立たなくなるから。",
+        "「普通」という言葉自体が日常から消え、判断の基準がなくなるから。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án ở đoạn 3 câu 1–2: 基準が目に見えない圧力として働き、人々は望んでいない選択を自らに強いる。Mất hiểu biết chung / mất lòng tin là hệ quả của việc bỏ chuẩn tối thiểu, không phải vấn đề mà đoạn 3 nêu."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「普通でいい」「普通に生きればいい」。私たちは日常的にこうした言葉を口にし、また耳にする。しかし、「普通」とは一体何なのだろうか。誰がその基準を決めたのかを考えたことがある人は、意外に少ないのではないか。その答えを探ることが、自分らしい生き方を考える出発点になる。\n「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。朝起きて働き、結婚して子どもを持ち、老後を穏やかに過ごす。そうした人生の型が「普通」として描かれ、それから外れる生き方は「変わっている」と見なされがちである。だが、多数派であることは正しさの証明にはならない。かつて「普通」とされた慣習の多くが、今では時代遅れとされていることが、その証拠である。多数派の基準は、時代が変われば静かに入れ替わっていくものでもある。\n問題は、この基準が目に見えない圧力として働く点にある。人々は「普通」から外れることを恐れ、本当は望んでいない選択を自らに強いる。周囲と同じ大学に進み、同じような職場に勤め、同じタイミングで結婚する。そうすることで安心は得られるかもしれない。しかし、その安心の代償は大きい。自分の感覚や欲求を後回しにし続ければ、いつしか何が自分にとって大切だったのかが分からなくなってしまうからである。その結果、他人から見れば順調な人生でも、本人だけが理由の分からない空虚さを抱えることになる。\nもちろん、基準そのものがすべて悪いわけではない。社会が円滑に機能するためには、ある程度の共通の了解が必要である。挨拶をし、約束を守り、他者に迷惑をかけない。こうした「普通」は、他者との信頼を支える土台である。批判すべきは、こうした最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。前者は社会を守り、後者は個人の自由を奪う。だから、問題は基準の有無ではなく、どの基準をどこまで自分の人生に持ち込むかという線引きにある。\n大切なのは、「普通」を疑う視点を持つことである。誰かにとっての「普通」が、自分にとっても「普通」であるとは限らない。基準は時代や場所によって変わるものであり、絶対的なものではない。だからこそ、私たちは時折立ち止まり、自分が本当に望む生き方とは何かを問い直す必要がある。「普通」に従うか従わないかではなく、自分で選び取ること。それこそが、「普通」という言葉に振り回されないための第一歩ではないだろうか。\n筆者が批判しているのは何か。",
+      "choices": [
+        "社会を円滑に機能させるための共通の了解そのもの。",
+        "挨拶や約束など、他者への最低限の礼儀を守ること。",
+        "時代遅れになった慣習を新しいものに置き換えること。",
+        "最低限の礼儀と人生の選択を縛る基準とを混同すること。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án ở đoạn 4 câu 5: 批判すべきは、最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。Tác giả khẳng định lễ nghi tối thiểu là nền tảng lòng tin nên không phê phán nó."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「普通でいい」「普通に生きればいい」。私たちは日常的にこうした言葉を口にし、また耳にする。しかし、「普通」とは一体何なのだろうか。誰がその基準を決めたのかを考えたことがある人は、意外に少ないのではないか。その答えを探ることが、自分らしい生き方を考える出発点になる。\n「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。朝起きて働き、結婚して子どもを持ち、老後を穏やかに過ごす。そうした人生の型が「普通」として描かれ、それから外れる生き方は「変わっている」と見なされがちである。だが、多数派であることは正しさの証明にはならない。かつて「普通」とされた慣習の多くが、今では時代遅れとされていることが、その証拠である。多数派の基準は、時代が変われば静かに入れ替わっていくものでもある。\n問題は、この基準が目に見えない圧力として働く点にある。人々は「普通」から外れることを恐れ、本当は望んでいない選択を自らに強いる。周囲と同じ大学に進み、同じような職場に勤め、同じタイミングで結婚する。そうすることで安心は得られるかもしれない。しかし、その安心の代償は大きい。自分の感覚や欲求を後回しにし続ければ、いつしか何が自分にとって大切だったのかが分からなくなってしまうからである。その結果、他人から見れば順調な人生でも、本人だけが理由の分からない空虚さを抱えることになる。\nもちろん、基準そのものがすべて悪いわけではない。社会が円滑に機能するためには、ある程度の共通の了解が必要である。挨拶をし、約束を守り、他者に迷惑をかけない。こうした「普通」は、他者との信頼を支える土台である。批判すべきは、こうした最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。前者は社会を守り、後者は個人の自由を奪う。だから、問題は基準の有無ではなく、どの基準をどこまで自分の人生に持ち込むかという線引きにある。\n大切なのは、「普通」を疑う視点を持つことである。誰かにとっての「普通」が、自分にとっても「普通」であるとは限らない。基準は時代や場所によって変わるものであり、絶対的なものではない。だからこそ、私たちは時折立ち止まり、自分が本当に望む生き方とは何かを問い直す必要がある。「普通」に従うか従わないかではなく、自分で選び取ること。それこそが、「普通」という言葉に振り回されないための第一歩ではないだろうか。\n筆者が最も伝えたいことは何か。",
+      "choices": [
+        "「普通」には従わず、すべての社会的な基準を拒否すべきだということ。",
+        "「普通」に従うか否かではなく、自分で選び取る視点を持つべきだということ。",
+        "安心を得るためには、周囲と同じ人生の型を選ぶのが最も確実だということ。",
+        "「普通」の基準は時代や場所で変わらないため、疑う必要はないということ。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án ở đoạn 5 câu 1 và câu 5: 大切なのは、「普通」を疑う視点を持つこと／「普通」に従うか従わないかではなく、自分で選び取ること。Các lựa chọn còn lại đều đảo ngược ý tác giả."
+    }
+  ],
+  "study": {
+    "passage_title": "「『普通』という基準」— Ai quyết định cái gì là 'bình thường'?",
+    "structure": "Bài luận thuyết 5 đoạn, mạch lập luận đi từ đặt vấn đề → định nghĩa lại → chỉ ra cái giá → nhượng bộ có điều kiện → kết luận kêu gọi. Đoạn 1 đặt câu hỏi mở: 'bình thường' là gì, ai đặt ra chuẩn đó, và nhận xét ít người từng nghĩ tới điều này. Đoạn 2 đưa ra định nghĩa của tác giả: 'bình thường' phần lớn chỉ là lối sống và giá trị của đa số, kèm ví dụ khuôn mẫu đời người, và bác bỏ việc đồng nhất đa số với đúng đắn bằng bằng chứng các tập quán từng là 'bình thường' nay đã lỗi thời. Đoạn 3 là trọng tâm phê phán: chuẩn này vận hành như áp lực vô hình khiến người ta tự ép mình chọn điều không mong muốn, và cái giá là đánh mất cảm giác về điều quan trọng với bản thân. Đoạn 4 là bước ngoặt nhượng bộ: tác giả không phủ nhận mọi chuẩn mực — lễ nghi tối thiểu (chào hỏi, giữ lời hứa, không làm phiền người khác) là nền tảng của lòng tin xã hội; điều đáng phê phán là việc lẫn lộn lễ nghi tối thiểu với chuẩn trói buộc lựa chọn đời người. Đoạn 5 kết luận: chuẩn thay đổi theo thời đại và nơi chốn, không tuyệt đối, nên điều quan trọng là giữ góc nhìn hoài nghi và tự mình lựa chọn, chứ không phải tuân theo hay chống lại một cách mù quáng. Chủ trương của tác giả nằm ở đoạn 4 (câu cuối, tách bạch hai loại chuẩn) và đoạn 5 (câu cuối, kêu gọi tự lựa chọn).",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "「{普通|ふつう}でいい」「{普通|ふつう}に{生|い}きればいい」。",
+        "vi": "“Cứ bình thường là được”, “Cứ sống bình thường là được”."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{私|わたくし}たちは{日常|にちじょう}{的|てき}にこうした{言葉|ことば}を{口|くち}にし、また{耳|みみ}にする。",
+        "vi": "Hằng ngày, chúng ta nói những lời như thế, và cũng nghe những lời như thế."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "しかし、「{普通|ふつう}」とは{一体|いったい}{何|なん}なのだろうか。",
+        "vi": "Tuy nhiên, “bình thường” rốt cuộc là cái gì?"
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "{誰|だれ}がその{基準|きじゅん}を{決|き}めたのかを{考|かんが}えたことがある{人|ひと}は、{意外|いがい}に{少|すく}ないのではないか。",
+        "vi": "Có lẽ số người từng nghĩ xem ai đã quyết định chuẩn mực đó lại ít một cách bất ngờ."
+      },
+      {
+        "para": 1,
+        "no": 5,
+        "ja": "その{答|こた}えを{探|さぐ}ることが、{自分|じぶん}らしい{生|い}き{方|かた}を{考|かんが}える{出発|しゅっぱつ}{点|てん}になる。",
+        "vi": "Việc tìm kiếm đáp án cho câu hỏi đó sẽ trở thành điểm xuất phát để nghĩ về cách sống đúng với bản thân."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "「{普通|ふつう}」は、{多|おお}くの{場合|ばあい}、{多数|たすう}{派|は}の{生活|せいかつ}{様式|ようしき}や{価値|かち}{観|かん}を{指|さ}すにすぎない。",
+        "vi": "“Bình thường”, trong nhiều trường hợp, chẳng qua chỉ là lối sống và giá trị quan của phe đa số."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{朝|あさ}{起|お}きて{働|はたら}き、{結婚|けっこん}して{子|こ}どもを{持|も}ち、{老後|ろうご}を{穏|おだ}やかに{過|す}ごす。",
+        "vi": "Sáng dậy đi làm, kết hôn sinh con, tuổi già sống yên ổn."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "そうした{人生|じんせい}の{型|かた}が「{普通|ふつう}」として{描|えが}かれ、それから{外|はず}れる{生|い}き{方|かた}は「{変|か}わっている」と{見|み}なされがちである。",
+        "vi": "Khuôn mẫu đời người như thế được vẽ ra như là “bình thường”, và cách sống lệch khỏi nó thường bị xem là “kỳ lạ”."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "だが、{多数|たすう}{派|は}であることは{正|ただ}しさの{証明|しょうめい}にはならない。",
+        "vi": "Thế nhưng, việc là đa số không phải là bằng chứng cho tính đúng đắn."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "かつて「{普通|ふつう}」とされた{慣習|かんしゅう}の{多|おお}くが、{今|いま}では{時代|じだい}{遅|おく}れとされていることが、その{証拠|しょうこ}である。",
+        "vi": "Việc nhiều tập quán từng được coi là “bình thường” nay lại bị xem là lỗi thời chính là bằng chứng cho điều đó."
+      },
+      {
+        "para": 2,
+        "no": 6,
+        "ja": "{多数|たすう}{派|は}の{基準|きじゅん}は、{時代|じだい}が{変|か}われば{静|しず}かに{入|い}れ{替|れか}わっていくものでもある。",
+        "vi": "Chuẩn mực của đa số cũng là thứ sẽ lặng lẽ thay đổi khi thời đại đổi thay."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "{問題|もんだい}は、この{基準|きじゅん}が{目|め}に{見|み}えない{圧力|あつりょく}として{働|はたら}く{点|てん}にある。",
+        "vi": "Vấn đề nằm ở chỗ chuẩn mực này vận hành như một áp lực vô hình."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{人々|ひとびと}は「{普通|ふつう}」から{外|はず}れることを{恐|おそ}れ、{本当|ほんと}は{望|のぞ}んでいない{選択|せんたく}を{自|みずか}らに{強|し}いる。",
+        "vi": "Người ta sợ lệch khỏi “bình thường” nên tự ép mình vào những lựa chọn mà thực ra mình không mong muốn."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{周囲|しゅうい}と{同|おな}じ{大学|だいがく}に{進|すす}み、{同|おな}じような{職場|しょくば}に{勤|つと}め、{同|おな}じタイミングで{結婚|けっこん}する。",
+        "vi": "Vào cùng trường đại học như mọi người xung quanh, làm ở nơi làm việc tương tự, kết hôn cùng thời điểm như nhau."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "そうすることで{安心|あんしん}は{得|え}られるかもしれない。",
+        "vi": "Làm như vậy thì có thể sẽ có được sự yên tâm."
+      },
+      {
+        "para": 3,
+        "no": 5,
+        "ja": "しかし、その{安心|あんしん}の{代償|だいしょう}は{大|おお}きい。",
+        "vi": "Tuy nhiên, cái giá của sự yên tâm đó là rất lớn."
+      },
+      {
+        "para": 3,
+        "no": 6,
+        "ja": "{自分|じぶん}の{感覚|かんかく}や{欲求|よっきゅう}を{後回|あとまわ}しにし{続|つづ}ければ、いつしか{何|なん}が{自分|じぶん}にとって{大切|たいせつ}だったのかが{分|わ}からなくなってしまうからである。",
+        "vi": "Bởi vì nếu cứ mãi gác lại cảm giác và mong muốn của bản thân, thì đến lúc nào đó ta sẽ không còn biết điều gì từng quan trọng với mình nữa."
+      },
+      {
+        "para": 3,
+        "no": 7,
+        "ja": "その{結果|けっか}、{他人|たにん}から{見|み}れば{順調|じゅんちょう}な{人生|じんせい}でも、{本人|ほんにん}だけが{理由|りゆう}の{分|わ}からない{空虚|くうきょ}さを{抱|かか}えることになる。",
+        "vi": "Kết quả là, dù nhìn từ người khác đó là một cuộc đời thuận lợi, chỉ riêng bản thân lại mang cảm giác trống rỗng không rõ lý do."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "もちろん、{基準|きじゅん}そのものがすべて{悪|わる}いわけではない。",
+        "vi": "Dĩ nhiên, không phải bản thân chuẩn mực là hoàn toàn xấu."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{社会|しゃかい}が{円滑|えんかつ}に{機能|きのう}するためには、ある{程度|ていど}の{共通|きょうつう}の{了解|りょうかい}が{必要|ひつよう}である。",
+        "vi": "Để xã hội vận hành trơn tru, cần có một mức độ hiểu biết chung nhất định."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{挨拶|あいさつ}をし、{約束|やくそく}を{守|まも}り、{他者|たしゃ}に{迷惑|めいわく}をかけない。",
+        "vi": "Chào hỏi, giữ lời hứa, không gây phiền toái cho người khác."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "こうした「{普通|ふつう}」は、{他者|たしゃ}との{信頼|しんらい}を{支|ささ}える{土台|どだい}である。",
+        "vi": "“Bình thường” như thế này là nền tảng nâng đỡ lòng tin với người khác."
+      },
+      {
+        "para": 4,
+        "no": 5,
+        "ja": "{批判|ひはん}すべきは、こうした{最低|さいてい}{限|げん}の{礼儀|れいぎ}と、{人生|じんせい}の{選択|せんたく}そのものを{縛|しば}る{基準|きじゅん}とを{混同|こんどう}することである。",
+        "vi": "Điều đáng phê phán là việc lẫn lộn giữa lễ nghi tối thiểu như thế này với chuẩn mực trói buộc chính lựa chọn đời người."
+      },
+      {
+        "para": 4,
+        "no": 6,
+        "ja": "{前者|ぜんしゃ}は{社会|しゃかい}を{守|まも}り、{後者|こうしゃ}は{個人|こじん}の{自由|じゆう}を{奪|うば}う。",
+        "vi": "Cái trước bảo vệ xã hội, cái sau tước đoạt tự do cá nhân."
+      },
+      {
+        "para": 4,
+        "no": 7,
+        "ja": "だから、{問題|もんだい}は{基準|きじゅん}の{有無|うむ}ではなく、どの{基準|きじゅん}をどこまで{自分|じぶん}の{人生|じんせい}に{持|も}ち{込|ちこ}むかという{線引|せんび}きにある。",
+        "vi": "Vì vậy, vấn đề không nằm ở việc có hay không có chuẩn mực, mà nằm ở ranh giới: đưa chuẩn mực nào vào đời mình tới mức nào."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{大切|たいせつ}なのは、「{普通|ふつう}」を{疑|うたが}う{視点|してん}を{持|も}つことである。",
+        "vi": "Điều quan trọng là có góc nhìn hoài nghi đối với “bình thường”."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{誰|だれ}かにとっての「{普通|ふつう}」が、{自分|じぶん}にとっても「{普通|ふつう}」であるとは{限|かぎ}らない。",
+        "vi": "“Bình thường” đối với ai đó chưa chắc cũng là “bình thường” đối với mình."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{基準|きじゅん}は{時代|じだい}や{場所|ばしょ}によって{変|か}わるものであり、{絶対|ぜったい}{的|てき}なものではない。",
+        "vi": "Chuẩn mực là thứ thay đổi theo thời đại và nơi chốn, chứ không phải thứ tuyệt đối."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "だからこそ、{私|わたくし}たちは{時折|ときおり}{立|た}ち{止|ちど}まり、{自分|じぶん}が{本当|ほんと}に{望|のぞ}む{生|い}き{方|かた}とは{何|なん}かを{問|と}い{直|いなお}す{必要|ひつよう}がある。",
+        "vi": "Chính vì vậy, thỉnh thoảng chúng ta cần dừng lại và hỏi lại bản thân rằng cách sống mình thực sự mong muốn là gì."
+      },
+      {
+        "para": 5,
+        "no": 5,
+        "ja": "「{普通|ふつう}」に{従|したが}うか{従|したが}わないかではなく、{自分|じぶん}で{選|えら}び{取|びと}ること。",
+        "vi": "Không phải là tuân theo hay không tuân theo “bình thường”, mà là tự mình lựa chọn."
+      },
+      {
+        "para": 5,
+        "no": 6,
+        "ja": "それこそが、「{普通|ふつう}」という{言葉|ことば}に{振|ふ}り{回|りまわ}されないための{第|だい}{一|いっ}{歩|ぽ}ではないだろうか。",
+        "vi": "Đó chẳng phải chính là bước đầu tiên để không bị từ “bình thường” chi phối hay sao?"
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án 3 · Câu 2 – đáp án 1 · Câu 3 – đáp án 4 · Câu 4 – đáp án 2",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 2,
+        "locator": "Đ2①",
+        "options": [
+          {
+            "text": "古くから受け継がれ、誰もが守るべき絶対的な社会のルールである。",
+            "verdict": "SAI",
+            "reason": "Bài không nói 'bình thường' là quy tắc tuyệt đối mọi người phải tuân theo; ngược lại đoạn 5 câu 3 khẳng định chuẩn thay đổi theo thời đại và nơi chốn, không tuyệt đối. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "個人の自由を守るために社会が定めた最低限の礼儀のことである。",
+            "verdict": "SAI",
+            "reason": "Lễ nghi tối thiểu chỉ là một loại 'bình thường' được nhắc ở đoạn 4 câu 3–4, không phải định nghĩa chung của 'bình thường' ở đoạn 2. Bẫy thu hẹp / đánh tráo khái niệm."
+          },
+          {
+            "text": "多くの場合、多数派の生活様式や価値観を指すにすぎないもの。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 2 câu 1: 「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。Từ にすぎない cho thấy tác giả hạ thấp tính tuyệt đối của khái niệm này."
+          },
+          {
+            "text": "時代や場所に関係なく、すべての人に共通する普遍的な価値観である。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 5 câu 3: 基準は時代や場所によって変わるものであり、絶対的なものではない。Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ3①②",
+        "options": [
+          {
+            "text": "目に見えない圧力として働き、人々が望まない選択を自らに強いるから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 1–2: この基準が目に見えない圧力として働く／本当は望んでいない選択を自らに強いる。Đây chính là 'vấn đề' mà tác giả nêu."
+          },
+          {
+            "text": "多数派の価値観が急速に変化し、人々がそれについていけなくなるから。",
+            "verdict": "SAI",
+            "reason": "Bài chỉ nói chuẩn thay đổi theo thời đại (đoạn 5), không nói sự thay đổi nhanh khiến người ta theo không kịp. Bẫy suy diễn thêm, không có bằng chứng."
+          },
+          {
+            "text": "社会の共通の了解が失われ、他者との信頼が成り立たなくなるから。",
+            "verdict": "SAI",
+            "reason": "Hiểu biết chung và lòng tin được nhắc ở đoạn 4 như vai trò tích cực của chuẩn tối thiểu, không phải vấn đề của 'bình thường' ở đoạn 3. Bẫy đánh tráo đoạn văn."
+          },
+          {
+            "text": "「普通」という言葉自体が日常から消え、判断の基準がなくなるから。",
+            "verdict": "SAI",
+            "reason": "Đoạn 1 câu 2 khẳng định ngược lại: hằng ngày chúng ta vẫn nói và nghe từ này. Bẫy bịa chi tiết không có trong bài."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ4⑤",
+        "options": [
+          {
+            "text": "社会を円滑に機能させるための共通の了解そのもの。",
+            "verdict": "SAI",
+            "reason": "Tác giả khẳng định hiểu biết chung là cần thiết (đoạn 4 câu 2) và lễ nghi tối thiểu là nền tảng lòng tin (câu 4), nên không thể là đối tượng phê phán. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "挨拶や約束など、他者への最低限の礼儀を守ること。",
+            "verdict": "SAI",
+            "reason": "Đoạn 4 câu 4 nói rõ loại 'bình thường' này 支える土台 (nâng đỡ lòng tin), tức được tác giả đánh giá tích cực. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "時代遅れになった慣習を新しいものに置き換えること。",
+            "verdict": "SAI",
+            "reason": "Việc tập quán cũ trở nên lỗi thời chỉ là bằng chứng ở đoạn 2 câu 5 cho thấy đa số không đồng nghĩa đúng đắn, không phải điều tác giả phê phán. Bẫy đánh tráo vai trò bằng chứng."
+          },
+          {
+            "text": "最低限の礼儀と人生の選択を縛る基準とを混同すること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 5: 批判すべきは、こうした最低限の礼儀と、人生の選択そのものを縛る基準とを混同することである。Câu 6 nhấn mạnh: cái trước bảo vệ xã hội, cái sau tước tự do."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đ5①⑤",
+        "options": [
+          {
+            "text": "「普通」には従わず、すべての社会的な基準を拒否すべきだということ。",
+            "verdict": "SAI",
+            "reason": "Tác giả chỉ kêu gọi hoài nghi và tự lựa chọn, đồng thời khẳng định chuẩn tối thiểu vẫn cần (đoạn 4). Từ chối mọi chuẩn là suy diễn quá đà. Bẫy cực đoan hóa."
+          },
+          {
+            "text": "「普通」に従うか否かではなく、自分で選び取る視点を持つべきだということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 5 câu 1 (疑う視点を持つこと) và câu 5 (従うか従わないかではなく、自分で選び取ること). Đây là kết luận toàn bài."
+          },
+          {
+            "text": "安心を得るためには、周囲と同じ人生の型を選ぶのが最も確実だということ。",
+            "verdict": "SAI",
+            "reason": "Đoạn 3 câu 4–5 thừa nhận chọn theo khuôn có thể cho yên tâm, nhưng ngay sau đó khẳng định cái giá rất lớn; tác giả không khuyên chọn cách này. Bẫy lấy ý nhượng bộ làm kết luận."
+          },
+          {
+            "text": "「普通」の基準は時代や場所で変わらないため、疑う必要はないということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược hoàn toàn đoạn 5 câu 3: 基準は時代や場所によって変わるものであり、絶対的なものではない. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{普通|ふつう}",
+        "reading": "ふつう",
+        "hanviet": "Phổ Thông",
+        "vi": "bình thường, thông thường"
+      },
+      {
+        "word": "{基準|きじゅん}",
+        "reading": "きじゅん",
+        "hanviet": "Cơ Chuẩn",
+        "vi": "tiêu chuẩn, chuẩn mực"
+      },
+      {
+        "word": "{多数|たすう}{派|は}",
+        "reading": "たすうは",
+        "hanviet": "Đa Số Phái",
+        "vi": "phe đa số"
+      },
+      {
+        "word": "{価値|かち}{観|かん}",
+        "reading": "かちかん",
+        "hanviet": "Giá Trị Quan",
+        "vi": "giá trị quan, hệ giá trị"
+      },
+      {
+        "word": "{生活|せいかつ}{様式|ようしき}",
+        "reading": "せいかつようしき",
+        "hanviet": "Sinh Hoạt Dạng Thức",
+        "vi": "lối sống, kiểu sinh hoạt"
+      },
+      {
+        "word": "{慣習|かんしゅう}",
+        "reading": "かんしゅう",
+        "hanviet": "Quán Tập",
+        "vi": "tập quán, thói quen xã hội"
+      },
+      {
+        "word": "{代償|だいしょう}",
+        "reading": "だいしょう",
+        "hanviet": "Đại Thường",
+        "vi": "cái giá phải trả, sự đền bù"
+      },
+      {
+        "word": "{後回|あとまわ}し",
+        "reading": "あとまわし",
+        "hanviet": "Hậu Hồi",
+        "vi": "việc gác lại sau, trì hoãn"
+      },
+      {
+        "word": "{円滑|えんかつ}",
+        "reading": "えんかつ",
+        "hanviet": "Viên Hoạt",
+        "vi": "trơn tru, suôn sẻ"
+      },
+      {
+        "word": "{混同|こんどう}",
+        "reading": "こんどう",
+        "hanviet": "Hỗn Đồng",
+        "vi": "sự lẫn lộn, nhầm lẫn"
+      },
+      {
+        "word": "{振|ふ}り{回|りまわ}される",
+        "reading": "ふりまわされる",
+        "hanviet": "Chấn Hồi",
+        "vi": "bị chi phối, bị xoay như chong chóng"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜にすぎない",
+        "vi": "chẳng qua chỉ là… (hạ thấp, giới hạn)",
+        "in_text": "「普通」は、多くの場合、多数派の生活様式や価値観を指すにすぎない。"
+      },
+      {
+        "pattern": "〜がちである",
+        "vi": "thường có xu hướng… (khuynh hướng dễ xảy ra)",
+        "in_text": "それから外れる生き方は「変わっている」と見なされがちである。"
+      },
+      {
+        "pattern": "〜かもしれない",
+        "vi": "có thể… (suy đoán, khả năng)",
+        "in_text": "そうすることで安心は得られるかもしれない。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "…mất, …luôn (kết quả ngoài ý muốn / hoàn tất)",
+        "in_text": "いつしか何が自分にとって大切だったのかが分からなくなってしまうからである。"
+      },
+      {
+        "pattern": "〜とは限らない",
+        "vi": "chưa chắc đã… (phủ định suy luận tất yếu)",
+        "in_text": "誰かにとっての「普通」が、自分にとっても「普通」であるとは限らない。"
+      },
+      {
+        "pattern": "〜ではないだろうか",
+        "vi": "chẳng phải là… hay sao? (kêu gọi đồng tình, kết luận mềm)",
+        "in_text": "それこそが、「普通」という言葉に振り回されないための第一歩ではないだろうか。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm限定・ phủ định nhẹ: にすぎない / だけだ / わけではない",
+        "rows": [
+          {
+            "form": "〜にすぎない",
+            "join": "N / Vる + にすぎない",
+            "vi": "chẳng qua chỉ là…",
+            "diff": "Nhấn mạnh 'không hơn thế', hạ thấp giá trị tuyệt đối của sự việc; mang sắc thái phê phán nhẹ.",
+            "example_ja": "それは{多数|たすう}{派|は}の{意見|いけん}にすぎない。",
+            "example_vi": "Đó chẳng qua chỉ là ý kiến của phe đa số."
+          },
+          {
+            "form": "〜だけだ",
+            "join": "N / Vる + だけだ",
+            "vi": "chỉ là…",
+            "diff": "Giới hạn phạm vi một cách trung tính, không mang sắc thái phê phán mạnh như にすぎない.",
+            "example_ja": "{彼|かれ}はうなずいただけだ。",
+            "example_vi": "Anh ta chỉ gật đầu mà thôi."
+          },
+          {
+            "form": "〜わけではない",
+            "join": "Vる / Aい / Nだ + わけではない",
+            "vi": "không phải là…",
+            "diff": "Phủ định một suy luận, một kết luận vội vàng; dùng để đính chính, không giới hạn phạm vi như hai mẫu trên.",
+            "example_ja": "{基準|きじゅん}があるからといって、すべて{悪|わる}いわけではない。",
+            "example_vi": "Có chuẩn mực không có nghĩa là mọi thứ đều xấu."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm phủ định suy luận tất yếu: とは限らない / とは言えない / ざるを得ない (đối chiếu)",
+        "rows": [
+          {
+            "form": "〜とは限らない",
+            "join": "Vる / Aい / Nだ + とは限らない",
+            "vi": "chưa chắc đã…",
+            "diff": "Phủ định tính tất yếu: có trường hợp ngoại lệ; dùng khi muốn nhắc 'không phải lúc nào cũng vậy'.",
+            "example_ja": "みんなの{普通|ふつう}が{自分|じぶん}の{普通|ふつう}とは{限|かぎ}らない。",
+            "example_vi": "Cái bình thường của mọi người chưa chắc là cái bình thường của mình."
+          },
+          {
+            "form": "〜とは言えない",
+            "join": "Vる / Aい / Nだ + とは言えない",
+            "vi": "không thể nói là…",
+            "diff": "Phủ định khả năng khẳng định vì thiếu căn cứ; nhẹ hơn và dè dặt hơn とは限らない.",
+            "example_ja": "この{方法|ほうほう}が{最善|さいぜん}とは{言|い}えない。",
+            "example_vi": "Không thể nói phương pháp này là tốt nhất."
+          },
+          {
+            "form": "〜ざるを得ない",
+            "join": "Vない形 (bỏ ない) + ざるを得ない",
+            "vi": "đành phải…",
+            "diff": "Ngược hướng: không phải phủ định mà là bắt buộc vì không còn lựa chọn — đối chiếu để tránh nhầm với hai mẫu phủ định trên.",
+            "example_ja": "{周囲|しゅうい}に{合|あ}わせざるを{得|え}ないと{感|かん}じる{人|ひと}もいる。",
+            "example_vi": "Cũng có người cảm thấy đành phải hòa theo mọi người xung quanh."
+          }
+        ]
+      }
+    ]
+  }
+}
