@@ -1,0 +1,754 @@
+{
+ "feature": "mock",
+ "id": "thu-25",
+ "label": "Đề thi thử 25",
+ "level": "N4",
+ "duration_minutes": 80,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「音楽」は 何と 読みますか。",
+   "choices": [
+    "おんがっく",
+    "おとがく",
+    "おんかく",
+    "おんがく"
+   ],
+   "answer": 3,
+   "explain_vi": "「音楽」は『おんがく』と読みます（âm nhạc)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「歌詞」は 何と 読みますか。",
+   "choices": [
+    "かしゅ",
+    "かし",
+    "かしし",
+    "かじ"
+   ],
+   "answer": 1,
+   "explain_vi": "「歌詞」は『かし』と読みます（lời bài hát)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「歌手」は 何と 読みますか。",
+   "choices": [
+    "かしゅ",
+    "かしゅっ",
+    "かて",
+    "かしゅう"
+   ],
+   "answer": 0,
+   "explain_vi": "「歌手」は『かしゅ』と読みます（ca sĩ)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「楽器」は 何と 読みますか。",
+   "choices": [
+    "がき",
+    "がっきい",
+    "がくき",
+    "がっき"
+   ],
+   "answer": 3,
+   "explain_vi": "「楽器」は『がっき』と読みます（nhạc cụ)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「合唱」は 何と 読みますか。",
+   "choices": [
+    "がっしょっ",
+    "がっしょう",
+    "がしょう",
+    "がっしょ"
+   ],
+   "answer": 1,
+   "explain_vi": "「合唱」は『がっしょう』と読みます（hợp xướng)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「舞台」は 何と 読みますか。",
+   "choices": [
+    "ぶたい",
+    "ぶだい",
+    "ぶんたい",
+    "ぶたいい"
+   ],
+   "answer": 0,
+   "explain_vi": "「舞台」は『ぶたい』と読みます（sân khấu)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「曲」は 何と 読みますか。",
+   "choices": [
+    "きょくう",
+    "きょうく",
+    "きょく",
+    "きょっく"
+   ],
+   "answer": 2,
+   "explain_vi": "「曲」は『きょく』と読みます（bản nhạc, bài hát)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "カラオケで 好きな うたを 歌います。「うた」は 漢字で どう 書きますか。",
+   "choices": [
+    "詞",
+    "哥",
+    "歌",
+    "謡"
+   ],
+   "answer": 2,
+   "explain_vi": "うた viết là『歌』(bài hát)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼女の こえは とても きれいです。「こえ」は 漢字で どう 書きますか。",
+   "choices": [
+    "音",
+    "届",
+    "鳴",
+    "声"
+   ],
+   "answer": 3,
+   "explain_vi": "こえ viết là『声』(giọng, tiếng người)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "祭りで 太鼓を たたきます。「たたく」は 漢字で どう 書きますか。",
+   "choices": [
+    "叩る",
+    "敲く",
+    "叩く",
+    "打く"
+   ],
+   "answer": 2,
+   "explain_vi": "たたく viết là『叩く』(gõ, đánh trống)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "妹は ピアノを ひくのが 上手です。「ひく」は 漢字で どう 書きますか。",
+   "choices": [
+    "引く",
+    "弾る",
+    "弾く",
+    "曳く"
+   ],
+   "answer": 2,
+   "explain_vi": "Chơi đàn piano viết là『弾く』. 引く là 'kéo', không dùng cho đàn."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "この 楽器の おとが 好きです。「おと」は 漢字で どう 書きますか。",
+   "choices": [
+    "意",
+    "者",
+    "音",
+    "声"
+   ],
+   "answer": 2,
+   "explain_vi": "おと viết là『音』(âm thanh)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼は ピアノの （　）が 上手です。",
+   "choices": [
+    "演奏",
+    "運動",
+    "練習",
+    "発表"
+   ],
+   "answer": 0,
+   "explain_vi": "Việc biểu diễn đàn dùng『演奏』."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "カラオケで 友達と （　）歌いました。",
+   "choices": [
+    "一人に",
+    "一人で",
+    "一緒に",
+    "一つに"
+   ],
+   "answer": 2,
+   "explain_vi": "Hát cùng bạn dùng『一緒に』."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "人気の コンサートの チケットを （　）買うことが できました。",
+   "choices": [
+    "だんだん",
+    "やっと",
+    "もうすぐ",
+    "そろそろ"
+   ],
+   "answer": 1,
+   "explain_vi": "やっと diễn tả mãi mới/cuối cùng cũng mua được vé."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "毎日 ピアノを 練習して、（　）上手に なりました。",
+   "choices": [
+    "だんだん",
+    "もうすぐ",
+    "やっと",
+    "そろそろ"
+   ],
+   "answer": 0,
+   "explain_vi": "だんだん là dần dần — luyện mỗi ngày nên dần giỏi lên."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "歌の 歌詞を （　）から、歌いました。",
+   "choices": [
+    "教えて",
+    "忘れて",
+    "習って",
+    "覚えて"
+   ],
+   "answer": 3,
+   "explain_vi": "Học thuộc lời rồi mới hát: 覚えてから."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "音楽会で 演奏が 終わって、みんなが 拍手を （　）。",
+   "choices": [
+    "かかりました",
+    "しました",
+    "なりました",
+    "あげました"
+   ],
+   "answer": 1,
+   "explain_vi": "Vỗ tay dùng『拍手をする』."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼は フルートを （　）のが 得意です。",
+   "choices": [
+    "叩く",
+    "吹く",
+    "引く",
+    "弾く"
+   ],
+   "answer": 1,
+   "explain_vi": "Sáo thổi bằng miệng nên dùng『吹く』."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "この 歌は 昔から （　）で、今も みんなに 歌われて います。",
+   "choices": [
+    "有名",
+    "大切",
+    "便利",
+    "静か"
+   ],
+   "answer": 0,
+   "explain_vi": "Bài hát nổi tiếng từ xưa đến nay: 有名."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼は ピアノを 演奏しました。「演奏する」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "聞く",
+    "歌う",
+    "弾く",
+    "作る"
+   ],
+   "answer": 2,
+   "explain_vi": "演奏する (biểu diễn nhạc cụ) gần nhất với 弾く trong ngữ cảnh piano."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼女は 歌が 上手です。「上手」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "強い",
+    "早い",
+    "得意",
+    "好き"
+   ],
+   "answer": 2,
+   "explain_vi": "上手 (giỏi) gần nghĩa nhất với 得意 (sở trường)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "カラオケの 店は 音が 大きくて さわがしいです。「さわがしい」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "近い",
+    "うるさい",
+    "静か",
+    "楽しい"
+   ],
+   "answer": 1,
+   "explain_vi": "さわがしい (ồn ào) gần nghĩa nhất với うるさい."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "コンサートの チケットを 買いました。「チケット」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "地図",
+    "切符",
+    "鍵",
+    "切手"
+   ],
+   "answer": 1,
+   "explain_vi": "チケット (vé) gần nghĩa nhất với 切符."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「歌う」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "歌で ご飯を 食べます。",
+    "ピアノを 歌います。",
+    "彼女は 上手に 歌います。",
+    "彼は 歌な 人です。"
+   ],
+   "answer": 2,
+   "explain_vi": "歌う là 'hát' — cô ấy hát hay là dùng đúng."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「弾く」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "歌を 弾きます。",
+    "太鼓を 弾きます。",
+    "彼は ギターを 弾きます。",
+    "ピアノを 弾いて 食べます。"
+   ],
+   "answer": 2,
+   "explain_vi": "弾く dùng cho nhạc cụ gảy/bấm phím như guitar, piano. Trống thì dùng 叩く."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「拍手する」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "演奏が 終わると、みんな 拍手しました。",
+    "彼は 拍手な 人です。",
+    "拍手を 食べました。",
+    "拍手で 歌います。"
+   ],
+   "answer": 0,
+   "explain_vi": "拍手する là vỗ tay — biểu diễn xong mọi người vỗ tay là đúng."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「練習する」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "発表会の 前に、毎日 練習しました。",
+    "彼は 練習な 人です。",
+    "練習で ピアノを 買いました。",
+    "練習を 飲みました。"
+   ],
+   "answer": 0,
+   "explain_vi": "練習する là luyện tập — luyện mỗi ngày trước buổi biểu diễn là đúng."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "歌を 歌い（　）、踊りました。",
+   "choices": [
+    "つつ",
+    "ながら",
+    "まま",
+    "たり"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ながら diễn tả hai hành động cùng lúc: vừa hát vừa nhảy."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "友達が 私の 好きな 歌を 歌って（　）。",
+   "choices": [
+    "もらいました",
+    "くれました",
+    "やりました",
+    "あげました"
+   ],
+   "answer": 1,
+   "explain_vi": "Bạn hát cho người nói nghe nên dùng 〜てくれました."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "練習して、ピアノが 弾ける（　）なりました。",
+   "choices": [
+    "ところに",
+    "ように",
+    "ために",
+    "ことに"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ようになる diễn tả sự thay đổi khả năng."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "音が 大き（　）て、眠れませんでした。",
+   "choices": [
+    "すぎ",
+    "すぎて",
+    "すぎる",
+    "すぎた"
+   ],
+   "answer": 1,
+   "explain_vi": "〜すぎて: tiếng ồn quá to nên không ngủ được."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "練習を 始めた（　）ので、まだ 上手では ありません。",
+   "choices": [
+    "だけ",
+    "まま",
+    "ばかり",
+    "ところ"
+   ],
+   "answer": 2,
+   "explain_vi": "〜たばかり = vừa mới làm: mới bắt đầu luyện nên chưa giỏi."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "明日の 発表会に 有名な 歌手が 来る（　）。",
+   "choices": [
+    "かもしれません",
+    "ましょう",
+    "はずです",
+    "そうです"
+   ],
+   "answer": 0,
+   "explain_vi": "〜かもしれません diễn tả khả năng 'có thể'."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "先生は 生徒に 歌を （　）。",
+   "choices": [
+    "歌いました",
+    "歌わせます",
+    "歌われました",
+    "歌わせました"
+   ],
+   "answer": 3,
+   "explain_vi": "Thầy cho/bắt học sinh hát — thể sai khiến quá khứ: 歌わせました."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "練習すれば、上手に （　）。",
+   "choices": [
+    "します",
+    "なります",
+    "みます",
+    "あります"
+   ],
+   "answer": 1,
+   "explain_vi": "練習すれば…上手になる: trở nên giỏi dùng なる."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "練習した（　）、発表会で 間違えました。",
+   "choices": [
+    "ため",
+    "のに",
+    "ので",
+    "から"
+   ],
+   "answer": 1,
+   "explain_vi": "〜のに diễn tả trái ngược: dù luyện rồi mà vẫn sai."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "雨が 降っ（　）、コンサートに 行きます。",
+   "choices": [
+    "なら",
+    "たら",
+    "れば",
+    "ても"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ても = dù... vẫn: dù mưa vẫn đi xem hòa nhạc."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "発表会の 前に、歌詞を 覚えて（　）。",
+   "choices": [
+    "あります",
+    "みます",
+    "しまいます",
+    "おきます"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ておく là làm sẵn trước: học thuộc lời trước buổi biểu diễn."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "この 歌は メロディーが 簡単で、歌い（　）です。",
+   "choices": [
+    "やすい",
+    "すぎ",
+    "にくい",
+    "たい"
+   ],
+   "answer": 0,
+   "explain_vi": "〜やすい = dễ làm: giai điệu đơn giản nên dễ hát."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "妹は 有名な 歌手に （　）います。",
+   "choices": [
+    "なりた",
+    "なりたがって",
+    "なりたくて",
+    "なりたいと"
+   ],
+   "answer": 1,
+   "explain_vi": "Nguyện vọng của người thứ ba dùng 〜たがる: なりたがっています."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "彼女は （　） （　） ★ （　） 歌いました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "大きな",
+    "前で",
+    "みんなの",
+    "声で"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 彼女はみんなの前で大きな声で歌いました nên ★ là『大きな』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "彼は （　） （　） ★ （　） 弾きました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "一人で",
+    "上手に",
+    "毎晩",
+    "ギターを"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 彼は毎晩一人で上手にギターを弾きました nên ★ là『上手に』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "みんなは （　） （　） ★ （　） しました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "後で",
+    "拍手を",
+    "大きな",
+    "演奏の"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: みんなは演奏の後で大きな拍手をしました nên ★ là『大きな』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "彼は （　） （　） ★ （　） 出ました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "合唱",
+    "初めて",
+    "学校の",
+    "コンクールに"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 彼は学校の合唱コンクールに初めて出ました nên ★ là『コンクールに』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "店員：いらっしゃいませ。何名様ですか。\n客：二人です。2時間 （　）。\n店員：はい。お部屋は 5番です。飲み物は こちらから 選んで ください。\n客：分かりました。あのう、この マイクは どう 使いますか。\n店員：この ボタンを 押して ください。\n客：ありがとうございます。じゃあ、歌を 選びます。\n（　）に 入る 最も よい ものは どれですか。",
+   "choices": [
+    "お願いしますか",
+    "お願いしました",
+    "お願いします",
+    "お願いするか"
+   ],
+   "answer": 2,
+   "explain_vi": "Đặt phòng karaoke 2 tiếng dùng『2時間お願いします』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "店員：いらっしゃいませ。何名様ですか。\n客：二人です。2時間 お願いします。\n店員：はい。お部屋は 5番です。飲み物は こちらから （　）。\n客：分かりました。あのう、この マイクは どう 使いますか。\n店員：この ボタンを 押して ください。\n客：ありがとうございます。じゃあ、歌を 選びます。",
+   "choices": [
+    "選んで います",
+    "選びましたか",
+    "選んで あげます",
+    "選んで ください"
+   ],
+   "answer": 3,
+   "explain_vi": "Nhân viên hướng dẫn khách chọn đồ uống:『選んでください』."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "店員：いらっしゃいませ。何名様ですか。\n客：二人です。2時間 お願いします。\n店員：はい。お部屋は 5番です。飲み物は こちらから 選んで ください。\n客：分かりました。あのう、この マイクは （　）か。\n店員：この ボタンを 押して ください。\n客：ありがとうございます。じゃあ、歌を 選びます。",
+   "choices": [
+    "どう 使います",
+    "どう 使って",
+    "どう 使いました",
+    "どう 使う"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi cách dùng lịch sự:『どう使いますか』nên chỗ trống là どう 使います."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "店員：いらっしゃいませ。何名様ですか。\n客：二人です。2時間 お願いします。\n店員：はい。お部屋は 5番です。飲み物は こちらから 選んで ください。\n客：分かりました。あのう、この マイクは どう 使いますか。\n店員：この ボタンを 押して ください。\n客：ありがとうございます。じゃあ、歌を （　）。",
+   "choices": [
+    "選びました",
+    "選ぶです",
+    "選ぼうです",
+    "選びます"
+   ],
+   "answer": 3,
+   "explain_vi": "Khách nói sẽ chọn bài hát:『歌を選びます』."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "お知らせ\nカラオケ「うた」では、平日は 午後5時まで、学生は 半額です。土曜日と 日曜日は 半額では ありません。\n学生が 半額で 入れるのは いつですか。",
+   "choices": [
+    "日曜日の 午後5時まで",
+    "毎日の 午後5時まで",
+    "平日の 午後5時まで",
+    "土曜日の 午前中"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi sinh viên được giảm nửa giá vào ngày thường đến 5 giờ chiều."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "メモ\n日曜日、市民ホールの 音楽会に 行きませんか。3時からです。チケットは 私が 買って おきます。ホールの 前で 2時半に 会いましょう。\n二人は 何時に 会いますか。",
+   "choices": [
+    "2時半",
+    "3時半",
+    "3時",
+    "2時"
+   ],
+   "answer": 0,
+   "explain_vi": "Memo hẹn gặp trước nhà hát lúc 2 giờ rưỡi."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私の 兄は バンドで ギターを 弾いて います。毎週 土曜日に ライブハウスで 演奏します。兄の 夢は 有名な 歌手に なることです。\n兄の 夢は 何ですか。",
+   "choices": [
+    "ライブハウスを 開くこと",
+    "ピアノの 先生に なること",
+    "バンドを やめること",
+    "有名な 歌手に なること"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn văn nói ước mơ của anh trai là trở thành ca sĩ nổi tiếng."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 子どもの ときから ピアノを 習って います。最初は 練習が 嫌いでしたが、先生が 優しくて、だんだん 好きに なりました。先月、町の 音楽会で 初めて みんなの 前で 演奏しました。とても 緊張しましたが、終わった とき、大きな 拍手が あって、うれしかったです。これからも 練習を 続けて、もっと 上手に なりたいです。\n子どもの とき、ピアノの 練習は どうでしたか。",
+   "choices": [
+    "最初から 好きでした",
+    "難しく ありませんでした",
+    "とても 楽しかったです",
+    "最初は 嫌いでした"
+   ],
+   "answer": 3,
+   "explain_vi": "Ban đầu tác giả ghét luyện đàn, sau mới dần thích."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 子どもの ときから ピアノを 習って います。最初は 練習が 嫌いでしたが、先生が 優しくて、だんだん 好きに なりました。先月、町の 音楽会で 初めて みんなの 前で 演奏しました。とても 緊張しましたが、終わった とき、大きな 拍手が あって、うれしかったです。これからも 練習を 続けて、もっと 上手に なりたいです。\n音楽会で 演奏した とき、筆者は どうでしたか。",
+   "choices": [
+    "緊張しました",
+    "退屈でした",
+    "眠かったです",
+    "怒りました"
+   ],
+   "answer": 0,
+   "explain_vi": "Lần đầu biểu diễn trước mọi người nên tác giả rất hồi hộp (緊張しました)."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 子どもの ときから ピアノを 習って います。最初は 練習が 嫌いでしたが、先生が 優しくて、だんだん 好きに なりました。先月、町の 音楽会で 初めて みんなの 前で 演奏しました。とても 緊張しましたが、終わった とき、大きな 拍手が あって、うれしかったです。これからも 練習を 続けて、もっと 上手に なりたいです。\n演奏が 終わった とき、何が ありましたか。",
+   "choices": [
+    "質問",
+    "大きな 声",
+    "プレゼント",
+    "大きな 拍手"
+   ],
+   "answer": 3,
+   "explain_vi": "Khi biểu diễn xong, có tràng vỗ tay lớn."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "カラオケ「うた」料金表\n・1時間：800円\n・2時間 パック：1,400円\n・飲み放題：+500円\n2時間 パックに 飲み放題を つけると、全部で いくらですか。",
+   "choices": [
+    "2,300円",
+    "1,300円",
+    "1,400円",
+    "1,900円"
+   ],
+   "answer": 3,
+   "explain_vi": "Gói 2 giờ 1.400 yên + đồ uống thỏa thích 500 yên = 1.900 yên."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "音楽教室の ご案内\n・ピアノ：月曜日・木曜日 16:00～19:00\n・ギター：水曜日・土曜日 13:00～17:00\n・歌：金曜日 15:00～18:00\nギターの レッスンは 何曜日ですか。",
+   "choices": [
+    "水曜日と 土曜日",
+    "水曜日と 金曜日",
+    "月曜日と 木曜日",
+    "金曜日"
+   ],
+   "answer": 0,
+   "explain_vi": "Bảng hướng dẫn ghi lớp guitar học thứ Tư và thứ Bảy."
+  }
+ ]
+}

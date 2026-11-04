@@ -1,0 +1,754 @@
+{
+ "feature": "mock",
+ "id": "thu-20",
+ "label": "Đề thi thử 20",
+ "level": "N4",
+ "duration_minutes": 80,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「校長」は 何と 読みますか。",
+   "choices": [
+    "こうちょう",
+    "こうなが",
+    "がっちょう",
+    "こうちょうう"
+   ],
+   "answer": 0,
+   "explain_vi": "「校長」đọc là こうちょう — hiệu trưởng."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「体育館」は 何と 読みますか。",
+   "choices": [
+    "たいいくかん",
+    "たいくかん",
+    "たいようかん",
+    "たいいくかんん"
+   ],
+   "answer": 0,
+   "explain_vi": "「体育館」đọc là たいいくかん — nhà thi đấu thể dục."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「欠席」は 何と 読みますか。",
+   "choices": [
+    "けつせき",
+    "けっせき",
+    "けせき",
+    "けっせきい"
+   ],
+   "answer": 1,
+   "explain_vi": "「欠席」đọc là けっせき — vắng mặt."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「給食」は 何と 読みますか。",
+   "choices": [
+    "きゅうしょくう",
+    "きゅうしょっく",
+    "きゅうしょ",
+    "きゅうしょく"
+   ],
+   "answer": 3,
+   "explain_vi": "「給食」đọc là きゅうしょく — bữa ăn trưa ở trường."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「算数」は 何と 読みますか。",
+   "choices": [
+    "さんす",
+    "さあんすう",
+    "さんすうう",
+    "さんすう"
+   ],
+   "answer": 3,
+   "explain_vi": "「算数」đọc là さんすう — môn số học ở tiểu học."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「図工」は 何と 読みますか。",
+   "choices": [
+    "ずこう",
+    "とこう",
+    "ずこ",
+    "ずこうう"
+   ],
+   "answer": 0,
+   "explain_vi": "「図工」đọc là ずこう — môn mỹ thuật–thủ công."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「国語」は 何と 読みますか。",
+   "choices": [
+    "こくごう",
+    "くにご",
+    "こくご",
+    "こっご"
+   ],
+   "answer": 2,
+   "explain_vi": "「国語」đọc là こくご — môn quốc ngữ (tiếng Nhật)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "来月、学校の としょしつが 新しく なります。「としょしつ」は 漢字で どう 書きますか。",
+   "choices": [
+    "図書館",
+    "図書屋",
+    "図書室",
+    "図室"
+   ],
+   "answer": 2,
+   "explain_vi": "図書室（としょしつ）là phòng thư viện trong trường."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "ほうかご、友達と 音楽室で 練習します。「ほうかご」は 漢字で どう 書きますか。",
+   "choices": [
+    "放課校",
+    "放課後",
+    "放課前",
+    "後課放"
+   ],
+   "answer": 1,
+   "explain_vi": "放課後（ほうかご）là sau giờ học."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "体の 弱い 子どもは、ほけんしつで 休むことが できます。「ほけんしつ」は 漢字で どう 書きますか。",
+   "choices": [
+    "保建室",
+    "保険室",
+    "保健所",
+    "保健室"
+   ],
+   "answer": 3,
+   "explain_vi": "保健室（ほけんしつ）là phòng y tế trường học. 保健所 đọc là ほけんじょ nên không khớp."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "この 学校には せいとが 三百人ぐらい います。「せいと」は 漢字で どう 書きますか。",
+   "choices": [
+    "生徒",
+    "生従",
+    "生都",
+    "生人"
+   ],
+   "answer": 0,
+   "explain_vi": "生徒（せいと）là học sinh."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "テストの てんすうが よくて、うれしかったです。「てんすう」は 漢字で どう 書きますか。",
+   "choices": [
+    "店数",
+    "点数",
+    "点素",
+    "点図"
+   ],
+   "answer": 1,
+   "explain_vi": "点数（てんすう）là điểm số."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "朝礼の 時間に、校長先生が 全校生徒の 前で （　）を しました。",
+   "choices": [
+    "話",
+    "歌",
+    "運動",
+    "宿題"
+   ],
+   "answer": 0,
+   "explain_vi": "校長先生が話をしました = hiệu trưởng phát biểu trước toàn trường trong giờ chào cờ."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "今日は 図工の 時間に、色紙を 使って 花を （　）。",
+   "choices": [
+    "書きました",
+    "読みました",
+    "作りました",
+    "聞きました"
+   ],
+   "answer": 2,
+   "explain_vi": "色紙で花を作る = dùng giấy màu làm hoa trong giờ thủ công."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "給食の 当番が 牛乳を （　）ので、床が ぬれて しまいました。",
+   "choices": [
+    "こぼした",
+    "飲んだ",
+    "配った",
+    "冷やした"
+   ],
+   "answer": 0,
+   "explain_vi": "牛乳をこぼす = làm đổ sữa; vì làm đổ nên sàn nhà bị ướt."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "明日の 音楽の テストのために、今夜 ピアノを たくさん （　）つもりです。",
+   "choices": [
+    "暗記する",
+    "掃除する",
+    "準備する",
+    "練習する"
+   ],
+   "answer": 3,
+   "explain_vi": "ピアノを練習する = luyện piano để chuẩn bị cho bài kiểm tra âm nhạc."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "弟は 算数の 計算が （　）ので、テストは いつも 早く 終わります。",
+   "choices": [
+    "易しい",
+    "速い",
+    "明るい",
+    "重い"
+   ],
+   "answer": 1,
+   "explain_vi": "計算が速い = tính toán nhanh nên bài kiểm tra luôn làm xong sớm."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "先生は 黒板に 大きな （　）で 今日の 予定を 書きました。",
+   "choices": [
+    "字",
+    "紙",
+    "色",
+    "声"
+   ],
+   "answer": 0,
+   "explain_vi": "黒板に字で書く = viết bằng chữ lớn trên bảng đen."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "運動会の 練習で 走りすぎて、足が （　）なりました。",
+   "choices": [
+    "痛く",
+    "重く",
+    "長く",
+    "太く"
+   ],
+   "answer": 0,
+   "explain_vi": "足が痛くなる = chân bị đau vì chạy quá nhiều khi luyện tập hội thao."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "図書室では 静かに 本を （　）なければ なりません。",
+   "choices": [
+    "読ま",
+    "書か",
+    "話さ",
+    "食べ"
+   ],
+   "answer": 0,
+   "explain_vi": "読まなければなりません = phải đọc (sách yên lặng trong phòng thư viện)."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "生徒は 毎日、授業に 出席しなければ なりません。「出席する」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "休む",
+    "遅れる",
+    "帰る",
+    "出る"
+   ],
+   "answer": 3,
+   "explain_vi": "出席する gần nghĩa nhất với 授業に出る = tham dự, có mặt trong giờ học."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "彼は まじめな 生徒で、宿題を いつも 忘れません。「まじめな」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "静かな",
+    "明るい",
+    "熱心な",
+    "優しい"
+   ],
+   "answer": 2,
+   "explain_vi": "まじめな gần với 熱心な = chăm chỉ, nghiêm túc trong học tập."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "宿題は 明日の 朝までに 提出して ください。「提出する」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "入れる",
+    "出す",
+    "渡す",
+    "送る"
+   ],
+   "answer": 1,
+   "explain_vi": "提出する gần nghĩa nhất với 出す trong ngữ cảnh này = nộp bài."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "弟は 今日、学校を 早退しました。「早退する」と 意味が 一番 近いものは どれですか。",
+   "choices": [
+    "遅く 来る",
+    "休む",
+    "残る",
+    "早く 帰る"
+   ],
+   "answer": 3,
+   "explain_vi": "早退する = về sớm hơn giờ quy định, gần nghĩa nhất với 早く帰る."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「当番」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "当番を 食べました。",
+    "彼は 当番な 人です。",
+    "今日は 私が 給食の 当番です。",
+    "当番で 窓を 開けました。"
+   ],
+   "answer": 2,
+   "explain_vi": "当番 là người trực/phụ trách theo phiên — câu đúng: hôm nay tôi phụ trách trực bữa ăn ở trường."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「居眠り」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "居眠りを 飲みました。",
+    "居眠りな 部屋で 勉強します。",
+    "授業中に 居眠りを して、先生に 注意されました。",
+    "居眠りで 手紙を 書きました。"
+   ],
+   "answer": 2,
+   "explain_vi": "居眠りをする = ngủ gật — ngủ gật trong giờ học nên bị thầy nhắc nhở."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「協力」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "文化祭の 準備は、みんなで 協力して 行いました。",
+    "協力を 食べました。",
+    "彼は 協力な 学生です。",
+    "協力で 学校へ 行きます。"
+   ],
+   "answer": 0,
+   "explain_vi": "協力する = hợp tác cùng làm — mọi người hợp tác chuẩn bị lễ hội văn hóa."
+  },
+  {
+   "level": "N4",
+   "section": "文字・語彙",
+   "question": "「遅刻」の 使い方が 一番 よい 文は どれですか。",
+   "choices": [
+    "遅刻を 食べました。",
+    "電車が 遅れて、学校に 遅刻しました。",
+    "遅刻な 先生が 来ました。",
+    "窓を 遅刻しました。"
+   ],
+   "answer": 1,
+   "explain_vi": "遅刻する = đến muộn — tàu đến trễ nên tôi đi học muộn."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "この 本は 図書室の 本ですから、来週の 月曜日までに （　）。",
+   "choices": [
+    "返しても いいです",
+    "返したことが あります",
+    "返さなければ なりません",
+    "返すつもりです"
+   ],
+   "answer": 2,
+   "explain_vi": "Sách của thư viện có hạn trả (までに) nên bắt buộc phải trả: 返さなければなりません."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "先生に 質問が あったら、手を （　）ください。",
+   "choices": [
+    "上げる",
+    "上げて",
+    "上げた",
+    "上げ"
+   ],
+   "answer": 1,
+   "explain_vi": "〜てください dùng dạng て: 上げてください = hãy giơ tay lên."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "私は 来年、高校生に （　）たいです。",
+   "choices": [
+    "なる",
+    "なり",
+    "なって",
+    "なった"
+   ],
+   "answer": 1,
+   "explain_vi": "〜たい đi với gốc ます của động từ: なりたい = muốn trở thành học sinh cấp ba."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "弟は まだ 自転車に （　）ことが できません。",
+   "choices": [
+    "乗る",
+    "乗った",
+    "乗って",
+    "乗れ"
+   ],
+   "answer": 0,
+   "explain_vi": "〜ことができません dùng dạng từ điển: 乗ることができません."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "この 教室には 三十人の 生徒が （　）ことが できます。",
+   "choices": [
+    "入った",
+    "入れて",
+    "入ら",
+    "入る"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ことができます dùng dạng từ điển: 入ることができます = phòng chứa được 30 học sinh."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "宿題を （　）から、遊びに 行きます。",
+   "choices": [
+    "する",
+    "して",
+    "した",
+    "し"
+   ],
+   "answer": 1,
+   "explain_vi": "〜てから = sau khi: 宿題をしてから = sau khi làm xong bài tập mới đi chơi."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "先生は 生徒に 教室を （　）。",
+   "choices": [
+    "掃除されました",
+    "掃除しました",
+    "掃除させました",
+    "掃除させますでした"
+   ],
+   "answer": 2,
+   "explain_vi": "Thể sai khiến: 先生が生徒に掃除させました = thầy bắt/cho học sinh dọn lớp."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "私は 友達に ノートを （　）もらいました。",
+   "choices": [
+    "貸した",
+    "貸す",
+    "貸して",
+    "貸し"
+   ],
+   "answer": 2,
+   "explain_vi": "〜てもらう: 貸してもらいました = được bạn cho mượn vở."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "雨が 降って きたので、運動会は 明日に （　）そうです。",
+   "choices": [
+    "なる",
+    "なります",
+    "なった",
+    "なっている"
+   ],
+   "answer": 0,
+   "explain_vi": "〜そうです (nghe nói) đi với dạng thường: なるそうです = nghe nói hội thao sẽ dời sang ngày mai."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "明日 テストが あるので、今夜は テレビを （　）ほうが いいです。",
+   "choices": [
+    "見なくて",
+    "見ない",
+    "見なかった",
+    "見ないで"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ないほうがいい = nên không làm: 見ないほうがいい = tối nay không nên xem TV."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "私は 日本語が 少し （　）ように なりました。",
+   "choices": [
+    "話せる",
+    "話す",
+    "話して",
+    "話した"
+   ],
+   "answer": 0,
+   "explain_vi": "〜ようになる dùng với dạng khả năng: 話せるようになりました = đã trở nên nói được tiếng Nhật một chút."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "教室の 窓が （　）います。",
+   "choices": [
+    "開けて",
+    "開いた",
+    "開いては",
+    "開いて"
+   ],
+   "answer": 3,
+   "explain_vi": "Trạng thái dùng tự động từ + ています: 窓が開いています = cửa sổ đang mở."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "校長先生に 作文を （　）いただきました。",
+   "choices": [
+    "読んだ",
+    "読んで",
+    "読む",
+    "読み"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ていただく: 読んでいただきました = được hiệu trưởng đọc bài văn cho."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "私は （　） （　） ★ （　）、学校へ 行きます。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "6時に",
+    "起きて",
+    "食べてから",
+    "朝ご飯を"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 6時に 起きて 朝ご飯を 食べてから 学校へ行きます — vị trí ★ là 朝ご飯を."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "先生は （　） （　） ★ （　） くださいました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "私に",
+    "日本語を",
+    "教えて",
+    "丁寧に"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 私に 日本語を 丁寧に 教えてくださいました — vị trí ★ là 丁寧に."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "弟は （　） （　） ★ （　） なりました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "一人で",
+    "乗れる",
+    "自転車に",
+    "ように"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 一人で 自転車に 乗れるように なりました — vị trí ★ là 乗れる."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "私たちは （　） （　） ★ （　） 決めました。文の ★に 入る ものは どれですか。",
+   "choices": [
+    "文化祭で",
+    "歌を",
+    "ことに",
+    "歌う"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 文化祭で 歌を 歌うことに 決めました — vị trí ★ là 歌う."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "次の文章の（1）に入る最もよいものを選びなさい。\n文章：お知らせ\n来週の 金曜日は 文化祭です。生徒は 朝 8時半に 体育館に （1）ください。文化祭では、クラスの 店や 歌の 発表が あります。食べ物を 売る クラスは、お金を （2）ように して ください。終わった 後で、教室を みんなで （3）なければ なりません。保護者の 方も 発表を （4）ことが できます。",
+   "choices": [
+    "集まる",
+    "集まったら",
+    "集まって",
+    "集まっては"
+   ],
+   "answer": 2,
+   "explain_vi": "〜てください dùng dạng て: 集まってください = hãy tập trung ở nhà thi đấu."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "次の文章の（2）に入る最もよいものを選びなさい。\n文章：お知らせ\n来週の 金曜日は 文化祭です。生徒は 朝 8時半に 体育館に （1）ください。文化祭では、クラスの 店や 歌の 発表が あります。食べ物を 売る クラスは、お金を （2）ように して ください。終わった 後で、教室を みんなで （3）なければ なりません。保護者の 方も 発表を （4）ことが できます。",
+   "choices": [
+    "数えた",
+    "数えて",
+    "数える",
+    "数え"
+   ],
+   "answer": 2,
+   "explain_vi": "〜ようにしてください dùng dạng từ điển: お金を数えるようにしてください = hãy chú ý đếm tiền."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "次の文章の（3）に入る最もよいものを選びなさい。\n文章：お知らせ\n来週の 金曜日は 文化祭です。生徒は 朝 8時半に 体育館に （1）ください。文化祭では、クラスの 店や 歌の 発表が あります。食べ物を 売る クラスは、お金を （2）ように して ください。終わった 後で、教室を みんなで （3）なければ なりません。保護者の 方も 発表を （4）ことが できます。",
+   "choices": [
+    "掃除する",
+    "掃除して",
+    "掃除し",
+    "掃除した"
+   ],
+   "answer": 2,
+   "explain_vi": "〜なければなりません cần gốc ない: 掃除しなければなりません = phải dọn dẹp lớp học."
+  },
+  {
+   "level": "N4",
+   "section": "文法",
+   "question": "次の文章の（4）に入る最もよいものを選びなさい。\n文章：お知らせ\n来週の 金曜日は 文化祭です。生徒は 朝 8時半に 体育館に （1）ください。文化祭では、クラスの 店や 歌の 発表が あります。食べ物を 売る クラスは、お金を （2）ように して ください。終わった 後で、教室を みんなで （3）なければ なりません。保護者の 方も 発表を （4）ことが できます。",
+   "choices": [
+    "見た",
+    "見て",
+    "見",
+    "見る"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ことができます dùng dạng từ điển: 発表を見ることができます = phụ huynh cũng có thể xem buổi biểu diễn."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "お知らせ\n図書室は 来週から、平日は 午後6時まで 開きます。土曜日は 今までどおり 午後5時までです。日曜日は 休みます。\n図書室は 土曜日、何時まで 開きますか。",
+   "choices": [
+    "午後6時まで",
+    "午後4時まで",
+    "午後5時まで",
+    "午前中だけ"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo nói thứ Bảy vẫn như cũ, phòng thư viện mở đến 5 giờ chiều."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "山田先生へ\nすみません。今日は 熱が あるので、学校を 休みます。宿題は 友達に 聞いて、明日までに やります。\n佐藤\n佐藤さんは 今日、どうして 学校を 休みますか。",
+   "choices": [
+    "熱が あるから",
+    "旅行に 行くから",
+    "宿題が 多いから",
+    "電車が 遅れたから"
+   ],
+   "answer": 0,
+   "explain_vi": "Thư viết bị sốt （熱がある) nên hôm nay xin nghỉ học."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "体育館の 使用について\n体育館は 運動会の 練習の ため、今週の 水曜日と 木曜日の 授業の 後は 使えません。使いたい クラスは、来週 予約して ください。\n体育館が 使えないのは いつですか。",
+   "choices": [
+    "今週の 月曜日と 火曜日",
+    "今週の 水曜日と 木曜日の 授業の 後",
+    "今週の 土曜日と 日曜日",
+    "来週の 水曜日と 木曜日"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo nói sau giờ học thứ Tư và thứ Năm tuần này không dùng được nhà thi đấu vì phải luyện tập hội thao."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 中学校の 音楽の 先生です。私の 学校では、毎年 秋に 合唱コンクールが あります。今年、私の クラスは 練習の 時間が 少なかったので、心配でした。でも、生徒たちは 放課後も 集まって、一生懸命 練習しました。本番の 日、クラスは 一番 いい 賞を 取りました。私は 生徒たちの 歌を 聞いて、とても 感動しました。\n合唱コンクールは いつ ありますか。",
+   "choices": [
+    "春",
+    "秋",
+    "夏",
+    "冬"
+   ],
+   "answer": 1,
+   "explain_vi": "Đoạn văn nói cuộc thi hợp xướng được tổ chức vào mùa thu hằng năm."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 中学校の 音楽の 先生です。私の 学校では、毎年 秋に 合唱コンクールが あります。今年、私の クラスは 練習の 時間が 少なかったので、心配でした。でも、生徒たちは 放課後も 集まって、一生懸命 練習しました。本番の 日、クラスは 一番 いい 賞を 取りました。私は 生徒たちの 歌を 聞いて、とても 感動しました。\n先生は 今年、どうして 心配でしたか。",
+   "choices": [
+    "生徒が 少なかったから",
+    "歌が 難しかったから",
+    "練習の 時間が 少なかったから",
+    "賞が なかったから"
+   ],
+   "answer": 2,
+   "explain_vi": "Thầy lo lắng vì năm nay lớp có ít thời gian luyện tập."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "私は 中学校の 音楽の 先生です。私の 学校では、毎年 秋に 合唱コンクールが あります。今年、私の クラスは 練習の 時間が 少なかったので、心配でした。でも、生徒たちは 放課後も 集まって、一生懸命 練習しました。本番の 日、クラスは 一番 いい 賞を 取りました。私は 生徒たちの 歌を 聞いて、とても 感動しました。\nクラスは 本番の 日、どうなりましたか。",
+   "choices": [
+    "練習を やめました",
+    "負けて 泣きました",
+    "コンクールに 出ませんでした",
+    "一番 いい 賞を 取りました"
+   ],
+   "answer": 3,
+   "explain_vi": "Vào ngày thi chính thức, cả lớp đã giành được giải thưởng cao nhất."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "さくら中学校 時間割（月曜日）\n・1時間目 8:50〜9:40 国語\n・2時間目 9:50〜10:40 数学\n・3時間目 10:50〜11:40 理科\n・4時間目 11:50〜12:40 英語\n・昼休み 12:40〜13:30\n・5時間目 13:30〜14:20 音楽\n※水曜日は 5時間目が ありません。\n月曜日の 3時間目は 何の 授業ですか。",
+   "choices": [
+    "理科",
+    "国語",
+    "数学",
+    "英語"
+   ],
+   "answer": 0,
+   "explain_vi": "Theo thời khóa biểu, tiết 3 ngày thứ Hai là môn 理科 (khoa học tự nhiên)."
+  },
+  {
+   "level": "N4",
+   "section": "読解",
+   "question": "さくら中学校 時間割（月曜日）\n・1時間目 8:50〜9:40 国語\n・2時間目 9:50〜10:40 数学\n・3時間目 10:50〜11:40 理科\n・4時間目 11:50〜12:40 英語\n・昼休み 12:40〜13:30\n・5時間目 13:30〜14:20 音楽\n※水曜日は 5時間目が ありません。\n月曜日の 昼休みは 何分 ありますか。",
+   "choices": [
+    "40分",
+    "60分",
+    "90分",
+    "50分"
+   ],
+   "answer": 3,
+   "explain_vi": "Giờ nghỉ trưa kéo dài từ 12:40 đến 13:30, tức là 50 phút."
+  }
+ ]
+}
