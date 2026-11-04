@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-29",
+ "label": "Đề thi thử 29",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「週末」は 何と 読みますか。",
+   "choices": [
+    "しゅうまつ",
+    "しゅうまち",
+    "しゅまつ",
+    "しゅうま"
+   ],
+   "answer": 0,
+   "explain_vi": "週末 đọc là しゅうまつ — cuối tuần."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「映画館」は 何と 読みますか。",
+   "choices": [
+    "えいがかん",
+    "えがかん",
+    "えいかかん",
+    "えいがか"
+   ],
+   "answer": 0,
+   "explain_vi": "映画館 đọc là えいがかん — rạp chiếu phim. 映 = えい, 画 = が, 館 = かん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「遊びます」は 何と 読みますか。",
+   "choices": [
+    "およぎます",
+    "あびます",
+    "あそびます",
+    "あそびまし"
+   ],
+   "answer": 2,
+   "explain_vi": "遊びます đọc là あそびます — chơi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「写真」は 何と 読みますか。",
+   "choices": [
+    "しゃし",
+    "さしん",
+    "じゃしん",
+    "しゃしん"
+   ],
+   "answer": 3,
+   "explain_vi": "写真 đọc là しゃしん — bức ảnh."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「海」は 何と 読みますか。",
+   "choices": [
+    "かい",
+    "うみ",
+    "うめ",
+    "なみ"
+   ],
+   "answer": 1,
+   "explain_vi": "海 đứng một mình đọc là うみ — biển."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「山」は 何と 読みますか。",
+   "choices": [
+    "さん",
+    "せん",
+    "やま",
+    "かわ"
+   ],
+   "answer": 2,
+   "explain_vi": "山 đứng một mình đọc là やま — núi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「天気」は 何と 読みますか。",
+   "choices": [
+    "てんけ",
+    "てんき",
+    "でんき",
+    "てんぎ"
+   ],
+   "answer": 1,
+   "explain_vi": "天気 đọc là てんき — thời tiết. でんき là 電気 (điện), khác hẳn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「うみ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "海",
+    "梅",
+    "毎",
+    "晦"
+   ],
+   "answer": 0,
+   "explain_vi": "うみ (biển) viết là 海. 梅 là うめ (quả mơ), 毎 là まい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「やま」を 漢字で 書くと どれですか。",
+   "choices": [
+    "山",
+    "仙",
+    "出",
+    "三"
+   ],
+   "answer": 0,
+   "explain_vi": "やま (núi) viết là 山."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「しゃしん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "写直",
+    "写真",
+    "者真",
+    "写心"
+   ],
+   "answer": 1,
+   "explain_vi": "しゃしん (bức ảnh) viết là 写真."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あそぶ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "泳ぐ",
+    "遊ぶ",
+    "遊ふ",
+    "游ぶ"
+   ],
+   "answer": 1,
+   "explain_vi": "あそぶ (chơi) viết là 遊ぶ. 泳ぐ đọc là およぐ — bơi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「てんき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "天機",
+    "天気",
+    "天来",
+    "電気"
+   ],
+   "answer": 1,
+   "explain_vi": "てんき (thời tiết) viết là 天気. 電気 đọc là でんき — điện."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "土曜日、友達と 映画館で 映画を （　）。",
+   "choices": [
+    "見ました",
+    "聞きました",
+    "読みました",
+    "書きました"
+   ],
+   "answer": 0,
+   "explain_vi": "Xem phim ở rạp dùng 見ます: 映画を 見ました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "日曜日は 天気が いいですから、公園で （　）。",
+   "choices": [
+    "働きます",
+    "勉強します",
+    "遊びます",
+    "寝ます"
+   ],
+   "answer": 2,
+   "explain_vi": "Trời đẹp nên ra công viên chơi → 遊びます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 友達と 海で 写真を （　）。",
+   "choices": [
+    "買いました",
+    "撮りました",
+    "売りました",
+    "作りました"
+   ],
+   "answer": 1,
+   "explain_vi": "Chụp ảnh dùng 撮ります: 写真を 撮りました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "週末は 部屋で ゆっくり （　）。",
+   "choices": [
+    "休みます",
+    "急ぎます",
+    "働きます",
+    "走ります"
+   ],
+   "answer": 0,
+   "explain_vi": "Cuối tuần nghỉ ngơi thong thả trong phòng → 休みます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "みんなで 公園で お昼ごはんを （　）。",
+   "choices": [
+    "食べました",
+    "飲みました",
+    "見ました",
+    "聞きました"
+   ],
+   "answer": 0,
+   "explain_vi": "Mọi người cùng ăn cơm trưa ở công viên → 食べました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "週末は いつも （　）で 遊びます。",
+   "choices": [
+    "学校",
+    "会社",
+    "公園",
+    "病院"
+   ],
+   "answer": 2,
+   "explain_vi": "Nơi chơi cuối tuần trong câu này là 公園 (công viên)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「撮ります」を 使った 文は どれですか。",
+   "choices": [
+    "音楽を 撮ります。",
+    "海で 友達の 写真を 撮りました。",
+    "撮りますは 大きいです。",
+    "彼は 撮りますな 人です。"
+   ],
+   "answer": 1,
+   "explain_vi": "撮る dùng để chụp ảnh, quay phim: 写真を 撮る. Âm nhạc thì nghe chứ không 'chụp'."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「出かけます」を 使った 文は どれですか。",
+   "choices": [
+    "部屋を 出かけます。",
+    "日曜日、家族で 公園へ 出かけます。",
+    "出かけますを 食べます。",
+    "彼は 出かけますな 学生です。"
+   ],
+   "answer": 1,
+   "explain_vi": "出かける là ra ngoài đi đâu đó (đi với へ). Ra khỏi phòng thì dùng 出ます, không phải 出かけます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「会います」を 使った 文は どれですか。",
+   "choices": [
+    "ご飯に 会います。",
+    "本に 会いました。",
+    "わたしは 会いますが 好きです。",
+    "駅前で 友達に 会います。"
+   ],
+   "answer": 3,
+   "explain_vi": "会う dùng khi gặp người, đi với trợ từ に: 友達に 会います."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "日曜日、友達と 映画を 見 （　） 行きます。",
+   "choices": [
+    "へ",
+    "を",
+    "に",
+    "で"
+   ],
+   "answer": 2,
+   "explain_vi": "Đi để làm việc gì dùng thân ます + に 行きます: 見に 行きます = đi xem."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "週末は 友達と 遊びます。平日 （　） 働きます。",
+   "choices": [
+    "も",
+    "が",
+    "を",
+    "は"
+   ],
+   "answer": 3,
+   "explain_vi": "は ở đây mang nghĩa tương phản: cuối tuần thì chơi, còn ngày thường thì làm việc."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "週末は 本を 読ん （　）、映画を 見たり します。",
+   "choices": [
+    "たり",
+    "では",
+    "だり",
+    "でも"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu liệt kê 〜たり〜たり: 読んだり、見たり. 読む tận cùng bằng む nên たり thành だり sau 読ん."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あした 天気が よかったら、海 （　） 行きましょう。",
+   "choices": [
+    "を",
+    "で",
+    "から",
+    "へ"
+   ],
+   "answer": 3,
+   "explain_vi": "Hướng đi dùng へ: 海へ 行きましょう = đi biển nhé."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "友達は わたし （　） 写真を 撮って くれました。",
+   "choices": [
+    "に",
+    "を",
+    "は",
+    "の"
+   ],
+   "answer": 3,
+   "explain_vi": "Bức ảnh của tôi → わたしの 写真. Sở hữu dùng の."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしが 車を 運転 （　）。",
+   "choices": [
+    "しましょうか",
+    "しましょう",
+    "したいです",
+    "しますか"
+   ],
+   "answer": 0,
+   "explain_vi": "Đề nghị làm giúp việc gì cho người nghe dùng しましょうか: 運転しましょうか = để tôi lái xe cho nhé."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 歌 （　） 上手です。",
+   "choices": [
+    "を",
+    "に",
+    "が",
+    "の"
+   ],
+   "answer": 2,
+   "explain_vi": "Giỏi về việc gì dùng が: 歌が 上手です = hát hay."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "友達と 映画を 見た （　）、レストランで 晩ごはんを 食べました。",
+   "choices": [
+    "前",
+    "時",
+    "中",
+    "後"
+   ],
+   "answer": 3,
+   "explain_vi": "〜た後で/〜た後 nghĩa là sau khi: xem phim xong rồi ăn tối."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "日曜日、一緒に 映画を 見 （　）か。",
+   "choices": [
+    "ます",
+    "ました",
+    "たい",
+    "ません"
+   ],
+   "answer": 3,
+   "explain_vi": "Lời rủ rê lịch sự dùng 〜ませんか: 見ませんか = cùng xem phim nhé."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 日曜日 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：海へ　3：遊びに　4：行きます",
+   "choices": [
+    "友達と",
+    "海へ",
+    "行きます",
+    "遊びに"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 友達と → 海へ → 遊びに → 行きます. ★ là 遊びに (đi để chơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 公園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：テニスを　3：して　4：遊びます",
+   "choices": [
+    "友達と",
+    "して",
+    "テニスを",
+    "遊びます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 友達と → テニスを → して → 遊びます. ★ là して (thể て của します)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼女は 週末 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：映画を　2：見て　3：家に　4：帰ります",
+   "choices": [
+    "映画を",
+    "見て",
+    "家に",
+    "帰ります"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 映画を → 見て → 家に → 帰ります. ★ là 家に (xem phim rồi về nhà)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしたちは 山で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：写真を　2：たくさん　3：撮って　4：帰りました",
+   "choices": [
+    "写真を",
+    "撮って",
+    "たくさん",
+    "帰りました"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 写真を → たくさん → 撮って → 帰りました. ★ là 撮って (chụp nhiều ảnh rồi về)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、（1）へ 行きませんか。\nB：いいですね。海は どうですか。\nA：海は 少し 遠いです。（2）は 近いですよ。\nB：じゃあ、山へ 行きましょう。（3） 行きますか。\nA：バスで 行きます。駅前で （4）。\nB：分かりました。午前 9時に 駅前ですね。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "どこ",
+    "だれ",
+    "いつ",
+    "なに"
+   ],
+   "answer": 0,
+   "explain_vi": "Rủ đi đâu đó dùng từ hỏi nơi chốn: どこへ 行きませんか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、（1）へ 行きませんか。\nB：いいですね。海は どうですか。\nA：海は 少し 遠いです。（2）は 近いですよ。\nB：じゃあ、山へ 行きましょう。（3） 行きますか。\nA：バスで 行きます。駅前で （4）。\nB：分かりました。午前 9時に 駅前ですね。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "山",
+    "海",
+    "川",
+    "空"
+   ],
+   "answer": 0,
+   "explain_vi": "Biển thì xa, còn núi thì gần → 山は 近いです. Sau đó B cũng đồng ý đi núi."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、（1）へ 行きませんか。\nB：いいですね。海は どうですか。\nA：海は 少し 遠いです。（2）は 近いですよ。\nB：じゃあ、山へ 行きましょう。（3） 行きますか。\nA：バスで 行きます。駅前で （4）。\nB：分かりました。午前 9時に 駅前ですね。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "何に",
+    "何で",
+    "何を",
+    "何へ"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi phương tiện đi lại dùng 何で: 何で 行きますか = đi bằng gì."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、（1）へ 行きませんか。\nB：いいですね。海は どうですか。\nA：海は 少し 遠いです。（2）は 近いですよ。\nB：じゃあ、山へ 行きましょう。（3） 行きますか。\nA：バスで 行きます。駅前で （4）。\nB：分かりました。午前 9時に 駅前ですね。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "会います",
+    "会いたい",
+    "会いましょう",
+    "会いました"
+   ],
+   "answer": 2,
+   "explain_vi": "Hẹn gặp nhau ở trước ga → 駅前で 会いましょう."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n映画館の お知らせ：土曜日と 日曜日は 午前 10時から 映画が あります。子どもは 500円、大人は 1,000円です。\n\n子どもは いくらですか。",
+   "choices": [
+    "1,000円",
+    "100円",
+    "5,000円",
+    "500円"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi vé trẻ em là 500 yên, người lớn 1.000 yên."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nあしたは 公園で お祭りが あります。午前 11時から 午後 4時までです。雨の 日は ありません。\n\nお祭りは 何時からですか。",
+   "choices": [
+    "午前 10時",
+    "午後 4時",
+    "午前 11時",
+    "午前 9時"
+   ],
+   "answer": 2,
+   "explain_vi": "Lễ hội bắt đầu lúc 11 giờ sáng; 4 giờ chiều là giờ kết thúc."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハオです。週末は いつも 友達と 遊びます。土曜日は 友達と 山へ 行きました。山で 写真を たくさん 撮りました。日曜日は 家で 休みました。来週は 海へ 行きたいです。\n\nハオさんは 土曜日に 何を しましたか。",
+   "choices": [
+    "海で 泳ぎました",
+    "家で 休みました",
+    "山で 写真を 撮りました",
+    "映画館で 映画を 見ました"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ Bảy Hào đi núi với bạn và chụp nhiều ảnh. Nghỉ ở nhà là việc của Chủ nhật."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハオです。週末は いつも 友達と 遊びます。土曜日は 友達と 山へ 行きました。山で 写真を たくさん 撮りました。日曜日は 家で 休みました。来週は 海へ 行きたいです。\n\nハオさんは 来週 何を したいですか。",
+   "choices": [
+    "海へ 行きたいです",
+    "山へ 行きたいです",
+    "家で 休みたいです",
+    "映画を 見たいです"
+   ],
+   "answer": 0,
+   "explain_vi": "Câu cuối của đoạn: 来週は 海へ 行きたいです — tuần sau muốn đi biển."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n映画の 時間\nアニメ：午前 10時\nドラマ：午後 1時\nアクション：午後 4時\nコメディ：午後 7時\n\nアクションは 何時からですか。",
+   "choices": [
+    "午前 10時",
+    "午後 1時",
+    "午後 7時",
+    "午後 4時"
+   ],
+   "answer": 3,
+   "explain_vi": "Bảng giờ ghi phim hành động (アクション) bắt đầu lúc 4 giờ chiều."
+  }
+ ]
+}

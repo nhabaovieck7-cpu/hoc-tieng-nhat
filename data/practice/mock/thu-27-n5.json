@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-27",
+ "label": "Đề thi thử 27",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「本」は 何と 読みますか。",
+   "choices": [
+    "ほん",
+    "もと",
+    "ぼん",
+    "ぽん"
+   ],
+   "answer": 0,
+   "explain_vi": "本 đọc là ほん — sách."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「英語」は 何と 読みますか。",
+   "choices": [
+    "えいご",
+    "えいごう",
+    "えご",
+    "えいこ"
+   ],
+   "answer": 0,
+   "explain_vi": "英語 đọc là えいご — tiếng Anh."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「地図」は 何と 読みますか。",
+   "choices": [
+    "じず",
+    "ちす",
+    "ちず",
+    "ちづ"
+   ],
+   "answer": 2,
+   "explain_vi": "地図 đọc là ちず — bản đồ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「算数」は 何と 読みますか。",
+   "choices": [
+    "さんすう",
+    "さすう",
+    "さんす",
+    "さんずう"
+   ],
+   "answer": 0,
+   "explain_vi": "算数 đọc là さんすう — môn toán (ở tiểu học)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「大学」は 何と 読みますか。",
+   "choices": [
+    "だいがっこう",
+    "たいがく",
+    "だいかく",
+    "だいがく"
+   ],
+   "answer": 3,
+   "explain_vi": "大学 đọc là だいがく — trường đại học."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「毎週」は 何と 読みますか。",
+   "choices": [
+    "まいしゅん",
+    "まいすう",
+    "まいしゅ",
+    "まいしゅう"
+   ],
+   "answer": 3,
+   "explain_vi": "毎週 đọc là まいしゅう — mỗi tuần."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「言葉」は 何と 読みますか。",
+   "choices": [
+    "げんば",
+    "ことば",
+    "ことのは",
+    "ことわ"
+   ],
+   "answer": 1,
+   "explain_vi": "言葉 đọc là ことば — từ ngữ, lời nói."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ほん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "日",
+    "本",
+    "木",
+    "水"
+   ],
+   "answer": 1,
+   "explain_vi": "ほん (sách) viết bằng kanji là 本."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「えいご」を 漢字で 書くと どれですか。",
+   "choices": [
+    "英語",
+    "英話",
+    "英吾",
+    "央語"
+   ],
+   "answer": 0,
+   "explain_vi": "えいご viết bằng kanji là 英語."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ちず」を 漢字で 書くと どれですか。",
+   "choices": [
+    "地頭",
+    "地図",
+    "地固",
+    "知図"
+   ],
+   "answer": 1,
+   "explain_vi": "ちず viết bằng kanji là 地図."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「さんすう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "算素",
+    "三数",
+    "算数",
+    "参数"
+   ],
+   "answer": 2,
+   "explain_vi": "さんすう viết bằng kanji là 算数."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ことば」を 漢字で 書くと どれですか。",
+   "choices": [
+    "事葉",
+    "言葉",
+    "言場",
+    "言者"
+   ],
+   "answer": 1,
+   "explain_vi": "ことば viết bằng kanji là 言葉."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "教室の 壁に 大きい （　）が あります。国の 名前が たくさん 書いて あります。",
+   "choices": [
+    "時計",
+    "地図",
+    "写真",
+    "カレンダー"
+   ],
+   "answer": 1,
+   "explain_vi": "Tấm bản đồ (地図) treo trên tường có ghi tên nhiều nước."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 毎週、（　）の 授業で 計算を します。",
+   "choices": [
+    "英語",
+    "体育",
+    "音楽",
+    "算数"
+   ],
+   "answer": 3,
+   "explain_vi": "計算 (tính toán) là việc làm trong giờ toán (算数)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "机の 上に 友達の （　）が あります。少し 読んでから、明日 返します。",
+   "choices": [
+    "鍵",
+    "眼鏡",
+    "傘",
+    "本"
+   ],
+   "answer": 3,
+   "explain_vi": "Đọc rồi mai trả lại — đó là cuốn sách (本) của bạn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "友達の リンさんは （　）が とても 上手です。アメリカ人の 先生と 話すことが できます。",
+   "choices": [
+    "算数",
+    "理科",
+    "英語",
+    "体育"
+   ],
+   "answer": 2,
+   "explain_vi": "Nói chuyện được với thầy người Mỹ nên giỏi tiếng Anh (英語)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わからない （　）は 辞書で 調べます。",
+   "choices": [
+    "算数",
+    "大学",
+    "言葉",
+    "地図"
+   ],
+   "answer": 2,
+   "explain_vi": "Từ (言葉) nào không hiểu thì tra từ điển."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "机の 上に 本が （　）あります。",
+   "choices": [
+    "三台",
+    "三枚",
+    "三本",
+    "三冊"
+   ],
+   "answer": 3,
+   "explain_vi": "Sách đếm bằng trợ từ 冊: 三冊 (ba quyển)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「調べます」を 使った 文は どれですか。",
+   "choices": [
+    "晩ご飯を 調べます。",
+    "友達を 調べます。",
+    "言葉の 意味を 辞書で 調べます。",
+    "歌を 調べます。"
+   ],
+   "answer": 2,
+   "explain_vi": "調べる là tra cứu: tra nghĩa của từ bằng từ điển. Không dùng cho bài hát, bữa ăn hay bạn bè."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「返します」を 使った 文は どれですか。",
+   "choices": [
+    "部屋を 返します。",
+    "友達に 本を 返します。",
+    "窓を 返します。",
+    "歌を 返します。"
+   ],
+   "answer": 1,
+   "explain_vi": "返す là trả lại đồ đã mượn: trả sách cho bạn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「座ります」を 使った 文は どれですか。",
+   "choices": [
+    "車に 座ります。",
+    "椅子に 座ります。",
+    "自転車に 座ります。",
+    "部屋に 座ります。"
+   ],
+   "answer": 1,
+   "explain_vi": "座る là ngồi xuống: ngồi lên ghế (椅子に座る). Với xe/xe đạp dùng 乗る."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしの 席は 窓の 近く （　） あります。",
+   "choices": [
+    "に",
+    "で",
+    "を",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Vị trí tồn tại của đồ vật/chỗ dùng に: 近くにあります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "友達 （　） 言葉を 教えて もらいました。",
+   "choices": [
+    "の",
+    "と",
+    "や",
+    "に"
+   ],
+   "answer": 3,
+   "explain_vi": "Được ai đó làm cho việc gì: 友達に 教えてもらいました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "授業は 9時 から 4時 （　）です。",
+   "choices": [
+    "から",
+    "だけ",
+    "より",
+    "まで"
+   ],
+   "answer": 3,
+   "explain_vi": "Cặp から〜まで: từ 9 giờ đến 4 giờ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 本は あの 本 （　） おもしろいです。",
+   "choices": [
+    "から",
+    "まで",
+    "へ",
+    "より"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh hơn dùng より: cuốn này hay hơn cuốn kia."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "放課後、図書室で 本を （　）ことが できます。",
+   "choices": [
+    "読んで",
+    "読む",
+    "読み",
+    "読んだ"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu 〜ことができます gắn với động từ thể từ điển: 読むことができます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "リンさんは （　）から 来ましたか。",
+   "choices": [
+    "何",
+    "だれ",
+    "どこ",
+    "いつ"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi đến từ đâu dùng どこから 来ましたか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 英語 （　） 算数が 好きです。",
+   "choices": [
+    "と",
+    "へ",
+    "を",
+    "か"
+   ],
+   "answer": 0,
+   "explain_vi": "Liệt kê đầy đủ hai môn yêu thích dùng と."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "教科書を かばんに （　）から、学校へ 行きます。",
+   "choices": [
+    "入れて",
+    "入れた",
+    "入れ",
+    "入れる"
+   ],
+   "answer": 0,
+   "explain_vi": "〜てから chỉ thứ tự hành động: cho sách vào cặp rồi mới đi học."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "明日は 試験ですから、今日は 早く （　） なりません。",
+   "choices": [
+    "帰っては",
+    "帰らなくても",
+    "帰らなければ",
+    "帰るでは"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu bắt buộc: 〜なければなりません (phải về sớm)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：図書室で　2：友達と　3：本を　4：読みます",
+   "choices": [
+    "ノートを",
+    "図書室で",
+    "本を",
+    "友達と"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 図書室で → 友達と → 本を → 読みます. Vị trí ★ (thứ ba) là 本を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "先生は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：教室で　2：学生に　3：英語を　4：教えます",
+   "choices": [
+    "教室で",
+    "英語を",
+    "学生に",
+    "日本語を"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 教室で → 学生に → 英語を → 教えます. Vị trí ★ là 英語を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：土曜日に　2：公園で　3：友達と　4：遊びます",
+   "choices": [
+    "一人で",
+    "友達と",
+    "土曜日に",
+    "公園で"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 土曜日に → 公園で → 友達と → 遊びます. Vị trí ★ là 友達と."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：机の 上に　2：本と　3：ノートを　4：置きました",
+   "choices": [
+    "机の 上に",
+    "鉛筆を",
+    "ノートを",
+    "本と"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 机の 上に → 本と → ノートを → 置きました. Vị trí ★ là ノートを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、この 漢字は （1） 読みますか。\nB：「言葉」と 読みます。「ことば」です。\nA：ありがとうございます。あのう、今日の 宿題は （2）ですか。\nB：算数の 教科書の 20ページです。\nA：分かりました。じゃあ、放課後 一緒に （3）か。\nB：いいですね。図書室で （4）。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "何と",
+    "何に",
+    "何が",
+    "何を"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi cách đọc dùng 何と読みますか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、この 漢字は （1） 読みますか。\nB：「言葉」と 読みます。「ことば」です。\nA：ありがとうございます。あのう、今日の 宿題は （2）ですか。\nB：算数の 教科書の 20ページです。\nA：分かりました。じゃあ、放課後 一緒に （3）か。\nB：いいですね。図書室で （4）。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "だれ",
+    "いつ",
+    "どこ",
+    "何"
+   ],
+   "answer": 3,
+   "explain_vi": "Hỏi bài tập hôm nay là gì: 宿題は 何ですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、この 漢字は （1） 読みますか。\nB：「言葉」と 読みます。「ことば」です。\nA：ありがとうございます。あのう、今日の 宿題は （2）ですか。\nB：算数の 教科書の 20ページです。\nA：分かりました。じゃあ、放課後 一緒に （3）か。\nB：いいですね。図書室で （4）。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "勉強したい",
+    "勉強します",
+    "勉強しません",
+    "勉強しました"
+   ],
+   "answer": 2,
+   "explain_vi": "Rủ rê dùng thể phủ định: 一緒に 勉強しませんか (học cùng nhau không?)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、この 漢字は （1） 読みますか。\nB：「言葉」と 読みます。「ことば」です。\nA：ありがとうございます。あのう、今日の 宿題は （2）ですか。\nB：算数の 教科書の 20ページです。\nA：分かりました。じゃあ、放課後 一緒に （3）か。\nB：いいですね。図書室で （4）。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "会いましょう",
+    "会います",
+    "会いたい",
+    "会いました"
+   ],
+   "answer": 0,
+   "explain_vi": "Đáp lại lời rủ bằng 〜ましょう: 図書室で 会いましょう (hẹn gặp ở thư viện nhé)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n学校からの お知らせ\n明日は 午前 9時から テストです。鉛筆と 消しゴムを 持って 来て ください。辞書は 使うことが できません。\n\nテストで 辞書を 使うことが できますか。",
+   "choices": [
+    "できません",
+    "使います",
+    "できます",
+    "分かりません"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi rõ không được dùng từ điển: 辞書は使うことができません."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n図書室からの お知らせ\n図書室は 午後 1時から 5時までです。本は 2週間 借りることが できます。\n\n本は 何週間 借りることが できますか。",
+   "choices": [
+    "2週間",
+    "5週間",
+    "1週間",
+    "3週間"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi sách mượn được 2 tuần (2週間)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハンです。わたしは 毎朝 7時に 学校へ 行きます。教室で 隣に 座るのは リンさんです。リンさんは 英語が 上手です。わからない 言葉が あるとき、リンさんに 聞きます。放課後、二人で 図書室で 勉強します。\n\nハンさんの 隣に 座るのは だれですか。",
+   "choices": [
+    "分かりません",
+    "先生",
+    "友達の 田中さん",
+    "リンさん"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn văn nói người ngồi cạnh là リンさん."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハンです。わたしは 毎朝 7時に 学校へ 行きます。教室で 隣に 座るのは リンさんです。リンさんは 英語が 上手です。わからない 言葉が あるとき、リンさんに 聞きます。放課後、二人で 図書室で 勉強します。\n\nハンさんは 放課後 どこで 勉強しますか。",
+   "choices": [
+    "家",
+    "教室",
+    "図書室",
+    "公園"
+   ],
+   "answer": 2,
+   "explain_vi": "Sau giờ học hai người học ở thư viện: 図書室で勉強します."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n月曜日：英語・算数\n火曜日：国語・音楽\n水曜日：理科・体育\n木曜日：英語・国語\n\n英語の 授業は 何曜日と 何曜日ですか。",
+   "choices": [
+    "水曜日と 木曜日",
+    "月曜日と 木曜日",
+    "月曜日と 火曜日",
+    "火曜日と 水曜日"
+   ],
+   "answer": 1,
+   "explain_vi": "Theo thời khóa biểu, tiếng Anh học thứ Hai và thứ Năm (月曜日と木曜日)."
+  }
+ ]
+}

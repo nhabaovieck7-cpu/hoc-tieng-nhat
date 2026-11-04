@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-12",
+ "label": "Đề thi thử 12",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「人参」は 何と 読みますか。",
+   "choices": [
+    "にんじん",
+    "じんさん",
+    "にんさん",
+    "じんじん"
+   ],
+   "answer": 0,
+   "explain_vi": "人参 đọc là にんじん (cà rốt). Trong từ này 人 đọc là にん, 参 đọc là じん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「大根」は 何と 読みますか。",
+   "choices": [
+    "おおね",
+    "だいこん",
+    "だいね",
+    "たいこん"
+   ],
+   "answer": 1,
+   "explain_vi": "大根 đọc là だいこん (củ cải trắng). 大 đọc là だい, 根 đọc là こん trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「牛肉」は 何と 読みますか。",
+   "choices": [
+    "うしにく",
+    "ぎゅうにき",
+    "ぎゅうにく",
+    "ぎゅうに"
+   ],
+   "answer": 2,
+   "explain_vi": "牛肉 đọc là ぎゅうにく (thịt bò). 牛 đọc là ぎゅう, 肉 đọc là にく."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「豚肉」は 何と 読みますか。",
+   "choices": [
+    "とんにく",
+    "ぶたに",
+    "とんにき",
+    "ぶたにく"
+   ],
+   "answer": 3,
+   "explain_vi": "豚肉 đọc là ぶたにく (thịt lợn). Đây là cách đọc kun'yomi: ぶた + にく."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「塩」は 何と 読みますか。",
+   "choices": [
+    "さと",
+    "しお",
+    "しょ",
+    "すな"
+   ],
+   "answer": 1,
+   "explain_vi": "塩 đọc là しお (muối). Đừng nhầm với 砂糖（さとう) là đường."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「砂糖」は 何と 読みますか。",
+   "choices": [
+    "さと",
+    "しゃとう",
+    "さとう",
+    "さどう"
+   ],
+   "answer": 2,
+   "explain_vi": "砂糖 đọc là さとう (đường). 砂 đọc là さ, 糖 đọc là とう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「米」は 何と 読みますか。",
+   "choices": [
+    "よね",
+    "まい",
+    "べい",
+    "こめ"
+   ],
+   "answer": 3,
+   "explain_vi": "米 chỉ gạo (chưa nấu) đọc là こめ. まい/べい là âm on'yomi, không dùng một mình để chỉ gạo trong văn nói thường ngày."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「やおや」を 漢字で 書くと どれですか。",
+   "choices": [
+    "八百屋",
+    "八百店",
+    "野菜店",
+    "八千屋"
+   ],
+   "answer": 0,
+   "explain_vi": "やおや (cửa hàng rau) viết là 八百屋. 店（てん) không ghép như vậy trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「こめ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "来",
+    "未",
+    "米",
+    "采"
+   ],
+   "answer": 2,
+   "explain_vi": "こめ (gạo) viết là 米. 来 là くる (đến), 未 là み trong 未来."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「さとう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "沙糖",
+    "砂唐",
+    "糖砂",
+    "砂糖"
+   ],
+   "answer": 3,
+   "explain_vi": "さとう (đường) viết là 砂糖. Chữ đầu phải là 砂（さ), không phải 沙."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「りょうり」を 漢字で 書くと どれですか。",
+   "choices": [
+    "料理",
+    "料里",
+    "理料",
+    "料利"
+   ],
+   "answer": 0,
+   "explain_vi": "りょうり (nấu ăn/món ăn) viết là 料理. Thứ tự đúng là 料 rồi 理."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「にんじん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "人三",
+    "人参",
+    "入参",
+    "参人"
+   ],
+   "answer": 1,
+   "explain_vi": "にんじん (cà rốt) viết là 人参. 人三 là ghép sai, không phải từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "市場で 新鮮な 野菜を たくさん （　）から、今晩は カレーを 作ります。",
+   "choices": [
+    "見ました",
+    "聞きました",
+    "読みました",
+    "買いました"
+   ],
+   "answer": 3,
+   "explain_vi": "Mua rau ở chợ rồi tối mới nấu cà ri được: 買いました (đã mua). Các động từ còn lại không hợp với 野菜 ở chợ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この じゃがいもは （　）です。一キロ 200円です。",
+   "choices": [
+    "安い",
+    "高い",
+    "重い",
+    "長い"
+   ],
+   "answer": 0,
+   "explain_vi": "Khoai tây 1kg chỉ 200 yên là rẻ: 安い (rẻ). Cao/đắt thì phải là 高い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "母は 毎晩 家族に 晩ごはんを （　）。",
+   "choices": [
+    "読みます",
+    "作ります",
+    "書きます",
+    "歌います"
+   ],
+   "answer": 1,
+   "explain_vi": "Nấu bữa tối cho gia đình: 作ります (làm/nấu). Đọc, viết, hát đều không đi với 晩ごはん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "塩が 多いですから、この スープは （　）です。",
+   "choices": [
+    "甘い",
+    "酸っぱい",
+    "しょっぱい",
+    "苦い"
+   ],
+   "answer": 2,
+   "explain_vi": "Nhiều muối thì súp mặn: しょっぱい (mặn). 甘い là ngọt, 酸っぱい là chua, 苦い là đắng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "なべに 水と 野菜を （　）。",
+   "choices": [
+    "入れます",
+    "出します",
+    "閉めます",
+    "消します"
+   ],
+   "answer": 0,
+   "explain_vi": "Cho nước và rau vào nồi: 入れます (cho vào). 出します là lấy ra, ngược nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "八百屋の 店員は とても （　）です。いつも 笑顔で 話します。",
+   "choices": [
+    "有名",
+    "便利",
+    "親切",
+    "元気"
+   ],
+   "answer": 2,
+   "explain_vi": "Nhân viên luôn cười và nói chuyện thân thiện: 親切 (tốt bụng, tử tế). 有名 là nổi tiếng, 便利 là tiện lợi — dùng cho vật/việc."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「切る」を 使った 文は どれですか。",
+   "choices": [
+    "歌を 切ります。",
+    "包丁で 野菜を 切ります。",
+    "電車を 切ります。",
+    "音楽を 切ります。"
+   ],
+   "answer": 1,
+   "explain_vi": "切る (cắt) dùng với rau, giấy, vật thể: 包丁で 野菜を 切ります (dùng dao cắt rau). Bài hát, tàu, âm nhạc không cắt được."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「焼く」を 使った 文は どれですか。",
+   "choices": [
+    "水を 焼きます。",
+    "本を 焼きます。",
+    "歌を 焼きます。",
+    "父は 魚を 焼きます。"
+   ],
+   "answer": 3,
+   "explain_vi": "焼く (nướng) dùng với cá, thịt, bánh: 魚を 焼きます. Nước, sách, bài hát không nướng theo nghĩa nấu ăn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「重い」を 使った 文は どれですか。",
+   "choices": [
+    "この 部屋は 重いです。",
+    "この 荷物は 重いです。",
+    "この 歌は 重いです。",
+    "今日は 重い 天気です。"
+   ],
+   "answer": 1,
+   "explain_vi": "重い (nặng) dùng cho hành lý, đồ vật: 荷物は 重いです. Phòng, bài hát, thời tiết không dùng 重い ở trình độ này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "野菜を 洗って （　）、切ります。",
+   "choices": [
+    "まで",
+    "より",
+    "と",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu 〜てから: rửa rau xong rồi mới cắt. から đi sau thể て để chỉ thứ tự việc."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは トマトを 買いました。にんじん （　） 買いました。",
+   "choices": [
+    "も",
+    "を",
+    "が",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Đã mua cà chua, còn mua thêm cà rốt nữa: も (cũng). を không lặp lại được trong cấu trúc liệt kê này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "野菜の 中で、トマトが （　） 好きです。",
+   "choices": [
+    "とても",
+    "少し",
+    "一番",
+    "あまり"
+   ],
+   "answer": 2,
+   "explain_vi": "Trong các loại rau, thích nhất là cà chua: 一番 (nhất). あまり phải đi với phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 新しい 包丁を 買い （　）です。",
+   "choices": [
+    "たく",
+    "たかった",
+    "たいの",
+    "たい"
+   ],
+   "answer": 3,
+   "explain_vi": "Muốn mua dao mới: 買いたいです. Thân động từ ます (買い) + たいです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "ご飯は （　） できましたか。",
+   "choices": [
+    "いつも",
+    "もう",
+    "時々",
+    "全然"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi cơm đã xong chưa: もう できましたか (đã... chưa). 全然 phải đi với phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 台所 （　） 野菜を 切ります。",
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Nơi diễn ra hành động cắt rau dùng で: 台所で 切ります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "野菜を 買い （　） 市場へ 行きます。",
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "が"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu ます形 + に 行く = đi để làm gì: 買いに 行きます (đi mua)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 肉を （　） 食べません。",
+   "choices": [
+    "とても",
+    "たくさん",
+    "あまり",
+    "いつも"
+   ],
+   "answer": 2,
+   "explain_vi": "あまり + phủ định = không... lắm: 肉を あまり 食べません (không ăn thịt nhiều)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "一緒に 晩ごはんを 作り （　）。",
+   "choices": [
+    "ましょう",
+    "ました",
+    "ません",
+    "たいです"
+   ],
+   "answer": 0,
+   "explain_vi": "Rủ rê cùng làm: 作りましょう (cùng nấu nhé). ます形 bỏ ます + ましょう."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 市場で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：トマトを　2：三つ　3：買いました",
+   "choices": [
+    "トマトを",
+    "買いました",
+    "作りました",
+    "三つ"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: トマトを → 三つ → 買いました (mua ba quả cà chua). Vậy vị trí ★ (thứ hai) là 三つ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：じゃがいもを　2：洗って　3：切ります",
+   "choices": [
+    "じゃがいもを",
+    "洗って",
+    "切ります",
+    "買います"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: じゃがいもを → 洗って → 切ります (rửa khoai rồi cắt). Vậy vị trí ★ là 洗って."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：にんじんを　2：切って　3：カレーを 作ります",
+   "choices": [
+    "カレーを 作ります",
+    "にんじんを",
+    "切って",
+    "飲みます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: にんじんを → 切って → カレーを 作ります. Vậy vị trí ★ (cuối) là カレーを 作ります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 晩ごはんの 後で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：皿を　2：洗って　3：休みます",
+   "choices": [
+    "皿を",
+    "洗って",
+    "食べます",
+    "休みます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 皿を → 洗って → 休みます (rửa bát rồi nghỉ). Vậy vị trí ★ (cuối) là 休みます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：きょうは 一緒に カレーを （1）ましょう。\nB：いいですね。にんじんは ありますか。\nA：あります。でも、たまねぎは （2）。\nB：じゃあ、スーパーへ 買いに （3）。\nA：牛肉 （4） 買って ください。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "作ります",
+    "作った",
+    "作り",
+    "作る"
+   ],
+   "answer": 2,
+   "explain_vi": "Rủ rê dùng 〜ましょう: 作りましょう (cùng nấu cà ri nhé). Thân ます形 là 作り."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：きょうは 一緒に カレーを （1）ましょう。\nB：いいですね。にんじんは ありますか。\nA：あります。でも、たまねぎは （2）。\nB：じゃあ、スーパーへ 買いに （3）。\nA：牛肉 （4） 買って ください。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "ありません",
+    "ありました",
+    "ありたいです"
+   ],
+   "answer": 1,
+   "explain_vi": "にんじん thì có nhưng hành tây thì không có: たまねぎは ありません (không có)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：きょうは 一緒に カレーを （1）ましょう。\nB：いいですね。にんじんは ありますか。\nA：あります。でも、たまねぎは （2）。\nB：じゃあ、スーパーへ 買いに （3）。\nA：牛肉 （4） 買って ください。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "行きます",
+    "行きましょう",
+    "行きました",
+    "行って"
+   ],
+   "answer": 1,
+   "explain_vi": "Sau じゃあ (vậy thì) là lời rủ đi mua: 買いに 行きましょう."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：きょうは 一緒に カレーを （1）ましょう。\nB：いいですね。にんじんは ありますか。\nA：あります。でも、たまねぎは （2）。\nB：じゃあ、スーパーへ 買いに （3）。\nA：牛肉 （4） 買って ください。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "も",
+    "を",
+    "が",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Ngoài hành tây, mua thêm cả thịt bò nữa: 牛肉も 買って ください. も = cũng."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n八百屋からの お知らせ：水曜日は 野菜の 日です。野菜は 全部 安いです。\n\n何曜日に 野菜が 安いですか。",
+   "choices": [
+    "月曜日",
+    "金曜日",
+    "日曜日",
+    "水曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 水曜日は 野菜の 日 — thứ Tư là ngày rau rẻ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n料理教室の お知らせ：土曜日の 午前 10時からです。野菜カレーを 作ります。\n\n料理教室で 何を 作りますか。",
+   "choices": [
+    "魚の 料理",
+    "ケーキ",
+    "野菜カレー",
+    "サラダ"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi rõ lớp nấu ăn làm 野菜カレー (cà ri rau)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ホアです。わたしは 料理が 好きです。毎週 土曜日に 市場へ 行きます。市場で 野菜と 肉を 買います。日曜日は 家族に 晩ごはんを 作ります。今日は にんじんと 牛肉の 料理を 作りました。とても おいしかったです。\n\nホアさんは 何曜日に 市場へ 行きますか。",
+   "choices": [
+    "日曜日",
+    "月曜日",
+    "金曜日",
+    "土曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn có câu 毎週 土曜日に 市場へ 行きます — mỗi thứ Bảy đi chợ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ホアです。わたしは 料理が 好きです。毎週 土曜日に 市場へ 行きます。市場で 野菜と 肉を 買います。日曜日は 家族に 晩ごはんを 作ります。今日は にんじんと 牛肉の 料理を 作りました。とても おいしかったです。\n\nホアさんは 今日 何を 作りましたか。",
+   "choices": [
+    "魚の 料理",
+    "カレー",
+    "にんじんと 牛肉の 料理",
+    "サラダ"
+   ],
+   "answer": 2,
+   "explain_vi": "Câu gần cuối: 今日は にんじんと 牛肉の 料理を 作りました — hôm nay nấu món cà rốt với thịt bò."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nトマト：一つ 80円\nにんじん：一本 60円\nじゃがいも：一つ 50円\nたまねぎ：一つ 40円\n\nいちばん 高い 野菜は どれですか。",
+   "choices": [
+    "にんじん",
+    "トマト",
+    "じゃがいも",
+    "たまねぎ"
+   ],
+   "answer": 1,
+   "explain_vi": "Bảng giá: cà chua 80 yên là đắt nhất trong bốn loại (60, 50, 40 yên)."
+  }
+ ]
+}

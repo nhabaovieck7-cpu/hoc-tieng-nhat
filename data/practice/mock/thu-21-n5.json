@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-21",
+ "label": "Đề thi thử 21",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「先月」は 何と 読みますか。",
+   "choices": [
+    "せんげつ",
+    "せんがつ",
+    "せんげち",
+    "せんげっ"
+   ],
+   "answer": 0,
+   "explain_vi": "先月 đọc là せんげつ (tháng trước). 先 = せん, 月 = げつ trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「来月」は 何と 読みますか。",
+   "choices": [
+    "らいがつ",
+    "らいげつ",
+    "きげつ",
+    "らいげち"
+   ],
+   "answer": 1,
+   "explain_vi": "来月 đọc là らいげつ (tháng sau). 来 = らい, 月 = げつ — giống cách đọc của 先月."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「先週」は 何と 読みますか。",
+   "choices": [
+    "せんしゆう",
+    "せんしゅ",
+    "せんしゅう",
+    "せんじゅう"
+   ],
+   "answer": 2,
+   "explain_vi": "先週 đọc là せんしゅう (tuần trước). 週 = しゅう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「来年」は 何と 読みますか。",
+   "choices": [
+    "らいとし",
+    "きねん",
+    "らいねい",
+    "らいねん"
+   ],
+   "answer": 3,
+   "explain_vi": "来年 đọc là らいねん (năm sau). 年 = ねん trong từ này (khác 今年 ことし)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「今晩」は 何と 読みますか。",
+   "choices": [
+    "こんば",
+    "こんばん",
+    "こんぱん",
+    "こんばんは"
+   ],
+   "answer": 1,
+   "explain_vi": "今晩 đọc là こんばん (tối nay). こんばんは là lời chào buổi tối, không phải cách đọc của từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「午前」は 何と 読みますか。",
+   "choices": [
+    "ごぜん",
+    "ごせん",
+    "こぜん",
+    "ごぜに"
+   ],
+   "answer": 0,
+   "explain_vi": "午前 đọc là ごぜん (buổi sáng, trước 12 giờ). Đối nghĩa là 午後（ごご)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「何日」は 何と 読みますか。",
+   "choices": [
+    "なににち",
+    "なんにっち",
+    "なんにち",
+    "なにち"
+   ],
+   "answer": 2,
+   "explain_vi": "何日 đọc là なんにち (ngày mấy / mấy ngày). 何 ở đây đọc là なん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「せんげつ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "先月",
+    "先日",
+    "先週",
+    "仙月"
+   ],
+   "answer": 0,
+   "explain_vi": "せんげつ (tháng trước) viết là 先月. 先日 là せんじつ (hôm trước), 先週 là tuần trước."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「らいげつ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "来日",
+    "来週",
+    "来月",
+    "未月"
+   ],
+   "answer": 2,
+   "explain_vi": "らいげつ (tháng sau) viết là 来月. 来日 là らいにち (đến Nhật), 来週 là tuần sau."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「せんしゅう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "先集",
+    "先週",
+    "先州",
+    "先秋"
+   ],
+   "answer": 1,
+   "explain_vi": "せんしゅう (tuần trước) viết là 先週. 週 nghĩa là tuần."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「らいねん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "来牛",
+    "来念",
+    "来然",
+    "来年"
+   ],
+   "answer": 3,
+   "explain_vi": "らいねん (năm sau) viết là 来年. 年 nghĩa là năm."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「こんばん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "今夜",
+    "今晩",
+    "今日",
+    "今板"
+   ],
+   "answer": 1,
+   "explain_vi": "こんばん (tối nay) viết là 今晩. 今夜 đọc là こんや — cũng nghĩa tối nay nhưng khác cách đọc."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしの 誕生日は （　）です。",
+   "choices": [
+    "3月15日",
+    "3時15分",
+    "3年",
+    "3人"
+   ],
+   "answer": 0,
+   "explain_vi": "Sinh nhật nói bằng ngày tháng: 3月15日 (ngày 15 tháng 3). 3時15分 là giờ phút, không dùng cho sinh nhật."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "パーティーは 午後 （　）からです。",
+   "choices": [
+    "7日",
+    "7時",
+    "7月",
+    "7歳"
+   ],
+   "answer": 1,
+   "explain_vi": "Sau 午後 chỉ giờ bắt đầu: 7時 (7 giờ). 7日 là ngày, 7月 là tháng, 7歳 là tuổi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "ケーキの 上に ろうそくが （　）あります。",
+   "choices": [
+    "五枚",
+    "五人",
+    "五本",
+    "五冊"
+   ],
+   "answer": 2,
+   "explain_vi": "Nến là vật dài nên đếm bằng 本（ほん): 五本 (năm cây nến). 枚 đếm đồ mỏng, 冊 đếm sách vở."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "友達が 五人 来ますから、椅子を （　） 出します。",
+   "choices": [
+    "五本",
+    "五冊",
+    "五枚",
+    "五つ"
+   ],
+   "answer": 3,
+   "explain_vi": "Ghế đếm bằng trợ số chung つ: 五つ (năm cái)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "みんなで （　）を 切りましょう。大きい ケーキです。",
+   "choices": [
+    "ジュース",
+    "ケーキ",
+    "歌",
+    "写真"
+   ],
+   "answer": 1,
+   "explain_vi": "Cắt bánh: ケーキを 切る. ジュース thì uống, 歌 thì hát, 写真 thì chụp — không đi với 切る."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "今日は （　）ですか。カレンダーを 見ます。",
+   "choices": [
+    "何日",
+    "何時",
+    "何人",
+    "何歳"
+   ],
+   "answer": 0,
+   "explain_vi": "Nhìn lịch （カレンダー) để hỏi ngày: 何日 (ngày mấy)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「集まります」を 使った 文は どれですか。",
+   "choices": [
+    "集まりますを 食べます。",
+    "パーティーの 日、友達が 家に 集まります。",
+    "彼は 集まりますが 好きです。",
+    "集まりますは おいしいです。"
+   ],
+   "answer": 1,
+   "explain_vi": "集まる = tụ tập, tập trung. Câu đúng: ngày tiệc, bạn bè tụ tập ở nhà. Động từ không đi với を và không có vị."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「楽しい」を 使った 文は どれですか。",
+   "choices": [
+    "楽しいを 飲みます。",
+    "楽しいは 窓です。",
+    "誕生日パーティーは とても 楽しかったです。",
+    "彼は 楽しいを 聞きます。"
+   ],
+   "answer": 2,
+   "explain_vi": "楽しい là tính từ い chỉ cảm xúc vui. Câu đúng dùng dạng quá khứ 楽しかったです cho bữa tiệc đã qua."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「始まります」を 使った 文は どれですか。",
+   "choices": [
+    "パーティーは 7時に 始まります。",
+    "始まりますを 買います。",
+    "わたしは パーティーを 始まります。",
+    "始まりますは 甘いです。"
+   ],
+   "answer": 0,
+   "explain_vi": "始まる là tự động từ: sự việc tự bắt đầu — パーティーは 7時に 始まります. Muốn nói 'tôi bắt đầu bữa tiệc' phải dùng 始める, không dùng 始まります với を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 2010年 （　） 生まれました。",
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Năm/thời điểm xảy ra việc dùng に: 2010年に 生まれました (sinh năm 2010)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "パーティーは 何時 （　） 始まりますか。",
+   "choices": [
+    "を",
+    "で",
+    "に",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "Giờ cụ thể dùng に: 何時に 始まりますか (mấy giờ bắt đầu)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あしたは 休みです （　）、友達と 遊びます。",
+   "choices": [
+    "でも",
+    "から",
+    "そして",
+    "が"
+   ],
+   "answer": 1,
+   "explain_vi": "から nối nguyên nhân – kết quả: vì mai nghỉ nên chơi với bạn. でも là 'nhưng', ngược nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "友達が たくさん （　）。パーティーは にぎやかでした。",
+   "choices": [
+    "行きました",
+    "会います",
+    "見ます",
+    "来ました"
+   ],
+   "answer": 3,
+   "explain_vi": "Bạn bè đến （来ました) nên bữa tiệc mới náo nhiệt. 行きました là đi khỏi, ngược hướng."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は ケーキを 作る （　）が できます。",
+   "choices": [
+    "もの",
+    "の",
+    "こと",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "Muốn nói 'biết/có thể làm việc gì', đổi động từ thành danh từ bằng こと: 作ることが できる."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "パーティーに （　）が 来ますか。",
+   "choices": [
+    "何人",
+    "何時",
+    "何日",
+    "何"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi số người dùng 何人（なんにん): 何人が 来ますか (bao nhiêu người đến)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "みんな （　） ケーキを 食べました。",
+   "choices": [
+    "に",
+    "で",
+    "を",
+    "へ"
+   ],
+   "answer": 1,
+   "explain_vi": "Hành động làm cùng nhau dùng で: みんなで 食べる (mọi người cùng ăn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は ケーキを 上手に （　）ことが できます。",
+   "choices": [
+    "作ります",
+    "作って",
+    "作った",
+    "作る"
+   ],
+   "answer": 3,
+   "explain_vi": "Trước ことが できます phải là dạng từ điển: 作ることが できる."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "プレゼントは （　）に あげますか。",
+   "choices": [
+    "どこ",
+    "なに",
+    "だれ",
+    "いつ"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi người nhận quà dùng だれ: だれに あげますか (tặng cho ai)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄は ケーキを ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：切って　2：みんなに　3：出しました",
+   "choices": [
+    "切って",
+    "出しました",
+    "みんなに",
+    "食べました"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 切って（cắt rồi) → みんなに（cho mọi người) → 出しました（dọn ra). Vậy ★ là 出しました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 先週 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：デパートへ　3：行きました",
+   "choices": [
+    "行きました",
+    "友達と",
+    "デパートへ",
+    "来ました"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 友達と（cùng bạn) → デパートへ（đến trung tâm thương mại) → 行きました. Vậy ★ là 行きました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "みんなは 部屋に ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：集まって　2：歌を　3：歌いました",
+   "choices": [
+    "集まって",
+    "歌を",
+    "聞きました",
+    "歌いました"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 集まって（tụ tập rồi) → 歌を → 歌いました（đã hát). Vậy ★ là 歌いました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は テーブルに ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：大きい　2：ケーキを　3：置きました",
+   "choices": [
+    "大きい",
+    "ケーキを",
+    "置きました",
+    "出しました"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 大きい（tính từ trước danh từ) → ケーキを → 置きました（đã đặt). Vậy ★ là 置きました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：来週の 土曜日、小さな パーティーを （1）か。\nB：いいですね。どこで （2）か。\nA：わたしの 家で します。友達が 五人 来ます。\nB：何を 買いますか。\nA：ケーキと ジュースを （3）。\nB：じゃあ、わたしは 花を 買って （4）。\nA：ありがとう。楽しみですね。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "しません",
+    "します",
+    "しました",
+    "したい"
+   ],
+   "answer": 0,
+   "explain_vi": "Mời/rủ làm gì dùng thể phủ định lịch sự 〜ませんか: パーティーを しませんか (làm tiệc nhé?)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：来週の 土曜日、小さな パーティーを （1）か。\nB：いいですね。どこで （2）か。\nA：わたしの 家で します。友達が 五人 来ます。\nB：何を 買いますか。\nA：ケーキと ジュースを （3）。\nB：じゃあ、わたしは 花を 買って （4）。\nA：ありがとう。楽しみですね。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "しました",
+    "します",
+    "しません",
+    "する"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu hỏi lịch sự ở hiện tại dùng thể ます: どこで しますか (làm ở đâu)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：来週の 土曜日、小さな パーティーを （1）か。\nB：いいですね。どこで （2）か。\nA：わたしの 家で します。友達が 五人 来ます。\nB：何を 買いますか。\nA：ケーキと ジュースを （3）。\nB：じゃあ、わたしは 花を 買って （4）。\nA：ありがとう。楽しみですね。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "買いました",
+    "買って",
+    "買う",
+    "買います"
+   ],
+   "answer": 3,
+   "explain_vi": "Đang bàn kế hoạch sắp tới, dùng thể ます hiện tại/tương lai: 買います (sẽ mua)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：来週の 土曜日、小さな パーティーを （1）か。\nB：いいですね。どこで （2）か。\nA：わたしの 家で します。友達が 五人 来ます。\nB：何を 買いますか。\nA：ケーキと ジュースを （3）。\nB：じゃあ、わたしは 花を 買って （4）。\nA：ありがとう。楽しみですね。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "行きました",
+    "行って",
+    "行きます",
+    "行く"
+   ],
+   "answer": 2,
+   "explain_vi": "Sau 買って (thể て nối tiếp) cần động từ thể ます: 買って 行きます (mua rồi đi / đi mua mang đến)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nお知らせ：6月20日（土曜日）、午後 2時から、学校の 食堂で 小さな パーティーを します。飲み物は 学校で 出します。食べ物を 持って 来て ください。\n\nパーティーは どこで ありますか。",
+   "choices": [
+    "学校の 食堂",
+    "公園",
+    "教室",
+    "友達の 家"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi 学校の 食堂で — bữa tiệc ở nhà ăn của trường."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの 店の ケーキは 大きいです。一つ 3,500円です。誕生日の ケーキは 前の 日に 注文して ください。\n\nケーキは 一つ いくらですか。",
+   "choices": [
+    "3,000円",
+    "3,500円",
+    "2,500円",
+    "2,000円"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 一つ 3,500円 — một chiếc bánh 3.500 yên."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は リエです。来月の 10日は 母の 誕生日です。わたしは 姉と 小さな パーティーを します。姉は ケーキを 作ります。わたしは 花と プレゼントを 買います。パーティーは 午後 6時からです。父も 6時に 帰ります。みんなで 歌を 歌って、ケーキを 食べます。\n\nパーティーは 何時からですか。",
+   "choices": [
+    "午後 5時",
+    "午前 6時",
+    "午後 6時",
+    "午後 7時"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn có câu: パーティーは 午後 6時からです — tiệc từ 6 giờ chiều."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は リエです。来月の 10日は 母の 誕生日です。わたしは 姉と 小さな パーティーを します。姉は ケーキを 作ります。わたしは 花と プレゼントを 買います。パーティーは 午後 6時からです。父も 6時に 帰ります。みんなで 歌を 歌って、ケーキを 食べます。\n\nリエさんは 何を 買いますか。",
+   "choices": [
+    "ケーキ",
+    "歌",
+    "ジュース",
+    "花と プレゼント"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn có câu: わたしは 花と プレゼントを 買います — Rie mua hoa và quà. Bánh là chị gái làm."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n6月5日（金曜日）：テスト\n6月10日（水曜日）：母の 誕生日\n6月20日（土曜日）：パーティー\n6月25日（木曜日）：旅行\n\nパーティーは 何日ですか。",
+   "choices": [
+    "10日",
+    "20日",
+    "5日",
+    "25日"
+   ],
+   "answer": 1,
+   "explain_vi": "Bảng ghi 6月20日（土曜日）：パーティー — bữa tiệc ngày 20."
+  }
+ ]
+}

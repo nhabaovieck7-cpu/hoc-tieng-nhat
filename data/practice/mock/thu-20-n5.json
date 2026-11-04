@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-20",
+ "label": "Đề thi thử 20",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「鉛筆」は 何と 読みますか。",
+   "choices": [
+    "えんぴつ",
+    "えんびつ",
+    "えんぴち",
+    "えんぴっ"
+   ],
+   "answer": 0,
+   "explain_vi": "鉛筆 đọc là えんぴつ (bút chì). 鉛 = えん, 筆 = ぴつ (âm ふで thành ぴつ khi ghép)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「辞書」は 何と 読みますか。",
+   "choices": [
+    "じっしょ",
+    "じしょ",
+    "じしゃ",
+    "じしよ"
+   ],
+   "answer": 1,
+   "explain_vi": "辞書 đọc là じしょ (từ điển). 辞 = じ, 書 = しょ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「電気」は 何と 読みますか。",
+   "choices": [
+    "てんき",
+    "てんぎ",
+    "でんき",
+    "でんきょ"
+   ],
+   "answer": 2,
+   "explain_vi": "電気 đọc là でんき (điện). 電 = でん (giống 電車), 気 = き."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「鍵」は 何と 読みますか。",
+   "choices": [
+    "かき",
+    "かげ",
+    "かご",
+    "かぎ"
+   ],
+   "answer": 3,
+   "explain_vi": "鍵 đọc là かぎ (chìa khóa). Đừng nhầm với 紙（かみ） hay 影（かげ = bóng)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「傘」は 何と 読みますか。",
+   "choices": [
+    "かざ",
+    "がさ",
+    "かせ",
+    "かさ"
+   ],
+   "answer": 3,
+   "explain_vi": "傘 đọc là かさ (cái ô/dù)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「眼鏡」は 何と 読みますか。",
+   "choices": [
+    "めがね",
+    "めがな",
+    "めかね",
+    "めがに"
+   ],
+   "answer": 0,
+   "explain_vi": "眼鏡 đọc là めがね (kính mắt) — cách đọc đặc biệt, nhớ cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「財布」は 何と 読みますか。",
+   "choices": [
+    "ざいふ",
+    "さいぶ",
+    "さいふ",
+    "ざいぶ"
+   ],
+   "answer": 2,
+   "explain_vi": "財布 đọc là さいふ (ví tiền). 財 = さい, 布 = ふ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「えんぴつ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "鉛筆",
+    "鉄筆",
+    "船筆",
+    "鉛本"
+   ],
+   "answer": 0,
+   "explain_vi": "えんぴつ (bút chì) viết là 鉛筆. 鉄 là てつ (sắt), 船 là ふね (thuyền) — đều là chữ nhiễu giống mặt chữ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「じしょ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "時書",
+    "辞書",
+    "辞所",
+    "自書"
+   ],
+   "answer": 1,
+   "explain_vi": "じしょ (từ điển) viết là 辞書. 時 là とき (thời gian), 自 là じ (tự) — không đúng từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「でんき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "電車",
+    "電気",
+    "電記",
+    "伝気"
+   ],
+   "answer": 1,
+   "explain_vi": "でんき (điện) viết là 電気. 電車 là でんしゃ (tàu điện), 記 là き trong 日記."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「かぎ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "鏡",
+    "釘",
+    "鍵",
+    "影"
+   ],
+   "answer": 2,
+   "explain_vi": "かぎ (chìa khóa) viết là 鍵. 鏡 là かがみ (gương), 釘 là くぎ (đinh), 影 là かげ (bóng)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「めがね」を 漢字で 書くと どれですか。",
+   "choices": [
+    "目鏡",
+    "眼鏡",
+    "眼経",
+    "限鏡"
+   ],
+   "answer": 1,
+   "explain_vi": "めがね (kính mắt) viết là 眼鏡. 眼 đọc là がん/め trong từ này, 鏡 là きょう (gương)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "電気が ついていますから、この 部屋は （　）です。",
+   "choices": [
+    "明るい",
+    "暗い",
+    "広い",
+    "狭い"
+   ],
+   "answer": 0,
+   "explain_vi": "Điện đang bật nên phòng sáng: 明るい (sáng). 暗い là tối, ngược nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "かばんの 中に 財布と （　）が あります。",
+   "choices": [
+    "鍵",
+    "窓",
+    "ドア",
+    "部屋"
+   ],
+   "answer": 0,
+   "explain_vi": "Trong cặp có ví và chìa khóa （鍵）. 窓/ドア/部屋 là bộ phận của nhà, không bỏ vào cặp được."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 毎朝、（　）を かけて 学校へ 行きます。",
+   "choices": [
+    "帽子",
+    "時計",
+    "眼鏡",
+    "靴"
+   ],
+   "answer": 2,
+   "explain_vi": "Động từ かける đi với 眼鏡 (đeo kính): 眼鏡を かける. Mũ dùng かぶる, giày dùng はく."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "雨ですから、（　）を 持って 行きます。",
+   "choices": [
+    "傘",
+    "眼鏡",
+    "辞書",
+    "鍵"
+   ],
+   "answer": 0,
+   "explain_vi": "Trời mưa nên mang theo ô （傘）."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "新しい 言葉は （　）で 調べます。",
+   "choices": [
+    "鉛筆",
+    "消しゴム",
+    "時計",
+    "辞書"
+   ],
+   "answer": 3,
+   "explain_vi": "Từ mới thì tra bằng từ điển: 辞書で 調べる."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "机の 上の （　）で 紙を 切ります。",
+   "choices": [
+    "のり",
+    "はさみ",
+    "セロテープ",
+    "えんぴつ"
+   ],
+   "answer": 1,
+   "explain_vi": "Cắt giấy dùng kéo: はさみで 切る. のり là hồ dán, セロテープ là băng dính."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「鍵」を 使った 文は どれですか。",
+   "choices": [
+    "鍵を 食べました。",
+    "鍵で 音楽を 聞きます。",
+    "ドアに 鍵を かけました。",
+    "鍵は おいしいです。"
+   ],
+   "answer": 2,
+   "explain_vi": "鍵を かける = khóa (cửa). Câu đúng: đã khóa cửa bằng chìa. 鍵 không ăn được, không nghe nhạc, không có vị."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「電気」を 使った 文は どれですか。",
+   "choices": [
+    "電気を 飲みます。",
+    "電気で 紙を 切ります。",
+    "電気は 青いです。",
+    "部屋の 電気を つけました。"
+   ],
+   "answer": 3,
+   "explain_vi": "電気を つける = bật điện. Câu đúng: đã bật điện trong phòng. Điện không uống/cắt giấy/không có màu."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「傘」を 使った 文は どれですか。",
+   "choices": [
+    "雨の 日は 傘を さします。",
+    "傘を 読みます。",
+    "傘に 座ります。",
+    "傘は 甘いです。"
+   ],
+   "answer": 0,
+   "explain_vi": "傘を さす = che ô. Câu đúng: ngày mưa thì che ô. Ô không đọc được, không ngồi lên, không có vị ngọt."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "机の 上 （　） 本が あります。",
+   "choices": [
+    "に",
+    "へ",
+    "を",
+    "で"
+   ],
+   "answer": 0,
+   "explain_vi": "Nơi tồn tại của đồ vật dùng に: 上に あります (ở trên bàn có sách)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 友達 （　） 手紙を 書きます。",
+   "choices": [
+    "と",
+    "を",
+    "は",
+    "に"
+   ],
+   "answer": 3,
+   "explain_vi": "Người nhận hành động dùng に: 友達に 手紙を 書く (viết thư cho bạn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "部屋に 机 （　） 椅子が あります。",
+   "choices": [
+    "に",
+    "を",
+    "と",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Liệt kê hai đồ vật dùng と: 机と 椅子 (bàn và ghế)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 辞書は わたし （　） です。",
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "の"
+   ],
+   "answer": 3,
+   "explain_vi": "Sở hữu dùng の: わたしの 辞書 (từ điển của tôi) — câu này rút gọn thành わたしの です."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎晩 部屋 （　） 勉強します。",
+   "choices": [
+    "で",
+    "に",
+    "を",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Nơi diễn ra hành động học dùng で: 部屋で 勉強する."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "窓の 近く （　） ベッドが あります。",
+   "choices": [
+    "を",
+    "で",
+    "に",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "Vị trí tồn tại dùng に: 近くに ベッドが ある (gần cửa sổ có giường)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "すみません、電気を （　）ください。",
+   "choices": [
+    "つけ",
+    "つける",
+    "つけて",
+    "つけました"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu nhờ vả 〜て ください: つけて ください (xin bật điện giúp)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは ノートを （　） 買いました。",
+   "choices": [
+    "三つ",
+    "三本",
+    "三冊",
+    "三枚"
+   ],
+   "answer": 2,
+   "explain_vi": "Sách/vở đếm bằng 冊（さつ): 三冊 (ba quyển). 本（ほん） đếm đồ dài, 枚 đếm đồ mỏng dẹt."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄の 部屋は 狭くて （　）です。",
+   "choices": [
+    "暗く",
+    "暗い",
+    "暗さ",
+    "暗かった"
+   ],
+   "answer": 1,
+   "explain_vi": "Nối hai tính từ い: 狭くて 暗い (hẹp và tối). Sau くて phải là dạng từ điển 暗い."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 机の 上で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：本を　2：開いて　3：勉強します",
+   "choices": [
+    "勉強します",
+    "本を",
+    "開いて",
+    "読みます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 本を → 開いて（mở ra rồi) → 勉強します. Vậy ★ là 勉強します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は 部屋を ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：窓を　2：掃除して　3：開けます",
+   "choices": [
+    "窓を",
+    "開けます",
+    "掃除して",
+    "閉めます"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu đầy đủ: 母は 部屋を 掃除して、窓を 開けます. Thứ tự các mảnh: 掃除して（dọn phòng rồi) → 窓を → 開けます. Vậy ★ là 開けます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは かばんに ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：ノートを　2：入れて　3：学校へ 行きます",
+   "choices": [
+    "ノートを",
+    "入れて",
+    "出ます",
+    "学校へ 行きます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: ノートを → 入れて（bỏ vào cặp rồi) → 学校へ 行きます. Vậy ★ là 学校へ 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 電気を ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：テレビを　2：つけて　3：見ます",
+   "choices": [
+    "テレビを",
+    "つけて",
+    "見ます",
+    "聞きます"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: つけて（bật điện/TV rồi) → テレビを → 見ます. Vậy ★ là 見ます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、辞書は （1）ですか。\nB：辞書は 机の 上に ありますよ。\nA：ありがとうございます。鍵は どこですか。\nB：鍵は ドアの 近く （2） あります。\nA：わかりました。消しゴムを （3）ください。\nB：はい、どうぞ。テストは 10時からです。10時 （4） 教室に 来て ください。\nA：はい、来ます。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "だれ",
+    "どこ",
+    "いつ",
+    "なに"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi nơi chốn của từ điển dùng どこ: 辞書は どこですか (từ điển ở đâu)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、辞書は （1）ですか。\nB：辞書は 机の 上に ありますよ。\nA：ありがとうございます。鍵は どこですか。\nB：鍵は ドアの 近く （2） あります。\nA：わかりました。消しゴムを （3）ください。\nB：はい、どうぞ。テストは 10時からです。10時 （4） 教室に 来て ください。\nA：はい、来ます。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "を",
+    "へ",
+    "に",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "Vị trí tồn tại dùng に: ドアの 近くに ある (ở gần cửa có chìa khóa)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、辞書は （1）ですか。\nB：辞書は 机の 上に ありますよ。\nA：ありがとうございます。鍵は どこですか。\nB：鍵は ドアの 近く （2） あります。\nA：わかりました。消しゴムを （3）ください。\nB：はい、どうぞ。テストは 10時からです。10時 （4） 教室に 来て ください。\nA：はい、来ます。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "借りて",
+    "貸し",
+    "借り",
+    "貸して"
+   ],
+   "answer": 3,
+   "explain_vi": "Mượn đồ của người khác dùng 貸して ください (xin cho tôi mượn). 借りて là phía mình đi mượn — ở đây nhờ đối phương cho mượn nên dùng 貸して."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません、辞書は （1）ですか。\nB：辞書は 机の 上に ありますよ。\nA：ありがとうございます。鍵は どこですか。\nB：鍵は ドアの 近く （2） あります。\nA：わかりました。消しゴムを （3）ください。\nB：はい、どうぞ。テストは 10時からです。10時 （4） 教室に 来て ください。\nA：はい、来ます。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "を",
+    "に",
+    "で",
+    "の"
+   ],
+   "answer": 1,
+   "explain_vi": "Giờ cụ thể dùng に: 10時に 来て ください (hãy đến lúc 10 giờ)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n教室の お知らせ：明日は テストです。辞書を 持って 来ないで ください。鉛筆と 消しゴムを 持って 来て ください。\n\nテストの とき、使っては いけないものは どれですか。",
+   "choices": [
+    "鉛筆",
+    "辞書",
+    "消しゴム",
+    "ノート"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 辞書を 持って 来ないで ください — không được mang/không được dùng từ điển khi kiểm tra."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの 部屋は 午前 9時から 午後 5時まで 使うことが できます。電気は 自分で つけて ください。\n\n部屋は 何時まで 使うことが できますか。",
+   "choices": [
+    "午前 9時",
+    "午後 9時",
+    "午前 5時",
+    "午後 5時"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 午前 9時から 午後 5時まで — dùng được đến 5 giờ chiều."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハイです。わたしの 部屋は 小さいですが、きれいです。部屋に 机と ベッドと 本棚が あります。わたしは 毎晩、机で 日本語を 勉強します。本棚に 辞書と ノートが たくさん あります。窓の 近くに 花が あります。\n\nハイさんの 部屋に 何が ありますか。",
+   "choices": [
+    "机と ベッドと 本棚",
+    "テレビと 冷蔵庫",
+    "机と テーブルと テレビ",
+    "ベッドと ピアノ"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn liệt kê: 部屋に 机と ベッドと 本棚が あります (bàn, giường và giá sách)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハイです。わたしの 部屋は 小さいですが、きれいです。部屋に 机と ベッドと 本棚が あります。わたしは 毎晩、机で 日本語を 勉強します。本棚に 辞書と ノートが たくさん あります。窓の 近くに 花が あります。\n\nハイさんは 毎晩 何を しますか。",
+   "choices": [
+    "テレビを 見ます",
+    "花に 水を やります",
+    "本棚を 掃除します",
+    "机で 日本語を 勉強します"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn có câu: わたしは 毎晩、机で 日本語を 勉強します — mỗi tối học tiếng Nhật ở bàn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n学校の 持ち物\n月曜日：体操服\n水曜日：辞書\n金曜日：絵の 道具\n\n辞書を 持って 行くのは 何曜日ですか。",
+   "choices": [
+    "月曜日",
+    "水曜日",
+    "金曜日",
+    "木曜日"
+   ],
+   "answer": 1,
+   "explain_vi": "Bảng ghi 水曜日：辞書 — thứ Tư mang từ điển."
+  }
+ ]
+}

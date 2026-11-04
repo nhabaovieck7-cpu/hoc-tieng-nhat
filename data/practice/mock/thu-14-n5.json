@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-14",
+ "label": "Đề thi thử 14",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「緑」は 何と 読みますか。",
+   "choices": [
+    "みとり",
+    "みどり",
+    "りょく",
+    "むどり"
+   ],
+   "answer": 1,
+   "explain_vi": "緑 đọc là みどり (màu xanh lá). Đây là cách đọc đặc biệt, nhớ cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「茶色」は 何と 読みますか。",
+   "choices": [
+    "さしょく",
+    "ちゃいろ",
+    "ちゃしょく",
+    "だいろ"
+   ],
+   "answer": 1,
+   "explain_vi": "茶色 đọc là ちゃいろ (màu nâu/trà). 茶 = ちゃ, 色 đọc là いろ trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「着ます」は 何と 読みますか。",
+   "choices": [
+    "きります",
+    "きます",
+    "つきます",
+    "ちゃきます"
+   ],
+   "answer": 1,
+   "explain_vi": "着ます đọc là きます (mặc — áo, váy...). 着 còn có âm つく trong từ khác nhưng động từ mặc là きます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「履きます」は 何と 読みますか。",
+   "choices": [
+    "ふきます",
+    "はきます",
+    "はります",
+    "りきます"
+   ],
+   "answer": 1,
+   "explain_vi": "履きます đọc là はきます (mặc/đi — quần, giày, tất...)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「薄い」は 何と 読みますか。",
+   "choices": [
+    "はくい",
+    "うすい",
+    "うすり",
+    "ばくい"
+   ],
+   "answer": 1,
+   "explain_vi": "薄い đọc là うすい (mỏng — vải, giấy). Đối nghĩa là 厚い（あつい)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「厚い」は 何と 読みますか。",
+   "choices": [
+    "こうい",
+    "あつい",
+    "あつり",
+    "とおい"
+   ],
+   "answer": 1,
+   "explain_vi": "厚い đọc là あつい (dày — vải, sách). Chú ý khác với 暑い (nóng) và 熱い (nóng khi chạm) — cùng âm あつい nhưng khác chữ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「短い」は 何と 読みますか。",
+   "choices": [
+    "たんい",
+    "みじかい",
+    "みじがい",
+    "みしかい"
+   ],
+   "answer": 1,
+   "explain_vi": "短い đọc là みじかい (ngắn). Đối nghĩa là 長い（ながい)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「みどり」の 服を 買います。この「みどり」の 漢字は どれですか。",
+   "choices": [
+    "線",
+    "緑",
+    "綿",
+    "練"
+   ],
+   "answer": 1,
+   "explain_vi": "みどり (xanh lá) viết là 線 là せん (đường), 綿 là めん (bông), 練 là れん trong 練習."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ちゃいろ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "茶巴",
+    "茶色",
+    "荼色",
+    "茶赤"
+   ],
+   "answer": 1,
+   "explain_vi": "ちゃいろ viết là 茶色. 巴・荼・赤 đều không đúng chữ của từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "セーターを 「きます」。この「きます」の 漢字は どれですか。",
+   "choices": [
+    "来ます",
+    "着ます",
+    "気ます",
+    "木ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Mặc áo len dùng 着ます. 来ます cũng đọc きます nhưng nghĩa là đến — phải nhìn ngữ cảnh mặc đồ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "ズボンを 「はきます」。この「はきます」の 漢字は どれですか。",
+   "choices": [
+    "履きまず",
+    "復きます",
+    "履きます",
+    "腹きます"
+   ],
+   "answer": 2,
+   "explain_vi": "はきます (mặc quần, đi giày) viết là 履きます. Các lựa chọn còn lại không phải chữ đúng của từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「みじかい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "疑い",
+    "短かい",
+    "短い",
+    "疑かい"
+   ],
+   "answer": 2,
+   "explain_vi": "みじかい viết là 短い. 疑い đọc là うたがい (nghi ngờ), không liên quan."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この セーターは （　）です。冬に 着ると、体が あたたかいです。",
+   "choices": [
+    "つめたい",
+    "からい",
+    "あたたかい",
+    "すっぱい"
+   ],
+   "answer": 2,
+   "explain_vi": "Áo len mặc mùa đông thì あたたかい (ấm). つめたい là lạnh (khi chạm), からい cay, すっぱい chua — đều tả vị/cảm giác khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この シャツは 大きいですから、（　）シャツを 見せて ください。",
+   "choices": [
+    "大きい",
+    "重い",
+    "小さい",
+    "長い"
+   ],
+   "answer": 2,
+   "explain_vi": "Cái này lớn quá nên xin xem cái 小さい (nhỏ) hơn. 重い là nặng, 長い là dài — không hợp với việc đổi cỡ áo."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "試着室は あちらです。あそこで 服を （　）ことが できます。",
+   "choices": [
+    "食べる",
+    "読む",
+    "着る",
+    "聞く"
+   ],
+   "answer": 2,
+   "explain_vi": "Trong phòng thử đồ （試着室） thì 着る (mặc thử) quần áo. Các động từ còn lại không đi với 服."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 緑の （　）が 好きです。夏に よく 着ます。",
+   "choices": [
+    "ぼうし",
+    "くつ",
+    "スカート",
+    "てぶくろ"
+   ],
+   "answer": 2,
+   "explain_vi": "Động từ 着ます đi với váy スカート. ぼうし dùng かぶります, くつ dùng はきます, てぶくろ dùng します — không dùng 着ます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この コートは 3,000円です。（　）ですね。",
+   "choices": [
+    "高い",
+    "重い",
+    "安い",
+    "軽い"
+   ],
+   "answer": 2,
+   "explain_vi": "Áo khoác 3,000 yên là rẻ: 安い. 重い/軽い tả cân nặng, không nhận xét giá."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "姉は ピンクの ワンピースを （　）います。",
+   "choices": [
+    "履いて",
+    "かぶって",
+    "着て",
+    "かけて"
+   ],
+   "answer": 2,
+   "explain_vi": "ワンピース (váy liền) dùng 着て います. 履いて dùng cho quần/giày, かぶって cho mũ, かけて cho kính."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「着ます」を 使った 文は どれですか。",
+   "choices": [
+    "彼は 帽子を 着ています。",
+    "わたしは 靴を 着ます。",
+    "弟は 緑の シャツを 着ています。",
+    "姉は 眼鏡を 着ています。"
+   ],
+   "answer": 2,
+   "explain_vi": "着ます dùng cho quần áo phần trên/váy: シャツを 着ています. Mũ dùng かぶります, giày dùng はきます/履きます, kính dùng かけます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「履きます」を 使った 文は どれですか。",
+   "choices": [
+    "母は シャツを 履いています。",
+    "妹は 帽子を 履いています。",
+    "彼は 新しい 靴を 履いています。",
+    "兄は セーターを 履いています。"
+   ],
+   "answer": 2,
+   "explain_vi": "履きます dùng cho đồ mặc phần dưới và chân: 靴を 履いています. Áo, mũ, áo len đều không dùng 履きます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「薄い」を 使った 文は どれですか。",
+   "choices": [
+    "薄い 音が 聞こえます。",
+    "彼は 薄い 声で 話します。",
+    "この Tシャツは 薄いですから、夏に 着ます。",
+    "薄い 雨が 降っています。"
+   ],
+   "answer": 2,
+   "explain_vi": "薄い nghĩa là mỏng, dùng cho vải/giấy/sách: Tシャツが 薄い. Âm thanh, giọng nói, mưa không đi với 薄い."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "店員：この セーターを 着て （　）いいですか。客：はい、どうぞ。",
+   "choices": [
+    "は",
+    "が",
+    "を",
+    "も"
+   ],
+   "answer": 3,
+   "explain_vi": "Xin phép làm gì dùng mẫu 〜ても いいですか: 着ても いいですか (tôi mặc thử có được không)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 店の 服の 中で、この コートが （　）高いです。",
+   "choices": [
+    "とても",
+    "あまり",
+    "よく",
+    "いちばん"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh nhất trong một nhóm dùng いちばん: いちばん 高い (đắt nhất)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしの 靴は あなたの 靴 （　）新しいです。",
+   "choices": [
+    "から",
+    "まで",
+    "にも",
+    "より"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh hơn dùng より: あなたの 靴より 新しい (mới hơn giày của bạn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この シャツは 安い （　）、買います。",
+   "choices": [
+    "でも",
+    "そして",
+    "それから",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "Nêu lý do dùng から: 安いから 買います (vì rẻ nên mua)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "クリスマスに 新しい コートが （　）。",
+   "choices": [
+    "ほしい",
+    "ほしくて",
+    "ほしかった",
+    "ほしいです"
+   ],
+   "answer": 3,
+   "explain_vi": "Muốn có vật gì dùng が ほしいです. Câu lịch sự hoàn chỉnh phải là ほしいです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は 緑の スカートを （　）います。",
+   "choices": [
+    "はいって",
+    "はいて",
+    "きて",
+    "かぶって"
+   ],
+   "answer": 1,
+   "explain_vi": "スカート (váy) dùng はいて います. きて dùng cho áo, かぶって dùng cho mũ. (Đáp án đúng: はいて)"
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "服を 着て （　）、出かけます。",
+   "choices": [
+    "まで",
+    "より",
+    "にも",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "Làm xong việc này rồi làm việc khác: 〜てから: 着てから 出かけます (mặc đồ xong rồi ra ngoài)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "一緒に あの 店へ （　）。",
+   "choices": [
+    "行きました",
+    "行きます",
+    "行きたいです",
+    "行きましょう"
+   ],
+   "answer": 3,
+   "explain_vi": "一緒に (cùng nhau) rủ rê dùng 〜ましょう: 行きましょう (chúng ta đi nào)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは Tシャツを （　）買いました。",
+   "choices": [
+    "二本",
+    "二つ",
+    "二台",
+    "二枚"
+   ],
+   "answer": 3,
+   "explain_vi": "Đồ vật phẳng như áo, giấy đếm bằng 枚: 二枚 (hai chiếc). 本 đếm vật dài, 台 đếm máy móc."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼女は 店で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：赤い　2：ワンピースを　3：着ています",
+   "choices": [
+    "赤い",
+    "着ています",
+    "店で",
+    "ワンピースを"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 赤い → ワンピースを → 着ています (đang mặc chiếc váy liền đỏ). Vậy vị trí ★ là ワンピースを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：ズボンを　2：はいて　3：出かけます",
+   "choices": [
+    "ズボンを",
+    "出かけます",
+    "朝",
+    "はいて"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: ズボンを → はいて → 出かけます (mặc quần rồi ra ngoài). Vậy vị trí ★ là はいて."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 試着室で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：店員を　2：着て　3：服を",
+   "choices": [
+    "着て",
+    "服を",
+    "店員を",
+    "試着室で"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 服を → 着て → … (mặc đồ trước, động từ chính đứng cuối câu). Vậy vị trí ★ là 着て."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：聞きました　2：店員に　3：サイズを",
+   "choices": [
+    "サイズを",
+    "店員に",
+    "聞きました",
+    "服の"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 店員に → サイズを → 聞きました (hỏi nhân viên về cỡ). Vậy vị trí ★ là サイズを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この セーターを （1）も いいですか。\nB：はい、どうぞ。試着室は あちらです。\nA：ありがとうございます。……すみません、この サイズは 少し （2）です。\nB：そうですか。Mサイズは どうですか。\nA：Mサイズは ちょうど いいです。これ （3） します。（4）ですか。\nB：3,800円です。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "着て",
+    "着る",
+    "着ます",
+    "着た"
+   ],
+   "answer": 0,
+   "explain_vi": "Xin phép mặc thử: 〜ても いいですか → 着て も いいですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この セーターを （1）も いいですか。\nB：はい、どうぞ。試着室は あちらです。\nA：ありがとうございます。……すみません、この サイズは 少し （2）です。\nB：そうですか。Mサイズは どうですか。\nA：Mサイズは ちょうど いいです。これ （3） します。（4）ですか。\nB：3,800円です。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "小さい",
+    "大きい",
+    "新しい",
+    "古い"
+   ],
+   "answer": 0,
+   "explain_vi": "Khách nói cỡ này hơi 小さい (nhỏ) nên nhân viên mới gợi ý cỡ M."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この セーターを （1）も いいですか。\nB：はい、どうぞ。試着室は あちらです。\nA：ありがとうございます。……すみません、この サイズは 少し （2）です。\nB：そうですか。Mサイズは どうですか。\nA：Mサイズは ちょうど いいです。これ （3） します。（4）ですか。\nB：3,800円です。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "に",
+    "を",
+    "が",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Quyết định lấy cái này dùng mẫu これに します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この セーターを （1）も いいですか。\nB：はい、どうぞ。試着室は あちらです。\nA：ありがとうございます。……すみません、この サイズは 少し （2）です。\nB：そうですか。Mサイズは どうですか。\nA：Mサイズは ちょうど いいです。これ （3） します。（4）ですか。\nB：3,800円です。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "いくら",
+    "いくつ",
+    "なん",
+    "どれ"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi giá dùng いくらですか. Nhân viên trả lời 3,800円 nên chắc chắn là hỏi giá."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nお知らせ：土曜日と 日曜日は 冬の 服が 安いです。コートと セーターは 半額です。\n\n半額の 服は どれですか。",
+   "choices": [
+    "コートと セーター",
+    "シャツと ズボン",
+    "帽子と 靴",
+    "全部の 服"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi rõ: コートと セーターは 半額です (áo khoác và áo len giảm nửa giá) vào cuối tuần."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの デパートの 1階は 靴と かばん、2階は 服です。\n\n服は 何階ですか。",
+   "choices": [
+    "2階",
+    "1階",
+    "3階",
+    "4階"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi 2階は 服です — quần áo ở tầng 2. Tầng 1 là giày và túi."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は サラです。昨日、駅前の 店で 服を 買いました。わたしは 青い ワンピースが ほしかったです。店で 小さい サイズの ワンピースを 着ました。でも、着ることが できませんでした。大きい サイズは ちょうど よかったです。ワンピースは 4,500円でした。\n\nサラさんは 何を 買いましたか。",
+   "choices": [
+    "青い ワンピース",
+    "赤い セーター",
+    "青い シャツ",
+    "緑の スカート"
+   ],
+   "answer": 0,
+   "explain_vi": "サラ muốn và đã mua 青い ワンピース (váy liền xanh dương) giá 4,500 yên."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は サラです。昨日、駅前の 店で 服を 買いました。わたしは 青い ワンピースが ほしかったです。店で 小さい サイズの ワンピースを 着ました。でも、着ることが できませんでした。大きい サイズは ちょうど よかったです。ワンピースは 4,500円でした。\n\nサラさんは どうして 大きい サイズを 着ましたか。",
+   "choices": [
+    "小さい サイズを 着ることが できなかったから",
+    "大きい サイズが 安かったから",
+    "店員が 大きい サイズを くれたから",
+    "友達が 大きい サイズが 好きだから"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn ghi: cỡ nhỏ thì 着ることが できませんでした (không mặc vào được), nên cô ấy thử cỡ lớn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nセーター：3,800円\nコート：7,000円\nワンピース：4,500円\nスカート：2,900円\n\nいちばん 安い 服は どれですか。",
+   "choices": [
+    "スカート",
+    "セーター",
+    "ワンピース",
+    "コート"
+   ],
+   "answer": 0,
+   "explain_vi": "So sánh giá: スカート 2,900円 là rẻ nhất. コート 7,000円 đắt nhất."
+  }
+ ]
+}

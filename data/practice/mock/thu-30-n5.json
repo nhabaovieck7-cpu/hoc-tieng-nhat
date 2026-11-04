@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-30",
+ "label": "Đề thi thử 30",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「今朝」は 何と 読みますか。",
+   "choices": [
+    "こんちょう",
+    "けさ",
+    "いまあさ",
+    "けしゃ"
+   ],
+   "answer": 1,
+   "explain_vi": "今朝 đọc là けさ — sáng nay. Đây là cách đọc đặc biệt, phải nhớ cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「去年」は 何と 読みますか。",
+   "choices": [
+    "こねん",
+    "きょね",
+    "きょねん",
+    "さくねん"
+   ],
+   "answer": 2,
+   "explain_vi": "去年 đọc là きょねん — năm ngoái. さくねん là cách đọc của 昨年."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「今年」は 何と 読みますか。",
+   "choices": [
+    "きとし",
+    "ことし",
+    "こと",
+    "ことち"
+   ],
+   "answer": 1,
+   "explain_vi": "今年 đọc là ことし — năm nay."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「手紙」は 何と 読みますか。",
+   "choices": [
+    "てがみ",
+    "てかみ",
+    "しゅし",
+    "てがめ"
+   ],
+   "answer": 0,
+   "explain_vi": "手紙 đọc là てがみ — lá thư. 紙 đọc là かみ nhưng trong từ này thành がみ (âm đục)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「新聞」は 何と 読みますか。",
+   "choices": [
+    "しんぷん",
+    "しんぶ",
+    "しんぼん",
+    "しんぶん"
+   ],
+   "answer": 3,
+   "explain_vi": "新聞 đọc là しんぶん — tờ báo."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「台所」は 何と 読みますか。",
+   "choices": [
+    "だいところ",
+    "たいどころ",
+    "たいしょ",
+    "だいどころ"
+   ],
+   "answer": 3,
+   "explain_vi": "台所 đọc là だいどころ — nhà bếp."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「銀行」は 何と 読みますか。",
+   "choices": [
+    "きんこう",
+    "ぎんごう",
+    "ぎんこ",
+    "ぎんこう"
+   ],
+   "answer": 3,
+   "explain_vi": "銀行 đọc là ぎんこう — ngân hàng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「けさ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "今明",
+    "今朝",
+    "今旦",
+    "今月"
+   ],
+   "answer": 1,
+   "explain_vi": "けさ (sáng nay) viết là 今朝. 今月 đọc là こんげつ — tháng này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「てがみ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "手紙",
+    "手氏",
+    "手級",
+    "主紙"
+   ],
+   "answer": 0,
+   "explain_vi": "てがみ (lá thư) viết là 手紙."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「しんぶん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "新門",
+    "新開",
+    "新聞",
+    "新文"
+   ],
+   "answer": 2,
+   "explain_vi": "しんぶん (tờ báo) viết là 新聞."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ぎんこう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "銀高",
+    "銀工",
+    "銀行",
+    "銀交"
+   ],
+   "answer": 2,
+   "explain_vi": "ぎんこう (ngân hàng) viết là 銀行."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「だいどころ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "台所",
+    "大所",
+    "台処",
+    "台戸"
+   ],
+   "answer": 0,
+   "explain_vi": "だいどころ (nhà bếp) viết là 台所."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 毎朝 両親に 手紙を （　）。",
+   "choices": [
+    "読みます",
+    "聞きます",
+    "書きます",
+    "買います"
+   ],
+   "answer": 2,
+   "explain_vi": "Viết thư cho bố mẹ → 手紙を 書きます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "彼は 毎晩 お風呂に （　）。",
+   "choices": [
+    "寝ます",
+    "入ります",
+    "起きます",
+    "働きます"
+   ],
+   "answer": 1,
+   "explain_vi": "Vào bồn tắm dùng お風呂に 入ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 朝ごはんの 後で、歯を （　）。",
+   "choices": [
+    "洗います",
+    "切ります",
+    "磨きます",
+    "脱ぎます"
+   ],
+   "answer": 2,
+   "explain_vi": "Đánh răng dùng 歯を 磨きます. 洗う dùng cho rửa mặt, rửa tay."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "夜は 部屋で 本を 読んで、10時に （　）。",
+   "choices": [
+    "寝ます",
+    "起きます",
+    "出ます",
+    "入ります"
+   ],
+   "answer": 0,
+   "explain_vi": "Đọc sách trong phòng rồi 10 giờ đi ngủ → 寝ます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "彼女は 毎日 台所で 晩ごはんを （　）。",
+   "choices": [
+    "買います",
+    "売ります",
+    "見ます",
+    "作ります"
+   ],
+   "answer": 3,
+   "explain_vi": "Nấu bữa tối trong bếp → 晩ごはんを 作ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "子どもは 公園から 家に （　）。",
+   "choices": [
+    "来ました",
+    "行きました",
+    "帰りました",
+    "出ました"
+   ],
+   "answer": 2,
+   "explain_vi": "Từ công viên trở về nhà dùng 帰ります: 家に 帰りました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「磨きます」を 使った 文は どれですか。",
+   "choices": [
+    "服を 磨きます。",
+    "音楽を 磨きます。",
+    "毎朝、歯を 磨きます。",
+    "磨きますは 大きいです。"
+   ],
+   "answer": 2,
+   "explain_vi": "磨く dùng cho đánh răng, đánh giày: 歯を 磨く. Quần áo thì giặt （洗う）, âm nhạc thì nghe."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「入ります」を 使った 文は どれですか。",
+   "choices": [
+    "ご飯に 入ります。",
+    "お風呂に 入ります。",
+    "彼は 入りますな 人です。",
+    "電車は 部屋に 入ります。"
+   ],
+   "answer": 1,
+   "explain_vi": "入る dùng khi đi vào một nơi hoặc vào bồn tắm: お風呂に 入ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「忙しい」を 使った 文は どれですか。",
+   "choices": [
+    "忙しい 水を 飲みます。",
+    "この 本は 忙しいです。",
+    "忙しいを 食べます。",
+    "今日は 仕事が たくさん あって、忙しいです。"
+   ],
+   "answer": 3,
+   "explain_vi": "忙しい là bận rộn, dùng cho người và công việc, không dùng cho đồ vật như quyển sách."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "学校は 9時 （　） 始まります。",
+   "choices": [
+    "から",
+    "まで",
+    "に",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Thời điểm bắt đầu dùng から: 9時から 始まります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "朝ごはんを 食べて （　）、学校へ 行きます。",
+   "choices": [
+    "から",
+    "まで",
+    "あと",
+    "まえ"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu 〜てから = sau khi làm xong việc trước: 食べてから 学校へ 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 学生 （　） ありません。",
+   "choices": [
+    "じゃ",
+    "は",
+    "が",
+    "では"
+   ],
+   "answer": 3,
+   "explain_vi": "Phủ định của です trong văn viết là ではありません: 学生では ありません."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄は 学生です。姉 （　） 学生です。",
+   "choices": [
+    "は",
+    "が",
+    "を",
+    "も"
+   ],
+   "answer": 3,
+   "explain_vi": "も nghĩa là 'cũng': anh là sinh viên, chị cũng là sinh viên."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "今日は 日曜日です。学校 （　） 休みです。",
+   "choices": [
+    "は",
+    "が",
+    "も",
+    "を"
+   ],
+   "answer": 0,
+   "explain_vi": "Chủ đề của câu dùng は: 学校は 休みです = trường nghỉ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "すみません、窓を 開けて （　）。",
+   "choices": [
+    "くださいます",
+    "もらいます",
+    "ください",
+    "あげます"
+   ],
+   "answer": 2,
+   "explain_vi": "Nhờ ai làm gì một cách lịch sự dùng 〜て ください: 開けて ください."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎晩 10時 （　） 寝ます。",
+   "choices": [
+    "へ",
+    "を",
+    "に",
+    "で"
+   ],
+   "answer": 2,
+   "explain_vi": "Mốc giờ cụ thể dùng に: 10時に 寝ます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 新聞は （　）の 新聞ですか。",
+   "choices": [
+    "どこ",
+    "いつ",
+    "いくら",
+    "だれ"
+   ],
+   "answer": 3,
+   "explain_vi": "Hỏi tờ báo của ai dùng だれの: だれの 新聞ですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 京都へ 行った （　）が あります。",
+   "choices": [
+    "もの",
+    "こと",
+    "の",
+    "ところ"
+   ],
+   "answer": 1,
+   "explain_vi": "Nói về kinh nghiệm đã từng làm dùng 〜たことが あります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：新聞を　2：読んで　3：朝ごはんを　4：食べます",
+   "choices": [
+    "朝ごはんを",
+    "新聞を",
+    "読んで",
+    "食べます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 新聞を → 読んで → 朝ごはんを → 食べます. ★ là 朝ごはんを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は 夜 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：両親に　2：手紙を　3：書いて　4：寝ます",
+   "choices": [
+    "両親に",
+    "書いて",
+    "手紙を",
+    "寝ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 両親に → 手紙を → 書いて → 寝ます. ★ là 書いて (viết thư rồi đi ngủ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 毎晩 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：お風呂に　2：入って　3：すぐ　4：寝ます",
+   "choices": [
+    "お風呂に",
+    "すぐ",
+    "入って",
+    "寝ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: お風呂に → 入って → すぐ → 寝ます. ★ là すぐ (tắm xong ngủ ngay)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 日曜日 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：家で　2：ゆっくり　3：休んで　4：います",
+   "choices": [
+    "休んで",
+    "家で",
+    "ゆっくり",
+    "います"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 家で → ゆっくり → 休んで → います. ★ là 休んで (đang nghỉ ngơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：こんにちは。（1）、どうぞ 入って ください。\nB：おじゃまします。きれいな 部屋ですね。\nA：ありがとうございます。（2）を どうぞ。\nB：いただきます。この ケーキは おいしいですね。\nA：今日は （3）を しますか。\nB：映画を 見に 行き（4）。\nA：いいですね。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "どうぞ",
+    "どうも",
+    "すみません",
+    "ありがとう"
+   ],
+   "answer": 0,
+   "explain_vi": "Mời khách vào nhà nói どうぞ: どうぞ、入って ください."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：こんにちは。（1）、どうぞ 入って ください。\nB：おじゃまします。きれいな 部屋ですね。\nA：ありがとうございます。（2）を どうぞ。\nB：いただきます。この ケーキは おいしいですね。\nA：今日は （3）を しますか。\nB：映画を 見に 行き（4）。\nA：いいですね。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "お茶",
+    "ケーキ",
+    "水",
+    "傘"
+   ],
+   "answer": 1,
+   "explain_vi": "Khách đáp 'cái bánh này ngon' nên thứ được mời là ケーキ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：こんにちは。（1）、どうぞ 入って ください。\nB：おじゃまします。きれいな 部屋ですね。\nA：ありがとうございます。（2）を どうぞ。\nB：いただきます。この ケーキは おいしいですね。\nA：今日は （3）を しますか。\nB：映画を 見に 行き（4）。\nA：いいですね。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "どこ",
+    "だれ",
+    "いつ",
+    "何"
+   ],
+   "answer": 3,
+   "explain_vi": "Hỏi hôm nay làm gì dùng 何: 何を しますか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：こんにちは。（1）、どうぞ 入って ください。\nB：おじゃまします。きれいな 部屋ですね。\nA：ありがとうございます。（2）を どうぞ。\nB：いただきます。この ケーキは おいしいですね。\nA：今日は （3）を しますか。\nB：映画を 見に 行き（4）。\nA：いいですね。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "たいです",
+    "ます",
+    "ました",
+    "ましょう"
+   ],
+   "answer": 0,
+   "explain_vi": "Muốn đi xem phim dùng 〜たいです: 見に 行きたいです."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n銀行の お知らせ：銀行は 午前 9時に 開きます。午後 3時に 閉まります。土曜日と 日曜日は 休みです。\n\n銀行は 午前 何時に 開きますか。",
+   "choices": [
+    "午前 10時",
+    "午前 9時",
+    "午後 3時",
+    "午前 8時"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi ngân hàng mở cửa lúc 9 giờ sáng; 3 giờ chiều là giờ đóng cửa."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n郵便局の お知らせ：手紙は ポストに 入れて ください。大きい 荷物は 窓口へ 持って 来て ください。\n\n大きい 荷物は どうしますか。",
+   "choices": [
+    "ポストに 入れます",
+    "窓口へ 持って 行きます",
+    "家に 置きます",
+    "駅へ 持って 行きます"
+   ],
+   "answer": 1,
+   "explain_vi": "Hành lý lớn phải mang đến quầy （窓口）; chỉ thư mới bỏ vào thùng thư (ポスト)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ティンです。わたしは 毎朝 6時に 起きます。朝ごはんを 食べて、7時に 家を 出ます。会社は 9時から 5時までです。夜は 家で 晩ごはんを 作ります。晩ごはんの 後で、日本語を 勉強します。10時に 寝ます。\n\nティンさんは 何時に 家を 出ますか。",
+   "choices": [
+    "6時",
+    "9時",
+    "10時",
+    "7時"
+   ],
+   "answer": 3,
+   "explain_vi": "Tín dậy lúc 6 giờ, ăn sáng xong thì 7 giờ ra khỏi nhà."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ティンです。わたしは 毎朝 6時に 起きます。朝ごはんを 食べて、7時に 家を 出ます。会社は 9時から 5時までです。夜は 家で 晩ごはんを 作ります。晩ごはんの 後で、日本語を 勉強します。10時に 寝ます。\n\nティンさんは 晩ごはんの 後で 何を しますか。",
+   "choices": [
+    "晩ごはんを 作ります",
+    "テレビを 見ます",
+    "日本語を 勉強します",
+    "すぐ 寝ます"
+   ],
+   "answer": 2,
+   "explain_vi": "Sau bữa tối, Tín học tiếng Nhật; 10 giờ mới đi ngủ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n店の 時間\nパン屋：午前 7時〜午後 7時\n本屋：午前 10時〜午後 8時\n銀行：午前 9時〜午後 3時\n郵便局：午前 9時〜午後 5時\n\n銀行は 午後 何時に 閉まりますか。",
+   "choices": [
+    "午後 5時",
+    "午後 7時",
+    "午後 3時",
+    "午後 8時"
+   ],
+   "answer": 2,
+   "explain_vi": "Bảng giờ ghi ngân hàng mở 9 giờ sáng đến 3 giờ chiều."
+  }
+ ]
+}

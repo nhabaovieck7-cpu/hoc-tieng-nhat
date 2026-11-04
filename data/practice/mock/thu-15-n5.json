@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-15",
+ "label": "Đề thi thử 15",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「曇り」は 何と 読みますか。",
+   "choices": [
+    "くもりい",
+    "くもり",
+    "どんり",
+    "うんり"
+   ],
+   "answer": 1,
+   "explain_vi": "曇り đọc là くもり (trời nhiều mây). 曇 = くも trong 曇ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「晴れ」は 何と 読みますか。",
+   "choices": [
+    "せい",
+    "はれ",
+    "はれる",
+    "ばれ"
+   ],
+   "answer": 1,
+   "explain_vi": "晴れ đọc là はれ (trời nắng đẹp/quang đãng)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「春」は 何と 読みますか。",
+   "choices": [
+    "しゅん",
+    "はる",
+    "あき",
+    "はるい"
+   ],
+   "answer": 1,
+   "explain_vi": "春 đọc là はる (mùa xuân) theo kun'yomi — cách đọc dùng khi chỉ mùa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「夏」は 何と 読みますか。",
+   "choices": [
+    "か",
+    "なつ",
+    "なつい",
+    "あつ"
+   ],
+   "answer": 1,
+   "explain_vi": "夏 đọc là なつ (mùa hè) theo kun'yomi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「秋」は 何と 読みますか。",
+   "choices": [
+    "しゅう",
+    "あき",
+    "あきい",
+    "とき"
+   ],
+   "answer": 1,
+   "explain_vi": "秋 đọc là あき (mùa thu) theo kun'yomi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「冬」は 何と 読みますか。",
+   "choices": [
+    "とう",
+    "ふゆ",
+    "ふゆい",
+    "さむ"
+   ],
+   "answer": 1,
+   "explain_vi": "冬 đọc là ふゆ (mùa đông) theo kun'yomi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「暖かい」は 何と 読みますか。",
+   "choices": [
+    "だんかい",
+    "あたたかい",
+    "あたかい",
+    "ぬるかい"
+   ],
+   "answer": 1,
+   "explain_vi": "暖かい đọc là あたたかい (ấm áp — thời tiết, phòng). Khác 温かい cũng đọc あたたかい nhưng dùng cho đồ ăn/uống ấm."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「はる」を 漢字で 書くと どれですか。",
+   "choices": [
+    "晴",
+    "春",
+    "明",
+    "青"
+   ],
+   "answer": 1,
+   "explain_vi": "はる (mùa xuân) viết là 春. 晴 là はれ (nắng), 明 là あかるい, 青 là あお."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「なつ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "秋",
+    "夏",
+    "暑",
+    "熱"
+   ],
+   "answer": 1,
+   "explain_vi": "なつ (mùa hè) viết là 夏. 暑 là あつい (nóng nực), 熱 là あつい/ねつ — không phải tên mùa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "冬",
+    "秋",
+    "空",
+    "明"
+   ],
+   "answer": 1,
+   "explain_vi": "あき (mùa thu) viết là 秋. 空 đọc là そら/あき trong vài từ ghép nhưng tên mùa thu phải là 秋."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ふゆ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "雪",
+    "冬",
+    "寒",
+    "冷"
+   ],
+   "answer": 1,
+   "explain_vi": "ふゆ (mùa đông) viết là 冬. 雪 là ゆき, 寒 là さむい, 冷 là つめたい — đều là từ liên quan nhưng không phải tên mùa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「くもり」を 漢字で 書くと どれですか。",
+   "choices": [
+    "雲り",
+    "曇",
+    "曇り",
+    "雲"
+   ],
+   "answer": 2,
+   "explain_vi": "くもり (trời mây) viết là 曇り — có okurigana り. 雲 là くも (đám mây), 曇 không có り thì đọc chưa đủ cho từ này trong câu."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "冬は 寒いですから、（　）が 降ります。",
+   "choices": [
+    "花",
+    "葉",
+    "雪",
+    "星"
+   ],
+   "answer": 2,
+   "explain_vi": "Mùa đông lạnh nên 雪 (tuyết) rơi. Hoa, lá, sao không dùng với 降ります trong ngữ cảnh này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "春は （　）が たくさん 咲きます。",
+   "choices": [
+    "雪",
+    "雨",
+    "花",
+    "雲"
+   ],
+   "answer": 2,
+   "explain_vi": "Động từ 咲きます (nở) chỉ đi với 花 (hoa). Mùa xuân hoa nở nhiều."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "夏は 海で （　）ことが できます。",
+   "choices": [
+    "滑る",
+    "登る",
+    "泳ぐ",
+    "走る"
+   ],
+   "answer": 2,
+   "explain_vi": "Mùa hè ở biển thì 泳ぐ (bơi). 滑る là trượt (tuyết/băng), 登る là leo (núi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "秋は 山の 葉が （　）なります。",
+   "choices": [
+    "赤い",
+    "赤いに",
+    "赤く",
+    "赤"
+   ],
+   "answer": 2,
+   "explain_vi": "Trước なります, tính từ -i đổi đuôi い thành く: 赤く なります (chuyển thành đỏ)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "今日は 風が （　）です。木が ゆれています。",
+   "choices": [
+    "弱い",
+    "高い",
+    "強い",
+    "早い"
+   ],
+   "answer": 2,
+   "explain_vi": "Cây rung lắc vì gió 強い (mạnh). 風が 弱い thì cây không rung như vậy."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "夜、曇りですから、（　）が 見えません。",
+   "choices": [
+    "花",
+    "鳥",
+    "星",
+    "魚"
+   ],
+   "answer": 2,
+   "explain_vi": "Ban đêm trời nhiều mây nên không thấy 星 (sao). Hoa, chim, cá không liên quan đến bầu trời đêm."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「暖かい」を 使った 文は どれですか。",
+   "choices": [
+    "彼は 暖かい 声で 話します。",
+    "暖かい 音が 聞こえます。",
+    "部屋は 暖かいですから、コートを 脱ぎます。",
+    "この スープは 暖かくて 寒いです。"
+   ],
+   "answer": 2,
+   "explain_vi": "暖かい dùng cho thời tiết/không khí/phòng ấm: 部屋は 暖かい. Giọng nói, âm thanh không dùng 暖かい, và 暖かい không đi cùng 寒い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「涼しい」を 使った 文は どれですか。",
+   "choices": [
+    "この ジュースは 涼しい 味です。",
+    "涼しい 音が 聞こえます。",
+    "秋の 夜は 涼しいです。",
+    "今日は 涼しくて 暑いです。"
+   ],
+   "answer": 2,
+   "explain_vi": "涼しい nghĩa là mát mẻ (thời tiết dễ chịu): 秋の 夜は 涼しい. Vị và âm thanh không dùng 涼しい, 涼しい không đi với 暑い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「咲きます」を 使った 文は どれですか。",
+   "choices": [
+    "桜は 海で 咲きます。",
+    "彼は 桜を 咲きます。",
+    "春、公園で 桜が 咲きます。",
+    "桜の 花が 空を 咲きます。"
+   ],
+   "answer": 2,
+   "explain_vi": "咲きます (nở) là tự động từ, chủ ngữ là hoa với が: 桜が 咲きます. Hoa anh đào không nở ở biển, và không dùng を với 咲きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "（　）に なりました。桜が 咲いています。",
+   "choices": [
+    "春へ",
+    "春を",
+    "春",
+    "春から"
+   ],
+   "answer": 2,
+   "explain_vi": "Trở thành mùa nào dùng 〜に なります: 春に なりました (đã sang xuân). Câu này chọn danh từ mùa cho sẵn trong lựa chọn."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "今日は 昨日 （　）寒いです。",
+   "choices": [
+    "から",
+    "まで",
+    "にも",
+    "より"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh với hôm qua dùng より: 昨日より 寒い (lạnh hơn hôm qua)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "今、雪が （　）います。",
+   "choices": [
+    "降る",
+    "降り",
+    "降った",
+    "降って"
+   ],
+   "answer": 3,
+   "explain_vi": "Đang diễn ra dùng 〜て います: 雪が 降って います (tuyết đang rơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "雨が 降りますから、傘を （　）ください。",
+   "choices": [
+    "持つ",
+    "持ち",
+    "持った",
+    "持って"
+   ],
+   "answer": 3,
+   "explain_vi": "Yêu cầu dùng 〜て ください: 持って ください (hãy mang theo)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "冬休みは スキーを （　）たいです。",
+   "choices": [
+    "する",
+    "して",
+    "した",
+    "し"
+   ],
+   "answer": 3,
+   "explain_vi": "Muốn làm gì: thân từ điển bỏ ます — します → し + たいです: スキーを したいです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "昨日は 雨でした。（　）、今日は 晴れです。",
+   "choices": [
+    "そして",
+    "それから",
+    "じゃあ",
+    "でも"
+   ],
+   "answer": 3,
+   "explain_vi": "Hai câu đối lập (hôm qua mưa, hôm nay nắng) nối bằng でも ở đầu câu (nhưng)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 夏、（　）海へ 行きます。",
+   "choices": [
+    "あまり",
+    "ぜんぜん",
+    "たくさん",
+    "よく"
+   ],
+   "answer": 3,
+   "explain_vi": "Với động từ khẳng định chỉ tần suất cao dùng よく (thường). あまり/ぜんぜん phải đi với thể phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "冬は 雨が あまり （　）。",
+   "choices": [
+    "降ります",
+    "降りました",
+    "降りたいです",
+    "降りません"
+   ],
+   "answer": 3,
+   "explain_vi": "あまり bắt buộc đi với thể phủ định: あまり 降りません (không mưa mấy)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "春は 暖かく（　）、花が きれいです。",
+   "choices": [
+    "で",
+    "に",
+    "を",
+    "て"
+   ],
+   "answer": 3,
+   "explain_vi": "Tính từ -i nối câu đổi い thành くて: 暖かくて (ấm và...)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 春 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：公園で　2：花を　3：見ます",
+   "choices": [
+    "公園で",
+    "見ます",
+    "春",
+    "花を"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 公園で → 花を → 見ます (xem hoa ở công viên). Vậy vị trí ★ là 花を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "子どもたちは 雪の 日 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：庭で　2：雪だるまを　3：作ります",
+   "choices": [
+    "庭で",
+    "作ります",
+    "雪の 日",
+    "雪だるまを"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 庭で → 雪だるまを → 作ります (làm người tuyết trong sân). Vậy vị trí ★ là 雪だるまを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は 夏 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：海で　2：泳いで　3：帰ります",
+   "choices": [
+    "泳いで",
+    "海で",
+    "帰ります",
+    "夏"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 海で → 泳いで → 帰ります (bơi ở biển rồi về). Vậy vị trí ★ là 泳いで."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 秋 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：山へ　2：行って　3：写真を 撮ります",
+   "choices": [
+    "行って",
+    "山へ",
+    "写真を 撮ります",
+    "秋"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 山へ → 行って → 写真を 撮ります (lên núi rồi chụp ảnh). Vậy vị trí ★ là 行って."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：今日は いい 天気ですね。\nB：ええ。（1）は 暖かいですね。\nA：公園の 桜も 咲きました。（2）、花見に 行きませんか。\nB：いいですね。（3）の 土曜日は どうですか。\nA：天気予報では、土曜日は 雨だそうです。日曜日に しましょう。\nB：そうしましょう。わたしは 飲み物を 持って 行きます。\nA：じゃあ、わたしは お弁当を （4）。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "春",
+    "夏",
+    "秋",
+    "冬"
+   ],
+   "answer": 0,
+   "explain_vi": "Hoa anh đào nở và trời ấm → đang là 春 (mùa xuân)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：今日は いい 天気ですね。\nB：ええ。（1）は 暖かいですね。\nA：公園の 桜も 咲きました。（2）、花見に 行きませんか。\nB：いいですね。（3）の 土曜日は どうですか。\nA：天気予報では、土曜日は 雨だそうです。日曜日に しましょう。\nB：そうしましょう。わたしは 飲み物を 持って 行きます。\nA：じゃあ、わたしは お弁当を （4）。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "じゃあ",
+    "でも",
+    "それから",
+    "なぜ"
+   ],
+   "answer": 0,
+   "explain_vi": "Sau khi đồng tình về cảnh đẹp, A rủ đi ngắm hoa — nối bằng じゃあ (vậy thì)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：今日は いい 天気ですね。\nB：ええ。（1）は 暖かいですね。\nA：公園の 桜も 咲きました。（2）、花見に 行きませんか。\nB：いいですね。（3）の 土曜日は どうですか。\nA：天気予報では、土曜日は 雨だそうです。日曜日に しましょう。\nB：そうしましょう。わたしは 飲み物を 持って 行きます。\nA：じゃあ、わたしは お弁当を （4）。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "今週",
+    "来週",
+    "先週",
+    "毎週"
+   ],
+   "answer": 0,
+   "explain_vi": "Hoa vừa nở và dự báo nói về thứ Bảy sắp tới → 今週の 土曜日 (thứ Bảy tuần này)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：今日は いい 天気ですね。\nB：ええ。（1）は 暖かいですね。\nA：公園の 桜も 咲きました。（2）、花見に 行きませんか。\nB：いいですね。（3）の 土曜日は どうですか。\nA：天気予報では、土曜日は 雨だそうです。日曜日に しましょう。\nB：そうしましょう。わたしは 飲み物を 持って 行きます。\nA：じゃあ、わたしは お弁当を （4）。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "作ります",
+    "作りました",
+    "作りたいです",
+    "作りましょう"
+   ],
+   "answer": 0,
+   "explain_vi": "Chia việc: B mang đồ uống, A nói mình sẽ làm cơm hộp → お弁当を 作ります."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nあしたの 天気：午前は 晴れ、午後は 雨です。傘を 持って 行って ください。\n\nあしたの 午後は どんな 天気ですか。",
+   "choices": [
+    "雨",
+    "晴れ",
+    "曇り",
+    "雪"
+   ],
+   "answer": 0,
+   "explain_vi": "Dự báo ghi 午後は 雨です — chiều mai mưa. Buổi sáng mới là 晴れ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nお知らせ：日曜日、公園で 桜まつりが あります。午前 10時からです。\n\n桜まつりは いつですか。",
+   "choices": [
+    "日曜日の 午前 10時から",
+    "土曜日の 午前 10時から",
+    "日曜日の 午後 10時から",
+    "日曜日の 一日中"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi: 日曜日、午前 10時から — lễ hội hoa anh đào bắt đầu 10 giờ sáng Chủ nhật."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は トゥアンです。わたしは 日本の 四つの 季節が 好きです。春は 暖かくて、桜が きれいです。夏は 暑いですが、海で 泳ぐことが できます。秋は 涼しくて、山の 葉が 赤く なります。冬は 寒くて、雪が 降ります。わたしは 冬が いちばん 好きです。スキーを するのが 楽しいです。\n\nトゥアンさんが いちばん 好きな 季節は どれですか。",
+   "choices": [
+    "冬",
+    "春",
+    "夏",
+    "秋"
+   ],
+   "answer": 0,
+   "explain_vi": "Câu gần cuối ghi rõ: わたしは 冬が いちばん 好きです — mùa đông là mùa anh ấy thích nhất vì được trượt tuyết."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は トゥアンです。わたしは 日本の 四つの 季節が 好きです。春は 暖かくて、桜が きれいです。夏は 暑いですが、海で 泳ぐことが できます。秋は 涼しくて、山の 葉が 赤く なります。冬は 寒くて、雪が 降ります。わたしは 冬が いちばん 好きです。スキーを するのが 楽しいです。\n\n秋は どんな 季節ですか。",
+   "choices": [
+    "涼しくて、山の 葉が 赤く なります",
+    "暑くて、海で 泳ぎます",
+    "暖かくて、桜が 咲きます",
+    "寒くて、雪が 降ります"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn về mùa thu ghi: 秋は 涼しくて、山の 葉が 赤く なります (mát mẻ, lá trên núi chuyển đỏ). Các lựa chọn còn lại là tả xuân/hè/đông."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n東京：晴れ\n大阪：曇り\n札幌：雪\n福岡：雨\n\n雪の 町は どれですか。",
+   "choices": [
+    "札幌",
+    "東京",
+    "大阪",
+    "福岡"
+   ],
+   "answer": 0,
+   "explain_vi": "Bảng dự báo ghi 札幌：雪 — Sapporo có tuyết. 東京 nắng, 大阪 nhiều mây, 福岡 mưa."
+  }
+ ]
+}

@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-19",
+ "label": "Đề thi thử 19",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「運動」は 何と 読みますか。",
+   "choices": [
+    "うんとう",
+    "うんどん",
+    "うんぼう",
+    "うんどう"
+   ],
+   "answer": 3,
+   "explain_vi": "運動 đọc là うんどう (vận động, thể thao). 運 = うん, 動 = どう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「水泳」は 何と 読みますか。",
+   "choices": [
+    "すいえ",
+    "すいええ",
+    "すいえい",
+    "すいよう"
+   ],
+   "answer": 2,
+   "explain_vi": "水泳 đọc là すいえい (bơi lội). 水 = すい, 泳 = えい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「練習」は 何と 読みますか。",
+   "choices": [
+    "れんしゅ",
+    "れんしゅう",
+    "れんじゅう",
+    "れんすう"
+   ],
+   "answer": 1,
+   "explain_vi": "練習 đọc là れんしゅう (luyện tập). 練 = れん, 習 = しゅう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「試合」は 何と 読みますか。",
+   "choices": [
+    "しあい",
+    "しあえ",
+    "じあい",
+    "しあう"
+   ],
+   "answer": 0,
+   "explain_vi": "試合 đọc là しあい (trận đấu). 試 = し, 合 = あい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「野球」は 何と 読みますか。",
+   "choices": [
+    "やきゅ",
+    "やぎゅう",
+    "やっきゅう",
+    "やきゅう"
+   ],
+   "answer": 3,
+   "explain_vi": "野球 đọc là やきゅう (bóng chày). 野 = や, 球 = きゅう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「体」は 何と 読みますか。",
+   "choices": [
+    "からた",
+    "かただ",
+    "からだ",
+    "からだい"
+   ],
+   "answer": 2,
+   "explain_vi": "体 đọc là からだ (cơ thể). Đây là cách đọc cả từ, phải nhớ nguyên từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「走ります」は 何と 読みますか。",
+   "choices": [
+    "はじります",
+    "はしります",
+    "はしりまし",
+    "はしるます"
+   ],
+   "answer": 1,
+   "explain_vi": "走ります đọc là はしります (chạy). 走 = はし."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「うんどう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "運動",
+    "運道",
+    "運働",
+    "雲動"
+   ],
+   "answer": 0,
+   "explain_vi": "うんどう (vận động) viết là 運動. 雲 đọc là うん trong 雲泥 nhưng nghĩa là mây, không dùng ở đây."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「すいえい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "水永",
+    "水英",
+    "氷泳",
+    "水泳"
+   ],
+   "answer": 3,
+   "explain_vi": "すいえい (bơi lội) viết là 水泳. 泳 mới là chữ chỉ việc bơi; 永 là vĩnh viễn, 英 là anh (Anh quốc)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「れんしゅう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "練週",
+    "連習",
+    "練習",
+    "練修"
+   ],
+   "answer": 2,
+   "explain_vi": "れんしゅう (luyện tập) viết là 練習. 週 là しゅう trong 週末 (cuối tuần), không ghép với 練."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「しあい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "試会",
+    "試合",
+    "試相",
+    "始合"
+   ],
+   "answer": 1,
+   "explain_vi": "しあい (trận đấu) viết là 試合. 会 đọc là あい trong 会社 nhưng không tạo thành từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「やきゅう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "野球",
+    "野求",
+    "野救",
+    "野急"
+   ],
+   "answer": 0,
+   "explain_vi": "やきゅう (bóng chày) viết là 野球. 球 mới là chữ chỉ quả bóng; 求/救/急 đều đọc きゅう nhưng khác nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "兄は スポーツが 好きで、毎日 （　）。",
+   "choices": [
+    "勉強します",
+    "料理します",
+    "掃除します",
+    "運動します"
+   ],
+   "answer": 3,
+   "explain_vi": "Anh trai thích thể thao nên mỗi ngày vận động: 毎日 運動します."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "夏は プールで （　）。",
+   "choices": [
+    "走ります",
+    "歩きます",
+    "泳ぎます",
+    "飛びます"
+   ],
+   "answer": 2,
+   "explain_vi": "Ở bể bơi thì bơi: プールで 泳ぎます. 走ります/歩きます không dùng trong bể bơi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "彼は 足が （　）です。",
+   "choices": [
+    "早い",
+    "速い",
+    "高い",
+    "重い"
+   ],
+   "answer": 1,
+   "explain_vi": "足が 速い là thành ngữ chỉ chạy nhanh. 早い dùng cho thời gian sớm/nhanh, không nói 足が早い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "練習の 後で、水を たくさん （　）。",
+   "choices": [
+    "飲みます",
+    "食べます",
+    "読みます",
+    "書きます"
+   ],
+   "answer": 0,
+   "explain_vi": "Nước thì uống: 水を 飲みます. Sau luyện tập uống nhiều nước là tự nhiên nhất."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "日曜日、スタジアムに たくさんの 人が （　）。",
+   "choices": [
+    "行きます",
+    "帰ります",
+    "入ります",
+    "来ます"
+   ],
+   "answer": 3,
+   "explain_vi": "Khán giả đến sân vận động xem thi đấu: スタジアムに 来ます (đến)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "朝、公園で おじいさんが （　）を しています。",
+   "choices": [
+    "料理",
+    "勉強",
+    "体操",
+    "仕事"
+   ],
+   "answer": 2,
+   "explain_vi": "Buổi sáng ở công viên, người cao tuổi tập thể dục: 体操を しています."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「泳ぎます」を 使った 文は どれですか。",
+   "choices": [
+    "彼は 歌を 泳ぎます。",
+    "わたしは プールで 泳ぎます。",
+    "泳ぎますは おいしいです。",
+    "わたしは 車を 泳ぎます。"
+   ],
+   "answer": 1,
+   "explain_vi": "泳ぎます (bơi) dùng với nơi bơi bằng trợ từ で: プールで 泳ぎます. Bài hát và xe không phải thứ để bơi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「走ります」を 使った 文は どれですか。",
+   "choices": [
+    "子どもたちは 公園を 走ります。",
+    "わたしは 本を 走ります。",
+    "走りますを 飲みます。",
+    "この 机は 走ります。"
+   ],
+   "answer": 0,
+   "explain_vi": "走ります (chạy) dùng với quãng đường/nơi chạy qua trợ từ を: 公園を 走ります. Sách và bàn không chạy được theo mẫu này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「運動します」を 使った 文は どれですか。",
+   "choices": [
+    "運動しますを 食べます。",
+    "彼は 晩ごはんを 運動します。",
+    "この 部屋は 運動します。",
+    "毎朝、公園で 運動します。"
+   ],
+   "answer": 3,
+   "explain_vi": "運動します (vận động) là việc của người, làm ở nơi chốn với で: 公園で 運動します. Cơm tối không phải đối tượng của 運動します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは プール （　） 泳ぎます。",
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Nơi diễn ra hành động dùng で: プールで 泳ぎます (bơi ở bể bơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "日曜日、友達と テニスを （　） 行きます。",
+   "choices": [
+    "する",
+    "しに",
+    "した",
+    "して"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu đi để làm gì: thân động từ bỏ ます + に + 行きます. します → しに 行きます (đi chơi tennis)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "運動した （　）、シャワーを 浴びます。",
+   "choices": [
+    "後で",
+    "前",
+    "とき",
+    "から"
+   ],
+   "answer": 0,
+   "explain_vi": "Sau khi vận động thì tắm: 運動した 後で (sau khi vận động). 前 phải đi với に và thể từ điển."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 泳ぐ （　）が できます。",
+   "choices": [
+    "の",
+    "もの",
+    "とき",
+    "こと"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu khả năng: thể từ điển + ことが できます. 泳ぐことが できます (biết bơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "プールは 駅 （　） 歩いて 10分です。",
+   "choices": [
+    "まで",
+    "に",
+    "から",
+    "の"
+   ],
+   "answer": 2,
+   "explain_vi": "Khoảng cách từ một điểm: 駅から 歩いて 10分 (đi bộ 10 phút từ ga)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "雨です （　）、今日の 試合は ありません。",
+   "choices": [
+    "でも",
+    "から",
+    "そして",
+    "それから"
+   ],
+   "answer": 1,
+   "explain_vi": "Lý do đứng trước: 雨ですから (vì trời mưa) nên trận đấu bị hủy. でも là nhưng, ngược quan hệ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "クラスで 彼が （　）速く 走ります。",
+   "choices": [
+    "いちばん",
+    "あまり",
+    "ぜんぜん",
+    "何も"
+   ],
+   "answer": 0,
+   "explain_vi": "Câu khẳng định nên dùng いちばん (nhất): いちばん 速く 走ります. あまり/ぜんぜん phải đi với phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：あした、試合を 見に （　）。\nB：いいですね、行きましょう。",
+   "choices": [
+    "行きました",
+    "行く",
+    "行けます",
+    "行きませんか"
+   ],
+   "answer": 3,
+   "explain_vi": "B đáp いいですね、行きましょう cho thấy A đang rủ: 見に 行きませんか (đi xem không)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 選手 （　）ありません。コーチです。",
+   "choices": [
+    "の",
+    "に",
+    "じゃ",
+    "を"
+   ],
+   "answer": 2,
+   "explain_vi": "Phủ định của です là じゃ ありません: 選手じゃ ありません (không phải vận động viên)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は プールで ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：上手に　2：泳いで　3：います",
+   "choices": [
+    "上手に",
+    "います",
+    "泳いで",
+    "帰ります"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 上手に (một cách giỏi) → 泳いで (thể て) → います (đang). Vậy ★ là います."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼女は 公園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：テニスを　3：します",
+   "choices": [
+    "します",
+    "友達と",
+    "テニスを",
+    "泳ぎます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 友達と (cùng ai) → テニスを (tân ngữ) → します (động từ cuối). Vậy ★ là します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 週末 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：プールへ　2：泳ぎに　3：行きます",
+   "choices": [
+    "プールへ",
+    "泳ぎに",
+    "来ます",
+    "行きます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: プールへ (hướng đến) → 泳ぎに (để bơi) → 行きます (động từ cuối). Vậy ★ là 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "妹は プールで ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：泳いで　3：遊びます",
+   "choices": [
+    "友達と",
+    "泳いで",
+    "遊びます",
+    "帰ります"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 友達と (cùng ai) → 泳いで (bơi rồi) → 遊びます (chơi). Vậy ★ là 遊びます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園で 一緒に サッカーを （1）か。\nB：いいですね。でも、わたしは サッカーが あまり （2）。\nA：大丈夫です。わたしが （3）。\nB：ありがとう。じゃあ、何時に （4）か。\nA：午前 9時に 公園の 前です。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "しました",
+    "しません",
+    "したい",
+    "する"
+   ],
+   "answer": 1,
+   "explain_vi": "A rủ B chơi bóng đá: サッカーを しませんか. Các dạng còn lại không tạo thành lời rủ với か."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園で 一緒に サッカーを （1）か。\nB：いいですね。でも、わたしは サッカーが あまり （2）。\nA：大丈夫です。わたしが （3）。\nB：ありがとう。じゃあ、何時に （4）か。\nA：午前 9時に 公園の 前です。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "上手じゃ ありません",
+    "上手です",
+    "好きです",
+    "速いです"
+   ],
+   "answer": 0,
+   "explain_vi": "Trước đó có あまり (không ... lắm) nên phải là thể phủ định: あまり 上手じゃ ありません (không giỏi lắm)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園で 一緒に サッカーを （1）か。\nB：いいですね。でも、わたしは サッカーが あまり （2）。\nA：大丈夫です。わたしが （3）。\nB：ありがとう。じゃあ、何時に （4）か。\nA：午前 9時に 公園の 前です。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "習います",
+    "見ます",
+    "聞きます",
+    "教えます"
+   ],
+   "answer": 3,
+   "explain_vi": "B không giỏi bóng đá, A nói 大丈夫です。わたしが 教えます (không sao, tôi sẽ chỉ cho bạn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園で 一緒に サッカーを （1）か。\nB：いいですね。でも、わたしは サッカーが あまり （2）。\nA：大丈夫です。わたしが （3）。\nB：ありがとう。じゃあ、何時に （4）か。\nA：午前 9時に 公園の 前です。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "集まりました",
+    "集まって",
+    "集まります",
+    "集まる"
+   ],
+   "answer": 2,
+   "explain_vi": "Câu hỏi lịch sự về kế hoạch: 何時に 集まりますか (mấy giờ tập trung)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nプールは 午前 9時から 午後 6時までです。水曜日は 休みです。\n\nプールは 何曜日が 休みですか。",
+   "choices": [
+    "月曜日",
+    "水曜日",
+    "金曜日",
+    "日曜日"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 水曜日は 休みです — bể bơi nghỉ thứ Tư."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n日曜日、午後 2時から 学校の グラウンドで サッカーの 試合が あります。みなさん、見に 来て ください。\n\n試合は 何時からですか。",
+   "choices": [
+    "午後 2時",
+    "午前 2時",
+    "午後 3時",
+    "午前 9時"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi 午後 2時から — trận đấu bắt đầu lúc 2 giờ chiều."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ケンです。わたしは スポーツが 大好きです。毎朝 6時に 起きて、公園を 走ります。週末は 友達と テニスを します。夏は 海で 泳ぎます。来月、町の マラソン大会に 出ます。毎日 練習して います。\n\nケンさんは 毎朝 何を しますか。",
+   "choices": [
+    "プールで 泳ぎます",
+    "友達と テニスを します",
+    "海で 泳ぎます",
+    "公園を 走ります"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn: 毎朝 6時に 起きて、公園を 走ります — mỗi sáng chạy ở công viên."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ケンです。わたしは スポーツが 大好きです。毎朝 6時に 起きて、公園を 走ります。週末は 友達と テニスを します。夏は 海で 泳ぎます。来月、町の マラソン大会に 出ます。毎日 練習して います。\n\nケンさんは 来月 何を しますか。",
+   "choices": [
+    "海で 泳ぎます",
+    "テニスを します",
+    "マラソン大会に 出ます",
+    "日本へ 行きます"
+   ],
+   "answer": 2,
+   "explain_vi": "Trong đoạn có câu: 来月、町の マラソン大会に 出ます — tháng sau tham gia giải marathon của thị trấn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n走る：月曜日・木曜日\n泳ぐ：火曜日・金曜日\nテニス：水曜日\n\n泳ぐのは 何曜日ですか。",
+   "choices": [
+    "月曜日と 木曜日",
+    "火曜日と 金曜日",
+    "水曜日",
+    "火曜日と 木曜日"
+   ],
+   "answer": 1,
+   "explain_vi": "Bảng ghi 泳ぐ：火曜日・金曜日 — bơi vào thứ Ba và thứ Sáu."
+  }
+ ]
+}

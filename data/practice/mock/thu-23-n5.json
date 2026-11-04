@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-23",
+ "label": "Đề thi thử 23",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「魚」は 何と 読みますか。",
+   "choices": [
+    "さかね",
+    "さがな",
+    "ざかな",
+    "さかな"
+   ],
+   "answer": 3,
+   "explain_vi": "魚 đọc là さかな (cá)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「象」は 何と 読みますか。",
+   "choices": [
+    "そう",
+    "ぞう",
+    "ぞを",
+    "ぞん"
+   ],
+   "answer": 1,
+   "explain_vi": "象 đọc là ぞう (con voi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「牛」は 何と 読みますか。",
+   "choices": [
+    "うじ",
+    "うす",
+    "ゆし",
+    "うし"
+   ],
+   "answer": 3,
+   "explain_vi": "牛 đọc là うし (con bò)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「豚」は 何と 読みますか。",
+   "choices": [
+    "ぶた",
+    "ぶだ",
+    "ふた",
+    "ぶて"
+   ],
+   "answer": 0,
+   "explain_vi": "豚 đọc là ぶた (con lợn/heo)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「羊」は 何と 読みますか。",
+   "choices": [
+    "ひずじ",
+    "ひつし",
+    "ひつじ",
+    "ひつち"
+   ],
+   "answer": 2,
+   "explain_vi": "羊 đọc là ひつじ (con cừu). Đây là cách đọc phải nhớ cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「兎」は 何と 読みますか。",
+   "choices": [
+    "うさき",
+    "うざぎ",
+    "うさぎ",
+    "うさし"
+   ],
+   "answer": 2,
+   "explain_vi": "兎 đọc là うさぎ (con thỏ)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「熊」は 何と 読みますか。",
+   "choices": [
+    "くま",
+    "くも",
+    "ぐま",
+    "くみ"
+   ],
+   "answer": 0,
+   "explain_vi": "熊 đọc là くま (con gấu). くも là 'mây' hoặc 'nhện', chữ khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「さかな」を 漢字で 書くと どれですか。",
+   "choices": [
+    "漁",
+    "鳥",
+    "魚",
+    "馬"
+   ],
+   "answer": 2,
+   "explain_vi": "さかな (cá) viết là 魚. 漁 cũng có bộ 魚 nhưng nghĩa là nghề đánh cá, đọc ぎょ/りょう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ぞう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "像",
+    "増",
+    "象",
+    "造"
+   ],
+   "answer": 2,
+   "explain_vi": "ぞう (voi) viết là 象. 像 là tượng/hình ảnh, không phải con voi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「うし」を 漢字で 書くと どれですか。",
+   "choices": [
+    "午",
+    "干",
+    "千",
+    "牛"
+   ],
+   "answer": 3,
+   "explain_vi": "うし (bò) viết là 牛. 午（ご) là 'ngọ' trong 午前/午後."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「うさぎ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "免",
+    "兎",
+    "白",
+    "耳"
+   ],
+   "answer": 1,
+   "explain_vi": "うさぎ (thỏ) viết là 兎. 免（めん) trông gần giống nhưng là chữ khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「くま」を 漢字で 書くと どれですか。",
+   "choices": [
+    "馬",
+    "熊",
+    "黒",
+    "態"
+   ],
+   "answer": 1,
+   "explain_vi": "くま (gấu) viết là 熊."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "動物園で 大きい （　）を 見ました。鼻が とても 長いです。",
+   "choices": [
+    "牛",
+    "豚",
+    "羊",
+    "象"
+   ],
+   "answer": 3,
+   "explain_vi": "Con vật có vòi （鼻） rất dài là 象 (voi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 猫を （　）います。名前は ミルクです。",
+   "choices": [
+    "飼って",
+    "食べて",
+    "見て",
+    "買って"
+   ],
+   "answer": 0,
+   "explain_vi": "Nuôi mèo ở nhà dùng 飼う: 猫を 飼っています (đang nuôi mèo)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "魚は 水の 中を （　）。",
+   "choices": [
+    "泳ぎます",
+    "飛びます",
+    "歩きます",
+    "登ります"
+   ],
+   "answer": 0,
+   "explain_vi": "Cá bơi trong nước: 水の 中を 泳ぎます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "パンダの 好きな 食べ物は （　）です。",
+   "choices": [
+    "竹",
+    "肉",
+    "魚",
+    "パン"
+   ],
+   "answer": 0,
+   "explain_vi": "Thức ăn nổi tiếng của gấu trúc パンダ là 竹 (tre/trúc)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "子どもは 小さい 犬と 公園で （　）。",
+   "choices": [
+    "働きます",
+    "勉強します",
+    "寝ます",
+    "遊びます"
+   ],
+   "answer": 3,
+   "explain_vi": "Trẻ con chơi với chó con ở công viên: 犬と 遊びます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この 子犬は まだ （　）です。生まれて 一か月です。",
+   "choices": [
+    "小さい",
+    "大きい",
+    "長い",
+    "重い"
+   ],
+   "answer": 0,
+   "explain_vi": "Chó con mới sinh một tháng nên còn 小さい (nhỏ)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「飼います」を 使った 文は どれですか。",
+   "choices": [
+    "わたしは 家で 犬を 飼っています。",
+    "わたしは 晩ごはんを 飼います。",
+    "彼は 学校を 飼います。",
+    "飼いますは 飲み物です。"
+   ],
+   "answer": 0,
+   "explain_vi": "飼う dùng cho việc nuôi động vật: 犬を 飼っています (đang nuôi chó). Cơm tối và trường học không phải thứ để nuôi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「鳴きます」を 使った 文は どれですか。",
+   "choices": [
+    "魚が 鳴きますを 聞きます。",
+    "朝、庭で 鳥が 鳴きます。",
+    "わたしは 鳴きますを 飲みます。",
+    "部屋が 鳴きますです。"
+   ],
+   "answer": 1,
+   "explain_vi": "鳴く là tiếng kêu của động vật: 鳥が 鳴きます (chim hót/kêu)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「登ります」を 使った 文は どれですか。",
+   "choices": [
+    "魚は 木に 登ります。",
+    "猿は 木に 登ります。",
+    "わたしは 歌を 登ります。",
+    "登りますは 部屋です。"
+   ],
+   "answer": 1,
+   "explain_vi": "登る là leo/trèo lên: 猿は 木に 登ります (khỉ leo cây). Cá không leo cây, bài hát không leo được."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "動物園 （　） 大きい 象が います。",
+   "choices": [
+    "を",
+    "へ",
+    "で",
+    "に"
+   ],
+   "answer": 3,
+   "explain_vi": "Nơi tồn tại của động vật （います) dùng trợ từ に: 動物園に 象が います."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "動物園は 何時 （　） 開きますか。",
+   "choices": [
+    "まで",
+    "に",
+    "から",
+    "を"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi giờ bắt đầu dùng から: 何時から 開きますか (mở cửa từ mấy giờ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 犬は （　）の 犬ですか。",
+   "choices": [
+    "どこ",
+    "いつ",
+    "だれ",
+    "なん"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi chủ sở hữu dùng だれの: だれの 犬 (chó của ai)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "みんなで 動物園へ 行き （　）。",
+   "choices": [
+    "ます",
+    "ました",
+    "たいです",
+    "ましょう"
+   ],
+   "answer": 3,
+   "explain_vi": "みんなで 〜ましょう là lời rủ rê cùng làm: 行きましょう (chúng ta đi nào)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "猫に ご飯を （　）ください。",
+   "choices": [
+    "あげる",
+    "あげて",
+    "あげます",
+    "あげた"
+   ],
+   "answer": 1,
+   "explain_vi": "〜て ください cần thể て: あげてください (xin hãy cho mèo ăn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "雨ですから、今日 動物園へ 行くことが （　）。",
+   "choices": [
+    "できます",
+    "したいです",
+    "できません",
+    "あります"
+   ],
+   "answer": 2,
+   "explain_vi": "Vì trời mưa nên không đi được: 行くことが できません (không thể đi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 犬と 公園で 遊ぶ （　）が できます。",
+   "choices": [
+    "もの",
+    "ところ",
+    "こと",
+    "に"
+   ],
+   "answer": 2,
+   "explain_vi": "〜ことが できます diễn tả có thể làm việc gì: 遊ぶことが できます (có thể chơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "動物園で （　）を 見ますか。",
+   "choices": [
+    "だれ",
+    "どこ",
+    "いつ",
+    "なに"
+   ],
+   "answer": 3,
+   "explain_vi": "Trước trợ từ を phải là từ hỏi vật: なにを 見ますか (xem cái gì)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "寒いです （　）、ペンギンは 元気です。",
+   "choices": [
+    "が",
+    "から",
+    "ので",
+    "と"
+   ],
+   "answer": 0,
+   "explain_vi": "が nối hai ý trái ngược nhẹ: trời lạnh, nhưng chim cánh cụt thì khỏe （ペンギン sống ở xứ lạnh)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 動物園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：象を　2：見て　3：写真を 撮りました",
+   "choices": [
+    "象を",
+    "写真を 撮りました",
+    "見て",
+    "聞いて"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 象を → 見て（xem rồi) → 写真を 撮りました（chụp ảnh). Vậy ★ là 見て."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "妹は 家で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：猫と　2：遊んで　3：寝ます",
+   "choices": [
+    "猫と",
+    "遊んで",
+    "寝ます",
+    "働きます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 猫と → 遊んで（chơi rồi) → 寝ます（đi ngủ). Vậy ★ là 遊んで."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄は 動物園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：パンダに　2：竹を　3：あげました",
+   "choices": [
+    "竹を",
+    "パンダに",
+    "あげました",
+    "見ました"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: パンダに（người nhận) → 竹を（vật cho) → あげました（đã cho). Vậy ★ là 竹を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：犬と　2：公園を　3：散歩します",
+   "choices": [
+    "公園を",
+    "犬と",
+    "散歩します",
+    "行きます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 犬と → 公園を → 散歩します. Vậy ★ là 公園を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：動物園は 初めてですか。\nB：はい、初めてです。今日は （1） 見たいです。\nA：パンダは あちらです。（2）から 見ましょう。\nB：わあ、大きいですね。写真を （3）も いいですか。\nA：はい、いいですよ。でも、フラッシュは （4）ください。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "パンダに",
+    "パンダが",
+    "パンダを",
+    "パンダへ"
+   ],
+   "answer": 2,
+   "explain_vi": "Đối tượng của 見たい dùng を: パンダを 見たいです (muốn xem gấu trúc)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：動物園は 初めてですか。\nB：はい、初めてです。今日は （1） 見たいです。\nA：パンダは あちらです。（2）から 見ましょう。\nB：わあ、大きいですね。写真を （3）も いいですか。\nA：はい、いいですよ。でも、フラッシュは （4）ください。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "ここ",
+    "あそこ",
+    "そこ",
+    "あれ"
+   ],
+   "answer": 1,
+   "explain_vi": "Gấu trúc ở phía xa kia: あそこから 見ましょう (hãy xem từ chỗ kia). あれ là đại từ chỉ vật, không đi với から trong câu này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：動物園は 初めてですか。\nB：はい、初めてです。今日は （1） 見たいです。\nA：パンダは あちらです。（2）から 見ましょう。\nB：わあ、大きいですね。写真を （3）も いいですか。\nA：はい、いいですよ。でも、フラッシュは （4）ください。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "撮って",
+    "撮る",
+    "撮ります",
+    "撮った"
+   ],
+   "answer": 0,
+   "explain_vi": "〜ても いいですか là xin phép: 撮っても いいですか (chụp ảnh có được không) — cần thể て."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：動物園は 初めてですか。\nB：はい、初めてです。今日は （1） 見たいです。\nA：パンダは あちらです。（2）から 見ましょう。\nB：わあ、大きいですね。写真を （3）も いいですか。\nA：はい、いいですよ。でも、フラッシュは （4）ください。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "使って",
+    "使います",
+    "使いたい",
+    "使わないで"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ないで ください là yêu cầu đừng làm: フラッシュは 使わないで ください (xin đừng dùng đèn flash)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n動物園からの お知らせ：動物園は 火曜日は 休みです。水曜日から 日曜日まで 開いています。\n\n動物園は 何曜日が 休みですか。",
+   "choices": [
+    "水曜日",
+    "日曜日",
+    "月曜日",
+    "火曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 動物園は 火曜日は 休みです — sở thú nghỉ thứ Ba."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nペットショップの お知らせ：小さい 犬は 30,000円です。猫は 20,000円です。鳥は 5,000円です。\n\n猫は いくらですか。",
+   "choices": [
+    "30,000円",
+    "20,000円",
+    "5,000円",
+    "2,000円"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 猫は 20,000円 — mèo giá 20.000 yên. 30,000円 là giá chó con."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は フォックです。わたしは 犬を 飼っています。名前は ポチです。ポチは 白くて 小さい 犬です。毎朝、ポチと 公園を 散歩します。日曜日は 家族と 動物園へ 行きます。動物園で 象と パンダを 見ます。\n\nポチは どんな 犬ですか。",
+   "choices": [
+    "黒くて 大きい 犬",
+    "白くて 小さい 犬",
+    "白くて 大きい 犬",
+    "黒くて 小さい 犬"
+   ],
+   "answer": 1,
+   "explain_vi": "Trong đoạn: ポチは 白くて 小さい 犬です — Pochi là chó trắng và nhỏ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は フォックです。わたしは 犬を 飼っています。名前は ポチです。ポチは 白くて 小さい 犬です。毎朝、ポチと 公園を 散歩します。日曜日は 家族と 動物園へ 行きます。動物園で 象と パンダを 見ます。\n\n日曜日、フォックさんは どこへ 行きますか。",
+   "choices": [
+    "公園",
+    "動物園",
+    "学校",
+    "海"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu cuối: 日曜日は 家族と 動物園へ 行きます — Chủ nhật đi sở thú với gia đình."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n動物の ご飯の 時間\n・象：午前 10時\n・パンダ：午前 11時\n・猿：午後 1時\n・ペンギン：午後 3時\n\nパンダの ご飯は 何時ですか。",
+   "choices": [
+    "午前 10時",
+    "午後 1時",
+    "午前 11時",
+    "午後 3時"
+   ],
+   "answer": 2,
+   "explain_vi": "Bảng ghi パンダ：午前 11時 — giờ cho gấu trúc ăn là 11 giờ sáng."
+  }
+ ]
+}

@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-18",
+ "label": "Đề thi thử 18",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「生徒」は 何と 読みますか。",
+   "choices": [
+    "せいと",
+    "せいど",
+    "しょうと",
+    "せいとう"
+   ],
+   "answer": 0,
+   "explain_vi": "生徒 đọc là せいと (học sinh). 生 = せい, 徒 = と."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「授業」は 何と 読みますか。",
+   "choices": [
+    "じゅうぎょう",
+    "じゅぎょう",
+    "じゅぎょ",
+    "じゅうぎょ"
+   ],
+   "answer": 1,
+   "explain_vi": "授業 đọc là じゅぎょう (tiết học, giờ học). 授 = じゅ, 業 = ぎょう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「試験」は 何と 読みますか。",
+   "choices": [
+    "しげん",
+    "しけむ",
+    "しけん",
+    "しいけん"
+   ],
+   "answer": 2,
+   "explain_vi": "試験 đọc là しけん (kỳ thi, bài kiểm tra). 試 = し, 験 = けん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「問題」は 何と 読みますか。",
+   "choices": [
+    "もんたい",
+    "もんだん",
+    "もんざい",
+    "もんだい"
+   ],
+   "answer": 3,
+   "explain_vi": "問題 đọc là もんだい (vấn đề; câu hỏi trong bài thi). 問 = もん, 題 = だい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「卒業」は 何と 読みますか。",
+   "choices": [
+    "そつぎょう",
+    "そつぎょ",
+    "そちぎょう",
+    "そつきょう"
+   ],
+   "answer": 0,
+   "explain_vi": "卒業 đọc là そつぎょう (tốt nghiệp). 卒 = そつ, 業 = ぎょう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「理科」は 何と 読みますか。",
+   "choices": [
+    "りが",
+    "りか",
+    "りけ",
+    "りかん"
+   ],
+   "answer": 1,
+   "explain_vi": "理科 đọc là りか (môn khoa học tự nhiên ở trường). 理 = り, 科 = か."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「社会」は 何と 読みますか。",
+   "choices": [
+    "しゃがい",
+    "しゃけい",
+    "しゃかい",
+    "しゃか"
+   ],
+   "answer": 2,
+   "explain_vi": "社会 đọc là しゃかい (môn xã hội; xã hội). 社 = しゃ, 会 = かい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「せいと」を 漢字で 書くと どれですか。",
+   "choices": [
+    "生途",
+    "製徒",
+    "生都",
+    "生徒"
+   ],
+   "answer": 3,
+   "explain_vi": "せいと (học sinh) viết là 生徒. 製 là せい trong 製品 (sản phẩm), 都 là と trong 首都."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「じゅぎょう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "授業",
+    "授行",
+    "受業",
+    "従業"
+   ],
+   "answer": 0,
+   "explain_vi": "じゅぎょう (tiết học) viết là 授業. 従業 đọc là じゅうぎょう (làm việc), âm dài khác hẳn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「しけん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "試検",
+    "試験",
+    "試険",
+    "試見"
+   ],
+   "answer": 1,
+   "explain_vi": "しけん (kỳ thi) viết là 試験. 検 là けん trong 検査, 険 là けん trong 危険 — đều không ghép với 試."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「もんだい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "問代",
+    "門題",
+    "問題",
+    "問台"
+   ],
+   "answer": 2,
+   "explain_vi": "もんだい viết là 問題. 門 đọc là もん nhưng nghĩa là cổng, không dùng trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「りか」を 漢字で 書くと どれですか。",
+   "choices": [
+    "理化",
+    "里科",
+    "利科",
+    "理科"
+   ],
+   "answer": 3,
+   "explain_vi": "りか (môn khoa học) viết là 理科. 化 đọc là か/ばける nhưng 理科 mới là tên môn học."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "先生は 教室で 学生に 日本語を （　）。",
+   "choices": [
+    "教えます",
+    "習います",
+    "覚えます",
+    "忘れます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thầy cô là phía dạy nên dùng 教えます (dạy). 習います là phía học, dùng cho học sinh."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 図書室で 本を （　）。静かな 部屋です。",
+   "choices": [
+    "書きます",
+    "読みます",
+    "買います",
+    "売ります"
+   ],
+   "answer": 1,
+   "explain_vi": "Ở phòng đọc của trường thì đọc sách: 本を 読みます. Mua/bán sách không diễn ra ở 図書室."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "授業の 後で、友達と 公園で （　）。",
+   "choices": [
+    "寝ます",
+    "働きます",
+    "遊びます",
+    "泳ぎます"
+   ],
+   "answer": 2,
+   "explain_vi": "Sau giờ học, chơi với bạn ở công viên: 遊びます. 泳ぎます cần hồ bơi/biển, 働きます là đi làm."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "先生の 話を よく （　）ください。",
+   "choices": [
+    "見て",
+    "食べて",
+    "飲んで",
+    "聞いて"
+   ],
+   "answer": 3,
+   "explain_vi": "Nghe lời thầy cô dùng 話を 聞きます. 話 (lời nói) không đi với 見て/食べて/飲んで."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは かばんに ノートと 教科書を （　）。",
+   "choices": [
+    "入れます",
+    "出します",
+    "開けます",
+    "閉めます"
+   ],
+   "answer": 0,
+   "explain_vi": "Cho vở và sách giáo khoa vào cặp: かばんに 入れます (bỏ vào). 出します là lấy ra, ngược nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "今日は 体育の 授業です。グラウンドで （　）。",
+   "choices": [
+    "泳ぎます",
+    "走ります",
+    "歌います",
+    "読みます"
+   ],
+   "answer": 1,
+   "explain_vi": "Tiết thể dục ở sân trường thì chạy: グラウンドで 走ります. 泳ぎます chỉ dùng ở bể bơi/biển."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「教えます」を 使った 文は どれですか。",
+   "choices": [
+    "わたしは 晩ごはんを 教えます。",
+    "彼は 教えますを 飲みます。",
+    "先生は 教室で 学生に 英語を 教えます。",
+    "この 本は とても 教えます。"
+   ],
+   "answer": 2,
+   "explain_vi": "教えます (dạy) dùng với người được dạy (に) và môn/nội dung dạy (を): 学生に 英語を 教えます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「習います」を 使った 文は どれですか。",
+   "choices": [
+    "母は わたしに 料理を 習います。",
+    "習いますは おいしいです。",
+    "彼は 車を 習います。",
+    "わたしは 学校で ピアノを 習います。"
+   ],
+   "answer": 3,
+   "explain_vi": "習います (học theo thầy) dùng cho phía người học: 学校で ピアノを 習います. Mẹ dạy con nấu ăn phải là 教えます, không phải 習います."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「休みます」を 使った 文は どれですか。",
+   "choices": [
+    "彼は 病気ですから、今日 学校を 休みます。",
+    "わたしは 公園を 休みます。",
+    "休みますを 食べます。",
+    "この 部屋は 休みますです。"
+   ],
+   "answer": 0,
+   "explain_vi": "休みます với を nghĩa là nghỉ (vắng) một buổi: 学校を 休みます (nghỉ học). Công viên không phải buổi học/buổi làm nên không dùng mẫu này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "学校 （　） 近くに 図書室が あります。",
+   "choices": [
+    "に",
+    "の",
+    "を",
+    "へ"
+   ],
+   "answer": 1,
+   "explain_vi": "Nơi chốn + の 近く: 学校の 近く (gần trường). Đây là mẫu sở hữu/vị trí cố định ở N5."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "放課後、わたしは 友達 （　） 図書室へ 行きます。",
+   "choices": [
+    "を",
+    "の",
+    "と",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Đi cùng ai dùng trợ từ と: 友達と 行きます (đi với bạn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "授業は 9時 （　） 10時までです。",
+   "choices": [
+    "に",
+    "へ",
+    "を",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "Cặp thời gian bắt đầu–kết thúc: 9時から 10時まで (từ 9 giờ đến 10 giờ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 兄 （　） 自転車で 学校へ 行きます。",
+   "choices": [
+    "の",
+    "に",
+    "を",
+    "で"
+   ],
+   "answer": 0,
+   "explain_vi": "Sở hữu dùng の: 兄の 自転車 (xe đạp của anh trai). で ở đây đã nằm trong 自転車で (bằng xe đạp)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 友達 （　） 日本語が 上手です。",
+   "choices": [
+    "から",
+    "より",
+    "まで",
+    "だけ"
+   ],
+   "answer": 1,
+   "explain_vi": "So sánh hơn dùng より: 友達より 上手 (giỏi hơn bạn). から/まで là từ–đến, だけ là chỉ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "来年、日本の 大学へ （　）たいです。",
+   "choices": [
+    "入る",
+    "入ります",
+    "入り",
+    "入って"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu muốn làm gì: thân động từ nhóm 1 bỏ ます, thêm たいです. 入ります → 入りたいです (muốn vào đại học)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "先生：ここに 名前を （　）ください。",
+   "choices": [
+    "書き",
+    "書く",
+    "書いた",
+    "書いて"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu yêu cầu lịch sự: thể て + ください. 書きます → 書いて ください (hãy viết tên vào đây)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あの 学生は （　）ですか。",
+   "choices": [
+    "だれ",
+    "どこ",
+    "いつ",
+    "なに"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi về người dùng だれ (ai): あの 学生は だれですか (học sinh kia là ai)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 日本語を （　）ことが できます。",
+   "choices": [
+    "話します",
+    "話す",
+    "話して",
+    "話した"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu khả năng: thể từ điển + ことが できます. 話すことが できます (có thể nói được)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 教室で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：日本語を　3：話します",
+   "choices": [
+    "友達と",
+    "日本語を",
+    "話します",
+    "聞きます"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 友達と (cùng ai) → 日本語を (tân ngữ) → 話します (động từ cuối câu). Vậy ★ là 話します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "妹は 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：学校へ　2：歩いて　3：行きます",
+   "choices": [
+    "学校へ",
+    "歩いて",
+    "泳いで",
+    "行きます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 学校へ (hướng đến) → 歩いて (bằng cách đi bộ) → 行きます (động từ cuối). Vậy ★ là 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 放課後 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：図書室で　2：宿題を　3：します",
+   "choices": [
+    "します",
+    "図書室で",
+    "宿題を",
+    "読みます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 図書室で (nơi chốn) → 宿題を (tân ngữ) → します (động từ cuối). Vậy ★ là します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "学生は テストの 前に ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：ノートを　2：見て　3：勉強します",
+   "choices": [
+    "ノートを",
+    "勉強します",
+    "見て",
+    "寝ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: ノートを → 見て (xem vở rồi mới học) → 勉強します. Vậy ★ là 勉強します."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：あしたは 試験ですね。\nB：ええ。わたしは 昨日の 夜、（1） 勉強しました。\nA：（2）で 勉強しましたか。\nB：図書室です。静かです （3）、よく 勉強できます。\nA：じゃあ、あした 3時に 図書室で （4）。\nB：いいですね。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "ぜんぜん",
+    "あまり",
+    "たくさん",
+    "何も"
+   ],
+   "answer": 2,
+   "explain_vi": "Câu sau là 勉強しました (khẳng định) nên chỉ dùng được たくさん (nhiều). ぜんぜん/あまり/何も đều phải đi với thể phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：あしたは 試験ですね。\nB：ええ。わたしは 昨日の 夜、（1） 勉強しました。\nA：（2）で 勉強しましたか。\nB：図書室です。静かです （3）、よく 勉強できます。\nA：じゃあ、あした 3時に 図書室で （4）。\nB：いいですね。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "だれ",
+    "いつ",
+    "なに",
+    "どこ"
+   ],
+   "answer": 3,
+   "explain_vi": "B trả lời 図書室です (nơi chốn) nên câu hỏi phải là どこで (ở đâu)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：あしたは 試験ですね。\nB：ええ。わたしは 昨日の 夜、（1） 勉強しました。\nA：（2）で 勉強しましたか。\nB：図書室です。静かです （3）、よく 勉強できます。\nA：じゃあ、あした 3時に 図書室で （4）。\nB：いいですね。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "から",
+    "でも",
+    "そして",
+    "それから"
+   ],
+   "answer": 0,
+   "explain_vi": "Quan hệ lý do: vì thư viện yên tĩnh nên học tốt → 静かですから. でも là nhưng, ngược nghĩa."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：あしたは 試験ですね。\nB：ええ。わたしは 昨日の 夜、（1） 勉強しました。\nA：（2）で 勉強しましたか。\nB：図書室です。静かです （3）、よく 勉強できます。\nA：じゃあ、あした 3時に 図書室で （4）。\nB：いいですね。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "会いました",
+    "会いましょう",
+    "会う",
+    "会いたいです"
+   ],
+   "answer": 1,
+   "explain_vi": "A đang hẹn gặp B ngày mai và B đáp いいですね, nên dùng thể rủ rê 会いましょう (gặp nhau nhé)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n図書室は 午後 4時までです。明日は 休みです。本は 一人 三冊まで 借りることが できます。\n\n本は 一人 何冊まで 借りることが できますか。",
+   "choices": [
+    "一冊",
+    "二冊",
+    "三冊",
+    "四冊"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi rõ: 本は 一人 三冊まで — mỗi người mượn tối đa 3 cuốn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n来週の 月曜日は テストが あります。午前 10時からです。遅刻しないで ください。\n\nテストは 何時からですか。",
+   "choices": [
+    "午前 9時",
+    "午後 10時",
+    "午後 1時",
+    "午前 10時"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 午前 10時からです — bài kiểm tra bắt đầu lúc 10 giờ sáng."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ミナです。わたしは 高校生です。学校は 家から 遠いですから、毎朝 バスで 行きます。学校で 日本語と 英語を 勉強します。日本語の 先生は 親切で、授業は おもしろいです。放課後、友達と 図書室で 宿題を します。わたしは この 学校が 大好きです。\n\nミナさんは どうやって 学校へ 行きますか。",
+   "choices": [
+    "バスで",
+    "歩いて",
+    "電車で",
+    "自転車で"
+   ],
+   "answer": 0,
+   "explain_vi": "Trong đoạn có câu: 学校は 家から 遠いですから、毎朝 バスで 行きます — đi bằng xe buýt vì nhà xa."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ミナです。わたしは 高校生です。学校は 家から 遠いですから、毎朝 バスで 行きます。学校で 日本語と 英語を 勉強します。日本語の 先生は 親切で、授業は おもしろいです。放課後、友達と 図書室で 宿題を します。わたしは この 学校が 大好きです。\n\n放課後、ミナさんは 何を しますか。",
+   "choices": [
+    "家で テレビを 見ます",
+    "友達と 図書室で 宿題を します",
+    "公園で サッカーを します",
+    "一人で 帰ります"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu cuối phần giữa đoạn: 放課後、友達と 図書室で 宿題を します — sau giờ học làm bài tập ở thư viện với bạn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nサッカー部：火曜日・木曜日\n音楽部：水曜日\n美術部：金曜日\n\n音楽部は 何曜日ですか。",
+   "choices": [
+    "火曜日",
+    "木曜日",
+    "水曜日",
+    "金曜日"
+   ],
+   "answer": 2,
+   "explain_vi": "Bảng ghi 音楽部：水曜日 — câu lạc bộ âm nhạc sinh hoạt vào thứ Tư."
+  }
+ ]
+}

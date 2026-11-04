@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-13",
+ "label": "Đề thi thử 13",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「紅茶」は 何と 読みますか。",
+   "choices": [
+    "こうちゃ",
+    "こうさ",
+    "べにちゃ",
+    "こうち"
+   ],
+   "answer": 0,
+   "explain_vi": "紅茶 đọc là こうちゃ (hồng trà/trà đen). 紅 đọc là こう trong từ này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「喫茶店」は 何と 読みますか。",
+   "choices": [
+    "きっちゃてん",
+    "きっさてん",
+    "きさてん",
+    "きっさでん"
+   ],
+   "answer": 1,
+   "explain_vi": "喫茶店 đọc là きっさてん (quán cà phê, quán trà). Có つ nhỏ: きっさ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「午後」は 何と 読みますか。",
+   "choices": [
+    "ごぜん",
+    "ごごう",
+    "ごご",
+    "ごごえ"
+   ],
+   "answer": 2,
+   "explain_vi": "午後 đọc là ごご (buổi chiều, sau 12 giờ). Ngược lại, buổi sáng là 午前（ごぜん)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「冷たい」は 何と 読みますか。",
+   "choices": [
+    "れいたい",
+    "つめた",
+    "すずしい",
+    "つめたい"
+   ],
+   "answer": 3,
+   "explain_vi": "冷たい đọc là つめたい (lạnh — dùng cho đồ uống, đồ vật khi chạm vào). すずしい là mát mẻ (thời tiết), từ khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「温かい」は 何と 読みますか。",
+   "choices": [
+    "あたたか",
+    "あたたかい",
+    "あたかい",
+    "ぬるい"
+   ],
+   "answer": 1,
+   "explain_vi": "温かい đọc là あたたかい (ấm — đồ uống, đồ ăn, thời tiết). Phải đủ あたたかい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「氷」は 何と 読みますか。",
+   "choices": [
+    "ひょう",
+    "こり",
+    "こおり",
+    "ごおり"
+   ],
+   "answer": 2,
+   "explain_vi": "氷 đọc là こおり (đá lạnh, băng). ひょう là âm on'yomi, dùng trong từ ghép khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「店員」は 何と 読みますか。",
+   "choices": [
+    "てんえん",
+    "てんい",
+    "でんいん",
+    "てんいん"
+   ],
+   "answer": 3,
+   "explain_vi": "店員 đọc là てんいん (nhân viên cửa hàng). 店 = てん, 員 = いん."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「こうちゃ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "紅茶",
+    "紅車",
+    "茶紅",
+    "赤茶"
+   ],
+   "answer": 0,
+   "explain_vi": "こうちゃ (hồng trà) viết là 紅茶. 車 là くるま (xe), không liên quan."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「こおり」を 漢字で 書くと どれですか。",
+   "choices": [
+    "水",
+    "永",
+    "氷",
+    "求"
+   ],
+   "answer": 2,
+   "explain_vi": "こおり (đá) viết là 氷. 水 là みず (nước), thêm một nét thành 氷."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「つめたい」水を 飲みます。この「つめたい」の 漢字は どれですか。",
+   "choices": [
+    "寒い",
+    "涼しい",
+    "熱い",
+    "冷たい"
+   ],
+   "answer": 3,
+   "explain_vi": "Nước lạnh dùng 冷たい (lạnh khi chạm/uống). 寒い dùng cho thời tiết, 涼しい là mát, 熱い là nóng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「みず」を 漢字で 書くと どれですか。",
+   "choices": [
+    "水",
+    "氷",
+    "永",
+    "泳"
+   ],
+   "answer": 0,
+   "explain_vi": "みず (nước) viết là 水. 氷 là こおり (đá), 泳 là およぐ (bơi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「てんいん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "店貝",
+    "店員",
+    "員店",
+    "店人"
+   ],
+   "answer": 1,
+   "explain_vi": "てんいん (nhân viên) viết là 店員. 員 mới đúng, 貝（かい) là vỏ sò."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "喫茶店で コーヒーを （　）。",
+   "choices": [
+    "食べます",
+    "読みます",
+    "書きます",
+    "飲みます"
+   ],
+   "answer": 3,
+   "explain_vi": "Uống cà phê ở quán: 飲みます. Cà phê là đồ uống nên không dùng 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "氷が ありますから、この お茶は （　）です。",
+   "choices": [
+    "冷たい",
+    "熱い",
+    "重い",
+    "長い"
+   ],
+   "answer": 0,
+   "explain_vi": "Trà có đá nên lạnh: 冷たい. 熱い là nóng, ngược với có đá."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この ジュースは 甘くて （　）です。",
+   "choices": [
+    "うるさい",
+    "おいしい",
+    "忙しい",
+    "難しい"
+   ],
+   "answer": 1,
+   "explain_vi": "Nước ép ngọt và ngon: おいしい. うるさい là ồn, 忙しい là bận, 難しい là khó."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "喫茶店は 駅の 前に （　）。",
+   "choices": [
+    "います",
+    "なります",
+    "あります",
+    "します"
+   ],
+   "answer": 2,
+   "explain_vi": "Quán cà phê là vật/công trình nên dùng あります (có, tồn tại). います dùng cho người và động vật."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "母は 毎朝 家族に お茶を （　）。",
+   "choices": [
+    "入れます",
+    "洗います",
+    "脱ぎます",
+    "閉めます"
+   ],
+   "answer": 0,
+   "explain_vi": "Pha trà cho gia đình: お茶を 入れます (pha trà). Đây là cách nói cố định của người Nhật."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この コーヒーは （　）ですから、砂糖を 入れます。",
+   "choices": [
+    "甘い",
+    "酸っぱい",
+    "苦い",
+    "しょっぱい"
+   ],
+   "answer": 2,
+   "explain_vi": "Cà phê đắng nên cho đường: 苦い (đắng). 甘い là ngọt thì không cần thêm đường."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「飲む」を 使った 文は どれですか。",
+   "choices": [
+    "本を 飲みます。",
+    "水を 飲みます。",
+    "歌を 飲みます。",
+    "ご飯を 飲みます。"
+   ],
+   "answer": 1,
+   "explain_vi": "飲む (uống) dùng với nước, trà, cà phê: 水を 飲みます. Cơm thì dùng 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「冷たい」を 使った 文は どれですか。",
+   "choices": [
+    "冷たい 部屋です。",
+    "冷たい 音が します。",
+    "冷たい 天気です。",
+    "冷たい 水を 飲みます。"
+   ],
+   "answer": 3,
+   "explain_vi": "冷たい dùng cho vật/đồ uống lạnh khi chạm vào: 冷たい 水. Thời tiết lạnh dùng 寒い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「温かい」を 使った 文は どれですか。",
+   "choices": [
+    "温かい 音が します。",
+    "温かい スープを 飲みます。",
+    "温かい 雨です。",
+    "温かい 歌です。"
+   ],
+   "answer": 1,
+   "explain_vi": "温かい (ấm) dùng cho súp, trà, đồ ăn: 温かい スープ. Âm thanh, mưa, bài hát không đi với 温かい ở trình độ này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "喫茶店は 10時 （　） 開きます。",
+   "choices": [
+    "まで",
+    "に",
+    "を",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "Quán mở từ 10 giờ: 10時から 開きます. から = từ (điểm bắt đầu)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 午後 3時 （　） 喫茶店で 働きます。",
+   "choices": [
+    "まで",
+    "から",
+    "に",
+    "へ"
+   ],
+   "answer": 0,
+   "explain_vi": "Làm việc đến 3 giờ chiều: 3時まで 働きます. まで = đến (điểm kết thúc)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "喫茶店 （　） 出て、駅へ 行きます。",
+   "choices": [
+    "で",
+    "に",
+    "を",
+    "が"
+   ],
+   "answer": 2,
+   "explain_vi": "Ra khỏi nơi nào dùng を: 店を 出る (ra khỏi quán). Đây là を chỉ điểm xuất phát."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "駅の 近く （　） 喫茶店が あります。",
+   "choices": [
+    "で",
+    "を",
+    "へ",
+    "に"
+   ],
+   "answer": 3,
+   "explain_vi": "Tồn tại ở đâu dùng に: 近くに あります. で dùng cho nơi diễn ra hành động."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "ここで 写真を 撮っ （　） いいですか。",
+   "choices": [
+    "た",
+    "て",
+    "で",
+    "に"
+   ],
+   "answer": 1,
+   "explain_vi": "Xin phép: 〜ても いいですか. 撮る → 撮って, nên chỗ trống là て (撮っても いいですか)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 苦い コーヒーを 飲み （　）です。",
+   "choices": [
+    "たい",
+    "たくて",
+    "たくない",
+    "たいと"
+   ],
+   "answer": 2,
+   "explain_vi": "Cà phê đắng nên không muốn uống: 飲みたくないです (không muốn uống). Đây là phủ định của たい."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "何 （　） 飲みません。わたしは 疲れています。",
+   "choices": [
+    "も",
+    "を",
+    "が",
+    "は"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu 何も + phủ định = không... gì cả: 何も 飲みません (không uống gì cả)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは （　） 喫茶店へ 行きます。週に 三回 行きます。",
+   "choices": [
+    "あまり",
+    "全然",
+    "よく",
+    "少し"
+   ],
+   "answer": 2,
+   "explain_vi": "Một tuần đi ba lần là thường xuyên: よく 行きます. あまり/全然 phải đi với phủ định."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "お茶を 入れ （　）。",
+   "choices": [
+    "ましょうか",
+    "ましょう",
+    "ました",
+    "ます"
+   ],
+   "answer": 0,
+   "explain_vi": "Đề nghị làm giúp người khác: 入れましょうか (để tôi pha trà nhé?). ましょう là rủ cùng làm, khác với đề nghị giúp."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 喫茶店で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：コーヒーを　2：飲んで　3：ケーキを 食べます",
+   "choices": [
+    "コーヒーを",
+    "ケーキを 食べます",
+    "読みます",
+    "飲んで"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: コーヒーを → 飲んで → ケーキを 食べます. Vậy vị trí ★ là 飲んで."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "友達は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：紅茶に　2：砂糖を　3：入れます",
+   "choices": [
+    "紅茶に",
+    "入れます",
+    "砂糖を",
+    "出します"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 紅茶に → 砂糖を → 入れます (cho đường vào trà). Vậy vị trí ★ (cuối) là 入れます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は 朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：お茶を　2：入れて　3：家族に 出します",
+   "choices": [
+    "入れて",
+    "お茶を",
+    "家族に 出します",
+    "洗います"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: お茶を → 入れて → 家族に 出します (pha trà rồi mang ra cho gia đình). Vậy vị trí ★ là 入れて."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 駅の 前で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：会って　3：喫茶店へ 行きます",
+   "choices": [
+    "友達と",
+    "会って",
+    "帰ります",
+    "喫茶店へ 行きます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 友達と → 会って → 喫茶店へ 行きます. Vậy vị trí ★ (cuối) là 喫茶店へ 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません、メニューを （1）。\nA：はい、どうぞ。\nB：コーヒーを 一つと、紅茶を 一つ （2）。\nA：はい、わかりました。ケーキも いかがですか。\nB：じゃあ、ケーキ （3） 一つ ください。全部で いくらですか。\nA：1,200円です。\nB：カード （4） いいですか。\nA：はい、いいですよ。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "見せます",
+    "見せました",
+    "見せてください",
+    "見せたいです"
+   ],
+   "answer": 2,
+   "explain_vi": "Nhờ nhân viên đưa thực đơn: メニューを 見せてください (làm ơn cho xem thực đơn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません、メニューを （1）。\nA：はい、どうぞ。\nB：コーヒーを 一つと、紅茶を 一つ （2）。\nA：はい、わかりました。ケーキも いかがですか。\nB：じゃあ、ケーキ （3） 一つ ください。全部で いくらですか。\nA：1,200円です。\nB：カード （4） いいですか。\nA：はい、いいですよ。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "ください",
+    "行きます",
+    "です"
+   ],
+   "answer": 1,
+   "explain_vi": "Gọi món lịch sự: コーヒーを 一つと、紅茶を 一つ ください (cho tôi một cà phê và một hồng trà)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません、メニューを （1）。\nA：はい、どうぞ。\nB：コーヒーを 一つと、紅茶を 一つ （2）。\nA：はい、わかりました。ケーキも いかがですか。\nB：じゃあ、ケーキ （3） 一つ ください。全部で いくらですか。\nA：1,200円です。\nB：カード （4） いいですか。\nA：はい、いいですよ。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "が",
+    "を",
+    "へ",
+    "に"
+   ],
+   "answer": 1,
+   "explain_vi": "Tân ngữ của ください là món đồ: ケーキを 一つ ください. Dùng を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません、メニューを （1）。\nA：はい、どうぞ。\nB：コーヒーを 一つと、紅茶を 一つ （2）。\nA：はい、わかりました。ケーキも いかがですか。\nB：じゃあ、ケーキ （3） 一つ ください。全部で いくらですか。\nA：1,200円です。\nB：カード （4） いいですか。\nA：はい、いいですよ。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "で",
+    "を",
+    "に",
+    "が"
+   ],
+   "answer": 0,
+   "explain_vi": "Trả bằng thẻ: カードで いいですか. で chỉ phương tiện/cách thức thanh toán."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n喫茶店「あおぞら」は 午前 9時から 午後 7時までです。月曜日は 休みです。\n\n喫茶店は 何曜日が 休みですか。",
+   "choices": [
+    "火曜日",
+    "土曜日",
+    "日曜日",
+    "月曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 月曜日は 休みです — quán nghỉ thứ Hai."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n今日の おすすめ：冷たい お茶と ケーキの セットは 600円です。\n\nセットは いくらですか。",
+   "choices": [
+    "500円",
+    "700円",
+    "600円",
+    "800円"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi rõ セットは 600円です."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ダンです。わたしは 喫茶店が 好きです。毎週 日曜日の 午後、駅の 前の 喫茶店へ 行きます。そこで 本を 読んだり、友達と 話したり します。今日は 紅茶を 飲んで、ケーキを 食べました。紅茶は 温かくて、おいしかったです。\n\nダンさんは 何曜日に 喫茶店へ 行きますか。",
+   "choices": [
+    "土曜日",
+    "月曜日",
+    "金曜日",
+    "日曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn: 毎週 日曜日の 午後...喫茶店へ 行きます — chiều Chủ nhật hằng tuần."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ダンです。わたしは 喫茶店が 好きです。毎週 日曜日の 午後、駅の 前の 喫茶店へ 行きます。そこで 本を 読んだり、友達と 話したり します。今日は 紅茶を 飲んで、ケーキを 食べました。紅茶は 温かくて、おいしかったです。\n\nダンさんは 今日 何を 食べましたか。",
+   "choices": [
+    "パン",
+    "サンドイッチ",
+    "ケーキ",
+    "クッキー"
+   ],
+   "answer": 2,
+   "explain_vi": "Câu trong đoạn: ケーキを 食べました — hôm nay ăn bánh ngọt."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nコーヒー：400円\n紅茶：450円\nお茶：300円\nジュース：350円\n\nいちばん 安い 飲み物は どれですか。",
+   "choices": [
+    "コーヒー",
+    "お茶",
+    "紅茶",
+    "ジュース"
+   ],
+   "answer": 1,
+   "explain_vi": "Bảng giá: お茶 300 yên là rẻ nhất (400, 450, 350 yên)."
+  }
+ ]
+}

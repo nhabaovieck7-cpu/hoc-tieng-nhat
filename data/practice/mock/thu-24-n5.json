@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-24",
+ "label": "Đề thi thử 24",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「長い」は 何と 読みますか。",
+   "choices": [
+    "なが",
+    "ながき",
+    "ちょう",
+    "ながい"
+   ],
+   "answer": 3,
+   "explain_vi": "長い đọc là ながい — dài (về độ dài)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「丸い」は 何と 読みますか。",
+   "choices": [
+    "まるき",
+    "まろい",
+    "まるい",
+    "えんい"
+   ],
+   "answer": 2,
+   "explain_vi": "丸い đọc là まるい — tròn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「四角い」は 何と 読みますか。",
+   "choices": [
+    "しかっい",
+    "しがくい",
+    "よんかくい",
+    "しかくい"
+   ],
+   "answer": 3,
+   "explain_vi": "四角い đọc là しかくい — vuông (có bốn góc)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「狭い」は 何と 読みますか。",
+   "choices": [
+    "せばい",
+    "せまき",
+    "さまい",
+    "せまい"
+   ],
+   "answer": 3,
+   "explain_vi": "狭い đọc là せまい — hẹp, chật."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「暗い」は 何と 読みますか。",
+   "choices": [
+    "あんい",
+    "くらい",
+    "あまい",
+    "くらき"
+   ],
+   "answer": 1,
+   "explain_vi": "暗い đọc là くらい — tối."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「新しい」は 何と 読みますか。",
+   "choices": [
+    "あたらしき",
+    "あたらじい",
+    "あたらしい",
+    "しんしい"
+   ],
+   "answer": 2,
+   "explain_vi": "新しい đọc là あたらしい — mới."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「太い」は 何と 読みますか。",
+   "choices": [
+    "ふとい",
+    "おおい",
+    "たいい",
+    "ふとき"
+   ],
+   "answer": 0,
+   "explain_vi": "太い đọc là ふとい — dày, to (đường kính). おおい là cách đọc của 多い, khác từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「さんかく」を 漢字で 書くと どれですか。",
+   "choices": [
+    "三画",
+    "三各",
+    "山角",
+    "三角"
+   ],
+   "answer": 3,
+   "explain_vi": "さんかく (tam giác) viết là 三角."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「むらさき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "柴",
+    "紫",
+    "芝",
+    "藤"
+   ],
+   "answer": 1,
+   "explain_vi": "むらさき (màu tím) viết là 紫. 芝 đọc là しば (bãi cỏ), 藤 là ふじ (hoa tử đằng), 柴 là しば (củi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「はいいろ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "配色",
+    "灰石",
+    "灰色",
+    "戻色"
+   ],
+   "answer": 2,
+   "explain_vi": "はいいろ (màu xám) viết là 灰色. 配色 đọc là はいしょく, nghĩa là phối màu, không phải tên màu xám."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ひろい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "弘い",
+    "宏い",
+    "広き",
+    "広い"
+   ],
+   "answer": 3,
+   "explain_vi": "ひろい (rộng) viết là 広い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あかるい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "明い",
+    "朝るい",
+    "明るい",
+    "明かるい"
+   ],
+   "answer": 2,
+   "explain_vi": "あかるい (sáng) viết là 明るい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この ボールは 丸くて （　）です。",
+   "choices": [
+    "赤い",
+    "忙しい",
+    "早い",
+    "重い"
+   ],
+   "answer": 0,
+   "explain_vi": "Quả bóng vừa tròn vừa đỏ: 丸くて 赤いです. Các tính từ còn lại không miêu tả màu của bóng trong câu này."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "空は （　）です。雲が 一つも ありません。",
+   "choices": [
+    "白い",
+    "黒い",
+    "青い",
+    "寒い"
+   ],
+   "answer": 2,
+   "explain_vi": "Không có mây nào nên bầu trời xanh: 青いです."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この 紙は （　）です。何も 書いて いません。",
+   "choices": [
+    "白い",
+    "暑い",
+    "重い",
+    "早い"
+   ],
+   "answer": 0,
+   "explain_vi": "Tờ giấy trắng, chưa viết gì: 白いです."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "レモンは （　）です。",
+   "choices": [
+    "甘い",
+    "黄色い",
+    "丸い",
+    "辛い"
+   ],
+   "answer": 1,
+   "explain_vi": "Quả chanh có màu vàng: 黄色いです. Chanh chua chứ không 甘い (ngọt) hay 辛い (cay)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "彼女の かばんは （　）です。四つの 角が あって、物が たくさん 入ります。",
+   "choices": [
+    "長い",
+    "新しい",
+    "丸い",
+    "四角い"
+   ],
+   "answer": 3,
+   "explain_vi": "Có bốn góc （四つの 角） nên là 四角い — vuông."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この ロープは 5メートルも あります。とても （　）です。",
+   "choices": [
+    "長い",
+    "短い",
+    "高い",
+    "安い"
+   ],
+   "answer": 0,
+   "explain_vi": "Sợi dây dài tới 5 mét: 長いです."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「丸い」を 使った 文は どれですか。",
+   "choices": [
+    "丸い 音を 聞きました。",
+    "月が 丸くて 明るいです。",
+    "わたしは 丸い 水を 飲みます。",
+    "彼は 丸い 歌が 好きです。"
+   ],
+   "answer": 1,
+   "explain_vi": "丸い (tròn) dùng cho vật có hình tròn như mặt trăng. Âm thanh, nước, bài hát không có hình tròn."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「紫」を 使った 文は どれですか。",
+   "choices": [
+    "庭に 紫の 花が 咲いています。",
+    "わたしは 紫を 飲みます。",
+    "紫は とても おいしいです。",
+    "紫い 車が 来ました。"
+   ],
+   "answer": 0,
+   "explain_vi": "紫 là danh từ chỉ màu tím, dùng dạng 紫の + danh từ. Không nói 紫い, và màu sắc không ăn/uống được."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「四角い」を 使った 文は どれですか。",
+   "choices": [
+    "わたしは 四角い 歌を 歌います。",
+    "この 箱は 四角いです。",
+    "四角い 音が 聞こえます。",
+    "四角い 水は 甘いです。"
+   ],
+   "answer": 1,
+   "explain_vi": "四角い (vuông) dùng cho đồ vật có góc cạnh như cái hộp. Âm thanh, bài hát, nước không có hình vuông."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 箱 （　） 中に 赤い ボールが あります。",
+   "choices": [
+    "に",
+    "の",
+    "を",
+    "へ"
+   ],
+   "answer": 1,
+   "explain_vi": "箱の中 (bên trong cái hộp) dùng の nối hai danh từ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "テーブルの 上 （　） 白い 紙が あります。",
+   "choices": [
+    "を",
+    "に",
+    "の",
+    "で"
+   ],
+   "answer": 1,
+   "explain_vi": "Vật ở trên bàn dùng に chỉ vị trí tồn tại: 上に あります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 写真 （　） 見て ください。",
+   "choices": [
+    "が",
+    "を",
+    "に",
+    "で"
+   ],
+   "answer": 1,
+   "explain_vi": "Đối tượng của 見ます dùng を: 写真を 見て ください."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 部屋は あの 部屋 （　） 広いです。",
+   "choices": [
+    "より",
+    "から",
+    "まで",
+    "と"
+   ],
+   "answer": 0,
+   "explain_vi": "So sánh hơn dùng より: あの 部屋より 広い = rộng hơn phòng kia."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 新しい 靴 （　） ほしいです。",
+   "choices": [
+    "を",
+    "へ",
+    "が",
+    "に"
+   ],
+   "answer": 2,
+   "explain_vi": "ほしい đi với が: 靴が ほしいです (tôi muốn có đôi giày)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "まどを （　）ください。暑いです。",
+   "choices": [
+    "開けて",
+    "開ける",
+    "開けた",
+    "開けます"
+   ],
+   "answer": 0,
+   "explain_vi": "〜て ください dùng thể て: 開けて ください (hãy mở cửa sổ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "きょうは 寒く （　）。",
+   "choices": [
+    "ない",
+    "あります",
+    "です",
+    "ありません"
+   ],
+   "answer": 3,
+   "explain_vi": "Tính từ い phủ định: 寒く ありません (không lạnh)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "日曜日は 本を 読ん （　）、音楽を 聞いたり します。",
+   "choices": [
+    "かり",
+    "だり",
+    "なり",
+    "たり"
+   ],
+   "answer": 1,
+   "explain_vi": "読む thuộc nhóm 1, thể た là 読んだ nên 〜たり thành 読んだり."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "兄は 車を 買いました。父 （　） 新しい 車を 買いました。",
+   "choices": [
+    "を",
+    "が",
+    "は",
+    "も"
+   ],
+   "answer": 3,
+   "explain_vi": "も nghĩa là 'cũng': bố cũng mua xe mới."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は 台所で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：丸い　2：パンを　3：焼きます",
+   "choices": [
+    "丸い",
+    "パンを",
+    "作ります",
+    "焼きます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 丸い → パンを → 焼きます (mẹ nướng chiếc bánh tròn). Vị trí ★ là 焼きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は デパートで ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：新しい　2：時計を　3：買いました",
+   "choices": [
+    "時計を",
+    "見ました",
+    "新しい",
+    "買いました"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 新しい → 時計を → 買いました (anh ấy mua chiếc đồng hồ mới). Vị trí ★ là 買いました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あの 店は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：大きくて　2：明るい　3：です",
+   "choices": [
+    "明るい",
+    "です",
+    "大きくて",
+    "ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 大きくて → 明るい → です (cửa hàng đó vừa to vừa sáng). Vị trí ★ là です."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "妹は 公園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：青い　2：鳥を　3：見ました",
+   "choices": [
+    "青い",
+    "鳥を",
+    "見ました",
+    "聞きました"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 青い → 鳥を → 見ました (em gái nhìn thấy con chim xanh). Vị trí ★ là 見ました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この かばんは （1）ですか。\nB：3,800円です。\nA：そうですか。（2）は ありますか。わたしは 青が 好きです。\nB：はい、こちらです。\nA：いいですね。これを （3）。\nB：ありがとう ございます。袋に （4）か。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "どれ",
+    "なん",
+    "いくら",
+    "だれ"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi giá tiền dùng いくらですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この かばんは （1）ですか。\nB：3,800円です。\nA：そうですか。（2）は ありますか。わたしは 青が 好きです。\nB：はい、こちらです。\nA：いいですね。これを （3）。\nB：ありがとう ございます。袋に （4）か。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "青いの",
+    "青",
+    "青く",
+    "青い"
+   ],
+   "answer": 0,
+   "explain_vi": "青いの は = cái (túi) màu xanh thì... の thay cho danh từ かばん đã nói trước đó."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この かばんは （1）ですか。\nB：3,800円です。\nA：そうですか。（2）は ありますか。わたしは 青が 好きです。\nB：はい、こちらです。\nA：いいですね。これを （3）。\nB：ありがとう ございます。袋に （4）か。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "みます",
+    "です",
+    "ください",
+    "します"
+   ],
+   "answer": 2,
+   "explain_vi": "Khi muốn mua: これを ください (cho tôi cái này)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。この かばんは （1）ですか。\nB：3,800円です。\nA：そうですか。（2）は ありますか。わたしは 青が 好きです。\nB：はい、こちらです。\nA：いいですね。これを （3）。\nB：ありがとう ございます。袋に （4）か。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "入れます",
+    "入れる",
+    "入ります",
+    "入れて"
+   ],
+   "answer": 0,
+   "explain_vi": "Nhân viên hỏi 'tôi cho vào túi nhé?': 袋に 入れますか. 入ります là tự động từ 'vào', không hợp vai người bán."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n今日は 赤い セーターが 安いです。一つ 3,000円です。白い セーターは 4,000円です。\n\n赤い セーターは いくらですか。",
+   "choices": [
+    "3,000円",
+    "3,500円",
+    "4,000円",
+    "300円"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi áo len đỏ 3,000円; 4,000円 là giá áo len trắng."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n丸い テーブルは 8,000円です。四角い テーブルは 6,000円です。\n\n四角い テーブルは いくらですか。",
+   "choices": [
+    "8,000円",
+    "6,500円",
+    "6,000円",
+    "600円"
+   ],
+   "answer": 2,
+   "explain_vi": "Bàn vuông giá 6,000円; 8,000円 là giá bàn tròn."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハンです。わたしの 部屋は 小さいですが、明るいです。部屋に 四角い 机と 丸い 時計が あります。机の 上に 青い ノートが あります。わたしは この 部屋が 好きです。\n\nハンさんの 部屋は どうですか。",
+   "choices": [
+    "小さくて 明るいです",
+    "新しくて 大きいです",
+    "古くて 狭いです",
+    "広くて 暗いです"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn nói: 部屋は 小さいですが、明るいです — phòng nhỏ nhưng sáng."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ハンです。わたしの 部屋は 小さいですが、明るいです。部屋に 四角い 机と 丸い 時計が あります。机の 上に 青い ノートが あります。わたしは この 部屋が 好きです。\n\n机の 上に 何が ありますか。",
+   "choices": [
+    "四角い 机",
+    "丸い 時計",
+    "青い ノート",
+    "赤い 本"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn ghi trên bàn có cuốn vở màu xanh （青い ノート)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n白い かばん：4,500円\n黒い かばん：5,000円\n茶色い かばん：4,000円\n\n一番 安い かばんは いくらですか。",
+   "choices": [
+    "5,000円",
+    "4,000円",
+    "3,500円",
+    "4,500円"
+   ],
+   "answer": 1,
+   "explain_vi": "Túi nâu 4,000円 là rẻ nhất trong ba chiếc."
+  }
+ ]
+}

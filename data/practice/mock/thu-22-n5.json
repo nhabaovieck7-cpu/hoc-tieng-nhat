@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-22",
+ "label": "Đề thi thử 22",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「自転車」は 何と 読みますか。",
+   "choices": [
+    "じでんしゃ",
+    "じてんじゃ",
+    "じてんしゃ",
+    "じどうしゃ"
+   ],
+   "answer": 2,
+   "explain_vi": "自転車 đọc là じてんしゃ (xe đạp). じどうしゃ là cách đọc của 自動車 (ô tô)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「近い」は 何と 読みますか。",
+   "choices": [
+    "ちがい",
+    "ちかい",
+    "ちかく",
+    "ちか"
+   ],
+   "answer": 1,
+   "explain_vi": "近い đọc là ちかい (gần). ちがい là từ khác, nghĩa là sự khác biệt."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「遠い」は 何と 読みますか。",
+   "choices": [
+    "とうい",
+    "とおく",
+    "とよい",
+    "とおい"
+   ],
+   "answer": 3,
+   "explain_vi": "遠い đọc là とおい (xa)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「橋」は 何と 読みますか。",
+   "choices": [
+    "はし",
+    "ばし",
+    "はじ",
+    "はす"
+   ],
+   "answer": 0,
+   "explain_vi": "橋 đọc là はし (cầu). Chữ 箸 cũng đọc はし nhưng nghĩa là đũa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「道」は 何と 読みますか。",
+   "choices": [
+    "みち",
+    "みじ",
+    "みし",
+    "びち"
+   ],
+   "answer": 0,
+   "explain_vi": "道 đọc là みち (đường đi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「右」は 何と 読みますか。",
+   "choices": [
+    "みき",
+    "みぎ",
+    "にぎ",
+    "みく"
+   ],
+   "answer": 1,
+   "explain_vi": "右 đọc là みぎ (bên phải)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「左」は 何と 読みますか。",
+   "choices": [
+    "ひだり",
+    "ひたり",
+    "ひだる",
+    "ひまり"
+   ],
+   "answer": 0,
+   "explain_vi": "左 đọc là ひだり (bên trái)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「じてんしゃ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "自転者",
+    "自電車",
+    "自転車",
+    "自車転"
+   ],
+   "answer": 2,
+   "explain_vi": "じてんしゃ (xe đạp) viết là 自転車. 転 là 'chuyển/lăn', 車 là xe."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あるく」を 漢字で 書くと どれですか。",
+   "choices": [
+    "歩く",
+    "走く",
+    "泳く",
+    "止く"
+   ],
+   "answer": 0,
+   "explain_vi": "あるく (đi bộ) viết là 歩く. 走る mới là 'chạy', 泳ぐ là 'bơi'."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「はし」を 渡ります。この「はし」の 漢字は どれですか。",
+   "choices": [
+    "箸",
+    "橋",
+    "端",
+    "柱"
+   ],
+   "answer": 1,
+   "explain_vi": "Vật dùng để 渡る (băng qua sông) là 橋 (cầu). 箸 là đũa, cũng đọc はし."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「みち」を 漢字で 書くと どれですか。",
+   "choices": [
+    "通",
+    "道",
+    "導",
+    "近"
+   ],
+   "answer": 1,
+   "explain_vi": "みち (đường) viết là 道."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ひだり」を 漢字で 書くと どれですか。",
+   "choices": [
+    "右",
+    "友",
+    "石",
+    "左"
+   ],
+   "answer": 3,
+   "explain_vi": "ひだり (trái) viết là 左. 右（みぎ) là bên phải."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしの 家から 駅まで （　）5分です。",
+   "choices": [
+    "自転車で",
+    "歩いて",
+    "バスで",
+    "電車で"
+   ],
+   "answer": 1,
+   "explain_vi": "歩いて 5分 = đi bộ mất 5 phút. Đây là cách nói cố định chỉ thời gian đi bộ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "公園の 近くに 大きい （　）が あります。子どもは そこで ボートに 乗ります。",
+   "choices": [
+    "池",
+    "海",
+    "山",
+    "森"
+   ],
+   "answer": 0,
+   "explain_vi": "Nơi có thể chèo thuyền ボート ngay trong/cạnh công viên là 池 (ao, hồ nhỏ)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "公園まで この （　）を まっすぐ 行きます。",
+   "choices": [
+    "橋",
+    "駅",
+    "道",
+    "店"
+   ],
+   "answer": 2,
+   "explain_vi": "この 道を まっすぐ 行きます = đi thẳng theo con đường này. 道 đi với を chỉ đường di chuyển."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "朝、公園で おばあさんが 犬と （　）を しています。",
+   "choices": [
+    "買い物",
+    "料理",
+    "散歩",
+    "勉強"
+   ],
+   "answer": 2,
+   "explain_vi": "犬と 散歩を する = dắt chó đi dạo — hoạt động quen thuộc ở công viên buổi sáng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "駅前で 自転車を （　）。それから、鍵を かけました。",
+   "choices": [
+    "止めました",
+    "売りました",
+    "買いました",
+    "洗いました"
+   ],
+   "answer": 0,
+   "explain_vi": "Dừng/đỗ xe đạp rồi khóa lại: 自転車を 止めました (đã đỗ xe)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "日曜日、家族で 公園へ （　）に 行きます。",
+   "choices": [
+    "仕事",
+    "ピクニック",
+    "勉強",
+    "病院"
+   ],
+   "answer": 1,
+   "explain_vi": "Cả nhà đi công viên để dã ngoại: ピクニックに 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「歩きます」を 使った 文は どれですか。",
+   "choices": [
+    "自転車を 歩きます。",
+    "彼は 歩きますを 聞きます。",
+    "わたしは 毎朝 公園を 歩きます。",
+    "歩きますは 飲み物です。"
+   ],
+   "answer": 2,
+   "explain_vi": "歩く đi với nơi di chuyển qua trợ từ を: 公園を 歩きます (đi bộ trong công viên). Xe đạp thì phải 'đi bằng' chứ không 歩く được."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「曲がります」を 使った 文は どれですか。",
+   "choices": [
+    "彼は 曲がりますが 好きです。",
+    "水を 曲がります。",
+    "あの 角を 右へ 曲がります。",
+    "曲がりますは おいしいです。"
+   ],
+   "answer": 2,
+   "explain_vi": "曲がる là rẽ/quẹo: 角を 右へ 曲がります = rẽ phải ở góc đường đó."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「渡ります」を 使った 文は どれですか。",
+   "choices": [
+    "わたしは 橋を 渡ります。",
+    "本を 渡ります。",
+    "歌を 渡ります。",
+    "晩ごはんを 渡ります。"
+   ],
+   "answer": 0,
+   "explain_vi": "渡る là băng qua: 橋を 渡ります (qua cầu). Sách, bài hát, bữa tối không phải thứ để băng qua."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "駅 （　） 自転車を 借りることが できます。",
+   "choices": [
+    "を",
+    "へ",
+    "で",
+    "の"
+   ],
+   "answer": 2,
+   "explain_vi": "Nơi diễn ra hành động 借りる dùng trợ từ で: 駅で 自転車を 借ります (mượn xe đạp ở ga)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "橋を 渡って （　）、左へ 曲がります。",
+   "choices": [
+    "から",
+    "まで",
+    "より",
+    "にも"
+   ],
+   "answer": 0,
+   "explain_vi": "〜てから = sau khi làm xong việc trước: 渡ってから 曲がります (qua cầu rồi mới rẽ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "自転車は バス （　） 速いです。",
+   "choices": [
+    "から",
+    "まで",
+    "ので",
+    "より"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh hai vật dùng より: バスより 速い = nhanh hơn xe buýt."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 道を まっすぐ （　）ください。",
+   "choices": [
+    "行く",
+    "行って",
+    "行きます",
+    "行きたい"
+   ],
+   "answer": 1,
+   "explain_vi": "〜て ください là mẫu nhờ/yêu cầu lịch sự: 行ってください (xin hãy đi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "ここで 自転車に 乗っては （　）。",
+   "choices": [
+    "いいです",
+    "あります",
+    "できます",
+    "いけません"
+   ],
+   "answer": 3,
+   "explain_vi": "〜ては いけません = không được phép làm: ở đây không được đi xe đạp."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "音楽を 聞き （　）、公園を 歩きます。",
+   "choices": [
+    "まで",
+    "ながら",
+    "から",
+    "ので"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ながら diễn tả hai việc cùng lúc: vừa nghe nhạc vừa đi bộ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "家に （　）から、手を 洗います。",
+   "choices": [
+    "帰って",
+    "帰る",
+    "帰ります",
+    "帰りたい"
+   ],
+   "answer": 0,
+   "explain_vi": "〜てから nên động từ phải ở thể て: 帰ってから (sau khi về nhà)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 公園を 歩く （　）が 好きです。",
+   "choices": [
+    "もの",
+    "ところ",
+    "こと",
+    "とき"
+   ],
+   "answer": 2,
+   "explain_vi": "Muốn nói 'thích làm việc gì', đổi động từ thành danh từ bằng こと: 歩くことが 好きです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "公園の 近くに （　） 店が ありますか。",
+   "choices": [
+    "どこ",
+    "だれ",
+    "いつ",
+    "どんな"
+   ],
+   "answer": 3,
+   "explain_vi": "Hỏi về loại/tính chất của 店 dùng どんな: どんな 店 (cửa hàng như thế nào)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：自転車で　2：公園へ　3：行きます",
+   "choices": [
+    "自転車で",
+    "公園へ",
+    "行きます",
+    "歩きます"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 自転車で（phương tiện) → 公園へ（hướng) → 行きます（động từ cuối câu). Vậy ★ là 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 公園で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：友達と　2：サッカーを　3：します",
+   "choices": [
+    "友達と",
+    "します",
+    "見ます",
+    "サッカーを"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 友達と → サッカーを → します. Vậy ★ là サッカーを."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 家から ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：歩いて　2：駅へ　3：行きます",
+   "choices": [
+    "歩いて",
+    "駅へ",
+    "行きます",
+    "来ます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 歩いて（thể て nối) → 駅へ（hướng) → 行きます. Vậy ★ là 駅へ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は 公園の 近くで ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：自転車を　2：止めて　3：休みます",
+   "choices": [
+    "自転車を",
+    "休みます",
+    "止めて",
+    "買います"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 自転車を → 止めて（đỗ xe rồi) → 休みます（nghỉ). Vậy ★ là 止めて."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園へ 行きませんか。\nB：いいですね。（1） 行きますか。\nA：自転車で 行きましょう。駅前で 借りることが できます。\nB：公園まで （2）分ですか。\nA：15分ぐらいです。公園で 何を （3）か。\nB：ボートに 乗りたいです。それから、木の下で 昼ごはんを （4）。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "どこへ",
+    "何で",
+    "だれと",
+    "いつ"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi cách/phương tiện đi dùng 何で (bằng gì). A trả lời bằng 自転車 nên （1） là 何で."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園へ 行きませんか。\nB：いいですね。（1） 行きますか。\nA：自転車で 行きましょう。駅前で 借りることが できます。\nB：公園まで （2）分ですか。\nA：15分ぐらいです。公園で 何を （3）か。\nB：ボートに 乗りたいです。それから、木の下で 昼ごはんを （4）。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "いくら",
+    "どの",
+    "何",
+    "だれ"
+   ],
+   "answer": 2,
+   "explain_vi": "何分 = bao nhiêu phút: 公園まで 何分ですか (đến công viên mất bao nhiêu phút)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園へ 行きませんか。\nB：いいですね。（1） 行きますか。\nA：自転車で 行きましょう。駅前で 借りることが できます。\nB：公園まで （2）分ですか。\nA：15分ぐらいです。公園で 何を （3）か。\nB：ボートに 乗りたいです。それから、木の下で 昼ごはんを （4）。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "しました",
+    "する",
+    "したい",
+    "します"
+   ],
+   "answer": 3,
+   "explain_vi": "Câu hỏi về kế hoạch sắp tới dùng thể ます: 何を しますか (sẽ làm gì)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：日曜日、公園へ 行きませんか。\nB：いいですね。（1） 行きますか。\nA：自転車で 行きましょう。駅前で 借りることが できます。\nB：公園まで （2）分ですか。\nA：15分ぐらいです。公園で 何を （3）か。\nB：ボートに 乗りたいです。それから、木の下で 昼ごはんを （4）。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "食べました",
+    "食べて",
+    "食べる",
+    "食べます"
+   ],
+   "answer": 3,
+   "explain_vi": "Cả đoạn nói về kế hoạch Chủ nhật và đang dùng thể ます （乗りたいです), nên kết câu là 食べます (sẽ ăn trưa)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n公園からの お知らせ：公園は 午前 6時から 午後 7時まで 開いています。自転車は 入り口の 近くに 止めて ください。\n\n自転車は どこに 止めますか。",
+   "choices": [
+    "入り口の 近く",
+    "公園の 中",
+    "池の 近く",
+    "駅の 前"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi rõ: 自転車は 入り口の 近くに 止めて ください — đỗ xe đạp gần lối vào."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nレンタサイクルの お知らせ：自転車は 1日 500円です。駅前の 店で 借りることが できます。午後 6時までに 返して ください。\n\n自転車は 1日 いくらですか。",
+   "choices": [
+    "600円",
+    "1,000円",
+    "300円",
+    "500円"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 1日 500円 — thuê xe đạp 500 yên một ngày. 午後6時 là giờ phải trả xe."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は トゥイです。わたしは 駅の 近くに 住んでいます。大学は 遠いですから、毎日 自転車で 行きます。でも、日曜日は 歩いて 公園へ 行きます。公園は 家から 歩いて 10分です。公園で 友達と バドミントンを します。\n\nトゥイさんは 毎日 何で 大学へ 行きますか。",
+   "choices": [
+    "バスで",
+    "自転車で",
+    "歩いて",
+    "電車で"
+   ],
+   "answer": 1,
+   "explain_vi": "Trong đoạn: 大学は 遠いですから、毎日 自転車で 行きます — vì trường xa nên hằng ngày đi bằng xe đạp. Đi bộ chỉ vào Chủ nhật."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は トゥイです。わたしは 駅の 近くに 住んでいます。大学は 遠いですから、毎日 自転車で 行きます。でも、日曜日は 歩いて 公園へ 行きます。公園は 家から 歩いて 10分です。公園で 友達と バドミントンを します。\n\n公園は 家から 歩いて 何分ですか。",
+   "choices": [
+    "15分",
+    "5分",
+    "20分",
+    "10分"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn có câu 公園は 家から 歩いて 10分です — công viên cách nhà 10 phút đi bộ."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n公園の 施設\n・ボート：午前 9時〜午後 4時\n・テニス：午前 8時〜午後 6時\n・売店：午前 10時〜午後 5時\n\nボートは 何時までですか。",
+   "choices": [
+    "午後 4時",
+    "午後 6時",
+    "午後 5時",
+    "午前 9時"
+   ],
+   "answer": 0,
+   "explain_vi": "Bảng ghi ボート：午前 9時〜午後 4時 — thuyền cho thuê đến 4 giờ chiều."
+  }
+ ]
+}

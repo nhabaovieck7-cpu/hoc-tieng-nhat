@@ -1,0 +1,572 @@
+{
+ "duration_minutes": 60,
+ "feature": "mock",
+ "id": "thu-16",
+ "label": "Đề thi thử 16",
+ "level": "N5",
+ "pass": {
+  "section_min_pct": 40,
+  "total_pct": 60
+ },
+ "questions": [
+  {
+   "answer": 0,
+   "choices": [
+    "いえ",
+    "うち",
+    "や",
+    "か"
+   ],
+   "explain_vi": "家 đọc là いえ (nhà). Đây là cách đọc cơ bản nhất ở N5 khi nói về nhà ở.",
+   "level": "N5",
+   "question": "「家」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "かあ",
+    "はは",
+    "ばは",
+    "ぼ"
+   ],
+   "explain_vi": "母 đọc là はは (mẹ — khi nói về mẹ mình). Khi nói về mẹ người khác dùng お母さん（おかあさん）.",
+   "level": "N5",
+   "question": "「母」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "いもと",
+    "いもうど",
+    "いもうと",
+    "いもおと"
+   ],
+   "explain_vi": "妹 đọc là いもうと (em gái) — cách đọc đặc biệt, phải nhớ cả từ.",
+   "level": "N5",
+   "question": "「妹」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "へいや",
+    "ぶや",
+    "へあ",
+    "へや"
+   ],
+   "explain_vi": "部屋 đọc là へや (phòng). 部 = へ, 屋 = や.",
+   "level": "N5",
+   "question": "「部屋」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "げんかん",
+    "げんがん",
+    "けんかん",
+    "げんか"
+   ],
+   "explain_vi": "玄関 đọc là げんかん (lối vào nhà, sảnh cửa). 玄 = げん, 関 = かん.",
+   "level": "N5",
+   "question": "「玄関」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "にあ",
+    "にわ",
+    "てい",
+    "にば"
+   ],
+   "explain_vi": "庭 đọc là にわ (sân, vườn).",
+   "level": "N5",
+   "question": "「庭」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "ふうろ",
+    "ぶろ",
+    "ふろ",
+    "ふろお"
+   ],
+   "explain_vi": "風呂 đọc là ふろ (bồn tắm). 風 = ふ, 呂 = ろ.",
+   "level": "N5",
+   "question": "「風呂」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "店",
+    "屋",
+    "社",
+    "家"
+   ],
+   "explain_vi": "いえ (nhà) viết là 家. 店 là みせ (cửa hàng), 屋 là や (tiệm), 社 là しゃ trong 会社.",
+   "level": "N5",
+   "question": "「いえ」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "部屋",
+    "部室",
+    "屋部",
+    "教室"
+   ],
+   "explain_vi": "へや (phòng) viết là 部屋. 教室 là きょうしつ (lớp học/phòng học).",
+   "level": "N5",
+   "question": "「へや」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "姉",
+    "妹",
+    "弟",
+    "兄"
+   ],
+   "explain_vi": "いもうと (em gái) viết là 妹. 姉 là あね (chị gái), 弟 là おとうと (em trai), 兄 là あに (anh trai).",
+   "level": "N5",
+   "question": "「いもうと」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "関玄",
+    "玄門",
+    "玄関",
+    "間関"
+   ],
+   "explain_vi": "げんかん (lối vào nhà) viết là 玄関. 門 là もん (cổng), không dùng trong từ này.",
+   "level": "N5",
+   "question": "「げんかん」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "呂風",
+    "風屋",
+    "呂屋",
+    "風呂"
+   ],
+   "explain_vi": "ふろ (bồn tắm) viết là 風呂. 屋 đọc là や (tiệm), không ghép với 風 thành ふろ được.",
+   "level": "N5",
+   "question": "「ふろ」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "入ります",
+    "飲みます",
+    "食べます",
+    "書きます"
+   ],
+   "explain_vi": "Vào bồn tắm dùng 入ります (vào). お風呂に 入ります là cụm cố định.",
+   "level": "N5",
+   "question": "妹は お母さんと 一緒に お風呂に （　）。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "起きます",
+    "出ます",
+    "帰ります",
+    "寝ます"
+   ],
+   "explain_vi": "Buổi tối bố trở về nhà: 家に 帰ります (về nhà). 出ます là ra khỏi, ngược hướng.",
+   "level": "N5",
+   "question": "父は 毎晩 9時に 家に （　）。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "狭い",
+    "広い",
+    "暗い",
+    "古い"
+   ],
+   "explain_vi": "Nhà mới và có nhiều phòng → 広い (rộng). 古い trái nghĩa với 新しい nên loại ngay.",
+   "level": "N5",
+   "question": "この 家は 新しくて （　）です。部屋が たくさん あります。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "聞きます",
+    "見ます",
+    "飲みます",
+    "読みます"
+   ],
+   "explain_vi": "Đọc sách dùng 読みます: 本を 読みます. 聞きます dùng cho âm thanh, 見ます cho hình ảnh/phim.",
+   "level": "N5",
+   "question": "兄は 自分の 部屋で 本を （　）。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "作ります",
+    "買います",
+    "売ります",
+    "食べます"
+   ],
+   "explain_vi": "Trồng rau trong vườn dùng 作ります (trồng/làm ra): 野菜を 作ります.",
+   "level": "N5",
+   "question": "祖母は 庭で 野菜を （　）。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "けします",
+    "つけます",
+    "開けます",
+    "閉めます"
+   ],
+   "explain_vi": "Phòng tối nên bật điện: 電気を つけます (bật). けします là tắt, ngược lại.",
+   "level": "N5",
+   "question": "部屋が 暗いですから、電気を （　）。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "広い 音を 聞きます。",
+    "わたしは 広い 水を 飲みます。",
+    "この 公園は 広いです。",
+    "彼は 広いを 食べます。"
+   ],
+   "explain_vi": "広い (rộng) dùng cho nơi chốn, diện tích: 公園は 広いです. Âm thanh, nước không đi với 広い.",
+   "level": "N5",
+   "question": "「広い」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "狭い 歌を 歌います。",
+    "この パンは 狭いです。",
+    "狭い 音が します。",
+    "わたしの 部屋は 狭いです。"
+   ],
+   "explain_vi": "狭い (hẹp) dùng cho phòng, nhà, nơi chốn: 部屋は 狭いです. Bài hát, bánh mì, âm thanh không dùng 狭い.",
+   "level": "N5",
+   "question": "「狭い」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "父は 毎晩 遅く 家に 帰ります。",
+    "わたしは 本を 帰ります。",
+    "彼は 部屋を 帰ります。",
+    "帰りますを 食べます。"
+   ],
+   "explain_vi": "帰ります (trở về) đi với nơi trở về qua に/へ: 家に 帰ります. Sách, phòng không phải tân ngữ của 帰ります.",
+   "level": "N5",
+   "question": "「帰ります」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "が",
+    "と",
+    "を",
+    "に"
+   ],
+   "explain_vi": "Liệt kê đầy đủ các thành viên dùng と (và): 父と 母と わたしと 妹.",
+   "level": "N5",
+   "question": "家族は 5人です。父と 母と わたし （　） 妹です。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "の",
+    "を",
+    "に",
+    "へ"
+   ],
+   "explain_vi": "Vị trí phía trước của nhà: 家の 前 (trước nhà). Danh từ chỉ vị trí đi sau の.",
+   "level": "N5",
+   "question": "家 （　） 前に 小さい 庭が あります。",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "の"
+   ],
+   "explain_vi": "Phòng của tôi: わたしの 部屋. Sở hữu dùng の.",
+   "level": "N5",
+   "question": "弟は わたし （　） 部屋で 遊びます。",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "に",
+    "へ",
+    "で",
+    "を"
+   ],
+   "explain_vi": "Nơi diễn ra hành động nấu ăn dùng で: 台所で 作ります.",
+   "level": "N5",
+   "question": "母は 台所 （　） 晩ごはんを 作ります。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "が",
+    "と",
+    "は",
+    "も"
+   ],
+   "explain_vi": "Đi cùng gia đình dùng と: 家族と 行きます (đi với gia đình).",
+   "level": "N5",
+   "question": "日曜日は 家族 （　） 公園へ 行きます。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "何人",
+    "誰",
+    "いくつ",
+    "いくら"
+   ],
+   "explain_vi": "Hỏi số người dùng 何人（なんにん）: 家族は 何人ですか (gia đình có mấy người).",
+   "level": "N5",
+   "question": "家族は （　）ですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "します",
+    "あります",
+    "できます",
+    "います"
+   ],
+   "explain_vi": "Mẫu 〜ことが できます = có thể làm: ピアノを ひくことが できます.",
+   "level": "N5",
+   "question": "妹は ピアノを ひくことが （　）。",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "帰ります",
+    "帰る",
+    "帰った",
+    "帰って"
+   ],
+   "explain_vi": "Sau 〜から (sau khi) phải dùng thể て: 帰ってから = sau khi về nhà thì rửa tay.",
+   "level": "N5",
+   "question": "わたしは 家に （　）から、手を 洗います。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "飲みます",
+    "飲みましょう",
+    "飲みたいです",
+    "飲んで"
+   ],
+   "explain_vi": "Câu rủ rê cả nhà cùng làm dùng 〜ましょう: お茶を 飲みましょう (mình uống trà đi).",
+   "level": "N5",
+   "question": "日曜日、家族で 庭で お茶を （　）。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "水を",
+    "庭で",
+    "花に",
+    "ご飯を"
+   ],
+   "explain_vi": "Thứ tự đúng: 庭で（nơi) → 花に → 水を → やります. Vậy vị trí ★ là 水を.",
+   "level": "N5",
+   "question": "わたしは 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：庭で　2：花に　3：水を",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "家族に",
+    "カレーを",
+    "作ります",
+    "飲みます"
+   ],
+   "explain_vi": "Thứ tự đúng: 家族に → カレーを → 作ります（động từ đứng cuối). Vậy vị trí ★ là 作ります.",
+   "level": "N5",
+   "question": "母は 台所で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：家族に　2：カレーを　3：作ります",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "音楽を",
+    "寝ます",
+    "聞いて",
+    "読みます"
+   ],
+   "explain_vi": "Thứ tự đúng: 音楽を → 聞いて（nghe rồi mới ngủ) → 寝ます. Vậy vị trí ★ là 寝ます.",
+   "level": "N5",
+   "question": "妹は 部屋で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：音楽を　2：聞いて　3：寝ます",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "仕事から",
+    "帰って",
+    "食べます",
+    "お風呂に 入ります"
+   ],
+   "explain_vi": "Thứ tự đúng: 仕事から → 帰って（về rồi mới vào tắm) → お風呂に 入ります. Vậy ★ là お風呂に 入ります.",
+   "level": "N5",
+   "question": "父は 毎晩 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：仕事から　2：帰って　3：お風呂に 入ります",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "誰",
+    "何",
+    "いつ",
+    "何人"
+   ],
+   "explain_vi": "Câu trả lời là 4人 (4 người) nên câu hỏi phải là 何人ですか (mấy người).",
+   "level": "N5",
+   "question": "A：あなたの 家族は （1）ですか。\nB：4人です。父と 母と 姉と わたしです。\nA：お姉さんは （2） 人ですか。\nB：とても （3） 人です。困った とき、いつも 助けて くれます。\nA：いいですね。あなたの 家は （4） ありますか。\nB：駅の 近くに あります。\n（1）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "どんな",
+    "どこ",
+    "どれ",
+    "なん"
+   ],
+   "explain_vi": "Hỏi tính cách con người dùng どんな 人ですか (là người thế nào).",
+   "level": "N5",
+   "question": "A：あなたの 家族は （1）ですか。\nB：4人です。父と 母と 姉と わたしです。\nA：お姉さんは （2） 人ですか。\nB：とても （3） 人です。困った とき、いつも 助けて くれます。\nA：いいですね。あなたの 家は （4） ありますか。\nB：駅の 近くに あります。\n（2）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "静かな",
+    "元気な",
+    "親切な",
+    "にぎやかな"
+   ],
+   "explain_vi": "Luôn giúp đỡ khi gặp khó khăn → 親切な 人 (người tốt bụng, nhiệt tình giúp người).",
+   "level": "N5",
+   "question": "A：あなたの 家族は （1）ですか。\nB：4人です。父と 母と 姉と わたしです。\nA：お姉さんは （2） 人ですか。\nB：とても （3） 人です。困った とき、いつも 助けて くれます。\nA：いいですね。あなたの 家は （4） ありますか。\nB：駅の 近くに あります。\n（3）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "なに",
+    "どこ",
+    "だれ",
+    "いつ"
+   ],
+   "explain_vi": "Câu trả lời chỉ nơi chốn (駅の 近く) nên từ hỏi là どこ (ở đâu): 家は どこに ありますか.",
+   "level": "N5",
+   "question": "A：あなたの 家族は （1）ですか。\nB：4人です。父と 母と 姉と わたしです。\nA：お姉さんは （2） 人ですか。\nB：とても （3） 人です。困った とき、いつも 助けて くれます。\nA：いいですね。あなたの 家は （4） ありますか。\nB：駅の 近くに あります。\n（4）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "買い物を します",
+    "家の 掃除を します",
+    "料理を します",
+    "散歩を します"
+   ],
+   "explain_vi": "Thông báo ghi rõ: 土曜日、家族で 家の 掃除を します — thứ Bảy cả nhà dọn nhà.",
+   "level": "N5",
+   "question": "\n土曜日、家族で 家の 掃除を します。午前 10時に 集まって ください。\n\n土曜日に 何を しますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "5分",
+    "15分",
+    "10分",
+    "20分"
+   ],
+   "explain_vi": "Trong thông báo có câu 駅から 歩いて 10分です — từ ga đi bộ 10 phút.",
+   "level": "N5",
+   "question": "\nこの 家は 静かです。駅から 歩いて 10分です。近くに 公園が あります。\n\n駅から 家まで 歩いて 何分ですか。",
+   "section": "読解"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "三つ",
+    "二つ",
+    "四つ",
+    "一つ"
+   ],
+   "explain_vi": "Đoạn văn ghi: 家に 部屋が 三つ あります — nhà có 3 phòng.",
+   "level": "N5",
+   "question": "わたしの 名前は ティエンです。わたしの 家は 小さいですが、明るいです。家に 部屋が 三つ あります。父と 母の 部屋、兄の 部屋、わたしの 部屋です。台所は 広いです。母は 毎晩 台所で おいしい 晩ごはんを 作ります。庭に 大きい 木が あります。日曜日、家族は 庭で お茶を 飲みます。\n\nティエンさんの 家に 部屋が いくつ ありますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "台所で",
+    "兄の 部屋で",
+    "公園で",
+    "庭で"
+   ],
+   "explain_vi": "Câu cuối đoạn: 日曜日、家族は 庭で お茶を 飲みます — Chủ nhật cả nhà uống trà ở sân vườn.",
+   "level": "N5",
+   "question": "わたしの 名前は ティエンです。わたしの 家は 小さいですが、明るいです。家に 部屋が 三つ あります。父と 母の 部屋、兄の 部屋、わたしの 部屋です。台所は 広いです。母は 毎晩 台所で おいしい 晩ごはんを 作ります。庭に 大きい 木が あります。日曜日、家族は 庭で お茶を 飲みます。\n\n日曜日、家族は どこで お茶を 飲みますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "2階",
+    "1階",
+    "3階",
+    "4階"
+   ],
+   "explain_vi": "Bảng ghi わたしの 部屋：1階 — phòng của tôi ở tầng 1.",
+   "level": "N5",
+   "question": "\n父と 母の 部屋：2階\n兄の 部屋：2階\nわたしの 部屋：1階\n台所：1階\n\nわたしの 部屋は 何階ですか。",
+   "section": "読解"
+  }
+ ]
+}

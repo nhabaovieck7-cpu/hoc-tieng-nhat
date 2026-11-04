@@ -1,0 +1,572 @@
+{
+ "duration_minutes": 60,
+ "feature": "mock",
+ "id": "thu-17",
+ "label": "Đề thi thử 17",
+ "level": "N5",
+ "pass": {
+  "section_min_pct": 40,
+  "total_pct": 60
+ },
+ "questions": [
+  {
+   "answer": 1,
+   "choices": [
+    "いしや",
+    "いしゃ",
+    "いじゃ",
+    "いさ"
+   ],
+   "explain_vi": "医者 đọc là いしゃ (bác sĩ). 医 = い, 者 = しゃ.",
+   "level": "N5",
+   "question": "「医者」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "かしゅう",
+    "うたしゅ",
+    "かしゅ",
+    "かし"
+   ],
+   "explain_vi": "歌手 đọc là かしゅ (ca sĩ). 歌 = か, 手 = しゅ trong từ này.",
+   "level": "N5",
+   "question": "「歌手」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "うんてんしゅう",
+    "うんでんしゅ",
+    "うんてしゅ",
+    "うんてんしゅ"
+   ],
+   "explain_vi": "運転手 đọc là うんてんしゅ (tài xế). 運 = うん, 転 = てん, 手 = しゅ.",
+   "level": "N5",
+   "question": "「運転手」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "けいさつかん",
+    "けいさつがん",
+    "けいさかん",
+    "けいさつか"
+   ],
+   "explain_vi": "警察官 đọc là けいさつかん (cảnh sát). 官 đọc là かん.",
+   "level": "N5",
+   "question": "「警察官」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "しこと",
+    "しごと",
+    "しごど",
+    "しこど"
+   ],
+   "explain_vi": "仕事 đọc là しごと (công việc) — cách đọc đặc biệt, nhớ cả từ.",
+   "level": "N5",
+   "question": "「仕事」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "こうば",
+    "こうしょう",
+    "こうじょう",
+    "こうじょ"
+   ],
+   "explain_vi": "工場 đọc là こうじょう (nhà máy). 工 = こう, 場 = じょう.",
+   "level": "N5",
+   "question": "「工場」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "かんごしし",
+    "かんごじ",
+    "かんこし",
+    "かんごし"
+   ],
+   "explain_vi": "看護師 đọc là かんごし (y tá, điều dưỡng).",
+   "level": "N5",
+   "question": "「看護師」は 何と 読みますか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "会社員",
+    "社会人",
+    "会社人",
+    "会員"
+   ],
+   "explain_vi": "かいしゃいん (nhân viên công ty) viết là 会社員. 社会人 đọc là しゃかいじん, nghĩa khác.",
+   "level": "N5",
+   "question": "「かいしゃいん」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "医社",
+    "医者",
+    "者医",
+    "矢者"
+   ],
+   "explain_vi": "いしゃ (bác sĩ) viết là 医者. 社 là しゃ trong 会社, không dùng ở đây.",
+   "level": "N5",
+   "question": "「いしゃ」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "運転主",
+    "運店手",
+    "運転者",
+    "運転手"
+   ],
+   "explain_vi": "うんてんしゅ (tài xế) viết là 運転手. 運転者 đọc là うんてんしゃ, khác âm cuối.",
+   "level": "N5",
+   "question": "「うんてんしゅ」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "歌者",
+    "楽手",
+    "歌手",
+    "歌人"
+   ],
+   "explain_vi": "かしゅ (ca sĩ) viết là 歌手. 歌人 đọc là かじん (nhà thơ tanka), khác hẳn.",
+   "level": "N5",
+   "question": "「かしゅ」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "工場",
+    "工所",
+    "工揚",
+    "場工"
+   ],
+   "explain_vi": "こうじょう (nhà máy) viết là 工場. 所 đọc là しょ/ところ, không đọc là じょう.",
+   "level": "N5",
+   "question": "「こうじょう」を 漢字で 書くと どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "先生",
+    "学生",
+    "医者",
+    "歌手"
+   ],
+   "explain_vi": "Người làm việc ở bệnh viện chữa bệnh là 医者 (bác sĩ).",
+   "level": "N5",
+   "question": "父は 病院で 働いています。（　）です。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "働いています",
+    "勉強しています",
+    "遊んでいます",
+    "寝ています"
+   ],
+   "explain_vi": "Bán quần áo ở trung tâm thương mại là đang làm việc: 働いています.",
+   "level": "N5",
+   "question": "姉は デパートで （　）。服を 売っています。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "医者",
+    "選手",
+    "運転手",
+    "警察官"
+   ],
+   "explain_vi": "Giỏi bóng đá thì ước mơ thành 選手 (vận động viên/cầu thủ).",
+   "level": "N5",
+   "question": "兄の 夢は （　）に なることです。サッカーが とても 上手です。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "店員",
+    "会社員",
+    "先生",
+    "歌手"
+   ],
+   "explain_vi": "Rất thích hát nên muốn thành 歌手 (ca sĩ).",
+   "level": "N5",
+   "question": "わたしは 子どもの とき、（　）に なりたかったです。歌が 大好きでした。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "歌手",
+    "医者",
+    "運転手",
+    "先生"
+   ],
+   "explain_vi": "Người lái xe buýt là 運転手 (tài xế).",
+   "level": "N5",
+   "question": "この バスの （　）は とても 親切です。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "医者",
+    "先生",
+    "歌手",
+    "運転手"
+   ],
+   "explain_vi": "Người dạy học cho trẻ ở trường là 先生 (giáo viên).",
+   "level": "N5",
+   "question": "母は 学校の （　）です。子どもに 勉強を 教えます。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "働きますを 飲みます。",
+    "彼は テレビを 働きます。",
+    "わたしは 歌を 働きます。",
+    "父は 会社で 働きます。"
+   ],
+   "explain_vi": "働きます (làm việc) đi với nơi làm việc qua で: 会社で 働きます. Động từ này không có tân ngữ を.",
+   "level": "N5",
+   "question": "「働きます」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "わたしの 夢は 医者に なることです。",
+    "夢を 食べます。",
+    "夢は おいしいです。",
+    "彼は 夢を 聞きます。"
+   ],
+   "explain_vi": "夢 (ước mơ) thường dùng trong mẫu 夢は 〜ことです: ước mơ trở thành bác sĩ. Ước mơ không ăn, không nghe được.",
+   "level": "N5",
+   "question": "「夢」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "わたしは 学校に なります。",
+    "彼は 歌を なります。",
+    "わたしは 先生に なりたいです。",
+    "この パンは なります。"
+   ],
+   "explain_vi": "なります (trở thành) dùng với nghề/trạng thái qua に: 先生に なります. Trường học và bài hát không phải thứ để trở thành theo mẫu này.",
+   "level": "N5",
+   "question": "「なります」を 使った 文は どれですか。",
+   "section": "文字・語彙"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "に",
+    "を",
+    "へ",
+    "で"
+   ],
+   "explain_vi": "Trở thành ai/cái gì dùng に: 医者に なりたいです (muốn trở thành bác sĩ).",
+   "level": "N5",
+   "question": "わたしは 医者 （　） なりたいです。",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "に",
+    "を",
+    "で",
+    "へ"
+   ],
+   "explain_vi": "Nơi diễn ra hành động làm việc dùng で: 病院で 働いています.",
+   "level": "N5",
+   "question": "父は 病院 （　） 働いています。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "たく",
+    "たい",
+    "たかった",
+    "た"
+   ],
+   "explain_vi": "Mẫu muốn làm: thân động từ bỏ ます + たいです. 働きます → 働きたいです.",
+   "level": "N5",
+   "question": "わたしは 日本で 働き （　）です。",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "誰",
+    "どこ",
+    "いくら",
+    "何"
+   ],
+   "explain_vi": "Hỏi ước mơ là gì dùng 何（なん）: 夢は 何ですか.",
+   "level": "N5",
+   "question": "あなたの 夢は （　）ですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "から",
+    "でも",
+    "を",
+    "に"
+   ],
+   "explain_vi": "Câu trước là lý do cho câu sau, dùng から (vì): muốn thành cầu thủ nên luyện tập mỗi ngày.",
+   "level": "N5",
+   "question": "兄は 選手に なりたいです （　）、毎日 練習します。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "に",
+    "から",
+    "で",
+    "を"
+   ],
+   "explain_vi": "Mẫu 〜から 〜まで (từ... đến...): 何時から 何時までですか.",
+   "level": "N5",
+   "question": "仕事は 何時 （　） 何時までですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "後",
+    "時計",
+    "とき",
+    "前"
+   ],
+   "explain_vi": "Khi còn nhỏ: 子どもの とき. 時計 là đồng hồ, không dùng ở đây.",
+   "level": "N5",
+   "question": "子どもの （　）、歌手に なりたかったです。",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "持つ",
+    "持って",
+    "持った",
+    "持ち"
+   ],
+   "explain_vi": "Trước たいです phải là thân động từ bỏ ます: 持ます → 持ちたいです (muốn có cửa hàng của riêng mình).",
+   "level": "N5",
+   "question": "わたしは 将来、自分の 店を （　）たいです。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "運転する",
+    "運転します",
+    "運転して",
+    "運転したい"
+   ],
+   "explain_vi": "Trước ことが できます phải dùng thể từ điển: 運転することが できます.",
+   "level": "N5",
+   "question": "運転手は 車を （　）ことが できます。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "日本で",
+    "たいです",
+    "働き",
+    "働きます"
+   ],
+   "explain_vi": "Thứ tự đúng: 日本で → 働き → たいです (mẫu 〜たいです). Vậy vị trí ★ là たいです.",
+   "level": "N5",
+   "question": "わたしは 将来 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：日本で　2：働き　3：たいです",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "工場へ",
+    "行って",
+    "帰ります",
+    "働きます"
+   ],
+   "explain_vi": "Thứ tự đúng: 工場へ → 行って（đi rồi mới làm) → 働きます. Vậy vị trí ★ là 働きます.",
+   "level": "N5",
+   "question": "兄は 毎日 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：工場へ　2：行って　3：働きます",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "たかったです",
+    "歌手に",
+    "なり",
+    "歌手です"
+   ],
+   "explain_vi": "Thứ tự đúng: 歌手に → なり → たかったです (muốn trở thành, ở quá khứ). Vậy ★ là たかったです.",
+   "level": "N5",
+   "question": "彼女は 子どもの とき ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：歌手に　2：なり　3：たかったです",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "パソコンを",
+    "使って",
+    "仕事を します",
+    "遊びます"
+   ],
+   "explain_vi": "Thứ tự đúng: パソコンを → 使って → 仕事を します. Vậy vị trí ★ là 仕事を します.",
+   "level": "N5",
+   "question": "彼は 会社で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：パソコンを　2：使って　3：仕事を します",
+   "section": "文法"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "誰",
+    "どこ",
+    "何",
+    "いつ"
+   ],
+   "explain_vi": "Hỏi ước mơ là gì dùng 何: 夢は 何ですか.",
+   "level": "N5",
+   "question": "A：あなたの 夢は （1）ですか。\nB：わたしは （2）に なりたいです。\nA：どうしてですか。\nB：歌が 好きです （3）。毎日 練習しています。\nA：いいですね。わたしは 医者に なりたいです。\nB：（4） 頑張りましょう。\n（1）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "歌手",
+    "医者",
+    "先生",
+    "学生"
+   ],
+   "explain_vi": "Phía sau B nói 歌が 好きです (thích hát) nên nghề muốn trở thành là 歌手 (ca sĩ).",
+   "level": "N5",
+   "question": "A：あなたの 夢は （1）ですか。\nB：わたしは （2）に なりたいです。\nA：どうしてですか。\nB：歌が 好きです （3）。毎日 練習しています。\nA：いいですね。わたしは 医者に なりたいです。\nB：（4） 頑張りましょう。\n（2）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "でも",
+    "を",
+    "に",
+    "から"
+   ],
+   "explain_vi": "Câu này trả lời cho どうしてですか (tại sao) nên dùng から (vì): vì thích hát.",
+   "level": "N5",
+   "question": "A：あなたの 夢は （1）ですか。\nB：わたしは （2）に なりたいです。\nA：どうしてですか。\nB：歌が 好きです （3）。毎日 練習しています。\nA：いいですね。わたしは 医者に なりたいです。\nB：（4） 頑張りましょう。\n（3）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "明日",
+    "一緒に",
+    "今日",
+    "昨日"
+   ],
+   "explain_vi": "Câu động viên cùng nhau cố gắng: 一緒に 頑張りましょう (cùng cố gắng nhé).",
+   "level": "N5",
+   "question": "A：あなたの 夢は （1）ですか。\nB：わたしは （2）に なりたいです。\nA：どうしてですか。\nB：歌が 好きです （3）。毎日 練習しています。\nA：いいですね。わたしは 医者に なりたいです。\nB：（4） 頑張りましょう。\n（4）に 入るものは どれですか。",
+   "section": "文法"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "午後 5時から",
+    "午後 9時から",
+    "午前 5時から",
+    "午後 3時から"
+   ],
+   "explain_vi": "Thông báo ghi: 時間は 午後 5時から 9時まで — làm từ 5 giờ chiều.",
+   "level": "N5",
+   "question": "\nアルバイトの お知らせ：この 店は 店員を 探しています。時間は 午後 5時から 9時までです。\n\n店員は 何時から 働きますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "開いています。",
+    "開いていません。休みです。",
+    "午前中だけ 開いています。",
+    "午後だけ 開いています。"
+   ],
+   "explain_vi": "Thông báo ghi 日曜日は 休みです — Chủ nhật bệnh viện nghỉ. 午前中だけ là của thứ Bảy.",
+   "level": "N5",
+   "question": "\n病院の お知らせ：日曜日は 休みです。土曜日は 午前中だけ 開いています。\n\n日曜日、病院は 開いていますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "病院で",
+    "店で",
+    "学校で",
+    "工場で"
+   ],
+   "explain_vi": "Đoạn văn ghi: 今、工場で 働いています — hiện đang làm ở nhà máy.",
+   "level": "N5",
+   "question": "わたしの 名前は ズンです。わたしは 今、工場で 働いています。仕事は 朝 8時から 夕方 5時までです。仕事は 大変ですが、楽しいです。わたしの 夢は いつか 自分の 店を 持つことです。料理が 好きですから、小さい レストランを 開きたいです。そのために、毎月 お金を 貯めています。\n\nズンさんは 今 どこで 働いていますか。",
+   "section": "読解"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "医者に なること",
+    "歌手に なること",
+    "自分の 店を 持つこと",
+    "日本へ 行くこと"
+   ],
+   "explain_vi": "Đoạn văn ghi: 夢は いつか 自分の 店を 持つことです — mơ có cửa hàng của riêng mình.",
+   "level": "N5",
+   "question": "わたしの 名前は ズンです。わたしは 今、工場で 働いています。仕事は 朝 8時から 夕方 5時までです。仕事は 大変ですが、楽しいです。わたしの 夢は いつか 自分の 店を 持つことです。料理が 好きですから、小さい レストランを 開きたいです。そのために、毎月 お金を 貯めています。\n\nズンさんの 夢は 何ですか。",
+   "section": "読解"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "医者",
+    "運転手",
+    "先生",
+    "歌手"
+   ],
+   "explain_vi": "Bảng ghi 兄：運転手（バスを 運転します） — anh trai là tài xế.",
+   "level": "N5",
+   "question": "\n父：医者（病院で 働いています）\n母：先生（学校で 働いています）\n兄：運転手（バスを 運転します）\n姉：歌手（テレビで 歌います）\n\n兄の 仕事は 何ですか。",
+   "section": "読解"
+  }
+ ]
+}

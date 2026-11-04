@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-11",
+ "label": "Đề thi thử 11",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「駅」は 何と 読みますか。",
+   "choices": [
+    "えぎ",
+    "やく",
+    "えき",
+    "えっき"
+   ],
+   "answer": 2,
+   "explain_vi": "駅 đọc là えき (nhà ga)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「円」は 何と 読みますか。",
+   "choices": [
+    "えん",
+    "まる",
+    "えい",
+    "えんき"
+   ],
+   "answer": 0,
+   "explain_vi": "円 đọc là えん (yên — đơn vị tiền Nhật)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「万」は 何と 読みますか。",
+   "choices": [
+    "ばん",
+    "まに",
+    "まんと",
+    "まん"
+   ],
+   "answer": 3,
+   "explain_vi": "万 đọc là まん (mười nghìn, vạn)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「千」は 何と 読みますか。",
+   "choices": [
+    "ち",
+    "せん",
+    "せい",
+    "せんと"
+   ],
+   "answer": 1,
+   "explain_vi": "千 đọc là せん (nghìn)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「番号」は 何と 読みますか。",
+   "choices": [
+    "ばんこ",
+    "はんごう",
+    "ばんごう",
+    "ばんご"
+   ],
+   "answer": 2,
+   "explain_vi": "番号 đọc là ばんごう (số, mã số)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「窓口」は 何と 読みますか。",
+   "choices": [
+    "まどくち",
+    "まとぐち",
+    "そうごう",
+    "まどぐち"
+   ],
+   "answer": 3,
+   "explain_vi": "窓口 đọc là まどぐち (quầy, cửa bán vé)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「飛行機」は 何と 読みますか。",
+   "choices": [
+    "ひこうき",
+    "ひこき",
+    "とびき",
+    "ひこうぎ"
+   ],
+   "answer": 0,
+   "explain_vi": "飛行機 đọc là ひこうき (máy bay)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ばんごう」を 漢字で 書くと どれですか。",
+   "choices": [
+    "番合",
+    "番号",
+    "審号",
+    "番語"
+   ],
+   "answer": 1,
+   "explain_vi": "ばんごう (số) viết bằng kanji là 番号."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「おかね」を 漢字で 書くと どれですか。",
+   "choices": [
+    "お全",
+    "お今",
+    "お会",
+    "お金"
+   ],
+   "answer": 3,
+   "explain_vi": "おかね (tiền) viết bằng kanji là お金."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ひゃくえん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "白円",
+    "百月",
+    "百円",
+    "白月"
+   ],
+   "answer": 2,
+   "explain_vi": "ひゃくえん (100 yên) viết bằng kanji là 百円."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ひこうき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "飛行機",
+    "飛待機",
+    "飛行器",
+    "飛往機"
+   ],
+   "answer": 0,
+   "explain_vi": "ひこうき (máy bay) viết bằng kanji là 飛行機."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「まんえん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "万月",
+    "万円",
+    "方円",
+    "万日"
+   ],
+   "answer": 1,
+   "explain_vi": "まんえん (10.000 yên) viết bằng kanji là 万円."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "切符は 一枚 （　）円です。",
+   "choices": [
+    "八千",
+    "八万",
+    "八十",
+    "八百"
+   ],
+   "answer": 3,
+   "explain_vi": "Giá vé một tấm là 八百円 (800 yên) — số tiền thường gặp ở N5."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 切符を （　） 買いました。自分と 友達の 分です。",
+   "choices": [
+    "二枚",
+    "二つ",
+    "二人",
+    "二本"
+   ],
+   "answer": 0,
+   "explain_vi": "Vé là vật mỏng dẹt nên đếm bằng 枚： hai người → 二枚 (2 tấm)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "駅まで バスで （　） かかります。",
+   "choices": [
+    "十円",
+    "十枚",
+    "十分",
+    "十人"
+   ],
+   "answer": 2,
+   "explain_vi": "かかる chỉ thời gian tốn: 十分 (10 phút) đi xe buýt đến ga."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "すみません、この 切符は （　）ですか。",
+   "choices": [
+    "いくつ",
+    "いくら",
+    "なんばん",
+    "いつ"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi giá tiền dùng いくら (bao nhiêu tiền)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "財布に （　） あります。千円が 三枚です。",
+   "choices": [
+    "三千円",
+    "三百円",
+    "三万円",
+    "千円"
+   ],
+   "answer": 0,
+   "explain_vi": "千円 × 3枚 = 三千円 (3.000 yên)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "大人の 切符は 一人 （　）円、子どもの 切符は 一人 五百円です。",
+   "choices": [
+    "百",
+    "万",
+    "十",
+    "千"
+   ],
+   "answer": 3,
+   "explain_vi": "Vé người lớn 1.000 yên nên chỗ trống là 千： 千円."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「切符」を 使った 文は どれですか。",
+   "choices": [
+    "切符を 聞きます。",
+    "切符を 買って、電車に 乗ります。",
+    "切符に 座って ください。",
+    "切符は 泳ぎます。"
+   ],
+   "answer": 1,
+   "explain_vi": "切符 (vé) mua rồi lên tàu: câu đúng dùng 買って、電車に 乗ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「お金」を 使った 文は どれですか。",
+   "choices": [
+    "お金を 聞きます。",
+    "お金に 乗ります。",
+    "財布に お金が あります。",
+    "お金は 歌います。"
+   ],
+   "answer": 2,
+   "explain_vi": "お金 (tiền) để trong ví: 財布に お金が あります là câu đúng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「番号」を 使った 文は どれですか。",
+   "choices": [
+    "切符の 番号は 5番です。",
+    "番号を 食べます。",
+    "番号に 泳ぎます。",
+    "番号は 飲みます。"
+   ],
+   "answer": 0,
+   "explain_vi": "番号 (số) đi với 〜番: vé có số 5番."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "切符は 窓口 （　） 買います。",
+   "choices": [
+    "に",
+    "を",
+    "へ",
+    "で"
+   ],
+   "answer": 3,
+   "explain_vi": "Nơi diễn ra hành động mua dùng で: 窓口で 買います (mua tại quầy)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "電車は 9時 （　） 出ます。",
+   "choices": [
+    "を",
+    "で",
+    "に",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Thời điểm cụ thể dùng に: 9時に 出ます (khởi hành lúc 9 giờ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "切符を 二枚 （　）。",
+   "choices": [
+    "どうぞ",
+    "ください",
+    "すみません",
+    "あります"
+   ],
+   "answer": 1,
+   "explain_vi": "Khi mua hàng, xin nhận đồ dùng 〜ください: 切符を二枚ください."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "お金が （　）、切符を 買うことが できませんでした。",
+   "choices": [
+    "なくて",
+    "ないで",
+    "なく",
+    "なき"
+   ],
+   "answer": 0,
+   "explain_vi": "ない nối câu chỉ lý do dùng なくて: vì không có tiền nên không mua được vé."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "電車と バスと （　）が 早いですか。",
+   "choices": [
+    "どれ",
+    "だれ",
+    "どこ",
+    "どちら"
+   ],
+   "answer": 3,
+   "explain_vi": "So sánh hai thứ dùng どちら (cái nào trong hai cái)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "うちから 駅まで （　） 10分です。",
+   "choices": [
+    "歩き",
+    "歩いて",
+    "歩く",
+    "歩いた"
+   ],
+   "answer": 1,
+   "explain_vi": "Phương tiện di chuyển bộ dùng thể て: 歩いて 10分 (đi bộ 10 phút)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "切符を 買って （　）、電車に 乗りました。",
+   "choices": [
+    "でも",
+    "が",
+    "から",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu 〜てから chỉ thứ tự: mua vé xong rồi mới lên tàu."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "すみません、窓口は （　）ですか。",
+   "choices": [
+    "何番",
+    "何枚",
+    "何人",
+    "何時"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi số thứ tự của quầy dùng 何番 (số mấy)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "飛行機の 切符は 電車の 切符より （　）です。",
+   "choices": [
+    "高く",
+    "高さ",
+    "高くて",
+    "高い"
+   ],
+   "answer": 3,
+   "explain_vi": "Trước です dùng dạng nguyên của tính từ -i: 高いです (đắt, cao)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 駅で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：切符を　2：買って　3：電車に 乗りました",
+   "choices": [
+    "切符を",
+    "電車に 乗りました",
+    "買って",
+    "バスを 降りました"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 切符を → 買って → 電車に 乗りました. Vậy ★ là 電車に 乗りました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 窓口で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：お金を　2：払って　3：切符を もらいました",
+   "choices": [
+    "お金を",
+    "払って",
+    "切符を もらいました",
+    "手紙を 書きました"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: お金を → 払って → 切符を もらいました (trả tiền rồi nhận vé). Vậy ★ là 切符を もらいました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：バスで　2：駅まで　3：行きます",
+   "choices": [
+    "行きます",
+    "バスで",
+    "駅まで",
+    "帰ります"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: バスで → 駅まで → 行きます (đi xe buýt đến ga). Vậy ★ là 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "姉は 飛行機で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：大阪へ　2：行って　3：友達に 会いました",
+   "choices": [
+    "大阪へ",
+    "行って",
+    "電話を しました",
+    "友達に 会いました"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 大阪へ → 行って → 友達に 会いました. Vậy ★ là 友達に 会いました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。東京までの 切符を （1）。\nB：はい。何枚ですか。\nA：（2） ください。いくらですか。\nB：一枚 800円ですから、（3） です。\nA：はい、どうぞ。あの、これは （4）ですか。\nB：3番の 電車です。9時に 出ます。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "どうぞ",
+    "います",
+    "ください",
+    "あります"
+   ],
+   "answer": 2,
+   "explain_vi": "Xin mua vé: 切符を ください (cho tôi vé)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。東京までの 切符を （1）。\nB：はい。何枚ですか。\nA：（2） ください。いくらですか。\nB：一枚 800円ですから、（3） です。\nA：はい、どうぞ。あの、これは （4）ですか。\nB：3番の 電車です。9時に 出ます。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "二つ",
+    "二枚",
+    "二人",
+    "二本"
+   ],
+   "answer": 1,
+   "explain_vi": "Vé đếm bằng 枚 nên trả lời 二枚 (2 tấm)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。東京までの 切符を （1）。\nB：はい。何枚ですか。\nA：（2） ください。いくらですか。\nB：一枚 800円ですから、（3） です。\nA：はい、どうぞ。あの、これは （4）ですか。\nB：3番の 電車です。9時に 出ます。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "千六百円",
+    "八百円",
+    "千円",
+    "二千円"
+   ],
+   "answer": 0,
+   "explain_vi": "800円 × 2枚 = 1.600円 （千六百円)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。東京までの 切符を （1）。\nB：はい。何枚ですか。\nA：（2） ください。いくらですか。\nB：一枚 800円ですから、（3） です。\nA：はい、どうぞ。あの、これは （4）ですか。\nB：3番の 電車です。9時に 出ます。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "何時",
+    "何枚",
+    "いくら",
+    "何番"
+   ],
+   "answer": 3,
+   "explain_vi": "Câu trả lời là 3番の電車 nên câu hỏi phải là 何番ですか (số mấy)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n切符は 窓口で 買って ください。電車は 9時に 出ます。\n\n切符は どこで 買いますか。",
+   "choices": [
+    "電車で",
+    "窓口で",
+    "駅の 前で",
+    "バスで"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 切符は 窓口で 買ってください — mua vé tại quầy."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの 駅の 窓口は 午前 8時から 午後 6時までです。\n\n窓口は 何時までですか。",
+   "choices": [
+    "午後 6時まで",
+    "午前 8時まで",
+    "午後 9時まで",
+    "午前 6時まで"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi quầy mở đến 午後 6時 (6 giờ chiều)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は クオンです。明日、友達と 京都へ 行きます。今日、駅で 切符を 買いました。切符は 一枚 1,200円でした。二枚で 2,400円でした。電車は 朝 8時に 出ます。窓口の 人は 親切でした。\n\nクオンさんは 明日 どこへ 行きますか。",
+   "choices": [
+    "東京へ",
+    "大阪へ",
+    "京都へ",
+    "名古屋へ"
+   ],
+   "answer": 2,
+   "explain_vi": "Trong đoạn: 明日、友達と 京都へ 行きます — ngày mai đi Kyoto."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は クオンです。明日、友達と 京都へ 行きます。今日、駅で 切符を 買いました。切符は 一枚 1,200円でした。二枚で 2,400円でした。電車は 朝 8時に 出ます。窓口の 人は 親切でした。\n\n切符は 二枚で いくらでしたか。",
+   "choices": [
+    "1,200円",
+    "2,000円",
+    "1,000円",
+    "2,400円"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn: 一枚 1.200円, 二枚で 2.400円 (2 tấm là 2.400 yên)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n東京まで：800円\n大阪まで：1,500円\n京都まで：1,200円\n名古屋まで：1,000円\n\n大阪までの 切符は いくらですか。",
+   "choices": [
+    "1,500円",
+    "800円",
+    "1,200円",
+    "1,000円"
+   ],
+   "answer": 0,
+   "explain_vi": "Bảng giá ghi 大阪まで：1.500円."
+  }
+ ]
+}

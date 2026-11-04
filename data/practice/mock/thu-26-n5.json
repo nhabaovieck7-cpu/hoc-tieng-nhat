@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-26",
+ "label": "Đề thi thử 26",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「桃」は 何と 読みますか。",
+   "choices": [
+    "もま",
+    "とも",
+    "もも",
+    "とう"
+   ],
+   "answer": 2,
+   "explain_vi": "桃 đọc là もも — quả đào, trái cây mùa hè."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「梨」は 何と 読みますか。",
+   "choices": [
+    "らり",
+    "りし",
+    "なし",
+    "なじ"
+   ],
+   "answer": 2,
+   "explain_vi": "梨 đọc là なし — quả lê."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「柿」は 何と 読みますか。",
+   "choices": [
+    "かく",
+    "がき",
+    "かき",
+    "かぎ"
+   ],
+   "answer": 2,
+   "explain_vi": "柿 đọc là かき — quả hồng, trái cây mùa thu."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「栗」は 何と 読みますか。",
+   "choices": [
+    "きり",
+    "くる",
+    "ぐり",
+    "くり"
+   ],
+   "answer": 3,
+   "explain_vi": "栗 đọc là くり — hạt dẻ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「梅」は 何と 読みますか。",
+   "choices": [
+    "うめ",
+    "ゆめ",
+    "むめ",
+    "うみ"
+   ],
+   "answer": 0,
+   "explain_vi": "梅 đọc là うめ — quả mơ/ô mai, nở hoa cuối đông đầu xuân."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「桜」は 何と 読みますか。",
+   "choices": [
+    "さくら",
+    "さぐら",
+    "ざくら",
+    "さくわ"
+   ],
+   "answer": 0,
+   "explain_vi": "桜 đọc là さくら — hoa anh đào."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「餅」は 何と 読みますか。",
+   "choices": [
+    "もじ",
+    "もち",
+    "もつ",
+    "もき"
+   ],
+   "answer": 1,
+   "explain_vi": "餅 đọc là もち — bánh mochi, hay ăn vào dịp năm mới."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「もも」を 漢字で 書くと どれですか。",
+   "choices": [
+    "梨",
+    "梅",
+    "桃",
+    "桜"
+   ],
+   "answer": 2,
+   "explain_vi": "もも viết bằng kanji là 桃."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「なし」を 漢字で 書くと どれですか。",
+   "choices": [
+    "栗",
+    "桃",
+    "柿",
+    "梨"
+   ],
+   "answer": 3,
+   "explain_vi": "なし viết bằng kanji là 梨."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「かき」を 漢字で 書くと どれですか。",
+   "choices": [
+    "桃",
+    "柿",
+    "梨",
+    "梅"
+   ],
+   "answer": 1,
+   "explain_vi": "かき (quả hồng) viết bằng kanji là 柿."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「くり」を 漢字で 書くと どれですか。",
+   "choices": [
+    "桜",
+    "柿",
+    "梨",
+    "栗"
+   ],
+   "answer": 3,
+   "explain_vi": "くり viết bằng kanji là 栗."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「うめ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "桃",
+    "梅",
+    "栗",
+    "餅"
+   ],
+   "answer": 1,
+   "explain_vi": "うめ viết bằng kanji là 梅."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "春、公園で （　）の 花を 見ました。ピンクで とても きれいでした。",
+   "choices": [
+    "桜",
+    "梨",
+    "餅",
+    "栗"
+   ],
+   "answer": 0,
+   "explain_vi": "Mùa xuân đi ngắm hoa anh đào (桜) màu hồng ở công viên — 花見."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "秋に 山で （　）を たくさん 拾いました。",
+   "choices": [
+    "栗",
+    "桜",
+    "梅",
+    "桃"
+   ],
+   "answer": 0,
+   "explain_vi": "Mùa thu lên núi nhặt hạt dẻ: 栗を拾う là cách nói quen thuộc."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この （　）は 秋の 果物です。オレンジ色で 甘いです。",
+   "choices": [
+    "桃",
+    "栗",
+    "柿",
+    "梅"
+   ],
+   "answer": 2,
+   "explain_vi": "Quả hồng (柿) là trái cây mùa thu, màu cam và ngọt."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "お正月に （　）を 食べます。白くて やわらかいです。",
+   "choices": [
+    "梅",
+    "餅",
+    "栗",
+    "梨"
+   ],
+   "answer": 1,
+   "explain_vi": "Dịp năm mới (お正月) người Nhật ăn 餅 — trắng và mềm."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この 梅は とても （　）ですから、砂糖を 入れて ジュースを 作ります。",
+   "choices": [
+    "甘い",
+    "すっぱい",
+    "辛い",
+    "重い"
+   ],
+   "answer": 1,
+   "explain_vi": "Mơ rất chua (すっぱい) nên phải cho đường làm nước ép."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "食事の 後で （　）を 食べました。甘い ケーキです。",
+   "choices": [
+    "デザート",
+    "果物",
+    "野菜",
+    "飲み物"
+   ],
+   "answer": 0,
+   "explain_vi": "Sau bữa ăn ăn tráng miệng (デザート) — ở đây là bánh ngọt."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「拾います」を 使った 文は どれですか。",
+   "choices": [
+    "山で 栗を 拾いました。",
+    "歌を 拾いました。",
+    "電車を 拾いました。",
+    "手紙を 拾いました。"
+   ],
+   "answer": 0,
+   "explain_vi": "拾う là nhặt lên (vật rơi/nằm trên mặt đất): nhặt hạt dẻ trên núi. Không dùng cho tàu, thư hay bài hát."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「すっぱい」を 使った 文は どれですか。",
+   "choices": [
+    "この 梅は すっぱいです。",
+    "この 歌は すっぱいです。",
+    "この 部屋は すっぱいです。",
+    "この 本は すっぱいです。"
+   ],
+   "answer": 0,
+   "explain_vi": "すっぱい chỉ vị chua của đồ ăn — quả mơ chua. Không dùng cho bài hát, phòng hay sách."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「入れます」を 使った 文は どれですか。",
+   "choices": [
+    "窓に 砂糖を 入れます。",
+    "コーヒーに 砂糖を 入れます。",
+    "部屋に 入れます。",
+    "本に 水を 入れます。"
+   ],
+   "answer": 1,
+   "explain_vi": "入れる là cho/bỏ vào: cho đường vào cà phê. 入ります mới là 'đi vào' (phòng)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "みかんと りんご （　） どちらが 好きですか。",
+   "choices": [
+    "や",
+    "も",
+    "の",
+    "と"
+   ],
+   "answer": 3,
+   "explain_vi": "Khi so sánh chọn một trong hai: AとBと どちらが〜ですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "柿を 食べ （　）ことが ありますか。",
+   "choices": [
+    "て",
+    "る",
+    "ます",
+    "た"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu 〜たことがあります (đã từng): động từ thể た + ことがあります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "ケーキを 作って （　）、友達を 呼びました。",
+   "choices": [
+    "より",
+    "まで",
+    "へ",
+    "から"
+   ],
+   "answer": 3,
+   "explain_vi": "〜てから diễn tả thứ tự: làm bánh xong rồi mới gọi bạn."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "桜を 見に 公園 （　） 行きましょう。",
+   "choices": [
+    "が",
+    "を",
+    "と",
+    "へ"
+   ],
+   "answer": 3,
+   "explain_vi": "Đi đến nơi nào dùng へ (hoặc に): 公園へ行く."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この ケーキは 母が 作りました。わたしは 母に ケーキを 作って （　）。",
+   "choices": [
+    "もらいました",
+    "くれました",
+    "しました",
+    "あげました"
+   ],
+   "answer": 0,
+   "explain_vi": "Được mẹ làm bánh cho: 母に 作って もらいました (nhờ/được ai làm cho). Với くれる thì chủ ngữ phải là mẹ (母が), không dùng 母に."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 桃の ジュースを （　）たいです。",
+   "choices": [
+    "飲んだ",
+    "飲み",
+    "飲んで",
+    "飲む"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu 〜たいです gắn với thân động từ nhóm ます: 飲み + たいです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "桃を 三つ （　） 五つ 買いました。",
+   "choices": [
+    "か",
+    "も",
+    "と",
+    "や"
+   ],
+   "answer": 0,
+   "explain_vi": "か nối hai lựa chọn 'hoặc': ba quả hoặc năm quả."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 桃は （　）て、甘いです。",
+   "choices": [
+    "大きい",
+    "大きな",
+    "大きく",
+    "大きさ"
+   ],
+   "answer": 2,
+   "explain_vi": "Nối hai tính từ い bằng thể て: 大きい → 大きくて."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あした 公園へ 桜を 見に 行く （　）です。",
+   "choices": [
+    "から",
+    "まで",
+    "つもり",
+    "ながら"
+   ],
+   "answer": 2,
+   "explain_vi": "〜つもりです diễn tả dự định: mai định đi ngắm hoa anh đào."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：甘い　2：桃を　3：食べました",
+   "choices": [
+    "桃を",
+    "梨を",
+    "甘い",
+    "食べました"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 甘い → 桃を → 食べました. Vị trí ★ là 桃を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：お正月に　2：餅を　3：作ります",
+   "choices": [
+    "作ります",
+    "お正月に",
+    "餅を",
+    "ケーキを"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: お正月に → 餅を → 作ります. Vị trí ★ là 餅を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしたちは ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：公園で　2：桜を　3：見ました",
+   "choices": [
+    "公園で",
+    "桜を",
+    "本を",
+    "見ました"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 公園で → 桜を → 見ました. Vị trí ★ là 桜を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：秋に　2：山で　3：栗を　4：拾いました",
+   "choices": [
+    "秋に",
+    "栗を",
+    "山で",
+    "魚を"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 秋に → 山で → 栗を → 拾いました. Vị trí ★ (thứ ba) là 栗を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。今日は 桃が 安いですよ。\nB：そうですか。じゃあ、桃を 三つ （1）。\nA：はい。全部で 500円です。ほかに （2）ですか。\nB：梨も 一つ ください。あのう、この 梨は （3）ですか。\nA：はい、とても 甘いですよ。\nB：じゃあ、それも ください。\nA：全部で 700円です。\nB：カードで （4）ですか。\nA：はい、できます。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "します",
+    "あります",
+    "です",
+    "ください"
+   ],
+   "answer": 3,
+   "explain_vi": "Mua hàng nói: 桃を三つ ください (cho tôi ba quả đào)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。今日は 桃が 安いですよ。\nB：そうですか。じゃあ、桃を 三つ （1）。\nA：はい。全部で 500円です。ほかに （2）ですか。\nB：梨も 一つ ください。あのう、この 梨は （3）ですか。\nA：はい、とても 甘いですよ。\nB：じゃあ、それも ください。\nA：全部で 700円です。\nB：カードで （4）ですか。\nA：はい、できます。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "何か",
+    "いくら",
+    "だれ",
+    "どれ"
+   ],
+   "answer": 0,
+   "explain_vi": "Nhân viên hỏi khách còn cần gì nữa: ほかに 何か ですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。今日は 桃が 安いですよ。\nB：そうですか。じゃあ、桃を 三つ （1）。\nA：はい。全部で 500円です。ほかに （2）ですか。\nB：梨も 一つ ください。あのう、この 梨は （3）ですか。\nA：はい、とても 甘いですよ。\nB：じゃあ、それも ください。\nA：全部で 700円です。\nB：カードで （4）ですか。\nA：はい、できます。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "高い",
+    "重い",
+    "甘い",
+    "新しい"
+   ],
+   "answer": 2,
+   "explain_vi": "Khách hỏi lê có ngọt không (甘いですか) và nhân viên trả lời 'rất ngọt'."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。今日は 桃が 安いですよ。\nB：そうですか。じゃあ、桃を 三つ （1）。\nA：はい。全部で 500円です。ほかに （2）ですか。\nB：梨も 一つ ください。あのう、この 梨は （3）ですか。\nA：はい、とても 甘いですよ。\nB：じゃあ、それも ください。\nA：全部で 700円です。\nB：カードで （4）ですか。\nA：はい、できます。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "だめ",
+    "ある",
+    "いい",
+    "ない"
+   ],
+   "answer": 2,
+   "explain_vi": "Hỏi trả bằng thẻ có được không: カードで いいですか."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nくだものや「さくら」からの お知らせ\n今日は 桃が 安いです。1つ 200円、3つで 500円です。午後 5時までです。\n\n桃を 3つ 買うと いくらですか。",
+   "choices": [
+    "600円",
+    "200円",
+    "500円",
+    "400円"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi mua 3 quả đào giá 500円."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nカフェ「ひまわり」からの お知らせ\n新しい デザートは メロンの ケーキです。土曜日と 日曜日だけです。\n\nメロンの ケーキは いつ 食べることが できますか。",
+   "choices": [
+    "金曜日だけ",
+    "毎日",
+    "月曜日だけ",
+    "土曜日と 日曜日"
+   ],
+   "answer": 3,
+   "explain_vi": "Bánh dưa lưới chỉ bán thứ Bảy và Chủ nhật (土曜日と日曜日だけ)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ミンです。わたしは 果物が 大好きです。春は 桜を 見ながら、いちごを 食べます。夏は すいかを 食べます。秋は 柿と 栗が おいしいです。冬は みかんを たくさん 食べます。\n\nミンさんは 秋に 何を 食べますか。",
+   "choices": [
+    "いちご",
+    "柿と 栗",
+    "すいか",
+    "みかん"
+   ],
+   "answer": 1,
+   "explain_vi": "Đoạn văn nói mùa thu hồng và hạt dẻ ngon: 秋は 柿と 栗が おいしいです."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ミンです。わたしは 果物が 大好きです。春は 桜を 見ながら、いちごを 食べます。夏は すいかを 食べます。秋は 柿と 栗が おいしいです。冬は みかんを たくさん 食べます。\n\nミンさんは 冬に 何を 食べますか。",
+   "choices": [
+    "いちご",
+    "みかん",
+    "柿",
+    "すいか"
+   ],
+   "answer": 1,
+   "explain_vi": "Đoạn văn nói mùa đông ăn nhiều quýt: 冬は みかんを たくさん 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n桃　1つ：250円\n梨　1つ：200円\n柿　1つ：150円\n栗　1パック：400円\n\n桃を 2つと 柿を 1つ 買うと、全部で いくらですか。",
+   "choices": [
+    "550円",
+    "600円",
+    "700円",
+    "650円"
+   ],
+   "answer": 3,
+   "explain_vi": "Đào 250円 × 2 = 500円, cộng hồng 150円 = 650円."
+  }
+ ]
+}

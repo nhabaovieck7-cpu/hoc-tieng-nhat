@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-25",
+ "label": "Đề thi thử 25",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「昼ご飯」は 何と 読みますか。",
+   "choices": [
+    "ひるごはん",
+    "ひるごばん",
+    "ちゅうごはん",
+    "ひるめし"
+   ],
+   "answer": 0,
+   "explain_vi": "昼ご飯 đọc là ひるごはん — bữa trưa."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「晩ご飯」は 何と 読みますか。",
+   "choices": [
+    "ゆうごはん",
+    "ばんごばん",
+    "ばんごはん",
+    "ばんめし"
+   ],
+   "answer": 2,
+   "explain_vi": "晩ご飯 đọc là ばんごはん — bữa tối."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「食事」は 何と 読みますか。",
+   "choices": [
+    "しょくこと",
+    "しょくじ",
+    "しょくが",
+    "たべじ"
+   ],
+   "answer": 1,
+   "explain_vi": "食事 đọc là しょくじ — bữa ăn, việc ăn uống."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「お腹」は 何と 読みますか。",
+   "choices": [
+    "おふく",
+    "おなが",
+    "おはら",
+    "おなか"
+   ],
+   "answer": 3,
+   "explain_vi": "お腹 đọc là おなか — cái bụng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「喉」は 何と 読みますか。",
+   "choices": [
+    "のと",
+    "のど",
+    "のご",
+    "のほ"
+   ],
+   "answer": 1,
+   "explain_vi": "喉 đọc là のど — cổ họng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「夕方」は 何と 読みますか。",
+   "choices": [
+    "ゆがた",
+    "ゆうがた",
+    "ゆうがだ",
+    "ゆうかた"
+   ],
+   "answer": 1,
+   "explain_vi": "夕方 đọc là ゆうがた — chiều tối, lúc xế chiều."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「食べ物」は 何と 読みますか。",
+   "choices": [
+    "たべぶつ",
+    "たべもん",
+    "たべもの",
+    "しょくぶつ"
+   ],
+   "answer": 2,
+   "explain_vi": "食べ物 đọc là たべもの — đồ ăn. しょくぶつ là cách đọc của 食物/植物, khác từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「しょくじ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "食字",
+    "食辞",
+    "食事",
+    "食時"
+   ],
+   "answer": 2,
+   "explain_vi": "しょくじ (bữa ăn) viết là 食事."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「たべもの」を 漢字で 書くと どれですか。",
+   "choices": [
+    "食べ品",
+    "食べ物",
+    "食べ勿",
+    "食べ者"
+   ],
+   "answer": 1,
+   "explain_vi": "たべもの (đồ ăn) viết là 食べ物."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「おなか」を 漢字で 書くと どれですか。",
+   "choices": [
+    "お服",
+    "お腋",
+    "お腹",
+    "お復"
+   ],
+   "answer": 2,
+   "explain_vi": "おなか (bụng) viết là お腹. お服 đọc là おふく, chỉ quần áo."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ゆうごはん」を 漢字で 書くと どれですか。",
+   "choices": [
+    "多ご飯",
+    "夕ご反",
+    "夕ご販",
+    "夕ご飯"
+   ],
+   "answer": 3,
+   "explain_vi": "ゆうごはん (bữa tối) viết là 夕ご飯."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あさ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "明",
+    "晩",
+    "朝",
+    "浅"
+   ],
+   "answer": 2,
+   "explain_vi": "あさ (buổi sáng) viết là 朝. 浅 đọc là あさい (nông), 晩 đọc là ばん (buổi tối)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "昼ご飯の 後で、（　）を 食べます。3時の おやつです。",
+   "choices": [
+    "ケーキ",
+    "切符",
+    "傘",
+    "手紙"
+   ],
+   "answer": 0,
+   "explain_vi": "3 giờ ăn nhẹ （おやつ) thì ăn bánh: ケーキを 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "運動の 後で、喉が （　）。水を 飲みたいです。",
+   "choices": [
+    "痛いです",
+    "眠いです",
+    "忙しいです",
+    "渇きました"
+   ],
+   "answer": 3,
+   "explain_vi": "Sau khi vận động thì khát nước: 喉が 渇きました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "朝から 何も 食べませんでしたから、お腹が （　）。",
+   "choices": [
+    "すきました",
+    "いっぱいです",
+    "重いです",
+    "痛いです"
+   ],
+   "answer": 0,
+   "explain_vi": "Không ăn gì từ sáng nên đói: お腹が すきました."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "わたしは 毎晩、晩ご飯を （　）。料理が 好きです。",
+   "choices": [
+    "見ます",
+    "作ります",
+    "買います",
+    "聞きます"
+   ],
+   "answer": 1,
+   "explain_vi": "Vì thích nấu ăn nên mỗi tối tự nấu bữa tối: 作ります."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "食事の 前に、手を （　）。",
+   "choices": [
+    "書きます",
+    "読みます",
+    "開けます",
+    "洗います"
+   ],
+   "answer": 3,
+   "explain_vi": "Trước bữa ăn phải rửa tay: 手を 洗います."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "飲み物は （　）です。",
+   "choices": [
+    "肉",
+    "ご飯",
+    "牛乳",
+    "魚"
+   ],
+   "answer": 2,
+   "explain_vi": "Trong bốn lựa chọn, chỉ 牛乳 (sữa) là đồ uống."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「おやつ」を 使った 文は どれですか。",
+   "choices": [
+    "3時に おやつを 食べます。",
+    "わたしは おやつを 飲みます。",
+    "おやつは 青くて 大きいです。",
+    "彼は おやつに なります。"
+   ],
+   "answer": 0,
+   "explain_vi": "おやつ là bữa ăn nhẹ, dùng với 食べます. Đồ ăn nhẹ không 飲みます, và おやつ không phải tính chất màu sắc."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「食事」を 使った 文は どれですか。",
+   "choices": [
+    "食事を 聞きます。",
+    "家族と 食事を します。",
+    "食事は 暑いです。",
+    "わたしは 食事を 着ます。"
+   ],
+   "answer": 1,
+   "explain_vi": "食事をする nghĩa là dùng bữa. 食事 không đi với 聞く (nghe) hay 着る (mặc)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「昼ご飯」を 使った 文は どれですか。",
+   "choices": [
+    "昼ご飯を 飲みます。",
+    "弟は 昼ご飯を 読みます。",
+    "わたしは 12時に 昼ご飯を 食べます。",
+    "昼ご飯は 寒いです。"
+   ],
+   "answer": 2,
+   "explain_vi": "昼ご飯 (bữa trưa) dùng với 食べます. Bữa trưa không 飲みます (uống) hay 読みます (đọc)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 母 （　） 朝ご飯を 作って もらいました。",
+   "choices": [
+    "を",
+    "が",
+    "に",
+    "へ"
+   ],
+   "answer": 2,
+   "explain_vi": "〜て もらう chỉ người làm giúp bằng に: 母に 作って もらいました (được mẹ nấu cho)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "朝ご飯を 食べ （　）、学校へ 行きます。",
+   "choices": [
+    "から",
+    "まで",
+    "てから",
+    "あと"
+   ],
+   "answer": 2,
+   "explain_vi": "食べ てから = ăn xong rồi mới (đi học). から phải đi với thể た (食べたから) nên không hợp ở đây."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "お腹が すきました。何か （　）。",
+   "choices": [
+    "食べる",
+    "食べます",
+    "食べました",
+    "食べたいです"
+   ],
+   "answer": 3,
+   "explain_vi": "Đang đói nên muốn ăn gì đó: 何か 食べたいです."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "もう 昼ご飯を （　）か。",
+   "choices": [
+    "食べました",
+    "食べたいです",
+    "食べます",
+    "食べる"
+   ],
+   "answer": 0,
+   "explain_vi": "もう đi với thể quá khứ trong câu hỏi: もう 食べましたか (bạn ăn trưa rồi à?)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "晩ご飯は まだ （　）。",
+   "choices": [
+    "食べる",
+    "食べません",
+    "食べたいです",
+    "食べていません"
+   ],
+   "answer": 3,
+   "explain_vi": "まだ + phủ định của 〜ています: まだ 食べていません (vẫn chưa ăn)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "食堂 （　） 昼ご飯を 食べます。",
+   "choices": [
+    "へ",
+    "で",
+    "を",
+    "に"
+   ],
+   "answer": 1,
+   "explain_vi": "Nơi diễn ra hành động ăn dùng で: 食堂で 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "今朝は 何も 食べ （　） 学校へ 行きました。",
+   "choices": [
+    "ないで",
+    "なかった",
+    "ないと",
+    "なくて"
+   ],
+   "answer": 0,
+   "explain_vi": "〜ないで = không làm gì mà làm việc khác: không ăn gì mà đến trường."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "朝ご飯は 7時 （　） 8時までです。",
+   "choices": [
+    "から",
+    "まで",
+    "を",
+    "に"
+   ],
+   "answer": 0,
+   "explain_vi": "7時から 8時まで = từ 7 giờ đến 8 giờ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "一緒に 昼ご飯を 食べ （　）。",
+   "choices": [
+    "たいですか",
+    "ませんか",
+    "ましたか",
+    "ますか"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ませんか là lời mời: 一緒に 食べませんか (cùng ăn trưa nhé?)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：家族と　2：朝ご飯を　3：食べます",
+   "choices": [
+    "家族と",
+    "朝ご飯を",
+    "飲みます",
+    "食べます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 家族と → 朝ご飯を → 食べます. Vị trí ★ là 食べます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "母は 昼ご飯に ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：おいしい　2：カレーを　3：作りました",
+   "choices": [
+    "おいしい",
+    "作りました",
+    "買いました",
+    "カレーを"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: おいしい → カレーを → 作りました (mẹ nấu món cà ri ngon). Vị trí ★ là 作りました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 夜 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：喉が　2：渇いて　3：水を 飲みました",
+   "choices": [
+    "水を 飲みました",
+    "お茶を 飲みました",
+    "喉が",
+    "渇いて"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 喉が → 渇いて → 水を 飲みました (em trai khát nên uống nước). Vị trí ★ là 水を 飲みました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしたちは 食堂で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：一緒に　2：昼ご飯を　3：食べました",
+   "choices": [
+    "昼ご飯を",
+    "飲みました",
+    "食べました",
+    "一緒に"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 一緒に → 昼ご飯を → 食べました. Vị trí ★ là 食べました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。今日の 昼ご飯は （1）ですか。\nB：今日は 魚の 定食です。\nA：じゃあ、それを （2）。\nB：飲み物は どう （3）。\nA：水で （4）です。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "何",
+    "どれ",
+    "だれ",
+    "いつ"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi món ăn hôm nay là gì dùng 何ですか."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。今日の 昼ご飯は （1）ですか。\nB：今日は 魚の 定食です。\nA：じゃあ、それを （2）。\nB：飲み物は どう （3）。\nA：水で （4）です。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "です",
+    "します",
+    "ください"
+   ],
+   "answer": 3,
+   "explain_vi": "Gọi món: それを ください (cho tôi món đó)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。今日の 昼ご飯は （1）ですか。\nB：今日は 魚の 定食です。\nA：じゃあ、それを （2）。\nB：飲み物は どう （3）。\nA：水で （4）です。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "します",
+    "です",
+    "なります"
+   ],
+   "answer": 1,
+   "explain_vi": "どう しますか = bạn dùng (đồ uống) thế nào / bạn chọn gì."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：すみません。今日の 昼ご飯は （1）ですか。\nB：今日は 魚の 定食です。\nA：じゃあ、それを （2）。\nB：飲み物は どう （3）。\nA：水で （4）です。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "いい",
+    "ほしい",
+    "します",
+    "あります"
+   ],
+   "answer": 0,
+   "explain_vi": "水で いいです = nước lọc là được rồi (chọn nước là đủ)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n明日の 朝ご飯は 7時から 8時までです。パンは ありません。ご飯と みそ汁です。\n\n明日の 朝ご飯に パンは ありますか。",
+   "choices": [
+    "食べます",
+    "分かりません",
+    "あります",
+    "ありません"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi rõ パンは ありません — ngày mai không có bánh mì."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n今日の 3時の おやつは クッキーです。ケーキは ありません。\n\n今日の おやつは 何ですか。",
+   "choices": [
+    "パンです",
+    "ケーキです",
+    "りんごです",
+    "クッキーです"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi bữa nhẹ hôm nay là bánh quy （クッキー); bánh kem không có."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は タオです。わたしは 学生です。毎朝 6時に 起きます。朝ご飯は いつも パンと 卵です。でも、今日は お腹が すいて、ご飯も 食べました。学校で 12時に 昼ご飯を 食べます。\n\nタオさんは 毎朝 何を 食べますか。",
+   "choices": [
+    "ご飯と みそ汁です",
+    "カレーです",
+    "パンと 卵です",
+    "魚です"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn nói bữa sáng thường ngày là bánh mì và trứng: いつも パンと 卵です."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は タオです。わたしは 学生です。毎朝 6時に 起きます。朝ご飯は いつも パンと 卵です。でも、今日は お腹が すいて、ご飯も 食べました。学校で 12時に 昼ご飯を 食べます。\n\n今日の 朝ご飯は いつもと 同じですか。",
+   "choices": [
+    "いいえ、ご飯も 食べました",
+    "いいえ、パンは ありません",
+    "はい、卵だけです",
+    "はい、同じです"
+   ],
+   "answer": 0,
+   "explain_vi": "Hôm nay vì đói nên ăn thêm cả cơm （ご飯も 食べました), khác với thường ngày."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n朝ご飯セット：500円\n昼ご飯セット：700円\n晩ご飯セット：800円\nおやつセット：300円\n\n昼ご飯セットと おやつセットは 全部で いくらですか。",
+   "choices": [
+    "800円",
+    "1,000円",
+    "1,100円",
+    "900円"
+   ],
+   "answer": 1,
+   "explain_vi": "Set trưa 700円 + set ăn nhẹ 300円 = 1,000円."
+  }
+ ]
+}

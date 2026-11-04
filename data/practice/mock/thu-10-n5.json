@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-10",
+ "label": "Đề thi thử 10",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「果物」は 何と 読みますか。",
+   "choices": [
+    "くだもの",
+    "かぶつ",
+    "くだもん",
+    "かんぶつ"
+   ],
+   "answer": 0,
+   "explain_vi": "果物 đọc là くだもの (trái cây, hoa quả)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「甘い」は 何と 読みますか。",
+   "choices": [
+    "うまい",
+    "あまい",
+    "かんい",
+    "あめい"
+   ],
+   "answer": 1,
+   "explain_vi": "甘い đọc là あまい (ngọt). うまい là cách đọc của 旨い・美味い, không phải của 甘い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「辛い」は 何と 読みますか。",
+   "choices": [
+    "しんい",
+    "からえ",
+    "からい",
+    "かるい"
+   ],
+   "answer": 2,
+   "explain_vi": "辛い đọc là からい (cay)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「卵」は 何と 読みますか。",
+   "choices": [
+    "たまこ",
+    "らん",
+    "たまごう",
+    "たまご"
+   ],
+   "answer": 3,
+   "explain_vi": "卵 đọc là たまご (trứng) — cách đọc đặc biệt, nhớ cả từ."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「牛乳」は 何と 読みますか。",
+   "choices": [
+    "ぎゅうにゅう",
+    "ぎゅうにゅ",
+    "うしにゅう",
+    "ぎゅにゅう"
+   ],
+   "answer": 0,
+   "explain_vi": "牛乳 đọc là ぎゅうにゅう (sữa bò). 牛 = ぎゅう, 乳 = にゅう."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「飲み物」は 何と 読みますか。",
+   "choices": [
+    "のみぶつ",
+    "のみもん",
+    "のみもの",
+    "いんもの"
+   ],
+   "answer": 2,
+   "explain_vi": "飲み物 đọc là のみもの (đồ uống)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「食堂」は 何と 読みますか。",
+   "choices": [
+    "しょくとう",
+    "しょくどう",
+    "くいどう",
+    "しょくど"
+   ],
+   "answer": 1,
+   "explain_vi": "食堂 đọc là しょくどう (nhà ăn, quán ăn)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「くだもの」を 漢字で 書くと どれですか。",
+   "choices": [
+    "菓物",
+    "課物",
+    "果者",
+    "果物"
+   ],
+   "answer": 3,
+   "explain_vi": "くだもの (trái cây) viết bằng kanji là 果物."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「たまご」を 漢字で 書くと どれですか。",
+   "choices": [
+    "玉",
+    "珠",
+    "卵",
+    "丸"
+   ],
+   "answer": 2,
+   "explain_vi": "たまご (trứng) viết bằng kanji là 卵."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この ジュースは あまいです。この「あまい」の 漢字は どれですか。",
+   "choices": [
+    "甘い",
+    "甜い",
+    "天い",
+    "雨い"
+   ],
+   "answer": 0,
+   "explain_vi": "あまい (ngọt) viết là 甘い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「やさい」を 漢字で 書くと どれですか。",
+   "choices": [
+    "野采",
+    "野菜",
+    "埜菜",
+    "野茶"
+   ],
+   "answer": 1,
+   "explain_vi": "やさい (rau) viết bằng kanji là 野菜."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「のみもの」を 漢字で 書くと どれですか。",
+   "choices": [
+    "飲み者",
+    "食み物",
+    "飲み門",
+    "飲み物"
+   ],
+   "answer": 3,
+   "explain_vi": "のみもの (đồ uống) viết bằng kanji là 飲み物."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この みかんは 少し （　）です。レモンの ような 味です。",
+   "choices": [
+    "あまい",
+    "すっぱい",
+    "からい",
+    "にがい"
+   ],
+   "answer": 1,
+   "explain_vi": "Giống vị chanh (レモン) nên là すっぱい (chua)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "韓国料理は （　） 食べ物が 多いです。",
+   "choices": [
+    "あまい",
+    "にがい",
+    "すっぱい",
+    "からい"
+   ],
+   "answer": 3,
+   "explain_vi": "Ẩm thực Hàn Quốc nổi tiếng nhiều món からい (cay)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "朝ごはんに トーストと （　）を 飲みます。",
+   "choices": [
+    "牛乳",
+    "果物",
+    "野菜",
+    "卵"
+   ],
+   "answer": 0,
+   "explain_vi": "Động từ là 飲みます (uống) nên đồ vật phải là đồ uống: 牛乳 (sữa)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "弟は チョコレートが 好きです。（　） お菓子を よく 食べます。",
+   "choices": [
+    "重い",
+    "長い",
+    "甘い",
+    "早い"
+   ],
+   "answer": 2,
+   "explain_vi": "Sô-cô-la là đồ ngọt nên お菓子 ở đây là 甘い (ngọt)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この 味噌汁は 少し （　）です。塩が 多いです。",
+   "choices": [
+    "あまい",
+    "すっぱい",
+    "にがい",
+    "しおからい"
+   ],
+   "answer": 3,
+   "explain_vi": "Nhiều muối （塩） nên vị là しおからい (mặn)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "晩ごはんの 後で、（　）を 食べます。メロンと ぶどうです。",
+   "choices": [
+    "野菜",
+    "果物",
+    "飲み物",
+    "ご飯"
+   ],
+   "answer": 1,
+   "explain_vi": "メロン (dưa) và ぶどう (nho) đều là 果物 (trái cây)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「甘い」を 使った 文は どれですか。",
+   "choices": [
+    "わたしは 甘いを 飲みます。",
+    "彼は 甘いに 行きます。",
+    "この ケーキは 甘くて おいしいです。",
+    "甘いは 机の 上です。"
+   ],
+   "answer": 2,
+   "explain_vi": "甘い là tính từ -i chỉ vị ngọt; câu đúng dùng 甘くて nối với おいしい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「果物」を 使った 文は どれですか。",
+   "choices": [
+    "果物は 体に いいです。",
+    "果物を 聞きます。",
+    "果物に 座って ください。",
+    "果物は 歌います。"
+   ],
+   "answer": 0,
+   "explain_vi": "果物 (trái cây) là đồ ăn; câu đúng: trái cây tốt cho cơ thể （体に いい)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「おいしい」を 使った 文は どれですか。",
+   "choices": [
+    "おいしいを 買います。",
+    "彼は おいしいに なります。",
+    "おいしいは 窓の 外です。",
+    "母の 料理は とても おいしいです。"
+   ],
+   "answer": 3,
+   "explain_vi": "おいしい là tính từ -i (ngon); câu đúng dùng để tả món ăn của mẹ."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 果物 （　） 野菜が 好きです。",
+   "choices": [
+    "も",
+    "へ",
+    "と",
+    "に"
+   ],
+   "answer": 2,
+   "explain_vi": "Liệt kê hai thứ song song dùng と: 果物と野菜 (trái cây và rau)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この ケーキは あの ケーキ （　） 甘いです。",
+   "choices": [
+    "から",
+    "より",
+    "まで",
+    "と"
+   ],
+   "answer": 1,
+   "explain_vi": "So sánh hơn dùng mẫu Aは Bより 〜: bánh này ngọt hơn bánh kia."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "昼ごはんを 食べ （　）、散歩を します。",
+   "choices": [
+    "て",
+    "から",
+    "に",
+    "も"
+   ],
+   "answer": 0,
+   "explain_vi": "Nối hai hành động liên tiếp bằng thể て: 食べて、散歩をします (ăn xong rồi đi dạo)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "昨日、レストランで すしを （　）。",
+   "choices": [
+    "食べます",
+    "食べたい",
+    "食べて",
+    "食べました"
+   ],
+   "answer": 3,
+   "explain_vi": "Có 昨日 (hôm qua) nên động từ phải ở thì quá khứ: 食べました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "みかんは 安い （　）、たくさん 買いました。",
+   "choices": [
+    "でも",
+    "が",
+    "から",
+    "と"
+   ],
+   "answer": 2,
+   "explain_vi": "から chỉ lý do: vì quýt rẻ nên mua nhiều."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 姉 （　） チョコレートを もらいました。",
+   "choices": [
+    "へ",
+    "に",
+    "で",
+    "と"
+   ],
+   "answer": 1,
+   "explain_vi": "もらう (nhận) lấy nguồn bằng に: 姉に もらいました (nhận từ chị)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "野菜を （　）ください。",
+   "choices": [
+    "洗って",
+    "洗い",
+    "洗う",
+    "洗った"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu yêu cầu 〜てください dùng thể て: 洗ってください (hãy rửa)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 辛い 食べ物 （　） 好きじゃ ありません。",
+   "choices": [
+    "を",
+    "に",
+    "へ",
+    "が"
+   ],
+   "answer": 3,
+   "explain_vi": "好き・好きじゃありません đi với trợ từ が, không dùng を."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "食堂は 駅の 前 （　） あります。",
+   "choices": [
+    "を",
+    "に",
+    "へ",
+    "と"
+   ],
+   "answer": 1,
+   "explain_vi": "Vị trí tồn tại của vật dùng に + あります: 前に あります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：パンを　2：食べて　3：学校へ 行きます",
+   "choices": [
+    "パンを",
+    "食べて",
+    "学校へ 行きます",
+    "家に 帰ります"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: パンを → 食べて → 学校へ 行きます (ăn bánh mì rồi đi học). Vậy ★ là 学校へ 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "弟は 食堂で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：カレーを　2：食べて　3：水を 飲みました",
+   "choices": [
+    "水を 飲みました",
+    "カレーを",
+    "食べて",
+    "ジュースを 買います"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: カレーを → 食べて → 水を 飲みました (ăn cà ri rồi uống nước). Vậy ★ là 水を 飲みました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 晩ごはんの 後で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：果物を　2：食べて　3：テレビを 見ます",
+   "choices": [
+    "果物を",
+    "食べて",
+    "本を 読みます",
+    "テレビを 見ます"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 果物を → 食べて → テレビを 見ます. Vậy ★ là テレビを 見ます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は 毎朝 ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：牛乳を　2：飲んで　3：仕事へ 行きます",
+   "choices": [
+    "牛乳を",
+    "仕事へ 行きます",
+    "飲んで",
+    "新聞を 読みます"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 牛乳を → 飲んで → 仕事へ 行きます (uống sữa rồi đi làm). Vậy ★ là 仕事へ 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。何に （1）か。\nB：すみません、メニューを 見せて （2）。\nA：はい、どうぞ。今日の おすすめは カレーです。\nB：じゃあ、カレーを ください。（3） 食べ物は ありますか。\nA：サラダと スープが ありますよ。\nB：じゃあ、サラダも ください。飲み物は （4）に します。\nA：かしこまりました。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "いきます",
+    "します",
+    "なります"
+   ],
+   "answer": 2,
+   "explain_vi": "Nhân viên nhà hàng hỏi 何に しますか (quý khách chọn món gì) — mẫu cố định khi gọi món."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。何に （1）か。\nB：すみません、メニューを 見せて （2）。\nA：はい、どうぞ。今日の おすすめは カレーです。\nB：じゃあ、カレーを ください。（3） 食べ物は ありますか。\nA：サラダと スープが ありますよ。\nB：じゃあ、サラダも ください。飲み物は （4）に します。\nA：かしこまりました。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "ください",
+    "どうぞ",
+    "います",
+    "あります"
+   ],
+   "answer": 0,
+   "explain_vi": "Xin xem thực đơn: メニューを見せて ください (xin cho xem)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。何に （1）か。\nB：すみません、メニューを 見せて （2）。\nA：はい、どうぞ。今日の おすすめは カレーです。\nB：じゃあ、カレーを ください。（3） 食べ物は ありますか。\nA：サラダと スープが ありますよ。\nB：じゃあ、サラダも ください。飲み物は （4）に します。\nA：かしこまりました。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "あした",
+    "いつも",
+    "たぶん",
+    "ほかに"
+   ],
+   "answer": 3,
+   "explain_vi": "ほかに = ngoài ra, còn gì nữa; hỏi ほかに 食べ物は ありますか (ngoài ra còn món ăn nào không)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。何に （1）か。\nB：すみません、メニューを 見せて （2）。\nA：はい、どうぞ。今日の おすすめは カレーです。\nB：じゃあ、カレーを ください。（3） 食べ物は ありますか。\nA：サラダと スープが ありますよ。\nB：じゃあ、サラダも ください。飲み物は （4）に します。\nA：かしこまりました。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "カレー",
+    "オレンジジュース",
+    "サラダ",
+    "スープ"
+   ],
+   "answer": 1,
+   "explain_vi": "Chỗ trống thuộc về 飲み物 (đồ uống) nên chọn オレンジジュース (nước cam)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの 店の ケーキは 甘くて 有名です。コーヒーは 苦いです。\n\nケーキは どんな 味ですか。",
+   "choices": [
+    "甘いです",
+    "苦いです",
+    "辛いです",
+    "酸っぱいです"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi ケーキは 甘くて 有名です — bánh có vị ngọt (甘い)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n食堂の お知らせ：金曜日は 韓国料理の 日です。辛い スープが あります。\n\n金曜日は 何料理の 日ですか。",
+   "choices": [
+    "日本料理です",
+    "中国料理です",
+    "韓国料理です",
+    "イタリア料理です"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi rõ 金曜日は 韓国料理の 日 (thứ Sáu là ngày món Hàn)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は フォンです。わたしは 果物が 大好きです。毎朝、市場へ 行って、果物を 買います。今日は りんごと バナナと みかんを 買いました。りんごは 甘くて、おいしかったです。みかんは 少し 酸っぱかったです。晩ごはんの 後で、家族と 一緒に 果物を 食べます。\n\nフォンさんは 毎朝 どこで 果物を 買いますか。",
+   "choices": [
+    "スーパーで",
+    "食堂で",
+    "果物屋で",
+    "市場で"
+   ],
+   "answer": 3,
+   "explain_vi": "Trong đoạn có câu 毎朝、市場へ 行って、果物を 買います — mua ở chợ （市場）."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は フォンです。わたしは 果物が 大好きです。毎朝、市場へ 行って、果物を 買います。今日は りんごと バナナと みかんを 買いました。りんごは 甘くて、おいしかったです。みかんは 少し 酸っぱかったです。晩ごはんの 後で、家族と 一緒に 果物を 食べます。\n\nみかんは どんな 味でしたか。",
+   "choices": [
+    "甘かったです",
+    "酸っぱかったです",
+    "辛かったです",
+    "苦かったです"
+   ],
+   "answer": 1,
+   "explain_vi": "Trong đoạn: みかんは 少し 酸っぱかったです — quýt hơi chua."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nりんご：甘い\nレモン：酸っぱい\nコーヒー：苦い\nトウガラシ：辛い\n\nレモンは どんな 味ですか。",
+   "choices": [
+    "甘い",
+    "苦い",
+    "酸っぱい",
+    "辛い"
+   ],
+   "answer": 2,
+   "explain_vi": "Bảng ghi レモン：酸っぱい — chanh có vị chua."
+  }
+ ]
+}

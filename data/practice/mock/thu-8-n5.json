@@ -1,0 +1,572 @@
+{
+ "feature": "mock",
+ "id": "thu-8",
+ "label": "Đề thi thử 8",
+ "level": "N5",
+ "duration_minutes": 60,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「赤い」は 何と 読みますか。",
+   "choices": [
+    "あかい",
+    "あか",
+    "あおい",
+    "しろい"
+   ],
+   "answer": 0,
+   "explain_vi": "赤い đọc là あかい (đỏ). 赤 không có い là danh từ chỉ màu đỏ; あおい là xanh dương, しろい là trắng."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「青い」は 何と 読みますか。",
+   "choices": [
+    "あかい",
+    "あおい",
+    "あお",
+    "くろい"
+   ],
+   "answer": 1,
+   "explain_vi": "青い đọc là あおい (xanh dương). あかい là đỏ, くろい là đen."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「白い」は 何と 読みますか。",
+   "choices": [
+    "しろ",
+    "しろえ",
+    "しろい",
+    "くろい"
+   ],
+   "answer": 2,
+   "explain_vi": "白い đọc là しろい (trắng). Tính từ phải có đuôi い đầy đủ: しろい."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「黒い」は 何と 読みますか。",
+   "choices": [
+    "くろ",
+    "くろえ",
+    "くらい",
+    "くろい"
+   ],
+   "answer": 3,
+   "explain_vi": "黒い đọc là くろい (đen). くらい là cách đọc của 暗い (tối), không phải của 黒い."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「靴」は 何と 読みますか。",
+   "choices": [
+    "くつ",
+    "ぐつ",
+    "くち",
+    "くつした"
+   ],
+   "answer": 0,
+   "explain_vi": "靴 đọc là くつ (giày). くつした là tất/vớ (靴下), không phải cách đọc của riêng chữ 靴."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「服」は 何と 読みますか。",
+   "choices": [
+    "はく",
+    "ふく",
+    "ぶく",
+    "ふぐ"
+   ],
+   "answer": 1,
+   "explain_vi": "服 đọc là ふく (quần áo). はく là động từ はく (mặc quần, đi giày)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「黄色」は 何と 読みますか。",
+   "choices": [
+    "きいろい",
+    "きい",
+    "きいろ",
+    "きんいろ"
+   ],
+   "answer": 2,
+   "explain_vi": "黄色 đọc là きいろ (màu vàng) — đây là danh từ chỉ màu. きいろい là dạng tính từ khi đứng trước danh từ khác."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「あかい」シャツを 買います。この「あかい」の 漢字は どれですか。",
+   "choices": [
+    "明るい",
+    "暗い",
+    "赤",
+    "赤い"
+   ],
+   "answer": 3,
+   "explain_vi": "あかい viết là 赤い. 赤 đứng một mình là danh từ 'màu đỏ'; tính từ phải có đuôi い. 明るい là あかるい (sáng), 暗い là くらい (tối)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「くつ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "靴",
+    "革",
+    "鞄",
+    "靴下"
+   ],
+   "answer": 0,
+   "explain_vi": "くつ (giày) viết là 靴. 靴下 đọc là くつした (tất/vớ), 革 là かわ (da), 鞄 là かばん (cặp/túi)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「ぼうし」を 漢字で 書くと どれですか。",
+   "choices": [
+    "帽字",
+    "帽子",
+    "帽紙",
+    "帽糸"
+   ],
+   "answer": 1,
+   "explain_vi": "ぼうし (mũ, nón) viết là 帽子. 子 đọc là し trong từ này; các chữ còn lại chỉ là chữ gần giống."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「めがね」を 漢字で 書くと どれですか。",
+   "choices": [
+    "目鏡",
+    "眼境",
+    "眼鏡",
+    "眼竟"
+   ],
+   "answer": 2,
+   "explain_vi": "めがね (kính mắt) viết là 眼鏡 — đây là cách đọc đặc biệt phải nhớ cả từ. 鏡 là gương/kính."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「てぶくろ」を 漢字で 書くと どれですか。",
+   "choices": [
+    "手紙",
+    "手帯",
+    "手貸",
+    "手袋"
+   ],
+   "answer": 3,
+   "explain_vi": "てぶくろ (găng tay) viết là 手袋. 手紙 đọc là てがみ (lá thư), 袋 là túi/bao."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "あの 赤い 靴は （　）ですか。",
+   "choices": [
+    "いくつ",
+    "いくら",
+    "いつ",
+    "いちばん"
+   ],
+   "answer": 1,
+   "explain_vi": "Hỏi giá tiền của một món đồ dùng いくらですか (bao nhiêu tiền). いくつ dùng để hỏi số lượng hoặc tuổi."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "寒いですから、（　）を かぶります。",
+   "choices": [
+    "眼鏡",
+    "靴",
+    "帽子",
+    "シャツ"
+   ],
+   "answer": 2,
+   "explain_vi": "Đội lên đầu dùng động từ かぶります → 帽子 (mũ). 眼鏡は かけます (đeo kính), 靴は はきます (đi giày), シャツは 着ます (mặc áo)."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "雨ですから、（　）を さします。",
+   "choices": [
+    "傘",
+    "帽子",
+    "靴",
+    "眼鏡"
+   ],
+   "answer": 0,
+   "explain_vi": "Che ô/dù dùng động từ さします đi với 傘. Các đồ còn lại không đi với さします."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "弟は ズボンを （　）。",
+   "choices": [
+    "着ます",
+    "かぶります",
+    "かけます",
+    "はきます"
+   ],
+   "answer": 3,
+   "explain_vi": "Mặc quần (và đi giày, tất) dùng はきます. 着ます dùng cho áo, かぶります cho mũ, かけます cho kính."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "この 黄色い 帽子は （　）です。500円です。",
+   "choices": [
+    "高い",
+    "安い",
+    "重い",
+    "軽い"
+   ],
+   "answer": 1,
+   "explain_vi": "Chỉ 500 yên nên là 安い (rẻ). 重い/軽い nói về trọng lượng, không hợp với ngữ cảnh giá tiền ở đây."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "彼は 眼鏡を （　）。",
+   "choices": [
+    "着ます",
+    "はきます",
+    "かけます",
+    "かぶります"
+   ],
+   "answer": 2,
+   "explain_vi": "Đeo kính dùng かけます. Đây là cách kết hợp cố định: 眼鏡を かける."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「白い」を 使った 文は どれですか。",
+   "choices": [
+    "白い 音が 聞こえます。",
+    "白い 水を 飲みます。",
+    "彼女は 白い ワンピースを 着ています。",
+    "彼は 白いを 読みます。"
+   ],
+   "answer": 2,
+   "explain_vi": "白い (trắng) dùng cho đồ vật, quần áo: bộ váy trắng. Âm thanh và nước không đi với màu trắng theo cách này, và 白い không đứng trước を."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「脱ぎます」を 使った 文は どれですか。",
+   "choices": [
+    "ご飯を 脱ぎます。",
+    "本を 脱ぎます。",
+    "音楽を 脱ぎます。",
+    "家に 入るとき、靴を 脱ぎます。"
+   ],
+   "answer": 3,
+   "explain_vi": "脱ぎます là cởi ra (giày, áo, mũ...). Chỉ câu cuối đúng: vào nhà thì cởi giày. Cơm, sách và nhạc không phải thứ để 'cởi'."
+  },
+  {
+   "level": "N5",
+   "section": "文字・語彙",
+   "question": "「軽い」を 使った 文は どれですか。",
+   "choices": [
+    "この かばんは 軽いです。",
+    "軽い 水を 飲みます。",
+    "軽い 音を 聞きます。",
+    "彼は 軽いを 食べます。"
+   ],
+   "answer": 0,
+   "explain_vi": "軽い (nhẹ) dùng cho đồ vật khi nói về trọng lượng: cái cặp nhẹ. Nước, âm thanh không dùng 軽い theo cách này."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この シャツ （　） あの シャツは、どちらが 安いですか。",
+   "choices": [
+    "と",
+    "を",
+    "に",
+    "は"
+   ],
+   "answer": 0,
+   "explain_vi": "Khi nêu hai thứ để so sánh dùng と để nối: このシャツと あのシャツ (áo này và áo kia)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼女は ズボンを （　）います。",
+   "choices": [
+    "着て",
+    "かぶって",
+    "かけて",
+    "はいて"
+   ],
+   "answer": 3,
+   "explain_vi": "Nói về trạng thái đang mặc quần dùng はいています. 着て dùng cho áo, かぶって cho mũ, かけて cho kính."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "この 店 （　） 服を 買います。",
+   "choices": [
+    "に",
+    "で",
+    "を",
+    "へ"
+   ],
+   "answer": 1,
+   "explain_vi": "Nơi diễn ra hành động mua sắm dùng trợ từ で: 店で 買います (mua ở cửa hàng)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "あの 人 （　） だれですか。",
+   "choices": [
+    "を",
+    "に",
+    "は",
+    "の"
+   ],
+   "answer": 2,
+   "explain_vi": "Chủ đề của câu hỏi về người là あの人は だれですか (người kia là ai)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "プレゼントは （　） 買いましたか。",
+   "choices": [
+    "もう",
+    "まだ",
+    "とても",
+    "よく"
+   ],
+   "answer": 0,
+   "explain_vi": "Hỏi một việc đã làm chưa dùng もう + thể quá khứ: もう 買いましたか (đã mua chưa)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "傘を （　） 買いました。",
+   "choices": [
+    "二つ",
+    "二枚",
+    "二台",
+    "二本"
+   ],
+   "answer": 3,
+   "explain_vi": "Ô là vật dài nên đếm bằng 本: 二本 (hai cái ô). 二枚 dùng cho vật mỏng phẳng, 二台 cho máy móc/xe."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "部屋に 机と 椅子 （　） あります。",
+   "choices": [
+    "を",
+    "が",
+    "は",
+    "も"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu tồn tại của đồ vật dùng mẫu Nが あります: 椅子が あります (có ghế)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "静かに （　）ください。",
+   "choices": [
+    "する",
+    "した",
+    "して",
+    "します"
+   ],
+   "answer": 2,
+   "explain_vi": "Mẫu yêu cầu dùng thể て + ください: 静かに して ください (xin hãy yên lặng)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "昨日、デパートへ （　）。",
+   "choices": [
+    "行きました",
+    "行きます",
+    "行きたいです",
+    "行きません"
+   ],
+   "answer": 0,
+   "explain_vi": "昨日 (hôm qua) là quá khứ nên dùng 行きました (đã đi)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 店で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：赤い　2：傘を　3：買いました",
+   "choices": [
+    "赤い",
+    "傘を",
+    "見ました",
+    "買いました"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng: 赤い (bổ nghĩa cho ô) → 傘を (tân ngữ) → 買いました (động từ đứng cuối). Vậy vị trí ★ là 買いました."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼女は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：白い　2：シャツを　3：着ています",
+   "choices": [
+    "シャツを",
+    "着ています",
+    "白い",
+    "はいています"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng: 白い → シャツを → 着ています (đang mặc, động từ cuối câu). Vậy vị trí ★ là 着ています."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "彼は ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：傘を　2：さして　3：行きます",
+   "choices": [
+    "傘を",
+    "さして",
+    "行きます",
+    "帰ります"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng: 傘を → さして (che ô rồi mới đi) → 行きます. Vậy vị trí ★ là 行きます."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "わたしは 部屋で ＿ ＿ ★ ＿ 。★ に 入るものは どれですか。1：靴を　2：脱いで　3：入ります",
+   "choices": [
+    "入ります",
+    "靴を",
+    "脱いで",
+    "出ます"
+   ],
+   "answer": 0,
+   "explain_vi": "Thứ tự đúng: 靴を → 脱いで (cởi giày rồi mới vào phòng) → 入ります. Vậy vị trí ★ là 入ります."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません。この 青い シャツは （1）ですか。\nA：3,500円です。\nB：（2）が ありますか。\nA：はい、赤と 白が あります。\nB：じゃあ、赤いのを （3）。\nA：はい、どうぞ。\nB：ありがとうございました。また （4）。\n（1）に 入るものは どれですか。",
+   "choices": [
+    "いくつ",
+    "いくら",
+    "いつ",
+    "いちばん"
+   ],
+   "answer": 1,
+   "explain_vi": "Khách hỏi giá chiếc áo, nhân viên trả lời 3,500円 nên chỗ trống là いくら (bao nhiêu tiền)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません。この 青い シャツは （1）ですか。\nA：3,500円です。\nB：（2）が ありますか。\nA：はい、赤と 白が あります。\nB：じゃあ、赤いのを （3）。\nA：はい、どうぞ。\nB：ありがとうございました。また （4）。\n（2）に 入るものは どれですか。",
+   "choices": [
+    "ほかの 色",
+    "大きい サイズ",
+    "青い 色",
+    "同じ 色"
+   ],
+   "answer": 0,
+   "explain_vi": "Nhân viên trả lời bằng các màu khác (赤と 白) nên khách đã hỏi ほかの 色 (màu khác)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません。この 青い シャツは （1）ですか。\nA：3,500円です。\nB：（2）が ありますか。\nA：はい、赤と 白が あります。\nB：じゃあ、赤いのを （3）。\nA：はい、どうぞ。\nB：ありがとうございました。また （4）。\n（3）に 入るものは どれですか。",
+   "choices": [
+    "あります",
+    "います",
+    "見ます",
+    "ください"
+   ],
+   "answer": 3,
+   "explain_vi": "Khi muốn lấy một món đồ trong cửa hàng, nói Nを ください: 赤いのを ください (cho tôi cái màu đỏ)."
+  },
+  {
+   "level": "N5",
+   "section": "文法",
+   "question": "A：いらっしゃいませ。\nB：すみません。この 青い シャツは （1）ですか。\nA：3,500円です。\nB：（2）が ありますか。\nA：はい、赤と 白が あります。\nB：じゃあ、赤いのを （3）。\nA：はい、どうぞ。\nB：ありがとうございました。また （4）。\n（4）に 入るものは どれですか。",
+   "choices": [
+    "行きます",
+    "会います",
+    "来ます",
+    "あります"
+   ],
+   "answer": 2,
+   "explain_vi": "Khi rời cửa hàng, khách nói また 来ます (tôi sẽ lại đến). 行きます dùng khi nói mình đi nơi khác, không dùng để hứa quay lại店."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nこの 店は 午前 10時から 午後 8時までです。月曜日は 休みです。\n\n店は 何時からですか。",
+   "choices": [
+    "午前 10時",
+    "午後 8時",
+    "午前 8時",
+    "午後 10時"
+   ],
+   "answer": 0,
+   "explain_vi": "Thông báo ghi 午前 10時から — cửa hàng mở từ 10 giờ sáng. 午後 8時 là giờ đóng cửa."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\n白い シャツは 半額です。今日だけ 1,500円です。\n\n白い シャツは いくらですか。",
+   "choices": [
+    "3,000円",
+    "半額",
+    "1,500円",
+    "1,000円"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi hôm nay áo trắng giá 1,500円. 半額 có nghĩa là giảm nửa giá, không phải một số tiền."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ユイです。わたしは 服が 好きです。昨日、友達と デパートへ 行きました。青い スカートと 白い シャツを 買いました。今日は その スカートを はいて、大学へ 行きます。\n\nユイさんは 昨日 何を 買いましたか。",
+   "choices": [
+    "白い スカートと 青い シャツ",
+    "青い スカートと 白い シャツ",
+    "青い 傘と 白い 靴",
+    "赤い スカートと 黒い シャツ"
+   ],
+   "answer": 1,
+   "explain_vi": "Đoạn văn ghi: 青い スカートと 白い シャツを 買いました — váy xanh dương và áo sơ mi trắng. Lựa chọn đầu tiên đã đảo ngược hai màu."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "わたしの 名前は ユイです。わたしは 服が 好きです。昨日、友達と デパートへ 行きました。青い スカートと 白い シャツを 買いました。今日は その スカートを はいて、大学へ 行きます。\n\n今日、ユイさんは 何を はいて 行きますか。",
+   "choices": [
+    "白い シャツ",
+    "黒い ズボン",
+    "青い シャツ",
+    "青い スカート"
+   ],
+   "answer": 3,
+   "explain_vi": "Câu cuối của đoạn: 今日は その スカートを はいて — hôm nay mặc chiếc váy đó (chiếc váy xanh dương mới mua)."
+  },
+  {
+   "level": "N5",
+   "section": "読解",
+   "question": "\nシャツ：2,000円\nズボン：3,000円\n靴：4,000円\n帽子：1,500円\n\nズボンは いくらですか。",
+   "choices": [
+    "2,000円",
+    "3,000円",
+    "4,000円",
+    "1,500円"
+   ],
+   "answer": 1,
+   "explain_vi": "Trong bảng giá, ズボン (quần dài) ghi 3,000円."
+  }
+ ]
+}
