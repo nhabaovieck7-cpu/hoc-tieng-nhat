@@ -1,6 +1,13 @@
 {
  "items": [
   {
+   "id": "2026-11-04-kho-150-de-thi-thu",
+   "date": "2026-11-04",
+   "type": "de-thi",
+   "title": "Kho đề thi thử khủng: 30 đề mỗi cấp N5–N1 (150 đề · 9.300 câu)",
+   "desc": "Mục Thi thử có thêm Đề thi thử 2 đến Đề thi thử 30 cho mọi cấp độ: mỗi đề đúng format phần thi viết JLPT (số câu, thời gian, từng phần như đề thật), tự soạn 100%, mọi câu đều có giải thích tiếng Việt và đáp án cân bằng. Làm bài ngay trong trang, chấm điểm và xem lại đáp án như các đề trước."
+  },
+  {
    "id": "2026-11-04-duyet-tu-dong-cong-tac-che-do",
    "date": "2026-11-04",
    "type": "thay-doi",
