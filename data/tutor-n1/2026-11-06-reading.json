@@ -1,0 +1,515 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 統合理解 trong phần đọc hiểu của đề N1 thật: hai bài văn cùng một chủ đề nhưng góc nhìn khác nhau, kèm 4 câu hỏi — 2 câu hỏi về từng bài riêng và 2 câu hỏi chung chỉ trả lời được khi đọc CẢ HAI bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc lướt nắm chủ trương của từng tác giả rồi mới trả lời; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 13–15 phút (đọc 2 bài + 4 câu hỏi). Trong đề thật, 統合理解 là dạng dễ mất điểm nhất trong đọc hiểu, vì các lựa chọn nhiễu thường lấy ý của bài này gán cho bài kia, hoặc gộp hai ý riêng thành một khẳng định chung không có trong bài.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi chung trước, rồi mới đọc hai bài",
+      "body": "Hai câu hỏi chung (câu 3, câu 4) cho biết bạn cần đối chiếu điểm gì: điểm chung trong suy nghĩ hay lập trường của cả hai tác giả. Biết trước điều cần tìm sẽ giúp bạn đọc có định hướng, thay vì đọc xong mới quay lại tìm."
+    },
+    {
+      "h": "Đọc câu đầu và câu cuối mỗi đoạn của CẢ HAI bài trước",
+      "body": "Mỗi bài đều theo cấu trúc dài — ngắn: đoạn đầu nêu lợi điểm, đoạn giữa chỉ ra điểm yếu, đoạn cuối nêu kết luận. Đọc khung này ở cả hai bài trước sẽ giúp bạn nắm chủ trương của từng tác giả và thấy ngay hai bài bổ sung hay đối chiếu nhau ở đâu."
+    },
+    {
+      "h": "Lập bảng đối chiếu trong đầu: 長所・短所 của từng cách học",
+      "body": "Bài A nói về sách: lợi điểm làペース và tính hệ thống, điểm yếu là tốn thời gian; Bài B nói về video: lợi điểm là trực quan và tiện lợi, điểm yếu là tốc độ cố định và dễ hiểu nhầm. Câu hỏi chung thường hỏi đúng điểm chung hoặc điểm khác trong bảng đối chiếu này."
+    },
+    {
+      "h": "Câu hỏi về một bài riêng thì CHỈ dùng bài đó",
+      "body": "Câu 1 chỉ hỏi về bài A, câu 2 chỉ hỏi về bài B. Lựa chọn lấy ý của bài kia (ví dụ: lấy 'trực quan' của video gán cho sách) là bẫy đánh tráo bài văn — loại ngay dù nghe rất hợp lý."
+    },
+    {
+      "h": "Câu hỏi chung không nằm ở một bài riêng: đáp án phải có căn cứ ở CẢ HAI bài",
+      "body": "Muốn chọn đáp án cho câu hỏi chung, bạn phải tìm được bằng chứng ở cả bài A và bài B. Nếu một lựa chọn chỉ đúng với một bài mà không đúng với bài còn lại, đó không phải đáp án — đó là bẫy gán ý kiến của một bên cho cả hai."
+    },
+    {
+      "h": "Cảnh giác với lựa chọn gộp hai ý riêng thành một khẳng định chung",
+      "body": "Bẫy thường gặp ở dạng tích hợp: lấy một ý đúng ở bài A cộng một ý đúng ở bài B, rồi kết luận thành một điều mà không bài nào nói — ví dụ 'cả hai tác giả đều cho rằng video là cửa ngõ tốt nhất', trong khi tác giả A không hề nhắc tới video. Hãy kiểm tra từng nửa của lựa chọn."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài A khen chiều sâu của sách nhưng thừa nhận đọc sách tốn thời gian và dễ bỏ cuộc; bài B khen tính trực quan và tiện lợi của video nhưng cảnh báo người xem dễ tưởng là đã hiểu. Điểm chung quan trọng: cả hai tác giả đều đòi hỏi người học phải chủ động — bài A là 'tự mình suy nghĩ', bài B là 'tự mình sắp xếp lại bằng lời của mình'. Khi làm câu 3 và câu 4, hãy bám vào điểm chung này và vào lập trường chung của cả hai: khen ưu điểm nhưng đồng thời chỉ ra giới hạn."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「本で学ぶこと」\n本で学ぶ最大の利点は、読み手が自分のペースで進めることである。分からないところでは立ち止まって考え、必要なら前に戻って読み直すことができる。さらに、知識が章立てによって体系的に整理されているため、全体のつながりが見えやすい。\nしかし、本を読む学びには時間がかかる。理解するには集中力が必要であり、基礎となる知識が不足していると、途中で読み進められなくなることもある。その結果、読み終える前に挫折してしまう人も少なくない。\nそれでも本の価値は、結論そのものよりも、著者の思考の筋道をたどることにある。なぜその結論に至ったのか、どのような根拠に基づいているのかを追うことで、読み手は自分の頭で考える訓練をする。他人の考えをなぞるのではなく、自分の考えと突き合わせながら読むことで、理解は深まっていく。この深まりこそが、本ならではの学びだと言える。\nつまり、本で学ぶこととは、速さよりも深さを選ぶ学びである。時間はかかるが、その分だけ知識は自分のものとして定着しやすい。だからこそ、しっかりと身につけたい知識があるとき、人は本に手を伸ばすのではないだろうか。\n文章B「動画で学ぶこと」\n一方、動画で学ぶ最大の利点は、目と耳の両方に同時に訴えかけることである。図や実演を交えることで、言葉だけでは伝わりにくい内容も直感的に理解できる。さらに、移動中や家事の合間といった隙間時間でも学べる手軽さがある。\nしかし、動画には流れの速さが決まっているという弱点がある。分からない部分があっても映像は止まってくれず、理解できないまま先へ進んでしまいがちである。その結果、見ただけで分かったつもりになり、実は何も身についていないということも起こりうる。\nそれでも動画の強みは、「見る」ことでしか得られない情報がある点にある。実際の動きや表情、現場の様子は、文字で説明されるよりもはるかに多くの情報を伝える。こうした特徴から、動画は入門や全体像をつかむ段階に特に向いていると言える。\nつまり、動画は学びの入り口として優れているが、それだけで深い理解が得られるわけではない。本当に自分のものにするためには、見た内容を自分の言葉で整理し直す作業が欠かせない。だからこそ、動画で全体像をつかみ、本で深めるという組み合わせこそが、最も効果的な学び方ではないだろうか。\n筆者Aによれば、本で学ぶことの最大の価値は何か。",
+      "choices": [
+        "短い時間で多くの知識を効率よく身につけられること。",
+        "著者の思考の筋道をたどり、自分の考えを深められること。",
+        "図や実演によって内容を直感的に理解できること。",
+        "隙間時間に手軽に学べること。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án ở bài A đoạn 3 câu 1 và câu 4: 本の価値は著者の思考の筋道をたどることにあり、この深まりこそが本ならではの学び。Các lựa chọn còn lại đều là lợi điểm của video (bài B đoạn 5)."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「本で学ぶこと」\n本で学ぶ最大の利点は、読み手が自分のペースで進めることである。分からないところでは立ち止まって考え、必要なら前に戻って読み直すことができる。さらに、知識が章立てによって体系的に整理されているため、全体のつながりが見えやすい。\nしかし、本を読む学びには時間がかかる。理解するには集中力が必要であり、基礎となる知識が不足していると、途中で読み進められなくなることもある。その結果、読み終える前に挫折してしまう人も少なくない。\nそれでも本の価値は、結論そのものよりも、著者の思考の筋道をたどることにある。なぜその結論に至ったのか、どのような根拠に基づいているのかを追うことで、読み手は自分の頭で考える訓練をする。他人の考えをなぞるのではなく、自分の考えと突き合わせながら読むことで、理解は深まっていく。この深まりこそが、本ならではの学びだと言える。\nつまり、本で学ぶこととは、速さよりも深さを選ぶ学びである。時間はかかるが、その分だけ知識は自分のものとして定着しやすい。だからこそ、しっかりと身につけたい知識があるとき、人は本に手を伸ばすのではないだろうか。\n文章B「動画で学ぶこと」\n一方、動画で学ぶ最大の利点は、目と耳の両方に同時に訴えかけることである。図や実演を交えることで、言葉だけでは伝わりにくい内容も直感的に理解できる。さらに、移動中や家事の合間といった隙間時間でも学べる手軽さがある。\nしかし、動画には流れの速さが決まっているという弱点がある。分からない部分があっても映像は止まってくれず、理解できないまま先へ進んでしまいがちである。その結果、見ただけで分かったつもりになり、実は何も身についていないということも起こりうる。\nそれでも動画の強みは、「見る」ことでしか得られない情報がある点にある。実際の動きや表情、現場の様子は、文字で説明されるよりもはるかに多くの情報を伝える。こうした特徴から、動画は入門や全体像をつかむ段階に特に向いていると言える。\nつまり、動画は学びの入り口として優れているが、それだけで深い理解が得られるわけではない。本当に自分のものにするためには、見た内容を自分の言葉で整理し直す作業が欠かせない。だからこそ、動画で全体像をつかみ、本で深めるという組み合わせこそが、最も効果的な学び方ではないだろうか。\n筆者Bによれば、動画で学ぶときに最も注意すべき点は何か。",
+      "choices": [
+        "映像の流れが決まっているため、分からないまま進み、分かったつもりになりやすいこと。",
+        "体系的に整理された知識が得られにくいこと。",
+        "視覚と聴覚の両方を使うため、集中力が続かないこと。",
+        "動画は入門には向いていないため、最初から本で学ぶべきだということ。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án ở bài B đoạn 6 câu 2–3: 映像は止まってくれず理解できないまま先へ進んでしまいがちで、見ただけで分かったつもりになることもある。Bài B không nói video thiếu tính hệ thống hay kém tập trung, và khẳng định video phù hợp cho giai đoạn nhập môn (đoạn 7 câu 3)."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「本で学ぶこと」\n本で学ぶ最大の利点は、読み手が自分のペースで進めることである。分からないところでは立ち止まって考え、必要なら前に戻って読み直すことができる。さらに、知識が章立てによって体系的に整理されているため、全体のつながりが見えやすい。\nしかし、本を読む学びには時間がかかる。理解するには集中力が必要であり、基礎となる知識が不足していると、途中で読み進められなくなることもある。その結果、読み終える前に挫折してしまう人も少なくない。\nそれでも本の価値は、結論そのものよりも、著者の思考の筋道をたどることにある。なぜその結論に至ったのか、どのような根拠に基づいているのかを追うことで、読み手は自分の頭で考える訓練をする。他人の考えをなぞるのではなく、自分の考えと突き合わせながら読むことで、理解は深まっていく。この深まりこそが、本ならではの学びだと言える。\nつまり、本で学ぶこととは、速さよりも深さを選ぶ学びである。時間はかかるが、その分だけ知識は自分のものとして定着しやすい。だからこそ、しっかりと身につけたい知識があるとき、人は本に手を伸ばすのではないだろうか。\n文章B「動画で学ぶこと」\n一方、動画で学ぶ最大の利点は、目と耳の両方に同時に訴えかけることである。図や実演を交えることで、言葉だけでは伝わりにくい内容も直感的に理解できる。さらに、移動中や家事の合間といった隙間時間でも学べる手軽さがある。\nしかし、動画には流れの速さが決まっているという弱点がある。分からない部分があっても映像は止まってくれず、理解できないまま先へ進んでしまいがちである。その結果、見ただけで分かったつもりになり、実は何も身についていないということも起こりうる。\nそれでも動画の強みは、「見る」ことでしか得られない情報がある点にある。実際の動きや表情、現場の様子は、文字で説明されるよりもはるかに多くの情報を伝える。こうした特徴から、動画は入門や全体像をつかむ段階に特に向いていると言える。\nつまり、動画は学びの入り口として優れているが、それだけで深い理解が得られるわけではない。本当に自分のものにするためには、見た内容を自分の言葉で整理し直す作業が欠かせない。だからこそ、動画で全体像をつかみ、本で深めるという組み合わせこそが、最も効果的な学び方ではないだろうか。\n両方の文章に共通する考えとして最も適切なものはどれか。",
+      "choices": [
+        "学ぶ側が自分の頭で考えたり、自分の言葉で整理したりする能動的な働きかけが、理解を深めるということ。",
+        "知識は、体系的に整理された形で与えられれば、誰でも同じように身につくということ。",
+        "学びの効果は、方法ではなく、かけた時間の長さだけで決まるということ。",
+        "本も動画も、受け身で接していれば十分に理解できるということ。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án có căn cứ ở CẢ HAI bài: bài A đoạn 3 câu 2–3 (自分の頭で考える訓練／自分の考えと突き合わせながら読む), bài B đoạn 8 câu 2 (見た内容を自分の言葉で整理し直す作業が欠かせない). Cả hai đều đòi hỏi người học chủ động thì hiểu biết mới sâu."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「本で学ぶこと」\n本で学ぶ最大の利点は、読み手が自分のペースで進めることである。分からないところでは立ち止まって考え、必要なら前に戻って読み直すことができる。さらに、知識が章立てによって体系的に整理されているため、全体のつながりが見えやすい。\nしかし、本を読む学びには時間がかかる。理解するには集中力が必要であり、基礎となる知識が不足していると、途中で読み進められなくなることもある。その結果、読み終える前に挫折してしまう人も少なくない。\nそれでも本の価値は、結論そのものよりも、著者の思考の筋道をたどることにある。なぜその結論に至ったのか、どのような根拠に基づいているのかを追うことで、読み手は自分の頭で考える訓練をする。他人の考えをなぞるのではなく、自分の考えと突き合わせながら読むことで、理解は深まっていく。この深まりこそが、本ならではの学びだと言える。\nつまり、本で学ぶこととは、速さよりも深さを選ぶ学びである。時間はかかるが、その分だけ知識は自分のものとして定着しやすい。だからこそ、しっかりと身につけたい知識があるとき、人は本に手を伸ばすのではないだろうか。\n文章B「動画で学ぶこと」\n一方、動画で学ぶ最大の利点は、目と耳の両方に同時に訴えかけることである。図や実演を交えることで、言葉だけでは伝わりにくい内容も直感的に理解できる。さらに、移動中や家事の合間といった隙間時間でも学べる手軽さがある。\nしかし、動画には流れの速さが決まっているという弱点がある。分からない部分があっても映像は止まってくれず、理解できないまま先へ進んでしまいがちである。その結果、見ただけで分かったつもりになり、実は何も身についていないということも起こりうる。\nそれでも動画の強みは、「見る」ことでしか得られない情報がある点にある。実際の動きや表情、現場の様子は、文字で説明されるよりもはるかに多くの情報を伝える。こうした特徴から、動画は入門や全体像をつかむ段階に特に向いていると言える。\nつまり、動画は学びの入り口として優れているが、それだけで深い理解が得られるわけではない。本当に自分のものにするためには、見た内容を自分の言葉で整理し直す作業が欠かせない。だからこそ、動画で全体像をつかみ、本で深めるという組み合わせこそが、最も効果的な学び方ではないだろうか。\n両方の筆者について言えることはどれか。",
+      "choices": [
+        "両者とも、自分の取り上げた方法だけが優れていると主張している。",
+        "両者とも、方法の長所を認めつつ、短所や限界も指摘している。",
+        "両者とも、学びの入り口には動画が最適だと考えている。",
+        "両者とも、速さを重視する学び方を最も評価している。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án đúng cho cả hai tác giả: A khen lợi điểm của sách (đoạn 1) nhưng chỉ ra điểm yếu tốn thời gian, dễ bỏ cuộc (đoạn 2); B khen lợi điểm của video (đoạn 5, 7) nhưng chỉ ra điểm yếu tốc độ cố định và dễ hiểu nhầm (đoạn 6). Không tác giả nào khẳng định phương pháp của mình là duy nhất đúng."
+    }
+  ],
+  "study": {
+    "passage_title": "「本で学ぶこと・動画で学ぶこと」— Hai cách học, một mục tiêu: hiểu sâu",
+    "structure": "Hai bài luận thuyết cùng chủ đề 'học', mỗi bài 4 đoạn, cùng đi theo mạch 長所 → 短所 → 核心 → 結論, nhưng kết luận khác nhau và bổ sung cho nhau. Bài A (đoạn 1–4): đoạn 1 nêu lợi điểm của sách — đọc theo nhịp độ của mình, kiến thức sắp xếp có hệ thống; đoạn 2 chỉ ra điểm yếu — tốn thời gian, đòi hỏi tập trung và kiến thức nền, dễ bỏ cuộc; đoạn 3 nêu giá trị cốt lõi — lần theo mạch suy nghĩ của tác giả để rèn luyện tư duy của chính mình; đoạn 4 kết luận — học bằng sách là chọn chiều sâu thay vì tốc độ. Bài B (đoạn 5–8): đoạn 5 nêu lợi điểm của video — tác động cả mắt lẫn tai, trực quan, học được trong thời gian trống; đoạn 6 chỉ ra điểm yếu — tốc độ trôi cố định, dễ tiến lên trong khi chưa hiểu, dễ tưởng là đã hiểu; đoạn 7 nêu điểm mạnh riêng — thông tin chỉ có được nhờ 'xem', phù hợp giai đoạn nhập môn và nắm tổng thể; đoạn 8 kết luận — video là cửa ngõ tốt nhưng chưa đủ, cần sắp xếp lại bằng lời của mình, và cách tốt nhất là kết hợp video với sách. Chủ trương của tác giả A nằm ở đoạn 4 (chọn chiều sâu), của tác giả B nằm ở đoạn 8 (kết hợp hai cách). Điểm chung của cả hai: không phương pháp nào là vạn năng, và người học phải chủ động — tự mình suy nghĩ (bài A) hay tự mình sắp xếp lại (bài B) — thì hiểu biết mới sâu sắc.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{本|ほん}で{学|まな}ぶ{最大|さいだい}の{利点|りてん}は、{読|よ}み{手|みて}が{自分|じぶん}のペースで{進|すす}めることである。",
+        "vi": "Lợi ích lớn nhất của việc học bằng sách là người đọc có thể tiến theo nhịp độ của chính mình."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{分|わ}からないところでは{立|た}ち{止|ちど}まって{考|かんが}え、{必要|ひつよう}なら{前|まえ}に{戻|もど}って{読|よ}み{直|みなお}すことができる。",
+        "vi": "Ở chỗ không hiểu, ta có thể dừng lại suy nghĩ, và nếu cần thì quay lại đọc lại."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "さらに、{知識|ちしき}が{章立|しょうだ}てによって{体系|たいけい}{的|てき}に{整理|せいり}されているため、{全体|ぜんたい}のつながりが{見|み}えやすい。",
+        "vi": "Hơn nữa, vì kiến thức được sắp xếp một cách có hệ thống theo từng chương, nên mối liên hệ tổng thể trở nên dễ thấy."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "しかし、{本|ほん}を{読|よ}む{学|まな}びには{時間|じかん}がかかる。",
+        "vi": "Tuy nhiên, việc học bằng cách đọc sách tốn thời gian."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{理解|りかい}するには{集中|しゅうちゅう}{力|りょく}が{必要|ひつよう}であり、{基礎|きそ}となる{知識|ちしき}が{不足|ぶそく}していると、{途中|とちゅう}で{読|よ}み{進|みすす}められなくなることもある。",
+        "vi": "Để hiểu được cần có sự tập trung, và nếu thiếu kiến thức nền tảng thì có khi đọc giữa chừng sẽ không thể tiếp tục được nữa."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "その{結果|けっか}、{読|よ}み{終|お}える{前|まえ}に{挫折|ざせつ}してしまう{人|ひと}も{少|すく}なくない。",
+        "vi": "Kết quả là, không ít người bỏ cuộc trước khi đọc xong."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "それでも{本|ほん}の{価値|かち}は、{結論|けつろん}そのものよりも、{著者|ちょしゃ}の{思考|しこう}の{筋道|すじみち}をたどることにある。",
+        "vi": "Dù vậy, giá trị của sách không nằm ở bản thân kết luận, mà ở việc lần theo mạch suy nghĩ của tác giả."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "なぜその{結論|けつろん}に{至|いた}ったのか、どのような{根拠|こんきょ}に{基|もと}づいているのかを{追|お}うことで、{読|よ}み{手|みて}は{自分|じぶん}の{頭|あたま}で{考|かんが}える{訓練|くんれん}をする。",
+        "vi": "Bằng cách truy tìm vì sao tác giả đi đến kết luận đó và dựa trên căn cứ nào, người đọc rèn luyện việc suy nghĩ bằng chính cái đầu của mình."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{他人|たにん}の{考|かんが}えをなぞるのではなく、{自分|じぶん}の{考|かんが}えと{突|つ}き{合|きあ}わせながら{読|よ}むことで、{理解|りかい}は{深|ふか}まっていく。",
+        "vi": "Không phải là bắt chước suy nghĩ của người khác, mà đọc trong khi đối chiếu với suy nghĩ của mình thì sự hiểu biết sẽ sâu dần."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "この{深|ふか}まりこそが、{本|ほん}ならではの{学|まな}びだと{言|い}える。",
+        "vi": "Chính sự sâu sắc này mới là cách học chỉ sách mới có."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "つまり、{本|ほん}で{学|まな}ぶこととは、{速|はや}さよりも{深|ふか}さを{選|えら}ぶ{学|まな}びである。",
+        "vi": "Nói cách khác, học bằng sách là cách học chọn chiều sâu hơn là tốc độ."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{時間|じかん}はかかるが、その{分|ぶん}だけ{知識|ちしき}は{自分|じぶん}のものとして{定着|ていちゃく}しやすい。",
+        "vi": "Tuy tốn thời gian, nhưng bù lại kiến thức dễ đọng lại thành của mình."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "だからこそ、しっかりと{身|み}につけたい{知識|ちしき}があるとき、{人|ひと}は{本|ほん}に{手|て}を{伸|の}ばすのではないだろうか。",
+        "vi": "Chính vì vậy, khi có kiến thức muốn nắm vững thật chắc, chẳng phải người ta sẽ với tay lấy sách hay sao?"
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{一方|いっぽう}、{動画|どうが}で{学|まな}ぶ{最大|さいだい}の{利点|りてん}は、{目|め}と{耳|みみ}の{両方|りょうほう}に{同時|どうじ}に{訴|うった}えかけることである。",
+        "vi": "Mặt khác, lợi ích lớn nhất của việc học qua video là nó tác động đồng thời vào cả mắt lẫn tai."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{図|ず}や{実演|じつえん}を{交|まじ}えることで、{言葉|ことば}だけでは{伝|つた}わりにくい{内容|ないよう}も{直感|ちょっかん}{的|てき}に{理解|りかい}できる。",
+        "vi": "Nhờ xen kẽ hình vẽ và phần trình diễn thực tế, cả những nội dung khó truyền đạt chỉ bằng lời cũng có thể hiểu một cách trực quan."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "さらに、{移動|いどう}{中|ちゅう}や{家事|かじ}の{合間|あいま}といった{隙間|すきま}{時間|じかん}でも{学|まな}べる{手軽|てがる}さがある。",
+        "vi": "Hơn nữa, còn có sự tiện lợi là có thể học ngay cả trong những khoảng thời gian trống như lúc di chuyển hay lúc làm việc nhà."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "しかし、{動画|どうが}には{流|なが}れの{速|はや}さが{決|き}まっているという{弱点|じゃくてん}がある。",
+        "vi": "Tuy nhiên, video có điểm yếu là tốc độ trôi của nó đã được định sẵn."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{分|わ}からない{部分|ぶぶん}があっても{映像|えいぞう}は{止|と}まってくれず、{理解|りかい}できないまま{先|さき}へ{進|すす}んでしまいがちである。",
+        "vi": "Dù có chỗ không hiểu, hình ảnh cũng không dừng lại cho ta, nên ta thường cứ thế tiến về phía trước trong khi chưa hiểu."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "その{結果|けっか}、{見|み}ただけで{分|わ}かったつもりになり、{実|じつ}は{何|なん}も{身|み}についていないということも{起|お}こりうる。",
+        "vi": "Kết quả là, có thể xảy ra chuyện chỉ mới xem qua đã tưởng là hiểu, mà thực ra chẳng thu được gì."
+      },
+      {
+        "para": 7,
+        "no": 1,
+        "ja": "それでも{動画|どうが}の{強|つよ}みは、「{見|み}る」ことでしか{得|え}られない{情報|じょうほう}がある{点|てん}にある。",
+        "vi": "Dù vậy, điểm mạnh của video nằm ở chỗ có những thông tin chỉ có được nhờ 'xem'."
+      },
+      {
+        "para": 7,
+        "no": 2,
+        "ja": "{実際|じっさい}の{動|うご}きや{表情|ひょうじょう}、{現場|げんば}の{様子|ようす}は、{文字|もじ}で{説明|せつめい}されるよりもはるかに{多|おお}くの{情報|じょうほう}を{伝|つた}える。",
+        "vi": "Chuyển động thực tế, nét mặt, khung cảnh tại hiện trường truyền tải nhiều thông tin hơn hẳn so với việc được giải thích bằng chữ."
+      },
+      {
+        "para": 7,
+        "no": 3,
+        "ja": "こうした{特徴|とくちょう}から、{動画|どうが}は{入門|にゅうもん}や{全体|ぜんたい}{像|ぞう}をつかむ{段階|だんかい}に{特|とく}に{向|む}いていると{言|い}える。",
+        "vi": "Từ những đặc điểm như vậy, có thể nói video đặc biệt phù hợp cho giai đoạn nhập môn hay nắm bắt bức tranh tổng thể."
+      },
+      {
+        "para": 8,
+        "no": 1,
+        "ja": "つまり、{動画|どうが}は{学|まな}びの{入|い}り{口|りぐち}として{優|すぐ}れているが、それだけで{深|ふか}い{理解|りかい}が{得|え}られるわけではない。",
+        "vi": "Nói cách khác, video rất tốt với vai trò là cửa ngõ của việc học, nhưng chỉ riêng nó thì không thể có được sự hiểu biết sâu sắc."
+      },
+      {
+        "para": 8,
+        "no": 2,
+        "ja": "{本当|ほんと}に{自分|じぶん}のものにするためには、{見|み}た{内容|ないよう}を{自分|じぶん}の{言葉|ことば}で{整理|せいり}し{直|なお}す{作業|さぎょう}が{欠|か}かせない。",
+        "vi": "Để thực sự biến thành của mình, không thể thiếu công việc sắp xếp lại nội dung đã xem bằng chính lời của mình."
+      },
+      {
+        "para": 8,
+        "no": 3,
+        "ja": "だからこそ、{動画|どうが}で{全体|ぜんたい}{像|ぞう}をつかみ、{本|ほん}で{深|ふか}めるという{組|く}み{合|みあ}わせこそが、{最|もっと}も{効果|こうか}{的|てき}な{学|まな}び{方|かた}ではないだろうか。",
+        "vi": "Chính vì vậy, chẳng phải cách học hiệu quả nhất chính là sự kết hợp: nắm bức tranh tổng thể bằng video, rồi đào sâu bằng sách hay sao?"
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án 2 · Câu 2 – đáp án 1 · Câu 3 – đáp án 1 · Câu 4 – đáp án 2",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "文章A Đ3①④",
+        "options": [
+          {
+            "text": "短い時間で多くの知識を効率よく身につけられること。",
+            "verdict": "SAI",
+            "reason": "Bài A khẳng định ngược lại: học bằng sách tốn thời gian (đoạn 2 câu 1), giá trị của nó nằm ở chiều sâu chứ không phải tốc độ. 'Học nhanh, tiện lợi' là lợi điểm của video (bài B đoạn 5 câu 3). Bẫy đánh tráo bài văn."
+          },
+          {
+            "text": "著者の思考の筋道をたどり、自分の考えを深められること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp bài A đoạn 3 câu 1: 本の価値は、著者の思考の筋道をたどることにある, và câu 4: この深まりこそが、本ならではの学びだと言える. Đây chính là giá trị lớn nhất mà tác giả A nêu."
+          },
+          {
+            "text": "図や実演によって内容を直感的に理解できること。",
+            "verdict": "SAI",
+            "reason": "Đây là lợi điểm của video, nêu ở bài B đoạn 5 câu 2: 図や実演を交えることで、言葉だけでは伝わりにくい内容も直感的に理解できる. Bẫy đánh tráo bài văn."
+          },
+          {
+            "text": "隙間時間に手軽に学べること。",
+            "verdict": "SAI",
+            "reason": "Đây cũng là lợi điểm của video (bài B đoạn 5 câu 3: 隙間時間でも学べる手軽さがある), không phải của sách. Bẫy đánh tráo bài văn."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "文章B Đ6②③",
+        "options": [
+          {
+            "text": "映像の流れが決まっているため、分からないまま進み、分かったつもりになりやすいこと。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp bài B đoạn 6 câu 2–3: 分からない部分があっても映像は止まってくれず、理解できないまま先へ進んでしまいがちである／見ただけで分かったつもりになり、実は何も身についていないということも起こりうる. Đây là điểm yếu mà tác giả B cảnh báo."
+          },
+          {
+            "text": "体系的に整理された知識が得られにくいこと。",
+            "verdict": "SAI",
+            "reason": "Bài B không hề nhắc tới việc kiến thức trong video có được sắp xếp hệ thống hay không; 'sắp xếp hệ thống' chỉ xuất hiện ở bài A đoạn 1 câu 3 như lợi điểm của sách. Bẫy suy diễn thêm, không có bằng chứng."
+          },
+          {
+            "text": "視覚と聴覚の両方を使うため、集中力が続かないこと。",
+            "verdict": "SAI",
+            "reason": "Việc tác động cả mắt lẫn tai được nêu ở bài B đoạn 5 câu 1 như một LỢI ĐIỂM, không phải nguyên nhân gây mất tập trung; bài không nói gì về tập trung khi xem video. Bẫy bịa chi tiết."
+          },
+          {
+            "text": "動画は入門には向いていないため、最初から本で学ぶべきだということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược hoàn toàn bài B đoạn 7 câu 3: 動画は入門や全体像をつかむ段階に特に向いていると言える. Tác giả B không hề khuyên bỏ video để học sách ngay từ đầu. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "文章A Đ3②③・文章B Đ8②",
+        "options": [
+          {
+            "text": "学ぶ側が自分の頭で考えたり、自分の言葉で整理したりする能動的な働きかけが、理解を深めるということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Có căn cứ ở CẢ HAI bài: bài A đoạn 3 câu 2–3 — 読み手は自分の頭で考える訓練をする／自分の考えと突き合わせながら読むことで、理解は深まっていく; bài B đoạn 8 câu 2 — 見た内容を自分の言葉で整理し直す作業が欠かせない. Đây là điểm chung thực sự của hai tác giả."
+          },
+          {
+            "text": "知識は、体系的に整理された形で与えられれば、誰でも同じように身につくということ。",
+            "verdict": "SAI",
+            "reason": "'Kiến thức sắp xếp hệ thống' chỉ là lợi điểm của sách ở bài A đoạn 1 câu 3; không bài nào nói 'ai cũng nắm được như nhau'. Từ 誰でも là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa / suy diễn thêm."
+          },
+          {
+            "text": "学びの効果は、方法ではなく、かけた時間の長さだけで決まるということ。",
+            "verdict": "SAI",
+            "reason": "Cả hai bài đều không nói hiệu quả học tập do thời gian quyết định: bài A coi trọng chiều sâu, bài B coi trọng việc tự sắp xếp lại. Bẫy bịa chi tiết, không có bằng chứng ở bài nào."
+          },
+          {
+            "text": "本も動画も、受け身で接していれば十分に理解できるということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược cả hai bài: bài A đòi hỏi tự mình suy nghĩ (đoạn 3), bài B đòi hỏi tự mình sắp xếp lại (đoạn 8 câu 2). Cả hai đều phủ nhận cách học thụ động. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "文章A Đ1・Đ2・文章B Đ5・Đ6",
+        "options": [
+          {
+            "text": "両者とも、自分の取り上げた方法だけが優れていると主張している。",
+            "verdict": "SAI",
+            "reason": "Cả hai tác giả đều chỉ ra giới hạn của phương pháp mình bàn: A thừa nhận sách tốn thời gian và dễ bỏ cuộc (đoạn 2), B thừa nhận video có điểm yếu về tốc độ (đoạn 6). Không ai khẳng định phương pháp của mình là duy nhất đúng. Bẫy tuyệt đối hóa / đảo ngược lập trường."
+          },
+          {
+            "text": "両者とも、方法の長所を認めつつ、短所や限界も指摘している。",
+            "verdict": "ĐÚNG",
+            "reason": "Đúng với CẢ HAI tác giả: A nêu lợi điểm của sách (đoạn 1) rồi chỉ ra điểm yếu (đoạn 2); B nêu lợi điểm của video (đoạn 5, 7) rồi chỉ ra điểm yếu (đoạn 6). Cả hai bài đều theo cùng cấu trúc khen — chê — kết luận."
+          },
+          {
+            "text": "両者とも、学びの入り口には動画が最適だと考えている。",
+            "verdict": "SAI",
+            "reason": "'Video là cửa ngõ tốt' chỉ là ý của tác giả B (đoạn 8 câu 1); tác giả A không hề nhắc tới video trong cả bài. Gán ý kiến của một bên cho cả hai. Bẫy đánh tráo bài văn."
+          },
+          {
+            "text": "両者とも、速さを重視する学び方を最も評価している。",
+            "verdict": "SAI",
+            "reason": "Tác giả A nói rõ học bằng sách là chọn chiều sâu thay vì tốc độ (đoạn 4 câu 1: 速さよりも深さを選ぶ学び), và tác giả B cũng cảnh báo tốc độ cố định của video là điểm yếu (đoạn 6). Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{筋道|すじみち}",
+        "reading": "すじみち",
+        "hanviet": "Cân Đạo",
+        "vi": "mạch suy nghĩ, trình tự lập luận"
+      },
+      {
+        "word": "{体系|たいけい}{的|てき}",
+        "reading": "たいけいてき",
+        "hanviet": "Thể Hệ Đích",
+        "vi": "có hệ thống, mang tính hệ thống"
+      },
+      {
+        "word": "{挫折|ざせつ}",
+        "reading": "ざせつ",
+        "hanviet": "Tỏa Chiết",
+        "vi": "sự bỏ cuộc giữa chừng, thất bại"
+      },
+      {
+        "word": "{定着|ていちゃく}",
+        "reading": "ていちゃく",
+        "hanviet": "Định Trước",
+        "vi": "sự đọng lại, ăn sâu (kiến thức)"
+      },
+      {
+        "word": "{直感|ちょっかん}{的|てき}",
+        "reading": "ちょっかんてき",
+        "hanviet": "Trực Cảm Đích",
+        "vi": "mang tính trực quan, theo trực giác"
+      },
+      {
+        "word": "{隙間|すきま}{時間|じかん}",
+        "reading": "すきまじかん",
+        "hanviet": "Khích Gian Thời Gian",
+        "vi": "khoảng thời gian trống, thời gian rảnh rỗi xen kẽ"
+      },
+      {
+        "word": "{実演|じつえん}",
+        "reading": "じつえん",
+        "hanviet": "Thực Diễn",
+        "vi": "sự trình diễn thực tế, minh họa bằng hành động"
+      },
+      {
+        "word": "{入門|にゅうもん}",
+        "reading": "にゅうもん",
+        "hanviet": "Nhập Môn",
+        "vi": "bước nhập môn, giai đoạn bắt đầu"
+      },
+      {
+        "word": "{突|つ}き{合|きあ}わせる",
+        "reading": "つきあわせる",
+        "hanviet": "Đột Hợp",
+        "vi": "đối chiếu, so sánh để kiểm chứng"
+      },
+      {
+        "word": "{欠|か}かせない",
+        "reading": "かかせない",
+        "hanviet": "Khiếm",
+        "vi": "không thể thiếu"
+      },
+      {
+        "word": "{訴|うった}えかける",
+        "reading": "うったえかける",
+        "hanviet": "Tố",
+        "vi": "tác động, kêu gọi (giác quan, cảm xúc)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜わけではない",
+        "vi": "không phải là… / không hẳn là… (phủ định một kết luận vội vàng)",
+        "in_text": "動画は学びの入り口として優れているが、それだけで深い理解が得られるわけではない。"
+      },
+      {
+        "pattern": "〜がちである",
+        "vi": "thường có xu hướng… (khuynh hướng dễ xảy ra, thường ngoài ý muốn)",
+        "in_text": "理解できないまま先へ進んでしまいがちである。"
+      },
+      {
+        "pattern": "〜こそ",
+        "vi": "chính là… (nhấn mạnh, chỉ ra yếu tố quan trọng nhất)",
+        "in_text": "この深まりこそが、本ならではの学びだと言える。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "…mất, …luôn (kết quả ngoài ý muốn / hoàn tất)",
+        "in_text": "読み終える前に挫折してしまう人も少なくない。"
+      },
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "chẳng phải là… hay sao? (kêu gọi đồng tình, kết luận mềm)",
+        "in_text": "しっかりと身につけたい知識があるとき、人は本に手を伸ばすのではないだろうか。"
+      },
+      {
+        "pattern": "〜うる",
+        "vi": "có thể… (khả năng xảy ra, văn viết trang trọng)",
+        "in_text": "実は何も身についていないということも起こりうる。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm phủ định một phần: わけではない / とは限らない / にすぎない",
+        "rows": [
+          {
+            "form": "〜わけではない",
+            "join": "Vる / Aい / Nだ + わけではない",
+            "vi": "không phải là… / không hẳn là…",
+            "diff": "Phủ định một kết luận vội vàng: sự việc không nhất thiết như người ta nghĩ; dùng để đính chính, không phủ định hoàn toàn sự việc.",
+            "example_ja": "{本|ほん}だけで{十分|じゅうぶん}だというわけではない。",
+            "example_vi": "Không phải cứ chỉ đọc sách là đủ."
+          },
+          {
+            "form": "〜とは限らない",
+            "join": "Vる / Aい / Nだ + とは限らない",
+            "vi": "chưa chắc đã…",
+            "diff": "Phủ định tính tất yếu: có trường hợp ngoại lệ; nhấn mạnh 'không phải lúc nào cũng vậy', trong khi わけではない phủ định một kết luận cụ thể.",
+            "example_ja": "{見|み}たからといって、{分|わ}かったとは{限|かぎ}らない。",
+            "example_vi": "Không phải cứ xem qua là đã hiểu."
+          },
+          {
+            "form": "〜にすぎない",
+            "join": "N / Vる + にすぎない",
+            "vi": "chẳng qua chỉ là…",
+            "diff": "Giới hạn phạm vi, hạ thấp giá trị tuyệt đối của sự việc; mang sắc thái phê phán nhẹ, khác với hai mẫu trên chỉ phủ định suy luận.",
+            "example_ja": "それは{学|まな}びの{入|い}り{口|りぐち}にすぎない。",
+            "example_vi": "Đó chẳng qua chỉ là cửa ngõ của việc học mà thôi."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm xu hướng・khả năng: がちである / 傾向がある / うる",
+        "rows": [
+          {
+            "form": "〜がちである",
+            "join": "Vます形 (bỏ ます) + がちである",
+            "vi": "thường có xu hướng…",
+            "diff": "Xu hướng dễ xảy ra, thường mang nghĩa tiêu cực hoặc ngoài ý muốn; dùng cho thói quen, hiện tượng lặp lại.",
+            "example_ja": "{分|わ}からないまま{先|さき}へ{進|すす}んでしまいがちだ。",
+            "example_vi": "Thường cứ thế tiến lên trong khi chưa hiểu."
+          },
+          {
+            "form": "〜傾向がある",
+            "join": "Vる / Nの + 傾向がある",
+            "vi": "có xu hướng…",
+            "diff": "Diễn đạt xu hướng một cách khách quan, trung tính hơn がちだ; dùng được cả cho xu hướng tốt lẫn xấu, và cho cả danh từ.",
+            "example_ja": "{動画|どうが}だけの{学習|がくしゅう}は{受|う}け{身|けみ}になる{傾向|けいこう}がある。",
+            "example_vi": "Việc chỉ học bằng video có xu hướng trở nên thụ động."
+          },
+          {
+            "form": "〜うる",
+            "join": "Vる (thể từ điển) + うる",
+            "vi": "có thể…",
+            "diff": "Khả năng xảy ra, văn viết trang trọng, thường đi với こともある; khác với がち・傾向 ở chỗ nói về khả năng đơn lẻ, không phải xu hướng lặp lại.",
+            "example_ja": "{見|み}たつもりになることも{起|お}こりうる。",
+            "example_vi": "Cũng có thể xảy ra chuyện tưởng là đã hiểu chỉ vì đã xem."
+          }
+        ]
+      }
+    ]
+  }
+}

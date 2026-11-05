@@ -101,6 +101,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 23 — 部屋の片づけとフリマ出品 (dọn phòng và bán đồ cũ trên app)",
       "file": "2026-11-05-kaiwa.json"
+    },
+    {
+      "date": "2026-11-06",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 06/11/2026（問題12・長文）",
+      "file": "2026-11-06-n1-set.json"
+    },
+    {
+      "date": "2026-11-06",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 06/11/2026（統合理解）",
+      "file": "2026-11-06-reading.json"
+    },
+    {
+      "date": "2026-11-06",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 24 — 初めての美容室 (lần đầu đi cắt tóc ở tiệm mới)",
+      "file": "2026-11-06-kaiwa.json"
     }
   ]
 }

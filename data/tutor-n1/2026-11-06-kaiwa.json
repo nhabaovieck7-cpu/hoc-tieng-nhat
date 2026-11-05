@@ -1,0 +1,374 @@
+{
+  "lesson": 24,
+  "topic": "初めての美容室 (lần đầu đi cắt tóc ở tiệm mới)",
+  "summary": "Bối cảnh: tóc 拓海 đã dài quá mà tiệm quen thì đóng cửa, nên cậu hỏi 莉子 giới thiệu tiệm cắt tóc mới mà cô hay đi. Hai người bàn về giá, cách đặt lịch, có cần hẹn trước không, và nói kiểu tóc thế nào để thợ hiểu. Hôm sau, 拓海 quay lại kể cho 莉子 nghe trải nghiệm ở tiệm: thợ cắt nói gì, phải chờ bao lâu, giá tiền ra sao, cậu có hài lòng với kiểu tóc mới không và có quay lại nữa không. Kỹ năng luyện: văn nói bạn bè — hỏi thông tin về một địa điểm mới (giá, đặt lịch, đường đi), mô tả kiểu tóc mơ hồ mà vẫn truyền đạt được ý, và kể lại trải nghiệm (khen/chê nhẹ nhàng, chốt có quay lại hay không). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và lặp từ nhấn mạnh. Điểm khó/điểm mới so với bài trước: cách nói về đặt lịch trước (予約を取る, 指名する), cách diễn tả độ dài tóc kiểu đời thường (耳にかかるくらい, すいてほしい), và cách khen/chê kiểu tóc mà không làm mất lòng người giới thiệu.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（hỏi giới thiệu tiệm cắt tóc）",
+      "stage": "（Buổi tối, 拓海 nhắn tin cho 莉子. Tóc cậu đã dài chạm tai, tiệm quen thì đóng cửa mất rồi.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ねえ、{莉子|りこ}。あのさ、{美容|びよう}{室|しつ}どこ{行|い}ってる？",
+          "vi": "Này, Riko. Này, cậu hay đi cắt tóc ở tiệm nào thế?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え？{急|きゅう}にどうしたの？{髪|かみ}、{伸|の}びたもんね。",
+          "vi": "Hả? Sao tự nhiên hỏi thế? Tóc cậu dài ra thật đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まじでさ、{耳|みみ}にかかるくらい{伸|の}びちゃってさ。いつもの{店|みせ}、{潰|つぶ}れちゃったんだよね。",
+          "vi": "Thật luôn ấy, dài đến mức chạm tai rồi. Tiệm tớ hay đi thì đóng cửa mất rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あー、そっか。じゃあさ、うちの{近|ちか}くのとこ、いいよ。{駅前|えきまえ}のさ、あの{美容|びよう}{室|しつ}。",
+          "vi": "À, ra thế. Thế thì, tiệm gần nhà tớ ấy, ổn lắm. Tiệm ở trước ga ấy, cái tiệm đó."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、いくらくらい？あんま{高|たか}くないといいんだけど。",
+          "vi": "Ồ, khoảng bao nhiêu tiền? Mong là đừng đắt quá."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "カットだけなら3,500{円|えん}くらいかな。シャンプー{込|ご}みでさ。",
+          "vi": "Chỉ cắt thôi thì khoảng 3.500 yên ấy. Đã bao gồm gội đầu rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、それなら{全然|ぜんぜん}ありだね。{予約|よやく}とか、いる？",
+          "vi": "Ồ, thế thì được đấy chứ. Có cần đặt lịch trước không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{予約|よやく}しといたほうがいいよ。{土日|どにち}は{混|こ}むしさ。ネットで{取|と}れるよ。",
+          "vi": "Ừ, đặt trước thì tốt hơn đấy. Cuối tuần đông lắm. Đặt trên mạng được mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そっか。でさ、{髪型|かみがた}、どう{伝|つた}えればいいの？「{短|みじか}めで」って{言|い}えばいい？",
+          "vi": "Ra thế. Mà này, kiểu tóc thì nói sao cho họ hiểu? Cứ nói “cắt ngắn” là được à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まあまあ、それで{大丈夫|だいじょうぶ}だよ。あとさ、{写真|しゃしん}{見|み}せちゃえば{一番|いちばん}{早|はや}いって。",
+          "vi": "Thì thì, nói thế cũng ổn mà. Với cả, cho họ xem ảnh thì nhanh nhất đấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（kể lại trải nghiệm sau khi cắt xong）",
+      "stage": "（Hôm sau, 拓海 gặp 莉子 ở ga. Tóc cậu đã cắt ngắn gọn gàng, trông nhẹ nhõm hẳn.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "お、{切|き}ったんだ。いいじゃん、すっきりしてる。",
+          "vi": "Ồ, cắt rồi à. Được đấy chứ, trông gọn gàng hẳn."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "でしょ？いやさ、{最初|さいしょ}ちょっと{緊張|きんちょう}したんだよね。{初|はじ}めての{店|みせ}だし。",
+          "vi": "Đúng không? Mà này, lúc đầu tớ hơi căng thẳng ấy. Vì là tiệm mới lần đầu mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "で、どうだった？{担当|たんとう}の{人|ひと}、{感|かん}じよかった？",
+          "vi": "Thế, sao rồi? Người cắt cho cậu, có dễ chịu không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、めっちゃ{丁寧|ていねい}だったよ。「{耳|みみ}にかかるくらい」って{言|い}ったら、ちゃんとわかってくれてさ。",
+          "vi": "Ừ, rất là tận tâm luôn. Tớ nói “dài chạm tai” thì họ hiểu đúng ý tớ luôn ấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "よかったじゃん。{待|ま}たされた？{混|こ}んでた？",
+          "vi": "Tốt rồi còn gì. Có phải chờ không? Có đông không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いや、{予約|よやく}しといたからさ、ほぼ{待|ま}たなかったよ。10{分|ぷん}くらいかな。",
+          "vi": "Không, vì tớ đặt trước rồi mà, nên gần như không phải chờ. Chắc khoảng 10 phút thôi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、{早|はや}いね。で、{値段|ねだん}は？{言|い}った{通|とお}りだった？",
+          "vi": "Ồ, nhanh nhỉ. Thế giá thì sao? Đúng như tớ nói không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、3,500{円|えん}ぴったりだった。シャンプーも{気持|きも}ちよかったしさ。",
+          "vi": "Ừ, đúng 3.500 yên luôn. Gội đầu cũng dễ chịu nữa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "じゃあ、また{行|い}く？{次|つぎ}もあそこにする？",
+          "vi": "Thế thì, còn quay lại không? Lần sau vẫn đi chỗ đó chứ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{行|い}く{行|い}く。{仕上|しあ}がりもイメージ{通|とお}りだったし。また{行|い}くよ。",
+          "vi": "Ừ, đi chứ đi chứ. Kiểu tóc xong cũng đúng như tớ tưởng tượng nữa. Lần sau lại đi."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "あなたはどこの美容室に行っていますか。",
+      "real": "ねえ、莉子。あのさ、美容室どこ行ってる？",
+      "why": "Sách giáo khoa hỏi đầy đủ chủ ngữ, dùng ています và です・ます thể. Nói thật thì gọi tên bạn trước để thu hút chú ý, mở đầu bằng あのさ để lấy đà, bỏ chủ ngữ và trợ từ thừa — nghe như tin nhắn bạn bè thật, không như câu hỏi phỏng vấn."
+    },
+    {
+      "textbook": "髪が耳にかかるくらい伸びてしまいました。",
+      "real": "耳にかかるくらい伸びちゃってさ。",
+      "why": "Văn nói rút てしまう thành ちゃう, bỏ chủ ngữ 髪が, kết câu bằng さ để than thở nhẹ. Dạng đầy đủ nghe như đang báo cáo, còn dạng rút gọn mới ra cảm giác “tóc dài quá rồi, khổ ghê” của người thật."
+    },
+    {
+      "textbook": "予約をしておいたほうがいいですよ。",
+      "real": "予約しといたほうがいいよ。",
+      "why": "Bạn bè rút ておく thành とく, bỏ です và dùng よ suồng sã. Sách giáo khoa thì lịch sự và dài dòng; dạng rút gọn nghe như lời khuyên thật lòng của bạn, không phải hướng dẫn trong sách."
+    },
+    {
+      "textbook": "担当の方はとても丁寧でした。",
+      "real": "めっちゃ丁寧だったよ。",
+      "why": "Văn nói dùng めっちゃ (rất, cực kỳ) thay cho とても, rút でした thành だった, thêm よ để nhấn mạnh cảm xúc. Cách nói này truyền được sự hài lòng thật sự, còn とても丁寧でした nghe khách sáo và nhạt."
+    },
+    {
+      "textbook": "仕上がりはイメージ通りでした。また行きます。",
+      "real": "仕上がりもイメージ通りだったし。また行くよ。",
+      "why": "Bạn bè dùng も và し để liệt kê cảm nhận một cách tự nhiên, dùng だった thay cho でした và kết bằng よ để khẳng định ý định. Sách giáo khoa tách thành hai câu trang trọng, nghe như đánh giá viết tay chứ không phải lời kể với bạn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "あのさ",
+      "in_lesson": "あのさ、美容室どこ行ってる？",
+      "original": "あの、〜",
+      "vi": "Này, này — mở đầu câu chuyện, lấy đà trước khi hỏi hoặc nhờ vả.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜ちゃう / 〜ちゃって",
+      "in_lesson": "伸びちゃってさ、潰れちゃったんだよね",
+      "original": "〜てしまう",
+      "vi": "Rút gọn của てしまう: lỡ… mất rồi / …mất rồi — diễn tả việc ngoài ý muốn, than thở nhẹ.",
+      "use": "Dùng với bạn bè, gia đình, đồng nghiệp thân.",
+      "avoid": "Tránh trong văn viết, thuyết trình, và khi nói với cấp trên trong bối cảnh trang trọng."
+    },
+    {
+      "form": "めっちゃ",
+      "in_lesson": "めっちゃ丁寧だったよ",
+      "original": "とても / 非常に",
+      "vi": "Rất, cực kỳ — từ nhấn mạnh suồng sã, mạnh hơn とても trong văn nói.",
+      "use": "Dùng với bạn bè cùng trang lứa, người thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người lớn tuổi không thân, và trong văn viết."
+    },
+    {
+      "form": "〜といた / 〜しといた",
+      "in_lesson": "予約しといたほうがいいよ、予約しといたからさ",
+      "original": "〜ておいた",
+      "vi": "Rút gọn của ておく: làm trước để chuẩn bị — đặt trước đi / vì đã đặt trước rồi.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nhờ cấp trên (khi đó dùng 〜ておいてください)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "いいじゃん、よかったじゃん",
+      "original": "〜じゃないか",
+      "vi": "…còn gì / …mà — xác nhận điều hiển nhiên, khen hoặc đồng tình.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜くらい / 〜くらいかな",
+      "in_lesson": "3,500円くらいかな、10分くらいかな",
+      "original": "〜ほど / 〜ぐらい",
+      "vi": "Khoảng… — nói con số áng chừng, giọng phân vân nhẹ khi không nhớ chính xác.",
+      "use": "Dùng được cả với bạn bè và trong giao tiếp thường ngày mức trung tính.",
+      "avoid": "Tránh khi cần báo con số chính xác (giá niêm yết, giờ hẹn) — khi đó nói số cụ thể."
+    },
+    {
+      "form": "〜し",
+      "in_lesson": "仕上がりもイメージ通りだったし",
+      "original": "〜し、〜",
+      "vi": "…nữa, với cả… — liệt kê lý do hoặc cảm nhận, giọng kể chuyện tự nhiên.",
+      "use": "Dùng với bạn bè, gia đình, trong văn nói thường ngày.",
+      "avoid": "Tránh trong văn viết trang trọng, nơi cần liệt kê rõ ràng bằng そして・また."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{予約|よやく}を{取|と}る",
+      "reading": "よやくをとる",
+      "vi": "Đặt lịch trước — đặt chỗ trước ở tiệm cắt tóc, nhà hàng, bệnh viện.",
+      "example_ja": "{土日|どにち}は{混|こ}むから、{早|はや}めに{予約|よやく}を{取|と}っといたほうがいいよ。",
+      "example_vi": "Cuối tuần đông lắm nên đặt lịch sớm trước thì tốt hơn đấy."
+    },
+    {
+      "expr": "イメージ{通|とお}り",
+      "reading": "いめーじどおり",
+      "vi": "Đúng như hình dung / đúng như mình tưởng tượng — khen kiểu tóc làm ra đúng ý mình.",
+      "example_ja": "{仕上|しあ}がりがイメージ{通|とお}りで、すごく{気|き}に{入|はい}ったよ。",
+      "example_vi": "Kiểu tóc xong đúng như mình tưởng tượng nên mình thích lắm."
+    },
+    {
+      "expr": "すいてほしい",
+      "reading": "すいてほしい",
+      "vi": "Muốn tỉa mỏng bớt đi — nhờ thợ tỉa bớt độ dày của tóc cho nhẹ đầu.",
+      "example_ja": "{後|うし}ろはすいてほしいんです。{重|おも}くて{暑|あつ}いので。",
+      "example_vi": "Phía sau tỉa mỏng giúp tôi nhé. Tóc dày nên nóng lắm."
+    },
+    {
+      "expr": "{切|き}りすぎ",
+      "reading": "きりすぎ",
+      "vi": "Cắt quá tay / cắt ngắn quá — điều ai đi cắt tóc cũng sợ nhất.",
+      "example_ja": "{前回|ぜんかい}、{切|き}りすぎちゃってさ、しばらく{帽子|ぼうし}が{手放|てばな}せなかったよ。",
+      "example_vi": "Lần trước bị cắt quá tay, một thời gian dài tớ không rời được cái mũ."
+    },
+    {
+      "expr": "{指名|しめい}する",
+      "reading": "しめいする",
+      "vi": "Chỉ định thợ — chọn đích danh thợ cắt tóc mình thích (có thể mất thêm phí).",
+      "example_ja": "{上手|じょうず}な{人|ひと}を{指名|しめい}するなら、500{円|えん}プラスかかるんだって。",
+      "example_vi": "Nghe nói nếu chỉ định thợ giỏi thì mất thêm 500 yên."
+    },
+    {
+      "expr": "{仕上|しあ}がり",
+      "reading": "しあがり",
+      "vi": "Thành phẩm / kiểu tóc sau khi làm xong — từ then chốt khi nhận xét kết quả ở tiệm.",
+      "example_ja": "{仕上|しあ}がりを{見|み}て、{思|おも}ったより{短|みじか}かったけど、これはこれでいいかも。",
+      "example_vi": "Nhìn thành phẩm xong, thấy ngắn hơn mình nghĩ nhưng thế này cũng được đấy chứ."
+    }
+  ],
+  "mindset": [
+    "Người Nhật đi cắt tóc hầu như luôn đặt lịch trước, đặc biệt là cuối tuần: tiệm đông thì không đặt trước có khi phải chờ cả tiếng hoặc bị từ chối. Trong bài, 莉子 khuyên 拓海 予約しといたほうがいいよ không phải vì phép lịch sự suông mà vì đó là cách tránh chờ đợi thực sự — và quả nhiên nhờ đặt trước mà cậu chỉ chờ khoảng 10 phút. Với người mới đi tiệm lần đầu, đặt lịch online là cách an toàn nhất, vừa chọn được giờ vừa khỏi phải gọi điện nói tiếng Nhật.",
+    "Khi nói kiểu tóc, người Nhật thường không mô tả chi tiết bằng lời mà nói mơ hồ kiểu “短めで” rồi cho thợ xem ảnh mẫu trên điện thoại — đó là cách chắc ăn nhất để thợ hiểu đúng ý. Trong bài, 莉子 dặn 拓海 写真見せちゃえば一番早いって chính là mẹo này. Ngoài ra, ở Nhật không có văn hóa tip cho thợ cắt tóc: giá niêm yết là giá cuối cùng, cứ trả đúng số tiền đó là đủ, không cần thêm tiền boa."
+  ],
+  "mistakes": [
+    "Đừng nói 理容室 khi muốn đi cắt tóc kiểu thời trang: 理容室 là tiệm cắt tóc nam kiểu truyền thống (cạo mặt, cắt ngắn), còn 美容室 mới là tiệm làm tóc thời trang mà cả nam lẫn nữ đều đi.",
+    "Đừng nói “短くしてください” với giọng ra lệnh khô khan khi muốn cắt ngắn: người Nhật thường nói mơ hồ hơn như 短めでお願いします hoặc 耳にかかるくらい切ってください, để thợ tự cân đối — nói quá cụ thể kiểu “cắt đúng 3cm” nghe cứng và khó làm.",
+    "Đừng dùng めっちゃ với thợ cắt tóc hoặc nhân viên tiệm: đây là từ lóng dùng với bạn bè; với người trong tiệm hãy dùng とても hoặc すごく.",
+    "Đừng quên đặt lịch trước rồi cứ đến thẳng vào cuối tuần: tiệm đông có thể bắt chờ rất lâu, thậm chí hẹn sang hôm khác. Đặt trước trên mạng (ネットで予約を取る) là cách chắc ăn nhất cho người mới."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Tóc bạn đã dài chạm tai, tiệm quen thì đóng cửa. Hãy hỏi một người bạn xem họ hay đi tiệm nào, hỏi giá cắt và có cần đặt lịch trước không.",
+    "Tình huống 2: Bạn đang ngồi ở tiệm mới, thợ hỏi muốn cắt kiểu gì. Hãy mô tả kiểu tóc mơ hồ kiểu Nhật (短めで, すいてほしい) và nói rằng bạn có ảnh mẫu để cho xem.",
+    "Tình huống 3: Sau khi cắt xong, bạn gặp người bạn đã giới thiệu tiệm. Hãy kể lại trải nghiệm: thợ có tận tâm không, có phải chờ không, giá bao nhiêu, kiểu tóc có đúng ý không, và lần sau bạn có quay lại không."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "ねえ、{莉子|りこ}。あのさ、{美容|びよう}{室|しつ}どこ{行|い}ってる？",
+      "vi": "Này, Riko. Này, cậu hay đi cắt tóc ở tiệm nào thế?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え？{急|きゅう}にどうしたの？{髪|かみ}、{伸|の}びたもんね。",
+      "vi": "Hả? Sao tự nhiên hỏi thế? Tóc cậu dài ra thật đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まじでさ、{耳|みみ}にかかるくらい{伸|の}びちゃってさ。いつもの{店|みせ}、{潰|つぶ}れちゃったんだよね。",
+      "vi": "Thật luôn ấy, dài đến mức chạm tai rồi. Tiệm tớ hay đi thì đóng cửa mất rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あー、そっか。じゃあさ、うちの{近|ちか}くのとこ、いいよ。{駅前|えきまえ}のさ、あの{美容|びよう}{室|しつ}。",
+      "vi": "À, ra thế. Thế thì, tiệm gần nhà tớ ấy, ổn lắm. Tiệm ở trước ga ấy, cái tiệm đó."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、いくらくらい？あんま{高|たか}くないといいんだけど。",
+      "vi": "Ồ, khoảng bao nhiêu tiền? Mong là đừng đắt quá."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "カットだけなら3,500{円|えん}くらいかな。シャンプー{込|ご}みでさ。",
+      "vi": "Chỉ cắt thôi thì khoảng 3.500 yên ấy. Đã bao gồm gội đầu rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、それなら{全然|ぜんぜん}ありだね。{予約|よやく}とか、いる？",
+      "vi": "Ồ, thế thì được đấy chứ. Có cần đặt lịch trước không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{予約|よやく}しといたほうがいいよ。{土日|どにち}は{混|こ}むしさ。ネットで{取|と}れるよ。",
+      "vi": "Ừ, đặt trước thì tốt hơn đấy. Cuối tuần đông lắm. Đặt trên mạng được mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そっか。でさ、{髪型|かみがた}、どう{伝|つた}えればいいの？「{短|みじか}めで」って{言|い}えばいい？",
+      "vi": "Ra thế. Mà này, kiểu tóc thì nói sao cho họ hiểu? Cứ nói “cắt ngắn” là được à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まあまあ、それで{大丈夫|だいじょうぶ}だよ。あとさ、{写真|しゃしん}{見|み}せちゃえば{一番|いちばん}{早|はや}いって。",
+      "vi": "Thì thì, nói thế cũng ổn mà. Với cả, cho họ xem ảnh thì nhanh nhất đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、{切|き}ったんだ。いいじゃん、すっきりしてる。",
+      "vi": "Ồ, cắt rồi à. Được đấy chứ, trông gọn gàng hẳn."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "でしょ？いやさ、{最初|さいしょ}ちょっと{緊張|きんちょう}したんだよね。{初|はじ}めての{店|みせ}だし。",
+      "vi": "Đúng không? Mà này, lúc đầu tớ hơi căng thẳng ấy. Vì là tiệm mới lần đầu mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "で、どうだった？{担当|たんとう}の{人|ひと}、{感|かん}じよかった？",
+      "vi": "Thế, sao rồi? Người cắt cho cậu, có dễ chịu không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、めっちゃ{丁寧|ていねい}だったよ。「{耳|みみ}にかかるくらい」って{言|い}ったら、ちゃんとわかってくれてさ。",
+      "vi": "Ừ, rất là tận tâm luôn. Tớ nói “dài chạm tai” thì họ hiểu đúng ý tớ luôn ấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "よかったじゃん。{待|ま}たされた？{混|こ}んでた？",
+      "vi": "Tốt rồi còn gì. Có phải chờ không? Có đông không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いや、{予約|よやく}しといたからさ、ほぼ{待|ま}たなかったよ。10{分|ぷん}くらいかな。",
+      "vi": "Không, vì tớ đặt trước rồi mà, nên gần như không phải chờ. Chắc khoảng 10 phút thôi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、{早|はや}いね。で、{値段|ねだん}は？{言|い}った{通|とお}りだった？",
+      "vi": "Ồ, nhanh nhỉ. Thế giá thì sao? Đúng như tớ nói không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、3,500{円|えん}ぴったりだった。シャンプーも{気持|きも}ちよかったしさ。",
+      "vi": "Ừ, đúng 3.500 yên luôn. Gội đầu cũng dễ chịu nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "じゃあ、また{行|い}く？{次|つぎ}もあそこにする？",
+      "vi": "Thế thì, còn quay lại không? Lần sau vẫn đi chỗ đó chứ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{行|い}く{行|い}く。{仕上|しあ}がりもイメージ{通|とお}りだったし。また{行|い}くよ。",
+      "vi": "Ừ, đi chứ đi chứ. Kiểu tóc xong cũng đúng như tớ tưởng tượng nữa. Lần sau lại đi."
+    }
+  ],
+  "notes": [
+    "美容室 / 理容室: phân biệt hai loại tiệm — 美容室 là tiệm làm tóc thời trang, 理容室 là tiệm cắt tóc nam truyền thống.",
+    "耳にかかるくらい: cách diễn tả độ dài tóc kiểu đời thường — “dài đến mức chạm tai”, thợ nghe là hình dung ra ngay.",
+    "予約しといたほうがいいよ: mẫu khuyên đặt trước, dùng thể rút gọn 〜といた — rất thường gặp khi bạn bè dặn nhau.",
+    "写真見せちゃえば一番早い: mẹo vàng khi nói kiểu tóc ở Nhật — cho xem ảnh mẫu nhanh và chắc hơn mô tả bằng lời.",
+    "めっちゃ丁寧だった: めっちゃ nhấn mạnh cảm xúc khen, mạnh hơn とても trong văn nói bạn bè.",
+    "イメージ通り: cụm then chốt để nhận xét kết quả — đúng ý mình thì khen, không đúng ý thì nói イメージと違った.",
+    "仕上がり: từ dùng khi nhận xét thành phẩm sau khi cắt/gội/nhuộm — học thuộc để dùng ngay ở tiệm."
+  ]
+}
