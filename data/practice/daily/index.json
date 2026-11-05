@@ -41,6 +41,12 @@
       "file": "2026-11-05-n4.json",
       "level": "N4",
       "questions": 20
+    },
+    {
+      "date": "2026-11-06",
+      "file": "2026-11-06-n3.json",
+      "level": "N3",
+      "questions": 20
     }
   ]
 }
