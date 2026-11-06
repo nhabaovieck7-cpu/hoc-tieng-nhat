@@ -119,6 +119,18 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 24 — 初めての美容室 (lần đầu đi cắt tóc ở tiệm mới)",
       "file": "2026-11-06-kaiwa.json"
+    },
+    {
+      "date": "2026-11-07",
+      "kind": "sat-set",
+      "title": "Bộ dài ôn tập tuần ngày 07/11/2026（問題10〜13）",
+      "file": "2026-11-07-sat-set.json"
+    },
+    {
+      "date": "2026-11-07",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 25 — Buổi chiều ở day service — Thể dục nhẹ, giờ ăn nhẹ và xe đưa về",
+      "file": "2026-11-07-kaiwa.json"
     }
   ]
 }

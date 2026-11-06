@@ -1,0 +1,531 @@
+{
+  "lesson": 25,
+  "topic": "Buổi chiều ở day service — Thể dục nhẹ, giờ ăn nhẹ và xe đưa về",
+  "summary": "Bối cảnh: buổi chiều ở day service, sau bữa trưa. 拓海 và 莉子 cùng các 利用者さん làm thể dục nhẹ rồi hát tập thể — 田中さん hôm nay hơi mệt nên hai người phải khéo léo rủ bác tham gia mà không ép. Sau đó là giờ ăn nhẹ (おやつ): bánh và trà, vừa ăn vừa trò chuyện, 拓海 nhắc bác uống nước cho đủ. Cuối ngày, hai người chuẩn bị đồ đạc, kiểm tra lại sổ liên lạc, rồi đưa 田中さん ra xe về; khi xe đến nhà, 拓海 trao đổi ngắn với người nhà về sức khỏe hôm nay của bác và hẹn ngày mai. Kỹ năng luyện: văn nói kaigo buổi chiều — rủ rê nhẹ nhàng người lớn tuổi tham gia hoạt động (không ép buộc), nhắc uống nước/ăn nhẹ bằng giọng ấm áp, báo cáo ngắn gọn với người nhà khi bàn giao (chuyển từ giọng suồng sã với đồng nghiệp sang lịch sự với người nhà). Điểm khó/điểm mới so với bài trước: cách rủ người lớn tuổi (～しませんか → ～しよっか, 一緒に〜), cách nhắc nhở sức khỏe mà không làm người ta thấy mình bị coi là yếu (無理しないでくださいね), và cách bàn giao ngắn gọn với người nhà (今日の様子, お伝えする).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（thể dục nhẹ và hát tập thể buổi chiều）",
+      "stage": "（Buổi chiều ở day service, sau bữa trưa. Mọi người đang ngồi thành vòng tròn ở phòng sinh hoạt chung, chuẩn bị làm thể dục nhẹ rồi hát. 田中さん ngồi hơi tách ra một chút, trông có vẻ mệt.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "さあさあ、みなさん、{体操|たいそう}の{時間|じかん}ですよー。{田中|たなか}さんも、{一緒|いっしょ}にやりましょうね。",
+          "vi": "Nào nào, mọi người ơi, đến giờ tập thể dục rồi ạ. Bác Tanaka cũng cùng làm với mọi người nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "ああ、{今日|きょう}はちょっと{疲|つか}れちゃってさ。{見|み}てるだけでもいいかい？",
+          "vi": "À, hôm nay bác hơi mệt một chút. Chỉ ngồi xem thôi có được không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}ですよ。{無理|むり}しないでくださいね。{手|て}だけでも、{一緒|いっしょ}に{動|うご}かしましょうか。",
+          "vi": "Không sao đâu ạ. Bác đừng cố quá nhé. Chỉ cử động tay thôi cũng được, bác cùng làm với mọi người nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "{手|て}だけなら、まあ、できるかな。",
+          "vi": "Chỉ tay thôi thì, chắc là, bác làm được đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうですよ。ほら、グー、パー、グー、パー。{田中|たなか}さん、{上手|じょうず}ですね。",
+          "vi": "Đúng rồi ạ. Nào, nắm tay, mở tay, nắm tay, mở tay. Bác Tanaka giỏi quá ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "はは、こんなもん、{昔|むかし}はもっとできたんだけどねえ。",
+          "vi": "Ha ha, thế này thì ngày xưa bác còn làm tốt hơn nhiều cơ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いやいや、{十分|じゅうぶん}ですよ。じゃあ、{次|つぎ}は{歌|うた}です。{田中|たなか}さん、{好|す}きな{歌|うた}、ありますか？",
+          "vi": "Không không, thế này là đủ lắm rồi ạ. Giờ thì đến phần hát ạ. Bác Tanaka có bài hát nào thích không ạ?"
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "うーん、やっぱり「ふるさと」かな。あれ、みんなで{歌|うた}うと、いいよね。",
+          "vi": "Ừm, vẫn là bài “Furusato” nhỉ. Bài đó mà hát cùng mọi người thì hay lắm."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいですね。「ふるさと」にしましょう。みなさん、{歌|うた}いますよー。",
+          "vi": "Hay quá ạ. Vậy hát bài “Furusato” nhé. Mọi người ơi, cùng hát nào."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、{声|こえ}、よく{出|で}てますよ。さすがですね。",
+          "vi": "Bác Tanaka, giọng bác vang lắm ạ. Đúng là bác giỏi thật."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "いやいや、みんなと{一緒|いっしょ}だと、つい、ね。",
+          "vi": "Không không, hát cùng mọi người thì tự nhiên là thế mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、ほんと、{楽|たの}しそうでしたよ。じゃあ、そろそろおやつの{時間|じかん}ですよ。",
+          "vi": "Ha ha, thật đấy ạ, trông bác vui lắm. Vậy thì, sắp đến giờ ăn nhẹ rồi ạ."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（giờ ăn nhẹ おやつ và nhắc uống nước）",
+      "stage": "（Phòng ăn. Mọi người đang ăn bánh おやつ và uống trà. 拓海 mang trà đến cho 田中さん, 莉子 dọn dẹp bàn bên cạnh.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、おやつですよ。{今日|きょう}はカステラです。お{茶|ちゃ}もどうぞ。",
+          "vi": "Bác Tanaka, đến giờ ăn nhẹ rồi ạ. Hôm nay là bánh castella ạ. Mời bác dùng trà nữa ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "お、ありがとう。{甘|あま}いものは、やっぱり、うまいねえ。",
+          "vi": "Ồ, cảm ơn nhé. Đồ ngọt thì, đúng là, ngon thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{田中|たなか}さん、{甘|あま}いもの、{好|す}きですよね。でも、{食|た}べすぎには{気|き}をつけてくださいね。",
+          "vi": "Bác Tanaka thích đồ ngọt nhỉ. Nhưng bác nhớ đừng ăn nhiều quá nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "わかってるよ。{今日|きょう}は、これだけで{我慢|がまん}するよ。",
+          "vi": "Bác biết rồi mà. Hôm nay bác chỉ ăn từng này thôi, cố nhịn đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、お{茶|ちゃ}、もう{少|すこ}し{飲|の}みませんか。{午後|ごご}は、のど、{乾|かわ}きやすいですからね。",
+          "vi": "À, bác uống thêm chút trà nữa không ạ. Buổi chiều cổ họng dễ khô lắm ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "そうだね。じゃあ、もう{一杯|いっぱい}、もらおうかな。",
+          "vi": "Đúng nhỉ. Vậy thì, cho bác thêm một chén nữa nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい、どうぞ。あ、こぼさないように、ゆっくりでいいですよ。",
+          "vi": "Vâng, mời bác ạ. À, bác cứ từ từ thôi, cẩn thận kẻo đổ ạ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、{田中|たなか}さんのお{薬|くすり}、{午後|ごご}の{分|ぶん}、もう{飲|の}んだっけ？",
+          "vi": "Takumi này, thuốc buổi chiều của bác Tanaka, bác đã uống chưa nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、まだだ。おやつのあとに{飲|の}んでもらう{予定|よてい}だよ。{声|こえ}かけとくね。",
+          "vi": "À, chưa đâu. Dự định là sau khi ăn nhẹ xong mới cho bác uống. Tớ nhắc bác nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "お{薬|くすり}か。{忘|わす}れちゃうんだよなあ、ほんと。",
+          "vi": "Thuốc à. Bác hay quên mất, thật đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}ですよ。{私|わたくし}がちゃんとお{渡|わた}ししますからね。{食後|しょくご}に{飲|の}みましょうね。",
+          "vi": "Không sao đâu ạ. Cháu sẽ đưa thuốc cho bác đàng hoàng mà. Ăn xong rồi mình uống nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "よし、じゃあ、おやつが{終|お}わったら、{帰|かえ}りの{準備|じゅんび}、{始|はじ}めようか。",
+          "vi": "Được rồi, vậy thì ăn nhẹ xong là bắt đầu chuẩn bị về nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（chuẩn bị xe đưa về và trao đổi với người nhà）",
+      "stage": "（Cuối ngày, ở lối vào. 拓海 kiểm tra lại đồ đạc của 田中さん, 莉子 xác nhận giờ xe. Xe đưa về vừa đến nhà bác, người nhà ra đón.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、{田中|たなか}さんの{荷物|にもつ}、{全部|ぜんぶ}そろってる？{帽子|ぼうし}とカバン、{忘|わす}れないようにね。",
+          "vi": "Takumi này, đồ đạc của bác Tanaka đã đủ hết chưa? Mũ với túi, đừng để quên nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{帽子|ぼうし}、カバン、それにお{薬|くすり}{手帳|てちょう}も{入|い}れたよ。あ、{連絡|れんらく}{帳|ちょう}、{書|か}いた？",
+          "vi": "Ừ, mũ, túi, với cả sổ thuốc cũng cho vào rồi. À, sổ liên lạc, cậu viết chưa?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{書|か}いた{書|か}いた。{今日|きょう}の{体調|たいちょう}とお{薬|くすり}のこと、ちゃんと{書|か}いといたよ。",
+          "vi": "Viết rồi viết rồi. Chuyện sức khỏe hôm nay với thuốc, tớ đã ghi cẩn thận rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{助|たす}かる。じゃあ、{田中|たなか}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。",
+          "vi": "Giúp tớ quá. Vậy thì, bác Tanaka ơi, sắp đến giờ xe đưa về đến rồi ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "もう{帰|かえ}る{時間|じかん}か。{今日|きょう}は{楽|たの}しかったよ。ありがとうね。",
+          "vi": "Đến giờ về rồi à. Hôm nay vui lắm. Cảm ơn các cháu nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "こちらこそ、ありがとうございました。{明日|あす}もお{待|ま}ちしていますね。",
+          "vi": "Chúng cháu mới phải cảm ơn bác ạ. Ngày mai chúng cháu lại chờ bác nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{田中|たなか}さん、{気|き}をつけてお{帰|かえ}りくださいね。{明日|あす}も{元気|げんき}に{来|き}てくださいね。",
+          "vi": "Bác Tanaka, bác về cẩn thận nhé. Ngày mai bác lại đến thật khỏe mạnh nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "はーい、また{明日|あす}ね。",
+          "vi": "Ừ, hẹn ngày mai nhé."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "お{疲|つか}れさまです。{今日|こんにち}、{父|ちち}はどうでしたか？",
+          "vi": "Cảm ơn các anh chị đã vất vả. Hôm nay bố tôi thế nào ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お{疲|つか}れさまです。{今日|きょう}は{午後|ごご}、{少|すこ}し{疲|つか}れたご{様子|ようす}でしたが、{体操|たいそう}と{歌|うた}には{参加|さんか}されて、おやつもしっかり{召|め}し{上|しあ}がりました。お{薬|くすり}も{飲|の}まれています。",
+          "vi": "Cảm ơn anh/chị. Hôm nay buổi chiều bố có vẻ hơi mệt một chút, nhưng bố vẫn tham gia tập thể dục và hát, ăn nhẹ cũng ăn hết ạ. Thuốc thì bố đã uống rồi ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "そうですか。ありがとうございます。{明日|あす}もよろしくお{願|ねが}いします。",
+          "vi": "Vậy ạ. Cảm ơn anh nhiều. Ngày mai cũng nhờ anh nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい、こちらこそ、よろしくお{願|ねが}いいたします。お{気|き}をつけてお{帰|かえ}りください。",
+          "vi": "Vâng, chúng tôi mới phải nhờ anh/chị ạ. Anh/chị về cẩn thận nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "体操の時間です。一緒にやりましょう。",
+      "real": "さあさあ、みなさん、体操の時間ですよー。田中さんも、一緒にやりましょうね。",
+      "why": "Sách giáo khoa chỉ thông báo khô khan. Nói thật với người lớn tuổi thì mở đầu bằng さあさあ để tạo không khí, gọi みなさん, kéo dài ですよー để giọng ấm và vui, thêm ね ở cuối để rủ rê nhẹ nhàng chứ không ra lệnh."
+    },
+    {
+      "textbook": "疲れているなら、無理をしないでください。",
+      "real": "大丈夫ですよ。無理しないでくださいね。手だけでも、一緒に動かしましょうか。",
+      "why": "Dạng sách giáo khoa nghe như đang chẩn đoán tình trạng của đối phương. Nói thật thì trấn an trước bằng 大丈夫ですよ, dùng 無理しないでくださいね với ね để mềm giọng, rồi đưa ngay ra một phương án thay thế nhẹ nhàng (chỉ cử động tay) — người nghe được phép tham gia ở mức của mình, không thấy mình bị coi là yếu."
+    },
+    {
+      "textbook": "お茶をもう少し飲みませんか。喉が乾きやすいですから。",
+      "real": "あ、お茶、もう少し飲みませんか。午後は、のど、乾きやすいですからね。",
+      "why": "Sách giáo khoa dùng từ Hán 喉 và câu liền mạch. Nói thật thì mở đầu bằng あ để bắt chuyện tự nhiên, dùng のど (cách nói đời thường), ngắt câu thành từng nhịp ngắn, thêm ね cuối câu — nghe như đang trò chuyện, không phải đang hướng dẫn y tế."
+    },
+    {
+      "textbook": "今日の父の様子を教えてください。",
+      "real": "お疲れさまです。今日、父はどうでしたか？",
+      "why": "Người nhà không hỏi thẳng “hãy cho tôi biết tình trạng hôm nay” như sách giáo khoa. Nói thật thì chào お疲れさまです trước (lịch sự xã giao bắt buộc khi gặp nhân viên), rồi hỏi ngắn gọn どうでしたか — câu hỏi mở, để nhân viên tự kể những gì quan trọng, không ép vào một khung trả lời."
+    },
+    {
+      "textbook": "午後は少し疲れた様子でしたが、体操と歌に参加し、おやつを召し上がり、薬を飲みました。",
+      "real": "今日は午後、少し疲れたご様子でしたが、体操と歌には参加されて、おやつもしっかり召し上がりました。お薬も飲まれています。",
+      "why": "Khi báo cáo với người nhà, nhân viên kaigo dùng kính ngữ kép: ご様子 (cách nói lịch sự về tình trạng), 参加される・召し上がる (kính ngữ cho hành động của người sử dụng dịch vụ), しっかり (nhấn mạnh ăn hết, uống đủ để người nhà yên tâm). Sách giáo khoa chỉ liệt kê sự việc, còn cách nói thật vừa lịch sự vừa truyền được sự an tâm."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "さあさあ",
+      "in_lesson": "さあさあ、みなさん、体操の時間ですよー",
+      "original": "さあ",
+      "vi": "Nào nào — gọi mọi người tập trung, bắt đầu một hoạt động, giọng vui vẻ, ấm áp.",
+      "use": "Dùng khi bắt đầu hoạt động tập thể ở day service, lớp học, buổi họp mặt.",
+      "avoid": "Tránh khi cần không khí nghiêm túc, trang trọng (họp chính thức, lễ tang)."
+    },
+    {
+      "form": "〜しよっか / 〜ましょうか",
+      "in_lesson": "一緒に動かしましょうか",
+      "original": "〜しましょう",
+      "vi": "Cùng làm… nhé — rủ rê nhẹ nhàng, để đối phương có cảm giác được chọn chứ không bị ép.",
+      "use": "Dùng với người lớn tuổi, người sử dụng dịch vụ, trẻ em — khi muốn rủ mà không áp đặt.",
+      "avoid": "Tránh dùng thể ra lệnh trực tiếp (〜しなさい) với người lớn tuổi — nghe thô và coi thường."
+    },
+    {
+      "form": "無理しないでくださいね",
+      "in_lesson": "大丈夫ですよ。無理しないでくださいね",
+      "original": "無理をしないでください",
+      "vi": "Đừng cố quá nhé — nhắc người khác đừng gắng sức, giọng quan tâm chứ không cấm đoán.",
+      "use": "Dùng với người lớn tuổi, người đang mệt, người mới ốm dậy; thêm ね để mềm giọng.",
+      "avoid": "Tránh nói 無理するな (thể mệnh lệnh thô) với người lớn tuổi hoặc người sử dụng dịch vụ."
+    },
+    {
+      "form": "〜ちゃう",
+      "in_lesson": "疲れちゃってさ、忘れちゃうんだよなあ",
+      "original": "〜てしまう",
+      "vi": "Rút gọn của てしまう: lỡ… mất rồi — than thở nhẹ, kể chuyện ngoài ý muốn.",
+      "use": "Dùng với đồng nghiệp thân thiết, bạn bè; người lớn tuổi cũng dùng khi kể chuyện với nhân viên thân quen.",
+      "avoid": "Tránh trong báo cáo chính thức với người nhà (khi đó dùng てしまいました) và trong văn viết."
+    },
+    {
+      "form": "〜っけ",
+      "in_lesson": "もう飲んだっけ？",
+      "original": "〜でしたっけ",
+      "vi": "…nhỉ? / …rồi đúng không? — hỏi lại để xác nhận điều mình không nhớ chắc.",
+      "use": "Dùng với đồng nghiệp, bạn bè khi kiểm tra lại việc đã làm hay chưa.",
+      "avoid": "Tránh dùng với người nhà của khách hàng và cấp trên — nghe thiếu chuyên nghiệp, khi đó dùng 〜でしたでしょうか."
+    },
+    {
+      "form": "ご様子",
+      "in_lesson": "少し疲れたご様子でした",
+      "original": "様子",
+      "vi": "Tình trạng, dáng vẻ (cách nói lịch sự) — từ then chốt khi báo cáo sức khỏe với người nhà.",
+      "use": "Dùng khi nói với người nhà, bác sĩ, cấp trên về tình trạng của người sử dụng dịch vụ.",
+      "avoid": "Tránh dùng ご様子 với đồng nghiệp thân thiết trong lúc làm việc nội bộ — nghe quá trang trọng, khi đó nói 様子 là đủ."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{無理|むり}しないでくださいね",
+      "reading": "むりしないでくださいね",
+      "vi": "Đừng cố quá nhé — câu nhắc sức khỏe quan trọng nhất ở day service, vừa quan tâm vừa tôn trọng.",
+      "example_ja": "{今日|きょう}は{暑|あつ}いですから、{無理|むり}しないでくださいね。{休|やす}みたいときは、いつでも{言|い}ってください。",
+      "example_vi": "Hôm nay trời nóng nên bác đừng cố quá nhé. Lúc nào muốn nghỉ thì cứ nói với cháu nhé."
+    },
+    {
+      "expr": "{一緒|いっしょ}にやりましょう",
+      "reading": "いっしょにやりましょう",
+      "vi": "Cùng làm với nhau nhé — lời rủ tham gia hoạt động tập thể, không ép buộc.",
+      "example_ja": "{体操|たいそう}の{時間|じかん}ですよ。できる{範囲|はんい}でいいですから、{一緒|いっしょ}にやりましょう。",
+      "example_vi": "Đến giờ tập thể dục rồi ạ. Bác làm trong khả năng của mình là được, cùng làm với mọi người nhé."
+    },
+    {
+      "expr": "おやつの{時間|じかん}",
+      "reading": "おやつのじかん",
+      "vi": "Giờ ăn nhẹ — khoảng thời gian ăn bánh, uống trà giữa buổi ở day service, cũng là lúc trò chuyện.",
+      "example_ja": "おやつの{時間|じかん}ですよ。{今日|きょう}はカステラとお{茶|ちゃ}です。",
+      "example_vi": "Đến giờ ăn nhẹ rồi ạ. Hôm nay có bánh castella với trà ạ."
+    },
+    {
+      "expr": "{声|こえ}をかける",
+      "reading": "こえをかける",
+      "vi": "Bắt chuyện, nhắc nhẹ — từ then chốt trong kaigo: nhắc uống thuốc, nhắc uống nước, gọi tham gia hoạt động.",
+      "example_ja": "お{薬|くすり}の{時間|じかん}になったら、{声|こえ}をかけてあげてください。",
+      "example_vi": "Đến giờ uống thuốc thì nhớ nhắc bác ấy giúp tôi nhé."
+    },
+    {
+      "expr": "お{気|き}をつけてお{帰|かえ}りください",
+      "reading": "おきをつけておかえりください",
+      "vi": "Về cẩn thận nhé — câu tiễn khách quen thuộc ở day service khi xe đưa về đến.",
+      "example_ja": "{雨|あめ}が{降|ふ}っていますから、お{気|き}をつけてお{帰|かえ}りくださいね。",
+      "example_vi": "Trời đang mưa nên bác về cẩn thận nhé."
+    },
+    {
+      "expr": "{今日|きょう}の{様子|ようす}",
+      "reading": "きょうのようす",
+      "vi": "Tình hình hôm nay — cụm mở đầu khi báo cáo với người nhà về một ngày của người sử dụng dịch vụ.",
+      "example_ja": "{今日|きょう}の{様子|ようす}ですが、{午後|ごご}は{少|すこ}し{疲|つか}れたご{様子|ようす}でしたが、おやつはしっかり{召|め}し{上|しあ}がりました。",
+      "example_vi": "Về tình hình hôm nay thì buổi chiều bố hơi mệt một chút, nhưng ăn nhẹ thì bố ăn hết ạ."
+    }
+  ],
+  "mindset": [
+    "Ở day service, “tham gia” không có nghĩa là phải làm đủ mọi động tác: người Nhật coi việc tôn trọng thể lực hôm đó của từng người là quan trọng hơn việc hoàn thành bài tập. Trong bài, 拓海 không ép 田中さん mà đề nghị “chỉ cử động tay thôi cũng được” — bác vừa được tham gia cùng mọi người, vừa không thấy mình bị coi là yếu. Đó chính là tinh thần kaigo: để người ta làm được ở mức của mình, chứ không phải bắt họ làm bằng mọi người.",
+    "Giờ おやつ không chỉ là ăn: đó là lúc nhân viên quan sát sức khỏe (ăn có ngon miệng không, có uống đủ nước không, có quên thuốc không) mà không làm người ta thấy mình đang bị theo dõi. Trong bài, 拓海 nhắc uống trà, nhắc thuốc đều lồng vào câu chuyện thường ngày — お茶、もう少し飲みませんか nghe như lời mời, không phải lời nhắc y tế. Người Nhật rất nhạy với cảm giác “bị chăm sóc quá mức”, nên nhắc khéo là một kỹ năng.",
+    "Khi bàn giao với người nhà, người Nhật báo cáo theo thứ tự: điểm cần lưu ý trước (hơi mệt buổi chiều), rồi điểm tốt sau (vẫn tham gia, ăn hết, uống thuốc đủ). Cách này vừa trung thực vừa để người nhà yên tâm ra về — không giấu điểm xấu, nhưng cũng không để điểm xấu thành ấn tượng cuối cùng. Kính ngữ trong lúc báo cáo (ご様子, 参加される, 召し上がる) là bắt buộc, dù ngoài giờ làm nhân viên có thể nói suồng sã với nhau."
+  ],
+  "mistakes": [
+    "Đừng nói với người lớn tuổi “体操しなさい” hay “参加してください” bằng giọng ra lệnh: ở day service, hoạt động là tự nguyện, người ta có quyền chỉ ngồi xem. Hãy rủ bằng 一緒にやりましょうか / 手だけでもいいですよ để họ tự chọn mức tham gia.",
+    "Đừng nhắc uống thuốc bằng câu khô khan “薬を飲んでください” ngay trước mặt mọi người: người lớn tuổi có thể thấy ngại vì bị nhắc chuyện riêng trước đám đông. Hãy nhắc riêng, nhẹ nhàng, kiểu おやつのあとに飲みましょうね, hoặc như trong bài — đồng nghiệp nhắc nhau trước, rồi nhân viên mới nhắc bác.",
+    "Đừng dùng 〜ちゃう / 〜っけ / 〜じゃん khi nói chuyện với người nhà của khách hàng: đây là văn nói nội bộ và bạn bè. Khi bàn giao với người nhà, chuyển sang lịch sự — お疲れさまです, ご様子でした, お飲みになられました.",
+    "Đừng báo cáo với người nhà chỉ toàn điểm xấu (“hôm nay mệt, ăn ít, quên thuốc”): người Nhật báo cáo theo thứ tự xấu trước tốt sau, và luôn chốt bằng điểm yên tâm (ăn hết, uống thuốc đủ, vẫn vui vẻ). Báo cáo chỉ toàn điểm xấu khiến người nhà lo lắng cả đêm."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Một 利用者さん nói hôm nay hơi mệt, chỉ muốn ngồi xem mọi người tập thể dục. Hãy rủ bác tham gia ở mức nhẹ (chỉ cử động tay) mà không ép buộc, dùng 無理しないでくださいね và 一緒にやりましょうか.",
+    "Tình huống 2: Đến giờ おやつ, bác ấy ăn bánh nhưng chưa uống nước. Hãy mời bác uống thêm trà bằng giọng tự nhiên, nhắc khéo rằng buổi chiều cổ họng dễ khô.",
+    "Tình huống 3: Sau giờ ăn nhẹ, bác ấy quên chưa uống thuốc buổi chiều. Hãy nhắc bác uống thuốc một cách riêng tư, nhẹ nhàng, không làm bác ngại trước mặt mọi người.",
+    "Tình huống 4: Xe đưa về đã đến, người nhà ra đón và hỏi “hôm nay bố tôi thế nào?”. Hãy báo cáo ngắn gọn theo thứ tự: điểm cần lưu ý trước, điểm tốt sau, dùng kính ngữ (ご様子, 参加される, 召し上がる) và chốt bằng câu để người nhà yên tâm."
+  ],
+  "lines": [
+    {
+      "speaker": "莉子",
+      "ja": "さあさあ、みなさん、{体操|たいそう}の{時間|じかん}ですよー。{田中|たなか}さんも、{一緒|いっしょ}にやりましょうね。",
+      "vi": "Nào nào, mọi người ơi, đến giờ tập thể dục rồi ạ. Bác Tanaka cũng cùng làm với mọi người nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "ああ、{今日|きょう}はちょっと{疲|つか}れちゃってさ。{見|み}てるだけでもいいかい？",
+      "vi": "À, hôm nay bác hơi mệt một chút. Chỉ ngồi xem thôi có được không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}ですよ。{無理|むり}しないでくださいね。{手|て}だけでも、{一緒|いっしょ}に{動|うご}かしましょうか。",
+      "vi": "Không sao đâu ạ. Bác đừng cố quá nhé. Chỉ cử động tay thôi cũng được, bác cùng làm với mọi người nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "{手|て}だけなら、まあ、できるかな。",
+      "vi": "Chỉ tay thôi thì, chắc là, bác làm được đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうですよ。ほら、グー、パー、グー、パー。{田中|たなか}さん、{上手|じょうず}ですね。",
+      "vi": "Đúng rồi ạ. Nào, nắm tay, mở tay, nắm tay, mở tay. Bác Tanaka giỏi quá ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "はは、こんなもん、{昔|むかし}はもっとできたんだけどねえ。",
+      "vi": "Ha ha, thế này thì ngày xưa bác còn làm tốt hơn nhiều cơ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いやいや、{十分|じゅうぶん}ですよ。じゃあ、{次|つぎ}は{歌|うた}です。{田中|たなか}さん、{好|す}きな{歌|うた}、ありますか？",
+      "vi": "Không không, thế này là đủ lắm rồi ạ. Giờ thì đến phần hát ạ. Bác Tanaka có bài hát nào thích không ạ?"
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "うーん、やっぱり「ふるさと」かな。あれ、みんなで{歌|うた}うと、いいよね。",
+      "vi": "Ừm, vẫn là bài “Furusato” nhỉ. Bài đó mà hát cùng mọi người thì hay lắm."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいですね。「ふるさと」にしましょう。みなさん、{歌|うた}いますよー。",
+      "vi": "Hay quá ạ. Vậy hát bài “Furusato” nhé. Mọi người ơi, cùng hát nào."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、{声|こえ}、よく{出|で}てますよ。さすがですね。",
+      "vi": "Bác Tanaka, giọng bác vang lắm ạ. Đúng là bác giỏi thật."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "いやいや、みんなと{一緒|いっしょ}だと、つい、ね。",
+      "vi": "Không không, hát cùng mọi người thì tự nhiên là thế mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、ほんと、{楽|たの}しそうでしたよ。じゃあ、そろそろおやつの{時間|じかん}ですよ。",
+      "vi": "Ha ha, thật đấy ạ, trông bác vui lắm. Vậy thì, sắp đến giờ ăn nhẹ rồi ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、おやつですよ。{今日|きょう}はカステラです。お{茶|ちゃ}もどうぞ。",
+      "vi": "Bác Tanaka, đến giờ ăn nhẹ rồi ạ. Hôm nay là bánh castella ạ. Mời bác dùng trà nữa ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "お、ありがとう。{甘|あま}いものは、やっぱり、うまいねえ。",
+      "vi": "Ồ, cảm ơn nhé. Đồ ngọt thì, đúng là, ngon thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{田中|たなか}さん、{甘|あま}いもの、{好|す}きですよね。でも、{食|た}べすぎには{気|き}をつけてくださいね。",
+      "vi": "Bác Tanaka thích đồ ngọt nhỉ. Nhưng bác nhớ đừng ăn nhiều quá nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "わかってるよ。{今日|きょう}は、これだけで{我慢|がまん}するよ。",
+      "vi": "Bác biết rồi mà. Hôm nay bác chỉ ăn từng này thôi, cố nhịn đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、お{茶|ちゃ}、もう{少|すこ}し{飲|の}みませんか。{午後|ごご}は、のど、{乾|かわ}きやすいですからね。",
+      "vi": "À, bác uống thêm chút trà nữa không ạ. Buổi chiều cổ họng dễ khô lắm ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "そうだね。じゃあ、もう{一杯|いっぱい}、もらおうかな。",
+      "vi": "Đúng nhỉ. Vậy thì, cho bác thêm một chén nữa nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい、どうぞ。あ、こぼさないように、ゆっくりでいいですよ。",
+      "vi": "Vâng, mời bác ạ. À, bác cứ từ từ thôi, cẩn thận kẻo đổ ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、{田中|たなか}さんのお{薬|くすり}、{午後|ごご}の{分|ぶん}、もう{飲|の}んだっけ？",
+      "vi": "Takumi này, thuốc buổi chiều của bác Tanaka, bác đã uống chưa nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、まだだ。おやつのあとに{飲|の}んでもらう{予定|よてい}だよ。{声|こえ}かけとくね。",
+      "vi": "À, chưa đâu. Dự định là sau khi ăn nhẹ xong mới cho bác uống. Tớ nhắc bác nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "お{薬|くすり}か。{忘|わす}れちゃうんだよなあ、ほんと。",
+      "vi": "Thuốc à. Bác hay quên mất, thật đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}ですよ。{私|わたくし}がちゃんとお{渡|わた}ししますからね。{食後|しょくご}に{飲|の}みましょうね。",
+      "vi": "Không sao đâu ạ. Cháu sẽ đưa thuốc cho bác đàng hoàng mà. Ăn xong rồi mình uống nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "よし、じゃあ、おやつが{終|お}わったら、{帰|かえ}りの{準備|じゅんび}、{始|はじ}めようか。",
+      "vi": "Được rồi, vậy thì ăn nhẹ xong là bắt đầu chuẩn bị về nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、{田中|たなか}さんの{荷物|にもつ}、{全部|ぜんぶ}そろってる？{帽子|ぼうし}とカバン、{忘|わす}れないようにね。",
+      "vi": "Takumi này, đồ đạc của bác Tanaka đã đủ hết chưa? Mũ với túi, đừng để quên nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{帽子|ぼうし}、カバン、それにお{薬|くすり}{手帳|てちょう}も{入|い}れたよ。あ、{連絡|れんらく}{帳|ちょう}、{書|か}いた？",
+      "vi": "Ừ, mũ, túi, với cả sổ thuốc cũng cho vào rồi. À, sổ liên lạc, cậu viết chưa?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{書|か}いた{書|か}いた。{今日|きょう}の{体調|たいちょう}とお{薬|くすり}のこと、ちゃんと{書|か}いといたよ。",
+      "vi": "Viết rồi viết rồi. Chuyện sức khỏe hôm nay với thuốc, tớ đã ghi cẩn thận rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{助|たす}かる。じゃあ、{田中|たなか}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。",
+      "vi": "Giúp tớ quá. Vậy thì, bác Tanaka ơi, sắp đến giờ xe đưa về đến rồi ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "もう{帰|かえ}る{時間|じかん}か。{今日|きょう}は{楽|たの}しかったよ。ありがとうね。",
+      "vi": "Đến giờ về rồi à. Hôm nay vui lắm. Cảm ơn các cháu nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "こちらこそ、ありがとうございました。{明日|あす}もお{待|ま}ちしていますね。",
+      "vi": "Chúng cháu mới phải cảm ơn bác ạ. Ngày mai chúng cháu lại chờ bác nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{田中|たなか}さん、{気|き}をつけてお{帰|かえ}りくださいね。{明日|あす}も{元気|げんき}に{来|き}てくださいね。",
+      "vi": "Bác Tanaka, bác về cẩn thận nhé. Ngày mai bác lại đến thật khỏe mạnh nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "はーい、また{明日|あす}ね。",
+      "vi": "Ừ, hẹn ngày mai nhé."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "お{疲|つか}れさまです。{今日|こんにち}、{父|ちち}はどうでしたか？",
+      "vi": "Cảm ơn các anh chị đã vất vả. Hôm nay bố tôi thế nào ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お{疲|つか}れさまです。{今日|きょう}は{午後|ごご}、{少|すこ}し{疲|つか}れたご{様子|ようす}でしたが、{体操|たいそう}と{歌|うた}には{参加|さんか}されて、おやつもしっかり{召|め}し{上|しあ}がりました。お{薬|くすり}も{飲|の}まれています。",
+      "vi": "Cảm ơn anh/chị. Hôm nay buổi chiều bố có vẻ hơi mệt một chút, nhưng bố vẫn tham gia tập thể dục và hát, ăn nhẹ cũng ăn hết ạ. Thuốc thì bố đã uống rồi ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "そうですか。ありがとうございます。{明日|あす}もよろしくお{願|ねが}いします。",
+      "vi": "Vậy ạ. Cảm ơn anh nhiều. Ngày mai cũng nhờ anh nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい、こちらこそ、よろしくお{願|ねが}いいたします。お{気|き}をつけてお{帰|かえ}りください。",
+      "vi": "Vâng, chúng tôi mới phải nhờ anh/chị ạ. Anh/chị về cẩn thận nhé."
+    }
+  ],
+  "notes": [
+    "レク (レクリエーション): hoạt động giải trí buổi chiều ở day service — thể dục nhẹ, hát, gấp giấy; từ lóng nội bộ giữa nhân viên.",
+    "おやつ: giờ ăn nhẹ giữa buổi (bánh + trà) — không chỉ là ăn, mà còn là lúc quan sát sức khỏe và nhắc thuốc, nhắc uống nước.",
+    "無理しないでくださいね: câu nhắc sức khỏe quan trọng nhất trong kaigo — quan tâm mà vẫn tôn trọng, khác hẳn giọng ra lệnh 無理するな.",
+    "ご様子 / 参加される / 召し上がる: kính ngữ bắt buộc khi báo cáo với người nhà về người sử dụng dịch vụ; với đồng nghiệp thì nói 様子 / 参加した / 食べた là đủ."
+  ]
+}
