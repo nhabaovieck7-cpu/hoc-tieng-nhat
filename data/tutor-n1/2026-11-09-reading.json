@@ -1,0 +1,515 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 情報検索 trong phần đọc hiểu của đề N1 thật: một bản thông báo dài, nhiều mục, kèm 4 câu hỏi — đáp án không nằm ở một chỗ mà phải đối chiếu nhiều mục với nhau (ngày giờ, phí, đối tượng, hạn đăng ký). Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi quét bản thông báo để tìm đúng mục cần tra, không đọc kỹ từ đầu đến cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình tra lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc lướt + 4 câu hỏi). Trong đề thật, 情報検索 là dạng dễ mất điểm vì các lựa chọn nhiễu thường lấy số liệu của mục khác gán sang mục đang hỏi — ví dụ lấy phí của phòng này gán cho phòng kia, lấy hạn đăng ký của sự kiện này gán cho sự kiện khác.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, đọc bản thông báo sau",
+      "body": "Mỗi câu hỏi chỉ cần 1–2 mục trong thông báo. Đọc câu hỏi trước để biết mình cần tìm gì (phí? hạn đăng ký? giờ mở cửa?), rồi mới quét bản thông báo tới đúng mục đó. Đọc kỹ toàn bộ từ đầu đến cuối vừa tốn thời gian vừa dễ bị số liệu của các mục khác làm nhiễu."
+    },
+    {
+      "h": "Gạch chân từ khóa của câu hỏi rồi quét mắt tìm đúng từ đó",
+      "body": "Từ khóa thường là tên riêng dễ thấy: tên sự kiện（音楽会・料理教室・防災講座）, tên phòng（大ホール・会議室・自習室）, hay con số（料金・締切・定員）. Quét mắt theo từ khóa sẽ đưa bạn tới đúng đoạn chứa đáp án trong vài giây."
+    },
+    {
+      "h": "Số liệu giống nhau ở nhiều mục là bẫy: luôn kiểm tra xem số đó thuộc về mục nào",
+      "body": "Bản thông báo này có nhiều con số na ná nhau: 500円 là phí phòng họp, 800円 là phí nhạc hội, 1,500円 là phí lớp nấu ăn. Khi câu hỏi hỏi về một mục cụ thể, hãy xác nhận con số đó đi kèm với đúng tên mục đó, đừng chọn con số đầu tiên nhìn thấy."
+    },
+    {
+      "h": "Chú ý các điều kiện đi kèm: 割引・優先・ただし",
+      "body": "Đáp án đúng thường nằm ở điều kiện kèm theo, không phải ở con số chính: giảm nửa phí chỉ áp dụng cho phí thuê phòng, KHÔNG áp dụng cho phí tham gia sự kiện; lớp phòng chống thiên tai ưu tiên người sống trong quận; phòng tự học nghỉ từ 29/12 đến 3/1. Bỏ qua một chữ ただし hay 優先 là chọn sai ngay."
+    },
+    {
+      "h": "Đối chiếu ngày tháng: ngày diễn ra ≠ hạn đăng ký ≠ ngày đóng cửa",
+      "body": "Ba loại ngày tháng hay bị tráo cho nhau: ngày tổ chức sự kiện (13/12, 17/1, 7/2), hạn đăng ký (5/12, 9/1, 30/1) và ngày nghỉ/đóng cửa (29/12–3/1, 28/12 đóng lúc 17 giờ). Khi câu hỏi hỏi 'đăng ký trước ngày nào', đừng lấy ngày tổ chức sự kiện làm đáp án."
+    },
+    {
+      "h": "Câu hỏi 'đúng / sai' về một sự kiện: kiểm tra TỪNG nửa của lựa chọn",
+      "body": "Lựa chọn đúng phải đúng toàn bộ: 'tham gia miễn phí VÀ ưu tiên dân trong quận' — chỉ cần một nửa sai (ví dụ phí 1,500円) thì cả lựa chọn sai. Nhiều lựa chọn nhiễu ghép một nửa đúng của sự kiện này với một nửa đúng của sự kiện khác."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bản thông báo này có 3 sự kiện (nhạc hội 13/12, lớp nấu ăn 17/1, lớp phòng chống thiên tai 7/2), 4 loại phòng với giờ mở cửa khác nhau, và 2 loại phí (phí sự kiện và phí thuê phòng) với quy tắc giảm giá khác nhau. Khi làm bài, hãy tra đúng bảng: hỏi phí thuê phòng thì xem mục 5, hỏi hạn đăng ký thì xem mục 6, hỏi giờ mở cửa ngày 29/12 thì xem mục 4."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "みどり区民センターでは、12月から2月にかけて、冬のイベントと施設利用のご案内を次のとおりお知らせします。詳細については、センター受付（電話03-1234-5678、受付時間は午前9時から午後5時まで）にお問い合わせください。\n冬のイベントは、次の3つです。まず、12月13日（土）午後2時から4時まで、大ホールで「冬の音楽会」を開催します。次に、1月17日（土）午前10時から正午まで、調理室で「お正月料理教室」を行います。最後に、2月7日（土）午後1時から3時半まで、会議室で「防災講座」を開きます。\n音楽会の参加費は大人800円、高校生以下は無料で、定員は300人です。料理教室の参加費は1,500円で、材料費を含み、定員は20人です。防災講座は参加費無料で、定員は50人ですが、区内在住の方を優先します。\n施設の利用時間は、大ホールが午前9時から午後9時まで、会議室が午前9時から午後5時までです。自習室は午前9時から午後8時まで利用できますが、12月29日から1月3日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、12月28日は午後5時で全館閉館します。\n施設の利用料金は、大ホールが1時間2,000円、会議室が1時間500円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、音楽会などの主催イベントの参加費には、この割引は適用されません。\nイベントの申込みは、電話か受付窓口で受け付けます。音楽会の申込締切は12月5日（金）、料理教室は1月9日（金）、防災講座は1月30日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の3日前までに受付へご連絡ください。駐車場は30台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、センターでは責任を負いかねます。\nご不明な点は、みどり区民センター（住所はみどり市花見町2-3-4）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n65歳の区内在住の方が、大ホールを2時間借りる場合、利用料金はいくらですか。",
+      "choices": [
+        "4,000円",
+        "2,000円",
+        "1,000円",
+        "500円"
+      ],
+      "answer": 1,
+      "explain_vi": "Hội trường lớn 2,000円/giờ nên 2 tiếng là 4,000円; người từ 65 tuổi trở lên được giảm nửa phí thuê phòng (đoạn 5 câu 2), còn 2,000円. Lưu ý: giảm giá chỉ áp dụng cho phí thuê phòng, không áp dụng cho phí tham gia sự kiện."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "みどり区民センターでは、12月から2月にかけて、冬のイベントと施設利用のご案内を次のとおりお知らせします。詳細については、センター受付（電話03-1234-5678、受付時間は午前9時から午後5時まで）にお問い合わせください。\n冬のイベントは、次の3つです。まず、12月13日（土）午後2時から4時まで、大ホールで「冬の音楽会」を開催します。次に、1月17日（土）午前10時から正午まで、調理室で「お正月料理教室」を行います。最後に、2月7日（土）午後1時から3時半まで、会議室で「防災講座」を開きます。\n音楽会の参加費は大人800円、高校生以下は無料で、定員は300人です。料理教室の参加費は1,500円で、材料費を含み、定員は20人です。防災講座は参加費無料で、定員は50人ですが、区内在住の方を優先します。\n施設の利用時間は、大ホールが午前9時から午後9時まで、会議室が午前9時から午後5時までです。自習室は午前9時から午後8時まで利用できますが、12月29日から1月3日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、12月28日は午後5時で全館閉館します。\n施設の利用料金は、大ホールが1時間2,000円、会議室が1時間500円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、音楽会などの主催イベントの参加費には、この割引は適用されません。\nイベントの申込みは、電話か受付窓口で受け付けます。音楽会の申込締切は12月5日（金）、料理教室は1月9日（金）、防災講座は1月30日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の3日前までに受付へご連絡ください。駐車場は30台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、センターでは責任を負いかねます。\nご不明な点は、みどり区民センター（住所はみどり市花見町2-3-4）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n「お正月料理教室」に参加したい場合、いつまでに申し込めばよいですか。",
+      "choices": [
+        "1月9日（金）",
+        "12月5日（金）",
+        "1月30日（金）",
+        "1月17日（土）"
+      ],
+      "answer": 0,
+      "explain_vi": "Hạn đăng ký của lớp nấu ăn là 1月9日（金） (đoạn 6 câu 2). 12月5日 là hạn của nhạc hội, 1月30日 là hạn của khóa phòng chống thiên tai, còn 1月17日 là ngày tổ chức lớp nấu ăn chứ không phải hạn đăng ký."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "みどり区民センターでは、12月から2月にかけて、冬のイベントと施設利用のご案内を次のとおりお知らせします。詳細については、センター受付（電話03-1234-5678、受付時間は午前9時から午後5時まで）にお問い合わせください。\n冬のイベントは、次の3つです。まず、12月13日（土）午後2時から4時まで、大ホールで「冬の音楽会」を開催します。次に、1月17日（土）午前10時から正午まで、調理室で「お正月料理教室」を行います。最後に、2月7日（土）午後1時から3時半まで、会議室で「防災講座」を開きます。\n音楽会の参加費は大人800円、高校生以下は無料で、定員は300人です。料理教室の参加費は1,500円で、材料費を含み、定員は20人です。防災講座は参加費無料で、定員は50人ですが、区内在住の方を優先します。\n施設の利用時間は、大ホールが午前9時から午後9時まで、会議室が午前9時から午後5時までです。自習室は午前9時から午後8時まで利用できますが、12月29日から1月3日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、12月28日は午後5時で全館閉館します。\n施設の利用料金は、大ホールが1時間2,000円、会議室が1時間500円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、音楽会などの主催イベントの参加費には、この割引は適用されません。\nイベントの申込みは、電話か受付窓口で受け付けます。音楽会の申込締切は12月5日（金）、料理教室は1月9日（金）、防災講座は1月30日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の3日前までに受付へご連絡ください。駐車場は30台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、センターでは責任を負いかねます。\nご不明な点は、みどり区民センター（住所はみどり市花見町2-3-4）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n「防災講座」について正しいものはどれですか。",
+      "choices": [
+        "参加費は1,500円である。",
+        "定員は300人である。",
+        "午前10時から正午まで行われる。",
+        "参加費は無料で、区内在住の方が優先される。"
+      ],
+      "answer": 3,
+      "explain_vi": "Khóa phòng chống thiên tai: tham gia miễn phí, định mức 50 người, ưu tiên người sống trong quận (đoạn 3 câu 3). Các lựa chọn còn lại đều là số liệu của sự kiện khác: 1,500円 là phí lớp nấu ăn, 300 người là định mức nhạc hội, 10 giờ–trưa là giờ lớp nấu ăn."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "みどり区民センターでは、12月から2月にかけて、冬のイベントと施設利用のご案内を次のとおりお知らせします。詳細については、センター受付（電話03-1234-5678、受付時間は午前9時から午後5時まで）にお問い合わせください。\n冬のイベントは、次の3つです。まず、12月13日（土）午後2時から4時まで、大ホールで「冬の音楽会」を開催します。次に、1月17日（土）午前10時から正午まで、調理室で「お正月料理教室」を行います。最後に、2月7日（土）午後1時から3時半まで、会議室で「防災講座」を開きます。\n音楽会の参加費は大人800円、高校生以下は無料で、定員は300人です。料理教室の参加費は1,500円で、材料費を含み、定員は20人です。防災講座は参加費無料で、定員は50人ですが、区内在住の方を優先します。\n施設の利用時間は、大ホールが午前9時から午後9時まで、会議室が午前9時から午後5時までです。自習室は午前9時から午後8時まで利用できますが、12月29日から1月3日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、12月28日は午後5時で全館閉館します。\n施設の利用料金は、大ホールが1時間2,000円、会議室が1時間500円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、音楽会などの主催イベントの参加費には、この割引は適用されません。\nイベントの申込みは、電話か受付窓口で受け付けます。音楽会の申込締切は12月5日（金）、料理教室は1月9日（金）、防災講座は1月30日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の3日前までに受付へご連絡ください。駐車場は30台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、センターでは責任を負いかねます。\nご不明な点は、みどり区民センター（住所はみどり市花見町2-3-4）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n12月29日に自習室を利用したい場合、どうなりますか。",
+      "choices": [
+        "午前9時から午後8時まで利用できる。",
+        "午後5時で閉館する。",
+        "休館のため利用できない。",
+        "月曜日なので利用できない。"
+      ],
+      "answer": 2,
+      "explain_vi": "Phòng tự học bình thường mở 9–20 giờ, nhưng từ 29/12 đến 3/1 thì休館 (đoạn 4 câu 2), nên ngày 29/12 không dùng được. 'Đóng lúc 17 giờ' là quy định của ngày 28/12, còn 'thứ Hai nghỉ' là quy định của phòng thể thao."
+    }
+  ],
+  "study": {
+    "passage_title": "「みどり区民センター 冬のイベントと施設利用のご案内」— Thông báo nhiều mục: sự kiện, giờ mở cửa, phí, cách đăng ký",
+    "structure": "Bản thông báo của một trung tâm cộng đồng (hư cấu), gồm 8 đoạn, chia thành 6 mục rõ ràng theo trình tự: đoạn 1 mở đầu — giới thiệu nội dung thông báo và số điện thoại liên hệ chung; đoạn 2 liệt kê 3 sự kiện mùa đông — nhạc hội 13/12, lớp nấu ăn 17/1, lớp phòng chống thiên tai 7/2 — mỗi sự kiện có ngày, giờ, địa điểm; đoạn 3 nêu phí tham gia và định mức từng sự kiện — nhạc hội 800円 (học sinh trở xuống miễn phí, 300 người), lớp nấu ăn 1,500円 (gồm phí nguyên liệu, 20 người), lớp phòng chống thiên tai miễn phí (50 người, ưu tiên dân trong quận); đoạn 4 nêu giờ mở cửa từng phòng — hội trường lớn 9–21 giờ, phòng họp 9–17 giờ, phòng tự học 9–20 giờ nhưng nghỉ 29/12–3/1, phòng thể thao 10–18 giờ và nghỉ thứ Hai, riêng 28/12 toàn館 đóng lúc 17 giờ; đoạn 5 nêu phí thuê phòng — hội trường lớn 2,000円/giờ, phòng họp 500円/giờ — và quy tắc giảm nửa phí cho người từ 65 tuổi trở lên và người có sổ tay người khuyết tật, với ngoại lệ: giảm giá KHÔNG áp dụng cho phí tham gia sự kiện; đoạn 6 nêu cách đăng ký — chỉ qua điện thoại hoặc quầy tiếp nhận, hạn đăng ký riêng cho từng sự kiện (5/12, 9/1, 30/1), quá định mức thì bốc thăm và báo kết quả trong 3 ngày, không nhận đăng ký qua mạng; đoạn 7 nêu lưu ý — hủy trước 3 ngày, bãi đỗ xe chỉ 30 chỗ nên dùng phương tiện công cộng, tự quản lý đồ quý giá; đoạn 8 kết thúc — địa chỉ và giờ tiếp nhận (9–17 giờ, nghỉ Chủ nhật và ngày lễ). Bẫy chính của bài là số liệu trùng lặp giữa các mục: phí, ngày giờ và định mức của sự kiện này rất dễ bị gán sang sự kiện khác.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "みどり{区民|くみん}センターでは、12{月|つき}から2{月|つき}にかけて、{冬|ふゆ}のイベントと{施設|しせつ}{利用|りよう}のご{案内|あんない}を{次|つぎ}のとおりお{知|し}らせします。",
+        "vi": "Trung tâm cộng đồng quận Midori xin thông báo về các sự kiện mùa đông và việc sử dụng cơ sở vật chất từ tháng 12 đến tháng 2 như sau."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{詳細|しょうさい}については、センター{受付|うけつけ}（{電話|でんわ}03-1234-5678、{受付|うけつけ}{時間|じかん}は{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}まで）にお{問|と}い{合|いあ}わせください。",
+        "vi": "Về chi tiết, xin vui lòng liên hệ quầy tiếp nhận của trung tâm (điện thoại 03-1234-5678, giờ tiếp nhận từ 9 giờ sáng đến 5 giờ chiều)."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{冬|ふゆ}のイベントは、{次|つぎ}の3つです。",
+        "vi": "Các sự kiện mùa đông gồm 3 sự kiện sau đây."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "まず、12{月|つき}13{日|か}（{土|ど}）{午後|ごご}2{時|じ}から4{時|じ}まで、{大|だい}ホールで「{冬|ふゆ}の{音楽|おんがく}{会|かい}」を{開催|かいさい}します。",
+        "vi": "Trước hết, từ 2 giờ chiều đến 4 giờ chiều thứ Bảy ngày 13 tháng 12, chúng tôi sẽ tổ chức 'Buổi hòa nhạc mùa đông' tại hội trường lớn."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "{次|つぎ}に、1{月|つき}17{日|か}（{土|ど}）{午前|ごぜん}10{時|じ}から{正午|しょうご}まで、{調理|ちょうり}{室|しつ}で「お{正月|しょうがつ}{料理|りょうり}{教室|きょうしつ}」を{行|おこな}います。",
+        "vi": "Tiếp theo, từ 10 giờ sáng đến trưa thứ Bảy ngày 17 tháng 1, chúng tôi sẽ tổ chức 'Lớp học nấu ăn ngày Tết' tại phòng nấu ăn."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{最後|さいご}に、2{月|つき}7{日|か}（{土|ど}）{午後|ごご}1{時|じ}から3{時|じ}{半|はん}まで、{会議|かいぎ}{室|しつ}で「{防災|ぼうさい}{講座|こうざ}」を{開|ひら}きます。",
+        "vi": "Cuối cùng, từ 1 giờ chiều đến 3 giờ rưỡi chiều thứ Bảy ngày 7 tháng 2, chúng tôi sẽ mở 'Khóa học phòng chống thiên tai' tại phòng họp."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "{音楽|おんがく}{会|かい}の{参加|さんか}{費|ひ}は{大人|おとな}800{円|えん}、{高校|こうこう}{生|せい}{以下|いか}は{無料|むりょう}で、{定員|ていいん}は300{人|にん}です。",
+        "vi": "Phí tham gia buổi hòa nhạc là 800 yên đối với người lớn, miễn phí đối với học sinh trung học phổ thông trở xuống, và định mức là 300 người."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{料理|りょうり}{教室|きょうしつ}の{参加|さんか}{費|ひ}は1,500{円|えん}で、{材料|ざいりょう}{費|ひ}を{含|ふく}み、{定員|ていいん}は20{人|にん}です。",
+        "vi": "Phí tham gia lớp nấu ăn là 1.500 yên, đã bao gồm phí nguyên liệu, và định mức là 20 người."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{防災|ぼうさい}{講座|こうざ}は{参加|さんか}{費|ひ}{無料|むりょう}で、{定員|ていいん}は50{人|にん}ですが、{区内|くない}{在住|ざいじゅう}の{方|ほう}を{優先|ゆうせん}します。",
+        "vi": "Khóa học phòng chống thiên tai tham gia miễn phí, định mức là 50 người, nhưng chúng tôi ưu tiên những người đang sống trong quận."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{施設|しせつ}の{利用|りよう}{時間|じかん}は、{大|だい}ホールが{午前|ごぜん}9{時|じ}から{午後|ごご}9{時|じ}まで、{会議|かいぎ}{室|しつ}が{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}までです。",
+        "vi": "Giờ sử dụng cơ sở vật chất là: hội trường lớn từ 9 giờ sáng đến 9 giờ tối, phòng họp từ 9 giờ sáng đến 5 giờ chiều."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{自習|じしゅう}{室|しつ}は{午前|ごぜん}9{時|じ}から{午後|ごご}8{時|じ}まで{利用|りよう}できますが、12{月|つき}29{日|か}から1{月|つき}3{日|か}までは{休館|きゅうかん}です。",
+        "vi": "Phòng tự học có thể sử dụng từ 9 giờ sáng đến 8 giờ tối, nhưng từ ngày 29 tháng 12 đến ngày 3 tháng 1 thì toàn館 nghỉ."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{体育|たいいく}{館|かん}は{午前|ごぜん}10{時|じ}から{午後|ごご}6{時|じ}までで、{月曜|げつよう}{日|ひ}は{定期|ていき}{清掃|せいそう}のため{利用|りよう}できません。",
+        "vi": "Phòng thể thao mở từ 10 giờ sáng đến 6 giờ chiều, và vào thứ Hai thì không thể sử dụng do vệ sinh định kỳ."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "なお、12{月|つき}28{日|か}は{午後|ごご}5{時|じ}で{全館|ぜんかん}{閉館|へいかん}します。",
+        "vi": "Ngoài ra, ngày 28 tháng 12 toàn館 sẽ đóng cửa lúc 5 giờ chiều."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{施設|しせつ}の{利用|りよう}{料金|りょうきん}は、{大|だい}ホールが1{時間|じかん}2,000{円|えん}、{会議|かいぎ}{室|しつ}が1{時間|じかん}500{円|えん}です。",
+        "vi": "Phí sử dụng cơ sở vật chất là: hội trường lớn 2.000 yên một giờ, phòng họp 500 yên một giờ."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "65{歳|さい}{以上|いじょう}の{方|ほう}と{障|しょう}がい{者|しゃ}{手帳|てちょう}をお{持|も}ちの{方|ほう}は、{利用|りよう}{料金|りょうきん}が{半額|はんがく}になります。",
+        "vi": "Những người từ 65 tuổi trở lên và những người có sổ tay người khuyết tật sẽ được giảm một nửa phí sử dụng."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "ただし、{音楽|おんがく}{会|かい}などの{主催|しゅさい}イベントの{参加|さんか}{費|ひ}には、この{割引|わりびき}は{適用|てきよう}されません。",
+        "vi": "Tuy nhiên, mức giảm giá này không áp dụng cho phí tham gia các sự kiện do trung tâm tổ chức như buổi hòa nhạc."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "イベントの{申込|もうしこ}みは、{電話|でんわ}か{受付|うけつけ}{窓口|まどぐち}で{受|う}け{付|けつ}けます。",
+        "vi": "Việc đăng ký tham gia sự kiện được tiếp nhận qua điện thoại hoặc tại quầy tiếp nhận."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{音楽|おんがく}{会|かい}の{申込|もうしこみ}{締切|しめきり}は12{月|つき}5{日|か}（{金|きん}）、{料理|りょうり}{教室|きょうしつ}は1{月|つき}9{日|か}（{金|きん}）、{防災|ぼうさい}{講座|こうざ}は1{月|つき}30{日|か}（{金|きん}）です。",
+        "vi": "Hạn đăng ký của buổi hòa nhạc là thứ Sáu ngày 5 tháng 12, của lớp nấu ăn là thứ Sáu ngày 9 tháng 1, và của khóa học phòng chống thiên tai là thứ Sáu ngày 30 tháng 1."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "{申込|もうしこ}みが{定員|ていいん}を{超|こ}えた{場合|ばあい}は{抽選|ちゅうせん}となり、{結果|けっか}は{締切|しめきり}から3{日|か}{以内|いない}に{電話|でんわ}でお{知|し}らせします。",
+        "vi": "Trường hợp số người đăng ký vượt quá định mức thì sẽ bốc thăm, và kết quả sẽ được thông báo qua điện thoại trong vòng 3 ngày kể từ hạn đăng ký."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "なお、インターネットでの{申込|もうしこ}みは{受|う}け{付|けつ}けておりません。",
+        "vi": "Ngoài ra, chúng tôi không tiếp nhận đăng ký qua internet."
+      },
+      {
+        "para": 7,
+        "no": 1,
+        "ja": "キャンセルされる{場合|ばあい}は、{開催|かいさい}{日|ひ}の3{日|か}{前|まえ}までに{受付|うけつけ}へご{連絡|れんらく}ください。",
+        "vi": "Trường hợp hủy đăng ký, xin vui lòng liên hệ quầy tiếp nhận trước ngày tổ chức 3 ngày."
+      },
+      {
+        "para": 7,
+        "no": 2,
+        "ja": "{駐車|ちゅうしゃ}{場|じょう}は30{台|だい}{分|ぶん}しかありませんので、できるだけ{公共|こうきょう}{交通|こうつう}{機関|きかん}をご{利用|りよう}ください。",
+        "vi": "Bãi đỗ xe chỉ có chỗ cho 30 xe, vì vậy xin vui lòng sử dụng phương tiện giao thông công cộng hết mức có thể."
+      },
+      {
+        "para": 7,
+        "no": 3,
+        "ja": "{貴重|きちょう}{品|ひん}の{管理|かんり}は{各自|かくじ}でお{願|ねが}いし、センターでは{責任|せきにん}を{負|お}いかねます。",
+        "vi": "Việc quản lý đồ vật có giá trị xin mỗi người tự lo, trung tâm không thể chịu trách nhiệm."
+      },
+      {
+        "para": 8,
+        "no": 1,
+        "ja": "ご{不明|ふめい}な{点|てん}は、みどり{区民|くみん}センター（{住所|じゅうしょ}はみどり{市|し}{花見|はなみ}{町|まち}2-3-4）までお{問|と}い{合|いあ}わせください。",
+        "vi": "Nếu có điều gì chưa rõ, xin vui lòng liên hệ Trung tâm cộng đồng quận Midori (địa chỉ: 2-3-4 Hanamicho, thành phố Midori)."
+      },
+      {
+        "para": 8,
+        "no": 2,
+        "ja": "{受付|うけつけ}{時間|じかん}は{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}までで、{日曜|にちよう}{日|ひ}と{祝日|しゅくじつ}は{休|やす}みです。",
+        "vi": "Giờ tiếp nhận là từ 9 giờ sáng đến 5 giờ chiều, và Chủ nhật cùng ngày lễ thì nghỉ."
+      }
+    ],
+    "answer_key": "問1：②　問2：①　問3：④　問4：③",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ5①②",
+        "options": [
+          {
+            "text": "4,000円",
+            "verdict": "SAI",
+            "reason": "Đây là phí thuê hội trường lớn 2 tiếng CHƯA giảm giá: 1時間2,000円 × 2時間 = 4,000円 (đoạn 5 câu 1). Nhưng người từ 65 tuổi trở lên được giảm nửa phí thuê phòng (đoạn 5 câu 2), nên đáp án này chưa áp dụng giảm giá. Bẫy bỏ qua điều kiện giảm giá."
+          },
+          {
+            "text": "2,000円",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với bài: hội trường lớn 1時間2,000円 (đoạn 5 câu 1) nên 2 tiếng là 4,000円; người 65歳以上 được 利用料金が半額 (đoạn 5 câu 2), còn 2,000円. Cần đối chiếu cả hai câu trong cùng một mục."
+          },
+          {
+            "text": "1,000円",
+            "verdict": "SAI",
+            "reason": "1,000円 là nửa phí của MỘT giờ (2,000円 ÷ 2), nhưng câu hỏi hỏi thuê 2 tiếng. Lựa chọn này áp dụng giảm giá đúng nhưng tính sai số giờ. Bẫy tính sai số liệu."
+          },
+          {
+            "text": "500円",
+            "verdict": "SAI",
+            "reason": "500円 là phí thuê MỘT giờ của PHÒNG HỌP (会議室が1時間500円, đoạn 5 câu 1), không phải của hội trường lớn. Bẫy lấy số liệu của mục khác (phòng khác) gán sang."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ6②",
+        "options": [
+          {
+            "text": "1月9日（金）",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 6 câu 2: 料理教室は1月9日（金） — đây đúng là hạn đăng ký của lớp nấu ăn 'お正月料理教室'."
+          },
+          {
+            "text": "12月5日（金）",
+            "verdict": "SAI",
+            "reason": "12月5日（金） là hạn đăng ký của BUỔI HÒA NHẠC (音楽会の申込締切は12月5日, đoạn 6 câu 2), không phải của lớp nấu ăn. Bẫy lấy hạn của sự kiện khác gán sang."
+          },
+          {
+            "text": "1月30日（金）",
+            "verdict": "SAI",
+            "reason": "1月30日（金） là hạn đăng ký của KHÓA PHÒNG CHỐNG THIÊN TAI (防災講座は1月30日, đoạn 6 câu 2), không phải của lớp nấu ăn. Bẫy lấy hạn của sự kiện khác gán sang."
+          },
+          {
+            "text": "1月17日（土）",
+            "verdict": "SAI",
+            "reason": "1月17日（土） là NGÀY TỔ CHỨC lớp nấu ăn (đoạn 2), không phải hạn đăng ký. Đăng ký phải xong trước ngày này. Bẫy tráo ngày tổ chức với hạn đăng ký."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ3③",
+        "options": [
+          {
+            "text": "参加費は1,500円である。",
+            "verdict": "SAI",
+            "reason": "1,500円 là phí của LỚP NẤU ĂN (料理教室の参加費は1,500円, đoạn 3 câu 2); khóa phòng chống thiên tai thì 参加費無料 (đoạn 3 câu 3). Bẫy lấy số liệu của sự kiện khác gán sang."
+          },
+          {
+            "text": "定員は300人である。",
+            "verdict": "SAI",
+            "reason": "300人 là định mức của BUỔI HÒA NHẠC (音楽会の定員は300人, đoạn 3 câu 1); khóa phòng chống thiên tai chỉ có định mức 50人 (đoạn 3 câu 3). Bẫy lấy số liệu của sự kiện khác gán sang."
+          },
+          {
+            "text": "午前10時から正午まで行われる。",
+            "verdict": "SAI",
+            "reason": "10 giờ sáng đến trưa là giờ của LỚP NẤU ĂN (1月17日午前10時から正午まで, đoạn 2); khóa phòng chống thiên tai diễn ra 午後1時から3時半まで (đoạn 2). Bẫy lấy giờ của sự kiện khác gán sang."
+          },
+          {
+            "text": "参加費は無料で、区内在住の方が優先される。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 3: 防災講座は参加費無料で、定員は50人ですが、区内在住の方を優先します. Cả hai nửa của lựa chọn đều đúng với cùng một sự kiện."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "Đ4②",
+        "options": [
+          {
+            "text": "午前9時から午後8時まで利用できる。",
+            "verdict": "SAI",
+            "reason": "9–20 giờ là giờ mở cửa BÌNH THƯỜNG của phòng tự học (自習室は午前9時から午後8時まで利用できます, đoạn 4 câu 2), nhưng cùng câu đó nói rõ 12月29日から1月3日までは休館. Lựa chọn này bỏ qua nửa sau của câu — bẫy đọc nửa câu."
+          },
+          {
+            "text": "午後5時で閉館する。",
+            "verdict": "SAI",
+            "reason": "'Đóng lúc 5 giờ chiều' là quy định của NGÀY 28/12 (12月28日は午後5時で全館閉館します, đoạn 4 câu 4), không phải ngày 29/12. Bẫy lấy số liệu của ngày khác gán sang."
+          },
+          {
+            "text": "休館のため利用できない。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 2: 自習室は…12月29日から1月3日までは休館です. Ngày 29/12 nằm trong thời gian nghỉ nên phòng tự học không dùng được."
+          },
+          {
+            "text": "月曜日なので利用できない。",
+            "verdict": "SAI",
+            "reason": "'Thứ Hai không dùng được' là quy định của PHÒNG THỂ THAO (体育館は…月曜日は定期清掃のため利用できません, đoạn 4 câu 3), không phải của phòng tự học; hơn nữa 29/12/2026 là thứ Ba. Bẫy lấy quy định của phòng khác gán sang."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{定員|ていいん}",
+        "reading": "ていいん",
+        "hanviet": "Định Viên",
+        "vi": "định mức, số người tối đa được nhận"
+      },
+      {
+        "word": "{抽選|ちゅうせん}",
+        "reading": "ちゅうせん",
+        "hanviet": "Trừu Tuyển",
+        "vi": "sự bốc thăm, rút thăm"
+      },
+      {
+        "word": "{締切|しめきり}",
+        "reading": "しめきり",
+        "hanviet": "Đế Thiết",
+        "vi": "hạn chót, hạn đăng ký"
+      },
+      {
+        "word": "{休館|きゅうかん}",
+        "reading": "きゅうかん",
+        "hanviet": "Hưu Quán",
+        "vi": "sự đóng cửa (cả tòa nhà/cơ sở)"
+      },
+      {
+        "word": "{閉館|へいかん}",
+        "reading": "へいかん",
+        "hanviet": "Bế Quán",
+        "vi": "sự đóng cửa (hết giờ mở cửa trong ngày)"
+      },
+      {
+        "word": "{適用|てきよう}",
+        "reading": "てきよう",
+        "hanviet": "Thích Dụng",
+        "vi": "sự áp dụng (quy định, giảm giá)"
+      },
+      {
+        "word": "{優先|ゆうせん}",
+        "reading": "ゆうせん",
+        "hanviet": "Ưu Tiên",
+        "vi": "sự ưu tiên"
+      },
+      {
+        "word": "{貴重|きちょう}{品|ひん}",
+        "reading": "きちょうひん",
+        "hanviet": "Quý Trọng Phẩm",
+        "vi": "đồ vật có giá trị, đồ quý giá"
+      },
+      {
+        "word": "{定期|ていき}{清掃|せいそう}",
+        "reading": "ていきせいそう",
+        "hanviet": "Định Kỳ Thanh Tảo",
+        "vi": "vệ sinh định kỳ"
+      },
+      {
+        "word": "{受付|うけつけ}{窓口|まどぐち}",
+        "reading": "うけつけまどぐち",
+        "hanviet": "Thụ Phó Song Khẩu",
+        "vi": "quầy tiếp nhận, cửa tiếp nhận"
+      },
+      {
+        "word": "{公共|こうきょう}{交通|こうつう}{機関|きかん}",
+        "reading": "こうきょうこうつうきかん",
+        "hanviet": "Công Cộng Giao Thông Cơ Quan",
+        "vi": "phương tiện giao thông công cộng"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜かねます",
+        "vi": "không thể… (cách nói lịch sự, khiêm nhường khi từ chối hoặc nói về giới hạn)",
+        "in_text": "貴重品の管理は各自でお願いし、センターでは責任を負いかねます。"
+      },
+      {
+        "pattern": "〜ておりません",
+        "vi": "không… (thể lịch sự trang trọng của 〜ていない, thường dùng trong thông báo)",
+        "in_text": "なお、インターネットでの申込みは受け付けておりません。"
+      },
+      {
+        "pattern": "〜しか〜ない",
+        "vi": "chỉ có… (giới hạn, nhấn mạnh số lượng ít)",
+        "in_text": "駐車場は30台分しかありませんので、できるだけ公共交通機関をご利用ください。"
+      },
+      {
+        "pattern": "〜までに",
+        "vi": "trước (thời điểm)… / chậm nhất là… (hạn chót)",
+        "in_text": "キャンセルされる場合は、開催日の3日前までに受付へご連絡ください。"
+      },
+      {
+        "pattern": "〜については",
+        "vi": "về (vấn đề)… thì… (nêu chủ đề sẽ nói tới)",
+        "in_text": "詳細については、センター受付（電話03-1234-5678、受付時間は午前9時から午後5時まで）にお問い合わせください。"
+      },
+      {
+        "pattern": "〜ため（に）",
+        "vi": "vì… / do… (chỉ lý do)",
+        "in_text": "体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm giới hạn số lượng: しか〜ない / だけ / のみ",
+        "rows": [
+          {
+            "form": "〜しか〜ない",
+            "join": "N + しか + Vない",
+            "vi": "chỉ có… (thôi)",
+            "diff": "Luôn đi với động từ phủ định; nhấn mạnh số lượng ÍT hơn mong đợi, mang sắc thái tiếc nuối hoặc hạn chế. Dùng trong văn nói và văn viết.",
+            "example_ja": "{駐車|ちゅうしゃ}{場|じょう}は30{台|だい}{分|ぶん}しかありません。",
+            "example_vi": "Bãi đỗ xe chỉ có chỗ cho 30 xe thôi."
+          },
+          {
+            "form": "〜だけ",
+            "join": "N + だけ",
+            "vi": "chỉ… (thôi)",
+            "diff": "Giới hạn trung tính, không mang sắc thái tiếc nuối như しか; dùng được cả với động từ khẳng định, nhấn mạnh 'chỉ có thế, không hơn'.",
+            "example_ja": "{定員|ていいん}は20{人|にん}だけです。",
+            "example_vi": "Định mức chỉ là 20 người thôi."
+          },
+          {
+            "form": "〜のみ",
+            "join": "N + のみ",
+            "vi": "chỉ… (duy nhất)",
+            "diff": "Trang trọng, văn viết; giống だけ nhưng cứng và chính thức hơn, thường dùng trong thông báo, quy định, hợp đồng.",
+            "example_ja": "{申込|もうしこ}みは{電話|でんわ}のみ{受|う}け{付|けつ}けます。",
+            "example_vi": "Đăng ký chỉ được tiếp nhận qua điện thoại."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm nói 'không thể' một cách lịch sự: かねます / ことができません / にくい",
+        "rows": [
+          {
+            "form": "〜かねます",
+            "join": "Vます形 (bỏ ます) + かねます",
+            "vi": "không thể… (lịch sự)",
+            "diff": "Cách từ chối hoặc nêu giới hạn một cách khiêm nhường, mềm mỏng; thường dùng trong thông báo, thư từ khi nói về trách nhiệm hoặc khả năng của bên mình.",
+            "example_ja": "センターでは{責任|せきにん}を{負|お}いかねます。",
+            "example_vi": "Trung tâm không thể chịu trách nhiệm."
+          },
+          {
+            "form": "〜ことができません",
+            "join": "Vる + ことができません",
+            "vi": "không thể…",
+            "diff": "Cách nói trực tiếp, trung tính về việc không làm được; thẳng hơn かねます, không có sắc thái khiêm nhường hay uyển chuyển.",
+            "example_ja": "{月曜|げつよう}{日|ひ}は{体育|たいいく}{館|かん}を{利用|りよう}することができません。",
+            "example_vi": "Vào thứ Hai thì không thể sử dụng phòng thể thao."
+          },
+          {
+            "form": "〜にくい",
+            "join": "Vます形 (bỏ ます) + にくい",
+            "vi": "khó…",
+            "diff": "Không phải 'không thể' mà là 'khó làm, khó xảy ra'; chỉ mức độ khó khăn, vẫn có thể làm được nếu cố gắng.",
+            "example_ja": "この{時間|じかん}{帯|たい}は{駐車|ちゅうしゃ}{場|じょう}が{利用|りよう}しにくいです。",
+            "example_vi": "Vào khung giờ này thì bãi đỗ xe khó sử dụng."
+          }
+        ]
+      }
+    ]
+  }
+}

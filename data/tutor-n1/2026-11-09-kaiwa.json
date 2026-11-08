@@ -1,0 +1,374 @@
+{
+  "lesson": 26,
+  "topic": "初めての歯医者 (lần đầu đi khám nha khoa)",
+  "summary": "Bối cảnh: 拓海 bị đau răng mấy hôm nay, ăn đồ lạnh là ê buốt, nhưng cậu chưa từng đi khám nha khoa ở Nhật nên chẳng biết bắt đầu từ đâu. Cậu hỏi 莉子 xem phòng khám cô hay đi có ổn không, đặt lịch thế nào, có dùng được bảo hiểm không và khám một lần hết khoảng bao nhiêu tiền. Hôm sau, 拓海 quay lại kể cho 莉子 nghe trải nghiệm: bác sĩ nói gì, có phải chụp X-quang không, điều trị có đau không, hết bao nhiêu tiền và cậu có phải quay lại tái khám nữa không. Kỹ năng luyện: văn nói bạn bè — hỏi thông tin về một phòng khám mới (đặt lịch, bảo hiểm, chi phí), mô tả triệu chứng đau răng kiểu đời thường, và kể lại trải nghiệm khám chữa (mức độ đau, kết quả chẩn đoán, có quay lại hay không). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và lặp từ nhấn mạnh. Điểm khó/điểm mới so với bài trước: cách nói về đặt lịch khám (予約を取る, 初診), cách diễn tả cơn đau răng mơ hồ mà vẫn truyền đạt được ý (しみる, ズキズキする), và cách hỏi về bảo hiểm y tế và chi phí mà không nghe như đang mặc cả.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（hỏi giới thiệu phòng khám nha khoa）",
+      "stage": "（Buổi tối, 拓海 nhắn tin cho 莉子. Cậu bị đau răng mấy hôm nay, ăn đồ lạnh là ê buốt cả hàm.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ねえ、{莉子|りこ}。あのさ、{歯|は}{医者|いしゃ}どこ{行|い}ってる？",
+          "vi": "Này, Riko. Này, cậu hay đi khám răng ở phòng khám nào thế?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え？{急|きゅう}にどうしたの？{歯|は}、{痛|いた}いの？",
+          "vi": "Hả? Sao tự nhiên hỏi thế? Cậu bị đau răng à?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、まじでさ、{冷|つめ}たいもの{食|た}べるとしみるんだよね。ここ{数|すう}{日|じつ}ずっとさ。",
+          "vi": "Ừ, thật luôn ấy, ăn đồ lạnh là ê buốt ấy. Mấy hôm nay cứ thế mãi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あー、そっか。それ、{虫歯|むしば}かもよ。うちの{近|ちか}くのとこ、いいよ。{駅前|えきまえ}のさ、あの{歯|は}{医者|いしゃ}。",
+          "vi": "À, ra thế. Thế thì có khi sâu răng đấy. Phòng khám gần nhà tớ ấy, ổn lắm. Phòng khám ở trước ga ấy, cái chỗ đó."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、{保険|ほけん}きくの？あんま{高|たか}くないといいんだけど。",
+          "vi": "Ồ, có dùng được bảo hiểm không? Mong là đừng đắt quá."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{保険|ほけん}きくよ。{初診|しょしん}だと3,000{円|えん}くらいかな。レントゲン{込|ご}みでさ。",
+          "vi": "Ừ, dùng được bảo hiểm mà. Lần khám đầu thì khoảng 3.000 yên ấy. Đã bao gồm chụp X-quang rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、それなら{全然|ぜんぜん}ありだね。{予約|よやく}とか、いる？",
+          "vi": "Ồ, thế thì được đấy chứ. Có cần đặt lịch trước không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{予約|よやく}しといたほうがいいよ。{飛|と}び{込|びこ}みだとめっちゃ{待|ま}たされるしさ。{電話|でんわ}でもネットでも{取|と}れるよ。",
+          "vi": "Ừ, đặt trước thì tốt hơn đấy. Đến thẳng không hẹn thì phải chờ lâu lắm. Gọi điện hay đặt trên mạng đều được mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そっか。でさ、{痛|いた}みのこと、どう{伝|つた}えればいいの？「しみる」って{言|い}えばいい？",
+          "vi": "Ra thế. Mà này, chuyện đau răng thì nói sao cho họ hiểu? Cứ nói “ê buốt” là được à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まあまあ、それで{大丈夫|だいじょうぶ}だよ。あとさ、いつから{痛|いた}いかも{言|い}っといたほうがいいって。",
+          "vi": "Thì thì, nói thế cũng ổn mà. Với cả, cậu nên nói luôn là đau từ bao giờ nữa ấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（kể lại trải nghiệm sau khi khám xong）",
+      "stage": "（Hôm sau, 拓海 gặp 莉子 ở ga. Cậu vừa khám răng về, tay cầm túi thuốc và tờ giấy hẹn tái khám.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "お、{行|い}ってきたんだ。どうだった？{痛|いた}かった？",
+          "vi": "Ồ, đi khám về rồi à. Sao rồi? Có đau không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "でしょ？いやさ、{最初|さいしょ}めっちゃ{緊張|きんちょう}したんだよね。{初|はじ}めての{歯|は}{医者|いしゃ}だし。",
+          "vi": "Đúng không? Mà này, lúc đầu tớ căng thẳng lắm ấy. Vì là lần đầu đi khám răng mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "で、{先生|せんせい}なんて{言|い}ってた？{虫歯|むしば}だった？",
+          "vi": "Thế, bác sĩ nói sao? Có bị sâu răng không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、やっぱり{虫歯|むしば}だったよ。{小|ちい}さいやつでさ、まだ{神経|しんけい}までいってないって。",
+          "vi": "Ừ, đúng là sâu răng thật. Cái lỗ nhỏ thôi, mà chưa chạm tới tủy đâu."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "よかったじゃん。レントゲン{撮|と}った？",
+          "vi": "Tốt rồi còn gì. Có chụp X-quang không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{撮|と}った{撮|と}った。でさ、{来週|らいしゅう}また{来|き}てって{言|い}われたよ。{詰|つ}め{物|めもの}するんだって。",
+          "vi": "Ừ, chụp rồi chụp rồi. Với cả, họ bảo tuần sau quay lại nữa. Để trám răng ấy mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、{治療|ちりょう}は{痛|いた}くなかった？{麻酔|ますい}とかした？",
+          "vi": "Ồ, điều trị có đau không? Có gây tê gì không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いや、{今日|きょう}は{検査|けんさ}だけだったからさ、{全然|ぜんぜん}{痛|いた}くなかったよ。",
+          "vi": "Không, hôm nay chỉ khám thôi mà, nên hoàn toàn không đau gì cả."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "じゃあ、{値段|ねだん}は？{言|い}った{通|とお}りだった？",
+          "vi": "Thế thì, giá thì sao? Đúng như tớ nói không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、2,800{円|えん}くらいだった。{保険|ほけん}きいて、{思|おも}ったより{安|やす}かったよ。",
+          "vi": "Ừ, khoảng 2.800 yên thôi. Có bảo hiểm nên rẻ hơn tớ tưởng đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "あなたはどこの歯医者に行っていますか。",
+      "real": "ねえ、莉子。あのさ、歯医者どこ行ってる？",
+      "why": "Sách giáo khoa hỏi đầy đủ chủ ngữ, dùng ています và です・ます thể. Nói thật thì gọi tên bạn trước để thu hút chú ý, mở đầu bằng あのさ để lấy đà, bỏ chủ ngữ và trợ từ thừa — nghe như tin nhắn bạn bè thật, không như câu hỏi phỏng vấn."
+    },
+    {
+      "textbook": "冷たいものを食べると歯がしみます。",
+      "real": "冷たいもの食べるとしみるんだよね。",
+      "why": "Văn nói bỏ trợ từ を và が, dùng んだよね để than thở và tìm đồng cảm. Dạng đầy đủ nghe như đang mô tả triệu chứng cho bác sĩ, còn dạng rút gọn mới ra cảm giác “ê buốt khó chịu ghê” khi kể với bạn."
+    },
+    {
+      "textbook": "予約をしておいたほうがいいですよ。",
+      "real": "予約しといたほうがいいよ。",
+      "why": "Bạn bè rút ておく thành とく, bỏ です và dùng よ suồng sã. Sách giáo khoa thì lịch sự và dài dòng; dạng rút gọn nghe như lời khuyên thật lòng của bạn, không phải hướng dẫn trong sách."
+    },
+    {
+      "textbook": "先生は虫歯だと言いました。神経まではいっていませんでした。",
+      "real": "やっぱり虫歯だったよ。小さいやつでさ、まだ神経までいってないって。",
+      "why": "Văn nói dùng やっぱり để diễn tả “quả nhiên đúng như dự đoán”, rút ていません thành ってない, kết bằng って khi thuật lại lời bác sĩ. Cách nói này truyền được cảm giác nhẹ nhõm vì bệnh chưa nặng, còn câu sách giáo khoa nghe như báo cáo y tế."
+    },
+    {
+      "textbook": "保険がきいて、思ったより安かったです。",
+      "real": "保険きいて、思ったより安かったよ。",
+      "why": "Bạn bè bỏ trợ từ が, dùng きく dạng thường thay cho きいて…です, kết bằng よ để chia sẻ sự bất ngờ dễ chịu. Sách giáo khoa tách thành câu trang trọng, nghe như đang viết nhận xét chứ không phải lời kể với bạn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "あのさ",
+      "in_lesson": "あのさ、歯医者どこ行ってる？",
+      "original": "あの、〜",
+      "vi": "Này, này — mở đầu câu chuyện, lấy đà trước khi hỏi hoặc nhờ vả.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, và trong văn viết trang trọng."
+    },
+    {
+      "form": "しみる",
+      "in_lesson": "冷たいもの食べるとしみるんだよね",
+      "original": "しみる (động từ)",
+      "vi": "Ê buốt — cảm giác buốt nhói khi răng chạm đồ lạnh, nóng hoặc ngọt.",
+      "use": "Dùng khi mô tả triệu chứng với bạn bè, gia đình, và cả với bác sĩ.",
+      "avoid": "Tránh dùng しみる cho cơn đau âm ỉ kéo dài — khi đó dùng 痛い hoặc ズキズキする."
+    },
+    {
+      "form": "〜かもよ",
+      "in_lesson": "それ、虫歯かもよ",
+      "original": "〜かもしれないよ",
+      "vi": "Có khi là… đấy — đoán nhẹ một khả năng, giọng nhắc nhở bạn thân.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh trong văn viết trang trọng và khi cần nói chắc chắn (khi đó dùng 〜だと思う)."
+    },
+    {
+      "form": "〜といた / 〜しといた",
+      "in_lesson": "予約しといたほうがいいよ、言っといたほうがいいって",
+      "original": "〜ておいた",
+      "vi": "Rút gọn của ておく: làm trước để chuẩn bị — đặt trước đi / nói trước đi.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nhờ cấp trên (khi đó dùng 〜ておいてください)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "よかったじゃん",
+      "original": "〜じゃないか",
+      "vi": "…còn gì / …mà — xác nhận điều hiển nhiên, khen hoặc đồng tình.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "めっちゃ",
+      "in_lesson": "最初めっちゃ緊張した、飛び込みだとめっちゃ待たされる",
+      "original": "とても / 非常に",
+      "vi": "Rất, cực kỳ — từ nhấn mạnh suồng sã, mạnh hơn とても trong văn nói.",
+      "use": "Dùng với bạn bè cùng trang lứa, người thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người lớn tuổi không thân, và trong văn viết."
+    },
+    {
+      "form": "〜って (thuật lại lời người khác)",
+      "in_lesson": "神経までいってないって、来週また来てって言われたよ",
+      "original": "〜と言いました / 〜と言われた",
+      "vi": "…bảo là / nghe nói là… — thuật lại lời bác sĩ hoặc người khác một cách suồng sã.",
+      "use": "Dùng với bạn bè, gia đình, trong văn nói thường ngày.",
+      "avoid": "Tránh trong văn viết trang trọng và khi thuật lại lời cấp trên trong bối cảnh chính thức."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{保険|ほけん}がきく",
+      "reading": "ほけんがきく",
+      "vi": "Dùng được bảo hiểm — chi phí khám được bảo hiểm y tế chi trả một phần.",
+      "example_ja": "この{歯|は}{医者|いしゃ}、{保険|ほけん}きくから、{初診|しょしん}でも3,000{円|えん}くらいだよ。",
+      "example_vi": "Phòng khám này dùng được bảo hiểm nên lần khám đầu cũng chỉ khoảng 3.000 yên thôi."
+    },
+    {
+      "expr": "しみる",
+      "reading": "しみる",
+      "vi": "Ê buốt — răng buốt nhói khi ăn đồ lạnh, nóng hoặc ngọt; triệu chứng hay gặp nhất khi đi khám răng.",
+      "example_ja": "アイスを{食|た}べると{奥歯|おくば}がしみるんです。",
+      "example_vi": "Ăn kem là răng hàm trong của tôi bị ê buốt."
+    },
+    {
+      "expr": "{初診|しょしん}",
+      "reading": "しょしん",
+      "vi": "Lần khám đầu — lần đầu tiên đến một phòng khám hay bệnh viện, thường đắt hơn tái khám và phải điền phiếu hỏi.",
+      "example_ja": "{初診|しょしん}なので、{問診|もんしん}{票|ひょう}を{書|か}いてくださいと{言|い}われました。",
+      "example_vi": "Vì là lần khám đầu nên tôi được bảo điền phiếu hỏi bệnh."
+    },
+    {
+      "expr": "レントゲンを{撮|と}る",
+      "reading": "れんとげんをとる",
+      "vi": "Chụp X-quang — chụp phim để bác sĩ xem chân răng và tình trạng sâu bên trong.",
+      "example_ja": "レントゲンを{撮|と}ったら、{小|ちい}さい{虫歯|むしば}が{見|み}つかったよ。",
+      "example_vi": "Chụp X-quang xong thì phát hiện một lỗ sâu nhỏ."
+    },
+    {
+      "expr": "{詰|つ}め{物|めもの}をする",
+      "reading": "つめものをする",
+      "vi": "Trám răng — lấp lỗ sâu bằng vật liệu trám sau khi đã làm sạch chỗ sâu.",
+      "example_ja": "{来週|らいしゅう}、{詰|つ}め{物|めもの}をすることになったよ。",
+      "example_vi": "Tuần sau tớ phải đi trám răng rồi."
+    },
+    {
+      "expr": "{飛|と}び{込|びこ}みで{行|い}く",
+      "reading": "とびこみでいく",
+      "vi": "Đến thẳng không hẹn trước — đến phòng khám hay tiệm mà không đặt lịch, có thể phải chờ rất lâu.",
+      "example_ja": "{飛|と}び{込|びこ}みで{行|い}ったら、1{時間|じかん}も{待|ま}たされたよ。",
+      "example_vi": "Tớ đến thẳng không hẹn trước nên phải chờ cả một tiếng đồng hồ."
+    }
+  ],
+  "mindset": [
+    "Người Nhật đi khám răng hầu như luôn đặt lịch trước: phòng khám nha khoa ở Nhật thường khám theo giờ hẹn, đến thẳng không hẹn (飛び込み) có khi phải chờ cả tiếng hoặc bị hẹn sang hôm khác. Trong bài, 莉子 khuyên 拓海 予約しといたほうがいいよ chính là vì lý do này — và quả nhiên nhờ có hẹn mà cậu được khám ngay trong buổi. Với người mới đi khám lần đầu, đặt lịch trên mạng là cách an toàn nhất, vừa chọn được giờ vừa khỏi phải gọi điện nói tiếng Nhật.",
+    "Ở Nhật, khám răng được bảo hiểm y tế chi trả 70%, người bệnh chỉ trả 30% — nhưng chỉ những điều trị cơ bản như trám răng, lấy cao răng, nhổ răng sâu mới nằm trong bảo hiểm; làm răng thẩm mỹ như tẩy trắng hay niềng răng thì phải tự trả toàn bộ. Trong bài, 拓海 chỉ mất khoảng 2.800 yên cho lần khám đầu gồm chụp X-quang vì có bảo hiểm, nên câu đầu tiên cậu hỏi 莉子 là 保険きくの？ — đó là câu hỏi rất thực tế mà ai mới sang Nhật cũng nên hỏi trước khi đi khám."
+  ],
+  "mistakes": [
+    "Đừng nói 歯医者さんに行きます với bác sĩ hay lễ tân: 歯医者 là cách gọi thân mật trong văn nói bạn bè; khi nói với nhân viên phòng khám hãy dùng 歯科 hoặc nói 受診します.",
+    "Đừng nói “歯が痛いです” chung chung khi bác sĩ hỏi: hãy nói rõ chỗ nào, đau kiểu gì và từ bao giờ — ví dụ 冷たいものを食べると奥歯がしみるんです, đau từ mấy hôm nay — bác sĩ mới chẩn đoán nhanh được.",
+    "Đừng dùng めっちゃ với bác sĩ hay nhân viên phòng khám: đây là từ lóng dùng với bạn bè; với người trong phòng khám hãy dùng とても hoặc すごく.",
+    "Đừng quên mang theo thẻ bảo hiểm (保険証) khi đi khám lần đầu: không có thẻ thì phải trả 100% chi phí, sau đó mới được làm thủ tục hoàn tiền — rất mất thời gian. Ngoài ra, lần khám đầu thường phải điền 問診票 (phiếu hỏi bệnh) nên hãy đến sớm hơn giờ hẹn khoảng 10 phút."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn bị đau răng mấy hôm nay, ăn đồ lạnh là ê buốt, nhưng chưa từng đi khám nha khoa ở Nhật. Hãy hỏi một người bạn xem họ hay đi phòng khám nào, có dùng được bảo hiểm không, khám lần đầu hết khoảng bao nhiêu và có cần đặt lịch trước không.",
+    "Tình huống 2: Bạn đang ở quầy lễ tân phòng khám lần đầu. Hãy nói rằng đây là lần khám đầu, bạn bị đau răng khi ăn đồ lạnh, và hỏi xem có cần điền phiếu hỏi bệnh không.",
+    "Tình huống 3: Sau khi khám xong, bạn gặp người bạn đã giới thiệu phòng khám. Hãy kể lại trải nghiệm: bác sĩ chẩn đoán thế nào, có phải chụp X-quang không, điều trị có đau không, hết bao nhiêu tiền, và bạn có phải quay lại tái khám nữa không."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "ねえ、{莉子|りこ}。あのさ、{歯|は}{医者|いしゃ}どこ{行|い}ってる？",
+      "vi": "Này, Riko. Này, cậu hay đi khám răng ở phòng khám nào thế?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え？{急|きゅう}にどうしたの？{歯|は}、{痛|いた}いの？",
+      "vi": "Hả? Sao tự nhiên hỏi thế? Cậu bị đau răng à?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、まじでさ、{冷|つめ}たいもの{食|た}べるとしみるんだよね。ここ{数|すう}{日|じつ}ずっとさ。",
+      "vi": "Ừ, thật luôn ấy, ăn đồ lạnh là ê buốt ấy. Mấy hôm nay cứ thế mãi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あー、そっか。それ、{虫歯|むしば}かもよ。うちの{近|ちか}くのとこ、いいよ。{駅前|えきまえ}のさ、あの{歯|は}{医者|いしゃ}。",
+      "vi": "À, ra thế. Thế thì có khi sâu răng đấy. Phòng khám gần nhà tớ ấy, ổn lắm. Phòng khám ở trước ga ấy, cái chỗ đó."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、{保険|ほけん}きくの？あんま{高|たか}くないといいんだけど。",
+      "vi": "Ồ, có dùng được bảo hiểm không? Mong là đừng đắt quá."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{保険|ほけん}きくよ。{初診|しょしん}だと3,000{円|えん}くらいかな。レントゲン{込|ご}みでさ。",
+      "vi": "Ừ, dùng được bảo hiểm mà. Lần khám đầu thì khoảng 3.000 yên ấy. Đã bao gồm chụp X-quang rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、それなら{全然|ぜんぜん}ありだね。{予約|よやく}とか、いる？",
+      "vi": "Ồ, thế thì được đấy chứ. Có cần đặt lịch trước không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{予約|よやく}しといたほうがいいよ。{飛|と}び{込|びこ}みだとめっちゃ{待|ま}たされるしさ。{電話|でんわ}でもネットでも{取|と}れるよ。",
+      "vi": "Ừ, đặt trước thì tốt hơn đấy. Đến thẳng không hẹn thì phải chờ lâu lắm. Gọi điện hay đặt trên mạng đều được mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そっか。でさ、{痛|いた}みのこと、どう{伝|つた}えればいいの？「しみる」って{言|い}えばいい？",
+      "vi": "Ra thế. Mà này, chuyện đau răng thì nói sao cho họ hiểu? Cứ nói “ê buốt” là được à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まあまあ、それで{大丈夫|だいじょうぶ}だよ。あとさ、いつから{痛|いた}いかも{言|い}っといたほうがいいって。",
+      "vi": "Thì thì, nói thế cũng ổn mà. Với cả, cậu nên nói luôn là đau từ bao giờ nữa ấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、{行|い}ってきたんだ。どうだった？{痛|いた}かった？",
+      "vi": "Ồ, đi khám về rồi à. Sao rồi? Có đau không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "でしょ？いやさ、{最初|さいしょ}めっちゃ{緊張|きんちょう}したんだよね。{初|はじ}めての{歯|は}{医者|いしゃ}だし。",
+      "vi": "Đúng không? Mà này, lúc đầu tớ căng thẳng lắm ấy. Vì là lần đầu đi khám răng mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "で、{先生|せんせい}なんて{言|い}ってた？{虫歯|むしば}だった？",
+      "vi": "Thế, bác sĩ nói sao? Có bị sâu răng không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、やっぱり{虫歯|むしば}だったよ。{小|ちい}さいやつでさ、まだ{神経|しんけい}までいってないって。",
+      "vi": "Ừ, đúng là sâu răng thật. Cái lỗ nhỏ thôi, mà chưa chạm tới tủy đâu."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "よかったじゃん。レントゲン{撮|と}った？",
+      "vi": "Tốt rồi còn gì. Có chụp X-quang không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{撮|と}った{撮|と}った。でさ、{来週|らいしゅう}また{来|き}てって{言|い}われたよ。{詰|つ}め{物|めもの}するんだって。",
+      "vi": "Ừ, chụp rồi chụp rồi. Với cả, họ bảo tuần sau quay lại nữa. Để trám răng ấy mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、{治療|ちりょう}は{痛|いた}くなかった？{麻酔|ますい}とかした？",
+      "vi": "Ồ, điều trị có đau không? Có gây tê gì không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いや、{今日|きょう}は{検査|けんさ}だけだったからさ、{全然|ぜんぜん}{痛|いた}くなかったよ。",
+      "vi": "Không, hôm nay chỉ khám thôi mà, nên hoàn toàn không đau gì cả."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "じゃあ、{値段|ねだん}は？{言|い}った{通|とお}りだった？",
+      "vi": "Thế thì, giá thì sao? Đúng như tớ nói không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、2,800{円|えん}くらいだった。{保険|ほけん}きいて、{思|おも}ったより{安|やす}かったよ。",
+      "vi": "Ừ, khoảng 2.800 yên thôi. Có bảo hiểm nên rẻ hơn tớ tưởng đấy."
+    }
+  ],
+  "notes": [
+    "歯医者 / 歯科: 歯医者 là cách gọi thân mật trong văn nói; 歯科 là tên gọi chính thức của khoa răng, dùng khi nói với nhân viên phòng khám.",
+    "しみる: từ then chốt để mô tả răng ê buốt — ăn đồ lạnh, nóng, ngọt mà buốt thì nói しみる, bác sĩ nghe là hiểu ngay.",
+    "保険がきく: cụm phải thuộc trước khi đi khám ở Nhật — hỏi câu này trước là biết ngay mình phải trả khoảng bao nhiêu.",
+    "初診: lần khám đầu ở một phòng khám mới — thường đắt hơn tái khám và phải điền 問診票, nên đến sớm 10 phút.",
+    "レントゲンを撮る: chụp X-quang để xem chân răng — lần khám đầu bị sâu răng thường được chụp để xác định mức độ.",
+    "詰め物をする: trám răng — điều trị phổ biến nhất cho lỗ sâu nhỏ chưa chạm tới tủy, thường làm ở lần tái khám.",
+    "飛び込みで行く: đến thẳng không hẹn trước — ở phòng khám nha khoa Nhật, cách này dễ phải chờ rất lâu, nên tránh."
+  ]
+}

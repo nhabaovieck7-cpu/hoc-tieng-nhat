@@ -131,6 +131,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 25 — Buổi chiều ở day service — Thể dục nhẹ, giờ ăn nhẹ và xe đưa về",
       "file": "2026-11-07-kaiwa.json"
+    },
+    {
+      "date": "2026-11-09",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 09/11/2026（問題10・短文）",
+      "file": "2026-11-09-n1-set.json"
+    },
+    {
+      "date": "2026-11-09",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 09/11/2026（情報検索）",
+      "file": "2026-11-09-reading.json"
+    },
+    {
+      "date": "2026-11-09",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 26 — 初めての歯医者 (lần đầu đi khám nha khoa)",
+      "file": "2026-11-09-kaiwa.json"
     }
   ]
 }
