@@ -1,0 +1,1377 @@
+{
+ "guides": [
+  {
+   "id": "dang-ky-sim",
+   "group": "Điện thoại & nhà ở",
+   "title": "Đăng ký SIM điện thoại （携帯電話・SIM契約）",
+   "icon": "📱",
+   "summary": "Ở Nhật, muốn có số điện thoại để gọi và nhận tin nhắn SMS thì phải đăng ký SIM thoại và xác thực danh tính bằng thẻ lưu trú. Bài này giúp bạn phân biệt SIM thoại, SIM data và SIM giá rẻ, rồi tự đăng ký online hoặc tại cửa hàng mà không bị thiếu giấy tờ.",
+   "who": "Người mới sang Nhật, du học sinh, thực tập sinh, người đi làm cần số điện thoại Nhật để mở tài khoản ngân hàng, thuê nhà, xin việc và nhận mã xác thực SMS.",
+   "docs": [
+    "Thẻ lưu trú （在留カード, zairyū kādo — thẻ chứng minh bạn được ở Nhật hợp pháp, có ảnh, họ tên, địa chỉ, ngày sinh và hạn lưu trú） còn hạn, đã ghi địa chỉ nhà ở mặt sau",
+    "Hộ chiếu （パスポート） — một số nhà mạng yêu cầu xem thêm cùng thẻ lưu trú",
+    "Thẻ My Number （マイナンバーカード） hoặc bằng lái xe Nhật nếu có — có thể dùng để xác thực thay thế hoặc bổ sung tùy nhà mạng",
+    "Thẻ tín dụng （クレジットカード） đứng tên chính bạn hoặc tài khoản ngân hàng Nhật （銀行口座） để thanh toán hàng tháng — nhiều SIM giá rẻ chỉ nhận thẻ tín dụng",
+    "Địa chỉ nhà ở Nhật đã đăng ký tại tòa thị chính / văn phòng quận （住所登録） — địa chỉ trên giấy tờ phải khớp địa chỉ bạn khai khi đăng ký",
+    "Điện thoại đã mở mạng / không khóa SIM （SIMフリー） nếu bạn mang máy từ Việt Nam sang — kiểm tra máy có dùng được băng tần ở Nhật không",
+    "Địa chỉ email đang dùng được và số điện thoại liên lạc tạm thời nếu có (ví dụ số của bạn bè, trường học hoặc công ty)"
+   ],
+   "prep_home": [
+    "Ở nhà trước: chụp ảnh rõ 2 mặt thẻ lưu trú, lưu vào điện thoại và gửi thêm 1 bản vào email của mình để phòng khi ảnh chụp tại cửa hàng bị mờ",
+    "Kiểm tra mặt sau thẻ lưu trú đã có địa chỉ nhà hiện tại chưa — nếu chưa ghi địa chỉ thì phải ra tòa thị chính / văn phòng quận làm thủ tục chuyển đến （転入届） trước, chưa có địa chỉ thì hầu như không đăng ký được SIM thoại",
+    "Viết sẵn ra giấy: họ tên viết chữ La-tinh (romaji) đúng như trên thẻ lưu trú, ngày sinh, địa chỉ nhà bằng tiếng Nhật, mã bưu điện （郵便番号, 7 số) — khi điền form online bạn chỉ việc chép lại, tránh gõ sai",
+    "Kiểm tra điện thoại của bạn có phải máy SIMフリー (không khóa mạng) không: tháo thử, xem thông số máy, hoặc tra model trên trang nhà mạng — nếu máy khóa mạng Việt Nam thì cần mua máy mới hoặc thuê máy ở Nhật",
+    "Chuẩn bị cách thanh toán: nếu chưa có thẻ tín dụng Nhật, kiểm tra xem bạn có thẻ tín dụng quốc tế đứng tên mình không, hoặc đã có tài khoản ngân hàng Nhật và thẻ rút tiền chưa — ghi sẵn số thẻ / số tài khoản ra chỗ an toàn, không chụp gửi cho người lạ",
+    "Chọn trước ở nhà: bạn cần SIM thoại có số (để gọi + SMS) hay chỉ cần SIM data (chỉ vào mạng) — và cần khoảng bao nhiêu GB mỗi tháng, để ra cửa hàng không bị mời gói đắt hơn nhu cầu",
+    "Nếu đăng ký online: sạc đầy điện thoại, chuẩn bị sẵn điện thoại có chức năng đọc chip NFC vì nhiều nhà mạng nay xác thực bằng cách áp thẻ lưu trú / My Number vào điện thoại để đọc chip IC"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Phân biệt 3 loại SIM trước khi chọn",
+     "d": "Làm ở nhà, online. MẤT KHOẢNG 15 phút. Bạn cần hiểu: 1) SIM thoại （音声通話SIM, onsei tsūwa SIM) — có số điện thoại Nhật bắt đầu 070/080/090, gọi được, nhận SMS được, BẮT BUỘC xác thực danh tính theo Luật phòng chống sử dụng điện thoại trái phép （携帯電話不正利用防止法）. 2) SIM data có SMS （データ通信SIM） — vào mạng + nhận SMS, không gọi thường được. 3) SIM data-only thuần — chỉ vào mạng, không có số, không nhận SMS ngân hàng được. Nếu bạn cần mở ngân hàng, thuê nhà, xin việc thì PHẢI chọn loại 1. NHẬN ĐƯỢC: quyết định rõ loại SIM cần mua. KIỂM TRA: đừng chọn data-only nếu bạn cần nhận mã xác thực ngân hàng.",
+     "ja": "音声通話ができるSIMをお願いします。",
+     "vi": "Cho tôi SIM có thể gọi thoại được (tức SIM thoại có số điện thoại)."
+    },
+    {
+     "t": "Bước 2: Chọn nhà mạng lớn hay SIM giá rẻ",
+     "d": "Làm ở nhà, online, hoặc hỏi tại cửa hàng. MẤT KHOẢNG 20-30 phút so sánh. Nhà mạng lớn （大手キャリア） là docomo, au, SoftBank, Rakuten Mobile — có nhiều cửa hàng, có người hỗ trợ trực tiếp, giá thường cao hơn. SIM giá rẻ （格安SIM, kakuyasu SIM) là các công ty nhỏ hơn thuê lại sóng của nhà mạng lớn — giá rẻ hơn, nhưng thường phải tự đăng ký online, ít hỗ trợ tiếng nước ngoài. Người mới sang, tiếng Nhật yếu: nên ra cửa hàng của nhà mạng lớn hoặc Rakuten Mobile lần đầu cho dễ. Người đã quen, muốn tiết kiệm: chọn SIM giá rẻ online. NHẬN ĐƯỢC: 1-2 lựa chọn cuối cùng. KIỂM TRA: xem vùng nhà bạn có sóng không trên bản đồ vùng phủ sóng của nhà mạng, và máy của bạn có tương thích không.",
+     "ja": "格安SIMと大手キャリアの違いを教えてください。",
+     "vi": "Xin cho tôi biết khác nhau giữa SIM giá rẻ và nhà mạng lớn."
+    },
+    {
+     "t": "Bước 3: Đặt lịch hoặc chuẩn bị đăng ký online",
+     "d": "ĐI ĐÂU: nếu ra cửa hàng, đặt lịch trước trên web của nhà mạng (đi không đặt lịch vẫn được nhưng cuối tuần có thể chờ 1-2 tiếng). Nếu online, vào đúng trang chính thức của nhà mạng, không vào trang quảng cáo lạ. MANG GÌ: xem mục docs và prep_home. MẤT BAO LÂU: đặt lịch khoảng 5 phút. NHẬN ĐƯỢC: mã đặt lịch / giờ hẹn. KIỂM TRA: chụp màn hình xác nhận lịch hẹn, ghi lại địa chỉ cửa hàng và giờ hẹn vào điện thoại.",
+     "ja": "来店予約をお願いします。",
+     "vi": "Tôi muốn đặt lịch đến cửa hàng."
+    },
+    {
+     "t": "Bước 4: Đến cửa hàng hoặc bắt đầu đăng ký online và xác thực danh tính",
+     "d": "ĐI ĐÂU: quầy tiếp nhận của cửa hàng nhà mạng, hoặc form đăng ký online tại nhà. MANG GÌ: thẻ lưu trú bản gốc (cửa hàng không nhận bản photocopy thay bản gốc), hộ chiếu, thẻ / tài khoản thanh toán. NÓI GÌ: dùng câu mẫu ở dưới. Nhân viên / hệ thống sẽ chụp hoặc đọc chip IC trong thẻ lưu trú để kiểm tra họ tên, địa chỉ, ngày sinh — đây là bước bắt buộc theo luật, không bỏ qua được. MẤT BAO LÂU: khoảng 15-30 phút cho phần xác thực. NHẬN ĐƯỢC: hồ sơ được tiếp nhận. KIỂM TRA TRƯỚC KHI ĐI TIẾP: họ tên romaji và địa chỉ trên màn hình / giấy xác nhận phải khớp 100% với thẻ lưu trú, sai 1 chữ cũng phải sửa ngay.",
+     "ja": "新規契約をお願いします。本人確認書類は在留カードです。",
+     "vi": "Tôi muốn đăng ký mới. Giấy tờ xác thực danh tính của tôi là thẻ lưu trú."
+    },
+    {
+     "t": "Bước 5: Chọn gói cước và cách thanh toán",
+     "d": "ĐI ĐÂU: vẫn tại quầy / form online, mục chọn gói （プラン, puran — gói cước). MANG GÌ: thông tin thẻ tín dụng hoặc tài khoản ngân hàng đứng tên bạn. Bạn chọn dung lượng data mỗi tháng theo nhu cầu thật (ví dụ học / làm thêm ít thì chọn gói nhỏ, xem video nhiều thì chọn gói lớn hơn). Nhân viên có thể mời thêm dịch vụ phụ （オプション) như bảo hiểm máy, xem phim — nếu không cần thì nói không cần. Đăng ký cách thanh toán hàng tháng. MẤT BAO LÂU: khoảng 15 phút. NHẬN ĐƯỢC: giấy / màn hình tóm tắt gói cước. KIỂM TRA: tổng tiền mỗi tháng gồm những khoản gì, có phí đăng ký ban đầu không, có cam kết thời gian tối thiểu và phí hủy sớm không — hỏi rõ trước khi ký.",
+     "ja": "一番安いプランをお願いします。オプションは不要です。",
+     "vi": "Cho tôi gói rẻ nhất. Tôi không cần dịch vụ phụ."
+    },
+    {
+     "t": "Bước 6: Ký hợp đồng và nhận SIM hoặc eSIM",
+     "d": "ĐI ĐÂU: tại quầy thanh toán / bước cuối online. Bạn ký tên (hoặc bấm đồng ý online) vào hợp đồng. Nếu là SIM vật lý, nhân viên giao thẻ SIM nhỏ; nếu là eSIM (SIM điện tử cài bằng mã QR), bạn sẽ nhận mã QR hoặc hướng dẫn cài đặt. Nếu đăng ký online, SIM thường gửi về địa chỉ nhà đã đăng ký sau vài ngày, có trường hợp phải chính bạn nhận và xuất trình giấy tờ khi nhận. MẤT BAO LÂU: khoảng 15-20 phút tại cửa hàng; online thì chờ giao vài ngày tùy nơi. NHẬN ĐƯỢC: SIM / eSIM, bản hợp đồng, số điện thoại mới của bạn. KIỂM TRA TRƯỚC KHI RỜI CỬA HÀNG: nhờ nhân viên lắp SIM và thử ngay tại chỗ — gọi thử 1 cuộc, vào mạng thử 1 trang web.",
+     "ja": "この場で使えるか確認してもらえますか？",
+     "vi": "Bạn kiểm tra giúp tôi ngay tại đây xem dùng được chưa?"
+    },
+    {
+     "t": "Bước 7: Cài đặt APN và kiểm tra SMS nếu SIM chưa vào mạng",
+     "d": "Làm tại cửa hàng hoặc ở nhà. Một số SIM giá rẻ cần cài APN (điểm truy cập mạng — cài đặt để điện thoại vào được internet của nhà mạng đó) bằng cách tải hồ sơ cấu hình (profile) từ trang nhà mạng hoặc nhập tay thông số APN theo tờ hướng dẫn đi kèm SIM. MANG GÌ: tờ hướng dẫn đi kèm SIM, kết nối Wi-Fi để tải profile. MẤT BAO LÂU: khoảng 5-10 phút. NHẬN ĐƯỢC: điện thoại vào mạng bằng 4G/5G khi tắt Wi-Fi. KIỂM TRA: tắt Wi-Fi, mở web; thử nhận 1 tin SMS (ví dụ nhờ bạn gửi thử). Nếu không được, quay lại bước này trước khi nghĩ SIM hỏng.",
+     "ja": "インターネットにつながりません。APN設定を教えてください。",
+     "vi": "Không vào được internet. Xin hướng dẫn tôi cài đặt APN."
+    },
+    {
+     "t": "Bước 8: Lưu số mới và hiểu cách trả tiền hàng tháng",
+     "d": "Làm ở nhà trong ngày đầu tiên. Ghi số điện thoại mới vào danh bạ, gửi cho gia đình / công ty / trường học. Đọc lại trên app hoặc web của nhà mạng: ngày chốt tiền, ngày trừ thẻ / tài khoản mỗi tháng là ngày nào, xem hóa đơn ở đâu. MẤT BAO LÂU: khoảng 10 phút. NHẬN ĐƯỢC: bạn nắm rõ lịch thanh toán. KIỂM TRA: đảm bảo thẻ / tài khoản luôn có đủ tiền trước ngày trừ tiền — trả trễ nhiều lần sẽ bị ghi vào lịch sử tín dụng và sau này khó mua điện thoại trả góp, khó thuê nhà.",
+     "ja": "毎月の支払日はいつですか？",
+     "vi": "Ngày thanh toán hàng tháng là ngày nào?"
+    }
+   ],
+   "cost": "Phí đăng ký ban đầu và giá gói thay đổi theo nhà mạng và theo thời điểm, tùy gói dung lượng — chỉ nên tin giá ghi trên trang chính thức / tại cửa hàng lúc đăng ký. Nói chung SIM giá rẻ thường rẻ hơn nhà mạng lớn; gói ít data rẻ hơn gói nhiều data. Không có một mức giá cố định chung cho mọi nhà mạng, đừng tin giá rao trên mạng xã hội.",
+   "duration": "Tại cửa hàng: khoảng 1-2 tiếng nếu giấy tờ đầy đủ và không phải chờ lâu. Online: điền form khoảng 20-30 phút, SIM gửi đến sau khoảng vài ngày tùy địa phương và nhà mạng.",
+   "warnings": [
+    "Tuyệt đối không cho người khác mượn SIM / số điện thoại đứng tên bạn, không bán lại SIM của mình, không đăng ký hộ SIM cho người khác — luật Nhật cấm chuyển nhượng SIM khi chưa được nhà mạng đồng ý, làm vậy có thể bị phạt và bị khóa số.",
+    "Không dùng SIM hoặc tài khoản của người khác đứng tên để nhận tiền, mở ngân hàng hộ — đây là hành vi hay bị lợi dụng vào lừa đảo, bạn có thể bị cảnh sát điều tra dù không trực tiếp lừa ai.",
+    "Địa chỉ trên thẻ lưu trú phải là địa chỉ bạn đang ở thật. Dùng địa chỉ giả, địa chỉ của bạn bè mà bạn không ở đó để đăng ký có thể bị từ chối hoặc bị dừng dịch vụ.",
+    "Nếu trục trặc — thiếu giấy tờ: cửa hàng từ chối thì đừng cãi, hãy hỏi rõ thiếu giấy gì, ghi lại tên giấy đó bằng tiếng Nhật, về nhà chuẩn bị rồi quay lại hoặc chuyển sang đăng ký online. Thiếu địa chỉ trên thẻ lưu trú thì ra văn phòng quận làm thủ tục ghi địa chỉ trước.",
+    "Nếu trục trặc — bị từ chối đăng ký SIM: hỏi lý do chung (thường do chưa có cách thanh toán hợp lệ, giấy tờ hết hạn, hoặc còn nợ cước nhà mạng khác chưa trả). Kênh thay thế: thử nhà mạng khác / SIM giá rẻ khác có nhận tài khoản ngân hàng, hoặc trước mắt dùng SIM data + Wi-Fi tại nhà / trường trong lúc chuẩn bị lại thẻ tín dụng và giấy tờ — nhưng nhớ SIM data không thay được số thoại khi cần SMS ngân hàng.",
+    "Nếu trục trặc — không hiểu tiếng Nhật: mang theo bạn biết tiếng Nhật, hoặc dùng ứng dụng dịch chụp màn hình / dịch giọng nói, và nói câu xin giải thích chậm, viết ra giấy ở mục phrases. Nhiều cửa hàng lớn ở thành phố lớn có hỗ trợ tiếng Anh, một số nơi có hỗ trợ tiếng Việt theo lịch — hãy đặt lịch và hỏi trước.",
+    "Trả cước trễ hoặc không trả sẽ bị ghi nợ xấu: sau này mua điện thoại trả góp, thuê nhà, làm thẻ tín dụng đều khó hơn. Nếu sắp không trả được, gọi cho nhà mạng xin tư vấn trước ngày trừ tiền.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận đủ: SIM / eSIM hoạt động được, bản hợp đồng hoặc email xác nhận hợp đồng, tờ ghi số điện thoại mới — chụp ảnh lưu vào điện thoại và cất bản giấy vào 1 túi hồ sơ riêng",
+    "Đã thử tại chỗ / tại nhà: gọi đi được, nhận cuộc gọi được, tắt Wi-Fi vẫn vào mạng được, nhận SMS được",
+    "Đã lưu: số điện thoại mới, tên đăng nhập và mật khẩu app nhà mạng, ngày trừ tiền hàng tháng — ghi vào ghi chú điện thoại, không chia sẻ mật khẩu cho ai",
+    "Đã kiểm tra hóa đơn tháng đầu trong app: số tiền có đúng gói đã chọn không, có dịch vụ phụ nào bị cộng thêm mà bạn không đăng ký không — nếu có, gọi / ra cửa hàng hỏi ngay trong tháng đầu",
+    "Hạn chót tiếp theo: ngày trừ tiền tháng sau — để sẵn tiền trong thẻ / tài khoản trước ngày đó ít nhất 1-2 ngày"
+   ],
+   "vocab": [
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうかーど",
+     "vi": "thẻ lưu trú"
+    },
+    {
+     "ja": "本人確認",
+     "reading": "ほんにんかくにん",
+     "vi": "xác thực danh tính"
+    },
+    {
+     "ja": "新規契約",
+     "reading": "しんきけいやく",
+     "vi": "đăng ký mới"
+    },
+    {
+     "ja": "音声通話SIM",
+     "reading": "おんせいつうわしむ",
+     "vi": "SIM thoại (có số, gọi được)"
+    },
+    {
+     "ja": "データ通信SIM",
+     "reading": "でーたちゅうしんしむ",
+     "vi": "SIM data (chỉ / chủ yếu vào mạng)"
+    },
+    {
+     "ja": "格安SIM",
+     "reading": "かくやすしむ",
+     "vi": "SIM giá rẻ"
+    },
+    {
+     "ja": "大手キャリア",
+     "reading": "おおてきゃりあ",
+     "vi": "nhà mạng lớn"
+    },
+    {
+     "ja": "プラン",
+     "reading": "ぷらん",
+     "vi": "gói cước"
+    },
+    {
+     "ja": "月額料金",
+     "reading": "げつがくりょうきん",
+     "vi": "cước hàng tháng"
+    },
+    {
+     "ja": "オプション",
+     "reading": "おぷしょん",
+     "vi": "dịch vụ phụ tùy chọn"
+    },
+    {
+     "ja": "SIMフリー",
+     "reading": "しむふりー",
+     "vi": "máy không khóa mạng"
+    },
+    {
+     "ja": "来店予約",
+     "reading": "らいてんよやく",
+     "vi": "đặt lịch đến cửa hàng"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "新規契約をお願いします。音声通話ができるSIMがほしいです。",
+     "vi": "Tôi muốn đăng ký mới. Tôi muốn SIM có thể gọi thoại được."
+    },
+    {
+     "ja": "本人確認書類は在留カードとパスポートです。",
+     "vi": "Giấy tờ xác thực của tôi là thẻ lưu trú và hộ chiếu."
+    },
+    {
+     "ja": "一番安いプランを教えてください。",
+     "vi": "Xin cho tôi biết gói rẻ nhất."
+    },
+    {
+     "ja": "オプションは不要です。",
+     "vi": "Tôi không cần dịch vụ phụ."
+    },
+    {
+     "ja": "ゆっくり説明してください。紙に書いてください。",
+     "vi": "Xin giải thích chậm giúp tôi. Xin viết ra giấy giúp tôi."
+    },
+    {
+     "ja": "毎月の支払いはいくらですか？支払日はいつですか？",
+     "vi": "Mỗi tháng phải trả bao nhiêu? Ngày thanh toán là khi nào?"
+    }
+   ],
+   "links": [
+    {
+     "label": "Bộ Tổng vụ Nhật Bản (Tổng vụ省) — Quy định xác thực danh tính điện thoại di động",
+     "url": "https://www.soumu.go.jp/tokushusagi/id-check/"
+    },
+    {
+     "label": "Bộ Tổng vụ Nhật Bản — Phòng chống sử dụng điện thoại vào tội phạm / Luật phòng chống sử dụng trái phép",
+     "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/050526_1.html"
+    },
+    {
+     "label": "NTT docomo — Giấy tờ xác thực khi đến cửa hàng",
+     "url": "https://www.docomo.ne.jp/support/identification/"
+    },
+    {
+     "label": "Rakuten Mobile — Giấy tờ xác thực danh tính",
+     "url": "https://network.mobile.rakuten.co.jp/guide/verify/"
+    }
+   ],
+   "affiliate": "sim",
+   "forms": [
+    {
+     "name_jp": "楽天モバイル オンラインお申し込み（新規契約・MNP）",
+     "name_vi": "Không có tờ khai giấy — đăng ký SIM online trên trang chính thức của Rakuten Mobile",
+     "download_url": "https://network.mobile.rakuten.co.jp/guide/procedure/online-application/",
+     "source": "楽天モバイル (Rakuten Mobile) — trang hướng dẫn đăng ký online chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "プラン選択 (chọn gói cước)",
+       "how": "Rakuten Mobile hiện chỉ có 1 gói là Rakuten最強プラン, cước tự thay đổi theo lượng data dùng trong tháng. Cứ chọn gói này rồi bấm tiếp tục.",
+       "example": "Rakuten最強プラン",
+       "mistake": "Đừng nhầm sang gói data-only （データタイプ) nếu bạn cần số điện thoại để gọi và nhận SMS ngân hàng."
+      },
+      {
+       "field": "SIMタイプ選択 (chọn loại SIM: eSIM hoặc SIMカード)",
+       "how": "eSIM là SIM điện tử cài thẳng vào máy, mở dùng được ngay nếu máy hỗ trợ. SIMカード là thẻ SIM vật lý gửi về nhà sau vài ngày. Kiểm tra máy của bạn có hỗ trợ eSIM không trước khi chọn.",
+       "example": "eSIM",
+       "mistake": "Chọn eSIM cho máy không hỗ trợ eSIM thì sẽ không dùng được."
+      },
+      {
+       "field": "楽天会員ログイン (đăng nhập tài khoản Rakuten)",
+       "how": "Đăng nhập bằng ID Rakuten (email) và mật khẩu. Chưa có thì đăng ký miễn phí ngay trên trang. Họ tên và địa chỉ trong tài khoản Rakuten phải khớp với giấy tờ tùy thân.",
+       "example": "an.nguyen@example.com",
+       "mistake": "Địa chỉ trong tài khoản Rakuten khác địa chỉ trên thẻ lưu trú là hay bị trả hồ sơ xác thực."
+      },
+      {
+       "field": "契約者氏名 (họ tên người ký hợp đồng)",
+       "how": "Gõ chữ La-tinh (romaji) đúng từng chữ như trên thẻ lưu trú, đúng thứ tự họ trước tên sau.",
+       "example": "グエン・バン・アン (NGUYEN VAN AN)",
+       "mistake": "Gõ có dấu tiếng Việt hoặc đảo thứ tự họ tên khác với thẻ lưu trú sẽ bị từ chối xác thực."
+      },
+      {
+       "field": "生年月日 (ngày tháng năm sinh)",
+       "how": "Chọn năm, tháng, ngày sinh đúng như trên thẻ lưu trú.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "住所 (địa chỉ nhà ở Nhật)",
+       "how": "Nhập mã bưu điện 7 số rồi điền địa chỉ. Địa chỉ phải khớp đúng địa chỉ đã đăng ký ở mặt sau thẻ lưu trú, gồm tên tòa nhà và số phòng.",
+       "example": "〒211-0063 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Thiếu số phòng hoặc ghi khác cách viết trên thẻ lưu trú là lỗi bị trả hồ sơ nhiều nhất."
+      },
+      {
+       "field": "本人確認書類アップロード (tải lên giấy tờ xác thực danh tính)",
+       "how": "Người nước ngoài dùng thẻ lưu trú （在留カード). Chọn cách スマホでかんたん本人確認 thì áp điện thoại vào thẻ để đọc chip IC qua app Rakuten Link, hoặc chụp ảnh 2 mặt thẻ tải lên. Ảnh phải rõ, không lóa sáng, thấy đủ 4 góc thẻ.",
+       "example": "在留カード番号 AB12345678CD",
+       "mistake": "Ảnh mờ, bị cắt góc hoặc thẻ đã hết hạn lưu trú sẽ bị yêu cầu làm lại."
+      },
+      {
+       "field": "MNP予約番号 (mã giữ số khi chuyển mạng mà giữ nguyên số cũ)",
+       "how": "Chỉ cần khi bạn chuyển từ nhà mạng khác sang và muốn giữ số cũ. Lấy mã này từ nhà mạng cũ trước, mã phải còn hạn từ 10 ngày trở lên. Nếu nhà mạng cũ hỗ trợ MNPワンストップ thì không cần nhập mã. Đăng ký số mới hoàn toàn thì bỏ qua mục này.",
+       "example": "123456789012345 (15 chữ số)",
+       "mistake": "Lấy mã quá sớm, đến lúc đăng ký mã hết hạn thì phải xin lại từ đầu."
+      },
+      {
+       "field": "支払い方法 (phương thức thanh toán hàng tháng)",
+       "how": "Chọn thẻ tín dụng đứng tên chính bạn, hoặc trừ tiền tài khoản ngân hàng （口座振替） đứng tên chính bạn. Nhập số thẻ hoặc số tài khoản đúng như trên thẻ / sổ ngân hàng.",
+       "example": "クレジットカード （ thẻ tín dụng tên グエン・バン・アン)",
+       "mistake": "Dùng thẻ hoặc tài khoản của người khác (bạn bè, người thân) sẽ không được chấp nhận."
+      },
+      {
+       "field": "連絡先電話番号・メールアドレス (số điện thoại và email liên lạc)",
+       "how": "Điền số điện thoại liên lạc được và email bạn đang dùng. Kết quả xét duyệt và thông báo giao SIM sẽ gửi về đây.",
+       "example": "090-1234-5678 / an.nguyen@example.com"
+      }
+     ],
+     "sample_note": "Toàn bộ thông tin mẫu trong mục này là hư cấu, chỉ để tập điền thử. Rakuten Mobile không có đơn giấy cho đăng ký online; nếu ra cửa hàng Rakuten thì nhân viên sẽ nhập đúng các mục này vào máy tính bảng giúp bạn."
+    },
+    {
+     "name_jp": "povo2.0 新規契約の手続き（通話＋データ）",
+     "name_vi": "Không có tờ khai giấy — đăng ký SIM online/qua app trên trang chính thức của povo (KDDI/au)",
+     "download_url": "https://povo.jp/procedure/new/",
+     "source": "povo (KDDI) — trang thủ tục đăng ký mới chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "メールアドレス登録 (đăng ký email)",
+       "how": "Nhập email đang dùng được. povo gửi mã xác thực (ワンタイムパスワード) về email này để bắt đầu đăng ký. Không dùng được email của nhà mạng Nhật (đuôi @docomo.ne.jp, @au.com...).",
+       "example": "an.nguyen@example.com",
+       "mistake": "Nhớ mở sẵn hộp thư và cho phép nhận mail từ @povo.jp, nếu không sẽ không thấy mã xác thực."
+      },
+      {
+       "field": "契約タイプ選択 (chọn loại hợp đồng)",
+       "how": "Chọn 通話＋データ nếu bạn cần số điện thoại để gọi và nhận SMS. Loại データ専用 không có số gọi và không cần giấy tờ tùy thân, nhưng không nhận được mã xác thực ngân hàng.",
+       "example": "通話＋データ",
+       "mistake": "Chọn nhầm データ専用 là sau này không mở được nhiều dịch vụ cần số điện thoại."
+      },
+      {
+       "field": "SIMタイプ選択 (chọn loại SIM: SIMカード hoặc eSIM)",
+       "how": "SIMカード gửi về nhà qua bưu điện. eSIM cài ngay vào máy nếu máy hỗ trợ. Máy phải là máy SIMフリー hoặc đã mở khóa mạng （SIMロック解除）.",
+       "example": "eSIM"
+      },
+      {
+       "field": "お客さま情報・氏名 (thông tin khách hàng: họ tên)",
+       "how": "Nhập họ tên chữ La-tinh hoặc katakana đúng như trên giấy tờ tùy thân bạn sẽ dùng để xác thực eKYC.",
+       "example": "グエン・バン・アン",
+       "mistake": "Tên nhập khác tên trên thẻ lưu trú dù chỉ 1 chữ cũng khiến eKYC không khớp."
+      },
+      {
+       "field": "生年月日・住所 (ngày sinh và địa chỉ)",
+       "how": "Ngày sinh và địa chỉ nhà ở Nhật, ghi đúng như trên thẻ lưu trú, gồm tên tòa nhà và số phòng.",
+       "example": "1998年5月12日 / 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "本人確認 eKYC (xác thực danh tính điện tử bằng thẻ lưu trú)",
+       "how": "Trên app povo2.0, chọn 在留カード làm giấy tờ xác thực. Làm theo hướng dẫn: áp điện thoại vào thẻ để đọc chip IC và chụp ảnh khuôn mặt. Đăng ký sau 21 giờ thì kết quả xác thực có thể sang sáng hôm sau.",
+       "example": "在留カード番号 AB12345678CD",
+       "mistake": "Điện thoại không có chức năng đọc NFC/chip IC thì không làm eKYC được, phải đổi máy khác để đăng ký."
+      },
+      {
+       "field": "クレジットカード情報 (thông tin thẻ tín dụng)",
+       "how": "povo chỉ nhận thanh toán bằng thẻ tín dụng đứng tên chính bạn. Chưa có thẻ tín dụng thì chọn あと払い（ペイディ) — dịch vụ trả sau Paidy mà trang povo giới thiệu. Nhập số thẻ, hạn thẻ và mã bảo mật 3 số sau thẻ.",
+       "example": "クレジットカード （ tên chủ thẻ グエン・バン・アン)",
+       "mistake": "povo không nhận trừ tiền tài khoản ngân hàng, đừng mất công tìm mục 口座振替."
+      },
+      {
+       "field": "MNP予約番号 (mã giữ số khi chuyển từ nhà mạng khác)",
+       "how": "Chỉ cần khi giữ nguyên số cũ chuyển sang povo. povo hỗ trợ MNPワンストップ: ngay trong lúc đăng ký bạn chọn nhà mạng cũ và lấy mã luôn, không phải lấy trước. Lưu ý trang povo cảnh báo: nếu bạn đã lỡ lấy MNP予約番号 trước cho diện đăng ký mới thì phải hủy mã đó mới đăng ký tiếp được.",
+       "example": "Lấy ngay trong màn hình đăng ký (MNPワンストップ)",
+       "mistake": "Đang dùng au, UQ mobile hoặc povo1.0 thì không đăng ký ở trang này, phải đi từ trang chuyển đổi riêng."
+      },
+      {
+       "field": "データトッピング選択 (chọn gói data mua thêm)",
+       "how": "povo không có cước tháng cố định: cước gốc 0 yên, bạn mua từng gói data gọi là トッピング (ví dụ 3GB dùng 30 ngày). Chọn 1 gói đầu tiên để bắt đầu dùng, sau này mua thêm trong app khi cần.",
+       "example": "データ追加3GB（30日間）",
+       "mistake": "Quá 180 ngày không mua gói trả phí nào thì có thể bị dừng hoặc hủy hợp đồng."
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. povo là gói online hoàn toàn của KDDI (mạng au), không có cửa hàng và không có đơn giấy: mọi bước làm trên app povo2.0 hoặc web, xác thực bằng cách đọc chip IC của thẻ lưu trú."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "楽天モバイル研究所@もえ",
+     "lang": "ja",
+     "note": "Hướng dẫn từng bước đăng ký Rakuten Mobile: giấy tờ cần chuẩn bị, xác thực danh tính và kích hoạt SIM.",
+     "title": "楽天モバイルの申込手順を世界一わかりやすく解説🔰！乗り換え 申し込み",
+     "url": "https://www.youtube.com/watch?v=J8V2vDOuNfE"
+    }
+   ]
+  },
+  {
+   "id": "mua-dien-thoai-tra-gop",
+   "group": "Điện thoại & nhà ở",
+   "title": "Mua điện thoại trả góp / đăng ký nhà mạng lớn （スマートフォンの分割払い・キャリア契約）",
+   "icon": "📲",
+   "summary": "Mua điện thoại trả góp ở Nhật là một hợp đồng tín dụng: nhà mạng trả tiền máy trước, bạn trả dần mỗi tháng và phải qua xét duyệt. Người nước ngoài hay bị từ chối trả góp dài hạn khi thời gian còn lại trên thẻ lưu trú ngắn hơn thời gian trả góp — bài này chỉ rõ cách chuẩn bị, cách nói và phương án thay thế nếu không được duyệt.",
+   "who": "Người muốn mua điện thoại mới kèm hợp đồng tại docomo, au, SoftBank, Rakuten Mobile hoặc mua tại Apple Store / cửa hàng điện máy, nhất là người mới sang, thẻ lưu trú còn ngắn hạn.",
+   "docs": [
+    "Thẻ lưu trú （在留カード） còn hạn — đặc biệt quan trọng: thời gian lưu trú còn lại càng dài càng dễ được duyệt trả góp dài",
+    "Hộ chiếu do nước ngoài cấp （外国発行のパスポート） — nhà mạng lớn thường yêu cầu người nước ngoài xuất trình thêm hộ chiếu cùng thẻ lưu trú (người có tư cách vĩnh trú có thể được miễn ở một số nơi, tùy nhà mạng)",
+    "Thẻ My Number hoặc bằng lái xe Nhật nếu có — giấy tờ bổ sung khi nhà mạng yêu cầu",
+    "Thẻ tín dụng đứng tên chính bạn hoặc tài khoản ngân hàng Nhật đứng tên chính bạn để đăng ký trừ tiền hàng tháng",
+    "Con dấu cá nhân （印鑑, inkan) nếu có — một số cửa hàng vẫn yêu cầu, đa số nay ký tên là được, nên mang theo nếu đã làm",
+    "Số điện thoại và email liên lạc được, địa chỉ nhà đã đăng ký khớp trên thẻ lưu trú",
+    "Nếu đang dùng nhà mạng khác và muốn giữ nguyên số cũ khi chuyển mạng: mã đặt giữ số MNP （MNP予約番号) lấy từ nhà mạng cũ — mã này có hạn sử dụng, chỉ lấy khi sắp chuyển"
+   ],
+   "prep_home": [
+    "Ở nhà trước: tính ngày hết hạn thẻ lưu trú của bạn còn bao nhiêu tháng tính từ hôm nay — viết ra giấy con số đó, vì đây là con số quyết định bạn có được trả góp 24 / 36 tháng hay không",
+    "Chụp ảnh 2 mặt thẻ lưu trú và mặt thông tin hộ chiếu, lưu trong điện thoại; đồng thời kiểm tra hộ chiếu còn hạn không",
+    "Kiểm tra lịch sử trả tiền của mình: bạn có đang nợ cước điện thoại, nợ thẻ tín dụng, hoặc trả trễ khoản nào ở Nhật không — nếu có nợ chưa trả thì trả góp gần như chắc chắn bị từ chối, nên xử lý nợ cũ trước",
+    "Chuẩn bị ngân sách ở nhà: ghi ra số tiền bạn trả được mỗi tháng (tiền máy trả góp + cước SIM cộng lại), và số tiền bạn có thể trả luôn 1 lần nếu bị yêu cầu trả thẳng — để ra cửa hàng không quyết định vội quá khả năng",
+    "Chọn trước model máy, màu, dung lượng ở nhà trên trang chính thức và chụp màn hình giá / chương trình đang có — ra cửa hàng chỉ việc chỉ vào ảnh, đỡ phải giải thích dài bằng tiếng Nhật",
+    "Nếu muốn giữ số cũ: ở nhà đăng nhập app nhà mạng cũ tìm mục MNP, đọc kỹ hạn của mã giữ số và phí (nếu có) trước khi lấy mã — lấy sớm quá mã hết hạn phải lấy lại",
+    "Đặt lịch đến cửa hàng （来店予約） trên web vào khung giờ vắng (thường là sáng ngày thường) để có nhiều thời gian hỏi và dịch khi cần"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Tự kiểm tra điều kiện trả góp của mình ở nhà",
+     "d": "Làm ở nhà. MẤT KHOẢNG 10 phút. Trả góp điện thoại tiếng Nhật gọi là 分割払い (bunkatsu-barai — trả chia nhiều lần) hoặc 割賦 (kappu). Đây là hợp đồng tín dụng nên nhà mạng sẽ xét duyệt （審査, shinsa — kiểm tra khả năng trả nợ) qua thông tin tín dụng. Nguyên tắc chung đã được các nhà mạng lớn áp dụng: nếu thời gian lưu trú còn lại trên thẻ lưu trú NGẮN HƠN thời gian trả góp thì có thể bị từ chối trả góp đó, phải rút ngắn số lần trả hoặc trả thẳng 1 lần. Ví dụ còn lưu trú khoảng 8 tháng thì khó được duyệt trả góp 24 tháng. NHẬN ĐƯỢC: bạn biết mình nên xin trả góp mấy tháng hoặc nên chuẩn bị trả thẳng. KIỂM TRA: đừng xin trả góp dài hơn hạn lưu trú còn lại.",
+     "ja": "在留期間が短い場合、分割払いはできますか？",
+     "vi": "Nếu thời gian lưu trú của tôi ngắn thì có trả góp được không?"
+    },
+    {
+     "t": "Bước 2: Chọn nơi mua — nhà mạng, Apple Store hay cửa hàng điện máy",
+     "d": "Làm ở nhà / đi xem trước. MẤT KHOẢNG 20 phút. Mua kèm hợp đồng tại nhà mạng lớn: được tư vấn gói + máy cùng lúc, có chương trình đổi máy / giảm giá theo điều kiện. Mua tại Apple Store hoặc cửa hàng điện máy: mua máy riêng, SIM đăng ký riêng — linh hoạt hơn nếu trả góp tại nhà mạng không được duyệt. So sánh tổng số tiền phải trả toàn bộ thời gian (không chỉ tiền mỗi tháng). NHẬN ĐƯỢC: nơi mua chính. KIỂM TRA: chương trình giảm giá nào cũng có điều kiện (giữ gói bao lâu, trả máy cũ thế nào) — chụp lại điều kiện hoặc nhờ nhân viên viết ra giấy.",
+     "ja": "総額はいくらになりますか？紙に書いてください。",
+     "vi": "Tổng cộng tất cả là bao nhiêu tiền? Xin viết ra giấy giúp tôi."
+    },
+    {
+     "t": "Bước 3: Đến cửa hàng, nói rõ nhu cầu và xuất trình giấy tờ",
+     "d": "ĐI ĐÂU: cửa hàng của nhà mạng / Apple Store / cửa hàng điện máy đã đặt lịch. MANG GÌ: toàn bộ giấy tờ ở mục docs, bản gốc. NÓI GÌ: dùng câu mẫu dưới đây, chỉ vào ảnh model máy đã chụp sẵn. Nhân viên sẽ xác thực danh tính bằng thẻ lưu trú (đọc chip IC) và kiểm tra hộ chiếu. MẤT BAO LÂU: khoảng 20-30 phút cho phần tiếp nhận. NHẬN ĐƯỢC: hồ sơ đăng ký máy + gói cước. KIỂM TRA: họ tên, địa chỉ, ngày sinh trên hồ sơ khớp giấy tờ; model máy, màu, dung lượng đúng ý bạn.",
+     "ja": "この機種を分割払いで購入したいです。新規契約もお願いします。",
+     "vi": "Tôi muốn mua model máy này bằng trả góp. Tôi cũng muốn đăng ký mới."
+    },
+    {
+     "t": "Bước 4: Chờ xét duyệt trả góp (審査) và nghe kết quả",
+     "d": "Làm tại quầy chờ. MẤT BAO LÂU: thường khoảng 15-60 phút, có trường hợp lâu hơn hoặc phải chờ trả lời sau. Nhà mạng kiểm tra thông tin tín dụng của bạn (lịch sử trả nợ ở Nhật) và đối chiếu hạn lưu trú với số lần trả góp. Có 3 kết quả thường gặp: được duyệt như xin; được duyệt nhưng phải rút ngắn số lần trả / tăng tiền trả lần đầu; không được duyệt trả góp — chỉ mua được khi trả thẳng. Nhân viên thường KHÔNG giải thích được lý do chi tiết nếu bị từ chối. NHẬN ĐƯỢC: kết quả duyệt. KIỂM TRA: nếu điều kiện thay đổi (ví dụ phải trả trước nhiều hơn), yêu cầu viết lại tổng tiền mới ra giấy trước khi đồng ý.",
+     "ja": "審査結果を教えてください。分割は何回まで可能ですか？",
+     "vi": "Xin cho tôi biết kết quả xét duyệt. Trả góp tối đa được bao nhiêu lần?"
+    },
+    {
+     "t": "Bước 5: Chọn gói cước, dịch vụ phụ và chương trình đổi máy",
+     "d": "ĐI ĐÂU: tại quầy tư vấn gói. MANG GÌ: nhu cầu data đã ghi sẵn ở nhà. Giải thích ngắn: chương trình kiểu 'trả máy sau khoảng 2 năm thì được xóa phần tiền máy còn lại' chỉ có lợi nếu bạn chắc chắn ở Nhật và giữ hợp đồng đến lúc đó, và máy trả lại phải còn tốt, không vỡ. Dịch vụ phụ （オプション) như bảo hành, chống vỡ, xem phim có thể được cộng mặc định tháng đầu miễn phí rồi tự thu phí — hỏi rõ tháng nào bắt đầu mất tiền và cách hủy. MẤT BAO LÂU: khoảng 20 phút. NHẬN ĐƯỢC: bảng tóm tắt chi phí. KIỂM TRA TRƯỚC KHI KÝ: tiền máy mỗi tháng + cước mỗi tháng + dịch vụ phụ = tổng mỗi tháng là bao nhiêu, trong bao nhiêu tháng.",
+     "ja": "オプションは全部外してください。毎月の総額を書いてください。",
+     "vi": "Xin bỏ hết dịch vụ phụ cho tôi. Xin viết tổng tiền mỗi tháng ra giấy."
+    },
+    {
+     "t": "Bước 6: Ký 2 hợp đồng — hợp đồng通信 và hợp đồng trả góp máy",
+     "d": "ĐI ĐÂU: quầy ký hợp đồng. Bạn sẽ ký / đồng ý 2 phần riêng: 1) hợp đồng dịch vụ điện thoại (SIM, gói cước), 2) hợp đồng mua máy trả góp — đây là nợ riêng, dù bạn hủy SIM sau này thì tiền máy còn lại vẫn phải trả tiếp đến hết. Nhân viên sẽ giải thích các điểm quan trọng （重要事項説明, jūyō jikō setsumei — giải thích điều khoản quan trọng) — nghe kỹ phần phí hủy và phần tiền máy còn lại khi hủy. MẤT BAO LÂU: khoảng 20-30 phút. NHẬN ĐƯỢC: bản sao hợp đồng, giấy ghi lịch trả góp. KIỂM TRA TRƯỚC KHI RỜI ĐI: số tiền trả mỗi tháng, số lần trả, ngày bắt đầu trừ tiền đã ghi rõ chưa.",
+     "ja": "解約した場合、機種代金の残りはどうなりますか？",
+     "vi": "Nếu tôi hủy hợp đồng thì phần tiền máy còn lại sẽ thế nào?"
+    },
+    {
+     "t": "Bước 7: Nhận máy, chuyển dữ liệu và kích hoạt SIM tại chỗ",
+     "d": "ĐI ĐÂU: quầy bàn giao máy trong cửa hàng. MANG GÌ: điện thoại cũ, mật khẩu tài khoản Apple / Google của bạn để chuyển dữ liệu (tự nhập, không đọc mật khẩu cho nhân viên). Nhân viên lắp SIM / cài eSIM, kích hoạt số. MẤT BAO LÂU: khoảng 20-40 phút tùy lượng dữ liệu chuyển. NHẬN ĐƯỢC: máy mới dùng được ngay, máy cũ của bạn. KIỂM TRA TRƯỚC KHI RỜI CỬA HÀNG: gọi thử, vào mạng khi tắt Wi-Fi, đăng nhập được tài khoản chính, ảnh / danh bạ đã chuyển đủ chưa — có vấn đề phải nói ngay tại chỗ.",
+     "ja": "データ移行と動作確認をこの場でお願いします。",
+     "vi": "Xin chuyển dữ liệu và kiểm tra máy hoạt động ngay tại đây giúp tôi."
+    },
+    {
+     "t": "Bước 8: Về nhà kiểm tra lại lịch trả và giữ giấy tờ",
+     "d": "Làm ở nhà trong 1-2 ngày đầu. Đăng nhập app nhà mạng, kiểm tra: tổng tiền máy, đã trả mấy lần, còn mấy lần, ngày trừ tiền. Chụp ảnh hợp đồng và lịch trả góp lưu vào điện thoại + email. MẤT BAO LÂU: khoảng 10 phút. NHẬN ĐƯỢC: bạn nắm chắc lịch nợ của mình. KIỂM TRA: nếu tháng đầu bị cộng dịch vụ phụ lạ, ra cửa hàng / gọi tổng đài hủy ngay. Nhớ: gia hạn thẻ lưu trú xong nên báo / cập nhật giấy tờ mới cho nhà mạng nếu được yêu cầu, tránh bị dừng dịch vụ vì giấy tờ hết hạn.",
+     "ja": "残りの支払い回数と金額を確認したいです。",
+     "vi": "Tôi muốn kiểm tra số lần và số tiền thanh toán còn lại."
+    }
+   ],
+   "cost": "Tổng chi phí = giá máy (trả thẳng hoặc chia theo số lần trả góp, thường không mất lãi / phí trả góp ở nhà mạng lớn nhưng phải đọc kỹ hợp đồng của mình) + cước SIM hàng tháng + phí đăng ký ban đầu tùy nơi. Giá máy và chương trình giảm giá thay đổi theo model và thời điểm — chỉ tin bảng giá chính thức tại cửa hàng lúc mua, không tin giá rao miệng. Nếu bị yêu cầu trả thẳng, tổng tiền máy phải trả ngay 1 lần.",
+   "duration": "Tại cửa hàng: khoảng 2-3 tiếng gồm chờ xét duyệt và chuyển dữ liệu. Nếu xét duyệt cần kiểm tra thêm, có thể phải đến lần 2 hoặc nhận máy sau vài ngày tùy cửa hàng.",
+   "warnings": [
+    "Hủy SIM không làm hết nợ tiền máy: hợp đồng trả góp máy là nợ riêng, hủy đường truyền vẫn phải trả tiếp tiền máy còn lại đến hết, hoặc trả 1 lần toàn bộ phần còn lại.",
+    "Trả trễ tiền máy / cước sẽ bị ghi vào thông tin tín dụng ở Nhật trong nhiều năm, ảnh hưởng thuê nhà, làm thẻ tín dụng và mua trả góp lần sau — đây là thiệt hại lâu dài nhất, nặng hơn tiền phạt trễ.",
+    "Đừng đăng ký nhiều nơi cùng lúc khi vừa bị từ chối: mỗi lần xét duyệt đều để lại dấu vết đăng ký trong thời gian ngắn, đăng ký dồn dập càng dễ bị nghi ngờ. Nghỉ một thời gian, xử lý nguyên nhân rồi hãy thử lại.",
+    "Cẩn thận chương trình 'mỗi tháng chỉ từ...' trên quảng cáo: đó thường là tiền sau khi đã trừ điểm / trừ giá máy cũ / với điều kiện trả máy sau này. Luôn hỏi TỔNG số tiền bạn thật sự phải trả.",
+    "Nếu trục trặc — bị từ chối trả góp: đừng buồn và đừng nhờ người khác đứng tên mua hộ (đó là hành vi nguy hiểm, nợ và máy không thuộc về bạn, dễ tranh chấp và vi phạm điều khoản). Kênh thay thế hợp lệ: mua máy trả thẳng bằng tiền tiết kiệm, mua máy tầm trung / máy cũ còn tốt tại cửa hàng uy tín, hoặc chờ gia hạn thẻ lưu trú xong (hạn dài hơn) rồi đăng ký lại.",
+    "Nếu trục trặc — thiếu giấy tờ (thiếu hộ chiếu, thẻ lưu trú sắp hết hạn): hỏi nhân viên ghi tên giấy thiếu ra giấy, về bổ sung rồi quay lại đúng cửa hàng đó; nếu thẻ sắp hết hạn, nên gia hạn lưu trú trước rồi mới mua trả góp dài hạn.",
+    "Nếu trục trặc — không hiểu tiếng Nhật khi ký: hợp đồng trả góp là hợp đồng vay nợ, không ký khi chưa hiểu tổng tiền và điều kiện hủy. Hãy xin bản tóm tắt viết ra giấy, chụp lại dịch ở nhà, mang theo người biết tiếng Nhật, hoặc hẹn quay lại hôm khác — cửa hàng không có quyền ép bạn ký ngay.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận đủ: máy mới, hộp / phụ kiện, bản sao hợp đồng dịch vụ, giấy lịch trả góp ghi rõ số lần và tiền mỗi lần, hóa đơn mua máy — cất tất cả vào 1 túi hồ sơ",
+    "Đã kiểm tra tại chỗ: máy gọi được, vào mạng được, không trầy xước / lỗi màn hình — lỗi phát hiện sau khi rời cửa hàng sẽ khó đổi hơn",
+    "Đã lưu trong app: còn phải trả bao nhiêu lần, tổng còn nợ bao nhiêu, ngày trừ tiền hàng tháng",
+    "Đã hủy các dịch vụ phụ không cần mà cửa hàng cộng vào tháng đầu (nếu có) và chụp màn hình xác nhận đã hủy",
+    "Hạn chót tiếp theo: ngày trừ tiền đầu tiên và ngày hết hạn thẻ lưu trú của bạn — nếu hạn lưu trú đến trước khi trả xong góp, lên kế hoạch gia hạn sớm hoặc trả trước phần còn lại"
+   ],
+   "vocab": [
+    {
+     "ja": "分割払い",
+     "reading": "ぶんかつばらい",
+     "vi": "trả góp (trả chia nhiều lần)"
+    },
+    {
+     "ja": "割賦",
+     "reading": "かっぷ",
+     "vi": "mua trả góp (từ正式 trong hợp đồng)"
+    },
+    {
+     "ja": "審査",
+     "reading": "しんさ",
+     "vi": "xét duyệt (kiểm tra khả năng trả nợ)"
+    },
+    {
+     "ja": "機種代金",
+     "reading": "きしゅだいきん",
+     "vi": "tiền máy điện thoại"
+    },
+    {
+     "ja": "一括払い",
+     "reading": "いっかつばらい",
+     "vi": "trả thẳng 1 lần"
+    },
+    {
+     "ja": "大手キャリア",
+     "reading": "おおてきゃりあ",
+     "vi": "nhà mạng lớn"
+    },
+    {
+     "ja": "重要事項説明",
+     "reading": "じゅうようじこうせつめい",
+     "vi": "giải thích điều khoản quan trọng trước khi ký"
+    },
+    {
+     "ja": "解約",
+     "reading": "かいやく",
+     "vi": "hủy hợp đồng"
+    },
+    {
+     "ja": "残額",
+     "reading": "ざんがく",
+     "vi": "số tiền còn lại chưa trả"
+    },
+    {
+     "ja": "在留期間",
+     "reading": "ざいりゅうきかん",
+     "vi": "thời gian lưu trú (trên thẻ lưu trú)"
+    },
+    {
+     "ja": "来店予約",
+     "reading": "らいてんよやく",
+     "vi": "đặt lịch đến cửa hàng"
+    },
+    {
+     "ja": "データ移行",
+     "reading": "でーたいこう",
+     "vi": "chuyển dữ liệu sang máy mới"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "この機種を分割払いで購入したいです。",
+     "vi": "Tôi muốn mua model máy này bằng trả góp."
+    },
+    {
+     "ja": "在留カードとパスポートを持っています。",
+     "vi": "Tôi có mang thẻ lưu trú và hộ chiếu."
+    },
+    {
+     "ja": "分割は何回まで可能ですか？総額を紙に書いてください。",
+     "vi": "Trả góp tối đa được bao nhiêu lần? Xin viết tổng số tiền ra giấy."
+    },
+    {
+     "ja": "毎月の支払いは機種代金と通信料を合わせて、いくらですか？",
+     "vi": "Mỗi tháng, tiền máy cộng cước điện thoại là bao nhiêu tất cả?"
+    },
+    {
+     "ja": "今日は契約しません。家で考えてから来ます。",
+     "vi": "Hôm nay tôi chưa ký. Tôi về nhà suy nghĩ rồi sẽ quay lại."
+    },
+    {
+     "ja": "ゆっくり説明してください。通訳のアプリを使ってもいいですか？",
+     "vi": "Xin giải thích chậm giúp tôi. Tôi dùng app phiên dịch được không?"
+    }
+   ],
+   "links": [
+    {
+     "label": "NTT docomo — Giấy tờ xác thực khi đến cửa hàng",
+     "url": "https://www.docomo.ne.jp/support/identification/"
+    },
+    {
+     "label": "Bộ Tổng vụ Nhật Bản — Quy định xác thực danh tính điện thoại di động",
+     "url": "https://www.soumu.go.jp/tokushusagi/id-check/"
+    },
+    {
+     "label": "Rakuten Mobile — Giấy tờ xác thực danh tính",
+     "url": "https://network.mobile.rakuten.co.jp/guide/verify/"
+    }
+   ],
+   "affiliate": "sim",
+   "forms": [
+    {
+     "name_jp": "ドコモの分割払い（個別信用購入あっせん契約／割賦販売契約）お申込み",
+     "name_vi": "Không có mẫu đơn tải về — trang chính thức của docomo giải thích mua máy trả góp （分割払い）; đơn giấy tại cửa hàng có đúng các mục dưới đây",
+     "download_url": "https://www.docomo.ne.jp/support/payment_installment/",
+     "source": "NTTドコモ (NTT docomo) — trang hỗ trợ chính thức về mua máy trả góp",
+     "format": "web",
+     "fill": [
+      {
+       "field": "契約者氏名 (họ tên người ký hợp đồng)",
+       "how": "Họ tên người đứng tên hợp đồng, gõ đúng như trên thẻ lưu trú. Trả góp cá nhân bắt buộc phải do chính người ký hợp đồng đăng ký, không nhờ người khác đăng ký hộ được.",
+       "example": "グエン・バン・アン (NGUYEN VAN AN)"
+      },
+      {
+       "field": "本人確認書類 (giấy tờ xác thực danh tính)",
+       "how": "Theo trang chính thức của docomo, người nước ngoài phải xuất trình CẢ thẻ lưu trú VÀ hộ chiếu do nước ngoài cấp. Chỉ người có tư cách vĩnh trú （永住者） mới được miễn hộ chiếu.",
+       "example": "在留カード AB12345678CD ＋ パスポート (hộ chiếu Việt Nam)",
+       "mistake": "Chỉ mang thẻ lưu trú mà quên hộ chiếu là cửa hàng không tiếp nhận hồ sơ trả góp được."
+      },
+      {
+       "field": "購入機種・容量 (model máy và dung lượng mua)",
+       "how": "Chọn model máy, màu và dung lượng bộ nhớ. Giá máy trừ đi tiền trả trước （頭金） nếu có, phần còn lại mới chia ra trả góp.",
+       "example": "iPhone (bản mẫu) 256GB",
+       "mistake": "Chỉ nhìn tiền trả mỗi tháng mà không cộng tổng cả quá trình là dễ chọn máy vượt khả năng trả."
+      },
+      {
+       "field": "支払回数 (số lần trả góp)",
+       "how": "docomo cho chọn 12, 24 hoặc 36 lần, phí trả góp 0 yên. Số lần trả phải ngắn hơn thời gian lưu trú còn lại trên thẻ của bạn.",
+       "example": "24回",
+       "mistake": "Xin trả 36 lần khi thẻ lưu trú còn hạn ngắn hơn 36 tháng là gần như chắc chắn bị từ chối."
+      },
+      {
+       "field": "頭金 (tiền trả trước ngay khi mua)",
+       "how": "Một số cửa hàng quy định trả trước một phần tiền máy. Hỏi rõ số tiền này trước khi ký, vì nó không nằm trong số tiền chia trả góp.",
+       "example": "0円 hoặc số tiền cửa hàng quy định (hỏi trước khi ký)"
+      },
+      {
+       "field": "勤務先 (nơi làm việc — mục phục vụ xét duyệt)",
+       "how": "Khi xét duyệt trả góp, cửa hàng có thể hỏi và ghi: tên công ty, địa chỉ công ty, số điện thoại công ty. Ghi đúng như trên giấy chứng nhận đang làm việc （在職証明書） nếu có.",
+       "example": "株式会社サンプル介護サービス （ công ty dịch vụ chăm sóc mẫu)",
+       "mistake": "Khai nơi làm việc không có thật hoặc số điện thoại công ty không liên lạc được sẽ bị rớt xét duyệt."
+      },
+      {
+       "field": "勤続年数 (số năm đã làm việc tại công ty hiện tại)",
+       "how": "Ghi số năm và số tháng bạn đã làm ở công ty hiện tại. Mới vào làm chưa lâu không có nghĩa là bị từ chối, nhưng phải khai đúng sự thật.",
+       "example": "1年6か月"
+      },
+      {
+       "field": "年収 (thu nhập năm — nếu được hỏi khi xét duyệt)",
+       "how": "Một số trường hợp xét duyệt sẽ hỏi thu nhập năm trước thuế. Lấy con số trên giấy khấu trừ thuế tại nguồn （源泉徴収票）, chưa có thì dùng thu nhập dự kiến ghi trong hợp đồng lao động. Khai đúng, đừng khai cao hơn thật.",
+       "example": "約320万円 （ khoảng 3,2 triệu yên/năm)",
+       "mistake": "Khai thu nhập cao hơn giấy tờ chứng minh được là rủi ro bị từ chối và mất uy tín tín dụng."
+      },
+      {
+       "field": "在留期間 (thời hạn lưu trú còn lại trên thẻ lưu trú)",
+       "how": "Trang chính thức của docomo ghi rõ: nếu thời hạn lưu trú trên thẻ ngắn hơn thời gian của hợp đồng trả góp thì có thể bị từ chối đăng ký trả góp. Tự tính số tháng còn lại trước khi đi mua.",
+       "example": "在留期間満了日： 2028年8月31日 （ còn khoảng 21 tháng tính từ 11/2026)",
+       "mistake": "Không tự kiểm tra trước, ra cửa hàng mới biết không đủ điều kiện thì mất công đi lại."
+      },
+      {
+       "field": "支払い方法 (cách trả tiền hàng tháng)",
+       "how": "Tiền trả góp mỗi tháng chỉ trả bằng trừ tài khoản ngân hàng （口座振替） hoặc thẻ tín dụng, gộp chung với cước điện thoại. Chuẩn bị thẻ rút tiền ngân hàng hoặc thẻ tín dụng đứng tên chính bạn.",
+       "example": "口座振替 （ trừ tài khoản ngân hàng tên グエン・バン・アン)",
+       "mistake": "Không nhận trả tiền mặt hàng tháng tại cửa hàng tiện lợi cho phần tiền máy trả góp."
+      },
+      {
+       "field": "住所・連絡先電話番号 (địa chỉ và số điện thoại liên lạc)",
+       "how": "Địa chỉ đúng như mặt sau thẻ lưu trú, số điện thoại và email liên lạc được. Kết quả xét duyệt và thông tin hợp đồng liên quan đến các thông tin này.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678"
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. docomo, au, SoftBank đều không đăng mẫu đơn trả góp lên web để tải: khi mua tại cửa hàng, bạn điền (hoặc nhân viên nhập giúp) tờ 個別信用購入あっせん申込書 bằng giấy/máy tính bảng với đúng các mục ở trên. Hợp đồng trả góp bị ghi vào hồ sơ thông tin tín dụng cá nhân, trả trễ sẽ bị ghi nhận và ảnh hưởng các lần vay/trả góp sau — điều này docomo cũng ghi rõ trên trang chính thức."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "再スタートちゃんねる",
+     "lang": "ja",
+     "note": "Nhân viên cửa hàng docomo giải thích cách xét duyệt trả góp điện thoại và cách tăng khả năng được duyệt.",
+     "title": "「携帯分割審査」審査可決する方法は？",
+     "url": "https://www.youtube.com/watch?v=gzm5lrwbfZQ"
+    }
+   ]
+  },
+  {
+   "id": "thue-nha",
+   "group": "Điện thoại & nhà ở",
+   "title": "Thuê nhà: quy trình, chi phí đầu vào, công ty bảo lãnh （賃貸住宅の契約）",
+   "icon": "🏠",
+   "summary": "Thuê nhà ở Nhật gồm nhiều bước: tìm nhà, đăng ký xem xét (申込み), xét duyệt, nghe giải thích điều khoản quan trọng, ký hợp đồng và trả một khoản chi phí đầu vào lớn — thường khoảng 4-6 tháng tiền nhà. Bài này giải thích từng khoản tiền như tiền đặt cọc, tiền lễ, phí môi giới, phí công ty bảo lãnh bằng tiếng Việt dễ hiểu để bạn không bị bất ngờ khi nhận bảng tính tiền.",
+   "who": "Người mới sang cần thuê nhà lần đầu, người chuyển nhà trong Nhật, du học sinh / thực tập sinh / người đi làm thuê nhà riêng thay ký túc xá công ty.",
+   "docs": [
+    "Thẻ lưu trú （在留カード） còn hạn, đã ghi địa chỉ hiện tại (nếu đã ở Nhật) — công ty bất động sản sẽ photocopy cả 2 mặt",
+    "Hộ chiếu （パスポート） — thường được yêu cầu cùng thẻ lưu trú khi đăng ký thuê",
+    "Giấy chứng nhận đang học / đang làm việc: thẻ học sinh + giấy chứng nhận nhập học, hoặc giấy chứng nhận đang làm việc （在職証明書） / hợp đồng lao động — tùy công ty yêu cầu",
+    "Giấy chứng minh thu nhập nếu có: phiếu lương gần nhất, giấy khấu trừ thuế tại nguồn （源泉徴収票） — người mới vào công ty chưa có thì dùng thư mời làm việc / thông báo lương dự kiến",
+    "Thông tin người liên lạc khẩn cấp （緊急連絡先）: họ tên, địa chỉ, số điện thoại của 1 người quen ở Nhật (bạn bè, đồng nghiệp, thầy cô) — không phải người ở Việt Nam trong đa số trường hợp",
+    "Tài khoản ngân hàng Nhật đứng tên bạn để đăng ký trừ tiền nhà hàng tháng",
+    "Con dấu cá nhân （印鑑） nếu có — nhiều hợp đồng nay ký tên cũng được, mang theo nếu đã làm để khỏi phải quay lại",
+    "Nếu cần người bảo lãnh （連帯保証人）: thông tin người bảo lãnh ở Nhật — nhưng hiện nay đa số nhà cho thuê dùng công ty bảo lãnh thay cho người bảo lãnh, xem bước 4"
+   ],
+   "prep_home": [
+    "Ở nhà trước: ghi ra giấy ngân sách tối đa của bạn — tiền nhà mỗi tháng trả được bao nhiêu, và tiền mặt / tiền trong tài khoản có sẵn cho chi phí đầu vào khoảng bao nhiêu (thường cần chuẩn bị khoảng 4-6 tháng tiền nhà)",
+    "Viết sẵn ra giấy bằng tiếng Nhật / romaji: họ tên, ngày sinh, địa chỉ hiện tại, số điện thoại Nhật, tên trường / công ty, thu nhập dự kiến mỗi tháng — khi điền đơn đăng ký thuê （入居申込書） bạn chỉ chép lại, không bị lúng túng",
+    "Chụp ảnh và photocopy sẵn ở cửa hàng tiện lợi: thẻ lưu trú 2 mặt (2-3 bản), trang thông tin hộ chiếu (2 bản), thẻ học sinh / giấy tờ công ty — mang cả bản gốc lẫn bản photocopy khi đi xem nhà và đăng ký",
+    "Xin trước thông tin người liên lạc khẩn cấp: hỏi ý người đó trước, ghi sẵn họ tên, địa chỉ, số điện thoại, quan hệ với bạn — đừng tự ghi số của ai khi chưa hỏi, công ty bảo lãnh sẽ gọi xác nhận thật",
+    "Lập danh sách điều kiện nhà cần có ở nhà: ga gần nhất đi bộ tối đa mấy phút, ngân sách, có cần bếp gas / nhà vệ sinh riêng / tầng 2 trở lên không — viết thành 3-5 dòng tiếng Nhật đơn giản hoặc tiếng Việt để đưa nhân viên xem",
+    "Tìm hiểu trước khu vực trên bản đồ: khoảng cách từ ga, siêu thị, nơi làm việc — và đặt lịch xem nhà （内見, naiken — đi xem nhà thật) trước qua web / điện thoại thay vì đến thẳng không hẹn"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Tìm nhà trên web và lọc theo điều kiện",
+     "d": "Làm ở nhà, online trên các trang tìm nhà lớn hoặc trang của công ty bất động sản địa phương. MẤT KHOẢNG 30-60 phút. Học 3 chữ hay gặp: 賃料 (chinryō — tiền nhà mỗi tháng, chưa gồm phí quản lý), 管理費/共益費 (phí quản lý / phí chung mỗi tháng), 間取り (madori — kiểu phòng, ví dụ 1K là 1 phòng + bếp nhỏ). Cộng tiền nhà + phí quản lý mới là tiền trả mỗi tháng thật. Lọc thêm: nhà có cho người nước ngoài thuê không, có cần công ty bảo lãnh không. NHẬN ĐƯỢC: danh sách 3-5 căn muốn xem. KIỂM TRA: cộng cả phí quản lý khi so giá, đừng chỉ nhìn tiền nhà.",
+     "ja": "家賃と管理費を合わせて、月いくらになりますか？",
+     "vi": "Tiền nhà cộng phí quản lý thì mỗi tháng là bao nhiêu?"
+    },
+    {
+     "t": "Bước 2: Đến công ty bất động sản và đi xem nhà thật (内見)",
+     "d": "ĐI ĐÂU: văn phòng công ty bất động sản （不動産会社, fudōsan-gaisha — công ty môi giới nhà đất), rồi nhân viên dẫn đi xem nhà. MANG GÌ: thẻ lưu trú bản gốc, danh sách điều kiện đã viết sẵn, điện thoại để chụp ảnh / quay video trong nhà (xin phép nhân viên trước khi chụp). NÓI GÌ: dùng câu mẫu dưới đây. Khi xem nhà, kiểm tra: tiếng ồn, ánh sáng, chỗ phơi đồ, sóng điện thoại, tình trạng bếp / nhà tắm, thùng rác chung ở đâu. MẤT BAO LÂU: mỗi căn khoảng 15-30 phút, 1 buổi thường xem 2-3 căn. NHẬN ĐƯỢC: cảm nhận thật về căn nhà. KIỂM TRA TRƯỚC KHI VỀ: hỏi rõ căn này còn trống đến khi nào, có bao nhiêu người khác đang đăng ký.",
+     "ja": "内見をお願いします。写真を撮ってもいいですか？",
+     "vi": "Cho tôi đi xem nhà thật. Tôi chụp ảnh được không?"
+    },
+    {
+     "t": "Bước 3: Nộp đơn đăng ký thuê (入居申込書) và giấy tờ",
+     "d": "ĐI ĐÂU: tại văn phòng bất động sản hoặc online theo hướng dẫn của công ty. MANG GÌ: toàn bộ giấy tờ ở mục docs + bản photocopy đã chuẩn bị. Bạn điền đơn đăng ký thuê: họ tên, công việc / trường học, thu nhập, người liên lạc khẩn cấp, ngày muốn vào ở. Lưu ý: nộp đơn chưa phải là hợp đồng — đây mới là bước xin được xét duyệt, và một số nơi thu phí / đặt cọc giữ chỗ ở giai đoạn sau, phải hỏi rõ tiền gì hoàn lại được nếu không thuê nữa. MẤT BAO LÂU: điền đơn khoảng 20-30 phút. NHẬN ĐƯỢC: bản photocopy đơn đã nộp. KIỂM TRA: số điện thoại của bạn và người liên lạc khẩn cấp ghi đúng chưa — công ty sẽ gọi vào các số này.",
+     "ja": "入居申込書を提出します。必要な書類を教えてください。",
+     "vi": "Tôi nộp đơn đăng ký thuê. Xin cho tôi biết giấy tờ cần thiết."
+    },
+    {
+     "t": "Bước 4: Xét duyệt thuê và xét duyệt công ty bảo lãnh",
+     "d": "Làm chờ tại nhà. MẤT BAO LÂU: thường khoảng vài ngày đến khoảng 1 tuần, tùy nơi. Có 2 vòng xét duyệt: chủ nhà / công ty quản lý xét bạn có phù hợp không, và công ty bảo lãnh （保証会社, hoshō-gaisha — công ty đứng ra bảo lãnh tiền nhà: nếu bạn không trả, họ trả thay cho chủ nhà rồi đòi lại bạn) xét khả năng trả tiền nhà của bạn. Công ty bảo lãnh thường gọi điện cho bạn và người liên lạc khẩn cấp để xác nhận — dặn trước người liên lạc để họ nghe máy số lạ. Phí công ty bảo lãnh tháng đầu thường khoảng 50-100% tiền nhà (gồm phí quản lý) và có phí gia hạn hàng năm / theo kỳ, tùy công ty. NHẬN ĐƯỢC: kết quả được duyệt hay không. KIỂM TRA: nghe điện thoại trong những ngày này, để máy đổ chuông được.",
+     "ja": "保証会社への加入が必要ですか？初回保証料はいくらですか？",
+     "vi": "Có bắt buộc tham gia công ty bảo lãnh không? Phí bảo lãnh lần đầu là bao nhiêu?"
+    },
+    {
+     "t": "Bước 5: Nhận bảng chi phí đầu vào và kiểm tra từng khoản",
+     "d": "ĐI ĐÂU: tại văn phòng hoặc nhận file / giấy qua email. MANG GÌ: máy tính / điện thoại để tự cộng lại. Các khoản thường gặp — học thuộc để không bị rối: 敷金 (shikikin — tiền đặt cọc, thường khoảng 0-2 tháng tiền nhà, khi trả nhà sẽ trừ tiền sửa chữa / dọn dẹp rồi hoàn phần còn lại); 礼金 (reikin — tiền lễ cảm ơn chủ nhà, thường khoảng 0-1 tháng, KHÔNG được hoàn lại); 仲介手数料 (chūkai tesūryō — phí môi giới cho công ty bất động sản, thường khoảng 0,5-1 tháng tiền nhà + thuế, luật quy định mức tối đa); 前家賃 (mae-yachin — tiền nhà trả trước của tháng vào ở, tính theo ngày nếu vào giữa tháng); phí bảo lãnh lần đầu khoảng 50-100% tiền nhà tháng đầu; phí bảo hiểm cháy nổ （火災保険） thường tính theo 2 năm; phí thay khóa, phí dọn vệ sinh tùy nhà. Tổng chi phí đầu vào thường khoảng 4-6 tháng tiền nhà. MẤT BAO LÂU: kiểm tra kỹ khoảng 30 phút, đừng vội chuyển tiền ngay. NHẬN ĐƯỢC: bảng tính tiền chính thức. KIỂM TRA: khoản nào không hiểu thì hỏi ngay, khoản 'dịch vụ hỗ trợ / khử trùng' có bắt buộc không — nhiều khoản tùy chọn có thể bỏ.",
+     "ja": "初期費用の内訳を説明してください。これは必須ですか？",
+     "vi": "Xin giải thích chi tiết chi phí đầu vào. Khoản này có bắt buộc không?"
+    },
+    {
+     "t": "Bước 6: Nghe giải thích điều khoản quan trọng và ký hợp đồng",
+     "d": "ĐI ĐÂU: văn phòng công ty bất động sản, buổi ký hợp đồng. MANG GÌ: thẻ lưu trú, con dấu nếu có, giấy tờ được yêu cầu thêm. Trước khi ký, nhân viên có giấy phép phải giải thích 重要事項説明 (giải thích điều khoản quan trọng): tiền nhà, thời hạn hợp đồng (thường 2 năm), phí gia hạn khi hết hạn （更新料） nếu có, điều kiện cấm (không nuôi thú, không ở thêm người, không hút thuốc...), cách trả nhà và khôi phục nguyên trạng （原状回復, genjō kaifuku — khi trả nhà phải đưa phòng về gần như lúc mới vào, phần hao mòn do ai chịu sẽ theo luật và hướng dẫn của Bộ Đất đai). Nghe không hiểu chỗ nào thì dừng lại hỏi chỗ đó. MẤT BAO LÂU: khoảng 1-2 tiếng. NHẬN ĐƯỢC: hợp đồng thuê nhà （賃貸借契約書） — đây là giấy tờ rất quan trọng. KIỂM TRA TRƯỚC KHI KÝ: họ tên, địa chỉ nhà, tiền nhà, ngày bắt đầu ở phải đúng; điều cấm nào bạn dễ vi phạm không.",
+     "ja": "契約の期間と更新料を教えてください。原状回復のルールも説明してください。",
+     "vi": "Xin cho tôi biết thời hạn hợp đồng và phí gia hạn. Xin giải thích cả quy định khôi phục nguyên trạng khi trả nhà."
+    },
+    {
+     "t": "Bước 7: Trả chi phí đầu vào đúng hạn và đúng cách",
+     "d": "Làm qua chuyển khoản ngân hàng hoặc theo cách công ty chỉ định, trước ngày hẹn ghi trong giấy hướng dẫn (thường trước ngày nhận chìa khóa). MANG GÌ: giấy hướng dẫn thanh toán có số tài khoản đích, số tiền chính xác, tên người chuyển phải ghi thế nào. Tuyệt đối chỉ chuyển vào tài khoản công ty ghi trên giấy tờ chính thức, không chuyển vào tài khoản cá nhân do ai đó nhắn qua mạng xã hội. MẤT BAO LÂU: chuyển khoản khoảng 10 phút. NHẬN ĐƯỢC: biên lai / xác nhận đã nhận tiền. KIỂM TRA: lưu ảnh chụp màn hình chuyển khoản và đối chiếu số tiền đã trừ; nếu đến hạn mà chưa đủ tiền, gọi cho công ty TRƯỚC ngày hạn, đừng im lặng.",
+     "ja": "初期費用の振込先と期限を教えてください。",
+     "vi": "Xin cho tôi biết tài khoản chuyển tiền chi phí đầu vào và hạn chót."
+    },
+    {
+     "t": "Bước 8: Nhận chìa khóa và kiểm tra phòng cùng nhân viên",
+     "d": "ĐI ĐÂU: tại căn nhà mới vào ngày bắt đầu hợp đồng, hoặc nhận chìa tại văn phòng rồi tự đến nhà. MANG GÌ: hợp đồng, điện thoại để chụp ảnh. Cùng nhân viên (hoặc tự làm ngay ngày đầu) kiểm tra và CHỤP ẢNH mọi vết xước, vết bẩn, hư hỏng có sẵn trên tường, sàn, bếp, nhà tắm — gửi / giữ ảnh có ngày giờ. Đây là bằng chứng để khi trả nhà bạn không bị trừ tiền oan cho vết cũ. Thử mở nước, điện, kiểm tra điều hòa / bình nóng lạnh. MẤT BAO LÂU: khoảng 30-60 phút. NHẬN ĐƯỢC: chìa khóa (thường 2 chìa), hướng dẫn bỏ rác, nội quy tòa nhà. KIỂM TRA TRƯỚC KHI NHÂN VIÊN VỀ: số chìa nhận đủ chưa, hộp thư và chuông cửa dùng được không, đồng hồ điện / nước / gas ở đâu.",
+     "ja": "入居前に傷や汚れを一緒に確認してください。写真を撮ります。",
+     "vi": "Xin cùng kiểm tra vết xước và vết bẩn trước khi tôi vào ở. Tôi sẽ chụp ảnh lại."
+    },
+    {
+     "t": "Bước 9: Làm các thủ tục sau khi vào ở trong 1-2 tuần đầu",
+     "d": "Làm tại văn phòng quận / tòa thị chính và online. Việc bắt buộc: nộp giấy chuyển đến （転入届） tại nơi ở mới trong vòng 14 ngày kể từ ngày chuyển đến theo quy định, để địa chỉ mới được ghi lên mặt sau thẻ lưu trú. Đồng thời đăng ký điện — nước — gas — internet (xem bài hướng dẫn riêng trong cùng chuyên mục), và báo địa chỉ mới cho ngân hàng, nhà mạng điện thoại, trường học / công ty. MẤT BAO LÂU: thủ tục tại văn phòng quận khoảng 30-60 phút tùy đông vắng. NHẬN ĐƯỢC: thẻ lưu trú đã cập nhật địa chỉ mới. KIỂM TRA: địa chỉ mới trên thẻ lưu trú viết đúng chưa trước khi rời quầy.",
+     "ja": "転入届の手続きをお願いします。",
+     "vi": "Tôi muốn làm thủ tục đăng ký chuyển đến (ghi địa chỉ mới)."
+    }
+   ],
+   "cost": "Chi phí đầu vào thường khoảng 4-6 tháng tiền nhà, gồm: tiền đặt cọc khoảng 0-2 tháng, tiền lễ khoảng 0-1 tháng (không hoàn lại), phí môi giới khoảng 0,5-1 tháng + thuế, tiền nhà trả trước, phí công ty bảo lãnh lần đầu khoảng 50-100% tiền nhà tháng đầu, bảo hiểm cháy nổ và phí thay khóa / vệ sinh tùy nhà. Nhà ghi 'shikikin 0 / reikin 0' sẽ rẻ hơn lúc vào nhưng có thể có phí vệ sinh khi trả nhà cao hơn — luôn xem tổng cả vào lẫn ra. Số tiền cụ thể tùy căn nhà và địa phương, phải tin bảng tính chính thức của căn bạn thuê.",
+   "duration": "Từ lúc tìm nhà đến lúc ký xong: thường khoảng 2-4 tuần (tìm + xem nhà vài ngày, xét duyệt vài ngày đến khoảng 1 tuần, chuẩn bị tiền và ký hợp đồng). Nên bắt đầu tìm trước ngày muốn vào ở khoảng 1-1,5 tháng.",
+   "warnings": [
+    "Không chuyển tiền đặt cọc / giữ chỗ cho cá nhân rao nhà trên mạng xã hội khi chưa xem nhà thật và chưa qua công ty bất động sản có văn phòng rõ ràng — lừa đảo thuê nhà nhắm vào người nước ngoài mới sang rất phổ biến.",
+    "Ở thêm người, cho bạn ở nhờ dài ngày, nuôi thú cưng khi hợp đồng cấm là lý do hay bị hủy hợp đồng và mất tiền cọc nhất. Muốn ở ghép / có người vào ở cùng phải xin phép công ty quản lý trước bằng văn bản.",
+    "Tiền lễ （礼金） và phí môi giới, phí bảo lãnh không được hoàn lại khi trả nhà. Chỉ tiền đặt cọc （敷金） mới được tính hoàn sau khi trừ chi phí khôi phục nguyên trạng hợp lệ — và không phải trừ khoản nào cũng đúng, khi bị trừ nhiều bất thường bạn có quyền yêu cầu bảng chi tiết và đối chiếu hướng dẫn về khôi phục nguyên trạng của cơ quan nhà nước.",
+    "Đừng ký hợp đồng mà chưa nghe / chưa hiểu giải thích điều khoản quan trọng, đặc biệt là phí gia hạn, điều kiện hủy giữa chừng và tiền phạt hủy sớm nếu có.",
+    "Nếu trục trặc — bị từ chối xét duyệt thuê / bảo lãnh: đây là chuyện thường gặp với người mới sang, không phải do bạn 'có vấn đề'. Hãy hỏi công ty bất động sản giới thiệu căn khác dễ duyệt hơn (ví dụ nhà của công ty quản lý lớn, nhà UR không cần người bảo lãnh và không phí môi giới / tiền lễ ở nhiều căn, share house, hoặc nhà qua công ty hỗ trợ người nước ngoài). Chuẩn bị thêm giấy chứng minh thu nhập / thư của công ty cũng giúp lần sau dễ hơn.",
+    "Nếu trục trặc — thiếu giấy tờ hoặc chưa có người liên lạc khẩn cấp: nói thật với nhân viên ngay từ buổi đầu, họ thường gợi ý giấy thay thế (ví dụ giấy chứng nhận nhập học thay chứng minh thu nhập) hoặc công ty bảo lãnh chấp nhận liên lạc khẩn cấp là trường học / công ty. Đừng bịa thông tin thu nhập hoặc người liên lạc — bị phát hiện sẽ bị hủy hợp đồng.",
+    "Nếu trục trặc — không hiểu tiếng Nhật khi ký: mang theo người biết tiếng Nhật bạn tin cậy, xin nhận bản hợp đồng / bảng chi phí trước 1-2 ngày để dịch ở nhà, và dùng quyền hỏi lại từng khoản. Sách hướng dẫn tìm nhà cho người nước ngoài của Bộ Đất đai, Cơ sở hạ tầng, Giao thông và Du lịch có bản tiếng Việt — đọc trước sẽ hiểu hầu hết thuật ngữ.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận đủ: hợp đồng thuê nhà (bản của bạn), biên lai / xác nhận đã trả chi phí đầu vào, chìa khóa đủ số lượng đã thỏa thuận, sổ / tờ hướng dẫn nội quy và cách bỏ rác của tòa nhà",
+    "Đã chụp ảnh toàn bộ phòng ngày vào ở (tường, sàn, bếp, nhà tắm, ban công) và lưu kèm ngày giờ — giữ đến khi trả nhà, đừng xóa",
+    "Đã lưu trong điện thoại: số của công ty quản lý / bất động sản để gọi khi hỏng hóc hoặc khẩn cấp, ngày trừ tiền nhà hàng tháng, tên công ty bảo lãnh và phí gia hạn bảo lãnh",
+    "Đã làm xong trong 14 ngày: đăng ký chuyển đến tại văn phòng quận nơi ở mới, địa chỉ mới đã ghi sau thẻ lưu trú; đã báo địa chỉ mới cho ngân hàng, nhà mạng, trường / công ty",
+    "Hạn chót tiếp theo: ngày trả tiền nhà tháng sau, và ngày hết hạn hợp đồng / gia hạn (thường 2 năm) — ghi vào lịch ngay từ tháng đầu",
+    "Đã kiểm tra: tiền nhà tháng đầu tiên bị trừ đúng số, đúng tài khoản chưa"
+   ],
+   "vocab": [
+    {
+     "ja": "賃貸住宅",
+     "reading": "ちんたいじゅうたく",
+     "vi": "nhà cho thuê"
+    },
+    {
+     "ja": "不動産会社",
+     "reading": "ふどうさんがいしゃ",
+     "vi": "công ty bất động sản / môi giới nhà"
+    },
+    {
+     "ja": "内見",
+     "reading": "ないけん",
+     "vi": "đi xem nhà thật trước khi thuê"
+    },
+    {
+     "ja": "入居申込書",
+     "reading": "にゅうきょもうしこみしょ",
+     "vi": "đơn đăng ký thuê nhà"
+    },
+    {
+     "ja": "敷金",
+     "reading": "しききん",
+     "vi": "tiền đặt cọc (hoàn phần còn lại khi trả nhà)"
+    },
+    {
+     "ja": "礼金",
+     "reading": "れいきん",
+     "vi": "tiền lễ cho chủ nhà (không hoàn lại)"
+    },
+    {
+     "ja": "仲介手数料",
+     "reading": "ちゅうかいてすうりょう",
+     "vi": "phí môi giới"
+    },
+    {
+     "ja": "保証会社",
+     "reading": "ほしょうがいしゃ",
+     "vi": "công ty bảo lãnh tiền nhà"
+    },
+    {
+     "ja": "連帯保証人",
+     "reading": "れんたいほしょうにん",
+     "vi": "người bảo lãnh liên đới"
+    },
+    {
+     "ja": "緊急連絡先",
+     "reading": "きんきゅうれんらくさき",
+     "vi": "người liên lạc khẩn cấp"
+    },
+    {
+     "ja": "重要事項説明",
+     "reading": "じゅうようじこうせつめい",
+     "vi": "giải thích điều khoản quan trọng"
+    },
+    {
+     "ja": "賃貸借契約書",
+     "reading": "ちんたいしゃくけいやくしょ",
+     "vi": "hợp đồng thuê nhà"
+    },
+    {
+     "ja": "原状回復",
+     "reading": "げんじょうかいふく",
+     "vi": "khôi phục nguyên trạng khi trả nhà"
+    },
+    {
+     "ja": "更新料",
+     "reading": "こうしんりょう",
+     "vi": "phí gia hạn hợp đồng"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "外国人でも借りられる物件を探しています。",
+     "vi": "Tôi đang tìm nhà mà người nước ngoài cũng thuê được."
+    },
+    {
+     "ja": "内見をお願いします。",
+     "vi": "Cho tôi đi xem nhà thật."
+    },
+    {
+     "ja": "初期費用の内訳を全部、紙に書いてください。",
+     "vi": "Xin viết toàn bộ chi tiết chi phí đầu vào ra giấy giúp tôi."
+    },
+    {
+     "ja": "保証会社への加入が必要ですか？保証人は必要ですか？",
+     "vi": "Có cần tham gia công ty bảo lãnh không? Có cần người bảo lãnh không?"
+    },
+    {
+     "ja": "同居人が後から増える場合、連絡が必要ですか？",
+     "vi": "Nếu sau này có thêm người ở cùng thì có cần báo không?"
+    },
+    {
+     "ja": "ゆっくり説明してください。分からないところを質問します。",
+     "vi": "Xin giải thích chậm giúp tôi. Chỗ nào không hiểu tôi sẽ hỏi."
+    },
+    {
+     "ja": "契約書を家で読んでから、返事をしてもいいですか？",
+     "vi": "Tôi mang hợp đồng về nhà đọc rồi trả lời sau được không?"
+    }
+   ],
+   "links": [
+    {
+     "label": "Bộ Đất đai, Cơ sở hạ tầng, Giao thông và Du lịch (国土交通省) — Hỗ trợ người nước ngoài thuê nhà tư nhân / Sách hướng dẫn tìm nhà (có tiếng Việt)",
+     "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000017.html"
+    },
+    {
+     "label": "UR (Cơ quan Phục hưng Đô thị) — Chi phí khi thuê nhà: đặt cọc, phí môi giới, phí bảo lãnh",
+     "url": "https://www.ur-net.go.jp/chintai/college/202002/000469.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "UR賃貸住宅 URの借り方（申込み〜入居までの流れ）",
+     "name_vi": "Thuê nhà công UR賃貸住宅： quy trình chính thức từ đăng ký đến vào ở (không cần người bảo lãnh)",
+     "download_url": "https://www.ur-net.go.jp/chintai/rent/",
+     "source": "UR賃貸住宅 (UR都市機構 — cơ quan nhà ở công của Nhật) — trang quy trình thuê nhà chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "物件検索の条件 (điều kiện tìm phòng trên web UR)",
+       "how": "Trên trang UR, chọn khu vực, tuyến tàu/ga gần nhất, khoảng tiền nhà và kiểu phòng （間取り）. UR có nhà ở khắp vùng Kantō, gồm cả tỉnh Kanagawa.",
+       "example": "神奈川県川崎市 / 沿線： 南武線 / 家賃： 〜8万円 / 間取り： 1LDK"
+      },
+      {
+       "field": "お申込み資格の確認 (kiểm tra điều kiện được đăng ký)",
+       "how": "UR xét theo thu nhập của hộ gia đình so với tiền nhà (có mức thu nhập tối thiểu theo quy định UR). Đọc trang điều kiện đăng ký trước khi ra cửa hàng để khỏi mất công.",
+       "example": "Thu nhập tháng trung bình đạt mức UR quy định so với tiền nhà căn muốn thuê"
+      },
+      {
+       "field": "仮申込の連絡先 (thông tin liên lạc khi đăng ký tạm)",
+       "how": "Thấy căn ưng ý thì liên hệ cửa hàng UR qua điện thoại hoặc email để giữ căn （仮申込）. Điền họ tên, số điện thoại, email. Mỗi hộ chỉ được đăng ký 1 căn.",
+       "example": "グエン・バン・アン / 090-1234-5678 / an.nguyen@example.com"
+      },
+      {
+       "field": "内覧の本人確認書類 (giấy tờ khi đi xem nhà thật)",
+       "how": "Khi mượn chìa khóa xem nhà tại văn phòng quản lý, phải xuất trình giấy tờ có ảnh như bằng lái hoặc thẻ lưu trú. Xem nhà nguyên tắc chỉ 1 lần, nên kiểm tra kỹ trong 1 lần đi.",
+       "example": "在留カード AB12345678CD"
+      },
+      {
+       "field": "本申込の必要書類 (giấy tờ nộp khi đăng ký chính thức)",
+       "how": "Trong vòng 1 tuần kể từ ngày hôm sau của đăng ký tạm, mang đến cửa hàng UR: đơn đăng ký nhà ở của UR, bản sao giấy cư trú （住民票の写し）, giấy chứng minh thu nhập （収入証明書・源泉徴収票など). Người nước ngoài chuẩn bị thêm thẻ lưu trú và hộ chiếu.",
+       "example": "住民票の写し ＋ 源泉徴収票 ＋ 在留カード・パスポート"
+      },
+      {
+       "field": "契約時の支払い (tiền phải trả khi ký hợp đồng)",
+       "how": "Trước ngày ký phải trả: tiền đặt cọc （敷金） — nhà UR thường là 2 tháng tiền nhà, cộng tiền nhà và phí chung （共益費） tính theo ngày của tháng đầu. UR không thu tiền lễ （礼金） và phí môi giới.",
+       "example": "敷金（家賃2か月分）＋ 日割り家賃 ＋ 日割り共益費",
+       "mistake": "Hạn ký hợp đồng là trong 10 ngày từ hôm sau ngày đăng ký tạm — trễ hạn là mất căn nhà."
+      },
+      {
+       "field": "書類提出の期限 (hạn nộp giấy tờ đăng ký chính thức)",
+       "how": "Giấy tờ ở mục trên phải nộp trong vòng 1 tuần tính từ ngày hôm sau ngày đăng ký tạm （仮申込）. Chuẩn bị sẵn 住民票 và giấy thu nhập ngay từ khi bắt đầu tìm nhà.",
+       "example": "仮申込の翌日から1週間以内",
+       "mistake": "Xin 住民票 ở tòa thị chính mất thời gian — để sát hạn mới xin là dễ trễ và mất căn."
+      },
+      {
+       "field": "入居開始可能日 (ngày sớm nhất được vào ở)",
+       "how": "Ngày vào ở được chốt khi ký hợp đồng, tiền nhà bắt đầu tính từ ngày này dù bạn có dọn vào ở thật hay chưa. Vào ở được khoảng 10 ngày sau khi ký hợp đồng theo quy trình UR.",
+       "example": "契約後10日程度",
+       "mistake": "Đã qua ngày bắt đầu tính tiền nhà mà chưa nhận chìa khóa thì bạn vẫn phải trả tiền từ ngày đó."
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. UR賃貸住宅 là nhà cho thuê của cơ quan công UR都市機構： ưu điểm là không cần người bảo lãnh （連帯保証人）, không tiền lễ, không phí môi giới, không phí gia hạn. Đổi lại UR xét thu nhập khá chặt và số lượng căn trống có hạn."
+    },
+    {
+     "name_jp": "賃貸住宅入居申込書（一般的な記入項目の解説）",
+     "name_vi": "Giải thích từng mục của tờ đơn đăng ký thuê nhà 入居申込書 điển hình — đơn giấy do từng công ty bất động sản tự phát hành",
+     "download_url": "https://www.ur-net.go.jp/chintai/rent/",
+     "source": "Trang quy trình thuê nhà chính thức của UR賃貸住宅 (UR都市機構） — dùng làm trang thủ tục tham chiếu; đơn 入居申込書 giấy thực tế do công ty bất động sản nơi bạn thuê phát",
+     "format": "web",
+     "fill": [
+      {
+       "field": "申込者氏名 (họ tên người đăng ký thuê)",
+       "how": "Họ tên người sẽ đứng tên hợp đồng thuê, viết chữ La-tinh như trên thẻ lưu trú, kèm cách đọc katakana nếu đơn có ô フリガナ.",
+       "example": "グエン・バン・アン (NGUYEN VAN AN)",
+       "mistake": "Người đứng tên hợp đồng phải là người ở thật; đứng tên hộ người khác có thể bị hủy hợp đồng."
+      },
+      {
+       "field": "生年月日・性別・国籍 (ngày sinh, giới tính, quốc tịch)",
+       "how": "Điền đúng như trên thẻ lưu trú và hộ chiếu.",
+       "example": "1998年5月12日 / 男 / ベトナム"
+      },
+      {
+       "field": "現住所 (địa chỉ hiện tại)",
+       "how": "Địa chỉ bạn đang ở tại Nhật (hoặc địa chỉ ký túc xá/trường học nếu mới sang), ghi đủ tên tòa nhà và số phòng.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Địa chỉ khai phải khớp địa chỉ mặt sau thẻ lưu trú."
+      },
+      {
+       "field": "電話番号・メールアドレス (điện thoại và email)",
+       "how": "Số điện thoại Nhật bạn đang dùng hằng ngày. Công ty xét duyệt và công ty bảo lãnh sẽ gọi vào số này để xác nhận.",
+       "example": "090-1234-5678 / an.nguyen@example.com",
+       "mistake": "Không nghe máy số lạ trong thời gian chờ xét duyệt là hồ sơ dễ bị treo hoặc bị từ chối."
+      },
+      {
+       "field": "勤務先 (nơi làm việc / trường học)",
+       "how": "Tên công ty, địa chỉ công ty, số điện thoại công ty, phòng ban nếu có. Du học sinh thì ghi tên trường và khoa.",
+       "example": "株式会社サンプル介護サービス / 神奈川県川崎市 （ địa chỉ công ty mẫu)",
+       "mistake": "Số điện thoại công ty ghi sai khiến bên xét duyệt không gọi xác nhận được là hay bị rớt."
+      },
+      {
+       "field": "勤続年数・年収 (số năm làm việc và thu nhập năm)",
+       "how": "Ghi số năm làm việc và thu nhập năm trước thuế. Người mới vào công ty chưa có giấy thu nhập thì ghi lương dự kiến theo hợp đồng lao động và chuẩn bị sẵn hợp đồng để xuất trình.",
+       "example": "勤続1年6か月 / 年収約320万円"
+      },
+      {
+       "field": "在留カード番号・在留資格・在留期間 (số thẻ lưu trú, tư cách và thời hạn lưu trú)",
+       "how": "Một số đơn có mục này, hoặc công ty sẽ photocopy thẻ của bạn. Ghi số thẻ, loại tư cách lưu trú và ngày hết hạn đúng như trên thẻ.",
+       "example": "AB12345678CD / 技術・人文知識・国際業務 / 2028年8月31日まで"
+      },
+      {
+       "field": "入居者 (tất cả người sẽ ở trong nhà)",
+       "how": "Liệt kê họ tên, quan hệ, ngày sinh của mọi người ở cùng, kể cả người không đứng tên hợp đồng.",
+       "example": "申込者本人のみ （ chỉ mình người đăng ký ở)",
+       "mistake": "Cho người khác ở cùng mà không khai là vi phạm hợp đồng, bị phát hiện có thể bị yêu cầu dọn ra."
+      },
+      {
+       "field": "連帯保証人 (người bảo lãnh liên đới)",
+       "how": "Nếu đơn yêu cầu người bảo lãnh: ghi họ tên, địa chỉ, số điện thoại, quan hệ của người Nhật (hoặc người có thu nhập ở Nhật) đồng ý bảo lãnh. Hiện nay đa số nhà cho dùng công ty bảo lãnh （保証会社） thay thế — khi đó bỏ trống mục này và điền thay vào đơn của công ty bảo lãnh, tốn phí khoảng 50-100% của 1 tháng tiền nhà cho lần đầu.",
+       "example": "利用しない （保証会社を利用） — dùng công ty bảo lãnh",
+       "mistake": "Tự ý ghi tên người quen làm bảo lãnh khi chưa hỏi ý họ — công ty sẽ gọi điện xác nhận thật."
+      },
+      {
+       "field": "緊急連絡先 (người liên lạc khẩn cấp)",
+       "how": "Họ tên, địa chỉ, số điện thoại, quan hệ của 1 người quen ở Nhật liên lạc được khi bạn mất liên lạc. Người này không phải chịu trách nhiệm trả tiền nhà như bảo lãnh, nhưng vẫn phải xin phép họ trước.",
+       "example": "サンプル氏名 （ đồng nghiệp cùng công ty mẫu) / 090-XXXX-XXXX （ số mẫu)",
+       "mistake": "Đa số công ty không chấp nhận người liên lạc khẩn cấp đang ở Việt Nam."
+      },
+      {
+       "field": "希望入居日・家賃の支払い方法 (ngày muốn vào ở và cách trả tiền nhà)",
+       "how": "Ghi ngày muốn bắt đầu ở và cách trả tiền nhà hằng tháng, thường là trừ tài khoản ngân hàng （口座振替） đứng tên bạn.",
+       "example": "2026年12月1日 / 口座振替",
+       "mistake": "Ngày vào ở khai quá sát ngày nộp đơn thì xét duyệt và ký hợp đồng có thể không kịp."
+      }
+     ],
+     "sample_note": "QUAN TRỌNG và phải nói thật: thuê nhà tư nhân ở Nhật KHÔNG có một mẫu đơn chung của nhà nước. Mỗi công ty bất động sản và mỗi công ty bảo lãnh dùng mẫu 入居申込書 riêng của họ, bạn chỉ nhận được đơn khi đến văn phòng hoặc đăng ký online với công ty đó. Mục này chỉ giải thích các ô gần như công ty nào cũng có, để bạn chuẩn bị sẵn thông tin. Thông tin mẫu hoàn toàn hư cấu. Riêng nhà UR thì dùng mẫu riêng 賃貸住宅入居申込書 của UR都市機構， điền tại cửa hàng UR."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "ビブリ不動産",
+     "lang": "ja",
+     "note": "10 bước thuê nhà từ tìm trên web, xem nhà, nộp đơn, xét duyệt đến ký hợp đồng và nhận chìa khóa.",
+     "title": "１０項目の基本ステップでスムーズ部屋探し！一人暮らし初心者必見！",
+     "url": "https://www.youtube.com/watch?v=g5AeMSY2xrY"
+    },
+    {
+     "channel": "エクストホーム",
+     "lang": "ja",
+     "note": "Quy trình thuê nhà lần đầu: đăng ký, xét duyệt giấy tờ, giải thích điều khoản quan trọng và nhận nhà.",
+     "title": "部屋探しから入居までの流れと注意点を解説",
+     "url": "https://www.youtube.com/watch?v=tmpwSHoNPc4"
+    }
+   ]
+  },
+  {
+   "id": "dang-ky-dien-nuoc-gas-internet",
+   "group": "Điện thoại & nhà ở",
+   "title": "Đăng ký điện – nước – gas – internet khi chuyển nhà （電気・水道・ガス・インターネットの手続き）",
+   "icon": "💡",
+   "summary": "Khi chuyển nhà, điện và nước thường đăng ký online / điện thoại là xong và không cần có mặt, riêng gas thì bắt buộc đặt lịch trước và phải có người ở nhà khi nhân viên đến mở gas. Bài này xếp đúng thứ tự việc phải làm từ khoảng 1-2 tuần trước ngày chuyển đến ngày vào ở, để ngày đầu tiên bạn đã có điện, nước, gas và kế hoạch internet rõ ràng.",
+   "who": "Người vừa thuê nhà mới, người chuyển nhà trong Nhật, người ra ở riêng khỏi ký túc xá — bất kỳ ai cần bắt đầu (và dừng) dịch vụ điện, nước, gas, internet tại nhà mới và nhà cũ.",
+   "docs": [
+    "Địa chỉ nhà mới đầy đủ bằng tiếng Nhật: tỉnh / thành phố, quận, tên tòa nhà, số phòng — chép đúng như trên hợp đồng thuê nhà",
+    "Họ tên người đăng ký (viết như trên hợp đồng thuê / thẻ lưu trú), số điện thoại liên lạc được vào ban ngày",
+    "Ngày chuyển đi khỏi nhà cũ và ngày bắt đầu ở nhà mới — 2 ngày này quyết định ngày dừng và ngày bắt đầu dịch vụ",
+    "Mã khách hàng / số hợp đồng ở nhà cũ nếu có: ghi trên hóa đơn hoặc phiếu đo đồng hồ （検針票） của điện, gas, nước — chụp ảnh lại các phiếu này",
+    "Hợp đồng thuê nhà mới hoặc giấy xác nhận ngày vào ở do công ty bất động sản cấp — một số công ty điện / internet yêu cầu xác nhận địa chỉ và ngày vào ở",
+    "Thông tin công ty quản lý nhà / chủ nhà: nhà dùng gas thành phố （都市ガス） hay gas bình propane （プロパンガス / LPガス）, công ty gas nào phụ trách — hỏi công ty bất động sản, vì chọn sai loại gas sẽ đăng ký sai công ty",
+    "Tài khoản ngân hàng hoặc thẻ tín dụng đứng tên bạn để đăng ký thanh toán hàng tháng cho điện, gas, internet",
+    "Đối với nước: tên cơ quan nước sạch phụ trách khu vực nhà mới (cục nước của thành phố / tỉnh đó) — tra trên trang của chính quyền địa phương nơi nhà mới"
+   ],
+   "prep_home": [
+    "Ở nhà trước 1-2 tuần: lập 1 tờ danh sách 4 việc (điện, nước, gas, internet) x 2 nơi (nhà cũ: dừng, nhà mới: bắt đầu) — làm xong việc nào đánh dấu việc đó, tránh sót việc dừng ở nhà cũ khiến vẫn bị tính tiền",
+    "Chụp ảnh: phiếu đo đồng hồ / hóa đơn gần nhất ở nhà cũ (có mã khách hàng), trang địa chỉ trong hợp đồng nhà mới, và đồng hồ điện / nước / gas ở nhà mới nếu bạn đã nhận chìa khóa và đến xem trước được",
+    "Hỏi công ty bất động sản bằng tin nhắn / email trước: nhà mới dùng gas thành phố hay gas propane, công ty gas nào, internet được lắp loại nào (cáp quang riêng từng phòng hay dùng chung tòa nhà, có sẵn Wi-Fi không) — lưu câu trả lời lại",
+    "Đặt lịch mở gas TRƯỚC TIÊN trong các việc, ngay khi biết ngày vào ở: mùa chuyển nhà tháng 3-4 lịch mở gas kín rất nhanh, đặt chậm là vài ngày đầu không có gas để tắm và nấu ăn",
+    "Viết sẵn ra giấy câu thông tin sẽ phải nói khi gọi điện: họ tên, địa chỉ cũ, địa chỉ mới, mã khách hàng, ngày muốn dừng / bắt đầu — gọi điện tiếng Nhật sẽ đỡ rối hơn nhiều khi có giấy trước mặt",
+    "Chuẩn bị cách thanh toán: ghi sẵn số tài khoản / thẻ sẽ đăng ký cho từng dịch vụ; nhiều nơi cho đăng ký trừ tài khoản bằng form giấy gửi sau, nên chuẩn bị cả địa chỉ nhận thư chính xác"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Xác định công ty phụ trách từng dịch vụ ở nhà mới và nhà cũ",
+     "d": "Làm ở nhà, online / hỏi công ty bất động sản. MẤT KHOẢNG 20-30 phút. Điện: bạn được tự chọn công ty điện (không chỉ công ty điện lớn của vùng) nhưng lần đầu cứ dùng công ty đang cấp cho tòa nhà là đơn giản nhất. Nước: chỉ có cơ quan nước của địa phương đó, không chọn được. Gas: theo loại gas của tòa nhà (thành phố hay propane) và công ty được chỉ định. Internet: theo hạ tầng tòa nhà. NHẬN ĐƯỢC: danh sách tên công ty + số điện thoại / trang đăng ký của từng dịch vụ. KIỂM TRA: tên công ty gas phải khớp loại gas của nhà — đây là lỗi hay gặp nhất.",
+     "ja": "この物件のガスは都市ガスですか、プロパンガスですか？ガス会社はどこですか？",
+     "vi": "Nhà này dùng gas thành phố hay gas propane? Công ty gas là công ty nào?"
+    },
+    {
+     "t": "Bước 2: Đăng ký dừng và bắt đầu ĐIỆN (nhà cũ + nhà mới)",
+     "d": "ĐI ĐÂU: online trên trang của công ty điện hoặc gọi điện thoại — đa số công ty nhận đăng ký trước ngày chuyển khoảng 1 tháng đến vài ngày trước. MANG / CHUẨN BỊ GÌ: mã khách hàng nhà cũ, địa chỉ 2 nơi, ngày dừng và ngày bắt đầu. Điện bắt đầu / dừng KHÔNG cần bạn có mặt: ngày vào ở, bạn tự bật cầu dao tổng （ブレーカー） trong nhà lên là có điện (nhà dùng đồng hồ thông minh thì công ty mở từ xa theo ngày đã đăng ký). MẤT BAO LÂU: đăng ký khoảng 10-15 phút mỗi nơi, nhiều công ty cho làm gộp dừng + bắt đầu trong 1 lần nếu cùng công ty. NHẬN ĐƯỢC: email / giấy xác nhận ngày bắt đầu và ngày dừng. KIỂM TRA: ngày bắt đầu điện phải là ngày bạn vào ở hoặc trước 1 ngày; quên đăng ký dừng nhà cũ là vẫn bị tính tiền cơ bản ở đó.",
+     "ja": "引っ越しのため、電気の使用停止と使用開始を申し込みたいです。",
+     "vi": "Vì chuyển nhà, tôi muốn đăng ký dừng sử dụng điện ở nhà cũ và bắt đầu ở nhà mới."
+    },
+    {
+     "t": "Bước 3: Đăng ký dừng và bắt đầu NƯỚC (nhà cũ + nhà mới)",
+     "d": "ĐI ĐÂU: online / ứng dụng / điện thoại tới cơ quan nước sạch của địa phương (ví dụ ở Tokyo là Cục nước Tokyo — 東京都水道局). Nhiều nơi yêu cầu đăng ký trước ngày chuyển khoảng 3-4 ngày, theo hướng dẫn của từng địa phương. MANG / CHUẨN BỊ GÌ: địa chỉ 2 nơi, họ tên, ngày dừng / bắt đầu, mã khách hàng nhà cũ nếu có. Nước cũng thường KHÔNG cần có mặt khi bắt đầu: đến nhà mới, nếu vòi chưa có nước thì mở van khóa tổng （元栓 / 止水栓） ở hộp đồng hồ nước, hoặc làm theo tờ hướng dẫn để ở nhà mới (một số nơi để sẵn bưu thiếp đăng ký bắt đầu sử dụng — điền và bỏ thùng thư). MẤT BAO LÂU: đăng ký khoảng 10 phút. NHẬN ĐƯỢC: xác nhận đăng ký; hóa đơn cuối ở nhà cũ sẽ gửi về địa chỉ mới hoặc trừ qua tài khoản. KIỂM TRA: không đăng ký dừng thì dù không dùng, phí cơ bản vẫn bị tính — đây là lưu ý chính thức của các cục nước.",
+     "ja": "水道の使用開始と中止の手続きをお願いします。",
+     "vi": "Xin làm thủ tục bắt đầu và dừng sử dụng nước giúp tôi."
+    },
+    {
+     "t": "Bước 4: Đặt lịch MỞ GAS ở nhà mới — việc quan trọng nhất, làm sớm nhất",
+     "d": "ĐI ĐÂU: online / điện thoại tới công ty gas phụ trách nhà mới để đặt lịch mở gas （開栓, kaisen — mở van gas để bắt đầu dùng). BẮT BUỘC phải có người ở nhà khi nhân viên đến （立ち会い, tachiai — có mặt chứng kiến): nhân viên sẽ mở đồng hồ gas, kiểm tra rò rỉ, thử bật bếp / bình nóng lạnh và hướng dẫn an toàn ngay trước mặt bạn. Người nhà / người được ủy quyền có mặt thay cũng được ở nhiều công ty, nhưng phải báo trước. MANG / CHUẨN BỊ GÌ: địa chỉ, số phòng, ngày giờ muốn mở (nên là ngay ngày vào ở, khung giờ bạn chắc chắn có mặt), các thiết bị dùng gas để trong nhà để nhân viên thử. MẤT BAO LÂU: đặt lịch khoảng 10 phút; buổi mở gas tại nhà khoảng 20-40 phút tùy nơi. NHẬN ĐƯỢC: lịch hẹn chính thức. KIỂM TRA: ghi lịch hẹn vào điện thoại kèm số điện thoại công ty gas; đặt càng sớm càng tốt, nhất là tháng 3-4.",
+     "ja": "ガスの開栓の予約をお願いします。立ち会いが必要ですよね？",
+     "vi": "Tôi muốn đặt lịch mở gas. Việc này cần có người ở nhà đúng không?"
+    },
+    {
+     "t": "Bước 5: Đăng ký dừng GAS ở nhà cũ",
+     "d": "ĐI ĐÂU: online / điện thoại tới công ty gas nhà cũ, báo ngày chuyển đi. Việc đóng gas （閉栓） ở nhà cũ thường không cần có mặt, TRỪ trường hợp nhân viên không vào được khu vực đồng hồ (ví dụ tòa nhà khóa tự động) thì mới cần bạn có mặt mở cửa — công ty sẽ báo khi bạn đăng ký. MANG / CHUẨN BỊ GÌ: mã khách hàng, địa chỉ cũ, ngày đi, địa chỉ mới để gửi hóa đơn chốt cuối. MẤT BAO LÂU: khoảng 10 phút. NHẬN ĐƯỢC: xác nhận ngày đóng gas và cách thanh toán hóa đơn cuối. KIỂM TRA: hỏi rõ hóa đơn cuối trả bằng cách nào (trừ tài khoản cũ, giấy thanh toán gửi về nhà mới, hay trả tại cửa hàng tiện lợi) để không bị sót nợ.",
+     "ja": "引っ越し日にガスの閉栓をお願いします。最終の請求はどうなりますか？",
+     "vi": "Xin đóng gas vào ngày tôi chuyển đi. Hóa đơn cuối cùng sẽ thanh toán thế nào?"
+    },
+    {
+     "t": "Bước 6: Đăng ký INTERNET cho nhà mới",
+     "d": "ĐI ĐÂU: online / qua công ty bất động sản / tại cửa hàng điện máy. Trước hết xác nhận tòa nhà thuộc loại nào: 1) đã có sẵn đường truyền tới từng phòng, chỉ cần đăng ký là dùng; 2) có internet chung miễn phí của tòa nhà; 3) phải thi công kéo dây mới （工事, kōji — thi công lắp đặt), cần chủ nhà đồng ý và đặt lịch thợ, thường phải chờ khoảng vài tuần tùy mùa. Nếu phải thi công, đăng ký NGAY khi ký xong hợp đồng thuê, đừng chờ vào ở mới đăng ký. Trong lúc chờ, phương án tạm: Wi-Fi bỏ túi thuê ngắn hạn hoặc dùng phát sóng từ điện thoại. MANG / CHUẨN BỊ GÌ: hợp đồng thuê / địa chỉ + số phòng, giấy tờ danh tính, cách thanh toán. MẤT BAO LÂU: đăng ký khoảng 20-30 phút; chờ thi công tùy lịch thợ. NHẬN ĐƯỢC: ngày thi công / ngày bắt đầu dùng, thiết bị phát Wi-Fi gửi đến nếu có. KIỂM TRA: tổng chi phí gồm phí thi công + cước tháng, có cam kết thời hạn và phí hủy sớm không.",
+     "ja": "この物件は光回線の工事が必要ですか？いつから使えますか？",
+     "vi": "Nhà này có cần thi công cáp quang không? Từ khi nào thì dùng được?"
+    },
+    {
+     "t": "Bước 7: Ngày vào ở — bật điện, mở nước, có mặt mở gas",
+     "d": "ĐI ĐÂU: tại nhà mới, theo thứ tự: 1) Bật cầu dao điện tổng lên, thử đèn và ổ cắm. 2) Mở vòi nước thử; nếu chưa có nước thì mở van tổng ở hộp đồng hồ rồi thử lại. 3) Ở nhà đúng khung giờ đã hẹn để đón nhân viên gas: họ kiểm tra an toàn xong bạn mới dùng được bếp gas và nước nóng. MANG GÌ: điện thoại (để công ty gas gọi khi đến), hợp đồng / giấy hẹn, thiết bị dùng gas để sẵn. MẤT BAO LÂU: điện + nước khoảng 15 phút tự làm; chờ và làm mở gas khoảng 20-40 phút. NHẬN ĐƯỢC: nhà đủ điện — nước — gas. KIỂM TRA TRƯỚC KHI NHÂN VIÊN GAS VỀ: tự bật thử bếp, bật thử nước nóng, hỏi số điện thoại gọi khi ngửi mùi gas hoặc báo sự cố và ghi lên tủ lạnh.",
+     "ja": "ガス漏れのときは、どこに電話すればいいですか？",
+     "vi": "Khi bị rò gas thì tôi phải gọi đến đâu?"
+    },
+    {
+     "t": "Bước 8: Đăng ký cách thanh toán và nhận hóa đơn đầu tiên",
+     "d": "Làm ở nhà trong 1-2 tuần đầu. Với từng dịch vụ, hoàn tất đăng ký trừ tài khoản ngân hàng （口座振替） hoặc thẻ tín dụng theo form giấy / online mà công ty gửi — form giấy thường đến cùng thư chào / hóa đơn đầu. Đọc hóa đơn đầu tiên của điện, nước, gas để biết: mã khách hàng mới, ngày chốt số, ngày thanh toán. Nước ở nhiều địa phương thu 2 tháng 1 lần, đừng ngạc nhiên khi tháng đầu chưa thấy hóa đơn nước. MẤT BAO LÂU: khoảng 10 phút mỗi dịch vụ. NHẬN ĐƯỢC: lịch thanh toán rõ ràng cho cả nhà. KIỂM TRA: hóa đơn cuối của nhà cũ đã được thanh toán xong chưa — chưa xong thì trả ngay để không thành nợ xấu.",
+     "ja": "支払い方法を口座振替にしたいです。用紙を送ってください。",
+     "vi": "Tôi muốn đổi cách thanh toán sang trừ tài khoản ngân hàng. Xin gửi form cho tôi."
+    }
+   ],
+   "cost": "Đăng ký bắt đầu / dừng điện, nước, gas thường không mất phí thủ tục (mở gas cũng thường miễn phí công tác tại các công ty gas lớn — xác nhận với công ty của bạn). Chi phí thật gồm: tiền sử dụng theo đồng hồ hàng tháng (điện và gas tính theo lượng dùng + phí cơ bản; nước thường gồm phí cơ bản + tiền theo khối nước, nhiều nơi thu 2 tháng / lần) — mức tiền tùy địa phương, công ty và lượng dùng, không có giá chung toàn quốc. Internet: có thể có phí thi công ban đầu + cước tháng tùy gói và tòa nhà; nhà có internet chung sẵn thì có thể đã gồm trong phí quản lý. Chỉ tin bảng giá trên trang chính thức của công ty bạn đăng ký.",
+   "duration": "Chuẩn bị: bắt đầu trước ngày chuyển khoảng 1-2 tuần (điện có nơi nhận trước khoảng 1-2 tháng; nước thường trước khoảng 3-4 ngày theo hướng dẫn địa phương; gas nên đặt lịch ngay khi biết ngày vào ở). Ngày vào ở: điện / nước dùng được ngay nếu đã đăng ký; gas dùng được sau buổi mở gas có mặt (khoảng 20-40 phút). Internet: dùng ngay nếu tòa nhà có sẵn; nếu phải thi công, thường chờ khoảng vài tuần tùy mùa cao điểm.",
+   "warnings": [
+    "Gas là dịch vụ DUY NHẤT trong 4 dịch vụ này bắt buộc có người ở nhà khi bắt đầu sử dụng. Không có mặt đúng hẹn là buổi mở gas bị hủy, phải đặt lại — vào mùa cao điểm có thể phải chờ thêm nhiều ngày không có nước nóng và bếp.",
+    "Đừng tự ý mở van gas hoặc tự đấu nối thiết bị gas khi chưa có nhân viên kiểm tra. Ngửi mùi gas: khóa van tổng, mở cửa thông gió, không bật / tắt công tắc điện, ra ngoài rồi gọi công ty gas theo số khẩn cấp ghi trên tờ hướng dẫn.",
+    "Quên đăng ký DỪNG ở nhà cũ là lỗi tốn tiền nhất: điện, gas, nước ở nhà cũ vẫn tính phí cơ bản và có thể tính tiếp phần sử dụng của người vào sau nếu hợp đồng vẫn đứng tên bạn.",
+    "Nhà dùng gas propane (LP gas) thường do 1 công ty được tòa nhà chỉ định và giá gas propane nhìn chung khác gas thành phố — bạn không tự chọn công ty khác được trong đa số trường hợp, hãy hỏi rõ ngay khi thuê nhà.",
+    "Nếu trục trặc — đến ngày vào ở mà chưa đặt được lịch mở gas / lịch bị đầy: gọi điện trực tiếp cho công ty gas (đừng chỉ thử online) để hỏi khung giờ trống do hủy hẹn, hoặc nhờ công ty bất động sản hỗ trợ liên hệ; trong những ngày chờ, dùng tạm nhà tắm công cộng （銭湯） / bếp điện từ mini, và tuyệt đối không tự mở gas.",
+    "Nếu trục trặc — đăng ký thiếu thông tin / bị công ty gọi lại mà không nghe được tiếng Nhật: chuẩn bị sẵn tờ giấy ghi thông tin ở mục prep_home để đọc theo, nói câu xin nói chậm và xác nhận lại bằng số (ngày, giờ, số phòng đọc từng số một). Hầu hết thủ tục điện / nước / gas đều làm online bằng form chữ được — ưu tiên form online và dùng ứng dụng dịch, chỉ gọi điện khi thật cần.",
+    "Nếu trục trặc — vào ở rồi mà điện / nước không có: kiểm tra theo thứ tự — đã đến ngày bắt đầu đăng ký chưa, cầu dao tổng đã bật chưa, van nước tổng đã mở chưa — rồi mới gọi công ty. Ghi sẵn mã khách hàng và địa chỉ trước khi gọi để được hỗ trợ nhanh.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận / lưu đủ: email hoặc giấy xác nhận bắt đầu sử dụng điện, nước, gas ở nhà mới (ghi mã khách hàng mới của từng dịch vụ) và xác nhận đã dừng ở nhà cũ",
+    "Đã kiểm tra tại nhà mới: đèn và ổ cắm có điện, vòi nước chảy bình thường không rò, bếp gas và nước nóng dùng được sau buổi mở gas",
+    "Đã dán / lưu số điện thoại khẩn cấp của công ty gas và số tổng đài điện / nước ở chỗ dễ thấy (tủ lạnh hoặc ngay cửa ra vào)",
+    "Đã hoàn tất đăng ký cách thanh toán cho từng dịch vụ và biết ngày trừ tiền / hạn trả của mỗi hóa đơn — điện, gas thường hàng tháng, nước nhiều nơi 2 tháng 1 lần tùy địa phương",
+    "Đã thanh toán xong hóa đơn chốt cuối của nhà cũ (điện, nước, gas) và giữ biên lai / ảnh xác nhận ít nhất vài tháng",
+    "Hạn chót tiếp theo: ngày thi công internet (nếu có) — đảm bảo có người ở nhà hôm đó, và ngày nhận thiết bị Wi-Fi nếu công ty gửi qua bưu điện"
+   ],
+   "vocab": [
+    {
+     "ja": "電気",
+     "reading": "でんき",
+     "vi": "điện"
+    },
+    {
+     "ja": "水道",
+     "reading": "すいどう",
+     "vi": "nước máy / cấp nước"
+    },
+    {
+     "ja": "ガス",
+     "reading": "がす",
+     "vi": "gas"
+    },
+    {
+     "ja": "使用開始",
+     "reading": "しようかいし",
+     "vi": "bắt đầu sử dụng (đăng ký mở dịch vụ)"
+    },
+    {
+     "ja": "使用停止",
+     "reading": "しようていし",
+     "vi": "dừng sử dụng (đăng ký ngừng dịch vụ)"
+    },
+    {
+     "ja": "開栓",
+     "reading": "かいせん",
+     "vi": "mở gas / mở nước (mở van để bắt đầu dùng)"
+    },
+    {
+     "ja": "閉栓",
+     "reading": "へいせん",
+     "vi": "đóng gas / đóng nước (khóa van khi ngừng dùng)"
+    },
+    {
+     "ja": "立ち会い",
+     "reading": "たちあい",
+     "vi": "có mặt chứng kiến khi nhân viên làm việc"
+    },
+    {
+     "ja": "都市ガス",
+     "reading": "としがす",
+     "vi": "gas thành phố (gas qua đường ống)"
+    },
+    {
+     "ja": "プロパンガス",
+     "reading": "ぷろぱんがす",
+     "vi": "gas propane / LP gas (gas bình lớn đặt ngoài nhà)"
+    },
+    {
+     "ja": "ブレーカー",
+     "reading": "ぶれーかー",
+     "vi": "cầu dao điện tổng trong nhà"
+    },
+    {
+     "ja": "検針票",
+     "reading": "けんしんひょう",
+     "vi": "phiếu đo đồng hồ (ghi mã khách hàng và lượng dùng)"
+    },
+    {
+     "ja": "口座振替",
+     "reading": "こうざふりかえ",
+     "vi": "thanh toán tự động trừ tài khoản ngân hàng"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "引っ越しのため、電気とガスの使用開始を申し込みたいです。",
+     "vi": "Vì chuyển nhà, tôi muốn đăng ký bắt đầu sử dụng điện và gas."
+    },
+    {
+     "ja": "ガスの開栓の予約をお願いします。その日は家にいます。",
+     "vi": "Xin đặt lịch mở gas cho tôi. Ngày đó tôi sẽ có ở nhà."
+    },
+    {
+     "ja": "水道の使用中止を忘れていました。今から手続きできますか？",
+     "vi": "Tôi đã quên làm thủ tục dừng nước. Bây giờ làm thủ tục được không?"
+    },
+    {
+     "ja": "前の住所の最終請求は、新しい住所に送ってください。",
+     "vi": "Hóa đơn cuối của địa chỉ cũ, xin gửi về địa chỉ mới cho tôi."
+    },
+    {
+     "ja": "ゆっくり話してください。住所と日付を紙に書きます。",
+     "vi": "Xin nói chậm giúp tôi. Tôi sẽ viết địa chỉ và ngày tháng ra giấy."
+    },
+    {
+     "ja": "インターネットの工事の日程を教えてください。",
+     "vi": "Xin cho tôi biết lịch thi công internet."
+    }
+   ],
+   "links": [
+    {
+     "label": "Tokyo Gas — Thủ tục bắt đầu / dừng gas và điện khi chuyển nhà (mở gas cần có mặt)",
+     "url": "https://home.tokyo-gas.co.jp/gas_power/procedure/moving/"
+    },
+    {
+     "label": "Cục nước Tokyo (東京都水道局) — Thủ tục sử dụng nước: đăng ký trước 3-4 ngày qua app / điện thoại",
+     "url": "https://www.waterworks.metro.tokyo.lg.jp/tetsuduki/shiyou/"
+    },
+    {
+     "label": "Osaka Gas — Thủ tục điện, gas, nước khi chuyển nhà và việc có mặt khi mở gas",
+     "url": "https://home.osakagas.co.jp/hikkoshi/column/lifeline.html"
+    }
+   ],
+   "affiliate": "internet",
+   "forms": [
+    {
+     "name_jp": "東京電力エナジーパートナー 引越しに伴う電気の使用開始・停止お申込み",
+     "name_vi": "Không có tờ khai giấy — đăng ký bắt đầu/dừng điện online trên trang chuyển nhà chính thức của Tokyo Electric (TEPCO)",
+     "download_url": "https://www.tepco.co.jp/ep/private/moving/index-j.html",
+     "source": "東京電力エナジーパートナー (TEPCO) — trang thủ tục chuyển nhà chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "使用開始日 (ngày bắt đầu dùng điện)",
+       "how": "Chọn ngày bạn vào ở nhà mới. Đăng ký được từ khoảng 1 tháng trước đến vài ngày trước ngày chuyển. Điện không cần người ở nhà chứng kiến: đến ngày đó bạn tự bật cầu dao tổng （ブレーカー） lên là có điện.",
+       "example": "2026年12月1日",
+       "mistake": "Chọn ngày sau ngày vào ở là ngày đầu tiên vào nhà sẽ không có điện."
+      },
+      {
+       "field": "使用場所の住所 (địa chỉ nơi dùng điện - nhà mới)",
+       "how": "Nhập địa chỉ nhà mới đúng như trên hợp đồng thuê nhà, gồm tên tòa nhà và số phòng. Nếu công ty không xác định được địa chỉ, họ sẽ gọi điện hoặc email hỏi lại.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "契約者名 (họ tên người ký hợp đồng điện)",
+       "how": "Họ tên người đứng tên hợp đồng, viết như trên thẻ lưu trú/hợp đồng thuê nhà.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "連絡先電話番号 (số điện thoại liên lạc)",
+       "how": "Số điện thoại liên lạc được ban ngày. Công ty có thể gọi số này để xác nhận địa chỉ hoặc lịch thi công.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "メールアドレス (email nhận xác nhận)",
+       "how": "Email nhận thông báo đã tiếp nhận đăng ký. Cho phép nhận mail từ Info-move@tepco.co.jp như trang TEPCO hướng dẫn.",
+       "example": "an.nguyen@example.com",
+       "mistake": "Mail xác nhận rơi vào hộp thư rác mà không biết, tưởng chưa đăng ký xong."
+      },
+      {
+       "field": "料金プラン選択 (chọn gói cước điện)",
+       "how": "Chọn gói cước, ví dụ gói cơ bản スタンダードS hoặc gói truyền thống 従量電灯B. Người mới cứ chọn gói cơ bản, sau này đổi gói được.",
+       "example": "スタンダードS"
+      },
+      {
+       "field": "契約アンペア数 (công suất cầu dao - nếu được hỏi)",
+       "how": "Số ampe ghi trên cầu dao tổng trong nhà, nhà 1 người ở thường 20-30A. Không biết thì giữ nguyên công suất hiện tại của căn nhà như TEPCO hướng dẫn.",
+       "example": "30A"
+      },
+      {
+       "field": "支払い方法 (cách trả tiền điện hàng tháng)",
+       "how": "Chọn trừ tài khoản ngân hàng （口座振替）, thẻ tín dụng, hoặc phiếu nộp tiền tại cửa hàng tiện lợi. Nếu chọn trừ tài khoản, công ty gửi form giấy đăng ký về nhà sau, bạn điền và gửi lại.",
+       "example": "口座振替 （ trừ tài khoản tên グエン・バン・アン)",
+       "mistake": "Tên chủ tài khoản phải là tên người ký hợp đồng."
+      },
+      {
+       "field": "使用停止のお客さま番号 (mã khách hàng ở nhà cũ - khi đăng ký dừng điện nhà cũ)",
+       "how": "Nếu đồng thời đăng ký dừng điện ở nhà cũ, cần mã khách hàng （お客さま番号） ghi trên phiếu đo đồng hồ （検針票） hoặc hóa đơn ở nhà cũ. Chụp ảnh phiếu này trước khi chuyển đi.",
+       "example": "お客さま番号 （ dãy số trên 検針票 nhà cũ - số mẫu)",
+       "mistake": "Quên đăng ký dừng nhà cũ là tiền điện cơ bản ở nhà cũ vẫn bị tính tiếp."
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. TEPCO phụ trách điện cho vùng Kantō gồm Kawasaki. Ở Nhật bạn được tự chọn công ty điện bán lẻ khác nhau tùy vùng và tùy nhà, nên nếu chuyển sang tỉnh khác thì phải xem công ty nào phục vụ khu vực đó — trang này chỉ đúng cho khu vực TEPCO."
+    },
+    {
+     "name_jp": "東京ガス ガス・電気の開始や停止のお手続き（お引越し等のお手続き）",
+     "name_vi": "Không có tờ khai giấy — đăng ký mở gas online trên trang chuyển nhà chính thức của Tokyo Gas (bắt buộc đặt lịch và có mặt khi mở gas)",
+     "download_url": "https://home.tokyo-gas.co.jp/gas_power/procedure/moving/",
+     "source": "東京ガス (Tokyo Gas) — trang thủ tục bắt đầu/dừng gas và điện chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "使用開始日 (ngày bắt đầu dùng gas)",
+       "how": "Chọn ngày muốn mở gas, nên là ngày vào ở hoặc trước 1 ngày. Tokyo Gas khuyên đăng ký trước khoảng 1 tuần; mùa chuyển nhà tháng 3-4 lịch kín rất nhanh.",
+       "example": "2026年12月1日",
+       "mistake": "Đăng ký sát ngày mới biết hết khung giờ đẹp, mấy ngày đầu không có gas để tắm và nấu ăn."
+      },
+      {
+       "field": "訪問希望時間帯 (khung giờ muốn nhân viên đến mở gas)",
+       "how": "Chọn 1 khung giờ nhân viên đến: 9-12 giờ, 13-15 giờ, 15-17 giờ (một số ngày có thêm 17-19 giờ). Chỉ chọn được khung giờ, không chọn được giờ chính xác.",
+       "example": "9:00〜12:00"
+      },
+      {
+       "field": "立会い者氏名 (họ tên người có mặt chứng kiến khi mở gas)",
+       "how": "Mở gas BẮT BUỘC có người ở nhà: nhân viên mở van đồng hồ, kiểm tra châm lửa bếp và giải thích an toàn (khoảng 30 phút). Người đứng tên hợp đồng bận thì người đại diện ở thay cũng được, nhưng phải khai tên người đó.",
+       "example": "グエン・バン・アン (chính người ký hợp đồng)",
+       "mistake": "Không có ai ở nhà vào giờ hẹn là nhân viên ra về, bạn phải đặt lịch lại từ đầu."
+      },
+      {
+       "field": "使用場所の住所 (địa chỉ nhà mới)",
+       "how": "Địa chỉ nơi mở gas đúng như hợp đồng thuê nhà, gồm tên tòa nhà và số phòng.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "建物の種類 (loại nhà: nhà tập thể hay nhà riêng)",
+       "how": "Chọn 集合住宅 nếu là chung cư/mansion/apato, hoặc 一戸建て nếu là nhà riêng nguyên căn. Thông tin này giúp nhân viên chuẩn bị đúng lối vào đồng hồ gas.",
+       "example": "集合住宅"
+      },
+      {
+       "field": "契約者氏名 (họ tên người ký hợp đồng gas)",
+       "how": "Họ tên người đứng tên hợp đồng gas, viết như trên thẻ lưu trú.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "電話番号 (số điện thoại liên lạc được trong ngày mở gas)",
+       "how": "Số điện thoại nhân viên gọi được vào đúng ngày đến mở gas, vì họ gọi xác nhận trước khi vào nhà.",
+       "example": "090-1234-5678",
+       "mistake": "Điền số không liên lạc được ban ngày là dễ bị lỡ lịch hẹn."
+      },
+      {
+       "field": "使用予定のガス機器 (thiết bị gas dự định dùng)",
+       "how": "Khai các thiết bị gas trong nhà như bếp gas, bình nước nóng gas （給湯器）. Nhân viên sẽ kiểm tra và châm lửa thử các thiết bị này.",
+       "example": "ガスコンロ、ガス給湯器"
+      },
+      {
+       "field": "お客さま番号 (mã khách hàng ở nhà cũ - khi đăng ký dừng gas nhà cũ)",
+       "how": "Nếu nhà cũ cũng dùng Tokyo Gas, bạn đăng ký dừng nhà cũ + mở nhà mới trong cùng 1 lần. Trang Tokyo Gas ghi rõ muốn dừng gas phải có mã khách hàng ghi trên phiếu đo đồng hồ/hóa đơn nhà cũ.",
+       "example": "お客さま番号 （ dãy số trên 検針票 nhà cũ - số mẫu)",
+       "mistake": "Nhà dùng gas bình propane （プロパンガス） thì Tokyo Gas không phụ trách — phải hỏi công ty bất động sản tên công ty propane của tòa nhà."
+      },
+      {
+       "field": "支払い方法 (cách trả tiền gas hàng tháng)",
+       "how": "Chọn thẻ tín dụng, trừ tài khoản ngân hàng, hoặc phiếu nộp tiền. Đăng ký trừ tài khoản thường làm bằng form giấy công ty gửi sau.",
+       "example": "クレジットカード （ thẻ tín dụng tên グエン・バン・アン)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. Tokyo Gas phụ trách gas thành phố （都市ガス） cho khu vực gồm Kawasaki, nhưng không phải nhà nào ở Kawasaki cũng dùng Tokyo Gas: nhà dùng gas propane thì công ty gas do chủ nhà/tòa nhà chỉ định. Luôn hỏi công ty bất động sản trước xem nhà mình thuộc công ty gas nào. Công ty gas khác nhau theo từng vùng ở Nhật."
+    },
+    {
+     "name_jp": "川崎市上下水道局 水道を使う＆止める（使用開始の申込み）",
+     "name_vi": "Không có tờ khai giấy bắt buộc — đăng ký bắt đầu dùng nước online/điện thoại tại Cục nước thành phố Kawasaki",
+     "download_url": "https://www.city.kawasaki.jp/800/category/225-9-0-0-0-0-0-0-0-0.html",
+     "source": "川崎市上下水道局 (Cục cấp thoát nước thành phố Kawasaki) — trang thủ tục dùng/dừng nước chính thức",
+     "format": "web",
+     "fill": [
+      {
+       "field": "使用開始日 (ngày bắt đầu dùng nước)",
+       "how": "Ngày bạn bắt đầu ở nhà mới. Nước ở Kawasaki không cần người ở nhà chứng kiến khi bắt đầu dùng. Đăng ký online qua hệ thống オンライン手続かわさき (e-KAWASAKI) hoặc gọi trung tâm khách hàng 044-200-3548 (8:30-20:00, quanh năm).",
+       "example": "2026年12月1日"
+      },
+      {
+       "field": "名義（名義人氏名） (họ tên người đứng tên hợp đồng nước)",
+       "how": "Đây là các mục chính thức mà Cục nước Kawasaki yêu cầu khai khi đăng ký qua email/fax/điện thoại. Ghi họ tên người đứng tên, viết như trên thẻ lưu trú.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "名義（カナ） (họ tên viết bằng katakana)",
+       "how": "Viết lại họ tên bằng chữ katakana, cách đọc giống cách ghi trên thẻ lưu trú hoặc tài khoản ngân hàng của bạn.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "使用場所（住所） (địa chỉ nơi dùng nước)",
+       "how": "Địa chỉ nhà mới đầy đủ: tỉnh, thành phố, quận, khu phố, số nhà. Ghi đúng như hợp đồng thuê nhà.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4"
+      },
+      {
+       "field": "使用場所（方書） (tên tòa nhà và số phòng)",
+       "how": "Mục 方書 là phần tên tòa nhà + số phòng đi kèm địa chỉ. Không có tên tòa nhà thì để trống như hướng dẫn của Cục nước.",
+       "example": "サンプルマンション101号室",
+       "mistake": "Thiếu số phòng là hóa đơn và giấy tờ dễ bị gửi nhầm hoặc thất lạc."
+      },
+      {
+       "field": "電話番号 (số điện thoại liên lạc)",
+       "how": "Số điện thoại liên lạc được của người đứng tên, để Cục nước gọi xác nhận khi cần.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "水道番号 (mã số nước - nếu biết)",
+       "how": "Mục này không bắt buộc. Nếu ở cửa nhà/đồng hồ nước có sẵn giấy 水道使用開始申込書 ghi mã số nước （水道番号・お客様番号） thì ghi vào, không có thì bỏ qua.",
+       "example": "（để trống nếu không biết mã)",
+       "mistake": "Đừng bịa mã số nước — để trống vẫn đăng ký được bình thường."
+      },
+      {
+       "field": "支払い方法 (cách trả tiền nước)",
+       "how": "Sau khi đăng ký bắt đầu dùng, bạn đăng ký trả tiền bằng trừ tài khoản ngân hàng （口座振替） bằng form giấy hoặc tại quầy ngân hàng/bưu điện, hoặc trả bằng phiếu nộp tiền gửi về nhà 2 tháng 1 lần. Tiền nước ở Kawasaki tính gộp cả tiền thoát nước （下水道使用料）.",
+       "example": "口座振替 （ trừ tài khoản tên グエン・バン・アン)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu là hư cấu. Nhân vật mẫu sống ở thành phố Kawasaki nên cơ quan nước là 川崎市上下水道局 — nước sạch ở Nhật do từng thành phố/tỉnh quản lý, không có công ty nước toàn quốc: chuyển sang thành phố khác thì phải đăng ký với cục nước của thành phố đó. Riêng 神奈川県営水道 (nước cấp tỉnh Kanagawa) KHÔNG phục vụ địa bàn thành phố Kawasaki, Yokohama, Yokosuka — các thành phố này tự quản lý nước."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "引越お役立ち情報局",
+     "lang": "ja",
+     "note": "Cách xử lý thủ tục điện, gas, nước khi chuyển nhà, gồm việc phải có mặt khi mở gas và đăng ký gộp một lần.",
+     "title": "電気ガス水道の変更手続きが引越し当日になってしまった場合",
+     "url": "https://www.youtube.com/watch?v=cscxfzLg7JM"
+    }
+   ]
+  }
+ ]
+}

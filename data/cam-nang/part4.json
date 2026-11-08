@@ -1,0 +1,1363 @@
+{
+ "guides": [
+  {
+   "id": "bao-hiem-suc-khoe-di-kham",
+   "group": "Đời sống & việc làm",
+   "title": "Bảo hiểm sức khỏe quốc dân + đi khám bệnh lần đầu （国民健康保険・受診）",
+   "icon": "🏥",
+   "summary": "Ở Nhật, ai cũng bắt buộc có bảo hiểm y tế. Nếu không có bảo hiểm của công ty, bạn phải tự đăng ký Bảo hiểm Sức khỏe Quốc dân (国民健康保険, đọc là koku-min ken-kō ho-ken, gọi tắt là 国保 - kokuhō) tại tòa thị chính nơi ở. Khi đi khám, có bảo hiểm bạn thường chỉ trả 30% tiền khám (người trong độ tuổi đi học đến dưới 70 tuổi).",
+   "who": "Người Việt sống ở Nhật trên 3 tháng mà không có bảo hiểm y tế của công ty: du học sinh, thực tập sinh đã nghỉ việc, người làm tự do, người mới chuyển nhà, người vừa nghỉ việc và mất bảo hiểm công ty (社会保険, shakai hoken). Người đang có bảo hiểm công ty thì không cần bài này.",
+   "docs": [
+    "Thẻ lưu trú (在留カード, zairyū kādo) của bạn — bản gốc, còn hạn",
+    "Hộ chiếu (パスポート) — bản gốc",
+    "Thẻ My Number (マイナンバーカード) nếu đã có; chưa có thì mang giấy thông báo mã số cá nhân (通知書, tsūchisho)",
+    "Nếu vừa nghỉ việc: Giấy chứng nhận mất tư cách bảo hiểm của công ty (健康保険資格喪失証明書, ken-kō hoken shikaku sōshitsu shōmeisho) — xin công ty cũ cấp, đây là giấy rất quan trọng",
+    "Nếu mới chuyển đến: thông tin địa chỉ mới đã đăng ký cư trú (転入届, tennyū todoke) — thường làm cùng lúc tại tòa thị chính",
+    "Con dấu (印鑑, inkan/hanko) nếu có — nhiều nơi không bắt buộc nhưng mang theo cho chắc",
+    "Tiền mặt hoặc thẻ để đóng phí bảo hiểm kỳ đầu nếu quầy yêu cầu (nhiều nơi gửi giấy báo đóng tiền về nhà sau)"
+   ],
+   "prep_home": [
+    "Chụp ảnh 2 mặt thẻ lưu trú và trang hộ chiếu có ảnh, lưu trong điện thoại — để lỡ cần đối chiếu thông tin khi điền đơn",
+    "Nếu vừa nghỉ việc: gọi hoặc nhắn công ty cũ xin trước Giấy chứng nhận mất tư cách bảo hiểm (資格喪失証明書). Không có giấy này, quầy thường không làm tiếp được",
+    "Viết sẵn ra giấy hoặc ghi chú điện thoại: họ tên katakana của bạn, địa chỉ ở Nhật (viết đúng như trên thẻ lưu trú), số điện thoại, ngày tháng năm sinh",
+    "Kiểm tra ngày bắt đầu phải đăng ký: ngày chuyển đến Nhật / ngày chuyển nhà / ngày mất bảo hiểm công ty. Hạn đăng ký là trong vòng 14 ngày kể từ ngày đó — ghi lịch nhắc vào điện thoại ngay",
+    "Tra trước địa chỉ và giờ mở cửa của tòa thị chính (市役所, shiyakusho) hoặc văn phòng quận (区役所, kuyakusho) nơi bạn ở, và quầy phụ trách bảo hiểm quốc dân thường tên là 保険年金課 (hoken nenkinka) hoặc 国民健康保険課",
+    "Chuẩn bị sẵn câu hỏi bằng tiếng Nhật trong ghi chú điện thoại (xem phần câu mẫu ở cuối bài) phòng khi quầy không có người nói tiếng Việt",
+    "Mang theo sổ tay nhỏ để ghi lại: số điện thoại quầy bảo hiểm, ngày hẹn trả kết quả, số tiền phí bảo hiểm ước tính nhân viên báo cho bạn"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Tự kiểm tra xem mình thuộc diện nào",
+     "d": "Ở nhà, tự trả lời 3 câu: (1) Công ty có đóng bảo hiểm cho mình không? Nếu có, bạn đã có bảo hiểm công ty, không đăng ký 国保. (2) Nếu không có, hoặc vừa nghỉ việc, hoặc mới sang Nhật: bạn thuộc diện phải đăng ký 国保. (3) Đếm ngày: từ ngày chuyển đến / ngày mất bảo hiểm công ty, bạn có 14 ngày để đăng ký. Đăng ký trễ thì tiền phí vẫn bị tính ngược từ tháng đầu tiên, và tiền khám trước khi có bảo hiểm có thể phải tự trả 100%. Mất khoảng 5 phút tự kiểm tra ở nhà.",
+     "ja": "国民健康保険に加入したいです。",
+     "vi": "Tôi muốn đăng ký Bảo hiểm Sức khỏe Quốc dân."
+    },
+    {
+     "t": "Bước 2: Đến quầy bảo hiểm ở tòa thị chính / văn phòng quận",
+     "d": "ĐI ĐÂU: Tòa thị chính (市役所) hoặc văn phòng quận (区役所) của nơi bạn đăng ký địa chỉ. Vào cửa chính, tìm quầy thông tin (案内, annai) và nói câu mẫu bên dưới, nhân viên sẽ chỉ quầy 国民健康保険担当 (quầy phụ trách bảo hiểm quốc dân). MANG GÌ: toàn bộ giấy tờ trong mục docs. Lấy số thứ tự, ngồi chờ gọi số. Thời gian chờ thường khoảng 15–60 phút tùy đông hay vắng, đi buổi sáng sớm ngày thường thường nhanh hơn. NHẬN ĐƯỢC GÌ ở bước này: phiếu số thứ tự và có thể một tờ đơn để điền trước.",
+     "ja": "国民健康保険の加入手続きはどこですか。",
+     "vi": "Thủ tục đăng ký Bảo hiểm Sức khỏe Quốc dân làm ở đâu ạ?"
+    },
+    {
+     "t": "Bước 3: Điền đơn đăng ký và nộp giấy tờ",
+     "d": "ĐI ĐÂU: ngồi tại quầy được gọi. MANG GÌ: đưa thẻ lưu trú, hộ chiếu và giấy chứng nhận mất bảo hiểm công ty (nếu có). NÓI GÌ: nói rõ ngày bạn chuyển đến hoặc ngày nghỉ việc. Nhân viên sẽ đưa đơn đăng ký (加入届, kanyū todoke): điền họ tên, địa chỉ, ngày sinh, mã số My Number nếu biết. Không hiểu ô nào thì chỉ vào ô đó và hỏi, đừng đoán bừa. MẤT BAO LÂU: khoảng 10–20 phút. KIỂM TRA GÌ: họ tên katakana và địa chỉ trên đơn phải đúng y như thẻ lưu trú, sai một chữ cũng nên sửa ngay tại chỗ.",
+     "ja": "書き方が分かりません。教えてください。",
+     "vi": "Tôi không biết cách viết. Xin hãy chỉ cho tôi."
+    },
+    {
+     "t": "Bước 4: Nhận giấy tờ chứng nhận tư cách bảo hiểm",
+     "d": "Từ tháng 12/2024, Nhật ngừng cấp thẻ bảo hiểm giấy kiểu cũ. NHẬN ĐƯỢC GÌ tùy trường hợp: (1) Nếu bạn đã liên kết My Number với bảo hiểm: dùng thẻ My Number làm thẻ bảo hiểm (gọi là マイナ保険証, maina hokenshō). (2) Nếu chưa liên kết: bạn được cấp Giấy xác nhận tư cách (資格確認書, shikaku kakuninsho) để mang đi khám thay thẻ bảo hiểm. Một số nơi cấp ngay trong ngày, một số nơi gửi bưu điện về nhà sau khoảng 1–2 tuần; khi đó quầy có thể cấp giấy tạm để đi khám. HỎI RÕ trước khi về: giấy của tôi nhận hôm nay hay gửi về nhà? MẤT BAO LÂU: khoảng 10 phút cuối buổi làm việc.",
+     "ja": "資格確認書は今日もらえますか。郵便で届きますか。",
+     "vi": "Giấy xác nhận tư cách tôi nhận hôm nay được không? Hay sẽ gửi qua bưu điện?"
+    },
+    {
+     "t": "Bước 5: Nghe giải thích về phí bảo hiểm và cách đóng",
+     "d": "Phí bảo hiểm (保険料, hokenryō) tính theo thu nhập năm trước và theo từng địa phương nên mỗi người một mức, không có một con số chung. Người mới sang, thu nhập năm trước ở Nhật bằng 0 thì năm đầu thường thấp, nhưng không phải bằng 0. NHẬN ĐƯỢC GÌ: giấy báo đóng tiền (納付書, nōfusho) gửi về nhà theo kỳ, hoặc đăng ký trừ tự động qua ngân hàng (口座振替, kōza furikae) tại quầy nếu muốn. KIỂM TRA GÌ: hỏi rõ kỳ đầu đóng bao nhiêu, hạn đóng ngày nào, đóng ở đâu (ngân hàng, bưu điện, cửa hàng tiện lợi đều được với giấy báo). MẤT BAO LÂU: khoảng 5–10 phút.",
+     "ja": "保険料は毎月いくらぐらいですか。いつまでに払いますか。",
+     "vi": "Phí bảo hiểm mỗi tháng khoảng bao nhiêu ạ? Tôi phải đóng trước ngày nào?"
+    },
+    {
+     "t": "Bước 6: Chọn phòng khám và đặt lịch khám lần đầu",
+     "d": "Ở Nhật, lần đầu nên đi phòng khám nhỏ gần nhà (クリニック, kurinikku / 診療所, shinryōjo) theo đúng chuyên khoa: nội khoa (内科, naika) khi sốt/cảm/đau bụng, da liễu (皮膚科, hifuka), nha khoa (歯科, shika)... Bệnh viện lớn (病院, byōin) thường cần giấy giới thiệu (紹介状, shōkaijō), đi thẳng vào có thể bị thu thêm phí chọn bệnh viện. CÁCH ĐẶT LỊCH: gọi điện hoặc đặt trên web của phòng khám; nhiều nơi nhận khám trực tiếp không cần hẹn nhưng phải chờ lâu. Nói câu mẫu khi gọi điện. Ghi lại ngày giờ hẹn vào điện thoại ngay.",
+     "ja": "初めてです。予約したいです。",
+     "vi": "Đây là lần đầu tôi đến khám. Tôi muốn đặt lịch hẹn."
+    },
+    {
+     "t": "Bước 7: Đến phòng khám: quầy tiếp nhận và phiếu hỏi bệnh",
+     "d": "ĐI ĐÂU: quầy tiếp nhận (受付, uketsuke) ngay cửa phòng khám. MANG GÌ: 資格確認書 hoặc thẻ My Number đã liên kết bảo hiểm, thẻ lưu trú (một số nơi xem thêm), tiền mặt/thẻ. NÓI GÌ: nói câu mẫu, đưa giấy bảo hiểm. NHẬN ĐƯỢC GÌ: phiếu hỏi bệnh (問診票, monshinhyō) — điền triệu chứng: đau ở đâu, từ khi nào, sốt bao nhiêu độ, đang uống thuốc gì, có dị ứng thuốc/thức ăn không, có đang mang thai không. Không đọc được chữ Hán thì hỏi nhân viên hoặc dùng ứng dụng dịch chụp ảnh, điền trung thực là quan trọng nhất. Sau đó ngồi chờ gọi tên. MẤT BAO LÂU: chờ khoảng 15–60 phút tùy đông.",
+     "ja": "初めてです。保険証を出します。",
+     "vi": "Đây là lần đầu tôi đến. Tôi xin nộp giấy/thẻ bảo hiểm."
+    },
+    {
+     "t": "Bước 8: Vào khám và nói triệu chứng với bác sĩ",
+     "d": "Vào phòng khám (診察室, shinsatsushitsu) khi được gọi tên. NÓI GÌ: nói ngắn gọn theo thứ tự: (1) đau/khó chịu ở đâu, (2) từ khi nào, (3) mức độ thế nào. Dùng câu mẫu và chỉ tay vào chỗ đau nếu khó nói. Bác sĩ có thể nghe tim phổi, xem họng, xét nghiệm máu/nước tiểu hoặc chụp X-quang tùy trường hợp. Nếu bác sĩ nói nhanh không hiểu, hãy nói 'xin nói chậm lại' hoặc 'xin viết ra giấy'. Đừng gật đầu khi chưa hiểu về cách uống thuốc. MẤT BAO LÂU: thường khoảng 5–15 phút cho một lần khám thông thường.",
+     "ja": "昨日から熱と咳があります。ゆっくり話してください。",
+     "vi": "Từ hôm qua tôi bị sốt và ho. Xin hãy nói chậm lại ạ."
+    },
+    {
+     "t": "Bước 9: Thanh toán 30% ở quầy tính tiền và nhận thuốc",
+     "d": "ĐI ĐÂU: quay lại quầy, chờ gọi để tính tiền (会計, kaikei). TRẢ BAO NHIÊU: người từ tuổi vào tiểu học đến dưới 70 tuổi thường trả 30% tổng chi phí khám; trẻ chưa vào tiểu học trả 20%; người 70–74 tuổi trả 20% hoặc 30% tùy thu nhập. NHẬN ĐƯỢC GÌ: hóa đơn/biên lai (領収書, ryōshūsho) và明細 (bảng chi tiết chi phí, giữ lại cẩn thận), đơn thuốc (処方箋, shohōsen) nếu có thuốc. Mang đơn thuốc đến nhà thuốc (薬局, yakkyoku, thường ngay cạnh phòng khám), đưa đơn và trả tiền thuốc (cũng được bảo hiểm hỗ trợ tương tự). KIỂM TRA GÌ trước khi rời đi: đúng họ tên trên đơn thuốc, nghe rõ thuốc uống mấy lần/ngày, mấy ngày. Đơn thuốc thường có hạn khoảng 4 ngày kể cả ngày cấp, đừng để quá hạn.",
+     "ja": "薬は1日何回飲みますか。",
+     "vi": "Thuốc này uống mấy lần một ngày ạ?"
+    }
+   ],
+   "cost": "Đăng ký bảo hiểm: miễn phí. Phí bảo hiểm hàng tháng: khoảng vài nghìn đến vài chục nghìn yên/người/tháng, tùy thu nhập và tùy địa phương — năm đầu mới sang thường thấp. Đi khám: thường tự trả 30% chi phí khám + tiền thuốc (ví dụ khám cảm thông thường tổng chi phí khoảng 5.000–10.000 yên thì tự trả khoảng 1.500–3.000 yên, chỉ là mức tham khảo, tùy bệnh và xét nghiệm).",
+   "duration": "Đăng ký tại quầy: khoảng 30–90 phút trong 1 buổi. Giấy xác nhận tư cách: nhận ngay hoặc gửi về nhà sau khoảng 1–2 tuần tùy nơi. Hạn đăng ký: trong vòng 14 ngày kể từ ngày chuyển đến / ngày mất bảo hiểm công ty. Một lần đi khám thông thường: khoảng 1–2 giờ tính cả chờ đợi.",
+   "warnings": [
+    "Không có bảo hiểm mà đi khám là tự trả 100%, một lần khám + xét nghiệm có thể lên tới hàng chục nghìn yên. Chưa kịp có giấy bảo hiểm mà phải đi khám gấp: cứ đi khám, giữ toàn bộ hóa đơn, rồi hỏi quầy bảo hiểm ở tòa thị chính về thủ tục xin hoàn lại phần bảo hiểm sau khi đăng ký xong.",
+    "Đăng ký trễ quá 14 ngày: vẫn phải đi đăng ký ngay. Phí bảo hiểm vẫn bị tính ngược từ tháng bắt đầu có tư cách, và chi phí khám trong thời gian chưa đăng ký có thể không được hoàn. Càng để lâu càng thiệt, đừng bỏ mặc.",
+    "Nếu thiếu Giấy chứng nhận mất tư cách bảo hiểm công ty (資格喪失証明書): quầy thường chưa làm xong hồ sơ cho bạn. Cách xử lý: gọi ngay cho công ty cũ (hoặc công ty haken/đơn vị quản lý) yêu cầu cấp giấy này, đây là nghĩa vụ của công ty khi bạn nghỉ việc. Trong lúc chờ, hỏi quầy xem có được nộp bổ sung sau không và xin ghi lại hạn nộp bổ sung.",
+    "Nếu không hiểu tiếng Nhật ở quầy: nhiều tòa thị chính có tổng đài phiên dịch qua điện thoại hoặc tình nguyện viên phiên dịch theo ngày. Hãy hỏi câu 'Có phiên dịch tiếng Việt không?' (xem câu mẫu), hoặc mang theo người biết tiếng Nhật, hoặc viết sẵn điều cần hỏi ra giấy bằng tiếng Nhật trước ở nhà.",
+    "Nếu không đóng phí bảo hiểm: bị gửi giấy nhắc, tính phí chậm trả, để lâu có thể bị rút ngắn thời hạn giấy bảo hiểm hoặc bị cưỡng chế tài sản. Không đóng nổi vì thu nhập thấp: đến quầy hỏi về giảm miễn (減免, genmen) hoặc chia nhỏ kỳ đóng — có chế độ hỗ trợ, đừng im lặng bỏ trốn.",
+    "Đi khám mà quên mang giấy bảo hiểm: phòng khám có thể yêu cầu trả 100% trước. Giữ hóa đơn và mang giấy bảo hiểm quay lại phòng khám trong thời hạn họ hướng dẫn (thường trong tháng) để được tính lại và hoàn phần chênh lệch.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận được 資格確認書 (giấy xác nhận tư cách) hoặc đã liên kết thẻ My Number làm thẻ bảo hiểm — kiểm tra đúng họ tên, ngày sinh, địa chỉ trên giấy/thẻ",
+    "Đã biết rõ: phí bảo hiểm kỳ đầu là bao nhiêu, hạn đóng ngày nào, đóng bằng giấy báo hay trừ tài khoản tự động",
+    "Cất giấy bảo hiểm cùng thẻ lưu trú trong ví — đi khám ở đâu cũng mang theo cả hai",
+    "Lưu số điện thoại quầy bảo hiểm của tòa thị chính và địa chỉ phòng khám gần nhà vào điện thoại",
+    "Ghi lịch nhắc: khi chuyển nhà phải khai báo địa chỉ mới và đổi bảo hiểm trong 14 ngày; khi vào làm công ty có bảo hiểm thì phải làm thủ tục thôi 国保 để không bị đóng trùng 2 nơi",
+    "Giữ lại toàn bộ hóa đơn khám bệnh (領収書) trong năm — có thể dùng khi quyết toán thuế y tế (医療費控除) nếu tổng chi phí y tế trong năm cao"
+   ],
+   "vocab": [
+    {
+     "ja": "国民健康保険",
+     "reading": "こくみんけんこうほけん",
+     "vi": "Bảo hiểm Sức khỏe Quốc dân (người không có bảo hiểm công ty phải tham gia)"
+    },
+    {
+     "ja": "保険料",
+     "reading": "ほけんりょう",
+     "vi": "Phí bảo hiểm phải đóng hàng tháng/kỳ"
+    },
+    {
+     "ja": "資格確認書",
+     "reading": "しかくかくにんしょ",
+     "vi": "Giấy xác nhận tư cách bảo hiểm (dùng thay thẻ bảo hiểm giấy cũ khi đi khám)"
+    },
+    {
+     "ja": "自己負担",
+     "reading": "じこふたん",
+     "vi": "Phần tiền tự trả khi đi khám (thường 30%)"
+    },
+    {
+     "ja": "受付",
+     "reading": "うけつけ",
+     "vi": "Quầy tiếp nhận (ở phòng khám, bệnh viện)"
+    },
+    {
+     "ja": "問診票",
+     "reading": "もんしんひょう",
+     "vi": "Phiếu hỏi bệnh điền trước khi khám"
+    },
+    {
+     "ja": "診察",
+     "reading": "しんさつ",
+     "vi": "Việc khám bệnh với bác sĩ"
+    },
+    {
+     "ja": "処方箋",
+     "reading": "しょほうせん",
+     "vi": "Đơn thuốc bác sĩ kê, mang ra nhà thuốc"
+    },
+    {
+     "ja": "薬局",
+     "reading": "やっきょく",
+     "vi": "Nhà thuốc (nơi nhận thuốc theo đơn)"
+    },
+    {
+     "ja": "会計",
+     "reading": "かいけい",
+     "vi": "Quầy tính tiền / thanh toán"
+    },
+    {
+     "ja": "領収書",
+     "reading": "りょうしゅうしょ",
+     "vi": "Hóa đơn, biên lai thanh toán (nên giữ lại)"
+    },
+    {
+     "ja": "紹介状",
+     "reading": "しょうかいじょう",
+     "vi": "Giấy giới thiệu (cần khi lên bệnh viện lớn)"
+    },
+    {
+     "ja": "内科",
+     "reading": "ないか",
+     "vi": "Khoa nội (khám sốt, cảm, đau bụng...)"
+    },
+    {
+     "ja": "市役所",
+     "reading": "しやくしょ",
+     "vi": "Tòa thị chính (nơi làm thủ tục hành chính)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "国民健康保険に加入したいです。",
+     "vi": "Tôi muốn đăng ký Bảo hiểm Sức khỏe Quốc dân."
+    },
+    {
+     "ja": "ベトナム語の通訳はいますか。",
+     "vi": "Có phiên dịch tiếng Việt không ạ?"
+    },
+    {
+     "ja": "熱があります。喉が痛いです。",
+     "vi": "Tôi bị sốt. Tôi đau họng."
+    },
+    {
+     "ja": "薬のアレルギーがあります。",
+     "vi": "Tôi bị dị ứng thuốc."
+    },
+    {
+     "ja": "初めてです。予約したいです。",
+     "vi": "Đây là lần đầu tôi đến. Tôi muốn đặt lịch hẹn."
+    },
+    {
+     "ja": "保険料を分けて払えますか。",
+     "vi": "Tôi chia nhỏ phí bảo hiểm ra đóng được không ạ?"
+    }
+   ],
+   "links": [
+    {
+     "label": "Bộ Y tế, Lao động và Phúc lợi (MHLW) — Tờ hướng dẫn Bảo hiểm Sức khỏe Quốc dân (PDF)",
+     "url": "https://www.mhlw.go.jp/content/001745817.pdf"
+    },
+    {
+     "label": "Thành phố Kawasaki — Thủ tục tham gia Bảo hiểm Sức khỏe Quốc dân (ví dụ trang của một thành phố)",
+     "url": "https://www.city.kawasaki.jp/350/page/0000139064.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "国民健康保険加入届（川崎市）",
+     "name_vi": "Đơn đăng ký tham gia Bảo hiểm Sức khỏe Quốc dân - ví dụ mẫu của TP Kawasaki",
+     "download_url": "https://www.city.kawasaki.jp/350/page/0000139064.html",
+     "source": "川崎市 (Thành phố Kawasaki) - trang 国民健康保険に加入するとき",
+     "format": "web",
+     "fill": [
+      {
+       "field": "届出日 (ngày nộp đơn)",
+       "how": "Ghi ngày bạn đến quầy nộp. Không ghi ngày trước ngày phát sinh lý do đăng ký.",
+       "example": "2026年11月10日"
+      },
+      {
+       "field": "世帯主 氏名 (họ tên chủ hộ)",
+       "how": "Ghi họ tên chủ hộ trong hộ gia đình. Nếu bạn sống một mình, bạn chính là chủ hộ.",
+       "example": "グエン・バン・アン",
+       "mistake": "Nhiều người ghi tên người đi nộp thay vì tên chủ hộ. Hai người này có thể khác nhau."
+      },
+      {
+       "field": "世帯主 住所 (địa chỉ chủ hộ)",
+       "how": "Ghi đúng địa chỉ đã đăng ký cư trú, giống hệt trên thẻ lưu trú.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "加入する方の氏名・ふりがな (họ tên người tham gia + cách đọc)",
+       "how": "Ghi họ tên bằng chữ Latin như trên thẻ lưu trú. Ô furigana ghi cách đọc katakana.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "生年月日 (ngày tháng năm sinh)",
+       "how": "Ghi theo năm dương lịch hoặc niên hiệu Nhật, đúng như thẻ lưu trú.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "性別 (giới tính)",
+       "how": "Khoanh hoặc đánh dấu vào ô Nam (男) hoặc Nữ (女).",
+       "example": "男"
+      },
+      {
+       "field": "個人番号／マイナンバー (mã số cá nhân My Number)",
+       "how": "Ghi 12 số My Number của chủ hộ và của từng người tham gia. Mang theo thẻ My Number hoặc giấy thông báo để đối chiếu.",
+       "example": "(ghi 12 số trên thẻ My Number của bạn)",
+       "mistake": "Thiếu mã số của một người trong hộ là hồ sơ bị giữ lại bổ sung."
+      },
+      {
+       "field": "加入の理由・事由発生日 (lý do tham gia + ngày phát sinh)",
+       "how": "Chọn lý do: chuyển đến từ nơi khác (転入), thôi bảo hiểm công ty (職場の健康保険をやめた), sinh con, hoặc hết trợ cấp sinh hoạt. Ghi ngày xảy ra việc đó. Hạn nộp là 14 ngày kể từ ngày này.",
+       "example": "職場の健康保険をやめた／事由発生日：2026年11月1日",
+       "mistake": "Nộp trễ vẫn bị truy thu phí từ tháng phát sinh lý do, nên đừng để quá 14 ngày."
+      },
+      {
+       "field": "届出人 (người đi nộp)",
+       "how": "Nếu người khác đi nộp thay, ghi họ tên và quan hệ với chủ hộ. Người ngoài gia đình cùng hộ thường cần giấy ủy quyền (委任状).",
+       "example": "本人 (chính chủ)"
+      },
+      {
+       "field": "連絡先電話番号 (số điện thoại liên lạc)",
+       "how": "Ghi số điện thoại di động đang dùng để quầy liên lạc khi thiếu giấy tờ.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "資格喪失証明書の有無 (có giấy chứng nhận mất tư cách bảo hiểm công ty hay không)",
+       "how": "Nếu vừa nghỉ việc, đánh dấu có và nộp kèm Giấy chứng nhận mất tư cách (資格喪失証明書) xin từ công ty cũ.",
+       "example": "有（添付）",
+       "mistake": "Giấy xác nhận nghỉ việc thường không thay thế được giấy này."
+      }
+     ],
+     "sample_note": "Mẫu đơn đăng ký Quốc dân kiện bảo hiểm không có mẫu chung toàn quốc: mỗi thành phố/quận (市区町村) tự phát hành mẫu riêng và phát tại quầy 保険年金課 của mình, vì vậy trang Kawasaki chỉ là ví dụ làm mẫu - nếu bạn ở thành phố khác, hãy xin mẫu của đúng nơi bạn ở. Riêng trường hợp thôi bảo hiểm công ty, Kawasaki cho nộp online qua Myna Portal (ぴったりサービス). Ví dụ trong bài là nhân vật hư cấu."
+    },
+    {
+     "name_jp": "内科問診票（多言語版・ベトナム語）",
+     "name_vi": "Phiếu hỏi bệnh khoa Nội đa ngôn ngữ (bản tiếng Việt) - điền tại phòng khám",
+     "download_url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html",
+     "source": "厚生労働省 (Bộ Y tế, Lao động và Phúc lợi) - trang 外国人向け多言語説明資料一覧, mục (14) 内科問診票",
+     "format": "Excel",
+     "fill": [
+      {
+       "field": "氏名 (họ tên)",
+       "how": "Ghi họ tên như trên thẻ bảo hiểm / thẻ lưu trú.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "生年月日・年齢 (ngày sinh và tuổi)",
+       "how": "Ghi ngày sinh và tuổi hiện tại.",
+       "example": "1998年5月12日生／28歳"
+      },
+      {
+       "field": "性別 (giới tính)",
+       "how": "Đánh dấu Nam hoặc Nữ.",
+       "example": "男"
+      },
+      {
+       "field": "住所・電話番号 (địa chỉ và số điện thoại)",
+       "how": "Ghi địa chỉ nhà và số di động để phòng khám liên lạc kết quả xét nghiệm.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678"
+      },
+      {
+       "field": "今日はどうしましたか (hôm nay bạn bị sao)",
+       "how": "Khoanh triệu chứng chính: sốt (発熱), ho (咳), đau bụng (腹痛)... và ghi bắt đầu từ khi nào.",
+       "example": "発熱と咳／3日前から",
+       "mistake": "Chỉ ghi 'bị ốm' là bác sĩ khó hỏi tiếp. Hãy ghi triệu chứng + từ bao giờ."
+      },
+      {
+       "field": "熱・体温 (sốt / nhiệt độ cơ thể)",
+       "how": "Nếu đã đo nhiệt độ, ghi số đo gần nhất.",
+       "example": "38.2度"
+      },
+      {
+       "field": "アレルギー (dị ứng)",
+       "how": "Ghi dị ứng thuốc hoặc thức ăn nếu có. Không có thì đánh dấu 'không có' (なし).",
+       "example": "薬のアレルギー：なし／食べ物：なし",
+       "mistake": "Để trống ô này dễ bị hiểu là chưa hỏi. Luôn ghi rõ có hoặc không."
+      },
+      {
+       "field": "今飲んでいる薬 (thuốc đang uống)",
+       "how": "Liệt kê thuốc đang uống, kể cả thuốc mua ở Việt Nam mang sang. Mang theo vỏ thuốc nếu có.",
+       "example": "なし"
+      },
+      {
+       "field": "今までにかかった病気・手術 (bệnh đã từng mắc / đã từng phẫu thuật)",
+       "how": "Đánh dấu các bệnh từng điều trị như huyết áp cao, tiểu đường, hen suyễn; ghi nếu từng mổ.",
+       "example": "大きな病気：なし／手術：なし"
+      },
+      {
+       "field": "たばこ・お酒 (thuốc lá và rượu)",
+       "how": "Ghi có hút thuốc / uống rượu hay không, khoảng bao nhiêu mỗi ngày.",
+       "example": "たばこ：吸わない／お酒：飲まない"
+      },
+      {
+       "field": "（女性）妊娠の可能性 (với nữ: khả năng mang thai)",
+       "how": "Đánh dấu đang mang thai, có thể mang thai, hoặc không. Thông tin này ảnh hưởng đến chụp X-quang và kê thuốc.",
+       "example": "対象外 (nam thì bỏ qua mục này)"
+      }
+     ],
+     "sample_note": "Đây là bộ phiếu hỏi bệnh đa ngôn ngữ chính thức của Bộ Y tế Nhật (厚生労働省), có bản tiếng Việt cho nhiều khoa (nội, hô hấp, tiêu hóa...), tải được dạng Excel và PDF từ trang trên. Mỗi phòng khám vẫn có phiếu riêng của họ, nhưng nội dung hỏi gần giống nhau, nên điền thử bản này ở nhà sẽ giúp bạn điền nhanh tại quầy. Ví dụ là nhân vật hư cấu."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "MOJchannel",
+     "lang": "ja",
+     "note": "Video chính thức của Cục Xuất nhập cảnh (MOJchannel) giải thích chế độ bảo hiểm sức khỏe và tiền khám bệnh cho người nước ngoài sống ở Nhật.",
+     "title": "生活オリエンテーション動画　８　健康保険制度（日本語）",
+     "url": "https://www.youtube.com/watch?v=2MsTwufBkuI"
+    }
+   ]
+  },
+  {
+   "id": "tim-viec-lam-them-hello-work",
+   "group": "Đời sống & việc làm",
+   "title": "Tìm việc làm thêm & Hello Work （ハローワーク・求職）",
+   "icon": "💼",
+   "summary": "Hello Work (ハローワーク) là cơ quan giới thiệu việc làm công cộng của nhà nước, dùng hoàn toàn miễn phí cho cả người Nhật và người nước ngoài. Bạn đăng ký tìm việc (求職登録) tại Hello Work gần nhà, được tư vấn, xem tin tuyển dụng (求人, kyūjin) trên toàn quốc và nhận giấy giới thiệu (紹介状) để đi phỏng vấn. Song song đó cần kiểm tra kỹ tư cách lưu trú của mình có được làm thêm hay không, được làm bao nhiêu giờ.",
+   "who": "Người Việt đang sống hợp pháp ở Nhật muốn tìm việc làm thêm (アルバイト, arubaito) hoặc việc chính thức: du học sinh (cần Giấy phép hoạt động ngoài tư cách lưu trú), người theo gia đình, thực tập sinh đã chuyển việc hợp pháp, người có tư cách lao động muốn đổi việc. Người có tư cách 'du lịch/ngắn hạn' không được làm việc.",
+   "docs": [
+    "Thẻ lưu trú (在留カード) — bản gốc, bắt buộc để nhân viên kiểm tra tư cách và thời hạn lưu trú",
+    "Hộ chiếu (パスポート) — bản gốc, mang theo phòng khi cần đối chiếu",
+    "Nếu là du học sinh / người theo diện gia đình: đã có Giấy phép hoạt động ngoài tư cách lưu trú (資格外活動許可, shikakugai katsudō kyoka) — kiểm tra mặt sau thẻ lưu trú, mục giấy phép có đóng dấu/chữ cho phép hay chưa",
+    "Sơ yếu lý lịch viết theo mẫu Nhật (履歴書, rirekisho) — bản nháp cũng được, Hello Work sẽ hướng dẫn sửa",
+    "Thông tin tài khoản ngân hàng ở Nhật (để sau này nhận lương) — chưa có cũng đăng ký tìm việc được",
+    "Thẻ My Number hoặc giấy thông báo mã số cá nhân — một số công ty yêu cầu khi nhận việc",
+    "Bằng cấp / chứng chỉ tiếng Nhật (JLPT...) bản sao nếu có — giúp được giới thiệu nhiều việc tốt hơn"
+   ],
+   "prep_home": [
+    "Kiểm tra mặt sau thẻ lưu trú của mình: mục 資格外活動許可欄 (ô giấy phép hoạt động ngoài tư cách) ghi gì. Du học sinh và diện gia đình chỉ được làm thêm khi đã có giấy phép này, tối đa 28 giờ/tuần (kỳ nghỉ dài của trường: tối đa 8 giờ/ngày)",
+    "Viết sẵn ra giấy mong muốn của mình: muốn làm việc gì, khu vực nào đi lại được, làm được thứ mấy / mấy giờ đến mấy giờ, mức lương giờ mong muốn — bằng cả tiếng Việt và vài từ khóa tiếng Nhật",
+    "Điền nháp sẵn sơ yếu lý lịch (履歴書) theo mẫu bán ở cửa hàng 100 yên hoặc tải mẫu miễn phí trên mạng: họ tên + cách đọc furigana, ngày sinh, địa chỉ, quá trình học/làm, lý do ứng tuyển để trống cũng được",
+    "Chụp ảnh thẻ 3x4 cm (ảnh làm hồ sơ, nền trắng) — dán vào 履歴書; chụp tại máy ảnh tự động ở ga hoặc cửa hàng tiện lợi, khoảng vài trăm yên/bộ",
+    "Tra trước địa chỉ Hello Work phụ trách khu vực nhà bạn trên trang Hello Work Internet Service, xem giờ mở cửa (thường ngày thường 8:30–17:15, một số nơi mở thêm sáng thứ Bảy — tùy nơi)",
+    "Chuẩn bị sẵn trong điện thoại: bản chụp thẻ lưu trú 2 mặt, số điện thoại, email đang dùng — khi đăng ký online hoặc tại quầy sẽ cần",
+    "Nếu tiếng Nhật còn yếu: xem trước danh sách Hello Work có phiên dịch (một số Hello Work lớn có phiên dịch tiếng Việt theo ngày cố định trong tuần) và chọn đúng ngày có phiên dịch mà đi"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Kiểm tra tư cách lưu trú có được làm việc không",
+     "d": "Ở nhà, xem thẻ lưu trú: ô 在留資格 (tư cách lưu trú) ghi gì. 'Kỹ thuật - Tri thức nhân văn - Nghiệp vụ quốc tế', 'Kỹ năng đặc định'... là diện lao động, làm việc trong phạm vi ngành nghề được phép. 'Du học' (留学) và 'Đoàn tụ gia đình' (家族滞在) bắt buộc phải có 資格外活動許可 mới được làm thêm, tối đa 28 giờ/tuần. 'Thăm thân ngắn hạn/du lịch' thì tuyệt đối không được làm việc. Không chắc thì mang thẻ đến Hello Work hoặc Cục Xuất nhập cảnh hỏi trước khi nhận bất kỳ việc gì. Mất khoảng 5 phút.",
+     "ja": "私は働けますか。在留カードを見てください。",
+     "vi": "Tôi có được làm việc không ạ? Xin xem thẻ lưu trú của tôi."
+    },
+    {
+     "t": "Bước 2: Tìm việc thử trên Hello Work Internet Service",
+     "d": "Ở nhà, mở trang Hello Work Internet Service (link cuối bài), chọn mục tìm tin tuyển dụng (求人情報検索). Lọc theo: tỉnh/thành phố nơi ở, loại việc (パート・アルバイト là làm thêm theo giờ), ngành nghề, lương giờ. Lưu lại mã số tin tuyển dụng (求人番号, kyūjin bangō) của vài việc bạn thích — mang mã số này ra quầy, nhân viên tra cứu và tư vấn rất nhanh. Xem online thì không cần đăng ký tài khoản. Mất khoảng 20–30 phút ở nhà.",
+     "ja": "",
+     "vi": ""
+    },
+    {
+     "t": "Bước 3: Đến Hello Work đăng ký tìm việc (求職登録)",
+     "d": "ĐI ĐÂU: Hello Work phụ trách khu vực bạn sống, vào quầy tiếp nhận tổng hợp (総合受付, sōgō uketsuke). MANG GÌ: thẻ lưu trú, hộ chiếu, 履歴書 nháp, danh sách mã số việc đã lưu. NÓI GÌ: nói câu mẫu. Nhân viên đưa Đơn đăng ký tìm việc (求職申込書, kyūshoku mōshimosho): điền họ tên, địa chỉ, việc muốn làm, giờ làm được, kinh nghiệm. Không biết điền ô nào thì hỏi ngay, có mẫu điền sẵn để nhìn theo ở nhiều nơi. MẤT BAO LÂU: đăng ký + tư vấn lần đầu khoảng 30–60 phút.",
+     "ja": "仕事を探しています。求職登録をしたいです。",
+     "vi": "Tôi đang tìm việc. Tôi muốn đăng ký tìm việc."
+    },
+    {
+     "t": "Bước 4: Nhận thẻ/phiếu người tìm việc và ngồi tư vấn",
+     "d": "NHẬN ĐƯỢC GÌ: Phiếu tiếp nhận Hello Work / thẻ người tìm việc (ハローワーク受付票・求職票) có mã số tìm việc của riêng bạn — giữ cẩn thận, mỗi lần đến đều mang theo. Sau đó nhân viên tư vấn (相談窓口) sẽ hỏi kỹ: muốn làm việc gì, đi xa được bao nhiêu, làm được giờ nào, tiếng Nhật ở mức nào. Trả lời thật: nói quá khả năng tiếng Nhật dễ được giới thiệu việc không làm nổi. Nếu nơi đó có quầy/phiên dịch cho người nước ngoài (外国人雇用サービスコーナー ở các Hello Work lớn), hãy xin được tư vấn ở quầy đó. KIỂM TRA GÌ: mã số tìm việc và họ tên trên phiếu có đúng không.",
+     "ja": "ベトナム語で相談できますか。",
+     "vi": "Tôi tư vấn bằng tiếng Việt được không ạ?"
+    },
+    {
+     "t": "Bước 5: Tự tra việc trên máy tính tại Hello Work và chọn việc ứng tuyển",
+     "d": "ĐI ĐÂU: khu vực máy tính tra cứu (求人検索パソコン) trong Hello Work, dùng mã số tìm việc của bạn để đăng nhập. In ra (hoặc chụp lại) tờ thông tin việc (求人票, kyūjinhyō) của việc muốn ứng tuyển. ĐỌC KỸ trên 求人票: lương giờ (時給, jikyū), giờ làm (勤務時間), ngày nghỉ, có đóng bảo hiểm xã hội/bảo hiểm lao động không, địa điểm làm việc, yêu cầu tiếng Nhật. Chữ nào không hiểu thì mang tờ đó ra quầy hỏi trước khi quyết định. MẤT BAO LÂU: khoảng 20–40 phút. Chỉ chọn việc ghi rõ ràng lương và giờ làm; việc chỉ ghi 'lương cao, hỏi sau' thì nên tránh.",
+     "ja": "この求人について詳しく教えてください。",
+     "vi": "Xin cho tôi biết chi tiết về tin tuyển dụng này."
+    },
+    {
+     "t": "Bước 6: Xin giấy giới thiệu (紹介状) và hẹn phỏng vấn",
+     "d": "Mang 求人票 ra quầy tư vấn, nói muốn ứng tuyển việc này. Nhân viên sẽ gọi điện cho công ty giúp bạn để hẹn lịch phỏng vấn. NHẬN ĐƯỢC GÌ: Giấy giới thiệu (紹介状, shōkaisho) ghi tên bạn và thông tin công ty, kèm ngày giờ + địa điểm phỏng vấn và tên người phụ trách. Đây là giấy quan trọng: đi phỏng vấn bắt buộc mang theo cùng 履歴書. KIỂM TRA GÌ trước khi rời quầy: đúng ngày giờ phỏng vấn, đúng địa chỉ công ty, số điện thoại liên lạc khi đi lạc đường. MẤT BAO LÂU: khoảng 10–20 phút nếu công ty bắt máy ngay.",
+     "ja": "この仕事に応募したいです。",
+     "vi": "Tôi muốn ứng tuyển vào công việc này."
+    },
+    {
+     "t": "Bước 7: Đi phỏng vấn (面接) tại công ty",
+     "d": "ĐI ĐÂU: đến địa điểm công ty ghi trên 紹介状, đến sớm khoảng 10 phút. MANG GÌ: 紹介状, 履歴書 có dán ảnh, thẻ lưu trú, bút. NÓI GÌ: gõ cửa, chào và tự giới thiệu ngắn (tên, đến từ Việt Nam, đang tìm việc làm thêm). Công ty thường hỏi: làm được thứ mấy/mấy giờ, làm được bao lâu, đi lại bằng gì, tiếng Nhật nghe hiểu mức nào. Trả lời trung thực về giờ làm được — đặc biệt du học sinh không được hứa làm quá 28 giờ/tuần. Kết quả thường báo sau vài ngày qua điện thoại hoặc qua Hello Work. MẤT BAO LÂU: phỏng vấn khoảng 15–30 phút.",
+     "ja": "紹介状を持ってきました。よろしくお願いします。",
+     "vi": "Tôi có mang theo giấy giới thiệu. Rất mong được giúp đỡ."
+    },
+    {
+     "t": "Bước 8: Khi được nhận việc: kiểm tra giấy tờ lao động trước khi ký",
+     "d": "Trước ngày làm đầu tiên, công ty phải đưa văn bản ghi rõ điều kiện làm việc (労働条件通知書, rōdō jōken tsūchisho): lương giờ, ngày trả lương, giờ làm, ngày nghỉ, công việc cụ thể. ĐỌC VÀ KIỂM TRA: lương có thấp hơn lương tối thiểu của tỉnh không (tiền lương tối thiểu khác nhau theo tỉnh, tra trên trang Bộ Y tế Lao động), có trừ khoản gì lạ không. Công ty sẽ xin bản sao thẻ lưu trú và thông tin My Number để làm thủ tục bảo hiểm lao động — đây là thủ tục bình thường. Nếu không được đưa giấy điều kiện lao động, hãy hỏi xin trước khi bắt đầu làm. Báo lại cho Hello Work biết bạn đã tìm được việc khi họ liên lạc hỏi thăm.",
+     "ja": "労働条件通知書をください。",
+     "vi": "Xin cho tôi bản thông báo điều kiện lao động."
+    }
+   ],
+   "cost": "Miễn phí toàn bộ: đăng ký tìm việc, tư vấn, tra cứu tin tuyển dụng và cấp giấy giới thiệu tại Hello Work đều không mất tiền. Chi phí tự túc duy nhất: in/chụp ảnh hồ sơ khoảng vài trăm yên, tiền đi lại đi phỏng vấn. CẢNH BÁO: bất kỳ 'trung tâm giới thiệu việc' nào bắt đóng phí giới thiệu, phí đặt cọc cho người lao động đều có dấu hiệu lừa đảo — việc làm qua Hello Work không bao giờ thu phí của người tìm việc.",
+   "duration": "Đăng ký lần đầu tại quầy: khoảng 30–60 phút. Từ đăng ký đến phỏng vấn đầu tiên: thường khoảng vài ngày đến 2 tuần, tùy số lượng việc phù hợp. Giấy phép hoạt động ngoài tư cách lưu trú (nếu chưa có): xin tại Cục Xuất nhập cảnh, thường được cấp ngay trong ngày hoặc sau khoảng 2 tuần–1 tháng tùy nơi và hồ sơ.",
+   "warnings": [
+    "Du học sinh / diện gia đình làm thêm KHÔNG có 資格外活動許可, hoặc làm quá 28 giờ/tuần (gộp TẤT CẢ các việc làm thêm lại), là vi phạm luật xuất nhập cảnh: có thể bị phạt, không được gia hạn visa, nặng thì bị hủy tư cách lưu trú. Làm 2 việc cùng lúc phải tự cộng giờ cho đúng.",
+    "Tuyệt đối không làm việc ở quán bar, quán rượu tiếp khách, pachinko và các ngành giải trí người lớn (風俗, fūzoku) — du học sinh có giấy phép làm thêm cũng bị CẤM làm các việc này, kể cả rửa bát hay dọn dẹp trong quán đó.",
+    "Nếu bị trừ lương vô lý, bắt làm quá giờ đã hẹn, không trả lương: đừng bỏ việc im lặng. Mang hợp đồng/giấy điều kiện lao động và bảng lương đến Hello Work hoặc Cục Thanh tra Lao động (労働基準監督署, rōdō kijun kantokusho) để được tư vấn miễn phí, có nơi hỗ trợ phiên dịch.",
+    "Nếu trục trặc hồ sơ ở Hello Work — thiếu giấy tờ: nhân viên sẽ ghi lại giấy gì còn thiếu. Cách xử lý: chụp ảnh tờ ghi chú đó, về chuẩn bị đúng giấy được ghi, quay lại quầy cũ và đưa phiếu tìm việc — không phải đăng ký lại từ đầu.",
+    "Nếu trượt phỏng vấn: rất bình thường, không ảnh hưởng gì đến visa hay hồ sơ. Quay lại Hello Work, nói kết quả, nhân viên sẽ giới thiệu việc khác. Xin nhân viên góp ý luôn về 履歴書 và cách trả lời phỏng vấn để lần sau tốt hơn.",
+    "Nếu không hiểu tiếng Nhật khi tư vấn: chọn Hello Work lớn có góc hỗ trợ người nước ngoài, đi đúng ngày có phiên dịch tiếng Việt (mỗi nơi lịch khác nhau — xem trên web hoặc gọi hỏi trước), hoặc mang theo người phiên dịch. Đừng ký bất kỳ giấy gì bạn chưa hiểu nội dung.",
+    "Đừng đưa bản gốc thẻ lưu trú/hộ chiếu cho công ty giữ. Công ty chỉ được xem và sao chụp để làm thủ tục; giữ bản gốc giấy tờ của người lao động là việc không đúng quy định.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã có Phiếu tìm việc (求職票) và ghi lại mã số tìm việc của mình — cất cùng hồ sơ, mang theo mỗi lần đến Hello Work",
+    "Đã kiểm tra lại mặt sau thẻ lưu trú: có giấy phép làm thêm chưa, giới hạn giờ là bao nhiêu — và tự đặt lịch học/làm không vượt quá 28 giờ/tuần nếu là du học sinh/diện gia đình",
+    "Trước khi bắt đầu làm: đã nhận Giấy thông báo điều kiện lao động (労働条件通知書), đọc kỹ lương giờ, ngày trả lương, giờ làm — chụp ảnh lưu lại",
+    "Đã lưu vào điện thoại: địa chỉ + số điện thoại Hello Work phụ trách, tên công ty, số điện thoại người phụ trách phỏng vấn",
+    "Mỗi tháng tự kiểm tra bảng lương (給与明細, kyūyo meisai): số giờ làm x lương giờ có khớp không, có bị trừ khoản lạ không — giữ lại mọi bảng lương",
+    "Nhớ hạn chót tiếp theo: hạn thẻ lưu trú của bạn ngày nào. Gần hết hạn mà đang làm thêm thì phải gia hạn visa và xin lại giấy phép làm thêm (giấy phép cũ hết hiệu lực theo visa cũ)"
+   ],
+   "vocab": [
+    {
+     "ja": "ハローワーク",
+     "reading": "はろーわーく",
+     "vi": "Hello Work — cơ quan giới thiệu việc làm công cộng, miễn phí"
+    },
+    {
+     "ja": "求人",
+     "reading": "きゅうじん",
+     "vi": "Tin tuyển dụng, việc đang tuyển người"
+    },
+    {
+     "ja": "求職登録",
+     "reading": "きゅうしょくとうろく",
+     "vi": "Đăng ký tìm việc"
+    },
+    {
+     "ja": "履歴書",
+     "reading": "りれきしょ",
+     "vi": "Sơ yếu lý lịch theo mẫu Nhật (nộp khi xin việc)"
+    },
+    {
+     "ja": "面接",
+     "reading": "めんせつ",
+     "vi": "Phỏng vấn xin việc"
+    },
+    {
+     "ja": "紹介状",
+     "reading": "しょうかいじょう",
+     "vi": "Giấy giới thiệu của Hello Work mang đi phỏng vấn"
+    },
+    {
+     "ja": "時給",
+     "reading": "じきゅう",
+     "vi": "Lương theo giờ"
+    },
+    {
+     "ja": "資格外活動許可",
+     "reading": "しかくがいかつどうきょか",
+     "vi": "Giấy phép hoạt động ngoài tư cách lưu trú (giấy phép làm thêm)"
+    },
+    {
+     "ja": "在留資格",
+     "reading": "ざいりゅうしかく",
+     "vi": "Tư cách lưu trú (loại visa)"
+    },
+    {
+     "ja": "労働条件通知書",
+     "reading": "ろうどうじょうけんつうちしょ",
+     "vi": "Bản thông báo điều kiện lao động (lương, giờ làm, ngày nghỉ...)"
+    },
+    {
+     "ja": "給与明細",
+     "reading": "きゅうよめいさい",
+     "vi": "Bảng chi tiết lương hàng tháng"
+    },
+    {
+     "ja": "アルバイト",
+     "reading": "あるばいと",
+     "vi": "Việc làm thêm, việc bán thời gian"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "仕事を探しています。求職登録をしたいです。",
+     "vi": "Tôi đang tìm việc. Tôi muốn đăng ký tìm việc."
+    },
+    {
+     "ja": "週に何時間働けますか。",
+     "vi": "(Câu nhân viên hay hỏi) Bạn làm được mấy giờ một tuần?"
+    },
+    {
+     "ja": "平日の夜と土曜日、日曜日に働けます。",
+     "vi": "Tôi làm được tối ngày thường và thứ Bảy, Chủ nhật."
+    },
+    {
+     "ja": "この仕事に応募したいです。",
+     "vi": "Tôi muốn ứng tuyển vào công việc này."
+    },
+    {
+     "ja": "面接の日を変えられますか。",
+     "vi": "Đổi ngày phỏng vấn được không ạ?"
+    },
+    {
+     "ja": "ベトナム語で相談できますか。",
+     "vi": "Tôi tư vấn bằng tiếng Việt được không ạ?"
+    }
+   ],
+   "links": [
+    {
+     "label": "Hello Work Internet Service — Trang tìm việc chính thức (Bộ Y tế, Lao động và Phúc lợi)",
+     "url": "https://www.hellowork.mhlw.go.jp/"
+    },
+    {
+     "label": "Bộ Y tế, Lao động và Phúc lợi — Trang giới thiệu Hello Work",
+     "url": "https://www.mhlw.go.jp/hellowork/"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh (ISA) — Giấy phép hoạt động ngoài tư cách cho du học sinh",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri07_00003.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "履歴書（厚生労働省履歴書様式例）",
+     "name_vi": "Sơ yếu lý lịch theo mẫu Bộ Y tế, Lao động và Phúc lợi (mẫu tải từ Hello Work)",
+     "download_url": "https://www.hellowork.mhlw.go.jp/doc/kouroushourirekisho.pdf",
+     "source": "ハローワークインターネットサービス／厚生労働省 (Hello Work Internet Service / Bộ Y tế, Lao động và Phúc lợi)",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "作成日・年 月 日現在 (ngày viết lý lịch)",
+       "how": "Ghi ngày bạn viết hoặc ngày nộp hồ sơ, ở góc trên tờ lý lịch.",
+       "example": "2026年11月10日現在"
+      },
+      {
+       "field": "氏名・ふりがな (họ tên + cách đọc furigana)",
+       "how": "Ghi họ tên chữ Latin đúng như thẻ lưu trú. Hàng furigana phía trên ghi cách đọc bằng katakana.",
+       "example": "ふりがな：グエン・バン・アン／氏名：NGUYEN VAN AN",
+       "mistake": "Thiếu furigana là lỗi rất hay gặp ở người nước ngoài."
+      },
+      {
+       "field": "生年月日・満年齢 (ngày sinh và tuổi tròn)",
+       "how": "Ghi ngày sinh và tuổi tính đến ngày viết.",
+       "example": "1998年5月12日生（満28歳）"
+      },
+      {
+       "field": "性別 (giới tính) ※任意",
+       "how": "Mục này ghi hay không là tùy bạn. Mẫu của Bộ ghi rõ có thể để trống.",
+       "example": "(có thể để trống)"
+      },
+      {
+       "field": "写真 (ảnh thẻ)",
+       "how": "Dán ảnh 3x4 cm, chụp trong 6 tháng, nền trơn, nhìn thẳng, không đội mũ. Ghi họ tên sau lưng ảnh trước khi dán phòng khi ảnh bong ra.",
+       "example": "Ảnh chụp tại máy ảnh tự động ở ga / cửa hàng tiện lợi"
+      },
+      {
+       "field": "現住所・ふりがな・電話 (địa chỉ hiện tại + cách đọc + điện thoại)",
+       "how": "Ghi mã bưu điện, địa chỉ đúng như thẻ lưu trú, kèm furigana cho địa chỉ và số điện thoại di động.",
+       "example": "〒211-0063 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678"
+      },
+      {
+       "field": "連絡先 (địa chỉ liên lạc khác)",
+       "how": "Chỉ ghi khi bạn muốn nhận liên lạc ở địa chỉ khác địa chỉ hiện tại. Không có thì để trống.",
+       "example": "(để trống nếu giống địa chỉ hiện tại)"
+      },
+      {
+       "field": "学歴 (quá trình học tập)",
+       "how": "Ghi theo thứ tự thời gian: năm tháng nhập học và tốt nghiệp từng trường. Với trường ở Việt Nam, ghi tên trường + 入学 / 卒業.",
+       "example": "2016年9月 ハノイ市内の高等学校 入学／2019年6月 同校 卒業 (ví dụ hư cấu)",
+       "mistake": "Chỉ ghi trường cuối cùng. Ở Nhật phải ghi lần lượt từng trường."
+      },
+      {
+       "field": "職歴 (quá trình làm việc)",
+       "how": "Ghi riêng khối 职历, tách khỏi 学历: năm tháng vào công ty, công việc làm, năm tháng nghỉ. Cuối cùng ghi '以上'.",
+       "example": "2020年4月 ○○会社 入社（介護業務に従事）／2025年3月 一身上の都合により退職／以上 (ví dụ hư cấu)"
+      },
+      {
+       "field": "免許・資格 (bằng cấp và chứng chỉ)",
+       "how": "Ghi năm tháng lấy và tên chứng chỉ: JLPT, bằng lái xe, chứng chỉ kaigo... Chưa có thì để trống, không ghi bừa.",
+       "example": "2024年12月 日本語能力試験 N3 合格 (ví dụ)"
+      },
+      {
+       "field": "志望の動機・特技・アピールポイント (lý do ứng tuyển, sở trường, điểm mạnh)",
+       "how": "Viết 3-5 dòng ngắn: vì sao chọn công việc này, kinh nghiệm hoặc điểm mạnh liên quan. Tránh chép nguyên một mẫu cho mọi công ty.",
+       "example": "介護の仕事に興味があり、利用者様と笑顔で話すことが得意です。(ví dụ)"
+      },
+      {
+       "field": "本人希望記入欄 (nguyện vọng của bản thân)",
+       "how": "Ghi希望 về ca làm, ngày làm, nơi làm nếu có. Nếu theo điều kiện của công ty thì ghi '貴社の規定に従います'.",
+       "example": "勤務時間：週28時間以内を希望します (du học sinh ghi rõ giới hạn giờ làm thêm)"
+      }
+     ],
+     "sample_note": "Trang Hello Work (mục 履歴書・職務経歴書の書き方) đăng cùng mẫu này ở dạng PDF và Excel, khổ A3 và A4. Đây là mẫu lý lịch chuẩn hiện hành do Bộ ban hành, thay cho mẫu JIS cũ. Ví dụ học vấn / nghề nghiệp trong bài là hư cấu để minh họa cách ghi."
+    },
+    {
+     "name_jp": "求職申込書（筆記式）／求職申込み手続き",
+     "name_vi": "Đơn đăng ký tìm việc (bản viết tay) và hướng dẫn thủ tục đăng ký tìm việc tại Hello Work",
+     "download_url": "https://www.hellowork.mhlw.go.jp/member/app_entryguide.html",
+     "source": "ハローワークインターネットサービス／厚生労働省 (Hello Work Internet Service)",
+     "format": "web",
+     "fill": [
+      {
+       "field": "氏名・生年月日 (họ tên và ngày sinh)",
+       "how": "Ghi đúng như thẻ lưu trú để nhân viên đối chiếu tư cách lưu trú.",
+       "example": "グエン・バン・アン／1998年5月12日"
+      },
+      {
+       "field": "住所・電話番号・メール (địa chỉ, điện thoại, email)",
+       "how": "Ghi địa chỉ hiện tại, số di động và email đang dùng. Hello Work sẽ liên lạc qua các kênh này.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678"
+      },
+      {
+       "field": "希望する仕事・職種 (công việc mong muốn)",
+       "how": "Ghi loại việc muốn làm, ví dụ kaigo, phục vụ quán, kho vận. Chưa rõ thì ghi chung và nhờ nhân viên tư vấn.",
+       "example": "介護、飲食店のホールなど"
+      },
+      {
+       "field": "就業形態 (hình thức làm việc)",
+       "how": "Đánh dấu làm thêm bán thời gian (パート・アルバイト) hay chính thức (正社員).",
+       "example": "パート・アルバイト"
+      },
+      {
+       "field": "希望勤務地 (nơi làm việc mong muốn)",
+       "how": "Ghi khu vực đi lại được, ví dụ trong quận/thành phố nhà ở hoặc dọc tuyến tàu bạn đi.",
+       "example": "川崎市中原区・武蔵小杉駅周辺"
+      },
+      {
+       "field": "希望勤務時間・曜日 (giờ và ngày làm mong muốn)",
+       "how": "Ghi khung giờ làm được từng thứ trong tuần. Du học sinh nhớ tổng không quá 28 giờ/tuần.",
+       "example": "月・水・金 17時〜22時、週28時間以内"
+      },
+      {
+       "field": "希望賃金 (mức lương mong muốn)",
+       "how": "Ghi lương giờ mong muốn. Có thể tham khảo lương tối thiểu của tỉnh trước khi ghi.",
+       "example": "時給1,200円以上を希望"
+      },
+      {
+       "field": "職歴・経験 (kinh nghiệm làm việc)",
+       "how": "Tóm tắt việc đã làm ở Việt Nam và Nhật, mỗi việc 1 dòng.",
+       "example": "ベトナムで介護施設に2年勤務 (ví dụ hư cấu)"
+      },
+      {
+       "field": "資格・語学 (chứng chỉ và ngoại ngữ)",
+       "how": "Ghi JLPT, bằng lái, và khả năng giao tiếp tiếng Nhật thực tế.",
+       "example": "日本語能力試験N3／日常会話ができます"
+      },
+      {
+       "field": "在留資格の確認 (kiểm tra tư cách lưu trú)",
+       "how": "Đây không hẳn là ô tự ghi, nhưng nhân viên sẽ xem thẻ lưu trú tại quầy. Hãy mang bản gốc và kiểm tra mặt sau thẻ đã có dấu cho phép làm thêm (資格外活動許可) chưa.",
+       "example": "留学／資格外活動許可あり (ví dụ)",
+       "mistake": "Chưa có giấy phép hoạt động ngoài tư cách mà đã nhận việc là vi phạm tư cách lưu trú."
+      }
+     ],
+     "sample_note": "Trang chính thức trên giải thích 2 cách đăng ký: nhập trên máy tính tại Hello Work (hoặc từ nhà qua My Page) và điền Đơn đăng ký tìm việc bản viết tay (求職申込書・筆記式, có file PDF khoảng 365KB tải từ chính trang này) rồi nộp tại quầy. Đăng ký xong bạn được cấp Phiếu tiếp nhận Hello Work (ハローワーク受付票) có mã số tìm việc. Ví dụ là nhân vật hư cấu."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "MOJchannel",
+     "lang": "ja",
+     "note": "Video chính thức của Cục Xuất nhập cảnh: giới thiệu Hello Work là nơi tìm việc miễn phí và lưu ý kiểm tra giấy phép hoạt động ngoài tư cách lưu trú.",
+     "title": "生活オリエンテーション動画　１１　雇用・労働（日本語）",
+     "url": "https://www.youtube.com/watch?v=v5XSr-XNKLs"
+    },
+    {
+     "channel": "ハローワーク名古屋中",
+     "lang": "ja",
+     "note": "Kênh chính thức của Hello Work Nagoya-naka giới thiệu quầy tư vấn và giới thiệu việc làm cho người nước ngoài, có phiên dịch cả tiếng Việt.",
+     "title": "Job Search & Consultation Service for Foreign Residents Living inJapan",
+     "url": "https://www.youtube.com/watch?v=dlTWWDY4h_Q"
+    }
+   ]
+  },
+  {
+   "id": "doi-bang-lai-xe",
+   "group": "Đời sống & việc làm",
+   "title": "Đổi bằng lái xe Việt Nam sang Nhật （外免切替 - gaimen kirikae）",
+   "icon": "🚗",
+   "summary": "Người đã có bằng lái xe ô tô/xe máy ở Việt Nam có thể đổi sang bằng Nhật bằng thủ tục Ngoại miễn thiết thế (外免切替, gaimen kirikae) tại Trung tâm sát hạch bằng lái (運転免許センター) của tỉnh nơi ở, không phải thi lấy bằng từ đầu. Điều kiện cốt lõi: bằng Việt Nam còn hiệu lực và sau khi được cấp bằng, bạn đã ở Việt Nam tổng cộng từ 3 tháng trở lên. Từ 01/10/2025 thủ tục siết chặt hơn nhiều: phải nộp bản sao phiếu cư trú (住民票) và bài kiểm tra kiến thức tăng lên 50 câu, đúng ít nhất 45 câu mới đạt.",
+   "who": "Người Việt đang cư trú trung/dài hạn ở Nhật (có đăng ký cư trú 住民登録), có bằng lái xe do Việt Nam cấp còn hiệu lực và chứng minh được đã ở Việt Nam từ 3 tháng trở lên sau ngày cấp bằng. Khách du lịch/ngắn hạn không có phiếu cư trú thì từ 10/2025 về nguyên tắc không làm được thủ tục này.",
+   "docs": [
+    "Bằng lái xe Việt Nam bản gốc, còn hiệu lực (hết hạn là không đổi được) — cả thẻ PET và bằng giấy cũ nếu có",
+    "Bản dịch tiếng Nhật của bằng lái do cơ quan được chỉ định cấp: JAF (Liên đoàn Ô tô Nhật Bản), Đại sứ quán/Lãnh sự quán Việt Nam tại Nhật, hoặc đơn vị dịch được cảnh sát tỉnh công nhận — bản dịch tự làm không được chấp nhận",
+    "Bản sao phiếu cư trú (住民票の写し, jūminhyō no utsushi) xin tại tòa thị chính — loại có ghi quốc tịch, tư cách lưu trú, thời hạn lưu trú (từ 10/2025 đây là giấy bắt buộc, không dùng địa chỉ khách sạn được nữa)",
+    "Thẻ lưu trú (在留カード) bản gốc + hộ chiếu (パスポート) bản gốc",
+    "Tất cả hộ chiếu cũ và mới + giấy tờ chứng minh đã ở Việt Nam tổng cộng từ 3 tháng trở lên sau ngày cấp bằng (dấu xuất nhập cảnh trong hộ chiếu; nếu hộ chiếu không có dấu, xin thêm giấy xác nhận xuất nhập cảnh hoặc giấy tờ tương đương)",
+    "Ảnh thẻ chụp trong vòng 6 tháng, cỡ khoảng 3cm x 2,4cm (cỡ ảnh làm bằng lái — kiểm tra cỡ chính xác theo tỉnh của bạn)",
+    "Bằng lái quốc tế hoặc giấy tờ bổ sung về quá trình cấp bằng nếu trung tâm yêu cầu thêm (tùy trường hợp, ví dụ bằng mới cấp lại, đổi bằng nhiều lần)"
+   ],
+   "prep_home": [
+    "Tự tính trước ở nhà: lấy ngày cấp bằng Việt Nam, cộng dồn thời gian bạn thực tế ở Việt Nam sau ngày đó — phải đủ từ 3 tháng (khoảng 90 ngày) trở lên. Lật hộ chiếu xem dấu xuất/nhập cảnh có chứng minh được không; thiếu dấu thì chuẩn bị xin giấy xác nhận xuất nhập cảnh của Việt Nam",
+    "Đặt làm bản dịch bằng lái TRƯỚC ở nhà: nộp online qua trang của JAF hoặc đến chi nhánh JAF / cơ quan được công nhận. Phí dịch khoảng vài nghìn yên tùy đơn vị và phải chờ khoảng vài ngày đến 2 tuần tùy nơi — đừng để sát ngày thi mới làm",
+    "Ra tòa thị chính xin sẵn 住民票の写し (phí khoảng 200–400 yên/tờ tùy địa phương), dặn quầy xin loại ghi đầy đủ quốc tịch và tư cách lưu trú, không ghi mã số My Number cá nhân",
+    "Gọi điện hoặc xem web của Trung tâm bằng lái tỉnh nhà TRƯỚC: nhiều trung tâm bắt buộc đặt lịch hẹn trước (予約制) và lịch thường kín trước vài tuần đến vài tháng. Hỏi luôn: thi kiến thức có tiếng Việt vào thứ mấy, cần mang giấy gì thêm cho bằng Việt Nam",
+    "Ôn luật giao thông Nhật trước ở nhà: lái xe bên TRÁI (ngược với Việt Nam), biển báo Nhật, quy tắc qua đường sắt, nhường người đi bộ, tốc độ trong khu dân cư. Bài kiến thức từ 10/2025 là 50 câu dạng văn xuôi, đúng 45/50 câu (90%) mới đạt — khó hơn hẳn mức cũ 10 câu",
+    "Chụp ảnh lưu điện thoại: mặt trước/sau bằng Việt Nam, trang hộ chiếu — phòng khi cần gửi bổ sung cho đơn vị dịch thuật",
+    "Nếu định thi thực hành: đăng ký tập lái thử trong sân tập của trường dạy lái (教習所) gần nhà trước 1–2 buổi để quen sân thi và cách thi của Nhật — rớt thực hành là chuyện rất thường gặp"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Kiểm tra mình đủ điều kiện đổi bằng không",
+     "d": "Ở nhà, kiểm tra 4 điều kiện: (1) Bằng Việt Nam còn hạn sử dụng. (2) Sau ngày cấp bằng, ở Việt Nam tổng cộng đủ 3 tháng trở lên. (3) Đang cư trú hợp pháp ở Nhật và đã đăng ký địa chỉ (có 住民票). (4) Tuổi đáp ứng loại bằng muốn đổi (ô tô thông thường: từ 18 tuổi). Thiếu điều kiện (2) là lý do bị từ chối hồ sơ nhiều nhất — nếu không chứng minh được, hồ sơ sẽ không được nhận, phải bổ sung giấy tờ chứng minh khác. Mất khoảng 15 phút tự kiểm tra.",
+     "ja": "",
+     "vi": ""
+    },
+    {
+     "t": "Bước 2: Làm bản dịch tiếng Nhật của bằng lái",
+     "d": "ĐI ĐÂU: nộp online trên trang JAF hoặc đến chi nhánh JAF / Đại sứ quán, Lãnh sự quán Việt Nam / đơn vị được tỉnh công nhận. MANG GÌ (hoặc tải lên nếu online): ảnh chụp rõ 2 mặt bằng lái, thông tin thẻ lưu trú. NÓI GÌ: nói rõ là dịch để làm 外免切替. NHẬN ĐƯỢC GÌ: bản dịch tiếng Nhật chính thức (翻訳文, hon'yakubun) có đóng dấu của đơn vị dịch — đây mới là bản trung tâm bằng lái chấp nhận. Phí khoảng vài nghìn yên, thời gian khoảng vài ngày đến 2 tuần tùy đơn vị và tùy nơi. KIỂM TRA GÌ: họ tên, ngày sinh, ngày cấp bằng, hạng bằng trên bản dịch phải khớp 100% với bằng gốc.",
+     "ja": "外免切替のための翻訳文をお願いします。",
+     "vi": "Xin làm bản dịch (bằng lái) để đổi bằng sang bằng Nhật."
+    },
+    {
+     "t": "Bước 3: Xin phiếu cư trú và đặt lịch hẹn ở trung tâm bằng lái",
+     "d": "Ra tòa thị chính xin 住民票の写し như đã chuẩn bị. Sau đó gọi điện cho Trung tâm sát hạch bằng lái (運転免許センター, unten menkyo sentā) của tỉnh nơi bạn ở để đặt lịch (nhiều nơi chỉ nhận đặt lịch qua điện thoại, một số nơi nhận online). Khi gọi, nói câu mẫu và hỏi 3 việc: ngày hẹn còn trống gần nhất, danh sách giấy tờ cho bằng Việt Nam, ngày thi kiến thức bằng tiếng Việt. Ghi lại ngày giờ hẹn và mã số hẹn (nếu có) vào điện thoại. Mất khoảng 10–15 phút gọi điện, nhưng ngày hẹn có thể phải chờ vài tuần đến vài tháng tùy tỉnh.",
+     "ja": "外免切替の予約をしたいです。ベトナムの免許を持っています。",
+     "vi": "Tôi muốn đặt lịch đổi bằng lái nước ngoài. Tôi có bằng lái của Việt Nam."
+    },
+    {
+     "t": "Bước 4: Đến trung tâm: nộp hồ sơ và phỏng vấn kiểm tra giấy tờ",
+     "d": "ĐI ĐÂU: Trung tâm bằng lái của tỉnh, đến quầy 外免切替 đúng giờ hẹn (đi sớm 15 phút). MANG GÌ: toàn bộ giấy tờ ở mục docs + bản dịch + 住民票. Nhân viên kiểm tra hồ sơ (書類審査, shorui shinsa) và phỏng vấn ngắn: lấy bằng ở đâu, học lái bao lâu, đã lái ở Việt Nam bao lâu, ở Việt Nam bao lâu sau khi có bằng. Trả lời trung thực, khớp với giấy tờ. Đồng thời đóng lệ phí xét hồ sơ/thi (ví dụ ở Tokyo, bằng ô tô thông thường: phí xét khoảng 2.500 yên — mức phí khác nhau theo tỉnh và hạng bằng). MẤT BAO LÂU: khoảng 1–2 giờ. NHẬN ĐƯỢC GÌ: thông báo lịch kiểm tra thị lực + thi kiến thức (thường cùng ngày nếu hồ sơ đạt).",
+     "ja": "予約した外免切替の手続きに来ました。",
+     "vi": "Tôi đến làm thủ tục đổi bằng theo lịch hẹn đã đặt."
+    },
+    {
+     "t": "Bước 5: Kiểm tra thích ứng (thị lực, thính lực, vận động)",
+     "d": "Kiểm tra thích ứng (適性試験, tekisei shiken): đo thị lực (mắt thường hoặc đeo kính đều được — nhớ mang kính/áp tròng nếu cận), kiểm tra phân biệt màu đèn tín hiệu, nghe và cử động tay chân cơ bản. Không đạt thị lực thì được hướng dẫn đi đo kính rồi quay lại, không phải 'trượt bằng'. Mất khoảng 10–15 phút. Nhớ mang theo kính đang dùng hàng ngày.",
+     "ja": "眼鏡をかけています。",
+     "vi": "Tôi có đeo kính."
+    },
+    {
+     "t": "Bước 6: Kiểm tra kiến thức (学科試験 / 知識確認) 50 câu",
+     "d": "Bài kiểm tra kiến thức (知識確認, chishiki kakunin) theo quy định từ 01/10/2025: 50 câu dạng văn xuôi (không còn câu hình ảnh như xưa), đúng từ 45 câu trở lên (90%) mới ĐẠT. Nội dung: luật giao thông Nhật, biển báo, tốc độ, nhường đường, lái xe an toàn. NGÔN NGỮ: ở nhiều tỉnh thi được bằng tiếng Việt, nhưng KHÔNG phải tỉnh nào cũng có và thường chỉ tổ chức vào ngày cố định trong tuần (ví dụ Tokyo có tiếng Việt trong nhóm 20 ngôn ngữ, thi các ngày thường) — bắt buộc hỏi trước từ Bước 3. Thi trên giấy hoặc máy tùy trung tâm. MẤT BAO LÂU: khoảng 30–60 phút làm bài, có kết quả trong ngày. Đạt mới được sang bước thi thực hành.",
+     "ja": "ベトナム語で試験を受けたいです。",
+     "vi": "Tôi muốn thi bằng tiếng Việt."
+    },
+    {
+     "t": "Bước 7: Kiểm tra kỹ năng lái (技能確認) trong sân thi",
+     "d": "Thi thực hành (技能確認, ginō kakunin) lái xe thật trong sân của trung tâm, có giám khảo ngồi cạnh. Các điểm bị trừ nặng: không quan sát kỹ khi rẽ/khởi hành, không dừng hẳn ở biển dừng (止まれ, tomare) và đường sắt, lấn vạch, quên xi-nhan, chạy sát lề trái chưa đúng. Xe thi là xe của trung tâm (số tự động hoặc số sàn theo hạng bằng đăng ký). MẤT BAO LÂU: khoảng 10–15 phút chạy, nhưng chờ lượt có thể lâu. Tỷ lệ đạt thực hành lần đầu không cao — đây là bước nhiều người phải thi lại nhất. Nếu đạt, sang bước nhận bằng; nếu chưa đạt, đặt lịch thi lại tại quầy trước khi về và đóng lệ phí thi lại (tùy tỉnh).",
+     "ja": "技能確認の予約をお願いします。",
+     "vi": "Xin cho tôi đặt lịch kiểm tra kỹ năng (thi thực hành)."
+    },
+    {
+     "t": "Bước 8: Nhận bằng lái xe Nhật trong ngày đạt thực hành",
+     "d": "Sau khi đạt thực hành: đóng phí cấp bằng (ví dụ ở Tokyo khoảng 2.350 yên, tùy tỉnh), chụp ảnh tại trung tâm và chờ cấp bằng. NHẬN ĐƯỢC GÌ: bằng lái xe Nhật (運転免許証) — thường nhận trong ngày, ghi chú 'mới lấy bằng' (初心者, shoshinsha): trong 1 năm đầu phải dán/hiển thị ký hiệu tài xế mới (初心者マーク) khi lái xe. KIỂM TRA GÌ trước khi rời trung tâm: họ tên romaji, ngày sinh, hạng bằng, thời hạn bằng (thường đến sinh nhật thứ 3 sau khi cấp) có đúng không — sai phải báo sửa ngay tại quầy.",
+     "ja": "免許証の名前を確認しました。ありがとうございました。",
+     "vi": "Tôi đã kiểm tra tên trên bằng lái. Xin cảm ơn."
+    }
+   ],
+   "cost": "Tổng cộng khoảng 10.000–20.000 yên nếu đạt ngay các lần đầu, gồm: phí dịch bằng khoảng vài nghìn yên (tùy đơn vị), lệ phí xét/thi và phí cấp bằng (ví dụ ở Tokyo bằng ô tô thông thường: khoảng 2.500 yên phí xét + khoảng 2.350 yên phí cấp bằng — tùy tỉnh, tùy hạng bằng), phí xin 住民票 khoảng 200–400 yên, ảnh thẻ vài trăm yên. Thi lại kiến thức/thực hành lần nào đóng lệ phí lần đó; tập lái thử ở trường dạy lái tính riêng theo buổi.",
+   "duration": "Chuẩn bị giấy tờ + dịch bằng: khoảng 1–3 tuần. Chờ lịch hẹn ở trung tâm: khoảng vài tuần đến vài tháng tùy tỉnh (các thành phố lớn thường rất đông). Hồ sơ đạt + thi kiến thức đạt trong 1 ngày; thi thực hành có thể phải đặt lịch riêng sau đó khoảng vài tuần. Tổng thời gian thực tế thường khoảng 1–4 tháng.",
+   "warnings": [
+    "QUY ĐỊNH MỚI TỪ 01/10/2025 (rất quan trọng): bài kiến thức tăng từ 10 câu lên 50 câu, phải đúng ít nhất 45 câu; bắt buộc nộp 住民票 — khách du lịch/ngắn hạn không có đăng ký cư trú thì về nguyên tắc không đổi bằng được. Thông tin cũ trên mạng xã hội nói 'thi 10 câu dễ lắm' đã hết đúng, đừng tin.",
+    "Nếu thiếu giấy chứng minh ở Việt Nam đủ 3 tháng sau khi có bằng: hồ sơ bị dừng ngay tại Bước 4. Cách xử lý: bổ sung hộ chiếu cũ, giấy xác nhận xuất nhập cảnh do cơ quan có thẩm quyền của Việt Nam cấp, hoặc giấy tờ khác chứng minh thời gian ở Việt Nam (hợp đồng lao động, giấy xác nhận học tập...). Hỏi trung tâm xem họ chấp nhận loại giấy nào rồi mới đi xin, tránh xin sai giấy.",
+    "Nếu trượt bài kiến thức: không sao, được thi lại. Đóng lệ phí thi lại, đặt lịch lần sau (có thể phải chờ), về nhà ôn kỹ luật Nhật — đặc biệt phần khác Việt Nam: lái bên trái, ưu tiên người đi bộ, dừng ở đường sắt. Đừng thi lại ngay khi chưa ôn, mỗi lần thi lại đều tốn phí và thời gian chờ.",
+    "Nếu trượt thực hành: đây là chuyện rất phổ biến, kể cả người lái lâu năm ở Việt Nam. Cách xử lý hiệu quả nhất: đăng ký 1–2 buổi tập ngay trong sân thi/trường dạy lái để học 'cách thi' của Nhật (quan sát, dừng 止まれ, đi sát trái...), rồi đặt lịch thi lại. Giám khảo chấm theo quy trình an toàn, không chấm theo kinh nghiệm lái nhanh.",
+    "Nếu không hiểu tiếng Nhật trong ngày thi: bài kiến thức có thể chọn tiếng Việt ở nhiều tỉnh, nhưng phần hướng dẫn tại quầy và khi thi thực hành (giám khảo ra hiệu lệnh) chủ yếu bằng tiếng Nhật. Một số trung tâm cho mang phiên dịch ở khâu hồ sơ nhưng KHÔNG cho phiên dịch khi thi. Hãy học trước các hiệu lệnh tiếng Nhật cơ bản khi lái xe: dừng lại, rẽ trái/phải, khởi hành...",
+    "Bằng quốc tế (国際免許) và bằng Việt Nam nguyên bản KHÔNG thay thế được bằng Nhật để lái lâu dài ở Nhật khi bạn đã là người cư trú. Lái xe không bằng hợp lệ ở Nhật bị phạt rất nặng, có thể phạt tù và phạt tiền lớn, và ảnh hưởng việc gia hạn visa.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận bằng lái Nhật: kiểm tra đúng họ tên, ngày sinh, hạng bằng, ảnh và thời hạn sử dụng in trên bằng",
+    "Ghi lại ngày hết hạn của bằng vào điện thoại và đặt nhắc trước khoảng 2 tháng — quên gia hạn quá 6 tháng có thể phải làm lại thủ tục phức tạp",
+    "Trong 1 năm đầu: luôn gắn ký hiệu tài xế mới (初心者マーク) trước và sau xe khi lái, đây là nghĩa vụ theo luật",
+    "Cất bằng Việt Nam gốc và bản dịch ở nhà an toàn — bằng Việt Nam vẫn cần khi về Việt Nam lái xe; trung tâm Nhật không thu giữ bằng gốc của bạn",
+    "Mua bảo hiểm ô tô/xe máy đầy đủ trước khi lái xe thật: bảo hiểm bắt buộc (自賠責, jibaiseki) là chưa đủ, nên vào thêm bảo hiểm tự nguyện (任意保険, nin'i hoken)",
+    "Lưu số điện thoại và địa chỉ trung tâm bằng lái tỉnh nhà — nơi sẽ gia hạn bằng và xử lý khi mất bằng sau này"
+   ],
+   "vocab": [
+    {
+     "ja": "外免切替",
+     "reading": "がいめんきりかえ",
+     "vi": "Đổi bằng lái nước ngoài sang bằng lái Nhật"
+    },
+    {
+     "ja": "運転免許センター",
+     "reading": "うんてんめんきょせんたー",
+     "vi": "Trung tâm sát hạch/cấp bằng lái xe của tỉnh"
+    },
+    {
+     "ja": "翻訳文",
+     "reading": "ほんやくぶん",
+     "vi": "Bản dịch chính thức của bằng lái (JAF/đại sứ quán... cấp)"
+    },
+    {
+     "ja": "住民票",
+     "reading": "じゅうみんひょう",
+     "vi": "Phiếu đăng ký cư trú (xin ở tòa thị chính)"
+    },
+    {
+     "ja": "知識確認",
+     "reading": "ちしきかくにん",
+     "vi": "Kiểm tra kiến thức luật giao thông (50 câu, đạt từ 45 câu — từ 10/2025)"
+    },
+    {
+     "ja": "技能確認",
+     "reading": "ぎのうかくにん",
+     "vi": "Kiểm tra kỹ năng lái xe thực tế trong sân thi"
+    },
+    {
+     "ja": "適性試験",
+     "reading": "てきせいしけん",
+     "vi": "Kiểm tra thích ứng: thị lực, thính lực, vận động"
+    },
+    {
+     "ja": "学科試験",
+     "reading": "がっかしけん",
+     "vi": "Bài thi lý thuyết (thi viết)"
+    },
+    {
+     "ja": "初心者マーク",
+     "reading": "しょしんしゃまーく",
+     "vi": "Ký hiệu tài xế mới (phải gắn 1 năm đầu sau khi có bằng)"
+    },
+    {
+     "ja": "止まれ",
+     "reading": "とまれ",
+     "vi": "Biển 'DỪNG LẠI' — phải dừng hẳn, điểm hay bị trừ khi thi"
+    },
+    {
+     "ja": "左側通行",
+     "reading": "ひだりがわつうこう",
+     "vi": "Đi bên trái (Nhật lái xe bên trái, ngược Việt Nam)"
+    },
+    {
+     "ja": "有効期限",
+     "reading": "ゆうこうきげん",
+     "vi": "Thời hạn hiệu lực (của bằng lái)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "外免切替の予約をしたいです。",
+     "vi": "Tôi muốn đặt lịch đổi bằng lái nước ngoài."
+    },
+    {
+     "ja": "ベトナムの運転免許証を持っています。",
+     "vi": "Tôi có bằng lái xe của Việt Nam."
+    },
+    {
+     "ja": "ベトナム語で試験を受けたいです。",
+     "vi": "Tôi muốn thi bằng tiếng Việt."
+    },
+    {
+     "ja": "必要な書類を教えてください。",
+     "vi": "Xin cho tôi biết các giấy tờ cần chuẩn bị."
+    },
+    {
+     "ja": "もう一度、技能確認を受けたいです。",
+     "vi": "Tôi muốn thi lại phần kiểm tra kỹ năng."
+    },
+    {
+     "ja": "免許を取った後、ベトナムに3か月以上いました。",
+     "vi": "Sau khi lấy bằng, tôi đã ở Việt Nam từ 3 tháng trở lên."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cảnh sát Tokyo (警視庁) — Thi bằng lái bằng ngoại ngữ, gồm tiếng Việt",
+     "url": "https://www.keishicho.metro.tokyo.lg.jp/menkyo/menkyo/foreign_exam.html"
+    },
+    {
+     "label": "Cảnh sát tỉnh Osaka — Thay đổi thủ tục đổi bằng nước ngoài (外免切替) từ 10/2025",
+     "url": "https://www.police.pref.osaka.lg.jp/tetsuduki/untenmenkyo/21927.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "外国免許切替申請（運転免許センターで記入する申請書）",
+     "name_vi": "Đơn đổi bằng lái nước ngoài sang bằng Nhật - điền tại Trung tâm sát hạch bằng lái",
+     "download_url": "https://www.police.pref.kanagawa.jp/tetsuzuki/menkyo/mes83000.html",
+     "source": "神奈川県警察 (Cảnh sát tỉnh Kanagawa) - trang mục lục thủ tục bằng lái, mục 外国免許から国内免許への切替",
+     "format": "web",
+     "fill": [
+      {
+       "field": "氏名・ふりがな (họ tên + cách đọc)",
+       "how": "Ghi họ tên như trên phiếu cư trú (住民票) và thẻ lưu trú, kèm cách đọc katakana.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "生年月日 (ngày sinh)",
+       "how": "Ghi đúng như thẻ lưu trú.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "住所 (địa chỉ)",
+       "how": "Ghi địa chỉ ở tỉnh Kanagawa đã đăng ký cư trú. Từ 10/2025 không dùng địa chỉ khách sạn hay địa chỉ tạm được nữa.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "国籍・在留資格 (quốc tịch và tư cách lưu trú)",
+       "how": "Trung tâm đối chiếu với bản sao phiếu cư trú có ghi đầy đủ quốc tịch, tư cách và thời hạn lưu trú - nhớ xin đúng loại phiếu này ở tòa thị chính.",
+       "example": "ベトナム／留学 (ví dụ)",
+       "mistake": "Phiếu cư trú thiếu mục quốc tịch/tư cách lưu trú là phải xin lại."
+      },
+      {
+       "field": "外国免許の種類・番号 (loại và số bằng lái nước ngoài)",
+       "how": "Ghi hạng bằng và số bằng Việt Nam của bạn.",
+       "example": "B2（ベトナム普通免許に相当）／番号は免許証の記載どおり (ví dụ: bằng hạng B2 cấp tại Hà Nội)"
+      },
+      {
+       "field": "免許取得年月日・発給国 (ngày cấp bằng và nước cấp)",
+       "how": "Ghi ngày cấp bằng lần đầu và nước cấp. Đây là mốc để tính thời gian ở Việt Nam sau khi có bằng.",
+       "example": "ベトナム／取得日は免許証の記載どおり (ví dụ)"
+      },
+      {
+       "field": "取得後の滞在期間 (thời gian ở nước cấp bằng sau khi có bằng)",
+       "how": "Phải chứng minh được tổng cộng từ 3 tháng (90 ngày) trở lên bằng dấu xuất nhập cảnh trong hộ chiếu cũ và mới.",
+       "example": "通算90日以上（パスポートの出入国スタンプで証明）",
+       "mistake": "Thiếu dấu trong hộ chiếu thì cần giấy xác nhận xuất nhập cảnh bổ sung, nếu không hồ sơ bị dừng ở bước xét giấy tờ."
+      },
+      {
+       "field": "希望する日本の免許種別 (hạng bằng Nhật muốn đổi sang)",
+       "how": "Ghi hạng tương ứng muốn nhận, ví dụ bằng ô tô phổ thông (普通免許). Hạng được cấp theo kết quả xác nhận kiến thức và kỹ năng.",
+       "example": "普通免許"
+      },
+      {
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số di động để trung tâm liên lạc lịch hẹn và kết quả.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "写真の貼付 (dán ảnh)",
+       "how": "Dán ảnh chụp trong 6 tháng, cỡ ảnh làm bằng lái theo quy định của tỉnh (khoảng 3cm x 2,4cm - kiểm tra lại trên trang của tỉnh).",
+       "example": "縦3cm×横2.4cm、6か月以内撮影"
+      }
+     ],
+     "sample_note": "Thủ tục này chỉ làm tại Trung tâm sát hạch bằng lái (運転免許センター), theo lịch hẹn trước (予約制), và tờ đơn được phát và điền tại trung tâm chứ không tải trước. Liên kết trên là trang mục lục chính thức của Cảnh sát Kanagawa (đã mở kiểm tra được), trong đó có mục '外国の運転免許から日本の運転免許への切替手続について' dẫn tới trang chi tiết điều kiện và giấy tờ cần mang. Ví dụ bằng lái Việt Nam hạng B2 cấp tại Hà Nội chỉ là ví dụ hư cấu."
+    },
+    {
+     "name_jp": "外国運転免許証翻訳文発行申請書（JAF）",
+     "name_vi": "Đơn xin cấp bản dịch tiếng Nhật bằng lái nước ngoài của JAF",
+     "download_url": "https://jaf.or.jp/-/media/1/2590/2708/3096/pdf_apli_english_202304_ippan_001.pdf",
+     "source": "一般社団法人日本自動車連盟（JAF）- Liên đoàn Ô tô Nhật Bản",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "申請者ご氏名 (họ tên người xin dịch)",
+       "how": "Ghi họ tên đúng như ghi trên bằng lái. Nếu bằng chỉ ghi chữ không phải Latin, ghi thêm bằng tiếng Nhật hoặc tiếng Anh theo hướng dẫn của JAF.",
+       "example": "グエン・バン・アン",
+       "mistake": "Ghi tên khác với trên bằng lái khiến bản dịch bị yêu cầu làm lại."
+      },
+      {
+       "field": "申請者日本国内ご住所・返送先 (địa chỉ ở Nhật / địa chỉ nhận bản dịch)",
+       "how": "Ghi mã bưu điện và địa chỉ ở Nhật. Về nguyên tắc bản dịch chỉ gửi về địa chỉ của chính người xin ở Nhật.",
+       "example": "〒211-0063 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "電話番号 TEL (số điện thoại)",
+       "how": "Ghi số và đánh dấu là số nhà, công ty hay di động.",
+       "example": "090-1234-5678（携帯）"
+      },
+      {
+       "field": "免許証発給国 (nước cấp bằng lái)",
+       "how": "Ghi nước đã cấp bằng của bạn.",
+       "example": "ベトナム"
+      },
+      {
+       "field": "取得後3か月以上の滞在 はい／いいえ (đã ở nước cấp bằng từ 3 tháng sau khi có bằng chưa)",
+       "how": "Khoanh 'はい' (có) nếu sau ngày cấp bằng bạn đã ở Việt Nam tổng cộng từ 3 tháng trở lên. Đây là điều kiện cốt lõi của đổi bằng.",
+       "example": "はい"
+      },
+      {
+       "field": "送付必要書類のチェック (đánh dấu giấy tờ gửi kèm)",
+       "how": "Đánh dấu: đơn xin, bản sao bằng lái (cả 2 mặt, rõ nét, ưu tiên bản màu), phí dịch. Thiếu mục nào đơn bị trả lại.",
+       "example": "申請書・免許証コピーにチェック"
+      },
+      {
+       "field": "代理人記入欄 (mục người đại diện - nếu có)",
+       "how": "Chỉ ghi khi người khác nộp thay: họ tên người đại diện, quan hệ với người xin, địa chỉ và điện thoại. Người không nói được tiếng Nhật nên nhờ người nói được tiếng Nhật đứng mục này nếu nộp qua bưu điện.",
+       "example": "(để trống nếu tự nộp)"
+      },
+      {
+       "field": "領収書宛名 (tên trên biên lai)",
+       "how": "Để trống thì biên lai đứng tên người xin. Muốn đứng tên người đại diện hoặc công ty thì đánh dấu 'その他' và ghi tên đó.",
+       "example": "申請者本人"
+      },
+      {
+       "field": "使用目的・オンライン申請時の選択 (mục đích sử dụng - khi nộp online)",
+       "how": "Khi nộp online phải chọn đúng mục đích 'đổi sang bằng Nhật' (日本の免許証に切り替える). Chọn sai mục đích thì phí và bản dịch có thể không dùng được cho hồ sơ đổi bằng.",
+       "example": "日本の免許証に切り替える"
+      }
+     ],
+     "sample_note": "File PDF trên là mẫu đơn giấy chính thức của JAF (bản 2023.4, song ngữ Nhật-Anh, đã mở kiểm tra được). Lưu ý quan trọng: theo trang JAF hiện tại (https://jaf.or.jp/common/visitor-procedures/about-dltas, đã mở kiểm tra), JAF nay chỉ nhận đơn ONLINE qua trang nộp đơn chuyên dụng, không nhận tại quầy hay qua bưu điện, và phí dịch cho mục đích đổi bằng là 6.600 yên (từ 1/7/2026) - mức 4.000 yên in trên mẫu giấy cũ đã lỗi thời. Các ô điền trên mẫu giấy và trên web gần như giống nhau, nên bài này dùng mẫu giấy để giải thích từng ô. Ví dụ là nhân vật hư cấu."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "MTV TaiYou太陽",
+     "lang": "vi",
+     "note": "Kinh nghiệm luyện và thi thực hành sa hình tại Kadoma, Osaka; video quay trước đợt siết quy định 10/2025 nên phần thi kiến thức cần đối chiếu quy định mới 50 câu.",
+     "title": "Kinh nghiệm thi thực hành đổi bằng lái xe ô tô từ Việt Nam sang bằng Nhật_Kadoma osaka| MTV TaiYou太陽",
+     "url": "https://www.youtube.com/watch?v=oehEE6Wch7Y"
+    }
+   ]
+  },
+  {
+   "id": "mat-the-luu-tru-mat-do",
+   "group": "Đời sống & việc làm",
+   "title": "Mất thẻ lưu trú / mất đồ: trình báo cảnh sát + làm lại （遺失届・在留カード再交付）",
+   "icon": "🆘",
+   "summary": "Mất thẻ lưu trú (在留カード) là việc phải xử lý ngay theo đúng thứ tự: (1) đến đồn cảnh sát/đồn nhỏ (交番, kōban) trình báo mất đồ để lấy số biên nhận và giấy chứng nhận, (2) trong vòng 14 ngày kể từ ngày biết mất, đến Cục Xuất nhập cảnh (出入国在留管理局) xin cấp lại thẻ. Mất đồ thường (ví, điện thoại, ô...) cũng trình báo ở cảnh sát như vậy — đồ được nhặt được cảnh sát giữ và tra cứu trong 3 tháng.",
+   "who": "Mọi người Việt cư trú trung/dài hạn ở Nhật bị mất, bị lấy trộm hoặc làm hỏng thẻ lưu trú; và bất kỳ ai bị mất đồ ở Nhật (ví tiền, điện thoại, túi xách, xe đạp...) muốn trình báo để có cơ hội tìm lại và có giấy tờ chứng minh khi làm lại giấy tờ, khóa thẻ ngân hàng.",
+   "docs": [
+    "Khi đi trình báo cảnh sát: mang theo giấy tờ tùy thân còn lại (hộ chiếu, thẻ My Number, bằng lái xe Nhật — có gì mang nấy); nhớ ghi sẵn: mất ở đâu, khoảng mấy giờ, đặc điểm món đồ/thẻ",
+    "Giấy chứng nhận trình báo mất đồ của cảnh sát: Giấy chứng nhận受理 trình báo mất đồ (遺失届出証明書, ishitsu todokede shōmeisho) hoặc Giấy chứng nhận trình báo trộm cắp (盗難届出証明書) — hoặc ít nhất là Số biên nhận (受理番号, juri bangō) do cảnh sát cấp",
+    "Đơn xin cấp lại thẻ lưu trú (在留カード再交付申請書, zairyū kādo saikōfu shinseisho) — lấy mẫu tại Cục Xuất nhập cảnh hoặc tải từ trang của Cục",
+    "Ảnh thẻ 4cm x 3cm, chụp trong vòng 6 tháng, nền trơn, không đội mũ (người dưới 16 tuổi không cần ảnh)",
+    "Hộ chiếu (パスポート) bản gốc — trường hợp mất cả hộ chiếu thì mang giấy tờ thay thế và trình bày tại quầy",
+    "Bản trình bày về việc mất thẻ (陳述書, chinjutsusho — mẫu của Cục Xuất nhập cảnh): ghi hoàn cảnh mất và số biên nhận trình báo cảnh sát",
+    "Nếu thẻ bị hỏng/mờ chứ không mất: mang theo chính thẻ cũ bị hỏng đó"
+   ],
+   "prep_home": [
+    "Ngay khi phát hiện mất: bình tĩnh nhớ lại và ghi vào điện thoại: lần cuối chắc chắn còn thẻ/đồ là khi nào, ở đâu; đã đi qua những chỗ nào. Thông tin này cảnh sát sẽ hỏi chi tiết",
+    "Gọi điện ngay cho ngân hàng và công ty điện thoại để KHÓA thẻ ngân hàng / thẻ tín dụng / SIM nếu mất cả ví/điện thoại — làm việc này TRƯỚC, đừng chờ tìm lại được. Số tổng đài khóa thẻ thường in trên web ngân hàng, hỗ trợ 24/7",
+    "Nếu mất điện thoại: dùng máy tính đăng nhập iCloud/Google để xem vị trí lần cuối, khóa máy từ xa (đừng vội xóa dữ liệu)",
+    "Chụp/mở sẵn trong điện thoại: ảnh 2 mặt thẻ lưu trú đã lưu từ trước (bài học: luôn chụp lưu sẵn), số thẻ lưu trú, số hộ chiếu — cảnh sát và Cục Xuất nhập cảnh đều cần các số này",
+    "Tra trước địa chỉ: đồn cảnh sát (警察署, keisatsusho) hoặc 交番 gần nơi mất đồ nhất, và Cục Xuất nhập cảnh phụ trách tỉnh bạn ở; xem giờ tiếp nhận hồ sơ cấp lại (thường ngày thường 9:00–16:00, tùy nơi)",
+    "Viết sẵn ra giấy vài câu tiếng Nhật mô tả việc mất đồ (xem câu mẫu cuối bài) nếu tiếng Nhật còn yếu",
+    "Chuẩn bị ảnh thẻ 4x3cm mới tại máy chụp ảnh tự động (khoảng vài trăm yên) nếu sắp đi làm lại thẻ lưu trú"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Tìm lại theo trí nhớ và hỏi tại nơi có thể đã đánh rơi",
+     "d": "ĐI ĐÂU: quay lại theo trí nhớ những nơi vừa đi: cửa hàng, nhà ga, tàu/xe buýt — hỏi quầy thông tin / quầy đồ thất lạc (お忘れ物センター, o-wasuremono sentā ở ga lớn). Ở Nhật, đồ nhặt được ở cơ sở như ga/cửa hàng thường được giữ tại đó một thời gian rồi mới chuyển cho cảnh sát. NÓI GÌ: dùng câu mẫu mô tả món đồ. MẤT BAO LÂU: khoảng 15–30 phút. Nếu không thấy, chuyển ngay sang Bước 2, đừng chờ vài ngày.",
+     "ja": "落とし物を探しています。財布をなくしました。",
+     "vi": "Tôi đang tìm đồ đánh rơi. Tôi bị mất ví tiền."
+    },
+    {
+     "t": "Bước 2: Đến 交番 hoặc đồn cảnh sát trình báo mất đồ (遺失届)",
+     "d": "ĐI ĐÂU: đồn cảnh sát nhỏ (交番, kōban) hoặc đồn cảnh sát (警察署) gần nơi mất đồ hoặc gần nhà đều được nhận. MANG GÌ: giấy tờ tùy thân còn lại, ghi chú về thời gian/địa điểm mất và đặc điểm món đồ (màu sắc, hãng, bên trong có gì). NÓI GÌ: nói câu mẫu. Cảnh sát sẽ lập Biên bản trình báo mất đồ (遺失届, ishitsu todoke): mất thẻ lưu trú thì khai rõ số thẻ nếu nhớ, mất do rơi hay bị móc trộm (bị trộm thì khai là 盗難届, tōnan todoke — trình báo trộm cắp). MẤT BAO LÂU: khoảng 15–30 phút. Đây là bước bắt buộc phải có trước khi xin cấp lại thẻ lưu trú.",
+     "ja": "在留カードをなくしました。遺失届を出したいです。",
+     "vi": "Tôi bị mất thẻ lưu trú. Tôi muốn trình báo mất đồ."
+    },
+    {
+     "t": "Bước 3: Nhận số biên nhận và xin giấy chứng nhận trình báo",
+     "d": "NHẬN ĐƯỢC GÌ: Số biên nhận trình báo (受理番号, juri bangō) — chụp ảnh và ghi lại ngay vào điện thoại. Đồng thời xin cấp Giấy chứng nhận trình báo mất đồ (遺失届出証明書): giấy này cần khi nộp hồ sơ cấp lại thẻ ở Cục Xuất nhập cảnh và đôi khi ngân hàng/trường học yêu cầu. Lưu ý: giao ban nhỏ (交番) lập trình báo được nhưng giấy chứng nhận thường do đồn cảnh sát (警察署) cấp — hỏi rõ nhận giấy ở đâu, có phải quay lại hôm khác không. KIỂM TRA GÌ trước khi rời đi: họ tên, ngày sinh, mô tả món đồ trên biên bản có đúng không, sai thì xin sửa ngay.",
+     "ja": "受理番号と遺失届出証明書をください。",
+     "vi": "Xin cho tôi số biên nhận và giấy chứng nhận trình báo mất đồ."
+    },
+    {
+     "t": "Bước 4: Tra cứu đồ thất lạc trên hệ thống cảnh sát và chờ liên lạc",
+     "d": "Đồ nhặt được nộp cho cảnh sát được giữ và công khai tra cứu trong 3 tháng. Ở nhà, vào trang tra cứu đồ thất lạc của cảnh sát tỉnh (link của Cảnh sát quốc gia NPA ở cuối bài dẫn tới từng tỉnh), nhập loại đồ và ngày mất để tự kiểm tra vài ngày một lần. Nếu cảnh sát tìm thấy đồ khớp với trình báo của bạn, họ sẽ liên lạc theo số điện thoại bạn đã khai. Khi đến nhận lại đồ: mang giấy tờ tùy thân và giấy tờ chứng minh món đồ là của mình (hóa đơn, số máy điện thoại IMEI...), và đến đúng đồn cảnh sát được thông báo. Mất đồ thường thì đến đây là xong; riêng THẺ LƯU TRÚ phải làm tiếp Bước 5–7 kể cả khi đang chờ tìm.",
+     "ja": "落とし物が届いていないか、確認したいです。",
+     "vi": "Tôi muốn kiểm tra xem đồ đánh rơi của tôi đã được nộp vào chưa."
+    },
+    {
+     "t": "Bước 5: Trong 14 ngày: đến Cục Xuất nhập cảnh xin cấp lại thẻ lưu trú",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương (地方出入国在留管理局, chihō shutsunyūkoku zairyū kanrikyoku) hoặc chi nhánh phụ trách nơi bạn ở. HẠN CHÓT: trong vòng 14 ngày kể từ ngày BIẾT mình mất thẻ (nếu phát hiện mất khi đang ở nước ngoài: tính 14 ngày từ ngày nhập cảnh lại vào Nhật). MANG GÌ: toàn bộ giấy tờ ở mục docs, gồm giấy chứng nhận/số biên nhận trình báo cảnh sát và bản trình bày (陳述書). NÓI GÌ: nói câu mẫu. MẤT BAO LÂU: xếp hàng + nộp hồ sơ thường khoảng 1–3 giờ tùy đông; nhiều nơi cấp thẻ mới ngay trong ngày nếu hồ sơ đầy đủ.",
+     "ja": "在留カードの再交付を申請したいです。",
+     "vi": "Tôi muốn xin cấp lại thẻ lưu trú."
+    },
+    {
+     "t": "Bước 6: Điền đơn, nộp hồ sơ và chờ xét tại Cục",
+     "d": "Điền Đơn xin cấp lại (再交付申請書) tại quầy: họ tên, ngày sinh, quốc tịch, địa chỉ, số thẻ cũ (ghi theo ảnh chụp đã lưu), lý do: mất (紛失, funshitsu). Nộp kèm: ảnh 4x3cm, hộ chiếu, 陳述書 ghi số biên nhận cảnh sát. Nhân viên có thể hỏi thêm hoàn cảnh mất — trả lời đúng như đã khai với cảnh sát. KIỂM TRA GÌ: giữ lại biên lai/biên nhận hồ sơ (受付票) nếu có, hỏi rõ thẻ mới nhận ngay hay phải quay lại hôm khác, và trong thời gian chờ mà cần chứng minh thân phận thì dùng giấy tờ gì. Lệ phí cấp lại do mất: miễn phí (theo hướng dẫn của Cục Xuất nhập cảnh — kiểm tra lại tại quầy vì quy định có thể thay đổi).",
+     "ja": "警察に届けました。受理番号はこれです。",
+     "vi": "Tôi đã trình báo cảnh sát rồi. Đây là số biên nhận."
+    },
+    {
+     "t": "Bước 7: Nhận thẻ lưu trú mới và kiểm tra thông tin",
+     "d": "NHẬN ĐƯỢC GÌ: thẻ lưu trú mới với SỐ THẺ MỚI (số thẻ thay đổi so với thẻ cũ đã mất), thời hạn lưu trú giữ nguyên như cũ — cấp lại thẻ không làm thay đổi hạn visa. KIỂM TRA GÌ ngay tại quầy: họ tên, ngày sinh, quốc tịch, địa chỉ, tư cách lưu trú, ngày hết hạn, mặt sau có ghi giấy phép làm thêm (nếu bạn có) hay không. Phát hiện sai phải báo sửa ngay tại chỗ. Chụp ảnh 2 mặt thẻ mới lưu vào điện thoại ngay khi nhận.",
+     "ja": "内容を確認しました。ありがとうございました。",
+     "vi": "Tôi đã kiểm tra nội dung (trên thẻ). Xin cảm ơn."
+    },
+    {
+     "t": "Bước 8: Thông báo số thẻ mới cho các nơi cần thiết",
+     "d": "Trong vài ngày sau khi có thẻ mới, lần lượt thông báo/đăng ký lại số thẻ mới tại: (1) ngân hàng (nhiều ngân hàng yêu cầu cập nhật thông tin thẻ lưu trú), (2) công ty/trường học của bạn, (3) công ty điện thoại nếu hợp đồng gắn với thẻ cũ, (4) tòa thị chính nếu được yêu cầu. Mang thẻ mới bản gốc đi, mỗi nơi mất khoảng 10–20 phút. Nếu sau này thẻ cũ được tìm thấy và trả lại: mang cả thẻ cũ đến Cục Xuất nhập cảnh hoặc hỏi cảnh sát cách xử lý — không tự giữ dùng 2 thẻ.",
+     "ja": "在留カードが新しくなりました。登録を変更したいです。",
+     "vi": "Thẻ lưu trú của tôi đã được cấp mới. Tôi muốn thay đổi thông tin đăng ký."
+    }
+   ],
+   "cost": "Trình báo cảnh sát: miễn phí. Xin giấy chứng nhận trình báo: miễn phí hoặc khoảng vài trăm yên tùy địa phương (hỏi tại đồn). Cấp lại thẻ lưu trú do mất/bị trộm: miễn phí theo hướng dẫn hiện hành của Cục Xuất nhập cảnh. Chi phí tự túc: ảnh thẻ khoảng vài trăm yên, tiền đi lại. Nếu mất cả hộ chiếu: phí cấp lại hộ chiếu tại Đại sứ quán/Lãnh sự quán Việt Nam tính riêng theo biểu phí lãnh sự.",
+   "duration": "Trình báo cảnh sát: khoảng 15–30 phút, làm ngay trong ngày phát hiện mất. Hạn xin cấp lại thẻ lưu trú: trong vòng 14 ngày kể từ ngày biết mất. Cấp lại thẻ: hồ sơ đầy đủ thường nhận thẻ mới ngay trong ngày nộp, một số trường hợp phải chờ thêm. Cảnh sát giữ đồ nhặt được để chờ chủ đến nhận: 3 tháng.",
+   "warnings": [
+    "QUÁ HẠN 14 NGÀY mà chưa xin cấp lại thẻ lưu trú là vi phạm nghĩa vụ theo luật xuất nhập cảnh, có thể bị xử phạt (theo quy định, trường hợp không xin cấp lại trong thời hạn có thể bị phạt tù đến 1 năm hoặc phạt tiền đến 200.000 yên). Nếu đã lỡ quá hạn: vẫn phải đến Cục Xuất nhập cảnh NGAY, mang theo giấy trình báo cảnh sát, thành thật trình bày lý do chậm trễ — đi muộn còn hơn không đi.",
+    "Nếu mất thẻ mà chưa kịp trình báo cảnh sát: Cục Xuất nhập cảnh sẽ không nhận hồ sơ cấp lại ngay được, vì cần số biên nhận/giấy tờ của cảnh sát trong hồ sơ. Thứ tự bắt buộc: cảnh sát trước, Cục Xuất nhập cảnh sau — đừng đi ngược thứ tự làm mất công đi lại.",
+    "Nếu thiếu giấy tờ khi đến Cục (quên ảnh, quên hộ chiếu, chưa có 陳述書): quầy sẽ ghi lại giấy còn thiếu. Cách xử lý: chụp ảnh tờ ghi chú, bổ sung đúng giấy đó rồi quay lại trong hạn 14 ngày. Hỏi quầy xem hồ sơ của bạn có được 'giữ chỗ' không hay phải nộp lại từ đầu.",
+    "Nếu mất CẢ hộ chiếu lẫn thẻ lưu trú: trình báo cảnh sát cho cả hai món. Sau đó liên hệ Đại sứ quán/Lãnh sự quán Việt Nam tại Nhật để xin cấp lại hộ chiếu hoặc giấy thông hành trước, rồi mang giấy tờ được cấp đến Cục Xuất nhập cảnh xin cấp lại thẻ và trình bày hoàn cảnh — cả hai cơ quan đều có hướng xử lý cho trường hợp mất hết giấy tờ, đừng vì mất hết mà trốn tránh không khai báo.",
+    "Nếu không hiểu tiếng Nhật ở đồn cảnh sát/Cục: nhiều đồn cảnh sát lớn và Cục Xuất nhập cảnh có hỗ trợ phiên dịch qua điện thoại. Hãy nói 'Tôi muốn nói chuyện qua phiên dịch tiếng Việt' (xem câu mẫu), hoặc viết sẵn sự việc ra giấy. Đừng ký vào biên bản bạn chưa hiểu — xin đọc lại/xin giải thích trước khi ký.",
+    "Trong thời gian chưa có thẻ mới: luôn mang theo hộ chiếu + bản chụp thẻ cũ + giấy biên nhận trình báo khi ra ngoài. Người cư trú trung/dài hạn có nghĩa vụ mang theo thẻ lưu trú; đang làm thủ tục cấp lại thì các giấy trên là căn cứ chứng minh bạn đang xử lý đúng quy định khi bị kiểm tra.",
+    "Cảnh giác lừa đảo sau khi mất đồ: cảnh sát và Cục Xuất nhập cảnh KHÔNG bao giờ gọi điện yêu cầu chuyển tiền để 'tìm đồ' hay 'cấp lại thẻ nhanh'. Có cuộc gọi lạ xưng là cảnh sát đòi tiền: cúp máy và tự gọi lại số chính thức của đồn cảnh sát để kiểm chứng.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã có số biên nhận trình báo cảnh sát (受理番号) và giấy chứng nhận trình báo — chụp ảnh lưu điện thoại và cất bản giấy cùng hồ sơ quan trọng",
+    "Đã nhận thẻ lưu trú mới: kiểm tra đúng họ tên, ngày sinh, địa chỉ, tư cách lưu trú và NGÀY HẾT HẠN (giữ nguyên như thẻ cũ) — chụp ảnh 2 mặt thẻ mới lưu ngay",
+    "Đã ghi lại SỐ THẺ MỚI (khác số thẻ cũ) và thông báo cập nhật cho ngân hàng, công ty/trường học, công ty điện thoại",
+    "Nếu đã khóa thẻ ngân hàng/SIM lúc mất ví/điện thoại: kiểm tra đã được cấp thẻ/SIM mới chưa, các dịch vụ trừ tiền tự động (tiền nhà, điện nước) có bị ảnh hưởng không",
+    "Đặt thói quen phòng ngừa: chụp lưu ảnh 2 mặt mọi giấy tờ quan trọng vào thư mục riêng trên điện thoại + lưu thêm một bản trên đám mây/email của chính mình",
+    "Nếu đồ thường vẫn chưa tìm thấy: thỉnh thoảng tra lại trên trang đồ thất lạc của cảnh sát tỉnh trong vòng 3 tháng kể từ ngày mất"
+   ],
+   "vocab": [
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうかーど",
+     "vi": "Thẻ lưu trú (giấy tờ tùy thân quan trọng nhất ở Nhật)"
+    },
+    {
+     "ja": "遺失届",
+     "reading": "いしつとどけ",
+     "vi": "Trình báo mất đồ (nộp ở cảnh sát)"
+    },
+    {
+     "ja": "盗難届",
+     "reading": "とうなんとどけ",
+     "vi": "Trình báo bị trộm cắp"
+    },
+    {
+     "ja": "交番",
+     "reading": "こうばん",
+     "vi": "Đồn cảnh sát nhỏ trong khu dân cư"
+    },
+    {
+     "ja": "警察署",
+     "reading": "けいさつしょ",
+     "vi": "Đồn/Sở cảnh sát (cấp giấy chứng nhận trình báo)"
+    },
+    {
+     "ja": "受理番号",
+     "reading": "じゅりばんごう",
+     "vi": "Số biên nhận (cảnh sát cấp khi nhận trình báo)"
+    },
+    {
+     "ja": "遺失届出証明書",
+     "reading": "いしつとどけでしょうめいしょ",
+     "vi": "Giấy chứng nhận đã trình báo mất đồ"
+    },
+    {
+     "ja": "再交付",
+     "reading": "さいこうふ",
+     "vi": "Cấp lại (thẻ/giấy tờ bị mất hoặc hỏng)"
+    },
+    {
+     "ja": "出入国在留管理局",
+     "reading": "しゅつにゅうこくざいりゅうかんりきょく",
+     "vi": "Cục Quản lý Xuất nhập cảnh và Lưu trú (Nyūkan)"
+    },
+    {
+     "ja": "落とし物",
+     "reading": "おとしもの",
+     "vi": "Đồ đánh rơi / đồ thất lạc"
+    },
+    {
+     "ja": "紛失",
+     "reading": "ふんしつ",
+     "vi": "Làm mất, thất lạc"
+    },
+    {
+     "ja": "陳述書",
+     "reading": "ちんじゅつしょ",
+     "vi": "Bản trình bày hoàn cảnh (mất thẻ) nộp cho Cục Xuất nhập cảnh"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "在留カードをなくしました。遺失届を出したいです。",
+     "vi": "Tôi bị mất thẻ lưu trú. Tôi muốn trình báo mất đồ."
+    },
+    {
+     "ja": "昨日、駅で財布を落としたと思います。",
+     "vi": "Tôi nghĩ hôm qua tôi đã đánh rơi ví ở nhà ga."
+    },
+    {
+     "ja": "受理番号を教えてください。",
+     "vi": "Xin cho tôi biết số biên nhận."
+    },
+    {
+     "ja": "在留カードの再交付を申請したいです。",
+     "vi": "Tôi muốn xin cấp lại thẻ lưu trú."
+    },
+    {
+     "ja": "ベトナム語の通訳をお願いできますか。",
+     "vi": "Tôi nhờ phiên dịch tiếng Việt được không ạ?"
+    },
+    {
+     "ja": "落とし物が届いたら、連絡してください。",
+     "vi": "Nếu đồ thất lạc của tôi được nộp vào, xin hãy liên lạc cho tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh (ISA) — Xin cấp lại thẻ lưu trú do mất (thời hạn 14 ngày)",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00010.html"
+    },
+    {
+     "label": "Cơ quan Cảnh sát Quốc gia (NPA) — Trình báo và tra cứu đồ thất lạc",
+     "url": "https://www.npa.go.jp/bureau/soumu/ishitsubutsu/ishitsu-todokedekensaku.html"
+    },
+    {
+     "label": "Cảnh sát Tokyo (警視庁) — Khi bị mất thẻ lưu trú (hướng dẫn dễ hiểu)",
+     "url": "https://www.keishicho.metro.tokyo.lg.jp/kurashi/anzen/live_in_tokyo/zairyu_card.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "在留カード再交付申請書（紛失等による再交付）",
+     "name_vi": "Đơn xin cấp lại thẻ lưu trú (trường hợp mất, bị trộm, thất lạc)",
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00010.html",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh - Bộ Tư pháp, moj.go.jp/isa) - trang 紛失等による在留カードの再交付申請",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "国籍・地域 (quốc tịch / khu vực)",
+       "how": "Ghi quốc tịch như trên hộ chiếu.",
+       "example": "ベトナム"
+      },
+      {
+       "field": "生年月日 (ngày sinh)",
+       "how": "Ghi theo thứ tự năm - tháng - ngày.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "氏名 (họ tên)",
+       "how": "Ghi họ tên chữ Latin đúng như thẻ lưu trú cũ và hộ chiếu.",
+       "example": "グエン・バン・アン (NGUYEN VAN AN)"
+      },
+      {
+       "field": "性別 (giới tính)",
+       "how": "Khoanh 男 (nam) hoặc 女 (nữ).",
+       "example": "男"
+      },
+      {
+       "field": "住居地 (địa chỉ cư trú)",
+       "how": "Ghi địa chỉ đang đăng ký cư trú, giống trên phiếu cư trú.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "在留カード番号 (số thẻ lưu trú)",
+       "how": "Ghi số thẻ đã mất nếu bạn đã chụp lưu hoặc tra cứu được. Không nhớ thì trình bày tại quầy, nhân viên sẽ tra cứu.",
+       "example": "AB12345678CD",
+       "mistake": "Số này in ở mặt trước thẻ. Hãy luôn chụp 2 mặt thẻ lưu sẵn trong điện thoại."
+      },
+      {
+       "field": "資格外活動許可の有無 (có giấy phép làm thêm ngoài tư cách hay không)",
+       "how": "Khoanh 有 nếu mặt sau thẻ cũ có dấu cho phép làm thêm, 無 nếu không có.",
+       "example": "有"
+      },
+      {
+       "field": "所持を失った理由及びその事実を知った日 (lý do mất thẻ và ngày biết bị mất)",
+       "how": "Ghi ngắn gọn: mất ở đâu, hoàn cảnh gì, và ngày bạn phát hiện mất. Hạn nộp đơn là 14 ngày kể từ ngày biết mất.",
+       "example": "電車で財布ごと紛失／知った日：2026年11月5日 (ví dụ)",
+       "mistake": "Quá 14 ngày mới nộp thì phải nộp thêm giấy giải trình lý do nộp muộn."
+      },
+      {
+       "field": "写真の貼付 (dán ảnh)",
+       "how": "Dán 1 ảnh 4cm x 3cm, chụp trong 6 tháng, nền trơn, không đội mũ, vào ô ảnh trên đơn.",
+       "example": "縦4cm×横3cm、6か月以内"
+      },
+      {
+       "field": "申請人の署名／申請書作成年月日 (chữ ký người nộp và ngày viết đơn)",
+       "how": "Ký tên (chữ ký tay, không cần con dấu) và ghi ngày viết đơn.",
+       "example": "署名：グエン・バン・アン／2026年11月10日"
+      },
+      {
+       "field": "代理人欄 (mục người đại diện)",
+       "how": "Chỉ ghi khi người khác nộp thay thuộc diện được phép: họ tên, quan hệ với bạn, địa chỉ. Tự đi nộp thì để trống.",
+       "example": "(để trống nếu tự nộp)"
+      }
+     ],
+     "sample_note": "Trang chính thức trên cho tải chính đơn này ở dạng PDF (163KB) và Excel (54KB), in trên giấy A4. Nộp kèm: ảnh, bản trình bày về việc mất thẻ (陳述書 - trong đó bắt buộc ghi số biên nhận trình báo cảnh sát 受理番号), và xuất trình hộ chiếu. Phí cấp lại do mất là miễn phí và theo trang của Cục, về nguyên tắc cấp ngay trong ngày. Ví dụ là nhân vật hư cấu; số thẻ AB12345678CD là số mẫu."
+    },
+    {
+     "name_jp": "遺失届出書（第5号様式）／遺失届の手続き",
+     "name_vi": "Đơn trình báo mất đồ (mẫu số 5) và thủ tục trình báo mất đồ tại cảnh sát",
+     "download_url": "https://www.police.pref.kanagawa.jp/tetsuzuki/otoshimono/mesa1901.html",
+     "source": "神奈川県警察 (Cảnh sát tỉnh Kanagawa) - trang 落とし物をしたときは？",
+     "format": "web",
+     "fill": [
+      {
+       "field": "届出人の氏名 (họ tên người trình báo)",
+       "how": "Ghi họ tên người bị mất đồ, đúng như giấy tờ tùy thân bạn mang theo.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "住所・電話番号 (địa chỉ và điện thoại liên lạc)",
+       "how": "Ghi địa chỉ nhà và số di động. Cảnh sát sẽ gọi số này khi tìm thấy đồ.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678",
+       "mistake": "Sai số điện thoại là cảnh sát không liên lạc được dù đã tìm thấy đồ."
+      },
+      {
+       "field": "なくした日時 (ngày giờ bị mất)",
+       "how": "Ghi khoảng thời gian hẹp nhất bạn nhớ được: lần cuối chắc chắn còn đồ là khi nào, phát hiện mất lúc nào.",
+       "example": "2026年11月5日 18時ごろ〜19時ごろ (ví dụ)"
+      },
+      {
+       "field": "なくした場所 (nơi bị mất)",
+       "how": "Ghi cụ thể tuyến tàu, nhà ga, cửa hàng hoặc đoạn đường. Trình báo ở đồn gần nơi mất nhất sẽ dễ tìm hơn.",
+       "example": "武蔵小杉駅から自宅までの間 (ví dụ)"
+      },
+      {
+       "field": "なくした物の名称 (tên món đồ bị mất)",
+       "how": "Ghi tên đồ: thẻ lưu trú, ví, điện thoại... Mỗi loại đồ ghi rõ một mục.",
+       "example": "在留カード、財布"
+      },
+      {
+       "field": "物の特徴 (đặc điểm món đồ)",
+       "how": "Mô tả màu sắc, hãng, hình dạng, và đồ bên trong. Với thẻ lưu trú, ghi rõ số thẻ nếu nhớ.",
+       "example": "在留カード番号 AB12345678CD／財布：黒い二つ折り、中に現金約5,000円 (ví dụ)"
+      },
+      {
+       "field": "現金の金額 (số tiền mặt bị mất - nếu có)",
+       "how": "Nếu mất ví, ghi số tiền mặt áng chừng và các thẻ bên trong để cảnh sát đối chiếu khi có người nhặt được.",
+       "example": "約5,000円"
+      },
+      {
+       "field": "受理番号の控え (giữ lại số biên nhận)",
+       "how": "Đây không phải ô bạn ghi, mà là số cảnh sát cấp sau khi nhận đơn. Hãy ghi lại và chụp ảnh giữ cẩn thận - số này bắt buộc phải điền vào bản trình bày (陳述書) khi xin cấp lại thẻ lưu trú.",
+       "example": "受理番号は警察から受け取って控える",
+       "mistake": "Về nhà làm mất số biên nhận là phải quay lại đồn cảnh sát xin tra cứu lại."
+      }
+     ],
+     "sample_note": "Trang chính thức của Cảnh sát Kanagawa hướng dẫn 3 cách trình báo: đến bất kỳ đồn cảnh sát / 交番 / 駐在所 nào, trình báo online qua Cổng cảnh sát quốc dân (警察国民向けポータル của 警察庁), hoặc tải Mẫu đơn trình báo mất đồ số 5 (第5号様式 遺失届出書 - chính trang này có file PDF mẫu và file hướng dẫn cách ghi) điền sẵn rồi mang đến hoặc gửi bưu điện cho đồn cảnh sát trong tỉnh. Lưu ý trang của tỉnh ghi rõ: giấy trình báo này không tự nó chứng minh việc mất đồ; khi làm lại thẻ lưu trú, giấy tờ Cục Xuất nhập cảnh yêu cầu là bản 陳述書 kèm số biên nhận (受理番号). Ví dụ là nhân vật hư cấu."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "MOJchannel",
+     "lang": "ja",
+     "note": "Video chính thức của Cục Xuất nhập cảnh về thủ tục lưu trú, trong đó có quy định: mất hoặc hỏng thẻ lưu trú phải xin cấp lại tại Cục trong vòng 14 ngày.",
+     "title": "生活オリエンテーション動画　７　入管の手続と住所の手続（日本語）",
+     "url": "https://www.youtube.com/watch?v=EIzoNipcQVQ"
+    }
+   ]
+  }
+ ]
+}

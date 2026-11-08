@@ -1,0 +1,2225 @@
+{
+ "guides": [
+  {
+   "affiliate": "bank",
+   "cost": "Mở tài khoản thường miễn phí. Chỉ tốn tiền khắc con dấu (khoảng vài trăm đến khoảng 1.000 yên tùy nơi) và tiền gửi lần đầu nếu ngân hàng yêu cầu (tùy nơi, có nơi không cần).",
+   "docs": [
+    "Thẻ lưu trú （在留カード） bản gốc — phải có ghi địa chỉ nhà hiện tại ở mặt sau, và ngày hết hạn lưu trú còn hơn 3 tháng tính từ ngày xin mở tài khoản",
+    "Hộ chiếu (パスポート) bản gốc — ngân hàng có lúc xin xem thêm, nên luôn mang theo",
+    "Thẻ My Number （マイナンバーカード, thẻ số cá nhân) hoặc giấy thông báo số cá nhân — nhiều ngân hàng sẽ hỏi",
+    "Con dấu cá nhân （印鑑, đọc là inkan) — loại dấu khắc tên, một số ngân hàng cho dùng chữ ký thay thế, nhưng có dấu thì an toàn hơn",
+    "Thẻ học sinh （学生証） nếu tư cách lưu trú là du học （留学）, hoặc thẻ nhân viên （社員証） / giấy chứng nhận đang làm việc nếu là thực tập sinh kỹ năng （技能実習）",
+    "Số điện thoại ở Nhật đã đăng ký được (số của chính mình)",
+    "Một ít tiền mặt để gửi vào lần đầu, khoảng vài trăm đến vài nghìn yên tùy ngân hàng (có nơi không cần)"
+   ],
+   "duration": "Làm thủ tục ở quầy khoảng 30–60 phút. Sổ có nơi nhận ngay, có nơi gửi về nhà sau vài ngày; thẻ rút tiền thường về sau khoảng 1 tuần, tùy ngân hàng.",
+   "final_check": [
+    "Đã nhận đủ: sổ tài khoản (hoặc thông báo số tài khoản) và thẻ rút tiền gửi về nhà. Thiếu một trong hai thì ra quầy hỏi ngay.",
+    "Đã thử ATM một lần: gửi và rút tiền nhỏ thành công, mã PIN đúng.",
+    "Đã báo số tài khoản cho công ty / trường và kiểm tra tên katakana của mình trong hồ sơ của công ty.",
+    "Cất sổ và thẻ ở hai chỗ khác nhau trong nhà; không để mã PIN chung chỗ với thẻ.",
+    "Ghi vào lịch: ngày hết hạn thẻ lưu trú của mình. Trước ngày đó khoảng 3 tháng phải gia hạn, và gia hạn xong phải báo ngân hàng.",
+    "Chụp ảnh trang đầu sổ tài khoản lưu trong điện thoại để khi cần điền số tài khoản thì có sẵn, nhưng không gửi ảnh này cho người lạ."
+   ],
+   "group": "Tiền, thuế & ngân hàng",
+   "icon": "🏦",
+   "id": "mo-tai-khoan-ngan-hang",
+   "links": [
+    {
+     "label": "Yucho — Hướng dẫn mở tài khoản cho người nước ngoài (tiếng Nhật)",
+     "url": "https://www.jp-bank.japanpost.jp/kaisetu/kat_gaikokujin.html"
+    },
+    {
+     "label": "Yucho — Mở tài khoản (tiếng Nhật)",
+     "url": "https://www.jp-bank.japanpost.jp/kaisetu/kat_index.html"
+    },
+    {
+     "label": "Cơ quan Dịch vụ Tài chính Nhật Bản (FSA) — Tờ hướng dẫn tài khoản và chuyển tiền cho người nước ngoài (PDF)",
+     "url": "https://www.fsa.go.jp/user/01_2024.pdf"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "口座を開設したいです。",
+     "vi": "Tôi muốn mở tài khoản."
+    },
+    {
+     "ja": "必要な書類を教えてください。",
+     "vi": "Xin cho tôi biết cần những giấy tờ gì."
+    },
+    {
+     "ja": "日本語があまり分かりません。ゆっくりお願いします。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin nói chậm giúp tôi."
+    },
+    {
+     "ja": "もう一度説明をお願いします。",
+     "vi": "Xin giải thích lại một lần nữa."
+    },
+    {
+     "ja": "住所が変わったら、どうすればいいですか。",
+     "vi": "Khi đổi địa chỉ thì tôi phải làm gì?"
+    },
+    {
+     "ja": "ありがとうございました。",
+     "vi": "Cảm ơn rất nhiều."
+    }
+   ],
+   "prep_home": [
+    "Kiểm tra mặt sau thẻ lưu trú: đã có dòng địa chỉ nhà ở Nhật chưa. Chưa có thì phải ra tòa thị chính （市役所） đăng ký địa chỉ trước, ngân hàng sẽ không nhận hồ sơ thiếu địa chỉ.",
+    "Đếm ngày hết hạn trên thẻ lưu trú: nếu còn từ 3 tháng trở xuống, khoan đi mở ở Yucho — hãy gia hạn lưu trú xong rồi mới đi, vì Yucho ghi rõ trường hợp này không mở được.",
+    "Chụp ảnh hai mặt thẻ lưu trú và trang có ảnh của hộ chiếu, lưu trong điện thoại để khi cần điền thông tin thì xem lại, không phải lục túi.",
+    "Viết sẵn ra giấy bằng chữ La-tinh (romaji) đúng như hộ chiếu: họ tên, địa chỉ nhà ở Nhật, số điện thoại, ngày tháng năm sinh. Điền đơn ở quầy sẽ nhanh và ít sai hơn nhiều.",
+    "Nếu là du học sinh hoặc thực tập sinh: xin sẵn thẻ học sinh / thẻ nhân viên, hoặc nhờ trường / công ty cấp giấy chứng nhận đang học / đang làm việc （在籍証明書）. Thiếu giấy này là phải đi lại lần hai.",
+    "Khắc sẵn con dấu inkan ở cửa hàng dấu (khoảng vài trăm đến khoảng 1.000 yên tùy nơi) nếu chưa có, và mang theo cả bản gốc lẫn không cần photo — ngân hàng tự sao chụp giấy tờ của bạn.",
+    "Tra trước địa chỉ chi nhánh Yucho / bưu điện gần nhà và giờ làm việc của quầy tiết kiệm (thường ngày thường ban ngày, tùy nơi), chọn buổi sáng ngày thường để đỡ đông."
+   ],
+   "steps": [
+    {
+     "d": "ĐI ĐÂU: Tòa thị chính nơi bạn sống （市役所 hoặc 区役所）, quầy cư trú. MANG GÌ: Thẻ lưu trú và hộ chiếu. NÓI GÌ: Dùng câu mẫu ở trường ja. MẤT BAO LÂU: Khoảng 15–30 phút tùy đông. NHẬN ĐƯỢC GÌ: Địa chỉ được in ở mặt sau thẻ lưu trú. KIỂM TRA GÌ: Đọc lại dòng địa chỉ ở mặt sau thẻ, đúng số nhà và tên tòa nhà chưa, rồi mới rời quầy. Chưa có địa chỉ này thì ngân hàng không mở tài khoản được.",
+     "ja": "住所の登録をお願いします。",
+     "t": "Bước 1: Đăng ký địa chỉ ở tòa thị chính trước",
+     "vi": "Cho tôi đăng ký địa chỉ nhà."
+    },
+    {
+     "d": "ĐI ĐÂU: Chưa đi đâu cả, quyết định ở nhà. Cách chọn đơn giản: Yucho （ゆうちょ銀行, ngân hàng của bưu điện) là nơi dễ mở nhất cho người mới, có quầy ở hầu hết bưu điện. Ngân hàng lớn như MUFG, SMBC, Mizuho: nhiều nơi coi người mới đến chưa đủ 6 tháng là 'người không cư trú' （非居住者） theo luật ngoại hối, nên có thể bị hạn chế dịch vụ hoặc bị từ chối, trừ khi có giấy chứng nhận đang đi làm ở Nhật. Ngân hàng online (trên mạng): mỗi nơi một điều kiện, có nơi ghi rõ không nhận người vào Nhật chưa đủ 6 tháng và không làm việc ở Nhật. NÓI GÌ: Chưa cần nói gì. MẤT BAO LÂU: Khoảng 10 phút suy nghĩ. NHẬN ĐƯỢC GÌ: Quyết định mở Yucho trước. KIỂM TRA GÌ: Nếu công ty yêu cầu nhận lương vào một ngân hàng cụ thể, hỏi công ty trước khi chọn.",
+     "ja": "",
+     "t": "Bước 2: Chọn ngân hàng đầu tiên — ưu tiên Yucho",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Tại quầy — chi nhánh Yucho hoặc bưu điện lớn gần nhà, vào quầy tiết kiệm （貯金窓口）. Cũng có thể đăng ký bằng ứng dụng ゆうちょ手続きアプリ trên điện thoại (có tiếng Việt), nhưng đi quầy lần đầu sẽ dễ hơn vì có người hướng dẫn. MANG GÌ: Toàn bộ giấy tờ trong mục docs, mang bản gốc. NÓI GÌ: Dùng câu mẫu ở trường ja và đưa thẻ lưu trú ra. MẤT BAO LÂU: Chờ khoảng 10–30 phút tùy đông. NHẬN ĐƯỢC GÌ: Số thứ tự và sự hướng dẫn đến quầy làm thủ tục. KIỂM TRA GÌ: Đúng quầy tiết kiệm chưa (không phải quầy gửi thư/bưu phẩm).",
+     "ja": "口座を開設したいです。新しく日本に来ました。",
+     "t": "Bước 3: Đến quầy Yucho / bưu điện, lấy số thứ tự",
+     "vi": "Tôi muốn mở tài khoản. Tôi mới đến Nhật."
+    },
+    {
+     "d": "ĐI ĐÂU: Tại bàn điền đơn trong chi nhánh. MANG GÌ: Tờ ghi sẵn họ tên, địa chỉ bằng chữ La-tinh đã chuẩn bị ở nhà và con dấu inkan. NÓI GÌ: Nếu không đọc được chữ Hán nào, chỉ vào dòng đó và dùng câu mẫu. MẤT BAO LÂU: Khoảng 10–15 phút. NHẬN ĐƯỢC GÌ: Đơn đã điền xong. KIỂM TRA GÌ: Họ tên phải giống hệt hộ chiếu từng chữ, địa chỉ giống hệt mặt sau thẻ lưu trú, số điện thoại viết đúng — sai một chữ là sau này chuyển tiền, nhận lương dễ bị kẹt.",
+     "ja": "すみません、この漢字はどういう意味ですか。",
+     "t": "Bước 4: Điền đơn mở tài khoản",
+     "vi": "Xin lỗi, chữ Hán này nghĩa là gì ạ?"
+    },
+    {
+     "d": "ĐI ĐÂU: Tại quầy giao dịch khi được gọi số. MANG GÌ: Thẻ lưu trú, hộ chiếu, thẻ học sinh / thẻ nhân viên nếu là du học hoặc thực tập sinh. Nhân viên sẽ kiểm tra quốc tịch, tư cách lưu trú và ngày hết hạn (đây là quy định chống rửa tiền, ai cũng bị kiểm tra như nhau). NÓI GÌ: Trả lời ngắn: ở Nhật để làm việc / học tập, tài khoản để nhận lương. MẤT BAO LÂU: Khoảng 10–20 phút. NHẬN ĐƯỢC GÌ: Hồ sơ được nhận. KIỂM TRA GÌ: Nghe kỹ nhân viên hẹn gì: có nơi làm xong trong ngày, có nơi gửi sổ về nhà sau vì cần thời gian kiểm tra — Yucho ghi rõ có trường hợp không mở được ngay trong ngày.",
+     "ja": "給料を受け取るために口座が必要です。",
+     "t": "Bước 5: Nộp giấy tờ và trả lời câu hỏi xác nhận",
+     "vi": "Tôi cần tài khoản để nhận lương."
+    },
+    {
+     "d": "ĐI ĐÂU: Vẫn tại quầy. MANG GÌ: Tiền mặt gửi lần đầu nếu ngân hàng yêu cầu. Bạn sẽ tự đặt mã PIN 4 số （暗証番号, mã bí mật cho thẻ rút tiền) — không nói mã này cho nhân viên nghe, tự bấm hoặc tự viết vào giấy theo hướng dẫn. NÓI GÌ: Không cần nói mã PIN cho ai cả. MẤT BAO LÂU: Khoảng 5 phút. NHẬN ĐƯỢC GÌ: Biên lai nộp tiền lần đầu. KIỂM TRA GÌ: Không dùng mã PIN là ngày sinh hoặc số điện thoại — dễ bị đoán. Ghi nhớ mã ở nơi chỉ mình biết, không ghi lên thẻ.",
+     "ja": "暗証番号は4桁でいいですか。",
+     "t": "Bước 6: Đặt mã PIN và nộp tiền lần đầu",
+     "vi": "Mã PIN 4 số là được phải không ạ?"
+    },
+    {
+     "d": "ĐI ĐÂU: Tại quầy (nhận sổ) và tại nhà (nhận thẻ qua bưu điện). MANG GÌ: Giấy hẹn nếu có. NHẬN ĐƯỢC GÌ: Sổ tài khoản （通帳） có ghi số tài khoản （口座番号） — có nơi cấp ngay, có nơi gửi về nhà sau vài ngày. Thẻ rút tiền （キャッシュカード） thường được gửi riêng về nhà sau khoảng 1 tuần, tùy ngân hàng. MẤT BAO LÂU: Đợi khoảng vài ngày đến khoảng 1–2 tuần. KIỂM TRA GÌ: Khi thẻ về, kiểm tra tên trên thẻ có đúng không. Nếu sau khoảng 2 tuần chưa thấy thẻ, mang sổ ra quầy hỏi.",
+     "ja": "キャッシュカードはいつ届きますか。",
+     "t": "Bước 7: Nhận sổ tài khoản và chờ thẻ rút tiền",
+     "vi": "Khi nào thẻ rút tiền sẽ được gửi đến ạ?"
+    },
+    {
+     "d": "ĐI ĐÂU: Tại công ty hoặc trường học, gặp người phụ trách lương / hành chính. MANG GÌ: Sổ tài khoản hoặc ảnh chụp trang đầu của sổ (có tên ngân hàng, số tài khoản, tên chủ tài khoản viết bằng chữ katakana). NÓI GÌ: Dùng câu mẫu ở trường ja. MẤT BAO LÂU: Khoảng 5 phút. NHẬN ĐƯỢC GÌ: Xác nhận đã đăng ký tài khoản nhận lương. KIỂM TRA GÌ: Đọc lại tên chủ tài khoản bằng katakana mà công ty ghi — sai katakana là lương không vào được.",
+     "ja": "給料の振込先はこの口座でお願いします。",
+     "t": "Bước 8: Báo số tài khoản cho công ty / trường học",
+     "vi": "Xin chuyển lương vào tài khoản này giúp tôi."
+    },
+    {
+     "d": "ĐI ĐÂU: Máy ATM của Yucho ở bưu điện hoặc cửa hàng tiện lợi có ATM liên kết. MANG GÌ: Thẻ rút tiền và mã PIN. Thử gửi vào một số tiền nhỏ và rút ra một phần để chắc chắn thẻ và mã PIN dùng được. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 5 phút. NHẬN ĐƯỢC GÌ: Biên lai giao dịch. KIỂM TRA GÌ: Số dư trên biên lai có khớp với số tiền bạn đã nộp không. Xong xuôi mới yên tâm chờ lương vào.",
+     "ja": "",
+     "t": "Bước 9: Thử rút và gửi tiền một lần cho quen",
+     "vi": ""
+    }
+   ],
+   "summary": "Tài khoản ngân hàng là thứ cần có đầu tiên để nhận lương, trả tiền nhà và tiền điện thoại. Người mới sang nên bắt đầu ở Ngân hàng Bưu điện Yucho （ゆうちょ銀行）, sau đó khi đã ở lâu hơn có thể mở thêm ở ngân hàng lớn hoặc ngân hàng trên mạng (online).",
+   "title": "Mở tài khoản ngân hàng （銀行口座の開設）",
+   "vocab": [
+    {
+     "ja": "口座開設",
+     "reading": "こうざかいせつ",
+     "vi": "mở tài khoản ngân hàng"
+    },
+    {
+     "ja": "普通預金",
+     "reading": "ふつうよきん",
+     "vi": "tài khoản thường (dùng hằng ngày)"
+    },
+    {
+     "ja": "通帳",
+     "reading": "つうちょう",
+     "vi": "sổ tài khoản"
+    },
+    {
+     "ja": "キャッシュカード",
+     "reading": "きゃっしゅかーど",
+     "vi": "thẻ rút tiền ATM"
+    },
+    {
+     "ja": "口座番号",
+     "reading": "こうざばんごう",
+     "vi": "số tài khoản"
+    },
+    {
+     "ja": "暗証番号",
+     "reading": "あんしょうばんごう",
+     "vi": "mã PIN (mã bí mật 4 số)"
+    },
+    {
+     "ja": "印鑑",
+     "reading": "いんかん",
+     "vi": "con dấu cá nhân"
+    },
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうかーど",
+     "vi": "thẻ lưu trú"
+    },
+    {
+     "ja": "残高",
+     "reading": "ざんだか",
+     "vi": "số dư trong tài khoản"
+    },
+    {
+     "ja": "入金",
+     "reading": "にゅうきん",
+     "vi": "nộp / nhận tiền vào tài khoản"
+    },
+    {
+     "ja": "出金",
+     "reading": "しゅっきん",
+     "vi": "rút tiền ra"
+    },
+    {
+     "ja": "振込",
+     "reading": "ふりこみ",
+     "vi": "chuyển khoản"
+    },
+    {
+     "ja": "窓口",
+     "reading": "まどぐち",
+     "vi": "quầy giao dịch"
+    }
+   ],
+   "warnings": [
+    "Tuyệt đối không cho mượn, bán hoặc cho thuê tài khoản, sổ và thẻ của mình cho bất kỳ ai — đây là tội hình sự ở Nhật, có thể bị bắt, bị trục xuất và không quay lại Nhật được.",
+    "Khi đổi địa chỉ nhà hoặc gia hạn thẻ lưu trú, phải báo lại cho ngân hàng ngay （住所変更・在留期間の更新）. Không báo, ngân hàng có thể tạm khóa giao dịch cho đến khi bạn cập nhật.",
+    "Nếu trục trặc — thiếu giấy tờ: nhân viên thường ghi ra giấy còn thiếu gì. Đừng bỏ về tay không: xin tờ ghi chú đó, chụp ảnh lại, về nhà chuẩn bị đúng giấy được ghi rồi quay lại, hoặc hỏi người của công ty / trường đi cùng hỗ trợ.",
+    "Nếu trục trặc — bị từ chối mở tài khoản: hỏi rõ lý do bằng câu mẫu và xin ghi lý do ra giấy. Sau đó thử kênh khác: bị ngân hàng lớn từ chối vì chưa ở đủ 6 tháng thì quay sang mở Yucho trước; đủ 6 tháng hoặc có thêm giấy chứng nhận việc làm thì quay lại ngân hàng lớn sau.",
+    "Nếu trục trặc — không hiểu tiếng Nhật: Yucho có ứng dụng hỗ trợ tiếng Việt, và trang hướng dẫn mở tài khoản cho người nước ngoài. Bạn có thể nhờ người phiên dịch của công ty / trường đi cùng, hoặc viết sẵn điều mình muốn nói ra giấy / điện thoại để đưa nhân viên xem.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "who": "Người Việt mới sang Nhật, đã có thẻ lưu trú （在留カード, thẻ chứng minh tư cách ở Nhật) và đã đăng ký địa chỉ ở tòa thị chính. Ai cần nhận lương, thực tập sinh, du học sinh, người đi làm đều cần làm việc này trong những tuần đầu.",
+   "forms": [
+    {
+     "name_jp": "ゆうちょ銀行 口座開設（ゆうちょ手続きアプリ／窓口）",
+     "name_vi": "Mở tài khoản Yucho Bank — đăng ký trên app Yucho Tetsuzuki hoặc tại quầy bưu điện",
+     "download_url": "https://www.jp-bank.japanpost.jp/kaisetu/kat_index.html",
+     "source": "ゆうちょ銀行（日本郵政グループ）",
+     "format": "web",
+     "fill": [
+      {
+       "field": "氏名（漢字・ローマ字）(họ tên)",
+       "how": "Ghi họ tên đúng từng chữ như trên hộ chiếu và thẻ lưu trú. App sẽ đọc chip thẻ nên tên phải khớp giấy tờ.",
+       "example": "グエン・バン・アン / NGUYEN VAN AN",
+       "mistake": "Ghi tên khác thứ tự họ-tên so với hộ chiếu khiến đối chiếu thất bại."
+      },
+      {
+       "field": "氏名フリガナ（カタカナ）(tên katakana)",
+       "how": "Ghi tên bằng katakana. Đây là tên sẽ in trên sổ và dùng khi công ty chuyển lương, phải nhớ đúng cách ghi này.",
+       "example": "グエン・バン・アン",
+       "mistake": "Mỗi nơi ghi một kiểu katakana khác nhau khiến lương không vào được."
+      },
+      {
+       "field": "生年月日 (ngày sinh)",
+       "how": "Ghi ngày sinh theo lịch Tây, đúng như thẻ lưu trú.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "住所 (địa chỉ nhà ở Nhật)",
+       "how": "Ghi địa chỉ hiện tại đúng như mặt sau thẻ lưu trú. Chưa đăng ký địa chỉ ở tòa thị chính thì không mở được.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Ghi địa chỉ cũ hoặc thiếu số phòng."
+      },
+      {
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số điện thoại Nhật của chính mình, số nhận được SMS xác thực.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "在留カード情報 (thông tin thẻ lưu trú)",
+       "how": "Người nước ngoài mở qua app phải dùng thẻ lưu trú: đặt thẻ vào điện thoại để đọc chip NFC, hoặc xuất trình bản gốc tại quầy. Ghi số thẻ và ngày hết hạn khi được hỏi.",
+       "example": "在留カード番号 AB12345678CD、有効期限 2028年6月30日 (ví dụ mẫu)",
+       "mistake": "Thẻ sắp hết hạn dưới 3 tháng — Yucho có thể từ chối, nên gia hạn lưu trú trước."
+      },
+      {
+       "field": "マイナンバー（個人番号）(số My Number)",
+       "how": "Nhập 12 số My Number hoặc chụp thẻ My Number. Ngân hàng dùng để xác thực thuế và danh tính.",
+       "example": "1234 5678 9012"
+      },
+      {
+       "field": "職業・勤務先 (nghề nghiệp, nơi làm việc)",
+       "how": "Chọn nghề nghiệp và ghi tên công ty hoặc trường đang học. Du học sinh và thực tập sinh có thể bị yêu cầu thẻ học sinh hoặc thẻ nhân viên.",
+       "example": "会社員／介護施設勤務 (nhân viên công ty / làm ở cơ sở chăm sóc)"
+      },
+      {
+       "field": "口座の利用目的 (mục đích dùng tài khoản)",
+       "how": "Chọn mục đích thật: nhận lương, sinh hoạt phí, tiết kiệm. Chọn đúng ngay từ đầu để tránh bị hỏi lại.",
+       "example": "給与受取・生活費 (nhận lương, chi phí sinh hoạt)"
+      },
+      {
+       "field": "暗証番号（PIN）(mã PIN thẻ)",
+       "how": "Tự đặt 4 số PIN cho thẻ rút tiền. Không dùng ngày sinh hay số điện thoại.",
+       "example": "Tự đặt 4 số bí mật (không ghi ra giấy kèm thẻ)",
+       "mistake": "Dùng ngày sinh làm PIN — dễ bị đoán và ngân hàng cũng cảnh báo."
+      },
+      {
+       "field": "お届け印（印鑑）(con dấu đăng ký — khi làm tại quầy)",
+       "how": "Làm tại quầy thì mang con dấu inkan khắc tên và đóng vào đơn. Một số thủ tục app không cần con dấu.",
+       "example": "Dấu khắc グエン hoặc NGUYEN (theo hướng dẫn của quầy)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Trang chính thức xác nhận: người nước ngoài cần thẻ lưu trú để mở qua app, người Nhật dùng thẻ My Number hoặc bằng lái; app chỉ mở tài khoản không sổ ゆうちょダイレクト＋. Không có mẫu đơn giấy tải về — mở tài khoản làm online qua app hoặc điền đơn tại quầy."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "Tohasho Blog",
+     "lang": "vi",
+     "note": "Hướng dẫn mở tài khoản Rakuten Bank 100% online kèm chọn thẻ debit, giấy tờ cần thẻ lưu trú, My Number và số điện thoại Nhật.",
+     "title": "🧧 MỞ NGÂN HÀNG RAKUTEN + THẺ DEBIT MIỄN PHÍ 2026 - NHẬN NGAY 2.000 POINT FREE(chỉ đến 31/5/2026)! 🧧",
+     "url": "https://www.youtube.com/watch?v=npF_-1T78mI"
+    }
+   ]
+  },
+  {
+   "affiliate": null,
+   "cost": "Nhiều thẻ phổ thông miễn phí thường niên; thẻ ghi nợ thường cũng miễn phí hoặc tùy ngân hàng. Chi phí thật sự cần sợ là phí trả chậm và phí trả xoay vòng (ribo) — luôn viết chung là 'tùy thẻ, phải tự kiểm tra trong điều kiện của thẻ mình xin', không có con số chung cho mọi thẻ.",
+   "docs": [
+    "Thẻ lưu trú （在留カード） bản gốc — công ty thẻ sẽ kiểm tra tư cách lưu trú và ngày hết hạn; hạn còn quá ngắn (ví dụ dưới 6 tháng ở một số nơi) có thể không đăng ký được",
+    "Tài khoản ngân hàng mang tên chính mình để đăng ký trừ tiền tự động (tài khoản ở bài hướng dẫn mở tài khoản)",
+    "Số điện thoại ở Nhật mang tên chính mình (số thuê bao trả sau hoặc số đã đăng ký chính chủ)",
+    "Thông tin công việc: tên công ty / trường học, địa chỉ, số điện thoại nơi làm việc, thu nhập một năm khoảng bao nhiêu （年収）",
+    "Thẻ My Number hoặc giấy tờ xác nhận số cá nhân — một số công ty thẻ yêu cầu khi đăng ký trên mạng",
+    "Con dấu inkan (chỉ một số nơi yêu cầu khi làm giấy tờ bản giấy)"
+   ],
+   "duration": "Thẻ ghi nợ: đăng ký khoảng 15–30 phút, thẻ về sau khoảng 1–2 tuần tùy nơi. Thẻ tín dụng: xét duyệt khoảng vài ngày đến khoảng 2 tuần, tùy công ty.",
+   "final_check": [
+    "Đã ký tên vào mặt sau thẻ ngay khi nhận và đã kích hoạt (nếu thẻ yêu cầu).",
+    "Đã ghi vào lịch: ngày chốt nợ và ngày trừ tiền hằng tháng của thẻ, kèm nhắc giữ số dư trước vài ngày.",
+    "Đã kiểm tra trong ứng dụng: tính năng ribo không bị bật sẵn; hạn mức thẻ là bao nhiêu và mình tự đặt giới hạn chi tiêu thấp hơn hạn mức đó.",
+    "Đã thử một giao dịch nhỏ và thấy tiền được trừ đúng vào ngày quy định.",
+    "Cất thẻ cẩn thận; lưu số điện thoại khóa thẻ khẩn cấp của công ty thẻ vào danh bạ để khi mất thẻ gọi ngay.",
+    "Ghi nhớ: khi gia hạn thẻ lưu trú, phải cập nhật bản sao thẻ lưu trú mới cho công ty thẻ nếu được yêu cầu — có công ty tạm dừng thẻ khi hạn lưu trú trong hồ sơ đã qua."
+   ],
+   "group": "Tiền, thuế & ngân hàng",
+   "icon": "💳",
+   "id": "lam-the-tin-dung",
+   "links": [
+    {
+     "label": "SMBC Card — Người nước ngoài có làm thẻ tín dụng được không (tiếng Nhật)",
+     "url": "https://www.smbc-card.com/nyukai/magazine/knowledge/credit-card_foreigner.jsp"
+    },
+    {
+     "label": "Saison Card — Thẻ tín dụng cho người nước ngoài: giấy tờ và xét duyệt (tiếng Nhật)",
+     "url": "https://www.saisoncard.co.jp/credictionary/knowledge/article106.html"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "デビットカードを作りたいです。",
+     "vi": "Tôi muốn làm thẻ ghi nợ."
+    },
+    {
+     "ja": "クレジットカードを申し込みたいです。",
+     "vi": "Tôi muốn đăng ký thẻ tín dụng."
+    },
+    {
+     "ja": "一括払いでお願いします。",
+     "vi": "Cho tôi trả một lần."
+    },
+    {
+     "ja": "リボ払いは使いたくありません。",
+     "vi": "Tôi không muốn dùng trả xoay vòng (ribo)."
+    },
+    {
+     "ja": "カードをなくしました。止めてください。",
+     "vi": "Tôi làm mất thẻ. Xin khóa thẻ giúp tôi."
+    }
+   ],
+   "prep_home": [
+    "Kiểm tra ngày hết hạn thẻ lưu trú: nếu sắp hết hạn, hãy gia hạn xong rồi mới xin thẻ — nhiều công ty thẻ từ chối hồ sơ có hạn lưu trú còn quá ngắn.",
+    "Mở sẵn tài khoản ngân hàng và dùng tài khoản đó nhận lương khoảng vài tháng đều đặn trước khi xin thẻ tín dụng, để có lịch sử tiền vào rõ ràng.",
+    "Viết sẵn ra giấy: tên công ty / trường bằng tiếng Nhật, địa chỉ công ty, số điện thoại công ty, ngày bắt đầu làm việc, thu nhập năm ước tính. Điền đơn trên mạng cần đúng các thông tin này.",
+    "Chụp ảnh hai mặt thẻ lưu trú để tải lên khi đăng ký online; ảnh phải rõ, không lóa, đủ bốn góc.",
+    "Quyết định trước ở nhà: chỉ xin MỘT thẻ ở MỘT nơi trong một đợt. Xin nhiều nơi cùng lúc bị ghi lại trong hồ sơ tín dụng và càng dễ bị từ chối tiếp.",
+    "Đọc trước về hai loại thẻ: thẻ ghi nợ trừ tiền ngay, không cần xét duyệt khó; thẻ tín dụng trả sau, có xét duyệt. Đừng nhầm hai loại khi điền đơn."
+   ],
+   "steps": [
+    {
+     "d": "ĐI ĐÂU: Tại quầy ngân hàng nơi bạn có tài khoản, hoặc trên ứng dụng / trang web của ngân hàng đó (online). MANG GÌ: Thẻ rút tiền, sổ tài khoản, thẻ lưu trú. NÓI GÌ: Dùng câu mẫu ở trường ja. MẤT BAO LÂU: Khoảng 15–30 phút tại quầy; thẻ gửi về nhà sau khoảng 1–2 tuần tùy nơi. NHẬN ĐƯỢC GÌ: Thẻ ghi nợ có logo Visa / Mastercard / JCB, dùng mua hàng như thẻ tín dụng nhưng tiền trừ ngay trong tài khoản. KIỂM TRA GÌ: Hỏi rõ hạn mức chi tiêu một ngày （利用限度額） và cách khóa thẻ khi mất.",
+     "ja": "デビットカードを作りたいです。",
+     "t": "Bước 1: Làm thẻ ghi nợ ở ngân hàng đang có tài khoản trước",
+     "vi": "Tôi muốn làm thẻ ghi nợ (debit card)."
+    },
+    {
+     "d": "ĐI ĐÂU: Không đi đâu — giai đoạn này làm trong sinh hoạt hằng ngày, khoảng vài tháng. MANG GÌ: Chỉ cần thẻ ghi nợ. Việc cần làm: nhận lương vào tài khoản đều, trả tiền điện thoại, tiền nhà đúng hạn, không để tài khoản âm tiền, không nợ quá hạn bất kỳ khoản nào. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 3–6 tháng là khoảng thời gian nhiều người chọn trước khi xin thẻ tín dụng (đây là kinh nghiệm chung, không phải quy định). NHẬN ĐƯỢC GÌ: Lịch sử giao dịch đều đặn. KIỂM TRA GÌ: Mỗi tháng xem sao kê trong ứng dụng ngân hàng, chắc chắn không có khoản trừ tiền nào bị lỗi do thiếu số dư.",
+     "ja": "",
+     "t": "Bước 2: Dùng thẻ ghi nợ đều đặn và giữ tài khoản 'sạch'",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Online, trên trang chính thức của công ty thẻ. Chọn thẻ miễn phí năm （年会費無料） cho chiếc đầu tiên. MANG GÌ: Thông tin đã viết sẵn ở nhà (công ty, thu nhập, địa chỉ). NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 20–30 phút đọc. NHẬN ĐƯỢC GÌ: Quyết định xin đúng một thẻ. KIỂM TRA GÌ: Ba dòng quan trọng nhất trong điều kiện: phí năm, ngày chốt nợ và ngày trừ tiền mỗi tháng, và lãi / phí khi trả chậm hoặc trả xoay vòng （リボ払い, trả góp tự động — rất tốn phí, cần tránh bật sẵn).",
+     "ja": "",
+     "t": "Bước 3: Chọn một công ty thẻ và đọc điều kiện",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Online, trên trang chính thức của công ty thẻ (không đăng ký qua link lạ gửi trong tin nhắn). MANG GÌ: Ảnh hai mặt thẻ lưu trú, thông tin công việc và tài khoản ngân hàng để trừ tiền. NÓI GÌ: Không cần, nhưng điền phải đúng sự thật — khai thu nhập cao hơn thực tế là lý do bị từ chối và bị ghi hồ sơ xấu. MẤT BAO LÂU: Khoảng 15–20 phút. NHẬN ĐƯỢC GÌ: Mã hồ sơ / email xác nhận đã nhận đơn. KIỂM TRA GÌ: Trước khi bấm gửi, đọc lại họ tên La-tinh, ngày sinh, địa chỉ và số tài khoản trừ tiền; chụp màn hình trang xác nhận cuối cùng.",
+     "ja": "年会費は無料ですか。",
+     "t": "Bước 4: Điền đơn xin thẻ tín dụng online",
+     "vi": "Phí thường niên có miễn phí không ạ? (câu để hỏi khi làm tại quầy)"
+    },
+    {
+     "d": "ĐI ĐÂU: Ở nhà / nơi làm việc — một số công ty thẻ gọi điện xác nhận bạn đang làm việc thật, hoặc gọi cho chính bạn. MANG GÌ: Điện thoại luôn bên người trong giờ hành chính. NÓI GÌ: Trả lời đúng như đã khai trong đơn: tên, nơi làm việc, thời gian làm việc. MẤT BAO LÂU: Kết quả thường có sau khoảng vài ngày đến khoảng 2 tuần, tùy công ty. NHẬN ĐƯỢC GÌ: Email / thư báo đậu hoặc không đậu (thường không nêu lý do cụ thể). KIỂM TRA GÌ: Nếu công ty gọi mà bạn nghe không hiểu tiếng Nhật, xin gọi lại sau và nhờ đồng nghiệp hỗ trợ — đừng trả lời bừa.",
+     "ja": "本人確認の電話ですね。本人です。",
+     "t": "Bước 5: Chờ xét duyệt và nghe điện thoại xác nhận nếu có",
+     "vi": "Đây là cuộc gọi xác nhận chính chủ phải không ạ? Tôi là chính chủ."
+    },
+    {
+     "d": "ĐI ĐÂU: Tại nhà — thẻ thường gửi bằng thư bảo đảm, phải có người ký nhận, không bỏ vào hộp thư thường. MANG GÌ: Thẻ lưu trú để đối chiếu khi nhận thư. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 5 phút nhận và kiểm tra. NHẬN ĐƯỢC GÌ: Thẻ tín dụng và giấy hướng dẫn ghi hạn mức （限度額） và ngày trừ tiền. KIỂM TRA GÌ: Ký tên ngay vào mặt sau thẻ, kiểm tra tên in trên thẻ, cất giấy hướng dẫn. Kích hoạt thẻ theo hướng dẫn nếu được yêu cầu (một số thẻ dùng được ngay).",
+     "ja": "カードが届きました。ありがとうございます。",
+     "t": "Bước 6: Nhận thẻ gửi về nhà và ký tên",
+     "vi": "Thẻ đã đến rồi. Cảm ơn. (câu dùng khi cần gọi xác nhận đã nhận thẻ)"
+    },
+    {
+     "d": "ĐI ĐÂU: Cửa hàng tiện lợi hoặc mua hàng online một món nhỏ. MANG GÌ: Thẻ tín dụng. NÓI GÌ: Khi thanh toán ở cửa hàng, nếu nhân viên hỏi trả một lần hay nhiều lần, luôn chọn trả một lần — dùng câu mẫu. MẤT BAO LÂU: Khoảng 5 phút. NHẬN ĐƯỢC GÌ: Hóa đơn và thông báo giao dịch trong ứng dụng. KIỂM TRA GÌ: Xem trong ứng dụng của công ty thẻ: ngày chốt nợ （締め日） và ngày trừ tiền khỏi tài khoản （引き落とし日） của chính thẻ này, ghi vào lịch điện thoại.",
+     "ja": "一括払いでお願いします。",
+     "t": "Bước 7: Dùng thử một khoản nhỏ và xem ngày trừ tiền",
+     "vi": "Cho tôi trả một lần (không trả góp)."
+    },
+    {
+     "d": "ĐI ĐÂU: Trên điện thoại — đặt lịch nhắc trước ngày trừ tiền vài ngày, lặp lại hằng tháng. MANG GÌ: Ứng dụng ngân hàng để kiểm tra số dư. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 5 phút cài đặt. NHẬN ĐƯỢC GÌ: Thói quen không bao giờ thiếu tiền ngày trừ nợ. KIỂM TRA GÌ: Sau lần trừ tiền đầu tiên, mở ứng dụng kiểm tra đã trừ thành công chưa. Trừ tiền thất bại dù chỉ một lần cũng bị ghi vào lịch sử tín dụng （信用情報） và ảnh hưởng mọi lần xin thẻ / vay sau này.",
+     "ja": "",
+     "t": "Bước 8: Đặt nhắc nhở giữ số dư trước ngày trừ tiền",
+     "vi": ""
+    }
+   ],
+   "summary": "Thẻ tín dụng （クレジットカード, thẻ mua trước trả sau) ở Nhật phải qua xét duyệt （審査） nên người mới sang hay bị từ chối. Cách đi an toàn: dùng thẻ ghi nợ （デビットカード, trừ tiền ngay trong tài khoản) trước, sinh hoạt và trả tiền đều đặn một thời gian, rồi mới xin thẻ tín dụng.",
+   "title": "Làm thẻ tín dụng / thẻ ghi nợ đầu tiên （クレジットカード・デビットカード）",
+   "vocab": [
+    {
+     "ja": "クレジットカード",
+     "reading": "くれじっとかーど",
+     "vi": "thẻ tín dụng (mua trước, trả sau)"
+    },
+    {
+     "ja": "デビットカード",
+     "reading": "でびっとかーど",
+     "vi": "thẻ ghi nợ (trừ tiền ngay trong tài khoản)"
+    },
+    {
+     "ja": "審査",
+     "reading": "しんさ",
+     "vi": "xét duyệt hồ sơ"
+    },
+    {
+     "ja": "年会費",
+     "reading": "ねんかいひ",
+     "vi": "phí thường niên của thẻ"
+    },
+    {
+     "ja": "利用限度額",
+     "reading": "りようげんどがく",
+     "vi": "hạn mức sử dụng của thẻ"
+    },
+    {
+     "ja": "一括払い",
+     "reading": "いっかつばらい",
+     "vi": "trả một lần toàn bộ"
+    },
+    {
+     "ja": "リボ払い",
+     "reading": "りぼばらい",
+     "vi": "trả xoay vòng (trả ít mỗi tháng, phí cao)"
+    },
+    {
+     "ja": "引き落とし",
+     "reading": "ひきおとし",
+     "vi": "trừ tiền tự động khỏi tài khoản"
+    },
+    {
+     "ja": "締め日",
+     "reading": "しめび",
+     "vi": "ngày chốt nợ hằng tháng"
+    },
+    {
+     "ja": "信用情報",
+     "reading": "しんようじょうほう",
+     "vi": "lịch sử / thông tin tín dụng cá nhân"
+    },
+    {
+     "ja": "年収",
+     "reading": "ねんしゅう",
+     "vi": "thu nhập một năm"
+    },
+    {
+     "ja": "暗証番号",
+     "reading": "あんしょうばんごう",
+     "vi": "mã PIN của thẻ"
+    }
+   ],
+   "warnings": [
+    "Không bật trả xoay vòng ribo （リボ払い) nếu chưa hiểu rõ: số tiền trả hằng tháng trông nhỏ nhưng phí rất cao và nợ kéo dài. Ở quầy thanh toán luôn nói trả một lần （一括払い).",
+    "Trả chậm dù một lần cũng bị ghi vào lịch sử tín dụng khoảng nhiều năm và làm các lần xin thẻ, thuê nhà, mua điện thoại trả góp sau này khó hơn hẳn.",
+    "Nếu trục trặc — bị từ chối thẻ tín dụng: đừng xin tiếp nơi khác ngay. Việc xin dồn dập bị ghi lại và càng khó đậu. Hãy quay về dùng thẻ ghi nợ, giữ trả đúng hạn mọi hóa đơn, đợi khoảng 6 tháng rồi mới xin lại một nơi. Một số nơi cho phép bạn tự kiểm tra lịch sử tín dụng của mình ở các tổ chức thông tin tín dụng với một khoản phí nhỏ (tùy tổ chức).",
+    "Nếu trục trặc — thẻ ghi nợ cũng chưa làm được: kiểm tra lại tài khoản ngân hàng có bị giới hạn vì chưa cập nhật địa chỉ / thẻ lưu trú mới không; cập nhật xong ở quầy ngân hàng rồi xin lại.",
+    "Nếu trục trặc — không hiểu điều kiện tiếng Nhật: chỉ đăng ký trên trang chính thức, dùng chức năng dịch của trình duyệt để đọc, và chụp lại các dòng về phí năm, ngày trừ tiền, ribo để nhờ người biết tiếng Nhật xem giúp trước khi bấm gửi. Tuyệt đối không nhờ người lạ đăng ký hộ bằng thông tin của mình.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "who": "Người đã có tài khoản ngân hàng, số điện thoại và địa chỉ ổn định ở Nhật, muốn mua hàng trên mạng, trả góp điện thoại hoặc tích điểm. Người mới sang dưới vài tháng nên đọc kỹ thứ tự thẻ ghi nợ trước, thẻ tín dụng sau.",
+   "forms": [
+    {
+     "name_jp": "楽天カード オンライン申込",
+     "name_vi": "Đăng ký thẻ tín dụng Rakuten Card online — có xét duyệt 審査",
+     "download_url": "https://www.rakuten-card.co.jp/card/",
+     "source": "楽天カード株式会社",
+     "format": "web",
+     "fill": [
+      {
+       "field": "楽天会員ログイン（楽天ID）(đăng nhập tài khoản Rakuten)",
+       "how": "Đăng ký thẻ phải có tài khoản Rakuten miễn phí trước. Đăng nhập bằng Rakuten ID của chính mình rồi mới vào đơn thẻ.",
+       "example": "Đăng nhập Rakuten ID của グエン・バン・アン"
+      },
+      {
+       "field": "氏名・フリガナ (họ tên và katakana)",
+       "how": "Ghi họ tên và katakana đúng như thẻ lưu trú và tài khoản ngân hàng nhận lương.",
+       "example": "グエン・バン・アン",
+       "mistake": "Katakana khác với katakana của tài khoản khấu trừ khiến đăng ký tài khoản trả tiền thất bại."
+      },
+      {
+       "field": "生年月日・性別 (ngày sinh, giới tính)",
+       "how": "Ghi ngày sinh lịch Tây và giới tính như giấy tờ tùy thân.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "住所・電話番号 (địa chỉ, số điện thoại)",
+       "how": "Ghi địa chỉ hiện tại khớp thẻ lưu trú và số điện thoại liên lạc được. Thẻ gửi về địa chỉ này và phải xuất trình giấy tờ khi nhận.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678"
+      },
+      {
+       "field": "職業 (nghề nghiệp)",
+       "how": "Chọn đúng nhóm nghề: nhân viên công ty, công chức, tự doanh, bán thời gian, sinh viên... Khai đúng tình trạng thật vì đây là mục xét duyệt quan trọng.",
+       "example": "会社員 (nhân viên công ty)"
+      },
+      {
+       "field": "勤務先名・勤務先電話番号 (tên và số điện thoại nơi làm việc)",
+       "how": "Chọn loại hình công ty (ví dụ 株式会社) rồi ghi tên công ty bỏ phần loại hình theo hướng dẫn của Rakuten, kèm số điện thoại công ty.",
+       "example": "株式会社サンプル介護サービス／044-000-0000 (ví dụ mẫu)",
+       "mistake": "Ghi cả 株式会社 vào ô tên khi hệ thống đã chọn riêng loại hình công ty."
+      },
+      {
+       "field": "年収（税込）(thu nhập năm trước thuế)",
+       "how": "Ghi tổng thu nhập năm gần nhất, xem trên giấy 源泉徴収票 công ty cấp cuối năm. Khai đúng số thật, không khai tăng.",
+       "example": "350万円",
+       "mistake": "Khai năm thu nhập cao hơn thực tế — khi bị yêu cầu giấy chứng minh thu nhập sẽ không khớp."
+      },
+      {
+       "field": "勤続年数 (số năm làm việc)",
+       "how": "Ghi số năm và tháng đã làm ở công ty hiện tại. Mới vào làm vẫn đăng ký được, cứ ghi đúng.",
+       "example": "2年"
+      },
+      {
+       "field": "住居・居住年数・住宅ローン有無 (nhà ở, số năm ở, có vay mua nhà không)",
+       "how": "Chọn loại nhà (thuê, nhà gia đình, ký túc...), số năm đã ở và có hay không khoản vay nhà, vay không thế chấp.",
+       "example": "賃貸マンション／居住2年／住宅ローンなし (nhà thuê / ở 2 năm / không vay nhà)"
+      },
+      {
+       "field": "家族構成・世帯年収 (thành viên gia đình, thu nhập hộ)",
+       "how": "Ghi số người sống cùng và thu nhập của vợ/chồng nếu được hỏi. Độc thân sống một mình thì ghi đúng một mình.",
+       "example": "独身・一人暮らし (độc thân, sống một mình)"
+      },
+      {
+       "field": "引き落とし口座（支払口座）(tài khoản ngân hàng khấu trừ)",
+       "how": "Đăng ký tài khoản ngân hàng để tự động trừ tiền thẻ ngày 27 hàng tháng: chọn ngân hàng, chi nhánh, số tài khoản và xác thực online.",
+       "example": "ゆうちょ銀行／記号・番号 mẫu 10000-12345678 (ví dụ mẫu)",
+       "mistake": "Đăng ký tài khoản của người khác — chỉ được dùng tài khoản của chính chủ thẻ."
+      },
+      {
+       "field": "キャッシング枠の希望 (hạn mức vay tiền mặt mong muốn)",
+       "how": "Chọn có đăng ký khung vay tiền mặt hay không và hạn mức mong muốn. Không cần thì chọn 0 hoặc không đăng ký để tránh bị yêu cầu giấy chứng minh thu nhập.",
+       "example": "希望しない (không đăng ký)"
+      },
+      {
+       "field": "暗証番号（カードPIN）(mã PIN thẻ)",
+       "how": "Đặt 4 số PIN cho thẻ. Không dùng ngày sinh.",
+       "example": "Tự đặt 4 số bí mật"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Đăng ký xong không có thẻ ngay: Rakuten xét duyệt 審査 dựa trên nghề nghiệp, nơi làm việc, thu nhập và lịch sử tín dụng, thẻ về sau khoảng 1 tuần đến 10 ngày và phải xuất trình giấy tờ khi nhận. Trượt xét duyệt là chuyện bình thường với người mới sang Nhật — chờ có lịch sử lương ổn định rồi đăng ký lại."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "Đình Trần",
+     "lang": "vi",
+     "note": "Điền form đăng ký Rakuten Card từng bước và cách nộp ảnh thẻ lưu trú xác minh danh tính cho người nước ngoài.",
+     "title": "Hướng Dẫn Đăng Ký Thẻ RAKUTEN Visa Dễ Đậu Nhất, Nhì Năm 2026",
+     "url": "https://www.youtube.com/watch?v=xQzvNT8U9iE"
+    }
+   ]
+  },
+  {
+   "affiliate": "remit",
+   "cost": "Không có một con số chung: mỗi kênh gồm phí gửi + chênh lệch tỷ giá, có thể thêm phí ngân hàng trung gian / phía nhận, tất cả đều tùy kênh, tùy số tiền và tùy thời điểm. Chỉ so sánh bằng 'tổng số tiền người nhà thực nhận' tại cùng một thời điểm, không tin con số phí quảng cáo riêng lẻ.",
+   "docs": [
+    "Thẻ lưu trú （在留カード） bản gốc và còn hạn",
+    "Thẻ My Number hoặc giấy tờ có số cá nhân — chuyển tiền quốc tế thường bị yêu cầu xác nhận số này",
+    "Thông tin người nhận ở Việt Nam viết đúng bằng chữ La-tinh không dấu: họ tên giống hệt giấy tờ / tài khoản ngân hàng của người nhận, địa chỉ, số điện thoại",
+    "Thông tin tài khoản ngân hàng của người nhận ở Việt Nam: tên ngân hàng, số tài khoản (nếu nhận vào tài khoản); hoặc giấy tờ tùy thân của người nhận nếu nhận tiền mặt tại quầy ở Việt Nam (tùy kênh)",
+    "Nguồn tiền và mục đích chuyển: ví dụ phiếu lương （給与明細） gần nhất — ngân hàng / công ty chuyển tiền có quyền hỏi tiền này từ đâu và gửi để làm gì",
+    "Tài khoản ngân hàng ở Nhật của chính mình (nếu chuyển qua ngân hàng hoặc nạp tiền vào ứng dụng chuyển tiền)"
+   ],
+   "duration": "Đăng ký lần đầu: khoảng vài giờ đến vài ngày tùy kênh duyệt danh tính. Mỗi lần chuyển sau đó: tạo lệnh khoảng 10 phút; tiền đến nhanh hay chậm tùy kênh và cách nhận, từ trong ngày đến vài ngày làm việc — kiểm tra thời gian dự kiến hiển thị trước khi xác nhận.",
+   "final_check": [
+    "Người nhà đã xác nhận nhận đủ tiền; số tiền thực nhận khớp với số hiển thị khi bạn xác nhận lệnh (nếu lệch, đã hỏi rõ bị trừ ở khâu nào).",
+    "Đã lưu chứng từ của lần chuyển: mã giao dịch, ngày chuyển, số yên, tỷ giá, số tiền người nhận — vào cùng một thư mục cho cả năm.",
+    "Tên người nhận trong chứng từ là đúng người thân bạn định phụng dưỡng (quan trọng cho hồ sơ thuế).",
+    "Đã ghi lại kênh đang dùng và số tổng đài chính thức của kênh đó vào điện thoại để lần trục trặc sau gọi ngay.",
+    "Không còn giữ ý định dùng kênh chui nào: nếu có ai chào phí rẻ hơn qua tin nhắn, bỏ qua và chặn.",
+    "Cuối năm: tổng hợp số lần và tổng tiền đã gửi cho từng người thân để đối chiếu khi làm 年末調整 / 確定申告."
+   ],
+   "group": "Tiền, thuế & ngân hàng",
+   "icon": "💸",
+   "id": "chuyen-tien-ve-viet-nam",
+   "links": [
+    {
+     "label": "Cơ quan Dịch vụ Tài chính (FSA) — Tờ hướng dẫn tài khoản và chuyển tiền cho người nước ngoài (PDF)",
+     "url": "https://www.fsa.go.jp/user/01_2024.pdf"
+    },
+    {
+     "label": "Bộ Tài chính Nhật Bản — Muốn kinh doanh chuyển tiền ra nước ngoài cần giấy phép gì (tiếng Nhật)",
+     "url": "https://www.mof.go.jp/faq/international_policy/10cb.htm"
+    },
+    {
+     "label": "Yucho — Chuyển tiền quốc tế (tiếng Nhật)",
+     "url": "https://www.jp-bank.japanpost.jp/kojin/sokin/kokusou/kj_sk_ks_index.html"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "ベトナムに送金したいです。",
+     "vi": "Tôi muốn chuyển tiền về Việt Nam."
+    },
+    {
+     "ja": "手数料とレートを教えてください。",
+     "vi": "Xin cho tôi biết phí và tỷ giá."
+    },
+    {
+     "ja": "いくら届きますか。",
+     "vi": "Người nhận sẽ nhận được bao nhiêu?"
+    },
+    {
+     "ja": "送金の目的は家族の生活費です。",
+     "vi": "Mục đích chuyển là tiền sinh hoạt cho gia đình."
+    },
+    {
+     "ja": "領収書をください。",
+     "vi": "Xin cho tôi biên lai."
+    },
+    {
+     "ja": "この会社は資金移動業の登録がありますか。",
+     "vi": "Công ty này có đăng ký chuyển tiền (資金移動業) không ạ?"
+    }
+   ],
+   "prep_home": [
+    "Hỏi người nhà ở Việt Nam trước: nhận vào tài khoản ngân hàng hay nhận tiền mặt? Ghi lại chính xác họ tên La-tinh không dấu, tên ngân hàng, số tài khoản, số điện thoại của người nhận. Sai một chữ trong tên là tiền bị treo hoặc bị trả lại.",
+    "Chụp ảnh phiếu lương gần nhất và trang đầu sổ tài khoản ở Nhật, lưu trong điện thoại — lần chuyển đầu tiên gần như chắc chắn bị hỏi nguồn tiền.",
+    "Tự tính ở nhà bằng phép tính đơn giản: số tiền gia đình thực nhận = (số yên gửi − phí gửi) đổi theo tỷ giá của kênh đó, có thể trừ thêm phí ở phía ngân hàng trung gian / ngân hàng nhận (tùy kênh). Đừng chỉ nhìn quảng cáo 'phí rẻ'.",
+    "Kiểm tra kênh định dùng có giấy phép thật không: tra tên công ty trong danh sách công ty chuyển tiền （資金移動業者） trên trang của Cơ quan Dịch vụ Tài chính （金融庁） hoặc xem số đăng ký ghi trên trang chính thức / tại cửa hàng của công ty đó.",
+    "Chuẩn bị sẵn câu trả lời mục đích chuyển bằng tiếng Nhật đơn giản, ví dụ gửi tiền sinh hoạt cho gia đình — viết sẵn ra điện thoại.",
+    "Không chuẩn bị tiền mặt để đưa cho cá nhân nào cả: mọi kênh hợp pháp đều cho biên lai / mã giao dịch tra cứu được."
+   ],
+   "steps": [
+    {
+     "d": "ĐI ĐÂU: Ở nhà, so sánh trên trang chính thức của từng kênh. Ba kênh hợp pháp: (1) Ngân hàng ở Nhật — an toàn cao, thủ tục chặt, thường hợp với số tiền lớn; phí và tỷ giá tùy ngân hàng. (2) Công ty chuyển tiền có đăng ký 資金移動業者 — thường có ứng dụng điện thoại, hỗ trợ tiếng Việt ở một số nơi, tốc độ tùy công ty và tùy nước nhận. (3) Dịch vụ chuyển tiền quốc tế của Yucho trên web (dịch vụ 'ゆうちょの国際送金' — từ năm 2025 Yucho chuyển sang làm trên web, không làm tại quầy bưu điện nữa; nước nhận và điều kiện phải tự kiểm tra trên trang chính thức). MANG GÌ: Không cần. MẤT BAO LÂU: Khoảng 20–30 phút so sánh. NHẬN ĐƯỢC GÌ: Một kênh chính để dùng lâu dài. KIỂM TRA GÌ: Ba thứ — tổng chi phí (phí + chênh tỷ giá), thời gian tiền đến, và cách người nhà nhận tiền có tiện không.",
+     "ja": "",
+     "t": "Bước 1: Chọn một trong ba kênh hợp pháp",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Online trên ứng dụng / trang chính thức của kênh đã chọn, hoặc tại quầy nếu là ngân hàng. MANG GÌ: Thẻ lưu trú, thẻ My Number, điện thoại nhận mã xác nhận. NÓI GÌ: Không cần nếu làm online; làm tại quầy thì dùng câu mẫu. MẤT BAO LÂU: Điền khoảng 15 phút; chờ duyệt danh tính khoảng vài giờ đến vài ngày tùy kênh. NHẬN ĐƯỢC GÌ: Tài khoản người gửi đã xác nhận, có mã khách hàng / mã thành viên. KIỂM TRA GÌ: Tên người gửi trong hệ thống phải giống hệt thẻ lưu trú; sai thì sửa ngay trước khi chuyển lần đầu.",
+     "ja": "海外送金の登録をしたいです。",
+     "t": "Bước 2: Đăng ký tài khoản người gửi (xác nhận danh tính)",
+     "vi": "Tôi muốn đăng ký dịch vụ chuyển tiền ra nước ngoài."
+    },
+    {
+     "d": "ĐI ĐÂU: Trong ứng dụng / trang của kênh chuyển tiền, mục đăng ký người nhận （受取人）. MANG GÌ: Thông tin người nhận đã ghi sẵn ở nhà. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 10 phút. NHẬN ĐƯỢC GÌ: Người nhận được lưu trong danh sách. KIỂM TRA GÌ: Đọc lại từng chữ: họ tên không dấu, số tài khoản, tên ngân hàng. Gọi điện cho người nhà đọc đối chiếu một lượt trước khi chuyển thật.",
+     "ja": "受取人はベトナムの家族です。",
+     "t": "Bước 3: Đăng ký người nhận ở Việt Nam",
+     "vi": "Người nhận là gia đình tôi ở Việt Nam."
+    },
+    {
+     "d": "ĐI ĐÂU: Trong ứng dụng / tại quầy. Điền số tiền (theo yên hoặc theo số tiền muốn người nhà nhận), chọn cách nhận (vào tài khoản hay tiền mặt). Khai mục đích, ví dụ 生活費 (tiền sinh hoạt cho gia đình) và nguồn tiền là lương. MANG GÌ: Phiếu lương gần nhất dạng ảnh / bản giấy nếu hệ thống hoặc nhân viên yêu cầu tải lên. NÓI GÌ: Dùng câu mẫu khi được hỏi mục đích. MẤT BAO LÂU: Khoảng 10 phút. NHẬN ĐƯỢC GÌ: Màn hình / tờ xác nhận ghi rõ: số yên gửi, phí, tỷ giá áp dụng, số tiền người nhà sẽ nhận, thời gian dự kiến. KIỂM TRA GÌ: Đây là bước quan trọng nhất — đọc kỹ số tiền người nhận thực nhận và tỷ giá trước khi bấm xác nhận. Chụp màn hình lại.",
+     "ja": "送金の目的は家族の生活費です。",
+     "t": "Bước 4: Tạo lệnh chuyển và khai mục đích, nguồn tiền",
+     "vi": "Mục đích chuyển tiền là tiền sinh hoạt cho gia đình."
+    },
+    {
+     "d": "ĐI ĐÂU: Tùy kênh: trừ từ tài khoản ngân hàng liên kết, chuyển khoản vào tài khoản chỉ định của công ty chuyển tiền, hoặc nộp tại quầy / cửa hàng tiện lợi theo hướng dẫn của kênh. MANG GÌ: Thẻ ngân hàng / ứng dụng ngân hàng. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 5–15 phút. NHẬN ĐƯỢC GÌ: Mã giao dịch / số tham chiếu của lần chuyển này. KIỂM TRA GÌ: Số tiền đã thanh toán khớp với lệnh chuyển; giữ mã giao dịch — mất mã này là rất khó tra cứu khi có trục trặc.",
+     "ja": "送金の番号を教えてください。",
+     "t": "Bước 5: Thanh toán tiền gửi",
+     "vi": "Xin cho tôi biết mã số của lần chuyển tiền này."
+    },
+    {
+     "d": "ĐI ĐÂU: Gọi điện / nhắn tin cho người nhà ngay sau khi chuyển. Nội dung cần báo: mã giao dịch, số tiền sẽ nhận, nhận ở đâu (ngân hàng nào / điểm chi trả nào), cần mang giấy tờ gì (thường là căn cước công dân của người nhận). MANG GÌ: Ảnh chụp màn hình xác nhận để gửi cho người nhà. NÓI GÌ: Dặn người nhà: chỉ người có tên trong lệnh chuyển mới nhận được, và không đưa mã giao dịch cho người lạ. MẤT BAO LÂU: Khoảng 5 phút. NHẬN ĐƯỢC GÌ: Người nhà sẵn sàng đi nhận. KIỂM TRA GÌ: Hẹn người nhà báo lại ngay khi đã nhận được tiền.",
+     "ja": "",
+     "t": "Bước 6: Báo cho người nhà cách nhận tiền",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Trong ứng dụng — kiểm tra trạng thái giao dịch chuyển sang 'đã hoàn tất'; đồng thời người nhà xác nhận đã nhận đủ. MANG GÌ: Thư mục (trên điện thoại hoặc bìa hồ sơ giấy) để lưu mọi chứng từ chuyển tiền. NÓI GÌ: Nếu quá thời gian dự kiến mà tiền chưa đến, gọi tổng đài của kênh chuyển tiền và đọc mã giao dịch — dùng câu mẫu. MẤT BAO LÂU: Khoảng 5 phút kiểm tra. NHẬN ĐƯỢC GÌ: Chứng từ chuyển tiền hoàn chỉnh của lần này. KIỂM TRA GÌ: Số tiền người nhà nhận có khớp số đã báo không; nếu thiếu, hỏi kênh chuyển tiền xem bị trừ phí ở khâu nào và xin giải thích bằng văn bản.",
+     "ja": "送金がまだ届いていません。確認をお願いします。",
+     "t": "Bước 7: Xác nhận tiền đã đến và lưu chứng từ",
+     "vi": "Tiền chuyển vẫn chưa đến. Xin kiểm tra giúp tôi."
+    },
+    {
+     "d": "ĐI ĐÂU: Ở nhà, làm vào cuối năm trước mùa điều chỉnh cuối năm （年末調整） / khai thuế （確定申告）. Việc cần làm: gom chứng từ chuyển tiền cho từng người thân (mỗi người nhận cần chứng từ riêng mang tên người đó) kèm giấy tờ chứng minh quan hệ gia đình （親族関係書類, ví dụ sổ hộ khẩu / giấy khai sinh đã dịch). MANG GÌ: Toàn bộ biên lai chuyển tiền trong năm. NÓI GÌ: Khi nộp cho công ty, dùng câu mẫu. MẤT BAO LÂU: Khoảng 30 phút sắp xếp. NHẬN ĐƯỢC GÌ: Bộ hồ sơ phụng dưỡng hoàn chỉnh. KIỂM TRA GÌ: Chuyển tiền cho người thân ở nước ngoài để xin khấu trừ hiện có thêm điều kiện về số tiền gửi tối thiểu cho mỗi người trong năm (theo quy định hiện hành của Cơ quan Thuế — tự kiểm tra lại con số trên trang nta.go.jp vì quy định thay đổi theo năm).",
+     "ja": "扶養控除のために、送金の書類を出します。",
+     "t": "Bước 8: Gom chứng từ cả năm nếu xin khấu trừ phụng dưỡng",
+     "vi": "Tôi nộp giấy tờ chuyển tiền để xin khấu trừ phụng dưỡng."
+    }
+   ],
+   "summary": "Ở Nhật chỉ được chuyển tiền quốc tế qua ngân hàng hoặc công ty chuyển tiền đã đăng ký với Cơ quan Dịch vụ Tài chính （金融庁） theo diện công ty chuyển tiền （資金移動業者）. Gửi qua người quen xách tay, qua môi giới trên mạng xã hội là chuyển tiền chui — bất hợp pháp và mất tiền là không ai bảo vệ bạn.",
+   "title": "Chuyển tiền về Việt Nam （ベトナムへの送金）",
+   "vocab": [
+    {
+     "ja": "海外送金",
+     "reading": "かいがいそうきん",
+     "vi": "chuyển tiền ra nước ngoài"
+    },
+    {
+     "ja": "資金移動業者",
+     "reading": "しきんいどうぎょうしゃ",
+     "vi": "công ty chuyển tiền có đăng ký với 金融庁"
+    },
+    {
+     "ja": "送金手数料",
+     "reading": "そうきんてすうりょう",
+     "vi": "phí chuyển tiền"
+    },
+    {
+     "ja": "為替レート",
+     "reading": "かわせれーと",
+     "vi": "tỷ giá hối đoái"
+    },
+    {
+     "ja": "受取人",
+     "reading": "うけとりにん",
+     "vi": "người nhận tiền"
+    },
+    {
+     "ja": "送金人",
+     "reading": "そうきんにん",
+     "vi": "người gửi tiền"
+    },
+    {
+     "ja": "送金目的",
+     "reading": "そうきんもくてき",
+     "vi": "mục đích chuyển tiền"
+    },
+    {
+     "ja": "生活費",
+     "reading": "せいかつひ",
+     "vi": "tiền sinh hoạt"
+    },
+    {
+     "ja": "本人確認",
+     "reading": "ほんにんかくにん",
+     "vi": "xác nhận danh tính"
+    },
+    {
+     "ja": "取引番号",
+     "reading": "とりひきばんごう",
+     "vi": "mã giao dịch"
+    },
+    {
+     "ja": "着金",
+     "reading": "ちゃっきん",
+     "vi": "tiền đã đến nơi nhận"
+    },
+    {
+     "ja": "扶養控除",
+     "reading": "ふようこうじょ",
+     "vi": "khấu trừ phụng dưỡng (giảm thuế)"
+    },
+    {
+     "ja": "送金関係書類",
+     "reading": "そうきんかんけいしょるい",
+     "vi": "giấy tờ chứng minh việc chuyển tiền (dùng cho thuế)"
+    }
+   ],
+   "warnings": [
+    "Tuyệt đối không dùng 'chuyển tiền tay ba', môi giới trên Facebook / Zalo, người xách tiền hộ: đó là hành vi chuyển tiền không giấy phép (ngân hàng ngầm, 地下銀行), bất hợp pháp ở Nhật. Mất tiền không khiếu nại được, và người gửi cũng có thể bị điều tra, bị khóa tài khoản ngân hàng.",
+    "Tài khoản ngân hàng bị dùng để nhận / chuyển tiền hộ người khác có thể bị đóng băng và bị coi là liên quan rửa tiền. Không cho mượn tài khoản, không nhận tiền lạ vào tài khoản của mình.",
+    "Mỗi lần chuyển phải khớp tên người gửi là chính bạn; nhờ người khác đứng tên chuyển hộ làm mất chứng từ phụng dưỡng và gây rắc rối khi bị hỏi nguồn tiền.",
+    "Nếu trục trặc — tiền lâu không đến: giữ bình tĩnh, kiểm tra trạng thái bằng mã giao dịch trong ứng dụng trước; nếu quá thời gian dự kiến, gọi tổng đài chính thức của kênh đó (số ghi trên trang chính thức), đọc mã giao dịch và ghi lại ngày giờ, tên người trả lời. Ngân hàng / công ty hợp pháp đều có quy trình tra soát, chỉ cần mã giao dịch.",
+    "Nếu trục trặc — nhập sai thông tin người nhận: liên hệ kênh chuyển tiền NGAY trong ngày, trước khi tiền được chi trả, để xin sửa hoặc hủy lệnh. Đã chi trả rồi thì việc đòi lại rất khó và tùy trường hợp. Đây là lý do phải đối chiếu tên người nhận ở bước chuẩn bị.",
+    "Nếu trục trặc — bị một nơi từ chối chuyển (ví dụ hỏi nguồn tiền mà giấy tờ chưa đủ): bổ sung phiếu lương / sao kê lương theo yêu cầu, hoặc chuyển sang kênh hợp pháp khác. Đừng vì bị từ chối mà tìm đến kênh chui.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "who": "Người Việt ở Nhật muốn gửi tiền về cho gia đình: tiền sinh hoạt, tiền học cho con, tiền phụng dưỡng cha mẹ. Cũng cần biết bài này nếu muốn xin khấu trừ phụng dưỡng （扶養控除） khi khai thuế, vì chứng từ chuyển tiền là giấy tờ bắt buộc.",
+   "forms": [
+    {
+     "name_jp": "セブン銀行 海外送金サービス（Western Union）契約・受取人登録",
+     "name_vi": "Dịch vụ chuyển tiền quốc tế Seven Bank (Western Union) — đăng ký hợp đồng và đăng ký người nhận ở Việt Nam",
+     "download_url": "https://www.sevenbank.co.jp/soukin/jp/",
+     "source": "株式会社セブン銀行",
+     "format": "web",
+     "fill": [
+      {
+       "field": "セブン銀行口座 (tài khoản Seven Bank)",
+       "how": "Phải có tài khoản Seven Bank trước, rồi mới đăng ký thêm hợp đồng chuyển tiền quốc tế. Chưa có tài khoản thì mở tài khoản trước.",
+       "example": "支店名・口座番号 theo sổ/app Seven Bank của mình (ví dụ mẫu)"
+      },
+      {
+       "field": "氏名・フリガナ (họ tên người gửi)",
+       "how": "Ghi họ tên người gửi đúng như thẻ lưu trú và tài khoản Seven Bank.",
+       "example": "グエン・バン・アン"
+      },
+      {
+       "field": "住所・電話番号 (địa chỉ, điện thoại người gửi)",
+       "how": "Ghi địa chỉ hiện tại ở Nhật và số điện thoại liên lạc được.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室／090-1234-5678"
+      },
+      {
+       "field": "在留カード・マイナンバー (thẻ lưu trú và My Number)",
+       "how": "Nộp ảnh hoặc thông tin thẻ lưu trú và My Number khi đăng ký hợp đồng chuyển tiền. Seven Bank yêu cầu xuất trình thẻ lưu trú còn hạn.",
+       "example": "1234 5678 9012",
+       "mistake": "Thẻ lưu trú hết hạn hoặc địa chỉ mặt sau chưa cập nhật sẽ bị yêu cầu nộp lại."
+      },
+      {
+       "field": "ダイレクトバンキング利用開始登録 (đăng ký internet banking)",
+       "how": "Muốn chuyển qua internet hoặc app thì đăng ký sử dụng Direct Banking trước. Chuyển ở ATM Seven Bank thì dùng thẻ như hướng dẫn trên trang.",
+       "example": "Đăng ký trong app Myセブン銀行"
+      },
+      {
+       "field": "受取人の氏名（ローマ字）(tên người nhận viết chữ La-tinh)",
+       "how": "Đăng ký trước người nhận: ghi tên người nhận ở Việt Nam bằng chữ La-tinh in hoa, đúng từng chữ như giấy tờ tùy thân của người nhận.",
+       "example": "NGUYEN THI BE",
+       "mistake": "Thừa hoặc thiếu dấu, sai thứ tự tên khiến người nhận ở Việt Nam không nhận được tiền."
+      },
+      {
+       "field": "受取国・受取方法 (nước nhận và cách nhận)",
+       "how": "Chọn Việt Nam và cách nhận: nhận tiền mặt tại điểm Western Union hoặc chuyển vào tài khoản ngân hàng Việt Nam nếu ngân hàng đó thuộc danh sách hỗ trợ trên trang chính thức.",
+       "example": "ベトナム／現金受取 (Việt Nam / nhận tiền mặt)"
+      },
+      {
+       "field": "受取銀行・口座情報 (ngân hàng và tài khoản nhận — khi chọn vào tài khoản)",
+       "how": "Ghi tên ngân hàng ở Việt Nam, chi nhánh và số tài khoản của người nhận đúng như thông tin ngân hàng cấp.",
+       "example": "Ngân hàng mẫu ở Việt Nam／số tài khoản mẫu 0123456789 (ví dụ mẫu)"
+      },
+      {
+       "field": "送金目的 (mục đích chuyển tiền)",
+       "how": "Chọn mục đích thật như hỗ trợ gia đình, sinh hoạt phí. Mục đích này là bắt buộc theo quy định phòng chống rửa tiền.",
+       "example": "家族への生活費支援 (hỗ trợ sinh hoạt phí cho gia đình)"
+      },
+      {
+       "field": "送金額・受取通貨 (số tiền gửi và loại tiền nhận)",
+       "how": "Nhập số tiền yên muốn gửi, chọn tiền nhận là VND hoặc USD. Hệ thống hiện tỷ giá và phí trước khi xác nhận — kiểm tra kỹ rồi mới bấm gửi.",
+       "example": "100,000円／受取 VND (ví dụ mẫu)"
+      },
+      {
+       "field": "送金限度額の確認 (kiểm tra hạn mức)",
+       "how": "Đọc hạn mức gửi theo ngày và theo lần trên trang chính thức trước khi gửi số tiền lớn. Vượt hạn mức thì chia nhỏ hoặc hỏi tổng đài.",
+       "example": "Kiểm tra mục 送金限度額 trên trang Seven Bank"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Seven Bank xác nhận trên trang chính thức: gửi đi Việt Nam thuộc nhóm ベトナム・インドネシア・ネパール向け送金 khi nhận tiền mặt qua Western Union, người nhận phải đăng ký trước, tối đa 12 người nhận trên một thẻ. Không có đơn giấy — toàn bộ đăng ký và chuyển tiền làm online, qua app hoặc ATM."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "Cuộc Sống Nhật Bản",
+     "lang": "vi",
+     "note": "Thao tác nạp tiền bằng thẻ SBI Remit tại ATM Yucho để tiền tự chuyển về người nhận ở Việt Nam.",
+     "title": "Cách Chuyển Tiền Về Việt Nam Bằng Thẻ SBI - Cuộc Sống Nhật Bản",
+     "url": "https://www.youtube.com/watch?v=u9PzRQwtTzg"
+    }
+   ]
+  },
+  {
+   "affiliate": null,
+   "cost": "Tra cứu Nenkin Net và ねんきん定期便: miễn phí. Xin 脱退一時金: không mất phí xét duyệt, chỉ tốn phí gửi hồ sơ quốc tế (tùy dịch vụ bưu điện) và phí nhận tiền / chuyển đổi ngoại tệ của ngân hàng (tùy ngân hàng). Hoàn thuế 20,42%: tự làm qua người quản lý thuế là bạn bè thì không mất phí dịch vụ; thuê chuyên gia thuế （税理士） thì phí tùy nơi — phải hỏi trước. Mức đóng 国民年金 cho người tự đóng thay đổi theo năm, viết chung là khoảng mười bảy nghìn yên/tháng tùy năm.",
+   "docs": [
+    "Số nenkin cơ bản （基礎年金番号, dãy 10 số) — ghi trên sổ nenkin （年金手帳） hoặc thẻ thông báo số nenkin cơ bản （基礎年金番号通知書）, và trên giấy ねんきん定期便 gửi về hằng năm",
+    "Phiếu lương （給与明細） vài tháng gần nhất — để đối chiếu tiền 厚生年金 bị trừ",
+    "Thẻ My Number （マイナンバーカード） và mã PIN 4 số của thẻ — để đăng ký Nenkin Net qua MynaPortal",
+    "Thẻ lưu trú và hộ chiếu (khi về nước: cần bản sao hộ chiếu có trang thông tin cá nhân và dấu / tem chứng minh đã xuất cảnh, theo hướng dẫn trên mẫu đơn của 日本年金機構）",
+    "Giấy tờ chứng minh không còn địa chỉ ở Nhật: ví dụ bản sao thẻ lưu trú đã bị đục lỗ vô hiệu khi xuất cảnh, hoặc giấy xác nhận đã xóa đăng ký cư trú （住民票の除票など) — chuẩn bị theo danh mục trên mẫu đơn 脱退一時金請求書 mới nhất",
+    "Thông tin tài khoản ngân hàng ở nước ngoài để nhận 脱退一時金: tên ngân hàng, địa chỉ ngân hàng, số tài khoản / số SWIFT nếu ngân hàng yêu cầu — ghi đúng chữ La-tinh",
+    "Đơn xin 脱退一時金 （脱退一時金請求書） — tải mẫu mới nhất từ trang nenkin.go.jp hoặc lấy tại văn phòng nenkin （年金事務所）",
+    "Khi làm hoàn thuế: giấy chỉ định người quản lý thuế （所得税・消費税の納税管理人の届出書）, và sau này là bản gốc giấy quyết định chi trả 脱退一時金支給決定通知書 do 日本年金機構 gửi kèm lúc trả tiền"
+   ],
+   "duration": "Đăng ký Nenkin Net: khoảng 15–20 phút (hoặc chờ thư vài ngày nếu không có khóa truy cập). 脱退一時金: từ lúc 日本年金機構 nhận hồ sơ đến lúc trả tiền thường khoảng vài tháng. Hoàn thuế: sau khi nộp đơn, tiền hoàn thường về sau khoảng vài tháng. Toàn bộ quá trình về nước + hoàn tiền + hoàn thuế thường kéo dài khoảng nửa năm — phải tính trước, không để sát ngày.",
+   "final_check": [
+    "Khi còn ở Nhật: đăng nhập được Nenkin Net, tổng số tháng đã đóng đã được chụp màn hình lưu lại; phiếu lương và ねんきん定期便 được cất cùng một bìa hồ sơ.",
+    "Đã quyết định rõ bằng con số: tổng thời gian đóng của mình là bao nhiêu tháng — dưới 10 năm và về hẳn thì đi tiếp thủ tục hoàn tiền; gần / trên 10 năm thì cân nhắc giữ quyền lương hưu.",
+    "Trước ngày bay: giấy chỉ định người quản lý thuế đã nộp (hoặc đã thống nhất sẽ nộp kèm hồ sơ hoàn thuế), và người quản lý thuế có đủ thông tin liên lạc của bạn ở Việt Nam.",
+    "Sau khi bay: hồ sơ 脱退一時金 đã gửi bằng thư có mã theo dõi và đã xác nhận hồ sơ đến 日本年金機構, vẫn nằm trong hạn 2 năm.",
+    "Khi tiền về: đã nhận bản gốc 脱退一時金支給決定通知書, đã đối chiếu số tháng và số thuế 20,42% bị khấu trừ trên giấy với thực tế tài khoản nhận được.",
+    "Đã gửi bản gốc giấy quyết định cho người quản lý thuế bằng thư bảo đảm và giữ bản scan; đơn hoàn thuế đã được nộp cho đúng cơ quan thuế nơi ở cuối cùng ở Nhật.",
+    "Tiền hoàn thuế đã về và đã đối chiếu xong; toàn bộ giấy tờ nenkin + thuế được lưu ít nhất vài năm (bản giấy và bản scan) phòng khi quay lại Nhật hoặc bị hỏi lại."
+   ],
+   "group": "Tiền, thuế & ngân hàng",
+   "icon": "🧾",
+   "id": "nenkin-hoan-tien-thue",
+   "links": [
+    {
+     "label": "日本年金機構 — Chế độ 脱退一時金: điều kiện và cách tính (tiếng Nhật)",
+     "url": "https://www.nenkin.go.jp/service/jukyu/seido/sonota-kyufu/dattai-ichiji/20150406.html"
+    },
+    {
+     "label": "日本年金機構 — Cách đăng ký Nenkin Net (tiếng Nhật)",
+     "url": "https://www.nenkin.go.jp/denshibenri_kojin/n_net/registration/summary.html"
+    },
+    {
+     "label": "日本年金機構 — Hiệp định an sinh xã hội và danh sách nước áp dụng (tiếng Nhật)",
+     "url": "https://www.nenkin.go.jp/service/shaho-kyotei/shaho.html"
+    },
+    {
+     "label": "Cơ quan Thuế Quốc gia (NTA) — Trang 年末調整 (tiếng Nhật)",
+     "url": "https://www.nta.go.jp/users/gensen/nencho/index.htm"
+    },
+    {
+     "label": "Cơ quan Thuế Quốc gia (NTA) — Khai hoàn thuế No.2030 (tiếng Nhật)",
+     "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2030.htm"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "年金手帳をなくしました。",
+     "vi": "Tôi làm mất sổ nenkin rồi."
+    },
+    {
+     "ja": "私の加入記録を確認したいです。",
+     "vi": "Tôi muốn kiểm tra lịch sử đóng nenkin của mình."
+    },
+    {
+     "ja": "この月の記録がありません。確認をお願いします。",
+     "vi": "Tháng này không có ghi nhận. Xin kiểm tra giúp tôi."
+    },
+    {
+     "ja": "帰国するので、脱退一時金について教えてください。",
+     "vi": "Tôi sắp về nước, xin cho tôi biết về tiền hoàn nenkin (脱退一時金)."
+    },
+    {
+     "ja": "納税管理人の届出書を出したいです。",
+     "vi": "Tôi muốn nộp giấy chỉ định người quản lý thuế."
+    },
+    {
+     "ja": "申告書の書き方を教えてください。",
+     "vi": "Xin chỉ cho tôi cách điền tờ khai."
+    }
+   ],
+   "prep_home": [
+    "Tìm lại số nenkin cơ bản của mình trước mọi việc: lật sổ nenkin / thẻ thông báo số, hoặc xem giấy ねんきん定期便 gần nhất. Chụp ảnh lưu điện thoại. Mất số này thì mọi tra cứu đều chậm lại.",
+    "Gom phiếu lương 3 tháng gần nhất ra bàn: tìm dòng 厚生年金保険料 (tiền nenkin bị trừ). Nếu đi làm công ty mà không thấy dòng này, hỏi công ty ngay — có thể bạn chưa được vào 厚生年金.",
+    "Nếu là người tự đóng 国民年金: gom các biên lai đã nộp ở cửa hàng tiện lợi / ngân hàng. Tháng nào chưa nộp là tháng đó không được tính khi xin 脱退一時金.",
+    "Người sắp về nước: chọn trước NGƯỜI QUẢN LÝ THUẾ （納税管理人） — một người quen còn sống ở Nhật, đồng ý nhận thư từ cơ quan thuế và nhận tiền hoàn thuế thay bạn. Nói chuyện và xin đồng ý của họ TRƯỚC khi về, đừng về rồi mới tìm.",
+    "Tải sẵn hai mẫu đơn từ trang chính thức và điền thử ở nhà: 脱退一時金請求書 (từ nenkin.go.jp) và 所得税・消費税の納税管理人の届出書 (từ nta.go.jp). Điền thử bằng bút chì / bản nháp, chỗ nào không hiểu thì khoanh lại để hỏi.",
+    "Viết sẵn ra giấy thông tin tài khoản ngân hàng ở Việt Nam bằng chữ La-tinh: tên chủ tài khoản, tên và địa chỉ ngân hàng, số tài khoản. Điền sai thông tin này là tiền hoàn bị trả lại và mất thêm nhiều tuần.",
+    "Chụp / scan toàn bộ giấy tờ quan trọng (hộ chiếu, thẻ lưu trú hai mặt, sổ nenkin) lưu vào điện thoại và gửi một bản cho người quản lý thuế tương lai giữ hộ."
+   ],
+   "steps": [
+    {
+     "d": "ĐI ĐÂU: Ở nhà, tự kiểm tra. Có hai loại: (1) 国民年金 (nenkin quốc dân) — mọi người sống ở Nhật từ 20 đến dưới 60 tuổi đều phải tham gia; người không đi làm công ty (tự kinh doanh, thất nghiệp, một số du học sinh) tự đóng một mức cố định theo tháng, mức này thay đổi theo năm (viết chung là 'khoảng mười bảy nghìn yên một tháng, tùy năm'). (2) 厚生年金 (nenkin phúc lợi) — người đi làm ở công ty thuộc diện áp dụng: tiền đóng tính theo lương, trừ thẳng vào lương, công ty đóng một nửa, bạn đóng một nửa, và trong đó đã gồm phần 国民年金. MANG GÌ: Phiếu lương tháng gần nhất. NÓI GÌ: Nếu không rõ, hỏi công ty bằng câu mẫu. MẤT BAO LÂU: Khoảng 10 phút. NHẬN ĐƯỢC GÌ: Biết chắc mình thuộc loại nào. KIỂM TRA GÌ: Phiếu lương có dòng trừ 厚生年金保険料 hay không — có dòng này là bạn đang ở loại (2).",
+     "ja": "私は厚生年金に入っていますか。",
+     "t": "Bước 1: Xác định mình đang đóng loại nenkin nào",
+     "vi": "Tôi có đang tham gia nenkin phúc lợi (厚生年金) không ạ?"
+    },
+    {
+     "d": "ĐI ĐÂU: Ở nhà. Hai nơi xem tiền đã đóng: phiếu lương （給与明細） mỗi tháng — xem dòng 厚生年金保険料 bị trừ (đó là phần của bạn, bằng một nửa tổng tiền đóng); và giấy ねんきん定期便 — thư / bưu thiếp 日本年金機構 gửi về mỗi năm một lần vào khoảng tháng sinh nhật, ghi tổng thời gian đã đóng và số tiền dự kiến. Người tự đóng 国民年金 thì đối chiếu biên lai nộp tiền với giấy này. MANG GÌ: Phiếu lương vài tháng và ねんきん定期便 gần nhất. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 15 phút. NHẬN ĐƯỢC GÌ: Bức tranh tổng: đã đóng bao nhiêu tháng, có tháng nào bị thiếu không. KIỂM TRA GÌ: Số tháng trên ねんきん定期便 có khớp với thời gian bạn thực tế đi làm / đã nộp không; lệch thì ghi lại tháng bị lệch để hỏi ở bước sau.",
+     "ja": "ねんきん定期便が届きません。",
+     "t": "Bước 2: Đối chiếu tiền đóng trên phiếu lương và giấy báo hằng năm",
+     "vi": "Giấy báo nenkin hằng năm (ねんきん定期便) không được gửi đến cho tôi. (câu dùng khi cần hỏi vì sao không nhận được)"
+    },
+    {
+     "d": "ĐI ĐÂU: Online, trên điện thoại / máy tính. Nenkin Net （ねんきんネット) là trang tra cứu chính thức của 日本年金機構: xem được toàn bộ lịch sử đóng, số tháng đã đóng và ước tính lương hưu. Cách dễ nhất: đăng nhập MynaPortal bằng thẻ My Number (quét thẻ, nhập PIN 4 số), chọn mục 年金 rồi làm thủ tục liên kết （連携） sang ねんきんネット và đăng ký email. Không có thẻ My Number vẫn đăng ký được bằng số nenkin cơ bản + khóa truy cập （アクセスキー, dãy 17 số in trên ねんきん定期便); không có khóa thì xin cấp mã người dùng và chờ thư gửi về nhà. MANG GÌ: Thẻ My Number + PIN, hoặc ねんきん定期便 có アクセスキー. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 15–20 phút nếu dùng My Number; đăng ký không có khóa truy cập phải chờ thư khoảng vài ngày. NHẬN ĐƯỢC GÌ: Tài khoản Nenkin Net xem được hồ sơ đóng của chính mình. KIỂM TRA GÌ: Đăng nhập lại một lần, mở mục lịch sử đóng và đối chiếu với bước 2 — thấy tháng nào trống bất thường thì chụp màn hình lại.",
+     "ja": "",
+     "t": "Bước 3: Đăng ký Nenkin Net để tự tra hồ sơ bất cứ lúc nào",
+     "vi": ""
+    },
+    {
+     "d": "ĐI ĐÂU: Tại quầy — văn phòng nenkin （年金事務所） gần nhà, hoặc gọi tổng đài nenkin ghi trên trang nenkin.go.jp. MANG GÌ: Sổ nenkin / số nenkin cơ bản, thẻ lưu trú, phiếu lương hoặc hợp đồng của giai đoạn bị thiếu. NÓI GÌ: Dùng câu mẫu, chỉ vào tháng bị thiếu trên bản in lịch sử đóng. MẤT BAO LÂU: Khoảng 30 phút tại quầy tùy đông. NHẬN ĐƯỢC GÌ: Hướng dẫn cụ thể để sửa hồ sơ, hoặc giấy hẹn bổ sung chứng cứ (ví dụ phiếu lương cũ). KIỂM TRA GÌ: Trước khi về, hỏi rõ: cần bổ sung giấy gì, hạn đến khi nào, và khi nào kiểm tra lại được trên Nenkin Net.",
+     "ja": "この月の記録がありません。確認をお願いします。",
+     "t": "Bước 4: Nếu hồ sơ đóng bị thiếu / sai — ra văn phòng nenkin hỏi",
+     "vi": "Tháng này không có ghi nhận đóng. Xin kiểm tra giúp tôi."
+    },
+    {
+     "d": "ĐI ĐÂU: Ở nhà, phần hiểu biết để quyết định về hay ở. Nội dung cốt lõi: để sau này được nhận lương hưu tuổi già （老齢年金）, tổng thời gian đủ tư cách （受給資格期間） phải từ 10 năm trở lên. Một số nước có hiệp định an sinh xã hội （社会保障協定） với Nhật cho phép cộng dồn thời gian đóng ở hai nước; NHƯNG tính đến thời điểm kiểm chứng bài này, Việt Nam KHÔNG có tên trong danh sách 24 nước đã có hiệp định có hiệu lực trên trang chính thức của 日本年金機構 — vì vậy đừng tự cho rằng thời gian đóng ở Việt Nam được cộng dồn, và hãy kiểm tra lại danh sách mới nhất. Kèm theo, thuế thu nhập cơ bản: người đi làm công ty thường được công ty làm 年末調整 (điều chỉnh cuối năm) — nộp phiếu khai phụng dưỡng, giấy chứng nhận bảo hiểm để công ty tính lại thuế; ai có hai nguồn thu nhập, đổi việc giữa năm, hoặc muốn xin khấu trừ phụng dưỡng người thân ở Việt Nam mà chưa làm ở 年末調整 thì tự làm 確定申告 (khai thuế quyết toán) vào khoảng tháng 2–3 năm sau tại cơ quan thuế / online. MANG GÌ: Không cần. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng 15 phút đọc. NHẬN ĐƯỢC GÌ: Quyết định đúng: ở đủ lâu hướng tới 10 năm, hay về nước và xin 脱退一時金 (bước 6–10). KIỂM TRA GÌ: Tổng số tháng đã đóng của mình trên Nenkin Net — con số này quyết định mọi lựa chọn.",
+     "ja": "受給資格期間は10年ですか。",
+     "t": "Bước 5: Hiểu mốc 10 năm và chuyện lương hưu sau này (+ thuế cơ bản: 年末調整 / 確定申告）",
+     "vi": "Thời gian đủ tư cách nhận lương hưu là 10 năm phải không ạ? (câu dùng khi hỏi văn phòng nenkin)"
+    },
+    {
+     "d": "ĐI ĐÂU: Tại quầy / qua bưu điện — cơ quan thuế （税務署） quản lý nơi ở cuối cùng của bạn ở Nhật. Việc này làm TRƯỚC ngày về nước. MANG GÌ: Giấy chỉ định người quản lý thuế （所得税・消費税の納税管理人の届出書, tải mẫu từ nta.go.jp) đã điền: thông tin của bạn, địa chỉ sau khi về nước, và thông tin người quản lý thuế (người quen còn ở Nhật, đã đồng ý ở bước chuẩn bị). NÓI GÌ: Dùng câu mẫu ở trường ja. MẤT BAO LÂU: Khoảng 15–30 phút tại quầy. NHẬN ĐƯỢC GÌ: Bản sao / dấu đã nhận của cơ quan thuế (xin một bản cho mình). KIỂM TRA GÌ: Tên và địa chỉ người quản lý thuế viết đúng từng chữ — toàn bộ thư thuế và tiền hoàn sau này đi qua địa chỉ này. Lưu ý: nếu lỡ về nước mà chưa nộp giấy này, theo hướng dẫn của 日本年金機構, vẫn nộp bổ sung được cùng lúc với hồ sơ hoàn thuế ở bước 10, nhưng làm trước khi về luôn gọn hơn.",
+     "ja": "納税管理人の届出書を出したいです。",
+     "t": "Bước 6: Trước khi về nước — chỉ định người quản lý thuế và nộp giấy cho cơ quan thuế",
+     "vi": "Tôi muốn nộp giấy chỉ định người quản lý thuế."
+    },
+    {
+     "d": "ĐI ĐÂU: Trước khi đi: tòa thị chính nơi sống, làm thủ tục chuyển đi nước ngoài （転出届） và thông báo sẽ không còn địa chỉ ở Nhật. Tại sân bay: làm thủ tục xuất cảnh, thẻ lưu trú được đục lỗ vô hiệu. MANG GÌ: Thẻ lưu trú, hộ chiếu, thẻ My Number (được ghi chú / xử lý theo hướng dẫn khi xuất cảnh). NÓI GÌ: Ở tòa thị chính dùng câu mẫu. MẤT BAO LÂU: Khoảng 20–30 phút ở tòa thị chính. NHẬN ĐƯỢC GÌ: Giấy xác nhận chuyển đi; thẻ lưu trú đã vô hiệu (giữ lại làm kỷ niệm và làm bằng chứng — cần bản sao của nó / giấy tờ tương đương cho hồ sơ bước 8, theo danh mục trên mẫu đơn). KIỂM TRA GÌ: Điều kiện cốt lõi của 脱退一時金 là 'không còn địa chỉ ở Nhật' — chưa xóa địa chỉ thì hồ sơ bị dừng. Chụp ảnh mọi giấy tờ ở bước này trước khi bay.",
+     "ja": "海外へ転出する届出をお願いします。",
+     "t": "Bước 7: Rời Nhật đúng thủ tục — xóa địa chỉ cư trú",
+     "vi": "Cho tôi làm thủ tục chuyển nơi ở ra nước ngoài."
+    },
+    {
+     "d": "ĐI ĐÂU: Qua bưu điện quốc tế, gửi đến 日本年金機構 (địa chỉ ghi trên mẫu đơn và trang nenkin.go.jp — luôn lấy địa chỉ mới nhất từ trang chính thức). Không nộp ở lãnh sự quán. MANG GÌ (cho vào phong bì): Đơn 脱退一時金請求書 đã điền; bản sao hộ chiếu (trang thông tin cá nhân và trang có dấu / bằng chứng xuất cảnh); giấy tờ chứng minh không còn địa chỉ ở Nhật; giấy tờ ghi số nenkin cơ bản (bản sao sổ nenkin / thẻ thông báo số); giấy tờ thông tin tài khoản ngân hàng ở nước ngoài mang tên chính bạn. ĐIỀU KIỆN NHẮC LẠI: không phải quốc tịch Nhật; tổng thời gian đã đóng từ 6 tháng trở lên; không còn địa chỉ ở Nhật; chưa từng có quyền nhận lương hưu tật nguyền; chưa đủ 10 năm để nhận lương hưu tuổi già; và hồ sơ phải đến nơi trong vòng 2 năm kể từ ngày không còn địa chỉ ở Nhật. NÓI GÌ: Không cần. MẤT BAO LÂU: Điền và gửi khoảng 1 buổi; dùng thư bảo đảm / chuyển phát có mã theo dõi. NHẬN ĐƯỢC GÌ: Mã theo dõi bưu điện để biết hồ sơ đã đến. KIỂM TRA GÌ: Photo / scan toàn bộ hồ sơ trước khi niêm phong — mất giấy tờ giữa đường là phải làm lại từ đầu.",
+     "ja": "脱退一時金の請求書を送ります。",
+     "t": "Bước 8: Nộp hồ sơ xin 脱退一時金 cho 日本年金機構",
+     "vi": "Tôi gửi đơn xin tiền hoàn nenkin khi về nước (脱退一時金). (câu ghi ngoài phong bì / dùng khi hỏi bưu điện)"
+    },
+    {
+     "d": "ĐI ĐÂU: Ở nhà tại Việt Nam — 日本年金機構 xét hồ sơ rồi chuyển tiền vào tài khoản nước ngoài bạn đã khai, đồng thời gửi giấy 脱退一時金支給決定通知書 (giấy quyết định chi trả). CÁCH TÍNH TIỀN (hiểu ở mức chung): tiền được tính theo số tháng đã đóng, chia thành từng bậc 6 tháng (6–11 tháng, 12–17 tháng, … tăng dần); số tháng dùng để tính có TRẦN TỐI ĐA 60 THÁNG đối với người có thời gian đóng sau tháng 4/2021 (trước đó trần là 36 tháng). Với 国民年金: lấy một nửa mức đóng tháng của năm đóng cuối nhân với hệ số theo bậc tháng. Với 厚生年金: lấy lương chuẩn bình quân trong thời gian đóng nhân với suất chi trả theo bậc tháng. Vì vậy đóng 7 năm cũng chỉ tính tối đa 5 năm — đây là quy định, không phải tính thiếu. MANG GÌ: Không cần. NÓI GÌ: Không cần. MẤT BAO LÂU: Khoảng vài tháng kể từ khi hồ sơ đến nơi, tùy thời điểm và hồ sơ có thiếu gì không. NHẬN ĐƯỢC GÌ: Tiền vào tài khoản (riêng 厚生年金 sẽ bị trừ trước thuế 20,42% — xem bước 10) và bản gốc giấy quyết định chi trả. KIỂM TRA GÌ: Đối chiếu số tháng được tính trên giấy quyết định với hồ sơ Nenkin Net của bạn; giữ bản gốc giấy này cẩn thận — bước 10 bắt buộc phải có bản gốc.",
+     "ja": "支給決定通知書を受け取りました。",
+     "t": "Bước 9: Chờ xét duyệt và nhận tiền kèm giấy quyết định chi trả",
+     "vi": "Tôi đã nhận được giấy quyết định chi trả. (câu dùng khi cần liên lạc xác nhận)"
+    },
+    {
+     "d": "ĐI ĐÂU: Người quản lý thuế của bạn ở Nhật làm thay: nộp hồ sơ đến cơ quan thuế （税務署） quản lý nơi ở cuối cùng của bạn ở Nhật. Làm rõ hai điểm hay bị nhầm: (1) Chỉ 脱退一時金 của 厚生年金 mới bị khấu trừ thuế thu nhập 20,42% lúc chi trả; phần của 国民年金 KHÔNG bị khấu trừ nên không có thuế để hoàn. (2) Giấy tờ trung tâm là bản gốc 脱退一時金支給決定通知書 (không phải phiếu khấu trừ thuế năm của công ty). MANG GÌ / GỬI GÌ: Sau khi nhận tiền, bạn gửi bản gốc giấy quyết định chi trả bằng thư bảo đảm quốc tế cho người quản lý thuế. Người quản lý thuế điền và nộp đơn 退職所得の選択課税による還付のための申告書 (đơn xin hoàn thuế theo diện lựa chọn tính thuế thu nhập hưu trí — một dạng tờ khai quyết toán riêng cho việc này) kèm giấy quyết định; nếu bước 6 chưa nộp giấy chỉ định người quản lý thuế thì nộp kèm luôn lúc này. NÓI GÌ: Khi nhờ người quản lý thuế, nói rõ: tiền hoàn sẽ vào tài khoản của họ trước, sau đó họ chuyển tiếp cho bạn — thỏa thuận cách chuyển và phí chuyển trước bằng văn bản / tin nhắn rõ ràng. MẤT BAO LÂU: Chuẩn bị và nộp khoảng vài tuần sau khi nhận giấy quyết định; tiền hoàn về sau khoảng vài tháng tùy cơ quan thuế. NHẬN ĐƯỢC GÌ: Tiền thuế 20,42% (toàn bộ hoặc phần lớn, tùy tính lại theo diện cư trú — nhiều trường hợp được hoàn toàn bộ vì khoản này nằm dưới mức khấu trừ thu nhập hưu trí tối thiểu, nhưng không ai cam kết trước được con số). KIỂM TRA GÌ: Nhận được tiền hoàn từ người quản lý thuế thì đối chiếu với số thuế ghi trên giấy quyết định chi trả, và lưu toàn bộ giấy tờ thuế ít nhất vài năm. Việc khai này có thời hạn theo luật thuế (tính theo năm nhận tiền) — đừng để dồn qua nhiều năm mới làm.",
+     "ja": "退職所得の選択課税による還付の申告をお願いします。",
+     "t": "Bước 10: Lấy lại thuế 20,42% đã bị khấu trừ (chỉ phần 厚生年金）",
+     "vi": "Xin làm thủ tục hoàn thuế theo diện lựa chọn tính thuế thu nhập hưu trí giúp tôi. (câu nói với người quản lý thuế / cơ quan thuế)"
+    }
+   ],
+   "summary": "Nenkin （年金） là lương hưu nhà nước của Nhật: đi làm công ty thì đóng 厚生年金 trừ thẳng vào lương, không đi làm công ty thì tự đóng 国民年金. Đóng đủ 10 năm thì về già được nhận lương hưu; nếu về nước hẳn khi chưa đủ 10 năm, bạn có thể xin nhận lại một phần tiền đã đóng gọi là 脱退一時金 trong vòng 2 năm sau khi rời Nhật, và phần thuế 20,42% bị khấu trừ trên khoản đó （厚生年金） cũng lấy lại được nếu làm thêm thủ tục hoàn thuế.",
+   "title": "Nenkin: các loại, cách kiểm tra, hoàn tiền khi về nước （年金・脱退一時金） và hoàn thuế cơ bản",
+   "vocab": [
+    {
+     "ja": "国民年金",
+     "reading": "こくみんねんきん",
+     "vi": "nenkin quốc dân (mọi người 20–59 tuổi; người không đi làm công ty tự đóng mức cố định)"
+    },
+    {
+     "ja": "厚生年金",
+     "reading": "こうせいねんきん",
+     "vi": "nenkin phúc lợi (người đi làm công ty, trừ vào lương, công ty đóng một nửa)"
+    },
+    {
+     "ja": "基礎年金番号",
+     "reading": "きそねんきんばんごう",
+     "vi": "số nenkin cơ bản (10 số, của riêng mỗi người)"
+    },
+    {
+     "ja": "ねんきん定期便",
+     "reading": "ねんきんていきびん",
+     "vi": "giấy báo nenkin gửi về mỗi năm một lần"
+    },
+    {
+     "ja": "ねんきんネット",
+     "reading": "ねんきんねっと",
+     "vi": "trang tra cứu nenkin online chính thức (Nenkin Net)"
+    },
+    {
+     "ja": "給与明細",
+     "reading": "きゅうよめいさい",
+     "vi": "phiếu lương chi tiết"
+    },
+    {
+     "ja": "受給資格期間",
+     "reading": "じゅきゅうしかくきかん",
+     "vi": "thời gian đủ tư cách nhận lương hưu (cần 10 năm)"
+    },
+    {
+     "ja": "老齢年金",
+     "reading": "ろうれいねんきん",
+     "vi": "lương hưu tuổi già"
+    },
+    {
+     "ja": "脱退一時金",
+     "reading": "だったいいちじきん",
+     "vi": "tiền hoàn nenkin một lần khi rời Nhật hẳn"
+    },
+    {
+     "ja": "社会保障協定",
+     "reading": "しゃかいほしょうきょうてい",
+     "vi": "hiệp định an sinh xã hội giữa hai nước"
+    },
+    {
+     "ja": "納税管理人",
+     "reading": "のうぜいかんりにん",
+     "vi": "người quản lý thuế (người ở Nhật làm thủ tục thuế thay bạn)"
+    },
+    {
+     "ja": "支給決定通知書",
+     "reading": "しきゅうけっていつうちしょ",
+     "vi": "giấy quyết định chi trả (gửi kèm tiền 脱退一時金)"
+    },
+    {
+     "ja": "年末調整",
+     "reading": "ねんまつちょうせい",
+     "vi": "điều chỉnh thuế cuối năm do công ty làm"
+    },
+    {
+     "ja": "確定申告",
+     "reading": "かくていしんこく",
+     "vi": "khai thuế quyết toán tự làm"
+    },
+    {
+     "ja": "源泉徴収",
+     "reading": "げんせんちょうしゅう",
+     "vi": "khấu trừ thuế tại nguồn (trừ trước khi trả)"
+    }
+   ],
+   "warnings": [
+    "Hạn chót cứng: hồ sơ 脱退一時金 phải được nộp trong vòng 2 năm kể từ ngày bạn không còn địa chỉ ở Nhật. Quá hạn là mất toàn bộ quyền xin, không có ngoại lệ xin lại.",
+    "Nhận 脱退一時金 xong thì toàn bộ thời gian đóng tương ứng bị xóa khỏi hồ sơ nenkin (coi như chưa từng đóng giai đoạn đó). Nếu sau này quay lại Nhật sinh sống lâu dài hướng tới mốc 10 năm, hãy cân nhắc kỹ trước khi xin.",
+    "Chỉ 厚生年金 mới bị khấu trừ 20,42%; ai đóng toàn bộ bằng 国民年金 thì không bị trừ khoản thuế này — đừng nghe môi giới nói 'ai cũng phải thuê dịch vụ đòi thuế'.",
+    "Nếu trục trặc — không tìm thấy số nenkin cơ bản / mất sổ: đến văn phòng nenkin （年金事務所） với thẻ lưu trú để được tra và cấp lại thông tin số; hoặc kiểm tra trên ねんきん定期便 gần nhất. Đừng mượn số của người khác, đừng khai bừa.",
+    "Nếu trục trặc — hồ sơ 脱退一時金 bị trả lại / yêu cầu bổ sung: đọc kỹ giấy thông báo ghi thiếu gì (thường là giấy chứng minh đã xóa địa chỉ, hoặc thông tin tài khoản sai chữ). Bổ sung đúng giấy được ghi và gửi lại sớm, vẫn phải nằm trong hạn 2 năm. Giữ liên lạc qua người quen ở Nhật nếu địa chỉ nhận thư ở nước ngoài chậm.",
+    "Nếu trục trặc — chưa kịp chỉ định người quản lý thuế trước khi về: vẫn nộp giấy chỉ định cùng lúc với hồ sơ hoàn thuế được (theo hướng dẫn của 日本年金機構）. Nếu không có bạn bè nào ở Nhật để nhờ, có thể thuê 税理士 làm người quản lý thuế / làm thủ tục — hỏi phí rõ ràng trước bằng văn bản.",
+    "Nếu trục trặc — không hiểu giấy tờ tiếng Nhật: văn phòng nenkin và cơ quan thuế có mẫu đơn và hướng dẫn chính thức trên trang của họ; trang nenkin.go.jp có cả mục tiếng Nhật đơn giản và tiếng Anh. Chụp lại giấy không hiểu và nhờ người dịch đáng tin cậy — tuyệt đối không ký / gửi giấy mình chưa hiểu nội dung.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "who": "Mọi người Việt sống ở Nhật từ 20 đến 59 tuổi đều liên quan đến nenkin. Bài này dành cho: người muốn biết mình đang đóng loại nào và đóng được bao lâu; người sắp về nước hẳn muốn lấy 脱退一時金 và hoàn thuế; và người đi làm muốn hiểu điều chỉnh cuối năm （年末調整） / khai thuế （確定申告） ở mức cơ bản.",
+   "forms": [
+    {
+     "name_jp": "脱退一時金請求書（国民年金／厚生年金保険）ベトナム語版",
+     "name_vi": "Đơn xin hoàn trả nenkin một lần khi về nước — bản song ngữ tiếng Việt do Cơ quan Nenkin Nhật Bản phát hành",
+     "download_url": "https://www.nenkin.go.jp/shinsei/jukyu/sonota-kyufu/20150406.files/I.pdf",
+     "source": "日本年金機構",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "基礎年金番号 (số nenkin cơ bản)",
+       "how": "Ghi 10 số nenkin cơ bản trên giấy thông báo số nenkin hoặc sổ nenkin. Đây là số quan trọng nhất của đơn.",
+       "example": "0123-456789 (ví dụ mẫu — ghi đúng 10 số của mình)",
+       "mistake": "Không nhớ số thì đính kèm bản sao giấy thông báo số nenkin, đừng ghi đoán."
+      },
+      {
+       "field": "請求者氏名（ローマ字・大文字）(tên người xin — chữ La-tinh in hoa)",
+       "how": "Ô tên và địa chỉ sau khi về nước phải ghi bằng chữ La-tinh in hoa theo hướng dẫn chính thức của Cơ quan Nenkin.",
+       "example": "NGUYEN VAN AN",
+       "mistake": "Ghi chữ thường hoặc ghi katakana ở ô này khiến hồ sơ bị trả lại."
+      },
+      {
+       "field": "生年月日 (ngày sinh)",
+       "how": "Ghi ngày sinh đúng như hộ chiếu.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "離日後の住所 (địa chỉ sau khi rời Nhật)",
+       "how": "Ghi địa chỉ nhà ở Việt Nam bằng chữ La-tinh in hoa, ghi rõ tỉnh, huyện, xã để thư và tiền về đúng nơi.",
+       "example": "HA NOI, VIET NAM (ghi đầy đủ địa chỉ nhà ở Việt Nam — ví dụ mẫu)",
+       "mistake": "Chỉ ghi tên tỉnh, thiếu địa chỉ chi tiết khiến thư quyết định không tới."
+      },
+      {
+       "field": "署名 (chữ ký)",
+       "how": "Ký tên giống chữ ký trong hộ chiếu. Đơn ghi rõ mục chữ ký là bắt buộc.",
+       "example": "Ký như trong hộ chiếu"
+      },
+      {
+       "field": "振込先銀行名・支店名 (ngân hàng và chi nhánh nhận tiền)",
+       "how": "Ghi tên ngân hàng, tên chi nhánh và địa chỉ chi nhánh của tài khoản nhận tiền ở Việt Nam.",
+       "example": "Ngân hàng mẫu tại Việt Nam — chi nhánh Hà Nội (ví dụ mẫu)"
+      },
+      {
+       "field": "口座番号・口座名義 (số tài khoản và chủ tài khoản nhận)",
+       "how": "Ghi số tài khoản và tên chủ tài khoản. Tài khoản phải là của chính người xin. Đính kèm giấy chứng nhận tài khoản do ngân hàng cấp, hoặc xin dấu chứng nhận của ngân hàng vào ô 銀行の口座証明印 trên đơn.",
+       "example": "0123456789／NGUYEN VAN AN (ví dụ mẫu)",
+       "mistake": "Dùng tài khoản của người thân — tiền chỉ trả vào tài khoản của chính người xin. Lưu ý: tài khoản Yucho không nhận được tiền hoàn nenkin này."
+      },
+      {
+       "field": "添付書類① パスポートの写し (bản sao hộ chiếu)",
+       "how": "Đính kèm bản sao các trang hộ chiếu thấy rõ họ tên, ngày sinh, quốc tịch, chữ ký và tư cách lưu trú.",
+       "example": "Photo trang ảnh và trang chữ ký của hộ chiếu"
+      },
+      {
+       "field": "添付書類② 住所喪失の証明 (giấy chứng minh không còn địa chỉ ở Nhật)",
+       "how": "Đính kèm bản sao giấy xóa đăng ký cư trú 住民票の除票. Nếu trước khi về đã nộp đơn chuyển đi 転出届 ở tòa thị chính thì mục này có thể không cần vì cơ quan tự tra được.",
+       "example": "住民票の除票の写し (bản sao giấy xóa cư trú)"
+      },
+      {
+       "field": "添付書類③④ 銀行証明・年金番号書類 (chứng nhận ngân hàng và giấy số nenkin)",
+       "how": "Đính kèm giấy ngân hàng chứng nhận tài khoản và giấy thấy rõ số nenkin cơ bản. Thiếu một trong các giấy đính kèm là đơn bị gửi trả lại.",
+       "example": "Giấy chứng nhận tài khoản + giấy thông báo số nenkin cơ bản"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Đơn chỉ nộp sau khi đã rời Nhật và không còn địa chỉ ở Nhật, hạn nộp là 2 năm kể từ ngày mất địa chỉ ở Nhật. Bản tiếng Việt này tải từ trang danh sách mẫu đơn chính thức của Cơ quan Nenkin (trang 脱退一時金に関する手続きをおこなうとき, cập nhật 2026-10-01). Nhận tiền hoàn của厚生年金 sẽ bị trừ thuế 20.42% tại nguồn — muốn hoàn phần thuế này thì làm tiếp đơn ở mục dưới."
+    },
+    {
+     "name_jp": "所得税・消費税の納税管理人の選任・解任届出書",
+     "name_vi": "Đơn chỉ định người quản lý nộp thuế — nộp cho cơ quan thuế trước khi về nước để người ở Nhật thay mình xin hoàn thuế 20.42% bị trừ từ tiền hoàn nenkin",
+     "download_url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shinkoku/annai/07.htm",
+     "source": "国税庁",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "提出先 税務署長 (cơ quan thuế nơi nộp)",
+       "how": "Ghi tên cơ quan thuế quản lý địa chỉ cuối cùng của mình ở Nhật. Đơn nộp cho cơ quan thuế này, không nộp cho Cơ quan Nenkin.",
+       "example": "川崎北税務署長 (ví dụ theo địa chỉ mẫu ở Kawasaki)",
+       "mistake": "Nộp nhầm cơ quan thuế của nơi làm việc thay vì nơi ở cuối cùng."
+      },
+      {
+       "field": "届出の区分 選任・解任 (loại đơn: chỉ định hay bãi nhiệm)",
+       "how": "Khoanh tròn 選任 khi chỉ định người mới. Gạch bỏ chữ 解任 trên tiêu đề theo hướng dẫn ghi của NTA.",
+       "example": "選任 (chỉ định)"
+      },
+      {
+       "field": "納税者 氏名・住所 (tên và địa chỉ người nộp thuế — là mình)",
+       "how": "Ghi họ tên và địa chỉ cuối cùng ở Nhật của mình.",
+       "example": "グエン・バン・アン／神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "個人番号（マイナンバー）(số My Number của mình)",
+       "how": "Ghi 12 số My Number. Nộp bản giấy thì phải xuất trình hoặc đính kèm bản sao giấy tờ xác thực cá nhân.",
+       "example": "1234 5678 9012"
+      },
+      {
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số điện thoại liên lạc được trước khi về nước.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "納税管理人 氏名・住所 (tên và địa chỉ người quản lý thuế)",
+       "how": "Ghi họ tên và địa chỉ ở Nhật của người mình nhờ. Người này chỉ cần có địa chỉ ở Nhật, không cần điều kiện gì thêm. Phải được người đó đồng ý trước.",
+       "example": "Người quen đang ở Nhật — ghi tên và địa chỉ thật của họ khi nộp thật (không dùng ví dụ mẫu để nộp)"
+      },
+      {
+       "field": "納税管理人 職業・続柄 (nghề nghiệp, quan hệ)",
+       "how": "Ghi nghề nghiệp của người quản lý và quan hệ với mình như bạn bè, đồng nghiệp, người thân.",
+       "example": "会社員／友人 (nhân viên công ty / bạn bè) — ví dụ mẫu"
+      },
+      {
+       "field": "納税管理人を定めた理由 (lý do chỉ định)",
+       "how": "Ghi lý do là về nước, không còn địa chỉ ở Nhật, cần người thay mặt làm thủ tục hoàn thuế.",
+       "example": "帰国のため日本に住所を有しなくなるため (vì về nước nên không còn địa chỉ ở Nhật) — ví dụ mẫu"
+      },
+      {
+       "field": "法の施行地外における住所 (địa chỉ ở nước ngoài sau khi về)",
+       "how": "Ghi địa chỉ nhà ở Việt Nam sau khi về nước.",
+       "example": "Địa chỉ nhà ở Việt Nam (ghi đầy đủ — ví dụ mẫu)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Link là trang thủ tục chính thức A1-7 của NTA — trên trang có nút tải PDF đơn (645KB) và bản hướng dẫn ghi. Nộp trước ngày xuất cảnh là tốt nhất; quên nộp thì nộp kèm cùng đơn hoàn thuế sau đó vẫn được theo hướng dẫn trong tài liệu nenkin. Sau khi tiền hoàn nenkin về, gửi bản gốc giấy 脱退一時金支給決定通知書 cho người quản lý thuế để họ nộp đơn 退職所得の選択課税による還付のための申告書 xin hoàn phần thuế 20.42%."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "Thao Chan",
+     "lang": "vi",
+     "note": "Tự làm hồ sơ nenkin lần 1 (脱退一時金): điều kiện, giấy tờ cần chuẩn bị và mẫu đơn tải từ trang Japan Pension Service.",
+     "title": "Hướng dẫn thủ tục tự lấy nenkin không mất tiền 💰脱退一時金申請書",
+     "url": "https://www.youtube.com/watch?v=R5wDAkExRIQ"
+    }
+   ]
+  },
+  {
+   "id": "khai-thue-cuoi-nam",
+   "group": "Tiền, thuế & ngân hàng",
+   "title": "Khai thuế cuối năm: điều chỉnh cuối năm ở công ty và tự khai thuế （年末調整・確定申告）",
+   "icon": "🧾",
+   "summary": "Hầu hết người đi làm được công ty làm 年末調整 (điều chỉnh thuế cuối năm) nên không phải tự khai. Nhưng nếu đổi việc giữa năm, có thu nhập ở 2 nơi trở lên, có người phụ thuộc ở Việt Nam chưa khai, hoặc chi phí y tế cao, bạn phải tự làm 確定申告 (khai thuế quyết toán) — hoặc nên khai để được hoàn tiền (還付申告). Bài này hướng dẫn cả hai phần, từng bước một.",
+   "who": "Mọi người Việt đi làm ở Nhật. Phần 年末調整 dành cho người làm 1 công ty cả năm. Phần 確定申告 dành cho người: đổi việc giữa năm, làm baito/phụ việc ở nhiều nơi, nghỉ việc cuối năm chưa kịp điều chỉnh, có người phụ thuộc ở Việt Nam, chi phí y tế cao, mua nhà vay ngân hàng năm đầu, hoặc làm furusato nozei mà không dùng chế độ one-stop.",
+   "docs": [
+    "Phiếu khấu trừ tại nguồn 源泉徴収票 (gensen chōshūhyō) của TẤT CẢ công ty đã làm trong năm — công ty cũ và công ty mới, kể cả nơi baito; xin lại nếu làm mất",
+    "Các tờ khai công ty phát cho 年末調整： tờ khai người phụ thuộc 扶養控除等申告書, tờ khai khấu trừ bảo hiểm 保険料控除申告書, tờ khai khấu trừ cơ bản/vợ chồng 基礎控除申告書兼配偶者控除等申告書",
+    "Giấy chứng nhận đã đóng bảo hiểm nhân thọ, bảo hiểm động đất, bảo hiểm xã hội tự đóng: 控除証明書 (kōjo shōmeisho) — công ty bảo hiểm gửi về nhà khoảng tháng 10–11, giữ nguyên không vứt",
+    "Nếu có người phụ thuộc ở Việt Nam: giấy tờ chứng minh quan hệ thân nhân 親族関係書類 (ví dụ giấy khai sinh, sổ hộ khẩu — kèm bản dịch tiếng Nhật) cho TỪNG người",
+    "Nếu có người phụ thuộc ở Việt Nam: giấy chứng minh gửi tiền 送金関係書類 (sōkin kankei shorui) — biên lai/chứng từ chuyển tiền quốc tế ghi rõ tên người gửi, tên người nhận, ngày, số tiền — cho TỪNG người, TỪNG lần gửi trong năm",
+    "Thẻ My Number マイナンバーカード (cần cả 2 mật khẩu: mật khẩu 4 số và mật khẩu chữ ký điện tử 6–16 ký tự) — dùng cho e-Tax và điền tờ khai",
+    "Nếu khai khấu trừ y tế 医療費控除： biên lai khám chữa bệnh cả năm của bản thân và người nhà sống chung sinh kế, hoặc giấy thông báo chi phí y tế 医療費通知 từ bảo hiểm; cộng sẵn tổng tiền trước",
+    "Nếu khai furusato nozei: giấy chứng nhận tiền quyên góp 寄附金受領証明書 (kifukin juryō shōmeisho) của từng địa phương đã quyên góp",
+    "Nếu khai khấu trừ vay mua nhà năm đầu 住宅ローン控除： giấy chứng nhận số dư vay cuối năm 借入金の年末残高等証明書 từ ngân hàng và giấy tờ nhà đất theo hướng dẫn của Cục Thuế",
+    "Sổ/tài khoản ngân hàng đứng tên chính bạn để nhận tiền hoàn thuế (ghi sẵn tên ngân hàng, chi nhánh, số tài khoản) và con dấu 印鑑 nếu nộp giấy trực tiếp"
+   ],
+   "prep_home": [
+    "Thu thập 源泉徴収票 của mọi nơi đã làm trong năm vào 1 bìa hồ sơ; thiếu của công ty nào thì gọi điện/email xin cấp lại ngay, đừng chờ tới hạn khai",
+    "Với người phụ thuộc ở Việt Nam: lập bảng riêng cho từng người (tên, ngày sinh, quan hệ, tổng tiền đã gửi trong năm); kiểm tra điều kiện tuổi — người 30 đến dưới 70 tuổi chỉ được tính nếu thuộc trường hợp đặc biệt như du học, khuyết tật, hoặc nhận từ bạn từ 38万円/năm trở lên cho sinh hoạt/học tập (theo Quốc thuế庁)",
+    "Dịch sẵn giấy tờ quan hệ thân nhân sang tiếng Nhật (tự dịch được, ghi tên người dịch); giấy tờ tiếng nước ngoài nộp cho thuế phải kèm bản dịch",
+    "Cộng sẵn: tổng chi phí y tế cả năm (trừ phần bảo hiểm đã chi trả), tổng tiền furusato nozei, tổng tiền gửi về Việt Nam cho từng người",
+    "Kiểm tra thẻ My Number còn hạn, nhớ 2 loại mật khẩu; quên mật khẩu thì ra 市役所 (shiyakusho, ủy ban thành phố/quận) đặt lại trước mùa khai thuế",
+    "Cài sẵn ứng dụng マイナポータルアプリ (Mynaportal app) trên điện thoại có đọc thẻ NFC nếu định nộp bằng e-Tax",
+    "Tính trước mình thuộc diện BẮT BUỘC khai hay diện khai để ĐƯỢC HOÀN tiền (xem Bước 5); ghi ra giấy các khoản thu nhập ngoài lương: baito, việc phụ, bán hàng online...",
+    "Photo/chụp lại toàn bộ giấy tờ trước khi nộp bản gốc cho công ty hoặc gửi bưu điện, cất file theo năm"
+   ],
+   "steps": [
+    {
+     "t": "Nhận và điền tờ khai 年末調整 công ty phát",
+     "d": "LÀM Ở ĐÂU: tại công ty, thường tháng 10–11 phòng nhân sự （人事部， jinjibu) phát giấy hoặc gửi link hệ thống online của công ty. CẦN GÌ: 3 loại tờ khai chính — 扶養控除等申告書 (khai người phụ thuộc), 保険料控除申告書 (khai bảo hiểm), 基礎控除申告書兼配偶者控除等申告書 (khai khấu trừ cơ bản và vợ/chồng). ĐIỀN GÌ: họ tên, địa chỉ, số My Number, tên và ngày sinh người phụ thuộc, số tiền bảo hiểm đã đóng ghi đúng theo giấy 控除証明書 đính kèm. MẤT BAO LÂU: khoảng 20–40 phút nếu đã chuẩn bị giấy tờ. KIỂM TRA GÌ: hạn nộp nội bộ của công ty (thường trước cuối tháng 11) — nộp muộn là công ty không kịp làm, bạn phải tự đi 確定申告. NHẬN ĐƯỢC GÌ: chưa nhận ngay; kết quả thể hiện ở lương tháng 12 hoặc tháng 1 và phiếu 源泉徴収票.",
+     "ja": "年末調整の書類を提出します。扶養控除等申告書と保険料控除申告書です。",
+     "vi": "Tôi nộp giấy tờ điều chỉnh cuối năm. Đây là tờ khai người phụ thuộc và tờ khai khấu trừ bảo hiểm."
+    },
+    {
+     "t": "Khai người phụ thuộc ở Việt Nam trong 年末調整",
+     "d": "LÀM Ở ĐÂU: ghi vào 扶養控除等申告書 và nộp kèm giấy tờ cho phòng nhân sự. CẦN GÌ cho TỪNG người ở Việt Nam: (1) 親族関係書類 — giấy tờ chứng minh quan hệ thân nhân kèm bản dịch tiếng Nhật; (2) 送金関係書類 — chứng từ gửi tiền trong năm đó, ghi rõ bạn gửi cho chính người đó. QUAN TRỌNG: gửi tiền cho cả nhà vào 1 tài khoản của mẹ thì thường chỉ tính được cho mẹ, không chia cho bố/em được — nên gửi RIÊNG cho từng người, từng lần giữ biên lai. Điều kiện tuổi (theo 国税庁）: 16 đến dưới 30 tuổi hoặc từ 70 tuổi trở lên thì theo diện thông thường; người 30 đến dưới 70 tuổi chỉ được tính khi là du học sinh rời Nhật để học, người khuyết tật, hoặc nhận từ bạn từ 38万円/năm trở lên. Thu nhập của người phụ thuộc cũng phải trong giới hạn khấu trừ (khoảng 48万円/năm quy đổi — tùy năm, kiểm tra lại). NÓI GÌ khi nhân sự hỏi: dùng câu mẫu bên dưới. KIỂM TRA GÌ: hỏi nhân sự đã nhận đủ giấy của từng người chưa và xin xác nhận bằng email/biên nhận.",
+     "ja": "ベトナムにいる親族の扶養控除をお願いします。親族関係書類と送金関係書類を提出します。",
+     "vi": "Tôi xin khấu trừ người phụ thuộc cho người thân ở Việt Nam. Tôi nộp giấy tờ quan hệ thân nhân và giấy chứng minh gửi tiền."
+    },
+    {
+     "t": "Nộp giấy chứng nhận bảo hiểm để được khấu trừ",
+     "d": "LÀM Ở ĐÂU: đính kèm vào 保険料控除申告書 nộp cho công ty. CẦN GÌ: giấy 控除証明書 gốc của bảo hiểm nhân thọ （生命保険）, bảo hiểm chăm sóc/ y tế tư nhân, bảo hiểm động đất （地震保険）; bảo hiểm xã hội （国民健康保険・国民年金） mà bạn tự đóng khi nghỉ việc/chuyển việc cũng khai vào tờ này — ghi số tiền đã đóng, có thể kèm biên lai. ĐIỀN GÌ: tên công ty bảo hiểm, loại hợp đồng, số tiền đã đóng trong năm — chép đúng từng số trên giấy chứng nhận, không làm tròn. MẤT BAO LÂU: khoảng 10–15 phút. KIỂM TRA GÌ: giấy chứng nhận gửi về từ tháng 10 — nếu chưa thấy, gọi công ty bảo hiểm xin cấp lại （再発行， saihakkō) sớm vì cấp lại mất khoảng 1–2 tuần. LƯU Ý: khấu trừ y tế 医療費控除 và khấu trừ vay nhà năm đầu KHÔNG làm ở 年末調整 được — phải tự làm 確定申告 (xem nửa sau của bài).",
+     "ja": "保険料控除証明書を添付しました。再発行をお願いできますか。",
+     "vi": "Tôi đã đính kèm giấy chứng nhận khấu trừ bảo hiểm. / Cho tôi xin cấp lại giấy được không?"
+    },
+    {
+     "t": "Nhận kết quả 年末調整 và phiếu 源泉徴収票",
+     "d": "LÀM Ở ĐÂU: công ty trả kết quả cùng lương tháng 12 hoặc tháng 1. NHẬN ĐƯỢC GÌ: nếu thuế đã tạm khấu trừ thừa, phần thừa được cộng vào lương (hoàn tại công ty); nếu thiếu, bị trừ thêm. Khoảng tháng 1 bạn nhận 源泉徴収票 — phiếu tổng kết thu nhập và thuế cả năm. KIỂM TRA GÌ trên phiếu: tổng thu nhập 支払金額， số thuế đã khấu trừ 源泉徴収税額， tên người phụ thuộc đã được tính chưa, số tiền khấu trừ bảo hiểm đã vào chưa. Nếu người phụ thuộc ở Việt Nam không xuất hiện hoặc số tiền sai, hỏi phòng nhân sự ngay — trong thời gian ngắn công ty có thể làm lại （再年末調整）; quá thời gian thì bạn tự làm 確定申告 để sửa. Cất phiếu này cẩn thận: nó là giấy tờ BẮT BUỘC khi tự khai thuế, xin visa, chuyển việc. MẤT BAO LÂU: kiểm tra khoảng 10 phút.",
+     "ja": "源泉徴収票を受け取りました。扶養控除が反映されているか確認したいです。",
+     "vi": "Tôi đã nhận phiếu khấu trừ tại nguồn. Tôi muốn kiểm tra xem khấu trừ người phụ thuộc đã được tính chưa."
+    },
+    {
+     "t": "Tự kiểm tra: mình BẮT BUỘC phải 確定申告 hay khai để ĐƯỢC HOÀN tiền?",
+     "d": "Đây là bước quyết định của nửa sau bài — đọc kỹ 2 nhóm. NHÓM A — BẮT BUỘC tự khai （確定申告が必要）: (1) Thu nhập lương năm trên 2.000万円 (công ty không làm 年末調整 cho diện này). (2) Nhận lương từ 2 nơi trở lên mà phần lương chưa được 年末調整 cộng với các khoản thu nhập khác vượt 20万円 — ví dụ làm chính 1 công ty + baito cuối tuần chưa gộp. (3) Làm 1 nơi nhưng có thu nhập ngoài lương (việc phụ, kinh doanh nhỏ, bán hàng online, cho thuê...) với SỐ LÃI (thu nhập trừ chi phí, gọi là 所得 shotoku) trên 20万円/năm. Lưu ý: 20万円 ở đây tính theo 所得 đối với việc phụ không phải lương, và tính theo số tiền lương chưa điều chỉnh đối với baito — phân biệt kỹ. Dù thu nhập phụ từ 20万円 trở xuống không phải khai thuế thu nhập, vẫn có thể phải khai thuế cư trú 住民税 ở thành phố — đừng bỏ qua. (4) Nghỉ việc cuối năm, chưa kịp làm 年末調整 ở nơi mới và tình trạng thuộc diện phải khai theo các mục trên. NHÓM B — Không bắt buộc nhưng khai để ĐƯỢC HOÀN tiền （還付申告， kanpu shinkoku): (1) Đổi việc giữa năm: công ty mới không gộp thu nhập công ty cũ, hoặc nghỉ việc giữa năm rồi không đi làm lại trong năm đó — thuế thường đã khấu trừ thừa. (2) Người phụ thuộc ở Việt Nam chưa kịp khai ở 年末調整 (thiếu giấy tờ lúc công ty chốt). (3) Chi phí y tế của bản thân và người nhà cùng sinh kế đã trả trong năm vượt khoảng 10万円 (nếu tổng thu nhập dưới 200万円 thì mức so sánh là khoảng 5% thu nhập) — gọi là 医療費控除， chỉ khai được bằng 確定申告. (4) Furusato nozei mà KHÔNG dùng ワンストップ特例， hoặc quyên góp cho từ 6 địa phương trở lên. (5) Khấu trừ vay mua nhà 住宅ローン控除 NĂM ĐẦU TIÊN — bắt buộc tự khai; từ năm thứ 2 công ty mới làm qua 年末調整 được. (6) Quên khai bảo hiểm, khấu trừ vợ/chồng ở 年末調整. KẾT QUẢ BƯỚC NÀY: ghi ra giấy mình thuộc mục nào, cần giấy tờ gì tương ứng trong mục docs của bài.",
+     "ja": "私は確定申告が必要です。／還付申告をしたいです。",
+     "vi": "Tôi thuộc diện phải khai thuế quyết toán. / Tôi muốn khai để được hoàn thuế."
+    },
+    {
+     "t": "Chuẩn bị bộ hồ sơ 確定申告 theo trường hợp của mình",
+     "d": "LÀM Ở ĐÂU: ở nhà, trước khi mở máy tính hoặc đến 税務署 (zeimusho, cơ quan thuế). CẦN GÌ — gom theo trường hợp đã xác định ở Bước 5: 源泉徴収票 của MỌI công ty trong năm (bắt buộc, thiếu là không tính đúng được); khấu trừ y tế: lập 医療費控除の明細書 — bảng liệt kê người khám, bệnh viện, số tiền đã trả, số tiền bảo hiểm bù — từ biên lai (biên lai gốc không phải nộp kèm nhưng phải giữ 5 năm); furusato: 寄附金受領証明書 của từng địa phương (hoặc giấy chứng nhận gộp do cổng furusato cấp nếu có); người phụ thuộc ở Việt Nam: 親族関係書類 + bản dịch + 送金関係書類 cho từng người, từng lần gửi (giống Bước 2 — nếu đã nộp cho công ty ở 年末調整 rồi thì khi khai lại vẫn nên mang theo bản sao); vay nhà năm đầu: 借入金の年末残高等証明書 và các giấy tờ nhà đất theo danh mục của 国税庁； thẻ My Number; thông tin tài khoản ngân hàng nhận tiền hoàn (phải đứng tên chính bạn, ghi đúng tên ngân hàng, chi nhánh, loại tài khoản, số tài khoản). MẤT BAO LÂU: khoảng 30–60 phút nếu giấy tờ đã sẵn; xin lại giấy tờ thiếu có thể mất 1–2 tuần — bắt đầu từ tháng 1. KIỂM TRA GÌ: chụp/scan toàn bộ hồ sơ, đặt tên file theo năm.",
+     "ja": "確定申告に必要な書類を教えてください。",
+     "vi": "Xin cho tôi biết các giấy tờ cần thiết để khai thuế quyết toán."
+    },
+    {
+     "t": "Cách nộp A (dễ nhất): e-Tax bằng thẻ My Number + điện thoại",
+     "d": "LÀM Ở ĐÂU: ở nhà, trên điện thoại hoặc máy tính, qua trang tạo tờ khai của 国税庁『確定申告書等作成コーナー』(Kakutei Shinkokusho-tō Sakusei Corner) rồi gửi bằng e-Tax (hệ thống khai thuế điện tử quốc gia). CẦN GÌ: thẻ My Number + điện thoại đọc được thẻ NFC đã cài マイナポータルアプリ, hoặc máy tính + đầu đọc thẻ. CÁC BƯỚC: (1) Mở trang tạo tờ khai (Sakusei Corner), chọn năm khai và loại thu nhập (lương 給与所得）. (2) Chọn cách gửi e-Tax bằng マイナンバーカード方式. (3) Đặt thẻ My Number lên điện thoại, nhập mật khẩu 4 số, rồi nhập mật khẩu chữ ký điện tử khi gửi. (4) Nhập số liệu CHÉP ĐÚNG từ 源泉徴収票： thu nhập, thuế đã khấu trừ, các khoản khấu trừ — trang web tự tính, có thể dùng マイナポータル連携 để một số giấy chứng nhận tự điền nếu đã liên kết trước. (5) Nhập thêm các khoản theo trường hợp: thu nhập nơi phụ, khấu trừ y tế, furusato, người phụ thuộc. (6) Nhập tài khoản ngân hàng nhận tiền hoàn. (7) Kiểm tra màn hình tổng kết: số tiền hoàn dự kiến hoặc số thuế nộp thêm hiện rõ — chụp màn hình lại. (8) Bấm gửi 送信 (sōshin); khi thấy màn hình 受付完了 và mã số tiếp nhận 受付番号 thì mới xong — lưu/tải file tờ khai (PDF) và thông báo tiếp nhận về máy. MẤT BAO LÂU: khoảng 30–60 phút lần đầu. ƯU ĐIỂM: không cần in, không cần gửi kèm đa số giấy chứng nhận (nhưng phải GIỮ giấy gốc 5 năm để khi cơ quan thuế hỏi thì xuất trình), tiền hoàn thường nhanh hơn nộp giấy.",
+     "ja": "e-Taxでマイナンバーカードを使って申告します。送信が完了しました。",
+     "vi": "Tôi khai bằng e-Tax với thẻ My Number. Đã gửi xong."
+    },
+    {
+     "t": "Cách nộp B: điền trên web, in ra gửi bưu điện; Cách nộp C: đến trực tiếp 税務署",
+     "d": "CÁCH B — GIẤY + BƯU ĐIỆN: (1) Vẫn dùng 『確定申告書等作成コーナー』 để điền (chọn 書面提出 — nộp bằng giấy), trang web tự tính và tạo PDF. (2) In tờ khai, ký tên/đóng dấu theo hướng dẫn, photocopy giữ 1 bộ. (3) Bỏ vào phong bì: tờ khai + bản sao giấy tờ cần đính kèm theo trường hợp (một số giấy chứng nhận phải nộp bản sao/bản gốc theo quy định từng loại — đọc kỹ trang hướng dẫn của tờ khai). (4) Gửi đến 税務署 phụ trách khu vực nhà bạn (xem địa chỉ trên trang 国税庁 theo mã bưu điện) bằng thư bảo đảm 簡易書留 (kan'i kakitome) để có chứng cứ đã gửi; ngày đóng dấu bưu điện được tính là ngày nộp nếu gửi trong hạn. MẤT BAO LÂU: điền 30–60 phút + 1 lần ra bưu điện. CÁCH C — ĐẾN TRỰC TIẾP: (1) Đến 税務署 nơi bạn sống trong kỳ khai thuế (thường rất đông, một số nơi phải lấy phiếu xếp hàng 入場整理券 trước qua LINE/web — kiểm tra trang 国税庁 của địa phương). (2) Mang theo: toàn bộ hồ sơ ở Bước 6, thẻ My Number, con dấu, sổ ngân hàng. (3) Lấy số thứ tự, đến khu hỗ trợ khai thuế 申告相談コーナー — nhân viên hướng dẫn bạn nhập trên máy của cơ quan hoặc điền giấy; không hiểu tiếng Nhật thì chỉ vào giấy tờ và dùng các câu mẫu trong bài, hoặc nhờ nhân viên viết hộ phần bạn đọc số liệu （代筆 hỗ trợ ghi thay trong khu hỗ trợ — tùy nơi). (4) Nộp xong phải nhận tờ khai bản sao có đóng dấu tiếp nhận 収受印 (shūju-in) — đây là bằng chứng đã nộp, cất kỹ. MẤT BAO LÂU: khoảng 1–3 giờ kể cả chờ đợi trong mùa cao điểm; đi sớm buổi sáng hoặc tránh tuần cuối.",
+     "ja": "申告書を郵送で提出します。／確定申告の相談コーナーはどこですか。受付印のある控えをください。",
+     "vi": "Tôi nộp tờ khai qua bưu điện. / Khu tư vấn khai thuế ở đâu ạ? Cho tôi bản sao có đóng dấu tiếp nhận."
+    },
+    {
+     "t": "Nộp đúng hạn và nộp thêm thuế nếu còn thiếu",
+     "d": "KỲ HẠN — phân biệt 2 loại: (1) 確定申告 diện BẮT BUỘC: nguyên tắc từ 16/2 đến 15/3 năm sau （原則2月16日〜3月15日）; nếu ngày 15/3 trùng thứ Bảy, Chủ nhật hoặc ngày lễ thì hạn lùi sang ngày làm việc tiếp theo — ví dụ có năm hạn thành 16/3. Cả việc NỘP TỜ KHAI và NỘP TIỀN thuế còn thiếu đều phải xong trong hạn này. (2) 還付申告 diện ĐƯỢC HOÀN tiền: nộp được từ 1/1 năm sau và trong vòng 5 năm — không cần chờ đến 16/2, nộp sớm thì hoàn sớm, và quá 15/3 cũng chưa mất quyền (trừ một số ưu đãi đặc biệt có điều kiện nộp trong hạn — đa số người đi làm không thuộc diện này). CÁCH NỘP TIỀN nếu phải đóng thêm: chuyển khoản tự động 振替納税 (đăng ký trước, tiền trừ vào khoảng tháng 4), nộp online bằng thẻ/internet banking qua e-Tax, mã QR tại cửa hàng tiện lợi (với số tiền trong giới hạn), hoặc mang giấy nộp tiền ra ngân hàng/bưu điện. KIỂM TRA GÌ: sau khi nộp, lưu mã tiếp nhận (e-Tax) hoặc bản sao đóng dấu (giấy/trực tiếp) + chứng từ nộp tiền vào cùng bìa hồ sơ năm đó. MẤT BAO LÂU: nộp tiền online khoảng 10 phút.",
+     "ja": "申告期限は3月15日までですね。振替納税をお願いします。",
+     "vi": "Hạn khai thuế là đến 15/3 phải không ạ? Tôi xin đăng ký nộp thuế bằng chuyển khoản tự động."
+    },
+    {
+     "t": "Chờ tiền hoàn về và kiểm tra kết quả",
+     "d": "TIỀN HOÀN VỀ BẰNG CÁCH NÀO: chuyển khoản thẳng vào tài khoản ngân hàng bạn đã ghi trong tờ khai (phải đúng tên bạn — sai tên/số tài khoản là tiền không về được và cơ quan thuế sẽ liên hệ lại). Cũng có cách nhận tại bưu điện nhưng chuyển khoản tiện và nhanh hơn. KHI NÀO VỀ: theo 国税庁， trong mùa khai thuế đông, hoàn tiền thường mất KHOẢNG 1 đến 1,5 tháng sau khi nộp đối với hồ sơ giấy; hồ sơ e-Tax thường được xử lý nhanh hơn, khoảng 3 tuần (số liệu tham khảo của 国税庁 — tùy hồ sơ có thiếu giấy tờ hay không). CÁCH KIỂM TRA: người dùng e-Tax tra được tình trạng xử lý tiền hoàn trên hệ thống e-Tax （還付金処理状況） sau khoảng 2 tuần kể từ khi nộp online (khoảng 1 tháng nếu nộp giấy); khi tiền về sẽ có thông báo 国税還付金振込通知書 gửi về nhà hoặc xem trên e-Tax nếu đã đăng ký nhận điện tử. KIỂM TRA GÌ KHI TIỀN VỀ: đối chiếu số tiền về với số tiền hoàn dự kiến trên tờ khai; nếu chênh lệch, trong thông báo/thư của 税務署 thường ghi lý do — đọc kỹ, không rõ thì gọi 税務署 theo số trên thư và hỏi bằng câu mẫu. Nếu quá khoảng 2 tháng chưa thấy tiền và không có thư, gọi 税務署 nơi nộp để hỏi. Cất tờ khai và giấy tờ liên quan 5 năm.",
+     "ja": "還付金の処理状況を確認したいです。還付金はいつ振り込まれますか。",
+     "vi": "Tôi muốn kiểm tra tình trạng xử lý tiền hoàn thuế. Khi nào tiền hoàn được chuyển khoản ạ?"
+    }
+   ],
+   "cost": "Nộp cho công ty (年末調整) và tự khai (e-Tax, gửi bưu điện, tại 税務署) đều không mất phí nộp. Chi phí có thể phát sinh: dịch giấy tờ Việt Nam (tự dịch thì miễn phí), gửi thư bảo đảm khoảng vài trăm yên, in ấn. Nếu thuê 税理士 (zeirishi, kế toán thuế) làm thay thì phí tùy văn phòng, thường từ khoảng 10.000 yên trở lên cho hồ sơ đơn giản — đa số người đi làm tự làm được, không cần thuê.",
+   "duration": "年末調整： chuẩn bị và điền khoảng 30–60 phút, hạn nội bộ thường cuối tháng 11. 確定申告： kỳ nộp diện bắt buộc nguyên tắc 16/2–15/3 năm sau; 還付申告 nộp được từ 1/1 năm sau trong 5 năm. Tự làm online khoảng 30–60 phút; đến 税務署 mùa cao điểm khoảng 1–3 giờ. Tiền hoàn về khoảng 3 tuần (e-Tax) đến khoảng 1–1,5 tháng (giấy) sau khi nộp.",
+   "warnings": [
+    "Nếu trục trặc — thiếu 源泉徴収票 của công ty cũ: gọi/email công ty cũ xin cấp lại （再発行）; công ty có nghĩa vụ cấp. Nếu công ty cũ đã giải thể hoặc nhất quyết không cấp, đến 税務署 giải thích và xin hướng dẫn — đừng tự bỏ qua khoản thu nhập đó",
+    "Nếu trục trặc — giấy gửi tiền cho người phụ thuộc ở Việt Nam không đạt: gửi tiền chung cho cả nhà vào 1 người, biên lai không ghi tên người nhận, hoặc gửi tay mặt không có chứng từ thì thường KHÔNG được tính. Năm sau hãy gửi riêng từng người qua dịch vụ chuyển tiền có chứng từ và giữ đủ biên lai cả năm",
+    "Nếu trục trặc — không hiểu tiếng Nhật khi khai: dùng trang tạo tờ khai của 国税庁 và nhập số liệu chép từ 源泉徴収票 trước; đến 税務署 thì vào khu 申告相談 nhờ nhân viên hướng dẫn từng mục, mang theo người phiên dịch nếu có thể. Đừng ký/gửi khi chưa hiểu số tiền hoàn hay số thuế phải nộp thêm hiện trên màn hình",
+    "Lỗi hay gặp: khai thiếu thu nhập nơi phụ/baito. Thuế đối chiếu dữ liệu từ các công ty — thiếu thu nhập bị phát hiện sau sẽ phải khai sửa và có thể bị tính thêm tiền phạt và tiền chậm nộp",
+    "Lỗi hay gặp: đã đăng ký ワンストップ特例 cho furusato nozei nhưng sau đó lại phải làm 確定申告 vì lý do khác (y tế, việc phụ...) thì ワンストップ特例 MẤT HIỆU LỰC toàn bộ — trong tờ khai phải khai LẠI toàn bộ tiền furusato của mọi địa phương, kèm giấy chứng nhận; quên là mất khấu trừ",
+    "Lỗi hay gặp: nhầm mốc 20万円 — đây là mốc của thuế thu nhập trong điều kiện nhất định (xem Bước 5); thuế cư trú 住民税 có quy định riêng của thành phố, thu nhập phụ nhỏ vẫn có thể phải khai ở 市役所",
+    "Quá hạn diện bắt buộc: nộp càng sớm càng tốt dù đã trễ — khai trễ tự giác trước khi bị cơ quan thuế nhắc thường nhẹ hơn bị phát hiện; có thể phát sinh thuế phạt khai thiếu/chậm nộp 無申告加算税 và tiền lãi chậm nộp 延滞税 (tên và mức cụ thể tùy trường hợp — kiểm tra trên trang 国税庁）",
+    "Khai sai số liệu: nếu phát hiện sai SAU khi nộp, sửa bằng 更正の請求 (xin điều chỉnh giảm thuế, trong vòng 5 năm) nếu bạn đóng thừa, hoặc 修正申告 (khai sửa) càng sớm càng tốt nếu bạn đóng thiếu",
+    "Bài này chỉ hướng dẫn thủ tục chung cho người nhận lương; trường hợp phức tạp (kinh doanh cá thể, bất động sản cho thuê, thu nhập từ nước ngoài, thừa kế/quà tặng) nên hỏi trực tiếp 税務署 hoặc 税理士 (kế toán thuế) trước khi nộp, đừng tự suy đoán số liệu",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã nhận 源泉徴収票 sau 年末調整 và kiểm tra: người phụ thuộc, khấu trừ bảo hiểm đã được tính đúng chưa",
+    "Nếu đã tự khai: có mã số tiếp nhận e-Tax hoặc bản sao tờ khai đóng dấu 収受印 cất trong bìa hồ sơ theo năm",
+    "Tài khoản nhận tiền hoàn ghi trong tờ khai là tài khoản đứng tên chính mình, đúng số tài khoản",
+    "Ghi lịch: hạn 確定申告 năm sau (nguyên tắc 15/3, kiểm tra ngày chính xác từng năm) và hạn gom biên lai y tế, biên lai gửi tiền theo từng người",
+    "Giữ toàn bộ giấy tờ gốc liên quan (biên lai y tế, chứng từ gửi tiền, giấy chứng nhận quyên góp) trong 5 năm kể từ khi khai",
+    "Khoảng tháng 6 năm sau nhận thông báo thuế cư trú 住民税決定通知書 — kiểm tra số tiền có thay đổi đúng như kết quả khai thuế không",
+    "Rút kinh nghiệm cho năm sau: gửi tiền riêng từng người phụ thuộc, giữ biên lai y tế từ tháng 1, để dành giấy 控除証明書 ngay khi nhận"
+   ],
+   "vocab": [
+    {
+     "ja": "年末調整",
+     "reading": "ねんまつちょうせい",
+     "vi": "điều chỉnh thuế cuối năm do công ty làm"
+    },
+    {
+     "ja": "確定申告",
+     "reading": "かくていしんこく",
+     "vi": "khai thuế quyết toán do cá nhân tự nộp cho cơ quan thuế"
+    },
+    {
+     "ja": "還付申告",
+     "reading": "かんぷしんこく",
+     "vi": "khai thuế để được hoàn lại phần thuế đã đóng thừa"
+    },
+    {
+     "ja": "源泉徴収票",
+     "reading": "げんせんちょうしゅうひょう",
+     "vi": "phiếu tổng kết thu nhập và thuế khấu trừ trong năm"
+    },
+    {
+     "ja": "税務署",
+     "reading": "ぜいむしょ",
+     "vi": "cơ quan thuế phụ trách khu vực nơi ở"
+    },
+    {
+     "ja": "扶養控除",
+     "reading": "ふようこうじょ",
+     "vi": "khấu trừ người phụ thuộc"
+    },
+    {
+     "ja": "親族関係書類",
+     "reading": "しんぞくかんけいしょるい",
+     "vi": "giấy tờ chứng minh quan hệ thân nhân"
+    },
+    {
+     "ja": "送金関係書類",
+     "reading": "そうきんかんけいしょるい",
+     "vi": "giấy tờ chứng minh việc gửi tiền"
+    },
+    {
+     "ja": "医療費控除",
+     "reading": "いりょうひこうじょ",
+     "vi": "khấu trừ chi phí y tế"
+    },
+    {
+     "ja": "保険料控除申告書",
+     "reading": "ほけんりょうこうじょしんこくしょ",
+     "vi": "tờ khai khấu trừ phí bảo hiểm nộp cho công ty"
+    },
+    {
+     "ja": "控除証明書",
+     "reading": "こうじょしょうめいしょ",
+     "vi": "giấy chứng nhận số tiền bảo hiểm đã đóng"
+    },
+    {
+     "ja": "寄附金受領証明書",
+     "reading": "きふきんじゅりょうしょうめいしょ",
+     "vi": "giấy chứng nhận đã nhận tiền quyên góp (furusato nozei)"
+    },
+    {
+     "ja": "住宅ローン控除",
+     "reading": "じゅうたくろーんこうじょ",
+     "vi": "khấu trừ vay mua nhà (tên chính thức: khấu trừ đặc biệt khoản vay nhà ở)"
+    },
+    {
+     "ja": "還付金",
+     "reading": "かんぷきん",
+     "vi": "tiền thuế được hoàn lại"
+    },
+    {
+     "ja": "申告期限",
+     "reading": "しんこくきげん",
+     "vi": "hạn cuối nộp tờ khai thuế"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "年末調整の書類の書き方を教えてください。",
+     "vi": "Xin hướng dẫn tôi cách điền giấy tờ điều chỉnh cuối năm."
+    },
+    {
+     "ja": "源泉徴収票を再発行してください。",
+     "vi": "Xin cấp lại cho tôi phiếu khấu trừ tại nguồn."
+    },
+    {
+     "ja": "ベトナムの家族への送金の証明書を提出します。",
+     "vi": "Tôi nộp giấy chứng minh gửi tiền cho gia đình ở Việt Nam."
+    },
+    {
+     "ja": "確定申告が必要かどうか確認したいです。",
+     "vi": "Tôi muốn kiểm tra xem mình có phải khai thuế quyết toán không."
+    },
+    {
+     "ja": "医療費控除の申告をしたいです。",
+     "vi": "Tôi muốn khai khấu trừ chi phí y tế."
+    },
+    {
+     "ja": "申告書の控えに受付印を押してください。",
+     "vi": "Xin đóng dấu tiếp nhận vào bản sao tờ khai của tôi."
+    },
+    {
+     "ja": "還付金の振込先はこの口座でお願いします。",
+     "vi": "Xin chuyển tiền hoàn thuế vào tài khoản này."
+    }
+   ],
+   "links": [
+    {
+     "label": "国税庁 — No.2020 確定申告 (kỳ hạn và cách nộp)",
+     "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2020.htm"
+    },
+    {
+     "label": "国税庁 — No.1900 Người nhận lương nào bắt buộc phải 確定申告",
+     "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm"
+    },
+    {
+     "label": "国税庁 — No.2030 還付申告 (khai hoàn thuế, nộp được trong 5 năm)",
+     "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2030.htm"
+    },
+    {
+     "label": "国税庁 — Giấy tờ người phụ thuộc ở nước ngoài （国外居住親族）",
+     "url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/gensen/kokugai/index.htm"
+    },
+    {
+     "label": "e-Tax （国税庁） — Bắt đầu sử dụng khai thuế điện tử",
+     "url": "https://www.e-tax.nta.go.jp/start/"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "給与所得者の扶養控除等（異動）申告書",
+     "name_vi": "Đơn khai khấu trừ người phụ thuộc cho người làm công ăn lương — đơn年末調整 quan trọng nhất, công ty phát hàng năm",
+     "download_url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/gensen/pdf/2026bun_01.pdf",
+     "source": "国税庁",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "給与の支払者の名称・所在地 (tên và địa chỉ công ty)",
+       "how": "Phần đầu đơn là thông tin công ty trả lương — thường công ty in sẵn. Kiểm tra đúng tên công ty mình.",
+       "example": "株式会社サンプル介護サービス (ví dụ mẫu)"
+      },
+      {
+       "field": "あなたの氏名・フリガナ (họ tên mình và katakana)",
+       "how": "Ghi họ tên và katakana đúng như đăng ký với công ty.",
+       "example": "グエン・バン・アン／グエン・バン・アン"
+      },
+      {
+       "field": "あなたの個人番号（マイナンバー）(My Number của mình)",
+       "how": "Ghi 12 số My Number. Một số công ty cho phép bỏ qua nếu đã nộp trước — hỏi công ty.",
+       "example": "1234 5678 9012"
+      },
+      {
+       "field": "あなたの住所又は居所 (địa chỉ của mình)",
+       "how": "Ghi địa chỉ hiện tại ở Nhật.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "生年月日 (ngày sinh của mình)",
+       "how": "Ghi ngày sinh của mình.",
+       "example": "1998年5月12日"
+      },
+      {
+       "field": "配偶者の有無 (có vợ/chồng hay không)",
+       "how": "Khoanh 有 nếu đã kết hôn, 無 nếu độc thân. Độc thân thì bỏ trống các ô vợ/chồng bên dưới.",
+       "example": "無 (không) — theo nhân vật mẫu độc thân"
+      },
+      {
+       "field": "A 源泉控除対象配偶者 (vợ/chồng thuộc diện khấu trừ tại nguồn)",
+       "how": "Chỉ ghi khi có vợ/chồng sống dựa vào lương của mình và thu nhập ước tính của họ trong giới hạn trên đơn. Ghi tên, ngày sinh, thu nhập ước tính.",
+       "example": "Bỏ trống nếu độc thân"
+      },
+      {
+       "field": "B 源泉控除対象親族 — 氏名・続柄 (người thân phụ thuộc — tên và quan hệ)",
+       "how": "Ghi từng người thân mình nuôi: họ tên, quan hệ, ngày sinh. Đây là ô ghi bố mẹ ở Việt Nam.",
+       "example": "グエン・ティ・ビー／母 (mẹ)",
+       "mistake": "Quên ghi bố mẹ ở Việt Nam dù hàng tháng vẫn gửi tiền nuôi — mất khấu trừ oan."
+      },
+      {
+       "field": "B 非居住者である親族の区分 (phân loại người thân không cư trú — mục 国外居住親族)",
+       "how": "Người thân ở Việt Nam là 非居住者. Phải tích vào ô đúng độ tuổi: mẹ trên 70 tuổi tích ô 16歳以上30歳未満又は70歳以上; người 30 đến dưới 70 tuổi phải thuộc diện du học, khuyết tật, hoặc nhận từ mình từ 38万円 trở lên trong năm thì tích ô 38万円以上の支払.",
+       "example": "70歳以上 (trên 70 tuổi) — nếu mẹ chưa tới 70 tuổi thì tích 38万円以上の支払 và chuẩn bị chứng từ gửi tiền từ 38万円/năm trở lên",
+       "mistake": "Không tích ô nào cho người thân ở nước ngoài — công ty sẽ không tính khấu trừ."
+      },
+      {
+       "field": "B 令和8年中の所得の見積額 (thu nhập ước tính trong năm của người phụ thuộc)",
+       "how": "Ghi thu nhập ước tính của người phụ thuộc trong năm. Bố mẹ ở quê không có thu nhập thì ghi 0. Người phụ thuộc chỉ được tính khi thu nhập trong giới hạn ghi trên đơn.",
+       "example": "0円"
+      },
+      {
+       "field": "B 生計を一にする事実・送金額 (số tiền đã gửi nuôi trong năm)",
+       "how": "Ở bước年末調整 cuối năm, ghi tổng số tiền đã gửi cho người thân không cư trú trong năm đó. Giữ toàn bộ biên lai chuyển tiền để nộp cho công ty làm 送金関係書類.",
+       "example": "400,000円 (ví dụ mẫu — gửi 40万円 trong năm)",
+       "mistake": "Gửi tiền mặt nhờ người quen cầm về, không có biên lai ngân hàng — không chứng minh được."
+      },
+      {
+       "field": "添付：親族関係書類 (giấy tờ chứng minh quan hệ)",
+       "how": "Người thân ở nước ngoài phải nộp giấy chứng minh quan hệ như hộ tịch hoặc giấy khai sinh kèm bản dịch tiếng Nhật. Công ty hướng dẫn cụ thể — chuẩn bị sớm từ đầu năm.",
+       "example": "Bản dịch giấy khai sinh / sổ hộ khẩu (ví dụ mẫu)"
+      },
+      {
+       "field": "C 障害者・寡婦・ひとり親・勤労学生 (khuyết tật, góa, cha/mẹ đơn thân, sinh viên đi làm)",
+       "how": "Chỉ tích khi mình hoặc người phụ thuộc thuộc các diện này. Không thuộc diện nào thì bỏ trống.",
+       "example": "Bỏ trống nếu không thuộc diện nào"
+      },
+      {
+       "field": "住民税に関する事項 — 16歳未満の扶養親族 (mục thuế cư trú — con dưới 16 tuổi)",
+       "how": "Có con dưới 16 tuổi thì ghi ở mục dưới cùng này dù con không tính khấu trừ thuế thu nhập. Không có con thì bỏ trống.",
+       "example": "Bỏ trống nếu không có con dưới 16 tuổi"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Link là PDF chính thức bản năm 令和8年分 (2026) của NTA; hàng năm công ty phát bản của năm đó — điền bản công ty phát, mẫu này để tập điền trước. Người Việt khai bố mẹ ở Việt Nam cần đủ 3 thứ: tích đúng ô 非居住者である親族, giấy chứng minh quan hệ có bản dịch, và biên lai gửi tiền. Danh sách mọi mẫu đơn年末調整 và bản tiếng Việt có trên trang tổng hợp của NTA: https://www.nta.go.jp/users/gensen/nencho/shinkokusyo/index.htm (đã mở kiểm tra ngày 2026-11-08)."
+    },
+    {
+     "name_jp": "給与所得者の保険料控除申告書",
+     "name_vi": "Đơn khai khấu trừ phí bảo hiểm — khai bảo hiểm nhân thọ, bảo hiểm động đất, nenkin tự đóng",
+     "download_url": "https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/gensen/pdf/2026bun_04.pdf",
+     "source": "国税庁",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "あなたの氏名・住所 (họ tên và địa chỉ của mình)",
+       "how": "Ghi họ tên và địa chỉ của mình ở phần đầu đơn.",
+       "example": "グエン・バン・アン／神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "生命保険料 — 保険会社等の名称 (bảo hiểm nhân thọ — tên công ty bảo hiểm)",
+       "how": "Sao đúng tên công ty bảo hiểm trên giấy chứng nhận khấu trừ 生命保険料控除証明書 công ty bảo hiểm gửi về mùa thu.",
+       "example": "Tên công ty bảo hiểm trên giấy chứng nhận (ví dụ mẫu)",
+       "mistake": "Tự ghi theo trí nhớ, sai tên công ty hoặc sai loại hợp đồng mới/cũ 新・旧."
+      },
+      {
+       "field": "生命保険料 — 保険等の種類・期間 (loại bảo hiểm và thời hạn)",
+       "how": "Ghi loại hợp đồng và thời hạn như trên giấy chứng nhận. Khoanh đúng区分: 一般の生命保険料, 介護医療保険料, 個人年金保険料.",
+       "example": "一般の生命保険料／新 (bảo hiểm nhân thọ thường / hợp đồng mới) — ví dụ mẫu"
+      },
+      {
+       "field": "生命保険料 — 契約者・受取人 (người đứng tên hợp đồng và người nhận tiền)",
+       "how": "Ghi người đứng tên hợp đồng và người nhận tiền bảo hiểm. Người nhận phải là mình hoặc người thân sống cùng nguồn lương mới được tính.",
+       "example": "契約者 グエン・バン・アン／受取人 グエン・バン・アン (ví dụ mẫu)"
+      },
+      {
+       "field": "生命保険料 — 本年中に支払った金額 (số tiền đã đóng trong năm)",
+       "how": "Ghi số tiền đã đóng trong năm theo giấy chứng nhận, đã trừ phần hoàn lại nếu có. Đính kèm giấy chứng nhận bản gốc khi nộp.",
+       "example": "60,000円 (ví dụ mẫu)"
+      },
+      {
+       "field": "地震保険料 (phí bảo hiểm động đất)",
+       "how": "Có bảo hiểm động đất cho nhà và đồ đạc thì ghi tên công ty, loại hợp đồng và số tiền theo giấy chứng nhận. Không có thì bỏ trống.",
+       "example": "Bỏ trống nếu không mua bảo hiểm động đất"
+      },
+      {
+       "field": "社会保険料 — 国民年金等を自分で払った分 (nenkin quốc dân tự đóng)",
+       "how": "Chỉ ghi phần bảo hiểm xã hội mình tự trả trực tiếp, ví dụ nenkin quốc dân đóng trong thời gian nghỉ việc. Phần công ty đã trừ vào lương thì không ghi lại. Nenkin quốc dân phải đính kèm giấy chứng nhận đã đóng.",
+       "example": "国民年金保険料 50,000円 (ví dụ mẫu)",
+       "mistake": "Ghi lại cả phần bảo hiểm công ty đã trừ lương — bị trùng và phải sửa."
+      },
+      {
+       "field": "小規模企業共済等掛金 — iDeCo等 (tiền đóng iDeCo và quỹ tương trợ)",
+       "how": "Đóng iDeCo thì ghi số tiền đã đóng trong năm theo giấy thông báo từ quỹ. Đính kèm giấy chứng nhận.",
+       "example": "個人型年金加入者掛金（iDeCo）120,000円 (ví dụ mẫu)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Link là PDF chính thức bản năm 令和8年分 (2026) của NTA. Nguyên tắc chung: mọi con số đều chép từ giấy chứng nhận các hãng bảo hiểm và quỹ gửi về, nộp kèm bản gốc giấy chứng nhận. Không mua bảo hiểm tư nhân nào và không tự đóng thêm gì thì đơn này nộp trắng vẫn được — phần bảo hiểm công ty trừ lương đã tự động tính."
+    },
+    {
+     "name_jp": "確定申告書等作成コーナー（確定申告書）",
+     "name_vi": "Trang tạo tờ khai thuế chính thức của NTA — tự khai khi công ty không làm年末調整, khai y tế, hoặc khai furusato nozei",
+     "download_url": "https://www.keisan.nta.go.jp/",
+     "source": "国税庁",
+     "format": "web",
+     "fill": [
+      {
+       "field": "作成開始・年度選択 (bắt đầu tạo và chọn năm khai)",
+       "how": "Vào trang, chọn tạo mới 新規作成 và chọn đúng năm thu nhập cần khai. Khai sai năm là phải làm lại.",
+       "example": "令和7年分 (khai cho thu nhập năm 2025) — ví dụ mẫu"
+      },
+      {
+       "field": "マイナンバー連携又は手入力の選択 (liên kết My Number Portal hoặc nhập tay)",
+       "how": "Chọn liên kết MynaPortal để tự điền lương và bảo hiểm, hoặc nhập tay theo giấy 源泉徴収票. Nhập tay thì cầm sẵn giấy khấu trừ tại nguồn của công ty.",
+       "example": "手入力（源泉徴収票を見ながら）(nhập tay nhìn giấy khấu trừ) — ví dụ mẫu"
+      },
+      {
+       "field": "氏名・生年月日・住所 (họ tên, ngày sinh, địa chỉ)",
+       "how": "Ghi họ tên, ngày sinh và địa chỉ tại thời điểm ngày 1 tháng 1 của năm khai theo hướng dẫn trên màn hình.",
+       "example": "グエン・バン・アン／1998年5月12日／神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "個人番号（マイナンバー）(số My Number)",
+       "how": "Nhập 12 số My Number. Gửi qua e-Tax bằng thẻ My Number thì hệ thống đọc từ thẻ.",
+       "example": "1234 5678 9012"
+      },
+      {
+       "field": "給与収入・源泉徴収票の入力 (nhập lương theo giấy khấu trừ tại nguồn)",
+       "how": "Chép đúng từng ô từ giấy 源泉徴収票: tổng lương đã trả 支払金額, số thuế đã trừ 源泉徴収税額, các khoản khấu trừ đã ghi. Sai một số là phải khai sửa.",
+       "example": "支払金額 3,500,000円／源泉徴収税額 theo giấy của công ty (ví dụ mẫu — lương năm 350万円)",
+       "mistake": "Nhập lương tháng thay vì tổng lương cả năm trên giấy khấu trừ."
+      },
+      {
+       "field": "扶養控除・国外居住親族 (khấu trừ người phụ thuộc ở nước ngoài)",
+       "how": "Khai bố mẹ ở Việt Nam ở mục người phụ thuộc: tên, ngày sinh, thu nhập 0, và số tiền đã gửi trong năm. Chuẩn bị giấy quan hệ và biên lai gửi tiền như ở đơn年末調整.",
+       "example": "グエン・ティ・ビー／母／所得 0円／送金 400,000円 (ví dụ mẫu)"
+      },
+      {
+       "field": "医療費控除 (khấu trừ chi phí y tế)",
+       "how": "Tổng chi phí y tế trong năm vượt 10万円 mới khai. Nhập từng hóa đơn bệnh viện, nhà thuốc theo file tổng hợp tải từ trang này.",
+       "example": "Tổng hóa đơn mẫu 150,000円 → phần vượt 50,000円 được tính (ví dụ mẫu)"
+      },
+      {
+       "field": "寄附金控除（ふるさと納税）(khấu trừ quyên góp furusato nozei)",
+       "how": "Khai furusato nozei thì nhập từng địa phương và số tiền theo giấy chứng nhận nhận tiền 寄附金受領証明書. Đã nộp đơn one-stop mà lại khai thuế thì phần one-stop mất hiệu lực — phải khai đủ mọi địa phương đã quyên.",
+       "example": "1自治体／20,000円 (ví dụ mẫu)"
+      },
+      {
+       "field": "還付先口座 (tài khoản nhận tiền hoàn thuế)",
+       "how": "Ghi tài khoản ngân hàng đứng tên mình để nhận tiền hoàn. Kiểm tra kỹ số tài khoản trước khi gửi.",
+       "example": "Tài khoản của グエン・バン・アン (ví dụ mẫu)",
+       "mistake": "Tài khoản Yucho phải nhập theo định dạng số tài khoản dùng cho chuyển khoản, không nhập nguyên ký hiệu 記号 như trên sổ."
+      },
+      {
+       "field": "送信方法 e-Tax又は印刷 (cách nộp: gửi điện tử hoặc in gửi bưu điện)",
+       "how": "Chọn gửi e-Tax bằng thẻ My Number, hoặc in ra ký tên và gửi bưu điện đến cơ quan thuế nơi ở. Lưu file dữ liệu .data để năm sau dùng lại.",
+       "example": "e-Tax送信 (gửi điện tử) — ví dụ mẫu"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Đây là trang web chính thức duy nhất của NTA để tạo tờ khai — ngoài bản web còn có mẫu PDF tải trên trang thủ tục của NTA, nhưng bản web tự tính toán và gửi e-Tax được nên NTA khuyến nghị dùng bản web. Hạn khai thường là ngày 16 tháng 3 của năm sau (tùy năm, kiểm tra trên trang)."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "国税庁動画チャンネル",
+     "lang": "ja",
+     "note": "Video chính thức của Cục Thuế: tổng quan quy trình điều chỉnh thuế cuối năm và các tờ khai liên quan (bản Reiwa 8).",
+     "title": "年末調整の手続　～概要～",
+     "url": "https://www.youtube.com/watch?v=tWxpJGIDSdo"
+    },
+    {
+     "channel": "国税庁動画チャンネル",
+     "lang": "ja",
+     "note": "Video chính thức của Cục Thuế giới thiệu cách tự khai thuế (確定申告) online bằng e-Tax với thẻ My Number trên điện thoại.",
+     "title": "イーね！カンタン！e-Tax（令和８年１月修正）",
+     "url": "https://www.youtube.com/watch?v=-1_3bZF1Wbk"
+    }
+   ]
+  },
+  {
+   "id": "furusato-nozei",
+   "group": "Tiền, thuế & ngân hàng",
+   "title": "Quyên góp quê hương Furusato nozei （ふるさと納税）",
+   "icon": "🎁",
+   "summary": "Furusato nozei là chế độ quyên góp tiền cho một địa phương （自治体） ở Nhật mà bạn muốn ủng hộ. Phần tiền quyên góp vượt quá 2.000 yên tự trả sẽ được trừ vào thuế thu nhập và thuế cư trú, trong một hạn mức theo thu nhập của bạn, và bạn còn nhận quà cảm ơn （返礼品） của địa phương. Bài này hướng dẫn tính hạn mức an toàn, các bước đặt trên cổng thông tin, và cách chọn ワンストップ特例 hay 確定申告.",
+   "who": "Người đang đi làm và có đóng thuế cư trú ở Nhật, muốn nhận quà cảm ơn địa phương mà chi phí thực tế chỉ khoảng 2.000 yên/năm. Người thu nhập thấp, được miễn thuế cư trú, hoặc không đóng thuế thì hạn mức rất nhỏ hoặc bằng 0 — nên tính mô phỏng trước khi quyên góp.",
+   "docs": [
+    "Phiếu 源泉徴収票 của năm trước (hoặc năm nay nếu đã có) — để nhập số liệu vào công cụ mô phỏng hạn mức",
+    "Thông báo thuế cư trú 住民税決定通知書 (nhận khoảng tháng 6) — để tính hạn mức chính xác hơn nếu dùng mô phỏng chi tiết",
+    "Thẻ My Number マイナンバーカード hoặc giấy tờ xác nhận số cá nhân + giấy tờ tùy thân — bắt buộc khi làm ワンストップ特例 (nộp bản sao theo hướng dẫn của địa phương/cổng thông tin)",
+    "Thẻ tín dụng hoặc phương thức thanh toán mà cổng furusato chấp nhận (một số địa phương nhận chuyển khoản, thanh toán cửa hàng tiện lợi)",
+    "Địa chỉ nhận quà và địa chỉ đăng ký cư trú 住民票 phải khớp thông tin người quyên góp — giấy chứng nhận quyên góp cấp theo tên và địa chỉ này",
+    "Giấy chứng nhận tiền quyên góp 寄附金受領証明書 của từng địa phương (gửi về sau khi quyên góp) — bắt buộc nếu làm 確定申告， và nên giữ kể cả khi dùng one-stop"
+   ],
+   "prep_home": [
+    "Dùng công cụ mô phỏng （シミュレーション) trên cổng furusato hoặc trang của Bộ Tổng vụ để tính hạn mức mà phần tự trả chỉ là 2.000 yên; nhập thu nhập năm và tình trạng gia đình (độc thân/vợ chồng/người phụ thuộc)",
+    "Để an toàn, chỉ quyên góp khoảng 90% hạn mức mô phỏng — vì hạn mức thật phụ thuộc cả các khấu trừ khác (y tế, vay nhà, iDeCo...) mà mô phỏng đơn giản không tính hết",
+    "Quyết định trước: dùng ワンストップ特例 (tối đa 5 địa phương, không cần 確定申告） hay làm 確定申告 — nếu năm đó bạn vốn phải/tự làm 確定申告 vì lý do khác thì one-stop mất hiệu lực, hãy chọn phương án khai thuế ngay từ đầu",
+    "Đếm số địa phương dự định quyên góp: cùng 1 địa phương quyên góp nhiều lần vẫn tính là 1 địa phương",
+    "Chuẩn bị bản sao thẻ My Number (mặt trước + mặt sau) hoặc giấy tờ thay thế để nộp one-stop ngay sau khi đặt, tránh quên tới hạn 10/1",
+    "Ghi vào lịch: hạn cuối quyên góp tính cho năm nay là 31/12 (tính theo ngày thanh toán hoàn tất), hạn nộp giấy one-stop là 10/1 năm sau (phải ĐẾN nơi nhận trước hạn — 必着）"
+   ],
+   "steps": [
+    {
+     "t": "Tính hạn mức an toàn bằng công cụ mô phỏng",
+     "d": "LÀM Ở ĐÂU: online, trên trang mô phỏng của cổng furusato （さとふる/ふるさとチョイス/楽天ふるさと納税 đều có) hoặc bảng目安 của Bộ Tổng vụ （総務省）. CẦN GÌ: 源泉徴収票 — nhập tổng thu nhập năm 支払金額， tình trạng hôn nhân, số người phụ thuộc. HIỂU KẾT QUẢ: con số hiện ra là TỔNG số tiền quyên góp trong năm mà phần vượt 2.000 yên được trừ hết vào thuế (gọi là hạn mức 控除上限額）. Ví dụ mô phỏng cho khoảng 50.000 yên thì quyên góp 50.000 yên: bạn trả trước 50.000, sau đó khoảng 48.000 được giảm vào thuế thu nhập/thuế cư trú, thực trả 2.000 yên. Vượt hạn mức thì phần vượt KHÔNG được trừ — thành tiền quyên góp thật, không hoàn lại. MẤT BAO LÂU: khoảng 10 phút. KIỂM TRA GÌ: mô phỏng chi tiết （詳細シミュレーション) chính xác hơn mô phỏng nhanh — nếu có 住民税決定通知書 hãy dùng bản chi tiết. Ghi lại con số và chỉ dùng khoảng 90% để an toàn.",
+     "ja": "ふるさと納税の控除上限額をシミュレーションで確認します。",
+     "vi": "Tôi kiểm tra hạn mức khấu trừ furusato nozei bằng công cụ mô phỏng."
+    },
+    {
+     "t": "Chọn cổng thông tin và tạo tài khoản",
+     "d": "LÀM Ở ĐÂU: online. Các cổng lớn: さとふる (Satofull), ふるさとチョイス (Furusato Choice — cổng có số quà đăng tải rất lớn), 楽天ふるさと納税 (trên Rakuten Ichiba, tiện nếu bạn đã có tài khoản Rakuten). CẦN GÌ: email, họ tên, địa chỉ ĐÚNG như trên 住民票 (phiếu cư trú) — tên và địa chỉ người quyên góp phải khớp giấy tờ cư trú vì giấy chứng nhận và thủ tục trừ thuế dùng thông tin này; ghi sai tên người khác trong nhà là không được trừ cho bạn. ĐIỀN GÌ: tạo tài khoản, lưu địa chỉ nhận quà. MẤT BAO LÂU: khoảng 5–10 phút. KIỂM TRA GÌ: bật tùy chọn nhận giấy 寄附金受領証明書 và — nếu định dùng one-stop — chọn mục '希望する' (mong muốn) đối với ワンストップ特例申請 ngay khi đặt từng đơn.",
+     "ja": "ワンストップ特例の申請を希望します。寄附金受領証明書を送ってください。",
+     "vi": "Tôi muốn đăng ký chế độ đặc lệ one-stop. Xin gửi giấy chứng nhận tiền quyên góp cho tôi."
+    },
+    {
+     "t": "Chọn địa phương và quà cảm ơn, đặt quyên góp",
+     "d": "LÀM Ở ĐÂU: trên cổng đã chọn. CÁCH LÀM: tìm theo địa phương hoặc theo quà （返礼品 henreihin — gạo, thịt, trái cây, hải sản, đồ dùng...); quà cảm ơn theo quy định có giá trị khoảng không quá 30% số tiền quyên góp và là đặc sản của địa phương đó. Mỗi lần đặt: chọn số tiền quyên góp của món quà, mục đích sử dụng tiền (một số địa phương cho chọn), xác nhận có xin one-stop hay không, rồi thanh toán bằng thẻ tín dụng là nhanh nhất. LƯU Ý THỜI ĐIỂM: tiền được tính vào năm nào là theo NGÀY THANH TOÁN HOÀN TẤT — muốn tính vào năm nay thì thanh toán phải xong trước 31/12; cuối tháng 12 hệ thống rất đông, nên đặt trước giữa tháng 12. NHẬN ĐƯỢC GÌ: email xác nhận đặt hàng và mã đơn; quà giao sau theo lịch của địa phương (thường khoảng 2 tuần đến 2 tháng, quà theo mùa giao đúng mùa). MẤT BAO LÂU: khoảng 10 phút mỗi địa phương. KIỂM TRA GÌ: tổng tiền đã quyên góp cộng dồn trong năm chưa vượt hạn mức an toàn ở Bước 1.",
+     "ja": "返礼品を選んで寄附を申し込みます。決済を完了しました。",
+     "vi": "Tôi chọn quà cảm ơn và đăng ký quyên góp. Đã thanh toán xong."
+    },
+    {
+     "t": "Nhận giấy chứng nhận và giấy one-stop từ địa phương",
+     "d": "LÀM Ở ĐÂU: giấy được gửi về nhà qua bưu điện, thường khoảng 2 tuần đến 1 tháng sau khi quyên góp (mùa cao điểm cuối năm có thể chậm hơn). NHẬN ĐƯỢC GÌ: (1) 寄附金受領証明書 — giấy chứng nhận số tiền và ngày quyên góp, địa phương phát hành; (2) nếu bạn chọn one-stop: mẫu đơn 寄附金税額控除に係る申告特例申請書 (đơn xin đặc lệ khấu trừ) — một số địa phương/cổng cho làm one-stop ONLINE bằng thẻ My Number trên ứng dụng/trang chuyên dụng, không cần giấy. KIỂM TRA GÌ: họ tên, địa chỉ, số tiền, ngày tháng trên chứng nhận có đúng không; sai thì liên hệ ngay bộ phận furusato của địa phương hoặc tổng đài của cổng. Cất tất cả chứng nhận vào 1 bìa theo năm — dù dùng one-stop cũng KHÔNG vứt, vì nếu sau này phải làm 確定申告 thì cần lại toàn bộ.",
+     "ja": "寄附金受領証明書を受け取りました。記載内容に間違いがあります。",
+     "vi": "Tôi đã nhận giấy chứng nhận tiền quyên góp. / Nội dung ghi trên giấy có chỗ sai."
+    },
+    {
+     "t": "Nộp đơn ワンストップ特例 cho từng địa phương (nếu đủ điều kiện)",
+     "d": "ĐIỀU KIỆN dùng one-stop (theo Bộ Tổng vụ và 国税庁） — phải thỏa CẢ HAI: (1) Bạn là người vốn KHÔNG cần làm 確定申告 (chỉ có lương 1 nơi, đã 年末調整， không có việc khác phải khai); (2) Tổng số địa phương quyên góp trong năm từ 5 trở xuống. CÁCH NỘP GIẤY: điền đơn 申告特例申請書 của TỪNG địa phương (quyên góp 3 địa phương = nộp 3 bộ), đính kèm bản sao giấy tờ xác nhận My Number + giấy tờ tùy thân, gửi bưu điện đến địa chỉ ghi trên đơn. HẠN: đơn phải ĐẾN địa phương trước ngày 10/1 năm sau （必着） — gửi chậm nhất đầu tháng 1, tốt nhất gửi ngay khi nhận đơn. CÁCH NỘP ONLINE: một số cổng/địa phương cho nộp qua ứng dụng one-stop điện tử bằng thẻ My Number — nhanh và có xác nhận đã gửi, nên ưu tiên nếu nơi đó hỗ trợ. THAY ĐỔI THÔNG TIN: chuyển nhà/đổi tên sau khi nộp đơn giấy thì phải nộp thêm đơn thông báo thay đổi 変更届出書 cũng trước 10/1. KIỂM TRA GÌ: đã nộp đủ cho MỌI địa phương chưa — thiếu 1 nơi là nơi đó không được xử lý one-stop. KẾT QUẢ: khi one-stop thành công, toàn bộ phần trừ thuế được trừ vào THUẾ CƯ TRÚ của năm sau (không hoàn qua thuế thu nhập).",
+     "ja": "ワンストップ特例申請書とマイナンバーの確認書類を送ります。1月10日必着です。",
+     "vi": "Tôi gửi đơn đặc lệ one-stop và giấy tờ xác nhận My Number. Hạn là phải đến trước ngày 10/1."
+    },
+    {
+     "t": "Trường hợp phải làm 確定申告 cho furusato",
+     "d": "KHI NÀO: quyên góp từ 6 địa phương trở lên; HOẶC năm đó bạn làm 確定申告 vì bất kỳ lý do nào khác (khấu trừ y tế, thu nhập phụ, đổi việc...). LƯU Ý QUAN TRỌNG: hễ nộp 確定申告 thì mọi đơn one-stop đã gửi đều MẤT HIỆU LỰC — trong tờ khai phải khai lại tiền furusato của TẤT CẢ địa phương. LÀM Ở ĐÂU/CÁCH LÀM: theo hướng dẫn phần 確定申告 trong bài 'Khai thuế cuối năm' cùng chuyên mục — trên trang tạo tờ khai của 国税庁， nhập vào mục 寄附金控除 (khấu trừ tiền quyên góp) tổng số tiền theo từng 寄附金受領証明書. CẦN GÌ: chứng nhận gốc/bản theo hướng dẫn (nộp e-Tax thì thường không phải gửi kèm nhưng phải giữ 5 năm). KỲ HẠN: nguyên tắc 16/2–15/3 năm sau, giống hạn 確定申告 thông thường. KẾT QUẢ: phần trừ được chia giữa thuế thu nhập (hoàn/nộp bớt trong lần khai này) và thuế cư trú năm sau. MẤT BAO LÂU: thêm khoảng 10–15 phút nhập liệu nếu đã gom đủ chứng nhận.",
+     "ja": "ふるさと納税の寄附金控除を確定申告で申請します。",
+     "vi": "Tôi khai khấu trừ tiền quyên góp furusato nozei bằng khai thuế quyết toán."
+    },
+    {
+     "t": "Kiểm tra tiền trừ thuế vào thuế cư trú năm sau",
+     "d": "LÀM Ở ĐÂU: khoảng tháng 6 năm sau, công ty phát 住民税決定通知書 (thông báo quyết định thuế cư trú) hoặc thành phố gửi về nhà. KIỂM TRA GÌ: trên thông báo có dòng ghi số tiền khấu trừ quyên góp 寄附金税額控除 — đối chiếu: tổng tiền quyên góp trừ 2.000 yên phải khớp (với one-stop, toàn bộ phần trừ nằm ở thuế cư trú; với 確定申告， một phần đã trừ ở thuế thu nhập, phần còn lại ở thuế cư trú). Thu nhập năm sau giảm/lương thay đổi thì thuế cư trú tính theo thu nhập NĂM QUYÊN GÓP. Nếu số tiền không khớp hoặc không thấy dòng khấu trừ: mang chứng nhận quyên góp và thông báo đến bộ phận thuế cư trú của 市役所 hỏi càng sớm càng tốt. MẤT BAO LÂU: kiểm tra khoảng 10 phút. Đây là bước nhiều người bỏ qua — không kiểm tra thì sai sót one-stop bị trễ hạn sẽ không ai báo cho bạn.",
+     "ja": "住民税の決定通知書で寄附金税額控除を確認したいです。",
+     "vi": "Tôi muốn kiểm tra khoản khấu trừ quyên góp trên thông báo quyết định thuế cư trú."
+    }
+   ],
+   "cost": "Số tiền bạn bỏ ra trước = tổng tiền quyên góp bạn chọn. Phần vượt 2.000 yên/năm (tính trên TỔNG cả năm, không phải từng lần) được trừ vào thuế trong hạn mức. Gửi đơn one-stop bằng giấy tốn tem bưu điện khoảng vài trăm yên/bộ; nộp online miễn phí. Ngoài ra không mất phí thủ tục.",
+   "duration": "Tính hạn mức và đặt quyên góp: khoảng 30–60 phút cho địa phương đầu tiên. Quà giao khoảng 2 tuần–2 tháng tùy loại. Giấy chứng nhận về khoảng 2 tuần–1 tháng. Hạn quyên góp của năm: thanh toán xong trước 31/12. Hạn nộp one-stop: 10/1 năm sau (phải đến nơi). Tiền trừ thuế thể hiện ở thuế cư trú từ tháng 6 năm sau.",
+   "warnings": [
+    "Nếu trục trặc — quá hạn 10/1 one-stop hoặc đơn bị trả lại vì thiếu giấy tờ: one-stop không còn kịp thì chuyển sang làm 確定申告 trong kỳ 16/2–15/3 để vẫn được khấu trừ; đừng bỏ luôn",
+    "Nếu trục trặc — giấy chứng nhận ghi sai tên/địa chỉ hoặc làm mất: liên hệ bộ phận furusato của địa phương đã quyên góp hoặc tổng đài cổng thông tin để xin cấp lại （再発行）; làm càng sớm càng tốt vì gần hạn khai thuế sẽ rất chậm",
+    "Nếu trục trặc — không hiểu tiếng Nhật khi điền đơn one-stop: các mục chính chỉ là họ tên, địa chỉ, số My Number, ngày sinh và dấu tích xác nhận điều kiện; có thể làm online qua ứng dụng one-stop có hướng dẫn từng màn hình, hoặc nhờ bộ phận nhân sự/tổng đài của cổng giải thích. Tuyệt đối ghi đúng số My Number — sai số là đơn vô hiệu",
+    "Đừng quyên góp vượt hạn mức mô phỏng: phần vượt không được trừ thuế, không hoàn lại. Người năm đó thu nhập giảm mạnh, nghỉ việc, hoặc được miễn thuế cư trú thì hạn mức thực tế có thể gần bằng 0",
+    "Tên người quyên góp phải là người muốn được trừ thuế và khớp 住民票； quyên góp bằng tài khoản/tên của vợ/chồng thì người đó mới là người được khấu trừ, không chuyển sang bạn được",
+    "Quà cảm ơn có thể bị tính là thu nhập tạm thời 一時所得 trong một số trường hợp giá trị lớn — đa số trường hợp thông thường không phát sinh thuế, nhưng nếu tổng thu nhập tạm thời trong năm lớn, hãy kiểm tra lại quy định trên trang 国税庁",
+    "Cảnh giác trang web giả mạo cổng furusato: chỉ đặt qua trang chính thức của các cổng lớn hoặc trang của Bộ Tổng vụ; không chuyển tiền vào tài khoản cá nhân lạ",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Tổng tiền quyên góp cả năm vẫn nằm trong hạn mức an toàn đã mô phỏng (khoảng 90%)",
+    "Đã nhận đủ 寄附金受領証明書 của mọi địa phương và kiểm tra đúng tên, địa chỉ, số tiền",
+    "Nếu dùng one-stop: đã nộp đơn cho TỪNG địa phương và chắc chắn đến trước 10/1; giữ bằng chứng đã gửi (biên lai bưu điện/xác nhận online)",
+    "Nếu năm đó phát sinh việc phải 確定申告： nhớ khai lại toàn bộ furusato trong tờ khai vì one-stop mất hiệu lực",
+    "Tháng 6 năm sau: kiểm tra dòng 寄附金税額控除 trên thông báo thuế cư trú có khớp tổng tiền trừ 2.000 yên không",
+    "Cất chứng nhận quyên góp 5 năm cùng hồ sơ thuế của năm đó"
+   ],
+   "vocab": [
+    {
+     "ja": "ふるさと納税",
+     "reading": "ふるさとのうぜい",
+     "vi": "chế độ quyên góp cho địa phương và được trừ thuế (furusato nozei)"
+    },
+    {
+     "ja": "寄附",
+     "reading": "きふ",
+     "vi": "quyên góp"
+    },
+    {
+     "ja": "自治体",
+     "reading": "じちたい",
+     "vi": "địa phương (tỉnh, thành phố, thị trấn, làng) nhận quyên góp"
+    },
+    {
+     "ja": "返礼品",
+     "reading": "へんれいひん",
+     "vi": "quà cảm ơn gửi lại cho người quyên góp"
+    },
+    {
+     "ja": "控除上限額",
+     "reading": "こうじょじょうげんがく",
+     "vi": "hạn mức tối đa được khấu trừ thuế"
+    },
+    {
+     "ja": "自己負担",
+     "reading": "じこふたん",
+     "vi": "phần tự trả (2.000 yên/năm trong furusato nozei)"
+    },
+    {
+     "ja": "ワンストップ特例",
+     "reading": "わんすとっぷとくれい",
+     "vi": "chế độ đặc lệ one-stop: không cần khai thuế quyết toán"
+    },
+    {
+     "ja": "申告特例申請書",
+     "reading": "しんこくとくれいしんせいしょ",
+     "vi": "đơn xin áp dụng đặc lệ one-stop"
+    },
+    {
+     "ja": "寄附金受領証明書",
+     "reading": "きふきんじゅりょうしょうめいしょ",
+     "vi": "giấy chứng nhận đã nhận tiền quyên góp"
+    },
+    {
+     "ja": "寄附金控除",
+     "reading": "きふきんこうじょ",
+     "vi": "khấu trừ tiền quyên góp khi khai thuế"
+    },
+    {
+     "ja": "住民税",
+     "reading": "じゅうみんぜい",
+     "vi": "thuế cư trú đóng cho địa phương nơi ở"
+    },
+    {
+     "ja": "必着",
+     "reading": "ひっちゃく",
+     "vi": "phải đến nơi nhận trước hạn (không tính ngày gửi)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "ふるさと納税をしたいです。上限額を教えてください。",
+     "vi": "Tôi muốn làm furusato nozei. Xin cho biết hạn mức của tôi."
+    },
+    {
+     "ja": "ワンストップ特例の申請書を送ってください。",
+     "vi": "Xin gửi cho tôi đơn đăng ký đặc lệ one-stop."
+    },
+    {
+     "ja": "寄附金受領証明書を再発行してください。",
+     "vi": "Xin cấp lại giấy chứng nhận tiền quyên góp cho tôi."
+    },
+    {
+     "ja": "申請書の住所を変更したいです。変更届はどうすればいいですか。",
+     "vi": "Tôi muốn đổi địa chỉ trên đơn đăng ký. Đơn thông báo thay đổi làm thế nào ạ?"
+    },
+    {
+     "ja": "返礼品がまだ届いていません。確認をお願いします。",
+     "vi": "Quà cảm ơn vẫn chưa đến. Xin kiểm tra giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "総務省 — Cổng thông tin Furusato nozei: cơ chế và cách trừ thuế",
+     "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/mechanism/about.html"
+    },
+    {
+     "label": "総務省 — Furusato nozei: câu hỏi thường gặp (gồm ワンストップ特例 tối đa 5 địa phương)",
+     "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/faq/"
+    },
+    {
+     "label": "国税庁 — No.1155 Furusato nozei (khấu trừ tiền quyên góp)",
+     "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm"
+    },
+    {
+     "label": "ふるさとチョイス — Giải thích chế độ ワンストップ特例",
+     "url": "https://www.furusato-tax.jp/about/onestop"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "寄附金税額控除に係る申告特例申請書（ワンストップ特例申請書）",
+     "name_vi": "Đơn xin áp dụng đặc lệ one-stop cho furusato nozei — nộp cho từng địa phương đã quyên, hạn ngày 10 tháng 1 năm sau",
+     "download_url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/mechanism/procedure.html",
+     "source": "総務省 ふるさと納税ポータルサイト",
+     "format": "web",
+     "fill": [
+      {
+       "field": "提出先 自治体名 (địa phương nơi nộp đơn)",
+       "how": "Đơn nộp cho chính địa phương đã nhận tiền quyên, mỗi địa phương một đơn riêng. Ghi tên tỉnh và thành phố nhận quyên ở đầu đơn họ gửi kèm giấy chứng nhận.",
+       "example": "北海道夕張市長 宛 (ví dụ mẫu — ghi địa phương mình đã quyên thật)"
+      },
+      {
+       "field": "申請日 (ngày viết đơn)",
+       "how": "Ghi ngày viết đơn. Hạn cuối là ngày 10 tháng 1 của năm sau năm quyên — quá hạn là mất one-stop, phải tự khai thuế.",
+       "example": "2027年1月5日 (ví dụ mẫu cho khoản quyên năm 2026)"
+      },
+      {
+       "field": "住所 (địa chỉ)",
+       "how": "Ghi địa chỉ theo giấy chứng minh cư trú tại thời điểm ngày 1 tháng 1 của năm sau năm quyên. Đây là địa chỉ quyết định nơi trừ thuế cư trú.",
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Chuyển nhà sau khi quyên mà không nộp đơn thay đổi — khấu trừ về nhầm địa phương."
+      },
+      {
+       "field": "氏名・フリガナ (họ tên và katakana)",
+       "how": "Ghi họ tên và katakana đúng như trên thẻ My Number.",
+       "example": "グエン・バン・アン／グエン・バン・アン"
+      },
+      {
+       "field": "個人番号（マイナンバー）(số My Number)",
+       "how": "Ghi đủ 12 số My Number. Đơn thiếu số này là không hợp lệ.",
+       "example": "1234 5678 9012",
+       "mistake": "Thiếu My Number hoặc ghi sai một số — đơn bị trả lại và có thể quá hạn 10 tháng 1."
+      },
+      {
+       "field": "生年月日・性別 (ngày sinh, giới tính)",
+       "how": "Ghi ngày sinh và giới tính như giấy tờ tùy thân.",
+       "example": "1998年5月12日／男 (nam)"
+      },
+      {
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số điện thoại liên lạc được để địa phương gọi khi hồ sơ thiếu.",
+       "example": "090-1234-5678"
+      },
+      {
+       "field": "寄附年月日・寄附金額 (ngày quyên và số tiền)",
+       "how": "Chép ngày quyên và số tiền đúng như giấy chứng nhận nhận tiền địa phương gửi. Mỗi lần quyên một dòng nếu mẫu đơn cho ghi nhiều dòng.",
+       "example": "2026年11月20日／20,000円 (ví dụ mẫu)"
+      },
+      {
+       "field": "チェック欄① 確定申告を行わないことの確認 (cam kết không khai thuế)",
+       "how": "Tích vào ô xác nhận mình là người làm công ăn lương không có nghĩa vụ khai thuế. Sau đó mà vẫn khai thuế vì lý do khác thì đơn one-stop này tự mất hiệu lực.",
+       "example": "Tích ✓ vào ô xác nhận"
+      },
+      {
+       "field": "チェック欄② 寄附先が5団体以内であることの確認 (cam kết quyên không quá 5 địa phương)",
+       "how": "Tích vào ô xác nhận tổng số địa phương mình quyên trong năm không quá 5. Quyên địa phương thứ 6 là toàn bộ phải chuyển sang khai thuế.",
+       "example": "Tích ✓ vào ô xác nhận",
+       "mistake": "Quyên 6 nơi nhưng vẫn nộp one-stop — cả năm đó không được khấu trừ qua one-stop."
+      },
+      {
+       "field": "添付書類 マイナンバー確認・本人確認 (giấy đính kèm: xác nhận số và danh tính)",
+       "how": "Đính kèm bản sao thẻ My Number cả hai mặt, hoặc giấy thông báo số kèm thẻ lưu trú hoặc bằng lái theo hướng dẫn trên đơn. Nay nhiều địa phương cho nộp online bằng thẻ My Number.",
+       "example": "Bản sao 2 mặt thẻ My Number (ví dụ mẫu)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Bộ Nội vụ xác nhận trên trang chính thức: mẫu đơn do từng địa phương nhận quyên gửi kèm giấy chứng nhận (mẫu chuẩn toàn quốc 省令様式第55号の5 nên các ô giống nhau), một số địa phương cho nộp online bằng thẻ My Number. Trang link là trang thủ tục chính thức của cổng furusato nozei của Bộ Nội vụ (総務省) — cổng này không đăng file PDF đơn riêng vì đơn do địa phương phát."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "節約マスター",
+     "lang": "ja",
+     "note": "6 bước làm furusato nozei: tính hạn mức khấu trừ, chọn trang/quà, quyên góp, chọn one-stop hay khai thuế, rồi kiểm tra khấu trừ thuế cư trú năm sau.",
+     "title": "ふるさと納税のやり方6STEP完全マニュアル｜9割が知らない限度額計算と実質2000円で6万円分もらう方法",
+     "url": "https://www.youtube.com/watch?v=C1dFDGm8mSc"
+    }
+   ]
+  },
+  {
+   "id": "mo-tai-khoan-nisa",
+   "group": "Tiền, thuế & ngân hàng",
+   "title": "Mở tài khoản NISA （NISA口座を開設する）",
+   "icon": "📈",
+   "summary": "Bài này CHỈ hướng dẫn thủ tục: mở tài khoản chứng khoán tổng hợp và tài khoản NISA tại một công ty chứng khoán, giấy tờ cần có, và các bước đăng ký trên web/app (lấy Rakuten Securities làm ví dụ quy trình). NISA có 2 khung là つみたて投資枠 và 成長投資枠 — bài chỉ giải thích các khung này ở mức thủ tục và hạn mức theo quy định, không khuyên nên mua gì.",
+   "who": "Người Việt đang sống ở Nhật, từ 18 tuổi trở lên (tính tại ngày 1/1 của năm mở tài khoản, theo quy định hiện hành), có thẻ lưu trú còn hạn đủ dài, thẻ My Number và tài khoản ngân hàng tại Nhật, muốn hoàn tất thủ tục mở tài khoản chứng khoán + NISA. Mỗi người chỉ được có 1 tài khoản NISA tại 1 công ty tài chính tại một thời điểm.",
+   "docs": [
+    "Thẻ lưu trú 在留カード (zairyū kādo) còn hạn — với người nước ngoài, Rakuten Securities yêu cầu nộp thẻ lưu trú làm giấy tờ xác minh danh tính (người không phải vĩnh trú cần thời gian lưu trú còn lại từ khoảng 3 tháng trở lên tính từ ngày đăng ký; kiểm tra điều kiện hiện hành trên trang công ty)",
+    "Thẻ My Number マイナンバーカード — dùng cả để xác minh danh tính (mặt trước) và đăng ký số cá nhân My Number (mặt sau) — mở tài khoản chứng khoán bắt buộc phải đăng ký My Number",
+    "Trường hợp chưa có thẻ nhựa My Number: giấy thông báo số cá nhân 通知カード kèm giấy tờ tùy thân có ảnh, hoặc bản sao giấy cư trú 住民票 có ghi My Number — theo danh mục giấy tờ công ty chấp nhận tại thời điểm đăng ký",
+    "Tài khoản ngân hàng tại Nhật đứng tên chính bạn (để nạp/rút tiền với tài khoản chứng khoán) — chuẩn bị tên ngân hàng, chi nhánh, số tài khoản; nếu dùng ngân hàng cùng hệ sinh thái (ví dụ Rakuten Bank với Rakuten Securities) có thể có tính năng liên kết tự động",
+    "Điện thoại thông minh có camera và đọc được thẻ NFC (để xác minh danh tính online bằng cách chụp thẻ + chụp khuôn mặt), email và số điện thoại đang dùng",
+    "Thông tin nơi làm việc (tên công ty, địa chỉ, số điện thoại) và thông tin nghề nghiệp — mẫu đăng ký tài khoản chứng khoán có mục khai nơi làm việc và mục đích giao dịch theo quy định phòng chống rửa tiền"
+   ],
+   "prep_home": [
+    "Kiểm tra thẻ lưu trú còn hạn bao lâu; nếu sắp hết hạn dưới khoảng 3 tháng, gia hạn lưu trú xong rồi hãy đăng ký để tránh bị từ chối",
+    "Kiểm tra họ tên và địa chỉ trên thẻ lưu trú, thẻ My Number, tài khoản ngân hàng phải KHỚP nhau từng ký tự (kể cả cách ghi romaji/katakana) — lệch là hồ sơ bị trả lại",
+    "Chụp thử ảnh thẻ lưu trú 2 mặt và mặt trước thẻ My Number ở nơi đủ sáng, không lóa, đủ 4 góc — xem rõ ảnh mới dùng",
+    "Nghĩ sẵn: mật khẩu đăng nhập tài khoản chứng khoán, mã PIN giao dịch — đặt khác mật khẩu ngân hàng và cất vào trình quản lý mật khẩu",
+    "Đọc trước trên trang 金融庁 (Cơ quan Dịch vụ Tài chính) về 2 khung của NISA để đến lúc chọn trên màn hình không bỡ ngỡ: つみたて投資枠 và 成長投資枠 là 2 khung trong CÙNG 1 tài khoản NISA, dùng song song được",
+    "Chuẩn bị sẵn câu trả lời cho các mục khai báo khi mở tài khoản: thu nhập năm khoảng bao nhiêu, tài sản tài chính khoảng bao nhiêu, kinh nghiệm đầu tư (chưa có thì chọn 'chưa có' — khai đúng sự thật), mục đích mở tài khoản"
+   ],
+   "steps": [
+    {
+     "t": "Hiểu ở mức thủ tục: tài khoản chứng khoán và tài khoản NISA là 2 lớp",
+     "d": "GIẢI THÍCH ĐƠN GIẢN: để dùng NISA bạn cần mở 2 thứ cùng lúc tại 1 công ty chứng khoán: (1) 総合口座 (sōgō kōza — tài khoản tổng hợp/tài khoản giao dịch chứng khoán thông thường); (2) NISA口座 (tài khoản NISA mở kèm theo). Hầu hết công ty cho đăng ký cả hai trong CÙNG 1 lần làm thủ tục online — tích chọn 'NISA口座も同時に申し込む' (đăng ký đồng thời tài khoản NISA). NISA là chế độ miễn thuế của nhà nước: lãi và cổ tức phát sinh trong khung NISA được miễn thuế thu nhập theo quy định, thay vì bị khấu trừ thuế như tài khoản thường. Mỗi người chỉ có 1 tài khoản NISA tại 1 tổ chức tài chính tại một thời điểm; muốn đổi công ty phải làm thủ tục chuyển đổi theo năm — không mở thêm cái thứ hai song song được. LÀM Ở ĐÂU: đọc phần giới thiệu NISA trên trang 金融庁 trước khi đăng ký (khoảng 10 phút). KIỂM TRA GÌ: bạn chưa từng mở NISA ở ngân hàng/công ty chứng khoán nào khác mà chưa đóng/chưa chuyển.",
+     "ja": "総合口座とNISA口座を同時に申し込みたいです。",
+     "vi": "Tôi muốn đăng ký đồng thời tài khoản tổng hợp và tài khoản NISA."
+    },
+    {
+     "t": "Nắm hạn mức của 2 khung NISA (chỉ là con số quy định)",
+     "d": "Theo 金融庁， chế độ NISA hiện hành (từ năm 2024) có 2 khung trong cùng 1 tài khoản, dùng song song được: (1) つみたて投資枠 (tsumitate tōshi-waku — khung đầu tư tích lũy): hạn mức mua vào tối đa 120万円/năm, dành cho hình thức mua tích lũy định kỳ các quỹ đầu tư đáp ứng tiêu chuẩn của nhà nước. (2) 成長投資枠 (seichō tōshi-waku — khung đầu tư tăng trưởng): hạn mức mua vào tối đa 240万円/năm. Tổng cả 2 khung tối đa 360万円/năm. Hạn mức nắm giữ miễn thuế trọn đời 非課税保有限度額： tổng 1.800万円 tính theo giá mua vào （簿価）, trong đó phần dùng khung tăng trưởng tối đa 1.200万円. Khi bán ra, phần hạn mức tương ứng giá mua được phục hồi để dùng lại từ năm sau theo quy định. Thời hạn miễn thuế là không thời hạn. ĐÂY CHỈ LÀ CON SỐ TRẦN THEO LUẬT — không phải số tiền bạn 'nên' bỏ vào; bỏ bao nhiêu là quyết định và rủi ro của riêng bạn. KIỂM TRA GÌ: đối chiếu lại các con số này trên trang 金融庁 tại thời điểm bạn mở tài khoản vì chế độ có thể thay đổi.",
+     "ja": "つみたて投資枠は年間120万円、成長投資枠は年間240万円までです。",
+     "vi": "Khung tích lũy tối đa 120 man yên/năm, khung tăng trưởng tối đa 240 man yên/năm."
+    },
+    {
+     "t": "Mở trang đăng ký của công ty chứng khoán (ví dụ: Rakuten Securities)",
+     "d": "LÀM Ở ĐÂU: online trên điện thoại/máy tính — ví dụ quy trình tại Rakuten Securities: vào trang chính thức rakuten-sec.co.jp, chọn mục 口座開設 (mở tài khoản). CẦN GÌ: điện thoại, email. CÁC BƯỚC: (1) Nhập email, nhận link/mã xác nhận. (2) Chọn đăng ký đồng thời tài khoản NISA như Bước 1. (3) Chọn cách xác minh danh tính: cách nhanh nhất thường là chụp bằng điện thoại スマホで本人確認 — chụp thẻ My Number hoặc giấy tờ được chấp nhận + chụp khuôn mặt; với người nước ngoài tại Rakuten Securities, giấy tờ xác minh cần nộp là 在留カード (mặt trước và mặt sau) — làm đúng theo màn hình hướng dẫn tại thời điểm đăng ký vì danh mục có thể cập nhật. (4) Đăng ký My Number bằng cách chụp mặt sau thẻ My Number hoặc tải ảnh lên. MẤT BAO LÂU: nhập liệu khoảng 10–20 phút. KIỂM TRA GÌ trước khi sang bước sau: họ tên romaji, ngày sinh, địa chỉ phải khớp 100% với thẻ lưu trú.",
+     "ja": "口座開設を申し込みます。在留カードで本人確認をします。",
+     "vi": "Tôi đăng ký mở tài khoản. Tôi xác minh danh tính bằng thẻ lưu trú."
+    },
+    {
+     "t": "Điền thông tin cá nhân, nơi làm việc và khai báo theo mẫu",
+     "d": "LÀM Ở ĐÂU: tiếp tục trên cùng luồng đăng ký web/app. ĐIỀN GÌ: địa chỉ hiện tại (khớp thẻ lưu trú), số điện thoại, nghề nghiệp và tên công ty đang làm, thu nhập năm ước tính, tài sản tài chính, kinh nghiệm giao dịch, mục đích sử dụng tài khoản; khai báo người trong nội bộ doanh nghiệp niêm yết 内部者 (insider) — nếu bạn hoặc người nhà làm ở công ty niêm yết liên quan thì khai đúng mục này; xác nhận quốc tịch và tình trạng cư trú thuế （居住者） tại Nhật. Đọc và đồng ý các điều khoản 約款 (yakkan) và tài liệu giải thích trước hợp đồng 契約締結前交付書面 — ít nhất đọc phần phí giao dịch, rủi ro, và cách rút tiền. MẤT BAO LÂU: khoảng 10–15 phút. KIỂM TRA GÌ: mục chọn loại tài khoản khấu trừ thuế — màn hình thường hỏi về 特定口座 (tài khoản đặc định, công ty tính thuế thay) kèm 源泉徴収あり/なし cho tài khoản THƯỜNG (không liên quan NISA vì NISA miễn thuế); nếu chưa rõ, đọc kỹ phần giải thích trên màn hình hoặc hỏi tổng đài trước khi chọn, vì chọn sai ảnh hưởng việc tự khai thuế của tài khoản thường.",
+     "ja": "勤務先と年収を入力しました。特定口座について教えてください。",
+     "vi": "Tôi đã nhập nơi làm việc và thu nhập năm. Xin giải thích về tài khoản đặc định (tokutei kōza)."
+    },
+    {
+     "t": "Gửi hồ sơ và chờ công ty xét duyệt, đối chiếu với cơ quan thuế",
+     "d": "SAU KHI GỬI: công ty chứng khoán kiểm tra ảnh giấy tờ và thông tin; riêng tài khoản NISA, công ty phải đối chiếu với cơ quan thuế để xác nhận bạn chưa có NISA ở nơi khác — bước này khiến NISA thường mất thời gian hơn tài khoản thường một chút. THỜI GIAN: xác minh bằng điện thoại với thẻ My Number có thể xong sớm nhất khoảng ngày làm việc tiếp theo đối với tài khoản tổng hợp (theo công bố của Rakuten Securities tại thời điểm tham khảo); cách tải ảnh/giấy tờ thường mất khoảng 5 ngày làm việc; NISA có hiệu lực sau khi đối chiếu xong và công ty thông báo. NHẬN ĐƯỢC GÌ: email/thư thông báo mở tài khoản, mã số tài khoản (支店番号・口座番号）, hướng dẫn đăng nhập lần đầu. Nếu nhận yêu cầu bổ sung 不備 (fubi — hồ sơ thiếu sót): đọc kỹ thiếu mục nào (thường là ảnh mờ, địa chỉ lệch, thẻ lưu trú sắp hết hạn) và nộp lại đúng mục đó. MẤT BAO LÂU: chờ khoảng vài ngày đến khoảng 2 tuần tùy cách nộp và mùa cao điểm.",
+     "ja": "申込みが完了しました。審査にはどのくらい時間がかかりますか。",
+     "vi": "Tôi đã đăng ký xong. Việc xét duyệt mất khoảng bao lâu ạ?"
+    },
+    {
+     "t": "Đăng nhập lần đầu, cài bảo mật và liên kết tài khoản ngân hàng",
+     "d": "LÀM Ở ĐÂU: trên web/app chính thức của công ty (ví dụ Rakuten Securities dùng web và ứng dụng giao dịch của hãng). CÁC BƯỚC: (1) Đăng nhập bằng ID/mật khẩu đã đặt, đổi mật khẩu tạm (nếu công ty cấp) ngay. (2) Bật xác thực 2 lớp （二段階認証） và đăng ký email/số điện thoại nhận cảnh báo đăng nhập. (3) Kiểm tra mục 登録情報： tên, địa chỉ, số My Number đã đăng ký đúng chưa; trạng thái NISA口座 đã '開設済み' (đã mở) chưa. (4) Liên kết tài khoản ngân hàng rút tiền 出金先口座： nhập đúng tên ngân hàng, chi nhánh, số tài khoản đứng tên bạn; nếu dùng ngân hàng liên kết cùng hệ (ví dụ マネーブリッジ giữa Rakuten Bank và Rakuten Securities) thì làm thêm bước đăng ký liên kết theo hướng dẫn — chỉ là thủ tục kỹ thuật chuyển tiền, không liên quan quyết định đầu tư. (5) Thử nạp một khoản nhỏ và kiểm tra tiền vào đúng tài khoản (thường phân biệt số dư tài khoản thường và khung NISA khi mua — đọc kỹ màn hình). MẤT BAO LÂU: khoảng 15–20 phút. KIỂM TRA GÌ: đăng xuất và đăng nhập lại thành công bằng xác thực 2 lớp trước khi kết thúc.",
+     "ja": "初回ログインと二段階認証の設定が完了しました。出金先口座を登録します。",
+     "vi": "Tôi đã đăng nhập lần đầu và cài xác thực 2 lớp xong. Tôi đăng ký tài khoản ngân hàng để rút tiền."
+    },
+    {
+     "t": "Xác nhận khung NISA đã sẵn sàng trước khi có bất kỳ giao dịch nào",
+     "d": "LÀM Ở ĐÂU: trong màn hình tài khoản của công ty chứng khoán, mục NISA. KIỂM TRA GÌ: hiển thị đủ 2 khung つみたて投資枠 và 成長投資枠 với hạn mức năm nay còn lại (120万円 và 240万円 theo quy định hiện hành); năm mở tài khoản được tính là năm đầu tiên. Phân biệt trên màn hình: khi thực hiện bất kỳ giao dịch mua nào sau này, hệ thống luôn yêu cầu chọn mua bằng 'NISA' hay bằng tài khoản thường 課税口座 — chọn nhầm sang tài khoản thường thì giao dịch đó bị tính thuế bình thường và không sửa ngược lại được; vì vậy bước kiểm tra này chỉ nhằm giúp bạn nhận diện đúng các nhãn trên màn hình. Bài này dừng ở đây — việc có đầu tư hay không, đầu tư vào đâu, là quyết định cá nhân nằm ngoài phạm vi bài hướng dẫn thủ tục. MẤT BAO LÂU: khoảng 5 phút.",
+     "ja": "NISA口座のつみたて投資枠と成長投資枠の残り金額を確認しました。",
+     "vi": "Tôi đã kiểm tra số tiền còn lại trong khung tích lũy và khung tăng trưởng của tài khoản NISA."
+    }
+   ],
+   "cost": "Mở tài khoản tổng hợp và tài khoản NISA: miễn phí tại hầu hết công ty chứng khoán online, phí duy trì tài khoản thường cũng miễn phí (kiểm tra biểu phí của công ty bạn chọn). Phí giao dịch khi mua/bán và phí quản lý của từng sản phẩm là chuyện phát sinh SAU khi bạn quyết định giao dịch — không thuộc thủ tục mở tài khoản; đọc biểu phí 手数料 trên trang công ty trước khi đăng ký.",
+   "duration": "Đăng ký online khoảng 20–30 phút. Xét duyệt: nhanh nhất khoảng ngày làm việc tiếp theo với xác minh bằng điện thoại + thẻ My Number (theo công bố từng công ty), khoảng 5 ngày làm việc nếu nộp bằng tải ảnh/giấy tờ; tài khoản NISA có hiệu lực sau khi đối chiếu cơ quan thuế xong, tổng cộng thường khoảng vài ngày đến 2 tuần.",
+   "warnings": [
+    "Nếu trục trặc — hồ sơ bị trả vì ảnh giấy tờ mờ/lóa hoặc thông tin không khớp: chụp lại ở nơi sáng, tắt flash, thấy đủ 4 góc và cả mặt sau thẻ lưu trú; đối chiếu từng ký tự tên romaji và địa chỉ với thẻ lưu trú trước khi gửi lại",
+    "Nếu trục trặc — bị từ chối vì thẻ lưu trú sắp hết hạn (thường cần còn từ khoảng 3 tháng trở lên tại Rakuten Securities): gia hạn tư cách lưu trú trước, nhận thẻ mới rồi đăng ký lại; đừng dùng giấy tờ của người khác hoặc địa chỉ khác nơi ở thật — có thể bị đóng tài khoản sau này",
+    "Nếu trục trặc — không hiểu tiếng Nhật trong các điều khoản và khai báo: dùng tổng đài hỗ trợ của công ty chứng khoán để hỏi từng mục trước khi tích 'đồng ý'; các mục khai báo sai sự thật (thu nhập, kinh nghiệm, insider) có thể khiến tài khoản bị hạn chế. Không nhờ người lạ đăng ký hộ bằng thông tin của bạn và tuyệt đối không đưa mật khẩu/mã PIN cho bất kỳ ai",
+    "Đã có NISA ở ngân hàng hoặc công ty khác: không mở thêm được cái thứ hai; muốn đổi nơi phải làm thủ tục thay đổi tổ chức tài chính 金融機関変更 theo niên lịch (thường xử lý theo năm) hoặc đóng tài khoản cũ trước — hỏi cả nơi cũ và nơi mới trước khi đăng ký mới để tránh hồ sơ bị treo",
+    "Chọn nhầm 課税口座 (tài khoản chịu thuế) thay vì NISA khi giao dịch thì giao dịch đó bị tính thuế và thường không hủy/đổi lại được — luôn nhìn kỹ nhãn khung trước khi bấm xác nhận ở bất kỳ giao dịch nào",
+    "Cảnh giác lừa đảo: công ty chứng khoán không bao giờ nhắn tin mạng xã hội rủ đầu tư, không yêu cầu chuyển tiền vào tài khoản cá nhân, không hỏi mật khẩu qua điện thoại. Chỉ đăng ký từ trang web/ứng dụng chính thức",
+    "Đầu tư có rủi ro thua lỗ, bao gồm khả năng mất một phần hoặc toàn bộ tiền gốc; giá trị tài sản trong tài khoản NISA cũng biến động theo thị trường và chế độ miễn thuế không bảo đảm có lãi. Bài này chỉ hướng dẫn thủ tục mở tài khoản, không phải lời khuyên đầu tư.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đăng nhập được vào tài khoản, đã bật xác thực 2 lớp và cất mật khẩu/mã PIN ở nơi an toàn",
+    "Trạng thái NISA口座 hiển thị 'đã mở' và thấy đủ 2 khung つみたて投資枠 / 成長投資枠 cùng hạn mức còn lại của năm",
+    "Thông tin đăng ký (tên, địa chỉ, My Number, tài khoản ngân hàng rút tiền) khớp hoàn toàn với thẻ lưu trú và sổ ngân hàng",
+    "Đã lưu email/thư thông báo mở tài khoản và số tài khoản vào hồ sơ cá nhân",
+    "Khi đổi địa chỉ, đổi việc, gia hạn thẻ lưu trú hoặc đổi số điện thoại: cập nhật ngay thông tin tại công ty chứng khoán và làm thủ tục thay đổi My Number/thẻ lưu trú mới nếu được yêu cầu",
+    "Mỗi năm kiểm tra lại hạn mức NISA và các thay đổi chế độ trên trang 金融庁 trước khi có kế hoạch sử dụng tiếp"
+   ],
+   "vocab": [
+    {
+     "ja": "NISA口座",
+     "reading": "にーさこうざ",
+     "vi": "tài khoản NISA (tài khoản đầu tư miễn thuế theo chế độ nhà nước)"
+    },
+    {
+     "ja": "総合口座",
+     "reading": "そうごうこうざ",
+     "vi": "tài khoản chứng khoán tổng hợp (tài khoản giao dịch thông thường)"
+    },
+    {
+     "ja": "つみたて投資枠",
+     "reading": "つみたてとうしわく",
+     "vi": "khung đầu tư tích lũy trong NISA (tối đa 120万円/năm)"
+    },
+    {
+     "ja": "成長投資枠",
+     "reading": "せいちょうとうしわく",
+     "vi": "khung đầu tư tăng trưởng trong NISA (tối đa 240万円/năm)"
+    },
+    {
+     "ja": "非課税保有限度額",
+     "reading": "ひかぜいほゆうげんどがく",
+     "vi": "hạn mức nắm giữ miễn thuế trọn đời (tổng 1.800万円)"
+    },
+    {
+     "ja": "口座開設",
+     "reading": "こうざかいせつ",
+     "vi": "mở tài khoản"
+    },
+    {
+     "ja": "本人確認書類",
+     "reading": "ほんにんかくにんしょるい",
+     "vi": "giấy tờ xác minh danh tính"
+    },
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうかーど",
+     "vi": "thẻ lưu trú"
+    },
+    {
+     "ja": "マイナンバー",
+     "reading": "まいなんばー",
+     "vi": "số cá nhân My Number (12 chữ số)"
+    },
+    {
+     "ja": "特定口座",
+     "reading": "とくていこうざ",
+     "vi": "tài khoản đặc định (công ty chứng khoán hỗ trợ tính thuế cho tài khoản thường)"
+    },
+    {
+     "ja": "証券会社",
+     "reading": "しょうけんがいしゃ",
+     "vi": "công ty chứng khoán"
+    },
+    {
+     "ja": "金融庁",
+     "reading": "きんゆうちょう",
+     "vi": "Cơ quan Dịch vụ Tài chính Nhật Bản (cơ quan quản lý chế độ NISA)"
+    },
+    {
+     "ja": "二段階認証",
+     "reading": "にだんかいにんしょう",
+     "vi": "xác thực 2 lớp"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "NISA口座を開設したいです。必要な書類を教えてください。",
+     "vi": "Tôi muốn mở tài khoản NISA. Xin cho biết giấy tờ cần thiết."
+    },
+    {
+     "ja": "外国人です。本人確認には在留カードを使います。",
+     "vi": "Tôi là người nước ngoài. Tôi dùng thẻ lưu trú để xác minh danh tính."
+    },
+    {
+     "ja": "申込み内容に不備があると連絡がありました。どこを直せばいいですか。",
+     "vi": "Tôi nhận được thông báo hồ sơ có thiếu sót. Tôi cần sửa ở mục nào ạ?"
+    },
+    {
+     "ja": "マイナンバーの登録が完了したか確認したいです。",
+     "vi": "Tôi muốn kiểm tra xem đăng ký My Number đã hoàn tất chưa."
+    },
+    {
+     "ja": "住所が変わったので、登録情報の変更をお願いします。",
+     "vi": "Tôi đã đổi địa chỉ, xin thay đổi thông tin đăng ký."
+    }
+   ],
+   "links": [
+    {
+     "label": "金融庁 — NISAを知る (giới thiệu chính thức về NISA và các khung)",
+     "url": "https://www.fsa.go.jp/policy/nisa2/know/"
+    },
+    {
+     "label": "楽天証券 — 口座開設から手続きまで (quy trình và giấy tờ mở tài khoản)",
+     "url": "https://www.rakuten-sec.co.jp/web/account-flow/"
+    },
+    {
+     "label": "楽天証券 — 口座開設の申込み (trang đăng ký mở tài khoản)",
+     "url": "https://www.rakuten-sec.co.jp/web/account/"
+    },
+    {
+     "label": "国税庁 — 新NISAの概要 (tóm tắt chế độ NISA mới)",
+     "url": "https://www.nta.go.jp/users/gensen/nisa/pdf/shinnisa.pdf"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "楽天証券 総合口座＋NISA口座 同時申込（オンライン）",
+     "name_vi": "Mở đồng thời tài khoản tổng hợp và tài khoản NISA tại Rakuten Securities online — chỉ là thủ tục mở tài khoản, không phải tư vấn đầu tư",
+     "download_url": "https://www.rakuten-sec.co.jp/web/nisa/startup/",
+     "source": "楽天証券株式会社",
+     "format": "web",
+     "fill": [
+      {
+       "field": "メールアドレス登録 (đăng ký email)",
+       "how": "Bước đầu là đăng ký email. Mã đăng nhập sẽ gửi về email này và không đổi được, nên dùng email mình giữ lâu dài.",
+       "example": "Email cá nhân của mình (ví dụ mẫu)"
+      },
+      {
+       "field": "本人確認書類の撮影 (chụp giấy tờ xác thực)",
+       "how": "Dùng điện thoại chụp thẻ My Number hoặc bằng lái, rồi chụp khuôn mặt. Người nước ngoài nên chuẩn bị thêm thẻ lưu trú vì có thể bị yêu cầu nộp thêm.",
+       "example": "マイナンバーカード (thẻ My Number)",
+       "mistake": "Ảnh bị lóa hoặc mờ — chụp ở nơi sáng, đặt giấy tờ trên nền tối."
+      },
+      {
+       "field": "氏名・住所等の本人情報 (thông tin cá nhân)",
+       "how": "Nhập họ tên, ngày sinh, địa chỉ đúng từng chữ như trên giấy tờ vừa chụp.",
+       "example": "グエン・バン・アン／1998年5月12日／神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室"
+      },
+      {
+       "field": "ログインパスワード設定 (đặt mật khẩu đăng nhập)",
+       "how": "Đặt mật khẩu đăng nhập ngay trong lúc đăng ký. Ghi lại và cất riêng, không dùng chung mật khẩu email.",
+       "example": "Tự đặt mật khẩu mạnh (không ghi mẫu)"
+      },
+      {
+       "field": "NISA口座同時申込の選択 (chọn mở kèm tài khoản NISA)",
+       "how": "Ở bước đăng ký tài khoản tổng hợp, chọn đăng ký đồng thời tài khoản NISA. Một người chỉ được có NISA ở một công ty tại một thời điểm — đã có NISA nơi khác thì phải làm thủ tục chuyển đổi công ty tài chính.",
+       "example": "NISA口座を同時に申し込む (đăng ký NISA cùng lúc)"
+      },
+      {
+       "field": "特定口座／一般口座の選択（課税口座分）(chọn loại tài khoản chịu thuế cho phần ngoài NISA)",
+       "how": "Phần tài khoản thường ngoài NISA phải chọn: 特定口座（源泉徴収あり）là công ty tự tính và trừ thuế thay, 特定口座（源泉徴収なし）là công ty lập báo cáo năm nhưng mình tự khai thuế, 一般口座 là mình tự tính toàn bộ. Chưa rõ thì đọc kỹ phần giải thích trên màn hình trước khi chọn — đây là lựa chọn thủ tục thuế, chọn sai sửa được nhưng phiền.",
+       "example": "特定口座（源泉徴収あり）(ví dụ mẫu — công ty trừ thuế thay)",
+       "mistake": "Chọn 一般口座 mà không biết phải tự tính lãi lỗ và tự khai thuế hàng năm."
+      },
+      {
+       "field": "勤務先情報・年収 (thông tin nơi làm việc, thu nhập)",
+       "how": "Ở bước thiết lập ban đầu sau khi nhận mã đăng nhập, khai tên công ty đang làm, địa chỉ công ty và thu nhập năm.",
+       "example": "株式会社サンプル介護サービス／年収350万円 (ví dụ mẫu)"
+      },
+      {
+       "field": "投資経験・資産・取引目的 (kinh nghiệm, tài sản, mục đích giao dịch)",
+       "how": "Khai đúng kinh nghiệm giao dịch, tài sản tài chính ước tính và mục đích. Khai đúng tình trạng thật của mình.",
+       "example": "投資経験なし／金融資産 100万円未満 (ví dụ mẫu)"
+      },
+      {
+       "field": "内部者（インサイダー）該当の申告 (khai báo người nội bộ)",
+       "how": "Nếu mình hoặc người nhà là nhân viên công ty niêm yết thuộc diện nội bộ thì khai đúng mục này. Không thuộc diện thì chọn không thuộc.",
+       "example": "該当しない (không thuộc diện) — ví dụ mẫu"
+      },
+      {
+       "field": "マイナンバー登録 (đăng ký My Number)",
+       "how": "Sau khi đăng nhập lần đầu, đăng ký My Number ở bước thiết lập ban đầu. Chưa đăng ký My Number thì không hoàn tất mở NISA được.",
+       "example": "1234 5678 9012"
+      },
+      {
+       "field": "取引暗証番号設定 (đặt mã PIN giao dịch)",
+       "how": "Đặt mã số giao dịch 4 số khác với mật khẩu đăng nhập. Mã này dùng khi đặt lệnh.",
+       "example": "Tự đặt 4 số bí mật khác mật khẩu"
+      },
+      {
+       "field": "税務署審査の完了待ち (chờ cơ quan thuế duyệt NISA)",
+       "how": "Không phải điền gì thêm. Rakuten nộp hồ sơ lên cơ quan thuế, duyệt thường mất 1 đến 2 tuần. Có email báo hoàn tất 本開設 mới là xong hẳn; trước đó là trạng thái mở tạm 仮開設.",
+       "example": "Chờ email NISA口座開設完了 (ví dụ mẫu)"
+      }
+     ],
+     "sample_note": "Thông tin mẫu hoàn toàn hư cấu. Trang link là trang hướng dẫn các bước mở NISA chính thức của Rakuten Securities, đã mở kiểm tra ngày 2026-11-08: các bước trên trang gồm đăng ký, xác thực bằng điện thoại, nhận mã đăng nhập qua email, thiết lập ban đầu và đăng ký My Number, rồi chờ cơ quan thuế duyệt 1–2 tuần. Nội dung này chỉ hướng dẫn thủ tục mở tài khoản, không khuyến nghị mua bất kỳ sản phẩm đầu tư nào."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "楽天証券",
+     "lang": "ja",
+     "note": "Video chính thức của Rakuten Securities hướng dẫn mở thêm tài khoản NISA (cho người đã có tài khoản tổng hợp và đã đăng ký My Number): đăng ký và tải giấy tờ xác minh.",
+     "title": "NISA口座開設ガイド！",
+     "url": "https://www.youtube.com/watch?v=2CLoZqhoHCc"
+    }
+   ]
+  }
+ ]
+}

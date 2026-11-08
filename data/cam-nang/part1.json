@@ -1,0 +1,2471 @@
+{
+ "guides": [
+  {
+   "id": "dang-ky-dia-chi-my-number",
+   "group": "Giấy tờ & cư trú",
+   "title": "Đăng ký địa chỉ + lấy thẻ My Number khi mới đến / chuyển nhà （転入届・住民票・マイナンバーカード）",
+   "icon": "🏠",
+   "summary": "Vừa đến Nhật hoặc vừa chuyển nhà, việc đầu tiên phải làm là ra tòa thị chính (役所, đọc là yakusho, nghĩa là ủy ban phường/xã/thành phố nơi bạn ở) để đăng ký địa chỉ trong vòng 14 ngày. Đăng ký xong, địa chỉ sẽ được ghi vào mặt sau thẻ lưu trú (在留カード, thẻ cư trú) và bạn xin được giấy cư trú (住民票, juminhyo). Sau đó bạn mới xin được thẻ My Number (マイナンバーカード, thẻ chứa số cá nhân 12 số), là thẻ căn cước quan trọng nhất khi sống ở Nhật.",
+   "who": "Mọi người Việt mới sang Nhật sống từ 3 tháng trở lên (du học, đi làm, thực tập sinh, kỹ năng đặc định...), và bất kỳ ai chuyển nhà sang quận/thành phố khác hoặc chuyển nhà trong cùng một quận. Ví dụ hư cấu: anh Nguyễn Văn An vừa sang học tiếng Nhật, thuê nhà ở một phường mới, thì phải làm bài này trong 14 ngày đầu.",
+   "docs": [
+    "Thẻ lưu trú (在留カード, zairyu card) bản gốc — thẻ bạn nhận ở sân bay khi nhập cảnh",
+    "Hộ chiếu (パスポート) bản gốc",
+    "Giấy chứng nhận chuyển đi (転出証明書, tenshutsu shomeisho) — chỉ cần khi bạn chuyển từ quận/thành phố khác đến; nơi ở cũ cấp cho bạn khi bạn báo chuyển đi. Mới sang Nhật lần đầu thì KHÔNG cần giấy này",
+    "Thẻ My Number cũ hoặc giấy thông báo số cá nhân (個人番号通知書, kojin bango tsuchisho) nếu đã có — mới sang lần đầu thường chưa có",
+    "Hợp đồng thuê nhà hoặc giấy tờ ghi rõ địa chỉ mới, số nhà, số phòng (để chép địa chỉ cho đúng từng chữ)",
+    "Nếu đi cùng vợ/chồng/con và muốn gộp chung một hộ (世帯, setai, nghĩa là hộ gia đình): giấy chứng nhận kết hôn / giấy khai sinh của con, kèm bản dịch tiếng Nhật hoặc tiếng Anh",
+    "Tiền mặt khoảng 1.000 yên để xin giấy cư trú (住民票) khi cần"
+   ],
+   "prep_home": [
+    "Chép sẵn địa chỉ nhà mới ra giấy, viết đúng từng phần: tỉnh/thành phố, quận, tên khu phố, số nhà, tên tòa nhà và số phòng. Địa chỉ tiếng Nhật thường ghi trong hợp đồng thuê nhà — chụp ảnh trang hợp đồng có địa chỉ để mang theo đối chiếu",
+    "Tra trước địa chỉ và giờ mở cửa của tòa thị chính nơi ở mới trên điện thoại. Hầu hết chỉ làm việc ngày thường, khoảng 8:30–17:15, thứ Bảy/Chủ nhật và ngày lễ nghỉ (một số nơi có quầy mở thứ Bảy buổi sáng, tùy địa phương)",
+    "Bỏ thẻ lưu trú và hộ chiếu vào một túi hồ sơ riêng, mang BẢN GỐC. Đừng chỉ mang ảnh chụp — quầy sẽ không nhận",
+    "Nếu chuyển nhà trong Nhật: trước khi rời nơi cũ, ra tòa thị chính cũ xin giấy chứng nhận chuyển đi (転出証明書) rồi mới đi. Mới sang từ Việt Nam thì bỏ qua việc này",
+    "Chụp ảnh mặt trước + mặt sau thẻ lưu trú lưu trong điện thoại, phòng khi cần tra số thẻ",
+    "Học thuộc 2 câu mẫu trong bài này (câu báo mới chuyển đến và câu xin giấy cư trú), hoặc lưu sẵn trong điện thoại để giơ cho nhân viên xem",
+    "Mang theo bút đen và một ít tiền lẻ. Ở tòa thị chính thường có máy photocopy tính phí nếu bạn cần sao thêm giấy"
+   ],
+   "steps": [
+    {
+     "t": "Đến đúng tòa thị chính của nơi ở mới và lấy số thứ tự",
+     "d": "ĐI ĐÂU: Tòa thị chính (市役所/区役所, shiyakusho/kuyakusho) của đúng quận/thành phố nơi nhà mới của bạn nằm, vào khu vực quầy hộ tịch – cư trú (市民課, shiminka). Vừa vào cửa, tìm máy lấy số hoặc quầy hướng dẫn (案内, annai). MANG GÌ: túi hồ sơ bản gốc đã chuẩn bị ở nhà. NÓI GÌ: nói câu mẫu bên dưới. MẤT BAO LÂU: lấy số chỉ 1 phút, nhưng chờ tới lượt có thể 10–40 phút tùy đông. NHẬN ĐƯỢC GÌ: phiếu số thứ tự. KIỂM TRA GÌ: nhìn bảng điện tử, để ý khi số của mình hiện lên kèm số quầy.",
+     "ja": "転入届を出しに来ました。",
+     "vi": "Tôi đến để nộp giấy báo chuyển đến (đăng ký địa chỉ mới)."
+    },
+    {
+     "t": "Điền đơn báo chuyển đến (転入届)",
+     "d": "ĐI ĐÂU: Tại quầy hoặc bàn điền đơn gần quầy 市民課, có sẵn mẫu đơn giấy và thường có mẫu điền sẵn để tham khảo. MANG GÌ: hợp đồng thuê nhà hoặc ảnh chụp địa chỉ mới, thẻ lưu trú. CÁCH ĐIỀN: ghi họ tên (viết in hoa không dấu giống trên thẻ lưu trú), ngày sinh, địa chỉ MỚI, địa chỉ CŨ (nếu mới sang thì ghi địa chỉ ở Việt Nam bằng chữ Latin), ngày bắt đầu sống ở nhà mới (転入日 — ghi ngày bạn thực tế dọn vào, KHÔNG ghi lùi ngày), tên chủ hộ (世帯主, setainushi — nếu bạn ở một mình thì chính là bạn). MẤT BAO LÂU: khoảng 5–10 phút. KIỂM TRA GÌ: đối chiếu địa chỉ từng ký tự với hợp đồng thuê nhà, nhất là số phòng — sai số phòng là thư từ sẽ không đến được.",
+     "ja": "書き方を教えてください。",
+     "vi": "Xin chỉ cho tôi cách điền tờ này."
+    },
+    {
+     "t": "Nộp đơn và trình thẻ lưu trú + hộ chiếu",
+     "d": "ĐI ĐÂU: Đến quầy có số của bạn khi được gọi. MANG GÌ: đơn đã điền, thẻ lưu trú bản gốc, hộ chiếu bản gốc, giấy chứng nhận chuyển đi nếu chuyển từ nơi khác trong Nhật. NÓI GÌ: đưa hồ sơ và nói câu mẫu. Nhân viên sẽ kiểm tra và ghi địa chỉ mới vào MẶT SAU thẻ lưu trú của bạn ngay tại chỗ. MẤT BAO LÂU: khoảng 5–15 phút. NHẬN ĐƯỢC GÌ: thẻ lưu trú đã có địa chỉ mới ở mặt sau. KIỂM TRA GÌ: ngay tại quầy, lật mặt sau thẻ xem địa chỉ đã đúng chưa, có thiếu số phòng không. Sai thì báo ngay để sửa tại chỗ, đừng về nhà mới phát hiện.",
+     "ja": "お願いします。在留カードとパスポートです。",
+     "vi": "Xin nhờ anh/chị. Đây là thẻ lưu trú và hộ chiếu của tôi."
+    },
+    {
+     "t": "Báo luôn các việc đi kèm: bảo hiểm, lương hưu, con cái (nếu có)",
+     "d": "ĐI ĐÂU: Nhân viên thường hướng dẫn bạn sang các quầy bên cạnh trong cùng tòa nhà: quầy bảo hiểm y tế quốc dân (国民健康保険, kokumin kenko hoken) nếu bạn không có bảo hiểm của công ty, quầy lương hưu quốc dân (国民年金, kokumin nenkin) nếu bạn từ 20 tuổi trở lên và không đi làm công ty. MANG GÌ: vẫn là thẻ lưu trú đã ghi địa chỉ. NÓI GÌ: nếu chưa rõ mình phải vào bảo hiểm nào, hỏi câu mẫu bên dưới. MẤT BAO LÂU: mỗi quầy thêm khoảng 5–15 phút. NHẬN ĐƯỢC GÌ: có nơi cấp thẻ bảo hiểm sau ít ngày qua bưu điện; giấy hướng dẫn đóng tiền. KIỂM TRA GÌ: hỏi rõ mình đã được đăng ký bảo hiểm chưa, vì đi khám bệnh ở Nhật bắt buộc phải có bảo hiểm.",
+     "ja": "健康保険の手続きも必要ですか。",
+     "vi": "Tôi có cần làm thủ tục bảo hiểm y tế luôn không?"
+    },
+    {
+     "t": "Xin giấy cư trú (住民票, juminhyo) để dùng cho các việc tiếp theo",
+     "d": "ĐI ĐÂU: Vẫn tại khu quầy 市民課, xin mẫu đơn cấp giấy chứng nhận (証明書の請求書). MANG GÌ: thẻ lưu trú, tiền mặt. NÓI GÌ: nói câu mẫu, và nói rõ cần bản của cả hộ (世帯全員) hay chỉ mình bạn (個人). Giấy này bạn sẽ cần khi mở tài khoản ngân hàng, thuê điện thoại, làm thủ tục ở công ty/trường. MẤT BAO LÂU: khoảng 5–10 phút, nhận ngay. NHẬN ĐƯỢC GÌ: tờ giấy cư trú A4 có đóng dấu đỏ. PHÍ: khoảng 300 yên/tờ, tùy địa phương. KIỂM TRA GÌ: xem tên, ngày sinh, địa chỉ trên giấy có đúng không và có đủ số tờ bạn cần không (nên xin 2 tờ, một tờ nộp, một tờ giữ).",
+     "ja": "住民票を2通ください。世帯全員のものです。",
+     "vi": "Cho tôi xin 2 bản giấy cư trú, bản của cả hộ."
+    },
+    {
+     "t": "Nhận giấy hướng dẫn xin thẻ My Number và kiểm tra thư sẽ gửi về nhà",
+     "d": "ĐI ĐÂU: Hỏi ngay tại quầy cư trú. Sau khi đăng ký địa chỉ, số cá nhân (マイナンバー, 12 số) của bạn được tạo. Một phong bì chứa giấy thông báo số cá nhân (個人番号通知書) và đơn xin thẻ sẽ được gửi về địa chỉ mới qua bưu điện, thường khoảng 2–3 tuần (tùy địa phương). MANG GÌ: không cần thêm giấy. NÓI GÌ: hỏi câu mẫu để biết khoảng bao lâu thư đến và nếu không nhận được thì quay lại đâu. KIỂM TRA GÌ: ghi lại ngày dự kiến thư đến vào điện thoại; đảm bảo hộp thư nhà bạn có ghi tên bạn, nếu không bưu tá có thể không phát được.",
+     "ja": "マイナンバーの通知はいつ届きますか。",
+     "vi": "Thư thông báo số My Number khoảng khi nào sẽ đến ạ?"
+    },
+    {
+     "t": "Xin thẻ My Number (khi đã có đơn xin thẻ gửi về nhà)",
+     "d": "ĐI ĐÂU: Làm ngay tại nhà bằng điện thoại: quét mã QR trên đơn xin thẻ (交付申請書) được gửi kèm thư thông báo, chụp ảnh chân dung và gửi trực tuyến. Cũng làm được bằng bưu điện hoặc máy chụp ảnh thẻ có chức năng nộp đơn. MANG GÌ (chuẩn bị sẵn): ảnh chân dung chụp trong 6 tháng, nền sáng, không đội mũ. MẤT BAO LÂU: nộp đơn khoảng 10 phút; thẻ làm xong sau khoảng 1 tháng (tùy địa phương), sẽ có thư báo đến nhận (交付通知書, còn gọi là hagaki báo nhận thẻ). PHÍ: cấp lần đầu MIỄN PHÍ. KIỂM TRA GÌ: sau khi gửi đơn, giữ lại đơn/thư thông báo cẩn thận, đừng vứt.",
+     "ja": "マイナンバーカードをスマートフォンで申請します。",
+     "vi": "Tôi sẽ xin thẻ My Number bằng điện thoại thông minh."
+    },
+    {
+     "t": "Đến nhận thẻ My Number và đặt mã PIN tại quầy",
+     "d": "ĐI ĐÂU: Tòa thị chính ghi trên thư báo nhận thẻ, đến quầy thẻ My Number (マイナンバーカード交付窓口). MANG GÌ: thư báo nhận thẻ, thẻ lưu trú, và giấy thông báo số cá nhân nếu còn giữ. LÀM GÌ TẠI QUẦY: nhân viên sẽ yêu cầu bạn tự đặt mã PIN trên máy tại quầy: một mã 4 số (dùng khi nhận giấy tờ ở cửa hàng tiện lợi) và một mật khẩu dài hơn cho chữ ký điện tử. Tự nghĩ trước 4 số dễ nhớ với bạn nhưng khó đoán với người khác, TUYỆT ĐỐI không dùng ngày sinh. MẤT BAO LÂU: khoảng 15–30 phút. NHẬN ĐƯỢC GÌ: thẻ My Number bằng nhựa có ảnh của bạn. KIỂM TRA GÌ: xem ảnh, họ tên, địa chỉ trên thẻ; cất thẻ ngay vào ví, và ghi mã PIN ra một nơi bí mật ở nhà (không ghi lên thẻ).",
+     "ja": "マイナンバーカードを受け取りに来ました。",
+     "vi": "Tôi đến để nhận thẻ My Number."
+    }
+   ],
+   "cost": "Đăng ký địa chỉ: miễn phí. Giấy cư trú (住民票): khoảng 300 yên/tờ, tùy địa phương (lấy ở cửa hàng tiện lợi bằng thẻ My Number thường rẻ hơn một chút). Thẻ My Number cấp lần đầu: miễn phí; cấp lại khi làm mất thường có phí, tùy địa phương.",
+   "duration": "Đăng ký địa chỉ: làm xong trong ngày, thường 30–60 phút cả chờ đợi. Thư thông báo số cá nhân: khoảng 2–3 tuần sau khi đăng ký địa chỉ. Thẻ My Number: khoảng 1 tháng kể từ ngày nộp đơn xin thẻ, tùy địa phương.",
+   "warnings": [
+    "HẠN CHÓT QUAN TRỌNG: phải đăng ký địa chỉ trong vòng 14 ngày kể từ ngày bắt đầu sống ở nhà mới (theo Luật Sổ cư trú cơ bản). Để quá hạn không có lý do chính đáng có thể bị phạt tiền hành chính. Nếu đã lỡ quá 14 ngày, vẫn cứ đi làm ngay — đi muộn còn hơn không đi, và trình bày thật lý do",
+    "Ngày chuyển vào (転入日) phải là ngày bạn THẬT SỰ bắt đầu ở nhà mới. Khai lùi ngày hoặc khai trước ngày đều không được; cũng không nộp đơn trước ngày dọn vào được",
+    "Nếu chuyển nhà trong Nhật Bản: chuyển sang quận/thành phố khác phải làm 2 việc — báo chuyển đi (転出届) ở nơi cũ và báo chuyển đến (転入届) ở nơi mới trong 14 ngày. Chuyển trong CÙNG một quận thì chỉ cần báo thay đổi địa chỉ (転居届), vẫn trong 14 ngày",
+    "Sau khi đăng ký địa chỉ ở nơi mới, thẻ My Number (nếu đã có) có thể bị mất hiệu lực nếu bạn để quá lâu không cập nhật địa chỉ trên thẻ — làm thủ tục địa chỉ xong thì hỏi luôn việc cập nhật thẻ",
+    "Địa chỉ ghi trên thẻ lưu trú là địa chỉ chính thức duy nhất của bạn ở Nhật. Mọi thư của cơ quan nhà nước, ngân hàng, cục xuất nhập cảnh đều gửi về địa chỉ này — chuyển nhà mà không báo là mất thư và có thể vi phạm nghĩa vụ khai báo",
+    "Nếu TRỤC TRẶC — thiếu giấy tờ: nhân viên sẽ chỉ rõ thiếu gì và thường cho bạn mang bổ sung sau, không bị phạt. Cứ hỏi rõ tên giấy còn thiếu bằng tiếng Nhật và chụp ảnh lại tên giấy đó để chuẩn bị đúng. Đừng bỏ về không hỏi",
+    "Nếu TRỤC TRẶC — không hiểu tiếng Nhật ở quầy: nhiều tòa thị chính có quầy hỗ trợ người nước ngoài, máy phiên dịch hoặc nhân viên nói tiếng Anh. Hãy nói câu: 「日本語があまり分かりません。ゆっくり話してください。」(Tôi chưa hiểu tiếng Nhật lắm, xin nói chậm giúp tôi). Cũng có thể viết ra giấy hoặc giơ màn hình điện thoại đã gõ sẵn nội dung cần làm",
+    "Nếu TRỤC TRẶC — không nhận được thư thông báo My Number sau khoảng 1 tháng: quay lại quầy cư trú của tòa thị chính hỏi, mang thẻ lưu trú. Đừng tự ý bỏ qua, vì không có số My Number sẽ rất khó làm thủ tục đi làm và ngân hàng",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Lật mặt sau thẻ lưu trú: địa chỉ mới đã được ghi đúng, đủ số phòng, không sai một ký tự nào",
+    "Đã có ít nhất 1–2 tờ giấy cư trú (住民票) mới nhất để sẵn sàng nộp cho ngân hàng / công ty / trường học khi được yêu cầu",
+    "Đã biết tình trạng bảo hiểm y tế của mình: có thẻ bảo hiểm của công ty, hay đã đăng ký bảo hiểm quốc dân tại quầy hôm nay",
+    "Đã ghi vào điện thoại ngày dự kiến thư thông báo My Number đến, và hộp thư ở nhà đã có tên bạn",
+    "Đã cất bản gốc thẻ lưu trú, hộ chiếu, hợp đồng thuê nhà vào một chỗ cố định ở nhà; ảnh chụp các giấy này đã lưu trong điện thoại",
+    "Nếu chuyển nhà: đã báo địa chỉ mới cho trường học / công ty và người bảo lãnh (nếu có), để thư từ không bị gửi về nhà cũ"
+   ],
+   "vocab": [
+    {
+     "ja": "転入届",
+     "reading": "てんにゅうとどけ",
+     "vi": "Đơn báo chuyển đến (đăng ký địa chỉ khi đến nơi ở mới)"
+    },
+    {
+     "ja": "転出届",
+     "reading": "てんしゅつとどけ",
+     "vi": "Đơn báo chuyển đi (nộp ở nơi ở cũ khi chuyển sang nơi khác)"
+    },
+    {
+     "ja": "住民票",
+     "reading": "じゅうみんひょう",
+     "vi": "Giấy cư trú / bản sao sổ đăng ký cư trú"
+    },
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうカード",
+     "vi": "Thẻ lưu trú (thẻ cư trú của người nước ngoài)"
+    },
+    {
+     "ja": "市役所",
+     "reading": "しやくしょ",
+     "vi": "Tòa thị chính thành phố"
+    },
+    {
+     "ja": "区役所",
+     "reading": "くやくしょ",
+     "vi": "Ủy ban quận"
+    },
+    {
+     "ja": "市民課",
+     "reading": "しみんか",
+     "vi": "Phòng/quầy công dân (nơi làm thủ tục cư trú)"
+    },
+    {
+     "ja": "世帯主",
+     "reading": "せたいぬし",
+     "vi": "Chủ hộ"
+    },
+    {
+     "ja": "マイナンバーカード",
+     "reading": "マイナンバーカード",
+     "vi": "Thẻ My Number (thẻ số cá nhân)"
+    },
+    {
+     "ja": "個人番号通知書",
+     "reading": "こじんばんごうつうちしょ",
+     "vi": "Giấy thông báo số cá nhân"
+    },
+    {
+     "ja": "交付通知書",
+     "reading": "こうふつうちしょ",
+     "vi": "Thư báo đến nhận thẻ My Number"
+    },
+    {
+     "ja": "暗証番号",
+     "reading": "あんしょうばんごう",
+     "vi": "Mã PIN / mật khẩu của thẻ"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "転入届を出しに来ました。",
+     "vi": "Tôi đến để nộp đơn báo chuyển đến (đăng ký địa chỉ mới)."
+    },
+    {
+     "ja": "ベトナムから来ました。初めての手続きです。",
+     "vi": "Tôi đến từ Việt Nam. Đây là lần đầu tôi làm thủ tục này."
+    },
+    {
+     "ja": "住民票を2通ください。",
+     "vi": "Cho tôi xin 2 bản giấy cư trú."
+    },
+    {
+     "ja": "日本語があまり分かりません。ゆっくり話してください。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin nói chậm giúp tôi."
+    },
+    {
+     "ja": "この住所で合っていますか。",
+     "vi": "Địa chỉ như thế này có đúng không ạ?"
+    },
+    {
+     "ja": "次に何をすればいいですか。",
+     "vi": "Tiếp theo tôi phải làm gì ạ?"
+    }
+   ],
+   "links": [
+    {
+     "label": "Cơ quan Số hóa (Digital Agency) — Chế độ My Number và thẻ My Number",
+     "url": "https://www.digital.go.jp/policies/mynumber"
+    },
+    {
+     "label": "Bộ Nội vụ và Truyền thông — Nhắc nhở về khai báo thay đổi địa chỉ",
+     "url": "https://www.soumu.go.jp/menu_kyotsuu/important/topics081127.html"
+    },
+    {
+     "label": "Trang tổng hợp thẻ My Number — Cách xin thẻ",
+     "url": "https://www.kojinbango-card.go.jp/apprec/apply/"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.city.kawasaki.jp/250/page/0000037068.html",
+     "fill": [
+      {
+       "example": "2026年11月10日",
+       "field": "届出年月日 (ngày nộp đơn)",
+       "how": "Ghi ngày bạn đến quầy nộp. Lấy ngày hôm đó, không ghi trước.",
+       "mistake": "Ghi ngày khác ngày đi nộp."
+      },
+      {
+       "example": "2026年11月8日",
+       "field": "転入日・異動日 (ngày chuyển đến)",
+       "how": "Ghi ngày bạn thật sự bắt đầu sống ở nhà mới. Xem ngày bắt đầu trong hợp đồng thuê nhà.",
+       "mistake": "Ghi lùi ngày cho khớp giấy tờ khác. Sai ngày này là sai cả hồ sơ."
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "field": "新しい住所 (địa chỉ mới)",
+       "how": "Chép đúng từng chữ trong hợp đồng thuê nhà: tỉnh, thành phố, quận, khu, số nhà, tên tòa nhà, số phòng.",
+       "mistake": "Thiếu số phòng. Thư từ sẽ không đến được."
+      },
+      {
+       "example": "ベトナム ハノイ市（mới sang lần đầu）",
+       "field": "前の住所 (địa chỉ cũ)",
+       "how": "Chuyển từ thành phố khác trong Nhật thì ghi địa chỉ cũ ở Nhật. Mới sang Nhật lần đầu thì ghi địa chỉ ở Việt Nam bằng chữ Latin.",
+       "mistake": ""
+      },
+      {
+       "example": "グエン・バン・アン (NGUYEN VAN AN)",
+       "field": "世帯主の氏名 (tên chủ hộ)",
+       "how": "Ở một mình thì chủ hộ là chính bạn. Ghi họ tên in hoa không dấu, giống trên thẻ lưu trú.",
+       "mistake": "Viết tên có dấu tiếng Việt. Phải giống hệt thẻ lưu trú."
+      },
+      {
+       "example": "グエン・バン・アン・本人",
+       "field": "届出人の氏名・続柄 (tên người nộp và quan hệ với chủ hộ)",
+       "how": "Bạn tự nộp thì ghi tên bạn, ô quan hệ ghi 本人 (chính mình).",
+       "mistake": ""
+      },
+      {
+       "example": "グエン・バン・アン",
+       "field": "引っ越してきた人の氏名 (họ tên từng người chuyển đến)",
+       "how": "Liệt kê mọi người cùng chuyển đến, kể cả bạn. Mỗi người một dòng, giống trên thẻ lưu trú của từng người.",
+       "mistake": "Chỉ ghi tên mình mà quên người đi cùng."
+      },
+      {
+       "example": "1998年5月12日・男",
+       "field": "生年月日・性別 (ngày sinh và giới tính)",
+       "how": "Chép từ hộ chiếu hoặc thẻ lưu trú của từng người.",
+       "mistake": "Nhầm thứ tự năm tháng ngày."
+      },
+      {
+       "example": "世帯主",
+       "field": "本人との続柄 (quan hệ với chủ hộ)",
+       "how": "Chủ hộ ghi 世帯主. Vợ ghi 妻, chồng ghi 夫, con ghi 子.",
+       "mistake": ""
+      },
+      {
+       "example": "AB12345678CD (số mẫu)",
+       "field": "在留カード番号 (số thẻ lưu trú)",
+       "how": "Chép số in ở góc phải trên mặt trước thẻ lưu trú của từng người chuyển đến.",
+       "mistake": "Nhầm với số My Number 12 số."
+      }
+     ],
+     "format": "web",
+     "name_jp": "転入届（住民異動届）",
+     "name_vi": "Đơn báo chuyển đến (đăng ký địa chỉ mới)",
+     "sample_note": "Ví dụ điền cho anh グエン・バン・アン mới chuyển đến Kawasaki. Mỗi thành phố/quận có mẫu 転入届 riêng của mình, nội dung gần giống nhau: lấy mẫu tại quầy 市民課・区民課 của nơi ở mới, hoặc nhập trước qua web (Kawasaki có ネットdeスマート).",
+     "source": "川崎市 (Thành phố Kawasaki)"
+    },
+    {
+     "download_url": "https://www.city.kawasaki.jp/250/page/0000001671.html",
+     "fill": [
+      {
+       "example": "2026年11月10日",
+       "field": "請求年月日 (ngày xin cấp)",
+       "how": "Ghi ngày bạn đến quầy xin giấy.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / グエン・バン・アン",
+       "field": "窓口に来た人の住所・氏名 (địa chỉ và họ tên người đến quầy)",
+       "how": "Ghi địa chỉ hiện tại và họ tên của chính bạn, giống trên thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "090-1234-5678",
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số điện thoại liên lạc được ban ngày, để quầy gọi khi cần hỏi lại.",
+       "mistake": ""
+      },
+      {
+       "example": "同上 (giống trên) / グエン・バン・アン / 世帯主 グエン・バン・アン",
+       "field": "必要な人の住所・氏名・世帯主 (người cần lấy giấy: địa chỉ, họ tên, chủ hộ)",
+       "how": "Xin cho chính mình thì ghi lại địa chỉ và tên bạn, tên chủ hộ là bạn.",
+       "mistake": ""
+      },
+      {
+       "example": "住民票の写し（世帯全員）1通",
+       "field": "証明の種類と通数 (loại giấy và số bản)",
+       "how": "Đánh dấu vào 住民票の写し và ghi số bản cần. Ở một mình thì chọn loại 世帯全員 (toàn hộ) cho tiện dùng.",
+       "mistake": "Xin thừa nhiều bản. Lệ phí 300 yên một bản (ở Kawasaki), xin đúng số cần."
+      },
+      {
+       "example": "世帯主・続柄：記載する / 個人番号：記載しない",
+       "field": "記載事項の選択 (chọn mục muốn hiện trên giấy)",
+       "how": "Tick các mục muốn in: 世帯主・続柄 (chủ hộ và quan hệ) thường cần. 個人番号 (số My Number) chỉ tick khi nơi nộp yêu cầu rõ.",
+       "mistake": "In số My Number khi không cần. Giấy đó phải giữ rất cẩn thận."
+      },
+      {
+       "example": "銀行口座開設のため、○○銀行へ提出",
+       "field": "使用目的・提出先 (mục đích dùng và nơi nộp)",
+       "how": "Ghi ngắn gọn dùng để làm gì và nộp ở đâu.",
+       "mistake": "Để trống ô này. Quầy sẽ hỏi lại và mất thời gian."
+      },
+      {
+       "example": "グエン・バン・アン (ký tay)",
+       "field": "請求者の署名 (chữ ký người xin)",
+       "how": "Tự tay ký tên ở ô người xin. Dù điền bằng máy tính rồi in, ô này vẫn phải ký tay.",
+       "mistake": "In sẵn tên mà không ký tay. Kawasaki ghi rõ ô này phải tự ký."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "住民票等の請求・申出書（窓口用）",
+     "name_vi": "Đơn xin cấp bản sao giấy cư trú (juminhyo) — bản dùng tại quầy",
+     "sample_note": "Ví dụ xin 1 bản 住民票の写し toàn hộ cho anh アン để mở tài khoản ngân hàng. Tên mẫu đơn ở Kawasaki là 住民票等の請求・申出書（窓口用）; thành phố khác tên gọi có thể khác đôi chút.",
+     "source": "川崎市 (Thành phố Kawasaki)"
+    },
+    {
+     "download_url": "https://www.kojinbango-card.go.jp/download/",
+     "fill": [
+      {
+       "example": "1234 5678 9012 (số mẫu, không phải số thật)",
+       "field": "個人番号 (số cá nhân My Number, 12 số)",
+       "how": "Chép 12 số từ giấy thông báo số cá nhân 個人番号通知書 gửi về nhà sau khi đăng ký địa chỉ. Chỉ có ở mẫu viết tay tải về.",
+       "mistake": "Sai một số là đơn không được nhận. Đối chiếu từng số."
+      },
+      {
+       "example": "グエン・バン・アン",
+       "field": "氏名 (họ tên)",
+       "how": "Ghi họ tên giống trên thẻ lưu trú và giấy cư trú.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "field": "住所 (địa chỉ)",
+       "how": "Ghi địa chỉ đã đăng ký ở tòa thị chính, có cả tên tòa nhà và số phòng.",
+       "mistake": "Ghi địa chỉ cũ trước khi chuyển nhà."
+      },
+      {
+       "example": "1998年5月12日",
+       "field": "生年月日 (ngày sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "男",
+       "field": "性別 (giới tính)",
+       "how": "Khoanh hoặc tick 男 (nam) hay 女 (nữ).",
+       "mistake": ""
+      },
+      {
+       "example": "090-1234-5678",
+       "field": "電話番号 (số điện thoại)",
+       "how": "Ghi số điện thoại hay dùng nhất.",
+       "mistake": ""
+      },
+      {
+       "example": "Ảnh chụp tại máy ảnh thẻ hoặc tiệm ảnh, ghi tên sau ảnh trước khi dán",
+       "field": "顔写真貼付欄 (ô dán ảnh chân dung)",
+       "how": "Dán ảnh 3.5cm x 4.5cm, chụp trong 6 tháng gần nhất, nền trơn, nhìn thẳng, không đội mũ.",
+       "mistake": "Dùng ảnh selfie, ảnh mờ hoặc ảnh cũ. Đơn có thể bị trả lại."
+      },
+      {
+       "example": "希望しない",
+       "field": "点字表記の希望 (muốn in chữ nổi Braille trên thẻ hay không)",
+       "how": "Không cần thì để trống hoặc tick 無. Chỉ tick khi bạn cần chữ nổi trên mặt thẻ.",
+       "mistake": ""
+      },
+      {
+       "example": "2026年11月15日 / グエン・バン・アン",
+       "field": "申請年月日・署名 (ngày xin và chữ ký)",
+       "how": "Ghi ngày điền đơn và tự tay ký tên.",
+       "mistake": ""
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "マイナンバーカード交付申請書（個人番号カード交付申請書）",
+     "name_vi": "Đơn xin cấp thẻ My Number",
+     "sample_note": "Đây là mẫu viết tay để gửi bưu điện cho anh アン. Cách nhanh hơn: quét mã QR trên đơn xin cấp thẻ gửi về nhà để xin online bằng điện thoại (cùng trang kojinbango-card.go.jp có hướng dẫn申請 online).",
+     "source": "マイナンバーカード総合サイト (Trang tổng hợp thẻ My Number, J-LIS)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "JP viva",
+     "lang": "vi",
+     "note": "Hướng dẫn bằng tiếng Việt cách đổi thẻ My Number giấy sang thẻ cứng có chip IC ở Nhật.",
+     "title": "[JP viva] Đổi thẻ cứng My number ở Nhật",
+     "url": "https://www.youtube.com/watch?v=aLmksdT5khM"
+    },
+    {
+     "channel": "松戸市",
+     "lang": "ja",
+     "note": "Video chính thức của thành phố Matsudo hướng dẫn thủ tục 転入・転出・転居 khi chuyển nhà, kèm bảo hiểm y tế và nenkin cho người nước ngoài.",
+     "title": "転入（てんにゅう）　・　転出（てんしゅつ）　～引っ越したときに必要なこと～",
+     "url": "https://www.youtube.com/watch?v=38JkPIQpxtg"
+    }
+   ]
+  },
+  {
+   "id": "gia-han-visa",
+   "group": "Giấy tờ & cư trú",
+   "title": "Gia hạn visa （在留期間更新）",
+   "icon": "🔄",
+   "summary": "Ở Nhật, cái mọi người hay gọi là 'gia hạn visa' thực ra là xin gia hạn thời gian lưu trú (在留期間更新, zairyu kikan koshin) tại Cục Xuất nhập cảnh (出入国在留管理局, gọi tắt là Nyukan). Nếu công việc/học tập của bạn không đổi và chỉ muốn ở tiếp, bạn nộp hồ sơ trước ngày hết hạn, sớm nhất từ 3 tháng trước ngày hết hạn. Tuyệt đối không để quá hạn dù chỉ 1 ngày.",
+   "who": "Người đang có tư cách lưu trú (du học, đi làm, gia đình, kỹ năng đặc định...) sắp hết hạn thẻ lưu trú mà vẫn tiếp tục đúng hoạt động cũ: vẫn học ở trường đó, vẫn làm ở công ty đó. Ví dụ hư cấu: chị Trần Thị Bình đang làm việc tại một công ty ở Kawasaki, thẻ hết hạn vào tháng sau, công ty vẫn thuê tiếp — chị Bình làm thủ tục này. Lưu ý: đổi công ty/đổi loại công việc có thể là thủ tục KHÁC, xem thêm bài đổi tư cách lưu trú.",
+   "docs": [
+    "Đơn xin gia hạn thời gian lưu trú (在留期間更新許可申請書) — bản dành đúng cho tư cách lưu trú của bạn, lấy tại Nyukan hoặc tải trên trang của Cục",
+    "Ảnh chân dung 4cm × 3cm, chụp trong 3 tháng gần đây, nền sáng, không đội mũ (một số trường hợp thời hạn ngắn không cần, cứ mang theo cho chắc)",
+    "Hộ chiếu (パスポート) bản gốc — mang trình, không nộp lại",
+    "Thẻ lưu trú (在留カード) bản gốc — mang trình, bản cũ sẽ được trả lại khi nhận thẻ mới",
+    "Giấy tờ theo tư cách của bạn — đi làm: giấy chứng nhận đang làm việc (在職証明書) do công ty cấp + giấy chứng nhận thuế (課税証明書) và giấy chứng nhận đã nộp thuế (納税証明書) của năm gần nhất, lấy ở tòa thị chính; du học: giấy chứng nhận đang học + bảng điểm + giấy chứng nhận chuyên cần do trường cấp",
+    "Giấy tờ chứng minh thu nhập / khả năng chi trả nếu được yêu cầu thêm (sao kê lương, số dư ngân hàng...) — tùy tư cách",
+    "Thẻ My Number hoặc giấy cư trú (住民票) — một số hồ sơ được yêu cầu kèm theo, mang sẵn bản sao phòng khi cần"
+   ],
+   "prep_home": [
+    "Nhìn mặt trước thẻ lưu trú, ghi lại NGÀY HẾT HẠN (在留期間満了日) và đặt nhắc nhở trong điện thoại trước đó 3 tháng. Bắt đầu chuẩn bị giấy tờ từ khoảng 2–3 tháng trước khi hết hạn",
+    "Xin công ty/trường cấp giấy chứng nhận sớm: giấy 在職証明書 / giấy của trường thường mất vài ngày đến 1 tuần, đừng để sát ngày mới xin",
+    "Ra tòa thị chính xin 課税証明書 và 納税証明書 của năm gần nhất (mỗi tờ khoảng 300 yên, tùy địa phương). Đây là 2 giấy người đi làm gần như luôn phải nộp — xin sẵn 1 bộ",
+    "Tải và điền thử đơn xin gia hạn ở nhà (trên trang Cục có mẫu điền tham khảo). Điền bằng bút đen, viết in hoa phần họ tên giống hộ chiếu",
+    "Photocopy mặt trước + mặt sau thẻ lưu trú và trang thông tin hộ chiếu, mỗi thứ 1 bản, kẹp cùng hồ sơ",
+    "Kiểm tra lại: bạn có đang nợ thuế, nợ tiền bảo hiểm, nợ tiền lương hưu không? Có khoản nợ nào thì đóng ngay trước khi nộp hồ sơ — Cục kiểm tra việc này khi xét gia hạn",
+    "Tra địa chỉ Nyukan phụ trách khu vực nhà bạn và giờ tiếp nhận (thường ngày thường 9:00–12:00 và 13:00–16:00). Chuẩn bị tinh thần đi ngày thường, có thể phải nghỉ làm nửa ngày"
+   ],
+   "steps": [
+    {
+     "t": "Tự kiểm tra điều kiện và thời điểm nộp",
+     "d": "LÀM Ở NHÀ: Bạn được nộp sớm nhất từ 3 THÁNG trước ngày hết hạn (với thời hạn lưu trú từ 6 tháng trở lên). Cục khuyến khích nộp trong khoảng từ 3 tháng đến 45 ngày trước khi hết hạn để kịp có kết quả trong hạn. KIỂM TRA GÌ: bạn vẫn đang làm đúng hoạt động của tư cách hiện tại (đúng công ty/việc đã khai, đi học đầy đủ nếu là du học), đã đóng thuế và bảo hiểm đầy đủ. Nếu vừa đổi công ty, hãy hỏi Nyukan hoặc trường/công ty xem trường hợp của bạn là 'gia hạn' hay phải 'đổi tư cách' — nộp nhầm loại đơn sẽ mất thời gian.",
+     "ja": "在留期間の更新を申請したいです。",
+     "vi": "Tôi muốn xin gia hạn thời gian lưu trú."
+    },
+    {
+     "t": "Chuẩn bị đủ bộ hồ sơ theo tư cách lưu trú của bạn",
+     "d": "LÀM Ở NHÀ + Ở CƠ QUAN CẤP GIẤY: Gom đủ các giấy trong mục checklist. Giấy do cơ quan Nhật cấp (thuế, giấy của công ty/trường) phải là bản cấp trong vòng 3 tháng gần đây. MANG GÌ khi đi nộp: toàn bộ hồ sơ + bản gốc hộ chiếu và thẻ lưu trú. MẤT BAO LÂU: khâu chuẩn bị giấy thường mất 1–2 tuần — đây là khâu lâu nhất, không phải khâu nộp. KIỂM TRA GÌ: đếm lại từng tờ theo checklist, giấy nào thiếu thì ghi ra và xử lý trước ngày đi nộp.",
+     "ja": "必要書類を確認したいです。",
+     "vi": "Tôi muốn kiểm tra các giấy tờ cần thiết."
+    },
+    {
+     "t": "Đến Nyukan, lấy số và nộp hồ sơ tại quầy tiếp nhận",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương (地方出入国在留管理局) phụ trách nơi bạn sống, đến quầy tiếp nhận hồ sơ (申請受付). MANG GÌ: bộ hồ sơ + hộ chiếu + thẻ lưu trú bản gốc. NÓI GÌ: đưa hồ sơ và nói câu mẫu. Nhân viên kiểm tra nhanh, nếu thiếu giấy sẽ chỉ rõ và có thể cho bổ sung sau. MẤT BAO LÂU: chờ + nộp thường 30 phút đến 2 giờ tùy đông (mùa tháng 3–4 và 9–10 rất đông, nên đi sớm buổi sáng). NHẬN ĐƯỢC GÌ: thẻ lưu trú của bạn được đóng dấu/ghi chú 'đang xin gia hạn' (申請中) ở mặt sau — từ lúc này, dù ngày hết hạn ghi trên thẻ qua đi, bạn vẫn ở hợp pháp trong thời gian chờ kết quả (tối đa 2 tháng sau ngày hết hạn, gọi là 特例期間, thời gian đặc lệ). KIỂM TRA GÌ: trước khi rời quầy, xem mặt sau thẻ đã có ghi chú đang nộp hồ sơ chưa và hỏi rõ cách nhận kết quả.",
+     "ja": "在留期間更新の申請書を提出します。",
+     "vi": "Tôi nộp đơn xin gia hạn thời gian lưu trú."
+    },
+    {
+     "t": "Giữ liên lạc và chờ thông báo kết quả",
+     "d": "Ở NHÀ CHỜ: Thời gian xét chuẩn khoảng 2 tuần đến 1 tháng. Cục sẽ gửi BƯU THIẾP (はがき, hagaki) về địa chỉ trên thẻ lưu trú khi có kết quả — đây là lý do địa chỉ của bạn phải luôn đúng và hộp thư phải có tên bạn. MANG GÌ: không cần mang gì, nhưng phải kiểm tra hộp thư mỗi ngày. Nếu Cục cần thêm giấy tờ, họ sẽ gửi thư yêu cầu bổ sung (資料提出通知書) — đọc kỹ hạn nộp bổ sung và nộp đúng hạn. KIỂM TRA GÌ: nếu quá 1 tháng chưa thấy bưu thiếp, gọi Trung tâm thông tin tổng hợp cho người nước ngoài (0570-013904, có hỗ trợ nhiều ngôn ngữ) để hỏi tình trạng hồ sơ.",
+     "ja": "申請の結果はいつ分かりますか。",
+     "vi": "Khi nào thì biết kết quả hồ sơ ạ?"
+    },
+    {
+     "t": "Nhận bưu thiếp kết quả và chuẩn bị đi nhận thẻ mới",
+     "d": "Ở NHÀ: Bưu thiếp sẽ ghi những thứ cần mang và mức lệ phí phải đóng. Chuẩn bị: bưu thiếp này, hộ chiếu, thẻ lưu trú cũ, và tiền mua tem doanh thu (収入印紙, shunyu inshi — loại tem nộp lệ phí nhà nước, mua ở bưu điện hoặc một số cửa hàng tiện lợi) đúng số tiền ghi trên bưu thiếp. LƯU Ý TIỀN PHÍ: mức phí đã thay đổi lớn từ 1/10/2026 và phụ thuộc thời hạn mới được cấp (xem mục Chi phí) — cứ mua đúng số tiền ghi trên bưu thiếp là chuẩn nhất. MẤT BAO LÂU: đi nhận trong thời hạn ghi trên bưu thiếp, đừng để quá hạn ghi trên thiếp.",
+     "ja": "はがきが届きました。カードを受け取りに来ました。",
+     "vi": "Bưu thiếp đã đến. Tôi đến để nhận thẻ."
+    },
+    {
+     "t": "Đến Nyukan nhận thẻ lưu trú mới và đóng lệ phí",
+     "d": "ĐI ĐÂU: Nyukan nơi bạn đã nộp, đến quầy nhận kết quả (交付窓口). MANG GÌ: bưu thiếp, hộ chiếu, thẻ lưu trú cũ, tem doanh thu đã mua và tờ khai nộp lệ phí (手数料納付書 — lấy và điền tại quầy, dán tem doanh thu lên đó). NÓI GÌ: nói câu mẫu của bước trước và nộp các giấy. MẤT BAO LÂU: thường 30 phút đến 1 giờ. NHẬN ĐƯỢC GÌ: thẻ lưu trú MỚI với ngày hết hạn mới; thẻ cũ bị đục lỗ và trả lại cho bạn giữ làm kỷ niệm/hồ sơ. KIỂM TRA GÌ NGAY TẠI QUẦY: họ tên, ngày sinh, tư cách lưu trú (在留資格) và ngày hết hạn mới trên thẻ mới — sai bất cứ chữ nào phải báo ngay tại chỗ.",
+     "ja": "新しい在留カードを確認しました。ありがとうございます。",
+     "vi": "Tôi đã kiểm tra thẻ lưu trú mới. Xin cảm ơn."
+    }
+   ],
+   "cost": "Chỉ đóng khi ĐƯỢC cấp phép, bằng tem doanh thu (収入印紙) nếu nộp tại quầy. Từ 1/10/2026, phí tính theo thời hạn mới được cấp: tối đa 3 tháng: 10.000 yên; trên 3 tháng đến 6 tháng: 18.000 yên; trên 6 tháng đến dưới 1 năm: 25.000 yên; 1 năm: 33.000 yên; trên 1 năm đến dưới 3 năm: 48.000 yên; từ 3 năm đến dưới 5 năm: 64.000 yên; từ 5 năm trở lên: 75.000 yên. Hồ sơ đã được tiếp nhận đến hết 30/9/2026 vẫn theo mức cũ 6.000 yên. Nộp trực tuyến phí thấp hơn một chút và thanh toán qua cửa hàng tiện lợi/ngân hàng. Số tiền chính xác của bạn sẽ ghi trên bưu thiếp báo kết quả — mua tem đúng số đó.",
+   "duration": "Thời gian xét chuẩn theo Cục công bố: khoảng 2 tuần đến 1 tháng kể từ ngày nộp. Mùa cao điểm có thể lâu hơn. Nếu đã nộp trước ngày hết hạn mà chưa có kết quả, bạn được ở hợp pháp thêm tối đa 2 tháng sau ngày hết hạn (thời gian đặc lệ 特例期間).",
+   "warnings": [
+    "TUYỆT ĐỐI không để qua ngày hết hạn mới nộp. Quá hạn dù 1 ngày mà chưa nộp hồ sơ là ở bất hợp pháp (不法滞在), hậu quả rất nặng cho mọi thủ tục sau này. Ngược lại, chỉ cần nộp TRƯỚC ngày hết hạn là bạn an toàn trong thời gian chờ",
+    "Đổi công ty không tự động bị cấm, nhưng khi gia hạn Cục sẽ xét công việc mới có đúng tư cách không và bạn có báo thay đổi nơi làm việc trong 14 ngày khi đổi việc không (đây là nghĩa vụ khai báo riêng — nhiều người quên và gặp rắc rối khi gia hạn)",
+    "Nợ thuế, nợ bảo hiểm y tế, nợ lương hưu là lý do bị từ chối hoặc chỉ được cấp thời hạn ngắn rất phổ biến. Trước khi nộp 2–3 tháng, hãy kiểm tra và đóng hết các khoản nợ",
+    "Du học sinh: tỉ lệ lên lớp (出席率) và việc làm thêm quá 28 giờ/tuần đều bị kiểm tra khi gia hạn. Làm thêm quá giờ là vi phạm có thể khiến hồ sơ bị từ chối",
+    "Nếu TRỤC TRẶC — thiếu giấy tờ khi nộp: đừng hoảng. Nhân viên sẽ ghi/chỉ rõ giấy còn thiếu và cho bạn bổ sung, thường bằng cách mang đến sau hoặc gửi bưu điện theo hướng dẫn. Chụp ảnh lại tờ giấy ghi yêu cầu bổ sung để chuẩn bị đúng, và nộp bổ sung TRƯỚC hạn được ghi",
+    "Nếu TRỤC TRẶC — bị TỪ CHỐI gia hạn: bạn sẽ nhận thông báo và thường được hướng dẫn đổi sang tư cách 'chuẩn bị xuất cảnh' (特定活動・出国準備) với thời hạn ngắn để thu xếp về nước, hoặc được giải thích lý do. Hãy hỏi rõ lý do từ chối (câu mẫu trong phần cụm câu), bình tĩnh ghi lại, và nếu thấy oan/không hiểu, nhờ luật sư hành chính (行政書士, gyoseishoshi) hoặc trung tâm hỗ trợ người nước ngoài của địa phương tư vấn trước khi làm tiếp bất cứ việc gì",
+    "Nếu TRỤC TRẶC — không hiểu tiếng Nhật khi đi nộp/nhận kết quả: nói câu 「日本語があまり分かりません」(tôi chưa hiểu tiếng Nhật lắm) và đưa hồ sơ/giấy tờ ra — nhân viên quen xử lý hồ sơ người nước ngoài. Khi cần hỏi việc quan trọng, gọi Trung tâm thông tin tổng hợp cho người nước ngoài 0570-013904 (có tiếng Việt trong các ngôn ngữ hỗ trợ, hãy kiểm tra giờ hỗ trợ tiếng Việt khi gọi)",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Thẻ mới: họ tên, ngày sinh, tư cách lưu trú và NGÀY HẾT HẠN MỚI đều đúng. Chụp ảnh 2 mặt thẻ mới lưu vào điện thoại ngay",
+    "Đặt nhắc nhở trong điện thoại: bắt đầu chuẩn bị gia hạn lần tới từ 3 tháng trước ngày hết hạn mới",
+    "Báo cho công ty/trường học biết bạn đã gia hạn xong — nơi làm việc thường cần bản sao thẻ mới để cập nhật hồ sơ lao động",
+    "Kiểm tra hạn của thẻ My Number và hộ chiếu: hạn thẻ My Number của người nước ngoài thường trùng ngày hết hạn lưu trú cũ — nếu thẻ My Number sắp/đã hết hạn theo thẻ cũ, ra tòa thị chính làm thủ tục cập nhật/gia hạn thẻ My Number",
+    "Cất thẻ cũ đã bị đục lỗ cùng hồ sơ giấy tờ quan trọng ở nhà, đừng vứt — đôi khi cần đối chiếu lịch sử lưu trú"
+   ],
+   "vocab": [
+    {
+     "ja": "在留期間更新",
+     "reading": "ざいりゅうきかんこうしん",
+     "vi": "Gia hạn thời gian lưu trú (gia hạn 'visa')"
+    },
+    {
+     "ja": "出入国在留管理局",
+     "reading": "しゅつにゅうこくざいりゅうかんりきょく",
+     "vi": "Cục Xuất nhập cảnh (Nyukan)"
+    },
+    {
+     "ja": "在留期間満了日",
+     "reading": "ざいりゅうきかんまんりょうび",
+     "vi": "Ngày hết hạn lưu trú"
+    },
+    {
+     "ja": "特例期間",
+     "reading": "とくれいきかん",
+     "vi": "Thời gian đặc lệ (được ở chờ kết quả sau ngày hết hạn, tối đa 2 tháng)"
+    },
+    {
+     "ja": "収入印紙",
+     "reading": "しゅうにゅういんし",
+     "vi": "Tem doanh thu (tem để nộp lệ phí nhà nước)"
+    },
+    {
+     "ja": "手数料納付書",
+     "reading": "てすうりょうのうふしょ",
+     "vi": "Tờ khai nộp lệ phí (dán tem doanh thu lên tờ này)"
+    },
+    {
+     "ja": "在職証明書",
+     "reading": "ざいしょくしょうめいしょ",
+     "vi": "Giấy chứng nhận đang làm việc"
+    },
+    {
+     "ja": "課税証明書",
+     "reading": "かぜいしょうめいしょ",
+     "vi": "Giấy chứng nhận thuế (ghi thu nhập chịu thuế)"
+    },
+    {
+     "ja": "納税証明書",
+     "reading": "のうぜいしょうめいしょ",
+     "vi": "Giấy chứng nhận đã nộp thuế"
+    },
+    {
+     "ja": "はがき",
+     "reading": "はがき",
+     "vi": "Bưu thiếp (Cục dùng để báo kết quả)"
+    },
+    {
+     "ja": "申請中",
+     "reading": "しんせいちゅう",
+     "vi": "Đang trong thời gian xin/nộp hồ sơ"
+    },
+    {
+     "ja": "不許可",
+     "reading": "ふきょか",
+     "vi": "Không được cấp phép / bị từ chối"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "在留期間更新の申請書を提出します。",
+     "vi": "Tôi nộp đơn xin gia hạn thời gian lưu trú."
+    },
+    {
+     "ja": "必要書類を確認したいです。",
+     "vi": "Tôi muốn kiểm tra các giấy tờ cần thiết."
+    },
+    {
+     "ja": "はがきが届きました。カードを受け取りに来ました。",
+     "vi": "Bưu thiếp đã đến. Tôi đến nhận thẻ."
+    },
+    {
+     "ja": "収入印紙はどこで買えますか。",
+     "vi": "Tem doanh thu mua ở đâu ạ?"
+    },
+    {
+     "ja": "不許可の理由を教えてください。",
+     "vi": "Xin cho tôi biết lý do bị từ chối."
+    },
+    {
+     "ja": "日本語があまり分かりません。ゆっくり話してください。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin nói chậm giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh — Thủ tục xin gia hạn thời gian lưu trú",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/16-3.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Thông báo sửa đổi lệ phí thủ tục lưu trú",
+     "url": "https://www.moj.go.jp/isa/11_00053.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/16-3-1.html",
+     "fill": [
+      {
+       "example": "Ảnh nền trơn, không mũ, không kính râm",
+       "field": "写真 (ảnh chân dung)",
+       "how": "Dán ảnh 4cm x 3cm, chụp trong 3 tháng gần nhất, vào ô ảnh ở đầu đơn (申請人等作成用 1).",
+       "mistake": "Dùng ảnh cũ quá 3 tháng."
+      },
+      {
+       "example": "ベトナム",
+       "field": "1 国籍・地域 (quốc tịch / khu vực)",
+       "how": "Ghi quốc tịch trên hộ chiếu của bạn.",
+       "mistake": ""
+      },
+      {
+       "example": "1998年5月12日",
+       "field": "2 生年月日 (ngày sinh)",
+       "how": "Chép từ hộ chiếu, ghi năm tháng ngày.",
+       "mistake": ""
+      },
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "3 氏名 (họ tên)",
+       "how": "Ghi chữ Latin in hoa, họ trước tên sau, giống hệt hộ chiếu và thẻ lưu trú.",
+       "mistake": "Viết có dấu hoặc khác thứ tự với hộ chiếu."
+      },
+      {
+       "example": "男 / 無",
+       "field": "4 性別 / 5 配偶者の有無 (giới tính / đã kết hôn chưa)",
+       "how": "Khoanh 男 hoặc 女; khoanh 有 nếu đã kết hôn, 無 nếu chưa.",
+       "mistake": ""
+      },
+      {
+       "example": "ハノイ / ベトナム ハノイ市",
+       "field": "6 出生地 / 7 本国における居住地 (nơi sinh / địa chỉ ở nước mình)",
+       "how": "Nơi sinh chép từ hộ chiếu. Địa chỉ ở Việt Nam ghi bằng chữ Latin.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "8 住居地・電話番号 (địa chỉ ở Nhật và điện thoại)",
+       "how": "Ghi địa chỉ đúng như mặt sau thẻ lưu trú, kèm số điện thoại cố định nếu có và số di động.",
+       "mistake": "Đã chuyển nhà mà vẫn ghi địa chỉ cũ."
+      },
+      {
+       "example": "番号 B12345678 (số mẫu) / 有効期限 2033年8月1日",
+       "field": "9 旅券 (hộ chiếu: số và ngày hết hạn)",
+       "how": "Chép số hộ chiếu và ngày hết hạn từ bìa thông tin hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "技術・人文知識・国際業務 / 3年 / 2027年3月31日",
+       "field": "10 現に有する在留資格・在留期間・満了日 (tư cách hiện tại, thời hạn, ngày hết hạn)",
+       "how": "Chép đúng từ thẻ lưu trú: tên tư cách, thời hạn được cấp, ngày hết hạn.",
+       "mistake": "Ghi sai ngày hết hạn. Đây là mốc quan trọng nhất của đơn."
+      },
+      {
+       "example": "AB12345678CD (số mẫu)",
+       "field": "11 在留カード番号 (số thẻ lưu trú)",
+       "how": "Chép số ở góc phải trên mặt trước thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "無",
+       "field": "12 犯罪を理由とする処分の有無 (đã từng bị xử phạt hình sự chưa)",
+       "how": "Chưa từng thì khoanh 無. Nếu có thì khoanh 有 và ghi rõ nội dung. Gồm cả ở ngoài Nhật.",
+       "mistake": "Giấu thông tin. Bị phát hiện là mất uy tín cho mọi lần xét sau."
+      },
+      {
+       "example": "引き続き現在の会社で勤務するため / 3年",
+       "field": "13 更新の理由・希望する在留期間 (lý do gia hạn và thời hạn mong muốn)",
+       "how": "Ghi ngắn gọn: vẫn làm công việc hiện tại tại công ty hiện tại. Thời hạn mong muốn ghi như 3年 hoặc 5年.",
+       "mistake": "Để trống lý do."
+      },
+      {
+       "example": "株式会社サンプル介護サービス / 川崎市中原区 / 044-000-0000 (tên công ty mẫu)",
+       "field": "所属機関等作成用：勤務先の名称・所在地・電話 (phần cơ quan: tên, địa chỉ, điện thoại nơi làm việc)",
+       "how": "Phần này do công ty điền. Bạn mang các trang 所属機関等作成用 đến nhờ công ty điền và đóng dấu (nếu công ty yêu cầu).",
+       "mistake": "Tự điền thay công ty. Số liệu phải khớp giấy tờ công ty nộp kèm."
+      },
+      {
+       "example": "介護業務の計画作成・月額 260,000円 (ví dụ mẫu)",
+       "field": "所属機関等作成用：職務内容・報酬 (phần cơ quan: nội dung công việc và lương)",
+       "how": "Công ty ghi công việc bạn thật sự làm và lương tháng hoặc lương năm. Phải khớp hợp đồng lao động.",
+       "mistake": "Lương trong đơn khác với hợp đồng và phiếu lương."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "在留期間更新許可申請書",
+     "name_vi": "Đơn xin gia hạn thời gian lưu trú",
+     "sample_note": "Ví dụ điền cho anh アン theo tư cách 技術・人文知識・国際業務 (mục số 8 trên trang tải đơn). Mỗi tư cách lưu trú có mẫu riêng: vào trang trên, chọn đúng mục của tư cách mình. Trang có cả bản PDF và Excel.",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "Văn phòng luật sư hành chính Shimarisu",
+     "lang": "vi",
+     "note": "Giải thích bằng tiếng Việt các giấy tờ cần chuẩn bị khi gia hạn visa kỹ sư, phần của người lao động và của công ty.",
+     "title": "Gia hạn visa kỹ sư Nhật Bản 2026 | Cần giấy tờ gì? (技術・人文知識・国際業務) 🎁 Tặng PDF miễn phí",
+     "url": "https://www.youtube.com/watch?v=HSj8Cu9YCdc"
+    },
+    {
+     "channel": "Văn phòng gyoseishoshi SHARK",
+     "lang": "vi",
+     "note": "Hành chính sư Nhật giải thích bằng tiếng Việt về thời gian đặc lệ khi gia hạn visa và vì sao nộp trễ 1 ngày là cư trú quá hạn.",
+     "title": "Gia hạn visa: Trễ 1 ngày là ở quá hạn bất hợp pháp",
+     "url": "https://www.youtube.com/watch?v=vImXc7_pVN0"
+    },
+    {
+     "channel": "Thao Chan",
+     "lang": "vi",
+     "note": "Hướng dẫn tự làm thủ tục gia hạn visa kỹ sư khi đã chuyển việc, nộp sớm nhất từ 3 tháng trước ngày hết hạn.",
+     "title": "📚Hướng dẫn tự làm thủ tục gia hạn visa cho kỹ sư khi chuyển việc",
+     "url": "https://www.youtube.com/watch?v=onUPmhK-zGg"
+    }
+   ]
+  },
+  {
+   "id": "doi-tu-cach-luu-tru",
+   "group": "Giấy tờ & cư trú",
+   "title": "Đổi tư cách lưu trú (du học → đi làm, sang 特定技能） （在留資格変更）",
+   "icon": "🔀",
+   "summary": "Đổi tư cách lưu trú (在留資格変更, zairyu shikaku henko) là thủ tục xin Cục Xuất nhập cảnh (Nyukan) cho phép bạn chuyển từ hoạt động này sang hoạt động khác: ví dụ từ 'Du học' (留学) sang tư cách đi làm như 'Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế' (技術・人文知識・国際業務, thường gọi là visa kỹ sư/nhân văn) hoặc sang 'Kỹ năng đặc định' (特定技能, tokutei gino). Chưa có phép đổi thì CHƯA được bắt đầu công việc mới, dù công ty đã nhận bạn.",
+   "who": "Người sắp tốt nghiệp đi làm, người đổi loại hình công việc sang nhóm tư cách khác, thực tập sinh/du học sinh muốn sang Đặc kỹ năng 1 (特定技能1号). Ví dụ hư cấu: bạn Lê Văn Cường, du học sinh sắp tốt nghiệp trường chuyên môn, được một công ty nhận vào làm — Cường phải đổi từ 'Du học' sang tư cách lao động trước ngày vào công ty. Một ví dụ khác: chị Phạm Thị Dung học xong tiếng Nhật, thi đỗ kỳ thi kỹ năng + tiếng Nhật của một ngành và được xí nghiệp nhận theo Đặc kỹ năng.",
+   "docs": [
+    "Đơn xin đổi tư cách lưu trú (在留資格変更許可申請書) — đúng mẫu của tư cách MỚI bạn muốn đổi sang",
+    "Ảnh chân dung 4cm × 3cm chụp trong 3 tháng gần đây",
+    "Hộ chiếu và thẻ lưu trú bản gốc (mang trình khi nộp)",
+    "Bằng tốt nghiệp hoặc giấy chứng nhận tốt nghiệp dự kiến (卒業証明書 / 卒業見込証明書) và bảng điểm — với người đổi từ du học sang đi làm",
+    "Hợp đồng lao động hoặc giấy báo trúng tuyển có ghi rõ nội dung công việc, lương, giờ làm (労働条件通知書 / 雇用契約書) do công ty cấp",
+    "Giấy tờ về công ty: bản sao đăng ký công ty, báo cáo quyết toán gần nhất, giấy chứng nhận thuế của công ty... — công ty thuộc nhóm (カテゴリー) nào thì giấy tờ khác nhau, phần này công ty thường chuẩn bị cho bạn",
+    "Lý lịch (履歴書) ghi quá trình học tập và làm việc của bạn",
+    "Riêng đường Đặc kỹ năng 1: giấy chứng nhận đỗ kỳ thi kỹ năng của ngành + đỗ thi tiếng Nhật (JLPT N4 trở lên hoặc JFT-Basic), hợp đồng Đặc kỹ năng và kế hoạch hỗ trợ (支援計画) do công ty/tổ chức hỗ trợ đăng ký chuẩn bị"
+   ],
+   "prep_home": [
+    "Xác định rõ tư cách MỚI của mình tên là gì và công việc sắp làm có khớp với ngành đã học không. Với tư cách Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế: việc văn phòng/kỹ thuật phải LIÊN QUAN đến môn đã học ở đại học/trường chuyên môn — đây là điểm bị xét kỹ nhất",
+    "Nhờ công ty mới cấp sớm: hợp đồng lao động/bảng điều kiện lao động ghi rõ việc sẽ làm, mức lương, và bộ giấy tờ của công ty theo nhóm (カテゴリー). Thiếu giấy của công ty là hồ sơ dừng lại, nên xin ngay khi có内定 (naitei, thư mời nhận việc)",
+    "Xin trường cấp bằng tốt nghiệp/giấy tốt nghiệp dự kiến và bảng điểm. Nếu nộp trước khi tốt nghiệp, bạn thường nộp bản 'dự kiến tốt nghiệp' trước rồi bổ sung bằng thật sau",
+    "Đi làm thêm (với du học sinh): tổng kết lại giờ làm thêm của bạn — làm quá 28 giờ/tuần trong thời gian dài là điểm trừ lớn khi đổi sang tư cách lao động. Ngừng việc làm thêm ngay khi không còn là du học sinh theo hướng dẫn của Nyukan/trường",
+    "Đóng hết các khoản nợ thuế thị dân, bảo hiểm y tế quốc dân, lương hưu còn thiếu. Hồ sơ Đặc kỹ năng đặc biệt bị kiểm tra kỹ phần nộp thuế và đóng bảo hiểm",
+    "Photocopy hộ chiếu, thẻ lưu trú 2 mặt, bằng cấp — mỗi thứ 1 bản; bản gốc bằng cấp mang theo khi nộp để đối chiếu nếu được yêu cầu",
+    "Tính ngược thời gian: kết quả đổi tư cách thường ra sau khoảng 1–2 tháng. Nếu ngày vào công ty đã ấn định, nộp hồ sơ ngay khi đủ giấy, đừng đợi tốt nghiệp xong mới bắt đầu chuẩn bị"
+   ],
+   "steps": [
+    {
+     "t": "Xác nhận công việc mới thuộc tư cách nào và có đủ điều kiện không",
+     "d": "LÀM Ở NHÀ + HỎI CÔNG TY: Ba đường phổ biến: (1) Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế: cần tốt nghiệp đại học (ở Nhật hoặc Việt Nam được công nhận) hoặc trường chuyên môn ở Nhật, và việc sắp làm phải dùng kiến thức đã học. (2) Đặc kỹ năng 1: cần đỗ thi kỹ năng của ngành + tiếng Nhật N4/JFT-Basic, không yêu cầu bằng đại học; người đã hoàn thành tốt thực tập kỹ năng 2 (技能実習2号) đúng ngành thường được miễn thi. (3) Các tư cách khác (Điều dưỡng 介護, Kỹ năng 技能...) theo từng ngành. NÓI GÌ: hỏi phòng nhân sự công ty câu mẫu để biết công ty đã quen làm hồ sơ cho người nước ngoài chưa. KIỂM TRA GÌ: lương trong hợp đồng phải ngang bằng hoặc hơn người Nhật làm cùng việc — lương thấp bất thường là lý do bị từ chối.",
+     "ja": "在留資格の変更について、会社の書類を準備していただけますか。",
+     "vi": "Về việc đổi tư cách lưu trú, công ty chuẩn bị giúp tôi các giấy tờ của công ty được không?"
+    },
+    {
+     "t": "Đỗ các kỳ thi cần thiết (chỉ với đường Đặc kỹ năng)",
+     "d": "ĐI ĐÂU: Kỳ thi kỹ năng theo ngành (ví dụ: điều dưỡng, nhà hàng, xây dựng, chế biến thực phẩm...) tổ chức tại Nhật và cả ở Việt Nam; thi tiếng Nhật là JLPT (日本語能力試験) cấp N4 trở lên hoặc JFT-Basic (kỳ thi tiếng Nhật cơ bản của Quỹ giao lưu quốc tế). ĐĂNG KÝ: qua trang chính thức của kỳ thi ngành và của JLPT/JFT — lịch thi và lệ phí thi thay đổi theo kỳ, xem trên trang của từng kỳ thi. MẤT BAO LÂU: từ lúc ôn + thi + có kết quả thường vài tháng — bắt đầu sớm. NHẬN ĐƯỢC GÌ: giấy chứng nhận đỗ (合格証明書) — giấy bắt buộc trong hồ sơ đổi tư cách. KIỂM TRA GÌ: tên trên giấy chứng nhận phải khớp từng chữ với hộ chiếu.",
+     "ja": "特定技能の試験に合格しました。",
+     "vi": "Tôi đã đỗ kỳ thi Kỹ năng đặc định."
+    },
+    {
+     "t": "Chuẩn bị bộ hồ sơ: phần của bạn + phần của công ty",
+     "d": "LÀM Ở NHÀ: Điền đơn đổi tư cách (mẫu của tư cách mới), dán ảnh, kẹp kèm bằng cấp, lý lịch, hợp đồng lao động và bộ giấy công ty. Giấy do cơ quan Nhật cấp phải trong vòng 3 tháng. MANG GÌ khi đi nộp: cả bộ hồ sơ + hộ chiếu + thẻ lưu trú bản gốc. MẤT BAO LÂU: chuẩn bị thường 2–4 tuần, lâu nhất là chờ giấy của công ty và bằng tốt nghiệp. KIỂM TRA GÌ: nội dung công việc ghi trong hợp đồng/đơn phải nhất quán với ngành học của bạn — nếu học kinh tế mà làm phiên dịch/marketing thì phải giải thích được mối liên hệ; học kỹ thuật mà làm việc tay chân đơn thuần thì nguy cơ bị từ chối rất cao.",
+     "ja": "卒業証明書と雇用契約書を用意しました。",
+     "vi": "Tôi đã chuẩn bị giấy chứng nhận tốt nghiệp và hợp đồng lao động."
+    },
+    {
+     "t": "Nộp hồ sơ tại Nyukan trước khi tư cách cũ hết hạn",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương phụ trách nơi bạn sống, quầy tiếp nhận (申請受付), ngày thường 9:00–12:00 và 13:00–16:00. NÓI GÌ: nói câu mẫu và nộp hồ sơ. THỜI ĐIỂM: nộp ngay khi có sự việc cần đổi (có việc làm mới, tốt nghiệp) và PHẢI nộp trước ngày hết hạn của tư cách hiện tại. Sau khi nộp, bạn được ở hợp pháp chờ kết quả tối đa 2 tháng sau ngày hết hạn cũ (thời gian đặc lệ). MẤT BAO LÂU: chờ + nộp 30 phút đến 2 giờ. NHẬN ĐƯỢC GÌ: ghi chú 'đang xin đổi tư cách' trên mặt sau thẻ lưu trú. KIỂM TRA GÌ: hỏi rõ — trong lúc chờ kết quả, bạn CHƯA được làm công việc mới; chỉ khi được cấp phép đổi mới bắt đầu làm.",
+     "ja": "在留資格変更の申請書を提出します。",
+     "vi": "Tôi nộp đơn xin đổi tư cách lưu trú."
+    },
+    {
+     "t": "Chờ kết quả và bổ sung giấy tờ nếu được yêu cầu",
+     "d": "Ở NHÀ CHỜ: Thời gian xét chuẩn khoảng 1–2 tháng. Cục gửi bưu thiếp (はがき) báo kết quả về địa chỉ đăng ký. Nếu nhận thư yêu cầu bổ sung (資料提出通知書), đọc kỹ giấy được yêu cầu và hạn nộp — bổ sung đúng hạn là cực kỳ quan trọng, trễ hạn có thể bị coi là không hợp tác và bị từ chối. MANG GÌ khi bổ sung: giấy được yêu cầu + mang theo thư yêu cầu. KIỂM TRA GÌ: trong thời gian chờ, nếu đổi địa chỉ nhà phải báo cả tòa thị chính lẫn Nyukan theo quy định, và kiểm tra hộp thư mỗi ngày.",
+     "ja": "追加書類を提出します。",
+     "vi": "Tôi nộp giấy tờ bổ sung."
+    },
+    {
+     "t": "Nhận thẻ lưu trú mới và đóng lệ phí theo thời hạn được cấp",
+     "d": "ĐI ĐÂU: Nyukan nơi đã nộp, quầy nhận kết quả. MANG GÌ: bưu thiếp kết quả, hộ chiếu, thẻ lưu trú cũ, tem doanh thu (収入印紙) đúng số tiền ghi trên bưu thiếp (mua ở bưu điện) và tờ khai nộp lệ phí điền tại quầy. MỨC PHÍ: từ 1/10/2026 phí tính theo thời hạn được cấp, cao nhất 75.000 yên cho thời hạn từ 5 năm (xem mục Chi phí) — hãy chuẩn bị tâm lý và tiền mặt mua tem theo đúng số ghi trên bưu thiếp. NHẬN ĐƯỢC GÌ: thẻ lưu trú mới ghi tư cách mới. KIỂM TRA GÌ NGAY TẠI QUẦY: tên tư cách mới (在留資格) có đúng loại bạn xin không, ngày hết hạn mới, và dòng 'được phép làm việc' — sai thì báo ngay.",
+     "ja": "新しい在留カードを受け取りに来ました。",
+     "vi": "Tôi đến nhận thẻ lưu trú mới."
+    },
+    {
+     "t": "Sau khi đổi xong: bắt đầu công việc và làm các thủ tục kéo theo",
+     "d": "LÀM TIẾP NGAY TUẦN ĐẦU: (1) Chỉ bắt đầu làm việc tại công ty mới SAU ngày được cấp phép đổi. (2) Đưa bản sao thẻ mới cho công ty để họ làm thủ tục bảo hiểm xã hội (社会保険) và thuế. (3) Nếu trước đây bạn ở bảo hiểm y tế quốc dân, ra tòa thị chính báo ngừng (脱退手続き) để không bị tính trùng tiền. (4) Du học sinh cũ: giấy phép làm thêm 28 giờ (資格外活動許可) đi kèm tư cách du học sẽ hết ý nghĩa — từ nay bạn làm theo tư cách lao động mới, không làm thêm ngoài phạm vi tư cách nếu chưa có phép riêng. KIỂM TRA GÌ: tháng lương đầu tiên, xem giấy báo lương có trừ bảo hiểm xã hội và thuế thu nhập đúng không.",
+     "ja": "在留資格が変更になりました。会社に報告します。",
+     "vi": "Tư cách lưu trú của tôi đã được đổi. Tôi sẽ báo cho công ty."
+    }
+   ],
+   "cost": "Chỉ đóng khi ĐƯỢC cấp phép, bằng tem doanh thu (収入印紙) nếu nộp tại quầy. Từ 1/10/2026, phí tính theo thời hạn mới được cấp: tối đa 3 tháng: 10.000 yên; trên 3 tháng đến 6 tháng: 18.000 yên; trên 6 tháng đến dưới 1 năm: 25.000 yên; 1 năm: 33.000 yên; trên 1 năm đến dưới 3 năm: 48.000 yên; từ 3 năm đến dưới 5 năm: 64.000 yên; từ 5 năm trở lên: 75.000 yên. Hồ sơ đã được tiếp nhận đến hết 30/9/2026 vẫn theo mức cũ 6.000 yên. Nộp trực tuyến phí thấp hơn một chút. Ngoài ra có thể phát sinh lệ phí thi kỹ năng/tiếng Nhật (đường Đặc kỹ năng) tùy kỳ thi.",
+   "duration": "Thời gian xét chuẩn theo Cục công bố: khoảng 1–2 tháng. Hồ sơ nộp vào mùa tốt nghiệp (tháng 12 đến tháng 3) thường đông và có thể lâu hơn — nộp sớm ngay khi đủ giấy tờ.",
+   "warnings": [
+    "CHƯA được phép đổi thì CHƯA được làm công việc mới — kể cả 'làm thử', 'đào tạo có lương' thuộc công việc của tư cách mới. Làm trước ngày cấp phép là lao động bất hợp pháp (不法就労), có thể bị hủy tư cách",
+    "Không còn làm hoạt động của tư cách cũ trong thời gian dài mà không đổi/không báo cũng nguy hiểm: ví dụ bỏ học nhiều tháng nhưng vẫn giữ tư cách du học, hoặc nghỉ việc quá lâu với tư cách lao động — Cục có thể thu hồi tư cách lưu trú. Nghỉ việc/đổi việc phải báo Nyukan trong 14 ngày theo quy định",
+    "Với tư cách Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế: công việc lao động tay chân đơn thuần (đứng chuyền nhà máy, phục vụ bàn thuần túy, dọn phòng...) KHÔNG thuộc tư cách này dù công ty gọi tên khác đi. Hãy đọc kỹ phần mô tả công việc trong hợp đồng trước khi nhận việc",
+    "Đặc kỹ năng 1 có tổng thời gian lưu trú tối đa 5 năm và về nguyên tắc không được đưa gia đình sang ở cùng (chỉ Đặc kỹ năng 2 mới được). Tính toán đường dài trước khi chọn, nhất là nếu bạn muốn hướng tới vĩnh trú — thời gian Đặc kỹ năng 1 không được tính vào phần '5 năm tư cách lao động' của điều kiện vĩnh trú",
+    "Nếu TRỤC TRẶC — thiếu giấy của công ty: quay về nhờ phòng nhân sự/tổ chức hỗ trợ ngay trong ngày, nói rõ tên giấy còn thiếu (chụp lại yêu cầu của Nyukan). Công ty có kinh nghiệm thường chuẩn bị trong vài ngày. Đừng tự bỏ qua vì sợ làm phiền công ty — đây là việc công ty có trách nhiệm phối hợp",
+    "Nếu TRỤC TRẶC — bị TỪ CHỐI đổi tư cách: hãy hỏi và ghi lại lý do cụ thể (thiếu liên hệ giữa ngành học và công việc? giấy tờ công ty chưa đủ? nợ thuế?). Tùy lý do, bạn có thể bổ sung giải trình và nộp lại, hoặc phải đổi hướng (ví dụ sang Đặc kỹ năng nếu đủ điều kiện). Nếu tư cách cũ sắp hết hạn, hỏi ngay quầy về tư cách 'chuẩn bị xuất cảnh' để ở hợp pháp trong lúc thu xếp, và nhờ luật sư hành chính (行政書士) tư vấn trước khi tự nộp lại",
+    "Nếu TRỤC TRẶC — không hiểu tiếng Nhật khi làm việc với quầy/công ty: nhờ tổ chức hỗ trợ đăng ký (登録支援機関, với Đặc kỹ năng) hoặc trường học đi cùng/hỗ trợ phiên dịch — đây là một phần trách nhiệm hỗ trợ của họ. Khi tự đi, dùng câu: 「日本語があまり分かりません。書いてもらえますか。」(Tôi chưa hiểu tiếng Nhật lắm. Xin viết ra giấy giúp tôi) để mang về tra lại",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Thẻ mới ghi ĐÚNG tên tư cách mới và ngày hết hạn mới. Chụp 2 mặt thẻ lưu vào điện thoại và gửi bản sao cho công ty",
+    "Ngày bắt đầu làm việc tại công ty mới nằm SAU ngày cấp phép đổi tư cách ghi trong hồ sơ của bạn",
+    "Đã báo ngừng bảo hiểm y tế quốc dân ở tòa thị chính (nếu nay vào bảo hiểm xã hội của công ty) để tránh bị đòi tiền trùng",
+    "Đã giữ lại: thẻ cũ bị đục lỗ, bản sao hợp đồng lao động, giấy chứng nhận đỗ thi (nếu đi đường Đặc kỹ năng) — cất cùng một túi hồ sơ",
+    "Đặt nhắc nhở gia hạn lần tới từ 3 tháng trước ngày hết hạn mới, và ghi nhớ: đổi công ty sau này phải báo Nyukan trong 14 ngày"
+   ],
+   "vocab": [
+    {
+     "ja": "在留資格変更",
+     "reading": "ざいりゅうしかくへんこう",
+     "vi": "Đổi tư cách lưu trú"
+    },
+    {
+     "ja": "留学",
+     "reading": "りゅうがく",
+     "vi": "Tư cách Du học"
+    },
+    {
+     "ja": "技術・人文知識・国際業務",
+     "reading": "ぎじゅつ・じんぶんちしき・こくさいぎょうむ",
+     "vi": "Tư cách Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế (visa kỹ sư/nhân văn)"
+    },
+    {
+     "ja": "特定技能",
+     "reading": "とくていぎのう",
+     "vi": "Kỹ năng đặc định (tokutei gino)"
+    },
+    {
+     "ja": "技能実習",
+     "reading": "ぎのうじっしゅう",
+     "vi": "Thực tập kỹ năng"
+    },
+    {
+     "ja": "卒業証明書",
+     "reading": "そつぎょうしょうめいしょ",
+     "vi": "Giấy chứng nhận tốt nghiệp"
+    },
+    {
+     "ja": "雇用契約書",
+     "reading": "こようけいやくしょ",
+     "vi": "Hợp đồng lao động"
+    },
+    {
+     "ja": "労働条件通知書",
+     "reading": "ろうどうじょうけんつうちしょ",
+     "vi": "Giấy thông báo điều kiện lao động"
+    },
+    {
+     "ja": "内定",
+     "reading": "ないてい",
+     "vi": "Thư mời nhận việc (quyết định tuyển dụng chưa chính thức)"
+    },
+    {
+     "ja": "登録支援機関",
+     "reading": "とうろくしえんきかん",
+     "vi": "Tổ chức hỗ trợ đăng ký (hỗ trợ người Đặc kỹ năng)"
+    },
+    {
+     "ja": "合格証明書",
+     "reading": "ごうかくしょうめいしょ",
+     "vi": "Giấy chứng nhận đỗ (kỳ thi)"
+    },
+    {
+     "ja": "不法就労",
+     "reading": "ふほうしゅうろう",
+     "vi": "Lao động bất hợp pháp"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "在留資格変更の申請書を提出します。",
+     "vi": "Tôi nộp đơn xin đổi tư cách lưu trú."
+    },
+    {
+     "ja": "会社の書類を準備していただけますか。",
+     "vi": "Công ty chuẩn bị giúp tôi giấy tờ của công ty được không?"
+    },
+    {
+     "ja": "特定技能の試験に合格しました。",
+     "vi": "Tôi đã đỗ kỳ thi Kỹ năng đặc định."
+    },
+    {
+     "ja": "追加書類を提出します。",
+     "vi": "Tôi nộp giấy tờ bổ sung."
+    },
+    {
+     "ja": "変更が許可されるまで、新しい仕事は始められませんね。",
+     "vi": "Trước khi được phép đổi, tôi chưa được bắt đầu công việc mới, đúng không ạ?"
+    },
+    {
+     "ja": "日本語があまり分かりません。書いてもらえますか。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin viết ra giấy giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh — Thủ tục xin đổi tư cách lưu trú",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/16-2.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Tư cách Kỹ thuật – Nhân văn – Nghiệp vụ quốc tế",
+     "url": "https://www.moj.go.jp/isa/applications/status/gijinkoku.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Tư cách Kỹ năng đặc định",
+     "url": "https://www.moj.go.jp/isa/applications/status/specifiedskilledworker.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/16-2.html",
+     "fill": [
+      {
+       "example": "Ảnh nền trơn, nhìn thẳng",
+       "field": "写真 (ảnh chân dung)",
+       "how": "Dán ảnh 4cm x 3cm chụp trong 3 tháng gần nhất vào ô ảnh.",
+       "mistake": "Dùng ảnh cũ."
+      },
+      {
+       "example": "ベトナム",
+       "field": "1 国籍・地域 (quốc tịch / khu vực)",
+       "how": "Ghi quốc tịch trên hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "1998年5月12日",
+       "field": "2 生年月日 (ngày sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "3 氏名 (họ tên)",
+       "how": "Chữ Latin in hoa, giống hệt hộ chiếu và thẻ lưu trú.",
+       "mistake": "Viết có dấu tiếng Việt."
+      },
+      {
+       "example": "男 / 無",
+       "field": "4 性別 / 5 配偶者の有無 (giới tính / tình trạng hôn nhân)",
+       "how": "Khoanh đúng 男・女 và 有・無.",
+       "mistake": ""
+      },
+      {
+       "example": "ハノイ / ベトナム ハノイ市",
+       "field": "6 出生地 / 7 本国における居住地 (nơi sinh / địa chỉ ở nước mình)",
+       "how": "Chép từ hộ chiếu; địa chỉ ở Việt Nam ghi chữ Latin.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "8 住居地・電話番号 (địa chỉ ở Nhật và điện thoại)",
+       "how": "Đúng như mặt sau thẻ lưu trú, kèm số di động.",
+       "mistake": ""
+      },
+      {
+       "example": "番号 B12345678 (số mẫu) / 有効期限 2033年8月1日",
+       "field": "9 旅券 (hộ chiếu: số và ngày hết hạn)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "留学 / 2年 / 2027年3月31日",
+       "field": "10 現に有する在留資格・在留期間・満了日 (tư cách hiện tại và ngày hết hạn)",
+       "how": "Chép từ thẻ lưu trú. Phải nộp đơn trước ngày hết hạn này.",
+       "mistake": "Để quá ngày hết hạn mới nộp."
+      },
+      {
+       "example": "AB12345678CD (số mẫu)",
+       "field": "11 在留カード番号 (số thẻ lưu trú)",
+       "how": "Chép số trên mặt trước thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "技術・人文知識・国際業務",
+       "field": "12 変更を希望する在留資格 (tư cách muốn đổi sang)",
+       "how": "Ghi tên tư cách mới khớp với công việc sắp làm. Hỏi công ty hoặc xem trang tư cách trên web Cục Xuất nhập cảnh trước khi ghi.",
+       "mistake": "Ghi tên tư cách không khớp nội dung công việc trong hợp đồng."
+      },
+      {
+       "example": "大学を卒業し、株式会社サンプル介護サービスに就職するため",
+       "field": "13 変更の理由 (lý do đổi)",
+       "how": "Ghi ngắn gọn và thật: tốt nghiệp, được tuyển vào công ty nào, làm việc gì, từ khi nào.",
+       "mistake": "Ghi lý do chung chung như 'muốn đi làm' mà không có tên công ty."
+      },
+      {
+       "example": "株式会社サンプル介護サービス / 介護計画の作成業務 / 月額 260,000円 (ví dụ mẫu)",
+       "field": "所属機関等作成用：勤務先・職務内容・報酬 (phần cơ quan: công ty, công việc, lương)",
+       "how": "Công ty mới điền phần này: tên công ty, địa chỉ, công việc bạn sẽ làm, lương, thời gian dự định làm việc. Phải khớp hợp đồng lao động.",
+       "mistake": "Tự điền thay công ty."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "在留資格変更許可申請書",
+     "name_vi": "Đơn xin đổi tư cách lưu trú",
+     "sample_note": "Ví dụ anh アン đổi từ 留学 (du học) sang 技術・人文知識・国際業務 để đi làm. Trang thủ tục trên dẫn tới trang của từng tư cách mới, nơi tải đúng mẫu đơn (có PDF và Excel) và xem danh sách giấy tờ kèm theo.",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "行政書士青嶋事務所",
+     "lang": "ja",
+     "note": "Giải thích quy trình và giấy tờ xin đổi tư cách lưu trú, gồm cả trường hợp du học sinh đổi sang 技術・人文知識・国際業務 và 経営・管理.",
+     "title": "これで安心！在留資格変更許可申請の流れと必要書類を徹底解説",
+     "url": "https://www.youtube.com/watch?v=6ofi1bfHZaI"
+    }
+   ]
+  },
+  {
+   "id": "giay-phep-lam-them-28h",
+   "group": "Giấy tờ & cư trú",
+   "title": "Giấy phép làm thêm 28 giờ/tuần （資格外活動許可）",
+   "icon": "🕐",
+   "summary": "Tư cách Du học (留学) và Gia đình (家族滞在) về nguyên tắc KHÔNG được đi làm. Muốn làm thêm (アルバイト, baito), bạn phải xin trước giấy phép hoạt động ngoài tư cách (資格外活動許可, shikakugai katsudo kyoka) tại Cục Xuất nhập cảnh. Có phép rồi mới được làm tối đa 28 giờ mỗi tuần. Thủ tục này MIỄN PHÍ, và du học sinh mới nhập cảnh có thể xin ngay tại sân bay.",
+   "who": "Du học sinh muốn làm thêm; người ở tư cách Gia đình (家族滞在) muốn làm việc bán thời gian; một số tư cách khác muốn làm việc phụ ngoài hoạt động chính (trường hợp này thường cần phép riêng cho từng công việc). Ví dụ hư cấu: bạn Hoàng Văn Em, du học sinh trường tiếng Nhật, muốn làm thêm ở cửa hàng tiện lợi gần nhà — Em phải có giấy phép này TRƯỚC buổi làm đầu tiên. Lưu ý: thực tập sinh kỹ năng (技能実習) và Đặc kỹ năng KHÔNG dùng giấy phép này để làm thêm việc khác.",
+   "docs": [
+    "Đơn xin giấy phép hoạt động ngoài tư cách (資格外活動許可申請書) — có mẫu riêng cho du học sinh mới nhập cảnh, tải trên trang Cục hoặc lấy tại quầy/sân bay",
+    "Thẻ lưu trú (在留カード) bản gốc — mang trình khi nộp tại Nyukan",
+    "Hộ chiếu (パスポート) bản gốc — mang trình",
+    "Nếu xin phép RIÊNG cho từng công việc (個別許可, kobetsu kyoka — ví dụ việc dịch thuật dịp hè của du học sinh vượt khung thông thường): giấy tờ nói rõ nội dung công việc dự định (hợp đồng/thư mời làm việc)",
+    "Thẻ học sinh/giấy chứng nhận đang học — không phải lúc nào cũng bắt buộc, mang theo bản sao phòng khi được yêu cầu"
+   ],
+   "prep_home": [
+    "Kiểm tra mặt sau thẻ lưu trú của bạn: nếu đã có dòng ghi phép hoạt động ngoài tư cách (資格外活動許可) thì bạn đã có phép — chụp ảnh lại để cho nơi tuyển dụng xem khi phỏng vấn",
+    "Nếu là du học sinh sắp sang Nhật: chuẩn bị sẵn đơn xin phép (mẫu cho người mới nhập cảnh) điền trước ở nhà/ở Việt Nam, kẹp cùng hộ chiếu — nộp ngay tại sân bay lúc nhập cảnh sẽ tiết kiệm được một chuyến đi Nyukan sau này",
+    "Tìm hiểu trước lịch học của bạn: phép làm thêm chỉ được dùng khi KHÔNG ảnh hưởng việc học. Kỳ nghỉ dài của trường (nghỉ hè/xuân theo quy định của trường) mới được làm tối đa 8 giờ/ngày",
+    "Chuẩn bị sẵn câu trả lời khi phỏng vấn baito: nhà tuyển dụng sẽ hỏi bạn đã có giấy phép chưa và xem mặt sau thẻ lưu trú. Chưa có phép thì nói rõ ngày bạn sẽ xin, đừng nhận việc trước",
+    "Cài sẵn một cách ghi giờ làm (ứng dụng hoặc sổ tay): bạn phải tự quản lý để tổng giờ làm ở TẤT CẢ các nơi cộng lại không quá 28 giờ/tuần, tính theo bất kỳ 7 ngày liên tiếp nào"
+   ],
+   "steps": [
+    {
+     "t": "Cách nhanh nhất cho người mới sang: xin ngay tại sân bay khi nhập cảnh",
+     "d": "ĐI ĐÂU: Tại sân bay quốc tế ở Nhật (ví dụ Narita, Haneda, Kansai...), sau khi qua cửa kiểm tra nhập cảnh và nhận thẻ lưu trú, đến quầy làm thủ tục giấy phép hoạt động ngoài tư cách trong khu vực sân bay theo hướng dẫn của nhân viên. Áp dụng cho người nhập cảnh LẦN ĐẦU với tư cách Du học (và một số trường hợp được thông báo tại sân bay). MANG GÌ: hộ chiếu, thẻ lưu trú vừa nhận, đơn xin phép đã điền sẵn. NÓI GÌ: nói câu mẫu bên dưới. MẤT BAO LÂU: thường xong ngay trong ngày tại sân bay. NHẬN ĐƯỢC GÌ: tem/dấu phép dán trong hộ chiếu hoặc ghi chú trên thẻ, và/hoặc giấy phép (資格外活動許可書). KIỂM TRA GÌ: xem kỹ phạm vi phép ghi trên giấy — tối đa 28 giờ/tuần. Xong bước này là bạn được đi xin baito ngay, không cần ra Nyukan nữa.",
+     "ja": "資格外活動許可を申請したいです。",
+     "vi": "Tôi muốn xin giấy phép hoạt động ngoài tư cách (giấy phép làm thêm)."
+    },
+    {
+     "t": "Nếu đã ở Nhật mà chưa có phép: nộp đơn tại Nyukan",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương phụ trách nơi bạn sống, quầy tiếp nhận hồ sơ, ngày thường 9:00–12:00 và 13:00–16:00. MANG GÌ: đơn đã điền, thẻ lưu trú và hộ chiếu bản gốc. NÓI GÌ: nói câu mẫu của bước 1. MẤT BAO LÂU: nộp chỉ khoảng 15–30 phút (chưa tính chờ); thời gian xét chuẩn khoảng 2 tuần đến 2 tháng. NHẬN ĐƯỢC GÌ: giấy biên nhận/thông tin cách nhận kết quả; khi được phép, giấy phép được cấp theo hướng dẫn của quầy (dán tem vào hộ chiếu hoặc cấp giấy phép riêng, tùy thời điểm và cách nộp). KIỂM TRA GÌ: hỏi rõ ngày dự kiến có kết quả và bạn chỉ được bắt đầu làm việc SAU khi có phép trên tay.",
+     "ja": "アルバイトをしたいので、資格外活動許可をお願いします。",
+     "vi": "Tôi muốn làm thêm nên xin giấy phép hoạt động ngoài tư cách."
+    },
+    {
+     "t": "Hiểu đúng giới hạn giờ trước khi nhận việc",
+     "d": "ĐỌC KỸ TRÊN GIẤY PHÉP CỦA BẠN: Phép thông thường (包括許可, phép bao quát) cho làm tối đa 28 giờ/tuần — tính theo MỌI khung 7 ngày liên tiếp, không phải theo tuần lịch cố định. Cộng TẤT CẢ các baito lại. Riêng du học sinh: trong kỳ nghỉ dài chính thức của trường (theo nội quy trường) được làm tối đa 8 giờ/ngày. Người tư cách Gia đình KHÔNG có ngoại lệ 8 giờ/ngày này — vẫn tối đa 28 giờ/tuần quanh năm. MẤT BAO LÂU: đọc 5 phút nhưng quyết định bạn có giữ được tư cách hay không. KIỂM TRA GÌ: đối chiếu lịch làm dự kiến với giới hạn trước khi nhận ca.",
+     "ja": "週28時間以内ですね。確認しました。",
+     "vi": "Tối đa 28 giờ mỗi tuần, đúng không ạ. Tôi đã xác nhận."
+    },
+    {
+     "t": "Đi phỏng vấn và trình giấy phép cho nơi làm thêm",
+     "d": "ĐI ĐÂU: Nơi bạn xin baito (cửa hàng tiện lợi, quán ăn, xưởng...). MANG GÌ: thẻ lưu trú (nơi làm sẽ sao chụp 2 mặt theo luật), giấy phép hoạt động ngoài tư cách nếu là giấy riêng, thẻ My Number (để khai thuế/lương), thông tin tài khoản ngân hàng nhận lương. NÓI GÌ: nói câu mẫu để chủ động cam kết khung giờ. NHẬN ĐƯỢC GÌ: lịch ca làm trong giới hạn cho phép. KIỂM TRA GÌ: nơi làm hợp pháp sẽ kiểm tra giấy phép của bạn trước khi cho làm — nơi nào bảo 'không cần giấy phép, trả tiền mặt' là nơi nguy hiểm, tránh xa.",
+     "ja": "資格外活動許可を持っています。週28時間以内で働けます。",
+     "vi": "Tôi đã có giấy phép làm thêm. Tôi làm được tối đa 28 giờ mỗi tuần."
+    },
+    {
+     "t": "Quản lý giờ làm mỗi tuần và giữ bằng chứng",
+     "d": "LÀM HÀNG TUẦN: Ghi lại giờ vào – giờ ra của từng ca ở mọi nơi làm. Nếu một tuần nào đó lịch cộng lại vượt 28 giờ, xin đổi ca NGAY trước khi tuần đó bắt đầu. Giữ phiếu lương (給与明細) của tất cả các nơi làm ít nhất đến kỳ gia hạn tư cách tiếp theo — Cục có thể đối chiếu giờ làm qua hồ sơ thuế và bảo hiểm khi bạn gia hạn/đổi tư cách. KIỂM TRA GÌ: cuối mỗi tuần, cộng tổng giờ 7 ngày gần nhất — đây là con số Cục nhìn vào, không phải tổng theo tháng.",
+     "ja": "今週の勤務時間を確認したいです。",
+     "vi": "Tôi muốn kiểm tra giờ làm của tuần này."
+    },
+    {
+     "t": "Khi gia hạn hoặc đổi tư cách: xin lại phép cùng lúc nếu vẫn cần",
+     "d": "ĐI ĐÂU: Ngay tại Nyukan khi bạn nộp hồ sơ gia hạn/đổi tư cách. Giấy phép làm thêm gắn với tư cách hiện tại — khi tư cách thay đổi hoặc gia hạn, hãy nộp đơn xin phép CÙNG LÚC với hồ sơ chính (đây cũng là trường hợp duy nhất được nộp đơn xin phép trực tuyến cùng hồ sơ chính). MANG GÌ: đơn xin phép điền sẵn kèm bộ hồ sơ gia hạn/đổi tư cách. KIỂM TRA GÌ: sau khi nhận thẻ mới, kiểm tra mặt sau thẻ/giấy phép mới đã ghi phép làm thêm chưa trước khi tiếp tục đi làm baito.",
+     "ja": "更新と一緒に、資格外活動許可も申請します。",
+     "vi": "Tôi xin giấy phép làm thêm cùng lúc với hồ sơ gia hạn."
+    }
+   ],
+   "cost": "Miễn phí hoàn toàn — Cục không thu lệ phí cho thủ tục này.",
+   "duration": "Xin tại sân bay khi nhập cảnh lần đầu: thường xong ngay trong ngày. Nộp tại Nyukan: thời gian xét chuẩn khoảng 2 tuần đến 2 tháng. Chỉ được bắt đầu làm việc sau khi đã có phép.",
+   "warnings": [
+    "Làm thêm khi CHƯA có phép, hoặc làm quá 28 giờ/tuần, là vi phạm luật xuất nhập cảnh: có thể bị phạt, bị từ chối gia hạn tư cách, nặng nhất là bị buộc về nước. Đừng nghe lời rủ 'làm chui trả tiền mặt, không ai biết' — Cục đối chiếu được qua dữ liệu thuế của nơi làm",
+    "TUYỆT ĐỐI không làm việc ở các cơ sở kinh doanh liên quan đến phong tục/người lớn (風俗営業 — quán bar tiếp khách, pachinko dạng dịch vụ tình cảm, cơ sở giải trí người lớn...): nhóm việc này bị CẤM hoàn toàn với giấy phép làm thêm, kể cả chỉ rửa bát/dọn dẹp trong cơ sở đó",
+    "Đang nghỉ học dài hạn không chính thức (休学, bảo lưu) thì không được dùng phép làm thêm như bình thường — việc học là hoạt động chính của tư cách du học. Điểm danh/tỉ lệ lên lớp thấp cũng là lý do bị từ chối cấp/gia hạn phép",
+    "Đi thực tập có lương (インターンシップ có trả lương) cũng tính là hoạt động có thu nhập — cần phép làm thêm bao quát hoặc phép riêng tùy trường hợp, hỏi trường trước khi nhận",
+    "Nếu TRỤC TRẶC — nộp lâu chưa có kết quả mà nơi làm đang giục: nói thật với nơi làm rằng bạn chỉ được bắt đầu sau khi có phép (câu mẫu ở phần cụm câu), và gọi Trung tâm thông tin 0570-013904 hỏi tình trạng hồ sơ. Đừng 'làm tạm vài buổi' — vài buổi cũng là vi phạm",
+    "Nếu TRỤC TRẶC — lỡ làm quá giờ trong một tuần: dừng ngay các ca vượt, ghi lại chính xác số giờ đã lỡ làm, và khi đến kỳ gia hạn hãy chuẩn bị tinh thần giải trình. Việc chủ động ngừng và giữ phiếu lương rõ ràng tốt hơn nhiều so với che giấu. Nếu lo lắng, hỏi trung tâm hỗ trợ người nước ngoài của địa phương hoặc luật sư hành chính trước kỳ gia hạn",
+    "Nếu TRỤC TRẶC — không hiểu tiếng Nhật ở quầy Nyukan/sân bay: đưa đơn đã điền sẵn và nói 「日本語があまり分かりません」(tôi chưa hiểu tiếng Nhật lắm). Ở sân bay và Nyukan lớn thường có bảng hướng dẫn nhiều ngôn ngữ; du học sinh có thể nhờ trường học hướng dẫn điền đơn trước ở nhà",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã có bằng chứng phép trên tay: ghi chú/tem phép trong hộ chiếu hoặc trên thẻ, hoặc giấy 資格外活動許可書 — chụp ảnh lưu điện thoại",
+    "Đã đọc phạm vi phép: tối đa 28 giờ/tuần (và 8 giờ/ngày chỉ trong kỳ nghỉ dài chính thức, chỉ áp dụng cho du học sinh)",
+    "Nơi làm thêm đã sao chụp thẻ lưu trú và xác nhận lịch ca của bạn nằm trong giới hạn giờ",
+    "Đã có thói quen ghi giờ làm hàng tuần và giữ phiếu lương của mọi nơi làm",
+    "Đã ghi nhớ: đổi tư cách hoặc gia hạn tư cách thì phải xin phép làm thêm lại cùng hồ sơ chính nếu vẫn muốn làm thêm"
+   ],
+   "vocab": [
+    {
+     "ja": "資格外活動許可",
+     "reading": "しかくがいかつどうきょか",
+     "vi": "Giấy phép hoạt động ngoài tư cách (giấy phép làm thêm)"
+    },
+    {
+     "ja": "包括許可",
+     "reading": "ほうかつきょか",
+     "vi": "Phép bao quát (phép làm thêm thông thường tối đa 28 giờ/tuần)"
+    },
+    {
+     "ja": "個別許可",
+     "reading": "こべつきょか",
+     "vi": "Phép riêng cho từng công việc cụ thể"
+    },
+    {
+     "ja": "アルバイト",
+     "reading": "アルバイト",
+     "vi": "Việc làm thêm / baito"
+    },
+    {
+     "ja": "週28時間",
+     "reading": "しゅうにじゅうはちじかん",
+     "vi": "28 giờ mỗi tuần (giới hạn giờ làm thêm)"
+    },
+    {
+     "ja": "長期休業期間",
+     "reading": "ちょうききゅうぎょうきかん",
+     "vi": "Kỳ nghỉ dài của trường (nghỉ hè, nghỉ xuân...)"
+    },
+    {
+     "ja": "資格外活動許可書",
+     "reading": "しかくがいかつどうきょかしょ",
+     "vi": "Giấy chứng nhận phép hoạt động ngoài tư cách"
+    },
+    {
+     "ja": "給与明細",
+     "reading": "きゅうよめいさい",
+     "vi": "Phiếu lương / bảng kê lương"
+    },
+    {
+     "ja": "風俗営業",
+     "reading": "ふうぞくえいぎょう",
+     "vi": "Kinh doanh phong tục/người lớn (nhóm việc bị cấm làm thêm)"
+    },
+    {
+     "ja": "勤務時間",
+     "reading": "きんむじかん",
+     "vi": "Giờ làm việc"
+    },
+    {
+     "ja": "在留カード",
+     "reading": "ざいりゅうカード",
+     "vi": "Thẻ lưu trú"
+    },
+    {
+     "ja": "出入国在留管理局",
+     "reading": "しゅつにゅうこくざいりゅうかんりきょく",
+     "vi": "Cục Xuất nhập cảnh (Nyukan)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "資格外活動許可を申請したいです。",
+     "vi": "Tôi muốn xin giấy phép hoạt động ngoài tư cách."
+    },
+    {
+     "ja": "資格外活動許可を持っています。週28時間以内で働けます。",
+     "vi": "Tôi đã có giấy phép làm thêm. Tôi làm được tối đa 28 giờ mỗi tuần."
+    },
+    {
+     "ja": "許可が出てから働き始めます。",
+     "vi": "Tôi sẽ bắt đầu làm việc sau khi có giấy phép."
+    },
+    {
+     "ja": "今週はもう28時間働いたので、これ以上働けません。",
+     "vi": "Tuần này tôi đã làm đủ 28 giờ nên không làm thêm được nữa."
+    },
+    {
+     "ja": "シフトを調整してもらえますか。",
+     "vi": "Điều chỉnh ca làm giúp tôi được không?"
+    },
+    {
+     "ja": "日本語があまり分かりません。ゆっくり話してください。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin nói chậm giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh — Thủ tục xin giấy phép hoạt động ngoài tư cách",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/16-8.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Giải thích về giấy phép hoạt động ngoài tư cách cho du học sinh",
+     "url": "https://www.moj.go.jp/isa/applications/guide/nyuukokukanri07_00045.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/16-8.html",
+     "fill": [
+      {
+       "example": "ベトナム",
+       "field": "1 国籍・地域 (quốc tịch / khu vực)",
+       "how": "Ghi quốc tịch trên hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "1998年5月12日",
+       "field": "2 生年月日 (ngày sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "3 氏名 (họ tên)",
+       "how": "Chữ Latin in hoa giống hộ chiếu và thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "男 / 無 / 学生",
+       "field": "4 性別 / 5 配偶者の有無 / 6 職業 (giới tính / hôn nhân / nghề nghiệp)",
+       "how": "Du học sinh ghi nghề là 学生 hoặc tên trường đang học theo hướng dẫn của trường.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "7 住居地 (địa chỉ ở Nhật)",
+       "how": "Đúng như mặt sau thẻ lưu trú, kèm số điện thoại trong đơn.",
+       "mistake": ""
+      },
+      {
+       "example": "番号 B12345678 (số mẫu) / 有効期限 2033年8月1日",
+       "field": "8 旅券 (hộ chiếu: số và ngày hết hạn)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "留学 / 2年 / 2027年3月31日",
+       "field": "9 現に有する在留資格・在留期間・満了日 (tư cách hiện tại)",
+       "how": "Chép từ thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "AB12345678CD (số mẫu)",
+       "field": "10 在留カード番号 (số thẻ lưu trú)",
+       "how": "Chép số trên mặt trước thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "サンプル日本語学校に在学、週間授業時間 20時間 (tên trường mẫu)",
+       "field": "11 現在の在留活動の内容 (hoạt động hiện tại: trường và giờ học)",
+       "how": "Học sinh ghi tên trường và số giờ học mỗi tuần. Đây là căn cứ để xét việc làm thêm không ảnh hưởng học tập.",
+       "mistake": "Để trống ô này."
+      },
+      {
+       "example": "その他（コンビニエンスストアの店員）",
+       "field": "12 (1) 他に従事しようとする活動：職務の内容 (việc làm thêm muốn làm)",
+       "how": "Tick loại việc: 翻訳・通訳 (phiên dịch), 語学教師 (dạy ngôn ngữ), hoặc その他 và ghi rõ việc, ví dụ làm tại quán ăn, cửa hàng tiện lợi.",
+       "mistake": "Xin phép bao quát (包括許可) thì nhiều trường hợp chưa cần ghi nơi làm cụ thể; ghi sai loại việc vẫn phải sửa."
+      },
+      {
+       "example": "2026年12月1日〜2027年3月31日 / 週 20時間",
+       "field": "12 (2) 雇用契約期間 / (3) 週間稼働時間 (thời hạn hợp đồng / số giờ mỗi tuần)",
+       "how": "Ghi theo hợp đồng với nơi làm thêm. Du học sinh tối đa 28 giờ một tuần trong kỳ học.",
+       "mistake": "Ghi quá 28 giờ một tuần. Vượt giới hạn là vi phạm."
+      },
+      {
+       "example": "時給 1,200円 (lương giờ ví dụ mẫu)",
+       "field": "12 (4) 報酬 (lương làm thêm)",
+       "how": "Ghi số tiền và tick 月額 (theo tháng), 週額 (theo tuần) hay 日額 (theo ngày). Thường ghi lương giờ vào khung theo hướng dẫn tại quầy.",
+       "mistake": ""
+      },
+      {
+       "example": "グエン・バン・アン / 2026年11月20日",
+       "field": "申請人の署名・申請書作成年月日 (chữ ký và ngày điền đơn)",
+       "how": "Cuối đơn, ký tên và ghi ngày điền. Ký tay.",
+       "mistake": "Quên ký. Đơn thiếu chữ ký không được nhận."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "資格外活動許可申請書",
+     "name_vi": "Đơn xin giấy phép hoạt động ngoài tư cách (giấy phép làm thêm)",
+     "sample_note": "Ví dụ du học sinh アン xin phép bao quát để làm thêm tại cửa hàng tiện lợi, 20 giờ một tuần. Trang trên có bản PDF, bản Excel và cả bản Excel riêng cho du học sinh mới nhập cảnh xin ngay tại sân bay.",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "行政書士青嶋事務所",
+     "lang": "ja",
+     "note": "Giải thích giấy phép hoạt động ngoài tư cách cho du học sinh: giấy tờ cần thiết, quy trình từ lúc nộp đơn đến khi được cấp phép và các hình phạt khi vi phạm.",
+     "title": "外国人が日本で働くための資格外活動許可とは？",
+     "url": "https://www.youtube.com/watch?v=Pa5j2AYaAO8"
+    },
+    {
+     "channel": "ビザ申請サポートNavi東京",
+     "lang": "ja",
+     "note": "Trả lời cách du học sinh diện 留学 xin giấy phép hoạt động ngoài tư cách để được đi làm thêm hợp pháp.",
+     "title": "どうすれば留学ビザ（在留資格「留学」）の留学生が資格外活動許可を取得できますか？",
+     "url": "https://www.youtube.com/watch?v=21GUwtYLDoY"
+    }
+   ]
+  },
+  {
+   "id": "xin-vinh-tru",
+   "group": "Giấy tờ & cư trú",
+   "title": "Xin vĩnh trú — điều kiện cơ bản （永住許可）",
+   "icon": "🏯",
+   "summary": "Vĩnh trú (永住許可, eiju kyoka) là việc xin đổi sang tư cách 'Người vĩnh trú' (永住者) — tư cách ổn định nhất: không giới hạn thời gian lưu trú, không giới hạn công việc, không phải gia hạn tư cách nữa. Điều kiện gốc nổi tiếng nhất là: sống liên tục ở Nhật từ 10 năm trở lên, trong đó có từ 5 năm trở lên ở tư cách lao động hoặc tư cách cư trú, cộng với hạnh kiểm tốt, tự nuôi sống được bản thân và đóng thuế – bảo hiểm – lương hưu đầy đủ. Đây là hồ sơ khó và xét lâu (khoảng 4–6 tháng), nên phải chuẩn bị sớm và trung thực tuyệt đối.",
+   "who": "Người đã sống ở Nhật nhiều năm bằng tư cách lao động (Kỹ thuật – Nhân văn, Kỹ năng, Điều dưỡng...), tư cách gia đình/cư trú, và muốn ổn định lâu dài. Ví dụ hư cấu: anh Vũ Văn Giang sang Nhật làm kỹ sư từ 10 năm trước, nay vẫn làm ổn định, đóng thuế đầy đủ và đang giữ thời hạn lưu trú 3 năm — anh Giang thuộc nhóm nên đọc kỹ bài này. Lưu ý: thời gian ở tư cách Thực tập kỹ năng (技能実習) và Đặc kỹ năng 1 (特定技能1号) KHÔNG được tính vào phần '5 năm tư cách lao động' nói trên.",
+   "docs": [
+    "Đơn xin phép vĩnh trú (永住許可申請書) + ảnh chân dung 4cm × 3cm chụp trong 3 tháng (người dưới 16 tuổi không cần ảnh)",
+    "Hộ chiếu và thẻ lưu trú bản gốc (mang trình khi nộp)",
+    "Giấy cư trú (住民票) của cả hộ, xin ở tòa thị chính (bản không ghi số My Number)",
+    "Giấy tờ nghề nghiệp: giấy chứng nhận đang làm việc (在職証明書) của người xin và của vợ/chồng nếu cùng tính thu nhập hộ; người tự kinh doanh chuẩn bị giấy tờ riêng theo hướng dẫn của Cục",
+    "Giấy tờ thu nhập và thuế của những năm gần nhất (thường xem 3–5 năm tùy tư cách): giấy chứng nhận thuế (課税証明書) + giấy chứng nhận đã nộp thuế (納税証明書) xin ở tòa thị chính, và giấy thuế thu nhập do cơ quan thuế cấp theo danh mục Cục yêu cầu",
+    "Giấy tờ chứng minh đã đóng lương hưu (年金) và bảo hiểm y tế (健康保険) đúng hạn trong các năm gần nhất — ví dụ bản ghi đóng lương hưu (ねんきん定期便 hoặc bản in từ Nenkin Net), giấy tờ bảo hiểm của công ty/bảo hiểm quốc dân",
+    "Giấy tờ chứng minh tài sản: giấy chứng nhận số dư ngân hàng (残高証明書), bản sao sổ ngân hàng...",
+    "Thư trình bày lý do xin vĩnh trú (理由書) — viết vì sao bạn muốn sống lâu dài ở Nhật, quá trình sống và làm việc, kế hoạch tương lai",
+    "Giấy của NGƯỜI BẢO LÃNH (身元保証人, mimoto hoshojin — thường là người Nhật, người vĩnh trú hoặc đặc biệt vĩnh trú sống ở Nhật): giấy bảo lãnh (身元保証書), giấy cư trú và giấy tờ thu nhập của người bảo lãnh. Người bảo lãnh ở đây là bảo lãnh về mặt đạo đức/xã hội, không phải bảo lãnh nợ nần như vay tiền",
+    "Giấy tờ nhân thân: giấy chứng nhận kết hôn, khai sinh của con... tùy hoàn cảnh gia đình; giấy khen/bằng khen nếu có (điểm cộng, không bắt buộc)"
+   ],
+   "prep_home": [
+    "Tự đếm năm: liệt kê ra giấy toàn bộ lịch sử tư cách lưu trú của bạn từ ngày đầu sang Nhật đến nay (năm nào tư cách gì). Kiểm tra đủ: tổng liên tục từ 10 năm, trong đó từ 5 năm là tư cách lao động/cư trú (không tính thực tập kỹ năng và Đặc kỹ năng 1), và thời hạn lưu trú hiện tại của bạn phải là thời hạn DÀI NHẤT của tư cách đó (phần lớn tư cách là 5 năm; theo quy định chuyển tiếp, người giữ thời hạn 3 năm nộp hồ sơ đến 31/3/2027 vẫn được coi là đạt điều kiện này — sau mốc đó hãy kiểm tra lại hướng dẫn mới nhất)",
+    "Kiểm tra 'vết' vắng mặt: trong 10 năm qua, có lần nào bạn rời Nhật LIÊN TỤC từ 6 tháng trở lên không có lý do hợp lý, hoặc tổng thời gian ở ngoài Nhật cộng lại từ 2 năm 6 tháng trở lên không? Theo hướng dẫn của Cục, các trường hợp này bị đánh giá tiêu cực về tính 'sống liên tục ở Nhật' — nếu có, chuẩn bị giấy giải thích lý do (công tác, chữa bệnh...)",
+    "Rà soát tiền nong của 3–5 năm gần nhất: thuế thị dân đã đóng hết chưa, có tháng nào chậm đóng bảo hiểm y tế quốc dân/lương hưu quốc dân không. Có khoản chậm nào thì đóng và giữ biên lai — hồ sơ vĩnh trú bị soi phần này kỹ nhất",
+    "Nghĩ trước về người bảo lãnh (身元保証人): nhờ sớm một người phù hợp (thường là người Nhật hoặc người vĩnh trú, có thu nhập ổn định — ví dụ cấp trên/người quen lâu năm). Giải thích rõ cho họ: đây không phải bảo lãnh vay nợ. Chuẩn bị sẵn mẫu 身元保証書 để họ chỉ việc điền và ký",
+    "Phác thảo thư lý do (理由書) bằng tiếng Nhật đơn giản: sang Nhật khi nào, làm gì, đóng góp gì (đi làm, đóng thuế, hoạt động địa phương), vì sao muốn ở lại lâu dài, kế hoạch sắp tới. Viết thật, ngắn gọn 1–2 trang A4",
+    "Xin sẵn các giấy ở tòa thị chính (住民票 cả hộ, 課税証明書・納税証明書 các năm cần thiết) và in bản ghi đóng lương hưu từ Nenkin Net hoặc qua bưu điện — gom giấy thường mất 2–4 tuần",
+    "Tính thời điểm nộp: trong lúc chờ xét vĩnh trú, nếu tư cách hiện tại hết hạn bạn vẫn PHẢI gia hạn tư cách đó riêng như bình thường. Đừng nộp vĩnh trú sát ngày hết hạn rồi quên gia hạn"
+   ],
+   "steps": [
+    {
+     "t": "Tự đối chiếu 3 điều kiện pháp lý cốt lõi",
+     "d": "LÀM Ở NHÀ: Luật yêu cầu đồng thời: (1) Hạnh kiểm tốt (素行が善良) — không tiền án tiền sự, sống tuân thủ pháp luật, không vi phạm giao thông/nghĩa vụ nghiêm trọng lặp lại. (2) Tự lập sinh kế (独立の生計) — có thu nhập/tài sản đủ nuôi sống bản thân và gia đình một cách ổn định, không là gánh nặng cho xã hội. Hướng dẫn mới của Cục xem thu nhập theo CẢ HỘ, so với mức thu nhập trung bình của hộ người Nhật cùng số người — hiểu đơn giản: thu nhập ổn định ở mức khá là rất quan trọng. (3) Việc bạn vĩnh trú có lợi cho Nhật Bản (国益) — trong đó có: ở liên tục 10 năm (5 năm lao động/cư trú), đóng thuế – bảo hiểm – lương hưu đúng hạn, tuân thủ mọi nghĩa vụ khai báo. KIỂM TRA GÌ: dùng bảng tự kiểm tra (チェックシート) trên trang của Cục cho đúng nhóm tư cách của bạn — nếu có ô nào trả lời 'Không', khả năng bị từ chối rất cao, nên xử lý ô đó trước khi nộp.",
+     "ja": "永住許可のチェックシートを確認しました。",
+     "vi": "Tôi đã kiểm tra bảng tự kiểm tra điều kiện vĩnh trú."
+    },
+    {
+     "t": "Biết các trường hợp được rút ngắn thời gian (ngoại lệ 10 năm)",
+     "d": "LÀM Ở NHÀ — ĐỌC ĐỂ BIẾT MÌNH CÓ THUỘC DIỆN NÀO KHÔNG: (1) Vợ/chồng của người Nhật / người vĩnh trú / đặc biệt vĩnh trú: theo hướng dẫn hiện hành áp dụng đến nay là hôn nhân thật từ 3 năm trở lên + sống ở Nhật liên tục từ 1 năm trở lên. LƯU Ý QUAN TRỌNG: hướng dẫn sửa đổi công bố 10/2026 sẽ Siết chặt diện này thành hôn nhân từ 5 năm + ở Nhật từ 3 năm, áp dụng cho hồ sơ nộp từ 1/4/2027 — nếu bạn thuộc diện này và đã đủ điều kiện cũ, hãy cân nhắc nộp sớm và kiểm tra kỹ mốc áp dụng. Con ruột của người Nhật/người vĩnh trú cũng có diện rút ngắn riêng (mức thời gian ở Nhật sẽ siết từ 1 năm lên 3 năm theo cùng đợt sửa đổi). (2) Người 定住者 (định trú): ở liên tục từ 5 năm. (3) Người tài năng cao (高度人材): 70 điểm trở lên duy trì 3 năm, hoặc 80 điểm trở lên duy trì 1 năm thì được xin sớm. KIỂM TRA GÌ: diện ngoại lệ nào cũng vẫn xét thuế, bảo hiểm, hạnh kiểm như thường — rút ngắn năm không có nghĩa là dễ hơn.",
+     "ja": "特例に当てはまるか確認したいです。",
+     "vi": "Tôi muốn kiểm tra xem mình có thuộc diện ngoại lệ không."
+    },
+    {
+     "t": "Chuẩn bị bộ hồ sơ đầy đủ theo nhóm tư cách của bạn",
+     "d": "LÀM Ở NHÀ + ĐI XIN GIẤY: Danh mục giấy tờ khác nhau theo tư cách hiện tại (lao động / vợ chồng người Nhật / định trú / gia đình...). Tải đúng danh mục (提出書類一覧) cho nhóm của bạn trên trang Cục và gom từng tờ. Giấy cơ quan Nhật cấp phải trong vòng 3 tháng. MANG GÌ khi nộp: cả bộ hồ sơ + hộ chiếu + thẻ lưu trú. MẤT BAO LÂU: chuẩn bị nghiêm túc thường 3–6 tuần, lâu nhất là giấy của người bảo lãnh và giấy tờ thuế nhiều năm. KIỂM TRA GÌ: thu nhập khai trong các giấy thuế phải khớp nhau giữa các năm và khớp với thư lý do; số liệu 'chênh nhau' không giải thích được là điểm trừ.",
+     "ja": "永住許可の書類を準備しています。",
+     "vi": "Tôi đang chuẩn bị hồ sơ xin vĩnh trú."
+    },
+    {
+     "t": "Nhờ người bảo lãnh hoàn thiện phần giấy bảo lãnh",
+     "d": "LÀM TRƯỚC NGÀY NỘP: Đưa người bảo lãnh 3 thứ: mẫu giấy bảo lãnh (身元保証書) để điền/ký, và nhờ họ xin giúp giấy cư trú (住民票) + giấy chứng nhận thuế/thu nhập của họ tại tòa thị chính nơi họ sống. NÓI GÌ với người bảo lãnh: giải thích trung thực đây là bảo lãnh về việc bạn sẽ tuân thủ pháp luật và lối sống ở Nhật, người bảo lãnh không gánh nợ tài chính thay bạn. MẤT BAO LÂU: thường 1–2 tuần tùy người bảo lãnh. KIỂM TRA GÌ: thông tin người bảo lãnh (địa chỉ, nghề nghiệp, thu nhập) ghi đầy đủ, chữ ký/đóng dấu theo mẫu — thiếu phần này hồ sơ không được tiếp nhận trọn vẹn.",
+     "ja": "身元保証人をお願いできますか。",
+     "vi": "Anh/chị làm người bảo lãnh nhân thân cho tôi được không?"
+    },
+    {
+     "t": "Nộp hồ sơ tại Nyukan và nhận biên nhận",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương phụ trách nơi bạn sống, quầy tiếp nhận, ngày thường 9:00–12:00 và 13:00–16:00. MANG GÌ: bộ hồ sơ + hộ chiếu + thẻ lưu trú bản gốc. NÓI GÌ: nói câu mẫu. Nhân viên kiểm tra danh mục; thiếu giấy sẽ được chỉ rõ để bổ sung. MẤT BAO LÂU: 30 phút đến 2 giờ tùy đông. NHẬN ĐƯỢC GÌ: dấu/biên nhận đã nộp hồ sơ trên đơn hoặc giấy hẹn — giữ cẩn thận. LƯU Ý: lúc nộp CHƯA phải đóng lệ phí — phí chỉ đóng khi ĐƯỢC phép. KIỂM TRA GÌ: trong thời gian chờ, tư cách hiện tại của bạn không đổi; nếu sắp hết hạn phải gia hạn riêng (bước tiếp theo).",
+     "ja": "永住許可申請書を提出します。",
+     "vi": "Tôi nộp đơn xin phép vĩnh trú."
+    },
+    {
+     "t": "Trong lúc chờ xét (khoảng 4–6 tháng): giữ mọi thứ ổn định",
+     "d": "Ở NHÀ: (1) Gia hạn tư cách hiện tại đúng hạn nếu hết hạn trong thời gian chờ — hồ sơ vĩnh trú không thay thế việc gia hạn. (2) Không đổi việc/loại việc tùy tiện; nếu bắt buộc đổi việc, cân nhắc báo và chuẩn bị giấy giải trình vì Cục xét tình trạng tại thời điểm ra quyết định. (3) Đóng thuế, bảo hiểm, lương hưu tiếp tục đúng hạn từng tháng. (4) Kiểm tra hộp thư mỗi ngày: Cục có thể gửi thư yêu cầu bổ sung giấy tờ giữa chừng — trả lời đúng hạn ghi trong thư. (5) Theo hướng dẫn sửa đổi 10/2026 (áp dụng cho hồ sơ từ 1/4/2027), năng lực tiếng Nhật khoảng trình độ B1 (tương đương trên N3, gần N2 theo khung tham chiếu) và việc hiểu quy tắc/xã hội Nhật cũng được đưa vào yếu tố xem xét — việc bạn đang học tiếng Nhật nghiêm túc là điểm có lợi về lâu dài. KIỂM TRA GÌ: mỗi tháng tự rà một lần — thuế/bảo hiểm tháng này đã đóng chưa.",
+     "ja": "審査中です。追加書類があれば提出します。",
+     "vi": "Hồ sơ đang được xét. Nếu cần giấy bổ sung tôi sẽ nộp."
+    },
+    {
+     "t": "Nhận kết quả và đóng lệ phí khi được phép",
+     "d": "ĐI ĐÂU: Nhận bưu thiếp/thư báo kết quả gửi về nhà, rồi đến Nyukan theo hướng dẫn trong thư. MANG GÌ: thư báo, hộ chiếu, thẻ lưu trú hiện tại, tem doanh thu (収入印紙) đúng số tiền. MỨC PHÍ HIỆN TẠI: hồ sơ nộp từ 1/10/2026, khi được phép phải đóng 200.000 yên (hồ sơ được tiếp nhận đến 30/9/2026 vẫn là mức cũ 10.000 yên) — đây là khoản lớn, hãy chuẩn bị tiền sẵn từ khi nộp hồ sơ. NHẬN ĐƯỢC GÌ: thẻ lưu trú mới ghi tư cách '永住者' (người vĩnh trú), thời hạn lưu trú không còn ghi ngày hết hạn (thay vào đó thẻ có hạn sử dụng riêng phải đổi định kỳ). KIỂM TRA GÌ NGAY TẠI QUẦY: họ tên, ngày sinh trên thẻ mới và dòng tư cách 永住者.",
+     "ja": "永住許可の結果を受け取りに来ました。",
+     "vi": "Tôi đến nhận kết quả xin vĩnh trú."
+    }
+   ],
+   "cost": "Chỉ đóng khi ĐƯỢC phép, bằng tem doanh thu (収入印紙): hồ sơ nộp từ 1/10/2026 là 200.000 yên; hồ sơ đã được tiếp nhận đến hết 30/9/2026 là 10.000 yên theo mức cũ. Một số trường hợp khó khăn đặc biệt có thể được giảm phí theo quy định — hỏi Cục nếu thuộc hoàn cảnh đó. Ngoài ra chỉ tốn phí xin các giấy chứng nhận (mỗi tờ khoảng 300 yên, tùy địa phương).",
+   "duration": "Thời gian xét chuẩn theo Cục công bố: khoảng 4–6 tháng. Thực tế có hồ sơ lâu hơn vào mùa đông — nộp sớm và giữ liên lạc thư từ đầy đủ.",
+   "warnings": [
+    "Đừng nộp 'cho vui' khi chưa đủ điều kiện: hồ sơ bị từ chối không bị phạt, nhưng bạn mất nhiều tháng chờ và lần nộp sau Cục vẫn xem lại toàn bộ quá trình sống của bạn. Tự kiểm tra bằng bảng チェックシート của Cục trước, ô nào chưa đạt thì xử lý xong mới nộp",
+    "Ba 'vùng đỏ' khiến hồ sơ vĩnh trú bị từ chối nhiều nhất: (1) chậm/nợ tiền lương hưu và bảo hiểm y tế trong các năm gần nhất, (2) thu nhập thấp hoặc không ổn định so với số người trong hộ, (3) vắng mặt khỏi Nhật dài ngày làm đứt tính 'liên tục'. Cả ba đều cần thời gian nhiều tháng–nhiều năm để sửa, không sửa được trong một tuần",
+    "Thời gian ở tư cách Thực tập kỹ năng và Đặc kỹ năng 1 không được tính vào '5 năm tư cách lao động' cho điều kiện 10 năm. Nhiều người tính nhẩm đủ 10 năm nhưng phần lao động chỉ đếm được ít hơn — hãy liệt kê từng giai đoạn tư cách ra giấy như hướng dẫn chuẩn bị ở nhà",
+    "Vĩnh trú không phải 'miễn mọi nghĩa vụ': bạn vẫn phải đổi thẻ lưu trú định kỳ, vẫn khai báo địa chỉ khi chuyển nhà, vẫn đóng thuế/bảo hiểm. Và vĩnh trú vẫn có thể bị THU HỒI nếu sau này bạn không đóng thuế/bảo hiểm kéo dài hoặc vi phạm pháp luật (quy định về thu hồi đã được luật hóa) — giữ nếp sống ổn định sau khi được cấp cũng quan trọng như trước khi xin",
+    "Nếu TRỤC TRẶC — thiếu giấy tờ các năm cũ (ví dụ mất giấy thuế năm xưa): ra tòa thị chính/cơ quan thuế hỏi xin cấp lại — hầu hết giấy thuế và bản ghi lương hưu đều tra và in lại được cho các năm gần đây. Giấy nào thật sự không xin lại được, viết một tờ giải trình ngắn nộp kèm thay vì im lặng bỏ trống",
+    "Nếu TRỤC TRẶC — bị TỪ CHỐI: hãy đến quầy hỏi và ghi lại lý do cụ thể (thiếu năm? thu nhập? lương hưu?). Vĩnh trú bị từ chối không ảnh hưởng tư cách hiện tại của bạn — bạn vẫn ở và gia hạn bình thường. Lập kế hoạch sửa đúng điểm yếu đó (thường cần 1–2 năm thể hiện cải thiện) rồi nộp lại. Nhờ luật sư hành chính (行政書士) chuyên về vĩnh trú đọc lại hồ sơ trước lần nộp lại là khoản đầu tư đáng giá",
+    "Nếu TRỤC TRẶC — không đủ tự tin về tiếng Nhật khi viết thư lý do và điền đơn: nhờ trung tâm hỗ trợ người nước ngoài của địa phương (多文化共生センター...) hoặc luật sư hành chính kiểm tra bản nháp. Thư lý do viết bằng tiếng Nhật đơn giản, đúng sự thật của chính bạn tốt hơn nhiều một bài mẫu sao chép trên mạng",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Thẻ mới ghi tư cách 永住者, thông tin cá nhân đúng. Chụp 2 mặt thẻ và cất cùng hồ sơ vĩnh trú (gồm cả bản sao bộ hồ sơ đã nộp)",
+    "Ghi lại ngày hết hạn SỬ DỤNG của thẻ lưu trú (thẻ vĩnh trú vẫn phải đổi thẻ định kỳ, thường 7 năm) và đặt nhắc nhở đổi thẻ trước hạn",
+    "Báo cho công ty và ngân hàng về việc đổi tư cách nếu họ yêu cầu cập nhật thông tin thẻ lưu trú",
+    "Vẫn duy trì: đóng thuế – bảo hiểm – lương hưu đúng hạn, khai báo địa chỉ khi chuyển nhà — đây là điều kiện để GIỮ vĩnh trú lâu dài",
+    "Nếu có kế hoạch về Việt Nam dài ngày (trên 1 năm): tìm hiểu trước về giấy phép tái nhập cảnh (再入国許可) loại nhiều lần để không mất tư cách vĩnh trú khi ở nước ngoài lâu"
+   ],
+   "vocab": [
+    {
+     "ja": "永住許可",
+     "reading": "えいじゅうきょか",
+     "vi": "Phép vĩnh trú"
+    },
+    {
+     "ja": "永住者",
+     "reading": "えいじゅうしゃ",
+     "vi": "Người vĩnh trú (tên tư cách lưu trú)"
+    },
+    {
+     "ja": "素行が善良",
+     "reading": "そこうがぜんりょう",
+     "vi": "Hạnh kiểm tốt"
+    },
+    {
+     "ja": "独立の生計",
+     "reading": "どくりつのせいけい",
+     "vi": "Sinh kế độc lập (tự nuôi sống được bản thân/gia đình)"
+    },
+    {
+     "ja": "身元保証人",
+     "reading": "みもとほしょうにん",
+     "vi": "Người bảo lãnh nhân thân"
+    },
+    {
+     "ja": "身元保証書",
+     "reading": "みもとほしょうしょ",
+     "vi": "Giấy bảo lãnh nhân thân"
+    },
+    {
+     "ja": "理由書",
+     "reading": "りゆうしょ",
+     "vi": "Thư trình bày lý do (xin vĩnh trú)"
+    },
+    {
+     "ja": "課税証明書",
+     "reading": "かぜいしょうめいしょ",
+     "vi": "Giấy chứng nhận thuế"
+    },
+    {
+     "ja": "納税証明書",
+     "reading": "のうぜいしょうめいしょ",
+     "vi": "Giấy chứng nhận đã nộp thuế"
+    },
+    {
+     "ja": "年金",
+     "reading": "ねんきん",
+     "vi": "Lương hưu"
+    },
+    {
+     "ja": "残高証明書",
+     "reading": "ざんだかしょうめいしょ",
+     "vi": "Giấy chứng nhận số dư ngân hàng"
+    },
+    {
+     "ja": "高度人材",
+     "reading": "こうどじんざい",
+     "vi": "Nhân lực chất lượng cao (hệ điểm, diện rút ngắn vĩnh trú)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "永住許可申請書を提出します。",
+     "vi": "Tôi nộp đơn xin phép vĩnh trú."
+    },
+    {
+     "ja": "日本に10年以上住んでいます。",
+     "vi": "Tôi đã sống ở Nhật hơn 10 năm."
+    },
+    {
+     "ja": "身元保証人をお願いできますか。",
+     "vi": "Anh/chị làm người bảo lãnh nhân thân cho tôi được không?"
+    },
+    {
+     "ja": "税金と年金を納めています。",
+     "vi": "Tôi đang đóng thuế và lương hưu đầy đủ."
+    },
+    {
+     "ja": "不許可の理由を教えてください。",
+     "vi": "Xin cho tôi biết lý do không được cấp phép."
+    },
+    {
+     "ja": "日本語があまり分かりません。書いてもらえますか。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin viết ra giấy giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh — Thủ tục xin phép vĩnh trú",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/16-4.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Hướng dẫn về phép vĩnh trú (bản sửa đổi 24/2/2026)",
+     "url": "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan50.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Hướng dẫn vĩnh trú sửa đổi 1/10/2026 (áp dụng cho hồ sơ từ 1/4/2027)",
+     "url": "https://www.moj.go.jp/isa/10_00279.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/zairyu_eijyu01.html",
+     "fill": [
+      {
+       "example": "Ảnh nền trơn, nhìn thẳng",
+       "field": "写真 (ảnh chân dung)",
+       "how": "Dán ảnh 4cm x 3cm chụp trong 3 tháng gần nhất vào ô ảnh của tờ 1 (その1). In đơn một mặt, không in hai mặt.",
+       "mistake": "In hai mặt. Cục ghi rõ phải in từng tờ một mặt."
+      },
+      {
+       "example": "ベトナム / 1998年5月12日",
+       "field": "1 国籍・地域 / 2 生年月日 (quốc tịch / ngày sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "3 氏名 (họ tên)",
+       "how": "Chữ Latin in hoa giống hệt hộ chiếu và thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "男 / ハノイ / 無",
+       "field": "4 性別 / 5 出生地 / 6 配偶者の有無 (giới tính / nơi sinh / hôn nhân)",
+       "how": "Khoanh và ghi đúng theo hộ chiếu và tình trạng thật.",
+       "mistake": ""
+      },
+      {
+       "example": "会社員（介護職）",
+       "field": "7 職業 (nghề nghiệp)",
+       "how": "Ghi nghề hiện tại ngắn gọn, khớp với giấy chứng nhận đang làm việc 在職証明書.",
+       "mistake": "Ghi nghề khác với giấy tờ công ty cấp."
+      },
+      {
+       "example": "ベトナム ハノイ市",
+       "field": "8 本国における居住地 (địa chỉ ở nước mình)",
+       "how": "Ghi địa chỉ ở Việt Nam bằng chữ Latin.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "9 住居地・電話番号・携帯電話番号 (địa chỉ ở Nhật và điện thoại)",
+       "how": "Đúng như giấy cư trú 住民票 và mặt sau thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "B12345678 (số mẫu) / 技術・人文知識・国際業務・2027年3月31日 / AB12345678CD (số mẫu)",
+       "field": "10 旅券 / 11 現に有する在留資格・満了日 / 12 在留カード番号 (hộ chiếu / tư cách hiện tại / số thẻ lưu trú)",
+       "how": "Chép lần lượt từ hộ chiếu và thẻ lưu trú. Đang xin vĩnh trú vẫn phải gia hạn tư cách hiện tại nếu sắp hết hạn.",
+       "mistake": "Để tư cách hiện tại hết hạn trong lúc chờ xét vĩnh trú."
+      },
+      {
+       "example": "無",
+       "field": "13 犯罪を理由とする処分の有無 (tiền án, tiền phạt)",
+       "how": "Chưa từng thì khoanh 無. Tính cả phạt giao thông nặng và xử phạt ở ngoài Nhật. Có thì ghi rõ nội dung.",
+       "mistake": "Giấu vi phạm. Đây là mục xét hạnh kiểm rất kỹ."
+      },
+      {
+       "example": "日本に10年在住し、介護の仕事を続けており、今後も日本で生活していくため",
+       "field": "14 永住許可を申請する理由 (lý do xin vĩnh trú)",
+       "how": "Viết vài dòng thật và cụ thể: sống ở Nhật bao lâu, làm việc gì, dự định sống lâu dài ra sao.",
+       "mistake": "Để trống hoặc viết một câu quá chung chung."
+      },
+      {
+       "example": "無",
+       "field": "15 異なる国籍・氏名・生年月日による出入国の有無 (đã từng xuất nhập cảnh bằng tên/quốc tịch khác chưa)",
+       "how": "Chưa từng thì khoanh 無. Từng đổi hộ chiếu hay đổi tên thì khoanh 有 và ghi chi tiết ở phần dưới ô này.",
+       "mistake": ""
+      },
+      {
+       "example": "2019年4月 サンプル日本語学校 入学 → 2021年4月 株式会社サンプル介護サービス 入社 (tên mẫu)",
+       "field": "16 経歴 (quá trình học và làm việc từ lần nhập cảnh này)",
+       "how": "Ghi theo thứ tự thời gian: học trường nào, làm công ty nào, từ tháng năm nào đến tháng năm nào. Không đủ chỗ thì ghi tiếp ra giấy riêng. Cuối phần ghi tổng số năm đã ở Nhật và ngày kết hôn nếu có.",
+       "mistake": "Để khoảng trống thời gian không giải thích được."
+      },
+      {
+       "example": "本人 / 株式会社サンプル介護サービス / 年収 3,600,000円 (ví dụ mẫu)",
+       "field": "17 主たる生計維持者 (người nuôi sống chính: quan hệ, nơi làm việc, thu nhập năm) — tờ 2",
+       "how": "Thường là chính bạn: tick 本人, ghi tên công ty, địa chỉ, điện thoại công ty và 年収 (thu nhập năm) khớp giấy chứng nhận thuế 課税証明書.",
+       "mistake": "Thu nhập ghi khác với giấy thuế. Đây là lỗi rất hay gặp."
+      },
+      {
+       "example": "身元保証人：勤務先の雇用主 (ví dụ mẫu)",
+       "field": "18 在日親族及び同居者 / 19 在日身元保証人 (người thân tại Nhật và người bảo lãnh) — tờ 2",
+       "how": "Mục 18: liệt kê người thân đang ở Nhật và người sống cùng nhà, kèm số thẻ lưu trú của họ. Mục 19: ghi họ tên, địa chỉ, nghề, điện thoại và quan hệ của người bảo lãnh 身元保証人 (thường là vợ/chồng hoặc chủ công ty).",
+       "mistake": "Chưa nhờ được người bảo lãnh đã nộp đơn. Phần giấy bảo lãnh 身元保証書 nộp kèm phải khớp thông tin này."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "永住許可申請書",
+     "name_vi": "Đơn xin phép vĩnh trú",
+     "sample_note": "Đơn vĩnh trú có 2 tờ (その1・その2), dùng chung cho mọi nhóm. Trang tải ở trên là trang 永住許可申請1; từ trang thủ tục 永住許可申請 (16-4) hãy chọn đúng trang theo nhóm tư cách của mình vì danh sách giấy tờ kèm theo khác nhau, mẫu đơn thì giống nhau (có PDF, Excel và mẫu điền sẵn).",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "MPKEN",
+     "lang": "vi",
+     "note": "Luật sư hành chính Nhật giải đáp từng mục guideline vĩnh trú mới áp dụng từ 4/2027, có phiên dịch tiếng Việt: thu nhập hộ gia đình, nenkin, tiếng Nhật B1, visa 5 năm.",
+     "title": "GUIDELINE MỚI VỀ XIN VĨNH TRÚ TỪ 4/2027: LUẬT SƯ HÀNH CHÍNH GIẢI ĐÁP TỪNG MỤC",
+     "url": "https://www.youtube.com/watch?v=nP8PXokES4g"
+    },
+    {
+     "channel": "湯田一輝",
+     "lang": "ja",
+     "note": "Hành chính sư giải thích đầy đủ 3 điều kiện pháp lý của vĩnh trú: hạnh kiểm tốt, tự lập sinh kế, phù hợp lợi ích quốc gia (số năm cư trú, thuế, nenkin, bảo hiểm).",
+     "title": "永住許可の3つの要件を完全解説｜知らないと不許可に",
+     "url": "https://www.youtube.com/watch?v=CAYshgKQ54M"
+    }
+   ]
+  },
+  {
+   "id": "moi-nguoi-nha-sang-nhat",
+   "group": "Giấy tờ & cư trú",
+   "title": "Mời người nhà sang Nhật (thăm thân / đoàn tụ) （短期滞在・家族滞在）",
+   "icon": "👨‍👩‍👧",
+   "summary": "Mời người nhà sang Nhật có 2 đường hoàn toàn khác nhau, phải chọn đúng ngay từ đầu: (1) THĂM THÂN ngắn hạn — bố mẹ, vợ/chồng, con, anh chị em ruột sang chơi tối đa 90 ngày bằng thị thực ngắn hạn (短期滞在), xin tại Đại sứ quán/Lãnh sự quán Nhật ở Việt Nam, KHÔNG được đi làm. (2) ĐOÀN TỤ sống lâu dài — chỉ dành cho VỢ/CHỒNG và CON của bạn, đi bằng tư cách 'Gia đình' (家族滞在): bạn ở Nhật xin trước Giấy chứng nhận tư cách lưu trú (在留資格認定証明書, gọi tắt là COE) tại Nyukan, người nhà cầm COE đi xin thị thực rồi mới sang. Bố mẹ KHÔNG thuộc diện đoàn tụ lâu dài.",
+   "who": "Người Việt đang sống/làm việc/học tập hợp pháp ở Nhật muốn mời người thân. Ví dụ hư cấu: anh Đỗ Văn Hải đang làm việc ở Nhật, muốn mời mẹ là bà Nguyễn Thị Hoa (tên hư cấu) sang thăm 1 tháng — đi đường THĂM THÂN. Ví dụ khác: chị Vũ Thị Lan (tên hư cấu) muốn đưa chồng và con sang sống cùng lâu dài — đi đường GIA ĐÌNH (家族滞在), và chỉ chồng/con mới thuộc diện này.",
+   "docs": [
+    "PHÍA NGƯỜI NHÀ Ở VIỆT NAM (đường thăm thân): hộ chiếu gốc, tờ khai xin thị thực + ảnh 4,5cm × 3,5cm chụp trong 6 tháng, giấy tờ chứng minh quan hệ với người mời (giấy khai sinh, giấy chứng nhận kết hôn, sổ hộ khẩu... — trình bản gốc, nộp bản sao)",
+    "PHÍA NGƯỜI NHÀ Ở VIỆT NAM: giấy xác nhận đặt chỗ máy bay/hành trình bay (chỉ đặt chỗ, CHƯA mua vé thật), giấy tờ chứng minh tài chính nếu người đi tự chi trả (chứng nhận thu nhập, số dư ngân hàng...)",
+    "PHÍA BẠN Ở NHẬT (đường thăm thân): giấy lý do mời (招へい理由書, shohei riyusho) — viết rõ mời ai, quan hệ gì, mời sang làm gì, trong bao lâu",
+    "PHÍA BẠN Ở NHẬT: lịch trình dự định (滞在予定表) — ghi từng ngày: đến ngày nào, ở đâu, làm gì, số điện thoại liên lạc, ngày về",
+    "PHÍA BẠN Ở NHẬT: giấy cư trú (住民票) của cả hộ (bản không ghi số My Number) + bản sao 2 mặt thẻ lưu trú của bạn; nếu bạn là người bảo lãnh chi phí thì thêm giấy bảo lãnh (身元保証書) và giấy chứng minh thu nhập/nộp thuế của bạn (課税証明書 hoặc giấy chứng nhận số dư ngân hàng hoặc giấy xác nhận đang làm việc có ghi lương)",
+    "ĐƯỜNG ĐOÀN TỤ (家族滞在): đơn xin COE cho từng người nhà, ảnh 4cm × 3cm của người nhà, giấy chứng minh quan hệ (giấy chứng nhận kết hôn đối với vợ/chồng, giấy khai sinh đối với con — kèm bản dịch tiếng Nhật), bản sao thẻ lưu trú của bạn",
+    "ĐƯỜNG ĐOÀN TỤ: giấy tờ chứng minh bạn nuôi sống được gia đình — giấy xác nhận đang làm việc (在職証明書), giấy chứng nhận thuế (課税証明書・納税証明書) nếu bạn có thu nhập ở Nhật; nếu bạn là du học sinh: giấy xác nhận đang học + chứng nhận số dư ngân hàng/học bổng mang tên bạn",
+    "Phong bì gửi trả kết quả COE (đường đoàn tụ, khi nộp COE tại Nyukan): phong bì ghi sẵn địa chỉ của bạn, dán tem thư bảo đảm đơn giản (簡易書留) theo hướng dẫn tại quầy"
+   ],
+   "prep_home": [
+    "Quyết định rõ ĐƯỜNG ĐI trước khi chuẩn bị giấy: sang chơi dưới 90 ngày = thăm thân; sang sống cùng lâu dài và là vợ/chồng hoặc con = gia đình (家族滞在). Bố mẹ, anh chị em KHÔNG có đường đoàn tụ lâu dài thông thường — đừng nghe môi giới hứa hẹn",
+    "Đường thăm thân: phân chia việc rõ ràng — bạn ở Nhật làm bộ giấy mời (lý do mời, lịch trình, giấy bảo lãnh nếu có, giấy cư trú, giấy thu nhập), gửi bản gốc về Việt Nam bằng chuyển phát nhanh quốc tế có theo dõi. Người nhà ở Việt Nam KHÔNG nộp hồ sơ tại Nhật mà nộp tại cơ quan đại diện Nhật ở Việt Nam (qua đơn vị ủy thác được chỉ định tại Việt Nam)",
+    "Viết lịch trình (滞在予定表) thật cụ thể theo từng ngày, khớp với số ngày xin ở (15/30/90 ngày) và khớp với đặt chỗ máy bay. Lịch trình mơ hồ kiểu 'đi chơi quanh Nhật' là điểm trừ lớn",
+    "Chụp/scan toàn bộ giấy bạn gửi về Việt Nam và giữ một bộ ở Nhật. Nếu phía Việt Nam bị yêu cầu bổ sung, bạn bổ sung được ngay mà không phải làm lại từ đầu",
+    "Đường đoàn tụ: chuẩn bị bản DỊCH tiếng Nhật cho giấy kết hôn/khai sinh của Việt Nam (bản dịch có ghi tên và đóng dấu/chữ ký người dịch — bạn có thể tự dịch nếu đủ khả năng, ghi rõ 'bản dịch do ... thực hiện')",
+    "Kiểm tra nhà ở: đưa gia đình sang sống cùng thì nhà phải đủ ở và hợp đồng thuê nhà có cho phép thêm người ở không. Hỏi chủ nhà/công ty quản lý trước — nhiều hợp đồng phải báo và được đồng ý mới thêm người",
+    "Cả 2 đường: dặn người nhà TUYỆT ĐỐI không mua vé máy bay thật và không nghỉ việc/bán đồ ở Việt Nam trước khi có thị thực/COE trên tay"
+   ],
+   "steps": [
+    {
+     "t": "Bước chung: chọn đúng đường và kiểm tra quan hệ được mời",
+     "d": "LÀM Ở NHÀ: Đường thăm thân ở Việt Nam áp dụng cho họ hàng trong vòng 3 đời (血族・姻族3親等以内 — gồm bố mẹ, vợ/chồng, con, ông bà, anh chị em ruột và họ hàng gần tương tự). Đường đoàn tụ 家族滞在 CHỈ gồm vợ/chồng và con của người đang sống ở Nhật với các tư cách như đi làm, du học... (không áp dụng cho người đang là thực tập sinh kỹ năng — thực tập sinh không đưa gia đình sang ở cùng được). KIỂM TRA GÌ: tư cách hiện tại của chính bạn có thuộc diện được bảo lãnh gia đình không — xem danh sách trên trang tư cách Gia đình của Cục, hoặc gọi Trung tâm thông tin 0570-013904 hỏi trước khi tốn công chuẩn bị.",
+     "ja": "家族を日本に呼びたいです。手続きを教えてください。",
+     "vi": "Tôi muốn mời người nhà sang Nhật. Xin chỉ cho tôi thủ tục."
+    },
+    {
+     "t": "[Thăm thân] Bạn ở Nhật làm bộ giấy mời",
+     "d": "LÀM TẠI NHẬT: (1) Ra tòa thị chính xin 住民票 cả hộ (phí khoảng 300 yên, tùy địa phương). (2) Điền giấy lý do mời (招へい理由書 — tải mẫu trên trang Bộ Ngoại giao/Đại sứ quán): ghi cụ thể mục đích (ví dụ: thăm con đang làm việc tại..., dự lễ tốt nghiệp, chăm cháu mới sinh trong thời gian ngắn) — viết chung chung 'mời sang chơi' sẽ yếu hồ sơ. (3) Điền lịch trình 滞在予定表 theo từng ngày. (4) Nếu bạn chi trả chi phí chuyến đi: điền thêm giấy bảo lãnh 身元保証書 và xin giấy chứng minh thu nhập (課税証明書 ở tòa thị chính, hoặc giấy số dư ngân hàng). (5) Sao chụp 2 mặt thẻ lưu trú. MẤT BAO LÂU: làm bộ giấy khoảng 2–3 ngày + thời gian xin giấy ở tòa thị chính. KIỂM TRA GÌ: họ tên, ngày sinh của người được mời phải khớp TỪNG CHỮ với hộ chiếu của họ — nhờ người nhà chụp hộ chiếu gửi qua để đối chiếu trước khi viết.",
+     "ja": "招へい理由書と滞在予定表を作成しました。",
+     "vi": "Tôi đã làm xong giấy lý do mời và lịch trình dự định."
+    },
+    {
+     "t": "[Thăm thân] Gửi giấy về Việt Nam và người nhà nộp hồ sơ xin thị thực",
+     "d": "GỬI GIẤY: Gửi bản gốc bộ giấy mời từ Nhật về Việt Nam bằng chuyển phát nhanh quốc tế có số theo dõi (thường mất khoảng vài ngày đến 1 tuần, tùy hãng). NỘP HỒ SƠ: Người nhà mang hồ sơ (phần của họ + bộ giấy mời của bạn) nộp tại cơ quan đại diện Nhật Bản tại Việt Nam THÔNG QUA đơn vị ủy thác được chỉ định (tại Việt Nam hiện không nộp trực tiếp tại cửa sổ lãnh sự đối với hồ sơ cá nhân — xem hướng dẫn hiện hành trên trang Đại sứ quán Nhật tại Việt Nam). NÓI GÌ: người nhà cứ trình bày đúng mục đích thăm thân như trong giấy lý do mời. XÉT DUYỆT: Bộ Ngoại giao cho biết thường khoảng 1 tuần nếu hồ sơ đầy đủ, có trường hợp lâu hơn khi cần xác minh. NHẬN ĐƯỢC GÌ: hộ chiếu dán thị thực ngắn hạn, ghi số ngày được ở (15, 30 hoặc 90 ngày) và hạn phải nhập cảnh (thường 3 tháng kể từ ngày cấp). KIỂM TRA GÌ: số ngày được ở và hạn nhập cảnh trên thị thực — lên kế hoạch bay trong đúng khung đó.",
+     "ja": "書類をベトナムに送りました。",
+     "vi": "Tôi đã gửi giấy tờ về Việt Nam."
+    },
+    {
+     "t": "[Thăm thân] Người nhà nhập cảnh và ở đúng số ngày được phép",
+     "d": "TẠI SÂN BAY NHẬT: Người nhà trình hộ chiếu có thị thực; nhân viên nhập cảnh dán tem nhập cảnh (上陸許可) ghi ngày được ở đến ngày nào — ngày này là ngày chốt, ở quá là vi phạm. TRONG THỜI GIAN Ở: thị thực thăm thân KHÔNG được đi làm dưới bất kỳ hình thức nào, kể cả làm giúp việc nhà cho người quen lấy tiền. GIỮ GÌ: chụp ảnh tem nhập cảnh gửi cho bạn để cả nhà cùng nhớ ngày phải xuất cảnh. KIỂM TRA GÌ: đặt vé về đúng/trước ngày cuối được phép ở, chừa dư vài ngày phòng thay đổi chuyến bay.",
+     "ja": "滞在期間を確認してください。",
+     "vi": "Xin kiểm tra thời gian được ở lại."
+    },
+    {
+     "t": "[Đoàn tụ] Bạn ở Nhật nộp hồ sơ xin COE tại Nyukan",
+     "d": "ĐI ĐÂU: Cục Xuất nhập cảnh địa phương phụ trách nơi bạn sống, quầy tiếp nhận hồ sơ cấp chứng nhận (認定申請). MANG GÌ: đơn xin COE cho từng người nhà + ảnh của họ, giấy chứng minh quan hệ kèm bản dịch tiếng Nhật, bản sao thẻ lưu trú của bạn, giấy tờ chứng minh nghề nghiệp/thu nhập của bạn, phong bì trả kết quả dán tem theo hướng dẫn. NÓI GÌ: nói câu mẫu. PHÍ: xin COE MIỄN PHÍ. MẤT BAO LÂU: nộp 30 phút đến 1 giờ; thời gian xét thường khoảng 1–3 tháng tùy hồ sơ và mùa. NHẬN ĐƯỢC GÌ: trước mắt là biên nhận/số hồ sơ — giữ kỹ để tra cứu. KIỂM TRA GÌ: địa chỉ ghi trên phong bì trả kết quả phải là địa chỉ nhà bạn hiện tại và hộp thư có tên bạn.",
+     "ja": "家族滞在の在留資格認定証明書を申請します。",
+     "vi": "Tôi xin Giấy chứng nhận tư cách lưu trú cho diện Gia đình."
+    },
+    {
+     "t": "[Đoàn tụ] Nhận COE và gửi về Việt Nam cho người nhà",
+     "d": "Ở NHÀ NHẬN THƯ: COE (bản giấy hoặc bản điện tử tùy cách cấp) được gửi về địa chỉ của bạn. COE chỉ có hiệu lực 3 THÁNG — trong thời gian đó người nhà phải xin thị thực VÀ nhập cảnh. GỬI VỀ VIỆT NAM: gửi bản gốc qua chuyển phát nhanh có theo dõi ngay trong ngày nhận được (nếu là COE điện tử thì gửi file/ảnh theo hướng dẫn). KIỂM TRA GÌ TRƯỚC KHI GỬI: họ tên, ngày sinh, quốc tịch trên COE khớp hộ chiếu người nhà; chụp/scan giữ lại một bản ở Nhật. MẤT BAO LÂU: gửi quốc tế khoảng vài ngày — tính cả thời gian này vào hạn 3 tháng.",
+     "ja": "認定証明書が届きました。家族に送ります。",
+     "vi": "Giấy chứng nhận đã đến. Tôi sẽ gửi cho người nhà."
+    },
+    {
+     "t": "[Đoàn tụ] Người nhà xin thị thực tại Việt Nam và sang Nhật",
+     "d": "NỘP TẠI VIỆT NAM: Người nhà mang hộ chiếu, tờ khai xin thị thực, ảnh và COE (bản gốc hoặc bản in COE điện tử) nộp qua đơn vị ủy thác của cơ quan đại diện Nhật tại Việt Nam như hướng dẫn hiện hành. Có COE rồi, khâu thị thực thường nhanh hơn nhiều so với xin từ đầu. LƯU Ý RIÊNG CHO NGƯỜI VIỆT: người mang quốc tịch Việt Nam thuộc diện có thể phải khám sàng lọc lao (結核スクリーニング) trước nhập cảnh đối với lưu trú dài hạn — kiểm tra diện áp dụng và cơ sở khám được chỉ định trên trang Bộ Ngoại giao/Đại sứ quán khi làm hồ sơ. SANG NHẬT: tại sân bay nhập cảnh, người nhà được cấp thẻ lưu trú diện Gia đình. KIỂM TRA GÌ: thời hạn trên thẻ lưu trú của người nhà (thường gắn theo thời hạn của bạn) và địa chỉ sẽ đăng ký ở bước cuối.",
+     "ja": "家族がビザを取得しました。",
+     "vi": "Người nhà tôi đã lấy được thị thực."
+    },
+    {
+     "t": "[Đoàn tụ] Sau khi người nhà đến: đăng ký địa chỉ và các thủ tục sống cùng",
+     "d": "LÀM TRONG 14 NGÀY SAU KHI ĐẾN: Ra tòa thị chính làm đăng ký địa chỉ (転入届) cho người nhà vào cùng địa chỉ với bạn (xem bài 1 trong nhóm này) và đăng ký bảo hiểm y tế cho họ. VIỆC LÀM: người ở tư cách Gia đình muốn làm thêm phải xin giấy phép hoạt động ngoài tư cách (資格外活動許可) riêng, tối đa 28 giờ/tuần (xem bài 4 trong nhóm này) — không có phép là không được làm. HỌC HÀNH: con trong tuổi đi học thì liên hệ quầy giáo dục của địa phương để xin nhập học trường công. KIỂM TRA GÌ: thẻ bảo hiểm của người nhà đã về tay chưa, và ngày hết hạn tư cách của họ (thường phải gia hạn cùng nhịp với bạn).",
+     "ja": "家族の転入届と健康保険の手続きをします。",
+     "vi": "Tôi làm đăng ký địa chỉ và bảo hiểm y tế cho người nhà."
+    }
+   ],
+   "cost": "Đường thăm thân: phía Nhật chỉ tốn phí xin giấy ở tòa thị chính (khoảng 300 yên/tờ) và cước gửi hồ sơ quốc tế; lệ phí thị thực do phía Việt Nam thu theo bảng lệ phí của cơ quan đại diện Nhật tại Việt Nam tại thời điểm nộp, và theo quy định chung chỉ thu khi thị thực ĐƯỢC CẤP (số tiền thay đổi theo năm tài chính — kiểm tra trên trang Đại sứ quán trước khi nộp, không nghe con số truyền miệng). Đường đoàn tụ: xin COE miễn phí; lệ phí thị thực tại Việt Nam áp dụng tương tự. Chi phí dịch thuật/chuyển phát do bạn tự chi trả.",
+   "duration": "Thăm thân: làm giấy mời khoảng vài ngày, gửi về Việt Nam khoảng vài ngày đến 1 tuần, xét thị thực thường khoảng 1 tuần nếu hồ sơ đầy đủ (có thể lâu hơn khi cần xác minh). Đoàn tụ: xét COE thường khoảng 1–3 tháng; COE có hiệu lực 3 tháng kể từ ngày cấp để xin thị thực và nhập cảnh.",
+   "warnings": [
+    "Phân biệt rõ 2 khái niệm bị nhầm nhiều nhất: THỊ THỰC (ビザ/査証) do Đại sứ quán cấp ở Việt Nam để ĐƯỢC LÊN MÁY BAY VÀ XIN NHẬP CẢNH; còn TƯ CÁCH LƯU TRÚ do Cục Xuất nhập cảnh quyết định. Sang bằng thăm thân rồi 'ở lại luôn' hoặc đi làm là vi phạm — muốn ở lâu dài phải đi đúng đường đoàn tụ ngay từ đầu",
+    "Thăm thân tối đa 90 ngày và không được xin gia hạn ở Nhật trừ trường hợp đặc biệt bất khả kháng (bệnh nặng, thiên tai...). Ở quá hạn dù vì lý do vé máy bay cũng bị tính là ở bất hợp pháp và ảnh hưởng mọi lần xin thị thực sau",
+    "Đoàn tụ 家族滞在 chỉ dành cho vợ/chồng và con. Mọi quảng cáo 'bảo lãnh bố mẹ sang ở lâu dài', 'đưa anh chị em sang đoàn tụ' từ môi giới đều không đúng với chế độ thông thường — bố mẹ chỉ có đường thăm thân ngắn hạn, hoặc các diện đặc biệt rất hẹp do Cục xét riêng từng trường hợp",
+    "Người bảo lãnh phía Nhật phải có tình trạng lưu trú và thuế ổn định: đang nợ thuế, thu nhập quá thấp so với số người sẽ nuôi, hoặc chính bạn đang ở tư cách không thuộc diện bảo lãnh gia đình — đều khiến hồ sơ yếu hoặc không đủ điều kiện. Kiểm tra trước khi mời",
+    "Nếu TRỤC TRẶC — hồ sơ thăm thân bị TỪ CHỐI: cơ quan lãnh sự theo nguyên tắc không giải thích lý do cụ thể, và về nguyên tắc không nhận lại hồ sơ cùng mục đích trong vòng 6 tháng. Việc nên làm: rà soát lại các điểm yếu thường gặp (lịch trình mơ hồ, chứng minh tài chính yếu, quan hệ chưa rõ giấy tờ, người mời mới sang Nhật chưa ổn định), củng cố rồi mới nộp lại sau thời gian quy định — đừng nộp lại ngay y hệt",
+    "Nếu TRỤC TRẶC — COE bị từ chối hoặc xét quá lâu: gọi Nyukan nơi nộp theo số hồ sơ trên biên nhận để hỏi tình trạng; nếu bị từ chối, hỏi lý do và ghi lại (thường liên quan đến chứng minh quan hệ hoặc khả năng nuôi gia đình). Sửa đúng điểm đó rồi nộp lại bộ mới — COE bị từ chối không cấm nộp lại, nhưng nộp lại y nguyên sẽ cho kết quả y nguyên",
+    "Nếu TRỤC TRẶC — không hiểu tiếng Nhật khi điền giấy mời/lịch trình: tải mẫu chính thức (có mẫu điền tham khảo) từ trang Bộ Ngoại giao và Đại sứ quán Nhật tại Việt Nam; nhiều tòa thị chính và trung tâm hỗ trợ người nước ngoài có quầy tư vấn miễn phí giúp kiểm tra giấy tờ. Dùng câu: 「招へい理由書の書き方を教えてください。」(Xin chỉ cho tôi cách viết giấy lý do mời)",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Người nhà đã có thị thực/COE đúng loại (thăm thân hay gia đình), họ tên và ngày sinh trên giấy khớp từng chữ với hộ chiếu",
+    "Đã ghi vào lịch: ngày cuối cùng được phép ở (với thăm thân) hoặc ngày hết hạn COE (3 tháng, với đoàn tụ) — và kế hoạch bay nằm trọn trong khung đó",
+    "Bạn ở Nhật đã giữ một bộ sao chụp toàn bộ hồ sơ 2 phía; người nhà giữ bản gốc khi di chuyển",
+    "Với đoàn tụ: trong 14 ngày sau khi người nhà đến, đã làm đăng ký địa chỉ + bảo hiểm y tế cho họ tại tòa thị chính",
+    "Với đoàn tụ: đã rõ người nhà muốn làm thêm thì phải xin giấy phép 28 giờ riêng; con đến tuổi đi học đã liên hệ địa phương về nhập học",
+    "Vé máy bay chỉ mua SAU khi thị thực đã được cấp — trước đó chỉ dùng xác nhận đặt chỗ"
+   ],
+   "vocab": [
+    {
+     "ja": "短期滞在",
+     "reading": "たんきたいざい",
+     "vi": "Lưu trú ngắn hạn (thăm thân/du lịch, tối đa 90 ngày)"
+    },
+    {
+     "ja": "家族滞在",
+     "reading": "かぞくたいざい",
+     "vi": "Tư cách Gia đình (vợ/chồng, con sang ở cùng lâu dài)"
+    },
+    {
+     "ja": "招へい理由書",
+     "reading": "しょうへいりゆうしょ",
+     "vi": "Giấy lý do mời"
+    },
+    {
+     "ja": "滞在予定表",
+     "reading": "たいざいよていひょう",
+     "vi": "Lịch trình dự định (theo từng ngày)"
+    },
+    {
+     "ja": "身元保証書",
+     "reading": "みもとほしょうしょ",
+     "vi": "Giấy bảo lãnh (người mời cam kết bảo lãnh)"
+    },
+    {
+     "ja": "在留資格認定証明書",
+     "reading": "ざいりゅうしかくにんていしょうめいしょ",
+     "vi": "Giấy chứng nhận tư cách lưu trú (COE)"
+    },
+    {
+     "ja": "査証",
+     "reading": "さしょう",
+     "vi": "Thị thực (visa, do Đại sứ quán cấp)"
+    },
+    {
+     "ja": "親族訪問",
+     "reading": "しんぞくほうもん",
+     "vi": "Thăm họ hàng"
+    },
+    {
+     "ja": "扶養",
+     "reading": "ふよう",
+     "vi": "Phụ thuộc / nuôi dưỡng (người nhà sống nhờ thu nhập của bạn)"
+    },
+    {
+     "ja": "住民票",
+     "reading": "じゅうみんひょう",
+     "vi": "Giấy cư trú"
+    },
+    {
+     "ja": "上陸許可",
+     "reading": "じょうりくきょか",
+     "vi": "Phép nhập cảnh (tem dán tại sân bay khi nhập cảnh)"
+    },
+    {
+     "ja": "結核スクリーニング",
+     "reading": "けっかくスクリーニング",
+     "vi": "Khám sàng lọc lao (trước nhập cảnh, áp dụng cho một số quốc tịch gồm Việt Nam ở diện lưu trú dài hạn)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "家族を日本に呼びたいです。手続きを教えてください。",
+     "vi": "Tôi muốn mời người nhà sang Nhật. Xin chỉ cho tôi thủ tục."
+    },
+    {
+     "ja": "招へい理由書と滞在予定表を作成しました。",
+     "vi": "Tôi đã làm xong giấy lý do mời và lịch trình dự định."
+    },
+    {
+     "ja": "家族滞在の在留資格認定証明書を申請します。",
+     "vi": "Tôi xin Giấy chứng nhận tư cách lưu trú diện Gia đình."
+    },
+    {
+     "ja": "招へい理由書の書き方を教えてください。",
+     "vi": "Xin chỉ cho tôi cách viết giấy lý do mời."
+    },
+    {
+     "ja": "母が90日間、日本に滞在します。",
+     "vi": "Mẹ tôi sẽ ở Nhật trong 90 ngày."
+    },
+    {
+     "ja": "日本語があまり分かりません。ゆっくり話してください。",
+     "vi": "Tôi chưa hiểu tiếng Nhật lắm. Xin nói chậm giúp tôi."
+    }
+   ],
+   "links": [
+    {
+     "label": "Bộ Ngoại giao Nhật Bản — Thị thực (visa) và lưu trú ngắn hạn",
+     "url": "https://www.mofa.go.jp/j_info/visit/visa/index.html"
+    },
+    {
+     "label": "Bộ Ngoại giao Nhật Bản — Thị thực dài hạn: diện Gia đình",
+     "url": "https://www.mofa.go.jp/mofaj/toko/visa/chouki/visa9.html"
+    },
+    {
+     "label": "Cục Xuất nhập cảnh — Tư cách Gia đình (家族滞在) và thủ tục COE",
+     "url": "https://www.moj.go.jp/isa/applications/status/dependent.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.mofa.go.jp/mofaj/ca/fna/page23_002812.html",
+     "fill": [
+      {
+       "example": "2026年11月15日",
+       "field": "作成年月日 (ngày viết thư)",
+       "how": "Ghi ngày bạn hoàn thành thư, gần với ngày người nhà nộp hồ sơ xin visa.",
+       "mistake": ""
+      },
+      {
+       "example": "在ホーチミン日本国総領事殿 (nếu người nhà nộp ở TP. Hồ Chí Minh)",
+       "field": "宛名 (kính gửi)",
+       "how": "Ghi tên người đứng đầu cơ quan Nhật ở Việt Nam nơi người nhà nộp hồ sơ: Đại sứ hoặc Tổng lãnh sự.",
+       "mistake": "Ghi gửi Bộ Ngoại giao hoặc gửi Cục Xuất nhập cảnh. Thư này gửi cơ quan cấp visa."
+      },
+      {
+       "example": "日本で生活する長男を訪問し、2週間自宅に滞在しながら家族と過ごすため",
+       "field": "招へい目的 (mục đích mời)",
+       "how": "Viết cụ thể người nhà sang làm gì, không ghi chung chung 'thăm thân'. Ví dụ: thăm con đang sống ở Nhật, ở tại nhà con, cùng đi đâu.",
+       "mistake": "Chỉ ghi 親族訪問. Bộ Ngoại giao yêu cầu ghi cụ thể."
+      },
+      {
+       "example": "招へい人は申請人の長男。2019年から日本在住。母が退職した機会に招待する。",
+       "field": "招へい経緯 (hoàn cảnh, quan hệ dẫn đến việc mời)",
+       "how": "Viết ngắn: quan hệ là gì, lần cuối gặp nhau khi nào, vì sao mời vào dịp này.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / グエン・バン・アン / 090-1234-5678",
+       "field": "招へい人：住所・氏名・電話番号 (người mời: địa chỉ, họ tên, điện thoại)",
+       "how": "Chính là bạn ở Nhật. Địa chỉ đúng như thẻ lưu trú, điện thoại liên lạc được.",
+       "mistake": "Thiếu số điện thoại. Cơ quan xét có thể gọi kiểm tra."
+      },
+      {
+       "example": "会社員（介護職）/ 株式会社サンプル介護サービス (tên công ty mẫu)",
+       "field": "招へい人の職業・勤務先 (nghề và nơi làm của người mời)",
+       "how": "Ghi nghề và tên công ty bạn đang làm.",
+       "mistake": ""
+      },
+      {
+       "example": "省略",
+       "field": "身元保証人 (người bảo lãnh)",
+       "how": "Người bảo lãnh cũng là bạn thì ghi 省略 (bỏ qua) theo hướng dẫn trên mẫu. Khác người thì ghi đầy đủ như phần người mời.",
+       "mistake": "Để trống mà không ghi 省略."
+      },
+      {
+       "example": "ベトナム / 主婦 / グエン・ティ・マイ / 女 / 1970年3月2日 / 56歳 / 1名 (người thân hư cấu)",
+       "field": "査証申請人 (người xin visa: quốc tịch, nghề, họ tên, giới tính, ngày sinh, tuổi, số người)",
+       "how": "Ghi thông tin của người nhà ở Việt Nam, tên chữ Latin giống hộ chiếu của họ. Nhiều người thì ghi 'và X người nữa, xem danh sách kèm theo' và nộp thêm 申請人名簿.",
+       "mistake": "Tên viết khác với hộ chiếu của người nhà."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "招へい理由書",
+     "name_vi": "Thư nêu lý do mời (người ở Nhật viết)",
+     "sample_note": "Ví dụ anh アン ở Kawasaki mời mẹ sang thăm 2 tuần. Thư mời và giấy bảo lãnh không cần đóng dấu (Bộ Ngoại giao ghi rõ 押印不要). Trang tải ở trên là trang dành cho người quốc tịch Việt Nam, có đủ cả bộ mẫu.",
+     "source": "外務省 (Bộ Ngoại giao Nhật Bản)"
+    },
+    {
+     "download_url": "https://www.mofa.go.jp/mofaj/ca/fna/page23_002812.html",
+     "fill": [
+      {
+       "example": "2027年1月10日 〜 2027年1月24日 (từng ngày một dòng)",
+       "field": "年月日 (ngày tháng, từng dòng)",
+       "how": "Liệt kê từng ngày từ ngày đến Nhật tới ngày về Việt Nam, không bỏ ngày nào.",
+       "mistake": "Chỉ ghi ngày đầu và ngày cuối."
+      },
+      {
+       "example": "ベトナム航空○○便で成田空港に到着、招へい人宅へ移動 (ví dụ mẫu)",
+       "field": "行動予定：入国日 (kế hoạch ngày đến)",
+       "how": "Dòng đầu ghi chuyến bay đến, sân bay đến, di chuyển về nhà ai.",
+       "mistake": ""
+      },
+      {
+       "example": "川崎市内の観光、招へい人と買い物 / 横浜観光 (ví dụ mẫu)",
+       "field": "行動予定：các ngày ở Nhật (kế hoạch từng ngày)",
+       "how": "Mỗi ngày ghi làm gì, đi đâu. Viết cụ thể tên nơi đến, không ghi 'tự do' cả tuần.",
+       "mistake": "Ghi một dòng 'thăm thân' cho cả chuyến đi."
+      },
+      {
+       "example": "成田空港からベトナム航空○○便で帰国 (ví dụ mẫu)",
+       "field": "行動予定：出国日 (kế hoạch ngày về)",
+       "how": "Dòng cuối ghi ra sân bay và chuyến bay về Việt Nam.",
+       "mistake": "Quên dòng ngày về."
+      },
+      {
+       "example": "090-1234-5678 (招へい人)",
+       "field": "連絡先 (thông tin liên lạc theo ngày)",
+       "how": "Ghi số điện thoại của người mời ở Nhật cho các ngày ở nhà người mời; ngày ở khách sạn thì ghi số khách sạn.",
+       "mistake": ""
+      },
+      {
+       "example": "招へい人宅：神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "field": "宿泊予定施設 (nơi ở theo ngày)",
+       "how": "Ở nhà người mời thì ghi tên người mời và địa chỉ nhà. Ở khách sạn thì ghi tên và địa chỉ khách sạn.",
+       "mistake": "Địa chỉ nơi ở khác với địa chỉ trong thư mời."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "滞在予定表",
+     "name_vi": "Lịch trình dự định lưu trú tại Nhật",
+     "sample_note": "Ví dụ lịch trình 15 ngày của mẹ anh アン, ở tại nhà anh アン suốt chuyến đi. Lịch trình phải khớp với thư mời 招へい理由書 và vé máy bay dự định.",
+     "source": "外務省 (Bộ Ngoại giao Nhật Bản)"
+    },
+    {
+     "download_url": "https://www.mofa.go.jp/mofaj/ca/fna/page23_002812.html",
+     "fill": [
+      {
+       "example": "2026年11月15日",
+       "field": "作成年月日 (ngày viết giấy)",
+       "how": "Ghi ngày bạn viết và ký giấy bảo lãnh, cùng đợt với thư mời.",
+       "mistake": ""
+      },
+      {
+       "example": "在ホーチミン日本国総領事殿",
+       "field": "宛名 (kính gửi)",
+       "how": "Giống thư mời: Đại sứ hoặc Tổng lãnh sự Nhật tại nơi người nhà nộp hồ sơ.",
+       "mistake": ""
+      },
+      {
+       "example": "ベトナム / 主婦 / グエン・ティ・マイ / 女 / 1970年3月2日 (người thân hư cấu)",
+       "field": "査証申請人 (người xin visa)",
+       "how": "Ghi quốc tịch, nghề, họ tên (chữ Latin như hộ chiếu), giới tính, ngày sinh của người nhà.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / グエン・バン・アン",
+       "field": "身元保証人：住所・氏名 (người bảo lãnh: địa chỉ, họ tên)",
+       "how": "Chính là bạn ở Nhật. Địa chỉ đúng như thẻ lưu trú.",
+       "mistake": ""
+      },
+      {
+       "example": "会社員 / 090-1234-5678",
+       "field": "身元保証人：職業・電話番号 (nghề và điện thoại người bảo lãnh)",
+       "how": "Ghi nghề, tên công ty và số điện thoại liên lạc được.",
+       "mistake": ""
+      },
+      {
+       "example": "長男 (con trai trưởng của người xin visa)",
+       "field": "申請人との関係 (quan hệ với người xin visa)",
+       "how": "Ghi rõ quan hệ gia đình.",
+       "mistake": ""
+      },
+      {
+       "example": "3 mục có sẵn trên mẫu: 滞在費・帰国旅費・法令の遵守",
+       "field": "身元保証事項 (3 cam kết bảo lãnh)",
+       "how": "Đọc và giữ nguyên 3 mục in sẵn trên mẫu: chi phí lưu trú, chi phí về nước, tuân thủ pháp luật Nhật. Thiếu một mục là hồ sơ bị coi là không hợp lệ.",
+       "mistake": "Tự sửa hoặc gạch bỏ nội dung cam kết."
+      },
+      {
+       "example": "グエン・バン・アン (ký tay)",
+       "field": "署名 (chữ ký người bảo lãnh)",
+       "how": "Ký tay tên bạn. Không cần đóng dấu con dấu cá nhân.",
+       "mistake": ""
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "身元保証書",
+     "name_vi": "Giấy bảo lãnh nhân thân (người ở Nhật ký bảo lãnh)",
+     "sample_note": "Ví dụ anh アン bảo lãnh cho mẹ sang thăm. Giấy này nộp kèm thư mời và lịch trình; Bộ Ngoại giao ghi rõ giấy bảo lãnh không cần đóng dấu.",
+     "source": "外務省 (Bộ Ngoại giao Nhật Bản)"
+    },
+    {
+     "download_url": "https://www.mofa.go.jp/mofaj/ca/fna/page23_002812.html",
+     "fill": [
+      {
+       "example": "NGUYEN THI MAI (người thân hư cấu)",
+       "field": "Surname / Given and middle names (họ và tên)",
+       "how": "Người nhà điền bằng chữ Latin in hoa, giống hệt hộ chiếu của họ. Điền trên máy bằng Adobe Acrobat Reader theo hướng dẫn của Bộ Ngoại giao.",
+       "mistake": "Viết có dấu hoặc khác thứ tự với hộ chiếu."
+      },
+      {
+       "example": "02/03/1970 / Ha Noi, Viet Nam (ví dụ mẫu)",
+       "field": "Date of birth / Place of birth (ngày sinh / nơi sinh)",
+       "how": "Chép từ hộ chiếu, ghi ngày/tháng/năm theo mẫu trên đơn.",
+       "mistake": "Nhầm ngày và tháng."
+      },
+      {
+       "example": "Female / Married (ví dụ mẫu)",
+       "field": "Sex / Marital status (giới tính / hôn nhân)",
+       "how": "Tick ô đúng: Female/Male và Married/Single/Divorced/Widowed.",
+       "mistake": ""
+      },
+      {
+       "example": "Viet Nam",
+       "field": "Nationality / ID No. (quốc tịch / số căn cước)",
+       "how": "Ghi quốc tịch Việt Nam và số giấy tờ tùy thân do Việt Nam cấp nếu có ô yêu cầu.",
+       "mistake": ""
+      },
+      {
+       "example": "Ordinary / B87654321 (số mẫu)",
+       "field": "Passport: Type / No. / Place and date of issue / Expiry date (hộ chiếu)",
+       "how": "Loại thường là Ordinary. Chép số, nơi cấp, ngày cấp, ngày hết hạn từ hộ chiếu.",
+       "mistake": "Hộ chiếu sắp hết hạn mà không kiểm tra trước."
+      },
+      {
+       "example": "Visiting relatives (son)",
+       "field": "Purpose of visit to Japan (mục đích sang Nhật)",
+       "how": "Ghi rõ Visiting relatives (thăm thân) cho diện mời người nhà.",
+       "mistake": "Ghi Tourism khi hồ sơ là thăm thân. Sẽ không khớp bộ giấy mời."
+      },
+      {
+       "example": "15 days / 10 Jan 2027 / Narita (ví dụ mẫu)",
+       "field": "Intended length of stay / Dates / Port of entry (thời gian ở, ngày đi, sân bay đến)",
+       "how": "Ghi số ngày, ngày dự định đến Nhật và sân bay nhập cảnh. Phải khớp lịch trình 滞在予定表.",
+       "mistake": "Khác với lịch trình đã nộp kèm."
+      },
+      {
+       "example": "NGUYEN VAN AN / 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "Name of hotels or persons with whom applicant intends to stay (nơi ở tại Nhật)",
+       "how": "Ở nhà người mời thì ghi tên người mời, địa chỉ nhà và số điện thoại của họ.",
+       "mistake": ""
+      },
+      {
+       "example": "Ha Noi, Viet Nam / Housewife (ví dụ mẫu)",
+       "field": "Address in home country / Tel / Profession or occupation (địa chỉ nhà, điện thoại, nghề của người xin visa)",
+       "how": "Ghi địa chỉ thường trú ở Việt Nam, số điện thoại và nghề hiện tại. Đi làm thì ghi thêm tên, địa chỉ, điện thoại cơ quan ở phần Employer.",
+       "mistake": "Để trống số điện thoại. Cơ quan xét có thể gọi phỏng vấn."
+      },
+      {
+       "example": "NGUYEN VAN AN / 12 May 1998 / 川崎市中原区… / Son (ví dụ mẫu)",
+       "field": "Guarantor or reference in Japan (người bảo lãnh ở Nhật)",
+       "how": "Ghi tên, ngày sinh, địa chỉ, điện thoại, nghề của bạn ở Nhật và quan hệ với người xin visa. Khớp với giấy bảo lãnh 身元保証書.",
+       "mistake": "Thông tin khác với giấy bảo lãnh nộp kèm."
+      },
+      {
+       "example": "No cho tất cả các mục (nếu đúng sự thật)",
+       "field": "Criminal record / deportation questions (các câu hỏi về tiền án, trục xuất)",
+       "how": "Trả lời trung thực từng câu bằng cách tick Yes/No. Có thì ghi chi tiết theo yêu cầu trên đơn.",
+       "mistake": "Trả lời sai sự thật. Bị phát hiện là bị từ chối và ảnh hưởng lần sau."
+      },
+      {
+       "example": "Ký tay của người xin visa",
+       "field": "Date of application / Signature (ngày nộp và chữ ký)",
+       "how": "Người xin visa tự ký ở cuối đơn. Ký giống chữ ký trong hộ chiếu.",
+       "mistake": "Người mời ở Nhật ký thay. Đơn phải do người xin visa ký."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "査証申請書",
+     "name_vi": "Đơn xin thị thực (visa) — người nhà ở Việt Nam điền, bản tiếng Anh",
+     "sample_note": "Ví dụ mẹ của anh アン điền đơn xin visa thăm thân tại Việt Nam. Đơn có bản tiếng Anh dạng PDF điền trên máy; dán ảnh 4.5cm x 3.5cm chụp trong 6 tháng vào ô ảnh trước khi nộp.",
+     "source": "外務省 (Bộ Ngoại giao Nhật Bản)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "javidata",
+     "lang": "vi",
+     "note": "Hướng dẫn chi tiết cách khai các form hồ sơ xin visa thăm thân sang Nhật, kèm link giấy tờ theo hướng dẫn của Đại sứ quán Nhật tại Việt Nam.",
+     "title": "Hướng dẫn chi tiết khai hồ sơ xin Visa thăm thân sang Nhật bản",
+     "url": "https://www.youtube.com/watch?v=C8St2Y915bY"
+    }
+   ]
+  },
+  {
+   "id": "xin-visa-sang-nhat-tu-dau",
+   "group": "Giấy tờ & cư trú",
+   "title": "Xin visa sang Nhật từ đầu: COE là gì và các bước nộp hồ sơ （在留資格認定証明書・査証）",
+   "icon": "🛂",
+   "summary": "Muốn sang Nhật sống dài hạn (học, đi làm, đoàn tụ...), bạn thường phải làm 2 bước nối nhau: trước hết người bảo lãnh ở Nhật xin COE (在留資格認定証明書, giấy chứng nhận đủ điều kiện tư cách lưu trú) tại Cục Xuất nhập cảnh, sau đó bạn mang COE đi xin visa (査証, thị thực) tại cơ quan của Nhật ở Việt Nam. Bài này giải thích rõ COE là gì, từng tư cách ai nộp hồ sơ và cần giấy gì, mất bao lâu, tốn bao nhiêu, và bị từ chối thì làm thế nào.",
+   "who": "Người Việt đang ở Việt Nam, chuẩn bị sang Nhật lần đầu để du học, đi làm (kỹ sư, kỹ năng đặc định, thực tập sinh), hoặc sang sống cùng người thân đang ở Nhật. Cũng hữu ích cho người muốn mời cha mẹ/người thân sang thăm ngắn hạn — trường hợp này KHÔNG dùng COE, xem riêng mục thăm thân ngắn hạn trong bài. Ví dụ hư cấu: chị Trần Thu Hà ở Hải Phòng vừa được một trường tiếng Nhật ở Tokyo nhận học, hoặc anh Phạm Văn Đức được công ty ở Osaka tuyển dụng — cả hai đều phải đi qua quy trình COE rồi mới xin visa.",
+   "docs": [
+    "Giấy tờ chung cho mọi tư cách: hộ chiếu còn hạn (nên còn hạn ít nhất 6 tháng), ảnh thẻ đúng kích thước quy định của hồ sơ COE và hồ sơ visa (hỏi trường/công ty/trung tâm tiếp nhận để lấy đúng cỡ ảnh hiện hành), giấy khai sinh và các giấy tờ cá nhân cơ bản để dịch khi cần",
+    "Du học （留学, ryugaku): đơn xin nhập học và giấy báo trúng tuyển của trường ở Nhật; bằng tốt nghiệp và học bạ/bảng điểm cấp học cao nhất đã học; chứng chỉ tiếng Nhật nếu có; giấy tờ chứng minh tài chính của người bảo trợ (経費支弁, keihi shiben, nghĩa là người chi trả chi phí): sổ tiết kiệm/số dư ngân hàng, giấy xác nhận thu nhập và việc làm của người bảo trợ, giấy tờ quan hệ giữa người bảo trợ và du học sinh",
+    "Kỹ sư — tư cách Kỹ thuật · Tri thức nhân văn · Nghiệp vụ quốc tế （技術・人文知識・国際業務, thường gọi tắt là kỹ sư): hợp đồng lao động hoặc giấy thông báo tuyển dụng với công ty ở Nhật, ghi rõ nội dung công việc, lương, nơi làm việc; bằng đại học (hoặc bằng chuyên môn và kinh nghiệm) phải KHỚP với nội dung công việc sẽ làm; sơ yếu lý lịch (履歴書) và giấy tờ giới thiệu công ty tuyển dụng",
+    "Kỹ năng đặc định （特定技能, tokutei ginou): chứng chỉ đỗ kỳ thi kỹ năng của ngành sẽ làm và chứng chỉ tiếng Nhật (kỳ thi JFT-Basic hoặc JLPT N4 trở lên) — người đã hoàn thành tốt thực tập sinh số 2 thường được miễn 2 kỳ thi này khi làm cùng ngành; hợp đồng lao động với công ty tiếp nhận; kế hoạch hỗ trợ của công ty hoặc tổ chức hỗ trợ đăng ký （登録支援機関)",
+    "Thực tập sinh （技能実習, ginou jisshu): hồ sơ làm qua công ty phái cử (công ty xuất khẩu lao động) ở Việt Nam và nghiệp đoàn/tổ chức quản lý (監理団体, kanri dantai) ở Nhật; hợp đồng phái cử ghi rõ mọi khoản phí, hợp đồng lao động dự kiến ở Nhật, giấy khám sức khỏe theo mẫu, giấy tờ học vấn và hộ khẩu/giấy tờ cá nhân theo yêu cầu của công ty phái cử",
+    "Đoàn tụ gia đình — tư cách Gia đình lưu trú （家族滞在, kazoku taizai): giấy tờ chứng minh quan hệ gia đình với người đang sống ở Nhật (giấy chứng nhận kết hôn đối với vợ/chồng, giấy khai sinh đối với con, kèm bản dịch); bản sao thẻ lưu trú và hộ chiếu của người bảo lãnh ở Nhật; giấy chứng minh thu nhập và việc làm của người bảo lãnh (giấy xác nhận đang làm việc, giấy thông báo thuế/thu nhập), giấy cư trú (住民票) của người bảo lãnh",
+    "Thăm thân ngắn hạn — tư cách Lưu trú ngắn hạn （短期滞在, tanki taizai) — KHÔNG dùng COE: phía người mời ở Nhật chuẩn bị thư nêu lý do mời (招へい理由書, shouhei riyuusho), giấy bảo lãnh thân nhân (身元保証書, mimoto hoshoosho) nếu người mời chi trả chi phí, lịch trình ở Nhật từng ngày (滞在予定表, taizai yoteihyo), giấy cư trú và giấy tờ thu nhập của người mời; phía người ở Việt Nam chuẩn bị hộ chiếu, đơn xin visa, giấy tờ chứng minh quan hệ với người mời, giấy tờ công việc và tài chính của bản thân",
+    "Bản dịch tiếng Nhật hoặc tiếng Anh của các giấy tờ tiếng Việt (khai sinh, kết hôn, bằng cấp...) theo yêu cầu của từng hồ sơ — hỏi trước trường/công ty/trung tâm tiếp nhận xem giấy nào cần dịch, giấy nào cần công chứng, tránh dịch thừa tốn tiền",
+    "Một bộ bản sao (copy) của toàn bộ hồ sơ đã nộp để tự lưu: khi bị yêu cầu bổ sung giấy tờ hoặc khi hồ sơ có chỗ mâu thuẫn, bạn đối chiếu lại được ngay bản mình đã gửi"
+   ],
+   "prep_home": [
+    "Xác định đúng tư cách lưu trú của mình trước tiên: đi học là 留学, đi làm văn phòng/kỹ thuật là 技術・人文知識・国際業務, lao động tay nghề theo ngành là 特定技能 hoặc 技能実習, sang ở cùng người thân là 家族滞在, chỉ sang chơi/thăm dưới 90 ngày là 短期滞在. Chọn sai tư cách là sai ngay từ đầu",
+    "Hỏi rõ người bảo lãnh ở Nhật (trường, công ty, nghiệp đoàn, người thân) một danh sách giấy tờ bằng văn bản: mình phải gửi giấy gì, bản gốc hay bản sao, có cần dịch/công chứng không, hạn gửi là ngày nào. Không tự đoán theo bài viết trên mạng vì mỗi trường/công ty một yêu cầu chi tiết khác nhau",
+    "Kiểm tra hộ chiếu: còn hạn không, có bị rách/mờ không, họ tên và ngày sinh có khớp 100% với giấy khai sinh, bằng cấp, hợp đồng không. Một chữ cái sai khác giữa các giấy tờ cũng có thể làm hồ sơ bị hỏi lại",
+    "Sắp xếp giấy tờ tài chính cho rõ ràng và nhất quán: tiền trong tài khoản đến từ đâu, ai là người bảo trợ, thu nhập hàng tháng bao nhiêu — số liệu trong các giấy phải khớp nhau, không vênh nhau giữa tờ này và tờ kia",
+    "Chuẩn bị sẵn bản dịch và bản sao dự phòng của giấy khai sinh, bằng cấp, giấy kết hôn (nếu có): dịch sớm thì đỡ bị động khi phía Nhật yêu cầu bổ sung gấp",
+    "Giữ liên lạc thường xuyên với người bảo lãnh ở Nhật và công ty phái cử/trung tâm hỗ trợ ở Việt Nam (nếu có): lưu số điện thoại, email, tên người phụ trách hồ sơ của mình ở cả hai đầu",
+    "Không mua vé máy bay cố định, không nghỉ việc, không trả phòng trọ cho đến khi đã có visa dán trong hộ chiếu — thời gian xét COE và visa có thể kéo dài hơn dự kiến",
+    "Tìm hiểu trước chi phí bằng văn bản: với thực tập sinh và du học qua trung tâm, yêu cầu bảng kê mọi khoản phí (phí phái cử, phí dịch vụ, đặt cọc nếu có), chữ ký và con dấu rõ ràng, giữ mọi biên lai"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Xác định tư cách và xem mình có cần COE hay không",
+     "d": "COE (在留資格認定証明書, zairyu shikaku nintei shomeisho) là giấy do Cục Xuất nhập cảnh Nhật Bản (出入国在留管理庁, thường gọi là 入管, nyukan) cấp, chứng nhận rằng việc bạn sắp làm ở Nhật (học, làm việc, sống cùng gia đình...) đã được kiểm tra trước và đáp ứng điều kiện của một tư cách lưu trú. Hầu hết tư cách sống dài hạn đều cần COE: du học, kỹ sư, kỹ năng đặc định, thực tập sinh, đoàn tụ gia đình. Hai trường hợp KHÔNG dùng COE: (1) thăm thân/du lịch ngắn hạn dưới 90 ngày (短期滞在) — đi thẳng tới bước xin visa ở Bước 6 với hồ sơ do người mời chuẩn bị; (2) vĩnh trú. Chưa rõ mình thuộc tư cách nào thì hỏi ngay trường/công ty/người thân ở Nhật, vì tư cách quyết định toàn bộ giấy tờ phía sau.",
+     "ja": "在留資格認定証明書（COE）",
+     "vi": "Giấy chứng nhận đủ điều kiện tư cách lưu trú, gọi tắt là COE"
+    },
+    {
+     "t": "Bước 2: Người ở Việt Nam chuẩn bị giấy tờ và gửi cho người bảo lãnh ở Nhật",
+     "d": "Điểm quan trọng nhất của COE: người nộp đơn xin COE phải là người đang ở Nhật — trường học (du học), công ty tuyển dụng (kỹ sư, kỹ năng đặc định), nghiệp đoàn/tổ chức quản lý (thực tập sinh), hoặc người thân đang sống ở Nhật (đoàn tụ). Bạn ở Việt Nam không tự ra Cục Xuất nhập cảnh nộp được; việc của bạn là chuẩn bị đúng và đủ giấy tờ theo danh sách người bảo lãnh đưa (xem mục Giấy tờ cần chuẩn bị), dịch những giấy được yêu cầu, rồi gửi bản quét rõ nét trước để phía Nhật kiểm tra, sau đó gửi bản gốc/bản công chứng qua chuyển phát quốc tế nếu được yêu cầu. Gửi xong phải hỏi xác nhận đã nhận được chưa và còn thiếu gì không, đừng gửi rồi im lặng chờ.",
+     "ja": "申請代理人",
+     "vi": "Người đại diện nộp đơn — là trường, công ty hoặc người thân ở Nhật"
+    },
+    {
+     "t": "Bước 3: Phía Nhật nộp hồ sơ xin COE tại Cục Xuất nhập cảnh",
+     "d": "Người bảo lãnh mang hồ sơ tới Cục Xuất nhập cảnh địa phương phụ trách khu vực nơi trường/công ty/người thân đóng trụ (hoặc nộp trực tuyến nếu thuộc diện được nộp online). Hồ sơ gồm đơn xin cấp COE theo mẫu đúng tư cách, ảnh của bạn, giấy tờ của bạn đã gửi sang, cộng giấy tờ phía Nhật (giấy phép hoạt động của trường/công ty, hợp đồng lao động, kế hoạch hỗ trợ...). Xin COE không mất lệ phí nhà nước. Khi nộp xong, phía Nhật nhận được giấy biên nhận/thông tin số hồ sơ — bạn nên xin lại số này và tên người phụ trách để tiện theo dõi. Từ đây, việc chờ và trả lời Cục là của phía Nhật, bạn chỉ bổ sung giấy tờ khi được nhờ.",
+     "ja": "地方出入国在留管理局",
+     "vi": "Cục Xuất nhập cảnh địa phương — nơi nộp hồ sơ COE ở Nhật"
+    },
+    {
+     "t": "Bước 4: Chờ xét COE — thường khoảng 1–3 tháng",
+     "d": "Thời gian xét chuẩn mà Cục Xuất nhập cảnh công bố cho COE là khoảng 1–3 tháng, tùy tư cách, tùy thời điểm (mùa nhập học tháng 4 và tháng 10 hồ sơ rất đông, thường lâu hơn) và tùy hồ sơ có phải bổ sung giấy tờ không. Trong lúc chờ, Cục có thể yêu cầu bổ sung: giải thích nguồn tiền bảo trợ, làm rõ quan hệ gia đình, bổ sung giấy tờ công ty... Khi đó phía Nhật sẽ liên hệ bạn — phải trả lời nhanh và đúng câu hỏi, vì thời gian bạn chậm trả lời cũng tính vào thời gian chờ. Lưu ý: không có cách nộp tiền để xét nhanh, ai hứa 'đóng thêm tiền là COE ra sớm' đều không đáng tin.",
+     "ja": "追加資料の提出をお願いします",
+     "vi": "Xin nộp thêm giấy tờ bổ sung — câu bạn có thể nghe khi hồ sơ bị yêu cầu bổ sung"
+    },
+    {
+     "t": "Bước 5: Nhận COE, kiểm tra kỹ và nhớ hạn 3 tháng",
+     "d": "Đỗ COE, Cục cấp COE cho phía Nhật (hiện nay có thể nhận COE điện tử qua email, hoặc bản giấy gửi về). Phía Nhật chuyển COE cho bạn ở Việt Nam — nhận bản điện tử thì in ra rõ nét để mang đi xin visa. Kiểm tra ngay từng dòng trên COE: họ tên (viết không dấu theo hộ chiếu), ngày sinh, quốc tịch, tư cách lưu trú, thời hạn lưu trú — sai một chi tiết phải báo phía Nhật xin sửa ngay, đừng để tới lúc xin visa mới phát hiện. COE chỉ có hiệu lực 3 tháng kể từ ngày cấp: trong 3 tháng đó bạn phải xin xong visa và nhập cảnh Nhật, quá hạn COE mất hiệu lực và phải xin lại từ đầu.",
+     "ja": "交付から3か月以内に入国してください",
+     "vi": "Hãy nhập cảnh trong vòng 3 tháng kể từ ngày cấp (COE)"
+    },
+    {
+     "t": "Bước 6: Chuẩn bị hồ sơ xin visa ở Việt Nam (kèm trường hợp thăm thân không có COE)",
+     "d": "Có COE rồi mới tới bước xin visa (査証, sashou — thường gọi là thị thực): visa là giấy phép dán/gắn vào hộ chiếu do cơ quan ngoại giao Nhật cấp, cho phép bạn lên máy bay và xin nhập cảnh. Hồ sơ xin visa diện có COE thường gồm: hộ chiếu gốc, đơn xin visa theo mẫu (dán ảnh), bản gốc COE (hoặc bản in COE điện tử) kèm bản sao, và giấy tờ bổ sung tùy tư cách (giấy báo nhập học, hợp đồng...). Riêng diện thăm thân ngắn hạn không có COE: hồ sơ phải có đủ bộ giấy của người mời ở Nhật — thư lý do mời (招へい理由書), lịch trình từng ngày (滞在予定表), giấy bảo lãnh thân nhân (身元保証書) nếu người mời trả chi phí — cộng giấy tờ quan hệ, công việc, tài chính của người được mời ở Việt Nam. Thiếu giấy của người mời là nguyên nhân rất hay gặp khiến hồ sơ thăm thân bị trả lại.",
+     "ja": "査証申請書",
+     "vi": "Đơn xin visa (thị thực)"
+    },
+    {
+     "t": "Bước 7: Nộp hồ sơ visa tại đúng nơi theo khu vực cư trú",
+     "d": "Nộp tại Đại sứ quán Nhật Bản tại Việt Nam (Hà Nội), Tổng Lãnh sự quán tại TP. Hồ Chí Minh hoặc Đà Nẵng tùy khu vực hộ khẩu/cư trú của bạn — và trên thực tế phần lớn hồ sơ nộp qua trung tâm tiếp nhận hồ sơ visa được ủy thác hoặc đại lý được Đại sứ quán/Tổng Lãnh sự chỉ định, chứ không nộp thẳng tại quầy lãnh sự. Trước khi đi, kiểm tra trang chính thức của cơ quan phụ trách khu vực mình để biết: nộp ở đâu, có cần đặt lịch hẹn không, nộp giờ nào, đóng phí ra sao. Nộp xong giữ kỹ giấy biên nhận/giấy hẹn trả hộ chiếu — mất giấy này sẽ rất khó nhận lại hộ chiếu. Đóng lệ phí visa khi được thông báo (lệ phí chỉ thu khi visa được cấp; thêm phí dịch vụ của trung tâm/đại lý tiếp nhận nếu nộp qua họ).",
+     "ja": "申請を受理しました",
+     "vi": "Hồ sơ của bạn đã được tiếp nhận"
+    },
+    {
+     "t": "Bước 8: Chờ visa — thường khoảng 1–2 tuần — và kiểm tra visa khi nhận hộ chiếu",
+     "d": "Bộ Ngoại giao Nhật công bố thời gian chuẩn là 5 ngày làm việc tính từ ngày hôm sau ngày tiếp nhận, nếu hồ sơ không có vấn đề gì; tính cả khâu tiếp nhận qua trung tâm/đại lý và trả hộ chiếu, thực tế thường khoảng 1–2 tuần. Hồ sơ cần kiểm tra kỹ hơn có thể lâu hơn nhiều, có trường hợp trên 1 tháng, nên đừng đặt vé máy bay sát ngày. Nhận lại hộ chiếu, kiểm tra ngay trang visa: họ tên, số hộ chiếu, loại visa/tư cách, ngày cấp, ngày hết hạn, số lần nhập cảnh — sai thông tin phải báo lại nơi đã nộp ngay trong ngày. Nếu hộ chiếu trả về mà không có visa, nghĩa là bị từ chối (xem mục Lưu ý để biết cách xử lý).",
+     "ja": "査証の有効期限を確認してください",
+     "vi": "Hãy kiểm tra hạn của visa"
+    },
+    {
+     "t": "Bước 9: Nhập cảnh Nhật và nhận thẻ lưu trú",
+     "d": "Mang theo hộ chiếu có visa và COE (bản gốc/bản in) khi bay. Tại sân bay Nhật (các sân bay lớn như Narita, Haneda, Kansai, Chubu...), nhân viên xuất nhập cảnh kiểm tra, đóng dấu phép nhập cảnh (上陸許可) vào hộ chiếu và cấp thẻ lưu trú (在留カード) ngay tại sân bay cho người ở trung hạn/dài hạn. Kiểm tra thẻ lưu trú ngay khi nhận: tên, ngày sinh, tư cách và thời hạn lưu trú phải khớp COE/visa. Sau khi có chỗ ở cố định, ra tòa thị chính nơi ở đăng ký địa chỉ trong vòng 14 ngày (xem bài đăng ký địa chỉ trong cùng chuyên mục này). Người sang diện thăm thân ngắn hạn không được cấp thẻ lưu trú và không được đi làm.",
+     "ja": "上陸許可・在留カード",
+     "vi": "Phép nhập cảnh và thẻ lưu trú — nhận tại sân bay khi đến Nhật"
+    }
+   ],
+   "cost": "Xin COE tại Cục Xuất nhập cảnh: không mất lệ phí nhà nước. Lệ phí visa: theo bảng lệ phí lãnh sự áp dụng cho hồ sơ được thụ lý từ 01/07/2026 đến 31/03/2027 tại Việt Nam, visa nhập cảnh 1 lần khoảng 2.590.000 đồng, visa nhập cảnh 2 lần/nhiều lần khoảng 5.170.000 đồng (trước 01/07/2026 mức cũ là khoảng 520.000 đồng / 1.030.000 đồng — lệ phí thay đổi theo năm tài khóa, phải kiểm tra bảng phí hiện hành trước khi nộp). Lệ phí visa chỉ thu khi visa được cấp; bị từ chối thì không phải đóng lệ phí visa. Ngoài ra còn: phí dịch vụ của trung tâm tiếp nhận/đại lý ủy thác nếu nộp qua họ (mỗi nơi một mức), phí dịch thuật — công chứng giấy tờ, phí gửi hồ sơ quốc tế, phí khám sức khỏe (thực tập sinh). Du học sinh và thực tập sinh đi qua trung tâm/công ty phái cử còn có phí dịch vụ/phí phái cử riêng — yêu cầu bảng kê bằng văn bản trước khi đóng bất kỳ khoản nào.",
+   "duration": "Toàn bộ quá trình thường khoảng 2–4 tháng nếu hồ sơ suôn sẻ: xin COE thường khoảng 1–3 tháng (thời gian xét chuẩn do Cục Xuất nhập cảnh công bố), xin visa thường khoảng 1–2 tuần (chuẩn chính thức là 5 ngày làm việc kể từ ngày sau ngày tiếp nhận, chưa tính khâu trung gian). Hồ sơ bị yêu cầu bổ sung giấy tờ, rơi vào mùa cao điểm nhập học/tuyển dụng, hoặc diện thăm thân cần xét kỹ có thể lâu hơn. Sau khi COE được cấp, phải nhập cảnh trong vòng 3 tháng, nếu không COE hết hiệu lực.",
+   "warnings": [
+    "Bị từ chối visa: Đại sứ quán/Tổng Lãnh sự KHÔNG thông báo lý do cụ thể và KHÔNG có thủ tục kháng cáo. Nguyên tắc chung là trong vòng 6 tháng kể từ khi bị từ chối, hồ sơ xin visa cùng một mục đích sẽ không được tiếp nhận lại (trừ trường hợp nhân đạo khẩn cấp như người thân mất, bệnh nặng — phải hỏi trước cơ quan lãnh sự). Vì vậy đừng nộp lại ngay với bộ hồ sơ y hệt; hãy chờ đủ thời gian và chỉ nộp lại khi hoàn cảnh/hồ sơ đã thay đổi rõ rệt",
+    "Bị từ chối COE: Cục Xuất nhập cảnh cũng về nguyên tắc không giải thích chi tiết lý do và không có thủ tục khiếu nại cho hồ sơ COE. Cách xử lý đúng là cùng người bảo lãnh ở Nhật rà soát lại toàn bộ hồ sơ để tìm nguyên nhân có khả năng nhất — tài chính người bảo trợ không rõ nguồn gốc, giấy tờ mâu thuẫn nhau, nội dung công việc không khớp bằng cấp, lịch sử lưu trú xấu — sửa đúng nguyên nhân đó rồi mới xin lại. Trường/công ty có kinh nghiệm thường nhờ luật sư hành chính (行政書士) xem lại hồ sơ trước khi nộp lại",
+    "Giấy tờ giả hoặc khai sai sự thật (bằng giả, sổ tiết kiệm làm giả, hợp đồng khống) là lỗi nặng nhất: bị phát hiện sẽ bị từ chối ngay, và có thể bị ghi lại lịch sử khiến những lần xin sau gần như không còn cơ hội. Thiếu giấy thì bổ sung được, giấy giả thì không cứu được",
+    "Mâu thuẫn thông tin giữa các giấy tờ là nguyên nhân bị hỏi lại/trì hoãn rất phổ biến: ngày sinh khác nhau giữa bằng cấp và hộ chiếu, thu nhập người bảo trợ mỗi giấy một con số, địa chỉ không thống nhất. Trước khi gửi, tự đọc chéo toàn bộ hồ sơ một lượt để soát lỗi này",
+    "COE không phải là visa và có COE không có nghĩa là chắc chắn 100% được cấp visa: vẫn phải qua bước xét visa ở Việt Nam như Bước 6–8. Ngược lại, có visa cũng chưa phải là chắc chắn được nhập cảnh — quyết định cuối cùng là của nhân viên xuất nhập cảnh tại sân bay Nhật",
+    "Cảnh giác môi giới hứa 'bao đậu COE/visa', bắt đóng tiền mặt không biên lai, giữ hộ chiếu gốc của bạn vô thời hạn, hoặc khuyên làm giả giấy tờ tài chính. Mọi khoản phí phải có hợp đồng/biên lai; với thực tập sinh, đọc kỹ hợp đồng phái cử — tổng phí, khoản nào được hoàn nếu trượt, quyền lợi khi gặp sự cố ở Nhật — trước khi ký và đóng tiền",
+    "Đừng để COE hết hạn 3 tháng vì chậm xin visa hoặc chờ vé rẻ: hết hạn là phải xin COE lại từ đầu, mất thêm 1–3 tháng nữa. Có COE là nộp visa ngay",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Trên visa và thẻ lưu trú: họ tên, ngày sinh, số hộ chiếu, tư cách lưu trú và thời hạn lưu trú khớp nhau và khớp với COE/hợp đồng/giấy báo nhập học",
+    "Đã chụp ảnh/lưu bản điện tử của COE, visa, thẻ lưu trú (cả 2 mặt) và hộ chiếu vào điện thoại và email, phòng khi mất bản gốc",
+    "Đã nhớ ngày hết hạn lưu trú của mình và biết trước thủ tục gia hạn (在留期間更新) phải làm trước khi hết hạn khoảng 3 tháng",
+    "Đã đăng ký địa chỉ tại tòa thị chính nơi ở trong vòng 14 ngày sau khi đến/chuyển nhà, và địa chỉ đã được ghi lên mặt sau thẻ lưu trú (người ở dài hạn)",
+    "Đã giữ lại toàn bộ biên lai lệ phí, phí dịch vụ, phí phái cử và hợp đồng với trường/công ty/trung tâm — đây là bằng chứng khi có tranh chấp về tiền",
+    "Đã lưu số liên lạc khẩn cấp: trường học/công ty/nghiệp đoàn ở Nhật, Đại sứ quán Việt Nam tại Nhật Bản, và người thân ở cả hai nước"
+   ],
+   "vocab": [
+    {
+     "ja": "在留資格認定証明書",
+     "reading": "ざいりゅうしかくにんていしょうめいしょ",
+     "vi": "Giấy chứng nhận đủ điều kiện tư cách lưu trú — COE"
+    },
+    {
+     "ja": "査証",
+     "reading": "さしょう",
+     "vi": "Visa / thị thực — giấy phép cấp ở Đại sứ quán/Lãnh sự quán, dán vào hộ chiếu"
+    },
+    {
+     "ja": "出入国在留管理庁",
+     "reading": "しゅつにゅうこくざいりゅうかんりちょう",
+     "vi": "Cục Xuất nhập cảnh Nhật Bản — cơ quan xét và cấp COE (gọi tắt là 入管)"
+    },
+    {
+     "ja": "在留資格",
+     "reading": "ざいりゅうしかく",
+     "vi": "Tư cách lưu trú — loại tư cách quyết định bạn được làm gì và ở bao lâu ở Nhật"
+    },
+    {
+     "ja": "留学",
+     "reading": "りゅうがく",
+     "vi": "Du học — tư cách lưu trú cho người đi học"
+    },
+    {
+     "ja": "技術・人文知識・国際業務",
+     "reading": "ぎじゅつ・じんぶんちしき・こくさいぎょうむ",
+     "vi": "Kỹ thuật · Tri thức nhân văn · Nghiệp vụ quốc tế — tư cách lao động trí thức, thường gọi là kỹ sư"
+    },
+    {
+     "ja": "特定技能",
+     "reading": "とくていぎのう",
+     "vi": "Kỹ năng đặc định — tư cách lao động theo ngành thiếu nhân lực"
+    },
+    {
+     "ja": "技能実習",
+     "reading": "ぎのうじっしゅう",
+     "vi": "Thực tập sinh kỹ năng"
+    },
+    {
+     "ja": "家族滞在",
+     "reading": "かぞくたいざい",
+     "vi": "Gia đình lưu trú — tư cách đoàn tụ cho vợ/chồng/con của người đang ở Nhật"
+    },
+    {
+     "ja": "短期滞在",
+     "reading": "たんきたいざい",
+     "vi": "Lưu trú ngắn hạn — thăm thân, du lịch, công tác ngắn dưới 90 ngày; không dùng COE"
+    },
+    {
+     "ja": "招へい理由書",
+     "reading": "しょうへいりゆうしょ",
+     "vi": "Thư nêu lý do mời — giấy của người mời ở Nhật khi xin visa thăm thân"
+    },
+    {
+     "ja": "身元保証書",
+     "reading": "みもとほしょうしょ",
+     "vi": "Giấy bảo lãnh thân nhân — người mời cam kết về chi phí và việc về nước của người được mời"
+    },
+    {
+     "ja": "滞在予定表",
+     "reading": "たいざいよていひょう",
+     "vi": "Lịch trình lưu trú — kế hoạch ở Nhật theo từng ngày khi xin visa ngắn hạn"
+    },
+    {
+     "ja": "経費支弁者",
+     "reading": "けいひしべんしゃ",
+     "vi": "Người bảo trợ tài chính — người chi trả chi phí du học/sinh hoạt"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "COEの申請は、どちらの機関が手続きをしますか。",
+     "vi": "Việc nộp hồ sơ xin COE thì cơ quan nào sẽ làm thủ tục ạ? (hỏi trường/công ty ở Nhật)"
+    },
+    {
+     "ja": "追加で必要な書類があれば、教えてください。",
+     "vi": "Nếu có giấy tờ nào cần bổ sung, xin cho tôi biết."
+    },
+    {
+     "ja": "認定証明書の交付まで、どのくらいかかりますか。",
+     "vi": "Đến khi COE được cấp thì mất khoảng bao lâu ạ?"
+    },
+    {
+     "ja": "COEが届いたので、査証を申請します。",
+     "vi": "COE đã về tới nơi nên tôi sẽ nộp hồ sơ xin visa."
+    },
+    {
+     "ja": "査証申請の受付場所と手数料を教えてください。",
+     "vi": "Xin cho tôi biết nơi tiếp nhận hồ sơ visa và lệ phí."
+    },
+    {
+     "ja": "パスポートの氏名と生年月日を確認してください。",
+     "vi": "Xin kiểm tra họ tên và ngày sinh trên hộ chiếu (khi đối chiếu thông tin visa/thẻ lưu trú)."
+    }
+   ],
+   "links": [
+    {
+     "label": "Cục Xuất nhập cảnh Nhật Bản (ISA) — Thủ tục xin cấp COE (在留資格認定証明書交付申請)",
+     "url": "https://www.moj.go.jp/isa/applications/procedures/16-1.html"
+    },
+    {
+     "label": "Bộ Ngoại giao Nhật Bản (MOFA) — Lệ phí visa (査証手数料)",
+     "url": "https://www.mofa.go.jp/mofaj/toko/visa/tetsuzuki/pagew_000001_02672.html"
+    },
+    {
+     "label": "Bộ Ngoại giao Nhật Bản (MOFA) — Hỏi đáp về visa: lý do từ chối và nộp lại sau 6 tháng (査証FAQ)",
+     "url": "https://www.mofa.go.jp/mofaj//toko/visa/faq.html"
+    },
+    {
+     "label": "Bộ Ngoại giao Nhật Bản (MOFA) — Thời gian cần thiết để cấp visa (査証取得までの必要日数)",
+     "url": "https://www.mofa.go.jp/mofaj/toko/visa/tetsuzuki/nissu.html"
+    },
+    {
+     "label": "Tổng Lãnh sự quán Nhật Bản tại Đà Nẵng — Bảng lệ phí lãnh sự năm 2026 tại Việt Nam",
+     "url": "https://www.danang.vn.emb-japan.go.jp/itpr_ja/VN-ConsularFee.html"
+    },
+    {
+     "label": "Bộ Ngoại giao Nhật Bản (MOFA) — Trang thông tin visa (査証)",
+     "url": "https://www.mofa.go.jp/mofaj/toko/visa/index.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "download_url": "https://www.moj.go.jp/isa/applications/procedures/16-1-1.html",
+     "fill": [
+      {
+       "example": "Ảnh nền trơn, nhìn thẳng",
+       "field": "写真 (ảnh chân dung)",
+       "how": "Dán ảnh 4cm x 3cm của người sắp sang Nhật, chụp trong 3 tháng gần nhất.",
+       "mistake": "Gửi ảnh cũ hoặc ảnh chụp chơi."
+      },
+      {
+       "example": "ベトナム",
+       "field": "1 国籍・地域 (quốc tịch / khu vực)",
+       "how": "Ghi quốc tịch trên hộ chiếu của người xin sang.",
+       "mistake": ""
+      },
+      {
+       "example": "1998年5月12日",
+       "field": "2 生年月日 (ngày sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": ""
+      },
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "3 氏名 (họ tên)",
+       "how": "Chữ Latin in hoa giống hệt hộ chiếu. Tên này sẽ in trên COE và thẻ lưu trú sau này.",
+       "mistake": "Sai một chữ cái. COE sai tên là phải xin sửa, mất nhiều tuần."
+      },
+      {
+       "example": "男 / 無",
+       "field": "4 性別 / 5 配偶者の有無 (giới tính / hôn nhân)",
+       "how": "Khoanh đúng theo sự thật.",
+       "mistake": ""
+      },
+      {
+       "example": "ハノイ / ベトナム ハノイ市",
+       "field": "6 出生地 / 7 本国における居住地 (nơi sinh / địa chỉ ở Việt Nam)",
+       "how": "Chép từ hộ chiếu; địa chỉ nhà ở Việt Nam ghi chữ Latin.",
+       "mistake": ""
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "8 日本における連絡先 (địa chỉ liên lạc tại Nhật)",
+       "how": "Ghi địa chỉ dự định ở tại Nhật và số điện thoại liên lạc (của trường, công ty hoặc người nhà ở Nhật).",
+       "mistake": "Để trống. Cục cần địa chỉ để gửi kết quả và liên lạc."
+      },
+      {
+       "example": "番号 B12345678 (số mẫu) / 有効期限 2033年8月1日",
+       "field": "9 旅券 (hộ chiếu: số và ngày hết hạn)",
+       "how": "Chép từ hộ chiếu còn hạn của người xin sang.",
+       "mistake": ""
+      },
+      {
+       "example": "技術・人文知識・国際業務",
+       "field": "10 入国目的・希望する在留資格 (mục đích nhập cảnh và tư cách muốn xin)",
+       "how": "Tick hoặc ghi tư cách khớp với hoạt động sẽ làm: đi học là 留学, đi làm theo ngành là 技術・人文知識・国際業務, đoàn tụ là 家族滞在.",
+       "mistake": "Chọn tư cách không khớp hợp đồng lao động hoặc giấy nhập học."
+      },
+      {
+       "example": "2027年4月1日 / 在ベトナム日本国大使館 (ví dụ mẫu)",
+       "field": "11 入国予定年月日 / 12 査証申請予定地 (ngày dự định nhập cảnh / nơi sẽ xin visa)",
+       "how": "Ghi ngày dự định sang (ước lượng hợp lý, sau thời gian xét COE 1–3 tháng) và cơ quan Nhật ở Việt Nam nơi sẽ nộp visa.",
+       "mistake": "Ghi ngày quá gần. COE chưa ra kịp là phải làm lại kế hoạch."
+      },
+      {
+       "example": "本人負担および家族からの送金：年 1,200,000円 (ví dụ mẫu)",
+       "field": "13 滞在費支弁方法 (ai trả chi phí sinh hoạt và trả thế nào)",
+       "how": "Ghi cách chi trả: tự trả, người thân gửi tiền, học bổng, công ty trả. Ghi số tiền mỗi tháng hoặc mỗi năm và tên người chi trả nếu có.",
+       "mistake": "Số tiền ghi thấp hơn nhiều so với chi phí thật, hoặc khác với giấy chứng minh tài chính nộp kèm."
+      },
+      {
+       "example": "株式会社サンプル介護サービス / 介護業務 / 3年 (ví dụ mẫu)",
+       "field": "所属機関等作成用 (phần trường học / công ty ở Nhật điền)",
+       "how": "Trường hoặc công ty tiếp nhận điền: tên cơ quan, địa chỉ, nội dung học hoặc công việc, thời gian. Bạn ở Việt Nam không tự điền phần này.",
+       "mistake": ""
+      },
+      {
+       "example": "2026年12月1日 (ngày nộp ví dụ mẫu)",
+       "field": "申請人・代理人の署名と申請年月日 (chữ ký người xin / người nộp thay và ngày nộp)",
+       "how": "Đơn COE thường do người ở Nhật nộp thay (trường, công ty, người nhà). Người nộp ký và ghi ngày nộp tại Cục Xuất nhập cảnh quản lý nơi ở hoặc nơi làm việc.",
+       "mistake": ""
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "在留資格認定証明書交付申請書",
+     "name_vi": "Đơn xin cấp Giấy chứng nhận tư cách lưu trú (COE)",
+     "sample_note": "Ví dụ xin COE cho anh アン sang làm việc diện 技術・人文知識・国際業務, công ty ở Nhật nộp thay. Mỗi tư cách có mẫu riêng ở mục tương ứng trên trang tải (có PDF và Excel). COE có hạn 3 tháng kể từ ngày cấp.",
+     "source": "出入国在留管理庁 (Cục Xuất nhập cảnh)"
+    },
+    {
+     "download_url": "https://www.mofa.go.jp/mofaj/toko/visa/index.html",
+     "fill": [
+      {
+       "example": "NGUYEN VAN AN",
+       "field": "Surname / Given and middle names (họ và tên)",
+       "how": "Điền chữ Latin in hoa giống hệt hộ chiếu và giống trên COE.",
+       "mistake": "Tên khác với COE một chữ cái cũng bị hỏi lại."
+      },
+      {
+       "example": "12/05/1998 / Ha Noi, Viet Nam",
+       "field": "Date of birth / Place of birth (ngày sinh / nơi sinh)",
+       "how": "Chép từ hộ chiếu.",
+       "mistake": "Nhầm ngày và tháng."
+      },
+      {
+       "example": "Male / Single",
+       "field": "Sex / Marital status (giới tính / hôn nhân)",
+       "how": "Tick ô đúng với tình trạng thật.",
+       "mistake": ""
+      },
+      {
+       "example": "Viet Nam",
+       "field": "Nationality / ID No. (quốc tịch / số căn cước)",
+       "how": "Ghi quốc tịch và số căn cước công dân Việt Nam nếu đơn yêu cầu.",
+       "mistake": ""
+      },
+      {
+       "example": "Ordinary / B12345678 (số mẫu)",
+       "field": "Passport: Type / No. / Place and date of issue / Expiry date (hộ chiếu)",
+       "how": "Chép đầy đủ từ hộ chiếu sẽ dùng để dán visa. Phải là cùng cuốn hộ chiếu đã ghi trong hồ sơ COE.",
+       "mistake": "Đổi hộ chiếu mới sau khi có COE mà không báo cơ quan nộp hồ sơ."
+      },
+      {
+       "example": "To work (Engineer/Specialist in Humanities/International Services) — khớp nội dung COE",
+       "field": "Purpose of visit to Japan (mục đích sang Nhật)",
+       "how": "Ghi mục đích khớp tư cách trên COE, ví dụ đi làm hoặc đi học.",
+       "mistake": "Ghi Tourism. Visa dài hạn phải theo COE."
+      },
+      {
+       "example": "Long term / 01 Apr 2027 / Narita (ví dụ mẫu)",
+       "field": "Intended length of stay / Dates / Port of entry (thời gian ở, ngày đi, sân bay đến)",
+       "how": "Đi dài hạn thì ghi thời hạn như trên COE hoặc 'Long term'. Ngày nhập cảnh dự định phải nằm trong hạn 3 tháng của COE.",
+       "mistake": "Để ngày đi sau khi COE hết hạn."
+      },
+      {
+       "example": "Số COE in ở mặt trước giấy chứng nhận (ghi theo giấy thật của bạn)",
+       "field": "Certificate of Eligibility No. — thông tin kèm theo (số COE)",
+       "how": "Đơn giấy không có ô riêng cho COE ở mọi bản; nộp bản gốc COE kèm đơn và ghi số COE khi nơi tiếp nhận yêu cầu. Kiểm tra tên và ngày sinh trên COE trước khi nộp.",
+       "mistake": "Không kiểm tra COE. Sai thông tin trên COE phải sửa ở Nhật, rất lâu."
+      },
+      {
+       "example": "神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室 / 090-1234-5678",
+       "field": "Name of hotels or persons with whom applicant intends to stay (nơi ở tại Nhật)",
+       "how": "Ghi địa chỉ dự định ở tại Nhật và người liên lạc (công ty, trường hoặc người nhà) kèm điện thoại.",
+       "mistake": ""
+      },
+      {
+       "example": "Ha Noi, Viet Nam / Company employee (ví dụ mẫu)",
+       "field": "Address in home country / Tel / Profession or occupation / Employer (địa chỉ nhà, điện thoại, nghề, nơi làm ở Việt Nam)",
+       "how": "Ghi địa chỉ thường trú, điện thoại liên lạc được và nghề hiện tại. Có nơi làm thì ghi tên, địa chỉ, điện thoại cơ quan.",
+       "mistake": "Số điện thoại không liên lạc được khi cơ quan xét gọi."
+      },
+      {
+       "example": "株式会社サンプル介護サービス / Employer (tên công ty mẫu)",
+       "field": "Guarantor or reference in Japan (người tham chiếu ở Nhật)",
+       "how": "Ghi công ty hoặc trường tiếp nhận ở Nhật: tên, địa chỉ, điện thoại, quan hệ với bạn. Khớp với phần cơ quan trong hồ sơ COE.",
+       "mistake": ""
+      },
+      {
+       "example": "No cho các mục (nếu đúng sự thật) / ký tay NGUYEN VAN AN",
+       "field": "Criminal record / deportation questions / Signature (câu hỏi tiền án, trục xuất và chữ ký)",
+       "how": "Tick Yes/No trung thực cho từng câu. Cuối đơn ghi ngày và tự ký, giống chữ ký trong hộ chiếu.",
+       "mistake": "Ký khác chữ ký trong hộ chiếu."
+      }
+     ],
+     "format": "PDF",
+     "name_jp": "査証申請書",
+     "name_vi": "Đơn xin thị thực (visa) tại Việt Nam sau khi có COE",
+     "sample_note": "Ví dụ anh アン có COE đi làm rồi điền đơn này để xin visa tại Việt Nam. Mục 3 trên trang Bộ Ngoại giao ở trên là nơi tải đơn (bản tiếng Anh, PDF điền bằng Adobe Acrobat Reader), kèm các mẫu giấy mời và bảo lãnh.",
+     "source": "外務省 (Bộ Ngoại giao Nhật Bản)"
+    }
+   ],
+   "videos": [
+    {
+     "channel": "ビザ申請チャンネル by OSAHIRO行政書士事務所",
+     "lang": "ja",
+     "note": "Giải thích toàn bộ流れ đưa lao động kỹ năng đặc định từ nước ngoài sang Nhật: xin COE, xin visa, nhập cảnh và bắt đầu làm việc.",
+     "title": "特定技能外国人を海外から採用｜企業の受入れ・ビザ申請を解説",
+     "url": "https://www.youtube.com/watch?v=G7qSOTzbCsg"
+    },
+    {
+     "channel": "公益社団法人 国際厚生事業団",
+     "lang": "ja",
+     "note": "Video của JICWELS hướng dẫn thủ tục lấy tư cách kỹ năng đặc định ngành kaigo, gồm流れ xin COE (在留資格認定証明書交付申請) và nhập cảnh.",
+     "title": "介護分野における特定技能制度4/6",
+     "url": "https://www.youtube.com/watch?v=LxqVNmS8CFU"
+    }
+   ]
+  }
+ ]
+}

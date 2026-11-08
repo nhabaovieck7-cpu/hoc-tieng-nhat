@@ -1,0 +1,1219 @@
+{
+ "guides": [
+  {
+   "id": "phong-van-baito",
+   "group": "Phỏng vấn xin việc",
+   "title": "Phỏng vấn việc làm thêm (baito) （アルバイト面接）",
+   "icon": "🍙",
+   "summary": "Phỏng vấn baito (アルバイト, arubaito — việc làm thêm) ở Nhật thường chỉ 10–20 phút, nhưng người Nhật đánh giá rất kỹ tác phong: đến đúng giờ, ăn mặc gọn gàng, chào hỏi rõ ràng. Bài này đi từ lúc gọi điện xin hẹn đến lúc ra về, kèm ngân hàng hỏi–đáp với câu trả lời mẫu đầy đủ để bạn tập nói trước ở nhà.",
+   "who": "Người Việt đang ở Nhật muốn xin việc làm thêm: du học sinh, người visa gia đình, thực tập sinh chuyển việc hợp pháp, người mới sang muốn làm ở cửa hàng tiện lợi (コンビニ), quán ăn, xưởng, kho hàng, siêu thị... Du học sinh bắt buộc đã có Giấy phép làm thêm (資格外活動許可) và chỉ làm tối đa 28 giờ/tuần.",
+   "docs": [
+    "Sơ yếu lý lịch theo mẫu Nhật (履歴書, rirekisho) — viết tay gọn gàng hoặc đánh máy đều được, dán ảnh thẻ 3x4 cm chụp trong 3 tháng gần nhất, mang theo 1 bản chính + 1 bản dự phòng",
+    "Thẻ lưu trú (在留カード, zairyū kādo) bản gốc — nơi làm việc phải xem và sao chụp để xác nhận tư cách và thời hạn lưu trú",
+    "Hộ chiếu (パスポート) bản gốc — mang theo phòng khi được yêu cầu đối chiếu",
+    "Nếu là du học sinh / visa gia đình: mặt sau thẻ lưu trú phải có dấu Giấy phép hoạt động ngoài tư cách lưu trú (資格外活動許可, shikakugai katsudō kyoka) — chưa có giấy phép này thì chưa được đi làm",
+    "Sổ ngân hàng hoặc thẻ ATM của ngân hàng Nhật (通帳, tsūchō / キャッシュカード) hoặc bản chụp trang đầu sổ có tên katakana và số tài khoản — nhiều nơi xin ngay khi nhận việc để trả lương",
+    "Thẻ My Number (マイナンバーカード) hoặc giấy thông báo mã số cá nhân — công ty thường xin khi làm thủ tục nhận việc",
+    "Bút bi đen, sổ ghi chú nhỏ, và điện thoại đã sạc đầy (để tra đường và liên lạc khi lạc) — vào phòng phỏng vấn thì tắt chuông hoàn toàn"
+   ],
+   "prep_home": [
+    "Viết 履歴書 xong trước ít nhất 1 ngày: họ tên kèm cách đọc katakana/furigana, địa chỉ đúng như thẻ lưu trú, quá trình học/làm ghi ngắn gọn, mục lý do ứng tuyển (志望動機) viết 2–3 câu cụ thể về cửa hàng/công ty đó, không viết chung chung",
+    "Chuẩn bị trang phục: áo sơ mi hoặc áo có cổ, quần dài sạch, giày kín mũi; tóc gọn, không nhuộm sáng, không đeo khuyên tai trang sức lòe loẹt, móng tay cắt ngắn — quán ăn và cửa hàng tiện lợi rất kỵ mùi nước hoa nồng và tóc dài không buộc",
+    "Tra đường đi trước trên bản đồ: đi tàu/xe buýt/đi bộ mấy phút, đến nơi sớm 10 phút là chuẩn (đến sớm quá 15 phút cũng gây phiền, đến trễ dù 5 phút là ấn tượng rất xấu)",
+    "Viết sẵn ra giấy lịch mình làm được: thứ mấy, từ mấy giờ đến mấy giờ, tuần mấy buổi — và tự cộng giờ: du học sinh tổng tất cả các việc làm thêm không quá 28 giờ/tuần (kỳ nghỉ dài của trường mới được 8 giờ/ngày)",
+    "Tập nói to ở nhà từng câu trả lời mẫu trong bài này, mỗi câu 30–60 giây; ghi âm bằng điện thoại nghe lại xem có nói quá nhanh, quá nhỏ không",
+    "Tìm hiểu trước về nơi xin việc: cửa hàng bán gì, ở đâu, giờ mở cửa, có gì khác cửa hàng khác — chỉ cần nhớ 2–3 điểm để nói vào câu 'vì sao chọn việc này'",
+    "Sạc điện thoại, tắt mọi báo thức có thể reo giữa buổi, chuẩn bị sẵn số điện thoại của cửa hàng để khi lạc đường gọi ngay chứ không đến trễ im lặng"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Nộp đơn / gọi điện xin hẹn phỏng vấn",
+     "d": "Có 3 cách ứng tuyển phổ biến: bấm nút ứng tuyển (応募, ōbo) trên app/web tuyển dụng, mang 履歴書 đến trực tiếp cửa hàng, hoặc gọi điện thoại. Khi gọi điện: chọn giờ không bận (tránh 11:30–13:30 với quán ăn, tránh giờ cao điểm của cửa hàng tiện lợi), tự xưng tên trước, nói rõ 'tôi thấy tin tuyển dụng việc làm thêm'. Câu mẫu khi gọi: 「すみません、アルバイトの募集を見て電話しました。グエンと申します。面接をお願いしたいのですが、よろしいでしょうか。」(Xin lỗi, tôi thấy tin tuyển làm thêm nên gọi điện. Tôi tên là Nguyễn. Tôi muốn xin được phỏng vấn, có được không ạ?) Ghi lại ngay: ngày giờ phỏng vấn, địa chỉ, tên người phụ trách, cần mang gì. Cuối cuộc gọi cảm ơn và chờ bên kia gác máy trước.",
+     "ja": "アルバイトの募集を見て電話しました。面接をお願いしたいです。",
+     "vi": "Tôi thấy tin tuyển việc làm thêm nên gọi điện. Tôi muốn xin được phỏng vấn."
+    },
+    {
+     "t": "Bước 2: Đến nơi, vào phòng và ngồi xuống đúng tác phong",
+     "d": "Đến sớm khoảng 10 phút, vào cửa chào nhân viên: 「○時から面接の約束をしたグエンです」(Tôi là Nguyễn, có hẹn phỏng vấn lúc ○ giờ). Được dẫn tới phòng: GÕ CỬA 3 LẦN (gõ 2 lần ở Nhật gợi liên tưởng gõ cửa nhà vệ sinh nên tránh), nghe tiếng 「どうぞ」(mời vào) thì nói 「失礼します」(shitsurei shimasu — xin phép vào) rồi mới mở cửa, đóng cửa nhẹ bằng cả hai tay. Đứng cạnh ghế, tự giới thiệu tên và cúi chào khoảng 30 độ. CHỜ được nói 「どうぞお座りください」(mời ngồi) mới nói 「失礼します」 và ngồi xuống. Túi xách để dưới chân ghế hoặc cạnh ghế, không để lên bàn; áo khoác/mũ cầm trên tay hoặc để cùng túi, không mặc nguyên khi phỏng vấn. Ngồi thẳng lưng, không khoanh tay, không rung chân, điện thoại đã tắt chuông để trong túi.",
+     "ja": "失礼します。本日はよろしくお願いいたします。",
+     "vi": "Xin phép ạ (khi vào phòng). Hôm nay rất mong được anh/chị giúp đỡ."
+    },
+    {
+     "t": "Hỏi – đáp: Giới thiệu bản thân",
+     "d": "Đây gần như luôn là câu đầu tiên. Chỉ cần 4 ý, nói trong 30–45 giây: tên + đến từ đâu, đang học/làm gì, ở Nhật bao lâu, một câu về việc đang tìm. TRẢ LỜI MẪU: 「グエン・ティ・リンと申します。ベトナムから来ました。今は日本語学校に通っていて、日本に来て1年になります。学校は午後からなので、午前中と週末に働けるアルバイトを探しています。よろしくお願いいたします。」Dịch mẫu: 'Tôi tên là Nguyễn Thị Linh. Tôi đến từ Việt Nam. Hiện tôi đang học ở trường tiếng Nhật, đã sang Nhật được 1 năm. Trường học buổi chiều nên tôi đang tìm việc làm thêm làm được buổi sáng và cuối tuần. Rất mong được giúp đỡ.' Mẹo: nói hết câu rồi cúi đầu nhẹ, đừng vừa nói vừa cười trừ.",
+     "ja": "自己紹介をお願いします。",
+     "vi": "Bạn hãy giới thiệu bản thân."
+    },
+    {
+     "t": "Hỏi – đáp: Vì sao chọn việc này / cửa hàng này?",
+     "d": "Người Nhật muốn nghe lý do gắn với chính nơi đó, không phải 'vì gần nhà, lương cao' là chính (nói thêm thì được, nói duy nhất thì bị trừ điểm). Khung trả lời: từng đến/ dùng dịch vụ ở đây + ấn tượng tốt + muốn học được điều gì. TRẢ LỜI MẪU: 「このお店によく買い物に来ていて、店員さんの対応がいつも丁寧だなと思っていました。接客の仕事を通して、日本語と日本のサービスの仕方を学びたいので、応募しました。」Dịch mẫu: 'Tôi hay đến mua đồ ở cửa hàng này và thấy nhân viên lúc nào cũng phục vụ rất chu đáo. Tôi muốn qua công việc tiếp khách học thêm tiếng Nhật và cách phục vụ của Nhật nên đã ứng tuyển.' Trước buổi phỏng vấn hãy ghé cửa hàng một lần để có chi tiết thật mà nói.",
+     "ja": "なぜこの仕事（このお店）を選びましたか。",
+     "vi": "Vì sao bạn chọn công việc này (cửa hàng này)?"
+    },
+    {
+     "t": "Hỏi – đáp: Làm được thứ mấy, mấy giờ đến mấy giờ?",
+     "d": "Câu hỏi quan trọng nhất của baito — trả lời phải KHỚP với tờ lịch bạn đã viết ở nhà và khớp với ca ghi trong tin tuyển dụng. Nói rõ: thứ nào, khung giờ nào, tuần mấy buổi, mỗi buổi mấy giờ. TRẢ LỜI MẪU: 「月曜日、水曜日、金曜日は午前8時から午後1時まで、土曜日と日曜日は午前8時から午後5時まで働けます。週に4回、20時間ぐらいを希望しています。」Dịch mẫu: 'Thứ Hai, Tư, Sáu tôi làm được từ 8 giờ sáng đến 1 giờ chiều; thứ Bảy và Chủ nhật làm được từ 8 giờ sáng đến 5 giờ chiều. Tôi mong muốn làm tuần 4 buổi, khoảng 20 giờ.' Lưu ý du học sinh: tổng giờ mọi việc làm thêm cộng lại không quá 28 giờ/tuần — hứa quá giờ này là vi phạm luật, nhà tuyển dụng tốt sẽ không dám nhận.",
+     "ja": "週に何日、何時から何時まで働けますか。",
+     "vi": "Một tuần bạn làm được mấy ngày, từ mấy giờ đến mấy giờ?"
+    },
+    {
+     "t": "Hỏi – đáp: Khi nào bắt đầu làm được?",
+     "d": "Nếu bắt đầu ngay được thì nói rõ 'ngay tuần này cũng được' — đây là điểm cộng lớn vì nhiều nơi đang thiếu người. Nếu cần vài ngày chuẩn bị (đổi lịch học, chờ giấy phép...) thì nói ngày cụ thể, đừng nói mơ hồ 'khi nào cũng được' rồi lại đổi. TRẢ LỜI MẪU: 「今週の土曜日から働けます。来週以降は、希望したシフト通りに入れます。」Dịch mẫu: 'Tôi bắt đầu làm được từ thứ Bảy tuần này. Từ tuần sau trở đi, tôi vào ca đúng như lịch đã đăng ký được.' Nếu đang làm việc khác chưa nghỉ, nói thật ngày nghỉ xong: 「今のバイトが今月末までなので、来月1日から働けます」.",
+     "ja": "いつから働けますか。",
+     "vi": "Bạn bắt đầu làm được từ khi nào?"
+    },
+    {
+     "t": "Hỏi – đáp: Nhà có xa không, đi lại bằng gì?",
+     "d": "Câu này để họ đoán bạn có đi làm đều, có đến trễ trời mưa tuyết hay không. Trả lời đủ 3 ý: ở khu nào, đi bằng gì, mất bao lâu — và khẳng định đi được cả ngày mưa. TRẢ LỜI MẪU: 「家は○○駅の近くで、ここまで自転車で15分ぐらいです。雨の日はバスで来ますが、時間はあまり変わりません。」Dịch mẫu: 'Nhà tôi ở gần ga ○○, đến đây đi xe đạp khoảng 15 phút. Ngày mưa tôi đi xe buýt, thời gian cũng không khác mấy.' Đừng nói 'hơi xa nhưng cố được' — nghe không chắc chắn; hãy nói thời gian cụ thể và phương án dự phòng.",
+     "ja": "家からここまで、どのくらいかかりますか。通勤手段は何ですか。",
+     "vi": "Từ nhà bạn đến đây mất bao lâu? Bạn đi lại bằng phương tiện gì?"
+    },
+    {
+     "t": "Hỏi – đáp: Làm được bao lâu? (dự định ở Nhật)",
+     "d": "Nơi làm nào cũng sợ tuyển vào, dạy xong thì nghỉ. Hãy nói kế hoạch ở Nhật cụ thể gắn với visa/trường học, và cam kết khoảng thời gian làm tối thiểu nếu thật sự làm được. TRẢ LỜI MẪU: 「日本語学校を来年3月に卒業するので、それまで1年以上働きたいと思っています。卒業後の進路が決まったら、早めに相談します。」Dịch mẫu: 'Tôi tốt nghiệp trường tiếng vào tháng 3 năm sau nên muốn làm ở đây hơn 1 năm cho tới lúc đó. Khi quyết định được hướng đi sau tốt nghiệp, tôi sẽ trao đổi sớm.' Tuyệt đối không hứa 'làm lâu dài' nếu vài tháng nữa đã về nước — bị phát hiện nói dối còn tệ hơn nói thật ngắn hạn.",
+     "ja": "どのくらいの期間、働けますか。",
+     "vi": "Bạn làm ở đây được trong bao lâu?"
+    },
+    {
+     "t": "Hỏi – đáp: Đã có kinh nghiệm làm thêm / công việc này chưa?",
+     "d": "Chưa có kinh nghiệm cũng không sao — baito tuyển cả người mới. Cách trả lời: nói thật kinh nghiệm (kể cả việc ở Việt Nam, việc phụ gia đình), rồi nối sang kỹ năng dùng được cho việc này. TRẢ LỜI MẪU: 「日本でのアルバイト経験はまだありません。ベトナムでは家族の食堂を手伝っていて、注文を取ったり、レジをしたりしていました。その経験を生かしたいです。」Dịch mẫu: 'Tôi chưa có kinh nghiệm làm thêm ở Nhật. Ở Việt Nam tôi từng phụ quán ăn của gia đình, nhận order và tính tiền ở quầy thu ngân. Tôi muốn vận dụng kinh nghiệm đó.' Tránh trả lời cụt 'ありません' (không có) rồi im lặng.",
+     "ja": "アルバイトの経験はありますか。この仕事の経験はありますか。",
+     "vi": "Bạn đã có kinh nghiệm làm thêm chưa? Đã làm công việc này bao giờ chưa?"
+    },
+    {
+     "t": "Hỏi – đáp: Tiếng Nhật được ở mức nào?",
+     "d": "Đừng nói quá ('nói được hết') cũng đừng tự dìm ('không biết gì'). Nói theo việc làm được: nghe hiểu chỉ thị đơn giản, chào khách được, đang học cấp độ nào, và cách bạn xử lý khi không hiểu. TRẢ LỜI MẪU: 「今、日本語能力試験のN3を勉強中です。日常会話と、仕事の簡単な指示は聞いて分かります。分からない言葉があったら、メモをして、すぐに聞くようにします。」Dịch mẫu: 'Hiện tôi đang học để thi JLPT N3. Hội thoại hàng ngày và chỉ thị công việc đơn giản tôi nghe hiểu được. Nếu có từ nào không hiểu, tôi sẽ ghi chép lại và hỏi ngay.' Câu 'ghi chép và hỏi ngay' là câu người Nhật rất thích nghe.",
+     "ja": "日本語はどのくらいできますか。",
+     "vi": "Tiếng Nhật của bạn ở mức nào?"
+    },
+    {
+     "t": "Hỏi – đáp: Điểm mạnh của bạn là gì?",
+     "d": "Chọn 1 điểm mạnh gắn trực tiếp với công việc: đúng giờ, khỏe, cẩn thận, nhớ việc nhanh, thích tiếp xúc với khách... và kèm một ví dụ nhỏ. TRẢ LỜI MẪU: 「私の長所は、時間を守ることです。学校も今まで遅刻したことがありません。アルバイトでも、シフトの時間には必ず早めに来るようにします。」Dịch mẫu: 'Điểm mạnh của tôi là giữ đúng giờ. Đi học đến nay tôi chưa đi trễ lần nào. Đi làm thêm tôi cũng sẽ luôn đến sớm hơn giờ vào ca.' Đừng kể điểm mạnh không liên quan như 'hát hay', và đừng kể 4–5 điểm mạnh một lúc nghe như đọc thuộc lòng.",
+     "ja": "あなたの長所は何ですか。",
+     "vi": "Điểm mạnh của bạn là gì?"
+    },
+    {
+     "t": "Hỏi – đáp: Cuối tuần / ngày lễ / có vào ca gấp được không?",
+     "d": "Quán ăn và cửa hàng thường bận nhất cuối tuần và ngày lễ (祝日, shukujitsu), nên câu này gần như quyết định đỗ/trượt. Nếu vào được thì nói rõ ràng; nếu chỉ được một phần thì nói phần làm được + thái độ hợp tác khi có người nghỉ đột xuất. TRẢ LỜI MẪU: 「土曜日と日曜日、祝日も働けます。急に人が足りないときは、学校がない日なら、できるだけ協力します。」Dịch mẫu: 'Thứ Bảy, Chủ nhật và ngày lễ tôi đều làm được. Khi đột xuất thiếu người, nếu là ngày không có giờ học, tôi sẽ cố gắng hỗ trợ hết mức có thể.' Đừng hứa 'bất cứ lúc nào cũng vào được' nếu biết chắc không giữ được lời.",
+     "ja": "土日や祝日も働けますか。急にシフトに入れますか。",
+     "vi": "Thứ Bảy, Chủ nhật và ngày lễ bạn có làm được không? Có vào ca gấp được không?"
+    },
+    {
+     "t": "Hỏi – đáp: Khi bận thi / bận việc trường thì sao?",
+     "d": "Du học sinh hay bị hỏi câu này. Trả lời trung thực nhưng cho thấy bạn có kế hoạch thông báo sớm, không nghỉ đột ngột sát ngày — điều nơi làm sợ nhất. TRẢ LỜI MẪU: 「試験の週は少しシフトを減らしたいですが、1か月前に必ず相談します。急に休むことはしません。」Dịch mẫu: 'Tuần thi tôi muốn giảm ca một chút, nhưng nhất định sẽ trao đổi trước 1 tháng. Tôi sẽ không nghỉ đột ngột.' Nói kèm 'trao đổi trước 1 tháng' biến một điểm yếu thành hình ảnh người có trách nhiệm.",
+     "ja": "学校の試験があるときは、どうしますか。",
+     "vi": "Khi có kỳ thi ở trường thì bạn sẽ thế nào?"
+    },
+    {
+     "t": "Hỏi – đáp: Câu nên hỏi lại — lương trả ngày nào, hỗ trợ đi lại",
+     "d": "Cuối buổi họ thường hỏi 「何か質問はありますか」(bạn có câu hỏi gì không). Hỏi 1–2 câu cho thấy bạn nghiêm túc muốn làm lâu dài; hỏi về lương là bình thường ở baito, không bị coi là thô lỗ nếu hỏi lịch sự. CÂU NÊN HỎI: 「お給料は何日に、どのように支払われますか。交通費は出ますか。」Dịch: 'Lương được trả vào ngày nào, bằng cách nào ạ? Có hỗ trợ tiền đi lại không ạ?' Các ý nên xác nhận nếu chưa rõ: lương giờ (時給) bao nhiêu, ca đêm sau 22 giờ có phụ cấp 25% không, lương chuyển khoản hay tiền mặt, chốt lương ngày nào (締め日). Ghi lại câu trả lời vào sổ ngay trước mặt họ — cử chỉ này tạo ấn tượng tốt.",
+     "ja": "お給料は何日に支払われますか。交通費は出ますか。",
+     "vi": "(Câu bạn hỏi lại) Lương được trả vào ngày nào ạ? Có hỗ trợ tiền đi lại không ạ?"
+    },
+    {
+     "t": "Hỏi – đáp: Câu nên hỏi lại — ca cố định hay đăng ký, đồng phục, tập việc",
+     "d": "Một câu hỏi lại nữa rất nên hỏi, vì nó quyết định bạn có giữ được lịch học hay không. CÂU NÊN HỎI: 「シフトは固定ですか、それとも希望を出す形ですか。制服は貸してもらえますか。」Dịch: 'Ca làm là cố định, hay là hình thức đăng ký nguyện vọng ạ? Đồng phục có được mượn không ạ?' Nếu phù hợp, hỏi thêm: thời gian tập việc (研修, kenshū) bao lâu và lương tập việc có khác không, ngày làm đầu tiên cần mang gì, khi muốn đổi ca thì báo trước bao lâu. Tránh hỏi ngay câu 'có được nghỉ nhiều không / có dễ xin nghỉ không' trong lần hỏi đầu tiên.",
+     "ja": "シフトは固定ですか。制服はありますか。",
+     "vi": "(Câu bạn hỏi lại) Ca làm có cố định không ạ? Có đồng phục không ạ?"
+    },
+    {
+     "t": "Bước 3: Những lỗi bị loại ngay — tránh tuyệt đối",
+     "d": "Các lỗi khiến baito trượt ngay dù tiếng Nhật tốt: (1) Đến trễ mà không gọi điện báo trước. (2) Điện thoại reo hoặc rung ồn trong lúc phỏng vấn. (3) Trang phục luộm thuộm: áo thun nhàu, quần rách, dép lê, tóc tai bù xù, mùi thuốc lá/nước hoa nồng. (4) Nói xấu chỗ làm cũ, trường học, thầy cô — người nghe sẽ nghĩ sau này bạn cũng nói xấu họ. (5) Trả lời cụt lủn, tránh mắt, ngồi ngả người, khoanh tay. (6) Hứa ca/giờ mà mình không làm được, hứa quá 28 giờ/tuần với du học sinh. (7) Chỉ hỏi về lương và ngày nghỉ, không hỏi gì về công việc. Nhớ: baito đánh giá 'có đến đều, có giữ lời, có sạch sẽ gọn gàng không' quan trọng hơn kinh nghiệm.",
+     "ja": "前のバイト先は給料が安かったです。",
+     "vi": "(Câu TUYỆT ĐỐI không nói) Chỗ làm thêm trước lương thấp lắm. — Nói xấu chỗ cũ là lỗi bị loại ngay."
+    },
+    {
+     "t": "Bước 4: Ra về đúng nghi thức",
+     "d": "Khi họ nói kết thúc, đứng dậy, nói lời cảm ơn rồi mới cầm túi: 「本日はお忙しい中、お時間をいただきありがとうございました」(Hôm nay cảm ơn anh/chị đã dành thời gian dù bận rộn), cúi chào 45 độ. Đẩy ghế về vị trí cũ nếu đã kéo ra. Đi tới cửa, quay người lại phía người phỏng vấn, nói 「失礼します」 và cúi chào một lần nữa rồi mới mở cửa ra, đóng cửa thật nhẹ. Lưu ý: khi ra về ở phỏng vấn dùng 「失礼します」, KHÔNG dùng 「お先に失礼します」— câu đó chỉ dùng khi tan làm về trước đồng nghiệp trong công ty. Ra khỏi cửa hàng vẫn giữ tác phong đến khi khuất tầm nhìn: không kiểm tra điện thoại ngay trước cửa, không tụ tập nói to với bạn đi cùng.",
+     "ja": "本日はありがとうございました。失礼します。",
+     "vi": "Hôm nay xin cảm ơn anh/chị rất nhiều. Tôi xin phép ra về."
+    },
+    {
+     "t": "Bước 5: Sau phỏng vấn — cảm ơn và chờ kết quả",
+     "d": "Về nhà, ghi lại ngay những gì đã hỏi–đáp và những điều kiện họ đã nói (lương giờ, ca, ngày bắt đầu dự kiến). Kết quả baito thường báo sau 2–7 ngày bằng điện thoại: luôn để điện thoại có chuông trong giờ hành chính, thấy số lạ thì nghe máy và xưng tên rõ ràng 「はい、グエンです」. Được nhận việc: xác nhận lại ngày làm đầu tiên và giấy tờ cần mang, cảm ơn một câu ngắn. Nếu quá ngày họ hẹn mà chưa có tin (ví dụ họ nói 'trong tuần này' mà hết tuần chưa gọi), bạn được phép gọi hỏi lịch sự một lần: 「先日面接を受けたグエンです。結果はいつごろ分かりますか」— chỉ gọi một lần, trong giờ làm việc. Bị từ chối cũng cảm ơn, đừng tỏ thái độ; cửa hàng khác trong cùng chuỗi có thể gọi lại sau.",
+     "ja": "先日は面接ありがとうございました。グエンと申します。",
+     "vi": "Cảm ơn anh/chị về buổi phỏng vấn hôm trước. Tôi là Nguyễn ạ. (câu mở đầu khi gọi/nhắn cảm ơn hoặc hỏi kết quả)"
+    }
+   ],
+   "cost": "Phỏng vấn baito: hoàn toàn miễn phí. Chi phí tự chuẩn bị: ảnh thẻ khoảng 800–1.000 yên/bộ tại máy chụp tự động, in/viết 履歴書 vài chục yên/tờ, tiền đi lại đến nơi phỏng vấn. CẢNH BÁO: nơi nào bắt đóng 'phí giới thiệu, phí đồng phục, phí đào tạo' trước khi nhận việc đều đáng ngờ — baito chính thống không thu tiền của người lao động trước khi đi làm.",
+   "duration": "Một buổi phỏng vấn baito: khoảng 10–30 phút. Từ ứng tuyển đến phỏng vấn: thường 1–7 ngày. Kết quả: thường báo sau 2–7 ngày; được nhận thì bắt đầu làm sau khoảng 3–14 ngày tùy lịch ca.",
+   "warnings": [
+    "Nếu trục trặc — sắp đến trễ (tàu dừng, lạc đường): gọi điện cho cửa hàng NGAY khi biết sẽ trễ, nói rõ trễ khoảng mấy phút và xin lỗi. Câu mẫu: 「申し訳ありません、電車が止まっていて10分ほど遅れます」. Đến trễ mà im lặng không gọi là lỗi nặng nhất; gọi báo trước thì nhiều nơi vẫn thông cảm.",
+    "Nếu trục trặc — không nghe rõ câu hỏi: đừng gật đầu giả vờ hiểu. Nói: 「すみません、もう一度ゆっくりお願いします」(Xin lỗi, xin nói lại chậm rãi một lần nữa). Vẫn không hiểu thì hỏi lại bằng cách diễn đạt khác hoặc xin viết ra giấy — người phỏng vấn đánh giá cao việc xác nhận lại hơn là trả lời lạc đề.",
+    "Nếu trục trặc — gặp câu hỏi khó không biết trả lời (ví dụ hỏi dự định 3 năm nữa): đừng im lặng quá 5 giây và đừng bịa. Nói một câu đệm 「少し考えさせてください」(cho tôi suy nghĩ một chút), rồi trả lời phần mình chắc chắn nhất, gắn với hiện tại: đang học gì, muốn làm tốt việc này thế nào.",
+    "Nếu trục trặc — quên mang 履歴書 hoặc giấy tờ: xin lỗi ngay từ đầu buổi, nói rõ giấy gì quên và cam kết mang đến/bổ sung ngày nào cụ thể. Nhiều cửa hàng vẫn phỏng vấn và cho bổ sung sau, nhưng quên mà không nói gì, đến khi được hỏi mới lộ ra thì mất điểm nặng.",
+    "Du học sinh: tổng giờ làm thêm ở TẤT CẢ các chỗ cộng lại không quá 28 giờ/tuần, và không làm các việc ở quán bar, pachinko, ngành giải trí người lớn (風俗) dù chỉ rửa bát dọn dẹp. Vi phạm có thể mất tư cách lưu trú — từ chối khéo khi bị rủ làm quá giờ: 「資格外活動許可の時間を超えてしまうので、できません」.",
+    "Không đưa bản gốc thẻ lưu trú/hộ chiếu cho nơi làm giữ. Họ chỉ xem và sao chụp; yêu cầu giữ bản gốc là bất thường, hãy từ chối và hỏi lại Hello Work.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Đã ghi vào sổ/điện thoại: lương giờ, ngày chốt lương, ngày trả lương, có phụ cấp đi lại và ca đêm không",
+    "Đã rõ: ca làm cố định hay đăng ký nguyện vọng, cách xin đổi ca/nghỉ và phải báo trước bao lâu",
+    "Đã rõ: ngày làm đầu tiên là ngày nào, đến sớm mấy phút, gặp ai, mang theo giấy tờ gì (sổ ngân hàng, thẻ lưu trú...)",
+    "Đã cộng lại tổng giờ làm thêm của mọi việc: nếu là du học sinh/visa gia đình, không vượt 28 giờ/tuần",
+    "Đã lưu số điện thoại cửa hàng và tên người phụ trách vào điện thoại để liên lạc khi có việc gấp",
+    "Khi nhận việc, yêu cầu được nhận văn bản điều kiện lao động (労働条件通知書) ghi rõ lương và giờ làm — đọc kỹ trước ngày làm đầu tiên"
+   ],
+   "vocab": [
+    {
+     "ja": "面接",
+     "reading": "めんせつ",
+     "vi": "Phỏng vấn xin việc"
+    },
+    {
+     "ja": "履歴書",
+     "reading": "りれきしょ",
+     "vi": "Sơ yếu lý lịch theo mẫu Nhật"
+    },
+    {
+     "ja": "志望動機",
+     "reading": "しぼうどうき",
+     "vi": "Lý do ứng tuyển / nguyện vọng muốn làm việc này"
+    },
+    {
+     "ja": "シフト",
+     "reading": "しふと",
+     "vi": "Ca làm việc (đăng ký/theo lịch)"
+    },
+    {
+     "ja": "時給",
+     "reading": "じきゅう",
+     "vi": "Lương theo giờ"
+    },
+    {
+     "ja": "交通費",
+     "reading": "こうつうひ",
+     "vi": "Tiền hỗ trợ đi lại"
+    },
+    {
+     "ja": "研修",
+     "reading": "けんしゅう",
+     "vi": "Thời gian tập việc / đào tạo ban đầu"
+    },
+    {
+     "ja": "制服",
+     "reading": "せいふく",
+     "vi": "Đồng phục"
+    },
+    {
+     "ja": "採用",
+     "reading": "さいよう",
+     "vi": "Được tuyển / việc tuyển dụng"
+    },
+    {
+     "ja": "不採用",
+     "reading": "ふさいよう",
+     "vi": "Không được tuyển (trượt)"
+    },
+    {
+     "ja": "資格外活動許可",
+     "reading": "しかくがいかつどうきょか",
+     "vi": "Giấy phép hoạt động ngoài tư cách lưu trú (giấy phép làm thêm)"
+    },
+    {
+     "ja": "接客",
+     "reading": "せっきゃく",
+     "vi": "Tiếp khách, phục vụ khách hàng"
+    },
+    {
+     "ja": "締め日",
+     "reading": "しめび",
+     "vi": "Ngày chốt lương hàng tháng"
+    },
+    {
+     "ja": "祝日",
+     "reading": "しゅくじつ",
+     "vi": "Ngày lễ (ngày nghỉ quốc gia)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "失礼します。",
+     "vi": "Xin phép ạ. (nói khi vào phòng và khi ra về ở cửa)"
+    },
+    {
+     "ja": "どうぞお座りくださいと言われるまで立って待ちます。",
+     "vi": "(Ghi nhớ tác phong) Đứng chờ cho đến khi được mời ngồi."
+    },
+    {
+     "ja": "すみません、もう一度ゆっくりお願いします。",
+     "vi": "Xin lỗi, xin nói lại chậm rãi một lần nữa ạ. (khi không nghe rõ)"
+    },
+    {
+     "ja": "少し考えさせてください。",
+     "vi": "Cho tôi suy nghĩ một chút ạ. (câu đệm khi gặp câu hỏi khó)"
+    },
+    {
+     "ja": "本日はお忙しい中、お時間をいただきありがとうございました。",
+     "vi": "Hôm nay cảm ơn anh/chị đã dành thời gian cho tôi dù rất bận."
+    },
+    {
+     "ja": "はい、グエンです。",
+     "vi": "Vâng, tôi là Nguyễn nghe máy đây. (cách nghe điện thoại chờ kết quả)"
+    },
+    {
+     "ja": "よろしくお願いいたします。",
+     "vi": "Rất mong được anh/chị giúp đỡ. (câu chào lịch sự dùng đầu và cuối buổi)"
+    },
+    {
+     "ja": "メモを取ってもいいですか。",
+     "vi": "Tôi ghi chép lại có được không ạ? (xin phép ghi chú điều kiện làm việc)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Hello Work Sapporo (Bộ Y tế, Lao động và Phúc lợi) — Tác phong phỏng vấn cần nhớ",
+     "url": "https://jsite.mhlw.go.jp/hokkaido-hellowork/list/sapporo/shisetsu/shinsotsu-column3.html"
+    },
+    {
+     "label": "Mynavi Baito — 15 câu hỏi thường gặp trong phỏng vấn baito và cách trả lời",
+     "url": "https://baito.mynavi.jp/times/baito/knowhow/2866/"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "履歴書",
+     "name_vi": "Sơ yếu lý lịch (rirekisho)",
+     "download_url": "https://www.hellowork.mhlw.go.jp/member/career_doc01.html",
+     "source": "ハローワーク (厚生労働省)",
+     "format": "web",
+     "fill": [
+      {
+       "field": "日付 (ngày viết hồ sơ)",
+       "how": "Ghi ngày nộp hoặc ngày phỏng vấn. Dùng một kiểu năm duy nhất trong toàn bản: Tây lịch hoặc niên hiệu Nhật, không trộn.",
+       "example": "2026年11月10日現在",
+       "mistake": "Để trống ô ngày, hoặc ngày viết cũ hơn ngày nộp cả tháng."
+      },
+      {
+       "field": "氏名・ふりがな (họ tên và cách đọc)",
+       "how": "Ghi họ tên đúng thứ tự và đúng chữ như trên thẻ lưu trú. Ô furigana ghi cách đọc bằng hiragana hoặc katakana theo mẫu của form. Với tên Việt Nam, ghi cách đọc bằng katakana.",
+       "example": "氏名：グエン・バン・アン ／ ふりがな：グエン・バン・アン",
+       "mistake": "Viết tên khác với thẻ lưu trú, hoặc quên ghi furigana."
+      },
+      {
+       "field": "生年月日・満年齢 (ngày sinh và tuổi tròn)",
+       "how": "Ghi ngày sinh Tây lịch hoặc niên hiệu, thống nhất với các ô khác. Tuổi ghi tuổi tròn tính đến ngày ghi ở ô 日付.",
+       "example": "1998年5月12日生 （満28歳）",
+       "mistake": "Tính tuổi theo tuổi mụ của Việt Nam."
+      },
+      {
+       "field": "写真 (ảnh thẻ)",
+       "how": "Dán ảnh 4x3 cm, chụp trong 3 tháng gần nhất. Ảnh nền trơn, mặc áo có cổ, không đội mũ, nhìn thẳng. Ghi họ tên vào mặt sau ảnh trước khi dán, phòng khi ảnh bong ra.",
+       "example": "Ảnh chụp tại máy chụp ảnh thẻ gần ga, mặc sơ mi trắng, mặt sau ghi グエン・バン・アン",
+       "mistake": "Dùng ảnh selfie, ảnh cắt từ ảnh nhóm, hoặc ảnh chụp đã lâu tóc khác hẳn hiện tại."
+      },
+      {
+       "field": "現住所・郵便番号 (địa chỉ hiện tại và mã bưu điện)",
+       "how": "Ghi đúng từng chữ như trên thẻ lưu trú, từ mã bưu điện đến số phòng. Không viết tắt tên tỉnh, thành phố.",
+       "example": "〒211-0063 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Ghi địa chỉ khác thẻ lưu trú, hoặc thiếu số phòng."
+      },
+      {
+       "field": "電話・メールアドレス (số điện thoại và email)",
+       "how": "Ghi số điện thoại di động đang dùng hằng ngày, nghe máy được. Email ghi địa chỉ hay kiểm tra, chữ rõ ràng, phân biệt số 0 và chữ o.",
+       "example": "電話：090-1234-5678 ／ メール：an.nguyen.sample@example.com",
+       "mistake": "Ghi số điện thoại ở Việt Nam, hoặc số đã ngừng sử dụng."
+      },
+      {
+       "field": "連絡先 (địa chỉ liên lạc khác)",
+       "how": "Chỉ ghi khi muốn nhận liên lạc ở địa chỉ khác địa chỉ hiện tại. Nếu không có thì để trống hoặc ghi 同上 (như trên) tùy form.",
+       "example": "現住所と同じため記入なし",
+       "mistake": "Ghi lại y hệt địa chỉ hiện tại gây rối, hoặc ghi địa chỉ bạn bè mà không báo trước."
+      },
+      {
+       "field": "学歴 (quá trình học, gồm trường đang học)",
+       "how": "Ghi theo thứ tự thời gian, mỗi trường một dòng: năm tháng nhập học, tốt nghiệp. Dòng cuối ghi trường đang học và ghi rõ 在学中 (đang học). Đây là chỗ ghi trường tiếng Nhật đang theo học.",
+       "example": "2025年4月 カワサキ日本語学校 入学 ／ 現在在学中",
+       "mistake": "Chỉ ghi trường ở Việt Nam mà quên ghi trường tiếng Nhật đang học."
+      },
+      {
+       "field": "職歴 (quá trình làm việc)",
+       "how": "Xin baito lần đầu thì ghi ngắn gọn. Có baito cũ liên quan thì ghi tên cửa hàng, thời gian làm. Chưa từng làm thì ghi なし (không có) ở giữa dòng, không để trống.",
+       "example": "職歴なし ／ または：2025年6月 コンビニエンスストアでアルバイト（現在も継続中）",
+       "mistake": "Để trống ô職歴 khiến người đọc tưởng quên ghi."
+      },
+      {
+       "field": "免許・資格 (bằng cấp, chứng chỉ)",
+       "how": "Ghi chứng chỉ tiếng Nhật và mọi chứng chỉ liên quan đến việc xin làm. Ghi năm tháng đạt được. Du học sinh nên chuẩn bị sẵn để nói rõ mình đã có 資格外活動許可 (giấy phép làm thêm) khi được hỏi.",
+       "example": "2025年12月 日本語能力試験 N3 合格",
+       "mistake": "Ghi chứng chỉ đang học dở như đã đỗ, hoặc ghi trình độ tự đánh giá không có giấy tờ."
+      },
+      {
+       "field": "志望の動機・アピールポイント (lý do ứng tuyển và điểm mạnh)",
+       "how": "Viết 2-3 câu ngắn, gắn với chính cửa hàng đó. Nêu một điểm mạnh cụ thể: đúng giờ, làm được cuối tuần, có kinh nghiệm tương tự. Không viết câu chung chung dùng cho mọi nơi.",
+       "example": "貴店によく買い物に来ており、店員の方の丁寧な対応に憧れて応募しました。接客を通して日本語を学びたいです。",
+       "mistake": "Chỉ viết vì gần nhà hoặc vì lương cao."
+      },
+      {
+       "field": "本人希望記入欄 (ô nguyện vọng của bản thân: ca làm, ngày làm được)",
+       "how": "Đây là ô quan trọng nhất với baito. Ghi rõ: mong muốn làm baito, ngày thứ làm được, khung giờ làm được, số buổi mỗi tuần. Tổng giờ của du học sinh không quá 28 giờ một tuần. Ghi khớp với lời nói lúc phỏng vấn.",
+       "example": "アルバイト希望。月・水・金 8時～13時、土・日 8時～17時勤務可能です。週4回、20時間程度を希望します。",
+       "mistake": "Hứa giờ làm vượt quá 28 giờ một tuần, hoặc ghi khung giờ khác với lịch học ở trường."
+      }
+     ],
+     "sample_note": "Ví dụ trong mục này là hư cấu hoàn toàn: học sinh グエン・バン・アン, sinh 1998年5月12日, học tại trường mẫu カワサキ日本語学校, địa chỉ và số điện thoại đều là mẫu. Trang Hello Work ở link trên có mẫu 厚生労働省履歴書様式例 để tải về, gồm bản PDF版 (A3 và A4) và bản Excel版 (A3 và A4). Lưu ý thực tế: xin baito thường đơn giản hơn xin việc chính thức. Nhiều cửa hàng dùng form rirekisho rút gọn bán ở cửa hàng 100 yên hoặc combini, hoặc dùng form riêng của cửa hàng đưa khi đến phỏng vấn. Hãy hỏi trước cửa hàng có chỉ định form không. Nếu không chỉ định, dùng mẫu của Bộ Y tế, Lao động và Phúc lợi ở link trên là an toàn nhất. Viết tay bằng bút bi đen, nét rõ, hoặc đánh máy đều được."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "厚生労働省 / Ministry of Health, Labour and Welfare",
+     "lang": "ja",
+     "note": "Video chính thức của Bộ Lao động: chào hỏi, cúi chào và toàn bộ流れ vào phòng đến ra về.",
+     "title": "面接でのマナーや気を付けるポイント",
+     "url": "https://www.youtube.com/watch?v=wRr9TDPkhlg"
+    },
+    {
+     "channel": "キャリアパーク就活講座",
+     "lang": "ja",
+     "note": "Chuyên về gõ cửa, vào phòng và ra về đúng tác phong — đúng phần baito hay bị đánh giá nhất.",
+     "title": "面接の入室・退室のマナー｜本番で失敗しないためのポイントを解説",
+     "url": "https://www.youtube.com/watch?v=gjild9ZYJ-c"
+    },
+    {
+     "channel": "スキマデ就活チャンネル",
+     "lang": "ja",
+     "note": "Có thực diễn vào/ra phòng và trang phục nam/nữ, xem để bắt chước động tác trước buổi phỏng vấn.",
+     "title": "〖面接対策〗対面面接に行く前に絶対見ておきたい面接時のマナー※入退室の実例付き！",
+     "url": "https://www.youtube.com/watch?v=VnD3MAfl-VU"
+    }
+   ]
+  },
+  {
+   "id": "phong-van-chinh-thuc",
+   "group": "Phỏng vấn xin việc",
+   "title": "Phỏng vấn việc chính thức / chuyển việc （正社員・転職面接）",
+   "icon": "👔",
+   "summary": "Phỏng vấn việc chính thức (正社員, seishain — nhân viên chính thức) và chuyển việc (転職, tenshoku) ở Nhật thường qua nhiều vòng, kéo dài vài tuần, và quyết định nằm ở 志望動機 (lý do ứng tuyển) và 自己PR (tự giới thiệu điểm mạnh) có thuyết phục hay không. Bài này hướng dẫn cách xây dựng hai phần đó, trả lời các câu hỏi khó và thương lượng lương cho khéo, kèm mẫu mail cảm ơn hoàn chỉnh.",
+   "who": "Người Việt đang ở Nhật (hoặc chuẩn bị sang) xin việc nhân viên chính thức: kỹ sư, IT, kaigo (介護 — chăm sóc người cao tuổi), nhân viên văn phòng, kỹ năng đặc định muốn lên chính thức, người đang làm ở công ty Nhật muốn chuyển việc (転職) sang công ty khác tốt hơn.",
+   "docs": [
+    "Sơ yếu lý lịch (履歴書, rirekisho) bản mới nhất, dán ảnh chụp trong 3 tháng — hồ sơ chính thức phải không có lỗi chính tả, ngày tháng thống nhất",
+    "Bản kinh nghiệm làm việc (職務経歴書, shokumu keirekisho) 1–2 trang A4: từng công việc, nhiệm vụ, thành tích có con số cụ thể — đây là giấy quan trọng nhất khi chuyển việc",
+    "Thẻ lưu trú (在留カード) bản gốc + bản sao — công ty cần xác nhận tư cách lưu trú có đúng ngành nghề ứng tuyển không và còn hạn bao lâu",
+    "Hộ chiếu bản gốc (mang theo), bằng cấp cao nhất và chứng chỉ JLPT, chứng chỉ chuyên môn (ví dụ 介護福祉士 với ngành kaigo) — bản gốc để đối chiếu, bản sao để nộp",
+    "Bản in mail/tin nhắn hẹn phỏng vấn và thông tin người liên lạc (tên công ty, địa chỉ, tên người phụ trách) — phòng khi đến nơi cần trình ở lễ tân",
+    "Sổ ghi chú + bút (ghi lại điều kiện, lịch vòng tiếp theo), điện thoại tắt chuông, và một bộ hồ sơ dự phòng giống hệt phòng khi có thêm người phỏng vấn"
+   ],
+   "prep_home": [
+    "Nghiên cứu công ty trước ít nhất 2–3 ngày: công ty làm lĩnh vực gì, sản phẩm/dịch vụ chính, điểm khác đối thủ, tin tức gần đây — đọc trang chủ và trang tuyển dụng của chính công ty đó, ghi ra 3 điểm bạn thật sự thấy hợp với mình",
+    "Viết sẵn 志望動機 theo khung 4 bước trong bài (kết luận → lý do → trải nghiệm liên quan → đóng góp được gì) và 自己PR theo khung (điểm mạnh → ví dụ có con số → áp dụng vào công ty này), mỗi phần nói được trong 1–2 phút",
+    "Chuẩn bị sẵn câu trả lời cho 5 câu hỏi khó hay gặp: lý do chuyển việc, điểm yếu, 5 năm nữa muốn thế nào, vì sao muốn làm việc ở Nhật, mức lương mong muốn — viết ra giấy và tập nói to, không học thuộc từng chữ mà nhớ ý chính",
+    "Trang phục: bộ vest (スーツ) tối màu (đen/xám đậm/xanh navy), áo sơ mi trắng, cà vạt với nam, giày da đen đã đánh bóng, túi xách đựng vừa A4; nữ: vest + váy quần gọn gàng, trang điểm nhẹ, tóc buộc gọn. Chuẩn bị từ tối hôm trước, là ủi sẵn",
+    "Nếu phỏng vấn online hoặc kết hợp (vòng 1 online, vòng cuối trực tiếp): test trước camera/micro/đường truyền, chuẩn bị theo đúng các bước trong bài 'Phỏng vấn online từ Việt Nam' của chuyên mục này",
+    "Tập phỏng vấn thử (模擬面接, mogi mensetsu) với bạn hoặc tự quay video: tập vào phòng, ngồi, trả lời 3 câu chính — xem lại video để sửa tật nói quá nhanh, nhìn xuống, dùng nhiều từ đệm 'えーと・あのー'",
+    "Ngủ đủ giấc đêm trước, sáng hôm phỏng vấn rà soát lại: địa chỉ công ty, đi tuyến tàu nào, đến sớm 10 phút, tên người phụ trách và chức danh (gọi người Nhật bằng họ + 様/役職, không gọi bằng tên riêng)"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Hiểu quy trình nhiều vòng tuyển dụng ở Nhật",
+     "d": "Quy trình điển hình của công ty Nhật: (1) Sàng lọc hồ sơ (書類選考, shorui senkō) — xét 履歴書 + 職務経歴書, khoảng 1–2 tuần có kết quả. (2) Phỏng vấn vòng 1 (一次面接) — thường với trưởng bộ phận hoặc nhân sự (人事, jinji), hỏi kinh nghiệm và động cơ. (3) Có nơi có bài kiểm tra năng lực (適性検査, tekisei kensa — trắc nghiệm tính cách và khả năng) làm online. (4) Phỏng vấn vòng cuối (最終面接) — với giám đốc hoặc lãnh đạo cấp cao (役員, yakuin), hỏi tầm nhìn và mức độ hợp văn hóa công ty. Toàn bộ thường kéo dài 3–6 tuần. Mỗi vòng xong, kết quả báo qua mail hoặc qua công ty giới thiệu việc làm (エージェント, agent) nếu bạn ứng tuyển qua họ. Hiểu trước quy trình để không sốt ruột và không nhận vội lời mời khác khi đang ở vòng cuối nơi mình thích nhất.",
+     "ja": "選考の流れと、各ステップの目安を教えてください。",
+     "vi": "Xin cho tôi biết quy trình tuyển chọn và thời gian ước tính của từng bước."
+    },
+    {
+     "t": "Bước 2: Xây dựng 志望動機 (lý do ứng tuyển) theo khung 4 bước",
+     "d": "志望動機 yếu là lý do trượt vòng 1 nhiều nhất. Khung 4 bước: ① Kết luận trước: 'Tôi ứng tuyển vì muốn làm ○○ tại quý công ty'. ② Lý do chọn NGÀNH này. ③ Lý do chọn đúng CÔNG TY này (điểm chỉ công ty này có: sản phẩm, thị trường Việt Nam, chế độ đào tạo...). ④ Kinh nghiệm của bạn đóng góp được gì. VÍ DỤ KHUNG (ngành kaigo, tên hư cấu): 「私は、介護の仕事を通じて高齢者の生活を支えたいと考え、貴社を志望しました。前職のデイサービスで3年間、利用者様一人ひとりに合わせた声かけを大切にしてきました。貴社が地域に根ざしたケアと職員の資格取得支援に力を入れている点に強く共感しています。介護福祉士の資格を生かし、将来的にはリーダーを目指したいです。」Dịch khung: 'Tôi ứng tuyển vào quý công ty vì muốn qua công việc chăm sóc hỗ trợ đời sống của người cao tuổi. Ở dịch vụ ban ngày trước đây, suốt 3 năm tôi luôn coi trọng việc trò chuyện phù hợp với từng người sử dụng. Tôi rất đồng cảm với việc quý công ty chú trọng chăm sóc gắn với địa phương và hỗ trợ nhân viên lấy chứng chỉ. Tôi muốn phát huy chứng chỉ Chăm sóc phúc lợi và hướng tới vị trí trưởng nhóm trong tương lai.'",
+     "ja": "志望動機は「結論→理由→経験→貢献」の順で組み立てます。",
+     "vi": "(Ghi nhớ) Lý do ứng tuyển xây theo thứ tự: kết luận → lý do → kinh nghiệm → đóng góp."
+    },
+    {
+     "t": "Bước 3: Xây dựng 自己PR (tự PR điểm mạnh) theo khung có con số",
+     "d": "自己PR (jiko PR — tự giới thiệu, quảng bá bản thân) khác với liệt kê tính cách: phải có VÍ DỤ và CON SỐ. Khung 3 bước: ① Điểm mạnh một câu (ví dụ: sự kiên trì học hỏi / khả năng gắn kết đội nhóm / cẩn thận với số liệu). ② Ví dụ thật: tình huống → bạn đã làm gì → kết quả có số (giảm thời gian 20%, phụ trách 15 người sử dụng, đạt N2 trong 1 năm...). ③ Áp dụng: điểm mạnh đó giúp gì cho đúng vị trí đang ứng tuyển. VÍ DỤ KHUNG: 「私の強みは、粘り強く学び続けることです。前職では、記録の書き方を先輩に教わりながら半年間ノートにまとめ、ミスを月5件から1件に減らしました。この学び方を貴社の業務でも生かし、早く戦力になりたいと考えています。」Dịch: 'Điểm mạnh của tôi là kiên trì học hỏi không ngừng. Ở chỗ làm trước, tôi vừa được đàn anh chị chỉ cách viết hồ sơ vừa tự ghi chép vào sổ suốt nửa năm, giảm lỗi từ 5 vụ/tháng xuống còn 1 vụ. Tôi muốn vận dụng cách học này vào công việc ở quý công ty để sớm trở thành nhân lực hữu ích.'",
+     "ja": "自己PRは「強み→具体例（数字）→仕事への生かし方」で話します。",
+     "vi": "(Ghi nhớ) Tự PR nói theo: điểm mạnh → ví dụ cụ thể (có con số) → cách áp dụng vào công việc."
+    },
+    {
+     "t": "Hỏi – đáp: Giới thiệu bản thân và tóm tắt kinh nghiệm",
+     "d": "Câu mở đầu của phỏng vấn chính thức dài hơn baito: nói 1–2 phút, đi theo dòng thời gian: học gì → làm những việc gì (mỗi việc một câu, nhấn việc gần nhất) → kỹ năng/chứng chỉ → kết thúc bằng một câu nối sang lý do ứng tuyển. TRẢ LỜI MẪU: 「グエン・ヴァン・アンと申します。ベトナムの大学で機械工学を学び、卒業後は部品メーカーで生産管理を2年経験しました。その後来日し、現在の会社で設計補助として3年働き、日本語能力試験N2を取得しました。本日はよろしくお願いいたします。」Dịch mẫu: 'Tôi là Nguyễn Văn An. Tôi học kỹ thuật cơ khí tại đại học ở Việt Nam, sau tốt nghiệp làm quản lý sản xuất 2 năm tại nhà máy linh kiện. Sau đó tôi sang Nhật, làm trợ lý thiết kế tại công ty hiện tại được 3 năm và đã đạt JLPT N2. Hôm nay rất mong được giúp đỡ.' Không kể hết mọi chi tiết — phần sâu để họ hỏi tiếp.",
+     "ja": "自己紹介と職務経歴を簡単に教えてください。",
+     "vi": "Bạn hãy giới thiệu bản thân và tóm tắt kinh nghiệm làm việc."
+    },
+    {
+     "t": "Hỏi – đáp: 志望動機 — vì sao ứng tuyển vào công ty này?",
+     "d": "Trả lời bằng đúng khung đã chuẩn bị ở Bước 2, rút gọn còn khoảng 1 phút. Điều cấm kỵ: lý do chỉ xoay quanh 'lương cao, gần nhà, công ty lớn nổi tiếng' — những lý do ai nói cũng được. Phải có ít nhất một chi tiết chỉ đúng công ty này mới có. TRẢ LỜI MẪU (ngành IT, tên hư cấu): 「貴社を志望した理由は、ベトナム拠点と連携した開発に力を入れているからです。前職では日本の顧客向けシステムのテストを担当し、ベトナムと日本の橋渡しができる人材になりたいと考えるようになりました。日本語とベトナム語の両方を使える環境で、長く成長したいと思っています。」Dịch mẫu: 'Lý do tôi ứng tuyển vào quý công ty là vì công ty đang chú trọng phát triển phối hợp với cơ sở tại Việt Nam. Ở công việc trước, tôi phụ trách kiểm thử hệ thống cho khách hàng Nhật và dần mong muốn trở thành nhân sự cầu nối giữa Việt Nam và Nhật Bản. Tôi muốn trưởng thành lâu dài trong môi trường dùng được cả tiếng Nhật và tiếng Việt.'",
+     "ja": "当社を志望した理由を教えてください。",
+     "vi": "Xin cho biết lý do bạn ứng tuyển vào công ty chúng tôi."
+    },
+    {
+     "t": "Hỏi – đáp: 自己PR — điểm mạnh áp dụng được vào việc này",
+     "d": "Dùng khung Bước 3. Lưu ý mức lịch sự: phỏng vấn chính thức dùng 丁寧語 (thể lịch sự) chắc chắn, tránh văn nói suồng sã. TRẢ LỜI MẪU: 「私の強みは、正確さと報告・連絡・相談を徹底することです。介護の現場では、利用者様の小さな変化も記録し、チームで共有することを続けた結果、事故の未然防止につながった経験があります。この姿勢は、貴社の安全を第一にする方針にも合うと考えています。」Dịch mẫu: 'Điểm mạnh của tôi là sự chính xác và triệt để trong báo cáo – liên lạc – trao đổi (hou-ren-sou). Tại nơi làm chăm sóc trước đây, tôi duy trì việc ghi lại cả những thay đổi nhỏ của người sử dụng và chia sẻ trong nhóm, nhờ đó đã có kinh nghiệm ngăn ngừa tai nạn trước khi xảy ra. Tôi nghĩ thái độ này cũng phù hợp với phương châm đặt an toàn lên hàng đầu của quý công ty.'",
+     "ja": "自己PRをお願いします。当社で生かせる強みは何ですか。",
+     "vi": "Xin hãy tự PR bản thân. Điểm mạnh nào của bạn áp dụng được ở công ty chúng tôi?"
+    },
+    {
+     "t": "Hỏi – đáp: Lý do chuyển việc / lý do nghỉ việc cũ (câu hỏi khó)",
+     "d": "Nguyên tắc vàng: nói về TƯƠNG LAI mình muốn tới, không nói xấu nơi cũ (không chê lương thấp, sếp khó, đồng nghiệp xấu trước mặt người phỏng vấn). Khung: cảm ơn điều đã học được → điều muốn thử thách mà nơi cũ không có → nối sang công ty mới. TRẢ LỜI MẪU: 「現職では多くのことを学び、感謝しています。一方で、業務が単純作業中心で、新しいスキルを身につける機会が限られていました。今後は資格を生かして、より専門的な業務に挑戦したいと考え、転職を決めました。」Dịch mẫu: 'Ở công ty hiện tại tôi đã học được rất nhiều và rất biết ơn. Tuy nhiên, công việc chủ yếu là thao tác đơn giản, cơ hội học kỹ năng mới còn hạn chế. Từ nay tôi muốn vận dụng chứng chỉ để thử thách ở công việc chuyên môn hơn, nên đã quyết định chuyển việc.'",
+     "ja": "転職理由（退職理由）を教えてください。",
+     "vi": "Xin cho biết lý do bạn chuyển việc (lý do nghỉ việc)."
+    },
+    {
+     "t": "Hỏi – đáp: Điểm yếu của bạn là gì? (câu hỏi khó)",
+     "d": "Cách trả lời đúng kiểu Nhật: chọn điểm yếu THẬT nhưng không chết người với vị trí (tránh 'tôi hay đi trễ', 'tôi nóng tính' khi làm kaigo), nói kèm cách đang khắc phục cụ thể. TRẢ LỜI MẪU: 「私の弱みは、仕事を引き受けすぎてしまうことです。前職で残業が続いたことを反省し、今はタスクを一覧にして優先順位をつけ、難しいときは早めに上司に相談するようにしています。その結果、締め切りに遅れることはなくなりました。」Dịch mẫu: 'Điểm yếu của tôi là hay ôm đồm quá nhiều việc. Sau lần phải tăng ca liên tục ở chỗ làm trước, tôi rút kinh nghiệm: nay tôi liệt kê công việc thành danh sách, xếp thứ tự ưu tiên và khi khó khăn thì trao đổi sớm với cấp trên. Nhờ vậy tôi không còn trễ hạn nữa.' Cấu trúc 'điểm yếu → bài học → cách sửa → kết quả' biến câu hỏi bẫy thành điểm cộng.",
+     "ja": "あなたの弱み（短所）は何ですか。",
+     "vi": "Điểm yếu (khuyết điểm) của bạn là gì?"
+    },
+    {
+     "t": "Hỏi – đáp: 5 năm nữa bạn muốn trở thành người thế nào? (câu hỏi khó)",
+     "d": "Họ muốn biết bạn có định gắn bó và có hình dung con đường nghề nghiệp khớp với công ty không. Trả lời theo mốc: 1 năm (thạo việc) → 3 năm (độc lập, chỉ dẫn người mới) → 5 năm (vị trí/chứng chỉ cao hơn), và luôn gắn với 'tại công ty này'. TRẢ LỜI MẪU: 「5年後は、業務を一人で任せてもらえるだけでなく、新人の指導もできる人材になっていたいです。そのために、まず1年で業務を覚え、3年目までに上の資格取得を目指します。長く貴社で働きながら成長したいと考えています。」Dịch mẫu: '5 năm nữa, tôi muốn trở thành nhân sự không chỉ được giao việc độc lập mà còn hướng dẫn được người mới. Để làm được vậy, trước tiên trong 1 năm tôi sẽ học thạo công việc, và đến năm thứ 3 sẽ hướng tới lấy chứng chỉ cao hơn. Tôi muốn vừa làm việc lâu dài tại quý công ty vừa trưởng thành.' Tránh nói '5 năm nữa mở công ty riêng' hoặc 'về Việt Nam hẳn' trong buổi phỏng vấn xin việc chính thức.",
+     "ja": "5年後、どうなっていたいですか。キャリアプランを教えてください。",
+     "vi": "5 năm nữa bạn muốn trở thành người thế nào? Hãy cho biết kế hoạch nghề nghiệp của bạn."
+    },
+    {
+     "t": "Hỏi – đáp: Vì sao muốn làm việc ở Nhật / ở công ty Nhật? (câu hỏi khó)",
+     "d": "Câu đặc thù với người nước ngoài. Tránh trả lời duy nhất 'vì lương cao hơn Việt Nam' — hãy nói về điều muốn HỌC và muốn XÂY DỰNG ở Nhật: tác phong, kỹ thuật, cách làm việc nhóm, kế hoạch dài hạn. TRẢ LỜI MẪU: 「日本で働きたい理由は、日本の仕事の進め方を身につけたいからです。時間や約束を守ること、チームで確認し合う文化は、ベトナムで働いていたときから尊敬していました。日本での経験を積んで、将来は両国をつなぐ仕事ができるようになりたいです。」Dịch mẫu: 'Lý do tôi muốn làm việc ở Nhật là vì muốn học được cách tiến hành công việc của Nhật. Văn hóa giữ đúng giờ giấc, lời hứa và xác nhận lẫn nhau trong nhóm là điều tôi ngưỡng mộ từ khi còn làm việc ở Việt Nam. Tôi muốn tích lũy kinh nghiệm ở Nhật để tương lai làm được công việc kết nối hai nước.'",
+     "ja": "なぜ日本で働きたいのですか。なぜ日本の会社なのですか。",
+     "vi": "Vì sao bạn muốn làm việc ở Nhật? Vì sao lại là công ty Nhật?"
+    },
+    {
+     "t": "Hỏi – đáp: Thành tựu tự hào nhất / thất bại lớn nhất",
+     "d": "Thành tựu: chọn việc có con số và vai trò của BẠN rõ ràng (dùng 'tôi đã...' chứ không chỉ 'nhóm tôi...'). Thất bại: chọn thất bại thật nhưng đã sửa được, dành nửa câu trả lời cho bài học và cách làm khác đi sau đó. TRẢ LỜI MẪU (thất bại): 「一番の失敗は、確認不足で納期が遅れたことです。進み具合を自分だけで判断し、報告が遅れました。それ以来、分からない点は早めに確認し、進捗は週に一度必ず報告するようにしています。その後は納期遅れを起こしていません。」Dịch mẫu: 'Thất bại lớn nhất của tôi là để trễ hạn giao việc vì xác nhận không đầy đủ. Tôi tự mình phán đoán tiến độ nên báo cáo bị chậm. Từ đó, điểm nào chưa rõ tôi xác nhận sớm, và tiến độ nhất định báo cáo mỗi tuần một lần. Sau đó tôi không để xảy ra trễ hạn nữa.'",
+     "ja": "これまでで一番の成果と、一番の失敗を教えてください。",
+     "vi": "Hãy cho biết thành tựu lớn nhất và thất bại lớn nhất của bạn từ trước đến nay."
+    },
+    {
+     "t": "Hỏi – đáp: Khi ý kiến trong nhóm khác nhau / khi công việc khó, bạn làm thế nào?",
+     "d": "Công ty Nhật coi trọng hòa hợp nhóm (チームワーク) và 報連相 (hōrensō — báo cáo, liên lạc, trao đổi). Trả lời bằng một ví dụ ngắn theo thứ tự: lắng nghe → trao đổi → thống nhất → báo cáo cấp trên nếu cần. TRẢ LỜI MẪU: 「意見が違うときは、まず相手の考えを最後まで聞きます。そのうえで、目的に合う方法を一緒に考え、決まらないときは上司に相談します。感情的にならず、仕事の目的を中心に話すことを大切にしています。」Dịch mẫu: 'Khi ý kiến khác nhau, trước hết tôi nghe hết ý kiến của đối phương. Sau đó cùng nhau nghĩ cách phù hợp với mục đích công việc, và khi không quyết được thì trao đổi với cấp trên. Tôi coi trọng việc không để cảm xúc chi phối và luôn nói chuyện xoay quanh mục đích công việc.'",
+     "ja": "チームで意見が合わないときは、どうしますか。",
+     "vi": "Khi ý kiến trong nhóm không thống nhất, bạn sẽ làm thế nào?"
+    },
+    {
+     "t": "Hỏi – đáp: Lương mong muốn / thương lượng lương nói sao cho khéo?",
+     "d": "Ở Nhật, vòng 1 ít khi chốt lương; lương thường chốt ở thư mời nhận việc (内定通知書, naitei tsūchisho / オファー). Khi bị hỏi sớm, đừng ra giá cứng nhắc: nêu một KHOẢNG dựa trên lương hiện tại + mặt bằng thị trường, và nhấn mạnh 'ưu tiên nội dung công việc, xin theo quy định công ty'. CÂU MẪU KHÉO: 「現在の年収は380万円ほどです。希望としては400万円前後を考えていますが、仕事内容や貴社の規定を優先したいと思っていますので、ご相談できればと思います。」Dịch: 'Thu nhập năm hiện tại của tôi khoảng 3,8 triệu yên. Mong muốn của tôi là khoảng 4 triệu yên, nhưng tôi muốn ưu tiên nội dung công việc và quy định của quý công ty, nên rất mong được trao đổi thêm.' Khi đã có 内定 mà muốn thương lượng: chỉ đề xuất MỘT lần, bằng mail lịch sự, có lý do (kinh nghiệm/chứng chỉ cụ thể), và chấp nhận kết quả cuối cùng — thương lượng đi lại nhiều lần bị đánh giá rất xấu ở Nhật. Không bao giờ dùng lời mời của công ty khác ra để ép giá một cách lộ liễu.",
+     "ja": "希望年収を教えてください。",
+     "vi": "Hãy cho biết mức thu nhập năm bạn mong muốn."
+    },
+    {
+     "t": "Hỏi – đáp: Khi nào đi làm được? Có đang ứng tuyển nơi khác không?",
+     "d": "Hai câu này hay đi cùng nhau ở vòng cuối. Đi làm được: tính theo thời gian báo nghỉ ở công ty hiện tại (ở Nhật thường báo trước 1–2 tháng theo nội quy; theo luật tối thiểu 2 tuần nhưng nên theo nội quy để giữ quan hệ). Ứng tuyển nơi khác: nói thật là có/không ở mức khái quát, không cần kể tên công ty, và khẳng định công ty này là nguyện vọng cao nhất nếu đúng vậy. TRẢ LỜI MẪU: 「現在の会社の退職手続きがありますので、内定をいただければ、1か月後を目安に入社できます。他社も選考中ですが、貴社が第一志望です。結果をいただければ、すぐに決断します。」Dịch mẫu: 'Vì còn thủ tục nghỉ việc ở công ty hiện tại, nếu được nhận, tôi có thể vào làm sau khoảng 1 tháng. Tôi cũng đang trong quá trình tuyển chọn ở nơi khác, nhưng quý công ty là nguyện vọng số một của tôi. Nếu nhận được kết quả, tôi sẽ quyết định ngay.'",
+     "ja": "入社可能時期はいつですか。他社の選考状況はどうですか。",
+     "vi": "Bạn có thể vào làm từ khi nào? Tình hình ứng tuyển ở các công ty khác thế nào?"
+    },
+    {
+     "t": "Hỏi – đáp: Đặt câu hỏi ngược — khi được hỏi 'Bạn có câu hỏi gì không?'",
+     "d": "Câu 「質問はありますか」(bạn có câu hỏi không) LUÔN xuất hiện cuối buổi — trả lời 'không có gì' bị hiểu là không quan tâm. Chuẩn bị sẵn 2–3 câu, hỏi 1–2 câu phù hợp vòng phỏng vấn: vòng 1 hỏi về công việc cụ thể và nhóm; vòng cuối hỏi về hướng phát triển và kỳ vọng với vị trí. CÂU MẪU TỐT: 「入社後、最初の半年で特に期待される役割を教えてください。」(Xin cho biết vai trò được kỳ vọng nhất trong nửa năm đầu sau khi vào công ty.) Hoặc: 「配属先のチームの人数と、外国籍の社員の有無を教えてください。」(Xin cho biết số người trong nhóm sẽ được phân vào, và có nhân viên người nước ngoài không.) Tránh hỏi ngay ở vòng 1 về số ngày nghỉ, tăng ca, tăng lương — những điều đó hỏi khi nhận 内定 hoặc hỏi agent.",
+     "ja": "最後に、何か質問はありますか。",
+     "vi": "Cuối cùng, bạn có câu hỏi gì (cho chúng tôi) không? — Đây là lúc BẠN đặt câu hỏi ngược."
+    },
+    {
+     "t": "Bước 4: Trang phục, tác phong trực tiếp và phỏng vấn online kết hợp",
+     "d": "Trực tiếp: vest tối màu, đến sớm 10 phút, vào phòng theo đúng nghi thức (gõ cửa 3 lần, 失礼します, chờ mời mới ngồi), xưng hô bằng họ + chức danh/様, ghi chép khi họ nói về điều kiện — ghi chép được coi là nghiêm túc. Online (nhiều công ty làm vòng 1 qua Zoom/Teams): trang phục vẫn vest đầy đủ như trực tiếp, ngồi nơi yên tĩnh phông gọn, nhìn vào camera khi nói, vào phòng họp trước 5 phút, chuẩn bị sẵn phương án khi rớt mạng (xem thêm bài phỏng vấn online trong chuyên mục này). Dù online hay trực tiếp: không đến trễ, không vừa phỏng vấn vừa làm việc khác, và sau mỗi vòng đều giữ liên lạc phản hồi mail trong vòng 24 giờ.",
+     "ja": "本日は貴重なお時間をいただき、ありがとうございました。",
+     "vi": "Hôm nay xin cảm ơn quý công ty đã dành thời gian quý báu cho tôi. (câu cảm ơn cuối buổi, dùng cả trực tiếp lẫn online)"
+    },
+    {
+     "t": "Bước 5: Mail cảm ơn sau phỏng vấn — mẫu hoàn chỉnh",
+     "d": "Gửi mail cảm ơn (お礼メール) trong ngày hôm đó hoặc chậm nhất sáng hôm sau, gửi cho người phụ trách tuyển dụng (hoặc qua agent nếu ứng tuyển qua agent — khi đó nhờ agent chuyển lời). MẪU HOÀN CHỈNH (tên hư cấu):\nTiêu đề: 面接のお礼（グエン・ヴァン・アン）\n本文: 『株式会社○○ 人事部 ○○様／お世話になっております。本日面接を受けさせていただきました、グエン・ヴァン・アンと申します。本日はお忙しい中、貴重なお時間をいただき、誠にありがとうございました。○○様のお話を伺い、貴社の○○事業への理解が深まり、志望の気持ちが一層強くなりました。ご縁がありましたら、貴社の力になれるよう努めます。まずはお礼まで申し上げます。何卒よろしくお願い申し上げます。グエン・ヴァン・アン（電話番号・メールアドレス）』\nDịch ý chính: 'Kính gửi anh/chị ○○, phòng Nhân sự Công ty ○○. Tôi là Nguyễn Văn An, người đã được phỏng vấn hôm nay. Xin chân thành cảm ơn quý công ty đã dành thời gian quý báu dù rất bận rộn. Qua câu chuyện của anh/chị, tôi hiểu sâu hơn về mảng ○○ của quý công ty và mong muốn được làm việc tại đây càng mạnh mẽ hơn. Nếu có duyên, tôi sẽ nỗ lực để đóng góp cho quý công ty. Trước hết xin gửi lời cảm ơn. Rất mong được giúp đỡ.' Lưu ý: mail chỉ cảm ơn, KHÔNG hỏi kết quả trong mail này.",
+     "ja": "面接のお礼（グエン・ヴァン・アン）",
+     "vi": "(Tiêu đề mail cảm ơn) Lời cảm ơn về buổi phỏng vấn (Nguyễn Văn An)"
+    },
+    {
+     "t": "Bước 6: Ra về, chờ kết quả và khi nhận được 内定 (thư mời nhận việc)",
+     "d": "Ra về theo nghi thức như baito nhưng trang trọng hơn: cảm ơn khi còn ngồi, đứng dậy chào 45 độ, tới cửa quay lại 「失礼します」 chào lần cuối, đóng cửa nhẹ; áo khoác chỉ mặc khi đã ra khỏi tòa nhà. Kết quả mỗi vòng thường báo sau 3–7 ngày làm việc; quá thời hạn họ nêu mà chưa có tin thì gửi MỘT mail hỏi thăm ngắn, lịch sự. Khi nhận 内定: đọc kỹ 内定通知書 và giấy điều kiện lao động (労働条件通知書) — lương, giờ làm, ngày nghỉ, địa điểm, thời gian thử việc (試用期間) — trước khi ký giấy nhận lời (内定承諾書). Song song chuẩn bị thủ tục đổi/gia hạn tư cách lưu trú nếu đổi ngành nghề: hỏi công ty danh sách giấy tờ họ sẽ cấp (hợp đồng, giấy giới thiệu công ty...) để nộp Cục Xuất nhập cảnh đúng hạn.",
+     "ja": "内定通知書と労働条件通知書を確認させてください。",
+     "vi": "Xin cho tôi kiểm tra thư mời nhận việc và bản thông báo điều kiện lao động."
+    }
+   ],
+   "cost": "Ứng tuyển và phỏng vấn việc chính thức: miễn phí (qua Hello Work, trang tuyển dụng của công ty, hoặc sự kiện việc làm). Dùng công ty giới thiệu việc làm (転職エージェント) cũng miễn phí cho người tìm việc — phía công ty tuyển dụng trả phí cho agent, agent hợp pháp không thu tiền của ứng viên. Chi phí tự túc: vest (có thể mua bộ cơ bản khoảng 20.000–30.000 yên hoặc rẻ hơn ở cửa hàng đồ cũ), ảnh hồ sơ, đi lại phỏng vấn.",
+   "duration": "Toàn bộ quy trình tuyển chính thức thường 3–6 tuần: sàng lọc hồ sơ 1–2 tuần, mỗi vòng phỏng vấn cách nhau khoảng 1 tuần, kết quả vòng cuối sau khoảng 3–7 ngày làm việc. Từ nhận 内定 đến ngày vào làm: thường 1–2 tháng (gồm thời gian báo nghỉ công ty cũ).",
+   "warnings": [
+    "Nếu trục trặc — sắp đến trễ phỏng vấn: gọi điện NGAY cho người phụ trách khi biết sẽ trễ (tàu dừng, đi nhầm tuyến). Nói rõ lý do ngắn gọn, trễ khoảng mấy phút, và hỏi có tiếp tục được không. Ở phỏng vấn chính thức, đến trễ không báo trước gần như đồng nghĩa bị loại.",
+    "Nếu trục trặc — không nghe rõ / không hiểu câu hỏi khó bằng tiếng Nhật: đừng đoán và trả lời lạc đề. Nói: 「申し訳ありません、確認させてください。○○という意味でしょうか」(Xin lỗi, cho tôi xác nhận lại: có phải ý anh/chị là ○○ không ạ?). Xác nhận lại câu hỏi được đánh giá là cẩn thận, không bị trừ điểm.",
+    "Nếu trục trặc — gặp câu hỏi thật sự không biết trả lời (kiến thức chuyên môn chưa có): nói thật phần mình biết, phần chưa biết sẽ học thế nào, tuyệt đối không bịa kinh nghiệm không có. Hồ sơ và kinh nghiệm bịa sẽ lộ ở vòng sau hoặc khi vào làm, và có thể bị hủy 内定.",
+    "Nếu trục trặc — bị hỏi câu riêng tư không liên quan công việc (kế hoạch kết hôn, sinh con, tôn giáo...): theo hướng dẫn tuyển dụng công bằng của Bộ Y tế, Lao động và Phúc lợi, đây là những câu không nên hỏi. Bạn có thể trả lời khéo léo ở mức chung: 「仕事に支障のないよう計画しています」(Tôi có kế hoạch để không ảnh hưởng đến công việc) rồi lái về chủ đề công việc, không cần căng thẳng tranh luận tại chỗ.",
+    "Không nói xấu công ty cũ, sếp cũ trong mọi trường hợp; không tiết lộ thông tin nội bộ/mật của công ty cũ khi được hỏi về kinh nghiệm — chỉ nói ở mức nhiệm vụ và kết quả của bản thân.",
+    "Cảnh giác tin tuyển dụng 'lương cao bất thường, không cần tiếng Nhật, không cần kinh nghiệm, vào làm ngay không phỏng vấn': kiểm tra tên công ty, địa chỉ, giấy phép giới thiệu việc làm trên trang chính thức trước khi nộp giấy tờ cá nhân; không đóng bất kỳ khoản phí nào để 'được nhận việc'.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Sau mỗi vòng: đã gửi mail cảm ơn trong vòng 24 giờ và ghi lại nội dung đã trao đổi, tên người phỏng vấn, điểm cần sửa cho vòng sau",
+    "Đã rõ lịch trình tiếp theo: còn mấy vòng, kết quả báo khi nào, qua mail hay qua agent",
+    "Khi nhận 内定: đã đọc kỹ lương, giờ làm, ngày nghỉ, địa điểm làm việc, thời gian thử việc trên văn bản trước khi ký nhận",
+    "Đã hỏi công ty danh sách giấy tờ họ cấp để đổi/gia hạn tư cách lưu trú (nếu cần) và nắm được hạn nộp hồ sơ",
+    "Đã lên kế hoạch báo nghỉ công ty hiện tại theo nội quy (thường trước 1–2 tháng) và bàn giao công việc gọn gàng — giữ quan hệ tốt đến ngày cuối",
+    "Đã chuẩn bị cho ngày đầu đi làm: tuyến đường, giờ có mặt, giấy tờ ngày đầu cần nộp (thẻ lưu trú, thông tin My Number, tài khoản ngân hàng...)"
+   ],
+   "vocab": [
+    {
+     "ja": "正社員",
+     "reading": "せいしゃいん",
+     "vi": "Nhân viên chính thức (biên chế)"
+    },
+    {
+     "ja": "転職",
+     "reading": "てんしょく",
+     "vi": "Chuyển việc (đổi công ty)"
+    },
+    {
+     "ja": "志望動機",
+     "reading": "しぼうどうき",
+     "vi": "Lý do ứng tuyển"
+    },
+    {
+     "ja": "自己PR",
+     "reading": "じこぴーあーる",
+     "vi": "Tự giới thiệu, quảng bá điểm mạnh của bản thân"
+    },
+    {
+     "ja": "職務経歴書",
+     "reading": "しょくむけいれきしょ",
+     "vi": "Bản mô tả kinh nghiệm làm việc (nộp kèm履歴書 khi chuyển việc)"
+    },
+    {
+     "ja": "書類選考",
+     "reading": "しょるいせんこう",
+     "vi": "Sàng lọc hồ sơ"
+    },
+    {
+     "ja": "一次面接",
+     "reading": "いちじめんせつ",
+     "vi": "Phỏng vấn vòng 1"
+    },
+    {
+     "ja": "最終面接",
+     "reading": "さいしゅうめんせつ",
+     "vi": "Phỏng vấn vòng cuối (thường với lãnh đạo)"
+    },
+    {
+     "ja": "内定",
+     "reading": "ないてい",
+     "vi": "Quyết định tuyển dụng / thư mời nhận việc"
+    },
+    {
+     "ja": "年収",
+     "reading": "ねんしゅう",
+     "vi": "Thu nhập theo năm"
+    },
+    {
+     "ja": "試用期間",
+     "reading": "しようきかん",
+     "vi": "Thời gian thử việc"
+    },
+    {
+     "ja": "報連相",
+     "reading": "ほうれんそう",
+     "vi": "Báo cáo – liên lạc – trao đổi (nguyên tắc làm việc nhóm của Nhật)"
+    },
+    {
+     "ja": "人事部",
+     "reading": "じんじぶ",
+     "vi": "Phòng nhân sự"
+    },
+    {
+     "ja": "労働条件通知書",
+     "reading": "ろうどうじょうけんつうちしょ",
+     "vi": "Bản thông báo điều kiện lao động (lương, giờ làm, ngày nghỉ...)"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "本日はよろしくお願いいたします。",
+     "vi": "Hôm nay rất mong được quý công ty giúp đỡ. (chào đầu buổi, trang trọng)"
+    },
+    {
+     "ja": "申し訳ありません、確認させてください。",
+     "vi": "Xin lỗi, cho phép tôi xác nhận lại (câu hỏi) ạ. (khi chưa hiểu rõ câu hỏi)"
+    },
+    {
+     "ja": "少し考えさせてください。",
+     "vi": "Cho tôi suy nghĩ một chút ạ. (câu đệm trước câu hỏi khó)"
+    },
+    {
+     "ja": "入社後、最初の半年で特に期待される役割を教えてください。",
+     "vi": "Xin cho biết vai trò được kỳ vọng nhất trong nửa năm đầu sau khi vào công ty. (câu hỏi ngược mẫu)"
+    },
+    {
+     "ja": "貴社が第一志望です。",
+     "vi": "Quý công ty là nguyện vọng số một của tôi."
+    },
+    {
+     "ja": "お忙しい中、お時間をいただき、誠にありがとうございました。",
+     "vi": "Xin chân thành cảm ơn quý công ty đã dành thời gian dù rất bận rộn. (cảm ơn cuối buổi / mở đầu mail cảm ơn)"
+    },
+    {
+     "ja": "ご連絡をお待ちしております。",
+     "vi": "Tôi rất mong nhận được liên lạc từ quý công ty. (kết mail lịch sự)"
+    },
+    {
+     "ja": "失礼いたします。",
+     "vi": "Tôi xin phép ạ. (nói khi vào phòng và khi ra về ở cửa)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Mynavi Tenshoku — Tổng hợp対策 phỏng vấn chuyển việc: câu hỏi, trả lời mẫu, tác phong",
+     "url": "https://tenshoku.mynavi.jp/knowhow/mensetsu/"
+    },
+    {
+     "label": "Mynavi Agent (tân tốt nghiệp) — Cách vào/ra phòng phỏng vấn đúng tác phong",
+     "url": "https://shinsotsu.mynavi-agent.jp/knowhow/article/entering-leaving/"
+    },
+    {
+     "label": "Hello Work Sapporo (Bộ Y tế, Lao động và Phúc lợi) — Tác phong phỏng vấn cần nhớ",
+     "url": "https://jsite.mhlw.go.jp/hokkaido-hellowork/list/sapporo/shisetsu/shinsotsu-column3.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "履歴書",
+     "name_vi": "Sơ yếu lý lịch (rirekisho)",
+     "download_url": "https://www.hellowork.mhlw.go.jp/member/career_doc01.html",
+     "source": "ハローワーク (厚生労働省)",
+     "format": "web",
+     "fill": [
+      {
+       "field": "日付 (ngày viết hồ sơ)",
+       "how": "Ghi ngày nộp hồ sơ hoặc ngày phỏng vấn. Thống nhất một kiểu năm trong toàn bản.",
+       "example": "2026年11月10日現在",
+       "mistake": "Gửi lại bản cũ ghi ngày từ vài tháng trước mà không sửa."
+      },
+      {
+       "field": "氏名・ふりがな (họ tên và cách đọc)",
+       "how": "Ghi họ tên đúng như thẻ lưu trú và hộ chiếu. Ô furigana ghi cách đọc katakana cho tên nước ngoài.",
+       "example": "氏名：グエン・バン・アン ／ ふりがな：グエン・バン・アン",
+       "mistake": "Thứ tự họ tên khác nhau giữa rirekisho và 職務経歴書."
+      },
+      {
+       "field": "生年月日・満年齢 (ngày sinh và tuổi tròn)",
+       "how": "Ghi ngày sinh và tuổi tròn tại ngày viết hồ sơ. Ô giới tính 性別 trong mẫu mới của Bộ là tùy chọn, có thể để trống.",
+       "example": "1998年5月12日生 （満28歳）",
+       "mistake": "Ghi tuổi sai do không cập nhật theo ngày nộp mới."
+      },
+      {
+       "field": "写真 (ảnh thẻ)",
+       "how": "Dán ảnh 4x3 cm chụp trong 3 tháng. Mặc vest hoặc áo trang trọng trong ảnh. Ghi họ tên sau ảnh trước khi dán.",
+       "example": "Ảnh mặc áo sơ mi và vest tối màu, nền trắng, chụp trong tháng này",
+       "mistake": "Dùng ảnh mặc áo thường hoặc ảnh cũ khác hẳn diện mạo hiện tại."
+      },
+      {
+       "field": "現住所・郵便番号 (địa chỉ hiện tại và mã bưu điện)",
+       "how": "Ghi đúng như thẻ lưu trú, đủ số phòng. Nếu mới chuyển nhà, cập nhật thẻ lưu trú trước rồi mới ghi.",
+       "example": "〒211-0063 神奈川県川崎市中原区小杉町2-3-4 サンプルマンション101号室",
+       "mistake": "Ghi địa chỉ cũ chưa đăng ký chuyển đến."
+      },
+      {
+       "field": "電話・メールアドレス (số điện thoại và email)",
+       "how": "Ghi số di động và email chuyên nghiệp, kiểm tra hộp thư mỗi ngày trong thời gian ứng tuyển. Tránh email có biệt danh khó hiểu.",
+       "example": "電話：090-1234-5678 ／ メール：an.nguyen.sample@example.com",
+       "mistake": "Để hộp thư đầy hoặc không kiểm tra thư rác, bỏ lỡ mail hẹn phỏng vấn."
+      },
+      {
+       "field": "連絡先 (địa chỉ liên lạc khác)",
+       "how": "Chỉ ghi khi địa chỉ nhận liên lạc khác địa chỉ hiện tại. Không có thì để trống.",
+       "example": "記入なし（現住所と同じ）",
+       "mistake": "Ghi địa chỉ công ty hiện tại khi chưa muốn công ty biết việc chuyển việc."
+      },
+      {
+       "field": "学歴 (quá trình học)",
+       "how": "Ghi từ trường cuối ở Việt Nam trở đi, mỗi trường một dòng: nhập học, tốt nghiệp. Ghi tên trường đầy đủ, không viết tắt. Nhóm học vấn ghi riêng, không trộn với việc làm.",
+       "example": "2016年9月 ○○大学 入学 ／ 2020年6月 ○○大学 卒業（ベトナム）",
+       "mistake": "Trộn lẫn dòng học vấn và dòng việc làm trong cùng một nhóm."
+      },
+      {
+       "field": "職歴 (quá trình làm việc)",
+       "how": "Ghi từng công ty một dòng theo thứ tự thời gian: vào công ty, việc được giao nếu cần, nghỉ việc. Công ty đang làm ghi 現在に至る (đến nay). Cuối phần ghi 以上 ở góc phải. Tên công ty ghi đầy đủ dạng pháp nhân, không viết tắt.",
+       "example": "2020年7月 ○○部品製造株式会社 入社 ／ 2022年6月 同社 退社 ／ 2023年4月 株式会社○○介護サービス 入社 ／ 現在に至る ／ 以上",
+       "mistake": "Bỏ sót một quãng thời gian dài mà không giải thích được khi phỏng vấn."
+      },
+      {
+       "field": "免許・資格 (bằng cấp, chứng chỉ)",
+       "how": "Ghi theo thứ tự thời gian đạt được: JLPT, chứng chỉ chuyên môn, bằng lái xe. Ghi đúng tên chính thức và năm tháng đạt. Với ngành kaigo, ghi rõ chứng chỉ như 介護職員初任者研修 nếu đã có.",
+       "example": "2022年12月 日本語能力試験 N2 合格 ／ 2024年3月 介護職員初任者研修 修了",
+       "mistake": "Ghi tên chứng chỉ theo cách gọi tắt ở Việt Nam khiến phía Nhật không tra được."
+      },
+      {
+       "field": "志望の動機 (lý do ứng tuyển)",
+       "how": "Viết theo thứ tự: kết luận muốn làm gì ở công ty này, lý do chọn ngành, lý do chọn đúng công ty này, mình đóng góp được gì. Viết 4-6 câu, có ít nhất một chi tiết chỉ công ty này mới có.",
+       "example": "地域に根ざした介護と資格取得支援に力を入れている貴社で、高齢者の生活を支える仕事を長く続けたいと考え、応募しました。",
+       "mistake": "Chỉ nêu lương, gần nhà, công ty lớn. Đây là lý do ai cũng nói được."
+      },
+      {
+       "field": "特技・アピールポイント (kỹ năng đặc biệt và điểm mạnh tự giới thiệu)",
+       "how": "Nêu một, hai điểm mạnh có ví dụ và con số. Ví dụ giảm lỗi hồ sơ, phụ trách bao nhiêu người, học được chứng chỉ trong bao lâu. Tránh liệt kê tính từ suông.",
+       "example": "記録のミスを月5件から1件に減らした経験があります。粘り強く学び続けることが強みです。",
+       "mistake": "Viết dài như bài văn nhưng không có ví dụ thật nào."
+      },
+      {
+       "field": "本人希望記入欄 (ô nguyện vọng của bản thân: lương, vị trí, giờ làm, nơi làm)",
+       "how": "Nếu công ty không yêu cầu ghi cụ thể, ghi theo quy định của công ty. Chỉ ghi nguyện vọng thật sự cần thiết, ví dụ nơi làm việc hoặc ngày bắt đầu làm được. Không ghi đòi hỏi lương cao ngay ở vòng hồ sơ.",
+       "example": "貴社の規定に従います。勤務地は神奈川県内を希望します。",
+       "mistake": "Ghi mức lương mong muốn cao hơn hẳn khung lương trong tin tuyển dụng."
+      }
+     ],
+     "sample_note": "Ví dụ trong mục này là hư cấu hoàn toàn: グエン・バン・アン, sinh 1998年5月12日, làm việc tại nhà máy ở Việt Nam 2 năm rồi sang Nhật làm kaigo 1 năm. Đây chỉ là ví dụ để học cách ghi, không phải hồ sơ của người thật. Trang Hello Work ở link trên có mẫu 厚生労働省履歴書様式例 để tải về, gồm bản PDF版 (A3 và A4) và bản Excel版 (A3 và A4). Khi chuyển việc, rirekisho phải khớp từng ngày tháng với 職務経歴書 ở mục dưới. Sai lệch ngày tháng giữa hai bản là lỗi hay bị hỏi nhất ở vòng phỏng vấn."
+    },
+    {
+     "name_jp": "職務経歴書",
+     "name_vi": "Bản kinh nghiệm làm việc (shokumu keirekisho)",
+     "download_url": "https://www.hellowork.mhlw.go.jp/doc/syokurekisyo_pamphlet_202406.pdf",
+     "source": "ハローワーク (厚生労働省)",
+     "format": "PDF",
+     "fill": [
+      {
+       "field": "標題・日付・氏名 (tiêu đề, ngày viết, họ tên)",
+       "how": "Đầu trang ghi giữa: 職務経歴書. Góc phải ghi ngày viết và họ tên. Khổ giấy A4 dọc, dài 1-2 trang, đánh máy là chính. Ngày và họ tên phải khớp rirekisho.",
+       "example": "職務経歴書 ／ 2026年11月10日 ／ グエン・バン・アン",
+       "mistake": "Ngày viết khác ngày trên rirekisho nộp cùng đợt."
+      },
+      {
+       "field": "職務要約 (tóm tắt kinh nghiệm làm việc)",
+       "how": "Viết 3-4 câu ở đầu bản. Tóm toàn bộ chặng đường: làm gì, bao nhiêu năm, ở đâu, điểm mạnh chính. Người đọc nhìn mục này là hiểu bạn là ai trong 10 giây.",
+       "example": "ベトナムの部品工場で生産管理を2年経験した後、来日し介護施設で介護業務に1年従事しました。記録作成と利用者対応が強みです。",
+       "mistake": "Sao chép nguyên phần giới thiệu bản thân trong phỏng vấn vào đây, dài và lan man."
+      },
+      {
+       "field": "職務経歴 (danh sách các nơi đã làm, theo thời gian)",
+       "how": "Mỗi công ty ghi thành một khối riêng: thời gian làm, tên công ty đầy đủ, quy mô công ty nếu biết, bộ phận được giao. Xếp việc mới nhất lên trước hoặc theo thứ tự cũ đến mới, thống nhất một kiểu.",
+       "example": "2023年4月～現在 株式会社○○介護サービス（デイサービス、職員30名）／ 2020年7月～2022年6月 ○○部品製造株式会社（ベトナム）",
+       "mistake": "Chỉ ghi tên công ty mà không ghi thời gian và bộ phận."
+      },
+      {
+       "field": "職務内容 (nội dung công việc chi tiết)",
+       "how": "Dưới mỗi công ty, gạch đầu dòng ghi việc cụ thể đã làm. Viết ngắn, kết câu bằng danh từ theo văn phong hồ sơ Nhật, ví dụ 送迎補助を担当. Nêu rõ phạm vi: phụ trách bao nhiêu người, dùng máy móc hay hệ thống gì.",
+       "example": "利用者15名の食事・入浴介助、送迎補助、介護記録の作成を担当",
+       "mistake": "Viết chung chung như phụ trách công việc chăm sóc mà không nói rõ làm việc gì."
+      },
+      {
+       "field": "実績 (thành tích, kết quả có con số)",
+       "how": "Ghi kết quả đo được: giảm lỗi bao nhiêu, rút ngắn thời gian bao nhiêu, được giao thêm việc gì. Không có con số lớn vẫn ghi được thay đổi nhỏ có thật. Tuyệt đối không bịa số.",
+       "example": "記録の書き方を統一し、記録ミスを月5件から1件に削減",
+       "mistake": "Ghi thành tích của cả nhóm như thành tích của riêng mình."
+      },
+      {
+       "field": "活かせる経験・知識・スキル (kinh nghiệm, kiến thức, kỹ năng dùng được ở nơi mới)",
+       "how": "Chọn 3-4 mục liên quan trực tiếp đến công việc đang ứng tuyển. Mỗi mục một dòng: kỹ năng gì, đã dùng ở đâu, dùng tiếp ở nơi mới thế nào. Đây là cầu nối giữa quá khứ và công ty mới.",
+       "example": "介護記録の正確な作成、日本語での利用者対応、ベトナム人実習生への通訳・指導補助",
+       "mistake": "Liệt kê mọi kỹ năng mình có, kể cả kỹ năng không liên quan đến việc ứng tuyển."
+      },
+      {
+       "field": "免許・資格 (bằng cấp, chứng chỉ)",
+       "how": "Liệt kê lại chứng chỉ theo bảng: tên chứng chỉ, thời gian đạt. Chỉ ghi chứng chỉ liên quan hoặc chứng chỉ tiếng Nhật. Chi tiết ngày tháng lấy đúng như trên rirekisho.",
+       "example": "日本語能力試験 N2（2022年12月）／ 介護職員初任者研修 修了（2024年3月）",
+       "mistake": "Ghi khác ngày tháng so với rirekisho."
+      },
+      {
+       "field": "自己PR (tự giới thiệu điểm mạnh)",
+       "how": "Viết 4-5 câu văn lịch sự, thể です・ます. Cấu trúc: điểm mạnh, ví dụ đã chứng minh, cách dùng điểm mạnh đó ở công ty mới. Khác với rirekisho ở chỗ được viết dài và cụ thể hơn.",
+       "example": "私の強みは粘り強く学び続けることです。前職では半年間記録の書き方をノートにまとめ、ミスを減らしました。貴社でも早く業務を覚え、戦力になりたいと考えています。",
+       "mistake": "Dùng lại nguyên văn phần アピールポイント trong rirekisho."
+      },
+      {
+       "field": "志望動機 (lý do ứng tuyển, nếu đưa vào bản này)",
+       "how": "Có thể ghi ngắn ở cuối bản nếu công ty yêu cầu hoặc nếu muốn nhấn mạnh. Chỉ ghi 3-4 câu riêng cho công ty này. Mỗi công ty ứng tuyển viết lại mục này, không dùng chung một bản cho mọi nơi.",
+       "example": "貴社が地域に根ざしたケアを大切にしている点に共感し、これまでの介護経験を生かして長く働きたいと考えました。",
+       "mistake": "Gửi cùng một bản giống hệt cho nhiều công ty, còn sót tên công ty khác."
+      }
+     ],
+     "sample_note": "Ví dụ trong mục này là hư cấu hoàn toàn, dùng cùng nhân vật mẫu グエン・バン・アン: làm ở nhà máy tại Việt Nam 2 năm, sang Nhật làm kaigo 1 năm. 職務経歴書 không có mẫu cố định như rirekisho. Hello Work giải thích đây là giấy tự do về hình thức, viết trên giấy A4 trắng 1-2 trang. Link trên là tài liệu hướng dẫn chính thức 職務経歴書の作り方 của Hello Work (Bộ Y tế, Lao động và Phúc lợi), có cấu trúc và ví dụ mẫu để làm theo. Mỗi công ty ứng tuyển phải sửa lại bản này cho phù hợp, nhất là mục 活かせる経験 và 志望動機. In xong nhớ giữ một bản sao để ôn trước phỏng vấn, vì câu hỏi phỏng vấn thường bám sát bản này."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "マイナビ転職",
+     "lang": "ja",
+     "note": "Kênh chính thức Mynavi: 5 câu hỏi lớn gồm志望動機 và自己PR kèm câu trả lời mẫu.",
+     "title": "〖転職面接〗5大質問・対策のポイントと回答例～明日から使える！実践術～",
+     "url": "https://www.youtube.com/watch?v=jEXt4xBeD54"
+    },
+    {
+     "channel": "マイナビ転職",
+     "lang": "ja",
+     "note": "Chuyên sâu riêng về志望動機: cách nghiên cứu công ty và cách gom ý thành câu trả lời thuyết phục.",
+     "title": "面接突破率UP！必ず聞かれる質問５項目〜志望動機編〜",
+     "url": "https://www.youtube.com/watch?v=DXsqdBy9Lq8"
+    },
+    {
+     "channel": "大企業転職チャンネル",
+     "lang": "ja",
+     "note": "Cách xây dựng自己PR được đánh giá cao và 3 lỗi NG cần tránh, theo góc nhìn của nhà tuyển dụng.",
+     "title": "〖転職面接〗評価される自己PRと避けるべきNG3選とは？面接官が見ている再現性のポイントと自己PRの作り方を転職のプロが徹底解説！〖大企業転職／キャリア転職／STAR法／面接対策／転職活動／志望動機〗",
+     "url": "https://www.youtube.com/watch?v=Mr22EBLr0x0"
+    }
+   ]
+  },
+  {
+   "id": "phong-van-online-tu-viet-nam",
+   "group": "Phỏng vấn xin việc",
+   "title": "Phỏng vấn online với công ty Nhật khi đang ở Việt Nam （オンライン面接）",
+   "icon": "💻",
+   "summary": "Nhiều công ty Nhật tuyển kỹ năng đặc định (特定技能), kỹ sư và thực tập sinh bằng phỏng vấn online (Web面接) ngay khi ứng viên còn ở Việt Nam. Khác biệt lớn nhất: mọi ấn tượng truyền qua màn hình và đường truyền, lại lệch múi giờ 2 tiếng. Bài này chuẩn bị từ thiết bị, ánh sáng, cách nói qua camera đến ngân hàng hỏi–đáp đặc thù cho người ở Việt Nam.",
+   "who": "Người đang ở Việt Nam chuẩn bị phỏng vấn online với công ty Nhật hoặc nghiệp đoàn/phía tiếp nhận: ứng viên kỹ năng đặc định (特定技能, tokutei ginō), kỹ sư (技人国), thực tập sinh kỹ năng (技能実習), và cả người phỏng vấn vòng đầu từ Việt Nam cho việc chính thức tại Nhật.",
+   "docs": [
+    "Sơ yếu lý lịch tiếng Nhật (履歴書, rirekisho) và bản tự giới thiệu đã gửi cho phía Nhật — in ra để trước mặt, nội dung nói trong buổi phải khớp hồ sơ đã nộp",
+    "Hộ chiếu (còn hạn ít nhất 1 năm là an toàn) và các chứng chỉ đã có: JLPT hoặc chứng chỉ tiếng Nhật tương đương, chứng chỉ kỹ năng đặc định (特定技能評価試験) / chứng chỉ tay nghề nếu diện của bạn yêu cầu",
+    "Đường link phòng họp online và/hoặc ID + mật khẩu phòng (Zoom/Teams/Google Meet...) nhận từ công ty phái cử hoặc phía Nhật — lưu cả trong điện thoại dự phòng",
+    "Tên công ty Nhật, tên người phụ trách và số điện thoại/email liên lạc khẩn cấp (cả phía Việt Nam và phía Nhật) — để khi rớt mạng thì liên lạc ngay được",
+    "Tai nghe có mic (イヤホン/ヘッドセット) đã test, bộ sạc laptop và điện thoại, và một thiết bị dự phòng (điện thoại với 4G đầy) sẵn sàng thay thế máy tính",
+    "Sổ ghi chú + bút đặt sẵn cạnh máy, tờ giấy ghi các câu trả lời mẫu đã chuẩn bị và danh sách câu muốn hỏi lại",
+    "Thông tin múi giờ đã quy đổi sẵn: giờ hẹn theo giờ Nhật và giờ Việt Nam viết cạnh nhau (ví dụ Nhật 10:00 = Việt Nam 8:00) — tránh nhầm lẫn chết người"
+   ],
+   "prep_home": [
+    "Đặt máy ở phòng yên tĩnh, cửa đóng được, báo trước với gia đình giờ phỏng vấn để không ai vào phòng/gọi tên giữa buổi; phông nền sau lưng là tường trống hoặc rèm trơn, dọn hết đồ đạc bừa bộn trong khung hình",
+    "Ánh sáng: ngồi ĐỐI DIỆN nguồn sáng (cửa sổ hoặc đèn đặt trước mặt), tuyệt đối không ngồi quay lưng ra cửa sổ vì mặt sẽ tối đen; test trên camera trước để mặt sáng đều, rõ mắt",
+    "Vị trí máy: camera ngang tầm mắt (kê sách/nâng laptop), khung hình lấy từ giữa ngực trở lên, ngồi cách máy khoảng một cánh tay; ghế chắc chắn, không dùng ghế xoay lung lay",
+    "Test đường truyền trước ít nhất 1 ngày và 30 phút trước buổi thật: vào thử phòng họp, kiểm tra mic (nói thử và nghe lại), loa/tai nghe, hình ảnh; đóng mọi ứng dụng nặng, nhờ người nhà hạn chế xem video/truyền hình trực tuyến trong giờ phỏng vấn",
+    "Trang phục như phỏng vấn trực tiếp: vest hoặc sơ mi + cà vạt (nam), áo có cổ gọn gàng (nữ), tóc tai gọn — dù chỉ thấy nửa người trên, tác phong vẫn được đánh giá qua trang phục và tư thế ngồi",
+    "Chuẩn bị sẵn câu trả lời cho các câu hỏi đặc thù (vì sao sang Nhật, làm bao lâu, gia đình có đồng ý, chịu được xa nhà/khí hậu không...) theo ngân hàng hỏi–đáp trong bài, tập nói chậm và rõ — qua mạng, nói nhanh là nghe không kịp",
+    "Quy đổi giờ hẹn hai lần: Nhật nhanh hơn Việt Nam 2 giờ (Nhật 14:00 = Việt Nam 12:00 cùng ngày). Đặt báo thức theo GIỜ VIỆT NAM đã quy đổi, vào phòng họp trước 10 phút",
+    "Nếu buổi có phiên dịch (通訳, tsūyaku): luyện cách nói ngắn từng đoạn 1–2 câu rồi dừng cho phiên dịch dịch, nhìn vào camera chứ không nhìn người dịch"
+   ],
+   "steps": [
+    {
+     "t": "Bước 1: Chuẩn bị thiết bị, ánh sáng, phông nền và trang phục",
+     "d": "Thiết bị tối thiểu: laptop hoặc điện thoại đặt CỐ ĐỊNH trên bàn (không cầm tay), tai nghe có mic, nguồn điện cắm sẵn. Ánh sáng đặt trước mặt, phông nền tường trơn phía sau, khung hình từ giữa ngực lên, camera ngang mắt. Trang phục: mặc như đi phỏng vấn trực tiếp cả phần dưới (giúp bạn tự giữ tâm thế nghiêm túc), ngồi thẳng lưng, chân đặt gọn trên sàn. Tránh: ngồi ngoài quán cà phê, ban công ồn, phòng có TV đang mở, nền ảo (background ảo) lòe loẹt — chỉ dùng nền ảo trơn hoặc làm mờ nhẹ nếu nhà không có góc phù hợp. Trước giờ hẹn 30 phút, khởi động lại máy và mở sẵn phần mềm họp.",
+     "ja": "カメラとマイクのテストをさせてください。",
+     "vi": "Cho tôi kiểm tra camera và micro ạ. (câu nói khi test máy với người hỗ trợ)"
+    },
+    {
+     "t": "Bước 2: Vào phòng họp sớm và chào hỏi qua màn hình",
+     "d": "Vào phòng trước giờ hẹn 5–10 phút (theo giờ đã quy đổi sang giờ Việt Nam), bật camera ngay, tắt mic khi chưa tới lượt nói nếu là phỏng vấn nhóm. Khi phía Nhật vào phòng: mỉm cười, nhìn VÀO CAMERA (không nhìn vào hình của chính mình), chào: 「おはようございます／こんにちは。グエンと申します。本日はよろしくお願いいたします」 và cúi đầu nhẹ về phía camera khoảng 15–30 độ. Nếu có nhiều người phía Nhật, chờ họ giới thiệu xong mới bắt đầu nói. Kiểm tra nhanh âm thanh bằng một câu: 「声は聞こえますか」(tiếng của tôi nghe rõ không ạ?) trước khi vào câu hỏi chính.",
+     "ja": "声は聞こえますか。映像は見えますか。",
+     "vi": "Tiếng của tôi nghe rõ không ạ? Hình ảnh nhìn thấy rõ không ạ?"
+    },
+    {
+     "t": "Bước 3: Cách nói và lắng nghe qua màn hình — camera, nói chậm, あいづち",
+     "d": "Ba kỹ thuật quyết định ấn tượng khi phỏng vấn online: (1) NHÌN VÀO CAMERA khi nói câu trả lời quan trọng — nhìn vào mắt người phỏng vấn trên màn hình khiến họ cảm thấy bạn nhìn xuống; tập xen kẽ: bắt đầu câu nhìn camera, giữa câu có thể nhìn màn hình. (2) NÓI CHẬM VÀ RÕ hơn bình thường khoảng 20%, câu ngắn, hết câu dừng một nhịp vì mạng có độ trễ (thường 0,5–1 giây) — chờ họ nói xong hẳn 1–2 giây mới trả lời, tránh cướp lời do trễ mạng. (3) あいづち (aizuchi — tiếng đệm thể hiện đang nghe): gật đầu nhẹ và nói 「はい」「なるほど」 khi họ đang nói, để họ biết đường truyền vẫn tốt và bạn đang theo dõi. Khi nghe câu hỏi: nghe hết, gật đầu, nói 「はい」 rồi mới trả lời.",
+     "ja": "はい、分かりました。",
+     "vi": "Vâng, tôi đã hiểu ạ. (câu đệm あいづち điển hình khi đang nghe)"
+    },
+    {
+     "t": "Hỏi – đáp: Giới thiệu bản thân (bản dành cho người ở Việt Nam)",
+     "d": "Giới thiệu online nên gọn trong 45–60 giây và có thêm thông tin phía Nhật cần: đang ở tỉnh nào của Việt Nam, đã học tiếng Nhật bao lâu/ở đâu, tình trạng hồ sơ (đang học, đã có chứng chỉ gì). TRẢ LỜI MẪU: 「グエン・ヴァン・ミンと申します。ベトナムの○○省から参加しています。日本語は1年間学校で勉強し、N4を取得しました。今は特定技能の試験にも合格し、日本で働く準備をしています。本日はよろしくお願いいたします。」Dịch mẫu: 'Tôi là Nguyễn Văn Minh. Tôi tham gia (phỏng vấn) từ tỉnh ○○ của Việt Nam. Tôi đã học tiếng Nhật 1 năm tại trường và đạt N4. Hiện tôi cũng đã đỗ kỳ thi kỹ năng đặc định và đang chuẩn bị để sang Nhật làm việc. Hôm nay rất mong được giúp đỡ.' Nói xong mỉm cười và cúi đầu nhẹ về phía camera.",
+     "ja": "自己紹介をお願いします。今はどこに住んでいますか。",
+     "vi": "Bạn hãy giới thiệu bản thân. Hiện bạn đang sống ở đâu?"
+    },
+    {
+     "t": "Hỏi – đáp: Vì sao muốn sang Nhật làm việc? (câu đặc thù)",
+     "d": "Câu hỏi gần như chắc chắn có. Cấu trúc trả lời an toàn: mục tiêu nghề nghiệp + điều muốn học ở Nhật + kế hoạch dùng kinh nghiệm đó lâu dài. Tránh nói lý do duy nhất là 'kiếm nhiều tiền' — có thể nhắc thu nhập ở mức phụ ('gia đình cũng đỡ khó khăn hơn') nhưng không đặt lên đầu. TRẢ LỜI MẪU: 「日本で働きたい理由は二つあります。一つは、日本の介護の技術と仕事の進め方を学びたいからです。もう一つは、日本で経験を積んで、将来ベトナムでも介護の仕事で役に立ちたいからです。そのために、今も日本語の勉強を続けています。」Dịch mẫu: 'Lý do tôi muốn làm việc ở Nhật có hai điều. Một là tôi muốn học kỹ thuật chăm sóc và cách tiến hành công việc của Nhật. Hai là tôi muốn tích lũy kinh nghiệm ở Nhật để tương lai cũng giúp ích được cho công việc chăm sóc tại Việt Nam. Vì vậy hiện tôi vẫn tiếp tục học tiếng Nhật mỗi ngày.'",
+     "ja": "なぜ日本で働きたいですか。",
+     "vi": "Vì sao bạn muốn làm việc ở Nhật?"
+    },
+    {
+     "t": "Hỏi – đáp: Vì sao chọn công ty này? Biết gì về công ty?",
+     "d": "Hai câu này thường hỏi liền nhau để kiểm tra bạn có tìm hiểu thật không hay ứng tuyển hàng loạt. Trước buổi phỏng vấn, nhờ công ty phái cử/trường dạy tiếng cung cấp và tự tra: công ty ở tỉnh nào, làm lĩnh vực gì, quy mô khoảng bao nhiêu người, điểm đặc trưng (ví dụ có người Việt đang làm, có ký túc xá...). TRẢ LỜI MẪU: 「御社は○○県で介護施設を運営していて、外国人スタッフの教育に力を入れていると聞きました。先輩のベトナム人も働いていると聞いて、安心して長く働けると思いました。」Dịch mẫu: 'Tôi được biết quý công ty vận hành cơ sở chăm sóc tại tỉnh ○○ và rất chú trọng đào tạo nhân viên người nước ngoài. Tôi nghe nói cũng có anh chị người Việt đi trước đang làm việc ở đó, nên tôi nghĩ mình có thể yên tâm làm việc lâu dài.' Chỉ nói những gì bạn đã được xác nhận — không bịa thông tin về công ty.",
+     "ja": "なぜ当社を選びましたか。当社について何を知っていますか。",
+     "vi": "Vì sao bạn chọn công ty chúng tôi? Bạn biết gì về công ty chúng tôi?"
+    },
+    {
+     "t": "Hỏi – đáp: Dự định làm ở Nhật bao lâu?",
+     "d": "Trả lời phải khớp với diện visa của bạn: kỹ năng đặc định số 1 tối đa 5 năm, thực tập sinh theo chương trình 3–5 năm, kỹ sư có thể gia hạn lâu dài. Nói kế hoạch cụ thể trong khung cho phép + mong muốn học lên/gia hạn nếu làm tốt. TRẢ LỜI MẪU (kỹ năng đặc định): 「まずは特定技能の期間、5年間を目標に働きたいと思っています。その間に介護福祉士の資格を取りたいので、仕事と勉強を両立させたいです。」Dịch mẫu: 'Trước hết, tôi đặt mục tiêu làm việc trong thời gian của kỹ năng đặc định là 5 năm. Trong thời gian đó tôi muốn lấy chứng chỉ Chăm sóc phúc lợi (kaigo fukushishi) nên sẽ cân bằng cả công việc và học tập.' Đừng trả lời 'làm 1 năm rồi tính tiếp' — phía Nhật tốn chi phí tiếp nhận nên rất ngại người định nghỉ sớm.",
+     "ja": "日本でどのくらい働きたいですか。",
+     "vi": "Bạn muốn làm việc ở Nhật trong bao lâu?"
+    },
+    {
+     "t": "Hỏi – đáp: Gia đình có đồng ý cho sang Nhật không? (câu đặc thù)",
+     "d": "Câu này để đảm bảo bạn không bỏ dở giữa chừng vì gia đình phản đối. Trả lời ngắn, chắc chắn: đã bàn với gia đình, gia đình ủng hộ, và cách liên lạc về nhà thường xuyên ngày nay rất dễ. TRẢ LỜI MẪU: 「家族とよく話し合って、みんな応援してくれています。今はビデオ通話でいつでも話せるので、その点も家族は安心しています。」Dịch mẫu: 'Tôi đã trao đổi kỹ với gia đình và mọi người đều ủng hộ tôi. Hiện nay lúc nào cũng nói chuyện được qua cuộc gọi video nên gia đình cũng yên tâm về điểm đó.' Nếu gia đình từng lo lắng, không cần kể lể dài — chỉ nói kết quả cuối cùng là đã thống nhất và được ủng hộ.",
+     "ja": "ご家族は、日本で働くことに賛成していますか。",
+     "vi": "Gia đình bạn có đồng ý việc bạn sang Nhật làm việc không?"
+    },
+    {
+     "t": "Hỏi – đáp: Có chịu được xa nhà, khí hậu lạnh và đồ ăn Nhật không? (câu đặc thù)",
+     "d": "Họ lo ứng viên sốc văn hóa/khí hậu rồi bỏ về sớm. Trả lời bằng thái độ chuẩn bị cụ thể: đã tìm hiểu thời tiết nơi công ty đóng (tỉnh lạnh hay ấm), sẵn sàng về ăn uống, và cách bạn sẽ giữ liên lạc với gia đình/ cộng đồng người Việt. TRẢ LỜI MẪU: 「○○県は冬に雪が降ると聞いて、準備しています。ホームシックについては心配ですが、家族と定期的に連絡を取り、先輩たちにも相談しながら乗り越えたいと思います。日本の食べ物は、学校の先生に教えてもらって、少しずつ慣れています。」Dịch mẫu: 'Tôi nghe nói tỉnh ○○ mùa đông có tuyết rơi và đang chuẩn bị cho điều đó. Về nỗi nhớ nhà, tôi cũng có lo, nhưng tôi sẽ thường xuyên liên lạc với gia đình và trao đổi với các anh chị đi trước để vượt qua. Đồ ăn Nhật tôi đã được thầy cô ở trường giới thiệu và đang dần làm quen.' Thừa nhận 'có lo nhưng có cách vượt qua' nghe tin cậy hơn khẳng định 'tôi không sao hết'.",
+     "ja": "ホームシックや日本の寒さ、食べ物は大丈夫ですか。",
+     "vi": "Nỗi nhớ nhà, cái lạnh của Nhật và đồ ăn Nhật — bạn có chịu được không?"
+    },
+    {
+     "t": "Hỏi – đáp: Tiếng Nhật đang ở mức nào, sẽ học tiếp thế nào?",
+     "d": "Nói đúng trình độ thật kèm bằng chứng (chứng chỉ, số giờ học) và kế hoạch học tiếp sau khi sang — phía Nhật đánh giá rất cao người có kế hoạch học lên N3/N2. TRẢ LỜI MẪU: 「今はN4レベルで、日常会話の基本はできます。仕事で使う言葉はまだ勉強中ですが、毎日単語を覚えています。日本に行ってからも勉強を続けて、1年以内にN3を取りたいです。」Dịch mẫu: 'Hiện tôi ở trình độ N4, giao tiếp cơ bản hàng ngày làm được. Từ vựng dùng trong công việc tôi vẫn đang học, mỗi ngày đều học thuộc từ mới. Sau khi sang Nhật tôi sẽ tiếp tục học và muốn đạt N3 trong vòng 1 năm.' Tuyệt đối không khai khống trình độ — phần sau buổi phỏng vấn họ thường kiểm tra bằng vài câu tiếng Nhật trực tiếp.",
+     "ja": "日本語はどのくらい勉強しましたか。これからも勉強しますか。",
+     "vi": "Bạn đã học tiếng Nhật được đến mức nào? Từ nay bạn có tiếp tục học không?"
+    },
+    {
+     "t": "Hỏi – đáp: Kinh nghiệm làm việc / tay nghề liên quan",
+     "d": "Kể kinh nghiệm ở Việt Nam theo thứ tự: làm việc gì, bao lâu, kỹ năng cụ thể dùng được cho công việc sắp làm ở Nhật. Chưa có kinh nghiệm đúng ngành thì kể việc gần nhất và thái độ học việc. TRẢ LỜI MẪU: 「ベトナムでは食品工場で2年間働きました。衛生管理と時間を守ることが大切な職場で、遅刻は一度もありませんでした。その経験は、日本の食品工場でも生かせると思います。」Dịch mẫu: 'Ở Việt Nam tôi đã làm 2 năm tại nhà máy thực phẩm. Đó là nơi làm việc coi trọng quản lý vệ sinh và giữ đúng giờ, và tôi chưa từng đi trễ lần nào. Tôi nghĩ kinh nghiệm đó cũng vận dụng được ở nhà máy thực phẩm tại Nhật.' Con số thời gian + chi tiết 'chưa từng đi trễ' là bằng chứng rẻ mà hiệu quả.",
+     "ja": "ベトナムではどんな仕事をしていましたか。",
+     "vi": "Ở Việt Nam bạn đã làm công việc gì?"
+    },
+    {
+     "t": "Hỏi – đáp: Làm ca đêm, tăng ca, việc nặng, ở vùng quê — có được không?",
+     "d": "Tùy ngành (kaigo, nhà máy, nông nghiệp...), họ sẽ hỏi về ca đêm (夜勤, yakin), tăng ca (残業, zangyō), công việc dùng sức, hoặc nơi làm ở nông thôn ít người nước ngoài. Trả lời thật trong khả năng của mình + thể hiện đã hiểu tính chất công việc qua tài liệu/hồ sơ công việc đã được giải thích. TRẢ LỜI MẪU: 「仕事の説明を受けて、夜勤があることは理解しています。体力には自信がありますし、生活リズムを整えて対応します。地方の静かな環境も、私には合っていると思います。」Dịch mẫu: 'Tôi đã được giải thích về công việc và hiểu rằng sẽ có ca đêm. Tôi tự tin về thể lực và sẽ điều chỉnh nhịp sinh hoạt để đáp ứng. Môi trường yên tĩnh ở địa phương tôi cũng thấy hợp với mình.' Nếu có giới hạn thật (sức khỏe, lý do tôn giáo về ăn uống...) hãy nói rõ ràng ngay lúc này — giấu rồi sang Nhật mới nói sẽ gây rắc rối cho cả hai phía.",
+     "ja": "夜勤や残業は大丈夫ですか。田舎での生活は平気ですか。",
+     "vi": "Ca đêm và tăng ca có được không? Sống ở vùng quê có sao không?"
+    },
+    {
+     "t": "Hỏi – đáp: Mong muốn về lương và điều kiện — nói sao cho khéo?",
+     "d": "Qua phỏng vấn online diện phái cử, lương và điều kiện thường đã ghi trong hồ sơ công việc (求人票) hai bên đã thống nhất — câu hỏi này chủ yếu để kiểm tra bạn có HIỂU ĐÚNG số tiền và các khoản trừ (thuế, bảo hiểm, tiền ký túc xá, điện nước) hay không. Trả lời là đã đọc kỹ và hiểu phần thực nhận, tránh đòi hỏi thêm ngay trong buổi. TRẢ LỜI MẪU: 「給料と控除については、説明を受けて理解しています。手取りの目安も聞いていますので、その条件で頑張りたいと思っています。」Dịch mẫu: 'Về lương và các khoản khấu trừ, tôi đã được giải thích và đã hiểu. Tôi cũng đã nghe mức thực nhận ước tính, nên muốn cố gắng làm việc với điều kiện đó.' Nếu con số họ nói trong buổi KHÁC với hồ sơ bạn đã xem, đừng tranh luận ngay trên sóng — ghi lại, kết thúc buổi rồi hỏi lại công ty phái cử phía Việt Nam để xác minh.",
+     "ja": "給料や条件について、理解していますか。希望はありますか。",
+     "vi": "Về lương và điều kiện, bạn đã hiểu chưa? Bạn có nguyện vọng gì không?"
+    },
+    {
+     "t": "Bước 4: Khi có phiên dịch — nói ngắn từng đoạn",
+     "d": "Nếu buổi có phiên dịch viên (通訳者): nói NGẮN từng đoạn 1–2 câu rồi DỪNG và nhìn camera chờ dịch xong, tuyệt đối không nói liền 30 giây khiến người dịch không theo kịp. Nói về phía camera/công ty Nhật, không quay sang nói chuyện riêng với phiên dịch. Trả lời bằng ngôi thứ nhất ('tôi...') chứ không nói 'bảo với họ là tôi...'. Câu mẫu khi cần phiên dịch nhắc lại: 「すみません、もう一度お願いします」. Nếu phiên dịch dịch có vẻ sai ý bạn, lịch sự bổ sung ngắn: 「補足しますと、○○という意味です」(Tôi xin bổ sung: ý tôi là ○○). Chuẩn bị từ khóa chuyên ngành bằng tiếng Nhật trước buổi, vì phiên dịch viên không phải lúc nào cũng rành thuật ngữ ngành của bạn.",
+     "ja": "通訳をお願いします。短く区切って話します。",
+     "vi": "Xin nhờ phiên dịch ạ. Tôi sẽ nói ngắt ngắn từng đoạn. (ý thức nói khi có phiên dịch)"
+    },
+    {
+     "t": "Hỏi – đáp: Câu nên hỏi lại — ký túc xá, hỗ trợ khi mới sang, học tiếng tiếp",
+     "d": "Cuối buổi bạn cũng được hỏi ngược. Với ứng viên từ Việt Nam, các câu hỏi lại tốt là những câu cho thấy bạn hình dung cuộc sống sau khi sang và muốn gắn bó: về ký túc xá/nhà ở (寮, ryō), người hỗ trợ khi mới sang, cơ hội học tiếng/chứng chỉ. CÂU MẪU: 「寮は会社の近くにありますか。また、日本に行った後、日本語の勉強を続ける機会はありますか。」Dịch: 'Ký túc xá có ở gần công ty không ạ? Ngoài ra, sau khi sang Nhật, có cơ hội tiếp tục học tiếng Nhật không ạ?' Tránh hỏi những điều đã ghi rõ trong hồ sơ công việc đã gửi (lương, giờ làm cơ bản) vì sẽ bị đánh giá là chưa đọc hồ sơ; và không hỏi 'có được về Việt Nam chơi thường xuyên không' trong buổi đầu.",
+     "ja": "寮はありますか。日本語の勉強は続けられますか。",
+     "vi": "(Câu bạn hỏi lại) Có ký túc xá không ạ? Tôi có tiếp tục học tiếng Nhật được không ạ?"
+    },
+    {
+     "t": "Bước 5: Trục trặc kỹ thuật giữa buổi — xử lý bình tĩnh",
+     "d": "Mất tiếng / mất hình / rớt mạng là chuyện thường gặp ở phỏng vấn xuyên quốc gia — cách bạn xử lý cũng là một phần đánh giá. (1) Mất tiếng phía họ: nói ngay 「すみません、音声が聞こえません」(Xin lỗi, tôi không nghe thấy âm thanh) và ra hiệu tay vào tai. (2) Hình bị đứng: tắt camera của mình vài giây để ưu tiên âm thanh, hoặc rời phòng rồi vào lại bằng link cũ. (3) Rớt mạng hẳn: chuyển ngay sang điện thoại 4G đã chuẩn bị, vào lại phòng; nếu không vào lại được, GỌI/nhắn ngay cho người liên lạc phía Việt Nam hoặc phía Nhật báo tình hình — tuyệt đối không im lặng chờ họ tìm mình. (4) Vào lại được thì xin lỗi ngắn và tóm tắt: 「申し訳ありません、接続が切れてしまいました。今は大丈夫です」rồi tiếp tục, không phân trần dài.",
+     "ja": "申し訳ありません、接続が切れてしまいました。",
+     "vi": "Xin lỗi, đường truyền vừa bị ngắt. (câu nói khi vào lại phòng sau sự cố)"
+    },
+    {
+     "t": "Bước 6: Kết thúc buổi, lời cảm ơn và sau phỏng vấn",
+     "d": "Khi họ báo kết thúc: ngồi thẳng, nhìn camera, nói: 「本日は面接の機会をいただき、ありがとうございました。日本で働けるよう、これからも日本語を頑張ります。よろしくお願いいたします」 và cúi đầu sâu về phía camera, GIỮ nguyên cho đến khi phía Nhật rời phòng hoặc người điều phối bảo bạn rời — đừng là người tắt máy đầu tiên một cách vội vã. Sau buổi: nhắn một lời cảm ơn ngắn cho người liên lạc (qua công ty phái cử/trường) trong ngày. Kết quả thường báo qua phía Việt Nam sau vài ngày đến 2 tuần — trong lúc chờ, tiếp tục học tiếng và giữ điện thoại liên lạc được; đỗ hay không cũng cảm ơn, vì cùng nghiệp đoàn/công ty có thể có đợt tuyển tiếp theo.",
+     "ja": "本日はありがとうございました。",
+     "vi": "Hôm nay xin cảm ơn quý công ty rất nhiều. (câu cảm ơn kết thúc, nói trong lúc nhìn vào camera)"
+    }
+   ],
+   "cost": "Phỏng vấn online: miễn phí. Chi phí tự chuẩn bị: tai nghe có mic (loại phổ thông là đủ), dữ liệu 4G dự phòng, trang phục phỏng vấn. CẢNH BÁO PHÁI CỬ: các khoản phí đi Nhật (phí dịch vụ công ty phái cử, học tiếng, khám sức khỏe...) phải theo hợp đồng và quy định hiện hành của Việt Nam và Nhật — yêu cầu hóa đơn/chứng từ cho mọi khoản thu; phỏng vấn với công ty Nhật thật sự không bao giờ yêu cầu chuyển tiền trực tiếp cho cá nhân người phỏng vấn.",
+   "duration": "Một buổi phỏng vấn online: khoảng 20–45 phút (có phiên dịch thì lâu hơn). Từ phỏng vấn đỗ đến khi xuất cảnh: thường vài tháng tùy diện visa và tiến độ hồ sơ (hồ sơ tư cách lưu trú COE thường xét khoảng 1–3 tháng). Kết quả phỏng vấn: thường báo sau vài ngày đến 2 tuần qua phía Việt Nam.",
+   "warnings": [
+    "Nếu trục trặc — nhầm múi giờ: đây là lỗi gây mất cơ hội nhiều nhất. Nhật nhanh hơn Việt Nam 2 giờ: hẹn 10:00 giờ Nhật = 8:00 giờ Việt Nam. Luôn viết cả hai giờ cạnh nhau khi ghi lịch, đặt báo thức theo giờ Việt Nam, và xác nhận lại với người liên lạc bằng câu ghi rõ cả hai múi giờ trước buổi 1 ngày.",
+    "Nếu trục trặc — rớt mạng/mất điện giữa buổi: bình tĩnh chuyển sang điện thoại 4G, vào lại phòng bằng link cũ; không vào được thì gọi/nhắn ngay cho người liên lạc báo 'đang bị mất kết nối, đang vào lại'. Sau khi vào lại, xin lỗi một câu ngắn rồi tiếp tục — xử lý bình tĩnh còn được cộng điểm.",
+    "Nếu trục trặc — không nghe rõ câu hỏi (nhiễu, nói nhanh, từ khó): đừng đoán. Nói: 「すみません、もう一度ゆっくりお願いできますか」. Vẫn không rõ thì xin họ gõ câu hỏi vào ô chat (チャット) của phần mềm họp: 「チャットに書いていただけますか」— đọc chữ thường dễ hiểu hơn nghe.",
+    "Nếu trục trặc — gặp câu hỏi khó không biết trả lời: dùng câu đệm 「少し考えさせてください」, trả lời phần mình biết chắc, phần chưa biết thì nói sẽ học/tìm hiểu thêm. Im lặng dài quá 10 giây qua màn hình khiến phía Nhật tưởng rớt mạng — hãy luôn phát ra tín hiệu: gật đầu, nói 'はい' trong lúc suy nghĩ.",
+    "Không nhờ người khác ngồi cạnh nhắc bài, không đọc văn mẫu viết sẵn dán trước mặt một cách lộ liễu (mắt đảo liên tục sẽ bị phát hiện qua camera), không để người nhà đi lại/nói chuyện trong khung hình. Bị phát hiện gian dối trong phỏng vấn online là bị hủy kết quả ngay.",
+    "Không tắt camera giữa buổi trừ khi được yêu cầu hoặc để xử lý sự cố đường truyền (và phải báo trước một câu). Camera tắt không lời giải thích bị hiểu là thiếu nghiêm túc.",
+    "Thông tin tham khảo tính đến 11/2026 — kiểm tra lại trang chính thức trước khi làm"
+   ],
+   "final_check": [
+    "Sau buổi: đã nhắn/gửi lời cảm ơn tới người liên lạc trong ngày và ghi lại các câu đã bị hỏi + câu mình trả lời còn yếu để rút kinh nghiệm",
+    "Đã ghi rõ các cam kết hai bên đã nói trong buổi: dự kiến thời gian sang Nhật, việc cần chuẩn bị tiếp (hồ sơ, học tiếng, khám sức khỏe...)",
+    "Nếu có điểm khác biệt giữa điều kiện nói trong buổi và hồ sơ công việc đã nhận (lương, nơi làm, ký túc): đã hỏi lại phía Việt Nam để xác minh bằng văn bản trước khi ký bất kỳ giấy gì",
+    "Đã rõ kênh và thời gian báo kết quả, và giữ điện thoại/email liên lạc được trong suốt thời gian chờ",
+    "Tiếp tục học tiếng Nhật hằng ngày trong lúc chờ kết quả và chờ xuất cảnh — trình độ lúc sang ảnh hưởng trực tiếp việc phân công việc và gia hạn sau này",
+    "Giữ liên lạc định kỳ với gia đình về kế hoạch sang Nhật để mọi việc đã thống nhất như đã trả lời trong phỏng vấn"
+   ],
+   "vocab": [
+    {
+     "ja": "オンライン面接",
+     "reading": "おんらいんめんせつ",
+     "vi": "Phỏng vấn trực tuyến (online)"
+    },
+    {
+     "ja": "Web面接",
+     "reading": "うぇぶめんせつ",
+     "vi": "Phỏng vấn qua web (cách gọi khác của phỏng vấn online)"
+    },
+    {
+     "ja": "通訳",
+     "reading": "つうやく",
+     "vi": "Phiên dịch (nói) / phiên dịch viên"
+    },
+    {
+     "ja": "時差",
+     "reading": "じさ",
+     "vi": "Chênh lệch múi giờ (Nhật hơn Việt Nam 2 giờ)"
+    },
+    {
+     "ja": "接続",
+     "reading": "せつぞく",
+     "vi": "Kết nối (đường truyền mạng)"
+    },
+    {
+     "ja": "音声",
+     "reading": "おんせい",
+     "vi": "Âm thanh, tiếng nói (trong cuộc họp online)"
+    },
+    {
+     "ja": "映像",
+     "reading": "えいぞう",
+     "vi": "Hình ảnh (video trong cuộc họp online)"
+    },
+    {
+     "ja": "特定技能",
+     "reading": "とくていぎのう",
+     "vi": "Kỹ năng đặc định (diện visa lao động)"
+    },
+    {
+     "ja": "技能実習",
+     "reading": "ぎのうじっしゅう",
+     "vi": "Thực tập kỹ năng (thực tập sinh)"
+    },
+    {
+     "ja": "寮",
+     "reading": "りょう",
+     "vi": "Ký túc xá của công ty"
+    },
+    {
+     "ja": "夜勤",
+     "reading": "やきん",
+     "vi": "Ca đêm"
+    },
+    {
+     "ja": "残業",
+     "reading": "ざんぎょう",
+     "vi": "Tăng ca, làm thêm giờ"
+    },
+    {
+     "ja": "手取り",
+     "reading": "てどり",
+     "vi": "Tiền thực nhận sau khi trừ thuế, bảo hiểm..."
+    },
+    {
+     "ja": "ホームシック",
+     "reading": "ほーむしっく",
+     "vi": "Nỗi nhớ nhà khi sống xa quê"
+    }
+   ],
+   "phrases": [
+    {
+     "ja": "声は聞こえますか。映像は見えますか。",
+     "vi": "Tiếng nghe rõ không ạ? Hình ảnh thấy rõ không ạ? (kiểm tra đầu buổi)"
+    },
+    {
+     "ja": "はい、分かりました。",
+     "vi": "Vâng, tôi đã hiểu ạ. (tiếng đệm あいづち)"
+    },
+    {
+     "ja": "すみません、もう一度ゆっくりお願いできますか。",
+     "vi": "Xin lỗi, xin nói lại chậm rãi một lần nữa được không ạ? (khi không nghe rõ)"
+    },
+    {
+     "ja": "チャットに書いていただけますか。",
+     "vi": "Xin viết vào khung trò chuyện (chat) giúp tôi được không ạ? (khi nghe không rõ)"
+    },
+    {
+     "ja": "申し訳ありません、接続が切れてしまいました。",
+     "vi": "Xin lỗi, đường truyền vừa bị ngắt. (khi vào lại sau sự cố)"
+    },
+    {
+     "ja": "少し考えさせてください。",
+     "vi": "Cho tôi suy nghĩ một chút ạ. (câu đệm khi gặp câu hỏi khó)"
+    },
+    {
+     "ja": "本日は面接の機会をいただき、ありがとうございました。",
+     "vi": "Xin cảm ơn quý công ty đã cho tôi cơ hội phỏng vấn hôm nay."
+    },
+    {
+     "ja": "よろしくお願いいたします。",
+     "vi": "Rất mong được quý công ty giúp đỡ. (chào đầu và cuối buổi)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Mynavi — Hướng dẫn phỏng vấn cho du học sinh người nước ngoài (tiếng Anh/Nhật)",
+     "url": "https://job.mynavi.jp/conts/2027/tok/global/mensetsu/index_en.html"
+    },
+    {
+     "label": "Recruit Agent — Tác phong phỏng vấn cơ bản: lễ tân, vào/ra phòng và phỏng vấn online",
+     "url": "https://www.r-agent.com/guide/jobinterview/15058/"
+    },
+    {
+     "label": "Hello Work Sapporo (Bộ Y tế, Lao động và Phúc lợi) — Tác phong phỏng vấn cần nhớ",
+     "url": "https://jsite.mhlw.go.jp/hokkaido-hellowork/list/sapporo/shisetsu/shinsotsu-column3.html"
+    }
+   ],
+   "affiliate": null,
+   "forms": [
+    {
+     "name_jp": "履歴書",
+     "name_vi": "Sơ yếu lý lịch (rirekisho)",
+     "download_url": "https://www.hellowork.mhlw.go.jp/member/career_doc01.html",
+     "source": "ハローワーク (厚生労働省)",
+     "format": "web",
+     "fill": [
+      {
+       "field": "日付 (ngày viết hồ sơ)",
+       "how": "Ghi ngày gửi hồ sơ cho phía Nhật. Lưu ý lệch múi giờ: Nhật nhanh hơn Việt Nam 2 giờ. Ngày trên hồ sơ ghi theo ngày gửi thực tế, thống nhất toàn bản.",
+       "example": "2026年11月10日現在",
+       "mistake": "Ghi ngày khác với ngày ghi trong các giấy tờ khác gửi cùng đợt."
+      },
+      {
+       "field": "氏名・ふりがな・ローマ字 (họ tên, cách đọc và chữ Latinh)",
+       "how": "Ghi họ tên katakana theo đúng hộ chiếu. Nhiều form của công ty Nhật còn yêu cầu ghi thêm tên chữ Latinh không dấu, đúng thứ tự như hộ chiếu. Ba chỗ: hộ chiếu, rirekisho, chứng chỉ phải giống hệt nhau.",
+       "example": "氏名：グエン・バン・アン ／ ローマ字：NGUYEN VAN AN",
+       "mistake": "Katakana mỗi giấy một kiểu, ví dụ giấy này ghi アン, giấy khác ghi アーン."
+      },
+      {
+       "field": "生年月日・満年齢 (ngày sinh và tuổi tròn)",
+       "how": "Ghi ngày sinh đúng hộ chiếu và giấy khai sinh đã dịch. Tuổi ghi tuổi tròn tại ngày viết hồ sơ.",
+       "example": "1998年5月12日生 （満28歳）／ 国籍：ベトナム",
+       "mistake": "Ngày sinh khác dù chỉ một số so với hộ chiếu."
+      },
+      {
+       "field": "写真 (ảnh thẻ)",
+       "how": "Dán hoặc đính kèm file ảnh 4x3 cm chụp trong 3 tháng, nền trắng, mặc trang phục trang trọng. Khi gửi file qua mạng, đặt tên file có họ tên Latinh để phía Nhật dễ lưu.",
+       "example": "File ảnh: nguyen-van-an-photo.jpg, áo sơ mi trắng và vest, nền trắng",
+       "mistake": "Gửi ảnh selfie hoặc ảnh chụp ngoài trời, phía Nhật phải yêu cầu gửi lại."
+      },
+      {
+       "field": "現住所 (địa chỉ hiện tại ở Việt Nam)",
+       "how": "Đang ở Việt Nam thì ghi địa chỉ ở Việt Nam. Ghi rõ tỉnh, thành phố, và ghi chú mình đang sống ở Việt Nam. Không ghi địa chỉ ở Nhật khi chưa sang.",
+       "example": "ベトナム ハノイ市 ○○区 ○○町 12番地（現在ベトナム在住）",
+       "mistake": "Ghi địa chỉ công ty hoặc địa chỉ dự kiến ở Nhật vào ô địa chỉ hiện tại."
+      },
+      {
+       "field": "電話・メールアドレス (số điện thoại và email)",
+       "how": "Ghi số điện thoại Việt Nam kèm mã nước +84, bỏ số 0 đầu. Email ghi địa chỉ kiểm tra được mỗi ngày, vì lịch phỏng vấn online và kết quả thường gửi qua email.",
+       "example": "電話：+84-90-1234-5678 ／ メール：an.nguyen.sample@example.com",
+       "mistake": "Ghi số điện thoại thiếu mã nước khiến phía Nhật không gọi được."
+      },
+      {
+       "field": "学歴 (quá trình học)",
+       "how": "Ghi trường cuối ở Việt Nam và quá trình học tiếng Nhật: học ở đâu, từ khi nào, bao nhiêu giờ nếu biết. Mỗi trường một dòng theo thứ tự thời gian.",
+       "example": "2020年6月 ○○高等学校 卒業 ／ 2025年4月 ○○日本語学校 入学、現在勉強中（ベトナム）",
+       "mistake": "Không ghi quá trình học tiếng Nhật, phía Nhật không đánh giá được nỗ lực học."
+      },
+      {
+       "field": "職歴 (quá trình làm việc)",
+       "how": "Ghi việc đã làm ở Việt Nam, kể cả việc ở nhà máy, xưởng, hoặc cơ sở chăm sóc. Ghi tên nơi làm, thời gian, việc chính. Chưa đi làm thì ghi なし, không để trống.",
+       "example": "2020年7月～2022年6月 ○○部品工場で生産管理を担当",
+       "mistake": "Khai việc không có thật. Phía Nhật hay hỏi sâu lúc phỏng vấn và sẽ lộ ngay."
+      },
+      {
+       "field": "日本語能力・免許・資格 (năng lực tiếng Nhật và chứng chỉ)",
+       "how": "Ghi rõ JLPT đã đạt: cấp độ, năm tháng thi đỗ. Chưa đỗ thì ghi cấp độ đang học và kỳ thi dự kiến, ghi trung thực. Đây là mục phía Nhật nhìn kỹ nhất với ứng viên ở nước ngoài.",
+       "example": "2025年12月 日本語能力試験 N4 合格 ／ 現在 N3 を勉強中",
+       "mistake": "Ghi trình độ cao hơn thực tế. Buổi phỏng vấn nói chuyện trực tiếp sẽ kiểm tra được ngay."
+      },
+      {
+       "field": "技能試験 (kỳ thi kỹ năng, thi tay nghề)",
+       "how": "Với diện kỹ năng đặc định, ghi kỳ thi đánh giá kỹ năng của ngành mình: tên kỳ thi, ngày đỗ. Ngành kaigo ghi thêm kỳ thi đánh giá tiếng Nhật ngành kaigo nếu đã đỗ. Chưa thi thì ghi ngày dự kiến thi.",
+       "example": "介護技能評価試験 合格（2026年3月）／ 介護日本語評価試験 合格（2026年3月）",
+       "mistake": "Trộn lẫn kỳ thi kỹ năng với JLPT, ghi sai tên kỳ thi của ngành khác."
+      },
+      {
+       "field": "在留資格の予定 (tư cách lưu trú dự kiến)",
+       "how": "Ghi diện dự kiến sang Nhật: 特定技能1号 (kỹ năng đặc định số 1) kèm ngành, hoặc 技術・人文知識・国際業務 (kỹ sư, thường gọi tắt là 技人国). Ghi kèm thời điểm dự kiến nhập cảnh được. Mục này thường ghi ở ô nguyện vọng hoặc ô trống của form công ty gửi.",
+       "example": "在留資格：特定技能1号（介護分野）を予定 ／ 入国可能時期：2027年3月頃",
+       "mistake": "Không rõ mình ứng tuyển diện nào, trả lời mỗi lúc một diện khác nhau."
+      },
+      {
+       "field": "志望の動機 (lý do ứng tuyển)",
+       "how": "Viết 3-4 câu: vì sao muốn sang Nhật, vì sao chọn ngành này, vì sao chọn công ty này. Nêu mục tiêu học kỹ thuật và làm việc lâu dài. Không đặt lý do thu nhập lên đầu.",
+       "example": "日本の介護の技術と仕事の進め方を学びたいと考え、応募しました。日本で経験を積み、長く働きたいです。",
+       "mistake": "Chỉ viết muốn kiếm tiền hoặc muốn đi nước ngoài."
+      },
+      {
+       "field": "本人希望記入欄 (ô nguyện vọng: nơi làm mong muốn, thời điểm đi được)",
+       "how": "Ghi nơi làm mong muốn nếu có căn cứ, ví dụ tỉnh có người quen hỗ trợ lúc đầu. Ghi thời điểm sang Nhật được và một câu tuân theo quy định công ty về lương và ca làm. Nguyện vọng phải khớp lời nói trong buổi phỏng vấn online.",
+       "example": "希望勤務地：神奈川県（知人が在住し、来日時の支援を受けられるため）。給与・勤務条件は貴社の規定に従います。",
+       "mistake": "Ghi nguyện vọng nơi làm nhưng lúc phỏng vấn lại nói đâu cũng được, gây mất tin tưởng."
+      }
+     ],
+     "sample_note": "Ví dụ trong mục này là hư cấu hoàn toàn: グエン・バン・アン, sinh 1998年5月12日, số điện thoại và email đều là mẫu. Trang Hello Work ở link trên có mẫu 厚生労働省履歴書様式例 để tải về, gồm bản PDF版 (A3 và A4) và bản Excel版 (A3 và A4). Lưu ý quan trọng khi ứng tuyển từ Việt Nam: công ty Nhật, nghiệp đoàn hoặc tổ chức tiếp nhận thường gửi form riêng của họ, gọi là エントリーシート hoặc 指定様式 (form chỉ định). Form riêng này hỏi gần như đúng các mục của rirekisho: họ tên, ngày sinh, học vấn, việc làm, JLPT, kỳ thi kỹ năng, diện lưu trú dự kiến, nơi làm mong muốn. Vì vậy cứ điền rirekisho chuẩn trước một bản để làm gốc, sau đó chép sang form riêng của công ty cho khớp từng chữ. Nội dung nói trong buổi phỏng vấn online phải khớp hồ sơ đã gửi."
+    }
+   ],
+   "videos": [
+    {
+     "channel": "マイナビ転職",
+     "lang": "ja",
+     "note": "Kênh chính thức Mynavi: chuẩn bị, ánh sáng, ánh mắt nhìn camera và phòng sự cố, có ví dụ tốt/xấu.",
+     "title": "〖WEB面接の流れ〗オンライン面接の基本的なマナー〖印象UP・DOWN例あり〗",
+     "url": "https://www.youtube.com/watch?v=7METyug9xWY"
+    },
+    {
+     "channel": "IndeedJapan",
+     "lang": "ja",
+     "note": "Indeed Nhật tóm gọn 5 điểm: kiểm tra mic/camera, ánh mắt, tránh dùng điện thoại và xử lý khi rớt mạng.",
+     "title": "Web面接時に注意しておきたい5つのポイント | Indeed Career Tips",
+     "url": "https://www.youtube.com/watch?v=vgpER3QWris"
+    },
+    {
+     "channel": "高野秀敏のベンチャー転職ch",
+     "lang": "ja",
+     "note": "8 lưu ý thực tế khi phỏng vấn online: cố định điện thoại, kiểm tra âm lượng và đường truyền trước.",
+     "title": "〖転職〗オンライン面接（WEB面接）の8個の注意点",
+     "url": "https://www.youtube.com/watch?v=YwEKxeUZ_kA"
+    }
+   ]
+  }
+ ]
+}

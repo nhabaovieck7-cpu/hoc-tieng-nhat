@@ -1,5 +1,6 @@
 {
  "items": [
+  {"id": "2026-11-08-cam-nang-thu-tuc", "date": "2026-11-08", "type": "tinh-nang", "title": "Chuyên mục mới: Cẩm nang thủ tục & dịch vụ tại Nhật", "desc": "25 hướng dẫn từng bước cho người Việt tại Nhật — đăng ký địa chỉ, SIM, điện thoại, ngân hàng, visa, thuế, nenkin, thuê nhà, phỏng vấn… Mỗi bài có checklist giấy tờ, link tải tờ khai chính thức + cách điền từng mục, video hướng dẫn, từ vựng và câu mẫu.", "link": "cam-nang.html"},
   {"id": "2026-11-08-game-media-r2", "date": "2026-11-08", "type": "fix", "title": "Game nhẹ hơn: chuyển giọng đọc + nhạc nền sang kho R2", "desc": "Toàn bộ giọng đọc, nhạc nền và clip nghe của game Tuổi Trẻ Ở Nhật + nhạc game Edo đã chuyển sang Cloudflare R2 — mở game nhanh hơn, web nhẹ đi ~452 MB.", "link": "game-truyen/index.html"},
   {
    "id": "2026-11-08-sua-nut-quay-lai-tang-toc-bai-hoc",
