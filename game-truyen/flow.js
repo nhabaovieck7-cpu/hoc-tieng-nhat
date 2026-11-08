@@ -48,7 +48,7 @@
     });
     $('modal-listen').classList.add('show');
     if (!listenAudio) {
-      listenAudio = new Audio('audio/listen-ga-01.mp3');
+      listenAudio = new Audio((window.GT_MEDIA || '') + 'audio/listen-ga-01.mp3');
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(listenAudio);   // Lane W: ducking khi phát clip nghe
       listenAudio.addEventListener('ended', function () { $('listen-eq').textContent = 'Đã phát xong — nghe lại nếu cần'; });
     }

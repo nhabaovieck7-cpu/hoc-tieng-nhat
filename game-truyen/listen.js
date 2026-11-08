@@ -93,7 +93,7 @@
     });
     $('modal-spotlisten').classList.add('show');
     if (!audio) { audio = new Audio(); if (window.BGM && BGM.attachDuck) BGM.attachDuck(audio); if (window.VOICE_BUS) VOICE_BUS.register('listen', function () { if (audio) { try { audio.pause(); } catch (e) {} } }); }   // Lane W: ducking khi phát câu nghe · Lane AC: bus một-giọng
-    audio.src = cur.audio;
+    audio.src = (window.GT_MEDIA || '') + cur.audio;
     $('spotlisten-play').onclick = function () {
       if (window.VOICE_BUS) VOICE_BUS.claim('listen');   // Lane AC: dừng mọi giọng khác trước khi phát
       audio.currentTime = 0; audio.play().catch(function () {});

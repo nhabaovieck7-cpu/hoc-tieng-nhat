@@ -24,12 +24,8 @@
   var DUCK_RATIO = 0.3; // duck = giảm ~70%
   var FADE_MS = 450;
 
-  // Đường dẫn tương đối theo vị trí file music.js (game/nhac/...) — an toàn dù trang ở thư mục con.
-  var base = 'nhac/';
-  try {
-    var cs = document.currentScript;
-    if (cs && cs.src) base = cs.src.replace(/[^/]*$/, '') + 'nhac/';
-  } catch (e) {}
+  // Nhạc nền đã chuyển sang Cloudflare R2 (08/11/2026) để gỡ trần 1 GB GitHub Pages.
+  var base = 'https://hoc-tieng-nhat-media.nhabaovieck7.workers.dev/game-media/game/nhac/';
 
   var unlocked = false;
   var pendingScene = null;

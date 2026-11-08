@@ -1,5 +1,6 @@
 {
  "items": [
+  {"id": "2026-11-08-game-media-r2", "date": "2026-11-08", "type": "fix", "title": "Game nhẹ hơn: chuyển giọng đọc + nhạc nền sang kho R2", "desc": "Toàn bộ giọng đọc, nhạc nền và clip nghe của game Tuổi Trẻ Ở Nhật + nhạc game Edo đã chuyển sang Cloudflare R2 — mở game nhanh hơn, web nhẹ đi ~452 MB.", "link": "game-truyen/index.html"},
   {
    "id": "2026-11-08-sua-nut-quay-lai-tang-toc-bai-hoc",
    "date": "2026-11-08",

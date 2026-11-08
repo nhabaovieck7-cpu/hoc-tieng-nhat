@@ -229,7 +229,7 @@
     });
     $('modal-listen').classList.add('show');
     if (!listenAudio) {
-      listenAudio = new Audio('audio/listen-ga-01.mp3');
+      listenAudio = new Audio((window.GT_MEDIA || '') + 'audio/listen-ga-01.mp3');
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(listenAudio);   // Lane W: ducking khi phát clip nghe
       if (window.VOICE_BUS) VOICE_BUS.register('station', function () { if (listenAudio) { try { listenAudio.pause(); } catch (e) {} } });   // Lane AC: bus một-giọng
       listenAudio.addEventListener('ended', function () { $('listen-eq').textContent = 'Đã phát xong — nghe lại nếu cần'; });
@@ -431,7 +431,7 @@
       pb.type = 'button'; pb.className = 'play-big'; pb.id = 'exam-listen-play';
       pb.textContent = '▶ Nghe câu này (còn 2 lần nghe lại)';
       stopExamAudio();   // Lane AC: câu mới hiện = clip câu trước dừng ngay (dù chưa bấm nghe câu mới)
-      var au = new Audio(it.audio);
+      var au = new Audio((window.GT_MEDIA || '') + it.audio);
       examAudio = au;
       if (window.BGM && BGM.attachDuck) BGM.attachDuck(au);   // Lane W: ducking khi phát câu nghe trong thi
       if (window.VOICE_BUS && !examBusReg) { examBusReg = true; VOICE_BUS.register('exam', stopExamAudio); }   // Lane AC: bus một-giọng

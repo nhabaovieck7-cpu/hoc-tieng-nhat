@@ -143,7 +143,7 @@
   });
   function tryPlayActive(why) {
     var a = activeEl();
-    if (!a.src && effTrack) a.src = 'bgm/' + effTrack + '.mp3';
+    if (!a.src && effTrack) a.src = (window.GT_MEDIA || '') + 'bgm/' + effTrack + '.mp3';
     var p = a.play();
     if (p && p.catch) p.catch(function () { wlog('play-rejected(' + why + ')'); });
   }
@@ -166,7 +166,7 @@
     try { el.pause(); } catch (e) {}
     if (!elD) { elD = new Audio(); elD.loop = true; elD.preload = 'auto'; }
     if (effTrack) {
-      var want = 'bgm/' + effTrack + '.mp3';
+      var want = (window.GT_MEDIA || '') + 'bgm/' + effTrack + '.mp3';
       if ((elD.getAttribute('src') || '') !== want) elD.src = want;
       try { if (isFinite(el.currentTime) && el.currentTime > 0) elD.currentTime = el.currentTime; } catch (e) {}
     }
@@ -305,7 +305,7 @@
       setOut(from * (1 - i / 10));
       if (i >= 10) {
         clearInterval(fadeTimer); fadeTimer = null;
-        activeEl().src = 'bgm/' + t + '.mp3';
+        activeEl().src = (window.GT_MEDIA || '') + 'bgm/' + t + '.mp3';
         diag.silentTicks = 0;   // track mới cần thời gian nạp — watchdog không đếm oan trong lúc chuyển bản
         if (on) { resumeCtx(); tryPlayActive('applyTarget-fade'); rampToVol(); }
         else activeEl().pause();
@@ -329,7 +329,7 @@
     if (!on) { ramp(0, function () { activeEl().pause(); }); }
     else if (effId()) {
       var a = activeEl();
-      if (!a.src) a.src = 'bgm/' + effId() + '.mp3';
+      if (!a.src) a.src = (window.GT_MEDIA || '') + 'bgm/' + effId() + '.mp3';
       setOut(0);
       resumeCtx();
       tryPlayActive('setEnabled');

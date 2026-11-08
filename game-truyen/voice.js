@@ -134,7 +134,7 @@
 
   function play(file) {
     BUS.claim('dlg');   // Lane AC: thoại bắt đầu = dừng mọi giọng khác (hướng dẫn/nghe/thi…)
-    audio.src = file;
+    audio.src = (window.GT_MEDIA || '') + file;
     audio.volume = vol;
     var p = audio.play();
     // Lane AF: play() bị từ chối (autoplay/chính sách trình duyệt) thì phần tử không
@@ -219,7 +219,7 @@
       var e = guideEntry();
       if (!e || !e.file) return false;
       BUS.claim('guide', ['dlg']);   // Lane AC: hướng dẫn chỉ giành sàn với THOẠI — không cắt clip nghe đang mở (xem BUS.claim)
-      gAudio.src = e.file;
+      gAudio.src = (window.GT_MEDIA || '') + e.file;
       gAudio.volume = vol;
       var p = gAudio.play();
       if (p && p.catch) p.catch(function () { BUS.release('guide'); });   // Lane AF: bị từ chối phát → nhả sàn/duck ngay

@@ -1,3 +1,7 @@
+// ===== MEDIA R2 (08/11/2026): giọng đọc + nhạc nền + clip nghe của game truyện
+// đã chuyển sang Cloudflare R2 (Worker hoc-tieng-nhat-media) để gỡ trần 1 GB của
+// GitHub Pages. Mọi điểm dựng đường dẫn audio trong game truyện đi qua hằng này.
+window.GT_MEDIA = 'https://hoc-tieng-nhat-media.nhabaovieck7.workers.dev/game-media/game-truyen/';
 
 // ===== GUESTOPEN (03/11/2026): khách KHÔNG lưu tiến độ (bản gắn cho realm game) =====
 // Khi trình duyệt KHÔNG có phiên đăng nhập, đọc/ghi các khoá TIẾN ĐỘ + HỒ SƠ
