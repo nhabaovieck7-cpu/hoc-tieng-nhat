@@ -1,6 +1,13 @@
 {
  "items": [
   {
+   "id": "2026-11-08-sua-nut-quay-lai-tang-toc-bai-hoc",
+   "date": "2026-11-08",
+   "type": "fix",
+   "title": "Sửa nút Quay lại bị \"quên\" + mở bài học nhanh hơn",
+   "desc": "Nút Quay lại nay nhớ đúng trang vừa học (kể cả khi mở web từ icon ngoài màn hình chính) và bấm một lần là rời bài sau khi đã xem mục lục; trang bài học cũng mở nhanh hơn vì gói nội dung được tải song song ngay từ đầu, bài không phải kaiwa không còn tải thừa dữ liệu dịch kaiwa, và các file dùng chung đã đóng tem được dùng lại từ bộ nhớ đệm thay vì hỏi lại máy chủ mỗi lần chuyển trang."
+  },
+  {
    "id": "2026-11-04-kho-150-de-thi-thu",
    "date": "2026-11-04",
    "type": "de-thi",

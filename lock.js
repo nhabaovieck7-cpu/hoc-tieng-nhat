@@ -74,6 +74,10 @@ const pre={};
 const binUrl=(m,name)=>'enc/'+name+'.bin?v='+(m.v[name]||'');
 function liteOk(m,name){const L=window.LESSONS_META;return name==='lessons'&&L&&L.v&&L.v===m.v.lessons&&Array.isArray(L.list)}
 function prefetch(m,files){for(const f of files){if(pre[f]||liteOk(m,f))continue;pre[f]=fetch(binUrl(m,f)).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status+' khi tải gói '+f);return r.arrayBuffer()});pre[f].catch(()=>{})}}
+// Trước khi chạy script #main của trang: nếu trang có dữ liệu phụ trợ đang
+// nạp song song (window.__kwviReady — vd kaiwa-vi.js chỉ nạp cho bài kaiwa
+// trên lesson.html) thì chờ nạp xong để #main không chạy thiếu dữ liệu.
+async function runMain(){if(window.__kwviReady){try{await window.__kwviReady}catch(e){}}const m=document.getElementById('main');if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}}
 async function load(name){const m=await getMeta();
  if(liteOk(m,name)){window.LESSONS=window.LESSONS_META.list;return}
  let ab;if(pre[name]){ab=await pre[name];delete pre[name]}else{const r=await fetch(binUrl(m,name));if(!r.ok)throw new Error('HTTP '+r.status+' khi tải gói '+name);ab=await r.arrayBuffer()}
@@ -180,7 +184,7 @@ async function run(files,opt){
   document.documentElement.classList.add('locked');
   try{
     const m0=await getMeta();
-    try{if(localStorage.getItem(SS)||localStorage.getItem(AS))prefetch(m0,files)}catch(e){}
+    try{prefetch(m0,files)}catch(e){} // Tăng tốc (08/11/2026): prefetch gói enc cho MỌI trường hợp (kể cả khách chưa có phiên) song song với verifySession/fetchGuestKey, không chờ tuần tự nữa
     key=await verifySession();
   }catch(e){
     errScreen('Không tải được dữ liệu mở khoá. Có thể do mạng chập chờn — kiểm tra kết nối rồi bấm Thử lại.');
@@ -202,7 +206,7 @@ async function run(files,opt){
           errScreen((e&&e.message)||'Không tải được trang. Kiểm tra mạng rồi bấm Thử lại.');return;
         }
         document.documentElement.classList.remove('locked');
-        if(r!==false){const m=document.getElementById('main');if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}}
+        if(r!==false)await runMain()
         dispatchEvent(new Event('guest'));
         return;
       }
@@ -226,8 +230,7 @@ async function run(files,opt){
       }
       document.documentElement.classList.remove('locked');
       document.documentElement.classList.add('guestopen');
-      const m=document.getElementById('main');
-      if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}
+      await runMain()
       dispatchEvent(new Event('unlocked'));
       dispatchEvent(new Event('guestopen'));
       return;
@@ -243,7 +246,7 @@ async function run(files,opt){
         errScreen((e&&e.message)||'Không tải được bài học thử. Kiểm tra mạng rồi bấm Thử lại.');return;
       }
       document.documentElement.classList.remove('locked');
-      if(r!==false){const m=document.getElementById('main');if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}}
+      if(r!==false)await runMain()
       dispatchEvent(new Event('guest'));
       return;
     }
@@ -257,8 +260,7 @@ async function run(files,opt){
     return;
   }
   document.documentElement.classList.remove('locked');
-  const m=document.getElementById('main');
-  if(m){const s2=document.createElement('script');s2.textContent=m.textContent;document.body.appendChild(s2)}
+  await runMain()
   dispatchEvent(new Event('unlocked'));
 }
 return {run,free,guestLock,load,lockAgain,importContentKey,verifySession,clearStoredKey,netFailed:()=>netFail,isGuestOpen:()=>guestOpen}})();

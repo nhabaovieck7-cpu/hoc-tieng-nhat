@@ -63,11 +63,41 @@ try{var mq=matchMedia('(prefers-color-scheme: dark)');
  if(mq.addEventListener)mq.addEventListener('change',onchg);else if(mq.addListener)mq.addListener(onchg)}catch(e){}
 })();
 
-// ===== Nút "← Quay lại" (trang con): có trang trước cùng site thì history.back(),
-// không có (mở trực tiếp) thì đi theo href trang cha đã khai sẵn trên nút =====
+// ===== Trí nhớ điều hướng (08/11/2026): ngăn xếp các trang đã thăm trong
+// phiên (sessionStorage hn_nav_v1: pathname+search, bỏ hash, tối đa 20 mục,
+// không ghi trùng liên tiếp). Nút Quay lại trước đây chỉ dựa vào
+// document.referrer nên khi referrer bị mất (mở web từ icon PWA, qua webview
+// hay trang trung gian chuyển hướng) là "quên" trang trước, rơi về trang chủ.
+// HN_BACK(): referrer cùng site KHỚP trang trước trong ngăn xếp ->
+// history.back() (giữ khôi phục vị trí cuộn/bfcache như luồng tốt); mất
+// referrer -> đi thẳng tới trang trước trong ngăn xếp; không có cả hai ->
+// trả false để nút dùng href/mặc định cũ.
+(function(){
+ var K='hn_nav_v1';
+ function cur(){return location.pathname+location.search}
+ function read(){try{var j=JSON.parse(sessionStorage.getItem(K)||'[]');return Array.isArray(j)?j.filter(function(x){return typeof x==='string'&&x.charAt(0)==='/'}):[]}catch(e){return[]}}
+ function write(a){try{sessionStorage.setItem(K,JSON.stringify(a.slice(-20)))}catch(e){}}
+ var a=read(),c=cur();
+ if(a[a.length-1]!==c){
+  if(a.length>=2&&a[a.length-2]===c)a.pop(); // vừa Back về một trang trong ngăn xếp: bỏ trang vừa rời khỏi đỉnh
+  else a.push(c);
+  write(a)}
+ function prev(){var s=read();for(var i=s.length-1;i>=0;i--){if(s[i]!==cur())return s[i]}return null}
+ function refPath(){try{if(!document.referrer)return null;var u=new URL(document.referrer);return u.origin===location.origin?u.pathname+u.search:null}catch(x){return null}}
+ window.HN_NAV={stack:read,prev:prev};
+ window.HN_BACK=function(){
+  var p=prev(),rp=refPath();
+  if(p&&rp===p&&history.length>1){history.back();return true}
+  if(p){location.href=p;return true}
+  if(rp&&rp!==cur()&&!/\/bai\/[\w-]+\.html$/.test(rp)&&history.length>1){history.back();return true}
+  return false};
+})();
+
+// ===== Nút "← Quay lại" (trang con): HN_BACK() về đúng trang trước (giữ
+// history.back() ở luồng tốt, dùng trí nhớ điều hướng khi mất referrer);
+// không có trang trước (mở trực tiếp) thì đi theo href trang cha trên nút =====
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a.hn-back'):null;if(!a)return;
- var ok=false;try{ok=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(x){}
- if(ok&&history.length>1){e.preventDefault();history.back()}});
+ if(window.HN_BACK&&HN_BACK())e.preventDefault()});
 
 // ===== Nút chia sẻ trang web =====
 // Ưu tiên Web Share API (iPhone Safari có sẵn — panel hệ thống gồm cả Messenger, Zalo…);
@@ -846,7 +876,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   b.id='backBtnFixed';b.type='button';b.textContent='←';
   b.setAttribute('aria-label','Quay lại');b.title='Quay lại';
   b.addEventListener('click',function(){
-   if(history.length>1)history.back();else location.href='index.html'});
+   if(window.HN_BACK&&HN_BACK())return;
+   // HN_BACK đã xử lý mọi trường hợp có trang trước cùng site; tới đây là
+   // không có trang trước trong phiên (mở thẳng bài ở tab mới...) -> về
+   // trang chủ thay vì history.back() mù (có thể rơi ra about:blank/trang ngoài).
+   location.href='index.html'});
   document.body.appendChild(b)}
  if(document.body)add();
  else document.addEventListener('DOMContentLoaded',add);

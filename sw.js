@@ -1,5 +1,5 @@
 // Service worker: cho phép dùng offline. Nội dung bài học vẫn là file mã hoá enc/*.bin.
-const APP='hn-app-v133',DATA='hn-data',FONTS='hn-fonts',MEDIA='hn-media';
+const APP='hn-app-v134',DATA='hn-data',FONTS='hn-fonts',MEDIA='hn-media';
 const SHELL=['./','index.html','kaiwa.html','cap-nhat.html','game/index.html','hoc-thu.html','hoc-thu.js','chao-cau.js','don-khach.js','khen-cau.js','thanh-ngu.html','nganh-nghe.html','doi-song.html','lesson.html','tin-tuc.html','cong-dong.html','tin-nhan.html','ban-be.html','xep-hang.html','luyen-nghe.html','on-tap.html','thi-thu.html','kiem-tra-trinh-do.html','hoi-ai.html','ung-dung.html','dang-nhap.html','quen-mat-khau.html','dat-lai-mat-khau.html','dang-cho.html','chinh-sach.html','admin.html','study.js','backbtn.js','thanh-ngu-data.js','manifest.json','icons/icon-192.png','enc/meta.json','hero.webp','theme.js','themes.css','skin/mascot-manga.png','skin/onigiri.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(APP).then(c=>c.addAll(SHELL.map(u=>new Request(u,{cache:'reload'})))).catch(()=>{}));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>![APP,DATA,FONTS,MEDIA].includes(k)).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
@@ -8,6 +8,8 @@ async function cacheFirst(req,cacheName){const c=await caches.open(cacheName);co
 self.addEventListener('fetch',e=>{const req=e.request;if(req.method!='GET')return;const u=new URL(req.url);
  if(u.origin==location.origin){
   if(/\/enc\/[\w-]+\.bin$/.test(u.pathname))return e.respondWith(cacheFirst(req,DATA));   // có ?v=hash nên an toàn
+  // asset tĩnh đã đóng tem ?v=md5 (js/css/json): tem đổi là URL đổi -> cacheFirst, khỏi hỏi lại máy chủ (cache:'no-cache') mỗi lần chuyển trang cho nhanh
+  if(u.searchParams.has('v'))return e.respondWith(cacheFirst(req,APP));
   // trang, js, css, meta.json: ưu tiên mạng (bản mới), mất mạng thì dùng bản đã lưu
   return e.respondWith(netFirst(req,APP,{ignoreSearch:req.mode=='navigate'||/\.(js|css|json)$/.test(u.pathname)}))}
  if(/fonts\.(googleapis|gstatic)\.com$/.test(u.hostname))e.respondWith(cacheFirst(req,FONTS));
