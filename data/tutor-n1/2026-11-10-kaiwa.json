@@ -1,0 +1,374 @@
+{
+  "lesson": 27,
+  "topic": "電車に傘を忘れる (quên ô trên tàu điện)",
+  "summary": "Bối cảnh: 拓海 vừa xuống tàu ở ga Kawasaki mới sực nhớ mình để quên chiếc ô gấp màu đen trên giá để hành lý. Cậu nhắn tin hỏi 莉子 xem ở Nhật thì phải làm thế nào để tìm lại đồ thất lạc trên tàu — hỏi ở đâu, cần nói những thông tin gì. Hôm sau, 拓海 gặp lại 莉子 và kể cho cô nghe kết quả: cậu đã đến quầy đồ thất lạc ở ga (忘れ物センター), thủ tục nhận lại đồ ra sao, mất bao lâu và có phải trả phí không. Kỹ năng luyện: văn nói bạn bè — hỏi cách xử lý đồ thất lạc (hỏi ở đâu, nói những gì), mô tả một đồ vật cụ thể (màu sắc, loại gấp, vị trí để quên), và kể lại trải nghiệm nhận lại đồ (có tìm thấy không, thủ tục, thời gian, chi phí). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng ga tàu và đồ thất lạc (忘れ物センター, 落とし物, 届け出る, 受け取る, 網棚), cách nói rút gọn diễn tả sự nuối tiếc 〜ちゃった (〜てしまった), và cách hỏi thông tin theo kiểu liệt kê (tuyến tàu, giờ giấc, đặc điểm đồ vật) mà vẫn nghe tự nhiên như nhắn tin với bạn.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（nhắn tin hỏi cách tìm lại ô để quên trên tàu）",
+      "stage": "（Buổi tối, 拓海 vừa xuống tàu ở ga Kawasaki thì sực nhớ mình để quên ô trên giá để hành lý. Cậu nhắn tin ngay cho 莉子.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "あ、やば。{電車|でんしゃ}に{傘|かさ}{忘|わす}れてきちゃった。",
+          "vi": "Á, chết rồi. Tớ để quên ô trên tàu mất rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え、まじ？あの{黒|くろ}い{折|お}りたたみ{傘|かさ}？",
+          "vi": "Hả, thật á? Cái ô gấp màu đen ấy hả?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうそう。{網棚|あみだな}に{置|お}いたまま{降|お}りちゃったんだよね。",
+          "vi": "Ừ, đúng cái đó. Tớ để trên giá để hành lý rồi xuống tàu luôn."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そっか。でさ、どの{電車|でんしゃ}？{何時|いつ}ごろのやつ？",
+          "vi": "Ra thế. Mà này, tàu nào? Khoảng mấy giờ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、7{時|じ}{半|はん}ごろのやつかな。{川崎|かわさき}で{降|お}りたんだけど。",
+          "vi": "Ừm, chắc khoảng 7 giờ rưỡi. Tớ xuống ở Kawasaki ấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "じゃあ、{忘|わす}れ{物|れもの}センターに{電話|でんわ}してみなよ。{駅|えき}の{忘|わす}れ{物|れもの}のとこ。",
+          "vi": "Thế thì thử gọi cho trung tâm đồ thất lạc xem sao. Chỗ đồ thất lạc ở ga ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "え、{電話|でんわ}で{聞|き}けるの？{何|なん}て{言|い}えばいいの？",
+          "vi": "Hả, gọi điện hỏi được à? Nói sao đây?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まあまあ、{乗|の}った{電車|でんしゃ}と{時間|じかん}と、{傘|かさ}の{特徴|とくちょう}を{言|い}えばいいよ。{色|いろ}とか{形|かたち}とかさ。",
+          "vi": "Thì thì, chỉ cần nói tàu nào, mấy giờ, với đặc điểm của cái ô là được. Màu sắc, hình dáng các thứ ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そっか。でもさ、もう{夜|よる}だし、{明日|あす}でもいいかな。",
+          "vi": "Ra thế. Nhưng mà giờ tối rồi, để mai cũng được nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{明日|あす}{駅|えき}で{直接|ちょくせつ}{聞|き}いてみてもいいよ。{忘|わす}れ{物|れもの}センターって{駅|えき}にあるしさ。",
+          "vi": "Ừ, mai cậu đến thẳng ga hỏi cũng được mà. Trung tâm đồ thất lạc có ngay ở ga ấy mà."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（kể lại trải nghiệm nhận lại ô ở quầy đồ thất lạc）",
+      "stage": "（Hôm sau, 拓海 gặp 莉子 ở ga. Cậu cầm trên tay chiếc ô gấp màu đen vừa nhận lại được từ quầy đồ thất lạc.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "お、{傘|かさ}どうだった？{見|み}つかった？",
+          "vi": "Ồ, cái ô sao rồi? Tìm thấy chưa?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、あったあった！{忘|わす}れ{物|れもの}センターに{行|い}ったら、すぐ{見|み}つかったよ。",
+          "vi": "Ừ, thấy rồi thấy rồi! Tớ đến trung tâm đồ thất lạc thì tìm thấy ngay."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まじで？よかったじゃん。で、{手続|てつづ}きとか{面倒|めんどう}だった？",
+          "vi": "Thật á? Tốt rồi còn gì. Mà thủ tục có rắc rối không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いや、{全然|ぜんぜん}。{乗|の}った{電車|でんしゃ}の{時間|じかん}と{傘|かさ}の{色|いろ}を{言|い}っただけだよ。",
+          "vi": "Không, hoàn toàn không. Tớ chỉ nói giờ tàu với màu ô thôi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、それだけ？{身分|みぶん}{証|しょう}とか{見|み}せた？",
+          "vi": "Ồ, chỉ thế thôi á? Có phải xuất trình giấy tờ gì không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{名前|なまえ}と{電話|でんわ}{番号|ばんごう}を{書|か}いたよ。あと、サインもしたしさ。",
+          "vi": "Ừ, tớ viết tên với số điện thoại. Với cả còn ký tên nữa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "で、{料金|りょうきん}とか{取|と}られた？",
+          "vi": "Thế, có bị thu phí gì không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いや、{無料|むりょう}だったよ。10{分|ぷん}くらいで{終|お}わったしさ。",
+          "vi": "Không, miễn phí mà. Khoảng 10 phút là xong."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、{早|はや}いね。よかったね、{傘|かさ}{返|かえ}ってきて。",
+          "vi": "Ồ, nhanh nhỉ. Tốt thật đấy, ô đã về lại với cậu rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ほんと、{助|たす}かったよ。{次|つぎ}からは{気|き}をつけるわ。",
+          "vi": "Thật đấy, may quá. Lần sau tớ sẽ cẩn thận hơn."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "電車に傘を忘れてしまいました。",
+      "real": "あ、やば。電車に傘忘れてきちゃった。",
+      "why": "Sách giáo khoa nói đầy đủ trợ từ và dạng てしまいました trang trọng. Nói thật thì thốt lên やば trước, bỏ trợ từ に・を, rút てしまった thành ちゃった — nghe đúng cảm giác vừa sực nhớ ra mình để quên đồ, chứ không phải câu tường thuật lạnh lùng."
+    },
+    {
+      "textbook": "網棚に傘を置いたまま降りてしまいました。",
+      "real": "網棚に置いたまま降りちゃったんだよね。",
+      "why": "Văn nói bỏ trợ từ và chủ ngữ thừa, dùng ちゃった để diễn tả sự tiếc nuối, kết bằng んだよね để than thở và tìm đồng cảm. Dạng đầy đủ nghe như đang viết báo cáo, còn dạng rút gọn mới ra cảm giác “tiếc ghê” khi kể với bạn."
+    },
+    {
+      "textbook": "忘れ物センターに電話してみてください。",
+      "real": "じゃあ、忘れ物センターに電話してみなよ。",
+      "why": "Bạn bè dùng 〜てみなよ thay cho 〜てみてください, mở đầu bằng じゃあ để đưa ra gợi ý tự nhiên sau khi đã nghe hết câu chuyện. Sách giáo khoa thì lịch sự và khô khan; dạng rút gọn nghe như lời khuyên thật lòng của bạn, không phải hướng dẫn trong sách."
+    },
+    {
+      "textbook": "忘れ物センターに行ったら、すぐに見つかりました。",
+      "real": "忘れ物センターに行ったら、すぐ見つかったよ。",
+      "why": "Văn nói rút すぐに thành すぐ, dùng dạng quá khứ thường 見つかった thay cho 見つかりました, kết bằng よ để chia sẻ niềm vui. Cách nói này truyền được cảm giác nhẹ nhõm vì đồ đã tìm thấy, còn câu sách giáo khoa nghe như báo cáo kết quả."
+    },
+    {
+      "textbook": "無料でした。10分くらいで終わりました。",
+      "real": "いや、無料だったよ。10分くらいで終わったしさ。",
+      "why": "Bạn bè mở đầu bằng いや để phủ định câu hỏi “có mất phí không”, dùng だった thay cho でした, thêm しさ để nối ý một cách suồng sã. Sách giáo khoa tách thành hai câu trang trọng, nghe như đang trả lời phỏng vấn chứ không phải lời kể với bạn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "あ、やば",
+      "in_lesson": "あ、やば。電車に傘忘れてきちゃった。",
+      "original": "やばい",
+      "vi": "Chết rồi / gay rồi — thốt lên khi vừa nhận ra mình làm hỏng chuyện gì, ở đây là để quên đồ.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết khi gặp sự cố bất ngờ.",
+      "avoid": "Tránh với cấp trên, khách hàng, nhân viên ga, và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "網棚に置いたまま降りちゃったんだよね",
+      "original": "〜てしまった",
+      "vi": "Rút gọn của てしまった: lỡ làm gì mất rồi — diễn tả sự tiếc nuối vì hành động đã xong không lấy lại được.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện mình lỡ làm gì đó.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên ga hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "そっか",
+      "in_lesson": "そっか。でさ、どの電車？何時ごろのやつ？",
+      "original": "そうか",
+      "vi": "Ra thế / à, thế à — phản hồi ngắn khi vừa hiểu ra tình hình của đối phương.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, và trong văn viết trang trọng (khi đó dùng そうですか)."
+    },
+    {
+      "form": "でさ",
+      "in_lesson": "でさ、どの電車？何時ごろのやつ？",
+      "original": "で、〜 / それで",
+      "vi": "Mà này / thế rồi — từ nối suồng sã để chuyển sang câu hỏi hoặc ý tiếp theo.",
+      "use": "Dùng với bạn bè, người thân trong văn nói thường ngày.",
+      "avoid": "Tránh trong văn viết trang trọng và khi nói chuyện với cấp trên hay khách hàng."
+    },
+    {
+      "form": "〜てみなよ",
+      "in_lesson": "忘れ物センターに電話してみなよ",
+      "original": "〜てみてください",
+      "vi": "Thử làm xem sao — dạng khuyên suồng sã, gợi ý đối phương thử một cách giải quyết.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết khi gợi ý.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "まじで？よかったじゃん",
+      "original": "〜じゃないか",
+      "vi": "…còn gì / …mà — xác nhận điều hiển nhiên, khen hoặc đồng tình.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "助かった",
+      "in_lesson": "ほんと、助かったよ。次からは気をつけるわ。",
+      "original": "助かる (động từ)",
+      "vi": "May quá / được cứu rồi — diễn tả sự nhẹ nhõm khi một chuyện rắc rối được giải quyết xong.",
+      "use": "Dùng với bạn bè, gia đình, trong văn nói thường ngày.",
+      "avoid": "Tránh dùng 助かった với cấp trên khi nói về việc họ giúp mình — khi đó dùng 助かりました hoặc ありがとうございました."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{忘|わす}れ{物|れもの}をする",
+      "reading": "わすれものをする",
+      "vi": "Để quên đồ — quên lấy một món đồ ở đâu đó, đồ vẫn còn nằm ở chỗ mình để quên.",
+      "example_ja": "{電車|でんしゃ}に{傘|かさ}を{忘|わす}れちゃったんだよね。",
+      "example_vi": "Tớ lỡ để quên ô trên tàu mất rồi."
+    },
+    {
+      "expr": "{忘|わす}れ{物|れもの}センター",
+      "reading": "わすれものセンター",
+      "vi": "Trung tâm đồ thất lạc — quầy ở ga chuyên giữ và trả lại đồ hành khách bỏ quên trên tàu.",
+      "example_ja": "{忘|わす}れ{物|れもの}センターに{電話|でんわ}したら、すぐ{見|み}つかったよ。",
+      "example_vi": "Gọi cho trung tâm đồ thất lạc thì tìm thấy ngay."
+    },
+    {
+      "expr": "{落|お}とし{物|としもの}",
+      "reading": "おとしもの",
+      "vi": "Đồ đánh rơi / đồ thất lạc — cách gọi chung đồ bị mất, nhân viên ga hay dùng từ này.",
+      "example_ja": "{落|お}とし{物|としもの}は{駅|えき}の{忘|わす}れ{物|れもの}センターに{届|とど}けられるよ。",
+      "example_vi": "Đồ thất lạc thường được đưa đến trung tâm đồ thất lạc ở ga."
+    },
+    {
+      "expr": "{届|とど}け{出|けで}る",
+      "reading": "とどけでる",
+      "vi": "Trình báo / khai báo — báo với ga hoặc cảnh sát rằng mình bị mất đồ.",
+      "example_ja": "{傘|かさ}をなくしたら、まず{駅|えき}に{届|とど}け{出|けで}たほうがいいよ。",
+      "example_vi": "Làm mất ô thì trước hết nên trình báo ở ga."
+    },
+    {
+      "expr": "{受|う}け{取|けと}る",
+      "reading": "うけとる",
+      "vi": "Nhận lại đồ — lấy lại đồ thất lạc của mình sau khi đã xác nhận là đồ của mình.",
+      "example_ja": "{本人|ほんにん}{確認|かくにん}をしてから、{忘|わす}れ{物|れもの}を{受|う}け{取|けと}りました。",
+      "example_vi": "Sau khi xác nhận danh tính, tôi đã nhận lại đồ thất lạc."
+    },
+    {
+      "expr": "{見|み}つかる",
+      "reading": "みつかる",
+      "vi": "Được tìm thấy — dạng tự động của 見つける; dùng khi hỏi đồ thất lạc có tìm thấy không.",
+      "example_ja": "{忘|わす}れた{傘|かさ}、{見|み}つかるといいね。",
+      "example_vi": "Mong là cái ô cậu quên sẽ được tìm thấy."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, đồ bỏ quên trên tàu thường được nhân viên ga hoặc chính hành khách khác nhặt và đưa về quầy đồ thất lạc (忘れ物センター) ở ga, nên khả năng tìm lại đồ khá cao — trong bài, 拓海 chỉ cần đến quầy hỏi là lấy lại được ô ngay hôm sau. Bí quyết là hỏi càng sớm càng tốt và chuẩn bị trước các thông tin then chốt: đi tuyến nào, khoảng mấy giờ, xuống ga nào, đồ vật có màu sắc và hình dáng ra sao. Trong bài, 莉子 hỏi ngay どの電車？何時ごろのやつ？ chính là vì không có mấy thông tin này thì nhân viên ga cũng khó mà tìm giúp được.",
+    "Thủ tục nhận lại đồ thất lạc ở Nhật nhìn chung khá đơn giản và lịch sự: nhân viên sẽ hỏi tên, số điện thoại và đặc điểm của món đồ để đối chiếu xem có đúng là đồ của mình không, rồi cho ký nhận trước khi trả lại — như trong bài, 拓海 chỉ viết tên, số điện thoại và ký tên là xong. Đồ thất lạc thường được ga giữ lại một thời gian rồi mới chuyển đi nơi khác tùy theo quy định của từng công ty đường sắt, nên đừng chần chừ: phát hiện mất đồ là hỏi ngay trong ngày hoặc hôm sau, càng để lâu càng khó tìm."
+  ],
+  "mistakes": [
+    "Đừng nói 傘をなくした với nhân viên ga khi ý là để quên trên tàu: なくした nghe như mất hẳn không biết ở đâu; hãy nói 電車に傘を忘れました hoặc 置き忘れました để nhân viên biết tìm ở chuyến tàu nào, toa nào.",
+    "Đừng hỏi chung chung kiểu “ô đen của tôi đâu?”: ô đen giống nhau rất nhiều, nhân viên khó phân biệt — hãy nói rõ loại gấp hay dài, có hoa văn hay túi đựng gì không, và mình ngồi ở toa nào, giá để hành lý nào.",
+    "Đừng dùng やばい hay めっちゃ với nhân viên ga: đây là từ lóng dùng với bạn bè; với nhân viên hãy dùng です・ます và nói rõ ràng, chậm rãi.",
+    "Đừng nghĩ đồ quên trên tàu là mất luôn: ở Nhật đồ thất lạc thường được thu lại và giữ ở ga một thời gian, nên hỏi càng sớm càng tốt; khi đi nhận lại nhớ mang theo giấy tờ tùy thân để xác nhận."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn vừa xuống tàu mới phát hiện để quên ô trên giá để hành lý. Hãy nhắn tin hỏi một người bạn: ở Nhật thì phải làm gì, hỏi ở đâu, và cần chuẩn bị những thông tin gì trước khi hỏi.",
+    "Tình huống 2: Bạn đang ở quầy đồ thất lạc ở ga. Hãy nói với nhân viên: bạn đi tàu nào, khoảng mấy giờ, xuống ga nào, và mô tả cái ô của bạn (màu sắc, loại gấp hay dài, có gì đặc biệt không).",
+    "Tình huống 3: Hôm sau bạn gặp người bạn đã tư vấn cho mình. Hãy kể lại: bạn đã lấy lại được ô chưa, thủ tục thế nào, mất bao lâu, có mất phí không, và lần sau bạn sẽ cẩn thận ra sao."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "あ、やば。{電車|でんしゃ}に{傘|かさ}{忘|わす}れてきちゃった。",
+      "vi": "Á, chết rồi. Tớ để quên ô trên tàu mất rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え、まじ？あの{黒|くろ}い{折|お}りたたみ{傘|かさ}？",
+      "vi": "Hả, thật á? Cái ô gấp màu đen ấy hả?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうそう。{網棚|あみだな}に{置|お}いたまま{降|お}りちゃったんだよね。",
+      "vi": "Ừ, đúng cái đó. Tớ để trên giá để hành lý rồi xuống tàu luôn."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そっか。でさ、どの{電車|でんしゃ}？{何時|いつ}ごろのやつ？",
+      "vi": "Ra thế. Mà này, tàu nào? Khoảng mấy giờ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、7{時|じ}{半|はん}ごろのやつかな。{川崎|かわさき}で{降|お}りたんだけど。",
+      "vi": "Ừm, chắc khoảng 7 giờ rưỡi. Tớ xuống ở Kawasaki ấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "じゃあ、{忘|わす}れ{物|れもの}センターに{電話|でんわ}してみなよ。{駅|えき}の{忘|わす}れ{物|れもの}のとこ。",
+      "vi": "Thế thì thử gọi cho trung tâm đồ thất lạc xem sao. Chỗ đồ thất lạc ở ga ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "え、{電話|でんわ}で{聞|き}けるの？{何|なん}て{言|い}えばいいの？",
+      "vi": "Hả, gọi điện hỏi được à? Nói sao đây?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まあまあ、{乗|の}った{電車|でんしゃ}と{時間|じかん}と、{傘|かさ}の{特徴|とくちょう}を{言|い}えばいいよ。{色|いろ}とか{形|かたち}とかさ。",
+      "vi": "Thì thì, chỉ cần nói tàu nào, mấy giờ, với đặc điểm của cái ô là được. Màu sắc, hình dáng các thứ ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そっか。でもさ、もう{夜|よる}だし、{明日|あす}でもいいかな。",
+      "vi": "Ra thế. Nhưng mà giờ tối rồi, để mai cũng được nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{明日|あす}{駅|えき}で{直接|ちょくせつ}{聞|き}いてみてもいいよ。{忘|わす}れ{物|れもの}センターって{駅|えき}にあるしさ。",
+      "vi": "Ừ, mai cậu đến thẳng ga hỏi cũng được mà. Trung tâm đồ thất lạc có ngay ở ga ấy mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、{傘|かさ}どうだった？{見|み}つかった？",
+      "vi": "Ồ, cái ô sao rồi? Tìm thấy chưa?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、あったあった！{忘|わす}れ{物|れもの}センターに{行|い}ったら、すぐ{見|み}つかったよ。",
+      "vi": "Ừ, thấy rồi thấy rồi! Tớ đến trung tâm đồ thất lạc thì tìm thấy ngay."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まじで？よかったじゃん。で、{手続|てつづ}きとか{面倒|めんどう}だった？",
+      "vi": "Thật á? Tốt rồi còn gì. Mà thủ tục có rắc rối không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いや、{全然|ぜんぜん}。{乗|の}った{電車|でんしゃ}の{時間|じかん}と{傘|かさ}の{色|いろ}を{言|い}っただけだよ。",
+      "vi": "Không, hoàn toàn không. Tớ chỉ nói giờ tàu với màu ô thôi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、それだけ？{身分|みぶん}{証|しょう}とか{見|み}せた？",
+      "vi": "Ồ, chỉ thế thôi á? Có phải xuất trình giấy tờ gì không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{名前|なまえ}と{電話|でんわ}{番号|ばんごう}を{書|か}いたよ。あと、サインもしたしさ。",
+      "vi": "Ừ, tớ viết tên với số điện thoại. Với cả còn ký tên nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "で、{料金|りょうきん}とか{取|と}られた？",
+      "vi": "Thế, có bị thu phí gì không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いや、{無料|むりょう}だったよ。10{分|ぷん}くらいで{終|お}わったしさ。",
+      "vi": "Không, miễn phí mà. Khoảng 10 phút là xong."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、{早|はや}いね。よかったね、{傘|かさ}{返|かえ}ってきて。",
+      "vi": "Ồ, nhanh nhỉ. Tốt thật đấy, ô đã về lại với cậu rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ほんと、{助|たす}かったよ。{次|つぎ}からは{気|き}をつけるわ。",
+      "vi": "Thật đấy, may quá. Lần sau tớ sẽ cẩn thận hơn."
+    }
+  ],
+  "notes": [
+    "忘れ物をする: để quên đồ — cụm cơ bản nhất của bài, dùng khi đồ còn nằm ở đâu đó mình biết, khác với なくす (làm mất hẳn).",
+    "忘れ物センター: quầy/trung tâm đồ thất lạc ở ga — chỗ hỏi đầu tiên khi quên đồ trên tàu; có thể đến trực tiếp hoặc gọi điện hỏi trước.",
+    "落とし物: đồ đánh rơi/thất lạc — từ nhân viên ga hay dùng; phân biệt với 忘れ物 (đồ để quên ở một chỗ cụ thể).",
+    "網棚 (あみだな): giá để hành lý phía trên ghế trên tàu — chỗ hay để quên ô, túi, áo khoác nhất, nhớ kiểm tra trước khi xuống tàu.",
+    "届け出る: trình báo, khai báo — khi mất đồ, nói 駅に届け出る nghĩa là đã báo với ga để họ tìm giúp.",
+    "受け取る: nhận lại đồ — dùng khi đi lấy lại đồ thất lạc sau khi đã xác nhận là đồ của mình.",
+    "見つかる: được tìm thấy — dạng tự động của 見つける; khi hỏi đồ thất lạc, câu 見つかりましたか là câu hỏi then chốt."
+  ]
+}

@@ -149,6 +149,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 26 — 初めての歯医者 (lần đầu đi khám nha khoa)",
       "file": "2026-11-09-kaiwa.json"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 10/11/2026（問題11・中文）",
+      "file": "2026-11-10-n1-set.json"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 10/11/2026（短文）",
+      "file": "2026-11-10-reading.json"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 27 — 電車に傘を忘れる (quên ô trên tàu điện)",
+      "file": "2026-11-10-kaiwa.json"
     }
   ]
 }

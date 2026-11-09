@@ -1,0 +1,413 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 短文 trong phần đọc hiểu của đề N1 thật: một bài đọc ngắn (khoảng 200–300 chữ) với 4 câu hỏi — hỏi ý chính của tác giả, ý nghĩa của một cụm từ trong bài, lý do của một nhận định, và lựa chọn đúng với nội dung bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, tìm chủ trương của tác giả ở câu cuối và các từ nối đối lập; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 6–8 phút (đọc + 4 câu hỏi). Trong đề thật, 短文 là dạng dễ mất điểm vì bài ngắn nhưng trừu tượng: các lựa chọn nhiễu thường 'nghe có lý' nhưng đảo ngược quan hệ nhân quả, hoặc lấy ví dụ minh họa trong bài làm đáp án thay cho ý chính của tác giả.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, đọc bài sau",
+      "body": "Bài 短文 tuy ngắn nhưng trừu tượng, đọc kỹ từ đầu dễ bị cuốn theo từng câu chữ. Đọc 4 câu hỏi trước để biết mình cần tìm gì (ý chính? ý của một cụm từ? lý do? lựa chọn đúng với nội dung?), rồi mới đọc bài với mục đích rõ ràng."
+    },
+    {
+      "h": "Tìm chủ trương của tác giả ở câu cuối và các từ nối đối lập",
+      "body": "Trong bài luận ngắn kiểu N1, ý chính thường nằm ở cuối bài, sau các từ nối đối lập như しかし・けれども・大切なのは. Đoạn đầu thường chỉ nêu vấn đề hoặc quan điểm cần phê phán, không phải ý chính. Câu hỏi '筆者が最も言いたいこと' hầu như luôn có đáp án ở đoạn cuối."
+    },
+    {
+      "h": "Ví dụ chỉ là bằng chứng, không phải ý chính",
+      "body": "Ví dụ mở đầu bằng たとえば・例えば chỉ minh họa cho một luận điểm, không bao giờ là đáp án của câu hỏi ý chính. Lựa chọn nào chỉ nhắc lại nội dung của ví dụ (ví dụ: chuyện thời gian, chuyện môi trường) thì gần như chắc chắn là nhiễu."
+    },
+    {
+      "h": "Câu hỏi về 下線部 / 'そこから' / 'こうして': tìm câu ngay trước đó",
+      "body": "Các từ chỉ định như そこから・こうして・それ luôn trỏ về nội dung của câu ngay trước nó trong cùng một đoạn, thường là vế trước của cùng một câu. Đừng suy luận xa — chỉ cần đọc lại câu trước đó là thấy đáp án."
+    },
+    {
+      "h": "Câu hỏi '本文の内容と合うもの': kiểm tra TỪNG nửa của lựa chọn",
+      "body": "Lựa chọn đúng phải đúng toàn bộ với bài. Nhiều lựa chọn nhiễu ghép một nửa đúng với một nửa bị đảo ngược (ví dụ: 'người bỏ bào chữa thì đổ lỗi cho người khác' — nửa đầu đúng, nửa sau ngược với bài). Chỉ cần một nửa sai thì cả lựa chọn sai."
+    },
+    {
+      "h": "Cảnh giác với lựa chọn đảo ngược quan hệ nhân quả",
+      "body": "Bẫy kinh điển của dạng 短文: lựa chọn viết ngược lại bài — 'bào chữa giúp làm rõ nguyên nhân' trong khi bài nói 'bào chữa khiến vấn đề bị trì hoãn', 'trách móc thất bại là quan trọng nhất' trong khi bài nói 'điều quan trọng KHÔNG PHẢI là trách móc'. Gặp lựa chọn có vẻ hợp lý, hãy đối chiếu từng chữ với nguyên văn."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài hôm nay có 4 đoạn: đoạn 1 nêu vấn đề — 言い訳 là lời để tự bảo vệ mình nhưng khiến người ta tìm nguyên nhân ở bên ngoài; đoạn 2 đưa 2 ví dụ (không có thời gian / môi trường xấu) rồi kết luận 言い訳 trì hoãn vấn đề; đoạn 3 bước ngoặt với しかし — người bỏ bào chữa đón nhận thất bại làm 課題 của mình; đoạn 4 kết luận với 大切なのは — chọn hành động thay cho lời bào chữa. Đáp án câu hỏi ý chính nằm ở đoạn 4, đáp án câu hỏi 'なぜ' nằm ở đoạn 2, đáp án câu hỏi 'そこから' nằm ở đoạn 3 câu 2."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "言い訳は、失敗したとき、自分を守るための言葉である。けれども、その言葉を繰り返すうちに、人は失敗の原因を自分の外に探すようになる。\nたとえば、時間がなかったからできなかった、と言う人は、時間の使い方を振り返らない。環境が悪かった、と言う人は、環境を変える努力をしない。こうして、言い訳は問題を先送りにする道具になってしまう。\nしかし、言い訳をやめた人は、失敗を自分の課題として受け止める。原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる。\n大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである。言葉を変えれば、自分の未来も変わり始める。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "失敗したときは、自分を責めるよりも、まず環境を変えるべきである。",
+        "言い訳は、自分を守るために必要な言葉であるから、使い続けるべきである。",
+        "言い訳をやめ、失敗を自分の課題として受け止め、行動を変えることが大切である。",
+        "失敗の原因は、ほとんどの場合、自分の外にある。"
+      ],
+      "answer": 2,
+      "explain_vi": "Ý chính nằm ở đoạn cuối: 大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである (đoạn 4 câu 1), cùng với đoạn 3: người bỏ bào chữa đón nhận thất bại làm 課題 của mình. Lựa chọn ③ tóm tắt đúng cả hai ý. Lựa chọn ① đảo ngược bài — bài phê phán việc đổ lỗi cho môi trường chứ không khuyên đổi môi trường trước; ② trái với chủ trương của tác giả — bài khuyên bỏ 言い訳 chứ không khuyên dùng tiếp; ④ trái với đoạn 1–2 — bài phê phán việc tìm nguyên nhân ở bên ngoài bản thân."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "言い訳は、失敗したとき、自分を守るための言葉である。けれども、その言葉を繰り返すうちに、人は失敗の原因を自分の外に探すようになる。\nたとえば、時間がなかったからできなかった、と言う人は、時間の使い方を振り返らない。環境が悪かった、と言う人は、環境を変える努力をしない。こうして、言い訳は問題を先送りにする道具になってしまう。\nしかし、言い訳をやめた人は、失敗を自分の課題として受け止める。原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる。\n大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである。言葉を変えれば、自分の未来も変わり始める。\n「こうして、言い訳は問題を先送りにする道具になってしまう」とあるが、なぜか。",
+      "choices": [
+        "言い訳をすると、失敗の原因を自分の外に求め、問題と向き合わなくなるから。",
+        "言い訳をすると、周りの人が助けてくれなくなるから。",
+        "言い訳は、失敗を認めるための第一歩だから。",
+        "言い訳を繰り返すと、時間の使い方が上手になるから。"
+      ],
+      "answer": 0,
+      "explain_vi": "こうして tóm tắt hai ví dụ ở đoạn 2: người nói 'không có thời gian' thì không nhìn lại cách dùng thời gian; người nói 'môi trường xấu' thì không nỗ lực thay đổi môi trường — tức là tìm nguyên nhân ở bên ngoài nên không đối mặt với vấn đề, vấn đề bị trì hoãn. Lựa chọn ② bài không hề nhắc tới việc người xung quanh có giúp đỡ hay không; ③ ngược với nội dung — 言い訳 là thứ ngăn cản việc thừa nhận thất bại, không phải bước đầu tiên để thừa nhận; ④ ngược với bài — người bào chữa không nhìn lại cách dùng thời gian nên không thể dùng thời gian giỏi lên."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "言い訳は、失敗したとき、自分を守るための言葉である。けれども、その言葉を繰り返すうちに、人は失敗の原因を自分の外に探すようになる。\nたとえば、時間がなかったからできなかった、と言う人は、時間の使い方を振り返らない。環境が悪かった、と言う人は、環境を変える努力をしない。こうして、言い訳は問題を先送りにする道具になってしまう。\nしかし、言い訳をやめた人は、失敗を自分の課題として受け止める。原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる。\n大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである。言葉を変えれば、自分の未来も変わり始める。\n「そこから初めて」とあるが、「そこから」とは何を指すか。",
+      "choices": [
+        "時間の使い方を振り返ること",
+        "環境を変える努力をすること",
+        "言い訳を繰り返すこと",
+        "失敗の原因が自分にあると認めること"
+      ],
+      "answer": 3,
+      "explain_vi": "「そこから」 ở đoạn 3 câu 2 trỏ về vế ngay trước nó trong cùng câu: 原因が自分にあると認めること — thừa nhận rằng nguyên nhân nằm ở bản thân mình; từ việc thừa nhận đó, lần đầu tiên người ta mới thấy được tiếp theo nên thay đổi điều gì. Lựa chọn ① và ② là những việc xuất hiện trong các ví dụ ở đoạn 2 — hơn nữa đó là những việc người bào chữa KHÔNG làm, không phải thứ mà 「そこから」 trỏ tới; ③ trái hẳn với bài — lặp lại 言い訳 chính là điều khiến vấn đề bị trì hoãn, không phải điểm khởi đầu để thấy được điều cần thay đổi."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "言い訳は、失敗したとき、自分を守るための言葉である。けれども、その言葉を繰り返すうちに、人は失敗の原因を自分の外に探すようになる。\nたとえば、時間がなかったからできなかった、と言う人は、時間の使い方を振り返らない。環境が悪かった、と言う人は、環境を変える努力をしない。こうして、言い訳は問題を先送りにする道具になってしまう。\nしかし、言い訳をやめた人は、失敗を自分の課題として受け止める。原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる。\n大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである。言葉を変えれば、自分の未来も変わり始める。\n本文の内容と合うものはどれか。",
+      "choices": [
+        "言い訳は失敗の原因を明らかにするので、問題解決に役立つ。",
+        "言葉を変えて行動を選ぶことで、自分の未来は変わり始める。",
+        "言い訳をやめた人は、失敗を他人のせいにするようになる。",
+        "失敗を責めることが、成長のための最も大切なことである。"
+      ],
+      "answer": 1,
+      "explain_vi": "Trùng khớp với đoạn 4: 言葉を変えれば、自分の未来も変わり始める (câu 2) và 大切なのは…言い訳の代わりに行動を選ぶことである (câu 1). Lựa chọn ① ngược với bài — 言い訳 khiến vấn đề bị 先送り, không làm rõ nguyên nhân; ③ ngược với đoạn 3 — người bỏ bào chữa đón nhận thất bại làm 課題 của mình, không đổ lỗi cho người khác; ④ ngược với đoạn 4 câu 1 — bài nói điều quan trọng KHÔNG PHẢI là 責めること mà là chọn 行動."
+    }
+  ],
+  "study": {
+    "passage_title": "「言い訳をやめること」— Bài luận ngắn: vì sao lời bào chữa trì hoãn vấn đề và vì sao bỏ bào chữa mới thấy được điều cần thay đổi",
+    "structure": "Bài luận ngắn gồm 4 đoạn, 9 câu, theo cấu trúc 'nêu vấn đề → ví dụ → bước ngoặt → kết luận' điển hình của dạng 短文 N1. Đoạn 1 (2 câu) nêu vấn đề: 言い訳 là lời nói để tự bảo vệ mình khi thất bại, nhưng lặp lại nó khiến người ta đi tìm nguyên nhân của thất bại ở bên ngoài bản thân. Đoạn 2 (3 câu) đưa 2 ví dụ song song: người nói 'không có thời gian nên không làm được' thì không nhìn lại cách dùng thời gian; người nói 'môi trường xấu' thì không nỗ lực thay đổi môi trường — rồi kết luận: こうして、言い訳 trở thành công cụ trì hoãn vấn đề. Đoạn 3 (2 câu) là bước ngoặt, mở đầu bằng しかし: người đã bỏ bào chữa thì đón nhận thất bại như 課題 của chính mình; thừa nhận nguyên nhân ở bản thân là đau đớn, nhưng từ đó mới thấy được tiếp theo nên thay đổi điều gì. Đoạn 4 (2 câu) kết luận, mở đầu bằng 大切なのは: điều quan trọng không phải là trách móc thất bại mà là chọn hành động thay cho lời bào chữa; thay đổi lời nói thì tương lai cũng bắt đầu thay đổi. Bẫy chính của bài: các lựa chọn nhiễu lấy ví dụ ở đoạn 2 làm ý chính, hoặc đảo ngược quan hệ nhân quả (nói 言い訳 giúp giải quyết vấn đề, nói trách móc là quan trọng nhất).",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{言|い}い{訳|いわけ}は、{失敗|しっぱい}したとき、{自分|じぶん}を{守|まも}るための{言葉|ことば}である。",
+        "vi": "Lời bào chữa là những lời nói để bảo vệ bản thân khi thất bại."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "けれども、その{言葉|ことば}を{繰|く}り{返|りかえ}すうちに、{人|ひと}は{失敗|しっぱい}の{原因|げんいん}を{自分|じぶん}の{外|そと}に{探|さが}すようになる。",
+        "vi": "Thế nhưng, khi cứ lặp lại những lời ấy, con người dần dần đi tìm nguyên nhân của thất bại ở bên ngoài bản thân mình."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "たとえば、{時間|じかん}がなかったからできなかった、と{言|い}う{人|ひと}は、{時間|じかん}の{使|つか}い{方|かた}を{振|ふ}り{返|りかえ}らない。",
+        "vi": "Chẳng hạn, người nói 'vì không có thời gian nên tôi đã không làm được' thì sẽ không nhìn lại cách mình sử dụng thời gian."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{環境|かんきょう}が{悪|わる}かった、と{言|い}う{人|ひと}は、{環境|かんきょう}を{変|か}える{努力|どりょく}をしない。",
+        "vi": "Người nói 'vì môi trường xấu' thì sẽ không nỗ lực thay đổi môi trường."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "こうして、{言|い}い{訳|いわけ}は{問題|もんだい}を{先送|さきおく}りにする{道具|どうぐ}になってしまう。",
+        "vi": "Cứ như vậy, lời bào chữa trở thành công cụ để trì hoãn vấn đề."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "しかし、{言|い}い{訳|いわけ}をやめた{人|ひと}は、{失敗|しっぱい}を{自分|じぶん}の{課題|かだい}として{受|う}け{止|けと}める。",
+        "vi": "Tuy nhiên, người đã thôi bào chữa thì đón nhận thất bại như là vấn đề của chính mình."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{原因|げんいん}が{自分|じぶん}にあると{認|みと}めることはつらいが、そこから{初|はじ}めて、{次|つぎ}に{何|なん}を{変|か}えるべきかが{見|み}えてくる。",
+        "vi": "Thừa nhận rằng nguyên nhân nằm ở bản thân mình là điều đau đớn, nhưng từ đó, lần đầu tiên người ta mới thấy được tiếp theo nên thay đổi điều gì."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{大切|たいせつ}なのは、{失敗|しっぱい}を{責|せ}めることではなく、{言|い}い{訳|いわけ}の{代|か}わりに{行動|こうどう}を{選|えら}ぶことである。",
+        "vi": "Điều quan trọng không phải là trách móc thất bại, mà là chọn hành động thay cho lời bào chữa."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{言葉|ことば}を{変|か}えれば、{自分|じぶん}の{未来|みらい}も{変|か}わり{始|はじ}める。",
+        "vi": "Nếu thay đổi lời nói, tương lai của chính mình cũng bắt đầu thay đổi."
+      }
+    ],
+    "answer_key": "問1：③　問2：①　問3：④　問4：②",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 2,
+        "locator": "Đ4① + Đ3①",
+        "options": [
+          {
+            "text": "失敗したときは、自分を責めるよりも、まず環境を変えるべきである。",
+            "verdict": "SAI",
+            "reason": "Bài phê phán việc đổ lỗi cho môi trường: người nói '環境が悪かった' thì '環境を変える努力をしない' (đoạn 2 câu 2) — tức là lấy môi trường làm cớ để không hành động. Lựa chọn này biến cái cớ trong bài thành lời khuyên, đảo ngược chủ trương của tác giả. Bẫy đảo ngược quan hệ nhân quả."
+          },
+          {
+            "text": "言い訳は、自分を守るために必要な言葉であるから、使い続けるべきである。",
+            "verdict": "SAI",
+            "reason": "Nửa đầu đúng với đoạn 1 câu 1 (言い訳は…自分を守るための言葉である) nhưng nửa sau sai hoàn toàn: toàn bộ bài luận khuyên BỎ 言い訳 (言い訳をやめた人は…, đoạn 3 câu 1; 言い訳の代わりに行動を選ぶ, đoạn 4 câu 1). Bẫy ghép nửa đúng với nửa ngược với bài."
+          },
+          {
+            "text": "言い訳をやめ、失敗を自分の課題として受け止め、行動を変えることが大切である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai luận điểm chính của bài: đoạn 3 câu 1 — 言い訳をやめた人は、失敗を自分の課題として受け止める; đoạn 4 câu 1 — 大切なのは…言い訳の代わりに行動を選ぶことである. Đây là ý tác giả muốn nói nhất, nằm ở đoạn kết luận."
+          },
+          {
+            "text": "失敗の原因は、ほとんどの場合、自分の外にある。",
+            "verdict": "SAI",
+            "reason": "Trái với đoạn 1 câu 2 và đoạn 3: bài phê phán việc '失敗の原因を自分の外に探す' và khẳng định người trưởng thành là người認める '原因が自分にある'. Lựa chọn này lấy hành vi bị phê phán trong bài làm thành kết luận. Bẫy lấy ý bị phê phán làm ý chính."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ2③ + Đ2①②",
+        "options": [
+          {
+            "text": "言い訳をすると、失敗の原因を自分の外に求め、問題と向き合わなくなるから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 2: hai ví dụ (không có thời gian → không nhìn lại cách dùng thời gian; môi trường xấu → không nỗ lực thay đổi môi trường) đều cho thấy người bào chữa tìm nguyên nhân ở bên ngoài nên không đối mặt với vấn đề, và こうして tóm tắt hai ví dụ đó thành kết luận '言い訳は問題を先送りにする道具になってしまう' (đoạn 2 câu 3)."
+          },
+          {
+            "text": "言い訳をすると、周りの人が助けてくれなくなるから。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nhắc tới việc người xung quanh có giúp đỡ hay không. Đây là suy luận ngoài bài — 'nghe có lý' trong đời thường nhưng không có căn cứ trong nguyên văn. Bẫy suy luận ngoài bài."
+          },
+          {
+            "text": "言い訳は、失敗を認めるための第一歩だから。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài: 言い訳 là thứ NGĂN CẢN việc thừa nhận thất bại (đoạn 1–2: bào chữa khiến người ta tìm nguyên nhân ở bên ngoài, trì hoãn vấn đề). Bước đầu tiên để thừa nhận thất bại theo bài là やめる 言い訳, không phải dùng 言い訳. Bẫy đảo ngược quan hệ nhân quả."
+          },
+          {
+            "text": "言い訳を繰り返すと、時間の使い方が上手になるから。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 1: người nói '時間がなかったからできなかった' thì '時間の使い方を振り返らない' — không nhìn lại thì không thể dùng thời gian giỏi lên. Lựa chọn này lấy ví dụ trong bài rồi đảo ngược kết quả của nó. Bẫy đảo ngược ví dụ."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ3②",
+        "options": [
+          {
+            "text": "時間の使い方を振り返ること",
+            "verdict": "SAI",
+            "reason": "Đây là việc xuất hiện trong ví dụ ở đoạn 2 câu 1 — hơn nữa đó là việc người bào chữa KHÔNG làm (時間の使い方を振り返らない). 「そこから」 ở đoạn 3 câu 2 trỏ về vế ngay trước nó trong cùng câu, không trỏ về ví dụ ở đoạn trước. Bẫy lấy ví dụ ở đoạn khác gán sang."
+          },
+          {
+            "text": "環境を変える努力をすること",
+            "verdict": "SAI",
+            "reason": "Đây là việc xuất hiện trong ví dụ ở đoạn 2 câu 2 — cũng là việc người bào chữa KHÔNG làm (環境を変える努力をしない). 「そこから」 trỏ về 原因が自分にあると認めること trong cùng câu ở đoạn 3, không phải việc này. Bẫy lấy ví dụ ở đoạn khác gán sang."
+          },
+          {
+            "text": "言い訳を繰り返すこと",
+            "verdict": "SAI",
+            "reason": "Trái hẳn với bài: 繰り返す 言い訳 là điều khiến vấn đề bị 先送り (đoạn 1 câu 2, đoạn 2 câu 3), không phải điểm khởi đầu để thấy được '次に何を変えるべきか'. Lựa chọn này lấy chính nguyên nhân của vấn đề làm đáp án. Bẫy đảo ngược."
+          },
+          {
+            "text": "失敗の原因が自分にあると認めること",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 2: '原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる' — 「そこから」 trỏ về vế ngay trước nó trong cùng câu, tức là việc thừa nhận nguyên nhân nằm ở bản thân mình."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đ4①②",
+        "options": [
+          {
+            "text": "言い訳は失敗の原因を明らかにするので、問題解決に役立つ。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 3: 言い訳は問題を先送りにする道具になってしまう — bào chữa khiến vấn đề bị trì hoãn, không làm rõ nguyên nhân cũng không giúp giải quyết vấn đề. Bẫy đảo ngược quan hệ nhân quả."
+          },
+          {
+            "text": "言葉を変えて行動を選ぶことで、自分の未来は変わり始める。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 4: 大切なのは…言い訳の代わりに行動を選ぶことである (câu 1) và 言葉を変えれば、自分の未来も変わり始める (câu 2). Cả hai nửa của lựa chọn đều đúng với cùng một đoạn kết luận."
+          },
+          {
+            "text": "言い訳をやめた人は、失敗を他人のせいにするようになる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 1: 言い訳をやめた人は、失敗を自分の課題として受け止める — đón nhận thất bại làm vấn đề của chính mình, không phải đổ lỗi cho người khác. Bẫy đảo ngược chủ thể (mình ↔ người khác)."
+          },
+          {
+            "text": "失敗を責めることが、成長のための最も大切なことである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 4 câu 1: 大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである — bài nói rõ điều quan trọng KHÔNG PHẢI là trách móc thất bại. Lựa chọn này bỏ qua ではなく và đảo ngược kết luận. Bẫy đọc nửa câu."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{言|い}い{訳|いわけ}",
+        "reading": "いいわけ",
+        "hanviet": "Ngôn Dịch",
+        "vi": "lời bào chữa, lý do biện hộ"
+      },
+      {
+        "word": "{先送|さきおく}り",
+        "reading": "さきおくり",
+        "hanviet": "Tiên Tống",
+        "vi": "sự trì hoãn, đẩy lùi (vấn đề) sang sau"
+      },
+      {
+        "word": "{受|う}け{止|けと}める",
+        "reading": "うけとめる",
+        "hanviet": "Thụ Chỉ",
+        "vi": "đón nhận, chấp nhận (một sự việc, sự thật)"
+      },
+      {
+        "word": "{振|ふ}り{返|りかえ}る",
+        "reading": "ふりかえる",
+        "hanviet": "Chấn Phản",
+        "vi": "nhìn lại, suy ngẫm lại (quá khứ, cách làm của mình)"
+      },
+      {
+        "word": "{課題|かだい}",
+        "reading": "かだい",
+        "hanviet": "Khóa Đề",
+        "vi": "vấn đề cần giải quyết, nhiệm vụ đặt ra cho bản thân"
+      },
+      {
+        "word": "{原因|げんいん}",
+        "reading": "げんいん",
+        "hanviet": "Nguyên Nhân",
+        "vi": "nguyên nhân, căn nguyên"
+      },
+      {
+        "word": "{繰|く}り{返|りかえ}す",
+        "reading": "くりかえす",
+        "hanviet": "Phản Phục",
+        "vi": "lặp lại, lặp đi lặp lại"
+      },
+      {
+        "word": "{代|か}わりに",
+        "reading": "かわりに",
+        "hanviet": "Đại",
+        "vi": "thay vào đó, thay cho (cái gì đó)"
+      },
+      {
+        "word": "{責|せ}める",
+        "reading": "せめる",
+        "hanviet": "Trách",
+        "vi": "trách móc, đổ lỗi, trách cứ"
+      },
+      {
+        "word": "{努力|どりょく}",
+        "reading": "どりょく",
+        "hanviet": "Nỗ Lực",
+        "vi": "sự nỗ lực, cố gắng"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜うちに",
+        "vi": "trong khi… / trong lúc… (diễn ra) — chỉ một thay đổi xảy ra trong quá trình lặp lại một hành động",
+        "in_text": "けれども、その言葉を繰り返すうちに、人は失敗の原因を自分の外に探すようになる。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "(vô tình / mất rồi)… — chỉ kết quả không mong muốn, mang sắc thái tiếc nuối hoặc phê phán",
+        "in_text": "こうして、言い訳は問題を先送りにする道具になってしまう。"
+      },
+      {
+        "pattern": "〜として",
+        "vi": "với tư cách là… / coi như là… — nêu vai trò, lập trường khi nhìn nhận một sự việc",
+        "in_text": "しかし、言い訳をやめた人は、失敗を自分の課題として受け止める。"
+      },
+      {
+        "pattern": "〜べき",
+        "vi": "nên… / phải… — chỉ điều nên làm theo chuẩn mực, bổn phận; ở đây là dạng べきか trong câu hỏi gián tiếp",
+        "in_text": "原因が自分にあると認めることはつらいが、そこから初めて、次に何を変えるべきかが見えてくる。"
+      },
+      {
+        "pattern": "〜のではなく",
+        "vi": "không phải là… mà là… — phủ định vế trước, khẳng định vế sau",
+        "in_text": "大切なのは、失敗を責めることではなく、言い訳の代わりに行動を選ぶことである。"
+      },
+      {
+        "pattern": "〜ば",
+        "vi": "nếu… thì… — điều kiện giả định; ở đây là Vれば trong 変えれば",
+        "in_text": "言葉を変えれば、自分の未来も変わり始める。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm diễn tả sự thay đổi dần dần: 〜ようになる / 〜てくる / 〜ていく",
+        "rows": [
+          {
+            "form": "〜ようになる",
+            "join": "Vる / Vない + ようになる",
+            "vi": "trở nên… / bắt đầu có thể…",
+            "diff": "Chỉ sự thay đổi TRẠNG THÁI hoặc khả năng: trước đây không thế, giờ đã thế. Nhấn mạnh kết quả của quá trình, không nhấn mạnh hướng thời gian.",
+            "example_ja": "{言|い}い{訳|いわけ}をやめると、{失敗|しっぱい}の{原因|げんいん}が{見|み}えるようになる。",
+            "example_vi": "Khi thôi bào chữa, người ta trở nên thấy được nguyên nhân của thất bại."
+          },
+          {
+            "form": "〜てくる",
+            "join": "Vて + くる",
+            "vi": "dần dần… (đến nay)",
+            "diff": "Nhấn mạnh quá trình thay đổi đang TIẾN TỚI HIỆN TẠI: từ trước đến giờ đã dần thay đổi như vậy. Thường dùng với thay đổi đã và đang diễn ra.",
+            "example_ja": "{失敗|しっぱい}の{見|み}{方|かた}が{少|すこ}しずつ{変|か}わってきた。",
+            "example_vi": "Cách nhìn nhận thất bại đã dần dần thay đổi."
+          },
+          {
+            "form": "〜ていく",
+            "join": "Vて + いく",
+            "vi": "dần dần… (từ nay về sau)",
+            "diff": "Nhấn mạnh quá trình thay đổi TIẾP DIỄN VỀ PHÍA TƯƠNG LAI: từ nay trở đi sẽ dần thay đổi. Đối lập với 〜てくる ở hướng thời gian.",
+            "example_ja": "これからも、{行動|こうどう}を{変|か}えていきたい。",
+            "example_vi": "Từ giờ trở đi, tôi cũng muốn dần dần thay đổi hành động của mình."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm nói 'nên / phải làm': 〜べきだ / 〜なければならない / 〜たほうがいい",
+        "rows": [
+          {
+            "form": "〜べきだ",
+            "join": "Vる + べきだ",
+            "vi": "nên… (theo lẽ phải)",
+            "diff": "Mang tính đạo đức, bổn phận, chuẩn mực xã hội: 'lẽ ra nên làm như vậy'. Mạnh hơn ほうがいい nhưng không bắt buộc tuyệt đối như なければならない.",
+            "example_ja": "{次|つぎ}に{何|なん}を{変|か}えるべきか、よく{考|かんが}えるべきだ。",
+            "example_vi": "Nên suy nghĩ kỹ xem tiếp theo cần thay đổi điều gì."
+          },
+          {
+            "form": "〜なければならない",
+            "join": "Vない + なければならない",
+            "vi": "phải… (bắt buộc)",
+            "diff": "Nghĩa vụ BẮT BUỘC: không làm thì không được, thường do quy định, hoàn cảnh hoặc trách nhiệm ép buộc. Mạnh nhất trong 3 mẫu.",
+            "example_ja": "{失敗|しっぱい}の{原因|げんいん}と{向|む}き{合|きあ}わなければならない。",
+            "example_vi": "Phải đối mặt với nguyên nhân của thất bại."
+          },
+          {
+            "form": "〜たほうがいい",
+            "join": "Vた + ほうがいい",
+            "vi": "nên… thì tốt hơn",
+            "diff": "Lời khuyên NHẸ NHÀNG, mang tính gợi ý: làm như vậy thì tốt hơn, nhưng không làm cũng không sai. Dùng nhiều trong văn nói khi khuyên người khác.",
+            "example_ja": "{言|い}い{訳|いわけ}をするより、{行動|こうどう}したほうがいい。",
+            "example_vi": "Thay vì bào chữa, hành động thì tốt hơn."
+          }
+        ]
+      }
+    ]
+  }
+}
