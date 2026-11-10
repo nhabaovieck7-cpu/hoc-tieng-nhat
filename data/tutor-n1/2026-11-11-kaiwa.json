@@ -1,0 +1,356 @@
+{
+  "lesson": 28,
+  "topic": "Đi mua máy giặt mới ở cửa hàng điện máy (洗濯機を買い替える)",
+  "summary": "Bối cảnh: chiếc máy giặt cũ nhà 拓海 đã dùng hơn mười năm, gần đây giặt kêu to và hay bị rò nước, nên cậu rủ 莉子 đi cùng đến một cửa hàng điện máy để chọn máy mới. Ở cửa hàng, hai người cùng xem các mẫu máy, bàn về dung lượng, chức năng sấy, giá cả, phí giao hàng và lắp đặt, rồi quyết định mua một chiếc máy giặt cửa trước. Vài ngày sau, sau khi máy mới được giao đến nhà, 拓海 gọi cho 莉子 kể lại: thợ giao hàng lắp đặt ra sao, máy chạy thử có êm không, còn máy cũ thì được thu hồi thế nào. Kỹ năng luyện: văn nói bạn bè — hỏi và so sánh thông số, giá cả của một món đồ điện máy (dung lượng, chức năng, bảo hành, phí giao hàng và lắp đặt), thương lượng kiểu bạn bè (đắt quá, giảm được không, cái nào đáng mua hơn), và kể lại trải nghiệm sau khi nhận hàng (lắp đặt, chạy thử, thu hồi đồ cũ). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng đồ điện máy và mua sắm (洗濯機, 乾燥機能, 容量, 設置, 配送, 下取り・回収, 保証), cách nói rút gọn diễn tả sự ngạc nhiên về giá 〜っす và 〜じゃん, và cách hỏi nhân viên cửa hàng bằng giọng lịch sự xen trong hội thoại bạn bè (〜って聞いたら, 〜だそうです).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở cửa hàng điện máy, cùng chọn máy giặt mới）",
+      "stage": "（Buổi chiều cuối tuần, 拓海 và 莉子 đang đứng trước dãy máy giặt trong một cửa hàng điện máy. Chiếc máy giặt cũ nhà 拓海 đã hỏng, nên cậu nhờ 莉子 đi cùng chọn máy mới.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "あのさ、うちの{洗濯|せんたく}{機|き}さ、もうダメなんだよね。{脱水|だっすい}のとき、すごい{音|おと}すんだよ。",
+          "vi": "Này, cái máy giặt nhà tớ ấy, hỏng hẳn rồi. Lúc vắt ấy, nó kêu to kinh khủng luôn."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え、まじ？{何|なん}{年|ねん}{使|つか}ってんの？",
+          "vi": "Hả, thật á? Cậu dùng bao nhiêu năm rồi?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、10{年|ねん}{以上|いじょう}かな。{最近|さいきん}、{水|みず}も{漏|も}れちゃってさ。",
+          "vi": "Ừm, chắc hơn 10 năm rồi. Dạo này còn bị rò nước nữa cơ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そりゃ{買|か}い{替|か}え{時|えどき}だね。で、どんなのがいいの？",
+          "vi": "Thế thì đến lúc thay rồi còn gì. Mà cậu muốn loại nào?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まあ、ドラム{式|しき}がいいなって{思|おも}ってんだけど、{高|たか}いじゃん。",
+          "vi": "Thì tớ đang nghĩ máy cửa trước thì tốt, nhưng mà đắt còn gì."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{確|たし}かに。でもさ、{乾燥|かんそう}までできると{楽|らく}だよ。{干|ほ}す{手間|てま}が{省|はぶ}けるしさ。",
+          "vi": "Đúng thật. Nhưng mà này, giặt xong sấy luôn thì nhàn lắm. Đỡ phải phơi nữa cơ mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、それもそうだよね。あ、これ8キロっすね。うちは{二人|ふたり}だし、{十分|じゅうぶん}かな。",
+          "vi": "Ừ, cũng đúng nhỉ. À, cái này 8 ký này. Nhà tớ có hai người, chắc đủ nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、8キロあれば{十分|じゅうぶん}でしょ。で、{値段|ねだん}は？",
+          "vi": "Ừ, 8 ký là đủ rồi còn gì. Mà giá bao nhiêu?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、9{万|まん}{円|えん}くらい。{配送|はいそう}と{設置|せっち}は{無料|むりょう}だって。{古|ふる}いのも{引|ひ}き{取|きと}ってくれるってさ。",
+          "vi": "Ừm, khoảng 9 man. Giao hàng với lắp đặt thì miễn phí. Máy cũ họ cũng thu lại luôn đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、それならいいじゃん。じゃあ、これにしちゃう？",
+          "vi": "Ồ, thế thì tốt còn gì. Thế thì chốt cái này nhé?"
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（ở nhà sau khi giao hàng, kiểm tra máy mới và dọn máy cũ）",
+      "stage": "（Vài ngày sau, máy giặt mới đã được giao đến nhà 拓海. 拓海 gọi điện cho 莉子, kể lại buổi giao hàng và lần giặt thử đầu tiên.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "もしもし、{莉子|りこ}？{洗濯|せんたく}{機|き}、{今日|きょう}{届|とど}いたよ。",
+          "vi": "A lô, 莉子 à? Máy giặt hôm nay giao đến rồi đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "お、{早|はや}かったね。{設置|せっち}はどうだった？",
+          "vi": "Ồ, nhanh nhỉ. Lắp đặt thế nào?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{業者|ぎょうしゃ}の{人|ひと}が{来|き}て、30{分|ぷん}くらいで{終|お}わったよ。{古|ふる}いのも{持|も}ってってくれたしさ。",
+          "vi": "Ừ, thợ giao hàng đến, khoảng 30 phút là xong. Máy cũ họ cũng mang đi luôn rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、よかったじゃん。で、{回|まわ}してみた？{音|おと}どう？",
+          "vi": "Ồ, tốt rồi còn gì. Mà cậu chạy thử chưa? Tiếng ồn sao?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、さっき{試|ため}しに{回|まわ}してみたんだけど、めっちゃ{静|しず}かだよ。",
+          "vi": "Ừ, tớ vừa chạy thử xong, êm cực kỳ luôn."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まじで？{前|まえ}のやつ、すごい{音|おと}してたもんね。",
+          "vi": "Thật á? Cái cũ kêu to kinh khủng còn gì."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうそう。あと、{乾燥|かんそう}もやってみたんだけど、タオルがふわふわになったよ。",
+          "vi": "Đúng đúng. Với cả tớ thử sấy luôn rồi, khăn tắm mềm xốp hẳn ra."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいなあ。でさ、{使|つか}い{方|かた}、ちゃんと{分|わ}かった？",
+          "vi": "Thích nhỉ. Mà này, cách dùng cậu đã hiểu rõ chưa?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まあ、{説明|せつめい}{書|しょ}{見|み}ながらなんとかね。ボタンが{多|おお}くて、{最初|さいしょ}は{戸惑|とまど}っちゃったけど。",
+          "vi": "Thì vừa xem sách hướng dẫn vừa mò thôi. Nhiều nút quá, lúc đầu cũng lúng túng."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そっか。まあ、{慣|な}れれば{大丈夫|だいじょうぶ}だよ。{洗濯|せんたく}が{楽|らく}になるといいね。",
+          "vi": "Ra thế. Thôi, quen rồi sẽ ổn thôi. Mong là giặt giũ sẽ nhàn hơn nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "うちの洗濯機はもう壊れています。脱水のとき、すごい音がします。",
+      "real": "あのさ、うちの洗濯機さ、もうダメなんだよね。脱水のとき、すごい音すんだよ。",
+      "why": "Sách giáo khoa nói đầy đủ dạng trang trọng 壊れています・します. Nói thật thì mở đầu bằng あのさ để thu hút chú ý, lặp さ sau chủ ngữ để nhấn mạnh, dùng ダメ thay cho 壊れている, rút 音がする thành 音すんだ — nghe như đang than thở với bạn, không phải đang báo cáo tình trạng máy."
+    },
+    {
+      "textbook": "ドラム式洗濯機がいいと思いますが、値段が高いです。",
+      "real": "まあ、ドラム式がいいなって思ってんだけど、高いじゃん。",
+      "why": "Văn nói bắt đầu bằng まあ để ngập ngừng, dùng 思ってんだけど thay cho と思いますが để vừa nêu ý vừa chừa chỗ cho bạn phản hồi, kết bằng 高いじゃん để khẳng định điều hiển nhiên là đắt. Câu sách giáo khoa nghe như kết luận, còn câu nói thật nghe như đang phân vân và chờ bạn đồng tình."
+    },
+    {
+      "textbook": "配送と設置は無料だそうです。古い洗濯機も引き取ってくれるそうです。",
+      "real": "配送と設置は無料だって。古いのも引き取ってくれるってさ。",
+      "why": "Khi kể lại lời nhân viên cửa hàng, bạn bè dùng だって・ってさ thay cho だそうです trang trọng, bỏ chủ ngữ thừa và rút 洗濯機 thành 古いの. Dạng này truyền được cảm giác “tớ vừa hỏi nhân viên xong, họ bảo thế”, còn dạng sách giáo khoa nghe như đang trích lại thông báo chính thức."
+    },
+    {
+      "textbook": "業者の人が来て、30分くらいで設置が終わりました。古い洗濯機も持って行ってくれました。",
+      "real": "業者の人が来て、30分くらいで終わったよ。古いのも持ってってくれたしさ。",
+      "why": "Văn nói dùng dạng thường 終わった・持ってってくれた thay cho 終わりました・持って行ってくれました, rút て行く thành てく, kết bằng よ và しさ để kể lại một cách nhẹ nhàng. Câu đầy đủ nghe như báo cáo công việc, còn câu rút gọn mới ra giọng kể chuyện với bạn sau khi mọi việc đã xong."
+    },
+    {
+      "textbook": "説明書を見ながら何とか使いました。ボタンが多くて、最初は戸惑いました。",
+      "real": "まあ、説明書見ながらなんとかね。ボタンが多くて、最初は戸惑っちゃったけど。",
+      "why": "Bạn bè bỏ trợ từ を, dùng なんとかね để nói qua loa cho xong chuyện, rút てしまった thành ちゃった để diễn tả sự lúng túng, kết bằng けど để mở ra cho bạn đáp lại. Sách giáo khoa thì nói tròn trịa và khép kín, nghe như đang viết nhật ký chứ không phải tâm sự với bạn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "あのさ",
+      "in_lesson": "あのさ、うちの洗濯機さ、もうダメなんだよね",
+      "original": "あのう、〜",
+      "vi": "Này / này này — mở đầu câu chuyện, thu hút sự chú ý của đối phương trước khi nói vào vấn đề.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết khi bắt đầu một câu chuyện.",
+      "avoid": "Tránh với cấp trên, khách hàng, nhân viên cửa hàng và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "ドラム式がいいなって思ってんだけど、高いじゃん",
+      "original": "〜じゃないか",
+      "vi": "…còn gì / …mà — xác nhận điều hiển nhiên, ở đây là “đắt là chuyện rõ ràng rồi còn gì”.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜っす",
+      "in_lesson": "あ、これ8キロっすね",
+      "original": "〜です",
+      "vi": "Rút gọn suồng sã của です — nói kiểu nửa lịch sự nửa thân mật, hay gặp khi nói chuyện với nhân viên cửa hàng quen hoặc bạn bè.",
+      "use": "Dùng với bạn bè, đồng nghiệp thân thiết, hoặc khi nói với nhân viên cửa hàng trong không khí thoải mái.",
+      "avoid": "Tránh với cấp trên, khách hàng quan trọng và trong văn viết trang trọng (khi đó dùng です・ます đầy đủ)."
+    },
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "ボタンが多くて、最初は戸惑っちゃったけど",
+      "original": "〜てしまった",
+      "vi": "Rút gọn của てしまった: lỡ làm gì / vô tình rơi vào trạng thái nào đó — diễn tả sự lúng túng bất ngờ.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện mình lỡ làm gì đó.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên cửa hàng hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "〜ってさ",
+      "in_lesson": "古いのも引き取ってくれるってさ",
+      "original": "〜と言っていました / 〜だそうです",
+      "vi": "Nghe bảo là / họ bảo là — trích lại lời người khác một cách suồng sã, hay dùng khi kể lại lời nhân viên cửa hàng.",
+      "use": "Dùng với bạn bè, người thân khi truyền đạt lại thông tin nghe được.",
+      "avoid": "Tránh với cấp trên, khách hàng và trong văn viết trang trọng (khi đó dùng 〜だそうです / 〜と言っていました)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{買|か}い{替|いか}える",
+      "reading": "かいかえる",
+      "vi": "Mua thay mới — mua một cái mới để thay cái cũ đã hỏng hoặc đã dùng lâu.",
+      "example_ja": "{洗濯|せんたく}{機|き}が{壊|こわ}れたから、{買|か}い{替|いか}えることにしたんだ。",
+      "example_vi": "Vì máy giặt hỏng nên tớ quyết định mua cái mới thay luôn."
+    },
+    {
+      "expr": "ドラム{式|しき}",
+      "reading": "ドラムしき",
+      "vi": "Kiểu lồng ngang / máy cửa trước — loại máy giặt có cửa mở phía trước, thường giặt sạch và sấy được luôn.",
+      "example_ja": "ドラム{式|しき}は{乾燥|かんそう}までできるから、{雨|あめ}の{日|ひ}も{便利|べんり}だよ。",
+      "example_vi": "Máy cửa trước sấy được luôn nên ngày mưa cũng tiện."
+    },
+    {
+      "expr": "{乾燥|かんそう}{機能|きのう}",
+      "reading": "かんそうきのう",
+      "vi": "Chức năng sấy khô — sấy quần áo ngay trong máy giặt, không cần phơi.",
+      "example_ja": "{乾燥|かんそう}{機能|きのう}がついてると、{冬|ふゆ}でも{洗濯|せんたく}{物|ぶつ}がすぐ{乾|かわ}くよ。",
+      "example_vi": "Có chức năng sấy thì mùa đông quần áo cũng khô nhanh."
+    },
+    {
+      "expr": "{配送|はいそう}と{設置|せっち}",
+      "reading": "はいそうとせっち",
+      "vi": "Giao hàng và lắp đặt — dịch vụ cửa hàng mang máy đến nhà và lắp đặt sẵn, thường miễn phí với đồ điện máy lớn.",
+      "example_ja": "{配送|はいそう}と{設置|せっち}は{無料|むりょう}だって、{店員|てんいん}さんが{言|い}ってたよ。",
+      "example_vi": "Nhân viên bảo giao hàng với lắp đặt là miễn phí đấy."
+    },
+    {
+      "expr": "{引|ひ}き{取|きと}る",
+      "reading": "ひきとる",
+      "vi": "Thu hồi / mang đi — cửa hàng nhận lại đồ cũ khi khách mua đồ mới, thường miễn phí hoặc có phí nhỏ.",
+      "example_ja": "{古|ふる}い{洗濯|せんたく}{機|き}は、{店|みせ}が{引|ひ}き{取|きと}ってくれるってさ。",
+      "example_vi": "Nghe bảo máy giặt cũ thì cửa hàng sẽ thu lại cho mình."
+    },
+    {
+      "expr": "{試|ため}しに{回|まわ}す",
+      "reading": "ためしにまわす",
+      "vi": "Chạy thử — bật máy giặt chạy một lần để kiểm tra xem có hoạt động bình thường không.",
+      "example_ja": "{新|あたら}しい{洗濯|せんたく}{機|き}、{試|ため}しに{回|まわ}してみたら、すごく{静|しず}かだったよ。",
+      "example_vi": "Chạy thử máy giặt mới thì thấy êm cực kỳ luôn."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, mua đồ điện máy lớn như máy giặt, tủ lạnh hay điều hòa thường đi kèm dịch vụ giao hàng và lắp đặt — trong bài, 拓海 mua máy xong thì cửa hàng giao đến tận nhà, thợ lắp đặt trong khoảng 30 phút rồi mang máy cũ đi luôn. Giá niêm yết ở cửa hàng điện máy thường đã bao gồm hoặc ghi rõ phí giao hàng và lắp đặt, và nhiều cửa hàng còn có dịch vụ thu hồi đồ cũ (引き取り) khi khách mua đồ mới, nên khi mua hãy hỏi ngay ba điều này: 配送はいくらですか (phí giao hàng bao nhiêu), 設置もお願いできますか (có lắp đặt giúp không), 古いのは引き取ってもらえますか (máy cũ có thu lại được không).",
+    "Người Nhật khi mua đồ điện máy hay cân nhắc rất kỹ ba yếu tố: dung lượng có vừa với số người trong nhà không, có chức năng sấy hay không, và giá có hợp lý không. Trong bài, 莉子 hỏi ngay 8キロあれば十分でしょ vì nhà 拓海 chỉ có hai người — dung lượng máy giặt thường tính theo số người: một người khoảng 5–6 ký, hai người khoảng 7–8 ký, gia đình bốn người thì 9–10 ký trở lên. Máy cửa trước (ドラム式) đắt hơn máy cửa trên nhưng sấy khô được luôn, nên vào mùa mưa hay mùa đông ở Nhật, nhiều người chấp nhận trả thêm tiền để khỏi phải phơi đồ.",
+    "Thái độ khi mua đồ điện máy ở Nhật cũng là một nét văn hóa: nhân viên cửa hàng thường giải thích rất kỹ, thậm chí đề nghị chạy thử, và khách hàng cũng hay hỏi lại nhiều lần trước khi quyết định — đó là chuyện bình thường, không ai thấy phiền. Trong bài, 拓海 hỏi nhân viên về giá, giao hàng, lắp đặt và thu hồi máy cũ rồi mới chốt mua, chính là cách mua sắm thông thường ở Nhật: hỏi cho rõ mọi chi phí phát sinh trước khi trả tiền, để về nhà không bị bất ngờ."
+  ],
+  "mistakes": [
+    "Đừng nhầm 乾燥機能 với 乾燥機: 乾燥機能 là chức năng sấy tích hợp trong máy giặt, còn 乾燥機 là máy sấy riêng; hỏi nhân viên thì nói rõ 乾燥機能がついていますか để họ hiểu mình hỏi chức năng sấy trong máy giặt.",
+    "Đừng nói máy giặt bằng từ 洗濯器 (せんたくき): từ đúng là 洗濯機 (せんたくき) — viết là 機 (máy móc) chứ không phải 器 (dụng cụ); nói sai thì nhân viên vẫn hiểu nhưng nghe rất lạ.",
+    "Đừng quên hỏi phí giao hàng và lắp đặt trước khi mua: nhiều cửa hàng ghi 配送無料 nhưng chỉ miễn phí trong khu vực gần, hoặc chỉ miễn phí lắp đặt đơn giản; hỏi rõ 設置料はかかりますか để tránh bị tính thêm tiền khi thợ đến nhà.",
+    "Đừng dùng 〜っす hay 〜じゃん với nhân viên cửa hàng lạ mặt: đây là cách nói suồng sã dùng với bạn bè; với nhân viên hãy dùng です・ます và nói rõ ràng, ví dụ 配送は無料ですか thay vì 配送無料っすか."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn đang ở cửa hàng điện máy, muốn mua máy giặt mới vì máy cũ đã hỏng. Hãy nói với người bạn đi cùng: máy cũ hỏng thế nào, bạn muốn loại máy nào (cửa trước hay cửa trên, dung lượng bao nhiêu), và hỏi ý kiến bạn xem loại nào đáng mua hơn.",
+    "Tình huống 2: Bạn đang nói chuyện với nhân viên cửa hàng. Hãy hỏi bằng giọng lịch sự: giá của chiếc máy bạn thích là bao nhiêu, có chức năng sấy không, phí giao hàng và lắp đặt thế nào, và máy cũ có được thu hồi không.",
+    "Tình huống 3: Vài ngày sau khi máy mới được giao đến nhà, bạn gọi điện cho người bạn đã đi mua cùng mình. Hãy kể lại: thợ giao hàng lắp đặt mất bao lâu, máy chạy thử có êm không, chức năng sấy dùng ra sao, và máy cũ đã được xử lý thế nào."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "あのさ、うちの{洗濯|せんたく}{機|き}さ、もうダメなんだよね。{脱水|だっすい}のとき、すごい{音|おと}すんだよ。",
+      "vi": "Này, cái máy giặt nhà tớ ấy, hỏng hẳn rồi. Lúc vắt ấy, nó kêu to kinh khủng luôn."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え、まじ？{何|なん}{年|ねん}{使|つか}ってんの？",
+      "vi": "Hả, thật á? Cậu dùng bao nhiêu năm rồi?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、10{年|ねん}{以上|いじょう}かな。{最近|さいきん}、{水|みず}も{漏|も}れちゃってさ。",
+      "vi": "Ừm, chắc hơn 10 năm rồi. Dạo này còn bị rò nước nữa cơ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そりゃ{買|か}い{替|か}え{時|えどき}だね。で、どんなのがいいの？",
+      "vi": "Thế thì đến lúc thay rồi còn gì. Mà cậu muốn loại nào?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まあ、ドラム{式|しき}がいいなって{思|おも}ってんだけど、{高|たか}いじゃん。",
+      "vi": "Thì tớ đang nghĩ máy cửa trước thì tốt, nhưng mà đắt còn gì."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{確|たし}かに。でもさ、{乾燥|かんそう}までできると{楽|らく}だよ。{干|ほ}す{手間|てま}が{省|はぶ}けるしさ。",
+      "vi": "Đúng thật. Nhưng mà này, giặt xong sấy luôn thì nhàn lắm. Đỡ phải phơi nữa cơ mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、それもそうだよね。あ、これ8キロっすね。うちは{二人|ふたり}だし、{十分|じゅうぶん}かな。",
+      "vi": "Ừ, cũng đúng nhỉ. À, cái này 8 ký này. Nhà tớ có hai người, chắc đủ nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、8キロあれば{十分|じゅうぶん}でしょ。で、{値段|ねだん}は？",
+      "vi": "Ừ, 8 ký là đủ rồi còn gì. Mà giá bao nhiêu?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、9{万|まん}{円|えん}くらい。{配送|はいそう}と{設置|せっち}は{無料|むりょう}だって。{古|ふる}いのも{引|ひ}き{取|きと}ってくれるってさ。",
+      "vi": "Ừm, khoảng 9 man. Giao hàng với lắp đặt thì miễn phí. Máy cũ họ cũng thu lại luôn đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、それならいいじゃん。じゃあ、これにしちゃう？",
+      "vi": "Ồ, thế thì tốt còn gì. Thế thì chốt cái này nhé?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "もしもし、{莉子|りこ}？{洗濯|せんたく}{機|き}、{今日|きょう}{届|とど}いたよ。",
+      "vi": "A lô, 莉子 à? Máy giặt hôm nay giao đến rồi đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、{早|はや}かったね。{設置|せっち}はどうだった？",
+      "vi": "Ồ, nhanh nhỉ. Lắp đặt thế nào?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{業者|ぎょうしゃ}の{人|ひと}が{来|き}て、30{分|ぷん}くらいで{終|お}わったよ。{古|ふる}いのも{持|も}ってってくれたしさ。",
+      "vi": "Ừ, thợ giao hàng đến, khoảng 30 phút là xong. Máy cũ họ cũng mang đi luôn rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、よかったじゃん。で、{回|まわ}してみた？{音|おと}どう？",
+      "vi": "Ồ, tốt rồi còn gì. Mà cậu chạy thử chưa? Tiếng ồn sao?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、さっき{試|ため}しに{回|まわ}してみたんだけど、めっちゃ{静|しず}かだよ。",
+      "vi": "Ừ, tớ vừa chạy thử xong, êm cực kỳ luôn."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まじで？{前|まえ}のやつ、すごい{音|おと}してたもんね。",
+      "vi": "Thật á? Cái cũ kêu to kinh khủng còn gì."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうそう。あと、{乾燥|かんそう}もやってみたんだけど、タオルがふわふわになったよ。",
+      "vi": "Đúng đúng. Với cả tớ thử sấy luôn rồi, khăn tắm mềm xốp hẳn ra."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいなあ。でさ、{使|つか}い{方|かた}、ちゃんと{分|わ}かった？",
+      "vi": "Thích nhỉ. Mà này, cách dùng cậu đã hiểu rõ chưa?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まあ、{説明|せつめい}{書|しょ}{見|み}ながらなんとかね。ボタンが{多|おお}くて、{最初|さいしょ}は{戸惑|とまど}っちゃったけど。",
+      "vi": "Thì vừa xem sách hướng dẫn vừa mò thôi. Nhiều nút quá, lúc đầu cũng lúng túng."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そっか。まあ、{慣|な}れれば{大丈夫|だいじょうぶ}だよ。{洗濯|せんたく}が{楽|らく}になるといいね。",
+      "vi": "Ra thế. Thôi, quen rồi sẽ ổn thôi. Mong là giặt giũ sẽ nhàn hơn nhé."
+    }
+  ],
+  "notes": [
+    "買い替える: mua thay mới — cụm cơ bản nhất của bài, dùng khi mua đồ mới để thay đồ cũ đã hỏng; phân biệt với 新しく買う (mua mới nói chung).",
+    "ドラム式: máy cửa trước / kiểu lồng ngang — loại máy giặt có cửa mở phía trước; ngược lại là 縦型 (たてがた, máy cửa trên, lồng đứng).",
+    "配送と設置: giao hàng và lắp đặt — cặp từ hay đi cùng nhau khi mua đồ điện máy lớn; hỏi 配送無料ですか và 設置もお願いできますか trước khi mua. 引き取る là thu hồi, mang đồ cũ đi — cửa hàng nhận lại đồ cũ khi khách mua đồ mới.",
+    "試しに回す: chạy thử — bật máy chạy một lần để kiểm tra; 回す ở đây là “cho máy chạy”, khác với 回る (tự quay). 乾燥機能 là chức năng sấy tích hợp trong máy giặt, phân biệt với 乾燥機 (máy sấy riêng) và 干す (phơi đồ)."
+  ]
+}

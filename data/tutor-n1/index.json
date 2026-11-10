@@ -167,6 +167,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 27 — 電車に傘を忘れる (quên ô trên tàu điện)",
       "file": "2026-11-10-kaiwa.json"
+    },
+    {
+      "date": "2026-11-11",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 10/11/2026（問題12・長文）",
+      "file": "2026-11-11-n1-set.json"
+    },
+    {
+      "date": "2026-11-11",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 10/11/2026（中文）",
+      "file": "2026-11-11-reading.json"
+    },
+    {
+      "date": "2026-11-11",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 28 — Đi mua máy giặt mới ở cửa hàng điện máy (洗濯機を買い替える)",
+      "file": "2026-11-11-kaiwa.json"
     }
   ]
 }

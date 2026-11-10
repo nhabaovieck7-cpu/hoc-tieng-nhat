@@ -1,0 +1,438 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 中文 trong phần đọc hiểu của đề N1 thật: một bài văn vừa (khoảng 700–1.000 chữ) với 4 câu hỏi — hỏi ý chính của tác giả, lý do của một nhận định trong bài, hệ quả của một thói quen, và lựa chọn đúng với nội dung bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, chú ý các từ nối đối lập và chủ trương ở đoạn cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc + 4 câu hỏi). Trong đề thật, 中文 là dạng dễ mất điểm vì các lựa chọn nhiễu rất sát nghĩa: chúng thường lấy ví dụ minh họa trong bài làm đáp án thay cho ý chính, hoặc đảo ngược quan hệ nhân quả, hoặc chỉ đúng một nửa.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, đọc bài sau",
+      "body": "Bài 中文 dài hơn 短文 và trừu tượng hơn, đọc kỹ từ đầu dễ bị cuốn theo từng câu chữ. Đọc 4 câu hỏi trước để biết mình cần tìm gì (ý chính? lý do của một nhận định? hệ quả của một thói quen? lựa chọn đúng với nội dung?), rồi mới đọc bài với mục đích rõ ràng."
+    },
+    {
+      "h": "Tìm bước ngoặt しかし và chủ trương ở đoạn cuối",
+      "body": "Trong bài luận kiểu N1, đoạn đầu thường chỉ nêu hiện tượng hoặc quan điểm cần phê phán, không phải ý chính. Bước ngoặt mở đầu bằng しかし (đoạn 3) mới là lúc tác giả nói thật, và chủ trương nằm ở đoạn kết luận, mở đầu bằng 大切なのは (đoạn 4 câu 1). Câu hỏi '筆者が最も言いたいこと' hầu như luôn có đáp án ở đoạn cuối."
+    },
+    {
+      "h": "Ví dụ song song chỉ là bằng chứng, không phải ý chính",
+      "body": "Đoạn 2 đưa 2 ví dụ song song (từ chối lời mời của bạn bè / bị hỏi lý do công việc không tiến triển) chỉ để minh họa cho nhận định 'bận là tấm khiên và là lời bào chữa'. Lựa chọn nào chỉ nhắc lại nội dung của một ví dụ thì gần như chắc chắn là nhiễu cho câu hỏi ý chính."
+    },
+    {
+      "h": "Cảnh giác với bẫy 'đúng một nửa' và bẫy đảo ngược nhân quả",
+      "body": "Lựa chọn đúng phải đúng toàn bộ với bài. Nhiều lựa chọn nhiễu ghép một nửa đúng với một nửa bị đảo ngược (ví dụ: 'bận là từ tiện lợi NÊN cứ dùng tiếp' — nửa đầu đúng, nửa sau ngược với chủ trương của tác giả), hoặc viết ngược lại bài ('nói bận thì thấy rõ mình đã làm được gì' trong khi bài nói 'chỉ còn lại cảm giác bận, còn làm được gì thì không rõ'). Gặp lựa chọn có vẻ hợp lý, hãy đối chiếu từng chữ với nguyên văn."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「忙しい」という言葉は、現代の日本人が最もよく口にする言葉の一つである。仕事が立て込んでいるときだけでなく、誘いを断るときや、自分の都合を説明するときにも、人はつい「忙しい」と言ってしまう。この言葉は便利だ。理由を詳しく説明しなくても、相手は大抵の場合、納得してくれるからである。\nたとえば、友人の誘いを断るとき、「忙しいから」と言えば、相手を傷つけずに済む。また、仕事が進まない理由を尋ねられたとき、「最近忙しくて」と答えれば、それ以上深く問われることは少ない。こうして、「忙しい」は断るための盾にも、説明を省くための言い訳にもなる。しかも、この言葉を口にするたびに、人は自分が大切な仕事に追われているのだと、どこかで確認しているのかもしれない。\nしかし、「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく。本当に忙しいのか、それとも忙しいと思い込むことで、やるべきことから目をそらしているだけなのか、区別がつかなくなってしまうのである。忙しさを理由にすれば、断ることも、先送りすることも正当化できる。その結果、忙しいという感覚だけが残り、実際に何を成し遂げたのかは、はっきりしなくなってしまう。\n大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである。「忙しい」と言う前に、立ち止まって、今本当に必要なことは何か、やらなくてもいいことは何かを考えてみたい。忙しさを手放すことは、暇になることではない。自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "忙しいときは、周りの人に理由を詳しく説明すべきである。",
+        "忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせ、やるべきことに集中することが大切である。",
+        "忙しいという言葉は便利だから、これからも積極的に使うべきである。",
+        "忙しさを手放せば、仕事が減って暇になる。"
+      ],
+      "answer": 1,
+      "explain_vi": "Ý chính nằm ở đoạn cuối: 大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである (đoạn 4 câu 1), cùng với câu cuối: 自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである. Lựa chọn ② tóm tắt đúng cả hai ý."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「忙しい」という言葉は、現代の日本人が最もよく口にする言葉の一つである。仕事が立て込んでいるときだけでなく、誘いを断るときや、自分の都合を説明するときにも、人はつい「忙しい」と言ってしまう。この言葉は便利だ。理由を詳しく説明しなくても、相手は大抵の場合、納得してくれるからである。\nたとえば、友人の誘いを断るとき、「忙しいから」と言えば、相手を傷つけずに済む。また、仕事が進まない理由を尋ねられたとき、「最近忙しくて」と答えれば、それ以上深く問われることは少ない。こうして、「忙しい」は断るための盾にも、説明を省くための言い訳にもなる。しかも、この言葉を口にするたびに、人は自分が大切な仕事に追われているのだと、どこかで確認しているのかもしれない。\nしかし、「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく。本当に忙しいのか、それとも忙しいと思い込むことで、やるべきことから目をそらしているだけなのか、区別がつかなくなってしまうのである。忙しさを理由にすれば、断ることも、先送りすることも正当化できる。その結果、忙しいという感覚だけが残り、実際に何を成し遂げたのかは、はっきりしなくなってしまう。\n大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである。「忙しい」と言う前に、立ち止まって、今本当に必要なことは何か、やらなくてもいいことは何かを考えてみたい。忙しさを手放すことは、暇になることではない。自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである。\n「『忙しい』は断るための盾にも、説明を省くための言い訳にもなる」とあるが、なぜか。",
+      "choices": [
+        "忙しいと言うと、相手が仕事を手伝ってくれるから。",
+        "忙しいと言うと、自分の時間が増えるから。",
+        "忙しいと言うと、相手に自分の能力を認めてもらえるから。",
+        "「忙しいから」と言えば理由を詳しく説明しなくても相手が納得し、深く問われることも少ないから。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đoạn 1 câu 4 nói rõ: 理由を詳しく説明しなくても、相手は大抵の場合、納得してくれる; đoạn 2 đưa 2 ví dụ song song — từ chối lời mời của bạn bè mà không làm tổn thương đối phương, và bị hỏi lý do công việc không tiến triển thì ít bị hỏi sâu thêm. Cả hai đều cho thấy 'bận' giúp lược bỏ phần giải thích."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「忙しい」という言葉は、現代の日本人が最もよく口にする言葉の一つである。仕事が立て込んでいるときだけでなく、誘いを断るときや、自分の都合を説明するときにも、人はつい「忙しい」と言ってしまう。この言葉は便利だ。理由を詳しく説明しなくても、相手は大抵の場合、納得してくれるからである。\nたとえば、友人の誘いを断るとき、「忙しいから」と言えば、相手を傷つけずに済む。また、仕事が進まない理由を尋ねられたとき、「最近忙しくて」と答えれば、それ以上深く問われることは少ない。こうして、「忙しい」は断るための盾にも、説明を省くための言い訳にもなる。しかも、この言葉を口にするたびに、人は自分が大切な仕事に追われているのだと、どこかで確認しているのかもしれない。\nしかし、「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく。本当に忙しいのか、それとも忙しいと思い込むことで、やるべきことから目をそらしているだけなのか、区別がつかなくなってしまうのである。忙しさを理由にすれば、断ることも、先送りすることも正当化できる。その結果、忙しいという感覚だけが残り、実際に何を成し遂げたのかは、はっきりしなくなってしまう。\n大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである。「忙しい」と言う前に、立ち止まって、今本当に必要なことは何か、やらなくてもいいことは何かを考えてみたい。忙しさを手放すことは、暇になることではない。自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである。\n筆者によると、「忙しい」と言い続けることで失われるものは何か。",
+      "choices": [
+        "自分の時間の使い方を見直す機会",
+        "友人からの誘い",
+        "仕事の量",
+        "相手への配慮"
+      ],
+      "answer": 0,
+      "explain_vi": "Đoạn 3 câu 1 nói thẳng: 「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく. Các câu sau trong đoạn 3 giải thích thêm: người ta không còn phân biệt được mình thực sự bận hay chỉ đang tự cho rằng mình bận, và chỉ còn lại cảm giác bận rộn."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「忙しい」という言葉は、現代の日本人が最もよく口にする言葉の一つである。仕事が立て込んでいるときだけでなく、誘いを断るときや、自分の都合を説明するときにも、人はつい「忙しい」と言ってしまう。この言葉は便利だ。理由を詳しく説明しなくても、相手は大抵の場合、納得してくれるからである。\nたとえば、友人の誘いを断るとき、「忙しいから」と言えば、相手を傷つけずに済む。また、仕事が進まない理由を尋ねられたとき、「最近忙しくて」と答えれば、それ以上深く問われることは少ない。こうして、「忙しい」は断るための盾にも、説明を省くための言い訳にもなる。しかも、この言葉を口にするたびに、人は自分が大切な仕事に追われているのだと、どこかで確認しているのかもしれない。\nしかし、「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく。本当に忙しいのか、それとも忙しいと思い込むことで、やるべきことから目をそらしているだけなのか、区別がつかなくなってしまうのである。忙しさを理由にすれば、断ることも、先送りすることも正当化できる。その結果、忙しいという感覚だけが残り、実際に何を成し遂げたのかは、はっきりしなくなってしまう。\n大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである。「忙しい」と言う前に、立ち止まって、今本当に必要なことは何か、やらなくてもいいことは何かを考えてみたい。忙しさを手放すことは、暇になることではない。自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである。\n本文の内容と合うものはどれか。",
+      "choices": [
+        "「忙しい」と言えば、実際に何を成し遂げたのかがはっきりする。",
+        "忙しいと感じるのは、いつも本当に仕事が多いからである。",
+        "忙しさを理由にすると、断ることも先送りすることも正当化できてしまう。",
+        "忙しさを手放すことは、暇になって何もしなくなることである。"
+      ],
+      "answer": 2,
+      "explain_vi": "Trùng khớp với đoạn 3 câu 3: 忙しさを理由にすれば、断ることも、先送りすることも正当化できる. Các lựa chọn còn lại đều ngược với bài, như phân tích ở Phần 4."
+    }
+  ],
+  "study": {
+    "passage_title": "「『忙しい』と言わないこと」— Bài văn vừa: vì sao từ 'bận' tiện lợi đến mức nguy hiểm, và vì sao buông nó xuống mới giành lại được thời gian của mình",
+    "structure": "Bài văn vừa gồm 4 đoạn, 16 câu, theo cấu trúc 'nêu hiện tượng → ví dụ song song → bước ngoặt → kết luận' điển hình của dạng 中文 N1. Đoạn 1 (4 câu) nêu hiện tượng: 「忙しい」 là từ người Nhật hiện đại hay nói nhất, dùng không chỉ khi công việc dồn dập mà cả khi từ chối lời mời hay giải thích hoàn cảnh; từ này tiện lợi vì không cần giải thích chi tiết mà đối phương vẫn thông cảm. Đoạn 2 (4 câu) đưa 2 ví dụ song song: từ chối lời mời của bạn bè chỉ bằng 'vì tôi bận' mà không làm tổn thương đối phương; bị hỏi lý do công việc không tiến triển thì trả lời 'dạo này tôi bận' sẽ ít bị hỏi sâu thêm — rồi kết luận: こうして, 'bận' vừa là tấm khiên để từ chối vừa là lời bào chữa để lược bỏ phần giải thích, và mỗi lần nói ra, người ta còn như tự xác nhận rằng mình đang bị cuốn theo một công việc quan trọng. Đoạn 3 (4 câu) là bước ngoặt, mở đầu bằng しかし: cứ nói 'bận' mãi thì người ta đánh mất cơ hội nhìn lại cách dùng thời gian, không còn phân biệt được mình thực sự bận hay chỉ tự cho rằng mình bận để lảng tránh việc cần làm; lấy bận làm lý do thì từ chối hay trì hoãn đều được biện minh là chính đáng; kết quả là chỉ còn lại cảm giác bận, còn thực sự làm được gì thì không rõ. Đoạn 4 (4 câu) kết luận, mở đầu bằng 大切なのは — câu chủ trương của toàn bài: điều quan trọng không phải là có bận hay không, mà là làm rõ mình dùng thời gian vào việc gì; trước khi nói 'tôi bận' hãy dừng lại và nghĩ xem điều gì thực sự cần thiết, điều gì không làm cũng được; buông bỏ sự bận rộn không phải là trở nên rảnh rỗi, mà là bước đầu tiên để giành lại quyền chủ động đối với thời gian của mình và tập trung vào việc cần làm. Bẫy chính của bài: các lựa chọn nhiễu lấy ví dụ ở đoạn 2 hoặc nửa đầu đúng ở đoạn 1 ('bận là từ tiện lợi') làm ý chính, hoặc đảo ngược quan hệ nhân quả ở đoạn 3–4 (nói 'bận' giúp thấy rõ thành quả, nói buông bận là trở nên rảnh rỗi và không làm gì).",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "「{忙|いそが}しい」という{言葉|ことば}は、{現代|げんだい}の{日本|にっぽん}{人|じん}が{最|もっと}もよく{口|くち}にする{言葉|ことば}の{一|ひと}つである。",
+        "vi": "Từ 'bận' là một trong những từ mà người Nhật hiện đại hay nói nhất."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{仕事|しごと}が{立|た}て{込|てこ}んでいるときだけでなく、{誘|さそ}いを{断|ことわ}るときや、{自分|じぶん}の{都合|つごう}を{説明|せつめい}するときにも、{人|ひと}はつい「{忙|いそが}しい」と{言|い}ってしまう。",
+        "vi": "Không chỉ khi công việc dồn dập, mà cả khi từ chối một lời mời hay khi giải thích hoàn cảnh của mình, người ta cũng bất giác nói 'tôi bận'."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "この{言葉|ことば}は{便利|べんり}だ。",
+        "vi": "Từ này rất tiện lợi."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "{理由|りゆう}を{詳|くわ}しく{説明|せつめい}しなくても、{相手|あいて}は{大抵|たいてい}の{場合|ばあい}、{納得|なっとく}してくれるからである。",
+        "vi": "Bởi vì dù không giải thích chi tiết lý do, đối phương trong hầu hết các trường hợp cũng sẽ thông cảm."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "たとえば、{友人|ゆうじん}の{誘|さそ}いを{断|ことわ}るとき、「{忙|いそが}しいから」と{言|い}えば、{相手|あいて}を{傷|きず}つけずに{済|す}む。",
+        "vi": "Chẳng hạn, khi từ chối lời mời của bạn bè, chỉ cần nói 'vì tôi bận' là có thể từ chối mà không làm tổn thương đối phương."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "また、{仕事|しごと}が{進|すす}まない{理由|りゆう}を{尋|たず}ねられたとき、「{最近|さいきん}{忙|いそが}しくて」と{答|こた}えれば、それ{以上|いじょう}{深|ふか}く{問|と}われることは{少|すく}ない。",
+        "vi": "Hơn nữa, khi bị hỏi lý do công việc không tiến triển, chỉ cần trả lời 'dạo này tôi bận' thì ít khi bị hỏi sâu thêm."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "こうして、「{忙|いそが}しい」は{断|ことわ}るための{盾|たて}にも、{説明|せつめい}を{省|はぶ}くための{言|い}い{訳|いわけ}にもなる。",
+        "vi": "Cứ như vậy, 'bận' vừa trở thành tấm khiên để từ chối, vừa trở thành lời bào chữa để lược bỏ phần giải thích."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "しかも、この{言葉|ことば}を{口|くち}にするたびに、{人|ひと}は{自分|じぶん}が{大切|たいせつ}な{仕事|しごと}に{追|お}われているのだと、どこかで{確認|かくにん}しているのかもしれない。",
+        "vi": "Hơn nữa, mỗi lần thốt ra từ này, có lẽ người ta lại đang đâu đó tự xác nhận rằng mình đang bị cuốn theo một công việc quan trọng."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "しかし、「{忙|いそが}しい」と{言|い}い{続|つづ}けるうちに、{人|ひと}は{自分|じぶん}の{時間|じかん}の{使|つか}い{方|かた}を{見直|みなお}す{機会|きかい}を{失|うしな}っていく。",
+        "vi": "Tuy nhiên, cứ tiếp tục nói 'bận' như vậy, người ta dần đánh mất cơ hội nhìn lại cách mình sử dụng thời gian."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{本当|ほんと}に{忙|いそが}しいのか、それとも{忙|いそが}しいと{思|おも}い{込|いこ}むことで、やるべきことから{目|め}をそらしているだけなのか、{区別|くべつ}がつかなくなってしまうのである。",
+        "vi": "Người ta trở nên không còn phân biệt được nữa: liệu mình thực sự bận, hay chỉ đang tự cho rằng mình bận để lảng tránh những việc cần làm."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{忙|いそが}しさを{理由|りゆう}にすれば、{断|ことわ}ることも、{先送|さきおく}りすることも{正当|せいとう}{化|か}できる。",
+        "vi": "Nếu lấy sự bận rộn làm lý do, thì việc từ chối hay việc trì hoãn đều có thể được biện minh là chính đáng."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "その{結果|けっか}、{忙|いそが}しいという{感覚|かんかく}だけが{残|のこ}り、{実際|じっさい}に{何|なん}を{成|な}し{遂|しと}げたのかは、はっきりしなくなってしまう。",
+        "vi": "Kết quả là chỉ còn lại cảm giác bận rộn, còn thực sự mình đã hoàn thành được điều gì thì trở nên không còn rõ ràng nữa."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{大切|たいせつ}なのは、{忙|いそが}しいかどうかではなく、{自分|じぶん}の{時間|じかん}を{何|なん}に{使|つか}っているのかをはっきりさせることである。",
+        "vi": "Điều quan trọng không phải là có bận hay không, mà là làm rõ mình đang dùng thời gian của mình vào việc gì."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "「{忙|いそが}しい」と{言|い}う{前|まえ}に、{立|た}ち{止|ちど}まって、{今|こん}{本当|ほんと}に{必要|ひつよう}なことは{何|なん}か、やらなくてもいいことは{何|なん}かを{考|かんが}えてみたい。",
+        "vi": "Trước khi nói 'tôi bận', hãy dừng lại và suy nghĩ xem ngay lúc này điều thực sự cần thiết là gì, điều gì dù không làm cũng được."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{忙|いそが}しさを{手放|てばな}すことは、{暇|ひま}になることではない。",
+        "vi": "Buông bỏ sự bận rộn không có nghĩa là trở nên rảnh rỗi."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "{自分|じぶん}の{時間|じかん}の{主導|しゅどう}{権|けん}を{取|と}り{戻|りもど}し、やるべきことに{集中|しゅうちゅう}するための{第|だい}{一|いっ}{歩|ぽ}なのである。",
+        "vi": "Đó là bước đầu tiên để giành lại quyền chủ động đối với thời gian của mình và tập trung vào những việc cần làm."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án 2 · Câu 2 – đáp án 4 · Câu 3 – đáp án 1 · Câu 4 – đáp án 3",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đoạn 4, câu 1 + câu 4",
+        "options": [
+          {
+            "text": "忙しいときは、周りの人に理由を詳しく説明すべきである。",
+            "verdict": "SAI",
+            "reason": "Trái với đoạn 1 câu 4: bài nói 'bận' tiện lợi chính vì '理由を詳しく説明しなくても、相手は大抵の場合、納得してくれる' — không cần giải thích chi tiết. Lựa chọn này biến điểm tiện lợi mà bài nêu thành lời khuyên ngược lại. Bẫy đảo ngược."
+          },
+          {
+            "text": "忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせ、やるべきことに集中することが大切である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai luận điểm chính ở đoạn kết luận: đoạn 4 câu 1 — 大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである; đoạn 4 câu 4 — 自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩なのである. Đây là ý tác giả muốn nói nhất."
+          },
+          {
+            "text": "忙しいという言葉は便利だから、これからも積極的に使うべきである。",
+            "verdict": "SAI",
+            "reason": "Nửa đầu đúng với đoạn 1 câu 3 (この言葉は便利だ) nhưng nửa sau sai hoàn toàn: toàn bộ đoạn 3–4 phê phán việc cứ nói 'bận' mãi và khuyên buông bỏ sự bận rộn (忙しさを手放すこと, đoạn 4 câu 3). Bẫy ghép nửa đúng với nửa ngược với bài."
+          },
+          {
+            "text": "忙しさを手放せば、仕事が減って暇になる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 4 câu 3: 忙しさを手放すことは、暇になることではない — buông bỏ sự bận rộn KHÔNG có nghĩa là trở nên rảnh rỗi. Lựa chọn này bỏ qua ではない và đảo ngược kết luận. Bẫy đọc nửa câu."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 3,
+        "locator": "Đoạn 1, câu 4 + Đoạn 2, câu 1–2",
+        "options": [
+          {
+            "text": "忙しいと言うと、相手が仕事を手伝ってくれるから。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nhắc tới việc đối phương có giúp đỡ công việc hay không. Đây là suy luận ngoài bài — 'nghe có lý' trong đời thường nhưng không có căn cứ trong nguyên văn. Bẫy suy luận ngoài bài."
+          },
+          {
+            "text": "忙しいと言うと、自分の時間が増えるから。",
+            "verdict": "SAI",
+            "reason": "Trái với đoạn 3: cứ nói 'bận' thì người ta đánh mất cơ hội nhìn lại cách dùng thời gian, và chỉ còn lại cảm giác bận — bài không hề nói nói 'bận' thì thời gian tăng lên. Bẫy đảo ngược hệ quả."
+          },
+          {
+            "text": "忙しいと言うと、相手に自分の能力を認めてもらえるから。",
+            "verdict": "SAI",
+            "reason": "Bài không nói 'bận' giúp được công nhận năng lực. Đoạn 2 câu 4 chỉ nói người ta 'どこかで確認しているのかもしれない' rằng mình đang bị cuốn theo một công việc quan trọng — đó là sự tự xác nhận của chính mình, không phải sự công nhận năng lực từ đối phương. Bẫy đổi chủ thể (mình tự xác nhận ↔ người khác công nhận)."
+          },
+          {
+            "text": "「忙しいから」と言えば理由を詳しく説明しなくても相手が納得し、深く問われることも少ないから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 1 câu 4 — 理由を詳しく説明しなくても、相手は大抵の場合、納得してくれるからである — và hai ví dụ song song ở đoạn 2: từ chối lời mời của bạn bè mà không làm tổn thương đối phương (câu 1), bị hỏi lý do công việc không tiến triển thì 'それ以上深く問われることは少ない' (câu 2). Cả hai ví dụ đều minh họa cho cùng một cơ chế."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "Đoạn 3, câu 1",
+        "options": [
+          {
+            "text": "自分の時間の使い方を見直す機会",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 1: 「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく. Các câu sau trong đoạn 3 giải thích thêm hệ quả: người ta không còn phân biệt được mình thực sự bận hay chỉ đang tự cho rằng mình bận (câu 2), và chỉ còn lại cảm giác bận rộn (câu 4)."
+          },
+          {
+            "text": "友人からの誘い",
+            "verdict": "SAI",
+            "reason": "Đây là chi tiết trong ví dụ ở đoạn 2 câu 1 (友人の誘いを断るとき) — người ta từ chối lời mời, chứ bài không nói người ta mất đi lời mời của bạn bè vì cứ nói 'bận'. Lựa chọn này lấy ví dụ ở đoạn khác gán sang làm đáp án. Bẫy lấy ví dụ gán sang."
+          },
+          {
+            "text": "仕事の量",
+            "verdict": "SAI",
+            "reason": "Bài không hề nói lượng công việc giảm đi hay mất đi vì cứ nói 'bận'. Đoạn 3 nói người ta mất cơ hội nhìn lại cách dùng thời gian và mất khả năng phân biệt thực sự bận hay không — không phải mất khối lượng công việc. Bẫy suy luận ngoài bài."
+          },
+          {
+            "text": "相手への配慮",
+            "verdict": "SAI",
+            "reason": "Trái với đoạn 2 câu 1: nói 'bận' khi từ chối lời mời chính là cách để '相手を傷つけずに済む' — tức là vẫn giữ được sự quan tâm tới đối phương, chứ không phải đánh mất nó. Lựa chọn này đảo ngược tác dụng của ví dụ trong bài. Bẫy đảo ngược ví dụ."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "Đoạn 3, câu 3",
+        "options": [
+          {
+            "text": "「忙しい」と言えば、実際に何を成し遂げたのかがはっきりする。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 4: その結果、忙しいという感覚だけが残り、実際に何を成し遂げたのかは、はっきりしなくなってしまう — nói 'bận' khiến thành quả trở nên KHÔNG rõ ràng. Lựa chọn này lấy câu trong bài rồi đảo ngược kết quả của nó. Bẫy đảo ngược."
+          },
+          {
+            "text": "忙しいと感じるのは、いつも本当に仕事が多いからである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 2: bài đặt câu hỏi '本当に忙しいのか、それとも忙しいと思い込むことで、やるべきことから目をそらしているだけなのか' và nói người ta '区別がつかなくなってしまう' — tức là cảm giác bận KHÔNG phải lúc nào cũng vì thực sự nhiều việc. Lựa chọn này khẳng định tuyệt đối điều bài đang nghi ngờ. Bẫy khẳng định tuyệt đối."
+          },
+          {
+            "text": "忙しさを理由にすると、断ることも先送りすることも正当化できてしまう。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 3 câu 3: 忙しさを理由にすれば、断ることも、先送りすることも正当化できる. Cả hai nửa của lựa chọn đều đúng với cùng một câu trong bài."
+          },
+          {
+            "text": "忙しさを手放すことは、暇になって何もしなくなることである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 4 câu 3–4: 忙しさを手放すことは、暇になることではない — buông bỏ sự bận rộn không phải là trở nên rảnh rỗi, mà là '自分の時間の主導権を取り戻し、やるべきことに集中するための第一歩'. Lựa chọn này bỏ qua ではない và biến bước đầu tiên để tập trung thành 'không làm gì'. Bẫy đọc nửa câu."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{忙|いそが}しい",
+        "reading": "いそがしい",
+        "hanviet": "Mang",
+        "vi": "bận rộn, bận bịu"
+      },
+      {
+        "word": "{立|た}て{込|てこ}む",
+        "reading": "たてこむ",
+        "hanviet": "Lập",
+        "vi": "dồn dập, chồng chất (công việc, lịch trình)"
+      },
+      {
+        "word": "{断|ことわ}る",
+        "reading": "ことわる",
+        "hanviet": "Đoạn",
+        "vi": "từ chối, khước từ"
+      },
+      {
+        "word": "{盾|たて}",
+        "reading": "たて",
+        "hanviet": "Thuẫn",
+        "vi": "tấm khiên, lá chắn (nghĩa bóng: cái cớ để che chắn)"
+      },
+      {
+        "word": "{言|い}い{訳|いわけ}",
+        "reading": "いいわけ",
+        "hanviet": "Ngôn Dịch",
+        "vi": "lời bào chữa, lý do biện hộ"
+      },
+      {
+        "word": "{先送|さきおく}り",
+        "reading": "さきおくり",
+        "hanviet": "Tiên Tống",
+        "vi": "sự trì hoãn, đẩy lùi (vấn đề) sang sau"
+      },
+      {
+        "word": "{正当|せいとう}{化|か}する",
+        "reading": "せいとうかする",
+        "hanviet": "Chính Đương Hóa",
+        "vi": "biện minh là chính đáng, hợp thức hóa"
+      },
+      {
+        "word": "{成|な}し{遂|しと}げる",
+        "reading": "なしとげる",
+        "hanviet": "Thành Toại",
+        "vi": "hoàn thành, đạt được (một việc, mục tiêu)"
+      },
+      {
+        "word": "{主導|しゅどう}{権|けん}",
+        "reading": "しゅどうけん",
+        "hanviet": "Chủ Đạo Quyền",
+        "vi": "quyền chủ động, quyền dẫn dắt (đối với thời gian, tình thế)"
+      },
+      {
+        "word": "{手放|てばな}す",
+        "reading": "てばなす",
+        "hanviet": "Thủ Phóng",
+        "vi": "buông bỏ, từ bỏ (cái đang nắm giữ)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜うちに",
+        "vi": "trong khi… / trong lúc… (diễn ra) — chỉ một thay đổi xảy ra trong quá trình lặp lại một hành động",
+        "in_text": "しかし、「忙しい」と言い続けるうちに、人は自分の時間の使い方を見直す機会を失っていく。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "(bất giác / mất rồi)… — chỉ kết quả xảy ra ngoài ý muốn hoặc không kiểm soát được, mang sắc thái tiếc nuối hoặc phê phán",
+        "in_text": "仕事が立て込んでいるときだけでなく、誘いを断るときや、自分の都合を説明するときにも、人はつい「忙しい」と言ってしまう。"
+      },
+      {
+        "pattern": "〜ば",
+        "vi": "nếu… thì… — điều kiện giả định; ở đây là Vれば trong 言えば",
+        "in_text": "たとえば、友人の誘いを断るとき、「忙しいから」と言えば、相手を傷つけずに済む。"
+      },
+      {
+        "pattern": "〜かもしれない",
+        "vi": "có lẽ… / có thể là… — phỏng đoán nhẹ, không chắc chắn",
+        "in_text": "しかも、この言葉を口にするたびに、人は自分が大切な仕事に追われているのだと、どこかで確認しているのかもしれない。"
+      },
+      {
+        "pattern": "〜のではなく",
+        "vi": "không phải là… mà là… — phủ định vế trước, khẳng định vế sau",
+        "in_text": "大切なのは、忙しいかどうかではなく、自分の時間を何に使っているのかをはっきりさせることである。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm diễn tả 'trong khi / trong lúc': 〜うちに / 〜間に / 〜あいだに",
+        "rows": [
+          {
+            "form": "〜うちに",
+            "join": "Vる / Vない / Vている + うちに",
+            "vi": "trong khi… / trong lúc…",
+            "diff": "Nhấn mạnh một thay đổi XẢY RA TRONG QUÁ TRÌNH đó, thường là thay đổi không chủ ý hoặc không nhận ra: 'cứ làm mãi thì dần dần…'. Hay đi với thay đổi trạng thái, nhận thức.",
+            "example_ja": "「{忙|いそが}しい」と{言|い}い{続|つづ}けるうちに、{時間|じかん}の{使|つか}い{方|かた}を{見直|みなお}す{機会|きかい}を{失|うしな}っていく。",
+            "example_vi": "Cứ tiếp tục nói 'bận' như vậy, người ta dần đánh mất cơ hội nhìn lại cách mình sử dụng thời gian."
+          },
+          {
+            "form": "〜間に",
+            "join": "Nの + 間に / Vる + 間に",
+            "vi": "trong khoảng thời gian…",
+            "diff": "Chỉ một KHOẢNG THỜI GIAN xác định, trong đó một hành động khác xảy ra: 'trong lúc A thì B'. Nhấn mạnh khung thời gian, không nhấn mạnh sự thay đổi dần dần như 〜うちに.",
+            "example_ja": "{会議|かいぎ}の{間|あいだ}に、{明日|あす}の{予定|よてい}を{確認|かくにん}した。",
+            "example_vi": "Trong lúc họp, tôi đã kiểm tra lịch trình ngày mai."
+          },
+          {
+            "form": "〜あいだに",
+            "join": "Vている + あいだに",
+            "vi": "trong suốt thời gian…",
+            "diff": "Nhấn mạnh SUỐT CẢ KHOẢNG THỜI GIAN đó một trạng thái hoặc hành động tiếp diễn: 'trong suốt lúc A thì B vẫn…'. Thường đi với Vている, mang tính liên tục hơn 〜間に.",
+            "example_ja": "{私|わたくし}が{休|やす}んでいるあいだに、{仕事|しごと}がどんどん{進|すす}んでいた。",
+            "example_vi": "Trong suốt thời gian tôi nghỉ, công việc cứ thế tiến triển."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm phủ định 'không phải là…': 〜のではなく / 〜わけではない / 〜というわけではない",
+        "rows": [
+          {
+            "form": "〜のではなく",
+            "join": "N / Vる / Aい + のではなく",
+            "vi": "không phải là… mà là…",
+            "diff": "Phủ định vế trước để KHẲNG ĐỊNH vế sau: 'không phải A, mà là B'. Cấu trúc đối lập hai vế, vế sau luôn được nêu rõ. Dùng nhiều trong bài luận để nêu chủ trương.",
+            "example_ja": "{大切|たいせつ}なのは、{忙|いそが}しいかどうかではなく、{自分|じぶん}の{時間|じかん}を{何|なん}に{使|つか}っているのかをはっきりさせることである。",
+            "example_vi": "Điều quan trọng không phải là có bận hay không, mà là làm rõ mình đang dùng thời gian của mình vào việc gì."
+          },
+          {
+            "form": "〜わけではない",
+            "join": "Vる / Vない + わけではない",
+            "vi": "không phải là… (đâu)",
+            "diff": "Phủ định NHẸ NHÀNG một suy luận hoặc kết luận có thể bị hiểu lầm: 'không hẳn là…'. Không nhất thiết phải nêu vế thay thế, chỉ bác bỏ cách hiểu sai.",
+            "example_ja": "{忙|いそが}しいからといって、{仕事|しごと}ができているわけではない。",
+            "example_vi": "Không phải cứ bận là có nghĩa là làm việc hiệu quả đâu."
+          },
+          {
+            "form": "〜というわけではない",
+            "join": "Vる / Vた + というわけではない",
+            "vi": "không phải là… (như người ta nghĩ)",
+            "diff": "Phủ định một cách hiểu HOẶC một lời đồn đang được nói tới: 'không phải như người ta vẫn nói là…'. Mang sắc thái đính chính, nhẹ hơn 〜わけではない một chút và hay dùng trong văn nói.",
+            "example_ja": "{忙|いそが}しさを{手放|てばな}すことが、{暇|ひま}になるということではない。",
+            "example_vi": "Buông bỏ sự bận rộn không có nghĩa là trở nên rảnh rỗi."
+          }
+        ]
+      }
+    ]
+  }
+}
