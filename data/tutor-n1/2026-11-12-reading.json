@@ -1,0 +1,586 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 長文 trong phần đọc hiểu của đề N1 thật: một bài văn dài (khoảng 1.200–1.500 chữ) với 4 câu hỏi — hỏi ý chính của tác giả, lý do của một nhận định trong bài, mục đích của một ví dụ minh họa, và lựa chọn đúng với nội dung bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, chú ý các từ nối đối lập và chủ trương ở đoạn cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 15–18 phút (đọc + 4 câu hỏi). Trong đề thật, 長文 là dạng khó nhất phần đọc vì bài dài, trừu tượng và các lựa chọn nhiễu rất sát nghĩa: chúng thường lấy ví dụ minh họa trong bài làm đáp án thay cho ý chính, hoặc đảo ngược quan hệ nhân quả, hoặc chỉ đúng một nửa — đặc biệt là các lựa chọn bỏ qua phần phủ định (〜わけではない / 〜のではなく) để đảo ngược kết luận của tác giả.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, đọc bài sau",
+      "body": "Bài 長文 dài 1.200–1.500 chữ, đọc kỹ từ đầu dễ bị cuốn theo từng câu chữ và hết giờ. Đọc 4 câu hỏi trước để biết mình cần tìm gì (ý chính? lý do của một nhận định? mục đích của một ví dụ? lựa chọn đúng với nội dung?), rồi mới đọc bài với mục đích rõ ràng."
+    },
+    {
+      "h": "Tìm bước ngoặt しかし và chủ trương ở đoạn cuối",
+      "body": "Đoạn đầu thường chỉ nêu quan niệm cần phê phán hoặc đặt vấn đề, không phải ý chính. Bước ngoặt mở đầu bằng しかし (đoạn 4) mới là lúc tác giả nói thật, và chủ trương nằm ở đoạn 5–6: '十分によい' làm tiêu chuẩn, 'いったん出してしまえばいい', rồi kết luận '不完全な一歩を踏み出す'. Câu hỏi '筆者が最も言いたいこと' hầu như luôn có đáp án ở đoạn cuối."
+    },
+    {
+      "h": "Ví dụ chỉ là bằng chứng, không phải ý chính",
+      "body": "Ví dụ người viết bản thảo ở đoạn 2 chỉ minh họa cho nhận định '完璧主義 là trì hoãn chứ không phải khắt khe về chất lượng' (câu cuối đoạn 2). Lựa chọn nào chỉ nhắc lại nội dung của ví dụ — 'viết lại thì bài gọn dần', 'hạn nộp đến gần' — thì gần như chắc chắn là nhiễu cho câu hỏi về mục đích của ví dụ hay câu hỏi ý chính."
+    },
+    {
+      "h": "Cảnh giác với bẫy phủ định: 〜わけではない / 〜のではなく",
+      "body": "Bài này dùng rất nhiều cấu trúc phủ định: '生まれるわけではない' (đoạn 4), '質へのこだわりではなく、先送りである' (đoạn 2), '手を抜くことではない' (đoạn 6). Lựa chọn nhiễu thường bỏ qua ではない / ではなく và đảo ngược kết luận — ví dụ 'không theo đuổi hoàn hảo tức là làm qua loa'. Gặp lựa chọn có vẻ hợp lý, hãy đối chiếu từng chữ với nguyên văn, nhất là phần phủ định."
+    },
+    {
+      "h": "Phân biệt '十分によい' với '手を抜く'",
+      "body": "Hai khái niệm này là cặp đối lập trung tâm của bài: '十分によい' là tiêu chuẩn để bắt đầu (đoạn 5: đạt mục đích + truyền đạt được thì cứ đưa ra), còn '手を抜く' là làm qua loa — điều mà đoạn 6 câu 1 khẳng định rõ là KHÔNG phải ý của tác giả. Lựa chọn nào đồng nhất hai khái niệm này thì chắc chắn sai."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "完璧を求める気持ちは、それ自体は悪いことではない。仕事でも勉強でも、高い目標を持つことは成長につながるからである。しかし、完璧を「始めるための条件」にしてしまうと、話は別である。始めなければ失敗しない、しかし始めなければ何も生まれない。完璧主義の多くは、実は向上心からではなく、失敗への恐れから生まれているのである。完璧な準備が整うのを待っているうちに、機会そのものが通り過ぎてしまうことも少なくない。それでも、多くの人は準備が完璧になる日を待って、結局何も始めないまま一年が過ぎてしまう。\nたとえば、原稿を書く人を考えてみよう。最初の一文が気に入らないので書き直し、書き直すうちに締め切りが近づいてくる。書き直すたびに文章は少しずつ整っていくが、読み手に届くことは決してない。結局、「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう。提出しなければ、誰からも批判されない。その代わり、誰からも読まれないままである。ここで起きているのは、質へのこだわりではなく、先送りである。\nさらに問題なのは、完璧の基準がいつの間にか他人の目に置かれてしまうことである。誰かに笑われないか、評価を下げられないか。そう考え始めると、自分の判断よりも他人の反応が優先されるようになる。すると、作るものは安全で無難なものばかりになり、新しい挑戦は避けられるようになる。他人の評価を気にしすぎると、自分の基準がどこにあるのかさえ分からなくなってしまう。完璧を求めるほど、かえって自分の色は消えていくのである。\nしかし、世の中の仕事の多くは、最初から完璧な形で生まれるわけではない。試作品を作り、使ってみて、直す。その繰り返しの中でしか、よいものは生まれないのである。最初から欠点のないものを作ろうとすれば、作る前に考える時間が長くなり、試す時間が短くなる。欠点は、隠すものではなく、直すための手がかりである。失敗を許さない姿勢は、改善の機会そのものを奪ってしまう。完璧なものを目指すあまり、試すこと自体をやめてしまうのである。\nでは、どうすればいいのか。まず、「十分によい」という基準を持つことである。目的を果たしているか、相手に伝わるか。この二つを満たしていれば、いったん出してしまえばいい。出した後で反応を見て直せばよく、出すことと直すことを分けて考えれば、始めるときの重さはぐっと軽くなる。もちろん、出す以上は責任を持たなければならないが、責任と完璧は同じではない。完璧を目指すことと、完璧になるまで出さないことは、まったく別のことである。\n完璧を求めないことは、手を抜くことではない。むしろ逆である。完成させるために、最初の一歩を小さくする勇気のことである。小さな一歩でも踏み出せば、次に何を直すべきかが見えてくる。完璧な一歩を待つのではなく、不完全な一歩を踏み出す。その一歩の積み重ねが、やがて自分にしかできない仕事へとつながっていくのである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "完璧を求めることは、手を抜くことと同じである。",
+        "完璧な準備が整うまで待つことが、成功への近道である。",
+        "完璧を求めずにまず一歩を踏み出し、出した後で直していくことが大切である。",
+        "他人の評価を気にしなければ、仕事の質は自然に上がる。"
+      ],
+      "answer": 2,
+      "explain_vi": "Ý chính nằm ở đoạn 5 và đoạn 6: đoạn 5 nói hãy lấy '十分によい' làm tiêu chuẩn, 'いったん出してしまえばいい' rồi '出した後で反応を見て直せばよく'; đoạn 6 kết luận '完璧な一歩を待つのではなく、不完全な一歩を踏み出す'. Lựa chọn ③ tóm tắt đúng cả hai ý."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "完璧を求める気持ちは、それ自体は悪いことではない。仕事でも勉強でも、高い目標を持つことは成長につながるからである。しかし、完璧を「始めるための条件」にしてしまうと、話は別である。始めなければ失敗しない、しかし始めなければ何も生まれない。完璧主義の多くは、実は向上心からではなく、失敗への恐れから生まれているのである。完璧な準備が整うのを待っているうちに、機会そのものが通り過ぎてしまうことも少なくない。それでも、多くの人は準備が完璧になる日を待って、結局何も始めないまま一年が過ぎてしまう。\nたとえば、原稿を書く人を考えてみよう。最初の一文が気に入らないので書き直し、書き直すうちに締め切りが近づいてくる。書き直すたびに文章は少しずつ整っていくが、読み手に届くことは決してない。結局、「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう。提出しなければ、誰からも批判されない。その代わり、誰からも読まれないままである。ここで起きているのは、質へのこだわりではなく、先送りである。\nさらに問題なのは、完璧の基準がいつの間にか他人の目に置かれてしまうことである。誰かに笑われないか、評価を下げられないか。そう考え始めると、自分の判断よりも他人の反応が優先されるようになる。すると、作るものは安全で無難なものばかりになり、新しい挑戦は避けられるようになる。他人の評価を気にしすぎると、自分の基準がどこにあるのかさえ分からなくなってしまう。完璧を求めるほど、かえって自分の色は消えていくのである。\nしかし、世の中の仕事の多くは、最初から完璧な形で生まれるわけではない。試作品を作り、使ってみて、直す。その繰り返しの中でしか、よいものは生まれないのである。最初から欠点のないものを作ろうとすれば、作る前に考える時間が長くなり、試す時間が短くなる。欠点は、隠すものではなく、直すための手がかりである。失敗を許さない姿勢は、改善の機会そのものを奪ってしまう。完璧なものを目指すあまり、試すこと自体をやめてしまうのである。\nでは、どうすればいいのか。まず、「十分によい」という基準を持つことである。目的を果たしているか、相手に伝わるか。この二つを満たしていれば、いったん出してしまえばいい。出した後で反応を見て直せばよく、出すことと直すことを分けて考えれば、始めるときの重さはぐっと軽くなる。もちろん、出す以上は責任を持たなければならないが、責任と完璧は同じではない。完璧を目指すことと、完璧になるまで出さないことは、まったく別のことである。\n完璧を求めないことは、手を抜くことではない。むしろ逆である。完成させるために、最初の一歩を小さくする勇気のことである。小さな一歩でも踏み出せば、次に何を直すべきかが見えてくる。完璧な一歩を待つのではなく、不完全な一歩を踏み出す。その一歩の積み重ねが、やがて自分にしかできない仕事へとつながっていくのである。\n「完璧主義の多くは、実は向上心からではなく、失敗への恐れから生まれている」とあるが、なぜか。",
+      "choices": [
+        "失敗を避けるために、始めることを先送りにするからである。",
+        "完璧主義者は、他人の評価をまったく気にしないからである。",
+        "完璧主義者は、質よりも量を重視するからである。",
+        "完璧主義者は、試作品を作るのが好きだからである。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đoạn 1 câu 4 nêu '始めなければ失敗しない、しかし始めなければ何も生まれない' — không bắt đầu thì không thất bại; đoạn 2 minh họa: người viết bản thảo cứ viết lại mãi rồi '提出を見送ってしまう', và đoạn 2 câu cuối khẳng định đó là '先送り' chứ không phải khắt khe về chất lượng. Nỗi sợ thất bại khiến người ta trì hoãn việc bắt đầu và việc nộp."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "完璧を求める気持ちは、それ自体は悪いことではない。仕事でも勉強でも、高い目標を持つことは成長につながるからである。しかし、完璧を「始めるための条件」にしてしまうと、話は別である。始めなければ失敗しない、しかし始めなければ何も生まれない。完璧主義の多くは、実は向上心からではなく、失敗への恐れから生まれているのである。完璧な準備が整うのを待っているうちに、機会そのものが通り過ぎてしまうことも少なくない。それでも、多くの人は準備が完璧になる日を待って、結局何も始めないまま一年が過ぎてしまう。\nたとえば、原稿を書く人を考えてみよう。最初の一文が気に入らないので書き直し、書き直すうちに締め切りが近づいてくる。書き直すたびに文章は少しずつ整っていくが、読み手に届くことは決してない。結局、「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう。提出しなければ、誰からも批判されない。その代わり、誰からも読まれないままである。ここで起きているのは、質へのこだわりではなく、先送りである。\nさらに問題なのは、完璧の基準がいつの間にか他人の目に置かれてしまうことである。誰かに笑われないか、評価を下げられないか。そう考え始めると、自分の判断よりも他人の反応が優先されるようになる。すると、作るものは安全で無難なものばかりになり、新しい挑戦は避けられるようになる。他人の評価を気にしすぎると、自分の基準がどこにあるのかさえ分からなくなってしまう。完璧を求めるほど、かえって自分の色は消えていくのである。\nしかし、世の中の仕事の多くは、最初から完璧な形で生まれるわけではない。試作品を作り、使ってみて、直す。その繰り返しの中でしか、よいものは生まれないのである。最初から欠点のないものを作ろうとすれば、作る前に考える時間が長くなり、試す時間が短くなる。欠点は、隠すものではなく、直すための手がかりである。失敗を許さない姿勢は、改善の機会そのものを奪ってしまう。完璧なものを目指すあまり、試すこと自体をやめてしまうのである。\nでは、どうすればいいのか。まず、「十分によい」という基準を持つことである。目的を果たしているか、相手に伝わるか。この二つを満たしていれば、いったん出してしまえばいい。出した後で反応を見て直せばよく、出すことと直すことを分けて考えれば、始めるときの重さはぐっと軽くなる。もちろん、出す以上は責任を持たなければならないが、責任と完璧は同じではない。完璧を目指すことと、完璧になるまで出さないことは、まったく別のことである。\n完璧を求めないことは、手を抜くことではない。むしろ逆である。完成させるために、最初の一歩を小さくする勇気のことである。小さな一歩でも踏み出せば、次に何を直すべきかが見えてくる。完璧な一歩を待つのではなく、不完全な一歩を踏み出す。その一歩の積み重ねが、やがて自分にしかできない仕事へとつながっていくのである。\n原稿を書く人の例から、筆者は何を示そうとしているのか。",
+      "choices": [
+        "書き直すことで文章は少しずつ整っていくこと。",
+        "締め切りを守ることが最も大切であること。",
+        "原稿を書くには、最初の一文が最も難しいこと。",
+        "「まだ完璧ではない」という理由で提出を見送るのは、質へのこだわりではなく先送りであること。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đoạn 2 câu cuối nói thẳng: 'ここで起きているのは、質へのこだわりではなく、先送りである'. Ví dụ người viết bản thảo chỉ là minh họa cho nhận định này: viết lại mãi, 'まだ完璧ではないから' rồi không nộp — bề ngoài là khắt khe về chất lượng, thực chất là trì hoãn."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "完璧を求める気持ちは、それ自体は悪いことではない。仕事でも勉強でも、高い目標を持つことは成長につながるからである。しかし、完璧を「始めるための条件」にしてしまうと、話は別である。始めなければ失敗しない、しかし始めなければ何も生まれない。完璧主義の多くは、実は向上心からではなく、失敗への恐れから生まれているのである。完璧な準備が整うのを待っているうちに、機会そのものが通り過ぎてしまうことも少なくない。それでも、多くの人は準備が完璧になる日を待って、結局何も始めないまま一年が過ぎてしまう。\nたとえば、原稿を書く人を考えてみよう。最初の一文が気に入らないので書き直し、書き直すうちに締め切りが近づいてくる。書き直すたびに文章は少しずつ整っていくが、読み手に届くことは決してない。結局、「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう。提出しなければ、誰からも批判されない。その代わり、誰からも読まれないままである。ここで起きているのは、質へのこだわりではなく、先送りである。\nさらに問題なのは、完璧の基準がいつの間にか他人の目に置かれてしまうことである。誰かに笑われないか、評価を下げられないか。そう考え始めると、自分の判断よりも他人の反応が優先されるようになる。すると、作るものは安全で無難なものばかりになり、新しい挑戦は避けられるようになる。他人の評価を気にしすぎると、自分の基準がどこにあるのかさえ分からなくなってしまう。完璧を求めるほど、かえって自分の色は消えていくのである。\nしかし、世の中の仕事の多くは、最初から完璧な形で生まれるわけではない。試作品を作り、使ってみて、直す。その繰り返しの中でしか、よいものは生まれないのである。最初から欠点のないものを作ろうとすれば、作る前に考える時間が長くなり、試す時間が短くなる。欠点は、隠すものではなく、直すための手がかりである。失敗を許さない姿勢は、改善の機会そのものを奪ってしまう。完璧なものを目指すあまり、試すこと自体をやめてしまうのである。\nでは、どうすればいいのか。まず、「十分によい」という基準を持つことである。目的を果たしているか、相手に伝わるか。この二つを満たしていれば、いったん出してしまえばいい。出した後で反応を見て直せばよく、出すことと直すことを分けて考えれば、始めるときの重さはぐっと軽くなる。もちろん、出す以上は責任を持たなければならないが、責任と完璧は同じではない。完璧を目指すことと、完璧になるまで出さないことは、まったく別のことである。\n完璧を求めないことは、手を抜くことではない。むしろ逆である。完成させるために、最初の一歩を小さくする勇気のことである。小さな一歩でも踏み出せば、次に何を直すべきかが見えてくる。完璧な一歩を待つのではなく、不完全な一歩を踏み出す。その一歩の積み重ねが、やがて自分にしかできない仕事へとつながっていくのである。\n本文の内容と合うものはどれか。",
+      "choices": [
+        "完璧を求めないことは、手を抜くことである。",
+        "試作品を作り、使ってみて、直す繰り返しの中でしか、よいものは生まれない。",
+        "他人の評価を気にすれば、自分の色を出すことができる。",
+        "完璧な準備が整ってから始めれば、失敗することはない。"
+      ],
+      "answer": 1,
+      "explain_vi": "Trùng khớp với đoạn 4 câu 3: 'その繰り返しの中でしか、よいものは生まれないのである' — 'chỉ trong sự lặp lại đó thì thứ tốt đẹp mới ra đời', với 'その繰り返し' là '試作品を作り、使ってみて、直す' (câu 2). Các lựa chọn còn lại đều ngược với bài, như phân tích ở Phần 4."
+    }
+  ],
+  "study": {
+    "passage_title": "「『完璧』を求めないこと」— Bài văn dài: vì sao theo đuổi sự hoàn hảo lại khiến con người trì hoãn và kiệt sức, và vì sao 'đủ tốt' mới là cách để hoàn thành",
+    "structure": "Bài văn dài gồm 6 đoạn, 40 câu, theo cấu trúc 'nêu vấn đề → ví dụ minh họa → mở rộng vấn đề → bước ngoặt → giải pháp → kết luận' điển hình của dạng 長文 N1. Đoạn 1 (7 câu) nêu vấn đề: theo đuổi sự hoàn hảo tự nó không xấu, mục tiêu cao giúp trưởng thành; nhưng biến hoàn hảo thành 'điều kiện để bắt đầu' thì khác — không bắt đầu thì không thất bại, nhưng cũng chẳng có gì ra đời; chủ nghĩa hoàn hảo phần lớn sinh ra từ nỗi sợ thất bại, và trong lúc chờ chuẩn bị hoàn hảo thì cơ hội đã trôi qua, thậm chí nhiều người chờ mãi mà một năm trôi qua vẫn chưa bắt đầu được gì. Đoạn 2 (7 câu) đưa ví dụ minh họa: người viết bản thảo cứ viết lại câu đầu, hạn nộp đến gần, cuối cùng tự nhủ 'vì vẫn chưa hoàn hảo' rồi không nộp; không nộp thì không bị phê bình, nhưng cũng chẳng được ai đọc — câu kết đoạn khẳng định: đó không phải là khắt khe về chất lượng mà là trì hoãn. Đoạn 3 (6 câu) mở rộng vấn đề: tiêu chuẩn hoàn hảo lúc nào không hay đã bị đặt vào ánh mắt người khác; sợ bị cười chê, sợ bị đánh giá thấp; phản ứng của người khác được ưu tiên hơn phán đoán của mình; làm ra chỉ toàn thứ an toàn, không có gì đáng chê; càng theo đuổi hoàn hảo, màu sắc riêng càng biến mất. Đoạn 4 (7 câu) là bước ngoặt, mở đầu bằng しかし: phần lớn công việc không sinh ra đã hoàn hảo; làm bản thử, dùng thử, sửa lại — chỉ trong sự lặp lại đó thứ tốt đẹp mới ra đời; cố làm thứ không có khuyết điểm ngay từ đầu thì thời gian suy nghĩ dài ra, thời gian thử ngắn lại; khuyết điểm là manh mối để sửa, không phải thứ để che giấu; thái độ không cho phép thất bại cướp đi chính cơ hội cải thiện, và vì quá hướng tới thứ hoàn hảo mà người ta thậm chí từ bỏ cả việc thử nghiệm. Đoạn 5 (7 câu) đưa giải pháp, mở đầu bằng では、どうすればいいのか: lấy '十分によい' làm tiêu chuẩn — đạt mục đích và truyền đạt được thì cứ đưa ra đã; đưa ra rồi xem phản ứng mà sửa sau; tách riêng việc đưa ra và việc sửa chữa thì gánh nặng lúc bắt đầu nhẹ đi rất nhiều; đã đưa ra thì phải chịu trách nhiệm, nhưng trách nhiệm và hoàn hảo không phải là một — hướng tới hoàn hảo và việc không đưa ra cho tới khi hoàn hảo là hai chuyện hoàn toàn khác nhau. Đoạn 6 (6 câu) kết luận, mở đầu bằng câu chủ trương phủ định: không theo đuổi hoàn hảo không phải là làm qua loa, mà ngược lại — đó là can đảm thu nhỏ bước đầu tiên để có thể hoàn thành; bước nhỏ cũng thấy được tiếp theo nên sửa chỗ nào; không chờ bước đi hoàn hảo mà hãy bước một bước chưa hoàn hảo; sự tích lũy của những bước đó dẫn tới công việc chỉ mình mới làm được. Bẫy chính của bài: các lựa chọn nhiễu lấy ví dụ ở đoạn 2 hoặc chi tiết phụ làm ý chính, hoặc bỏ qua phần phủ định (〜わけではない / 〜のではなく / 〜ではない) để đảo ngược kết luận, hoặc đồng nhất '十分によい' với '手を抜く'.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{完璧|かんぺき}を{求|もと}める{気持|きも}ちは、それ{自体|じたい}は{悪|わる}いことではない。",
+        "vi": "Cảm giác muốn theo đuổi sự hoàn hảo, tự bản thân nó không phải là điều xấu."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{仕事|しごと}でも{勉強|べんきょう}でも、{高|たか}い{目標|もくひょう}を{持|も}つことは{成長|せいちょう}につながるからである。",
+        "vi": "Bởi vì dù trong công việc hay trong học tập, việc có mục tiêu cao cũng dẫn tới sự trưởng thành."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "しかし、{完璧|かんぺき}を「{始|はじ}めるための{条件|じょうけん}」にしてしまうと、{話|はなし}は{別|べつ}である。",
+        "vi": "Tuy nhiên, nếu biến sự hoàn hảo thành 'điều kiện để bắt đầu' thì câu chuyện lại khác."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "{始|はじ}めなければ{失敗|しっぱい}しない、しかし{始|はじ}めなければ{何|なん}も{生|う}まれない。",
+        "vi": "Không bắt đầu thì sẽ không thất bại, nhưng không bắt đầu thì cũng chẳng có gì ra đời."
+      },
+      {
+        "para": 1,
+        "no": 5,
+        "ja": "{完璧|かんぺき}{主義|しゅぎ}の{多|おお}くは、{実|じつ}は{向上|こうじょう}{心|しん}からではなく、{失敗|しっぱい}への{恐|おそ}れから{生|う}まれているのである。",
+        "vi": "Phần lớn chủ nghĩa hoàn hảo, thực ra không sinh ra từ lòng cầu tiến mà từ nỗi sợ thất bại."
+      },
+      {
+        "para": 1,
+        "no": 6,
+        "ja": "{完璧|かんぺき}な{準備|じゅんび}が{整|ととの}うのを{待|ま}っているうちに、{機会|きかい}そのものが{通|とお}り{過|りす}ぎてしまうことも{少|すく}なくない。",
+        "vi": "Trong lúc chờ đợi sự chuẩn bị hoàn hảo, không ít lần chính cơ hội đã trôi qua mất."
+      },
+      {
+        "para": 1,
+        "no": 7,
+        "ja": "それでも、{多|おお}くの{人|ひと}は{準備|じゅんび}が{完璧|かんぺき}になる{日|ひ}を{待|ま}って、{結局|けっきょく}{何|なん}も{始|はじ}めないまま{一|いち}{年|ねん}が{過|す}ぎてしまう。",
+        "vi": "Thế nhưng, nhiều người vẫn chờ đợi cái ngày mà sự chuẩn bị trở nên hoàn hảo, để rồi cuối cùng một năm trôi qua mà vẫn chưa bắt đầu được gì."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "たとえば、{原稿|げんこう}を{書|か}く{人|ひと}を{考|かんが}えてみよう。",
+        "vi": "Chẳng hạn, hãy thử nghĩ về một người viết bản thảo."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{最初|さいしょ}の{一|いち}{文|ぶん}が{気|き}に{入|はい}らないので{書|か}き{直|きなお}し、{書|か}き{直|きなお}すうちに{締|し}め{切|めき}りが{近|ちか}づいてくる。",
+        "vi": "Vì không ưng ý câu đầu tiên nên người ấy viết lại, và cứ viết lại mãi thì hạn nộp bài cũng đến gần."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "{書|か}き{直|きなお}すたびに{文章|ぶんしょう}は{少|すこ}しずつ{整|ととの}っていくが、{読|よ}み{手|みて}に{届|とど}くことは{決|けっ}してない。",
+        "vi": "Mỗi lần viết lại, bài viết lại gọn gàng hơn một chút, nhưng nó không bao giờ đến được tay người đọc."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{結局|けっきょく}、「まだ{完璧|かんぺき}ではないから」と{自分|じぶん}に{言|い}い{聞|いき}かせて、{提出|ていしゅつ}を{見送|みおく}ってしまう。",
+        "vi": "Cuối cùng, người ấy tự nhủ 'vì vẫn chưa hoàn hảo' rồi thôi không nộp bài nữa."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "{提出|ていしゅつ}しなければ、{誰|だれ}からも{批判|ひはん}されない。",
+        "vi": "Không nộp thì sẽ chẳng bị ai phê bình."
+      },
+      {
+        "para": 2,
+        "no": 6,
+        "ja": "その{代|か}わり、{誰|だれ}からも{読|よ}まれないままである。",
+        "vi": "Đổi lại, bài viết sẽ mãi chẳng được ai đọc."
+      },
+      {
+        "para": 2,
+        "no": 7,
+        "ja": "ここで{起|お}きているのは、{質|しつ}へのこだわりではなく、{先送|さきおく}りである。",
+        "vi": "Điều đang xảy ra ở đây không phải là sự khắt khe về chất lượng, mà là sự trì hoãn."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "さらに{問題|もんだい}なのは、{完璧|かんぺき}の{基準|きじゅん}がいつの{間|あいだ}にか{他人|たにん}の{目|め}に{置|お}かれてしまうことである。",
+        "vi": "Vấn đề nghiêm trọng hơn là, tiêu chuẩn của sự hoàn hảo lúc nào không hay đã bị đặt vào ánh mắt của người khác."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{誰|だれ}かに{笑|わら}われないか、{評価|ひょうか}を{下|さ}げられないか。",
+        "vi": "Liệu có bị ai đó cười chê không, liệu có bị đánh giá thấp đi không."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "そう{考|かんが}え{始|はじ}めると、{自分|じぶん}の{判断|はんだん}よりも{他人|たにん}の{反応|はんのう}が{優先|ゆうせん}されるようになる。",
+        "vi": "Một khi bắt đầu nghĩ như vậy, phản ứng của người khác sẽ dần được ưu tiên hơn phán đoán của chính mình."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "すると、{作|つく}るものは{安全|あんぜん}で{無難|ぶなん}なものばかりになり、{新|あたら}しい{挑戦|ちょうせん}は{避|さ}けられるようになる。",
+        "vi": "Rồi những thứ làm ra chỉ còn toàn những thứ an toàn, không có gì đáng chê, và những thử thách mới sẽ bị tránh né."
+      },
+      {
+        "para": 3,
+        "no": 5,
+        "ja": "{他人|たにん}の{評価|ひょうか}を{気|き}にしすぎると、{自分|じぶん}の{基準|きじゅん}がどこにあるのかさえ{分|わ}からなくなってしまう。",
+        "vi": "Quá bận tâm tới đánh giá của người khác thì đến cả tiêu chuẩn của mình nằm ở đâu cũng không còn biết nữa."
+      },
+      {
+        "para": 3,
+        "no": 6,
+        "ja": "{完璧|かんぺき}を{求|もと}めるほど、かえって{自分|じぶん}の{色|いろ}は{消|き}えていくのである。",
+        "vi": "Càng theo đuổi sự hoàn hảo, ngược lại, màu sắc riêng của mình lại càng biến mất."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "しかし、{世|よ}の{中|のなか}の{仕事|しごと}の{多|おお}くは、{最初|さいしょ}から{完璧|かんぺき}な{形|かたち}で{生|う}まれるわけではない。",
+        "vi": "Tuy nhiên, phần lớn công việc trên đời không phải sinh ra ngay từ đầu đã ở hình dạng hoàn hảo."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{試作|しさく}{品|ひん}を{作|つく}り、{使|つか}ってみて、{直|なお}す。",
+        "vi": "Làm ra bản thử, dùng thử, rồi sửa lại."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "その{繰|く}り{返|りかえ}しの{中|なか}でしか、よいものは{生|う}まれないのである。",
+        "vi": "Chỉ trong sự lặp lại đó thì thứ tốt đẹp mới ra đời."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "{最初|さいしょ}から{欠点|けってん}のないものを{作|つく}ろうとすれば、{作|つく}る{前|まえ}に{考|かんが}える{時間|じかん}が{長|なが}くなり、{試|ため}す{時間|じかん}が{短|みじか}くなる。",
+        "vi": "Nếu cố làm ra ngay từ đầu một thứ không có khuyết điểm, thì thời gian suy nghĩ trước khi làm sẽ dài ra, còn thời gian thử nghiệm sẽ ngắn lại."
+      },
+      {
+        "para": 4,
+        "no": 5,
+        "ja": "{欠点|けってん}は、{隠|かく}すものではなく、{直|なお}すための{手|て}がかりである。",
+        "vi": "Khuyết điểm không phải là thứ để che giấu, mà là manh mối để sửa chữa."
+      },
+      {
+        "para": 4,
+        "no": 6,
+        "ja": "{失敗|しっぱい}を{許|ゆる}さない{姿勢|しせい}は、{改善|かいぜん}の{機会|きかい}そのものを{奪|うば}ってしまう。",
+        "vi": "Thái độ không cho phép thất bại sẽ cướp đi chính cơ hội cải thiện."
+      },
+      {
+        "para": 4,
+        "no": 7,
+        "ja": "{完璧|かんぺき}なものを{目指|めざ}すあまり、{試|ため}すこと{自体|じたい}をやめてしまうのである。",
+        "vi": "Vì quá hướng tới một thứ hoàn hảo mà người ta thậm chí từ bỏ cả việc thử nghiệm."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "では、どうすればいいのか。",
+        "vi": "Vậy thì nên làm thế nào?"
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "まず、「{十|じゅう}{分|ぷん}によい」という{基準|きじゅん}を{持|も}つことである。",
+        "vi": "Trước hết, hãy có một tiêu chuẩn mang tên 'đủ tốt'."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{目的|もくてき}を{果|は}たしているか、{相手|あいて}に{伝|つた}わるか。",
+        "vi": "Liệu nó có đạt được mục đích không, liệu nó có truyền đạt được tới đối phương không."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "この{二|ふた}つを{満|み}たしていれば、いったん{出|だ}してしまえばいい。",
+        "vi": "Nếu thỏa mãn hai điều này thì cứ đưa ra đã rồi tính."
+      },
+      {
+        "para": 5,
+        "no": 5,
+        "ja": "{出|だ}した{後|あと}で{反応|はんのう}を{見|み}て{直|なお}せばよく、{出|だ}すことと{直|なお}すことを{分|わ}けて{考|かんが}えれば、{始|はじ}めるときの{重|おも}さはぐっと{軽|かる}くなる。",
+        "vi": "Sau khi đưa ra, xem phản ứng rồi sửa sau cũng được; nếu tách riêng việc 'đưa ra' và việc 'sửa chữa' thì gánh nặng lúc bắt đầu sẽ nhẹ đi rất nhiều."
+      },
+      {
+        "para": 5,
+        "no": 6,
+        "ja": "もちろん、{出|だ}す{以上|いじょう}は{責任|せきにん}を{持|も}たなければならないが、{責任|せきにん}と{完璧|かんぺき}は{同|おな}じではない。",
+        "vi": "Tất nhiên, đã đưa ra thì phải chịu trách nhiệm, nhưng trách nhiệm và sự hoàn hảo không phải là một."
+      },
+      {
+        "para": 5,
+        "no": 7,
+        "ja": "{完璧|かんぺき}を{目指|めざ}すことと、{完璧|かんぺき}になるまで{出|だ}さないことは、まったく{別|べつ}のことである。",
+        "vi": "Hướng tới sự hoàn hảo và việc không đưa ra cho tới khi hoàn hảo là hai chuyện hoàn toàn khác nhau."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "{完璧|かんぺき}を{求|もと}めないことは、{手|て}を{抜|ぬ}くことではない。",
+        "vi": "Không theo đuổi sự hoàn hảo không có nghĩa là làm qua loa."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "むしろ{逆|ぎゃく}である。",
+        "vi": "Mà ngược lại mới đúng."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "{完成|かんせい}させるために、{最初|さいしょ}の{一|いち}{歩|ぽ}を{小|ちい}さくする{勇気|ゆうき}のことである。",
+        "vi": "Đó là sự can đảm thu nhỏ bước đầu tiên lại, để có thể hoàn thành."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "{小|ちい}さな{一|いち}{歩|ぽ}でも{踏|ふ}み{出|みだ}せば、{次|つぎ}に{何|なん}を{直|なお}すべきかが{見|み}えてくる。",
+        "vi": "Dù chỉ là một bước nhỏ, chỉ cần bước đi thì sẽ thấy được tiếp theo nên sửa chỗ nào."
+      },
+      {
+        "para": 6,
+        "no": 5,
+        "ja": "{完璧|かんぺき}な{一|いち}{歩|ぽ}を{待|ま}つのではなく、{不|ふ}{完全|かんぜん}な{一|いち}{歩|ぽ}を{踏|ふ}み{出|みだ}す。",
+        "vi": "Không chờ đợi một bước đi hoàn hảo, mà hãy bước một bước chưa hoàn hảo."
+      },
+      {
+        "para": 6,
+        "no": 6,
+        "ja": "その{一|いち}{歩|ぽ}の{積|つ}み{重|みかさ}ねが、やがて{自分|じぶん}にしかできない{仕事|しごと}へとつながっていくのである。",
+        "vi": "Sự tích lũy của những bước đi đó, cuối cùng sẽ dẫn tới một công việc mà chỉ mình mới làm được."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án 3 · Câu 2 – đáp án 1 · Câu 3 – đáp án 4 · Câu 4 – đáp án 2",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 2,
+        "locator": "Đoạn 5, câu 4–5 + Đoạn 6, câu 5",
+        "options": [
+          {
+            "text": "完璧を求めることは、手を抜くことと同じである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 6 câu 1: 完璧を求めないことは、手を抜くことではない — bài phân biệt rõ hai khái niệm này, còn lựa chọn này đồng nhất chúng. Bẫy đảo ngược."
+          },
+          {
+            "text": "完璧な準備が整うまで待つことが、成功への近道である。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 1 câu 6: chờ chuẩn bị hoàn hảo thì '機会そのものが通り過ぎてしまうことも少なくない'; đoạn 6 câu 5 khuyên '完璧な一歩を待つのではなく'. Lựa chọn này biến điều bài phê phán thành lời khuyên. Bẫy đảo ngược chủ trương."
+          },
+          {
+            "text": "完璧を求めずにまず一歩を踏み出し、出した後で直していくことが大切である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 5 câu 4–5 — いったん出してしまえばいい / 出した後で反応を見て直せばよく — và đoạn 6 câu 5 — 完璧な一歩を待つのではなく、不完全な一歩を踏み出す. Đây là ý tác giả muốn nói nhất."
+          },
+          {
+            "text": "他人の評価を気にしなければ、仕事の質は自然に上がる。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nói vậy. Đoạn 3 chỉ nói quá bận tâm tới đánh giá thì '自分の色は消えていく' — buông bận tâm là điều kiện để giữ màu sắc riêng, không phải là đảm bảo chất lượng tự tăng lên. Bẫy suy luận ngoài bài."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đoạn 1, câu 4–5 + Đoạn 2, câu 7",
+        "options": [
+          {
+            "text": "失敗を避けるために、始めることを先送りにするからである。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 1 câu 4–5: '始めなければ失敗しない' nên 完璧主義 '失敗への恐れから生まれている'; đoạn 2 minh họa bằng người viết bản thảo '提出を見送ってしまう', câu cuối khẳng định đó là '先送り' chứ không phải khắt khe về chất lượng."
+          },
+          {
+            "text": "完璧主義者は、他人の評価をまったく気にしないからである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 1: vấn đề chính là tiêu chuẩn hoàn hảo '他人の目に置かれてしまう', tức là quá quan tâm tới đánh giá của người khác, chứ không phải không quan tâm. Bẫy đảo ngược."
+          },
+          {
+            "text": "完璧主義者は、質よりも量を重視するからである。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nhắc tới số lượng. Đoạn 2 nói người viết bản thảo khắt khe về chất lượng tới mức không nộp được — không có chỗ nào nói người cầu toàn coi trọng số lượng. Bẫy suy luận ngoài bài."
+          },
+          {
+            "text": "完璧主義者は、試作品を作るのが好きだからである。",
+            "verdict": "SAI",
+            "reason": "試作品 là cách làm mà tác giả KHUYÊN ở đoạn 4 (試作品を作り、使ってみて、直す), không phải đặc điểm của người cầu toàn; người cầu toàn sợ thất bại nên không dám thử. Lựa chọn này lấy ý ở đoạn khác gán sang làm đáp án. Bẫy lấy ý đoạn khác gán sang."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đoạn 2, câu 4 + câu 7",
+        "options": [
+          {
+            "text": "書き直すことで文章は少しずつ整っていくこと。",
+            "verdict": "SAI",
+            "reason": "Đúng với đoạn 2 câu 3 (書き直すたびに文章は少しずつ整っていく) nhưng đó chỉ là một chi tiết trong ví dụ, không phải điều tác giả muốn chứng minh qua ví dụ. Bẫy lấy ví dụ làm đáp án."
+          },
+          {
+            "text": "締め切りを守ることが最も大切であること。",
+            "verdict": "SAI",
+            "reason": "Bài chỉ nhắc 締め切り như một chi tiết trong ví dụ (đoạn 2 câu 2), không hề nói giữ đúng hạn là quan trọng nhất. Bẫy lấy chi tiết phụ gán sang."
+          },
+          {
+            "text": "原稿を書くには、最初の一文が最も難しいこと。",
+            "verdict": "SAI",
+            "reason": "Bài nói câu đầu '気に入らないので書き直し' nhưng không hề nói đó là câu khó nhất; khó nhất hay không không phải luận điểm của ví dụ. Bẫy suy luận ngoài bài."
+          },
+          {
+            "text": "「まだ完璧ではない」という理由で提出を見送るのは、質へのこだわりではなく先送りであること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 2 câu 7: 'ここで起きているのは、質へのこだわりではなく、先送りである', với câu 4 làm bằng chứng — '「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう'. Đây chính là mục đích của ví dụ."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đoạn 4, câu 2–3",
+        "options": [
+          {
+            "text": "完璧を求めないことは、手を抜くことである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 6 câu 1: 完璧を求めないことは、手を抜くことではない — lựa chọn này bỏ qua ではない và đảo ngược kết luận. Bẫy đọc nửa câu."
+          },
+          {
+            "text": "試作品を作り、使ってみて、直す繰り返しの中でしか、よいものは生まれない。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 4 câu 2–3: '試作品を作り、使ってみて、直す。その繰り返しの中でしか、よいものは生まれないのである.' Cả hai nửa của lựa chọn đều đúng với cùng một đoạn trong bài."
+          },
+          {
+            "text": "他人の評価を気にすれば、自分の色を出すことができる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 6: '完璧を求めるほど、かえって自分の色は消えていく' và câu 3: phản ứng của người khác được ưu tiên hơn phán đoán của mình. Lựa chọn này đảo ngược quan hệ nhân quả trong bài. Bẫy đảo ngược."
+          },
+          {
+            "text": "完璧な準備が整ってから始めれば、失敗することはない。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 1 câu 4 và câu 6: '始めなければ失敗しない、しかし始めなければ何も生まれない' và chờ chuẩn bị hoàn hảo thì cơ hội trôi qua; bài không hề bảo đảm chuẩn bị xong thì sẽ không thất bại. Bẫy khẳng định tuyệt đối."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{完璧|かんぺき}",
+        "reading": "かんぺき",
+        "hanviet": "Hoàn Bích",
+        "vi": "sự hoàn hảo, hoàn mỹ, không tì vết"
+      },
+      {
+        "word": "{向上|こうじょう}{心|しん}",
+        "reading": "こうじょうしん",
+        "hanviet": "Hướng Thượng Tâm",
+        "vi": "lòng cầu tiến, chí tiến thủ"
+      },
+      {
+        "word": "{先送|さきおく}り",
+        "reading": "さきおくり",
+        "hanviet": "Tiên Tống",
+        "vi": "sự trì hoãn, đẩy lùi (vấn đề) sang sau"
+      },
+      {
+        "word": "{言|い}い{聞|いき}かせる",
+        "reading": "いいきかせる",
+        "hanviet": "Ngôn Văn",
+        "vi": "tự nhủ, tự thuyết phục mình (nói cho chính mình nghe)"
+      },
+      {
+        "word": "{見送|みおく}る",
+        "reading": "みおくる",
+        "hanviet": "Kiến Tống",
+        "vi": "hoãn lại, thôi không làm (nộp bài); cũng có nghĩa là tiễn đưa"
+      },
+      {
+        "word": "{無難|ぶなん}",
+        "reading": "ぶなん",
+        "hanviet": "Vô Nan",
+        "vi": "an toàn, không có gì đáng chê, không mạo hiểm"
+      },
+      {
+        "word": "{試作|しさく}{品|ひん}",
+        "reading": "しさくひん",
+        "hanviet": "Thí Tác Phẩm",
+        "vi": "bản thử, mẫu thử, sản phẩm thử nghiệm (prototype)"
+      },
+      {
+        "word": "{手|て}がかり",
+        "reading": "てがかり",
+        "hanviet": "Thủ Quải",
+        "vi": "manh mối, gợi ý, điểm tựa để bắt đầu sửa chữa"
+      },
+      {
+        "word": "{手|て}を{抜|ぬ}く",
+        "reading": "てをぬく",
+        "hanviet": "Thủ Bạt",
+        "vi": "làm qua loa, làm ẩu, bớt xén công sức"
+      },
+      {
+        "word": "{積|つ}み{重|みかさ}ね",
+        "reading": "つみかさね",
+        "hanviet": "Tích Trọng",
+        "vi": "sự tích lũy, chồng chất (từng bước nhỏ)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜わけではない",
+        "vi": "không phải là… (đâu) — phủ định một suy luận hoặc kết luận có thể bị hiểu lầm",
+        "in_text": "しかし、世の中の仕事の多くは、最初から完璧な形で生まれるわけではない。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "(mất rồi)… — chỉ kết quả xảy ra ngoài ý muốn hoặc không kiểm soát được, mang sắc thái tiếc nuối hoặc phê phán",
+        "in_text": "結局、「まだ完璧ではないから」と自分に言い聞かせて、提出を見送ってしまう。"
+      },
+      {
+        "pattern": "〜のではなく",
+        "vi": "không phải là… mà là… — phủ định vế trước, khẳng định vế sau",
+        "in_text": "ここで起きているのは、質へのこだわりではなく、先送りである。"
+      },
+      {
+        "pattern": "〜うちに",
+        "vi": "trong khi… / trong lúc… — chỉ một thay đổi xảy ra trong quá trình lặp lại một hành động, thường là thay đổi không chủ ý",
+        "in_text": "完璧な準備が整うのを待っているうちに、機会そのものが通り過ぎてしまうことも少なくない。"
+      },
+      {
+        "pattern": "〜ほど",
+        "vi": "càng… càng… — diễn tả mức độ tương quan giữa hai sự việc",
+        "in_text": "完璧を求めるほど、かえって自分の色は消えていくのである。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm phủ định suy luận: 〜わけではない / 〜というわけではない / 〜ものではない",
+        "rows": [
+          {
+            "form": "〜わけではない",
+            "join": "Vる / Vない + わけではない",
+            "vi": "không phải là… (đâu)",
+            "diff": "Phủ định một SUY LUẬN hoặc kết luận có thể bị hiểu lầm: 'không hẳn là…'. Không nhất thiết phải nêu vế thay thế, chỉ bác bỏ cách hiểu sai.",
+            "example_ja": "{世|よ}の{中|のなか}の{仕事|しごと}の{多|おお}くは、{最初|さいしょ}から{完璧|かんぺき}な{形|かたち}で{生|う}まれるわけではない。",
+            "example_vi": "Phần lớn công việc trên đời không phải sinh ra ngay từ đầu đã ở hình dạng hoàn hảo."
+          },
+          {
+            "form": "〜というわけではない",
+            "join": "Vる / Vた + というわけではない",
+            "vi": "không phải là… (như người ta nghĩ)",
+            "diff": "Phủ định một cách hiểu HOẶC một lời đồn đang được nói tới: 'không phải như người ta vẫn nói là…'. Mang sắc thái đính chính, nhẹ hơn 〜わけではない một chút và hay dùng trong văn nói.",
+            "example_ja": "{完璧|かんぺき}を{求|もと}めないことが、{手|て}を{抜|ぬ}くということではない。",
+            "example_vi": "Không theo đuổi sự hoàn hảo không có nghĩa là làm qua loa."
+          },
+          {
+            "form": "〜ものではない",
+            "join": "Vる + ものではない",
+            "vi": "không nên… / không phải là thứ để…",
+            "diff": "Phủ định MẠNH MẼ một hành động hoặc cách xử sự, mang sắc thái khuyên răn hoặc cấm đoán: 'không nên làm thế'. Khác với 〜わけではない chỉ bác bỏ một suy luận, 〜ものではない bác bỏ cả hành động.",
+            "example_ja": "{他人|たにん}の{評価|ひょうか}ばかり{気|き}にして、{自分|じぶん}の{判断|はんだん}を{捨|す}てるものではない。",
+            "example_vi": "Không nên chỉ lo đánh giá của người khác mà vứt bỏ phán đoán của mình."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm diễn tả mức độ và nguyên nhân: 〜ほど / 〜ばかりに / 〜だけに",
+        "rows": [
+          {
+            "form": "〜ほど",
+            "join": "Vる + ほど",
+            "vi": "càng… càng…",
+            "diff": "Diễn tả MỨC ĐỘ tương quan: càng làm A thì càng xảy ra B. Trong bài, ほど đi với かえって để nhấn mạnh kết quả ngược với mong đợi: càng theo đuổi hoàn hảo, màu sắc riêng càng biến mất.",
+            "example_ja": "{完璧|かんぺき}を{求|もと}めるほど、かえって{自分|じぶん}の{色|いろ}は{消|き}えていくのである。",
+            "example_vi": "Càng theo đuổi sự hoàn hảo, ngược lại, màu sắc riêng của mình lại càng biến mất."
+          },
+          {
+            "form": "〜ばかりに",
+            "join": "Vる / Vた + ばかりに",
+            "vi": "chỉ vì… mà…",
+            "diff": "Diễn tả NGUYÊN NHÂN TIÊU CỰC: chỉ vì một chuyện nhỏ mà dẫn tới kết quả xấu, mang sắc thái tiếc nuối hoặc phê phán. Khác với 〜ほど chỉ mức độ, 〜ばかりに nhấn mạnh nguyên nhân gây hại.",
+            "example_ja": "{他人|たにん}の{評価|ひょうか}を{気|き}にするばかりに、{自分|じぶん}の{基準|きじゅん}を{見失|みうしな}ってしまった。",
+            "example_vi": "Chỉ vì quá bận tâm tới đánh giá của người khác mà tôi đã đánh mất tiêu chuẩn của chính mình."
+          },
+          {
+            "form": "〜だけに",
+            "join": "Vる / Vた + だけに",
+            "vi": "chính vì… nên…",
+            "diff": "Diễn tả nguyên nhân DẪN TỚI KẾT QUẢ HỢP LÝ, như dự đoán: 'chính vì A nên B cũng là đương nhiên'. Trái với 〜ばかりに (kết quả xấu, đáng tiếc), 〜だけに mang sắc thái trung tính hoặc tích cực.",
+            "example_ja": "{高|たか}い{目標|もくひょう}を{持|も}つだけに、{失敗|しっぱい}を{恐|おそ}れる{気持|きも}ちも{強|つよ}くなる。",
+            "example_vi": "Chính vì có mục tiêu cao nên nỗi sợ thất bại cũng trở nên mạnh mẽ."
+          }
+        ]
+      }
+    ]
+  }
+}

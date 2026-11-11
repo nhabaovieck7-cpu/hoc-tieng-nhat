@@ -185,6 +185,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 28 — Đi mua máy giặt mới ở cửa hàng điện máy (洗濯機を買い替える)",
       "file": "2026-11-11-kaiwa.json"
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 12/11/2026（問題13・統合理解）",
+      "file": "2026-11-12-n1-set.json"
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 12/11/2026（長文）",
+      "file": "2026-11-12-reading.json"
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 29 — Lần đầu đi xem phim ở rạp (映画館デビュー)",
+      "file": "2026-11-12-kaiwa.json"
     }
   ]
 }

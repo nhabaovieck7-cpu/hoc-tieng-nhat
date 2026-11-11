@@ -1,0 +1,357 @@
+{
+  "lesson": 29,
+  "topic": "Lần đầu đi xem phim ở rạp (映画館デビュー)",
+  "summary": "Bối cảnh: 拓海 rủ 莉子 đi xem phim ở rạp vào cuối tuần, nhưng cậu chưa bao giờ tự đặt vé online nên nhờ 莉子 chỉ giúp. Hai người cùng mở trang đặt vé trên điện thoại, bàn xem phim nào hay, chọn suất chiếu, chọn ghế ngồi và thanh toán bằng thẻ, rồi hẹn giờ gặp nhau trước rạp. Sau khi xem xong, hai người vừa ra khỏi phòng chiếu vừa bàn luận sôi nổi về bộ phim: cảnh nào hay nhất, diễn viên nào diễn tốt, đoạn kết có bất ngờ không, rồi rủ nhau đi ăn tối gần rạp để nói tiếp. Kỹ năng luyện: văn nói bạn bè — hỏi ý kiến và thương lượng khi cùng chọn phim (phim nào hay, suất nào tiện, ghế nào ngồi thoải mái), các bước đặt vé online (xem giờ chiếu, chọn ghế, thanh toán, nhận mã vé), và cách bàn luận, cảm nhận về một bộ phim vừa xem (cảnh ấn tượng, diễn xuất, đoạn kết) rồi rủ nhau đi ăn. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng rạp chiếu phim và đặt vé online (上映時間, 座席指定, 前売り券, 予約, 決済, ポップコーン, 字幕・吹き替え), cách nói rút gọn khi hỏi giờ chiếu và chọn ghế 〜てみなよ và 〜っす, và cách bày tỏ cảm xúc về phim bằng giọng bạn bè (泣いちゃった, ハラハラした, 予想外だった).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（đặt vé xem phim online, cùng chọn phim và chọn ghế）",
+      "stage": "（Buổi tối, 拓海 và 莉子 đang ngồi xem trang đặt vé trên điện thoại để chọn phim đi xem cuối tuần. 拓海 chưa bao giờ tự đặt vé online nên nhờ 莉子 chỉ giúp.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "あのさ、{今週|こんしゅう}{末|まつ}さ、{映画|えいが}{見|み}に{行|い}かない？{俺|おれ}、ネットで{予約|よやく}したことないんだよね。",
+          "vi": "Này, cuối tuần này đi xem phim không? Tớ chưa bao giờ đặt vé online bao giờ cả."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え、まじ？{初|はじ}めてなの？じゃあ、{一緒|いっしょ}に{見|み}てみなよ。",
+          "vi": "Hả, thật á? Lần đầu à? Thế thì cùng xem thử đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、どれがいいかな。あのさ、{新|あたら}しいアクション{映画|えいが}、{評判|ひょうばん}いいらしいよ。",
+          "vi": "Ừ, phim nào hay nhỉ. Này, phim hành động mới ra nghe bảo đang hot lắm đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ああ、あれね。{私|わたくし}も{気|き}になってた。でさ、{上映|じょうえい}{時間|じかん}は{何時|いつ}から？",
+          "vi": "À, phim đó à. Tớ cũng đang tò mò đây. Mà suất chiếu bắt đầu mấy giờ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、{土曜|どよう}の{夜|よる}7{時|じ}からっすね。あと、{昼|ひる}の2{時|じ}もあるよ。",
+          "vi": "Ừm, thứ Bảy tối 7 giờ này. Với cả còn suất 2 giờ chiều nữa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{夜|よる}がいいな。{仕事|しごと}{終|お}わってから{行|い}けるしさ。{座席|ざせき}、どこがいい？",
+          "vi": "Tối đi. Xong việc rồi đi được luôn mà. Ghế ngồi chỗ nào thì tốt?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{真|ま}ん{中|んなか}がいいよね。{後|うし}ろすぎると{画面|がめん}が{遠|とお}いしさ。",
+          "vi": "Ngồi giữa thì tốt nhỉ. Ngồi xa quá thì màn hình lại xa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{真|ま}ん{中|んなか}の{列|れつ}にしよ。あ、ポップコーンも{一緒|いっしょ}に{頼|たの}んじゃう？",
+          "vi": "Ừ, chọn hàng giữa nhé. À, đặt luôn cả bắp rang bơ nhé?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いいね。じゃあ、{決済|けっさい}はカードでいい？",
+          "vi": "Ồ, hay đấy. Thế thanh toán bằng thẻ được không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、カードでオッケー。{予約|よやく}{番号|ばんごう}、スクショしといてね。",
+          "vi": "Ừ, thẻ là được. Nhớ chụp màn hình lại mã đặt vé nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（sau khi xem phim xong, bàn luận về phim và rủ nhau đi ăn）",
+      "stage": "（Tối thứ Bảy, phim vừa kết thúc. 拓海 và 莉子 vừa ra khỏi phòng chiếu, vừa đi về phía cửa rạp vừa bàn luận sôi nổi về bộ phim.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "いやあ、めっちゃ{面白|おもしろ}かったね。{最後|さいご}のシーン、やばかったよ。",
+          "vi": "Trời ơi, hay cực kỳ luôn. Cảnh cuối ấy, đỉnh thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ね、{予想|よそう}{外|がい}だったよね。{私|わたくし}、あそこで{泣|な}いちゃったもん。",
+          "vi": "Ừ nhỉ, ngoài dự đoán thật. Tớ khóc luôn ở đoạn đó đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まじ？{俺|おれ}もちょっとウルっときちゃったよ。",
+          "vi": "Thật á? Tớ cũng hơi cay cay mắt luôn đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "でさ、{主役|しゅやく}の{俳優|はいゆう}さん、{演技|えんぎ}うまかったよね。",
+          "vi": "Mà này, diễn viên chính ấy, diễn hay nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、あの{人|ひと}、ほんとすごいよね。アクションも{自分|じぶん}でやってるらしいよ。",
+          "vi": "Ừ, người đó đúng là giỏi thật. Nghe bảo cảnh hành động cũng tự đóng luôn đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "へえ、そうなんだ。あ、でもさ、{途中|とちゅう}でちょっと{長|なが}く{感|かん}じなかった？",
+          "vi": "Ồ, thế à. À mà này, giữa phim cậu có thấy hơi dài không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ああ、{確|たし}かに。{中盤|ちゅうばん}、ちょっとダレちゃったよね。",
+          "vi": "À, đúng thật. Đoạn giữa hơi bị chùng xuống nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "まあ、でも{全体|ぜんたい}としてはよかったよ。{次|つぎ}もまた{見|み}に{行|い}こうよ。",
+          "vi": "Thôi, nhưng nhìn chung vẫn hay mà. Lần sau lại đi xem tiếp nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{行|い}こう{行|い}こう。あ、{腹|はら}{減|へ}ったね。ご{飯|はん}でも{行|い}かない？",
+          "vi": "Ừ, đi đi. À, đói bụng rồi nhỉ. Đi ăn gì không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。{駅前|えきまえ}のラーメン{屋|や}、{行|い}ってみなよ。",
+          "vi": "Hay đấy. Quán ramen trước ga ấy, thử đi."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "今週末、映画を見に行きませんか。私はネットで予約したことがありません。",
+      "real": "あのさ、今週末さ、映画見に行かない？俺、ネットで予約したことないんだよね。",
+      "why": "Sách giáo khoa dùng dạng lịch sự 行きませんか・ありません và nói tròn trịa. Nói thật thì mở đầu bằng あのさ, lặp さ sau chủ ngữ, dùng 見に行かない？ để rủ một cách suồng sã, bỏ を trong 映画見に行き và rút したことがない thành したことない — nghe như đang rủ bạn đi chơi, không phải đang mời khách một cách trang trọng."
+    },
+    {
+      "textbook": "上映時間は何時からですか。座席はどこがいいですか。",
+      "real": "でさ、上映時間は何時から？座席、どこがいい？",
+      "why": "Văn nói bắt đầu bằng でさ để chuyển sang chuyện tiếp theo, bỏ trợ từ は và です・か trang trọng, nói ngắn gọn như đang cùng nhau xem màn hình điện thoại. Câu sách giáo khoa nghe như đang hỏi nhân viên rạp, còn câu nói thật nghe như hai người bạn đang cùng nhau chọn vé."
+    },
+    {
+      "textbook": "最後のシーンはすごかったです。私はあそこで泣いてしまいました。",
+      "real": "最後のシーン、やばかったよ。私、あそこで泣いちゃったもん。",
+      "why": "Bạn bè dùng やばかった để khen một cách cảm tính thay cho すごかったです trung tính, rút てしまった thành ちゃった để diễn tả mình khóc lúc nào không hay, kết bằng もん để nhấn mạnh cảm xúc thật. Câu sách giáo khoa nghe như đang viết cảm nhận phim, còn câu nói thật nghe như đang vừa ra khỏi rạp vừa hào hứng kể lại."
+    },
+    {
+      "textbook": "中盤は少し長く感じました。でも全体としてはよかったです。",
+      "real": "ああ、確かに。中盤、ちょっとダレちゃったよね。まあ、でも全体としてはよかったよ。",
+      "why": "Văn nói dùng ダレちゃった — từ lóng diễn tả đoạn phim bị chùng xuống, nhàm đi — thay cho 長く感じました khô khan, mở đầu bằng まあ để nhượng bộ trước khi khen chung. Câu sách giáo khoa nghe như nhận xét khách quan, còn câu nói thật nghe như hai người bạn đang đồng tình với nhau về cảm giác vừa xem xong."
+    },
+    {
+      "textbook": "お腹がすきましたね。ご飯でも行きませんか。",
+      "real": "うん、行こう行こう。あ、腹減ったね。ご飯でも行かない？",
+      "why": "Bạn bè lặp 行こう行こう để đồng tình ngay lập tức, dùng 腹減った thay cho お腹がすきました, rủ bằng 行かない？ ngắn gọn. Câu sách giáo khoa nghe như đang lịch sự đề nghị, còn câu nói thật nghe như cảm giác đói vừa ập đến sau hai tiếng ngồi xem phim và rủ nhau đi ăn ngay."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜てみなよ",
+      "in_lesson": "じゃあ、一緒に見てみなよ",
+      "original": "〜てみなさい / 〜てみてください",
+      "vi": "Thử … đi — rủ bạn cùng thử làm gì đó, giọng thân mật, hay dùng khi chỉ cho bạn cách làm lần đầu.",
+      "use": "Dùng với bạn bè, người thân, đàn em khi rủ hoặc chỉ ai đó thử làm gì.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "私、あそこで泣いちゃったもん",
+      "original": "〜てしまった",
+      "vi": "Rút gọn của てしまった: lỡ làm gì / vô tình rơi vào trạng thái nào đó — ở đây là khóc lúc nào không hay vì phim cảm động.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện mình lỡ làm gì đó hoặc cảm xúc bộc phát.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "やばい",
+      "in_lesson": "最後のシーン、やばかったよ",
+      "original": "すごい / すばらしい (nghĩa khen, trong văn nói)",
+      "vi": "Đỉnh / kinh khủng (theo nghĩa tốt) — từ lóng khen một cảnh phim, một món ăn, một màn trình diễn quá hay.",
+      "use": "Dùng với bạn bè, người thân khi khen ngợi một cách cảm tính, suồng sã.",
+      "avoid": "Tránh với cấp trên, khách hàng, trong văn viết trang trọng, và đừng dùng khi muốn khen một cách lịch sự (khi đó dùng すごい・すばらしい)."
+    },
+    {
+      "form": "ダレる",
+      "in_lesson": "中盤、ちょっとダレちゃったよね",
+      "original": "退屈になる / 緊張感がなくなる",
+      "vi": "Bị chùng xuống, nhàm đi — dùng khi một bộ phim, buổi nói chuyện hay trận đấu mất đi nhịp độ, trở nên nhàm chán.",
+      "use": "Dùng với bạn bè, người thân khi nhận xét phim, truyện, chương trình truyền hình.",
+      "avoid": "Tránh với cấp trên, khách hàng và trong văn viết trang trọng (khi đó dùng 長く感じた・退屈だった)."
+    },
+    {
+      "form": "腹減った",
+      "in_lesson": "あ、腹減ったね",
+      "original": "お腹がすいた",
+      "vi": "Đói bụng rồi — cách nói suồng sã của お腹がすいた, hay dùng sau khi làm gì đó lâu, ví dụ xem phim hai tiếng.",
+      "use": "Dùng với bạn bè, người thân, đồng nghiệp thân thiết.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{映画|えいが}を{見|み}に{行|い}く",
+      "reading": "えいがをみにいく",
+      "vi": "Đi xem phim — rủ nhau ra rạp xem phim, khác với 家で映画を見る (xem phim ở nhà).",
+      "example_ja": "{今週|こんしゅう}{末|まつ}、{映画|えいが}を{見|み}に{行|い}かない？",
+      "example_vi": "Cuối tuần này đi xem phim không?"
+    },
+    {
+      "expr": "{上映|じょうえい}{時間|じかん}",
+      "reading": "じょうえいじかん",
+      "vi": "Giờ chiếu / suất chiếu — thời gian bắt đầu chiếu một bộ phim trong ngày.",
+      "example_ja": "{上映|じょうえい}{時間|じかん}は{何時|いつ}から？{夜|よる}の7{時|じ}からだよ。",
+      "example_vi": "Suất chiếu bắt đầu mấy giờ? 7 giờ tối đấy."
+    },
+    {
+      "expr": "{座席|ざせき}{指定|してい}",
+      "reading": "ざせきしてい",
+      "vi": "Chọn ghế ngồi trước — khi đặt vé online, tự chọn vị trí ghế trong phòng chiếu (thường nên chọn hàng giữa).",
+      "example_ja": "{座席|ざせき}{指定|してい}で、{真|ま}ん{中|んなか}の{列|れつ}を{取|と}ったよ。",
+      "example_vi": "Tớ chọn ghế trước, lấy hàng giữa rồi đấy."
+    },
+    {
+      "expr": "{予約|よやく}{番号|ばんごう}",
+      "reading": "よやくばんごう",
+      "vi": "Mã đặt vé / số đặt chỗ — mã nhận được sau khi đặt vé online, dùng để lấy vé ở rạp hoặc vào cửa.",
+      "example_ja": "{予約|よやく}{番号|ばんごう}、スクショしといてね。",
+      "example_vi": "Nhớ chụp màn hình lại mã đặt vé nhé."
+    },
+    {
+      "expr": "{予想|よそう}{外|がい}だった",
+      "reading": "よそうがいだった",
+      "vi": "Ngoài dự đoán — diễn biến phim khác hẳn với những gì mình đoán trước, thường dùng để khen đoạn kết bất ngờ.",
+      "example_ja": "{最後|さいご}の{展開|てんかい}、{予想|よそう}{外|がい}だったよね。",
+      "example_vi": "Diễn biến cuối phim ngoài dự đoán thật nhỉ."
+    },
+    {
+      "expr": "ハラハラする",
+      "reading": "はらはらする",
+      "vi": "Hồi hộp, thót tim — cảm giác lo lắng, nín thở khi xem cảnh gay cấn trong phim.",
+      "example_ja": "アクションシーン、ハラハラしっぱなしだったよ。",
+      "example_vi": "Cảnh hành động hồi hộp thót tim suốt luôn."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, đặt vé xem phim online đã trở thành cách phổ biến nhất: chọn phim, chọn suất chiếu, chọn ghế (座席指定) rồi thanh toán bằng thẻ, sau đó chỉ cần mang mã đặt vé (予約番号) hoặc mã QR đến rạp là vào được, không cần xếp hàng mua vé. Nhiều rạp còn giảm giá vé khi đặt trước (前売り券) hoặc có giá vé rẻ vào các ngày trong tuần, ngày lễ, hoặc suất chiếu sớm — nên khi rủ bạn đi xem phim, người Nhật hay hỏi trước 上映時間は何時から và 座席どこにする để đặt vé sớm, nhất là với phim mới ra đang hot.",
+    "Người Nhật khi đi xem phim rất coi trọng việc giữ yên lặng trong rạp: không nói chuyện to, không dùng điện thoại sáng màn hình, không ăn đồ có mùi nặng. Trong bài, hai người chỉ bắt đầu bàn luận sôi nổi sau khi đã ra khỏi phòng chiếu — đó là phép lịch sự cơ bản khi xem phim ở Nhật. Nếu muốn nói gì trong lúc xem, người ta chỉ thì thầm rất nhỏ, và sau khi phim kết thúc thì ra ngoài mới thoải mái nói to.",
+    "Sau khi xem phim xong, rủ nhau đi ăn để nói tiếp về phim là thói quen rất quen thuộc của người Nhật — gọi là 感想を語り合う (cùng nhau chia sẻ cảm nhận). Trong bài, 拓海 rủ 莉子 đi ăn ramen ở quán gần ga sau khi xem phim, chính là để kéo dài buổi tối và nói tiếp về phim. Khi bàn về phim, người Nhật hay bắt đầu bằng cảm xúc chung chung như 面白かったね hay 予想外だったよね trước, rồi mới đi vào chi tiết — cách này giúp hai người đồng tình với nhau trước rồi mới tranh luận về điểm hay, điểm dở."
+  ],
+  "mistakes": [
+    "Đừng nhầm 上映時間 với 上映中: 上映時間 là giờ chiếu cụ thể của một suất (ví dụ 19時から), còn 上映中 là “đang chiếu” nói chung — hỏi giờ chiếu thì nói 上映時間は何時からですか, còn hỏi phim còn chiếu không thì nói まだ上映中ですか.",
+    "Đừng nói 映画を見る khi muốn rủ ai đó ra rạp: 映画を見る có thể là xem ở nhà; muốn nói đi ra rạp thì phải nói 映画を見に行く — thêm に行く mới rõ là ra khỏi nhà đến rạp.",
+    "Đừng dùng やばい trong tình huống trang trọng: やばい trong bài là lời khen suồng sã (đỉnh thật), nhưng gốc của nó là “nguy hiểm, tệ” — với người lớn tuổi, cấp trên hay trong văn viết, hãy dùng すごい・すばらしい thay cho やばい.",
+    "Đừng quên chụp lại mã đặt vé sau khi thanh toán: nhiều rạp ở Nhật không gửi vé giấy, chỉ có mã đặt vé (予約番号) hoặc mã QR — quên chụp màn hình thì đến rạp phải mở lại mail hoặc ứng dụng, rất mất thời gian."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn muốn rủ một người bạn đi xem phim cuối tuần nhưng chưa bao giờ đặt vé online. Hãy nói với bạn: bạn muốn xem phim nào, hỏi giờ chiếu nào tiện, và nhờ bạn chỉ cách đặt vé, chọn ghế và thanh toán.",
+    "Tình huống 2: Bạn đang cùng bạn chọn vé trên điện thoại. Hãy bàn với bạn: suất chiếu nào thì tiện (chiều hay tối), chọn ghế ở hàng nào, có nên đặt thêm bắp rang bơ và nước uống không, và thanh toán bằng cách nào.",
+    "Tình huống 3: Bạn vừa xem phim xong và đang đi ra khỏi rạp với bạn. Hãy kể cảm nhận của bạn: cảnh nào ấn tượng nhất, diễn viên nào diễn hay nhất, đoạn kết có bất ngờ không, và đoạn nào bạn thấy hơi dài.",
+    "Tình huống 4: Sau khi xem phim xong, bạn muốn rủ bạn đi ăn tối để nói tiếp về phim. Hãy rủ bạn đi ăn: hỏi bạn có đói không, đề nghị một quán ăn gần rạp, và nói bạn muốn nói tiếp về bộ phim vừa xem."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "あのさ、{今週|こんしゅう}{末|まつ}さ、{映画|えいが}{見|み}に{行|い}かない？{俺|おれ}、ネットで{予約|よやく}したことないんだよね。",
+      "vi": "Này, cuối tuần này đi xem phim không? Tớ chưa bao giờ đặt vé online bao giờ cả."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え、まじ？{初|はじ}めてなの？じゃあ、{一緒|いっしょ}に{見|み}てみなよ。",
+      "vi": "Hả, thật á? Lần đầu à? Thế thì cùng xem thử đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、どれがいいかな。あのさ、{新|あたら}しいアクション{映画|えいが}、{評判|ひょうばん}いいらしいよ。",
+      "vi": "Ừ, phim nào hay nhỉ. Này, phim hành động mới ra nghe bảo đang hot lắm đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ああ、あれね。{私|わたくし}も{気|き}になってた。でさ、{上映|じょうえい}{時間|じかん}は{何時|いつ}から？",
+      "vi": "À, phim đó à. Tớ cũng đang tò mò đây. Mà suất chiếu bắt đầu mấy giờ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、{土曜|どよう}の{夜|よる}7{時|じ}からっすね。あと、{昼|ひる}の2{時|じ}もあるよ。",
+      "vi": "Ừm, thứ Bảy tối 7 giờ này. Với cả còn suất 2 giờ chiều nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{夜|よる}がいいな。{仕事|しごと}{終|お}わってから{行|い}けるしさ。{座席|ざせき}、どこがいい？",
+      "vi": "Tối đi. Xong việc rồi đi được luôn mà. Ghế ngồi chỗ nào thì tốt?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{真|ま}ん{中|んなか}がいいよね。{後|うし}ろすぎると{画面|がめん}が{遠|とお}いしさ。",
+      "vi": "Ngồi giữa thì tốt nhỉ. Ngồi xa quá thì màn hình lại xa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{真|ま}ん{中|んなか}の{列|れつ}にしよ。あ、ポップコーンも{一緒|いっしょ}に{頼|たの}んじゃう？",
+      "vi": "Ừ, chọn hàng giữa nhé. À, đặt luôn cả bắp rang bơ nhé?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いいね。じゃあ、{決済|けっさい}はカードでいい？",
+      "vi": "Ồ, hay đấy. Thế thanh toán bằng thẻ được không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、カードでオッケー。{予約|よやく}{番号|ばんごう}、スクショしといてね。",
+      "vi": "Ừ, thẻ là được. Nhớ chụp màn hình lại mã đặt vé nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いやあ、めっちゃ{面白|おもしろ}かったね。{最後|さいご}のシーン、やばかったよ。",
+      "vi": "Trời ơi, hay cực kỳ luôn. Cảnh cuối ấy, đỉnh thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ね、{予想|よそう}{外|がい}だったよね。{私|わたくし}、あそこで{泣|な}いちゃったもん。",
+      "vi": "Ừ nhỉ, ngoài dự đoán thật. Tớ khóc luôn ở đoạn đó đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まじ？{俺|おれ}もちょっとウルっときちゃったよ。",
+      "vi": "Thật á? Tớ cũng hơi cay cay mắt luôn đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "でさ、{主役|しゅやく}の{俳優|はいゆう}さん、{演技|えんぎ}うまかったよね。",
+      "vi": "Mà này, diễn viên chính ấy, diễn hay nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、あの{人|ひと}、ほんとすごいよね。アクションも{自分|じぶん}でやってるらしいよ。",
+      "vi": "Ừ, người đó đúng là giỏi thật. Nghe bảo cảnh hành động cũng tự đóng luôn đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "へえ、そうなんだ。あ、でもさ、{途中|とちゅう}でちょっと{長|なが}く{感|かん}じなかった？",
+      "vi": "Ồ, thế à. À mà này, giữa phim cậu có thấy hơi dài không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ああ、{確|たし}かに。{中盤|ちゅうばん}、ちょっとダレちゃったよね。",
+      "vi": "À, đúng thật. Đoạn giữa hơi bị chùng xuống nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "まあ、でも{全体|ぜんたい}としてはよかったよ。{次|つぎ}もまた{見|み}に{行|い}こうよ。",
+      "vi": "Thôi, nhưng nhìn chung vẫn hay mà. Lần sau lại đi xem tiếp nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{行|い}こう{行|い}こう。あ、{腹|はら}{減|へ}ったね。ご{飯|はん}でも{行|い}かない？",
+      "vi": "Ừ, đi đi. À, đói bụng rồi nhỉ. Đi ăn gì không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。{駅前|えきまえ}のラーメン{屋|や}、{行|い}ってみなよ。",
+      "vi": "Hay đấy. Quán ramen trước ga ấy, thử đi."
+    }
+  ],
+  "notes": [
+    "映画を見に行く: đi xem phim ở rạp — thêm に行く mới rõ là ra khỏi nhà đến rạp, khác với 家で映画を見る (xem phim ở nhà). 前売り券 là vé đặt trước, thường rẻ hơn vé mua tại rạp.",
+    "上映時間: giờ chiếu / suất chiếu — hỏi 上映時間は何時から khi muốn biết suất chiếu bắt đầu mấy giờ; 座席指定 là chọn ghế ngồi trước khi đặt vé online, thường nên chọn hàng giữa (真ん中の列).",
+    "予約番号: mã đặt vé — mã nhận được sau khi đặt vé online, nhớ chụp màn hình lại (スクショしといて) để lấy vé ở rạp; 決済 là thanh toán, thường bằng thẻ (カードでオッケー).",
+    "予想外だった: ngoài dự đoán — dùng để khen đoạn kết bất ngờ; ハラハラする là hồi hộp, thót tim khi xem cảnh gay cấn; ダレる là đoạn phim bị chùng xuống, nhàm đi."
+  ]
+}
