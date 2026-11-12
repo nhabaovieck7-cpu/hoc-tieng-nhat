@@ -203,6 +203,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 29 — Lần đầu đi xem phim ở rạp (映画館デビュー)",
       "file": "2026-11-12-kaiwa.json"
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 13/11/2026（問題10・短文）",
+      "file": "2026-11-13-n1-set.json"
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 13/11/2026（統合理解）",
+      "file": "2026-11-13-reading.json"
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 30 — Đi chợ sáng cuối tuần (週末の朝市で買い物)",
+      "file": "2026-11-13-kaiwa.json"
     }
   ]
 }

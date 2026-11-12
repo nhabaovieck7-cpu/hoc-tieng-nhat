@@ -1,0 +1,357 @@
+{
+  "lesson": 30,
+  "topic": "Đi chợ sáng cuối tuần (週末の朝市で買い物)",
+  "summary": "Bối cảnh: sáng thứ Bảy, 拓海 rủ 莉子 đi chợ sáng cuối tuần ở gần nhà — chợ chỉ họp vào cuối tuần, bán rau củ, cá tươi và đồ ăn làm sẵn của các hộ nông dân quanh vùng. Hai người vừa đi dạo giữa các quầy hàng vừa hỏi người bán đồ nào tươi, nếm thử đồ ăn mẫu, mặc cả nhẹ nhàng rồi mua hơi quá tay vì cái gì cũng ngon và rẻ. Sau đó hai người về nhà 拓海, bày đồ vừa mua ra bếp rồi cùng nhau nấu một bữa trưa đơn giản: cá nướng, rau luộc và canh miso, vừa nấu vừa bàn xem lần sau đi chợ thì mua gì, không mua gì nữa. Kỹ năng luyện: văn nói bạn bè — hỏi đồ tươi và mặc cả nhẹ ở chợ (hôm nay có gì ngon, bớt chút được không, nếm thử được không), cách nói khi mua quá tay và tự trêu mình, và cách bàn bạc nấu ăn ở nhà (nấu món gì trước, nêm nếm thế nào, dọn dẹp ra sao). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng chợ sáng và thực phẩm tươi sống (朝市, 採れたて, 試食, まける, おまけ, 旬, 目利き), cách mặc cả nhẹ nhàng bằng giọng bạn bè và với người bán (〜にしてもらえませんか rút gọn thành 〜にしてくれない？, 〜ってさ), và cách bày tỏ cảm giác mua quá tay (買いすぎちゃった, つい, 〜じゃん).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở chợ sáng cuối tuần, hỏi đồ tươi, nếm thử và mặc cả nhẹ）",
+      "stage": "（Sáng thứ Bảy, chợ sáng cuối tuần ở gần nhà 拓海. Các quầy hàng bày rau củ, cá tươi và đồ ăn làm sẵn. 拓海 và 莉子 vừa đi dạo giữa các quầy vừa dừng lại xem hàng.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "あのさ、{今日|きょう}の{朝市|あさいち}、すごい{人|ひと}じゃん。やっぱ{土曜|どよう}は{混|こ}むんだね。",
+          "vi": "Này, chợ sáng hôm nay đông thật đấy. Quả nhiên thứ Bảy là đông nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ね。あ、この{野菜|やさい}、{採|と}れたてって{書|か}いてあるよ。{見|み}てみなよ。",
+          "vi": "Ừ. À, rau này ghi là vừa hái xong đấy. Xem thử đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。トマト、めっちゃ{赤|あか}いじゃん。{今日|きょう}のおすすめって、どれ？",
+          "vi": "Ồ, thật này. Cà chua đỏ au luôn. Hôm nay món nào ngon nhất thế?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "おじさん、このトマト、{甘|あま}いの？{試食|ししょく}してもいい？",
+          "vi": "Bác ơi, cà chua này có ngọt không ạ? Ăn thử được không ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うわ、{甘|かん}っ！これ、{買|か}っちゃおうよ。あとさ、{魚|さかな}も{見|み}てみなよ。",
+          "vi": "Chà, ngọt thật! Mua cái này đi. Với cả, xem cá nữa đi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あ、サンマ、{旬|しゅん}だってさ。3{匹|ぴき}で500{円|えん}だって。{安|やす}くない？",
+          "vi": "À, cá sanma đang mùa đấy. 3 con 500 yên này. Rẻ nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "まじで？じゃあ、5{匹|ぴき}で800{円|えん}にしてくれない？って{聞|き}いてみようよ。",
+          "vi": "Thật á? Thế hỏi thử 5 con 800 yên được không nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え、{値切|ねぎ}るの？まあ、{朝市|あさいち}だしさ、ちょっとだけならいいんじゃない？",
+          "vi": "Hả, mặc cả á? Thôi thì chợ sáng mà, bớt một chút chắc được chứ nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "おじさん、5{匹|ぴき}で800{円|えん}にしてくれない？{今日|こんにち}、たくさん{買|か}うからさ。",
+          "vi": "Bác ơi, 5 con 800 yên được không ạ? Hôm nay cháu mua nhiều mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "やった、オッケーってさ。あ、{漬物|つけもの}もおまけしてくれたよ。{買|か}いすぎちゃったね。",
+          "vi": "Được rồi kìa. À, còn được tặng thêm cả dưa muối nữa. Mua quá tay rồi nhỉ."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（về nhà nấu ăn với đồ vừa mua ở chợ）",
+      "stage": "（Trưa thứ Bảy, bếp nhà 拓海. Hai người bày đồ vừa mua ở chợ ra bàn: cá sanma, cà chua, rau củ và dưa muối được tặng thêm. Cả hai cùng nhau nấu bữa trưa.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ただいまー。さ、{買|か}ってきたものを{並|なら}べようよ。サンマ、{焼|や}いちゃおうか。",
+          "vi": "Về rồi đây. Nào, bày đồ vừa mua ra đi. Nướng cá sanma luôn nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{焼|や}いちゃおう。あ、トマトはサラダにしなよ。{切|き}るだけだしさ。",
+          "vi": "Ừ, nướng đi. À, cà chua làm salad nhé. Chỉ cần cắt thôi mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いいね。{味噌|みそ}{汁|しる}も{作|つく}る？{大根|だいこん}、まだ{余|あま}ってるじゃん。",
+          "vi": "Ồ, hay đấy. Nấu cả canh miso nữa nhé? Củ cải vẫn còn thừa mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{作|つく}ろう{作|つく}ろう。あ、{味噌|みそ}、{足|た}りる？{少|すく}なくなってない？",
+          "vi": "Nấu đi nấu đi. À, miso còn đủ không? Có bị ít đi không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}、あるよ。ほら、ここに。ってさ、{漬物|つけもの}、おまけでもらったやつ、{食|た}べてみなよ。",
+          "vi": "Không sao, còn mà. Đây này. Này, dưa muối được tặng thêm ấy, ăn thử đi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、いただきます。あ、うまい！ご{飯|はん}が{進|すす}んじゃうね。",
+          "vi": "Ừ, tớ ăn đây. À, ngon thật! Ăn với cơm thì hết ý luôn."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "でしょ？{朝市|あさいち}って、やっぱいいよね。{安|やす}いし、{新鮮|しんせん}だしさ。",
+          "vi": "Thấy chưa? Chợ sáng đúng là tuyệt thật nhỉ. Vừa rẻ vừa tươi nữa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん。でもさ、{買|か}いすぎちゃったから、{来週|らいしゅう}は{控|ひか}えめにしようね。",
+          "vi": "Ừ. Nhưng mà mua quá tay rồi, tuần sau mua ít thôi nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうだね。って{言|い}ってもさ、また{同|おな}じことしちゃいそうじゃん。",
+          "vi": "Ừ nhỉ. Nhưng nói thế thôi, tuần sau chắc lại mua quá tay tiếp ấy chứ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、ほんとそれ。じゃあ、{食|た}べ{終|お}わったら{洗|あら}い{物|いもの}、{私|わたくし}がやるよ。",
+          "vi": "Haha, đúng thật đấy. Thế ăn xong tớ rửa bát nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "今日の朝市はとても混んでいますね。土曜日は混むのですね。",
+      "real": "あのさ、今日の朝市、すごい人じゃん。やっぱ土曜は混むんだね。",
+      "why": "Sách giáo khoa dùng とても混んでいますね và giải thích bằng のですね một cách trang trọng. Nói thật thì mở đầu bằng あのさ, dùng すごい人じゃん để cảm thán đông đúc một cách suồng sã, và やっぱ để nói 'quả nhiên như mình đoán'. Câu sách giáo khoa nghe như đang nhận xét khách quan, còn câu nói thật nghe như hai người bạn vừa bước vào chợ đã thốt lên vì đông."
+    },
+    {
+      "textbook": "このトマトは甘いですか。試食してもいいですか。",
+      "real": "おじさん、このトマト、甘いの？試食してもいい？",
+      "why": "Văn nói gọi người bán là おじさん một cách thân mật, bỏ です・か trang trọng, dùng 甘いの？ với ngữ điệu lên giọng để hỏi. Câu sách giáo khoa nghe như đang hỏi nhân viên siêu thị một cách lịch sự, còn câu nói thật nghe như đang đứng trước quầy hàng, vừa chỉ vào cà chua vừa hỏi người bán."
+    },
+    {
+      "textbook": "5匹で800円にしていただけませんか。今日はたくさん買いますから。",
+      "real": "おじさん、5匹で800円にしてくれない？今日、たくさん買うからさ。",
+      "why": "Mặc cả ở chợ sáng không dùng kính ngữ していただけませんか mà dùng してくれない？ ngắn gọn, kết bằng からさ để đưa ra lý do một cách nhẹ nhàng. Câu sách giáo khoa nghe như đang thương lượng trong một giao dịch trang trọng, còn câu nói thật nghe như đang mặc cả vui vẻ với bác bán hàng quen ở chợ."
+    },
+    {
+      "textbook": "買いすぎてしまいましたね。来週は控えめにしましょう。",
+      "real": "買いすぎちゃったね。来週は控えめにしようね。",
+      "why": "Bạn bè rút てしまった thành ちゃった để tự trêu mình đã lỡ mua quá tay, dùng しようね thay cho しましょう để rủ nhau cùng hứa một cách thân mật. Câu sách giáo khoa nghe như đang tự kiểm điểm một cách nghiêm túc, còn câu nói thật nghe như hai người vừa mua xong đã cười trừ với nhau."
+    },
+    {
+      "textbook": "朝市は安くて新鮮で、とてもいいですね。",
+      "real": "でしょ？朝市って、やっぱいいよね。安いし、新鮮だしさ。",
+      "why": "Văn nói mở đầu bằng でしょ？ để hỏi lại cho chắc là bạn cũng đồng tình, dùng って để nhấn mạnh chủ đề 朝市, liệt kê bằng 〜し〜し thay cho て形 trang trọng. Câu sách giáo khoa nghe như đang kết luận một cách khách quan, còn câu nói thật nghe như đang đắc ý khoe với bạn rằng mình rủ đi chợ là đúng."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜じゃん",
+      "in_lesson": "今日の朝市、すごい人じゃん",
+      "original": "〜じゃないか / 〜ではないか",
+      "vi": "…mà / …đấy chứ — nhấn mạnh điều mình và người nghe đều thấy rõ, giọng suồng sã, hay dùng khi cảm thán.",
+      "use": "Dùng với bạn bè, người thân khi cảm thán hoặc xác nhận điều hiển nhiên trước mắt.",
+      "avoid": "Tránh với cấp trên, khách hàng, người mới quen và trong văn viết trang trọng."
+    },
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "買いすぎちゃったね",
+      "original": "〜てしまった",
+      "vi": "Rút gọn của てしまった: lỡ làm gì / mua quá tay lúc nào không hay — ở đây là tự trêu mình đã mua nhiều hơn dự định.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện mình lỡ làm gì đó hoặc cảm xúc bộc phát.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "採れたて",
+      "in_lesson": "この野菜、採れたてって書いてあるよ",
+      "original": "収穫したばかりの / 新鮮な",
+      "vi": "Vừa hái / vừa thu hoạch xong — rau củ quả mới hái, còn tươi nguyên, hay ghi trên bảng ở chợ sáng.",
+      "use": "Dùng khi nói về rau củ, trái cây, hải sản vừa thu hoạch hoặc vừa đánh bắt xong.",
+      "avoid": "Tránh dùng cho đồ đã qua chế biến hoặc đồ để lâu (khi đó dùng 新鮮な・作りたて)."
+    },
+    {
+      "form": "試食",
+      "in_lesson": "試食してもいい？",
+      "original": "味見をする / 試しに食べる",
+      "vi": "Ăn thử — nếm thử một miếng nhỏ trước khi mua, rất phổ biến ở chợ và siêu thị Nhật.",
+      "use": "Dùng khi hỏi người bán có được nếm thử không, hoặc khi mời ai đó ăn thử món mình nấu.",
+      "avoid": "Tránh dùng 試食 khi muốn nói nếm thử món ăn trong bữa cơm gia đình (khi đó dùng 味見)."
+    },
+    {
+      "form": "おまけ",
+      "in_lesson": "漬物もおまけしてくれたよ",
+      "original": "サービス / おまけに付ける",
+      "vi": "Tặng thêm / khuyến mãi thêm — người bán cho thêm một món nhỏ ngoài số hàng đã mua, thường gặp ở chợ truyền thống.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện được người bán cho thêm đồ, hoặc khi người bán đề nghị tặng thêm.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói về khuyến mãi của siêu thị lớn (khi đó dùng サービス・特典)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{朝市|あさいち}",
+      "reading": "あさいち",
+      "vi": "Chợ sáng — chợ chỉ họp vào buổi sáng, thường vào cuối tuần, bán rau củ, cá tươi và đồ ăn làm sẵn của nông dân quanh vùng.",
+      "example_ja": "{土曜|どよう}の{朝市|あさいち}、{行|い}ってみなよ。{安|やす}いし、{新鮮|しんせん}だよ。",
+      "example_vi": "Chợ sáng thứ Bảy ấy, thử đi xem đi. Vừa rẻ vừa tươi đấy."
+    },
+    {
+      "expr": "{採|と}れたて",
+      "reading": "とれたて",
+      "vi": "Vừa hái / vừa thu hoạch xong — rau củ quả mới hái, còn tươi nguyên; từ hay gặp trên bảng hiệu ở chợ sáng.",
+      "example_ja": "このトマト、{採|と}れたてだから{甘|あま}いよ。",
+      "example_vi": "Cà chua này vừa hái xong nên ngọt lắm đấy."
+    },
+    {
+      "expr": "{試食|ししょく}する",
+      "reading": "ししょくする",
+      "vi": "Ăn thử — nếm thử một miếng nhỏ trước khi mua, rất phổ biến ở chợ và siêu thị Nhật.",
+      "example_ja": "{試食|ししょく}してもいいですか。あ、{甘|あま}いですね。",
+      "example_vi": "Ăn thử được không ạ? À, ngọt thật đấy."
+    },
+    {
+      "expr": "{値切|ねぎ}る",
+      "reading": "ねぎる",
+      "vi": "Mặc cả / trả giá — xin người bán bớt giá xuống một chút, ở chợ truyền thống thì được, ở siêu thị thì không.",
+      "example_ja": "{朝市|あさいち}だから、ちょっとだけ{値切|ねぎ}ってみたよ。",
+      "example_vi": "Vì là chợ sáng nên tớ mặc cả thử một chút đấy."
+    },
+    {
+      "expr": "{買|か}いすぎる",
+      "reading": "かいすぎる",
+      "vi": "Mua quá tay / mua quá nhiều — mua nhiều hơn dự định vì đồ rẻ, đồ ngon, hay vì được người bán mời chào.",
+      "example_ja": "{安|やす}かったから、つい{買|か}いすぎちゃったよ。",
+      "example_vi": "Vì rẻ quá nên tớ lỡ mua quá tay luôn."
+    },
+    {
+      "expr": "{旬|しゅん}",
+      "reading": "しゅん",
+      "vi": "Đang mùa / đúng vụ — thực phẩm đang vào mùa ngon nhất, rẻ nhất trong năm; người Nhật rất coi trọng ăn đồ đúng mùa.",
+      "example_ja": "{今|いま}、サンマが{旬|しゅん}だから、{焼|や}いて{食|た}べるといいよ。",
+      "example_vi": "Giờ cá sanma đang mùa, nướng lên ăn là ngon nhất đấy."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, chợ sáng cuối tuần (朝市) là nơi người dân địa phương mua rau củ, cá tươi và đồ ăn làm sẵn trực tiếp từ nông dân và ngư dân quanh vùng — đồ thường là 採れたて (vừa hái, vừa đánh bắt xong), rẻ hơn siêu thị và có thể nói chuyện, mặc cả nhẹ với người bán. Nhiều chợ sáng chỉ họp vào sáng thứ Bảy hoặc Chủ Nhật, từ sáng sớm đến khoảng trưa là dẹp, nên người Nhật hay đi sớm để mua được đồ ngon nhất. Trong bài, 拓海 và 莉子 đi chợ sáng thứ Bảy, vừa hỏi người bán đồ nào đang 旬 (đúng mùa), vừa nếm thử (試食) trước khi mua — đó là cách mua sắm rất quen thuộc ở chợ truyền thống Nhật Bản.",
+    "Mặc cả ở Nhật khác hẳn với mặc cả ở Việt Nam: ở siêu thị hay cửa hàng thì giá là giá niêm yết, không mặc cả được; chỉ ở chợ truyền thống, chợ sáng hay cửa hàng nhỏ thì mới có thể hỏi nhẹ nhàng xem có bớt được chút không, và thường chỉ bớt một ít hoặc được người bán cho thêm đồ (おまけ) như dưa muối trong bài. Khi mặc cả, người Nhật hay nói một cách khiêm tốn và vui vẻ, ví dụ 5匹で800円にしてくれない？ kèm lý do 今日たくさん買うからさ — đưa ra lý do mua nhiều để người bán dễ đồng ý, chứ không trả giá gay gắt. Nếu người bán từ chối thì cũng cười trừ và mua với giá gốc, không kỳ kèo thêm.",
+    "Người Nhật rất coi trọng ăn đồ đúng mùa (旬): mỗi mùa có những món ngon nhất của mùa đó, ví dụ mùa thu là cá sanma (サンマ), nấm matsutake, khoai lang nướng. Trong bài, cá sanma đang 旬 nên vừa rẻ vừa ngon, và hai người mua về nướng ăn ngay trong ngày — đó là cách thưởng thức đồ đúng mùa điển hình của người Nhật. Ăn đồ đúng mùa không chỉ ngon hơn, rẻ hơn mà còn được coi là sống hòa hợp với thiên nhiên, nên khi đi chợ, người Nhật hay hỏi người bán 今、何が旬ですか để biết hôm nay nên mua gì."
+  ],
+  "mistakes": [
+    "Đừng mặc cả ở siêu thị hay cửa hàng lớn: giá ở đó là giá niêm yết, hỏi bớt giá sẽ khiến nhân viên lúng túng; chỉ mặc cả nhẹ ở chợ truyền thống, chợ sáng hay cửa hàng nhỏ, và chỉ bớt một chút hoặc xin thêm đồ (おまけ) chứ đừng trả giá quá thấp.",
+    "Đừng nhầm 試食 với 味見: 試食 là ăn thử món hàng trước khi mua (ở chợ, siêu thị), còn 味見 là nếm thử món ăn trong lúc nấu để kiểm tra vị — hỏi người bán thì nói 試食してもいいですか, còn khi đang nấu ăn thì nói 味見してみる.",
+    "Đừng nói 買いすぎました một cách nghiêm túc khi chỉ muốn tự trêu mình: với bạn bè, người Nhật hay nói 買いすぎちゃったね với giọng cười trừ — dùng ちゃった mới ra được cảm giác 'lỡ mua quá tay lúc nào không hay', còn 買いすぎました nghe như đang báo cáo một sai lầm nghiêm trọng.",
+    "Đừng quên rằng chợ sáng họp sớm và dẹp sớm: nhiều chợ sáng chỉ bán từ sáng sớm đến khoảng trưa, đi muộn thì đồ ngon đã hết, nhất là cá tươi và rau 採れたて — muốn mua được đồ ngon thì nên đi trước 10 giờ sáng."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn đang đi chợ sáng cuối tuần với một người bạn. Hãy hỏi người bán: hôm nay có rau củ nào vừa hái xong (採れたて), món nào đang đúng mùa (旬), và có được ăn thử (試食) trước khi mua không.",
+    "Tình huống 2: Bạn muốn mua 5 con cá với giá rẻ hơn giá niêm yết một chút. Hãy mặc cả nhẹ nhàng với người bán: đề nghị một mức giá thấp hơn, đưa ra lý do bạn mua nhiều, và cảm ơn khi người bán đồng ý.",
+    "Tình huống 3: Bạn mua quá tay ở chợ vì đồ rẻ và ngon. Hãy kể với bạn: bạn đã mua những gì, vì sao mua nhiều đến thế, và tự trêu mình bằng câu 買いすぎちゃった.",
+    "Tình huống 4: Bạn vừa mua đồ ở chợ về nhà và đang nấu bữa trưa cùng bạn. Hãy bàn với bạn: nấu món gì trước, món nào làm salad, món nào nấu canh, và sau khi ăn xong thì ai dọn dẹp, ai rửa bát."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "あのさ、{今日|きょう}の{朝市|あさいち}、すごい{人|ひと}じゃん。やっぱ{土曜|どよう}は{混|こ}むんだね。",
+      "vi": "Này, chợ sáng hôm nay đông thật đấy. Quả nhiên thứ Bảy là đông nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ね。あ、この{野菜|やさい}、{採|と}れたてって{書|か}いてあるよ。{見|み}てみなよ。",
+      "vi": "Ừ. À, rau này ghi là vừa hái xong đấy. Xem thử đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。トマト、めっちゃ{赤|あか}いじゃん。{今日|きょう}のおすすめって、どれ？",
+      "vi": "Ồ, thật này. Cà chua đỏ au luôn. Hôm nay món nào ngon nhất thế?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "おじさん、このトマト、{甘|あま}いの？{試食|ししょく}してもいい？",
+      "vi": "Bác ơi, cà chua này có ngọt không ạ? Ăn thử được không ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うわ、{甘|かん}っ！これ、{買|か}っちゃおうよ。あとさ、{魚|さかな}も{見|み}てみなよ。",
+      "vi": "Chà, ngọt thật! Mua cái này đi. Với cả, xem cá nữa đi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あ、サンマ、{旬|しゅん}だってさ。3{匹|ぴき}で500{円|えん}だって。{安|やす}くない？",
+      "vi": "À, cá sanma đang mùa đấy. 3 con 500 yên này. Rẻ nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "まじで？じゃあ、5{匹|ぴき}で800{円|えん}にしてくれない？って{聞|き}いてみようよ。",
+      "vi": "Thật á? Thế hỏi thử 5 con 800 yên được không nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え、{値切|ねぎ}るの？まあ、{朝市|あさいち}だしさ、ちょっとだけならいいんじゃない？",
+      "vi": "Hả, mặc cả á? Thôi thì chợ sáng mà, bớt một chút chắc được chứ nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "おじさん、5{匹|ぴき}で800{円|えん}にしてくれない？{今日|こんにち}、たくさん{買|か}うからさ。",
+      "vi": "Bác ơi, 5 con 800 yên được không ạ? Hôm nay cháu mua nhiều mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "やった、オッケーってさ。あ、{漬物|つけもの}もおまけしてくれたよ。{買|か}いすぎちゃったね。",
+      "vi": "Được rồi kìa. À, còn được tặng thêm cả dưa muối nữa. Mua quá tay rồi nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ただいまー。さ、{買|か}ってきたものを{並|なら}べようよ。サンマ、{焼|や}いちゃおうか。",
+      "vi": "Về rồi đây. Nào, bày đồ vừa mua ra đi. Nướng cá sanma luôn nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{焼|や}いちゃおう。あ、トマトはサラダにしなよ。{切|き}るだけだしさ。",
+      "vi": "Ừ, nướng đi. À, cà chua làm salad nhé. Chỉ cần cắt thôi mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いいね。{味噌|みそ}{汁|しる}も{作|つく}る？{大根|だいこん}、まだ{余|あま}ってるじゃん。",
+      "vi": "Ồ, hay đấy. Nấu cả canh miso nữa nhé? Củ cải vẫn còn thừa mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{作|つく}ろう{作|つく}ろう。あ、{味噌|みそ}、{足|た}りる？{少|すく}なくなってない？",
+      "vi": "Nấu đi nấu đi. À, miso còn đủ không? Có bị ít đi không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}、あるよ。ほら、ここに。ってさ、{漬物|つけもの}、おまけでもらったやつ、{食|た}べてみなよ。",
+      "vi": "Không sao, còn mà. Đây này. Này, dưa muối được tặng thêm ấy, ăn thử đi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、いただきます。あ、うまい！ご{飯|はん}が{進|すす}んじゃうね。",
+      "vi": "Ừ, tớ ăn đây. À, ngon thật! Ăn với cơm thì hết ý luôn."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "でしょ？{朝市|あさいち}って、やっぱいいよね。{安|やす}いし、{新鮮|しんせん}だしさ。",
+      "vi": "Thấy chưa? Chợ sáng đúng là tuyệt thật nhỉ. Vừa rẻ vừa tươi nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん。でもさ、{買|か}いすぎちゃったから、{来週|らいしゅう}は{控|ひか}えめにしようね。",
+      "vi": "Ừ. Nhưng mà mua quá tay rồi, tuần sau mua ít thôi nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうだね。って{言|い}ってもさ、また{同|おな}じことしちゃいそうじゃん。",
+      "vi": "Ừ nhỉ. Nhưng nói thế thôi, tuần sau chắc lại mua quá tay tiếp ấy chứ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、ほんとそれ。じゃあ、{食|た}べ{終|お}わったら{洗|あら}い{物|いもの}、{私|わたくし}がやるよ。",
+      "vi": "Haha, đúng thật đấy. Thế ăn xong tớ rửa bát nhé."
+    }
+  ],
+  "notes": [
+    "朝市: chợ sáng cuối tuần — chỉ họp vào buổi sáng, bán rau củ, cá tươi và đồ ăn làm sẵn của nông dân, ngư dân quanh vùng; đi sớm mới mua được đồ ngon, thường dẹp vào khoảng trưa.",
+    "採れたて: vừa hái / vừa thu hoạch xong — rau củ quả còn tươi nguyên; 旬 là đang mùa, đúng vụ ngon nhất và rẻ nhất trong năm, ví dụ mùa thu là cá sanma (サンマ).",
+    "試食: ăn thử trước khi mua — hỏi 試食してもいいですか khi muốn nếm thử ở chợ; 味見 là nếm thử món ăn trong lúc nấu, khác với 試食.",
+    "値切る: mặc cả — chỉ mặc cả nhẹ ở chợ truyền thống, ví dụ 5匹で800円にしてくれない？; おまけ là đồ người bán tặng thêm ngoài số hàng đã mua, ví dụ dưa muối trong bài."
+  ]
+}
