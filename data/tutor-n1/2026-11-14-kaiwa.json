@@ -1,0 +1,556 @@
+{
+  "lesson": 31,
+  "topic": "Phát hiện cụ thay đổi sức khỏe — báo cáo, ghi chép và liên lạc với người nhà",
+  "summary": "Bối cảnh: giờ ăn trưa ở day service. 拓海 phát hiện 田中さん hôm nay ăn ít hơn mọi khi, vẻ mặt mệt, tay cầm đũa hơi run — khác hẳn mọi ngày. Bài luyện kỹ năng quan trọng nhất trong kaigo: 気づき (nhận ra sự thay đổi nhỏ) rồi 報連相 (báo cáo — liên lạc — tham vấn) đúng trình tự: nói với đồng nghiệp thân để xác nhận, báo cáo 主任 bằng giọng lịch sự, ghi chép và 申し送り cho ca sau, rồi gọi điện báo người nhà và dặn dò lúc đưa cụ về. Thanh điệu chuyển rõ theo đối tượng: suồng sã với 莉子, lịch sự và ngắn gọn với 山田主任, kính ngữ ấm áp với người nhà. Điểm khó/điểm mới so với hai bài kaigo trước: cách nói về sức khỏe mà không làm người lớn tuổi lo (様子がおかしい thay vì nói thẳng 体調が悪い), cách báo cáo sự việc chưa chắc chắn (〜みたいです, 〜ような気がします), và cách dặn dò người nhà mà không phóng đại cũng không giấu nhẹm.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（phát hiện dấu hiệu bất thường trong lúc ăn trưa）",
+      "stage": "（Giờ ăn trưa ở day service. Mọi người đang ăn trong phòng ăn. 拓海 mang khay cơm đến cho 田中さん thì thấy bác ăn rất ít, vẻ mặt mệt, tay cầm đũa hơi run. 莉子 dọn bàn bên cạnh.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、お{昼|ひる}ですよ。{今日|きょう}はお{魚|さかな}の{煮付|につ}けです。ほら、{温|あたた}かいうちにどうぞ。",
+          "vi": "Bác Tanaka, đến giờ ăn trưa rồi ạ. Hôm nay là cá kho ạ. Nào, bác ăn lúc còn nóng nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "ありがとう。うーん、{今日|きょう}はあんまり、お{腹|なか}、{空|あ}いてなくてさ。",
+          "vi": "Cảm ơn nhé. Ừm, hôm nay bác chẳng thấy đói lắm."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "え、そうなんですか。いつもは、ごはん、おかわりするのに。",
+          "vi": "Ơ, vậy ạ? Mọi hôm bác còn xin thêm cơm cơ mà."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "そうなんだよ。なんか、{体|からだ}がだるくてさ。{手|て}も、ちょっと{震|ふる}えちゃって。",
+          "vi": "Đúng thế đấy. Chẳng hiểu sao người cứ mệt mỏi. Tay cũng hơi run nữa."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、ほんとだ。お{箸|はし}、{震|ふる}えてますね。{田中|たなか}さん、ちょっと{熱|ねつ}、{測|はか}らせてもらっていいですか。",
+          "vi": "À, đúng thật ạ. Đũa của bác đang run này. Bác Tanaka, cho cháu đo nhiệt độ một chút được không ạ?"
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "{熱|ねつ}？まさか。でも、{測|はか}ってみるか。",
+          "vi": "Sốt à? Không thể nào. Nhưng mà cứ đo thử xem sao."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、どうしたの？{田中|たなか}さん、{具合|ぐあい}、{悪|わる}いの？",
+          "vi": "Takumi này, có chuyện gì thế? Bác Tanaka thấy khó chịu à?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、あのさ、{田中|たなか}さん、{今日|きょう}、ごはん、ほとんど{食|た}べてないんだよ。{顔色|かおいろ}も、ちょっと{悪|わる}いしさ。",
+          "vi": "Ừ, này, bác Tanaka hôm nay gần như không ăn gì cả. Sắc mặt bác cũng hơi xấu nữa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "え、ほんと？いつもは、すごい{食欲|しょくよく}なのにね。{熱|ねつ}、{測|はか}ってみたら？",
+          "vi": "Hả, thật á? Mọi hôm bác ăn khỏe lắm cơ mà. Đo nhiệt độ thử xem sao?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{今|いま}、{測|はか}ってるとこ。{田中|たなか}さん、ちょっと{待|ま}っててくださいね。あ、37{度|ど}5{分|ぷん}ありますね。",
+          "vi": "Cháu đang đo đây ạ. Bác Tanaka chờ cháu một chút nhé. À, 37 độ 5 này."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "37{度|ど}5{分|ぷん}か。{微熱|びねつ}だね。こりゃ、{主任|しゅにん}に{報告|ほうこく}したほうがいいよ。",
+          "vi": "37 độ 5 à. Sốt nhẹ đấy. Thế này thì nên báo cho chủ nhiệm thôi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "だね。{田中|たなか}さん、{大丈夫|だいじょうぶ}ですよ。ちょっと{休|やす}んでいきましょうね。{無理|むり}しないでくださいね。",
+          "vi": "Ừ nhỉ. Bác Tanaka, không sao đâu ạ. Bác nghỉ ngơi một chút nhé. Bác đừng cố quá nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（báo cáo 主任 và ghi chép・申し送り）",
+      "stage": "（Văn phòng nhỏ của day service, sau giờ ăn trưa. 拓海 báo cáo với 山田主任, 莉子 đứng cạnh bổ sung. Sau đó hai người ghi chép vào sổ記録 và viết 申し送り cho ca chiều.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "{主任|しゅにん}、お{時間|じかん}、よろしいでしょうか。{田中|たなか}さんの{件|けん}で、ご{報告|ほうこく}があります。",
+          "vi": "Chủ nhiệm, anh có chút thời gian không ạ. Tôi có việc cần báo cáo về bác Tanaka ạ."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "うん、どうしたの。",
+          "vi": "Ừ, có chuyện gì?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい。{昼食|ちゅうしょく}のとき、{田中|たなか}さんが、いつもより、ほとんど{召|め}し{上|しあ}がらなかったんです。お{顔|かお}も、{少|すこ}し{疲|つか}れたご{様子|ようす}で、{手|て}も、{少|すこ}し{震|ふる}えていらっしゃいました。{熱|ねつ}を{測|はか}りましたら、37{度|ど}5{分|ぷん}ありました。",
+          "vi": "Vâng. Lúc ăn trưa, bác Tanaka gần như không ăn gì so với mọi hôm. Sắc mặt bác cũng có vẻ mệt mỏi, tay bác cũng hơi run ạ. Cháu đo nhiệt độ thì được 37 độ 5 ạ."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "37{度|ど}5{分|ぷん}か。{微熱|びねつ}だね。ほかに、{何|なん}か{気|き}になることはあった？",
+          "vi": "37 độ 5 à. Sốt nhẹ nhỉ. Ngoài ra còn điều gì đáng lo không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい。{食欲|しょくよく}がない、とおっしゃっていました。{体|からだ}がだるい、ともおっしゃっていました。",
+          "vi": "Vâng ạ. Bác nói là không thấy thèm ăn, và người thấy mệt mỏi ạ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{主任|しゅにん}、{私|わたくし}からも、ひとつ。{午前|ごぜん}の{体操|たいそう}のときも、{田中|たなか}さん、いつもより、{動|うご}きが、ちょっと{鈍|にぶ}かったような{気|き}がします。",
+          "vi": "Chủ nhiệm, em xin bổ sung một điều ạ. Lúc tập thể dục buổi sáng, bác Tanaka cử động cũng hơi chậm chạp hơn mọi hôm thì phải ạ."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "そうか。じゃあ、{念|ねん}のため、{午後|ごご}は{無理|むり}させずに、{様子|ようす}を{見|み}ていこう。{水分|すいぶん}をこまめに{取|と}ってもらって、{横|よこ}になって{休|やす}めるようにしておいて。",
+          "vi": "Vậy à. Thế thì để chắc chắn, buổi chiều đừng để bác gắng sức, cứ theo dõi tình hình. Nhắc bác uống nước thường xuyên, và chuẩn bị để bác có thể nằm nghỉ nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{承知|しょうち}いたしました。あの、ご{家族|かぞく}へのご{連絡|れんらく}は、どういたしましょうか。",
+          "vi": "Vâng, tôi đã rõ ạ. À, việc liên lạc với người nhà thì nên làm thế nào ạ?"
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "うん、{連絡|れんらく}は{入|い}れておこう。{微熱|びねつ}があることと、{様子|ようす}を{見|み}ていることを{伝|つた}えて。あんまり{大|おお}げさに{言|い}わないようにね。",
+          "vi": "Ừ, cứ liên lạc đi. Báo là bác hơi sốt nhẹ, và chúng ta đang theo dõi tình hình. Đừng nói quá lên nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、{記録|きろく}、{書|か}いとくよ。{昼食|ちゅうしょく}の{量|りょう}と{熱|ねつ}、それに{午前|ごぜん}の{体操|たいそう}のこと、{全部|ぜんぶ}、{書|か}いといたから。",
+          "vi": "Takumi này, tớ ghi chép nhé. Lượng cơm trưa với nhiệt độ, với cả chuyện tập thể dục buổi sáng, tớ ghi hết rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{助|たす}かる。{申|もう}し{送|しおく}りのほうも、{頼|たの}むよ。{午後|ごご}のスタッフに、ちゃんと{伝|つた}わるようにね。",
+          "vi": "Giúp tớ quá. Cả phần bàn giao nữa, nhờ cậu nhé. Để nhân viên ca chiều hiểu rõ nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{任|まか}せて。『{田中|たなか}さん、{微熱|びねつ}あり。{食欲|しょくよく}なし。{午後|ごご}は{様子|ようす}{見|み}。ご{家族|かぞく}へ{連絡|れんらく}{済|ず}み』って、{書|か}いとくよ。",
+          "vi": "Ừ, cứ để tớ. Tớ ghi là 'Bác Tanaka hơi sốt nhẹ. Không thèm ăn. Buổi chiều theo dõi tình hình. Đã liên lạc với người nhà' nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（gọi điện cho người nhà và dặn dò khi đưa về）",
+      "stage": "（Buổi chiều muộn, trước giờ xe đưa về. 拓海 gọi điện thoại cho người nhà của 田中さん để báo tình hình, sau đó đưa bác ra xe về và dặn dò.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お{世話|せわ}になっております。デイサービスの{拓海|たくみ}と{申|もう}します。{田中|たなか}さんの{件|けん}で、ご{連絡|れんらく}させていただきました。",
+          "vi": "Chào anh/chị, tôi là Takumi bên day service ạ. Tôi xin phép liên lạc về việc của bác Tanaka ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "あ、はい。{父|ちち}に、{何|なん}かありましたか。",
+          "vi": "À, vâng. Bố tôi có chuyện gì vậy ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ご{心配|しんぱい}をおかけして{申|もう}し{訳|しわけ}ありません。お{昼|ひる}のとき、{少|すこ}し{食欲|しょくよく}がなくて、{熱|ねつ}を{測|はか}りましたら、37{度|ど}5{分|ぶん}の{微熱|びねつ}がございました。ただ、{今|いま}は、{横|よこ}になって{休|やす}んでいらっしゃいますし、{落|お}ち{着|ちつ}いていらっしゃいます。",
+          "vi": "Xin lỗi đã làm anh/chị lo lắng ạ. Lúc ăn trưa, bác không thấy thèm ăn, cháu đo nhiệt độ thì bác sốt nhẹ 37 độ 5 ạ. Nhưng bây giờ bác đang nằm nghỉ, và tình hình đã ổn định rồi ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "そうですか。{微熱|びねつ}があるんですね。ほかに、{変|か}わった{様子|ようす}はありますか。",
+          "vi": "Vậy ạ. Bố tôi sốt nhẹ ạ. Ngoài ra còn biểu hiện gì lạ nữa không ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい。{手|て}が{少|すこ}し{震|ふる}えていらっしゃいましたが、{今|いま}は{落|お}ち{着|ちつ}いております。{午後|ごご}は{無理|むり}をなさらずに、{様子|ようす}を{見|み}ておりました。{水分|すいぶん}も、こまめに{取|と}っていただいております。",
+          "vi": "Vâng ạ. Tay bác hơi run một chút, nhưng giờ đã ổn rồi ạ. Buổi chiều chúng cháu không để bác gắng sức, vẫn đang theo dõi tình hình. Nước thì chúng cháu cũng nhắc bác uống thường xuyên ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "わかりました。ありがとうございます。{家|いえ}に{帰|かえ}ったら、{様子|ようす}を{見|み}ます。{何|なん}かあったら、また{連絡|れんらく}しますね。",
+          "vi": "Tôi hiểu rồi ạ. Cảm ơn anh nhiều. Về đến nhà tôi sẽ để ý bố tôi. Có gì tôi lại liên lạc ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ありがとうございます。{連絡|れんらく}{帳|ちょう}にも、{今日|きょう}の{様子|ようす}を{書|か}かせていただきました。お{帰|かえ}りの{際|さい}に、どうぞご{確認|かくにん}ください。",
+          "vi": "Cảm ơn anh/chị ạ. Trong sổ liên lạc, cháu cũng đã ghi tình hình hôm nay rồi ạ. Lúc về anh/chị xem giúp cháu nhé."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "はい、わかりました。よろしくお{願|ねが}いします。",
+          "vi": "Vâng, tôi hiểu rồi ạ. Nhờ anh nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。{今日|きょう}は、ゆっくり{休|やす}んでくださいね。",
+          "vi": "Bác Tanaka, sắp đến giờ xe đưa về đến rồi ạ. Hôm nay bác cứ nghỉ ngơi cho khỏe nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "ありがとうね。みんなに、{心配|しんぱい}かけちゃってさ。",
+          "vi": "Cảm ơn các cháu nhé. Làm mọi người lo lắng mất rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "いえいえ、とんでもございません。お{家|いえ}に{帰|かえ}ったら、{水分|すいぶん}を{取|と}って、{早|はや}めにお{休|やす}みくださいね。{何|なん}かありましたら、いつでもご{連絡|れんらく}ください。",
+          "vi": "Không không, bác đừng nói thế ạ. Về đến nhà bác nhớ uống nước, và đi ngủ sớm nhé. Có gì bác cứ liên lạc với chúng cháu bất cứ lúc nào ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "うん、ありがとう。また{明日|あす}、{来|く}るよ。",
+          "vi": "Ừ, cảm ơn cháu nhé. Ngày mai bác lại đến đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "田中さんは、今日は食欲がなく、顔色が悪く、手が震えています。熱は37度5分です。",
+      "real": "田中さん、今日、ごはん、ほとんど食べてないんだよ。顔色も、ちょっと悪いしさ。手も、ちょっと震えちゃって。",
+      "why": "Sách giáo khoa liệt kê triệu chứng như một bản báo cáo y tế. Nói thật giữa đồng nghiệp thân thì dùng văn nói: 食べてない (rút gọn của 食べていない), 震えちゃって (てしまう rút gọn, giọng than thở), thêm さ và んだよ để kể chuyện tự nhiên — người nghe hiểu ngay mức độ mà không thấy khô khan."
+    },
+    {
+      "textbook": "主任に報告します。田中さんに微熱があります。",
+      "real": "主任、お時間、よろしいでしょうか。田中さんの件で、ご報告があります。",
+      "why": "Với cấp trên, không vào thẳng nội dung như sách giáo khoa. Nói thật thì mở đầu bằng câu xin phép お時間、よろしいでしょうか (câu đệm lịch sự bắt buộc khi báo cáo cấp trên), rồi mới nêu chủ đề ご報告があります — vừa lịch sự vừa để cấp trên chuẩn bị lắng nghe."
+    },
+    {
+      "textbook": "午後は無理をさせないで、様子を見てください。",
+      "real": "じゃあ、念のため、午後は無理させずに、様子を見ていこう。",
+      "why": "Chủ nhiệm nói với nhân viên cấp dưới bằng giọng chỉ đạo mềm: 念のため (để chắc chắn) mở đầu cho thấy đây là biện pháp phòng ngừa, 無理させずに là dạng phủ định nối tiếp nhẹ hơn mệnh lệnh, 〜ていこう (cùng làm) thể hiện cả đội cùng theo dõi — không phải ra lệnh một chiều."
+    },
+    {
+      "textbook": "ご家族に連絡します。微熱があります。",
+      "real": "ご心配をおかけして申し訳ありません。……37度5分の微熱がございました。ただ、今は……落ち着いていらっしゃいます。",
+      "why": "Gọi cho người nhà không được vào thẳng tin xấu như sách giáo khoa. Nói thật thì xin lỗi trước vì làm người ta lo (ご心配をおかけして), báo tin bằng kính ngữ (ございました), rồi chốt ngay bằng ただ、今は落ち着いていらっしゃいます — người nhà nghe xong vừa biết sự việc vừa yên tâm, không hoảng."
+    },
+    {
+      "textbook": "手が震えていました。",
+      "real": "手が少し震えていらっしゃいましたが、今は落ち着いております。",
+      "why": "Khi báo cáo với người nhà, một sự việc chưa chắc chắn phải đi kèm 少し (mức độ nhẹ) và kính ngữ いらっしゃいました, đồng thời luôn nối bằng が、今は落ち着いております — nói sự thật nhưng không phóng đại, và luôn cho người nhà biết tình hình hiện tại đã ổn."
+    },
+    {
+      "textbook": "家に帰ったら、水分を取って、早く寝てください。",
+      "real": "お家に帰ったら、水分を取って、早めにお休みくださいね。",
+      "why": "Dặn dò người lớn tuổi thì お家 (cách nói lịch sự, ấm áp cho nhà của đối phương), 早めに (sớm hơn một chút, mềm hơn 早く), お休みください (kính ngữ thay cho 寝てください — nói 寝てください với người lớn tuổi nghe thô và như ra lệnh), thêm ね cuối câu để giọng dặn dò mà vẫn ấm."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃって / 〜ちゃった",
+      "in_lesson": "手も、ちょっと震えちゃって",
+      "original": "〜てしまって / 〜てしまった",
+      "vi": "Rút gọn của てしまう: lỡ… mất rồi — than thở nhẹ, kể chuyện ngoài ý muốn.",
+      "use": "Dùng với đồng nghiệp thân thiết, bạn bè; người lớn tuổi cũng dùng khi kể chuyện với nhân viên thân quen.",
+      "avoid": "Tránh trong báo cáo với 主任 và người nhà — khi đó dùng てしまいました."
+    },
+    {
+      "form": "〜みたいです / 〜ような気がします",
+      "in_lesson": "動きが、ちょっと鈍かったような気がします",
+      "original": "〜ようです / 〜と思います",
+      "vi": "Có vẻ như… / tôi có cảm giác là… — cách nói dè dặt khi báo cáo điều mình chưa chắc chắn.",
+      "use": "Dùng khi báo cáo với cấp trên và người nhà về quan sát chưa chắc chắn — thể hiện sự thận trọng, không kết luận vội.",
+      "avoid": "Tránh dùng khi đã có số liệu chắc chắn (nhiệt độ, lượng ăn) — khi đó nói thẳng số liệu."
+    },
+    {
+      "form": "あのさ / ねえ / ほら",
+      "in_lesson": "あのさ、田中さん、今日、ごはん、ほとんど食べてないんだよ",
+      "original": "あのう / ねえ / ほら",
+      "vi": "Này / này nhé / này — từ đệm gọi sự chú ý, mở đầu câu chuyện giữa người thân quen.",
+      "use": "Dùng với đồng nghiệp thân thiết, bạn bè để bắt chuyện tự nhiên.",
+      "avoid": "Tránh với 主任 và người nhà — khi đó mở đầu bằng お時間、よろしいでしょうか hoặc お世話になっております."
+    },
+    {
+      "form": "〜んです / 〜んだよ",
+      "in_lesson": "ほとんど召し上がらなかったんです / ほとんど食べてないんだよ",
+      "original": "〜のです / 〜のだよ",
+      "vi": "…đấy / …cơ mà — giải thích lý do, nhấn mạnh sự việc mình vừa phát hiện; 〜んです lịch sự, 〜んだよ suồng sã.",
+      "use": "Dùng 〜んです khi báo cáo với 主任 và người nhà (giải thích tình hình); dùng 〜んだよ với đồng nghiệp thân khi kể chuyện.",
+      "avoid": "Tránh dùng 〜んだよ với 主任 và người nhà — khi đó chuyển sang 〜んです."
+    },
+    {
+      "form": "こりゃ / そりゃ",
+      "in_lesson": "こりゃ、主任に報告したほうがいいよ",
+      "original": "これは / それは",
+      "vi": "Cái này / cái đó — rút gọn suồng sã, dùng khi kết luận nhanh trong lúc nói chuyện.",
+      "use": "Dùng với đồng nghiệp thân thiết khi quyết định nhanh một việc gì đó.",
+      "avoid": "Tránh với 主任 và người nhà — khi đó nói これは / それは đầy đủ, hoặc こちら."
+    },
+    {
+      "form": "お時間、よろしいでしょうか",
+      "in_lesson": "主任、お時間、よろしいでしょうか",
+      "original": "時間がありますか",
+      "vi": "Anh/chị có chút thời gian không ạ — câu xin phép lịch sự trước khi báo cáo cấp trên.",
+      "use": "Dùng khi cần nói chuyện với cấp trên, bác sĩ, người nhà — mở đầu lịch sự, để đối phương chuẩn bị.",
+      "avoid": "Tránh dùng với đồng nghiệp thân thiết — nghe quá trang trọng, xa cách."
+    },
+    {
+      "form": "〜させていただきました",
+      "in_lesson": "ご連絡させていただきました",
+      "original": "〜しました",
+      "vi": "Xin phép được… — khiêm nhường ngữ, dùng khi mình chủ động làm việc gì đó cho đối phương.",
+      "use": "Dùng khi gọi điện cho người nhà, báo cáo cấp trên — thể hiện sự khiêm tốn, lịch sự.",
+      "avoid": "Tránh dùng với đồng nghiệp thân thiết — nghe quá khách sáo, khi đó nói 〜したよ là đủ."
+    },
+    {
+      "form": "〜ておく / 〜とく",
+      "in_lesson": "記録、書いとくよ",
+      "original": "〜ておく",
+      "vi": "Làm sẵn, ghi sẵn — chuẩn bị trước để tiện cho người sau.",
+      "use": "Dùng nội bộ giữa nhân viên khi chia việc: ghi chép, chuẩn bị đồ, dặn dò ca sau.",
+      "avoid": "Tránh trong báo cáo chính thức với người nhà — khi đó dùng 書かせていただきました."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{様子|ようす}がおかしい",
+      "reading": "ようすがおかしい",
+      "vi": "Có gì đó khác thường — cụm then chốt khi nhận ra 利用者さん thay đổi, nói nhẹ hơn 体調が悪い.",
+      "example_ja": "{田中|たなか}さん、{今日|きょう}は{様子|ようす}がおかしいんです。いつもより、{元気|げんき}がないみたいで。",
+      "example_vi": "Bác Tanaka hôm nay có gì đó khác thường ạ. Bác có vẻ không khỏe như mọi hôm."
+    },
+    {
+      "expr": "{気|き}になる",
+      "reading": "きになる",
+      "vi": "Thấy lo, thấy bận tâm — dùng khi có dấu hiệu nhỏ nhưng chưa rõ là gì, cần để ý thêm.",
+      "example_ja": "{手|て}が{震|ふる}えているのが、ちょっと{気|き}になります。{主任|しゅにん}に{報告|ほうこく}しておきます。",
+      "example_vi": "Tay bác run làm tôi hơi lo. Tôi sẽ báo cáo với chủ nhiệm ạ."
+    },
+    {
+      "expr": "{念|ねん}のため",
+      "reading": "ねんのため",
+      "vi": "Để chắc chắn, phòng khi có chuyện — cụm mở đầu cho biện pháp phòng ngừa, rất hay dùng trong kaigo.",
+      "example_ja": "{念|ねん}のため、{午後|ごご}は{無理|むり}をさせずに、{様子|ようす}を{見|み}ていきましょう。",
+      "example_vi": "Để chắc chắn, buổi chiều đừng để bác gắng sức, cứ theo dõi tình hình nhé."
+    },
+    {
+      "expr": "{申|もう}し{送|しおく}りする",
+      "reading": "もうしおくりする",
+      "vi": "Bàn giao (cho ca sau) — ghi lại và truyền đạt thông tin quan trọng cho nhân viên ca tiếp theo.",
+      "example_ja": "{田中|たなか}さんの{微熱|びねつ}のことを、{午後|ごご}のスタッフに{申|もう}し{送|しおく}りしておきました。",
+      "example_vi": "Tôi đã bàn giao việc bác Tanaka hơi sốt nhẹ cho nhân viên ca chiều rồi."
+    },
+    {
+      "expr": "{様子|ようす}を{見|み}る",
+      "reading": "ようすをみる",
+      "vi": "Theo dõi tình hình — không can thiệp ngay mà quan sát thêm, quyết định sau.",
+      "example_ja": "{熱|ねつ}は{微熱|びねつ}ですから、{今日|きょう}は{様子|ようす}を{見|み}て、{明日|あす}、また{測|はか}ってみましょう。",
+      "example_vi": "Bác chỉ sốt nhẹ nên hôm nay cứ theo dõi đã, ngày mai đo lại nhé."
+    },
+    {
+      "expr": "{連絡|れんらく}を{入|い}れる",
+      "reading": "れんらくをいれる",
+      "vi": "Liên lạc báo (cho ai đó) — chủ động gọi điện/báo tin cho người nhà, cấp trên.",
+      "example_ja": "{微熱|びねつ}があるので、ご{家族|かぞく}に{連絡|れんらく}を{入|い}れておきました。",
+      "example_vi": "Vì bác hơi sốt nhẹ nên tôi đã liên lạc báo với người nhà rồi."
+    }
+  ],
+  "mindset": [
+    "Người Nhật làm kaigo rất coi trọng 気づき — nhận ra sự thay đổi nhỏ trước khi nó thành vấn đề lớn. Trong bài, 拓海 không đợi 田中さん tự nói ra mà tự phát hiện: ăn ít hơn mọi khi, tay run, sắc mặt khác. Ở Nhật, một nhân viên kaigo giỏi không phải là người làm đúng quy trình, mà là người “nhìn thấy” những thay đổi mà chính người lớn tuổi cũng chưa nhận ra. Đó là lý do bữa ăn trưa không chỉ là ăn — đó là lúc quan sát sức khỏe hằng ngày.",
+    "報連相 (ほうれんそう: 報告 — liên lạc — 相談) là văn hóa làm việc cốt lõi ở Nhật, đặc biệt trong kaigo: thấy điều bất thường thì báo cáo đồng nghiệp để xác nhận (không tự kết luận một mình), báo cáo 主任 để xin chỉ đạo, liên lạc người nhà để họ biết — không ai tự quyết chuyện sức khỏe của người khác một mình. Trong bài, 拓海 làm đúng trình tự này: nói với 莉子 trước, rồi mới báo 主任, rồi mới gọi cho người nhà. Làm ngược lại — gọi cho người nhà trước khi báo 主任 — sẽ bị coi là vượt cấp và thiếu chuyên nghiệp.",
+    "Khi báo tin sức khỏe cho người nhà, người Nhật luôn giữ hai nguyên tắc: không giấu, nhưng cũng không phóng đại. Trong bài, 拓海 báo đúng sự thật (sốt nhẹ 37 độ 5, ăn ít, tay run) nhưng luôn đi kèm “hiện tại đã ổn” (今は落ち着いていらっしゃいます) và kế hoạch theo dõi (様子を見ております). Người nhà nghe xong vừa nắm được sự việc, vừa yên tâm ra về — không bị hoảng vì một tin xấu trơ trọi, cũng không bị giấu nhẹm để rồi về nhà mới phát hiện."
+  ],
+  "mistakes": [
+    "Đừng nói thẳng với người lớn tuổi “体調が悪いですね” hay “具合が悪いですね” khi mới phát hiện dấu hiệu: nghe như chẩn đoán, khiến bác lo lắng. Hãy hỏi nhẹ bằng quan sát cụ thể: “今日は、お腹、空いてないんですか” hoặc “手、少し震えてますね” — nói cái mình thấy, không kết luận hộ.",
+    "Đừng dùng 〜ちゃった / 〜じゃん / 〜っす khi báo cáo với 主任: đây là văn nói nội bộ giữa đồng nghiệp thân. Khi báo cáo cấp trên, chuyển sang lịch sự — ご報告があります, 〜ていらっしゃいました, 承知いたしました. Trong bài, 拓海 nói với 莉子 là “食べてないんだよ” nhưng với 主任 là “ほとんど召し上がらなかったんです”.",
+    "Đừng báo cáo với người nhà chỉ bằng kết luận của mình (“bác ấy bị ốm rồi”): người Nhật báo cáo bằng quan sát + số liệu (ăn ít bao nhiêu, sốt bao nhiêu độ, tay run thế nào) rồi mới đến cảm nhận (〜ような気がします). Kết luận vội mà sai thì mất lòng tin; báo đúng sự việc thì dù sau này bác khỏe lại cũng không ai trách.",
+    "Đừng nhầm 様子 với 容態: 様子 là dáng vẻ, tình hình chung hằng ngày (今日の様子 — dùng được với mọi trường hợp, kể cả khi chỉ hơi mệt); 容態 là tình trạng bệnh lý, nặng hơn nhiều (容態が急変した — chỉ dùng khi diễn biến xấu rõ rệt, trong báo cáo y tế). Với một cơn sốt nhẹ 37 độ 5 thì dùng 様子, không dùng 容態 — nói 容態 sẽ làm người nhà hoảng.",
+    "Đừng quên 申し送り sau khi báo cáo miệng: báo cáo với 主任 xong mà không ghi chép thì ca chiều không biết gì, ngày mai cũng không ai nhớ. Trong kaigo Nhật, “nói rồi” chưa đủ — phải “ghi rồi” (記録) và “truyền lại rồi” (申し送り) mới xong việc."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Trong lúc ăn trưa, một 利用者さん ăn ít hơn mọi khi, vẻ mặt mệt. Hãy bắt chuyện nhẹ nhàng với bác (hỏi về cảm giác thèm ăn, đề nghị đo nhiệt độ) rồi quay sang nói với đồng nghiệp bằng văn nói suồng sã để xác nhận quan sát của mình.",
+    "Tình huống 2: Bạn vừa đo được nhiệt độ 37 độ 5 cho một cụ. Hãy báo cáo với 主任: mở đầu bằng câu xin phép, trình bày quan sát + số liệu bằng kính ngữ, và hỏi xin chỉ đạo (có nên gọi cho người nhà không, buổi chiều nên làm gì).",
+    "Tình huống 3: 主任 dặn bạn gọi điện cho người nhà. Hãy gọi điện báo tin: xin lỗi vì làm người ta lo trước, báo sự việc bằng kính ngữ, rồi chốt bằng tình hình hiện tại đã ổn và kế hoạch theo dõi — không phóng đại, không giấu nhẹm.",
+    "Tình huống 4: Xe đưa về đã đến, người nhà ra đón. Hãy dặn dò bác và người nhà lúc tiễn về: nhắc uống nước, ngủ sớm, và câu “có gì cứ liên lạc bất cứ lúc nào” bằng kính ngữ ấm áp."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、お{昼|ひる}ですよ。{今日|きょう}はお{魚|さかな}の{煮付|につ}けです。ほら、{温|あたた}かいうちにどうぞ。",
+      "vi": "Bác Tanaka, đến giờ ăn trưa rồi ạ. Hôm nay là cá kho ạ. Nào, bác ăn lúc còn nóng nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "ありがとう。うーん、{今日|きょう}はあんまり、お{腹|なか}、{空|あ}いてなくてさ。",
+      "vi": "Cảm ơn nhé. Ừm, hôm nay bác chẳng thấy đói lắm."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "え、そうなんですか。いつもは、ごはん、おかわりするのに。",
+      "vi": "Ơ, vậy ạ? Mọi hôm bác còn xin thêm cơm cơ mà."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "そうなんだよ。なんか、{体|からだ}がだるくてさ。{手|て}も、ちょっと{震|ふる}えちゃって。",
+      "vi": "Đúng thế đấy. Chẳng hiểu sao người cứ mệt mỏi. Tay cũng hơi run nữa."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、ほんとだ。お{箸|はし}、{震|ふる}えてますね。{田中|たなか}さん、ちょっと{熱|ねつ}、{測|はか}らせてもらっていいですか。",
+      "vi": "À, đúng thật ạ. Đũa của bác đang run này. Bác Tanaka, cho cháu đo nhiệt độ một chút được không ạ?"
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "{熱|ねつ}？まさか。でも、{測|はか}ってみるか。",
+      "vi": "Sốt à? Không thể nào. Nhưng mà cứ đo thử xem sao."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、どうしたの？{田中|たなか}さん、{具合|ぐあい}、{悪|わる}いの？",
+      "vi": "Takumi này, có chuyện gì thế? Bác Tanaka thấy khó chịu à?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、あのさ、{田中|たなか}さん、{今日|きょう}、ごはん、ほとんど{食|た}べてないんだよ。{顔色|かおいろ}も、ちょっと{悪|わる}いしさ。",
+      "vi": "Ừ, này, bác Tanaka hôm nay gần như không ăn gì cả. Sắc mặt bác cũng hơi xấu nữa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "え、ほんと？いつもは、すごい{食欲|しょくよく}なのにね。{熱|ねつ}、{測|はか}ってみたら？",
+      "vi": "Hả, thật á? Mọi hôm bác ăn khỏe lắm cơ mà. Đo nhiệt độ thử xem sao?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{今|いま}、{測|はか}ってるとこ。{田中|たなか}さん、ちょっと{待|ま}っててくださいね。あ、37{度|ど}5{分|ぷん}ありますね。",
+      "vi": "Cháu đang đo đây ạ. Bác Tanaka chờ cháu một chút nhé. À, 37 độ 5 này."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "37{度|ど}5{分|ぷん}か。{微熱|びねつ}だね。こりゃ、{主任|しゅにん}に{報告|ほうこく}したほうがいいよ。",
+      "vi": "37 độ 5 à. Sốt nhẹ đấy. Thế này thì nên báo cho chủ nhiệm thôi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "だね。{田中|たなか}さん、{大丈夫|だいじょうぶ}ですよ。ちょっと{休|やす}んでいきましょうね。{無理|むり}しないでくださいね。",
+      "vi": "Ừ nhỉ. Bác Tanaka, không sao đâu ạ. Bác nghỉ ngơi một chút nhé. Bác đừng cố quá nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{主任|しゅにん}、お{時間|じかん}、よろしいでしょうか。{田中|たなか}さんの{件|けん}で、ご{報告|ほうこく}があります。",
+      "vi": "Chủ nhiệm, anh có chút thời gian không ạ. Tôi có việc cần báo cáo về bác Tanaka ạ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "うん、どうしたの。",
+      "vi": "Ừ, có chuyện gì?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい。{昼食|ちゅうしょく}のとき、{田中|たなか}さんが、いつもより、ほとんど{召|め}し{上|しあ}がらなかったんです。お{顔|かお}も、{少|すこ}し{疲|つか}れたご{様子|ようす}で、{手|て}も、{少|すこ}し{震|ふる}えていらっしゃいました。{熱|ねつ}を{測|はか}りましたら、37{度|ど}5{分|ぷん}ありました。",
+      "vi": "Vâng. Lúc ăn trưa, bác Tanaka gần như không ăn gì so với mọi hôm. Sắc mặt bác cũng có vẻ mệt mỏi, tay bác cũng hơi run ạ. Cháu đo nhiệt độ thì được 37 độ 5 ạ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "37{度|ど}5{分|ぷん}か。{微熱|びねつ}だね。ほかに、{何|なん}か{気|き}になることはあった？",
+      "vi": "37 độ 5 à. Sốt nhẹ nhỉ. Ngoài ra còn điều gì đáng lo không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい。{食欲|しょくよく}がない、とおっしゃっていました。{体|からだ}がだるい、ともおっしゃっていました。",
+      "vi": "Vâng ạ. Bác nói là không thấy thèm ăn, và người thấy mệt mỏi ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{主任|しゅにん}、{私|わたくし}からも、ひとつ。{午前|ごぜん}の{体操|たいそう}のときも、{田中|たなか}さん、いつもより、{動|うご}きが、ちょっと{鈍|にぶ}かったような{気|き}がします。",
+      "vi": "Chủ nhiệm, em xin bổ sung một điều ạ. Lúc tập thể dục buổi sáng, bác Tanaka cử động cũng hơi chậm chạp hơn mọi hôm thì phải ạ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "そうか。じゃあ、{念|ねん}のため、{午後|ごご}は{無理|むり}させずに、{様子|ようす}を{見|み}ていこう。{水分|すいぶん}をこまめに{取|と}ってもらって、{横|よこ}になって{休|やす}めるようにしておいて。",
+      "vi": "Vậy à. Thế thì để chắc chắn, buổi chiều đừng để bác gắng sức, cứ theo dõi tình hình. Nhắc bác uống nước thường xuyên, và chuẩn bị để bác có thể nằm nghỉ nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{承知|しょうち}いたしました。あの、ご{家族|かぞく}へのご{連絡|れんらく}は、どういたしましょうか。",
+      "vi": "Vâng, tôi đã rõ ạ. À, việc liên lạc với người nhà thì nên làm thế nào ạ?"
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "うん、{連絡|れんらく}は{入|い}れておこう。{微熱|びねつ}があることと、{様子|ようす}を{見|み}ていることを{伝|つた}えて。あんまり{大|おお}げさに{言|い}わないようにね。",
+      "vi": "Ừ, cứ liên lạc đi. Báo là bác hơi sốt nhẹ, và chúng ta đang theo dõi tình hình. Đừng nói quá lên nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、{記録|きろく}、{書|か}いとくよ。{昼食|ちゅうしょく}の{量|りょう}と{熱|ねつ}、それに{午前|ごぜん}の{体操|たいそう}のこと、{全部|ぜんぶ}、{書|か}いといたから。",
+      "vi": "Takumi này, tớ ghi chép nhé. Lượng cơm trưa với nhiệt độ, với cả chuyện tập thể dục buổi sáng, tớ ghi hết rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{助|たす}かる。{申|もう}し{送|しおく}りのほうも、{頼|たの}むよ。{午後|ごご}のスタッフに、ちゃんと{伝|つた}わるようにね。",
+      "vi": "Giúp tớ quá. Cả phần bàn giao nữa, nhờ cậu nhé. Để nhân viên ca chiều hiểu rõ nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{任|まか}せて。『{田中|たなか}さん、{微熱|びねつ}あり。{食欲|しょくよく}なし。{午後|ごご}は{様子|ようす}{見|み}。ご{家族|かぞく}へ{連絡|れんらく}{済|ず}み』って、{書|か}いとくよ。",
+      "vi": "Ừ, cứ để tớ. Tớ ghi là 'Bác Tanaka hơi sốt nhẹ. Không thèm ăn. Buổi chiều theo dõi tình hình. Đã liên lạc với người nhà' nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お{世話|せわ}になっております。デイサービスの{拓海|たくみ}と{申|もう}します。{田中|たなか}さんの{件|けん}で、ご{連絡|れんらく}させていただきました。",
+      "vi": "Chào anh/chị, tôi là Takumi bên day service ạ. Tôi xin phép liên lạc về việc của bác Tanaka ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "あ、はい。{父|ちち}に、{何|なん}かありましたか。",
+      "vi": "À, vâng. Bố tôi có chuyện gì vậy ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ご{心配|しんぱい}をおかけして{申|もう}し{訳|しわけ}ありません。お{昼|ひる}のとき、{少|すこ}し{食欲|しょくよく}がなくて、{熱|ねつ}を{測|はか}りましたら、37{度|ど}5{分|ぶん}の{微熱|びねつ}がございました。ただ、{今|いま}は、{横|よこ}になって{休|やす}んでいらっしゃいますし、{落|お}ち{着|ちつ}いていらっしゃいます。",
+      "vi": "Xin lỗi đã làm anh/chị lo lắng ạ. Lúc ăn trưa, bác không thấy thèm ăn, cháu đo nhiệt độ thì bác sốt nhẹ 37 độ 5 ạ. Nhưng bây giờ bác đang nằm nghỉ, và tình hình đã ổn định rồi ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "そうですか。{微熱|びねつ}があるんですね。ほかに、{変|か}わった{様子|ようす}はありますか。",
+      "vi": "Vậy ạ. Bố tôi sốt nhẹ ạ. Ngoài ra còn biểu hiện gì lạ nữa không ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい。{手|て}が{少|すこ}し{震|ふる}えていらっしゃいましたが、{今|いま}は{落|お}ち{着|ちつ}いております。{午後|ごご}は{無理|むり}をなさらずに、{様子|ようす}を{見|み}ておりました。{水分|すいぶん}も、こまめに{取|と}っていただいております。",
+      "vi": "Vâng ạ. Tay bác hơi run một chút, nhưng giờ đã ổn rồi ạ. Buổi chiều chúng cháu không để bác gắng sức, vẫn đang theo dõi tình hình. Nước thì chúng cháu cũng nhắc bác uống thường xuyên ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "わかりました。ありがとうございます。{家|いえ}に{帰|かえ}ったら、{様子|ようす}を{見|み}ます。{何|なん}かあったら、また{連絡|れんらく}しますね。",
+      "vi": "Tôi hiểu rồi ạ. Cảm ơn anh nhiều. Về đến nhà tôi sẽ để ý bố tôi. Có gì tôi lại liên lạc ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ありがとうございます。{連絡|れんらく}{帳|ちょう}にも、{今日|きょう}の{様子|ようす}を{書|か}かせていただきました。お{帰|かえ}りの{際|さい}に、どうぞご{確認|かくにん}ください。",
+      "vi": "Cảm ơn anh/chị ạ. Trong sổ liên lạc, cháu cũng đã ghi tình hình hôm nay rồi ạ. Lúc về anh/chị xem giúp cháu nhé."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "はい、わかりました。よろしくお{願|ねが}いします。",
+      "vi": "Vâng, tôi hiểu rồi ạ. Nhờ anh nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。{今日|きょう}は、ゆっくり{休|やす}んでくださいね。",
+      "vi": "Bác Tanaka, sắp đến giờ xe đưa về đến rồi ạ. Hôm nay bác cứ nghỉ ngơi cho khỏe nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "ありがとうね。みんなに、{心配|しんぱい}かけちゃってさ。",
+      "vi": "Cảm ơn các cháu nhé. Làm mọi người lo lắng mất rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "いえいえ、とんでもございません。お{家|いえ}に{帰|かえ}ったら、{水分|すいぶん}を{取|と}って、{早|はや}めにお{休|やす}みくださいね。{何|なん}かありましたら、いつでもご{連絡|れんらく}ください。",
+      "vi": "Không không, bác đừng nói thế ạ. Về đến nhà bác nhớ uống nước, và đi ngủ sớm nhé. Có gì bác cứ liên lạc với chúng cháu bất cứ lúc nào ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "うん、ありがとう。また{明日|あす}、{来|く}るよ。",
+      "vi": "Ừ, cảm ơn cháu nhé. Ngày mai bác lại đến đấy."
+    }
+  ],
+  "notes": [
+    "様子がおかしい: có gì đó khác thường — cụm quan sát quan trọng nhất trong kaigo; nói nhẹ hơn 体調が悪い, dùng được ngay khi mới chỉ nghi ngờ.",
+    "微熱 (びねつ): sốt nhẹ (khoảng 37–38 độ) — khác với 高熱 (sốt cao); báo cáo với người nhà thì nói rõ số độ (37度5分) để họ nắm chính xác.",
+    "報連相 (ほうれんそう): 報告 (báo cáo) — 連絡 (liên lạc) — 相談 (tham vấn); trình tự bắt buộc khi phát hiện điều bất thường: đồng nghiệp → 主任 → người nhà.",
+    "申し送り (もうしおくり): bàn giao cho ca sau — ghi lại những điểm cần lưu ý để nhân viên ca tiếp theo biết; trong kaigo, nói rồi mà không ghi thì coi như chưa xong.",
+    "ご様子 / 召し上がる / いらっしゃる: kính ngữ bắt buộc khi nói với người nhà về người sử dụng dịch vụ; với đồng nghiệp thân thì nói 様子 / 食べる / いる là đủ.",
+    "〜みたいです / 〜ような気がします: cách nói dè dặt khi báo cáo quan sát chưa chắc chắn — thể hiện sự thận trọng, khác với kết luận vội.",
+    "念のため: để chắc chắn — cụm mở đầu cho biện pháp phòng ngừa; dùng rất nhiều trong kaigo và y tế khi chưa có kết luận chắc chắn."
+  ]
+}

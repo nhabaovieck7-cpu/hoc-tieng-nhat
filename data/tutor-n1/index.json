@@ -221,6 +221,18 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 30 — Đi chợ sáng cuối tuần (週末の朝市で買い物)",
       "file": "2026-11-13-kaiwa.json"
+    },
+    {
+      "date": "2026-11-14",
+      "kind": "sat-set",
+      "title": "Bộ dài ôn tập tuần ngày 14/11/2026（問題10〜13）",
+      "file": "2026-11-14-sat-set.json"
+    },
+    {
+      "date": "2026-11-14",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 31 — Phát hiện cụ thay đổi sức khỏe — báo cáo, ghi chép và liên lạc với người nhà",
+      "file": "2026-11-14-kaiwa.json"
     }
   ]
 }
