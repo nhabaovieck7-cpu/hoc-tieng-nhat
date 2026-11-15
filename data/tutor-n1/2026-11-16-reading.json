@@ -1,0 +1,510 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 主張理解 trong phần đọc hiểu của đề N1 thật: một bài luận thuyết dài, kèm 4 câu hỏi — hỏi ý kiến chủ trương của tác giả, hỏi '…とはどういうことか' và hỏi lý do. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc lướt nắm chủ trương của tác giả rồi mới trả lời; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc 1 bài + 4 câu hỏi). Trong đề thật, 主張理解 là dạng dễ mất điểm vì các lựa chọn nhiễu thường tuyệt đối hóa ý tác giả, đảo ngược lập trường của tác giả, hoặc đánh tráo chi tiết — ví dụ bài này nói 'thất bại có trách nhiệm thì nên được tha thứ và rút kinh nghiệm', lựa chọn nhiễu sẽ viết thành 'mọi thất bại đều nên được tha thứ, không cần hỏi trách nhiệm'.",
+  "tips": [
+    {
+      "h": "Đọc câu đầu và câu cuối mỗi đoạn trước",
+      "body": "Bài luận thuyết kiểu này thường đi theo mạch: đoạn đầu nêu vấn đề, các đoạn giữa triển khai lập luận bằng ví dụ và đối lập, đoạn cuối nêu chủ trương. Đọc câu đầu và câu cuối mỗi đoạn trước sẽ giúp bạn nắm khung lập luận, rồi mới đọc kỹ từng đoạn để trả lời."
+    },
+    {
+      "h": "Chủ trương của tác giả nằm ở đoạn cuối — đọc kỹ đoạn cuối nhất",
+      "body": "Câu hỏi 筆者が最も言いたいことは何か hầu như luôn có đáp án ở đoạn cuối, thường bắt đầu bằng 筆者が最も言いたいのは… hoặc kết bằng …のである. Trong bài này, đoạn 6 nêu thẳng chủ trương: xã hội khoan dung với thất bại mới là xã hội nuôi dưỡng người dám thử thách và đưa xã hội tiến lên. Đáp án phải bám vào đoạn này, không được suy ra từ một ví dụ ở đoạn giữa."
+    },
+    {
+      "h": "Phân biệt '許す' và '責任を問わない' — đây là điểm mấu chốt của bài",
+      "body": "Tác giả khẳng định ở đoạn 4: 失敗を許すことは、責任を問わないことと同じではない. Thất bại sau khi đã làm tròn trách nhiệm thì nên được tha thứ và rút kinh nghiệm, còn hành động vô trách nhiệm hay lặp lại cùng một thất bại thì quyết không được tha thứ. Lựa chọn nào gộp hai ý này thành 'mọi thất bại đều được tha thứ' là bẫy đánh tráo."
+    },
+    {
+      "h": "Cảnh giác với lựa chọn tuyệt đối hóa",
+      "body": "Các từ như 誰もが、常に、完全に、決して…ない、すべての… trong lựa chọn thường là dấu hiệu của bẫy tuyệt đối hóa. Tác giả bài này nói 'thất bại có thể mang lại bài học sâu sắc', không nói 'mọi thất bại đều mang lại bài học'; nói 'người thất bại có thể không dám thử lại', không nói 'người thất bại chắc chắn không bao giờ thử lại'. Hãy đối chiếu từng từ tuyệt đối với nguyên văn."
+    },
+    {
+      "h": "Câu hỏi 'とはどういうことか' thì đáp án là cách diễn đạt lại, không phải câu trích nguyên văn",
+      "body": "Khi hỏi '失敗を許すことは甘さではなく、未来への投資なのであるとはどういうことか', đáp án đúng sẽ diễn đạt lại ý đó bằng từ khác: ủng hộ người học từ thất bại và thử lại sẽ mang lại sự giàu có cho tương lai. Lựa chọn nào trích đúng một nửa câu trong bài nhưng đổi nghĩa của nửa còn lại (ví dụ 'tha thứ cho mọi người thì tương lai sẽ tốt lên') là bẫy."
+    },
+    {
+      "h": "Câu hỏi 'なぜか' thì đáp án phải là nguyên nhân tác giả nêu, không phải hệ quả",
+      "body": "Câu hỏi vì sao xã hội không khoan dung với thất bại thì khó sinh ra cái mới: nguyên nhân nằm ở đoạn 2 — mọi người chỉ chọn cách an toàn, không thất bại, nên không ai mở ra con đường mới. Đừng chọn hệ quả ('số sai lầm ngắn hạn tăng lên' — bài nói ngược lại: sai lầm ngắn hạn có thể giảm) hay chọn ý đảo ngược ('mọi người bớt chọn con đường ổn định')."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này lập luận theo mạch: đoạn 1 nêu vấn đề — ở Nhật nhiều người sợ thất bại nên không dám thử thách; đoạn 2 chỉ ra hệ quả — xã hội không khoan dung với thất bại khiến mọi người chỉ chọn cách an toàn, khó sinh ra cái mới; đoạn 3 lấy ví dụ người trẻ khởi nghiệp thất bại — nếu coi thất bại là bằng chứng của năng lực kém thì anh ta không dám thử lại, còn nếu phân tích nguyên nhân và cho cơ hội thì thất bại trở thành bài học sâu sắc; đoạn 4 phân biệt ranh giới — tha thứ không đồng nghĩa với không hỏi trách nhiệm, phải phân biệt thất bại sau khi đã nỗ lực với thất bại do lười biếng; đoạn 5 mở rộng — xã hội khoan dung với thất bại là xã hội có cơ chế học từ thất bại, biến thất bại của một người thành bài học chung; đoạn 6 kết luận chủ trương — khoan dung với thất bại không phải là sự dễ dãi mà là đầu tư cho tương lai. Khi làm 4 câu hỏi, hãy bám vào mạch này và vào đoạn 6."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "日本では、失敗を恐れて新しいことに挑戦しない人が多いと言われる。失敗すれば周囲から笑われたり、評価が下がったりするのではないかという不安が、行動を止めてしまうのである。その結果、安定した道を選ぶ人が増え、挑戦する人が少なくなっている。しかし、失敗を恐れるあまり挑戦しなければ、社会全体が新しいものを生み出せなくなってしまうのではないだろうか。\n失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる。失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である。そのような社会では、短期的なミスは減るかもしれないが、長期的に見れば大きな変化は生まれにくい。誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである。\nたとえば、新しい事業に挑戦した若者が失敗したとする。その失敗を「能力がない証拠」だと決めつければ、彼は二度と挑戦しようとは思わないだろう。しかし、失敗の原因を冷静に分析し、次に生かす機会が与えられれば、同じ失敗を繰り返すことはない。むしろ、一度失敗した経験は、成功だけを重ねてきた人にはない深い学びをもたらすこともある。\nもちろん、失敗を許すことは、責任を問わないことと同じではない。無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない。大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである。責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない。\n失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である。失敗した人が再び挑戦できる機会や、失敗の経験を共有する場があれば、社会全体の知恵は深まっていく。一人の失敗が皆の教訓になれば、同じ失敗をする人は減り、社会は少しずつ強くなっていく。このように、失敗を個人の恥として隠すのではなく、社会の財産として生かすことが求められている。\n筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである。失敗を恐れて何もしない社会よりも、失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる。そのためには、失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない。失敗を許すことは甘さではなく、未来への投資なのである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "失敗を完全に防ぐことこそが、社会の発展につながるということ。",
+        "失敗を恐れる人を責め、挑戦しない人を社会から排除すべきだということ。",
+        "失敗を許すことは、責任を問わないことと同じだということ。",
+        "失敗を許す社会こそが、挑戦する人を育て、社会を前に進めるということ。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án ở đoạn 6 câu 1: 筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである. Đây là chủ trương tác giả nêu thẳng ở đoạn kết. Lựa chọn 1 đi ngược đoạn 2, lựa chọn 2 không có trong bài, lựa chọn 3 bị đoạn 4 câu 1 bác bỏ trực tiếp."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "日本では、失敗を恐れて新しいことに挑戦しない人が多いと言われる。失敗すれば周囲から笑われたり、評価が下がったりするのではないかという不安が、行動を止めてしまうのである。その結果、安定した道を選ぶ人が増え、挑戦する人が少なくなっている。しかし、失敗を恐れるあまり挑戦しなければ、社会全体が新しいものを生み出せなくなってしまうのではないだろうか。\n失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる。失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である。そのような社会では、短期的なミスは減るかもしれないが、長期的に見れば大きな変化は生まれにくい。誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである。\nたとえば、新しい事業に挑戦した若者が失敗したとする。その失敗を「能力がない証拠」だと決めつければ、彼は二度と挑戦しようとは思わないだろう。しかし、失敗の原因を冷静に分析し、次に生かす機会が与えられれば、同じ失敗を繰り返すことはない。むしろ、一度失敗した経験は、成功だけを重ねてきた人にはない深い学びをもたらすこともある。\nもちろん、失敗を許すことは、責任を問わないことと同じではない。無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない。大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである。責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない。\n失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である。失敗した人が再び挑戦できる機会や、失敗の経験を共有する場があれば、社会全体の知恵は深まっていく。一人の失敗が皆の教訓になれば、同じ失敗をする人は減り、社会は少しずつ強くなっていく。このように、失敗を個人の恥として隠すのではなく、社会の財産として生かすことが求められている。\n筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである。失敗を恐れて何もしない社会よりも、失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる。そのためには、失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない。失敗を許すことは甘さではなく、未来への投資なのである。\n「失敗を許すことは甘さではなく、未来への投資なのである」とはどういうことか。",
+      "choices": [
+        "失敗した人を何でも許し、責任を問わなければ未来がよくなるということ。",
+        "失敗から学び、再び挑戦する人を支えることが、将来の豊かさにつながるということ。",
+        "失敗を許せば、失敗の数が減らなくても社会は発展するということ。",
+        "失敗を許す社会では、失敗しても努力する必要がなくなるということ。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án diễn đạt lại đoạn 6 câu 2 và câu 4: 失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる／失敗を許すことは甘さではなく、未来への投資なのである. 'Đầu tư cho tương lai' ở đây là ủng hộ người học từ thất bại và thử lại, chứ không phải tha thứ vô điều kiện. Lựa chọn 1 và 4 đi ngược đoạn 4 (phải hỏi trách nhiệm, phải nỗ lực cải thiện)."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "日本では、失敗を恐れて新しいことに挑戦しない人が多いと言われる。失敗すれば周囲から笑われたり、評価が下がったりするのではないかという不安が、行動を止めてしまうのである。その結果、安定した道を選ぶ人が増え、挑戦する人が少なくなっている。しかし、失敗を恐れるあまり挑戦しなければ、社会全体が新しいものを生み出せなくなってしまうのではないだろうか。\n失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる。失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である。そのような社会では、短期的なミスは減るかもしれないが、長期的に見れば大きな変化は生まれにくい。誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである。\nたとえば、新しい事業に挑戦した若者が失敗したとする。その失敗を「能力がない証拠」だと決めつければ、彼は二度と挑戦しようとは思わないだろう。しかし、失敗の原因を冷静に分析し、次に生かす機会が与えられれば、同じ失敗を繰り返すことはない。むしろ、一度失敗した経験は、成功だけを重ねてきた人にはない深い学びをもたらすこともある。\nもちろん、失敗を許すことは、責任を問わないことと同じではない。無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない。大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである。責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない。\n失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である。失敗した人が再び挑戦できる機会や、失敗の経験を共有する場があれば、社会全体の知恵は深まっていく。一人の失敗が皆の教訓になれば、同じ失敗をする人は減り、社会は少しずつ強くなっていく。このように、失敗を個人の恥として隠すのではなく、社会の財産として生かすことが求められている。\n筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである。失敗を恐れて何もしない社会よりも、失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる。そのためには、失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない。失敗を許すことは甘さではなく、未来への投資なのである。\n筆者によれば、失敗を許さない社会でなぜ新しいものが生まれにくくなるのか。",
+      "choices": [
+        "人が失敗しない無難な方法ばかりを選び、誰も新しい道を切り開こうとしなくなるから。",
+        "人が失敗を恐れて、安定した道を選ぶ人が減るから。",
+        "短期的なミスが増え、社会全体が混乱するから。",
+        "失敗した人が皆、すぐに再挑戦するようになるから。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án ở đoạn 2: 失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる／失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である／誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである. Lựa chọn 2 đi ngược đoạn 1 câu 3 (người chọn con đường ổn định TĂNG lên), lựa chọn 3 đi ngược đoạn 2 câu 3 (sai lầm ngắn hạn GIẢM đi), lựa chọn 4 đi ngược đoạn 3 câu 2."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "日本では、失敗を恐れて新しいことに挑戦しない人が多いと言われる。失敗すれば周囲から笑われたり、評価が下がったりするのではないかという不安が、行動を止めてしまうのである。その結果、安定した道を選ぶ人が増え、挑戦する人が少なくなっている。しかし、失敗を恐れるあまり挑戦しなければ、社会全体が新しいものを生み出せなくなってしまうのではないだろうか。\n失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる。失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である。そのような社会では、短期的なミスは減るかもしれないが、長期的に見れば大きな変化は生まれにくい。誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである。\nたとえば、新しい事業に挑戦した若者が失敗したとする。その失敗を「能力がない証拠」だと決めつければ、彼は二度と挑戦しようとは思わないだろう。しかし、失敗の原因を冷静に分析し、次に生かす機会が与えられれば、同じ失敗を繰り返すことはない。むしろ、一度失敗した経験は、成功だけを重ねてきた人にはない深い学びをもたらすこともある。\nもちろん、失敗を許すことは、責任を問わないことと同じではない。無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない。大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである。責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない。\n失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である。失敗した人が再び挑戦できる機会や、失敗の経験を共有する場があれば、社会全体の知恵は深まっていく。一人の失敗が皆の教訓になれば、同じ失敗をする人は減り、社会は少しずつ強くなっていく。このように、失敗を個人の恥として隠すのではなく、社会の財産として生かすことが求められている。\n筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである。失敗を恐れて何もしない社会よりも、失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる。そのためには、失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない。失敗を許すことは甘さではなく、未来への投資なのである。\n筆者の考えと合うものはどれか。",
+      "choices": [
+        "同じ失敗を何度も繰り返しても、努力していれば許すべきだ。",
+        "失敗を許す社会では、失敗の原因を明らかにする必要はない。",
+        "責任を果たした上での失敗は、学びとして生かし、再挑戦を支えるべきだ。",
+        "失敗を経験した人は、成功だけを重ねてきた人より能力が低い。"
+      ],
+      "answer": 2,
+      "explain_vi": "Đáp án đúng tổng hợp đoạn 4 và đoạn 5–6: phải phân biệt thất bại sau khi đã làm tròn trách nhiệm với thất bại do lười biếng (đoạn 4 câu 4), thất bại cần được biến thành bài học chung (đoạn 5), và người thất bại cần được nâng đỡ để đứng dậy thử lại (đoạn 6 câu 3). Các lựa chọn còn lại đều đi ngược nguyên văn."
+    }
+  ],
+  "study": {
+    "passage_title": "「失敗を許す社会」— Khoan dung với thất bại không phải là dễ dãi, mà là đầu tư cho tương lai",
+    "structure": "Bài luận thuyết 6 đoạn, đi theo mạch 問題提起 → 展開（対比・具体例）→ 主張. Đoạn 1 nêu vấn đề: ở Nhật nhiều người sợ thất bại nên không dám thử thách điều mới — nỗi lo bị cười chê hay bị đánh giá thấp khiến hành động bị dừng lại, kết quả là người chọn con đường ổn định tăng lên, người dám thử thách ít đi — và tác giả đặt câu hỏi: nếu sợ thất bại đến mức không thử thách thì xã hội sẽ không thể tạo ra cái mới. Đoạn 2 triển khai hệ quả bằng đối lập: trong xã hội không khoan dung với thất bại, con người chỉ nghĩ tới cách không thất bại, tức là cách không nổi bật, cách an toàn; xã hội như vậy có thể giảm sai lầm ngắn hạn, nhưng về lâu dài khó có thay đổi lớn; nếu ai cũng tránh thất bại thì không ai mở ra con đường mới. Đoạn 3 lấy ví dụ cụ thể: một người trẻ khởi nghiệp thất bại — nếu coi thất bại đó là bằng chứng của năng lực kém thì anh ta sẽ không dám thử lại; nhưng nếu phân tích nguyên nhân một cách bình tĩnh và cho cơ hội áp dụng vào lần sau thì sẽ không lặp lại cùng thất bại, thậm chí kinh nghiệm thất bại còn mang lại bài học sâu sắc mà người chỉ toàn thành công không có. Đoạn 4 đặt ranh giới cho chủ trương: tha thứ cho thất bại không đồng nghĩa với không hỏi trách nhiệm — hành động vô trách nhiệm hay lặp lại cùng thất bại nhiều lần thì quyết không được tha thứ; điều quan trọng là có làm rõ nguyên nhân và nỗ lực cải thiện hay không; phải phân biệt thất bại sau khi đã làm tròn trách nhiệm với thất bại do lười biếng. Đoạn 5 mở rộng: xã hội khoan dung với thất bại không phải là xã hội bỏ mặc thất bại, mà là xã hội có cơ chế học từ thất bại — có cơ hội thử lại và nơi chia sẻ kinh nghiệm thất bại thì trí tuệ chung của xã hội sâu thêm; thất bại của một người thành bài học chung thì người mắc cùng thất bại giảm đi, xã hội mạnh dần lên; cần biến thất bại từ nỗi xấu hổ cá nhân thành tài sản của xã hội. Đoạn 6 kết luận chủ trương: điều tác giả muốn nói nhất là xã hội khoan dung với thất bại mới là xã hội nuôi dưỡng người dám thử thách và đưa xã hội tiến lên; xã hội vừa thất bại vừa học hỏi liên tục sẽ tạo ra tương lai giàu có hơn nhiều so với xã hội sợ thất bại mà không làm gì; vì thế cần thái độ nâng đỡ người thất bại đứng dậy thay vì trách móc; khoan dung với thất bại không phải là sự dễ dãi mà là đầu tư cho tương lai.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{日本|にっぽん}では、{失敗|しっぱい}を{恐|おそ}れて{新|あたら}しいことに{挑戦|ちょうせん}しない{人|ひと}が{多|おお}いと{言|い}われる。",
+        "vi": "Người ta nói rằng ở Nhật có nhiều người vì sợ thất bại nên không dám thử thách điều mới."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{失敗|しっぱい}すれば{周囲|しゅうい}から{笑|わら}われたり、{評価|ひょうか}が{下|さ}がったりするのではないかという{不安|ふあん}が、{行動|こうどう}を{止|と}めてしまうのである。",
+        "vi": "Nỗi lo rằng nếu thất bại thì sẽ bị những người xung quanh cười chê hay bị đánh giá thấp đã ngăn cản hành động của họ."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "その{結果|けっか}、{安定|あんてい}した{道|みち}を{選|えら}ぶ{人|ひと}が{増|ふ}え、{挑戦|ちょうせん}する{人|ひと}が{少|すく}なくなっている。",
+        "vi": "Kết quả là số người chọn con đường ổn định tăng lên, còn số người dám thử thách thì ít đi."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "しかし、{失敗|しっぱい}を{恐|おそ}れるあまり{挑戦|ちょうせん}しなければ、{社会|しゃかい}{全体|ぜんたい}が{新|あたら}しいものを{生|う}み{出|みだ}せなくなってしまうのではないだろうか。",
+        "vi": "Tuy nhiên, nếu vì sợ thất bại quá mức mà không thử thách, chẳng phải toàn xã hội sẽ không thể tạo ra được điều gì mới hay sao?"
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{失敗|しっぱい}を{許|ゆる}さない{社会|しゃかい}では、{人|ひと}は{失敗|しっぱい}しない{方法|ほうほう}ばかりを{考|かんが}えるようになる。",
+        "vi": "Trong một xã hội không khoan dung với thất bại, con người trở nên chỉ nghĩ tới cách làm sao để không thất bại."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{失敗|しっぱい}しない{方法|ほうほう}とは、{言|い}い{換|いか}えれば、{目立|めだ}たない{方法|ほうほう}であり、{無難|ぶなん}な{方法|ほうほう}である。",
+        "vi": "Cách làm không thất bại, nói cách khác, chính là cách làm không nổi bật, cách làm an toàn."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "そのような{社会|しゃかい}では、{短期|たんき}{的|てき}なミスは{減|へ}るかもしれないが、{長期|ちょうき}{的|てき}に{見|み}れば{大|おお}きな{変化|へんか}は{生|う}まれにくい。",
+        "vi": "Trong một xã hội như vậy, sai lầm ngắn hạn có thể giảm đi, nhưng xét về lâu dài thì khó có thể nảy sinh thay đổi lớn."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{誰|だれ}もが{失敗|しっぱい}を{避|さ}けようとすれば、{誰|だれ}も{新|あたら}しい{道|みち}を{切|き}り{開|りひら}くことはできないのである。",
+        "vi": "Nếu ai cũng cố tránh thất bại, thì sẽ không ai có thể mở ra con đường mới."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "たとえば、{新|あたら}しい{事業|じぎょう}に{挑戦|ちょうせん}した{若者|わかもの}が{失敗|しっぱい}したとする。",
+        "vi": "Ví dụ, giả sử một người trẻ thử thách với một công việc kinh doanh mới và đã thất bại."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "その{失敗|しっぱい}を「{能力|のうりょく}がない{証拠|しょうこ}」だと{決|き}めつければ、{彼|かれ}は{二|に}{度|ど}と{挑戦|ちょうせん}しようとは{思|おも}わないだろう。",
+        "vi": "Nếu cứ khăng khăng coi thất bại đó là 'bằng chứng cho thấy không có năng lực', thì anh ta sẽ không bao giờ muốn thử thách nữa."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "しかし、{失敗|しっぱい}の{原因|げんいん}を{冷静|れいせい}に{分析|ぶんせき}し、{次|つぎ}に{生|い}かす{機会|きかい}が{与|あた}えられれば、{同|おな}じ{失敗|しっぱい}を{繰|く}り{返|りかえ}すことはない。",
+        "vi": "Tuy nhiên, nếu nguyên nhân thất bại được phân tích một cách bình tĩnh và có cơ hội áp dụng vào lần sau, thì sẽ không lặp lại cùng một thất bại đó."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "むしろ、{一|いち}{度|ど}{失敗|しっぱい}した{経験|けいけん}は、{成功|せいこう}だけを{重|かさ}ねてきた{人|ひと}にはない{深|ふか}い{学|まな}びをもたらすこともある。",
+        "vi": "Ngược lại, kinh nghiệm từng thất bại một lần đôi khi còn mang lại bài học sâu sắc mà người chỉ toàn chất chồng thành công không có."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "もちろん、{失敗|しっぱい}を{許|ゆる}すことは、{責任|せきにん}を{問|と}わないことと{同|おな}じではない。",
+        "vi": "Tất nhiên, việc tha thứ cho thất bại không giống với việc không hỏi tới trách nhiệm."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{無|む}{責任|せきにん}な{行動|こうどう}や、{同|おな}じ{失敗|しっぱい}を{何|なん}{度|ど}も{繰|く}り{返|りかえ}すことは、{決|けっ}して{許|ゆる}されるべきではない。",
+        "vi": "Hành động vô trách nhiệm hay việc lặp lại cùng một thất bại nhiều lần thì quyết không nên được tha thứ."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{大切|たいせつ}なのは、{失敗|しっぱい}の{原因|げんいん}を{明|あき}らかにし、{改善|かいぜん}する{努力|どりょく}をしたかどうかである。",
+        "vi": "Điều quan trọng là có làm rõ nguyên nhân thất bại và có nỗ lực cải thiện hay không."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "{責任|せきにん}をきちんと{果|は}たした{上|うえ}での{失敗|しっぱい}と、{努力|どりょく}を{怠|おこた}った{結果|けっか}の{失敗|しっぱい}とを{区別|くべつ}しなければならない。",
+        "vi": "Phải phân biệt thất bại xảy ra sau khi đã làm tròn trách nhiệm với thất bại do lười biếng, không chịu nỗ lực."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{失敗|しっぱい}を{許|ゆる}す{社会|しゃかい}とは、{失敗|しっぱい}を{放置|ほうち}する{社会|しゃかい}ではなく、{失敗|しっぱい}から{学|まな}ぶ{仕組|しく}みを{持|も}つ{社会|しゃかい}である。",
+        "vi": "Xã hội khoan dung với thất bại không phải là xã hội bỏ mặc thất bại, mà là xã hội có cơ chế học hỏi từ thất bại."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{失敗|しっぱい}した{人|ひと}が{再|ふたた}び{挑戦|ちょうせん}できる{機会|きかい}や、{失敗|しっぱい}の{経験|けいけん}を{共有|きょうゆう}する{場|ば}があれば、{社会|しゃかい}{全体|ぜんたい}の{知恵|ちえ}は{深|ふか}まっていく。",
+        "vi": "Nếu có cơ hội để người đã thất bại được thử thách lại và có nơi để chia sẻ kinh nghiệm thất bại, thì trí tuệ của toàn xã hội sẽ ngày càng sâu sắc hơn."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{一人|ひとり}の{失敗|しっぱい}が{皆|みな}の{教訓|きょうくん}になれば、{同|おな}じ{失敗|しっぱい}をする{人|ひと}は{減|へ}り、{社会|しゃかい}は{少|すこ}しずつ{強|つよ}くなっていく。",
+        "vi": "Nếu thất bại của một người trở thành bài học chung cho mọi người, thì số người mắc cùng thất bại đó sẽ giảm đi, và xã hội sẽ dần dần mạnh lên."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "このように、{失敗|しっぱい}を{個人|こじん}の{恥|はじ}として{隠|かく}すのではなく、{社会|しゃかい}の{財産|ざいさん}として{生|い}かすことが{求|もと}められている。",
+        "vi": "Như vậy, điều được đòi hỏi là không che giấu thất bại như một nỗi xấu hổ của cá nhân, mà tận dụng nó như tài sản của xã hội."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "{筆者|ひっしゃ}が{最|もっと}も{言|い}いたいのは、{失敗|しっぱい}を{許|ゆる}す{社会|しゃかい}こそが、{挑戦|ちょうせん}する{人|ひと}を{育|そだ}て、{社会|しゃかい}を{前|まえ}に{進|すす}める{社会|しゃかい}だということである。",
+        "vi": "Điều tác giả muốn nói nhất là: xã hội khoan dung với thất bại chính là xã hội nuôi dưỡng những người dám thử thách và đưa xã hội tiến lên phía trước."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{失敗|しっぱい}を{恐|おそ}れて{何|なん}もしない{社会|しゃかい}よりも、{失敗|しっぱい}を{重|かさ}ねながら{学|まな}び{続|つづ}ける{社会|しゃかい}のほうが、はるかに{豊|ゆた}かな{未来|みらい}を{生|う}み{出|みだ}すことができる。",
+        "vi": "So với một xã hội sợ thất bại nên không làm gì cả, một xã hội vừa chất chồng thất bại vừa tiếp tục học hỏi có thể tạo ra một tương lai giàu có hơn nhiều."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "そのためには、{失敗|しっぱい}した{人|ひと}を{責|せ}めるのではなく、{再|ふたた}び{立|た}ち{上|ちあ}がることを{支|ささ}える{姿勢|しせい}が{欠|か}かせない。",
+        "vi": "Để làm được điều đó, không thể thiếu thái độ nâng đỡ người đã thất bại đứng dậy trở lại, thay vì trách móc họ."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "{失敗|しっぱい}を{許|ゆる}すことは{甘|あま}さではなく、{未来|みらい}への{投資|とうし}なのである。",
+        "vi": "Việc khoan dung với thất bại không phải là sự dễ dãi, mà là sự đầu tư cho tương lai."
+      }
+    ],
+    "answer_key": "④②①③",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 3,
+        "locator": "Đ6①",
+        "options": [
+          {
+            "text": "失敗を完全に防ぐことこそが、社会の発展につながるということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược toàn bộ lập luận của bài: đoạn 2 câu 3–4 nói xã hội chỉ lo tránh thất bại thì về lâu dài khó có thay đổi lớn, và nếu ai cũng tránh thất bại thì không ai mở ra con đường mới; đoạn 6 câu 2 nói xã hội vừa thất bại vừa học hỏi mới tạo ra tương lai giàu có. Tác giả không hề chủ trương ngăn chặn hoàn toàn thất bại. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "失敗を恐れる人を責め、挑戦しない人を社会から排除すべきだということ。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nói nên trách móc hay loại bỏ người sợ thất bại; ngược lại, đoạn 6 câu 3 chủ trương 失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない — tức là nâng đỡ thay vì trách móc. Lựa chọn này không có căn cứ trong bài. Bẫy bịa chi tiết."
+          },
+          {
+            "text": "失敗を許すことは、責任を問わないことと同じだということ。",
+            "verdict": "SAI",
+            "reason": "Bị đoạn 4 câu 1 bác bỏ trực tiếp: もちろん、失敗を許すことは、責任を問わないことと同じではない. Tác giả phân biệt rõ tha thứ với không hỏi trách nhiệm. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "失敗を許す社会こそが、挑戦する人を育て、社会を前に進めるということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 6 câu 1: 筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである. Đây chính là chủ trương tác giả nêu thẳng ở đoạn kết, và được đoạn 6 câu 2 củng cố: xã hội vừa thất bại vừa học hỏi sẽ tạo ra tương lai giàu có hơn."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 1,
+        "locator": "Đ6②④",
+        "options": [
+          {
+            "text": "失敗した人を何でも許し、責任を問わなければ未来がよくなるということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 4: 失敗を許すことは、責任を問わないことと同じではない, và câu 2: 無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない. Từ 何でも là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa / đảo ngược ý tác giả."
+          },
+          {
+            "text": "失敗から学び、再び挑戦する人を支えることが、将来の豊かさにつながるということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Diễn đạt lại đúng đoạn 6 câu 2 và câu 4: 失敗を重ねながら学び続ける社会のほうが、はるかに豊かな未来を生み出すことができる／失敗を許すことは甘さではなく、未来への投資なのである. 'Đầu tư cho tương lai' ở đây chính là ủng hộ người học từ thất bại và thử lại, được đoạn 6 câu 3 củng cố: 再び立ち上がることを支える姿勢が欠かせない."
+          },
+          {
+            "text": "失敗を許せば、失敗の数が減らなくても社会は発展するということ。",
+            "verdict": "SAI",
+            "reason": "Bài không hề nói số lượng thất bại không giảm thì xã hội vẫn phát triển; điều tác giả nói là thất bại cần được phân tích nguyên nhân để không lặp lại (đoạn 3 câu 3: 同じ失敗を繰り返すことはない) và thất bại của một người thành bài học chung thì người mắc cùng thất bại sẽ giảm đi (đoạn 5 câu 3). Lựa chọn này gán cho tác giả một khẳng định không có trong bài. Bẫy bịa chi tiết."
+          },
+          {
+            "text": "失敗を許す社会では、失敗しても努力する必要がなくなるということ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 4 câu 3–4: 大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである／責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない. Nỗ lực cải thiện là điều kiện để thất bại được tha thứ, chứ không phải thứ có thể bỏ đi. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "Đ2①②④",
+        "options": [
+          {
+            "text": "人が失敗しない無難な方法ばかりを選び、誰も新しい道を切り開こうとしなくなるから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 2: 失敗を許さない社会では、人は失敗しない方法ばかりを考えるようになる／失敗しない方法とは、言い換えれば、目立たない方法であり、無難な方法である／誰もが失敗を避けようとすれば、誰も新しい道を切り開くことはできないのである. Đây chính là nguyên nhân tác giả nêu cho việc cái mới khó ra đời."
+          },
+          {
+            "text": "人が失敗を恐れて、安定した道を選ぶ人が減るから。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 1 câu 3: その結果、安定した道を選ぶ人が増え、挑戦する人が少なくなっている — người chọn con đường ổn định TĂNG lên, chứ không giảm. Bẫy đảo ngược ý tác giả / đánh tráo chi tiết."
+          },
+          {
+            "text": "短期的なミスが増え、社会全体が混乱するから。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 2 câu 3: そのような社会では、短期的なミスは減るかもしれないが、長期的に見れば大きな変化は生まれにくい — sai lầm ngắn hạn GIẢM đi, chứ không tăng; vấn đề của xã hội này là thiếu thay đổi lớn về lâu dài, không phải là hỗn loạn. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "失敗した人が皆、すぐに再挑戦するようになるから。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 3 câu 2: その失敗を「能力がない証拠」だと決めつければ、彼は二度と挑戦しようとは思わないだろう — trong xã hội không khoan dung, người thất bại sẽ KHÔNG dám thử lại. Từ 皆 là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa / đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "Đ4④・Đ5・Đ6③",
+        "options": [
+          {
+            "text": "同じ失敗を何度も繰り返しても、努力していれば許すべきだ。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 4 câu 2: 無責任な行動や、同じ失敗を何度も繰り返すことは、決して許されるべきではない. Lặp lại cùng thất bại nhiều lần là điều tác giả nói rõ là không nên tha thứ, dù có viện cớ nỗ lực. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "失敗を許す社会では、失敗の原因を明らかにする必要はない。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 4 câu 3 và đoạn 5 câu 1: 大切なのは、失敗の原因を明らかにし、改善する努力をしたかどうかである／失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である. Làm rõ nguyên nhân là điều kiện trung tâm của chủ trương. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "責任を果たした上での失敗は、学びとして生かし、再挑戦を支えるべきだ。",
+            "verdict": "ĐÚNG",
+            "reason": "Tổng hợp đúng đoạn 4 câu 4 (責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない), đoạn 5 (失敗を社会の財産として生かす, 失敗した人が再び挑戦できる機会) và đoạn 6 câu 3 (失敗した人を責めるのではなく、再び立ち上がることを支える姿勢が欠かせない). Đây là lập trường nhất quán của tác giả."
+          },
+          {
+            "text": "失敗を経験した人は、成功だけを重ねてきた人より能力が低い。",
+            "verdict": "SAI",
+            "reason": "Đi ngược đoạn 3 câu 4: むしろ、一度失敗した経験は、成功だけを重ねてきた人にはない深い学びをもたらすこともある — tác giả nói kinh nghiệm thất bại mang lại bài học sâu sắc mà người chỉ toàn thành công không có, chứ không nói người từng thất bại thì năng lực thấp hơn. Bẫy đảo ngược ý tác giả / đánh tráo chi tiết."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{挑戦|ちょうせん}",
+        "reading": "ちょうせん",
+        "hanviet": "Thiêu Chiến",
+        "vi": "sự thử thách, đương đầu với điều mới"
+      },
+      {
+        "word": "{恐|おそ}れる",
+        "reading": "おそれる",
+        "hanviet": "Khủng",
+        "vi": "sợ hãi, e ngại"
+      },
+      {
+        "word": "{決|き}めつける",
+        "reading": "きめつける",
+        "hanviet": "Quyết",
+        "vi": "khăng khăng cho là, vội kết luận"
+      },
+      {
+        "word": "{無難|ぶなん}",
+        "reading": "ぶなん",
+        "hanviet": "Vô Nan",
+        "vi": "an toàn, không có gì đáng chê trách"
+      },
+      {
+        "word": "{切|き}り{開|りひら}く",
+        "reading": "きりひらく",
+        "hanviet": "Thiết Khai",
+        "vi": "mở ra, khai phá (con đường mới)"
+      },
+      {
+        "word": "{冷静|れいせい}",
+        "reading": "れいせい",
+        "hanviet": "Lãnh Tĩnh",
+        "vi": "bình tĩnh, điềm tĩnh"
+      },
+      {
+        "word": "{怠|おこた}る",
+        "reading": "おこたる",
+        "hanviet": "Đãi",
+        "vi": "lười biếng, sao nhãng, không chịu làm"
+      },
+      {
+        "word": "{放置|ほうち}",
+        "reading": "ほうち",
+        "hanviet": "Phóng Trí",
+        "vi": "sự bỏ mặc, để mặc không xử lý"
+      },
+      {
+        "word": "{財産|ざいさん}",
+        "reading": "ざいさん",
+        "hanviet": "Tài Sản",
+        "vi": "tài sản, của cải quý giá"
+      },
+      {
+        "word": "{立|た}ち{上|ちあ}がる",
+        "reading": "たちあがる",
+        "hanviet": "Lập Thượng",
+        "vi": "đứng dậy trở lại, vực dậy"
+      },
+      {
+        "word": "{欠|か}かせない",
+        "reading": "かかせない",
+        "hanviet": "Khiếm",
+        "vi": "không thể thiếu, không thể không có"
+      },
+      {
+        "word": "{甘|あま}さ",
+        "reading": "あまさ",
+        "hanviet": "Cam",
+        "vi": "sự dễ dãi, sự ngọt ngào (ở đây: sự nương nhẹ quá mức)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜と言われる",
+        "vi": "người ta nói rằng… / được cho là… (trích dẫn nhận định chung)",
+        "in_text": "日本では、失敗を恐れて新しいことに挑戦しない人が多いと言われる。"
+      },
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "chẳng phải là… hay sao? (đặt câu hỏi tu từ, kêu gọi người đọc đồng tình)",
+        "in_text": "しかし、失敗を恐れるあまり挑戦しなければ、社会全体が新しいものを生み出せなくなってしまうのではないだろうか。"
+      },
+      {
+        "pattern": "〜なければならない",
+        "vi": "phải… / nhất định phải… (nghĩa vụ, điều bắt buộc)",
+        "in_text": "責任をきちんと果たした上での失敗と、努力を怠った結果の失敗とを区別しなければならない。"
+      },
+      {
+        "pattern": "〜こそ",
+        "vi": "chính là… (nhấn mạnh, chỉ ra yếu tố quan trọng nhất)",
+        "in_text": "筆者が最も言いたいのは、失敗を許す社会こそが、挑戦する人を育て、社会を前に進める社会だということである。"
+      },
+      {
+        "pattern": "〜のではなく",
+        "vi": "không phải là… mà là… (phủ định vế trước, khẳng định vế sau)",
+        "in_text": "失敗を許す社会とは、失敗を放置する社会ではなく、失敗から学ぶ仕組みを持つ社会である。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm kết luận mềm・suy luận: のではないだろうか / に違いない / はずだ",
+        "rows": [
+          {
+            "form": "〜のではないだろうか",
+            "join": "Vる / Aい / Nだ + のではないだろうか",
+            "vi": "chẳng phải là… hay sao?",
+            "diff": "Đặt câu hỏi tu từ để kêu gọi người đọc đồng tình; người nói đã có kết luận của mình và muốn người nghe cùng suy ngẫm, mức độ chắc chắn cao nhưng diễn đạt mềm.",
+            "example_ja": "{失敗|しっぱい}を{恐|おそ}れて{挑戦|ちょうせん}しなければ、{新|あたら}しいものは{生|う}まれないのではないだろうか。",
+            "example_vi": "Nếu vì sợ thất bại mà không thử thách, chẳng phải sẽ không có cái gì mới ra đời hay sao?"
+          },
+          {
+            "form": "〜に違いない",
+            "join": "Vる / Aい / Nだ + に違いない",
+            "vi": "chắc chắn là…",
+            "diff": "Phán đoán chắc chắn dựa trên căn cứ khách quan; mạnh và trực tiếp hơn のではないだろうか, không có sắc thái hỏi hay kêu gọi đồng tình.",
+            "example_ja": "{失敗|しっぱい}から{学|まな}ぶ{仕組|しく}みがあれば、{社会|しゃかい}は{少|すこ}しずつ{強|つよ}くなっていくに{違|ちが}いない。",
+            "example_vi": "Nếu có cơ chế học hỏi từ thất bại, chắc chắn xã hội sẽ dần dần mạnh lên."
+          },
+          {
+            "form": "〜はずだ",
+            "join": "Vる / Aい / Nだ + はずだ",
+            "vi": "chắc là… / hẳn là…",
+            "diff": "Suy luận theo lẽ thường, theo logic: sự việc đáng lẽ phải như vậy; mức độ chắc chắn thấp hơn に違いない, mang tính dự đoán dựa trên suy luận chứ không phải căn cứ chắc chắn.",
+            "example_ja": "{原因|げんいん}を{分析|ぶんせき}すれば、{同|おな}じ{失敗|しっぱい}は{繰|く}り{返|りかえ}さないはずだ。",
+            "example_vi": "Nếu phân tích nguyên nhân thì hẳn là sẽ không lặp lại cùng thất bại đó."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm phủ định・đối lập: のではなく / わけではない / ものではない",
+        "rows": [
+          {
+            "form": "〜のではなく",
+            "join": "Vる / Aい / Nだ + のではなく、〜だ",
+            "vi": "không phải là… mà là…",
+            "diff": "Phủ định vế trước để khẳng định vế sau là đúng; dùng khi muốn sửa lại cách hiểu sai và đưa ra cách hiểu đúng thay thế.",
+            "example_ja": "{失敗|しっぱい}を{許|ゆる}すことは{甘|あま}さではなく、{未来|みらい}への{投資|とうし}である。",
+            "example_vi": "Khoan dung với thất bại không phải là sự dễ dãi, mà là đầu tư cho tương lai."
+          },
+          {
+            "form": "〜わけではない",
+            "join": "Vる / Aい / Nだ + わけではない",
+            "vi": "không phải là… (đâu)",
+            "diff": "Phủ định một cách hiểu, một suy luận có thể nảy sinh; nhẹ hơn のではなく vì không đưa ra vế thay thế, chỉ nói 'không hẳn là như vậy'.",
+            "example_ja": "{失敗|しっぱい}を{許|ゆる}すからといって、{責任|せきにん}を{問|と}わないわけではない。",
+            "example_vi": "Không phải cứ tha thứ cho thất bại là không hỏi tới trách nhiệm."
+          },
+          {
+            "form": "〜ものではない",
+            "join": "Vる + ものではない",
+            "vi": "không nên… / không phải là thứ có thể…",
+            "diff": "Phủ định mang tính nguyên tắc, đạo lý hoặc lẽ thường: việc đó vốn không nên làm, không phải là điều được phép; mạnh hơn わけではない, thường dùng trong văn viết trang trọng.",
+            "example_ja": "{同|おな}じ{失敗|しっぱい}を{何|なん}{度|ど}も{繰|く}り{返|りかえ}すことは、{許|ゆる}されるものではない。",
+            "example_vi": "Việc lặp lại cùng một thất bại nhiều lần là điều không thể được tha thứ."
+          }
+        ]
+      }
+    ]
+  }
+}

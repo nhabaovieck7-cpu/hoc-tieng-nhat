@@ -233,6 +233,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 31 — Phát hiện cụ thay đổi sức khỏe — báo cáo, ghi chép và liên lạc với người nhà",
       "file": "2026-11-14-kaiwa.json"
+    },
+    {
+      "date": "2026-11-16",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 16/11/2026（問題11・中文）",
+      "file": "2026-11-16-n1-set.json"
+    },
+    {
+      "date": "2026-11-16",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 16/11/2026（主張理解）",
+      "file": "2026-11-16-reading.json"
+    },
+    {
+      "date": "2026-11-16",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 32 — Lần đầu gửi bưu kiện về Việt Nam qua bưu điện (EMS) (初めてEMSでベトナムに荷物を送る)",
+      "file": "2026-11-16-kaiwa.json"
     }
   ]
 }

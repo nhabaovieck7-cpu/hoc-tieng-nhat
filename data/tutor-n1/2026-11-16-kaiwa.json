@@ -1,0 +1,357 @@
+{
+  "lesson": 32,
+  "topic": "Lần đầu gửi bưu kiện về Việt Nam qua bưu điện (EMS) (初めてEMSでベトナムに荷物を送る)",
+  "summary": "Bối cảnh: 拓海 muốn gửi một thùng đồ về Việt Nam cho người nhà — toàn đồ ăn khô, thuốc và ít quần áo — nên rủ 莉子 đi cùng ra bưu điện gần nhà để hỏi cách gửi EMS lần đầu. Ở bưu điện, hai người hỏi nhân viên phí vận chuyển tính thế nào, cân thử thùng đồ, xin phiếu gửi hàng (送り状) về điền, hỏi có cần ghi chi tiết bên trong không và bao lâu thì hàng tới Việt Nam. Về đến nhà, hai người đóng gói lại cho chắc — lót giấy báo, chèn đồ cho khỏi xộc xệch, dán nhãn địa chỉ người nhận, chụp ảnh thùng đồ rồi nhắn tin báo người nhà là hàng đã gửi, khi nào tới thì nhớ ra nhận. Kỹ năng luyện: văn nói bạn bè ở quầy giao dịch — hỏi phí, hỏi cách điền phiếu, nhờ nhân viên kiểm tra lại giúp; cách nói khi đóng gói ở nhà (cái này để đâu, chèn thêm gì, dán chỗ nào) và cách nhắn tin báo người nhà một cách tự nhiên. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng bưu điện và gửi hàng quốc tế (EMS, 送料, 速達, 書留, 宛名, 梱包, 送り状, 計る, 到着), cách hỏi phí theo cân nặng và theo nơi đến, cách điền phiếu gửi hàng bằng kính ngữ rút gọn với nhân viên (〜って書けばいいですか, 〜で大丈夫ですか), và cách nói về thời gian đến nơi một cách mơ hồ nhưng tự nhiên (〜くらいで着く, 〜くらいかかる).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở bưu điện, hỏi phí EMS, cân đồ và điền phiếu gửi hàng）",
+      "stage": "（Buổi chiều, bưu điện gần nhà 拓海. 拓海 xách một thùng carton đựng đồ gửi về Việt Nam, 莉子 đi cùng. Hai người đứng trước quầy gửi hàng quốc tế, nhân viên bưu điện đang hướng dẫn.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "あのさ、{初|はじ}めてEMSでベトナムに{送|おく}るんだけどさ、{送料|そうりょう}ってどうやって{決|き}まるの？",
+          "vi": "Này, lần đầu tớ gửi EMS về Việt Nam, phí vận chuyển tính thế nào ấy nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ねえ、{重|おも}さで{変|か}わるってさ。とりあえず、{計|はか}ってもらおうよ。",
+          "vi": "Này, nghe bảo tính theo cân nặng đấy. Thôi cứ nhờ người ta cân thử đã."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "すみません、この{荷物|にもつ}、ベトナムに{送|おく}りたいんですけど、{計|はか}ってもらえますか。",
+          "vi": "Xin lỗi, thùng đồ này tôi muốn gửi về Việt Nam, nhờ anh/chị cân giúp được không ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "お、2キロちょっとだってさ。{送料|そうりょう}、いくらくらいになるのかな。",
+          "vi": "Ồ, hơn 2 ký một chút này. Phí vận chuyển tầm bao nhiêu nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、{速達|そくたつ}と{普通|ふつう}とで、{値段|ねだん}って{全然|ぜんぜん}{違|ちが}うんですか。",
+          "vi": "Ừm, gửi nhanh với gửi thường thì giá khác nhau nhiều lắm ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あ、{速達|そくたつ}だと3{日|にち}くらいで{着|つ}くってさ。{普通|ふつう}だと1{週間|しゅうかん}くらいかかるんだって。",
+          "vi": "À, gửi nhanh thì tầm 3 ngày là tới đấy. Gửi thường thì mất khoảng 1 tuần."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そっか。じゃあ、{速達|そくたつ}でお{願|ねが}いします。あの、{送|おく}り{状|りじょう}って、ここに{書|か}けばいいですか。",
+          "vi": "Ra thế. Thế thì cho tôi gửi nhanh ạ. À, phiếu gửi hàng này điền vào đây là được ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ねえ、{宛名|あてな}ってさ、{英語|えいご}で{書|か}くの？それともベトナム{語|ご}でもいいの？",
+          "vi": "Này, địa chỉ người nhận ấy, phải viết bằng tiếng Anh à? Hay viết tiếng Việt cũng được?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "すみません、{中身|なかみ}ってさ、{細|こま}かく{書|か}かなきゃダメですか。お{菓子|かし}とか{薬|くすり}とか、いろいろ{入|はい}ってるんですけど。",
+          "vi": "Xin lỗi, đồ bên trong ấy, có phải ghi chi tiết không ạ? Có bánh kẹo với thuốc các thứ, nhiều thứ lắm ạ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "オッケー、{書|か}けたよ。あ、{書留|かきとめ}にしたほうがいいってさ。{追跡|ついせき}できるから{安心|あんしん}だって。",
+          "vi": "Được rồi, điền xong rồi. À, nghe bảo nên gửi bảo đảm đấy. Vì theo dõi được hành trình nên yên tâm hơn."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（về nhà đóng gói tiếp, dán nhãn và nhắn tin báo người nhà）",
+      "stage": "（Tối cùng ngày, phòng khách nhà 拓海. Thùng carton đã mang về từ bưu điện để trên bàn, bên cạnh là giấy báo, băng dính, kéo và bút dạ. Hai người vừa đóng gói lại vừa chuẩn bị nhắn tin cho người nhà ở Việt Nam.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ただいまー。さ、{梱包|こんぽう}し{直|なお}そうよ。{隙間|すきま}、{新聞|しんぶん}{紙|し}で{埋|う}めちゃおうか。",
+          "vi": "Về rồi đây. Nào, đóng gói lại đi. Chỗ trống thì chèn giấy báo vào nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{埋|う}めちゃおう。あ、{薬|くすり}の{箱|はこ}、{真|ま}ん{中|んなか}に{入|い}れなよ。{割|わ}れ{物|れもの}じゃないけどさ。",
+          "vi": "Ừ, chèn vào đi. À, hộp thuốc thì để ở giữa nhé. Không phải đồ dễ vỡ nhưng mà..."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いいね。ってさ、ガムテープ、もう1{回|まわ}りしとこうよ。ベトナムまで{遠|とお}いしさ。",
+          "vi": "Ồ, hay đấy. Này, băng dính thì quấn thêm một vòng nữa đi. Về tới Việt Nam xa lắm mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。あ、{宛名|あてな}シール、ここに{貼|は}るんだよね。{曲|ま}がってない？",
+          "vi": "Ừ nhỉ. À, nhãn địa chỉ thì dán ở đây đúng không? Có bị lệch không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}、まっすぐだよ。ほら、{写真|しゃしん}も{撮|と}っとこう。{送|おく}る{前|まえ}に、{記録|きろく}しとかなきゃさ。",
+          "vi": "Không sao, thẳng mà. Này, chụp ảnh lại nữa nhé. Trước khi gửi thì phải lưu lại chứ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{撮|と}っといたよ。じゃあ、{送|おく}ったよって、うちの{人|ひと}に{連絡|れんらく}しなよ。",
+          "vi": "Ừ, chụp rồi đây. Thế nhắn cho người nhà là gửi rồi đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうする。えっとさ、「EMSで{送|おく}ったよ。3{日|にち}くらいで{着|つ}くって。{受|う}け{取|けと}ったら{教|おし}えてね」って{送|おく}ればいいかな。",
+          "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Tớ gửi EMS rồi nhé. Nghe bảo tầm 3 ngày là tới. Nhận được thì báo tớ nhé' thì được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいじゃん、それで。あ、{追跡|ついせき}{番号|ばんごう}も{一緒|いっしょ}に{送|おく}っといなよ。",
+          "vi": "Được đấy, nhắn thế đi. À, gửi kèm cả mã theo dõi nữa nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、{忘|わす}れるとこだった。{助|たす}かるわ。じゃあ、{明日|あす}、また{郵便|ゆうびん}{局|きょく}に{持|も}ってくよ。",
+          "vi": "Ồ, suýt nữa thì quên. May có cậu nhắc. Thế mai tớ lại mang ra bưu điện nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん。ちゃんと{届|とど}くといいね。あはは、{初|はじ}めてのEMS、ドキドキするじゃん。",
+          "vi": "Ừ. Mong là tới nơi an toàn nhỉ. Haha, lần đầu gửi EMS nên hồi hộp thật đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "初めてEMSでベトナムに荷物を送るのですが、送料はどのように決まりますか。",
+      "real": "あのさ、初めてEMSでベトナムに送るんだけどさ、送料ってどうやって決まるの？",
+      "why": "Sách giáo khoa dùng のですが và どのように決まりますか một cách trang trọng, hỏi như đang viết đơn. Nói thật thì mở đầu bằng あのさ, dùng って để đưa chủ đề 送料 lên trước, và kết bằng の？ ngắn gọn. Câu sách giáo khoa nghe như đang hỏi nhân viên trong một cuộc phỏng vấn, còn câu nói thật nghe như hai người bạn vừa bước vào bưu điện đã hỏi nhau trước khi hỏi nhân viên."
+    },
+    {
+      "textbook": "この荷物を計っていただけますか。速達と普通では、料金が違いますか。",
+      "real": "すみません、この荷物、ベトナムに送りたいんですけど、計ってもらえますか。",
+      "why": "Văn nói dùng すみません để mở lời với nhân viên, nói lý do trước bằng 〜んですけど rồi mới nhờ 計ってもらえますか một cách nhẹ nhàng. Câu sách giáo khoa chia thành hai câu hỏi riêng biệt, nghe như đang đọc từng mục trong sổ tay, còn câu nói thật gộp lý do và lời nhờ vào một câu, nghe như đang đứng trước quầy vừa đưa thùng đồ ra vừa nói."
+    },
+    {
+      "textbook": "送り状はここに書けばよろしいですか。中身は細かく書かなければなりませんか。",
+      "real": "あの、送り状って、ここに書けばいいですか。中身ってさ、細かく書かなきゃダメですか。",
+      "why": "Bạn bè và người nói với nhân viên ở quầy hay rút よろしいですか thành いいですか, rút なければなりません thành なきゃダメですか, thêm ってさ để nhấn mạnh chủ đề đang hỏi. Câu sách giáo khoa nghe như đang xác nhận thủ tục một cách cứng nhắc, còn câu nói thật nghe như đang cầm phiếu trên tay, vừa chỉ vừa hỏi cho chắc."
+    },
+    {
+      "textbook": "隙間を新聞紙で埋めましょう。ガムテープをもう一周巻きましょう。",
+      "real": "隙間、新聞紙で埋めちゃおうか。ガムテープ、もう1回りしとこうよ。",
+      "why": "Văn nói ở nhà dùng ちゃおう và しとこう (rút gọn của てしまおう・ておこう) để rủ nhau làm một việc rất đời thường, kèm よ để rủ rê thân mật. Câu sách giáo khoa dùng ましょう trang trọng, nghe như đang hướng dẫn trong một video dạy đóng gói, còn câu nói thật nghe như hai người đang ngồi trên sàn nhà, vừa nhét giấy báo vừa bàn nhau quấn thêm băng dính."
+    },
+    {
+      "textbook": "EMSで送りました。3日くらいで到着するそうです。受け取ったら教えてください。",
+      "real": "EMSで送ったよ。3日くらいで着くって。受け取ったら教えてね。",
+      "why": "Nhắn tin cho người nhà thì dùng 送ったよ và 教えてね ngắn gọn, dùng って để truyền lại lời nhân viên bưu điện nói (着くって), chứ không dùng そうです trang trọng. Câu sách giáo khoa nghe như đang viết email báo cáo, còn câu nói thật nghe như một tin nhắn gửi vội từ điện thoại sau khi đóng gói xong."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ってさ",
+      "in_lesson": "重さで変わるってさ",
+      "original": "〜ということだ / 〜と聞いた",
+      "vi": "Nghe bảo là… / nghe nói là… — truyền lại thông tin mình nghe được, giọng suồng sã, hay dùng khi kể lại lời nhân viên hoặc lời ai đó.",
+      "use": "Dùng với bạn bè, người thân khi kể lại điều mình vừa nghe được từ người khác.",
+      "avoid": "Tránh trong văn viết trang trọng và khi báo cáo chính thức (khi đó dùng 〜そうです・〜とのことです)."
+    },
+    {
+      "form": "〜ちゃおう",
+      "in_lesson": "新聞紙で埋めちゃおうか",
+      "original": "〜てしまおう",
+      "vi": "Rút gọn của てしまおう: cứ làm luôn đi / làm cho xong đi — ở đây là rủ nhau chèn giấy báo vào chỗ trống cho xong việc đóng gói.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau làm một việc đời thường cho xong.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜ましょう・〜てください)."
+    },
+    {
+      "form": "〜しとこう",
+      "in_lesson": "ガムテープ、もう1回りしとこうよ",
+      "original": "〜しておこう",
+      "vi": "Rút gọn của ておこう: cứ làm trước đi / làm sẵn đi — ở đây là quấn thêm băng dính phòng khi thùng bị va đập trên đường vận chuyển.",
+      "use": "Dùng với bạn bè, người thân khi đề nghị chuẩn bị trước một việc gì đó cho chắc chắn.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên (khi đó dùng 〜しておきましょう)."
+    },
+    {
+      "form": "〜くらい",
+      "in_lesson": "3日くらいで着くってさ",
+      "original": "約〜 / 〜ほど",
+      "vi": "Tầm khoảng… — nói thời gian, số lượng một cách ước chừng, không chắc chắn tuyệt đối, rất hay dùng khi truyền lại lời nhân viên bưu điện.",
+      "use": "Dùng khi nói thời gian đến nơi, phí vận chuyển, cân nặng một cách ước chừng với bạn bè, người thân.",
+      "avoid": "Tránh khi cần con số chính xác trong thủ tục, hợp đồng hay giấy tờ (khi đó dùng con số cụ thể)."
+    },
+    {
+      "form": "〜とこだった",
+      "in_lesson": "忘れるとこだった",
+      "original": "〜ところだった / 〜そうになった",
+      "vi": "Suýt nữa thì… — suýt quên, suýt làm sai lúc nào không hay; ở đây là suýt quên gửi kèm mã theo dõi cho người nhà.",
+      "use": "Dùng với bạn bè, người thân khi kể chuyện mình suýt quên hay suýt làm sai điều gì đó.",
+      "avoid": "Tránh trong văn bản chính thức và khi báo cáo sự việc nghiêm trọng (khi đó dùng 〜ところでした)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{送|おく}る",
+      "reading": "おくる",
+      "vi": "Gửi — gửi đồ, gửi thư, gửi bưu kiện đi nơi khác; từ gốc của mọi cách nói về gửi hàng trong bài.",
+      "example_ja": "ベトナムに{荷物|にもつ}を{送|おく}るの、{初|はじ}めてなんだよね。",
+      "example_vi": "Gửi đồ về Việt Nam ấy, lần đầu tiên tớ gửi đấy."
+    },
+    {
+      "expr": "{送料|そうりょう}",
+      "reading": "そうりょう",
+      "vi": "Phí vận chuyển / cước phí — tiền phải trả để gửi hàng, tính theo cân nặng, kích thước và nơi đến; hỏi ở bưu điện thì nói 送料はいくらですか.",
+      "example_ja": "{送料|そうりょう}って、{重|おも}さで{変|か}わるんだってさ。",
+      "example_vi": "Nghe bảo phí vận chuyển thì tính theo cân nặng đấy."
+    },
+    {
+      "expr": "{速達|そくたつ}",
+      "reading": "そくたつ",
+      "vi": "Gửi nhanh / chuyển phát nhanh — dịch vụ gửi hàng ưu tiên, tới nơi nhanh hơn gửi thường nhưng phí cao hơn; EMS về Việt Nam thường mất khoảng 3 ngày.",
+      "example_ja": "{速達|そくたつ}でお{願|ねが}いします。3{日|にち}くらいで{着|つ}くってさ。",
+      "example_vi": "Cho tôi gửi nhanh ạ. Nghe bảo tầm 3 ngày là tới đấy."
+    },
+    {
+      "expr": "{書留|かきとめ}",
+      "reading": "かきとめ",
+      "vi": "Gửi bảo đảm / gửi có đăng ký — dịch vụ có mã theo dõi, bồi thường nếu mất hàng; nhân viên bưu điện hay khuyên dùng khi gửi đồ quan trọng ra nước ngoài.",
+      "example_ja": "{書留|かきとめ}にしたほうがいいってさ。{追跡|ついせき}できるから{安心|あんしん}だって。",
+      "example_vi": "Nghe bảo nên gửi bảo đảm đấy. Vì theo dõi được hành trình nên yên tâm hơn."
+    },
+    {
+      "expr": "{宛名|あてな}",
+      "reading": "あてな",
+      "vi": "Địa chỉ người nhận / tên người nhận — phần ghi tên và địa chỉ người nhận trên phiếu gửi hàng và trên nhãn dán thùng; viết sai là hàng không tới được.",
+      "example_ja": "{宛名|あてな}シール、ここに{貼|は}るんだよね。{曲|ま}がってない？",
+      "example_vi": "Nhãn địa chỉ thì dán ở đây đúng không? Có bị lệch không?"
+    },
+    {
+      "expr": "{梱包|こんぽう}する",
+      "reading": "こんぽうする",
+      "vi": "Đóng gói — bọc, chèn, dán thùng hàng cho chắc chắn trước khi gửi; ở nhà thì chèn giấy báo vào chỗ trống, quấn băng dính quanh thùng.",
+      "example_ja": "さ、{梱包|こんぽう}し{直|なお}そうよ。{隙間|すきま}、{新聞|しんぶん}{紙|し}で{埋|う}めちゃおうか。",
+      "example_vi": "Nào, đóng gói lại đi. Chỗ trống thì chèn giấy báo vào nhé."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, bưu điện (郵便局) không chỉ gửi thư mà còn là nơi gửi bưu kiện trong nước và quốc tế, trong đó EMS (国際スピード郵便) là dịch vụ chuyển phát nhanh quốc tế của Bưu điện Nhật Bản — gửi về Việt Nam thường mất khoảng 3 ngày nếu gửi 速達, lâu hơn nếu gửi thường. Phí vận chuyển (送料) tính theo cân nặng, kích thước thùng và nước đến, nên nhân viên luôn cân thùng trước rồi mới báo giá; người gửi cũng phải điền phiếu gửi hàng (送り状) ghi rõ tên, địa chỉ người nhận (宛名) và liệt kê đồ bên trong, vì hải quan hai nước đều kiểm tra nội dung. Trong bài, 拓海 lần đầu gửi EMS nên hỏi từng bước một — đó là chuyện rất bình thường, nhân viên bưu điện Nhật quen hướng dẫn người gửi lần đầu.",
+    "Người Nhật gửi đồ ra nước ngoài hay chọn thêm 書留 (gửi bảo đảm) để có mã theo dõi (追跡番号) và được bồi thường nếu hàng thất lạc — nhất là khi trong thùng có thuốc, đồ ăn hay đồ quan trọng. Mã theo dõi này thường được gửi kèm cho người nhà ở Việt Nam để họ tự kiểm tra xem hàng đang ở đâu, khi nào tới. Ngoài ra, đồ gửi đi phải đóng gói (梱包) thật chắc: chèn giấy báo, giấy bọt khí vào chỗ trống cho đồ khỏi xộc xệch, quấn băng dính (ガムテープ) thêm vài vòng quanh thùng vì thùng phải đi máy bay, qua hải quan và chuyển nhiều chặng mới tới tay người nhận. Trong bài, hai người về nhà đóng gói lại cẩn thận rồi mới mang ra bưu điện vào hôm sau — đó là cách làm rất quen thuộc của người Nhật khi gửi hàng quốc tế.",
+    "Khi gửi đồ về cho người nhà ở Việt Nam, người Nhật hay nhắn tin báo trước: đã gửi bằng EMS, khoảng mấy ngày thì tới, mã theo dõi là gì, và dặn người nhà nhận được thì báo lại một tiếng. Tin nhắn đó thường rất ngắn gọn, dùng văn nói như 送ったよ, 着くって, 教えてね — không viết trang trọng như email, vì đây là tin nhắn trong gia đình. Việc báo trước như vậy cũng giúp người nhà ở Việt Nam chủ động ở nhà nhận hàng hoặc ra bưu điện nhận, vì bưu kiện quốc tế tới nơi thường cần người nhận ký xác nhận. Trong bài, 拓海 nhắn tin ngay sau khi đóng gói xong, kèm cả mã theo dõi — đó là phép lịch sự rất đời thường trong văn hóa gửi nhận hàng của người Nhật."
+  ],
+  "mistakes": [
+    "Đừng nhầm 速達 với 書留: 速達 là gửi nhanh (tới sớm hơn, phí cao hơn), còn 書留 là gửi bảo đảm (có mã theo dõi, được bồi thường nếu mất hàng) — hai dịch vụ khác nhau và có thể dùng cùng lúc, như trong bài vừa chọn 速達 vừa chọn 書留.",
+    "Đừng viết 宛名 sai hoặc viết tắt địa chỉ người nhận: tên và địa chỉ trên phiếu gửi hàng phải viết đầy đủ, rõ ràng, tốt nhất bằng chữ Latinh (tiếng Anh hoặc tiếng Việt không dấu) để hải quan và bưu điện Việt Nam đọc được — viết sai một chữ cũng có thể khiến hàng bị trả lại.",
+    "Đừng ghi đồ bên trong một cách chung chung như 'đồ ăn' hay 'quà': hải quan yêu cầu liệt kê cụ thể từng loại (bánh kẹo, thuốc, quần áo...) và số lượng, vì có những thứ bị cấm hoặc bị hạn chế khi gửi quốc tế — hỏi nhân viên 中身って細かく書かなきゃダメですか trước khi điền là cách làm đúng.",
+    "Đừng đóng gói qua loa rồi mang ra bưu điện ngay: thùng gửi quốc tế đi xa, chuyển nhiều chặng nên dễ bị va đập — phải chèn giấy báo vào chỗ trống, quấn băng dính thêm vài vòng, dán nhãn địa chỉ cho thẳng và chụp ảnh lại trước khi gửi để làm bằng chứng nếu hàng có vấn đề."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn lần đầu gửi EMS về Việt Nam. Hãy hỏi nhân viên bưu điện: phí vận chuyển tính thế nào, thùng này nặng bao nhiêu thì phí bao nhiêu, và gửi nhanh (速達) với gửi thường khác nhau ra sao.",
+    "Tình huống 2: Bạn đang điền phiếu gửi hàng (送り状) ở bưu điện. Hãy hỏi nhân viên: điền vào chỗ nào, địa chỉ người nhận (宛名) viết bằng tiếng Anh hay tiếng Việt, và đồ bên trong có phải ghi chi tiết không.",
+    "Tình huống 3: Bạn vừa mang thùng đồ về nhà và đang đóng gói lại cùng một người bạn. Hãy bàn với bạn: chèn gì vào chỗ trống, hộp thuốc để ở đâu, quấn băng dính thêm mấy vòng, và dán nhãn địa chỉ ở chỗ nào.",
+    "Tình huống 4: Bạn vừa đóng gói xong và muốn nhắn tin báo người nhà ở Việt Nam. Hãy nhắn: đã gửi bằng EMS, khoảng mấy ngày thì tới, mã theo dõi là gì, và dặn người nhà nhận được thì báo lại cho bạn."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "あのさ、{初|はじ}めてEMSでベトナムに{送|おく}るんだけどさ、{送料|そうりょう}ってどうやって{決|き}まるの？",
+      "vi": "Này, lần đầu tớ gửi EMS về Việt Nam, phí vận chuyển tính thế nào ấy nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ねえ、{重|おも}さで{変|か}わるってさ。とりあえず、{計|はか}ってもらおうよ。",
+      "vi": "Này, nghe bảo tính theo cân nặng đấy. Thôi cứ nhờ người ta cân thử đã."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "すみません、この{荷物|にもつ}、ベトナムに{送|おく}りたいんですけど、{計|はか}ってもらえますか。",
+      "vi": "Xin lỗi, thùng đồ này tôi muốn gửi về Việt Nam, nhờ anh/chị cân giúp được không ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、2キロちょっとだってさ。{送料|そうりょう}、いくらくらいになるのかな。",
+      "vi": "Ồ, hơn 2 ký một chút này. Phí vận chuyển tầm bao nhiêu nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、{速達|そくたつ}と{普通|ふつう}とで、{値段|ねだん}って{全然|ぜんぜん}{違|ちが}うんですか。",
+      "vi": "Ừm, gửi nhanh với gửi thường thì giá khác nhau nhiều lắm ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あ、{速達|そくたつ}だと3{日|にち}くらいで{着|つ}くってさ。{普通|ふつう}だと1{週間|しゅうかん}くらいかかるんだって。",
+      "vi": "À, gửi nhanh thì tầm 3 ngày là tới đấy. Gửi thường thì mất khoảng 1 tuần."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そっか。じゃあ、{速達|そくたつ}でお{願|ねが}いします。あの、{送|おく}り{状|りじょう}って、ここに{書|か}けばいいですか。",
+      "vi": "Ra thế. Thế thì cho tôi gửi nhanh ạ. À, phiếu gửi hàng này điền vào đây là được ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ねえ、{宛名|あてな}ってさ、{英語|えいご}で{書|か}くの？それともベトナム{語|ご}でもいいの？",
+      "vi": "Này, địa chỉ người nhận ấy, phải viết bằng tiếng Anh à? Hay viết tiếng Việt cũng được?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "すみません、{中身|なかみ}ってさ、{細|こま}かく{書|か}かなきゃダメですか。お{菓子|かし}とか{薬|くすり}とか、いろいろ{入|はい}ってるんですけど。",
+      "vi": "Xin lỗi, đồ bên trong ấy, có phải ghi chi tiết không ạ? Có bánh kẹo với thuốc các thứ, nhiều thứ lắm ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "オッケー、{書|か}けたよ。あ、{書留|かきとめ}にしたほうがいいってさ。{追跡|ついせき}できるから{安心|あんしん}だって。",
+      "vi": "Được rồi, điền xong rồi. À, nghe bảo nên gửi bảo đảm đấy. Vì theo dõi được hành trình nên yên tâm hơn."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ただいまー。さ、{梱包|こんぽう}し{直|なお}そうよ。{隙間|すきま}、{新聞|しんぶん}{紙|し}で{埋|う}めちゃおうか。",
+      "vi": "Về rồi đây. Nào, đóng gói lại đi. Chỗ trống thì chèn giấy báo vào nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{埋|う}めちゃおう。あ、{薬|くすり}の{箱|はこ}、{真|ま}ん{中|んなか}に{入|い}れなよ。{割|わ}れ{物|れもの}じゃないけどさ。",
+      "vi": "Ừ, chèn vào đi. À, hộp thuốc thì để ở giữa nhé. Không phải đồ dễ vỡ nhưng mà..."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いいね。ってさ、ガムテープ、もう1{回|まわ}りしとこうよ。ベトナムまで{遠|とお}いしさ。",
+      "vi": "Ồ, hay đấy. Này, băng dính thì quấn thêm một vòng nữa đi. Về tới Việt Nam xa lắm mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。あ、{宛名|あてな}シール、ここに{貼|は}るんだよね。{曲|ま}がってない？",
+      "vi": "Ừ nhỉ. À, nhãn địa chỉ thì dán ở đây đúng không? Có bị lệch không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}、まっすぐだよ。ほら、{写真|しゃしん}も{撮|と}っとこう。{送|おく}る{前|まえ}に、{記録|きろく}しとかなきゃさ。",
+      "vi": "Không sao, thẳng mà. Này, chụp ảnh lại nữa nhé. Trước khi gửi thì phải lưu lại chứ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{撮|と}っといたよ。じゃあ、{送|おく}ったよって、うちの{人|ひと}に{連絡|れんらく}しなよ。",
+      "vi": "Ừ, chụp rồi đây. Thế nhắn cho người nhà là gửi rồi đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうする。えっとさ、「EMSで{送|おく}ったよ。3{日|にち}くらいで{着|つ}くって。{受|う}け{取|けと}ったら{教|おし}えてね」って{送|おく}ればいいかな。",
+      "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Tớ gửi EMS rồi nhé. Nghe bảo tầm 3 ngày là tới. Nhận được thì báo tớ nhé' thì được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいじゃん、それで。あ、{追跡|ついせき}{番号|ばんごう}も{一緒|いっしょ}に{送|おく}っといなよ。",
+      "vi": "Được đấy, nhắn thế đi. À, gửi kèm cả mã theo dõi nữa nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、{忘|わす}れるとこだった。{助|たす}かるわ。じゃあ、{明日|あす}、また{郵便|ゆうびん}{局|きょく}に{持|も}ってくよ。",
+      "vi": "Ồ, suýt nữa thì quên. May có cậu nhắc. Thế mai tớ lại mang ra bưu điện nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん。ちゃんと{届|とど}くといいね。あはは、{初|はじ}めてのEMS、ドキドキするじゃん。",
+      "vi": "Ừ. Mong là tới nơi an toàn nhỉ. Haha, lần đầu gửi EMS nên hồi hộp thật đấy."
+    }
+  ],
+  "notes": [
+    "EMS: dịch vụ chuyển phát nhanh quốc tế của Bưu điện Nhật Bản (国際スピード郵便) — gửi về Việt Nam thường mất khoảng 3 ngày nếu chọn 速達; 送料 tính theo cân nặng, kích thước thùng và nước đến, nhân viên luôn cân thùng trước khi báo giá.",
+    "速達 là gửi nhanh, 書留 là gửi bảo đảm có mã theo dõi (追跡番号) — hai dịch vụ khác nhau, có thể dùng cùng lúc; 送り状 là phiếu gửi hàng, 宛名 là tên và địa chỉ người nhận ghi trên phiếu và trên nhãn dán thùng.",
+    "梱包する là đóng gói — chèn giấy báo vào chỗ trống, quấn băng dính (ガムテープ) thêm vài vòng cho thùng chắc chắn vì phải đi máy bay và qua nhiều chặng; chụp ảnh thùng trước khi gửi để làm bằng chứng.",
+    "〜ってさ là cách truyền lại lời người khác nghe được (重さで変わるってさ); 〜ちゃおう・〜しとこう là dạng rút gọn của てしまおう・ておこう, dùng khi rủ nhau làm việc đời thường cho xong; 〜くらい dùng khi nói thời gian, phí, cân nặng một cách ước chừng."
+  ]
+}
