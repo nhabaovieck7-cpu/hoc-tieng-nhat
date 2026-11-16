@@ -251,6 +251,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 32 — Lần đầu gửi bưu kiện về Việt Nam qua bưu điện (EMS) (初めてEMSでベトナムに荷物を送る)",
       "file": "2026-11-16-kaiwa.json"
+    },
+    {
+      "date": "2026-11-17",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 17/11/2026（問題12・長文）",
+      "file": "2026-11-17-n1-set.json"
+    },
+    {
+      "date": "2026-11-17",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 17/11/2026（情報検索）",
+      "file": "2026-11-17-reading.json"
+    },
+    {
+      "date": "2026-11-17",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 33 — Lần đầu đi làm thủ tục chuyển nhà ở区役所 (đổi địa chỉ, đăng ký My Number) (初めて区役所で引っ越しの手続きをする)",
+      "file": "2026-11-17-kaiwa.json"
     }
   ]
 }

@@ -1,0 +1,511 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 情報検索 trong phần đọc hiểu của đề N1 thật: một bản thông báo dài, nhiều mục, kèm 4 câu hỏi — đáp án không nằm ở một chỗ mà phải đối chiếu nhiều mục với nhau (ngày giờ, phí, đối tượng, hạn đăng ký). Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi quét bản thông báo để tìm đúng mục cần tra, không đọc kỹ từ đầu đến cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình tra lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc lướt + 4 câu hỏi). Trong đề thật, 情報検索 là dạng dễ mất điểm vì các lựa chọn nhiễu thường lấy số liệu của mục khác gán sang mục đang hỏi — ví dụ lấy phí của khóa học này gán cho khóa học khác, lấy hạn đăng ký của sự kiện này gán cho sự kiện khác, hoặc lấy giờ mở cửa của phòng này gán cho phòng kia.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, đọc bản thông báo sau",
+      "body": "Mỗi câu hỏi chỉ cần 1–2 mục trong thông báo. Đọc câu hỏi trước để biết mình cần tìm gì (phí thuê phòng? hạn đăng ký? giờ mở cửa ngày nào?), rồi mới quét bản thông báo tới đúng mục đó. Đọc kỹ toàn bộ từ đầu đến cuối vừa tốn thời gian vừa dễ bị số liệu của các mục khác làm nhiễu."
+    },
+    {
+      "h": "Số liệu giống nhau ở nhiều mục là bẫy: luôn kiểm tra xem số đó thuộc về mục nào",
+      "body": "Bản thông báo này có nhiều con số na ná nhau: 2,000円 là phí khóa gốm, 3,000円 là phí thuê đa năng 1 giờ, 1,200円 là phí khóa làm vườn. Khi câu hỏi hỏi về một mục cụ thể, hãy xác nhận con số đó đi kèm với đúng tên mục đó, đừng chọn con số đầu tiên nhìn thấy."
+    },
+    {
+      "h": "Chú ý các điều kiện đi kèm: 割引・優先・に限ります・が必要です",
+      "body": "Đáp án đúng thường nằm ở điều kiện kèm theo, không phải ở con số chính: giảm nửa phí chỉ áp dụng cho phí thuê phòng, KHÔNG áp dụng cho phí tham gia khóa học; lớp thể dục ưu tiên người từ 65 tuổi trở lên chứ không cấm người khác; lớp thí nghiệm khoa học chỉ nhận trẻ tiểu học đi cùng người bảo hộ và bắt buộc phải có người bảo hộ đi cùng. Bỏ qua một chữ ただし hay に限ります là chọn sai ngay."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bản thông báo này có 4 khóa học (gốm 11/4, làm vườn 18/4, thí nghiệm khoa học 25/4, thể dục cho người cao tuổi 9/5), 4 loại phòng với giờ mở cửa khác nhau, và 2 loại phí (phí tham gia khóa học và phí thuê phòng) với quy tắc giảm giá khác nhau. Khi làm bài, hãy tra đúng bảng: hỏi phí thuê phòng thì xem mục 5, hỏi hạn đăng ký thì xem mục 6, hỏi giờ mở cửa ngày 29/4 thì xem mục 4 đoạn 2."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "かわさき市民プラザでは、4月から5月にかけて、春の講座と施設利用のご案内を次のとおりお知らせします。詳細については、プラザ受付（電話044-9876-5432、受付時間は午前9時から午後5時まで）にお問い合わせください。\n春の講座は、次の4つです。まず、4月11日（土）午前10時から正午まで、工芸室で「はじめての陶芸教室」を開きます。次に、4月18日（土）午後1時から3時まで、研修室で「春のガーデニング講座」を行います。続いて、4月25日（土）午前10時から11時半まで、実験室で「親子で楽しむ科学実験教室」を開催します。最後に、5月9日（土）午前9時半から10時半まで、体育館で「シニアのための健康体操」を行います。\n陶芸教室の参加費は2,000円で、材料費を含み、定員は24人です。ガーデニング講座の参加費は1,200円で、定員は30人です。科学実験教室の参加費は親子1組800円で、定員は15組ですが、小学生のお子さんと保護者の方の参加に限ります。健康体操は参加費無料で、定員は40人ですが、65歳以上の方を優先します。\n施設の利用時間は、多目的ホールが午前9時から午後9時まで、研修室が午前9時から午後5時までです。図書コーナーは午前9時から午後8時まで利用できますが、4月29日から5月6日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、4月27日は午後5時で全館閉館します。\n施設の利用料金は、多目的ホールが1時間3,000円、研修室が1時間800円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、講座などの主催イベントの参加費には、この割引は適用されません。\n講座の申込みは、電話か受付窓口で受け付けます。陶芸教室の申込締切は4月3日（金）、ガーデニング講座は4月10日（金）、科学実験教室は4月17日（金）、健康体操は5月1日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の5日前までに受付へご連絡ください。陶芸教室に参加される方は、汚れてもよい服装でお越しください。科学実験教室は、保護者の方の同伴が必要です。駐車場は40台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、プラザでは責任を負いかねます。\nご不明な点は、かわさき市民プラザ（住所は川崎市花見町5-6-7）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n70歳の方が、多目的ホールを3時間借りる場合、利用料金はいくらですか。",
+      "choices": [
+        "9,000円",
+        "4,500円",
+        "3,000円",
+        "800円"
+      ],
+      "answer": 1,
+      "explain_vi": "Phòng đa năng 3,000円/giờ nên 3 tiếng là 9,000円; người từ 70 tuổi (65 tuổi trở lên) được giảm nửa phí thuê phòng (đoạn 5 câu 2), còn 4,500円. Lưu ý: giảm giá chỉ áp dụng cho phí thuê phòng, không áp dụng cho phí tham gia khóa học."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "かわさき市民プラザでは、4月から5月にかけて、春の講座と施設利用のご案内を次のとおりお知らせします。詳細については、プラザ受付（電話044-9876-5432、受付時間は午前9時から午後5時まで）にお問い合わせください。\n春の講座は、次の4つです。まず、4月11日（土）午前10時から正午まで、工芸室で「はじめての陶芸教室」を開きます。次に、4月18日（土）午後1時から3時まで、研修室で「春のガーデニング講座」を行います。続いて、4月25日（土）午前10時から11時半まで、実験室で「親子で楽しむ科学実験教室」を開催します。最後に、5月9日（土）午前9時半から10時半まで、体育館で「シニアのための健康体操」を行います。\n陶芸教室の参加費は2,000円で、材料費を含み、定員は24人です。ガーデニング講座の参加費は1,200円で、定員は30人です。科学実験教室の参加費は親子1組800円で、定員は15組ですが、小学生のお子さんと保護者の方の参加に限ります。健康体操は参加費無料で、定員は40人ですが、65歳以上の方を優先します。\n施設の利用時間は、多目的ホールが午前9時から午後9時まで、研修室が午前9時から午後5時までです。図書コーナーは午前9時から午後8時まで利用できますが、4月29日から5月6日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、4月27日は午後5時で全館閉館します。\n施設の利用料金は、多目的ホールが1時間3,000円、研修室が1時間800円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、講座などの主催イベントの参加費には、この割引は適用されません。\n講座の申込みは、電話か受付窓口で受け付けます。陶芸教室の申込締切は4月3日（金）、ガーデニング講座は4月10日（金）、科学実験教室は4月17日（金）、健康体操は5月1日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の5日前までに受付へご連絡ください。陶芸教室に参加される方は、汚れてもよい服装でお越しください。科学実験教室は、保護者の方の同伴が必要です。駐車場は40台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、プラザでは責任を負いかねます。\nご不明な点は、かわさき市民プラザ（住所は川崎市花見町5-6-7）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n「はじめての陶芸教室」に参加したい場合、いつまでに申し込めばよいですか。",
+      "choices": [
+        "4月3日（金）",
+        "4月10日（金）",
+        "4月17日（金）",
+        "4月11日（土）"
+      ],
+      "answer": 0,
+      "explain_vi": "Hạn đăng ký của lớp học gốm là 4月3日（金） (đoạn 6 câu 2). 4月10日 là hạn của khóa làm vườn, 4月17日 là hạn của lớp thí nghiệm khoa học, còn 4月11日 là ngày tổ chức lớp gốm chứ không phải hạn đăng ký."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "かわさき市民プラザでは、4月から5月にかけて、春の講座と施設利用のご案内を次のとおりお知らせします。詳細については、プラザ受付（電話044-9876-5432、受付時間は午前9時から午後5時まで）にお問い合わせください。\n春の講座は、次の4つです。まず、4月11日（土）午前10時から正午まで、工芸室で「はじめての陶芸教室」を開きます。次に、4月18日（土）午後1時から3時まで、研修室で「春のガーデニング講座」を行います。続いて、4月25日（土）午前10時から11時半まで、実験室で「親子で楽しむ科学実験教室」を開催します。最後に、5月9日（土）午前9時半から10時半まで、体育館で「シニアのための健康体操」を行います。\n陶芸教室の参加費は2,000円で、材料費を含み、定員は24人です。ガーデニング講座の参加費は1,200円で、定員は30人です。科学実験教室の参加費は親子1組800円で、定員は15組ですが、小学生のお子さんと保護者の方の参加に限ります。健康体操は参加費無料で、定員は40人ですが、65歳以上の方を優先します。\n施設の利用時間は、多目的ホールが午前9時から午後9時まで、研修室が午前9時から午後5時までです。図書コーナーは午前9時から午後8時まで利用できますが、4月29日から5月6日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、4月27日は午後5時で全館閉館します。\n施設の利用料金は、多目的ホールが1時間3,000円、研修室が1時間800円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、講座などの主催イベントの参加費には、この割引は適用されません。\n講座の申込みは、電話か受付窓口で受け付けます。陶芸教室の申込締切は4月3日（金）、ガーデニング講座は4月10日（金）、科学実験教室は4月17日（金）、健康体操は5月1日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の5日前までに受付へご連絡ください。陶芸教室に参加される方は、汚れてもよい服装でお越しください。科学実験教室は、保護者の方の同伴が必要です。駐車場は40台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、プラザでは責任を負いかねます。\nご不明な点は、かわさき市民プラザ（住所は川崎市花見町5-6-7）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n「親子で楽しむ科学実験教室」について正しいものはどれですか。",
+      "choices": [
+        "参加費は2,000円である。",
+        "定員は30人である。",
+        "保護者の同伴が必要である。",
+        "午後1時から3時まで行われる。"
+      ],
+      "answer": 2,
+      "explain_vi": "Lớp thí nghiệm khoa học: 保護者の方の同伴が必要です (đoạn 7 câu 3). Các lựa chọn còn lại đều là số liệu của khóa học khác: 2,000円 là phí lớp gốm, 30人 là định mức khóa làm vườn, 午後1時〜3時 là giờ khóa làm vườn."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "かわさき市民プラザでは、4月から5月にかけて、春の講座と施設利用のご案内を次のとおりお知らせします。詳細については、プラザ受付（電話044-9876-5432、受付時間は午前9時から午後5時まで）にお問い合わせください。\n春の講座は、次の4つです。まず、4月11日（土）午前10時から正午まで、工芸室で「はじめての陶芸教室」を開きます。次に、4月18日（土）午後1時から3時まで、研修室で「春のガーデニング講座」を行います。続いて、4月25日（土）午前10時から11時半まで、実験室で「親子で楽しむ科学実験教室」を開催します。最後に、5月9日（土）午前9時半から10時半まで、体育館で「シニアのための健康体操」を行います。\n陶芸教室の参加費は2,000円で、材料費を含み、定員は24人です。ガーデニング講座の参加費は1,200円で、定員は30人です。科学実験教室の参加費は親子1組800円で、定員は15組ですが、小学生のお子さんと保護者の方の参加に限ります。健康体操は参加費無料で、定員は40人ですが、65歳以上の方を優先します。\n施設の利用時間は、多目的ホールが午前9時から午後9時まで、研修室が午前9時から午後5時までです。図書コーナーは午前9時から午後8時まで利用できますが、4月29日から5月6日までは休館です。体育館は午前10時から午後6時までで、月曜日は定期清掃のため利用できません。なお、4月27日は午後5時で全館閉館します。\n施設の利用料金は、多目的ホールが1時間3,000円、研修室が1時間800円です。65歳以上の方と障がい者手帳をお持ちの方は、利用料金が半額になります。ただし、講座などの主催イベントの参加費には、この割引は適用されません。\n講座の申込みは、電話か受付窓口で受け付けます。陶芸教室の申込締切は4月3日（金）、ガーデニング講座は4月10日（金）、科学実験教室は4月17日（金）、健康体操は5月1日（金）です。申込みが定員を超えた場合は抽選となり、結果は締切から3日以内に電話でお知らせします。なお、インターネットでの申込みは受け付けておりません。\nキャンセルされる場合は、開催日の5日前までに受付へご連絡ください。陶芸教室に参加される方は、汚れてもよい服装でお越しください。科学実験教室は、保護者の方の同伴が必要です。駐車場は40台分しかありませんので、できるだけ公共交通機関をご利用ください。貴重品の管理は各自でお願いし、プラザでは責任を負いかねます。\nご不明な点は、かわさき市民プラザ（住所は川崎市花見町5-6-7）までお問い合わせください。受付時間は午前9時から午後5時までで、日曜日と祝日は休みです。\n4月29日に図書コーナーを利用したい場合、どうなりますか。",
+      "choices": [
+        "午前9時から午後8時まで利用できる。",
+        "午後5時で閉館する。",
+        "休館のため利用できない。",
+        "月曜日なので利用できない。"
+      ],
+      "answer": 2,
+      "explain_vi": "Góc thư viện bình thường mở 9–20 giờ, nhưng từ 29/4 đến 6/5 thì休館 (đoạn 4 câu 2), nên ngày 29/4 không dùng được. 'Đóng lúc 17 giờ' là quy định của ngày 27/4, còn 'thứ Hai nghỉ' là quy định của phòng thể thao."
+    }
+  ],
+  "study": {
+    "passage_title": "「かわさき市民プラザ 春の講座と施設利用のご案内」— Thông báo nhiều mục: khóa học, giờ mở cửa, phí, cách đăng ký",
+    "structure": "Bản thông báo của một trung tâm cộng đồng (hư cấu), gồm 8 đoạn, chia thành 6 mục rõ ràng theo trình tự: đoạn 1 mở đầu — giới thiệu nội dung thông báo và số điện thoại liên hệ chung; đoạn 2 liệt kê 4 khóa học mùa xuân — gốm 11/4, làm vườn 18/4, thí nghiệm khoa học 25/4, thể dục cho người cao tuổi 9/5 — mỗi khóa học có ngày, giờ, địa điểm; đoạn 3 nêu phí tham gia và định mức từng khóa học — gốm 2,000円 (gồm phí nguyên liệu, 24 người), làm vườn 1,200円 (30 người), thí nghiệm khoa học 800円 một cặp cha mẹ–con (15 cặp, chỉ nhận trẻ tiểu học đi cùng người bảo hộ), thể dục miễn phí (40 người, ưu tiên người từ 65 tuổi trở lên); đoạn 4 nêu giờ mở cửa từng khu — đa năng 9–21 giờ, phòng đào tạo 9–17 giờ, góc thư viện 9–20 giờ nhưng nghỉ 29/4–6/5, phòng thể thao 10–18 giờ và nghỉ thứ Hai, riêng 27/4 toàn館 đóng lúc 17 giờ; đoạn 5 nêu phí thuê phòng — đa năng 3,000円/giờ, phòng đào tạo 800円/giờ — và quy tắc giảm nửa phí cho người từ 65 tuổi trở lên và người có sổ tay người khuyết tật, với ngoại lệ: giảm giá KHÔNG áp dụng cho phí tham gia khóa học; đoạn 6 nêu cách đăng ký — chỉ qua điện thoại hoặc quầy tiếp nhận, hạn đăng ký riêng cho từng khóa học (3/4, 10/4, 17/4, 1/5), quá định mức thì bốc thăm và báo kết quả trong 3 ngày, không nhận đăng ký qua mạng; đoạn 7 nêu lưu ý — hủy trước 5 ngày, lớp gốm mặc đồ có thể bẩn, lớp thí nghiệm bắt buộc có người bảo hộ đi cùng, bãi đỗ xe chỉ 40 chỗ nên dùng phương tiện công cộng, tự quản lý đồ quý giá; đoạn 8 kết thúc — địa chỉ và giờ tiếp nhận (9–17 giờ, nghỉ Chủ nhật và ngày lễ). Bẫy chính của bài là số liệu trùng lặp giữa các mục: phí, ngày giờ và định mức của khóa học này rất dễ bị gán sang khóa học khác, và ngày tổ chức rất dễ bị nhầm với hạn đăng ký.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "かわさき{市民|しみん}プラザでは、4{月|つき}から5{月|つき}にかけて、{春|はる}の{講座|こうざ}と{施設|しせつ}{利用|りよう}のご{案内|あんない}を{次|つぎ}のとおりお{知|し}らせします。",
+        "vi": "Trung tâm công dân Kawasaki xin thông báo về các khóa học mùa xuân và việc sử dụng cơ sở vật chất từ tháng 4 đến tháng 5 như sau."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{詳細|しょうさい}については、プラザ{受付|うけつけ}（{電話|でんわ}044-9876-5432、{受付|うけつけ}{時間|じかん}は{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}まで）にお{問|と}い{合|いあ}わせください。",
+        "vi": "Về chi tiết, xin vui lòng liên hệ quầy tiếp nhận của trung tâm (điện thoại 044-9876-5432, giờ tiếp nhận từ 9 giờ sáng đến 5 giờ chiều)."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{春|はる}の{講座|こうざ}は、{次|つぎ}の4つです。",
+        "vi": "Các khóa học mùa xuân gồm 4 khóa học sau đây."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "まず、4{月|つき}11{日|か}（{土|ど}）{午前|ごぜん}10{時|じ}から{正午|しょうご}まで、{工芸|こうげい}{室|しつ}で「はじめての{陶芸|とうげい}{教室|きょうしつ}」を{開|ひら}きます。",
+        "vi": "Trước hết, từ 10 giờ sáng đến trưa thứ Bảy ngày 11 tháng 4, chúng tôi sẽ mở 'Lớp học gốm cho người mới bắt đầu' tại phòng thủ công."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "{次|つぎ}に、4{月|つき}18{日|か}（{土|ど}）{午後|ごご}1{時|じ}から3{時|じ}まで、{研修|けんしゅう}{室|しつ}で「{春|はる}のガーデニング{講座|こうざ}」を{行|おこな}います。",
+        "vi": "Tiếp theo, từ 1 giờ chiều đến 3 giờ chiều thứ Bảy ngày 18 tháng 4, chúng tôi sẽ tổ chức 'Khóa học làm vườn mùa xuân' tại phòng đào tạo."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{続|つづ}いて、4{月|つき}25{日|か}（{土|ど}）{午前|ごぜん}10{時|じ}から11{時|じ}{半|はん}まで、{実験|じっけん}{室|しつ}で「{親子|おやこ}で{楽|たの}しむ{科学|かがく}{実験|じっけん}{教室|きょうしつ}」を{開催|かいさい}します。",
+        "vi": "Tiếp đó, từ 10 giờ sáng đến 11 giờ rưỡi sáng thứ Bảy ngày 25 tháng 4, chúng tôi sẽ tổ chức 'Lớp học thí nghiệm khoa học vui cho cha mẹ và con' tại phòng thí nghiệm."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "{最後|さいご}に、5{月|つき}9{日|か}（{土|ど}）{午前|ごぜん}9{時|じ}{半|はん}から10{時|じ}{半|はん}まで、{体育|たいいく}{館|かん}で「シニアのための{健康|けんこう}{体操|たいそう}」を{行|おこな}います。",
+        "vi": "Cuối cùng, từ 9 giờ rưỡi sáng đến 10 giờ rưỡi sáng thứ Bảy ngày 9 tháng 5, chúng tôi sẽ tổ chức 'Thể dục sức khỏe dành cho người cao tuổi' tại phòng thể thao."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "{陶芸|とうげい}{教室|きょうしつ}の{参加|さんか}{費|ひ}は2,000{円|えん}で、{材料|ざいりょう}{費|ひ}を{含|ふく}み、{定員|ていいん}は24{人|にん}です。",
+        "vi": "Phí tham gia lớp học gốm là 2.000 yên, đã bao gồm phí nguyên liệu, và định mức là 24 người."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "ガーデニング{講座|こうざ}の{参加|さんか}{費|ひ}は1,200{円|えん}で、{定員|ていいん}は30{人|にん}です。",
+        "vi": "Phí tham gia khóa học làm vườn là 1.200 yên, và định mức là 30 người."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{科学|かがく}{実験|じっけん}{教室|きょうしつ}の{参加|さんか}{費|ひ}は{親子|おやこ}1{組|くみ}800{円|えん}で、{定員|ていいん}は15{組|くみ}ですが、{小学|しょうがく}{生|せい}のお{子|こ}さんと{保護|ほご}{者|しゃ}の{方|ほう}の{参加|さんか}に{限|かぎ}ります。",
+        "vi": "Phí tham gia lớp học thí nghiệm khoa học là 800 yên cho một cặp cha mẹ–con, định mức là 15 cặp, nhưng chỉ giới hạn cho trẻ tiểu học tham gia cùng người bảo hộ."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "{健康|けんこう}{体操|たいそう}は{参加|さんか}{費|ひ}{無料|むりょう}で、{定員|ていいん}は40{人|にん}ですが、65{歳|さい}{以上|いじょう}の{方|ほう}を{優先|ゆうせん}します。",
+        "vi": "Lớp thể dục sức khỏe tham gia miễn phí, định mức là 40 người, nhưng chúng tôi ưu tiên những người từ 65 tuổi trở lên."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{施設|しせつ}の{利用|りよう}{時間|じかん}は、{多|た}{目的|もくてき}ホールが{午前|ごぜん}9{時|じ}から{午後|ごご}9{時|じ}まで、{研修|けんしゅう}{室|しつ}が{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}までです。",
+        "vi": "Giờ sử dụng cơ sở vật chất là: phòng đa năng từ 9 giờ sáng đến 9 giờ tối, phòng đào tạo từ 9 giờ sáng đến 5 giờ chiều."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{図書|としょ}コーナーは{午前|ごぜん}9{時|じ}から{午後|ごご}8{時|じ}まで{利用|りよう}できますが、4{月|つき}29{日|か}から5{月|つき}6{日|か}までは{休館|きゅうかん}です。",
+        "vi": "Góc thư viện có thể sử dụng từ 9 giờ sáng đến 8 giờ tối, nhưng từ ngày 29 tháng 4 đến ngày 6 tháng 5 thì nghỉ."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{体育|たいいく}{館|かん}は{午前|ごぜん}10{時|じ}から{午後|ごご}6{時|じ}までで、{月曜|げつよう}{日|ひ}は{定期|ていき}{清掃|せいそう}のため{利用|りよう}できません。",
+        "vi": "Phòng thể thao mở từ 10 giờ sáng đến 6 giờ chiều, và vào thứ Hai thì không thể sử dụng do vệ sinh định kỳ."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "なお、4{月|つき}27{日|か}は{午後|ごご}5{時|じ}で{全館|ぜんかん}{閉館|へいかん}します。",
+        "vi": "Ngoài ra, ngày 27 tháng 4 toàn館 sẽ đóng cửa lúc 5 giờ chiều."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{施設|しせつ}の{利用|りよう}{料金|りょうきん}は、{多|た}{目的|もくてき}ホールが1{時間|じかん}3,000{円|えん}、{研修|けんしゅう}{室|しつ}が1{時間|じかん}800{円|えん}です。",
+        "vi": "Phí sử dụng cơ sở vật chất là: phòng đa năng 3.000 yên một giờ, phòng đào tạo 800 yên một giờ."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "65{歳|さい}{以上|いじょう}の{方|ほう}と{障|しょう}がい{者|しゃ}{手帳|てちょう}をお{持|も}ちの{方|ほう}は、{利用|りよう}{料金|りょうきん}が{半額|はんがく}になります。",
+        "vi": "Những người từ 65 tuổi trở lên và những người có sổ tay người khuyết tật sẽ được giảm một nửa phí sử dụng."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "ただし、{講座|こうざ}などの{主催|しゅさい}イベントの{参加|さんか}{費|ひ}には、この{割引|わりびき}は{適用|てきよう}されません。",
+        "vi": "Tuy nhiên, mức giảm giá này không áp dụng cho phí tham gia các khóa học hay sự kiện do trung tâm tổ chức."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "{講座|こうざ}の{申込|もうしこ}みは、{電話|でんわ}か{受付|うけつけ}{窓口|まどぐち}で{受|う}け{付|けつ}けます。",
+        "vi": "Việc đăng ký tham gia khóa học được tiếp nhận qua điện thoại hoặc tại quầy tiếp nhận."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{陶芸|とうげい}{教室|きょうしつ}の{申込|もうしこみ}{締切|しめきり}は4{月|つき}3{日|か}（{金|きん}）、ガーデニング{講座|こうざ}は4{月|つき}10{日|か}（{金|きん}）、{科学|かがく}{実験|じっけん}{教室|きょうしつ}は4{月|つき}17{日|か}（{金|きん}）、{健康|けんこう}{体操|たいそう}は5{月|つき}1{日|ついたち}（{金|きん}）です。",
+        "vi": "Hạn đăng ký của lớp học gốm là thứ Sáu ngày 3 tháng 4, của khóa học làm vườn là thứ Sáu ngày 10 tháng 4, của lớp học thí nghiệm khoa học là thứ Sáu ngày 17 tháng 4, và của lớp thể dục sức khỏe là thứ Sáu ngày 1 tháng 5."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "{申込|もうしこ}みが{定員|ていいん}を{超|こ}えた{場合|ばあい}は{抽選|ちゅうせん}となり、{結果|けっか}は{締切|しめきり}から3{日|か}{以内|いない}に{電話|でんわ}でお{知|し}らせします。",
+        "vi": "Trường hợp số người đăng ký vượt quá định mức thì sẽ bốc thăm, và kết quả sẽ được thông báo qua điện thoại trong vòng 3 ngày kể từ hạn đăng ký."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "なお、インターネットでの{申込|もうしこ}みは{受|う}け{付|けつ}けておりません。",
+        "vi": "Ngoài ra, chúng tôi không tiếp nhận đăng ký qua internet."
+      },
+      {
+        "para": 7,
+        "no": 1,
+        "ja": "キャンセルされる{場合|ばあい}は、{開催|かいさい}{日|ひ}の5{日|か}{前|まえ}までに{受付|うけつけ}へご{連絡|れんらく}ください。",
+        "vi": "Trường hợp hủy đăng ký, xin vui lòng liên hệ quầy tiếp nhận trước ngày tổ chức 5 ngày."
+      },
+      {
+        "para": 7,
+        "no": 2,
+        "ja": "{陶芸|とうげい}{教室|きょうしつ}に{参加|さんか}される{方|かた}は、{汚|よご}れてもよい{服装|ふくそう}でお{越|こ}しください。",
+        "vi": "Những người tham gia lớp học gốm xin vui lòng mặc trang phục có thể bị bẩn cũng được."
+      },
+      {
+        "para": 7,
+        "no": 3,
+        "ja": "{科学|かがく}{実験|じっけん}{教室|きょうしつ}は、{保護|ほご}{者|しゃ}の{方|ほう}の{同伴|どうはん}が{必要|ひつよう}です。",
+        "vi": "Đối với lớp học thí nghiệm khoa học, cần phải có người bảo hộ đi cùng."
+      },
+      {
+        "para": 7,
+        "no": 4,
+        "ja": "{駐車|ちゅうしゃ}{場|じょう}は40{台|だい}{分|ぶん}しかありませんので、できるだけ{公共|こうきょう}{交通|こうつう}{機関|きかん}をご{利用|りよう}ください。",
+        "vi": "Bãi đỗ xe chỉ có chỗ cho 40 xe, vì vậy xin vui lòng sử dụng phương tiện giao thông công cộng hết mức có thể."
+      },
+      {
+        "para": 7,
+        "no": 5,
+        "ja": "{貴重|きちょう}{品|ひん}の{管理|かんり}は{各自|かくじ}でお{願|ねが}いし、プラザでは{責任|せきにん}を{負|お}いかねます。",
+        "vi": "Việc quản lý đồ vật có giá trị xin mỗi người tự lo, trung tâm không thể chịu trách nhiệm."
+      },
+      {
+        "para": 8,
+        "no": 1,
+        "ja": "ご{不明|ふめい}な{点|てん}は、かわさき{市民|しみん}プラザ（{住所|じゅうしょ}は{川崎|かわさき}{市|し}{花見|はなみ}{町|まち}5-6-7）までお{問|と}い{合|いあ}わせください。",
+        "vi": "Nếu có điều gì chưa rõ, xin vui lòng liên hệ Trung tâm công dân Kawasaki (địa chỉ: 5-6-7 Hanamicho, thành phố Kawasaki)."
+      },
+      {
+        "para": 8,
+        "no": 2,
+        "ja": "{受付|うけつけ}{時間|じかん}は{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}までで、{日曜|にちよう}{日|ひ}と{祝日|しゅくじつ}は{休|やす}みです。",
+        "vi": "Giờ tiếp nhận là từ 9 giờ sáng đến 5 giờ chiều, và Chủ nhật cùng ngày lễ thì nghỉ."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ② · Câu 2 – đáp án ① · Câu 3 – đáp án ③ · Câu 4 – đáp án ③",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ5①②",
+        "options": [
+          {
+            "text": "9,000円",
+            "verdict": "SAI",
+            "reason": "Đây là phí thuê phòng đa năng 3 tiếng CHƯA giảm giá: 1時間3,000円 × 3時間 = 9,000円 (đoạn 5 câu 1). Nhưng người từ 65 tuổi trở lên được giảm nửa phí thuê phòng (đoạn 5 câu 2), nên đáp án này chưa áp dụng giảm giá. Bẫy bỏ qua điều kiện giảm giá."
+          },
+          {
+            "text": "4,500円",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với bài: phòng đa năng 1時間3,000円 (đoạn 5 câu 1) nên 3 tiếng là 9,000円; người 65歳以上 được 利用料金が半額 (đoạn 5 câu 2), còn 4,500円. Cần đối chiếu cả hai câu trong cùng một mục."
+          },
+          {
+            "text": "3,000円",
+            "verdict": "SAI",
+            "reason": "3,000円 là phí thuê MỘT giờ của phòng đa năng (多目的ホールが1時間3,000円, đoạn 5 câu 1), nhưng câu hỏi hỏi thuê 3 tiếng và còn phải áp dụng giảm giá. Lựa chọn này tính sai số giờ và bỏ qua giảm giá. Bẫy tính sai số liệu."
+          },
+          {
+            "text": "800円",
+            "verdict": "SAI",
+            "reason": "800円 là phí thuê MỘT giờ của PHÒNG研修 (研修室が1時間800円, đoạn 5 câu 1), không phải của phòng đa năng. Bẫy lấy số liệu của mục khác (phòng khác) gán sang."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ6②",
+        "options": [
+          {
+            "text": "4月3日（金）",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 6 câu 2: 陶芸教室の申込締切は4月3日（金） — đây đúng là hạn đăng ký của lớp học gốm 'はじめての陶芸教室'."
+          },
+          {
+            "text": "4月10日（金）",
+            "verdict": "SAI",
+            "reason": "4月10日（金） là hạn đăng ký của KHÓA LÀM VƯỜN (ガーデニング講座は4月10日, đoạn 6 câu 2), không phải của lớp gốm. Bẫy lấy hạn của khóa học khác gán sang."
+          },
+          {
+            "text": "4月17日（金）",
+            "verdict": "SAI",
+            "reason": "4月17日（金） là hạn đăng ký của LỚP THÍ NGHIỆM KHOA HỌC (科学実験教室は4月17日, đoạn 6 câu 2), không phải của lớp gốm. Bẫy lấy hạn của khóa học khác gán sang."
+          },
+          {
+            "text": "4月11日（土）",
+            "verdict": "SAI",
+            "reason": "4月11日（土） là NGÀY TỔ CHỨC lớp gốm (đoạn 2), không phải hạn đăng ký. Đăng ký phải xong trước ngày này. Bẫy tráo ngày tổ chức với hạn đăng ký."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 2,
+        "locator": "Đ7③・Đ3③",
+        "options": [
+          {
+            "text": "参加費は2,000円である。",
+            "verdict": "SAI",
+            "reason": "2,000円 là phí của LỚP GỐM (陶芸教室の参加費は2,000円, đoạn 3 câu 1); lớp thí nghiệm khoa học thì 親子1組800円 (đoạn 3 câu 3). Bẫy lấy số liệu của khóa học khác gán sang."
+          },
+          {
+            "text": "定員は30人である。",
+            "verdict": "SAI",
+            "reason": "30人 là định mức của KHÓA LÀM VƯỜN (ガーデニング講座の定員は30人, đoạn 3 câu 2); lớp thí nghiệm khoa học chỉ có định mức 15組 (đoạn 3 câu 3). Bẫy lấy số liệu của khóa học khác gán sang."
+          },
+          {
+            "text": "保護者の同伴が必要である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 7 câu 3: 科学実験教室は、保護者の方の同伴が必要です. Điều kiện này cũng khớp với đoạn 3 câu 3: lớp chỉ nhận 小学生のお子さんと保護者の方の参加."
+          },
+          {
+            "text": "午後1時から3時まで行われる。",
+            "verdict": "SAI",
+            "reason": "1 giờ chiều đến 3 giờ chiều là giờ của KHÓA LÀM VƯỜN (4月18日午後1時から3時まで, đoạn 2); lớp thí nghiệm khoa học diễn ra 午前10時から11時半まで (đoạn 2). Bẫy lấy giờ của khóa học khác gán sang."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "Đ4②",
+        "options": [
+          {
+            "text": "午前9時から午後8時まで利用できる。",
+            "verdict": "SAI",
+            "reason": "9–20 giờ là giờ mở cửa BÌNH THƯỜNG của góc thư viện (図書コーナーは午前9時から午後8時まで利用できます, đoạn 4 câu 2), nhưng cùng câu đó nói rõ 4月29日から5月6日までは休館. Lựa chọn này bỏ qua nửa sau của câu — bẫy đọc nửa câu."
+          },
+          {
+            "text": "午後5時で閉館する。",
+            "verdict": "SAI",
+            "reason": "'Đóng lúc 5 giờ chiều' là quy định của NGÀY 27/4 (4月27日は午後5時で全館閉館します, đoạn 4 câu 4), không phải ngày 29/4. Bẫy lấy số liệu của ngày khác gán sang."
+          },
+          {
+            "text": "休館のため利用できない。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 2: 図書コーナーは…4月29日から5月6日までは休館です. Ngày 29/4 nằm trong thời gian nghỉ nên góc thư viện không dùng được."
+          },
+          {
+            "text": "月曜日なので利用できない。",
+            "verdict": "SAI",
+            "reason": "'Thứ Hai không dùng được' là quy định của PHÒNG THỂ THAO (体育館は…月曜日は定期清掃のため利用できません, đoạn 4 câu 3), không phải của góc thư viện; hơn nữa 29/4 là ngày nghỉ lễ trong thời gian休館, không liên quan tới thứ Hai. Bẫy lấy quy định của phòng khác gán sang."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{定員|ていいん}",
+        "reading": "ていいん",
+        "hanviet": "Định Viên",
+        "vi": "định mức, số người tối đa được nhận"
+      },
+      {
+        "word": "{抽選|ちゅうせん}",
+        "reading": "ちゅうせん",
+        "hanviet": "Trừu Tuyển",
+        "vi": "sự bốc thăm, rút thăm"
+      },
+      {
+        "word": "{締切|しめきり}",
+        "reading": "しめきり",
+        "hanviet": "Đế Thiết",
+        "vi": "hạn chót, hạn đăng ký"
+      },
+      {
+        "word": "{休館|きゅうかん}",
+        "reading": "きゅうかん",
+        "hanviet": "Hưu Quán",
+        "vi": "sự đóng cửa (cả tòa nhà/cơ sở)"
+      },
+      {
+        "word": "{閉館|へいかん}",
+        "reading": "へいかん",
+        "hanviet": "Bế Quán",
+        "vi": "sự đóng cửa (hết giờ mở cửa trong ngày)"
+      },
+      {
+        "word": "{適用|てきよう}",
+        "reading": "てきよう",
+        "hanviet": "Thích Dụng",
+        "vi": "sự áp dụng (quy định, giảm giá)"
+      },
+      {
+        "word": "{優先|ゆうせん}",
+        "reading": "ゆうせん",
+        "hanviet": "Ưu Tiên",
+        "vi": "sự ưu tiên"
+      },
+      {
+        "word": "{同伴|どうはん}",
+        "reading": "どうはん",
+        "hanviet": "Đồng Bạn",
+        "vi": "sự đi cùng, đi kèm (người bảo hộ)"
+      },
+      {
+        "word": "{貴重|きちょう}{品|ひん}",
+        "reading": "きちょうひん",
+        "hanviet": "Quý Trọng Phẩm",
+        "vi": "đồ vật có giá trị, đồ quý giá"
+      },
+      {
+        "word": "{定期|ていき}{清掃|せいそう}",
+        "reading": "ていきせいそう",
+        "hanviet": "Định Kỳ Thanh Tảo",
+        "vi": "vệ sinh định kỳ"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜かねます",
+        "vi": "không thể… (cách nói lịch sự, khiêm nhường khi từ chối hoặc nói về giới hạn)",
+        "in_text": "貴重品の管理は各自でお願いし、プラザでは責任を負いかねます。"
+      },
+      {
+        "pattern": "〜ておりません",
+        "vi": "không… (thể lịch sự trang trọng của 〜ていない, thường dùng trong thông báo)",
+        "in_text": "なお、インターネットでの申込みは受け付けておりません。"
+      },
+      {
+        "pattern": "〜しか〜ない",
+        "vi": "chỉ có… (giới hạn, nhấn mạnh số lượng ít)",
+        "in_text": "駐車場は40台分しかありませんので、できるだけ公共交通機関をご利用ください。"
+      },
+      {
+        "pattern": "〜までに",
+        "vi": "trước (thời điểm)… / chậm nhất là… (hạn chót)",
+        "in_text": "キャンセルされる場合は、開催日の5日前までに受付へご連絡ください。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm giới hạn số lượng: しか〜ない / だけ / のみ",
+        "rows": [
+          {
+            "form": "〜しか〜ない",
+            "join": "N + しか + Vない",
+            "vi": "chỉ có… (thôi)",
+            "diff": "Luôn đi với động từ phủ định; nhấn mạnh số lượng ÍT hơn mong đợi, mang sắc thái tiếc nuối hoặc hạn chế. Dùng trong văn nói và văn viết.",
+            "example_ja": "{駐車|ちゅうしゃ}{場|じょう}は40{台|だい}{分|ぶん}しかありません。",
+            "example_vi": "Bãi đỗ xe chỉ có chỗ cho 40 xe thôi."
+          },
+          {
+            "form": "〜だけ",
+            "join": "N + だけ",
+            "vi": "chỉ… (thôi)",
+            "diff": "Giới hạn trung tính, không mang sắc thái tiếc nuối như しか; dùng được cả với động từ khẳng định, nhấn mạnh 'chỉ có thế, không hơn'.",
+            "example_ja": "{定員|ていいん}は24{人|にん}だけです。",
+            "example_vi": "Định mức chỉ là 24 người thôi."
+          },
+          {
+            "form": "〜のみ",
+            "join": "N + のみ",
+            "vi": "chỉ… (duy nhất)",
+            "diff": "Trang trọng, văn viết; giống だけ nhưng cứng và chính thức hơn, thường dùng trong thông báo, quy định, hợp đồng.",
+            "example_ja": "{申込|もうしこ}みは{電話|でんわ}のみ{受|う}け{付|けつ}けます。",
+            "example_vi": "Đăng ký chỉ được tiếp nhận qua điện thoại."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm giới hạn đối tượng・điều kiện: に限ります / を優先します / が必要です",
+        "rows": [
+          {
+            "form": "〜に限ります",
+            "join": "N / Vる + に限ります",
+            "vi": "chỉ giới hạn ở…",
+            "diff": "Quy định đối tượng DUY NHẤT được phép; ngoài đối tượng đó thì không được tham gia. Mạnh và dứt khoát hơn を優先します.",
+            "example_ja": "{科学|かがく}{実験|じっけん}{教室|きょうしつ}は、{小学|しょうがく}{生|せい}のお{子|こ}さんと{保護|ほご}{者|しゃ}の{方|ほう}の{参加|さんか}に{限|かぎ}ります。",
+            "example_vi": "Lớp học thí nghiệm khoa học chỉ giới hạn cho trẻ tiểu học tham gia cùng người bảo hộ."
+          },
+          {
+            "form": "〜を優先します",
+            "join": "N + を優先します",
+            "vi": "ưu tiên…",
+            "diff": "Không cấm người khác, chỉ xếp đối tượng đó lên trước khi quá định mức hoặc khi xét tuyển; nhẹ hơn に限ります, người ngoài đối tượng vẫn có thể tham gia nếu còn chỗ.",
+            "example_ja": "{健康|けんこう}{体操|たいそう}は、65{歳|さい}{以上|いじょう}の{方|ほう}を{優先|ゆうせん}します。",
+            "example_vi": "Lớp thể dục sức khỏe ưu tiên những người từ 65 tuổi trở lên."
+          },
+          {
+            "form": "〜が必要です",
+            "join": "N / Vること + が必要です",
+            "vi": "cần phải… / cần có…",
+            "diff": "Điều kiện BẮT BUỘC, thiếu thì không tham gia được; khác với を優先します (chỉ là xếp trước) và に限ります (giới hạn đối tượng).",
+            "example_ja": "{科学|かがく}{実験|じっけん}{教室|きょうしつ}は、{保護|ほご}{者|しゃ}の{方|ほう}の{同伴|どうはん}が{必要|ひつよう}です。",
+            "example_vi": "Đối với lớp học thí nghiệm khoa học, cần phải có người bảo hộ đi cùng."
+          }
+        ]
+      }
+    ]
+  }
+}

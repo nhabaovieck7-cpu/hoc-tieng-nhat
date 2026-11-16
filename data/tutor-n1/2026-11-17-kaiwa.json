@@ -1,0 +1,357 @@
+{
+  "lesson": 33,
+  "topic": "Lần đầu đi làm thủ tục chuyển nhà ở区役所 (đổi địa chỉ, đăng ký My Number) (初めて区役所で引っ越しの手続きをする)",
+  "summary": "Bối cảnh: 拓海 vừa chuyển nhà sang khu khác nên phải ra区役所 làm thủ tục chuyển đến (転入届) trong vòng 14 ngày, rủ 莉子 đi cùng vì lần đầu làm nên không biết bắt đầu từ đâu. Ở区役所, hai người lấy số thứ tự ở máy phát số, hỏi quầy nào làm thủ tục chuyển nhà, điền đơn 転入届, hỏi có cần mang thêm giấy tờ gì không và hỏi luôn về thẻ My Number — địa chỉ trên thẻ có phải đổi không, làm ở quầy nào, mất bao lâu. Về đến nhà, hai người dán nhãn lên các thùng đồ đã đóng gói — thùng nào đồ bếp, thùng nào quần áo, thùng nào đồ dễ vỡ — rồi 拓海 nhắn tin báo người nhà là thủ tục xong rồi, địa chỉ mới là ở đâu, hôm nào chuyển đồ sang nhà mới. Kỹ năng luyện: văn nói bạn bè ở quầy hành chính — hỏi quầy nào, hỏi cách điền đơn, nhờ nhân viên kiểm tra lại giúp; cách nói khi dọn nhà ở nhà (thùng này để đâu, dán nhãn chỗ nào, cái nào mở trước) và cách nhắn tin báo người nhà một cách tự nhiên. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng thủ tục hành chính và chuyển nhà (区役所, 転入届, 転出届, 整理券, 番号札, 窓口, マイナンバーカード, 住民票, 本人確認書類, 届け出), cách hỏi quầy làm thủ tục bằng kính ngữ rút gọn với nhân viên (〜の手続きって、どこの窓口ですか, 〜って書けばいいですか), và cách nói về thời hạn thủ tục một cách tự nhiên (14日以内に, 〜までにやらなきゃ).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở区役所, lấy số thứ tự, hỏi quầy và điền đơn 転入届）",
+      "stage": "（Buổi sáng, sảnh区役所 mới của 拓海. Hai người vừa bước vào, trước mặt là máy phát số thứ tự và bảng chỉ dẫn các quầy. 拓海 cầm theo thẻ lưu trú, thẻ My Number và một tờ giấy ghi địa chỉ mới.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "うわ、{区|く}{役所|やくしょ}ってさ、{朝|あさ}から{人|ひと}{多|おお}いね。まずさ、{整理|せいり}{券|けん}{取|と}らなきゃだよね。",
+          "vi": "Chà,区役所 ấy, sáng ra mà đông người thật. Trước tiên phải lấy số thứ tự đã nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{取|と}っとこう。あ、あの{機械|きかい}だよ。{引|ひ}っ{越|っこ}しの{手続|てつづ}きって、どれ{押|お}せばいいのかな。",
+          "vi": "Ừ, lấy đi. À, cái máy kia kìa. Thủ tục chuyển nhà thì bấm cái nào nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "すみません、{転入|てんにゅう}{届|とどけ}の{手続|てつづ}きって、どこの{窓口|まどぐち}ですか。",
+          "vi": "Xin lỗi, thủ tục nộp đơn chuyển đến thì làm ở quầy nào ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "お、3{番|ばん}の{窓口|まどぐち}だってさ。{番号|ばんごう}{札|さつ}、12{番|ばん}だよ。あと{何|なん}{人待|ひとま}ちかな。",
+          "vi": "Ồ, quầy số 3 đấy. Số thứ tự là 12 này. Còn phải chờ mấy người nữa nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、{転出|てんしゅつ}{届|とどけ}ってさ、{前|まえ}の{区|く}{役所|やくしょ}でもらったやつだよね。これでいいのかな。",
+          "vi": "Ừm, giấy chuyển đi ấy, là tờ nhận ở区役所 cũ đúng không? Tờ này là được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、それとさ、{在留|ざいりゅう}カードも{出|だ}さなきゃ。あ、マイナンバーカードも{一緒|いっしょ}に{持|も}ってきた？",
+          "vi": "Ừ, với cả phải đưa cả thẻ lưu trú nữa. À, thẻ My Number cậu có mang theo không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{持|も}ってきたよ。あの、{転入|てんにゅう}{届|とどけ}ってさ、ここに{新|あたら}しい{住所|じゅうしょ}を{書|か}けばいいですか。",
+          "vi": "Mang rồi đây. À, đơn chuyển đến này, ghi địa chỉ mới vào đây là được ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ねえ、{引|ひ}っ{越|っこ}した{日|ひ}ってさ、いつって{書|か}くの？{荷物|にもつ}を{運|はこ}んだ{日|ひ}でいいの？",
+          "vi": "Này, ngày chuyển nhà ấy, ghi ngày nào? Ghi ngày chuyển đồ có được không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "すみません、マイナンバーカードの{住所|じゅうしょ}って、ここで{変|か}えてもらえますか。",
+          "vi": "Xin lỗi, địa chỉ trên thẻ My Number thì có đổi luôn ở đây được không ạ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "オッケー、{終|お}わったね。あ、{住民|じゅうみん}{票|ひょう}も1{通|どおり}もらっといたほうがいいってさ。",
+          "vi": "Được rồi, xong rồi nhé. À, nghe bảo nên lấy thêm 1 bản giấy chứng nhận cư trú nữa đấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（về nhà dán nhãn thùng đồ và nhắn tin báo người nhà）",
+      "stage": "（Buổi chiều cùng ngày, phòng khách nhà mới của 拓海. Sàn nhà xếp đầy thùng carton đã đóng gói, bên cạnh là bút dạ, băng dính và một xấp nhãn dán. Hai người vừa dán nhãn vừa chuẩn bị nhắn tin cho người nhà.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ただいまー。ふう、{区|く}{役所|やくしょ}、{思|おも}ったより{早|はや}く{終|お}わったね。さ、ラベル{貼|は}っちゃおうよ。",
+          "vi": "Về rồi đây. Phù,区役所 xong nhanh hơn tớ tưởng nhỉ. Nào, dán nhãn lên thùng đi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{貼|は}っちゃおう。あ、この{箱|はこ}、キッチンって{書|か}いといて。お{皿|さら}とか{入|はい}ってるからさ。",
+          "vi": "Ừ, dán đi. À, thùng này thì ghi là đồ bếp nhé. Vì có bát đĩa trong này mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いいね。ってさ、{割|わ}れ{物|れもの}って、{赤|あか}で{大|おお}きく{書|か}いとこうよ。{運|はこ}ぶ{人|ひと}が{気|き}づくしさ。",
+          "vi": "Ồ, hay đấy. Này, chữ đồ dễ vỡ thì viết to bằng bút đỏ nhé. Để người chuyển đồ còn để ý."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。あ、この{箱|はこ}はさ、すぐ{使|つか}うものだけ{入|い}れといたよ。{歯|は}ブラシとか{充電|じゅうでん}{器|き}とかさ。",
+          "vi": "Ừ nhỉ. À, thùng này thì tớ chỉ cho đồ dùng ngay thôi đấy. Bàn chải với sạc các thứ ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{助|たす}かるわ。あ、ベランダの{箱|はこ}、まだ{開|あ}けてないよね。あとで{一緒|いっしょ}に{見|み}ようよ。",
+          "vi": "May quá. À, thùng ở ban công ấy, vẫn chưa mở đúng không? Lát nữa cùng xem nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{開|あ}けてないよ。じゃあ、{貼|は}り{終|お}わったらさ、うちの{人|ひと}に{連絡|れんらく}しなよ。",
+          "vi": "Ừ, chưa mở đâu. Thế dán xong thì nhắn cho người nhà đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうする。えっとさ、「{区|く}{役所|やくしょ}の{手続|てつづ}き{終|お}わったよ。{新|あたら}しい{住所|じゅうしょ}はここだよ。{荷物|にもつ}は{週末|しゅうまつ}に{運|はこ}ぶよ」って{送|おく}ればいいかな。",
+          "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Thủ tục ở区役所 xong rồi nhé. Địa chỉ mới là đây nhé. Đồ đạc thì cuối tuần chuyển nhé' thì được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいじゃん、それで。あ、{住所|じゅうしょ}、{間違|まちが}えないようにコピペしなよ。",
+          "vi": "Được đấy, nhắn thế đi. À, địa chỉ thì copy dán cho khỏi nhầm nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、そうだね。あ、{写真|しゃしん}も{一緒|いっしょ}に{送|おく}っとこう。{部屋|へや}、だいぶ{片付|かたづ}いたしさ。",
+          "vi": "Ồ, đúng rồi. À, gửi kèm cả ảnh nữa nhé. Phòng dọn cũng kha khá rồi mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん。{引|ひ}っ{越|っこ}しってさ、{大変|たいへん}だけどさ、{新|あたら}しい{街|まち}、{楽|たの}しみだよね。",
+          "vi": "Ừ. Chuyển nhà thì vất vả thật nhưng mà khu phố mới cũng đáng mong chờ nhỉ."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "区役所で転入届の手続きをしたいのですが、どこの窓口に行けばよろしいですか。",
+      "real": "すみません、転入届の手続きって、どこの窓口ですか。",
+      "why": "Sách giáo khoa dùng 〜したいのですが và 行けばよろしいですか một cách trang trọng, hỏi như đang viết đơn xin hướng dẫn. Nói thật thì mở đầu bằng すみません, dùng って để đưa chủ đề 転入届 lên trước, và kết bằng どこの窓口ですか ngắn gọn. Câu sách giáo khoa nghe như đang hỏi trong một cuộc phỏng vấn, còn câu nói thật nghe như người vừa bước vào sảnh区役所, tay cầm giấy tờ, hỏi nhân viên ngay tại chỗ."
+    },
+    {
+      "textbook": "整理券を取らなければなりません。番号札は12番です。",
+      "real": "まずさ、整理券取らなきゃだよね。番号札、12番だよ。",
+      "why": "Bạn bè hay rút なければなりません thành なきゃ và thêm さ・だよね để vừa nhắc nhau vừa xác nhận, còn số thứ tự thì nói cụt lủn 番号札、12番だよ như đang giơ tờ số lên cho bạn xem. Câu sách giáo khoa chia thành hai câu trang trọng, nghe như đang đọc quy định trong sổ tay, còn câu nói thật nghe như hai người đang đứng trước máy phát số, vừa bấm máy vừa nói với nhau."
+    },
+    {
+      "textbook": "転入届に新しい住所を書けばよろしいですか。マイナンバーカードの住所を変更していただけますか。",
+      "real": "あの、転入届ってさ、ここに新しい住所を書けばいいですか。マイナンバーカードの住所って、ここで変えてもらえますか。",
+      "why": "Văn nói với nhân viên ở quầy hay rút よろしいですか thành いいですか, rút 変更していただけますか thành 変えてもらえますか, thêm ってさ để nhấn mạnh chủ đề đang hỏi. Câu sách giáo khoa nghe như đang xác nhận thủ tục một cách cứng nhắc, còn câu nói thật nghe như đang cầm đơn trên tay, vừa chỉ vào ô cần điền vừa hỏi cho chắc."
+    },
+    {
+      "textbook": "ラベルを貼りましょう。割れ物と大きく書きましょう。",
+      "real": "さ、ラベル貼っちゃおうよ。割れ物って、赤で大きく書いとこうよ。",
+      "why": "Văn nói ở nhà dùng 貼っちゃおう và 書いとこう (rút gọn của 貼ってしまおう・書いておこう) để rủ nhau làm một việc rất đời thường, kèm よ để rủ rê thân mật. Câu sách giáo khoa dùng ましょう trang trọng, nghe như đang hướng dẫn trong một video dạy dọn nhà, còn câu nói thật nghe như hai người đang ngồi giữa đống thùng carton, vừa cầm bút dạ vừa bàn nhau viết nhãn thế nào."
+    },
+    {
+      "textbook": "区役所の手続きが終わりました。新しい住所はここです。荷物は週末に運びます。",
+      "real": "区役所の手続き終わったよ。新しい住所はここだよ。荷物は週末に運ぶよ。",
+      "why": "Nhắn tin cho người nhà thì dùng 終わったよ và 運ぶよ ngắn gọn, dùng ここだよ để đưa địa chỉ mới một cách thân mật, chứ không dùng です・ます trang trọng. Câu sách giáo khoa nghe như đang viết email báo cáo, còn câu nói thật nghe như một tin nhắn gửi vội từ điện thoại sau khi dán nhãn thùng xong."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜んですけど",
+      "in_lesson": "転入届の手続きって、どこの窓口ですか",
+      "original": "〜のですが / 〜なんですが",
+      "vi": "Dạng nói suồng sã của のですが: nêu lý do, hoàn cảnh trước rồi mới hỏi — ở đây là muốn làm thủ tục chuyển đến nên hỏi quầy nào; mở đầu bằng すみません thì nghe lịch sự mà vẫn tự nhiên.",
+      "use": "Dùng khi hỏi nhân viên ở quầy, hỏi đường, hỏi thủ tục — nói lý do trước rồi mới vào câu hỏi chính.",
+      "avoid": "Tránh trong văn bản chính thức và đơn từ (khi đó dùng 〜のですが・〜ますので)."
+    },
+    {
+      "form": "〜ばいいですか",
+      "in_lesson": "ここに新しい住所を書けばいいですか",
+      "original": "〜ばよろしいですか",
+      "vi": "Điền / làm thế này là được à? — cách hỏi xác nhận thủ tục rất hay dùng ở quầy hành chính khi cầm đơn trên tay, vừa chỉ vào ô cần điền vừa hỏi.",
+      "use": "Dùng với nhân viên ở quầy khi muốn xác nhận mình điền đơn, nộp giấy tờ hay làm thủ tục như vậy đã đúng chưa.",
+      "avoid": "Tránh khi hỏi ý kiến mang tính quyết định quan trọng (khi đó dùng 〜べきですか・〜たほうがいいですか)."
+    },
+    {
+      "form": "〜なきゃ",
+      "in_lesson": "整理券取らなきゃだよね",
+      "original": "〜なければならない",
+      "vi": "Rút gọn của なければならない: phải làm… — ở đây là phải lấy số thứ tự trước khi chờ đến lượt ở区役所; thêm だよね để vừa nhắc nhau vừa xác nhận.",
+      "use": "Dùng với bạn bè, người thân khi nhắc nhau việc bắt buộc phải làm, nhất là thủ tục có thời hạn như 転入届 trong 14 ngày.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜なければなりません)."
+    },
+    {
+      "form": "〜ちゃおう",
+      "in_lesson": "ラベル貼っちゃおうよ",
+      "original": "〜てしまおう",
+      "vi": "Rút gọn của てしまおう: cứ làm luôn đi / làm cho xong đi — ở đây là rủ nhau dán nhãn lên các thùng đồ cho xong việc dọn nhà.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau làm một việc đời thường cho xong.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜ましょう・〜てください)."
+    },
+    {
+      "form": "〜といた",
+      "in_lesson": "住民票も1通もらっといたほうがいいってさ",
+      "original": "〜ておいた",
+      "vi": "Rút gọn của ておいた: đã làm sẵn / đã lấy sẵn rồi — ở đây là khuyên nên lấy sẵn một bản giấy chứng nhận cư trú phòng khi sau này cần dùng; もらっといたほうがいい là cách khuyên rất tự nhiên.",
+      "use": "Dùng với bạn bè, người thân khi khuyên nhau chuẩn bị sẵn giấy tờ, đồ đạc phòng khi cần dùng sau.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên (khi đó dùng 〜ておいたほうがいいです)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{区|く}{役所|やくしょ}",
+      "reading": "くやくしょ",
+      "vi": "Ủy ban quận / văn phòng quận — cơ quan hành chính địa phương ở Nhật, nơi làm thủ tục chuyển nhà, đăng ký địa chỉ, đổi thẻ My Number và xin giấy chứng nhận cư trú.",
+      "example_ja": "{区|く}{役所|やくしょ}ってさ、{朝|あさ}から{人|ひと}{多|おお}いね。",
+      "example_vi": "区役所 ấy, sáng ra mà đông người thật."
+    },
+    {
+      "expr": "{転入|てんにゅう}{届|とどけ}",
+      "reading": "てんにゅうとどけ",
+      "vi": "Đơn khai chuyển đến / đơn đăng ký chuyển đến — tờ đơn phải nộp ở区役所 mới trong vòng 14 ngày sau khi chuyển nhà, để đăng ký địa chỉ mới vào sổ cư trú.",
+      "example_ja": "{転入|てんにゅう}{届|とどけ}ってさ、ここに{新|あたら}しい{住所|じゅうしょ}を{書|か}けばいいですか。",
+      "example_vi": "Đơn chuyển đến này, ghi địa chỉ mới vào đây là được ạ?"
+    },
+    {
+      "expr": "{整理|せいり}{券|けん}",
+      "reading": "せいりけん",
+      "vi": "Số thứ tự / phiếu chờ lượt — tờ số lấy ở máy phát số trong sảnh区役所, ngân hàng hay bệnh viện; đến lượt mình thì số hiện trên bảng điện tử, nhân viên gọi số đó.",
+      "example_ja": "まずさ、{整理|せいり}{券|けん}{取|と}らなきゃだよね。",
+      "example_vi": "Trước tiên phải lấy số thứ tự đã nhỉ."
+    },
+    {
+      "expr": "{窓口|まどぐち}",
+      "reading": "まどぐち",
+      "vi": "Quầy giao dịch / quầy tiếp nhận — từng quầy ở区役所 phụ trách một loại thủ tục khác nhau; làm thủ tục chuyển nhà thì phải hỏi đúng quầy, không phải quầy nào cũng làm được.",
+      "example_ja": "{転入|てんにゅう}{届|とどけ}の{手続|てつづ}きって、どこの{窓口|まどぐち}ですか。",
+      "example_vi": "Thủ tục nộp đơn chuyển đến thì làm ở quầy nào ạ?"
+    },
+    {
+      "expr": "マイナンバーカード",
+      "reading": "まいなんばーかーど",
+      "vi": "Thẻ My Number — thẻ định danh cá nhân ở Nhật, có ghi địa chỉ; chuyển nhà thì phải mang theo để đổi địa chỉ trên thẻ, và khi làm thủ tục cũng dùng làm giấy tờ xác nhận danh tính.",
+      "example_ja": "マイナンバーカードの{住所|じゅうしょ}って、ここで{変|か}えてもらえますか。",
+      "example_vi": "Địa chỉ trên thẻ My Number thì có đổi luôn ở đây được không ạ?"
+    },
+    {
+      "expr": "{住民|じゅうみん}{票|ひょう}",
+      "reading": "じゅうみんひょう",
+      "vi": "Giấy chứng nhận cư trú — giấy xác nhận địa chỉ và thông tin cư trú, xin ở区役所; hay cần khi làm thủ tục ở ngân hàng, công ty hay xin visa, nên lấy sẵn 1 bản phòng khi cần.",
+      "example_ja": "{住民|じゅうみん}{票|ひょう}も1{通|どおり}もらっといたほうがいいってさ。",
+      "example_vi": "Nghe bảo nên lấy thêm 1 bản giấy chứng nhận cư trú nữa đấy."
+    }
+  ],
+  "mindset": [
+    "Ở Nhật, chuyển nhà sang khu khác thì phải làm hai bước thủ tục: trước khi chuyển, ra区役所 cũ nộp 転出届 (đơn khai chuyển đi) để nhận giấy chuyển đi; sau khi chuyển, trong vòng 14 ngày phải ra区役所 mới nộp 転入届 (đơn khai chuyển đến) để đăng ký địa chỉ mới. Quá hạn 14 ngày có thể bị nhắc nhở hoặc phạt, nên người Nhật thường đi làm ngay trong tuần đầu sau khi chuyển. Khi đi, phải mang theo giấy chuyển đi, thẻ lưu trú (在留カード) và thẻ My Number (マイナンバーカード) để nhân viên đổi địa chỉ trên thẻ luôn. Trong bài, 拓海 đi cùng 莉子 vì lần đầu làm nên hỏi từng bước một — đó là chuyện rất bình thường, nhân viên区役所 quen hướng dẫn người làm thủ tục lần đầu.",
+    "区役所 ở Nhật buổi sáng thường rất đông, nên việc đầu tiên khi bước vào sảnh là lấy số thứ tự (整理券) ở máy phát số, rồi ngồi chờ đến khi bảng điện tử hiện số của mình. Mỗi loại thủ tục làm ở một quầy (窓口) khác nhau — thủ tục chuyển nhà, thủ tục My Number, xin giấy chứng nhận cư trú (住民票) có thể là các quầy khác nhau — nên nếu không biết thì cứ hỏi nhân viên ở cửa: 転入届の手続きって、どこの窓口ですか. Nhân viên sẽ chỉ đúng quầy, đưa đơn cho điền, và kiểm tra lại giúp trước khi nhận. Trong bài, hai người lấy số 12 ở quầy số 3 rồi điền đơn ngay tại chỗ — đó là quy trình rất quen thuộc ở区役所 Nhật.",
+    "Khi dọn nhà ở Nhật, người ta hay dán nhãn (ラベル) lên từng thùng carton — ghi rõ thùng nào đồ bếp, thùng nào quần áo, thùng nào đồ dễ vỡ (割れ物) — để khi chuyển đồ sang nhà mới thì biết thùng nào mở trước, thùng nào để sau, và người chuyển đồ cũng biết thùng nào phải nhẹ tay. Thùng đựng đồ dùng ngay (bàn chải, sạc điện thoại, đồ ngủ) thường được đánh dấu riêng để mở đầu tiên trong đêm đầu ở nhà mới. Sau khi thủ tục xong, người Nhật hay nhắn tin báo người nhà: thủ tục ở区役所 xong rồi, địa chỉ mới là ở đâu, đồ đạc khi nào chuyển xong — tin nhắn thường rất ngắn gọn, dùng văn nói như 終わったよ, ここだよ, 運ぶよ, và địa chỉ mới thì copy dán cho khỏi nhầm. Trong bài, 拓海 nhắn tin ngay sau khi dán nhãn xong, kèm cả ảnh phòng đã dọn — đó là cách báo tin rất đời thường trong văn hóa chuyển nhà của người Nhật."
+  ],
+  "mistakes": [
+    "Đừng nhầm 転入届 với 転出届: 転出届 là đơn khai chuyển đi, nộp ở区役所 cũ trước khi chuyển; 転入届 là đơn khai chuyển đến, nộp ở区役所 mới sau khi chuyển — nộp nhầm nơi là thủ tục không xong, phải đi lại.",
+    "Đừng để quá 14 ngày sau khi chuyển nhà mới đi nộp 転入届: luật quy định phải khai chuyển đến trong vòng 14 ngày, quá hạn có thể bị nhắc nhở hoặc phạt tiền — chuyển xong thì nên ra区役所 ngay trong tuần đầu.",
+    "Đừng quên mang thẻ My Number (マイナンバーカード) và thẻ lưu trú (在留カード) khi đi làm thủ tục: nhân viên cần hai giấy này để xác nhận danh tính và đổi địa chỉ trên thẻ My Number luôn — quên thì phải đi lại lần nữa.",
+    "Đừng điền ngày chuyển nhà một cách qua loa trên đơn 転入届: ngày chuyển (引っ越した日) phải ghi đúng ngày thực tế đã chuyển đến địa chỉ mới, vì ngày này là căn cứ để tính thời hạn 14 ngày — không chắc thì hỏi nhân viên trước khi ghi."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn vừa chuyển nhà sang khu khác và lần đầu ra区役所. Hãy hỏi nhân viên: lấy số thứ tự ở đâu, thủ tục chuyển đến (転入届) làm ở quầy nào, và phải mang theo giấy tờ gì.",
+    "Tình huống 2: Bạn đang điền đơn 転入届 ở区役所. Hãy hỏi nhân viên: địa chỉ mới ghi vào chỗ nào, ngày chuyển nhà ghi ngày nào, và địa chỉ trên thẻ My Number có đổi luôn ở đây được không.",
+    "Tình huống 3: Bạn vừa về nhà mới và đang dán nhãn lên các thùng đồ cùng một người bạn. Hãy bàn với bạn: thùng nào ghi đồ bếp, thùng nào ghi đồ dễ vỡ, thùng nào đựng đồ dùng ngay, và dán nhãn ở chỗ nào.",
+    "Tình huống 4: Bạn vừa làm xong thủ tục ở区役所 và dán nhãn thùng xong, muốn nhắn tin báo người nhà. Hãy nhắn: thủ tục xong rồi, địa chỉ mới là ở đâu, đồ đạc khi nào chuyển xong, và gửi kèm ảnh phòng đã dọn."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "うわ、{区|く}{役所|やくしょ}ってさ、{朝|あさ}から{人|ひと}{多|おお}いね。まずさ、{整理|せいり}{券|けん}{取|と}らなきゃだよね。",
+      "vi": "Chà,区役所 ấy, sáng ra mà đông người thật. Trước tiên phải lấy số thứ tự đã nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{取|と}っとこう。あ、あの{機械|きかい}だよ。{引|ひ}っ{越|っこ}しの{手続|てつづ}きって、どれ{押|お}せばいいのかな。",
+      "vi": "Ừ, lấy đi. À, cái máy kia kìa. Thủ tục chuyển nhà thì bấm cái nào nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "すみません、{転入|てんにゅう}{届|とどけ}の{手続|てつづ}きって、どこの{窓口|まどぐち}ですか。",
+      "vi": "Xin lỗi, thủ tục nộp đơn chuyển đến thì làm ở quầy nào ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "お、3{番|ばん}の{窓口|まどぐち}だってさ。{番号|ばんごう}{札|さつ}、12{番|ばん}だよ。あと{何|なん}{人待|ひとま}ちかな。",
+      "vi": "Ồ, quầy số 3 đấy. Số thứ tự là 12 này. Còn phải chờ mấy người nữa nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、{転出|てんしゅつ}{届|とどけ}ってさ、{前|まえ}の{区|く}{役所|やくしょ}でもらったやつだよね。これでいいのかな。",
+      "vi": "Ừm, giấy chuyển đi ấy, là tờ nhận ở区役所 cũ đúng không? Tờ này là được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、それとさ、{在留|ざいりゅう}カードも{出|だ}さなきゃ。あ、マイナンバーカードも{一緒|いっしょ}に{持|も}ってきた？",
+      "vi": "Ừ, với cả phải đưa cả thẻ lưu trú nữa. À, thẻ My Number cậu có mang theo không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{持|も}ってきたよ。あの、{転入|てんにゅう}{届|とどけ}ってさ、ここに{新|あたら}しい{住所|じゅうしょ}を{書|か}けばいいですか。",
+      "vi": "Mang rồi đây. À, đơn chuyển đến này, ghi địa chỉ mới vào đây là được ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ねえ、{引|ひ}っ{越|っこ}した{日|ひ}ってさ、いつって{書|か}くの？{荷物|にもつ}を{運|はこ}んだ{日|ひ}でいいの？",
+      "vi": "Này, ngày chuyển nhà ấy, ghi ngày nào? Ghi ngày chuyển đồ có được không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "すみません、マイナンバーカードの{住所|じゅうしょ}って、ここで{変|か}えてもらえますか。",
+      "vi": "Xin lỗi, địa chỉ trên thẻ My Number thì có đổi luôn ở đây được không ạ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "オッケー、{終|お}わったね。あ、{住民|じゅうみん}{票|ひょう}も1{通|どおり}もらっといたほうがいいってさ。",
+      "vi": "Được rồi, xong rồi nhé. À, nghe bảo nên lấy thêm 1 bản giấy chứng nhận cư trú nữa đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ただいまー。ふう、{区|く}{役所|やくしょ}、{思|おも}ったより{早|はや}く{終|お}わったね。さ、ラベル{貼|は}っちゃおうよ。",
+      "vi": "Về rồi đây. Phù,区役所 xong nhanh hơn tớ tưởng nhỉ. Nào, dán nhãn lên thùng đi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{貼|は}っちゃおう。あ、この{箱|はこ}、キッチンって{書|か}いといて。お{皿|さら}とか{入|はい}ってるからさ。",
+      "vi": "Ừ, dán đi. À, thùng này thì ghi là đồ bếp nhé. Vì có bát đĩa trong này mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いいね。ってさ、{割|わ}れ{物|れもの}って、{赤|あか}で{大|おお}きく{書|か}いとこうよ。{運|はこ}ぶ{人|ひと}が{気|き}づくしさ。",
+      "vi": "Ồ, hay đấy. Này, chữ đồ dễ vỡ thì viết to bằng bút đỏ nhé. Để người chuyển đồ còn để ý."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。あ、この{箱|はこ}はさ、すぐ{使|つか}うものだけ{入|い}れといたよ。{歯|は}ブラシとか{充電|じゅうでん}{器|き}とかさ。",
+      "vi": "Ừ nhỉ. À, thùng này thì tớ chỉ cho đồ dùng ngay thôi đấy. Bàn chải với sạc các thứ ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{助|たす}かるわ。あ、ベランダの{箱|はこ}、まだ{開|あ}けてないよね。あとで{一緒|いっしょ}に{見|み}ようよ。",
+      "vi": "May quá. À, thùng ở ban công ấy, vẫn chưa mở đúng không? Lát nữa cùng xem nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{開|あ}けてないよ。じゃあ、{貼|は}り{終|お}わったらさ、うちの{人|ひと}に{連絡|れんらく}しなよ。",
+      "vi": "Ừ, chưa mở đâu. Thế dán xong thì nhắn cho người nhà đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうする。えっとさ、「{区|く}{役所|やくしょ}の{手続|てつづ}き{終|お}わったよ。{新|あたら}しい{住所|じゅうしょ}はここだよ。{荷物|にもつ}は{週末|しゅうまつ}に{運|はこ}ぶよ」って{送|おく}ればいいかな。",
+      "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Thủ tục ở区役所 xong rồi nhé. Địa chỉ mới là đây nhé. Đồ đạc thì cuối tuần chuyển nhé' thì được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいじゃん、それで。あ、{住所|じゅうしょ}、{間違|まちが}えないようにコピペしなよ。",
+      "vi": "Được đấy, nhắn thế đi. À, địa chỉ thì copy dán cho khỏi nhầm nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、そうだね。あ、{写真|しゃしん}も{一緒|いっしょ}に{送|おく}っとこう。{部屋|へや}、だいぶ{片付|かたづ}いたしさ。",
+      "vi": "Ồ, đúng rồi. À, gửi kèm cả ảnh nữa nhé. Phòng dọn cũng kha khá rồi mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん。{引|ひ}っ{越|っこ}しってさ、{大変|たいへん}だけどさ、{新|あたら}しい{街|まち}、{楽|たの}しみだよね。",
+      "vi": "Ừ. Chuyển nhà thì vất vả thật nhưng mà khu phố mới cũng đáng mong chờ nhỉ."
+    }
+  ],
+  "notes": [
+    "転入届 là đơn khai chuyển đến, nộp ở区役所 mới trong vòng 14 ngày sau khi chuyển nhà; 転出届 là đơn khai chuyển đi, nộp ở区役所 cũ trước khi chuyển — hai đơn khác nhau, đừng nhầm.",
+    "区役所 buổi sáng thường đông: vào sảnh lấy số thứ tự (整理券) trước, chờ bảng điện tử hiện số của mình; thủ tục chuyển nhà làm ở quầy (窓口) riêng, không biết thì hỏi 転入届の手続きって、どこの窓口ですか.",
+    "Chuyển nhà phải mang theo thẻ lưu trú (在留カード) và thẻ My Number (マイナンバーカード) để đổi địa chỉ trên thẻ; nên lấy sẵn 1 bản giấy chứng nhận cư trú (住民票) phòng khi cần dùng sau.",
+    "〜んですけど là cách nêu lý do trước rồi mới hỏi, hay dùng ở quầy hành chính; 〜ばいいですか là cách hỏi xác nhận mình điền đơn như vậy đã đúng chưa; 〜なきゃ là dạng rút gọn của なければならない, dùng khi nhắc nhau việc bắt buộc phải làm."
+  ]
+}
