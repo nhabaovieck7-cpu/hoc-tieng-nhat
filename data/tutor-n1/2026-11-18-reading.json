@@ -1,0 +1,403 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 短文 trong phần đọc hiểu của đề N1 thật: một bài đọc ngắn, trừu tượng vừa phải, kèm 4 câu hỏi — đáp án không nằm lộ liễu trên mặt chữ mà phải suy luận từ chủ trương của tác giả. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, khoanh những câu mang chủ trương （〜ではない・むしろ・こそ・だからこそ); Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình suy luận lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 8–10 phút (đọc + 4 câu hỏi). Trong đề thật, 短文 là dạng dễ mất điểm vì các lựa chọn nhiễu thường diễn đạt na ná ý tác giả nhưng đảo ngược chủ trương, tuyệt đối hóa （誰でも・すべて・必ず), hoặc lấy ví dụ trong bài làm chủ trương — ví dụ lấy câu chuyện về kỹ thuật viên giỏi để kết luận 'người giỏi không bao giờ cần giúp đỡ', trong khi tác giả dùng ví dụ đó để nói điều ngược lại.",
+  "tips": [
+    {
+      "h": "Tìm câu chủ trương trước, đừng đọc dịch từng chữ",
+      "body": "Bài 短文 thường có một câu nêu chủ trương rõ nhất, hay nằm ở đoạn 2 hoặc đoạn cuối, với các dấu hiệu むしろ、それは…である／〜こそが／決して〜ではない. Bài này: đoạn 2 câu 2 (むしろ、それは…一つの技術である) và đoạn 4 câu 2 (頼る勇気を持つこと――それこそが…) chính là hai câu chủ trương. Khoanh chúng trước rồi mới làm câu hỏi."
+    },
+    {
+      "h": "しかし／もちろん／だからこそ là bản đồ của bài",
+      "body": "しかし ở đầu đoạn 2 lật ngược ý của đoạn 1 ('頼るのは弱い' → '頼るのは技術である'); もちろん ở đầu đoạn 3 giới hạn lại ý vừa nêu ('頼ること ≠ すべてを人任せにすること'); だからこそ ở đoạn 3 câu 3 nối hệ quả ('vì頼る≠人任せ, nên người頼る phải nghĩ đến gánh nặng của đối phương'). Đọc đúng 3 từ nối này là nắm được toàn bộ lập luận."
+    },
+    {
+      "h": "Ví dụ trong bài là bằng chứng, không phải chủ trương",
+      "body": "Ví dụ về '優れた技術者' ở đoạn 2 chỉ để chứng minh cho chủ trương '頼ることは技術である' — nó không phải là chủ trương. Lựa chọn nào nói 'kỹ thuật viên giỏi thì tự mình giải quyết mọi việc' là đã đảo ngược ý tác giả; lựa chọn nào nói 'kỹ thuật viên có nghĩa vụ dạy người khác' là chuyện không có trong bài."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có 4 đoạn, 11 câu, chủ trương nằm ở đoạn 2 (頼ることは技術である) và đoạn 4 (頼る勇気こそが近道である). Khi làm câu hỏi về '〜とはどういうことか', hãy quay lại đúng câu định nghĩa ở đoạn 2 câu 2; khi làm câu hỏi về từ nối しかし, hãy đối chiếu ý đoạn 1 với ý đoạn 2."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "人は誰でも、一度は「人に頼るのは弱いことだ」と考えたことがあるのではないだろうか。自分で何とかしなければならない、迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう人が多い。\nしかし、頼ることは、決して自分の弱さをさらすことではない。むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である。プロの現場を見れば、優れた技術者ほど、わからないことを素直に「教えてください」と言い、周囲の知識を自分の仕事に取り入れていることがわかる。\nもちろん、頼ることと、すべてを人任せにすることは違う。頼るのは、問題を自分で引き受けたうえで、足りない部分を補うために他人の力を借りることだ。だからこそ、頼る人は、頼まれる側の負担を考える。頼み方一つで、相手に与える印象は大きく変わるのである。\n一人で抱え込むことは、決して強さではない。頼る勇気を持つこと――それこそが、長い目で見れば、自分を成長させ、周囲との信頼を深める近道なのだ。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "頼ることは自分の弱さを認めることであり、成長にはつながらない。",
+        "頼ることは自分の限界を知り、他人の力を借りて問題を解決する技術である。",
+        "困難なときは、すべてを他人に任せて自分は何もしなければよい。",
+        "頼ることは相手に迷惑をかける行為であり、できるだけ避けるべきだ。"
+      ],
+      "answer": 1,
+      "explain_vi": "Chủ trương của tác giả nằm ở đoạn 2 câu 2: むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である — và được nhắc lại ở đoạn 4 câu 2: 頼る勇気を持つこと――それこそが…近道なのだ. 'Nhờ cậy là kỹ năng', không phải yếu đuối."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "人は誰でも、一度は「人に頼るのは弱いことだ」と考えたことがあるのではないだろうか。自分で何とかしなければならない、迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう人が多い。\nしかし、頼ることは、決して自分の弱さをさらすことではない。むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である。プロの現場を見れば、優れた技術者ほど、わからないことを素直に「教えてください」と言い、周囲の知識を自分の仕事に取り入れていることがわかる。\nもちろん、頼ることと、すべてを人任せにすることは違う。頼るのは、問題を自分で引き受けたうえで、足りない部分を補うために他人の力を借りることだ。だからこそ、頼る人は、頼まれる側の負担を考える。頼み方一つで、相手に与える印象は大きく変わるのである。\n一人で抱え込むことは、決して強さではない。頼る勇気を持つこと――それこそが、長い目で見れば、自分を成長させ、周囲との信頼を深める近道なのだ。\n「それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である」とあるが、「頼ること」とはどういうことか。",
+      "choices": [
+        "自分の弱さを他人に見せること。",
+        "問題をすべて他人に任せて、自分は何もしないこと。",
+        "自分の限界を正しく知り、相手の力を借りて問題を解決しようとすること。",
+        "周囲に迷惑をかけないように、一人で頑張ること。"
+      ],
+      "answer": 2,
+      "explain_vi": "Câu hỏi hỏi lại đúng định nghĩa ở đoạn 2 câu 2: むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である. 'それ' ở đây chính là '頼ること'. Lựa chọn 3 trích nguyên văn định nghĩa này."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "人は誰でも、一度は「人に頼るのは弱いことだ」と考えたことがあるのではないだろうか。自分で何とかしなければならない、迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう人が多い。\nしかし、頼ることは、決して自分の弱さをさらすことではない。むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である。プロの現場を見れば、優れた技術者ほど、わからないことを素直に「教えてください」と言い、周囲の知識を自分の仕事に取り入れていることがわかる。\nもちろん、頼ることと、すべてを人任せにすることは違う。頼るのは、問題を自分で引き受けたうえで、足りない部分を補うために他人の力を借りることだ。だからこそ、頼る人は、頼まれる側の負担を考える。頼み方一つで、相手に与える印象は大きく変わるのである。\n一人で抱え込むことは、決して強さではない。頼る勇気を持つこと――それこそが、長い目で見れば、自分を成長させ、周囲との信頼を深める近道なのだ。\n筆者が「優れた技術者」の例を挙げたのはなぜか。",
+      "choices": [
+        "優れた技術者は何でも一人で解決すべきだと示すため。",
+        "頼ることが仕事の場でも有効な技術であることを示すため。",
+        "プロの技術者には素人に教える義務があると示すため。",
+        "職場では頼る人が少ないことを示すため。"
+      ],
+      "answer": 1,
+      "explain_vi": "Ví dụ về kỹ thuật viên giỏi ở đoạn 2 câu 3 (優れた技術者ほど、わからないことを素直に「教えてください」と言い…) là bằng chứng cho chủ trương '頼ることは技術である' — ngay cả trong môi trường chuyên nghiệp, người giỏi cũng nhờ cậy người khác. Nó chứng minh頼ること có hiệu quả trong công việc, không phải để nói người giỏi phải tự làm mọi việc."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "人は誰でも、一度は「人に頼るのは弱いことだ」と考えたことがあるのではないだろうか。自分で何とかしなければならない、迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう人が多い。\nしかし、頼ることは、決して自分の弱さをさらすことではない。むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である。プロの現場を見れば、優れた技術者ほど、わからないことを素直に「教えてください」と言い、周囲の知識を自分の仕事に取り入れていることがわかる。\nもちろん、頼ることと、すべてを人任せにすることは違う。頼るのは、問題を自分で引き受けたうえで、足りない部分を補うために他人の力を借りることだ。だからこそ、頼る人は、頼まれる側の負担を考える。頼み方一つで、相手に与える印象は大きく変わるのである。\n一人で抱え込むことは、決して強さではない。頼る勇気を持つこと――それこそが、長い目で見れば、自分を成長させ、周囲との信頼を深める近道なのだ。\n「しかし」は何と何をつないでいるか。",
+      "choices": [
+        "「頼るのは弱いことだ」という考え方と、「頼るのは技術である」という筆者の主張。",
+        "「一人で抱え込む」ことと「迷惑をかける」こと。",
+        "「プロの現場」と「素直に頼る」こと。",
+        "「限界を知る」ことと「弱さをさらす」こと。"
+      ],
+      "answer": 0,
+      "explain_vi": "しかし ở đầu đoạn 2 lật ngược ý của đoạn 1: đoạn 1 nêu quan niệm phổ biến '人に頼るのは弱いことだ' (câu 1), đoạn 2 khẳng định ngược lại '頼ることは、決して自分の弱さをさらすことではない。むしろ…一つの技術である'. Từ nối này nối quan niệm cũ với chủ trương mới của tác giả."
+    }
+  ],
+  "study": {
+    "passage_title": "「『素直に頼る』こと」— Nhờ người khác giúp đỡ không phải là yếu đuối mà là một kỹ năng",
+    "structure": "Bài đọc ngắn 4 đoạn, 11 câu, lập luận theo trình tự phủ định → khẳng định → giới hạn → kết luận. Đoạn 1 mở đầu — nêu quan niệm phổ biến mà nhiều người từng có: 'nhờ người khác là yếu đuối', vì nghĩ mình phải tự xoay xở và không được làm phiền người khác nên càng khó khăn càng ôm hết một mình; đoạn 2 lật ngược quan niệm đó bằng しかし — nhờ cậy không phải là phơi bày điểm yếu, mà ngược lại là một kỹ năng: biết đúng giới hạn của mình và mượn sức người khác để giải quyết vấn đề, với bằng chứng là ví dụ về kỹ thuật viên giỏi trong môi trường chuyên nghiệp, càng giỏi càng thẳng thắn nói 'xin hãy chỉ cho tôi'; đoạn 3 giới hạn lại ý vừa nêu bằng もちろん — nhờ cậy khác với phó mặc tất cả cho người khác: nhờ cậy là khi mình đã tự nhận lấy vấn đề rồi mới mượn sức người khác để bù phần thiếu, chính vì vậy người nhờ cậy phải nghĩ đến gánh nặng của phía được nhờ, và chỉ một cách nhờ vả thôi cũng làm thay đổi lớn ấn tượng tạo ra cho đối phương; đoạn 4 kết luận — ôm hết một mình không phải là mạnh mẽ, có dũng khí nhờ cậy mới là con đường ngắn nhất để trưởng thành và làm sâu sắc thêm niềm tin với những người xung quanh. Bẫy chính của bài là các lựa chọn đảo ngược chủ trương (biến '頼ることは技術である' thành '頼ることは弱さである'), tuyệt đối hóa (biến '頼る' thành 'すべてを人に任せる'), và lấy ví dụ làm chủ trương (lấy chuyện kỹ thuật viên giỏi để kết luận ngược).",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{人|ひと}は{誰|だれ}でも、{一|いち}{度|ど}は「{人|ひと}に{頼|たよ}るのは{弱|よわ}いことだ」と{考|かんが}えたことがあるのではないだろうか。",
+        "vi": "Có lẽ ai cũng đã từng một lần nghĩ rằng 'nhờ người khác giúp đỡ là yếu đuối'."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{自分|じぶん}で{何|なん}とかしなければならない、{迷惑|めいわく}をかけてはいけない――そう{思|おも}い{込|いこ}んで、つらいときほど{一人|ひとり}で{抱|かか}え{込|えこ}んでしまう{人|ひと}が{多|おお}い。",
+        "vi": "Vì tin rằng mình phải tự xoay xở, không được làm phiền người khác, nên càng lúc khó khăn, càng nhiều người ôm hết mọi thứ một mình."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "しかし、{頼|たよ}ることは、{決|けっ}して{自分|じぶん}の{弱|よわ}さをさらすことではない。",
+        "vi": "Thế nhưng, nhờ cậy người khác hoàn toàn không phải là phơi bày điểm yếu của mình."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "むしろ、それは{自分|じぶん}の{限界|げんかい}を{正|ただ}しく{知|し}り、{相手|あいて}の{力|ちから}を{借|か}りて{問題|もんだい}を{解決|かいけつ}しようとする、{一|ひと}つの{技術|ぎじゅつ}である。",
+        "vi": "Ngược lại, đó là một kỹ năng: biết đúng giới hạn của bản thân và mượn sức người khác để giải quyết vấn đề."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "プロの{現場|げんば}を{見|み}れば、{優|すぐ}れた{技術|ぎじゅつ}{者|しゃ}ほど、わからないことを{素直|すなお}に「{教|おし}えてください」と{言|い}い、{周囲|しゅうい}の{知識|ちしき}を{自分|じぶん}の{仕事|しごと}に{取|と}り{入|りい}れていることがわかる。",
+        "vi": "Nhìn vào môi trường làm việc chuyên nghiệp thì sẽ rõ: càng là kỹ thuật viên giỏi, càng thẳng thắn nói 'xin hãy chỉ cho tôi' khi không biết, và đưa kiến thức của những người xung quanh vào công việc của mình."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "もちろん、{頼|たよ}ることと、すべてを{人任|ひとまか}せにすることは{違|ちが}う。",
+        "vi": "Tất nhiên, nhờ cậy người khác và việc phó mặc tất cả cho người khác là khác nhau."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{頼|たよ}るのは、{問題|もんだい}を{自分|じぶん}で{引|ひ}き{受|きう}けたうえで、{足|た}りない{部分|ぶぶん}を{補|おぎな}うために{他人|たにん}の{力|ちから}を{借|か}りることだ。",
+        "vi": "Nhờ cậy là khi mình đã tự nhận lấy vấn đề, rồi mượn sức người khác để bù vào phần còn thiếu."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "だからこそ、{頼|たよ}る{人|ひと}は、{頼|たの}まれる{側|がわ}の{負担|ふたん}を{考|かんが}える。",
+        "vi": "Chính vì vậy, người nhờ cậy sẽ nghĩ đến gánh nặng của phía được nhờ."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "{頼|たの}み{方|かた}{一|ひと}つで、{相手|あいて}に{与|あた}える{印象|いんしょう}は{大|おお}きく{変|か}わるのである。",
+        "vi": "Chỉ một cách nhờ vả thôi cũng làm thay đổi lớn ấn tượng mình tạo ra cho đối phương."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{一人|ひとり}で{抱|かか}え{込|えこ}むことは、{決|けっ}して{強|つよ}さではない。",
+        "vi": "Ôm hết mọi thứ một mình hoàn toàn không phải là mạnh mẽ."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{頼|たよ}る{勇気|ゆうき}を{持|も}つこと――それこそが、{長|なが}い{目|め}で{見|み}れば、{自分|じぶん}を{成長|せいちょう}させ、{周囲|しゅうい}との{信頼|しんらい}を{深|ふか}める{近道|ちかみち}なのだ。",
+        "vi": "Có dũng khí nhờ cậy người khác — chính điều đó, xét về lâu dài, là con đường ngắn nhất để mình trưởng thành và làm sâu sắc thêm niềm tin với những người xung quanh."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ② · Câu 2 – đáp án ③ · Câu 3 – đáp án ② · Câu 4 – đáp án ①",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ2②・Đ4②",
+        "options": [
+          {
+            "text": "頼ることは自分の弱さを認めることであり、成長にはつながらない。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược hoàn toàn chủ trương của tác giả. Bài viết khẳng định 頼ることは、決して自分の弱さをさらすことではない (đoạn 2 câu 1) và 頼る勇気を持つこと…自分を成長させ…近道なのだ (đoạn 4 câu 2) — tức là頼ること DẪN TỚI trưởng thành, chứ không phải 'không dẫn tới trưởng thành'. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "頼ることは自分の限界を知り、他人の力を借りて問題を解決する技術である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với câu chủ trương ở đoạn 2 câu 2: むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である, và được khẳng định lại ở đoạn 4 câu 2: 頼る勇気を持つこと――それこそが…自分を成長させ、周囲との信頼を深める近道なのだ."
+          },
+          {
+            "text": "困難なときは、すべてを他人に任せて自分は何もしなければよい。",
+            "verdict": "SAI",
+            "reason": "Tác giả nói rõ điều ngược lại ở đoạn 3 câu 1–2: もちろん、頼ることと、すべてを人任せにすることは違う. 頼るのは、問題を自分で引き受けたうえで、足りない部分を補うために他人の力を借りることだ. Lựa chọn này nhầm lẫn '頼る' với '人任せ' — bẫy tuyệt đối hóa và lấy ví dụ làm chủ trương sai."
+          },
+          {
+            "text": "頼ることは相手に迷惑をかける行為であり、できるだけ避けるべきだ。",
+            "verdict": "SAI",
+            "reason": "'迷惑をかけてはいけない' là suy nghĩ của những người ôm hết một mình ở đoạn 1 câu 2 — tức là quan niệm mà tác giả đang PHỦ ĐỊNH, không phải chủ trương của tác giả. Đoạn 3 câu 3 còn nói người頼る phải nghĩ đến 負担 của phía được nhờ, chứ không nói 'nên tránh頼ること'. Bẫy lấy ý bị phủ định làm chủ trương."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 2,
+        "locator": "Đ2②",
+        "options": [
+          {
+            "text": "自分の弱さを他人に見せること。",
+            "verdict": "SAI",
+            "reason": "Bài viết phủ định thẳng điều này ở đoạn 2 câu 1: 頼ることは、決して自分の弱さをさらすことではない. 'さらす' (phơi bày) chính là điều tác giả nói頼ること KHÔNG phải. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "問題をすべて他人に任せて、自分は何もしないこと。",
+            "verdict": "SAI",
+            "reason": "Đây là '人任せ', mà tác giả phân biệt rõ với '頼る' ở đoạn 3 câu 1–2: もちろん、頼ることと、すべてを人任せにすることは違う. 頼るのは、問題を自分で引き受けたうえで…他人の力を借りることだ. Bẫy nhầm lẫn頼る với人任せ."
+          },
+          {
+            "text": "自分の限界を正しく知り、相手の力を借りて問題を解決しようとすること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trích nguyên văn định nghĩa ở đoạn 2 câu 2: むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である. 'それ' trong câu này chỉ '頼ること' ở câu 1 của đoạn 2."
+          },
+          {
+            "text": "周囲に迷惑をかけないように、一人で頑張ること。",
+            "verdict": "SAI",
+            "reason": "Đây là cách làm của những người ở đoạn 1 câu 2 (つらいときほど一人で抱え込んでしまう) — tức là hành vi mà tác giả cho là KHÔNG phải mạnh mẽ (đoạn 4 câu 1: 一人で抱え込むことは、決して強さではない). Bẫy lấy hành vi bị phủ định làm định nghĩa."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 1,
+        "locator": "Đ2③",
+        "options": [
+          {
+            "text": "優れた技術者は何でも一人で解決すべきだと示すため。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược hoàn toàn ý của ví dụ. Đoạn 2 câu 3 viết: 優れた技術者ほど、わからないことを素直に「教えてください」と言い、周囲の知識を自分の仕事に取り入れている — tức là người giỏi CÀNG nhờ cậy người khác, chứ không phải 'tự giải quyết mọi việc'. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "頼ることが仕事の場でも有効な技術であることを示すため。",
+            "verdict": "ĐÚNG",
+            "reason": "Ví dụ về kỹ thuật viên giỏi trong プロの現場 (đoạn 2 câu 3) là bằng chứng cho chủ trương ở câu 2 cùng đoạn: 頼ることは…一つの技術である. Tác giả dùng ví dụ từ môi trường làm việc chuyên nghiệp để chứng minh頼ること không chỉ là chuyện đời thường mà còn là kỹ năng hữu hiệu trong công việc."
+          },
+          {
+            "text": "プロの技術者には素人に教える義務があると示すため。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nhắc tới 'nghĩa vụ dạy người khác' của kỹ thuật viên. Ví dụ chỉ nói kỹ thuật viên giỏi '素直に「教えてください」と言い' — tức là phía ĐI NHỜ, không phải phía dạy. Lựa chọn này bịa thêm nội dung không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "職場では頼る人が少ないことを示すため。",
+            "verdict": "SAI",
+            "reason": "Bài viết không nói gì về số lượng người頼る ở nơi làm việc — không có 'ít' hay 'nhiều'. Ví dụ về kỹ thuật viên giỏi được đưa ra để chứng minh頼ること là kỹ năng, chứ không phải để thống kê có bao nhiêu người頼る. Bẫy thêm thông tin ngoài bài."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 0,
+        "locator": "Đ1①・Đ2①②",
+        "options": [
+          {
+            "text": "「頼るのは弱いことだ」という考え方と、「頼るのは技術である」という筆者の主張。",
+            "verdict": "ĐÚNG",
+            "reason": "しかし ở đầu đoạn 2 nối đoạn 1 với đoạn 2 theo quan hệ phủ định → khẳng định: đoạn 1 câu 1 nêu quan niệm phổ biến '人に頼るのは弱いことだ', đoạn 2 câu 1–2 phủ định quan niệm đó (決して自分の弱さをさらすことではない) và đưa ra chủ trương ngược lại (むしろ…一つの技術である). Đây là cách dùng しかし điển hình của bài 短文: lật ngược quan niệm cũ để mở ra chủ trương mới."
+          },
+          {
+            "text": "「一人で抱え込む」ことと「迷惑をかける」こと。",
+            "verdict": "SAI",
+            "reason": "'一人で抱え込む' và '迷惑をかける' đều nằm trong CÙNG một đoạn 1 (câu 2: 迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう), quan hệ giữa chúng là nguyên nhân → hành vi, không phải quan hệ đối lập mà しかし nối. しかし nằm ở ĐẦU đoạn 2, nên nó nối đoạn 1 với đoạn 2. Bẫy nối sai phạm vi."
+          },
+          {
+            "text": "「プロの現場」と「素直に頼る」こと。",
+            "verdict": "SAI",
+            "reason": "'プロの現場' và '素直に頼る' đều nằm trong CÙNG một câu ở đoạn 2 câu 3 (プロの現場を見れば、優れた技術者ほど、わからないことを素直に「教えてください」と言い…), quan hệ giữa chúng là bối cảnh → hành động, không liên quan tới しかし ở đầu đoạn 2. Bẫy nối sai phạm vi."
+          },
+          {
+            "text": "「限界を知る」ことと「弱さをさらす」こと。",
+            "verdict": "SAI",
+            "reason": "'限界を知る' (đoạn 2 câu 2: 自分の限界を正しく知り…) và '弱さをさらす' (đoạn 2 câu 1: 決して自分の弱さをさらすことではない) đều nằm trong CÙNG đoạn 2 và cùng phục vụ một chủ trương, được nối với nhau bằng むしろ chứ không phải しかし. しかし nối đoạn 1 với đoạn 2, không nối hai ý trong cùng đoạn 2. Bẫy nhầm từ nối."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{抱|かか}え{込|えこ}む",
+        "reading": "かかえこむ",
+        "hanviet": "Bão Nhập",
+        "vi": "ôm hết (vấn đề, lo lắng) một mình, giữ trong lòng không chia sẻ"
+      },
+      {
+        "word": "{思|おも}い{込|いこ}む",
+        "reading": "おもいこむ",
+        "hanviet": "Tư Nhập",
+        "vi": "tin chắc (một cách chủ quan), khăng khăng cho rằng"
+      },
+      {
+        "word": "さらす",
+        "reading": "さらす",
+        "hanviet": "Sái",
+        "vi": "phơi bày, để lộ ra (điểm yếu, khuyết điểm)"
+      },
+      {
+        "word": "{限界|げんかい}",
+        "reading": "げんかい",
+        "hanviet": "Hạn Giới",
+        "vi": "giới hạn, mức tối đa có thể làm được"
+      },
+      {
+        "word": "{取|と}り{入|りい}れる",
+        "reading": "とりいれる",
+        "hanviet": "Thủ Nhập",
+        "vi": "đưa vào, tiếp thu, áp dụng (kiến thức, phương pháp của người khác)"
+      },
+      {
+        "word": "{人任|ひとまか}せ",
+        "reading": "ひとまかせ",
+        "hanviet": "Nhân Nhậm",
+        "vi": "sự phó mặc cho người khác, để người khác lo hết"
+      },
+      {
+        "word": "{引|ひ}き{受|きう}ける",
+        "reading": "ひきうける",
+        "hanviet": "Dẫn Thụ",
+        "vi": "nhận lấy, đảm nhận (trách nhiệm, vấn đề)"
+      },
+      {
+        "word": "{補|おぎな}う",
+        "reading": "おぎなう",
+        "hanviet": "Bổ",
+        "vi": "bù đắp, bổ sung (phần còn thiếu)"
+      },
+      {
+        "word": "{負担|ふたん}",
+        "reading": "ふたん",
+        "hanviet": "Phụ Đảm",
+        "vi": "gánh nặng, trách nhiệm phải gánh"
+      },
+      {
+        "word": "{近道|ちかみち}",
+        "reading": "ちかみち",
+        "hanviet": "Cận Đạo",
+        "vi": "con đường tắt, cách nhanh nhất (để đạt mục đích)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "có lẽ… chăng / phải chăng… (cách nói mềm mại khi đưa ra suy đoán hoặc gợi ý, mời người đọc đồng cảm)",
+        "in_text": "人は誰でも、一度は「人に頼るのは弱いことだ」と考えたことがあるのではないだろうか。"
+      },
+      {
+        "pattern": "〜ほど〜",
+        "vi": "càng… càng… (mức độ tăng theo nhau; ở đây: càng khó khăn thì càng ôm hết một mình)",
+        "in_text": "自分で何とかしなければならない、迷惑をかけてはいけない――そう思い込んで、つらいときほど一人で抱え込んでしまう人が多い。"
+      },
+      {
+        "pattern": "むしろ〜である",
+        "vi": "ngược lại, thực ra là… (đưa ra ý trái ngược với suy nghĩ thông thường hoặc với ý vừa nêu)",
+        "in_text": "むしろ、それは自分の限界を正しく知り、相手の力を借りて問題を解決しようとする、一つの技術である。"
+      },
+      {
+        "pattern": "〜こそが",
+        "vi": "chính… mới là… (nhấn mạnh mạnh mẽ: chỉ có điều này mới là đáp án đúng)",
+        "in_text": "頼る勇気を持つこと――それこそが、長い目で見れば、自分を成長させ、周囲との信頼を深める近道なのだ。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm nhấn mạnh: 〜こそ / 〜さえ / 〜も",
+        "rows": [
+          {
+            "form": "〜こそ",
+            "join": "N + こそ",
+            "vi": "chính… mới là",
+            "diff": "Nhấn mạnh MẠNH NHẤT: chỉ có đối tượng này mới đúng, các đối tượng khác đều không phải. Dùng khi muốn khẳng định một đáp án duy nhất, thường đi với が/は sau nó (こそが/こそは).",
+            "example_ja": "{頼|たよ}る{勇気|ゆうき}を{持|も}つこと――それこそが、{自分|じぶん}を{成長|せいちょう}させる{近道|ちかみち}なのだ。",
+            "example_vi": "Có dũng khí nhờ cậy người khác — chính điều đó mới là con đường ngắn nhất để mình trưởng thành."
+          },
+          {
+            "form": "〜さえ",
+            "join": "N + さえ",
+            "vi": "ngay cả… cũng",
+            "diff": "Nhấn mạnh theo hướng 'ngay cả trường hợp cực đoan này cũng…': nêu một ví dụ bất ngờ, cực đoan để làm nổi bật ý chính. Khác với こそ (chỉ có nó mới đúng), さえ mở rộng phạm vi tới cả trường hợp khó ngờ nhất.",
+            "example_ja": "{忙|いそが}しいときでさえ、{素直|すなお}に{頼|たよ}ることができれば、{仕事|しごと}はうまくいく。",
+            "example_vi": "Ngay cả khi bận rộn, nếu có thể thẳng thắn nhờ cậy người khác thì công việc cũng sẽ suôn sẻ."
+          },
+          {
+            "form": "〜も",
+            "join": "N + も",
+            "vi": "cũng",
+            "diff": "Nhấn mạnh NHẸ NHẤT: thêm một đối tượng nữa vào cùng một nhóm ('cái này cũng vậy'). Không có sắc thái 'chỉ có nó mới đúng' như こそ, cũng không có sắc thái 'ngay cả trường hợp cực đoan' như さえ.",
+            "example_ja": "{頼|たよ}ることも、{一人|ひとり}で{頑張|がんば}ることも、どちらも{大切|たいせつ}だ。",
+            "example_vi": "Nhờ cậy người khác cũng quan trọng, mà tự mình cố gắng cũng quan trọng."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm suy đoán mềm mại: 〜のではないだろうか / 〜わけではない / 〜はずだ",
+        "rows": [
+          {
+            "form": "〜のではないだろうか",
+            "join": "Vる・Aい・Nだ + のではないだろうか",
+            "vi": "có lẽ… chăng / phải chăng…",
+            "diff": "Suy đoán MỀM MẠI, mang tính gợi ý và mời người đọc đồng cảm: người nói không khẳng định chắc chắn mà gợi mở để người nghe tự suy nghĩ. Thường dùng ở đầu bài luận để đặt vấn đề.",
+            "example_ja": "{人|ひと}は{誰|だれ}でも、{一|いち}{度|ど}は「{人|ひと}に{頼|たよ}るのは{弱|よわ}いことだ」と{考|かんが}えたことがあるのではないだろうか。",
+            "example_vi": "Có lẽ ai cũng đã từng một lần nghĩ rằng 'nhờ người khác giúp đỡ là yếu đuối'."
+          },
+          {
+            "form": "〜わけではない",
+            "join": "Vる・Aい・Nだ + わけではない",
+            "vi": "không phải là… (đâu)",
+            "diff": "PHỦ ĐỊNH một phần: phủ định cách hiểu sai hoặc kết luận vội vàng, nhưng không phủ định toàn bộ sự việc. Khác với のではないだろうか (suy đoán mềm mại), わけではない là phủ định dứt khoát một cách hiểu.",
+            "example_ja": "{頼|たよ}ることは、{弱|よわ}さをさらすわけではない。",
+            "example_vi": "Nhờ cậy người khác không phải là phơi bày điểm yếu."
+          },
+          {
+            "form": "〜はずだ",
+            "join": "Vる・Aい・Nの + はずだ",
+            "vi": "chắc chắn là… / hẳn là…",
+            "diff": "Suy đoán MẠNH, dựa trên căn cứ logic hoặc lẽ thường: người nói tin rằng kết luận của mình gần như chắc chắn. Khác với のではないだろうか (gợi mở, chưa chắc), はずだ thể hiện sự tự tin cao hơn.",
+            "example_ja": "{自分|じぶん}の{限界|げんかい}を{知|し}っている{人|ひと}ほど、{素直|すなお}に{頼|たよ}ることができるはずだ。",
+            "example_vi": "Người biết rõ giới hạn của mình thì hẳn là càng có thể thẳng thắn nhờ cậy người khác."
+          }
+        ]
+      }
+    ]
+  }
+}

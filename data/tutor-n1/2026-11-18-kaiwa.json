@@ -1,0 +1,358 @@
+{
+  "lesson": 34,
+  "topic": "Lần đầu đi tắm ở nhà tắm công cộng 銭湯 (mua vé, tắm ở 洗い場, ngâm 湯船, uống sữa sau khi tắm) (初めて銭湯に行く)",
+  "summary": "Bối cảnh: 拓海 vừa chuyển đến khu mới, nhà tắm ở nhà hơi chật nên 莉子 rủ đi thử 銭湯 (nhà tắm công cộng) gần nhà — lần đầu đi nên 拓海 không biết mua vé ở đâu, có cần mang theo khăn và đồ tắm không, vào trong thì làm gì trước. Ở cửa, hai người mua vé ở máy bán vé tự động, gửi giày vào tủ giày, rồi vào 脱衣所 (phòng thay đồ) cởi đồ và cất đồ vào tủ đựng đồ. Vào đến 洗い場 (khu vực tắm rửa), 莉子 nhắc 拓海 ngồi ghế thấp, lấy nước nóng tắm sạch người và gội đầu trước, rồi mới được xuống ngâm 湯船 (bồn tắm chung) — không được mang khăn vào bồn, không được tắm xà phòng trong bồn. Sau khi ngâm xong, hai người ra ngoài, mua sữa và coffee milk ở máy bán hàng tự động trước cửa, ngồi uống cho mát người, rồi 拓海 nhắn tin báo người nhà là hôm nay đi銭湯 về, nước nóng thích lắm, hôm nào rảnh đi cùng. Kỹ năng luyện: văn nói bạn bè khi đi một nơi mới lần đầu — hỏi mua vé ở đâu, hỏi có cần mang theo đồ gì không, nhờ bạn chỉ cách làm từng bước; cách nói khi nhắc nhau về quy tắc ở nơi công cộng (phải tắm sạch trước khi ngâm, không mang khăn vào bồn) và cách rủ nhau đi lần sau. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về銭湯 và quy tắc tắm công cộng ở Nhật (銭湯, 脱衣所, 洗い場, 湯船, 番台, 下駄箱, ロッカー, タオル, シャンプー, 石鹸, コーヒー牛乳, フルーツ牛乳), cách hỏi cách dùng một nơi lần đầu đến bằng kính ngữ rút gọn với nhân viên (〜って、どうすればいいですか, 〜は持ってきたほうがいいですか), và cách nói về quy tắc bắt buộc một cách tự nhiên (〜してからじゃないと, 〜はダメだよ).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở cửa銭湯, mua vé, gửi giày, cởi đồ ở脱衣所 và tắm ở洗い場）",
+      "stage": "（Buổi chiều, trước cửa một銭湯 nhỏ trong khu phố của 拓海. Ngoài cửa có máy bán vé tự động, bên trong là quầy番台 và dãy tủ giày. 拓海 cầm theo một cái túi đựng khăn tắm và đồ tắm, lần đầu đến nên cứ nhìn quanh.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、ここが{銭湯|せんとう}か。ってさ、{入|はい}る{前|まえ}に{券売|けんばい}{機|き}でチケット{買|か}うんだよね。",
+          "vi": "Ồ, đây là銭湯 à. Này, trước khi vào thì mua vé ở máy bán vé đúng không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、そうだよ。あ、あの{機械|きかい}だよ。{入浴|にゅうよく}{料|りょう}ってさ、{大人|おとな}いくらだっけ。",
+          "vi": "Ừ, đúng rồi đấy. À, cái máy kia kìa. Vé vào tắm ấy, người lớn bao nhiêu nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、520{円|えん}って{書|か}いてあるよ。あのさ、タオルとかシャンプーってさ、{持|も}ってこなきゃダメなの？",
+          "vi": "Ừm, ghi là 520 yên này. À này, khăn với dầu gội ấy, không mang theo thì không được à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{持|も}ってこなくてもさ、{中|なか}で{買|か}えるよ。でもさ、タオルは{持|も}ってきたほうがいいよ。",
+          "vi": "Không mang theo cũng được mà, mua ở trong cũng được. Nhưng mà khăn thì mang theo vẫn hơn đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "オッケー、{買|か}ったよ。あ、{靴|くつ}はさ、ここの{下駄|げた}{箱|はこ}に{入|い}れればいいのかな。",
+          "vi": "Được rồi, mua xong rồi. À, giày thì cho vào cái tủ giày này là được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだよ。{鍵|かぎ}、なくさないようにね。さ、{脱衣|だつい}{所|しょ}で{服|ふく}{脱|ぬ}いでさ、ロッカーに{入|い}れようよ。",
+          "vi": "Đúng rồi đấy. Chìa khóa đừng làm mất nhé. Nào, cởi đồ ở phòng thay đồ rồi cất vào tủ đựng đồ đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うわ、{広|ひろ}いね。ってさ、{洗|あら}い{場|いば}って、どこで{洗|あら}えばいいの？",
+          "vi": "Chà, rộng thật. Này, khu tắm rửa ấy, tắm ở chỗ nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あそこのさ、{空|あ}いてるイスに{座|すわ}ってさ。まずさ、かけ{湯|ゆ}してさ、{体|からだ}{洗|あら}ってから{湯船|ゆぶね}に{入|はい}るんだよ。",
+          "vi": "Ngồi vào cái ghế trống đằng kia kìa. Trước tiên thì dội nước nóng lên người, tắm sạch người rồi mới được xuống ngâm bồn đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、シャワーじゃなくてさ、{洗面|せんめん}{器|き}にお{湯|ゆ}くむんだね。{石鹸|せっけん}で{洗|あら}ってさ、シャンプーもするの？",
+          "vi": "Ồ, không phải vòi sen mà là múc nước nóng vào chậu à. Tắm bằng xà phòng rồi gội đầu luôn à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、するよ。{体|たい}、ちゃんと{洗|あら}ってからじゃないとさ、{湯船|ゆぶね}に{入|はい}っちゃダメだよ。",
+          "vi": "Ừ, gội luôn đi. Tắm sạch người rồi mới được xuống ngâm bồn đấy, không thì không được đâu."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（ngâm湯船 xong, ra ngoài uống sữa và nhắn tin báo người nhà）",
+      "stage": "（Một lúc sau, ngoài cửa銭湯. Hai người vừa tắm xong, tóc còn hơi ướt, mặt đỏ hồng vì ngâm nước nóng. Trước cửa có máy bán hàng tự động bán sữa và coffee milk, bên cạnh là một cái ghế dài.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、{湯船|ゆぶね}、めっちゃ{気持|きも}ちよかったね。お{湯|ゆ}、{熱|あつ}かったけどさ。",
+          "vi": "Phù, ngâm bồn thích thật đấy. Nước nóng thật nhưng mà sướng."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "でしょ。ってさ、タオル、{湯船|ゆぶね}に{入|い}れなかった？{入|い}れたらダメだよ。",
+          "vi": "Thấy chưa. Này, khăn ấy, cậu không nhúng vào bồn đấy chứ? Nhúng vào là không được đâu đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{入|い}れてないよ。ちゃんとさ、{湯船|ゆぶね}のふちに{置|お}いといたよ。",
+          "vi": "Không nhúng đâu. Tớ đặt cẩn thận ở mép bồn rồi mà."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "よかった。さ、{牛乳|ぎゅうにゅう}{飲|の}もうよ。コーヒー{牛乳|ぎゅうにゅう}にする？それともフルーツ{牛乳|ぎゅうにゅう}？",
+          "vi": "May quá. Nào, uống sữa đi. Uống coffee milk nhé? Hay là sữa trái cây?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うーん、コーヒー{牛乳|ぎゅうにゅう}にする。{風呂上|ふろあ}がりの{牛乳|ぎゅうにゅう}ってさ、なんでこんなにうまいの。",
+          "vi": "Ừm, uống coffee milk đi. Sữa uống sau khi tắm ấy, sao mà ngon thế không biết."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "だよね。{銭湯|せんとう}ってさ、{家|いえ}のお{風呂|ふろ}よりさ、{広|ひろ}くてあったまるよね。",
+          "vi": "Ừ nhỉ.銭湯 ấy, rộng hơn bồn tắm ở nhà, ngâm người ấm hơn hẳn nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、また{来|こ}ようよ。{次|つぎ}はさ、サウナある{銭湯|せんとう}、{行|い}ってみない？",
+          "vi": "Ừ, lần sau lại đến nhé. Lần tới đi thử銭湯 có phòng xông hơi xem sao?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。あ、うちの{人|ひと}に{連絡|れんらく}しなよ。{銭湯|せんとう}{行|い}ってきたよってさ。",
+          "vi": "Hay đấy. À, nhắn cho người nhà đi. Bảo là hôm nay đi銭湯 về rồi ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{銭湯|せんとう}に{行|い}ってきたよ。お{湯|ゆ}が{気持|きも}ちよかったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+          "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi銭湯 về rồi. Nước nóng thích lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいじゃん、それで。あ、{写真|しゃしん}もさ、{銭湯|せんとう}の{外観|がいかん}、{撮|と}っとけばよかったね。",
+          "vi": "Được đấy, nhắn thế đi. À, ảnh ấy, lẽ ra phải chụp mặt tiền銭湯 mới phải."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "銭湯に入る前に、券売機で入浴券を買わなければなりません。タオルを持ってきたほうがよろしいです。",
+      "real": "入る前に券売機でチケット買うんだよね。タオルは持ってきたほうがいいよ。",
+      "why": "Sách giáo khoa dùng 買わなければなりません và 持ってきたほうがよろしいです một cách trang trọng, nghe như đang đọc hướng dẫn sử dụng銭湯 trong một cuốn cẩm nang. Nói thật thì rút thành 買うんだよね và 持ってきたほうがいいよ, thêm さ・よね để vừa xác nhận vừa nhắc nhau, nghe như hai người bạn lần đầu đứng trước cửa銭湯, vừa nhìn máy bán vé vừa bàn nhau."
+    },
+    {
+      "textbook": "洗い場で体を洗ってから、湯船に入ってください。タオルを湯船に入れてはいけません。",
+      "real": "まずさ、かけ湯してさ、体洗ってから湯船に入るんだよ。タオル、湯船に入れたらダメだよ。",
+      "why": "Văn nói ở銭湯 hay dùng 入るんだよ và 入れたらダメだよ để nhắc quy tắc một cách thân mật, kèm まずさ để chỉ thứ tự các bước — dội nước, tắm sạch, rồi mới ngâm. Câu sách giáo khoa dùng てください và てはいけません cứng nhắc, nghe như đang đọc biển nội quy dán trên tường, còn câu nói thật nghe như người bạn đã từng đi銭湯 đang chỉ từng bước cho bạn lần đầu đi."
+    },
+    {
+      "textbook": "靴は下駄箱に入れてください。脱衣所で服を脱いで、ロッカーに入れてください。",
+      "real": "靴はさ、ここの下駄箱に入れればいいのかな。脱衣所で服脱いでさ、ロッカーに入れようよ。",
+      "why": "Bạn bè hay hỏi 入れればいいのかな để xác nhận mình làm vậy đã đúng chưa, và rủ nhau 入れようよ khi cùng làm một việc. Câu sách giáo khoa dùng てください liên tiếp, nghe như nhân viên đang hướng dẫn khách lần lượt từng bước, còn câu nói thật nghe như hai người đang đứng trước dãy tủ giày, vừa cởi giày vừa hỏi nhau cho chắc."
+    },
+    {
+      "textbook": "風呂上がりの牛乳は、どうしてこんなにおいしいのでしょうか。次はサウナのある銭湯に行ってみましょう。",
+      "real": "風呂上がりの牛乳ってさ、なんでこんなにうまいの。また来ようよ。次はさ、サウナある銭湯、行ってみない？",
+      "why": "Văn nói sau khi tắm xong dùng うまい (thay vì おいしい trang trọng) và なんで để hỏi một cách suồng sã, rủ nhau bằng 行ってみない？ thay vì 行ってみましょう. Câu sách giáo khoa nghe như đang viết cảm nghĩ trong một bài văn, còn câu nói thật nghe như hai người vừa ngâm nước nóng xong, mặt đỏ hồng, ngồi trước máy bán sữa vừa uống vừa bàn lần sau đi đâu."
+    },
+    {
+      "textbook": "今日、初めて銭湯に行きました。お湯が気持ちよかったです。今度一緒に行きましょう。",
+      "real": "今日、初めて銭湯に行ってきたよ。お湯が気持ちよかったよ。今度一緒に行こう。",
+      "why": "Nhắn tin cho người nhà thì dùng 行ってきたよ và 行こう ngắn gọn, dùng よ để kể một cách thân mật, chứ không dùng です・ます trang trọng. Câu sách giáo khoa nghe như đang viết email báo cáo, còn câu nói thật nghe như một tin nhắn gửi vội từ điện thoại sau khi ra khỏi銭湯, vừa uống sữa vừa nhắn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ってさ",
+      "in_lesson": "入る前に券売機でチケット買うんだよね",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa việc mua vé ở máy bán vé lên trước rồi hỏi xác nhận; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang ở một nơi mới lần đầu đến.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜ばいいのかな",
+      "in_lesson": "靴はさ、ここの下駄箱に入れればいいのかな",
+      "original": "〜ばよろしいですか",
+      "vi": "Làm thế này là được à? — cách hỏi xác nhận rất hay dùng khi lần đầu đến một nơi, không chắc mình làm vậy đã đúng chưa; thêm かな để hỏi một cách do dự, chờ bạn xác nhận.",
+      "use": "Dùng với bạn bè, người thân khi muốn xác nhận cách làm một việc ở nơi mới — gửi giày vào đâu, cởi đồ ở đâu, tắm ở chỗ nào.",
+      "avoid": "Tránh khi hỏi nhân viên một việc quan trọng cần câu trả lời chắc chắn (khi đó dùng 〜ばいいですか・〜でよろしいですか)."
+    },
+    {
+      "form": "〜てからじゃないと",
+      "in_lesson": "体、ちゃんと洗ってからじゃないとさ、湯船に入っちゃダメだよ",
+      "original": "〜てからでなければ",
+      "vi": "Phải làm… rồi mới được… — cách nói quy tắc bắt buộc một cách tự nhiên: phải tắm sạch người rồi mới được xuống ngâm bồn; 入っちゃダメ là dạng rút gọn của 入ってはダメ (không được vào).",
+      "use": "Dùng với bạn bè, người thân khi nhắc nhau về thứ tự bắt buộc hoặc quy tắc ở nơi công cộng — tắm sạch rồi mới ngâm, cởi giày rồi mới vào nhà.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜てからでなければ〜できません)."
+    },
+    {
+      "form": "〜といた",
+      "in_lesson": "ちゃんとさ、湯船のふちに置いといたよ",
+      "original": "〜ておいた",
+      "vi": "Rút gọn của ておいた: đã đặt sẵn / đã để sẵn rồi — ở đây là đã đặt khăn cẩn thận ở mép bồn tắm, không nhúng khăn vào nước; 置いといたよ là cách kể lại mình đã làm đúng quy tắc.",
+      "use": "Dùng với bạn bè, người thân khi kể lại mình đã chuẩn bị hoặc để đồ ở một chỗ nào đó một cách cẩn thận.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên (khi đó dùng 〜ておいた・〜ておきました)."
+    },
+    {
+      "form": "〜てみない？",
+      "in_lesson": "次はさ、サウナある銭湯、行ってみない？",
+      "original": "〜てみませんか",
+      "vi": "Rút gọn của てみませんか: thử đi xem sao? — cách rủ nhau thử một chỗ mới một cách nhẹ nhàng, không ép buộc; ở đây là rủ lần sau đi thử銭湯 có phòng xông hơi.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau thử một nơi mới, một món mới, một việc chưa từng làm.",
+      "avoid": "Tránh trong văn bản chính thức và khi rủ cấp trên hay người lạ (khi đó dùng 〜てみませんか)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{銭湯|せんとう}",
+      "reading": "せんとう",
+      "vi": "Nhà tắm công cộng — nơi tắm công cộng ở Nhật, trả tiền vé vào cửa rồi tắm chung trong bồn lớn; khác với 温泉 (suối nước nóng thiên nhiên) vì nước ở銭湯 thường là nước máy đun nóng, giá rẻ và gần khu dân cư.",
+      "example_ja": "ここが{銭湯|せんとう}か。{入|はい}る{前|まえ}に{券売|けんばい}{機|き}でチケット{買|か}うんだよね。",
+      "example_vi": "Đây là銭湯 à. Trước khi vào thì mua vé ở máy bán vé đúng không?"
+    },
+    {
+      "expr": "{脱衣|だつい}{所|しょ}",
+      "reading": "だついじょ",
+      "vi": "Phòng thay đồ — phòng trước khi vào khu tắm, nơi cởi quần áo và cất đồ vào tủ đựng đồ (ロッカー); vào tắm thì chỉ mang theo khăn nhỏ và đồ tắm, còn lại để hết trong tủ.",
+      "example_ja": "{脱衣|だつい}{所|しょ}で{服|ふく}{脱|ぬ}いでさ、ロッカーに{入|い}れようよ。",
+      "example_vi": "Cởi đồ ở phòng thay đồ rồi cất vào tủ đựng đồ đi."
+    },
+    {
+      "expr": "{洗|あら}い{場|いば}",
+      "reading": "あらいば",
+      "vi": "Khu vực tắm rửa — khu vực có ghế thấp, vòi nước và chậu (洗面器), nơi ngồi tắm sạch người và gội đầu trước khi xuống ngâm bồn; ở đây tắm bằng chậu múc nước hoặc vòi sen, không tắm xà phòng trong bồn chung.",
+      "example_ja": "{洗|あら}い{場|いば}って、どこで{洗|あら}えばいいの？",
+      "example_vi": "Khu tắm rửa ấy, tắm ở chỗ nào?"
+    },
+    {
+      "expr": "{湯船|ゆぶね}",
+      "reading": "ゆぶね",
+      "vi": "Bồn tắm chung — bồn nước nóng lớn trong銭湯, mọi người cùng ngâm; quy tắc quan trọng nhất là phải tắm sạch người ở 洗い場 trước khi xuống ngâm, và tuyệt đối không mang khăn hay xà phòng vào bồn.",
+      "example_ja": "{体|たい}{洗|あら}ってから{湯船|ゆぶね}に{入|はい}るんだよ。タオル、{湯船|ゆぶね}に{入|い}れたらダメだよ。",
+      "example_vi": "Tắm sạch người rồi mới được xuống ngâm bồn đấy. Khăn mà nhúng vào bồn là không được đâu đấy."
+    },
+    {
+      "expr": "かけ{湯|ゆ}",
+      "reading": "かけゆ",
+      "vi": "Dội nước nóng lên người — bước đầu tiên trước khi vào bồn: múc nước nóng trong bồn hoặc từ vòi, dội lên người cho quen với nhiệt độ và rửa sơ người; làm かけ湯 trước rồi mới tắm xà phòng và gội đầu.",
+      "example_ja": "まずさ、かけ{湯|ゆ}してさ、{体|からだ}{洗|あら}ってから{湯船|ゆぶね}に{入|はい}るんだよ。",
+      "example_vi": "Trước tiên thì dội nước nóng lên người, tắm sạch người rồi mới được xuống ngâm bồn đấy."
+    },
+    {
+      "expr": "コーヒー{牛乳|ぎゅうにゅう}",
+      "reading": "こーひーぎゅうにゅう",
+      "vi": "Sữa cà phê (coffee milk) — thức uống kinh điển sau khi tắm ở銭湯: sữa pha cà phê đựng trong chai thủy tinh, bán ở máy bán hàng tự động trước cửa銭湯; người Nhật hay uống ngay sau khi tắm xong, khi người còn ấm và khát nước.",
+      "example_ja": "コーヒー{牛乳|ぎゅうにゅう}にする。{風呂上|ふろあ}がりの{牛乳|ぎゅうにゅう}ってさ、なんでこんなにうまいの。",
+      "example_vi": "Uống coffee milk đi. Sữa uống sau khi tắm ấy, sao mà ngon thế không biết."
+    }
+  ],
+  "mindset": [
+    "銭湯 là nhà tắm công cộng rất đời thường ở Nhật — khác với 温泉 (suối nước nóng thiên nhiên ở vùng du lịch) vì銭湯 nằm ngay trong khu dân cư, nước thường là nước máy đun nóng, vé vào cửa rẻ (khoảng 500 yên ở Tokyo), đi bộ từ nhà ra là tắm được. Người Nhật hay đi銭湯 khi nhà tắm ở nhà chật, khi muốn ngâm bồn lớn cho giãn người, hoặc đơn giản là muốn đổi không khí sau một ngày làm việc. Trong bài, 拓海 đi lần đầu vì nhà tắm ở nhà hơi chật, còn 莉子 đã quen nên chỉ từng bước — đi銭湯 lần đầu mà có bạn đi cùng chỉ giúp thì rất bình thường, nhân viên ở quầy番台 cũng quen hướng dẫn khách mới.",
+    "Quy tắc quan trọng nhất ở銭湯 là phải tắm sạch người ở 洗い場 trước khi xuống ngâm 湯船: ngồi ghế thấp, dội nước nóng lên người (かけ湯), tắm xà phòng, gội đầu sạch sẽ, rồi mới được xuống bồn chung. Bồn tắm là nước chung cho mọi người nên tuyệt đối không được mang khăn vào bồn, không được tắm xà phòng hay gội đầu trong bồn, không được bơi lội hay làm ồn. Khăn tắm thì gấp lại đặt ở mép bồn (湯船のふち) hoặc để trên đầu. Trong bài, 莉子 nhắc 拓海 từng bước một — dội nước, tắm sạch, rồi mới ngâm — và kiểm tra lại là khăn có nhúng vào bồn không; đó là cách người Nhật hay nhắc nhau về quy tắc ở nơi công cộng, không phải để khó dễ mà để giữ nước sạch cho mọi người.",
+    "Sau khi tắm xong, người Nhật hay có thói quen uống một chai sữa mát ngay trước cửa銭湯 — nổi tiếng nhất là コーヒー牛乳 (sữa cà phê) và フルーツ牛乳 (sữa trái cây) đựng trong chai thủy tinh, bán ở máy bán hàng tự động. Uống sữa sau khi ngâm nước nóng, người còn ấm và đang khát, là một niềm vui nhỏ rất đời thường, đến mức nhiều người đi銭湯 chỉ vì thèm chai sữa sau khi tắm. Trong bài, hai người ngồi uống sữa trước cửa, bàn lần sau đi銭湯 có phòng xông hơi (サウナ), rồi 拓海 nhắn tin báo người nhà là hôm nay đi銭湯 về, nước nóng thích lắm, hôm nào đi cùng — tin nhắn thường rất ngắn gọn, dùng văn nói như 行ってきたよ, 気持ちよかったよ, 行こう, và kèm cả ảnh mặt tiền銭湯 nếu chụp được."
+  ],
+  "mistakes": [
+    "Đừng xuống ngâm 湯船 khi chưa tắm sạch người ở 洗い場: phải dội nước nóng (かけ湯), tắm xà phòng và gội đầu sạch sẽ trước rồi mới được xuống bồn — xuống bồn khi người còn bẩn là điều tối kỵ ở銭湯, mọi người xung quanh sẽ khó chịu.",
+    "Đừng mang khăn tắm vào trong 湯船: khăn chỉ được gấp lại đặt ở mép bồn (湯船のふち) hoặc để trên đầu, tuyệt đối không nhúng khăn vào nước bồn — nước bồn là nước chung cho mọi người nên phải giữ sạch.",
+    "Đừng nhầm銭湯 với 温泉:銭湯 là nhà tắm công cộng trong khu dân cư, nước thường là nước máy đun nóng, vé rẻ; 温泉 là suối nước nóng thiên nhiên, thường ở vùng du lịch, giá cao hơn — hỏi đường hay tìm trên bản đồ thì phải nói đúng tên, không thì đi nhầm chỗ.",
+    "Đừng quên mang theo khăn tắm và đồ tắm (dầu gội, xà phòng) hoặc chuẩn bị tiền lẻ mua ở trong:銭湯 thường chỉ cho thuê hoặc bán khăn và đồ tắm, không phát miễn phí — quên mang thì phải mua thêm, và vé vào cửa thì mua ở máy bán vé tự động (券売機) trước khi vào, không phải trả tiền ở trong."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn lần đầu đi銭湯 và đứng trước máy bán vé tự động (券売機). Hãy hỏi bạn đi cùng: vé vào tắm bao nhiêu tiền, mua vé ở máy nào, và có cần mang theo khăn, dầu gội, xà phòng không.",
+    "Tình huống 2: Bạn vừa vào đến 脱衣所 (phòng thay đồ) của銭湯. Hãy hỏi bạn đi cùng: giày gửi vào tủ giày (下駄箱) nào, quần áo cởi ra cất vào tủ đựng đồ (ロッカー) nào, và vào khu tắm thì chỉ mang theo những gì.",
+    "Tình huống 3: Bạn đang ở 洗い場 (khu vực tắm rửa) của銭湯. Hãy hỏi bạn đi cùng: ngồi tắm ở ghế nào, dội nước nóng (かけ湯) như thế nào, tắm xà phòng và gội đầu ở đây hay trong bồn, và khi nào thì được xuống ngâm 湯船.",
+    "Tình huống 4: Bạn vừa ngâm 湯船 xong và ra ngoài cửa銭湯, đang đứng trước máy bán hàng tự động. Hãy rủ bạn đi cùng uống sữa sau khi tắm: uống コーヒー牛乳 hay フルーツ牛乳, và bàn lần sau đi thử銭湯 có phòng xông hơi (サウナ).",
+    "Tình huống 5: Bạn vừa đi銭湯 về và muốn nhắn tin báo người nhà. Hãy nhắn: hôm nay lần đầu đi銭湯, nước nóng thích thế nào, và rủ hôm nào rảnh đi cùng."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、ここが{銭湯|せんとう}か。ってさ、{入|はい}る{前|まえ}に{券売|けんばい}{機|き}でチケット{買|か}うんだよね。",
+      "vi": "Ồ, đây là銭湯 à. Này, trước khi vào thì mua vé ở máy bán vé đúng không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、そうだよ。あ、あの{機械|きかい}だよ。{入浴|にゅうよく}{料|りょう}ってさ、{大人|おとな}いくらだっけ。",
+      "vi": "Ừ, đúng rồi đấy. À, cái máy kia kìa. Vé vào tắm ấy, người lớn bao nhiêu nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、520{円|えん}って{書|か}いてあるよ。あのさ、タオルとかシャンプーってさ、{持|も}ってこなきゃダメなの？",
+      "vi": "Ừm, ghi là 520 yên này. À này, khăn với dầu gội ấy, không mang theo thì không được à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{持|も}ってこなくてもさ、{中|なか}で{買|か}えるよ。でもさ、タオルは{持|も}ってきたほうがいいよ。",
+      "vi": "Không mang theo cũng được mà, mua ở trong cũng được. Nhưng mà khăn thì mang theo vẫn hơn đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "オッケー、{買|か}ったよ。あ、{靴|くつ}はさ、ここの{下駄|げた}{箱|はこ}に{入|い}れればいいのかな。",
+      "vi": "Được rồi, mua xong rồi. À, giày thì cho vào cái tủ giày này là được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだよ。{鍵|かぎ}、なくさないようにね。さ、{脱衣|だつい}{所|しょ}で{服|ふく}{脱|ぬ}いでさ、ロッカーに{入|い}れようよ。",
+      "vi": "Đúng rồi đấy. Chìa khóa đừng làm mất nhé. Nào, cởi đồ ở phòng thay đồ rồi cất vào tủ đựng đồ đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うわ、{広|ひろ}いね。ってさ、{洗|あら}い{場|いば}って、どこで{洗|あら}えばいいの？",
+      "vi": "Chà, rộng thật. Này, khu tắm rửa ấy, tắm ở chỗ nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あそこのさ、{空|あ}いてるイスに{座|すわ}ってさ。まずさ、かけ{湯|ゆ}してさ、{体|からだ}{洗|あら}ってから{湯船|ゆぶね}に{入|はい}るんだよ。",
+      "vi": "Ngồi vào cái ghế trống đằng kia kìa. Trước tiên thì dội nước nóng lên người, tắm sạch người rồi mới được xuống ngâm bồn đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、シャワーじゃなくてさ、{洗面|せんめん}{器|き}にお{湯|ゆ}くむんだね。{石鹸|せっけん}で{洗|あら}ってさ、シャンプーもするの？",
+      "vi": "Ồ, không phải vòi sen mà là múc nước nóng vào chậu à. Tắm bằng xà phòng rồi gội đầu luôn à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、するよ。{体|たい}、ちゃんと{洗|あら}ってからじゃないとさ、{湯船|ゆぶね}に{入|はい}っちゃダメだよ。",
+      "vi": "Ừ, gội luôn đi. Tắm sạch người rồi mới được xuống ngâm bồn đấy, không thì không được đâu."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、{湯船|ゆぶね}、めっちゃ{気持|きも}ちよかったね。お{湯|ゆ}、{熱|あつ}かったけどさ。",
+      "vi": "Phù, ngâm bồn thích thật đấy. Nước nóng thật nhưng mà sướng."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "でしょ。ってさ、タオル、{湯船|ゆぶね}に{入|い}れなかった？{入|い}れたらダメだよ。",
+      "vi": "Thấy chưa. Này, khăn ấy, cậu không nhúng vào bồn đấy chứ? Nhúng vào là không được đâu đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{入|い}れてないよ。ちゃんとさ、{湯船|ゆぶね}のふちに{置|お}いといたよ。",
+      "vi": "Không nhúng đâu. Tớ đặt cẩn thận ở mép bồn rồi mà."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "よかった。さ、{牛乳|ぎゅうにゅう}{飲|の}もうよ。コーヒー{牛乳|ぎゅうにゅう}にする？それともフルーツ{牛乳|ぎゅうにゅう}？",
+      "vi": "May quá. Nào, uống sữa đi. Uống coffee milk nhé? Hay là sữa trái cây?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うーん、コーヒー{牛乳|ぎゅうにゅう}にする。{風呂上|ふろあ}がりの{牛乳|ぎゅうにゅう}ってさ、なんでこんなにうまいの。",
+      "vi": "Ừm, uống coffee milk đi. Sữa uống sau khi tắm ấy, sao mà ngon thế không biết."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "だよね。{銭湯|せんとう}ってさ、{家|いえ}のお{風呂|ふろ}よりさ、{広|ひろ}くてあったまるよね。",
+      "vi": "Ừ nhỉ.銭湯 ấy, rộng hơn bồn tắm ở nhà, ngâm người ấm hơn hẳn nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、また{来|こ}ようよ。{次|つぎ}はさ、サウナある{銭湯|せんとう}、{行|い}ってみない？",
+      "vi": "Ừ, lần sau lại đến nhé. Lần tới đi thử銭湯 có phòng xông hơi xem sao?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。あ、うちの{人|ひと}に{連絡|れんらく}しなよ。{銭湯|せんとう}{行|い}ってきたよってさ。",
+      "vi": "Hay đấy. À, nhắn cho người nhà đi. Bảo là hôm nay đi銭湯 về rồi ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{銭湯|せんとう}に{行|い}ってきたよ。お{湯|ゆ}が{気持|きも}ちよかったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+      "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi銭湯 về rồi. Nước nóng thích lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいじゃん、それで。あ、{写真|しゃしん}もさ、{銭湯|せんとう}の{外観|がいかん}、{撮|と}っとけばよかったね。",
+      "vi": "Được đấy, nhắn thế đi. À, ảnh ấy, lẽ ra phải chụp mặt tiền銭湯 mới phải."
+    }
+  ],
+  "notes": [
+    "銭湯 là nhà tắm công cộng trong khu dân cư, vé rẻ (khoảng 500 yên), nước thường là nước máy đun nóng; khác với 温泉 là suối nước nóng thiên nhiên ở vùng du lịch.",
+    "Quy tắc bắt buộc ở銭湯: dội nước nóng (かけ湯), tắm xà phòng và gội đầu sạch ở 洗い場 rồi mới được xuống ngâm 湯船; tuyệt đối không mang khăn hay xà phòng vào bồn, khăn chỉ đặt ở mép bồn (湯船のふち).",
+    "Sau khi tắm xong, người Nhật hay uống コーヒー牛乳 hoặc フルーツ牛乳 bán ở máy bán hàng tự động trước cửa銭湯 — đó là thói quen rất đời thường sau khi ngâm nước nóng.",
+    "〜てからじゃないと là cách nói quy tắc bắt buộc một cách tự nhiên (phải làm… rồi mới được…); 〜ばいいのかな là cách hỏi xác nhận khi lần đầu đến một nơi; 〜てみない？ là cách rủ nhau thử một chỗ mới một cách nhẹ nhàng."
+  ]
+}
