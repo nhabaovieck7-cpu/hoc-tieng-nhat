@@ -1,5 +1,6 @@
 {
  "items": [
+  {"id": "2026-11-19-nut-bai-truoc-bai-tiep-theo", "date": "2026-11-19", "type": "tinh-nang", "title": "Thêm nút Bài trước / Bài tiếp theo ở mọi bài học, bài kaiwa và đề thi", "desc": "Từ nay cuối mỗi bài học khóa học, bài kaiwa, đề thi (đề ngắn mỗi ngày, đề thứ Bảy, kho đề thi thử, bộ gia sư N1), bài Ngành nghề, Đời sống, Cẩm nang và Tin tức đều có thanh nút lớn ⬅ Bài trước / Bài tiếp theo ➡ kèm tên bài kề bên — học liền một mạch không cần quay ra danh sách. Đang ở bài đầu hoặc bài cuối thì nút tương ứng tự mờ đi.", "link": "index.html"},
   {"id": "2026-11-08-cam-nang-thu-tuc", "date": "2026-11-08", "type": "tinh-nang", "title": "Chuyên mục mới: Cẩm nang thủ tục & dịch vụ tại Nhật", "desc": "25 hướng dẫn từng bước cho người Việt tại Nhật — đăng ký địa chỉ, SIM, điện thoại, ngân hàng, visa, thuế, nenkin, thuê nhà, phỏng vấn… Mỗi bài có checklist giấy tờ, link tải tờ khai chính thức + cách điền từng mục, video hướng dẫn, từ vựng và câu mẫu.", "link": "cam-nang.html"},
   {"id": "2026-11-08-game-media-r2", "date": "2026-11-08", "type": "fix", "title": "Game nhẹ hơn: chuyển giọng đọc + nhạc nền sang kho R2", "desc": "Toàn bộ giọng đọc, nhạc nền và clip nghe của game Tuổi Trẻ Ở Nhật + nhạc game Edo đã chuyển sang Cloudflare R2 — mở game nhanh hơn, web nhẹ đi ~452 MB.", "link": "game-truyen/index.html"},
   {

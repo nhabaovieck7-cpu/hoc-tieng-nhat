@@ -93,6 +93,35 @@ try{var mq=matchMedia('(prefers-color-scheme: dark)');
   return false};
 })();
 
+
+// ===== Thanh "Bài trước / Bài tiếp theo" dùng chung (HNSEQ) =====
+// HNSEQ.navHTML(prev, next, opts): prev/next = null hoặc {label, href}.
+//  - Có href  -> thẻ <a>: mở bài kề như một link bình thường (history/Back
+//    vẫn đúng như khi bấm từ danh sách).
+//  - Không href -> <button data-seq="-1|1">: trang tự gắn hành động bằng
+//    HNSEQ.bindSeqNav(root, function(dir){...}) — dùng cho các trang mở
+//    bài bằng JS (đề thi, SPA theo hash tự vẽ lại...).
+//  - null -> hiện nút mờ vô hiệu (đang ở bài đầu / bài cuối danh sách).
+// HNSEQ.fromList(list, idx, labelFn, hrefFn): dựng {prev, next} từ một
+//  mảng ĐÃ sắp đúng thứ tự hiển thị; hrefFn bỏ trống (null) = nút button.
+(function(){
+ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+ function btn(it,dir,lab){
+  if(!it)return '<span class="hn-seqbtn is-off" aria-disabled="true"><span class="hn-seqlab">'+lab+'</span><span class="hn-seqname">—</span></span>';
+  var inner='<span class="hn-seqlab">'+lab+'</span><span class="hn-seqname">'+esc(it.label||'')+'</span>';
+  if(it.href)return '<a class="hn-seqbtn" href="'+esc(it.href)+'">'+inner+'</a>';
+  return '<button type="button" class="hn-seqbtn" data-seq="'+dir+'">'+inner+'</button>'}
+ window.HNSEQ={
+  navHTML:function(prev,next,opts){opts=opts||{};
+   return '<nav class="hn-seqnav" aria-label="'+esc(opts.aria||'Bài trước, bài tiếp theo')+'">'
+    +btn(prev,-1,opts.prevText||'⬅ Bài trước')
+    +btn(next,1,opts.nextText||'Bài tiếp theo ➡')
+    +'</nav>'},
+  bindSeqNav:function(root,go){if(!root||!go)return;root.querySelectorAll('[data-seq]').forEach(function(b){b.addEventListener('click',function(){go(+b.getAttribute('data-seq'),b)})})},
+  fromList:function(list,idx,labelFn,hrefFn){function at(i){if(!list||i<0||i>=list.length)return null;var it=list[i];return {label:labelFn(it,i),href:hrefFn?hrefFn(it,i):null}}return {prev:at(idx-1),next:at(idx+1)}}
+ };
+})();
+
 // ===== Nút "← Quay lại" (trang con): HN_BACK() về đúng trang trước (giữ
 // history.back() ở luồng tốt, dùng trí nhớ điều hướng khi mất referrer);
 // không có trang trước (mở trực tiếp) thì đi theo href trang cha trên nút =====
