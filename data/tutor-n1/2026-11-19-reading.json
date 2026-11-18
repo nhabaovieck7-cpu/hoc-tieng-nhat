@@ -1,0 +1,445 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 中文 trong phần đọc hiểu của đề N1 thật: một bài văn vừa (khoảng 600–800 chữ) với 4 câu hỏi — hỏi ý chính của tác giả, nghĩa của một nhận định trích dẫn trong bài, vai trò của ví dụ minh họa, và lựa chọn đúng với nội dung bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, chú ý các từ nối đối lập và chủ trương ở đoạn cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình suy luận lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc + 4 câu hỏi). Trong đề thật, 中文 là dạng dễ mất điểm vì các lựa chọn nhiễu rất sát nghĩa: chúng thường lấy ví dụ minh họa trong bài làm đáp án thay cho ý chính, hoặc đảo ngược quan hệ giữa 'lời nói dịu dàng' và 'sự tử tế thật sự', hoặc chỉ đúng một nửa.",
+  "tips": [
+    {
+      "h": "Tìm bước ngoặt しかし và chủ trương ở đoạn cuối",
+      "body": "Trong bài luận kiểu N1, đoạn đầu thường chỉ nêu quan niệm phổ biến cần phê phán, không phải ý chính. Bước ngoặt mở đầu bằng しかし (đoạn 1 câu 4: しかし、穏やかな言葉だけでは、相手の心に届かないこともある) mới là lúc tác giả bắt đầu nói thật, và chủ trương nằm ở đoạn kết luận, mở đầu bằng 大切なのは (đoạn 4 câu 1). Câu hỏi '筆者が最も言いたいこと' hầu như luôn có đáp án ở đoạn cuối."
+    },
+    {
+      "h": "Ví dụ đối lập chỉ là bằng chứng, không phải ý chính",
+      "body": "Đoạn 2 đưa 2 ví dụ đối lập nhau: tiền bối thứ nhất chỉ mỉm cười nói '大丈夫だよ' mà không chỉ ra lỗi, tiền bối thứ hai nói thẳng 'ここはこう直したほうがいいよ'. Cả hai ví dụ chỉ để minh họa cho nhận định ở đoạn 3 câu 2 (やさしさとは…相手にとって本当に必要なことをすることにほかならない). Lựa chọn nào chỉ nhắc lại nội dung của một ví dụ (ví dụ: 'nói 大丈夫だよ là tử tế') thì gần như chắc chắn là nhiễu cho câu hỏi ý chính."
+    },
+    {
+      "h": "もちろん／だからこそ là bản đồ của đoạn 3",
+      "body": "もちろん ở đoạn 3 câu 4 giới hạn lại ý vừa nêu ('nói sự thật khó nghe ≠ cứ ném lời nghiêm khắc vào đối phương'); だからこそ ở đoạn 3 câu 5 nối hệ quả ('vì厳しい言葉だけでは相手を傷つけるだけ, nên phải đứng ở lập trường của đối phương và truyền đạt bằng hình thức đối phương có thể tiếp nhận'). Đọc đúng 2 từ nối này là nắm được toàn bộ lập luận của đoạn 3."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có 4 đoạn, 18 câu, chủ trương nằm ở đoạn 3 câu 2 (やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない) và đoạn 4 câu 1 (大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである). Khi làm câu hỏi về '〜とはどういうことか', hãy quay lại đúng câu định nghĩa ở đoạn 3 câu 2; khi làm câu hỏi về vai trò của ví dụ佐藤さん, hãy đối chiếu kết quả đối lập của 2 tiền bối ở đoạn 2."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「やさしさ」と聞くと、多くの人は穏やかな言葉や笑顔を思い浮かべるのではないだろうか。相手を傷つけないように、ていねいな言葉を選び、優しい声で話すこと――それがやさしい人だと考えられがちである。確かに、言葉のやさしさは大切だ。しかし、穏やかな言葉だけでは、相手の心に届かないこともある。\nたとえば、職場で新人の佐藤さんが何度も同じ間違いをしていたとき、先輩の一人は「大丈夫だよ」と微笑みながら、何も指摘しなかった。それはやさしさのつもりだったのかもしれない。だが、佐藤さんは間違いに気づかないまま、同じ失敗を繰り返し、やがて自信を失ってしまった。一方、別の先輩は「ここはこう直したほうがいいよ」とはっきり伝えた。その言葉は少し厳しかったが、佐藤さんは仕事ができるようになり、先輩を信頼するようになった。\nこの違いは何だろうか。やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない。時には、言いにくい真実を伝えることが、相手のためになる。もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである。だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである。\n大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである。やさしさには、いろいろな形がある。言葉のやさしさだけがやさしさではない。相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "やさしい言葉を使うことが、やさしさのすべてである。",
+        "やさしさとは、相手にとって本当に必要なことを、相手が受け取れる形で行うことである。",
+        "他人の間違いを指摘することは、やさしさとは関係がない。",
+        "相手を傷つけないためには、何も言わないほうがよい。"
+      ],
+      "answer": 1,
+      "explain_vi": "Ý chính nằm ở đoạn 3 câu 2: やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない — và được nhắc lại ở đoạn 4 câu 1 (大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである) cùng đoạn 4 câu 4 (相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ). Lựa chọn ② tóm tắt đúng cả ba ý: làm điều cần thiết cho đối phương + bằng hình thức đối phương tiếp nhận được."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「やさしさ」と聞くと、多くの人は穏やかな言葉や笑顔を思い浮かべるのではないだろうか。相手を傷つけないように、ていねいな言葉を選び、優しい声で話すこと――それがやさしい人だと考えられがちである。確かに、言葉のやさしさは大切だ。しかし、穏やかな言葉だけでは、相手の心に届かないこともある。\nたとえば、職場で新人の佐藤さんが何度も同じ間違いをしていたとき、先輩の一人は「大丈夫だよ」と微笑みながら、何も指摘しなかった。それはやさしさのつもりだったのかもしれない。だが、佐藤さんは間違いに気づかないまま、同じ失敗を繰り返し、やがて自信を失ってしまった。一方、別の先輩は「ここはこう直したほうがいいよ」とはっきり伝えた。その言葉は少し厳しかったが、佐藤さんは仕事ができるようになり、先輩を信頼するようになった。\nこの違いは何だろうか。やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない。時には、言いにくい真実を伝えることが、相手のためになる。もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである。だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである。\n大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである。やさしさには、いろいろな形がある。言葉のやさしさだけがやさしさではない。相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ。\n「やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない」とあるが、どういうことか。",
+      "choices": [
+        "相手が喜ぶ言葉をかけることがやさしさである。",
+        "相手の気持ちを考えずに、厳しい言葉を言うことがやさしさである。",
+        "やさしさは、相手に必要なことをすることであり、それ以外にはないということ。",
+        "やさしさとは、相手に何も言わないことである。"
+      ],
+      "answer": 2,
+      "explain_vi": "Câu hỏi hỏi lại đúng định nghĩa ở đoạn 3 câu 2: やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない. Cấu trúc 〜ではなく…にほかならない có nghĩa là 'không phải A, mà chính là B, không gì khác' — tức làやさしさ CHỈ LÀ làm điều cần thiết cho đối phương, không phải là làm cho đối phương cảm thấy dễ chịu. Lựa chọn ③ diễn đạt đúng định nghĩa này."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「やさしさ」と聞くと、多くの人は穏やかな言葉や笑顔を思い浮かべるのではないだろうか。相手を傷つけないように、ていねいな言葉を選び、優しい声で話すこと――それがやさしい人だと考えられがちである。確かに、言葉のやさしさは大切だ。しかし、穏やかな言葉だけでは、相手の心に届かないこともある。\nたとえば、職場で新人の佐藤さんが何度も同じ間違いをしていたとき、先輩の一人は「大丈夫だよ」と微笑みながら、何も指摘しなかった。それはやさしさのつもりだったのかもしれない。だが、佐藤さんは間違いに気づかないまま、同じ失敗を繰り返し、やがて自信を失ってしまった。一方、別の先輩は「ここはこう直したほうがいいよ」とはっきり伝えた。その言葉は少し厳しかったが、佐藤さんは仕事ができるようになり、先輩を信頼するようになった。\nこの違いは何だろうか。やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない。時には、言いにくい真実を伝えることが、相手のためになる。もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである。だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである。\n大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである。やさしさには、いろいろな形がある。言葉のやさしさだけがやさしさではない。相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ。\n筆者が佐藤さんの例を挙げたのはなぜか。",
+      "choices": [
+        "職場では新人の失敗は先輩の責任だと示すため。",
+        "「大丈夫だよ」と言うことが、やさしさの最もよい形だと示すため。",
+        "言葉のやさしさだけでは相手のためにならず、必要なことを伝えることがやさしさであることを示すため。",
+        "新人は先輩の言葉を信じてはいけないと示すため。"
+      ],
+      "answer": 2,
+      "explain_vi": "Ví dụ về佐藤さん ở đoạn 2 là 2 ví dụ đối lập: tiền bối thứ nhất chỉ nói '大丈夫だよ' mà không chỉ ra lỗi — kết quả là佐藤さん cứ lặp lại thất bại và đánh mất sự tự tin; tiền bối thứ hai nói thẳng chỗ cần sửa — kết quả là佐藤さん làm được việc và tin tưởng tiền bối. Hai ví dụ đối lập này là bằng chứng cho chủ trương ở đoạn 3 câu 2: やさしさとは…相手にとって本当に必要なことをすることにほかならない. Nó chứng minh lời nói dịu dàng đơn thuần chưa đủ, điều quan trọng là truyền đạt điều cần thiết cho đối phương."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "「やさしさ」と聞くと、多くの人は穏やかな言葉や笑顔を思い浮かべるのではないだろうか。相手を傷つけないように、ていねいな言葉を選び、優しい声で話すこと――それがやさしい人だと考えられがちである。確かに、言葉のやさしさは大切だ。しかし、穏やかな言葉だけでは、相手の心に届かないこともある。\nたとえば、職場で新人の佐藤さんが何度も同じ間違いをしていたとき、先輩の一人は「大丈夫だよ」と微笑みながら、何も指摘しなかった。それはやさしさのつもりだったのかもしれない。だが、佐藤さんは間違いに気づかないまま、同じ失敗を繰り返し、やがて自信を失ってしまった。一方、別の先輩は「ここはこう直したほうがいいよ」とはっきり伝えた。その言葉は少し厳しかったが、佐藤さんは仕事ができるようになり、先輩を信頼するようになった。\nこの違いは何だろうか。やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない。時には、言いにくい真実を伝えることが、相手のためになる。もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである。だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである。\n大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである。やさしさには、いろいろな形がある。言葉のやさしさだけがやさしさではない。相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ。\n本文の内容と合うものはどれか。",
+      "choices": [
+        "厳しい言葉をぶつけるだけでも、相手のためになる。",
+        "言葉のやさしさは、まったく意味がない。",
+        "やさしい人とは、決して厳しい言葉を使わない人のことである。",
+        "相手の立場に立って、相手が受け取れる形で伝えることが大切である。"
+      ],
+      "answer": 3,
+      "explain_vi": "Trùng khớp với đoạn 3 câu 5: だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである. Các lựa chọn còn lại đều ngược với bài, như phân tích ở Phần 4."
+    }
+  ],
+  "study": {
+    "passage_title": "「『やさしさ』の形」— Sự tử tế có nhiều hình thức, không phải lúc nào cũng là nói lời dịu dàng",
+    "structure": "Bài văn vừa gồm 4 đoạn, 18 câu, theo cấu trúc 'nêu quan niệm phổ biến → ví dụ đối lập → chủ trương → kết luận' điển hình của dạng 中文 N1. Đoạn 1 (4 câu) nêu quan niệm phổ biến: nghe tới 'sự tử tế', nhiều người nghĩ ngay tới lời nói dịu dàng và nụ cười; chọn lời lịch sự để không làm tổn thương đối phương, nói bằng giọng dịu dàng — người ta thường cho rằng đó mới là người tử tế; quả thật, sự dịu dàng trong lời nói là quan trọng; nhưng bước ngoặt しかし ở câu 4 mở ra vấn đề: chỉ có lời nói dịu dàng thôi thì có khi cũng không chạm tới được trái tim của đối phương. Đoạn 2 (5 câu) đưa 2 ví dụ đối lập ở nơi làm việc: khi anh Sato, nhân viên mới, cứ mắc đi mắc lại cùng một lỗi, một tiền bối chỉ mỉm cười nói '大丈夫だよ' mà không chỉ ra lỗi nào — có lẽ đó là ý định tử tế — nhưng anh Sato không nhận ra lỗi của mình, cứ lặp lại cùng một thất bại và rồi dần đánh mất sự tự tin; trong khi đó, một tiền bối khác nói thẳng 'ここはこう直したほうがいいよ', lời nói có hơi nghiêm khắc nhưng anh Sato đã làm được việc và trở nên tin tưởng người tiền bối đó. Đoạn 3 (5 câu) là đoạn chủ trương: câu hỏi この違いは何だろうか mở đầu, rồi câu 2 đưa ra định nghĩa trung tâm — やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない; đôi khi nói ra sự thật khó nói lại có ích cho đối phương; もちろん giới hạn lại — chỉ ném lời nghiêm khắc vào đối phương thì chỉ làm tổn thương đối phương mà thôi; だからこそ kết lại — phải đứng ở lập trường của đối phương và truyền đạt bằng hình thức đối phương có thể tiếp nhận. Đoạn 4 (4 câu) kết luận, mở đầu bằng 大切なのは — câu chủ trương của toàn bài: điều quan trọng không phải là thể hiện sự tử tế của mình, mà là làm cho đối phương có thể tiến thêm một bước; sự tử tế có nhiều hình thức; chỉ sự dịu dàng trong lời nói mới là tử tế — không phải vậy; chỉ khi có tấm lòng nghĩ cho đối phương, thì ngay cả lời nói nghiêm khắc cũng trở thành sự tử tế. Bẫy chính của bài: các lựa chọn nhiễu đồng nhất 'lời nói dịu dàng' với 'sự tử tế', lấy một ví dụ ở đoạn 2 (nói '大丈夫だよ' hoặc nói thẳng lỗi sai) làm ý chính, hoặc đảo ngược quan hệ giữa 'lời nghiêm khắc' và 'sự tử tế' (bỏ qua điều kiện '相手を思う気持ちがあってこそ' và '相手が受け取れる形で').",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "「やさしさ」と{聞|き}くと、{多|おお}くの{人|ひと}は{穏|おだ}やかな{言葉|ことば}や{笑顔|えがお}を{思|おも}い{浮|いう}かべるのではないだろうか。",
+        "vi": "Khi nghe từ 'sự tử tế', có lẽ nhiều người sẽ hình dung ra những lời nói dịu dàng và nụ cười."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{相手|あいて}を{傷|きず}つけないように、ていねいな{言葉|ことば}を{選|えら}び、{優|やさ}しい{声|こえ}で{話|はな}すこと――それがやさしい{人|ひと}だと{考|かんが}えられがちである。",
+        "vi": "Chọn lời nói lịch sự để không làm tổn thương đối phương, nói bằng giọng dịu dàng — người ta thường cho rằng đó mới là người tử tế."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{確|たし}かに、{言葉|ことば}のやさしさは{大切|たいせつ}だ。",
+        "vi": "Quả thật, sự dịu dàng trong lời nói là quan trọng."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "しかし、{穏|おだ}やかな{言葉|ことば}だけでは、{相手|あいて}の{心|こころ}に{届|とど}かないこともある。",
+        "vi": "Thế nhưng, chỉ có lời nói dịu dàng thôi thì có khi cũng không chạm tới được trái tim của đối phương."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "たとえば、{職場|しょくば}で{新人|しんじん}の{佐藤|さとう}さんが{何|なん}{度|ど}も{同|おな}じ{間違|まちが}いをしていたとき、{先輩|せんぱい}の{一人|ひとり}は「{大丈夫|だいじょうぶ}だよ」と{微笑|ほほえ}みながら、{何|なん}も{指摘|してき}しなかった。",
+        "vi": "Chẳng hạn, ở nơi làm việc, khi anh Sato, nhân viên mới, cứ mắc đi mắc lại cùng một lỗi, một người tiền bối vừa mỉm cười vừa nói 'Không sao đâu' mà không chỉ ra lỗi nào cả."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "それはやさしさのつもりだったのかもしれない。",
+        "vi": "Có lẽ đó là ý định tử tế của người tiền bối ấy."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "だが、{佐藤|さとう}さんは{間違|まちが}いに{気|き}づかないまま、{同|おな}じ{失敗|しっぱい}を{繰|く}り{返|りかえ}し、やがて{自信|じしん}を{失|うしな}ってしまった。",
+        "vi": "Thế nhưng, anh Sato không nhận ra lỗi của mình, cứ lặp lại cùng một thất bại, và rồi dần đánh mất sự tự tin."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{一方|いっぽう}、{別|べつ}の{先輩|せんぱい}は「ここはこう{直|なお}したほうがいいよ」とはっきり{伝|つた}えた。",
+        "vi": "Trong khi đó, một người tiền bối khác lại nói thẳng: 'Chỗ này sửa như thế này thì tốt hơn đấy.'"
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "その{言葉|ことば}は{少|すこ}し{厳|きび}しかったが、{佐藤|さとう}さんは{仕事|しごと}ができるようになり、{先輩|せんぱい}を{信頼|しんらい}するようになった。",
+        "vi": "Lời nói ấy có hơi nghiêm khắc, nhưng anh Sato đã làm được việc, và trở nên tin tưởng người tiền bối đó."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "この{違|ちが}いは{何|なん}だろうか。",
+        "vi": "Sự khác biệt này là gì?"
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "やさしさとは、{相手|あいて}に{心地|ここち}よく{感|かん}じてもらうことではなく、{相手|あいて}にとって{本当|ほんと}に{必要|ひつよう}なことをすることにほかならない。",
+        "vi": "Sự tử tế không phải là làm cho đối phương cảm thấy dễ chịu, mà chính là làm điều thực sự cần thiết cho đối phương, không gì khác."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{時|とき}には、{言|い}いにくい{真実|しんじつ}を{伝|つた}えることが、{相手|あいて}のためになる。",
+        "vi": "Đôi khi, việc nói ra một sự thật khó nói lại có ích cho đối phương."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "もちろん、{厳|きび}しい{言葉|ことば}をぶつけるだけでは、{相手|あいて}を{傷|きず}つけるだけである。",
+        "vi": "Tất nhiên, chỉ ném vào đối phương những lời nghiêm khắc thì chỉ làm tổn thương đối phương mà thôi."
+      },
+      {
+        "para": 3,
+        "no": 5,
+        "ja": "だからこそ、{相手|あいて}の{立場|たちば}に{立|た}ち、{相手|あいて}が{受|う}け{取|けと}れる{形|かたち}で{伝|つた}えることが{大切|たいせつ}になるのである。",
+        "vi": "Chính vì vậy, việc đứng ở lập trường của đối phương và truyền đạt bằng hình thức mà đối phương có thể tiếp nhận mới trở nên quan trọng."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{大切|たいせつ}なのは、{自分|じぶん}のやさしさを{示|しめ}すことではなく、{相手|あいて}が{一歩|いっぽ}{前|まえ}に{進|すす}めるようになることである。",
+        "vi": "Điều quan trọng không phải là thể hiện sự tử tế của mình, mà là làm cho đối phương có thể tiến thêm một bước."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "やさしさには、いろいろな{形|かたち}がある。",
+        "vi": "Sự tử tế có nhiều hình thức khác nhau."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{言葉|ことば}のやさしさだけがやさしさではない。",
+        "vi": "Chỉ sự dịu dàng trong lời nói mới là tử tế — không phải vậy."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "{相手|あいて}を{思|おも}う{気持|きも}ちがあってこそ、{厳|きび}しい{言葉|ことば}もやさしさになるのだ。",
+        "vi": "Chỉ khi có tấm lòng nghĩ cho đối phương, thì ngay cả lời nói nghiêm khắc cũng trở thành sự tử tế."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ② · Câu 2 – đáp án ③ · Câu 3 – đáp án ③ · Câu 4 – đáp án ④",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ3②・Đ4①④",
+        "options": [
+          {
+            "text": "やさしい言葉を使うことが、やさしさのすべてである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 1 câu 4 và đoạn 4 câu 3: しかし、穏やかな言葉だけでは、相手の心に届かないこともある — và 言葉のやさしさだけがやさしさではない. Lời nói dịu dàng chỉ là MỘT hình thức của sự tử tế, không phải là tất cả. Bẫy đồng nhất một hình thức với toàn bộ khái niệm."
+          },
+          {
+            "text": "やさしさとは、相手にとって本当に必要なことを、相手が受け取れる形で行うことである。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai luận điểm chính của bài: đoạn 3 câu 2 — やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない; đoạn 3 câu 5 — 相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである; và đoạn 4 câu 1 — 大切なのは、自分のやさしさを示すことではなく、相手が一歩前に進めるようになることである. Đây là ý tác giả muốn nói nhất."
+          },
+          {
+            "text": "他人の間違いを指摘することは、やさしさとは関係がない。",
+            "verdict": "SAI",
+            "reason": "Ngược với ví dụ ở đoạn 2 câu 4–5: tiền bối thứ hai はっきり伝えた 'ここはこう直したほうがいいよ' và kết quả là佐藤さん làm được việc và tin tưởng tiền bối — tức là việc chỉ ra lỗi, khi được truyền đạt đúng cách, CHÍNH LÀ sự tử tế. Lựa chọn này phủ nhận hoàn toàn ví dụ trung tâm của bài. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "相手を傷つけないためには、何も言わないほうがよい。",
+            "verdict": "SAI",
+            "reason": "Ngược với ví dụ ở đoạn 2 câu 1–3: tiền bối thứ nhất '何も指摘しなかった' vì nghĩ là tử tế, nhưng kết quả là佐藤さん cứ lặp lại thất bại và đánh mất sự tự tin. Bài viết cho thấy 'không nói gì' không phải là tử tế mà còn gây hại. Bẫy lấy hành vi trong ví dụ bị phủ định làm chủ trương."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 2,
+        "locator": "Đ3②",
+        "options": [
+          {
+            "text": "相手が喜ぶ言葉をかけることがやさしさである。",
+            "verdict": "SAI",
+            "reason": "Đây chính là vế bị phủ định trong câu trích dẫn: やさしさとは、相手に心地よく感じてもらうことではなく… — tác giả nói rõやさしさ KHÔNG phải là 'làm cho đối phương cảm thấy dễ chịu'. Lựa chọn này lấy vế bị phủ định (〜ではなく) làm đáp án. Bẫy đọc vế phủ định thành khẳng định."
+          },
+          {
+            "text": "相手の気持ちを考えずに、厳しい言葉を言うことがやさしさである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 4–5: もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである — và だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである. Lời nghiêm khắc chỉ là tử tế khi có tấm lòng nghĩ cho đối phương (đoạn 4 câu 4: 相手を思う気持ちがあってこそ), chứ không phải khi 'không nghĩ tới cảm xúc của đối phương'. Bẫy bỏ qua điều kiện của bài."
+          },
+          {
+            "text": "やさしさは、相手に必要なことをすることであり、それ以外にはないということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trích đúng định nghĩa ở đoạn 3 câu 2: やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない. Cấu trúc 〜ではなく…にほかならない có nghĩa là 'không phải A, mà chính là B, không gì khác' — lựa chọn này diễn đạt đúng cả hai mặt: phủ định 'làm cho đối phương dễ chịu' và khẳng định 'làm điều cần thiết cho đối phương'."
+          },
+          {
+            "text": "やさしさとは、相手に何も言わないことである。",
+            "verdict": "SAI",
+            "reason": "Ngược với ví dụ ở đoạn 2 câu 1–3: tiền bối thứ nhất '何も指摘しなかった' nhưng kết quả là佐藤さん cứ lặp lại thất bại và đánh mất sự tự tin. Bài viết không hề định nghĩaやさしさ là 'không nói gì'. Bẫy lấy hành vi trong ví dụ bị phủ định làm định nghĩa."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 2,
+        "locator": "Đ2①③④⑤・Đ3②",
+        "options": [
+          {
+            "text": "職場では新人の失敗は先輩の責任だと示すため。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói lỗi của新人 là trách nhiệm của tiền bối, cũng không bàn tới chuyện quy trách nhiệm. Ví dụ về佐藤さん được đưa ra để so sánh HAI CÁCH ỨNG XỬ của tiền bối và kết quả đối lập của chúng, chứ không phải để quy trách nhiệm. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "「大丈夫だよ」と言うことが、やさしさの最もよい形だと示すため。",
+            "verdict": "SAI",
+            "reason": "Ngược với kết quả của ví dụ: tiền bối nói '大丈夫だよ' mà không chỉ ra lỗi thì佐藤さん cứ lặp lại thất bại và đánh mất sự tự tin (đoạn 2 câu 3). Đây là ví dụ cho thấy lời nói dịu dàng đơn thuần là CHƯA ĐỦ, không phải là 'hình thức tốt nhất của sự tử tế'. Bẫy lấy ví dụ bị phủ định làm chủ trương."
+          },
+          {
+            "text": "言葉のやさしさだけでは相手のためにならず、必要なことを伝えることがやさしさであることを示すため。",
+            "verdict": "ĐÚNG",
+            "reason": "Ví dụ về佐藤さん ở đoạn 2 là 2 ví dụ đối lập: tiền bối thứ nhất chỉ nói '大丈夫だよ' mà không chỉ ra lỗi — 佐藤さん cứ lặp lại thất bại và đánh mất sự tự tin (câu 1–3); tiền bối thứ hai nói thẳng 'ここはこう直したほうがいいよ' — 佐藤さん làm được việc và tin tưởng tiền bối (câu 4–5). Sự đối lập này là bằng chứng cho chủ trương ở đoạn 3 câu 2: やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない."
+          },
+          {
+            "text": "新人は先輩の言葉を信じてはいけないと示すため。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 5: 佐藤さんは仕事ができるようになり、先輩を信頼するようになった — anh Sato TRỞ NÊN tin tưởng tiền bối sau khi được chỉ ra lỗi. Bài viết không hề nói新人 không nên tin lời tiền bối. Bẫy đảo ngược kết quả của ví dụ."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 3,
+        "locator": "Đ3⑤",
+        "options": [
+          {
+            "text": "厳しい言葉をぶつけるだけでも、相手のためになる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 4: もちろん、厳しい言葉をぶつけるだけでは、相手を傷つけるだけである — chỉ ném lời nghiêm khắc vào đối phương thì CHỈ làm tổn thương đối phương mà thôi. Lựa chọn này bỏ qua だけでは…だけである và đảo ngược kết quả. Bẫy đọc nửa câu."
+          },
+          {
+            "text": "言葉のやさしさは、まったく意味がない。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 1 câu 3: 確かに、言葉のやさしさは大切だ — tác giả khẳng định lời nói dịu dàng LÀ quan trọng, chỉ là nó chưa đủ (穏やかな言葉だけでは…届かないこともある, câu 4). Lựa chọn này tuyệt đối hóa 'chưa đủ' thành 'hoàn toàn vô nghĩa'. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "やさしい人とは、決して厳しい言葉を使わない人のことである。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 4 câu 4: 相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ — ngay cả lời nói nghiêm khắc cũng trở thành sự tử tế khi có tấm lòng nghĩ cho đối phương. Lựa chọn này dùng 決して…ない để tuyệt đối hóa điều bài đang phủ định. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "相手の立場に立って、相手が受け取れる形で伝えることが大切である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 3 câu 5: だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである. Cả hai nửa của lựa chọn đều đúng với cùng một câu trong bài."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{穏|おだ}やか",
+        "reading": "おだやか",
+        "hanviet": "Ổn",
+        "vi": "dịu dàng, êm đềm, ôn hòa (lời nói, giọng điệu)"
+      },
+      {
+        "word": "{思|おも}い{浮|いう}かべる",
+        "reading": "おもいうかべる",
+        "hanviet": "Tư Phù",
+        "vi": "hình dung ra, nghĩ đến (một hình ảnh, một người)"
+      },
+      {
+        "word": "{届|とど}く",
+        "reading": "とどく",
+        "hanviet": "Giới",
+        "vi": "đến được, chạm tới (trái tim, lòng người)"
+      },
+      {
+        "word": "{微笑|ほほえ}む",
+        "reading": "ほほえむ",
+        "hanviet": "Vi Tiếu",
+        "vi": "mỉm cười"
+      },
+      {
+        "word": "{指摘|してき}する",
+        "reading": "してきする",
+        "hanviet": "Chỉ Trích",
+        "vi": "chỉ ra (lỗi sai, vấn đề)"
+      },
+      {
+        "word": "{繰|く}り{返|りかえ}す",
+        "reading": "くりかえす",
+        "hanviet": "Phản Phục",
+        "vi": "lặp lại (một hành động, một thất bại)"
+      },
+      {
+        "word": "{自信|じしん}",
+        "reading": "じしん",
+        "hanviet": "Tự Tín",
+        "vi": "sự tự tin"
+      },
+      {
+        "word": "{信頼|しんらい}する",
+        "reading": "しんらいする",
+        "hanviet": "Tín Lại",
+        "vi": "tin tưởng (ai đó)"
+      },
+      {
+        "word": "{心地|ここち}よい",
+        "reading": "ここちよい",
+        "hanviet": "Tâm Địa",
+        "vi": "dễ chịu, thoải mái (cảm giác)"
+      },
+      {
+        "word": "{立場|たちば}",
+        "reading": "たちば",
+        "hanviet": "Lập Trường",
+        "vi": "lập trường, vị trí (của đối phương)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜にほかならない",
+        "vi": "chính là… không gì khác (khẳng định dứt khoát: chỉ có đúng một đáp án này)",
+        "in_text": "やさしさとは、相手に心地よく感じてもらうことではなく、相手にとって本当に必要なことをすることにほかならない。"
+      },
+      {
+        "pattern": "〜てしまう",
+        "vi": "(mất rồi / rốt cuộc)… — chỉ kết quả xảy ra ngoài ý muốn hoặc không kiểm soát được, mang sắc thái tiếc nuối",
+        "in_text": "だが、佐藤さんは間違いに気づかないまま、同じ失敗を繰り返し、やがて自信を失ってしまった。"
+      },
+      {
+        "pattern": "〜からこそ",
+        "vi": "chính vì… nên… (nhấn mạnh lý do: vì có lý do đó nên mới có kết luận này)",
+        "in_text": "だからこそ、相手の立場に立ち、相手が受け取れる形で伝えることが大切になるのである。"
+      },
+      {
+        "pattern": "〜あってこそ",
+        "vi": "chỉ khi có… thì mới… (nhấn mạnh điều kiện không thể thiếu)",
+        "in_text": "相手を思う気持ちがあってこそ、厳しい言葉もやさしさになるのだ。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm khẳng định 'chỉ là…': 〜にほかならない / 〜にすぎない / 〜だけだ",
+        "rows": [
+          {
+            "form": "〜にほかならない",
+            "join": "N・Vること + にほかならない",
+            "vi": "chính là… không gì khác",
+            "diff": "Khẳng định DỨT KHOÁT và TRANG TRỌNG nhất: chỉ có đúng một đáp án này, không có khả năng nào khác. Hay dùng trong bài luận để nêu định nghĩa hoặc chủ trương. Sắc thái khẳng định mạnh, mang tính kết luận.",
+            "example_ja": "やさしさとは、{相手|あいて}にとって{本当|ほんと}に{必要|ひつよう}なことをすることにほかならない。",
+            "example_vi": "Sự tử tế chính là làm điều thực sự cần thiết cho đối phương, không gì khác."
+          },
+          {
+            "form": "〜にすぎない",
+            "join": "N・Vる + にすぎない",
+            "vi": "chỉ là… mà thôi",
+            "diff": "HẠ THẤP giá trị của đối tượng: 'chỉ là… thôi, không hơn thế'. Ngược hướng với にほかならない — にすぎない dùng để phủ định tầm quan trọng ('chỉ là… thôi'), còn にほかならない dùng để khẳng định duy nhất ('chính là…').",
+            "example_ja": "{穏|おだ}やかな{言葉|ことば}だけでは、やさしさとは{言|い}えない。それはやさしさの{一部|いちぶ}にすぎない。",
+            "example_vi": "Chỉ có lời nói dịu dàng thôi thì không thể gọi là sự tử tế. Đó chỉ là một phần của sự tử tế mà thôi."
+          },
+          {
+            "form": "〜だけだ",
+            "join": "N・Vる + だけだ",
+            "vi": "chỉ là… / chỉ có…",
+            "diff": "Giới hạn TRUNG TÍNH: nêu phạm vi của đối tượng mà không nhấn mạnh khẳng định hay hạ thấp. Khác với にほかならない (khẳng định duy nhất, trang trọng) và にすぎない (hạ thấp), だけだ chỉ nói 'chỉ có thế này thôi' một cách khách quan.",
+            "example_ja": "{言葉|ことば}のやさしさだけがやさしさではない。",
+            "example_vi": "Chỉ sự dịu dàng trong lời nói mới là tử tế — không phải vậy."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm nhấn mạnh điều kiện và lý do: 〜あってこそ / 〜てこそ / 〜からこそ",
+        "rows": [
+          {
+            "form": "〜あってこそ",
+            "join": "Nが + あってこそ",
+            "vi": "chỉ khi có… thì mới…",
+            "diff": "Nhấn mạnh ĐIỀU KIỆN TỒN TẠI không thể thiếu: chỉ khi có N thì kết quả mới xảy ra. N thường là một trạng thái, tấm lòng hoặc điều kiện trừu tượng (気持ち・信頼・理解).",
+            "example_ja": "{相手|あいて}を{思|おも}う{気持|きも}ちがあってこそ、{厳|きび}しい{言葉|ことば}もやさしさになるのだ。",
+            "example_vi": "Chỉ khi có tấm lòng nghĩ cho đối phương, thì ngay cả lời nói nghiêm khắc cũng trở thành sự tử tế."
+          },
+          {
+            "form": "〜てこそ",
+            "join": "Vて + こそ",
+            "vi": "chỉ khi làm… thì mới…",
+            "diff": "Nhấn mạnh ĐIỀU KIỆN HÀNH ĐỘNG không thể thiếu: chỉ khi thực hiện hành động đó thì kết quả mới xảy ra. Khác với あってこそ (điều kiện là sự tồn tại của một thứ), てこそ gắn với một hành động cụ thể.",
+            "example_ja": "{相手|あいて}の{立場|たちば}に{立|た}ってこそ、{相手|あいて}に{届|とど}く{言葉|ことば}を{選|えら}ぶことができる。",
+            "example_vi": "Chỉ khi đứng ở lập trường của đối phương, mới có thể chọn được lời nói chạm tới được đối phương."
+          },
+          {
+            "form": "〜からこそ",
+            "join": "Vる・Aい・Nだ + からこそ",
+            "vi": "chính vì… nên…",
+            "diff": "Nhấn mạnh LÝ DO: vì có lý do đó nên mới có kết luận này. Khác với あってこそ／てこそ (nhấn mạnh điều kiện để kết quả xảy ra), からこそ nhấn mạnh nguyên nhân dẫn tới kết luận — thường đứng ở đầu câu với だからこそ.",
+            "example_ja": "だからこそ、{相手|あいて}の{立場|たちば}に{立|た}ち、{相手|あいて}が{受|う}け{取|けと}れる{形|かたち}で{伝|つた}えることが{大切|たいせつ}になるのである。",
+            "example_vi": "Chính vì vậy, việc đứng ở lập trường của đối phương và truyền đạt bằng hình thức mà đối phương có thể tiếp nhận mới trở nên quan trọng."
+          }
+        ]
+      }
+    ]
+  }
+}

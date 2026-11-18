@@ -1,0 +1,366 @@
+{
+  "lesson": 35,
+  "topic": "Lần đầu đi xem kịch ở nhà hát nhỏ (lấy vé, tìm ghế, chờ mở màn, nghỉ giữa giờ, xem hết vở) (初めて小さな劇場でお芝居を見る)",
+  "summary": "Bối cảnh: 莉子 rủ 拓海 đi xem một vở kịch ở một nhà hát nhỏ trong khu phố — 拓海 chưa bao giờ đi xem kịch ở nhà hát nhỏ nên không biết lấy vé ở đâu, ghế ngồi thì tìm thế nào, vào trong thì phải làm gì trước giờ mở màn. Hai người đến nhà hát trước giờ diễn, lấy vé đã đặt trước ở quầy 受付, rồi tìm số ghế của mình trong khán phòng, ngồi chờ 開演. Vở kịch bắt đầu, hai người xem chăm chú; đến 幕間 (giờ nghỉ giữa giờ), hai người ra ngoài hành lang bàn nhau về vở diễn, mua nước uống ở máy bán hàng tự động, rồi quay lại ghế xem nốt nửa sau. Xem xong, hai người vừa đi ra vừa bàn xem diễn viên nào diễn hay nhất, rồi 拓海 nhắn tin báo người nhà là hôm nay đi xem kịch về, vở hay lắm, hôm nào đi cùng. Kỹ năng luyện: văn nói bạn bè khi đi xem kịch lần đầu — hỏi lấy vé ở đâu, hỏi ghế ngồi ở đâu, hỏi giờ mở màn và giờ nghỉ giữa giờ; cách nói khi bàn về vở diễn trong giờ nghỉ (diễn viên nào hay, đoạn nào xúc động, đoạn nào khó hiểu) và cách rủ nhau đi xem vở khác lần sau. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về nhà hát và xem kịch (劇場, 芝居, 開演, 幕間, 座席, 受付, 観客, 役者, 演出, セリフ, 拍手, カーテンコール), cách hỏi vị trí ghế ngồi và giờ giấc bằng câu hỏi xác nhận ngắn gọn (〜って、どこだっけ, 〜って、何時からだっけ), và cách nói cảm nhận về một vở diễn một cách tự nhiên (〜がすごかった, 〜に感動した, 〜がよくわかんなかった).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở cửa nhà hát nhỏ, lấy vé, tìm ghế, chờ đến giờ mở màn）",
+      "stage": "（Buổi tối, trước cửa một nhà hát nhỏ trong khu phố của 莉子. Ngoài cửa có tấm áp phích vở kịch tối nay, bên trong là quầy 受付 và một hành lang hẹp dẫn vào khán phòng. 拓海 cầm điện thoại có mã đặt vé, lần đầu đi xem kịch nên cứ nhìn quanh.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、ここが{劇場|げきじょう}か。ってさ、チケットって、どこで{受|う}け{取|けと}ればいいの？",
+          "vi": "Ồ, đây là nhà hát à. Này, vé ấy, lấy ở đâu?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あそこの{受付|うけつけ}だよ。{予約|よやく}したときの{番号|ばんごう}、{見|み}せればいいってさ。",
+          "vi": "Quầy tiếp đón đằng kia kìa. Chỉ cần cho họ xem mã đặt vé là được ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、これだよね。あのさ、{座席|ざせき}ってさ、どこだっけ。",
+          "vi": "Ừm, cái này đúng không. À này, ghế ngồi ấy, ở chỗ nào nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ほら、チケットに{書|か}いてあるよ。3{列|れつ}{目|め}の{真|ま}ん{中|んなか}あたりだってさ。",
+          "vi": "Này, ghi trên vé kìa. Hàng 3, khoảng giữa ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、{意外|いがい}と{近|ちか}いじゃん。ってさ、{開演|かいえん}って、{何時|いつ}からだっけ。",
+          "vi": "Ồ, gần hơn mình tưởng nhỉ. Này, mở màn ấy, mấy giờ bắt đầu nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "7{時|じ}からだよ。あと10{分|ぷん}くらいあるからさ、パンフレットでも{見|み}とこうよ。",
+          "vi": "7 giờ bắt đầu đấy. Còn khoảng 10 phút nữa, xem tờ chương trình đi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、パンフレットってさ、もらえるの？それとも{買|か}うの？",
+          "vi": "À, tờ chương trình ấy, được phát miễn phí à? Hay là phải mua?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "これ、{無料|むりょう}だよ。ほら、{出演|しゅつえん}{者|しゃ}とかさ、あらすじが{載|の}ってるよ。",
+          "vi": "Cái này miễn phí đấy. Này, có tên diễn viên với tóm tắt nội dung vở này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、{主役|しゅやく}の{人|ひと}ってさ、テレビにも{出|で}てるんだ。すごいね。",
+          "vi": "Chà, diễn viên chính ấy, cũng lên cả tivi cơ à. Giỏi thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "でしょ。さ、そろそろ{入|はい}ろうよ。{携帯|けいたい}、{電源|でんげん}{切|き}っといてね。",
+          "vi": "Thấy chưa. Nào, sắp đến giờ rồi, vào thôi. Tắt nguồn điện thoại đi nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（nghỉ giữa giờ, xem nốt nửa sau, xem xong bàn nhau và nhắn tin báo người nhà）",
+      "stage": "（Một lúc sau, hành lang nhà hát trong giờ nghỉ giữa giờ. Khán giả ra ngoài đi lại, mua nước ở máy bán hàng tự động. Sau đó hai người quay lại ghế, xem nốt nửa sau của vở kịch rồi đi ra ngoài cửa nhà hát.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、{幕間|まくあい}だね。{前半|ぜんはん}、めっちゃ{面白|おもしろ}かったじゃん。",
+          "vi": "Phù, nghỉ giữa giờ rồi. Nửa đầu hay thật đấy nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "だよね。あのさ、{主役|しゅやく}の{人|ひと}のセリフ、すごかったよね。",
+          "vi": "Ừ nhỉ. Này, lời thoại của diễn viên chính ấy, diễn đỉnh thật đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{声|こえ}も{大|おお}きくてさ、{後|うし}ろの{席|せき}まで{届|とど}いてたよ。ってさ、{後半|こうはん}って、どうなるんだろう。",
+          "vi": "Ừ, giọng cũng to nữa, ngồi ghế cuối vẫn nghe rõ. Này, nửa sau ấy, không biết diễn biến thế nào nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "さあ、わかんない。パンフレットのあらすじ、{読|よ}んじゃダメだよ。ネタバレしちゃうからさ。",
+          "vi": "Chịu, không biết. Đừng đọc tóm tắt trong tờ chương trình đấy. Đọc là lộ hết nội dung mất."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "わかった、{読|よ}まないよ。ってさ、{喉|のど}{渇|かわ}いたね。ジュース{買|か}ってこようか。",
+          "vi": "Biết rồi, không đọc đâu. Này, khát nước quá nhỉ. Đi mua nước nhé?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{買|か}ってきて。あ、もうすぐ{後半|こうはん}{始|はじ}まるからさ、{早|はや}く{戻|もど}ってきてね。",
+          "vi": "Ừ, mua đi. À, sắp diễn nửa sau rồi đấy, quay lại nhanh nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "ただいま。ってさ、{最後|さいご}のシーン、{感動|かんどう}したね。{客席|きゃくせき}、みんな{拍手|はくしゅ}してたよ。",
+          "vi": "Về rồi đây. Này, cảnh cuối ấy, xúc động thật đấy. Cả khán phòng vỗ tay ầm ầm luôn."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、よかったね。カーテンコールもさ、3{回|かい}もあったじゃん。",
+          "vi": "Ừ, hay thật đấy. Chào khán giả cuối vở ấy, cũng tới 3 lần cơ mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、うちの{人|ひと}に{連絡|れんらく}しなよ。{芝居|しばい}{見|み}てきたよってさ。",
+          "vi": "À, nhắn cho người nhà đi. Bảo là hôm nay đi xem kịch về rồi ấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{小|ちい}さな{劇場|げきじょう}でお{芝居|しばい}を{見|み}てきたよ。すごく{面白|おもしろ}かったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+          "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi xem kịch ở nhà hát nhỏ về rồi. Hay lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "チケットは受付で受け取ってください。座席はチケットに書いてあります。開演は7時からです。",
+      "real": "チケットって、どこで受け取ればいいの？座席ってさ、どこだっけ。開演って、何時からだっけ。",
+      "why": "Sách giáo khoa dùng 受け取ってください và 書いてあります một cách trang trọng, nghe như đang đọc hướng dẫn của nhà hát in trong tờ rơi. Nói thật thì hỏi bằng どこで受け取ればいいの và どこだっけ, thêm ってさ để đưa chủ đề lên trước rồi hỏi, nghe như hai người bạn lần đầu đứng trước cửa nhà hát nhỏ, vừa nhìn quanh vừa hỏi nhau."
+    },
+    {
+      "textbook": "携帯電話の電源をお切りください。まもなく後半が始まります。",
+      "real": "携帯、電源切っといてね。もうすぐ後半始まるからさ、早く戻ってきてね。",
+      "why": "Văn nói bạn bè dùng 切っといてね (rút gọn của 切っておいてね) và 始まるからさ để nhắc nhau một cách thân mật, kèm ね để dặn dò nhẹ nhàng. Câu sách giáo khoa dùng お切りください cứng nhắc, nghe như loa thông báo trong khán phòng, còn câu nói thật nghe như người bạn ngồi cạnh đang nhắc nhau tắt điện thoại trước khi đèn tắt."
+    },
+    {
+      "textbook": "前半は大変面白かったです。主役のセリフは素晴らしかったです。最後の場面に感動しました。",
+      "real": "前半、めっちゃ面白かったじゃん。主役の人のセリフ、すごかったよね。最後のシーン、感動したね。",
+      "why": "Văn nói khi bàn về vở kịch dùng めっちゃ và すごかった để khen một cách suồng sã, thêm じゃん・よね để rủ bạn đồng tình, còn sách giáo khoa dùng 大変面白かったです và 素晴らしかったです trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy cô. Câu nói thật nghe như hai người vừa xem xong nửa đầu, ra hành lang đứng bàn nhau trong giờ nghỉ."
+    },
+    {
+      "textbook": "パンフレットのあらすじを読んではいけません。内容がわかってしまいます。",
+      "real": "パンフレットのあらすじ、読んじゃダメだよ。ネタバレしちゃうからさ。",
+      "why": "Văn nói dùng 読んじゃダメだよ (rút gọn của 読んではダメだよ) và ネタバレしちゃう để cấm một cách thân mật, kèm からさ để giải thích lý do ngay sau đó. Câu sách giáo khoa dùng 読んではいけません và 内容がわかってしまいます, nghe như đang đọc nội quy của nhà hát, còn câu nói thật nghe như người bạn đang giữ tay bạn lại, không cho đọc trước tóm tắt vở kịch."
+    },
+    {
+      "textbook": "今日、初めて小さな劇場でお芝居を見ました。とても面白かったです。今度一緒に行きましょう。",
+      "real": "今日、初めて小さな劇場でお芝居を見てきたよ。すごく面白かったよ。今度一緒に行こう。",
+      "why": "Nhắn tin cho người nhà thì dùng 見てきたよ và 行こう ngắn gọn, dùng よ để kể một cách thân mật, chứ không dùng です・ます trang trọng. Câu sách giáo khoa nghe như đang viết email báo cáo, còn câu nói thật nghe như một tin nhắn gửi vội từ điện thoại sau khi ra khỏi nhà hát, vừa đi vừa nhắn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ってさ",
+      "in_lesson": "チケットって、どこで受け取ればいいの？",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa vé lên trước rồi hỏi lấy ở đâu; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang ở một nơi mới lần đầu đến.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "座席ってさ、どこだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; どこだっけ là hỏi lại ghế ngồi ở đâu, 何時からだっけ là hỏi lại giờ mở màn.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — ghế ngồi, giờ mở màn, tên diễn viên, ngày hẹn.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどこですか・〜は何時ですか)."
+    },
+    {
+      "form": "〜といて",
+      "in_lesson": "携帯、電源切っといてね",
+      "original": "〜ておいて",
+      "vi": "Rút gọn của ておいて: cứ… trước đi / nhớ… nhé — ở đây là nhớ tắt nguồn điện thoại trước khi vở kịch bắt đầu; 切っといてね là cách dặn dò nhẹ nhàng trước khi vào khán phòng.",
+      "use": "Dùng với bạn bè, người thân khi dặn nhau chuẩn bị một việc trước — tắt điện thoại, mang theo vé, để đồ ở tủ.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên (khi đó dùng 〜ておいてください)."
+    },
+    {
+      "form": "〜ちゃう",
+      "in_lesson": "ネタバレしちゃうからさ",
+      "original": "〜てしまう",
+      "vi": "Rút gọn của てしまう: lỡ… mất / …mất thôi — ở đây là đọc tóm tắt thì lỡ lộ hết nội dung vở kịch mất; ネタバレしちゃう là cách nói rất hay dùng khi bàn về phim, kịch, truyện.",
+      "use": "Dùng với bạn bè, người thân khi nói về một việc lỡ xảy ra ngoài ý muốn — lộ nội dung, làm mất đồ, quên mất việc gì.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てしまう)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "前半、めっちゃ面白かったじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; 面白かったじゃん là khen nửa đầu vở kịch hay rồi chờ bạn gật đầu theo.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — vở hay, món ngon, trời đẹp.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜ってさ、どうなるんだろう",
+      "in_lesson": "後半って、どうなるんだろう",
+      "original": "〜はどうなるでしょうか",
+      "vi": "…thì sẽ thế nào nhỉ — cách nói tò mò về diễn biến tiếp theo của vở kịch; どうなるんだろう là dạng suồng sã của どうなるだろうか, thêm ってさ để đưa nửa sau của vở lên trước rồi hỏi.",
+      "use": "Dùng với bạn bè, người thân khi tò mò về diễn biến tiếp theo của phim, kịch, truyện, trận đấu.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜はどうなるでしょうか)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "{開演|かいえん}",
+      "reading": "かいえん",
+      "vi": "Giờ mở màn — thời điểm vở kịch, buổi hòa nhạc hay vở diễn bắt đầu; trước giờ 開演 thì khán giả vào ghế ngồi, tắt điện thoại, xem tờ chương trình; 開演時間 là giờ bắt đầu ghi trên vé.",
+      "example_ja": "{開演|かいえん}って、{何時|いつ}からだっけ。7{時|じ}からだよ。",
+      "example_vi": "Mở màn ấy, mấy giờ bắt đầu nhỉ? 7 giờ bắt đầu đấy."
+    },
+    {
+      "expr": "{幕間|まくあい}",
+      "reading": "まくあい",
+      "vi": "Giờ nghỉ giữa giờ — khoảng nghỉ giữa hai phần của vở kịch (thường 10–15 phút), khán giả ra ngoài hành lang đi lại, mua nước, đi vệ sinh, bàn nhau về nửa đầu vở diễn; hết 幕間 thì đèn tắt, vở diễn tiếp.",
+      "example_ja": "ふう、{幕間|まくあい}だね。{前半|ぜんはん}、めっちゃ{面白|おもしろ}かったじゃん。",
+      "example_vi": "Phù, nghỉ giữa giờ rồi. Nửa đầu hay thật đấy nhỉ."
+    },
+    {
+      "expr": "{座席|ざせき}",
+      "reading": "ざせき",
+      "vi": "Ghế ngồi — vị trí ghế trong khán phòng, ghi trên vé theo hàng và số ghế (vd 3列目, 真ん中); nhà hát nhỏ thì ghế gần sân khấu nên nhìn rõ mặt diễn viên, còn ghế cuối thì xa nhưng xem được toàn cảnh.",
+      "example_ja": "{座席|ざせき}ってさ、どこだっけ。3{列|れつ}{目|め}の{真|ま}ん{中|んなか}あたりだってさ。",
+      "example_vi": "Ghế ngồi ấy, ở chỗ nào nhỉ? Hàng 3, khoảng giữa ấy mà."
+    },
+    {
+      "expr": "{受付|うけつけ}",
+      "reading": "うけつけ",
+      "vi": "Quầy tiếp đón — quầy ở cửa nhà hát, nơi nhận vé đã đặt trước, mua vé tại chỗ, hỏi thông tin về vở diễn; lấy vé thì cho nhân viên xem mã đặt vé hoặc tên người đặt, nhân viên sẽ đưa vé giấy.",
+      "example_ja": "チケットって、どこで{受|う}け{取|けと}ればいいの？あそこの{受付|うけつけ}だよ。",
+      "example_vi": "Vé ấy, lấy ở đâu? Quầy tiếp đón đằng kia kìa."
+    },
+    {
+      "expr": "セリフ",
+      "reading": "せりふ",
+      "vi": "Lời thoại — lời nói của diễn viên trong vở kịch; セリフがすごい là khen diễn viên nói lời thoại hay, giọng to, rõ, có cảm xúc; diễn viên quên セリフ thì gọi là セリフを忘れる, còn nói sai thì セリフを間違える.",
+      "example_ja": "{主役|しゅやく}の{人|ひと}のセリフ、すごかったよね。{声|こえ}も{大|おお}きくてさ、{後|うし}ろの{席|せき}まで{届|とど}いてたよ。",
+      "example_vi": "Lời thoại của diễn viên chính ấy, diễn đỉnh thật đấy. Giọng cũng to nữa, ngồi ghế cuối vẫn nghe rõ."
+    },
+    {
+      "expr": "ネタバレ",
+      "reading": "ねたばれ",
+      "vi": "Lộ nội dung (spoiler) — tiết lộ trước diễn biến hay kết thúc của phim, kịch, truyện khiến người chưa xem mất hứng; ネタバレしちゃう là lỡ lộ nội dung, ネタバレ注意 là cảnh báo có tiết lộ nội dung trong bài viết hay tin nhắn.",
+      "example_ja": "パンフレットのあらすじ、{読|よ}んじゃダメだよ。ネタバレしちゃうからさ。",
+      "example_vi": "Đừng đọc tóm tắt trong tờ chương trình đấy. Đọc là lộ hết nội dung mất."
+    }
+  ],
+  "mindset": [
+    "Nhà hát nhỏ (小さな劇場) ở Nhật rất khác rạp chiếu phim hay nhà hát lớn: khán phòng chỉ vài chục đến vài trăm ghế, sân khấu gần khán giả nên nhìn rõ mặt diễn viên, nghe rõ cả tiếng bước chân và hơi thở, cảm giác như đang xem ngay trước mắt. Nhiều vở kịch ở nhà hát nhỏ là vở của các đoàn kịch ít tên tuổi, vé rẻ (khoảng 3,000–5,000 yên), diễn viên trẻ diễn rất nhiệt tình. Trong bài, 拓海 đi xem kịch lần đầu nên cứ hỏi đủ thứ — vé lấy ở đâu, ghế ở đâu, mấy giờ mở màn — còn 莉子 đã quen nên chỉ từng bước; đi xem kịch lần đầu mà có bạn đi cùng chỉ giúp thì rất bình thường, nhân viên ở quầy 受付 cũng quen hướng dẫn khách mới.",
+    "Quy tắc quan trọng nhất khi xem kịch là phải tắt điện thoại trước giờ 開演 và giữ yên lặng trong lúc diễn: điện thoại rung hay sáng màn hình trong khán phòng tối sẽ làm phiền diễn viên và khán giả xung quanh, nên người Nhật hay tắt nguồn (電源を切る) hoặc để chế độ im lặng trước khi đèn tắt. Trong lúc diễn thì không được nói chuyện to, không được chụp ảnh hay quay phim, chỉ vỗ tay (拍手) khi một cảnh hay kết thúc và khi diễn viên ra chào khán giả cuối vở (カーテンコール). Trong bài, 莉子 nhắc 拓海 tắt điện thoại trước khi vào ghế, và hai người chỉ bàn nhau về vở diễn trong giờ 幕間, còn trong lúc diễn thì xem chăm chú.",
+    "Giờ nghỉ giữa giờ (幕間) là một phần thú vị của việc đi xem kịch: khán giả ra ngoài hành lang đi lại, mua nước ở máy bán hàng tự động, bàn nhau về nửa đầu vở diễn — diễn viên nào diễn hay, đoạn nào xúc động, đoạn nào khó hiểu, nửa sau sẽ diễn biến thế nào. Nhiều người còn tranh thủ đọc tờ chương trình (パンフレット) để xem tên diễn viên và tóm tắt, nhưng đọc trước tóm tắt thì dễ bị lộ nội dung (ネタバレ) nên người hay xem kịch thường tránh đọc kỹ phầnあらすじ trước khi xem xong. Trong bài, hai người bàn nhau trong giờ nghỉ, 拓海 tò mò nửa sau sẽ ra sao còn 莉子 dặn đừng đọc tóm tắt trước, rồi xem xong thì bàn xem diễn viên nào hay nhất, vỗ tay mấy lần chào khán giả (カーテンコール), rồi 拓海 nhắn tin báo người nhà là hôm nay đi xem kịch về, vở hay lắm, hôm nào đi cùng — tin nhắn thường rất ngắn gọn, dùng văn nói như 見てきたよ, 面白かったよ, 行こう."
+  ],
+  "mistakes": [
+    "Đừng để điện thoại rung hay sáng màn hình trong lúc diễn: phải tắt nguồn (電源を切る) hoặc để chế độ im lặng trước giờ 開演 — điện thoại sáng trong khán phòng tối sẽ làm phiền diễn viên và khán giả xung quanh, có khi còn bị nhân viên nhắc.",
+    "Đừng đọc trước tóm tắt (あらすじ) trong tờ chương trình nếu không muốn bị lộ nội dung (ネタバレ): đọc trước thì nửa sau vở kịch mất hết bất ngờ — muốn bàn về vở thì bàn sau khi xem xong, hoặc chỉ đọc phần tên diễn viên trước giờ diễn.",
+    "Đừng vào ghế muộn sau giờ 開演: nhà hát thường không cho khán giả vào giữa một cảnh đang diễn, phải đợi đến giờ nghỉ 幕間 mới được vào — đến muộn thì đứng đợi ở hành lang, mất cả nửa đầu vở.",
+    "Đừng chụp ảnh hay quay phim trong lúc diễn: hầu hết các vở kịch ở Nhật đều cấm chụp ảnh và quay phim trong khán phòng, kể cả không dùng đèn flash — muốn chụp thì chụp áp phích hay mặt tiền nhà hát ở ngoài cửa trước hoặc sau khi xem xong."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn lần đầu đi xem kịch ở nhà hát nhỏ và đang đứng trước cửa nhà hát. Hãy hỏi bạn đi cùng: vé đã đặt trước thì lấy ở quầy nào, cần cho nhân viên xem mã đặt vé hay tên người đặt, và ghế ngồi của mình ở hàng nào.",
+    "Tình huống 2: Bạn vừa vào khán phòng và đang tìm ghế ngồi của mình. Hãy hỏi bạn đi cùng: ghế của mình ở hàng mấy, ở giữa hay ở bên, và trước giờ 開演 thì nên làm gì (xem tờ chương trình, tắt điện thoại, đi vệ sinh).",
+    "Tình huống 3: Bạn đang ở giờ nghỉ giữa giờ (幕間) của vở kịch. Hãy bàn với bạn đi cùng về nửa đầu vở diễn: diễn viên nào diễn hay nhất, lời thoại (セリフ) nào ấn tượng, đoạn nào xúc động, và nửa sau sẽ diễn biến thế nào.",
+    "Tình huống 4: Bạn vừa xem xong vở kịch và đang đi ra ngoài cửa nhà hát. Hãy bàn với bạn đi cùng: cảnh cuối có xúc động không, khán giả vỗ tay (拍手) thế nào, diễn viên ra chào khán giả (カーテンコール) mấy lần, và lần sau muốn đi xem vở nào.",
+    "Tình huống 5: Bạn vừa đi xem kịch về và muốn nhắn tin báo người nhà. Hãy nhắn: hôm nay lần đầu đi xem kịch ở nhà hát nhỏ, vở hay thế nào, và rủ hôm nào rảnh đi cùng."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、ここが{劇場|げきじょう}か。ってさ、チケットって、どこで{受|う}け{取|けと}ればいいの？",
+      "vi": "Ồ, đây là nhà hát à. Này, vé ấy, lấy ở đâu?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あそこの{受付|うけつけ}だよ。{予約|よやく}したときの{番号|ばんごう}、{見|み}せればいいってさ。",
+      "vi": "Quầy tiếp đón đằng kia kìa. Chỉ cần cho họ xem mã đặt vé là được ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、これだよね。あのさ、{座席|ざせき}ってさ、どこだっけ。",
+      "vi": "Ừm, cái này đúng không. À này, ghế ngồi ấy, ở chỗ nào nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ほら、チケットに{書|か}いてあるよ。3{列|れつ}{目|め}の{真|ま}ん{中|んなか}あたりだってさ。",
+      "vi": "Này, ghi trên vé kìa. Hàng 3, khoảng giữa ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、{意外|いがい}と{近|ちか}いじゃん。ってさ、{開演|かいえん}って、{何時|いつ}からだっけ。",
+      "vi": "Ồ, gần hơn mình tưởng nhỉ. Này, mở màn ấy, mấy giờ bắt đầu nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "7{時|じ}からだよ。あと10{分|ぷん}くらいあるからさ、パンフレットでも{見|み}とこうよ。",
+      "vi": "7 giờ bắt đầu đấy. Còn khoảng 10 phút nữa, xem tờ chương trình đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、パンフレットってさ、もらえるの？それとも{買|か}うの？",
+      "vi": "À, tờ chương trình ấy, được phát miễn phí à? Hay là phải mua?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "これ、{無料|むりょう}だよ。ほら、{出演|しゅつえん}{者|しゃ}とかさ、あらすじが{載|の}ってるよ。",
+      "vi": "Cái này miễn phí đấy. Này, có tên diễn viên với tóm tắt nội dung vở này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、{主役|しゅやく}の{人|ひと}ってさ、テレビにも{出|で}てるんだ。すごいね。",
+      "vi": "Chà, diễn viên chính ấy, cũng lên cả tivi cơ à. Giỏi thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "でしょ。さ、そろそろ{入|はい}ろうよ。{携帯|けいたい}、{電源|でんげん}{切|き}っといてね。",
+      "vi": "Thấy chưa. Nào, sắp đến giờ rồi, vào thôi. Tắt nguồn điện thoại đi nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、{幕間|まくあい}だね。{前半|ぜんはん}、めっちゃ{面白|おもしろ}かったじゃん。",
+      "vi": "Phù, nghỉ giữa giờ rồi. Nửa đầu hay thật đấy nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "だよね。あのさ、{主役|しゅやく}の{人|ひと}のセリフ、すごかったよね。",
+      "vi": "Ừ nhỉ. Này, lời thoại của diễn viên chính ấy, diễn đỉnh thật đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{声|こえ}も{大|おお}きくてさ、{後|うし}ろの{席|せき}まで{届|とど}いてたよ。ってさ、{後半|こうはん}って、どうなるんだろう。",
+      "vi": "Ừ, giọng cũng to nữa, ngồi ghế cuối vẫn nghe rõ. Này, nửa sau ấy, không biết diễn biến thế nào nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "さあ、わかんない。パンフレットのあらすじ、{読|よ}んじゃダメだよ。ネタバレしちゃうからさ。",
+      "vi": "Chịu, không biết. Đừng đọc tóm tắt trong tờ chương trình đấy. Đọc là lộ hết nội dung mất."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "わかった、{読|よ}まないよ。ってさ、{喉|のど}{渇|かわ}いたね。ジュース{買|か}ってこようか。",
+      "vi": "Biết rồi, không đọc đâu. Này, khát nước quá nhỉ. Đi mua nước nhé?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{買|か}ってきて。あ、もうすぐ{後半|こうはん}{始|はじ}まるからさ、{早|はや}く{戻|もど}ってきてね。",
+      "vi": "Ừ, mua đi. À, sắp diễn nửa sau rồi đấy, quay lại nhanh nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ただいま。ってさ、{最後|さいご}のシーン、{感動|かんどう}したね。{客席|きゃくせき}、みんな{拍手|はくしゅ}してたよ。",
+      "vi": "Về rồi đây. Này, cảnh cuối ấy, xúc động thật đấy. Cả khán phòng vỗ tay ầm ầm luôn."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、よかったね。カーテンコールもさ、3{回|かい}もあったじゃん。",
+      "vi": "Ừ, hay thật đấy. Chào khán giả cuối vở ấy, cũng tới 3 lần cơ mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、うちの{人|ひと}に{連絡|れんらく}しなよ。{芝居|しばい}{見|み}てきたよってさ。",
+      "vi": "À, nhắn cho người nhà đi. Bảo là hôm nay đi xem kịch về rồi ấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{小|ちい}さな{劇場|げきじょう}でお{芝居|しばい}を{見|み}てきたよ。すごく{面白|おもしろ}かったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+      "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi xem kịch ở nhà hát nhỏ về rồi. Hay lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+    }
+  ],
+  "notes": [
+    "Nhà hát nhỏ (小さな劇場) ở Nhật có khán phòng chỉ vài chục đến vài trăm ghế, sân khấu gần khán giả, vé rẻ (khoảng 3,000–5,000 yên); khác với nhà hát lớn hay rạp chiếu phim vì xem kịch ở đây nghe rõ cả tiếng bước chân và hơi thở của diễn viên.",
+    "Quy tắc khi xem kịch: tắt điện thoại trước giờ 開演, giữ yên lặng trong lúc diễn, không chụp ảnh hay quay phim; chỉ vỗ tay (拍手) khi một cảnh hay kết thúc và khi diễn viên ra chào khán giả (カーテンコール); vào muộn sau giờ 開演 thì phải đợi đến giờ nghỉ 幕間 mới được vào.",
+    "Giờ nghỉ giữa giờ (幕間) là lúc khán giả ra hành lang mua nước, bàn nhau về nửa đầu vở diễn; đọc trước tóm tắt (あらすじ) trong tờ chương trình thì dễ bị lộ nội dung (ネタバレ) nên người hay xem kịch thường tránh đọc kỹ trước khi xem xong.",
+    "〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (ghế ngồi, giờ mở màn); 〜ちゃう là rút gọn của 〜てしまう (lỡ… mất); 〜じゃん là cách khẳng định cảm nhận rồi rủ bạn đồng tình; 〜といて là rút gọn của 〜ておいて (nhớ… trước nhé)."
+  ]
+}

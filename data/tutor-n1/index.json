@@ -287,6 +287,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 34 — Lần đầu đi tắm ở nhà tắm công cộng 銭湯 (mua vé, tắm ở 洗い場, ngâm 湯船, uống sữa sau khi tắm) (初めて銭湯に行く)",
       "file": "2026-11-18-kaiwa.json"
+    },
+    {
+      "date": "2026-11-19",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 19/11/2026（問題10・短文）",
+      "file": "2026-11-19-n1-set.json"
+    },
+    {
+      "date": "2026-11-19",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 19/11/2026（中文）",
+      "file": "2026-11-19-reading.json"
+    },
+    {
+      "date": "2026-11-19",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 35 — Lần đầu đi xem kịch ở nhà hát nhỏ (lấy vé, tìm ghế, chờ mở màn, nghỉ giữa giờ, xem hết vở) (初めて小さな劇場でお芝居を見る)",
+      "file": "2026-11-19-kaiwa.json"
     }
   ]
 }
