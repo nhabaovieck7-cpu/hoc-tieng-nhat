@@ -122,6 +122,65 @@ try{var mq=matchMedia('(prefers-color-scheme: dark)');
  };
 })();
 
+// ===== Phím tắt + vuốt cho thanh Bài trước / Bài tiếp theo (HNSEQ) =====
+// Thông số chủ trang chốt 19/11/2026 (KHÔNG đảo chiều):
+//  - Máy tính: ArrowRight = mở BÀI TIẾP THEO, ArrowLeft = quay lại BÀI TRƯỚC.
+//  - Điện thoại: vuốt SANG PHẢI = BÀI TIẾP THEO, vuốt SANG TRÁI = BÀI TRƯỚC.
+// Cách làm: tìm thanh .hn-seqnav ĐẦU TIÊN trong trang rồi .click() đúng nút
+// kề (nút <a> điều hướng như link thường; nút <button data-seq> đã được
+// bindSeqNav gắn sẵn hành động). Nút đang vô hiệu (span.is-off ở bài
+// đầu/cuối) thì không làm gì. Trang không có thanh thì bỏ qua hoàn toàn.
+// Khoá an toàn khi ĐANG LÀM BÀI THI ở thi-thu.html (tránh thoát giữa chừng
+// mất bài làm; màn hình kết quả thì mở lại bình thường): trang đề tự dùng
+// các dấu hiệu sau để biết bài đang làm dở — [data-paper] là khung bài của
+// bộ máy startExam (chính hàm alive() của trang kiểm tra dấu này),
+// #wmSubmit là nút nộp của đề hằng tuần còn hiện, #tm là đồng hồ của đề
+// trộn N1 đang chạy. Còn một trong ba dấu hiệu trên trang => tắt phím+vuốt.
+(function(){
+ var SW_MIN=72,SW_RATIO=1.6; // ngưỡng vuốt: tối thiểu 72px, ngang áp đảo dọc
+ function isFormTgt(t){
+  if(!t||t===document||t===window)return false;
+  if(t.closest){try{if(t.closest('input,textarea,select,[contenteditable],audio,video'))return true}catch(e){}}
+  var tg=t.tagName;return tg==='INPUT'||tg==='TEXTAREA'||tg==='SELECT'||tg==='AUDIO'||tg==='VIDEO'}
+ function dirFromKey(k){return k==='ArrowRight'?1:(k==='ArrowLeft'?-1:0)}
+ function dirFromSwipe(dx,dy){var ax=Math.abs(dx),ay=Math.abs(dy);
+  if(ax<SW_MIN||ax<=ay*SW_RATIO)return 0;return dx>0?1:-1}
+ function navLocked(){return !!(document.querySelector('[data-paper]')||document.getElementById('wmSubmit')||document.getElementById('tm'))}
+ function slot(nav,dir){if(!nav)return null;
+  var b=nav.querySelector('[data-seq="'+dir+'"]');if(b)return b;
+  var kids=nav.children;if(!kids||!kids.length)return null;
+  var el=dir<0?kids[0]:kids[kids.length-1];
+  if(el&&(el.tagName==='A'||el.tagName==='BUTTON')&&!el.classList.contains('is-off'))return el;
+  return null}
+ function go(dir){if(!dir||navLocked())return false;
+  var nav=document.querySelector('.hn-seqnav');if(!nav)return false;
+  var el=slot(nav,dir);if(!el)return false;el.click();return true}
+ function onKey(e){if(!e||e.defaultPrevented||e.repeat)return;
+  if(e.ctrlKey||e.altKey||e.metaKey)return;
+  var dir=dirFromKey(e.key);if(!dir)return;
+  if(isFormTgt(e.target))return;
+  go(dir)}
+ var ts=null;
+ function onTS(e){ts=null;if(!e||!e.touches||e.touches.length!==1)return;
+  var t=e.touches[0];ts={x:t.clientX,y:t.clientY,bad:isFormTgt(e.target)}}
+ function onTM(e){if(ts&&e&&e.touches&&e.touches.length>1)ts=null}
+ function onTE(e){if(!ts)return;var st=ts;ts=null;
+  if(st.bad||!e||!e.changedTouches||!e.changedTouches.length)return;
+  var t=e.changedTouches[0];
+  var dir=dirFromSwipe(t.clientX-st.x,t.clientY-st.y);
+  if(dir)go(dir)}
+ document.addEventListener('keydown',onKey);
+ document.addEventListener('touchstart',onTS,{passive:true});
+ document.addEventListener('touchmove',onTM,{passive:true});
+ document.addEventListener('touchend',onTE,{passive:true});
+ document.addEventListener('touchcancel',function(){ts=null},{passive:true});
+ // Điểm kiểm thử (jsdom) — logic quyết định tách riêng khỏi sự kiện thật:
+ var H=window.HNSEQ||(window.HNSEQ={});
+ H.dirFromKey=dirFromKey;H.dirFromSwipe=dirFromSwipe;H.navLocked=navLocked;
+ H.seqSlot=slot;H.seqGo=go;H.seqKey=onKey;
+ H.seqTouchStart=onTS;H.seqTouchMove=onTM;H.seqTouchEnd=onTE;
+})();
+
 // ===== Nút "← Quay lại" (trang con): HN_BACK() về đúng trang trước (giữ
 // history.back() ở luồng tốt, dùng trí nhớ điều hướng khi mất referrer);
 // không có trang trước (mở trực tiếp) thì đi theo href trang cha trên nút =====
