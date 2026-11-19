@@ -1,0 +1,366 @@
+{
+  "lesson": 36,
+  "topic": "Lần đầu đi karaoke với đồng nghiệp (chọn phòng, đặt đồ uống, chọn bài, hát xong ra về, hẹn lần sau) (初めて同僚とカラオケに行く)",
+  "summary": "Bối cảnh: đồng nghiệp trong công ty rủ nhau đi karaoke sau giờ làm, 拓海 lần đầu đi karaoke với mọi người nên không biết quán karaoke ở Nhật thì vào thế nào, chọn phòng ra sao, đặt đồ uống kiểu gì. 莉子 đã đi karaoke nhiều lần nên dẫn 拓海 đến một quán karaoke gần ga, hai người vào quầy 受付 đăng ký, chọn phòng, chọn gói đồ uống (ドリンクバー), rồi vào phòng, cầm リモコン chọn bài hát. 拓海 hát trước một bài, hát xong hơi run; 莉子 hát tiếp, giọng hay khiến cả phòng vỗ tay. Hát được một lúc thì hết giờ, hai người trả phòng, ra khỏi quán, vừa đi bộ về ga vừa bàn xem ai hát hay nhất, rồi hẹn lần sau đi karaoke nữa, đông người hơn. Cuối cùng 拓海 nhắn tin báo người nhà là hôm nay đi karaoke với đồng nghiệp về, hát vui lắm, hôm nào đi cùng. Kỹ năng luyện: văn nói bạn bè khi đi karaoke lần đầu — hỏi chọn phòng thế nào, hỏi gói đồ uống là gì, hỏi cách chọn bài bằng リモコン; cách nói khi khen ai hát hay (〜がうまかった, 〜が上手だったね), cách rủ nhau hát tiếp hay hẹn lần sau (〜しようよ, 今度は〜に行こう), và cách nhắn tin báo người nhà sau khi đi chơi về. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về karaoke (カラオケ, 部屋, 受付, ドリンクバー, リモコン, 予約, 延長, 持ち込み, 採点, デュエット, 盛り上がる, 歌う, マイク, 画面, 曲), cách hỏi về gói giờ và giá tiền bằng câu hỏi xác nhận ngắn gọn (〜って、いくらだっけ, 〜って、何時間だっけ), và cách nói cảm nhận về giọng hát của người khác một cách tự nhiên (〜がうまかった, 〜がすごかった, 〜がはずれてた).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（đến quán karaoke, chọn phòng, đặt đồ uống, chọn bài hát）",
+      "stage": "（Buổi tối, trước cửa một quán karaoke gần ga, biển hiệu sáng đèn, bên trong là quầy 受付 và một hành lang dài dẫn đến các phòng hát. 拓海 cầm túi đồ, lần đầu đi karaoke với đồng nghiệp nên cứ nhìn quanh.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、ここがカラオケか。ってさ、{受付|うけつけ}ってさ、どこだっけ。",
+          "vi": "Ồ, đây là quán karaoke à. Này, quầy tiếp đón ấy, ở chỗ nào nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あそこのカウンターだよ。{名前|なまえ}{言|い}えばいいってさ。{予約|よやく}してあるからさ。",
+          "vi": "Quầy đằng kia kìa. Nói tên là được ấy mà. Đặt trước rồi mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "えっと、{拓海|たくみ}です。ってさ、{部屋|へや}ってさ、どうやって{決|き}めるの？",
+          "vi": "Ừm, mình là Takumi. Này, phòng ấy, chọn thế nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{人数|にんずう}と{時間|じかん}で{決|き}まるよ。{今日|きょう}は2{人|ふたり}で2{時間|じかん}だってさ。ほら、{鍵|かぎ}もらったよ。",
+          "vi": "Chọn theo số người với thời gian ấy mà. Hôm nay 2 người, 2 tiếng ấy mà. Này, lấy chìa khóa rồi này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、{部屋|へや}、{意外|いがい}と{広|ひろ}いじゃん。ってさ、ドリンクバーって、{何|なん}だっけ。",
+          "vi": "Ồ, phòng rộng hơn mình tưởng nhỉ. Này, quầy đồ uống tự phục vụ ấy, là cái gì nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{飲|の}み{放題|ほうだい}だよ。ジュースとかさ、お{茶|ちゃ}とかさ、{好|す}きなだけ{飲|の}んでいいんだよ。",
+          "vi": "Uống thả ga đấy. Nước ngọt này, trà này, thích uống bao nhiêu cũng được ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、いいね。ってさ、{曲|まが}ってさ、どうやって{選|えら}ぶの？",
+          "vi": "Chà, hay đấy. Này, bài hát ấy, chọn thế nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "このリモコンで{選|えら}ぶんだよ。ほら、{曲名|きょくめい}{入|い}れてさ、{予約|よやく}ボタン{押|お}すだけだよ。",
+          "vi": "Chọn bằng cái điều khiển này này. Này, nhập tên bài vào rồi bấm nút đặt bài là xong ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、{簡単|かんたん}じゃん。じゃあさ、{最初|さいしょ}は{俺|おれ}が{歌|うた}うよ。えっと、{何|なん}{歌|うた}おうかな。",
+          "vi": "À, đơn giản nhỉ. Thế thì, đầu tiên mình hát nhé. Ừm, hát bài gì đây nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいよ、{歌|うた}って{歌|うた}って。マイク、ほら、こっちだよ。{緊張|きんちょう}しなくていいからさ。",
+          "vi": "Được, hát đi hát đi. Mic này, đằng này này. Đừng căng thẳng, cứ thoải mái đi."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（hát xong ra về, bàn xem ai hát hay, hẹn lần sau, nhắn tin báo người nhà）",
+      "stage": "（Một lúc sau, trong phòng karaoke, hai người đã hát được gần 2 tiếng. Nhân viên báo hết giờ qua điện thoại trong phòng, hai người trả phòng, ra khỏi quán, vừa đi bộ về ga vừa bàn nhau.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、2{時間|じかん}あっという{間|ま}だったね。{莉子|りこ}、めっちゃ{歌|うた}うまかったじゃん。",
+          "vi": "Phù, 2 tiếng trôi nhanh thật đấy. Riko này, hát hay thật đấy nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "だよね。{拓海|たくみ}もさ、{最初|さいしょ}は{緊張|きんちょう}してたけどさ、{最後|さいご}の{曲|きょく}、すごくよかったよ。",
+          "vi": "Ừ nhỉ. Takumi cũng thế, lúc đầu còn run, nhưng bài cuối ấy, hát hay lắm đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、ありがとう。ってさ、{採点|さいてん}ってさ、どうだった？{俺|おれ}、{何|なん}{点|てん}だっけ。",
+          "vi": "Ừ, cảm ơn nhé. Này, chấm điểm ấy, thế nào? Mình được bao nhiêu điểm nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "えっとさ、85{点|てん}だって。なかなかいいじゃん。あたしは92{点|てん}だったよ。",
+          "vi": "Ừm, 85 điểm ấy mà. Khá đấy chứ. Mình được 92 điểm cơ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、すごいね。ってさ、{今度|こんど}はさ、みんなでもっと{大|だい}{人数|にんずう}で{来|こ}ようよ。",
+          "vi": "Ồ, giỏi thật đấy. Này, lần sau ấy, rủ đông người hơn đi cùng nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。デュエットもさ、やってみようよ。あたしと{拓海|たくみ}でさ、1{曲|きょく}{歌|うた}おうよ。",
+          "vi": "Hay đấy. Hát đôi ấy, thử hát xem nào. Mình với Takumi hát chung một bài nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、いいじゃん。ってさ、{次|つぎ}はいつにする？{来週|らいしゅう}の{金曜|きんよう}とかさ、どう？",
+          "vi": "Ồ, hay đấy chứ. Này, lần sau thì khi nào? Thứ Sáu tuần sau chẳng hạn, thế nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、いいよ。みんなに{聞|き}いとくね。あ、{電車|でんしゃ}の{時間|じかん}、{大丈夫|だいじょうぶ}？",
+          "vi": "Ừ, được đấy. Để mình hỏi mọi người nhé. À, giờ tàu ấy, có kịp không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}だよ。あ、うちの{人|ひと}に{連絡|れんらく}しなよ。カラオケ{行|い}ってきたよってさ。",
+          "vi": "Kịp mà. À, nhắn cho người nhà đi. Bảo là hôm nay đi karaoke với đồng nghiệp về rồi ấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{同僚|どうりょう}とカラオケに{行|い}ってきたよ。すごく{楽|たの}しかったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+          "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi karaoke với đồng nghiệp về rồi. Vui lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "受付で名前を言ってください。部屋は人数と時間で決まります。ドリンクバーは飲み放題です。",
+      "real": "受付ってさ、どこだっけ。名前言えばいいってさ。部屋ってさ、どうやって決めるの？ドリンクバーって、何だっけ。",
+      "why": "Sách giáo khoa dùng 言ってください và 決まります một cách trang trọng, nghe như đang đọc hướng dẫn của quán karaoke in trong tờ rơi. Nói thật thì hỏi bằng どこだっけ và どうやって決めるの, thêm ってさ để đưa chủ đề lên trước rồi hỏi, nghe như hai người bạn lần đầu đứng trước cửa quán karaoke, vừa nhìn quanh vừa hỏi nhau."
+    },
+    {
+      "textbook": "リモコンで曲名を入力して、予約ボタンを押してください。緊張しなくても大丈夫です。",
+      "real": "このリモコンで選ぶんだよ。曲名入れてさ、予約ボタン押すだけだよ。緊張しなくていいからさ。",
+      "why": "Văn nói bạn bè dùng 選ぶんだよ và 押すだけだよ để chỉ cách chọn bài một cách thân mật, kèm さ để giải thích nhẹ nhàng, còn sách giáo khoa dùng 入力して và 押してください cứng nhắc, nghe như đang đọc hướng dẫn sử dụng máy. Câu nói thật nghe như người bạn ngồi cạnh đang cầm リモコン chỉ cho bạn cách chọn bài lần đầu."
+    },
+    {
+      "textbook": "2時間はあっという間でした。莉子さんは歌がとても上手でした。私は85点でした。",
+      "real": "2時間あっという間だったね。莉子、めっちゃ歌うまかったじゃん。俺、何点だっけ。85点だって。",
+      "why": "Văn nói khi bàn về buổi karaoke dùng めっちゃ và うまかった để khen một cách suồng sã, thêm じゃん・よね để rủ bạn đồng tình, còn sách giáo khoa dùng とても上手でした và あっという間でした trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy cô. Câu nói thật nghe như hai người vừa hát xong, đang đi bộ về ga, vừa đi vừa bàn xem ai hát hay."
+    },
+    {
+      "textbook": "今度はもっと大人数で来ましょう。デュエットもやってみましょう。来週の金曜日にしましょう。",
+      "real": "今度はさ、みんなでもっと大人数で来ようよ。デュエットもさ、やってみようよ。来週の金曜とかさ、どう？",
+      "why": "Văn nói dùng 来ようよ và やってみようよ để rủ nhau một cách thân mật, kèm とかさ・どう để hỏi ý kiến một cách thoải mái, còn sách giáo khoa dùng 来ましょう và やってみましょう, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người bạn đang hứng lên sau buổi hát, vừa đi vừa bàn nhau lần sau rủ thêm người."
+    },
+    {
+      "textbook": "今日、初めて同僚とカラオケに行きました。とても楽しかったです。今度一緒に行きましょう。",
+      "real": "今日、初めて同僚とカラオケに行ってきたよ。すごく楽しかったよ。今度一緒に行こう。",
+      "why": "Nhắn tin cho người nhà thì dùng 行ってきたよ và 行こう ngắn gọn, dùng よ để kể một cách thân mật, chứ không dùng です・ます trang trọng. Câu sách giáo khoa nghe như đang viết email báo cáo, còn câu nói thật nghe như một tin nhắn gửi vội từ điện thoại sau khi ra khỏi quán karaoke, vừa đi vừa nhắn."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ってさ",
+      "in_lesson": "受付ってさ、どこだっけ",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa quầy tiếp đón lên trước rồi hỏi ở đâu; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang ở một nơi mới lần đầu đến.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "ドリンクバーって、何だっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; 何だっけ là hỏi lại ドリンクバー là gì, 何点だっけ là hỏi lại mình được bao nhiêu điểm.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — gói đồ uống, điểm chấm, tên bài hát, ngày hẹn.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜は何ですか・〜は何点ですか)."
+    },
+    {
+      "form": "〜てみようよ",
+      "in_lesson": "デュエットもさ、やってみようよ",
+      "original": "〜てみましょう",
+      "vi": "Thử… xem nào — cách rủ nhau thử làm một việc mới một cách thân mật; やってみようよ là rủ nhau thử hát đôi lần sau, 歌ってみようよ là rủ nhau thử hát một bài mới.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau thử một việc mới — hát đôi, hát một bài mới, thử món ăn mới.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てみましょう)."
+    },
+    {
+      "form": "〜うまかった",
+      "in_lesson": "莉子、めっちゃ歌うまかったじゃん",
+      "original": "〜が上手だった",
+      "vi": "Hát hay thật — dạng suồng sã của 上手だった, thường đi với めっちゃ để khen mạnh; 歌うまかった là khen ai hát hay, 声がよかった là khen giọng hay, リズムがよかった là khen giữ nhịp tốt.",
+      "use": "Dùng với bạn bè, người thân khi khen ai đó hát hay, chơi nhạc hay, nấu ăn ngon — sau khi vừa xem hay vừa nghe xong.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜が上手でした・お上手でした)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "部屋、意外と広いじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; 広いじゃん là khen phòng rộng rồi chờ bạn gật đầu theo, いいじゃん là khen một ý hay rồi rủ bạn đồng ý.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — phòng rộng, bài hay, món ngon.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜とかさ、どう？",
+      "in_lesson": "来週の金曜とかさ、どう？",
+      "original": "〜はいかがですか / 〜はどうでしょうか",
+      "vi": "…chẳng hạn, thế nào? — cách đề xuất một lựa chọn một cách thoải mái, không ép buộc; 来週の金曜とかさ、どう là đề xuất thứ Sáu tuần sau rồi hỏi ý bạn, 大人数で来ようよ là rủ đông người đi cùng.",
+      "use": "Dùng với bạn bè, người thân khi đề xuất ngày giờ hay kế hoạch một cách thoải mái — hẹn lần sau, rủ đi ăn, rủ đi chơi.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜はいかがですか・〜はどうでしょうか)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "ドリンクバー",
+      "reading": "どりんくばー",
+      "vi": "Quầy đồ uống tự phục vụ (uống thả ga) — trong quán karaoke ở Nhật, khách chọn gói ドリンクバー thì được tự lấy nước ngọt, trà, cà phê ở quầy bao nhiêu lần cũng được trong thời gian thuê phòng; khác với gọi từng ly (ワンドリンク) thì mỗi ly tính tiền riêng.",
+      "example_ja": "ドリンクバーって、{何|なん}だっけ。{飲|の}み{放題|ほうだい}だよ。",
+      "example_vi": "Quầy đồ uống tự phục vụ ấy, là cái gì nhỉ? Uống thả ga đấy."
+    },
+    {
+      "expr": "リモコン",
+      "reading": "りもこん",
+      "vi": "Điều khiển (remote) chọn bài — thiết bị trong phòng karaoke để tìm và đặt bài hát: nhập tên bài hay tên ca sĩ, bấm nút 予約 (đặt bài) thì bài sẽ vào danh sách chờ; リモコン còn có nút chỉnh 音量 (âm lượng), キー (tông), テンポ (nhịp).",
+      "example_ja": "このリモコンで{選|えら}ぶんだよ。{曲名|きょくめい}{入|い}れてさ、{予約|よやく}ボタン{押|お}すだけだよ。",
+      "example_vi": "Chọn bằng cái điều khiển này này. Nhập tên bài vào rồi bấm nút đặt bài là xong ấy mà."
+    },
+    {
+      "expr": "{採点|さいてん}",
+      "reading": "さいてん",
+      "vi": "Chấm điểm giọng hát — chức năng của máy karaoke chấm điểm bài hát theo độ chính xác của cao độ và nhịp (thường thang 100 điểm); 採点する là bật chế độ chấm điểm, 85点・92点 là điểm nhận được, điểm cao thì máy khen 上手ですね.",
+      "example_ja": "{採点|さいてん}ってさ、どうだった？{俺|おれ}、{何|なん}{点|てん}だっけ。85{点|てん}だって。",
+      "example_vi": "Chấm điểm ấy, thế nào? Mình được bao nhiêu điểm nhỉ? 85 điểm ấy mà."
+    },
+    {
+      "expr": "デュエット",
+      "reading": "でゅえっと",
+      "vi": "Hát đôi (song ca) — hai người hát chung một bài, mỗi người hát một phần, có bài デュエット thì hai giọng hòa nhau; デュエットする là hát đôi với ai, デュエット曲 là bài hát đôi, hát đôi với bạn thân hay đồng nghiệp thì vui hơn hát một mình.",
+      "example_ja": "デュエットもさ、やってみようよ。あたしと{拓海|たくみ}でさ、1{曲|きょく}{歌|うた}おうよ。",
+      "example_vi": "Hát đôi ấy, thử hát xem nào. Mình với Takumi hát chung một bài nhé."
+    },
+    {
+      "expr": "{盛|も}り{上|りあ}がる",
+      "reading": "もりあがる",
+      "vi": "Nóng lên, sôi động lên — không khí trong phòng karaoke trở nên vui vẻ, mọi người cùng hát theo, vỗ tay, reo hò; 盛り上がる曲 là bài hát khiến cả phòng sôi động, 盛り上がってきた là không khí bắt đầu nóng lên, ngược lại là しらける (nguội lạnh).",
+      "example_ja": "{最後|さいご}の{曲|きょく}でさ、みんなで{歌|うた}ったら、すごく{盛|も}り{上|りあ}がったよ。",
+      "example_vi": "Bài cuối ấy, cả phòng cùng hát theo, không khí sôi động hẳn lên."
+    },
+    {
+      "expr": "あっという{間|ま}",
+      "reading": "あっというま",
+      "vi": "Thoáng cái, chớp mắt — thời gian trôi qua rất nhanh vì đang vui; 2時間あっという間だった là 2 tiếng hát karaoke trôi nhanh như chớp, あっという間に終わった là kết thúc trong nháy mắt, hay dùng khi kể về một buổi đi chơi vui.",
+      "example_ja": "ふう、2{時間|じかん}あっという{間|ま}だったね。{莉子|りこ}、めっちゃ{歌|うた}うまかったじゃん。",
+      "example_vi": "Phù, 2 tiếng trôi nhanh thật đấy. Riko này, hát hay thật đấy nhỉ."
+    }
+  ],
+  "mindset": [
+    "Quán karaoke (カラオケボックス) ở Nhật rất khác karaoke ở Việt Nam: khách thuê phòng theo giờ (thường 30分単位, khoảng 500–1,000 yên một giờ tùy giờ cao điểm hay giờ thấp điểm), chọn gói đồ uống (ドリンクバー là uống thả ga, còn ワンドリンク là mỗi người gọi một ly tính tiền riêng), rồi vào phòng hát bằng máy có màn hình cảm ứng và リモコン chọn bài. Phòng karaoke thường có ghế sofa, bàn nhỏ, màn hình lớn, hai micro (マイク), và điện thoại trong phòng để gọi nhân viên hay xin 延長 (gia hạn thêm giờ). Trong bài, 拓海 đi karaoke với đồng nghiệp lần đầu nên cứ hỏi đủ thứ — quầy 受付 ở đâu, phòng chọn thế nào, ドリンクバー là gì, chọn bài bằng gì — còn 莉子 đã quen nên chỉ từng bước; đi karaoke lần đầu mà có bạn đi cùng chỉ giúp thì rất bình thường, nhân viên ở quầy cũng quen hướng dẫn khách mới.",
+    "Cách chọn bài ở quán karaoke Nhật là dùng リモコン (điều khiển) hoặc màn hình cảm ứng trong phòng: nhập tên bài hát (曲名) hay tên ca sĩ (歌手名), bấm nút 予約 (đặt bài) thì bài sẽ vào danh sách chờ (予約リスト), hát xong một bài thì máy tự chuyển sang bài tiếp theo. リモコン còn có nút chỉnh 音量 (âm lượng), キー (tông cao thấp), テンポ (nhịp nhanh chậm), và nút 採点 (chấm điểm) để máy chấm điểm bài hát theo độ chính xác của cao độ và nhịp, thường thang 100 điểm. Trong bài, 莉子 chỉ 拓海 cách nhập tên bài rồi bấm nút đặt bài, 拓海 hát trước một bài, hát xong hơi run nhưng bài cuối hát tốt; hai người còn xem điểm chấm (拓海 85点, 莉子 92点) rồi bàn xem ai hát hay nhất — xem điểm chấm xong khen nhau là chuyện rất thường gặp trong phòng karaoke.",
+    "Đi karaoke với đồng nghiệp ở Nhật là một dịp giao lưu (飲み会の二次会) rất thường gặp sau giờ làm hay sau bữa ăn tối: mọi người thuê phòng 2–3 tiếng, vừa hát vừa uống nước ở ドリンクバー, ai cũng hát một hai bài, có người hát hay, có người hát dở nhưng cả phòng vẫn vỗ tay và reo hò (盛り上がる). Quy tắc ngầm là không nên chiếm micro quá lâu, nên hát bài mọi người cùng biết để cả phòng hát theo, và nên khen người khác hát hay (〜がうまかったね) dù hát chưa hay lắm. Hết giờ thì nhân viên báo qua điện thoại trong phòng (お時間です), khách trả phòng ở quầy, chia tiền theo đầu người (割り勘), rồi vừa đi bộ về ga vừa bàn xem lần sau đi nữa, rủ thêm người, hát đôi (デュエット) với nhau. Trong bài, hai người hát xong ra khỏi quán, bàn xem ai hát hay, hẹn thứ Sáu tuần sau đi nữa đông người hơn, rồi 拓海 nhắn tin báo người nhà là hôm nay đi karaoke với đồng nghiệp về, hát vui lắm, hôm nào đi cùng — tin nhắn thường rất ngắn gọn, dùng văn nói như 行ってきたよ, 楽しかったよ, 行こう."
+  ],
+  "mistakes": [
+    "Đừng chiếm micro quá lâu hay hát liền nhiều bài một mình: karaoke với đồng nghiệp là hát chung, mỗi người hát một hai bài rồi đưa micro cho người khác — hát liền 3–4 bài một mình thì người khác ngồi chờ, không khí trong phòng dễ nguội (しらける).",
+    "Đừng quên để ý giờ thuê phòng: hết giờ thì nhân viên báo qua điện thoại trong phòng (お時間です), nếu muốn hát thêm thì phải xin 延長 (gia hạn) trước khi hết giờ — không xin trước mà cứ hát tiếp thì có khi bị tính thêm tiền theo 30分単位 mà không hay.",
+    "Đừng hát bài quá khó hay bài chỉ mình biết: hát bài mọi người cùng biết thì cả phòng hát theo, vỗ tay, không khí mới sôi động (盛り上がる) — hát bài lạ, tông quá cao hay quá thấp thì hát dở, cả phòng ngồi im, rất khó xử.",
+    "Đừng quên chia tiền (割り勘) khi trả phòng: tiền phòng karaoke thường chia đều theo đầu người, kể cả người hát ít — đi karaoke với đồng nghiệp mà để một người trả hết hay quên chia tiền thì lần sau người ta ngại rủ đi cùng."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn lần đầu đi karaoke với đồng nghiệp và đang đứng trước cửa quán karaoke. Hãy hỏi bạn đi cùng: quầy 受付 ở đâu, cần nói tên người đặt trước hay mã đặt phòng, và phòng hát thì chọn thế nào (theo số người, theo thời gian).",
+    "Tình huống 2: Bạn vừa vào phòng karaoke và đang cầm リモコン chọn bài. Hãy hỏi bạn đi cùng: chọn bài bằng リモコン thế nào, nhập tên bài hay tên ca sĩ, bấm nút nào để đặt bài, và nút chỉnh 音量・キー・テンポ ở đâu.",
+    "Tình huống 3: Bạn vừa hát xong một bài và máy chấm điểm (採点) cho bạn 85点. Hãy bàn với bạn đi cùng: điểm chấm thế nào, bài nào hát hay nhất, giọng mình có bị lạc tông (音程がはずれた) không, và lần sau muốn hát bài gì.",
+    "Tình huống 4: Bạn vừa hát karaoke xong và đang đi bộ về ga với đồng nghiệp. Hãy bàn với bạn đi cùng: ai hát hay nhất, bài nào khiến cả phòng sôi động (盛り上がった) nhất, và lần sau muốn đi karaoke nữa vào lúc nào, rủ thêm ai.",
+    "Tình huống 5: Bạn vừa đi karaoke với đồng nghiệp về và muốn nhắn tin báo người nhà. Hãy nhắn: hôm nay lần đầu đi karaoke với đồng nghiệp, hát vui thế nào, và rủ hôm nào rảnh đi cùng."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、ここがカラオケか。ってさ、{受付|うけつけ}ってさ、どこだっけ。",
+      "vi": "Ồ, đây là quán karaoke à. Này, quầy tiếp đón ấy, ở chỗ nào nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あそこのカウンターだよ。{名前|なまえ}{言|い}えばいいってさ。{予約|よやく}してあるからさ。",
+      "vi": "Quầy đằng kia kìa. Nói tên là được ấy mà. Đặt trước rồi mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "えっと、{拓海|たくみ}です。ってさ、{部屋|へや}ってさ、どうやって{決|き}めるの？",
+      "vi": "Ừm, mình là Takumi. Này, phòng ấy, chọn thế nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{人数|にんずう}と{時間|じかん}で{決|き}まるよ。{今日|きょう}は2{人|ふたり}で2{時間|じかん}だってさ。ほら、{鍵|かぎ}もらったよ。",
+      "vi": "Chọn theo số người với thời gian ấy mà. Hôm nay 2 người, 2 tiếng ấy mà. Này, lấy chìa khóa rồi này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、{部屋|へや}、{意外|いがい}と{広|ひろ}いじゃん。ってさ、ドリンクバーって、{何|なん}だっけ。",
+      "vi": "Ồ, phòng rộng hơn mình tưởng nhỉ. Này, quầy đồ uống tự phục vụ ấy, là cái gì nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{飲|の}み{放題|ほうだい}だよ。ジュースとかさ、お{茶|ちゃ}とかさ、{好|す}きなだけ{飲|の}んでいいんだよ。",
+      "vi": "Uống thả ga đấy. Nước ngọt này, trà này, thích uống bao nhiêu cũng được ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、いいね。ってさ、{曲|まが}ってさ、どうやって{選|えら}ぶの？",
+      "vi": "Chà, hay đấy. Này, bài hát ấy, chọn thế nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "このリモコンで{選|えら}ぶんだよ。ほら、{曲名|きょくめい}{入|い}れてさ、{予約|よやく}ボタン{押|お}すだけだよ。",
+      "vi": "Chọn bằng cái điều khiển này này. Này, nhập tên bài vào rồi bấm nút đặt bài là xong ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、{簡単|かんたん}じゃん。じゃあさ、{最初|さいしょ}は{俺|おれ}が{歌|うた}うよ。えっと、{何|なん}{歌|うた}おうかな。",
+      "vi": "À, đơn giản nhỉ. Thế thì, đầu tiên mình hát nhé. Ừm, hát bài gì đây nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいよ、{歌|うた}って{歌|うた}って。マイク、ほら、こっちだよ。{緊張|きんちょう}しなくていいからさ。",
+      "vi": "Được, hát đi hát đi. Mic này, đằng này này. Đừng căng thẳng, cứ thoải mái đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、2{時間|じかん}あっという{間|ま}だったね。{莉子|りこ}、めっちゃ{歌|うた}うまかったじゃん。",
+      "vi": "Phù, 2 tiếng trôi nhanh thật đấy. Riko này, hát hay thật đấy nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "だよね。{拓海|たくみ}もさ、{最初|さいしょ}は{緊張|きんちょう}してたけどさ、{最後|さいご}の{曲|きょく}、すごくよかったよ。",
+      "vi": "Ừ nhỉ. Takumi cũng thế, lúc đầu còn run, nhưng bài cuối ấy, hát hay lắm đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、ありがとう。ってさ、{採点|さいてん}ってさ、どうだった？{俺|おれ}、{何|なん}{点|てん}だっけ。",
+      "vi": "Ừ, cảm ơn nhé. Này, chấm điểm ấy, thế nào? Mình được bao nhiêu điểm nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "えっとさ、85{点|てん}だって。なかなかいいじゃん。あたしは92{点|てん}だったよ。",
+      "vi": "Ừm, 85 điểm ấy mà. Khá đấy chứ. Mình được 92 điểm cơ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、すごいね。ってさ、{今度|こんど}はさ、みんなでもっと{大|だい}{人数|にんずう}で{来|こ}ようよ。",
+      "vi": "Ồ, giỏi thật đấy. Này, lần sau ấy, rủ đông người hơn đi cùng nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。デュエットもさ、やってみようよ。あたしと{拓海|たくみ}でさ、1{曲|きょく}{歌|うた}おうよ。",
+      "vi": "Hay đấy. Hát đôi ấy, thử hát xem nào. Mình với Takumi hát chung một bài nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、いいじゃん。ってさ、{次|つぎ}はいつにする？{来週|らいしゅう}の{金曜|きんよう}とかさ、どう？",
+      "vi": "Ồ, hay đấy chứ. Này, lần sau thì khi nào? Thứ Sáu tuần sau chẳng hạn, thế nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、いいよ。みんなに{聞|き}いとくね。あ、{電車|でんしゃ}の{時間|じかん}、{大丈夫|だいじょうぶ}？",
+      "vi": "Ừ, được đấy. Để mình hỏi mọi người nhé. À, giờ tàu ấy, có kịp không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}だよ。あ、うちの{人|ひと}に{連絡|れんらく}しなよ。カラオケ{行|い}ってきたよってさ。",
+      "vi": "Kịp mà. À, nhắn cho người nhà đi. Bảo là hôm nay đi karaoke với đồng nghiệp về rồi ấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうする。えっとさ、「{今日|きょう}、{初|はじ}めて{同僚|どうりょう}とカラオケに{行|い}ってきたよ。すごく{楽|たの}しかったよ。{今度|こんど}{一緒|いっしょ}に{行|い}こう」って{送|おく}ればいいかな。",
+      "vi": "Ừ, nhắn thế. Ừm, nhắn là 'Hôm nay lần đầu đi karaoke với đồng nghiệp về rồi. Vui lắm. Hôm nào đi cùng nhau nhé' thì được nhỉ?"
+    }
+  ],
+  "notes": [
+    "Quán karaoke (カラオケボックス) ở Nhật thuê phòng theo giờ (thường 30分単位), chọn gói đồ uống ドリンクバー (uống thả ga) hay ワンドリンク (gọi từng ly); trong phòng có màn hình, リモコン chọn bài, hai micro, điện thoại gọi nhân viên hay xin 延長 (gia hạn thêm giờ).",
+    "Cách chọn bài: nhập tên bài (曲名) hay tên ca sĩ (歌手名) vào リモコン rồi bấm nút 予約 (đặt bài); リモコン còn chỉnh được 音量 (âm lượng), キー (tông), テンポ (nhịp); nút 採点 cho máy chấm điểm bài hát theo độ chính xác của cao độ và nhịp, thường thang 100 điểm.",
+    "Đi karaoke với đồng nghiệp là dịp giao lưu thường gặp sau giờ làm: mỗi người hát một hai bài rồi đưa micro cho người khác, hát bài mọi người cùng biết để cả phòng hát theo (盛り上がる); hết giờ thì trả phòng ở quầy, chia tiền đều theo đầu người (割り勘).",
+    "〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (gói đồ uống, điểm chấm); 〜てみようよ là cách rủ nhau thử làm một việc mới (hát đôi); 〜うまかった là dạng suồng sã của 上手だった để khen ai hát hay; 〜じゃん là cách khẳng định cảm nhận rồi rủ bạn đồng tình."
+  ]
+}

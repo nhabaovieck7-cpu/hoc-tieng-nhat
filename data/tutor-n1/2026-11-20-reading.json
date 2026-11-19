@@ -1,0 +1,529 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 長文 trong phần đọc hiểu của đề N1 thật: một bài văn dài (khoảng 1000–1300 chữ) với 4 câu hỏi — hỏi ý chính của tác giả, nghĩa của một nhận định trích dẫn trong bài, vai trò của ví dụ minh họa, và lựa chọn đúng với nội dung bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, chú ý các từ nối đối lập và chủ trương ở đoạn cuối; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình suy luận lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 15–18 phút (đọc + 4 câu hỏi). Trong đề thật, 長文 là dạng dễ mất điểm vì bài dài và trừu tượng: các lựa chọn nhiễu thường tuyệt đối hóa ('mọi cảm xúc đều truyền được nếu mài giũa lời nói'), đảo ngược ý tác giả ('thứ không nói được thì cũng như không tồn tại'), lấy ví dụ minh họa (cảnh mặt trời mọc, sự im lặng của anh Tanaka) làm chủ trương, hoặc thêm thông tin ngoài bài.",
+  "tips": [
+    {
+      "h": "Tìm bước ngoặt しかし／だが và chủ trương ở đoạn cuối",
+      "body": "Trong bài luận kiểu N1, đoạn đầu thường chỉ nêu hiện tượng ai cũng biết, không phải ý chính. Bước ngoặt mở đầu bằng しかし (đoạn 2 câu 3: しかし、それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない) và だが (đoạn 3 câu 5: だが、言葉にできることだけがすべてだと考えると、大切なものを見落としてしまう) mới là lúc tác giả bắt đầu nói thật, và chủ trương nằm ở đoạn 5 câu 1 (大切なのは、言葉にできないものを「ないもの」として扱わないことである) và đoạn 6 câu 3 (言葉にできないことを、言葉にできないまま大切にする). Câu hỏi '筆者が最も言いたいこと' hầu như luôn có đáp án ở hai đoạn cuối."
+    },
+    {
+      "h": "Ví dụ chỉ là bằng chứng, không phải ý chính",
+      "body": "Đoạn 2 đưa ví dụ cảnh mặt trời mọc trên đỉnh núi: nói '明るかった、きれいだった' thì người nghe chỉ hình dung ra mặt trời mọc của chính mình, không chia sẻ được mặt trời mọc của người nói — ví dụ này chỉ để minh họa cho nhận định ở đoạn 2 câu 5 (言葉は、体験そのものではなく、体験の「説明」にすぎないからだ). Đoạn 4 đưa ví dụ anh Tanaka: sự tĩnh lặng của anh trong ngày chia tay, càng giải thích càng trở nên nhạt nhòa — chỉ để minh họa cho nhận định ở đoạn 4 câu 5 (そこには、説明をこえたものがあるのだ). Lựa chọn nào chỉ nhắc lại nội dung của một ví dụ (ví dụ: 'cần từ ngữ đặc biệt để tả cảnh mặt trời mọc') thì gần như chắc chắn là nhiễu cho câu hỏi ý chính."
+    },
+    {
+      "h": "もちろん／だからこそ là bản đồ của đoạn 3",
+      "body": "もちろん ở đoạn 3 câu 1 mở đầu bằng sự thừa nhận ('quả thật, lời nói có sức mạnh lớn'); だからこそ ở đoạn 3 câu 4 nối hệ quả ('chính vì lời nói có sức mạnh, nên con người đã mài giũa và tin tưởng vào lời nói'); rồi だが ở đoạn 3 câu 5 lật lại toàn bộ ('thế nhưng, nếu cho rằng chỉ những gì nói được mới là tất cả thì sẽ bỏ sót những điều quan trọng'). Đọc đúng 3 từ nối này là nắm được toàn bộ lập luận của đoạn 3: thừa nhận giá trị của lời nói → nhưng lời nói không phải là tất cả."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có 6 đoạn, 30 câu, chủ trương nằm ở đoạn 5 câu 1 (大切なのは、言葉にできないものを「ないもの」として扱わないことである), đoạn 5 câu 5 (言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ) và đoạn 6 câu 3 (言葉にできないことを、言葉にできないまま大切にする). Khi làm câu hỏi về '〜とはどういうことか', hãy quay lại đúng câu định nghĩa ở đoạn 2 câu 5 (言葉は、体験そのものではなく、体験の「説明」にすぎない); khi làm câu hỏi về vai trò của ví dụ mặt trời mọc, hãy đối chiếu đoạn 2 câu 3–4 (người nghe chỉ hình dung ra cảnh của chính mình)."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「言葉にできない」と人はよく言う。感動や悲しみ、あるいは何年も胸にしまってきた思いが、言葉にしようとした瞬間に、どこか違うものになってしまう。どんなに言葉を選び、並べ替えても、元の気持ちそのものを取り出すことはできない。言葉は便利だが、その便利さの代わりに、気持ちの細部を少しずつ切り落としてしまうのだ。言い換えれば、言葉にするとき、わたしたちは気持ちの一部をあきらめているのである。\nたとえば、山の頂で朝日を見たときの気持ちを、誰かに伝えようとしてみる。明るかった、きれいだった――そんな言葉はすぐに出てくる。しかし、それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない。同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう。言葉は、体験そのものではなく、体験の「説明」にすぎないからだ。\nもちろん、言葉には大きな力がある。言葉がなければ、思いを相手に伝えることも、考えを整理することもできない。言葉のおかげで、人は自分の考えを確かめ、遠くの人と心を通わせることができる。だからこそ、人は言葉を磨き、言葉を信じてきた。だが、言葉にできることだけがすべてだと考えると、大切なものを見落としてしまう。\n言葉にならないものは、言葉が足りないからではない。むしろ、その体験が言葉の枠におさまらないほど大きいからだ。大きすぎる気持ちや、長く積み重なってきた時間は、一つの文におさまるものではない。たとえば、母を長く看病してきた田中さんが、別れの日に見せた静けさは、説明すればするほど、かえって薄くなってしまう。言葉にしようとすればするほど、本当に言いたかったことから遠ざかってしまうこともある。そこには、説明をこえたものがあるのだ。\n大切なのは、言葉にできないものを「ないもの」として扱わないことである。言葉にならないからといって、それが存在しないわけではない。沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする。うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある。言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ。\n言葉は、すべてを伝えるための道具ではない。言葉が届かないところにこそ、人の心の深さがある。言葉にできないことを、言葉にできないまま大切にする――それもまた、言葉の使い方の一つなのではないだろうか。言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "言葉は不便な道具なので、できるだけ使わないほうがよい。",
+        "言葉にできないものも大切なものとして扱い、言葉の限界を知ることが大切である。",
+        "言葉にできない気持ちは、言葉を磨けば必ず伝えられるようになる。",
+        "言葉にできないものは存在しないのと同じだから、忘れたほうがよい。"
+      ],
+      "answer": 1,
+      "explain_vi": "Ý chính nằm ở đoạn 5 câu 1: 大切なのは、言葉にできないものを「ないもの」として扱わないことである — và được nhắc lại ở đoạn 5 câu 5 (言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ) cùng đoạn 6 câu 3–4 (言葉にできないことを、言葉にできないまま大切にする…言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである). Lựa chọn ② tóm tắt đúng cả hai ý: trân trọng thứ không nói được + biết giới hạn của lời nói."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「言葉にできない」と人はよく言う。感動や悲しみ、あるいは何年も胸にしまってきた思いが、言葉にしようとした瞬間に、どこか違うものになってしまう。どんなに言葉を選び、並べ替えても、元の気持ちそのものを取り出すことはできない。言葉は便利だが、その便利さの代わりに、気持ちの細部を少しずつ切り落としてしまうのだ。言い換えれば、言葉にするとき、わたしたちは気持ちの一部をあきらめているのである。\nたとえば、山の頂で朝日を見たときの気持ちを、誰かに伝えようとしてみる。明るかった、きれいだった――そんな言葉はすぐに出てくる。しかし、それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない。同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう。言葉は、体験そのものではなく、体験の「説明」にすぎないからだ。\nもちろん、言葉には大きな力がある。言葉がなければ、思いを相手に伝えることも、考えを整理することもできない。言葉のおかげで、人は自分の考えを確かめ、遠くの人と心を通わせることができる。だからこそ、人は言葉を磨き、言葉を信じてきた。だが、言葉にできることだけがすべてだと考えると、大切なものを見落としてしまう。\n言葉にならないものは、言葉が足りないからではない。むしろ、その体験が言葉の枠におさまらないほど大きいからだ。大きすぎる気持ちや、長く積み重なってきた時間は、一つの文におさまるものではない。たとえば、母を長く看病してきた田中さんが、別れの日に見せた静けさは、説明すればするほど、かえって薄くなってしまう。言葉にしようとすればするほど、本当に言いたかったことから遠ざかってしまうこともある。そこには、説明をこえたものがあるのだ。\n大切なのは、言葉にできないものを「ないもの」として扱わないことである。言葉にならないからといって、それが存在しないわけではない。沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする。うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある。言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ。\n言葉は、すべてを伝えるための道具ではない。言葉が届かないところにこそ、人の心の深さがある。言葉にできないことを、言葉にできないまま大切にする――それもまた、言葉の使い方の一つなのではないだろうか。言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである。\n「言葉は、体験そのものではなく、体験の「説明」にすぎない」とあるが、どういうことか。",
+      "choices": [
+        "言葉で体験を説明すれば、相手も同じ体験をしたことになるということ。",
+        "体験を言葉にすると、体験そのものが消えてしまうということ。",
+        "言葉は体験を説明するための道具にすぎず、体験そのものを相手に渡すことはできないということ。",
+        "言葉で説明するのはむだだから、体験は話さないほうがよいということ。"
+      ],
+      "answer": 2,
+      "explain_vi": "Câu hỏi hỏi lại đúng nhận định ở đoạn 2 câu 5: 言葉は、体験そのものではなく、体験の「説明」にすぎないからだ. Cấu trúc 〜ではなく…にすぎない có nghĩa là 'không phải A, mà chỉ là B mà thôi' — tức là lời nói chỉ là công cụ giải thích về trải nghiệm, chứ không phải là bản thân trải nghiệm, nên không thể trao trải nghiệm đó cho đối phương. Lựa chọn ③ diễn đạt đúng nhận định này; đoạn 2 câu 3–4 là bằng chứng: người nghe chỉ hình dung ra mặt trời mọc của chính mình."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「言葉にできない」と人はよく言う。感動や悲しみ、あるいは何年も胸にしまってきた思いが、言葉にしようとした瞬間に、どこか違うものになってしまう。どんなに言葉を選び、並べ替えても、元の気持ちそのものを取り出すことはできない。言葉は便利だが、その便利さの代わりに、気持ちの細部を少しずつ切り落としてしまうのだ。言い換えれば、言葉にするとき、わたしたちは気持ちの一部をあきらめているのである。\nたとえば、山の頂で朝日を見たときの気持ちを、誰かに伝えようとしてみる。明るかった、きれいだった――そんな言葉はすぐに出てくる。しかし、それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない。同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう。言葉は、体験そのものではなく、体験の「説明」にすぎないからだ。\nもちろん、言葉には大きな力がある。言葉がなければ、思いを相手に伝えることも、考えを整理することもできない。言葉のおかげで、人は自分の考えを確かめ、遠くの人と心を通わせることができる。だからこそ、人は言葉を磨き、言葉を信じてきた。だが、言葉にできることだけがすべてだと考えると、大切なものを見落としてしまう。\n言葉にならないものは、言葉が足りないからではない。むしろ、その体験が言葉の枠におさまらないほど大きいからだ。大きすぎる気持ちや、長く積み重なってきた時間は、一つの文におさまるものではない。たとえば、母を長く看病してきた田中さんが、別れの日に見せた静けさは、説明すればするほど、かえって薄くなってしまう。言葉にしようとすればするほど、本当に言いたかったことから遠ざかってしまうこともある。そこには、説明をこえたものがあるのだ。\n大切なのは、言葉にできないものを「ないもの」として扱わないことである。言葉にならないからといって、それが存在しないわけではない。沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする。うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある。言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ。\n言葉は、すべてを伝えるための道具ではない。言葉が届かないところにこそ、人の心の深さがある。言葉にできないことを、言葉にできないまま大切にする――それもまた、言葉の使い方の一つなのではないだろうか。言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである。\n筆者が朝日の例を挙げたのはなぜか。",
+      "choices": [
+        "同じ言葉を聞いても、聞く人の心に浮かぶ景色は話す人の景色とちがうことを示すため。",
+        "朝日の美しさを伝えるには、特別な言葉が必要だと示すため。",
+        "山の頂で見る朝日は、他の場所で見る朝日より美しいと示すため。",
+        "言葉を使わずに気持ちを伝える方法があると示すため。"
+      ],
+      "answer": 0,
+      "explain_vi": "Ví dụ mặt trời mọc ở đoạn 2 là bằng chứng cho nhận định ở đoạn 2 câu 5: 言葉は、体験そのものではなく、体験の「説明」にすぎないからだ. Người nói dùng '明るかった、きれいだった' (câu 2), nhưng người nghe chỉ hình dung ra mặt trời mọc của chính mình (câu 3: 自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない), và câu 4 khẳng định: 同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう. Ví dụ này chứng minh lời nói không truyền được trải nghiệm nguyên vẹn."
+    },
+    {
+      "level": "N1",
+      "section": "読解（長文）",
+      "question": "「言葉にできない」と人はよく言う。感動や悲しみ、あるいは何年も胸にしまってきた思いが、言葉にしようとした瞬間に、どこか違うものになってしまう。どんなに言葉を選び、並べ替えても、元の気持ちそのものを取り出すことはできない。言葉は便利だが、その便利さの代わりに、気持ちの細部を少しずつ切り落としてしまうのだ。言い換えれば、言葉にするとき、わたしたちは気持ちの一部をあきらめているのである。\nたとえば、山の頂で朝日を見たときの気持ちを、誰かに伝えようとしてみる。明るかった、きれいだった――そんな言葉はすぐに出てくる。しかし、それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない。同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう。言葉は、体験そのものではなく、体験の「説明」にすぎないからだ。\nもちろん、言葉には大きな力がある。言葉がなければ、思いを相手に伝えることも、考えを整理することもできない。言葉のおかげで、人は自分の考えを確かめ、遠くの人と心を通わせることができる。だからこそ、人は言葉を磨き、言葉を信じてきた。だが、言葉にできることだけがすべてだと考えると、大切なものを見落としてしまう。\n言葉にならないものは、言葉が足りないからではない。むしろ、その体験が言葉の枠におさまらないほど大きいからだ。大きすぎる気持ちや、長く積み重なってきた時間は、一つの文におさまるものではない。たとえば、母を長く看病してきた田中さんが、別れの日に見せた静けさは、説明すればするほど、かえって薄くなってしまう。言葉にしようとすればするほど、本当に言いたかったことから遠ざかってしまうこともある。そこには、説明をこえたものがあるのだ。\n大切なのは、言葉にできないものを「ないもの」として扱わないことである。言葉にならないからといって、それが存在しないわけではない。沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする。うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある。言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ。\n言葉は、すべてを伝えるための道具ではない。言葉が届かないところにこそ、人の心の深さがある。言葉にできないことを、言葉にできないまま大切にする――それもまた、言葉の使い方の一つなのではないだろうか。言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである。\n本文の内容と合うものはどれか。",
+      "choices": [
+        "言葉にできないものは、言葉が足りないから生まれる。",
+        "言葉にできないものは存在しないのと同じだから、考える必要はない。",
+        "言葉を磨けば、どんな気持ちも完全に伝えることができる。",
+        "沈黙のなかでも、人は相手の気持ちを感じ取ることができる。"
+      ],
+      "answer": 3,
+      "explain_vi": "Trùng khớp với đoạn 5 câu 3: 沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする. Các lựa chọn còn lại đều ngược với bài, như phân tích ở Phần 4."
+    }
+  ],
+  "study": {
+    "passage_title": "「『言葉にできないこと』」— Những điều không thể diễn đạt bằng lời",
+    "structure": "Bài văn dài gồm 6 đoạn, 30 câu, theo cấu trúc 'nêu hiện tượng → ví dụ minh họa → thừa nhận giá trị của lời nói rồi lật lại → lý giải vì sao có thứ không nói được → chủ trương → kết luận' điển hình của dạng 長文 N1. Đoạn 1 (5 câu) nêu hiện tượng: người ta thường nói 'không thể diễn đạt bằng lời'; cảm động hay nỗi buồn, hay những suy nghĩ cất giữ trong lòng nhiều năm, ngay khoảnh khắc định diễn đạt thành lời thì trở thành một thứ gì đó khác hẳn; dù chọn lựa lời lẽ, sắp xếp lại thế nào cũng không thể lấy ra được cảm xúc nguyên vẹn; lời nói tiện lợi, nhưng đổi lại sự tiện lợi đó, nó cắt bỏ dần từng chi tiết nhỏ của cảm xúc; nói cách khác, khi diễn đạt thành lời, chúng ta đang từ bỏ một phần cảm xúc của mình. Đoạn 2 (5 câu) đưa ví dụ cảnh mặt trời mọc trên đỉnh núi: thử kể cho ai đó nghe cảm xúc khi nhìn mặt trời mọc — 'sáng quá, đẹp quá', những lời như thế thì bật ra ngay; thế nhưng người nghe chỉ hình dung ra mặt trời mọc mà chính mình đã thấy, không thể chia sẻ mặt trời mọc mà tôi đã thấy; dù dùng cùng một lời, cảnh hiện lên trong lòng người nghe vẫn khác với cảnh của người nói; bởi vì lời nói không phải là chính trải nghiệm, mà chỉ là 'lời giải thích' về trải nghiệm mà thôi. Đoạn 3 (5 câu) thừa nhận rồi lật lại: tất nhiên, lời nói có sức mạnh lớn; không có lời nói thì không thể truyền đạt suy nghĩ cho đối phương, cũng không thể sắp xếp suy nghĩ của mình; nhờ lời nói, con người có thể xác nhận suy nghĩ của mình và giao cảm với người ở xa; chính vì vậy, con người đã mài giũa lời nói và tin tưởng vào lời nói; thế nhưng, nếu cho rằng chỉ những gì nói được mới là tất cả thì sẽ bỏ sót những điều quan trọng. Đoạn 4 (6 câu) lý giải: thứ không thành lời được không phải vì thiếu lời; trái lại, vì trải nghiệm đó lớn tới mức không vừa với khuôn khổ của lời nói; cảm xúc quá lớn hay thời gian tích lũy lâu dài không thể gói gọn trong một câu văn; ví dụ anh Tanaka — người đã chăm sóc mẹ ốm lâu ngày — sự tĩnh lặng anh thể hiện trong ngày chia tay, càng giải thích thì lại càng trở nên nhạt nhòa; càng cố diễn đạt thành lời thì có khi lại càng xa rời điều thực sự muốn nói; ở đó có thứ vượt ra ngoài lời giải thích. Đoạn 5 (5 câu) là đoạn chủ trương: điều quan trọng là đừng đối xử với những thứ không thể diễn đạt bằng lời như thể chúng 'không tồn tại'; không nói được không có nghĩa là nó không tồn tại; trong im lặng, con người cảm nhận được cảm xúc của đối phương và cố gắng đọc ra suy nghĩ trong kẽ hở của lời nói; gật đầu, ở bên cạnh, chỉ lặng lẽ lắng nghe — những thứ ngoài lời nói như vậy cũng có thể truyền đạt suy nghĩ; chính việc đối diện với những điều không thể diễn đạt bằng lời mới là bước đầu tiên để thực sự hiểu đối phương. Đoạn 6 (4 câu) kết luận: lời nói không phải là công cụ để truyền đạt mọi thứ; chính ở nơi lời nói không chạm tới được mới có chiều sâu của trái tim con người; trân trọng những điều không thể diễn đạt bằng lời, giữ nguyên chúng như những điều không thể diễn đạt — đó chẳng phải cũng là một cách dùng lời hay sao; chính vì có những thứ không thể diễn đạt bằng lời nên con người mới trân trọng lời nói và biết giới hạn của lời nói. Bẫy chính của bài: các lựa chọn nhiễu tuyệt đối hóa ('mài giũa lời nói thì cảm xúc nào cũng truyền được hoàn toàn'), đảo ngược ý tác giả ('thứ không nói được thì cũng như không tồn tại, nên quên đi'), lấy một ví dụ (cảnh mặt trời mọc, sự im lặng của anh Tanaka) làm chủ trương, hoặc thêm thông tin ngoài bài (ví dụ: 'cần từ ngữ đặc biệt để tả cảnh mặt trời mọc').",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "「{言葉|ことば}にできない」と{人|ひと}はよく{言|い}う。",
+        "vi": "Người ta thường nói 'không thể diễn đạt bằng lời'."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{感動|かんどう}や{悲|かな}しみ、あるいは{何|なん}{年|ねん}も{胸|むね}にしまってきた{思|おも}いが、{言葉|ことば}にしようとした{瞬間|しゅんかん}に、どこか{違|ちが}うものになってしまう。",
+        "vi": "Cảm động hay nỗi buồn, hay những suy nghĩ đã cất giữ trong lòng nhiều năm, ngay khoảnh khắc định diễn đạt thành lời thì trở thành một thứ gì đó khác hẳn."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "どんなに{言葉|ことば}を{選|えら}び、{並|なら}べ{替|べか}えても、{元|もと}の{気持|きも}ちそのものを{取|と}り{出|りだ}すことはできない。",
+        "vi": "Dù chọn lựa lời lẽ, sắp xếp lại thế nào cũng không thể lấy ra được cảm xúc nguyên vẹn ban đầu."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "{言葉|ことば}は{便利|べんり}だが、その{便利|べんり}さの{代|か}わりに、{気持|きも}ちの{細部|さいぶ}を{少|すこ}しずつ{切|き}り{落|りお}としてしまうのだ。",
+        "vi": "Lời nói thì tiện lợi, nhưng đổi lại sự tiện lợi đó, nó cắt bỏ dần từng chi tiết nhỏ của cảm xúc."
+      },
+      {
+        "para": 1,
+        "no": 5,
+        "ja": "{言|い}い{換|いか}えれば、{言葉|ことば}にするとき、わたしたちは{気持|きも}ちの{一部|いちぶ}をあきらめているのである。",
+        "vi": "Nói cách khác, khi diễn đạt thành lời, chúng ta đang từ bỏ một phần cảm xúc của mình."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "たとえば、{山|やま}の{頂|いただき}で{朝日|あさひ}を{見|み}たときの{気持|きも}ちを、{誰|だれ}かに{伝|つた}えようとしてみる。",
+        "vi": "Chẳng hạn, hãy thử kể cho ai đó nghe cảm xúc khi nhìn mặt trời mọc trên đỉnh núi."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{明|あか}るかった、きれいだった――そんな{言葉|ことば}はすぐに{出|で}てくる。",
+        "vi": "'Sáng quá, đẹp quá' — những lời như thế thì bật ra ngay."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "しかし、それを{聞|き}いた{人|ひと}は、{自分|じぶん}の{見|み}た{朝日|あさひ}を{思|おも}い{浮|いう}かべるだけで、わたしが{見|み}た{朝日|あさひ}を{共有|きょうゆう}することはできない。",
+        "vi": "Thế nhưng, người nghe những lời đó chỉ hình dung ra mặt trời mọc mà chính mình đã thấy, không thể chia sẻ mặt trời mọc mà tôi đã thấy."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{同|おな}じ{言葉|ことば}を{使|つか}っても、{聞|き}く{人|ひと}の{心|こころ}に{浮|う}かぶ{景色|けしき}は、{話|はな}す{人|ひと}の{景色|けしき}とはちがう。",
+        "vi": "Dù dùng cùng một lời, cảnh hiện lên trong lòng người nghe vẫn khác với cảnh của người nói."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "{言葉|ことば}は、{体験|たいけん}そのものではなく、{体験|たいけん}の「{説明|せつめい}」にすぎないからだ。",
+        "vi": "Bởi vì lời nói không phải là chính trải nghiệm, mà chỉ là 'lời giải thích' về trải nghiệm mà thôi."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "もちろん、{言葉|ことば}には{大|おお}きな{力|ちから}がある。",
+        "vi": "Tất nhiên, lời nói có sức mạnh lớn."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{言葉|ことば}がなければ、{思|おも}いを{相手|あいて}に{伝|つた}えることも、{考|かんが}えを{整理|せいり}することもできない。",
+        "vi": "Không có lời nói thì không thể truyền đạt suy nghĩ cho đối phương, cũng không thể sắp xếp suy nghĩ của mình."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{言葉|ことば}のおかげで、{人|ひと}は{自分|じぶん}の{考|かんが}えを{確|たし}かめ、{遠|とお}くの{人|ひと}と{心|こころ}を{通|かよ}わせることができる。",
+        "vi": "Nhờ lời nói, con người có thể xác nhận suy nghĩ của mình và giao cảm với người ở xa."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "だからこそ、{人|ひと}は{言葉|ことば}を{磨|みが}き、{言葉|ことば}を{信|しん}じてきた。",
+        "vi": "Chính vì vậy, con người đã mài giũa lời nói và tin tưởng vào lời nói."
+      },
+      {
+        "para": 3,
+        "no": 5,
+        "ja": "だが、{言葉|ことば}にできることだけがすべてだと{考|かんが}えると、{大切|たいせつ}なものを{見落|みお}としてしまう。",
+        "vi": "Thế nhưng, nếu cho rằng chỉ những gì nói được mới là tất cả thì sẽ bỏ sót những điều quan trọng."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{言葉|ことば}にならないものは、{言葉|ことば}が{足|た}りないからではない。",
+        "vi": "Thứ không thành lời được không phải vì thiếu lời."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "むしろ、その{体験|たいけん}が{言葉|ことば}の{枠|わく}におさまらないほど{大|おお}きいからだ。",
+        "vi": "Trái lại, vì trải nghiệm đó lớn tới mức không vừa với khuôn khổ của lời nói."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{大|おお}きすぎる{気持|きも}ちや、{長|なが}く{積|つ}み{重|みかさ}なってきた{時間|じかん}は、{一|ひと}つの{文|ぶん}におさまるものではない。",
+        "vi": "Cảm xúc quá lớn hay thời gian tích lũy lâu dài không thể gói gọn trong một câu văn."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "たとえば、{母|はは}を{長|なが}く{看病|かんびょう}してきた{田中|たなか}さんが、{別|わか}れの{日|ひ}に{見|み}せた{静|しず}けさは、{説明|せつめい}すればするほど、かえって{薄|うす}くなってしまう。",
+        "vi": "Chẳng hạn, sự tĩnh lặng mà anh Tanaka — người đã chăm sóc mẹ ốm lâu ngày — thể hiện trong ngày chia tay, càng giải thích thì lại càng trở nên nhạt nhòa."
+      },
+      {
+        "para": 4,
+        "no": 5,
+        "ja": "{言葉|ことば}にしようとすればするほど、{本当|ほんと}に{言|い}いたかったことから{遠|とお}ざかってしまうこともある。",
+        "vi": "Càng cố diễn đạt thành lời thì có khi lại càng xa rời điều thực sự muốn nói."
+      },
+      {
+        "para": 4,
+        "no": 6,
+        "ja": "そこには、{説明|せつめい}をこえたものがあるのだ。",
+        "vi": "Ở đó có thứ vượt ra ngoài lời giải thích."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{大切|たいせつ}なのは、{言葉|ことば}にできないものを「ないもの」として{扱|あつか}わないことである。",
+        "vi": "Điều quan trọng là đừng đối xử với những thứ không thể diễn đạt bằng lời như thể chúng 'không tồn tại'."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{言葉|ことば}にならないからといって、それが{存在|そんざい}しないわけではない。",
+        "vi": "Không nói được không có nghĩa là nó không tồn tại."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{沈黙|ちんもく}のなかで、{人|ひと}は{相手|あいて}の{気持|きも}ちを{感|かん}じ{取|じと}り、{言葉|ことば}のすきまに、{思|おも}いを{読|よ}み{取|みと}ろうとする。",
+        "vi": "Trong im lặng, con người cảm nhận được cảm xúc của đối phương và cố gắng đọc ra suy nghĩ trong kẽ hở của lời nói."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "うなずくこと、そばにいること、ただ{黙|だま}って{耳|みみ}を{傾|かたむ}けること――そうした{言葉|ことば}{以外|いがい}のものが、{思|おも}いを{伝|つた}えることもある。",
+        "vi": "Gật đầu, ở bên cạnh, chỉ lặng lẽ lắng nghe — những thứ ngoài lời nói như vậy cũng có thể truyền đạt suy nghĩ."
+      },
+      {
+        "para": 5,
+        "no": 5,
+        "ja": "{言葉|ことば}にできないことと{向|む}き{合|きあ}うことこそ、{相手|あいて}を{本当|ほんと}に{理解|りかい}する{第|だい}{一|いっ}{歩|ぽ}なのだ。",
+        "vi": "Chính việc đối diện với những điều không thể diễn đạt bằng lời mới là bước đầu tiên để thực sự hiểu đối phương."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "{言葉|ことば}は、すべてを{伝|つた}えるための{道具|どうぐ}ではない。",
+        "vi": "Lời nói không phải là công cụ để truyền đạt mọi thứ."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{言葉|ことば}が{届|とど}かないところにこそ、{人|ひと}の{心|こころ}の{深|ふか}さがある。",
+        "vi": "Chính ở nơi lời nói không chạm tới được mới có chiều sâu của trái tim con người."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "{言葉|ことば}にできないことを、{言葉|ことば}にできないまま{大切|たいせつ}にする――それもまた、{言葉|ことば}の{使|つか}い{方|かた}の{一|ひと}つなのではないだろうか。",
+        "vi": "Trân trọng những điều không thể diễn đạt bằng lời, giữ nguyên chúng như những điều không thể diễn đạt — đó chẳng phải cũng là một cách dùng lời hay sao."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "{言葉|ことば}にできないものがあるからこそ、{人|ひと}は{言葉|ことば}を{大切|たいせつ}にし、{言葉|ことば}の{限界|げんかい}を{知|し}るのである。",
+        "vi": "Chính vì có những thứ không thể diễn đạt bằng lời nên con người mới trân trọng lời nói và biết giới hạn của lời nói."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ② · Câu 2 – đáp án ③ · Câu 3 – đáp án ① · Câu 4 – đáp án ④",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ5①⑤・Đ6③④",
+        "options": [
+          {
+            "text": "言葉は不便な道具なので、できるだけ使わないほうがよい。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 1–4: もちろん、言葉には大きな力がある — tác giả thừa nhận lời nói có sức mạnh lớn, nhờ lời nói mà con người xác nhận suy nghĩ và giao cảm với người ở xa (言葉のおかげで、人は自分の考えを確かめ、遠くの人と心を通わせることができる), và だからこそ、人は言葉を磨き、言葉を信じてきた. Bài viết không hề nói lời nói là công cụ bất tiện nên hạn chế dùng. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "言葉にできないものも大切なものとして扱い、言葉の限界を知ることが大切である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai luận điểm chính của bài: đoạn 5 câu 1 — 大切なのは、言葉にできないものを「ないもの」として扱わないことである; đoạn 5 câu 5 — 言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ; và đoạn 6 câu 3–4 — 言葉にできないことを、言葉にできないまま大切にする…言葉にできないものがあるからこそ、人は言葉を大切にし、言葉の限界を知るのである. Đây là ý tác giả muốn nói nhất."
+          },
+          {
+            "text": "言葉にできない気持ちは、言葉を磨けば必ず伝えられるようになる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 5 và đoạn 4 câu 4–5: 言葉は、体験そのものではなく、体験の「説明」にすぎない — lời nói chỉ là lời giải thích, không phải là bản thân trải nghiệm; và ví dụ anh Tanaka cho thấy càng giải thích thì sự tĩnh lặng lại càng nhạt nhòa (説明すればするほど、かえって薄くなってしまう), càng cố diễn đạt thành lời thì có khi lại càng xa rời điều thực sự muốn nói (言葉にしようとすればするほど、本当に言いたかったことから遠ざかってしまうこともある). Lựa chọn này dùng 必ず để tuyệt đối hóa điều bài đang phủ định. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "言葉にできないものは存在しないのと同じだから、忘れたほうがよい。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 5 câu 1–2: 大切なのは、言葉にできないものを「ないもの」として扱わないことである — và 言葉にならないからといって、それが存在しないわけではない. Tác giả nói rõ thứ không nói được VẪN TỒN TẠI và phải được đối xử như thứ quan trọng, chứ không phải 'cũng như không tồn tại nên quên đi'. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 2,
+        "locator": "Đ2⑤",
+        "options": [
+          {
+            "text": "言葉で体験を説明すれば、相手も同じ体験をしたことになるということ。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 3: それを聞いた人は、自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない — người nghe chỉ hình dung ra mặt trời mọc của chính mình, KHÔNG chia sẻ được trải nghiệm của người nói. Lựa chọn này đảo ngược kết quả của ví dụ. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "体験を言葉にすると、体験そのものが消えてしまうということ。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói trải nghiệm 'biến mất' khi được diễn đạt thành lời. Đoạn 1 câu 3 chỉ nói không thể lấy ra được cảm xúc nguyên vẹn (元の気持ちそのものを取り出すことはできない), và đoạn 2 câu 5 chỉ nói lời nói là 'lời giải thích' về trải nghiệm, chứ không phải trải nghiệm bị xóa bỏ. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "言葉は体験を説明するための道具にすぎず、体験そのものを相手に渡すことはできないということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trích đúng nhận định ở đoạn 2 câu 5: 言葉は、体験そのものではなく、体験の「説明」にすぎないからだ. Cấu trúc 〜ではなく…にすぎない có nghĩa là 'không phải A, mà chỉ là B mà thôi' — lời nói chỉ là công cụ giải thích về trải nghiệm, không phải là bản thân trải nghiệm, nên không thể trao trải nghiệm đó cho đối phương. Bằng chứng ở đoạn 2 câu 3–4: người nghe chỉ hình dung ra cảnh của chính mình."
+          },
+          {
+            "text": "言葉で説明するのはむだだから、体験は話さないほうがよいということ。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 1–4: もちろん、言葉には大きな力がある — tác giả thừa nhận lời nói có sức mạnh lớn và con người đã mài giũa, tin tưởng vào lời nói (だからこそ、人は言葉を磨き、言葉を信じてきた). Bài viết không hề nói giải thích bằng lời là vô ích và nên im lặng. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "Đ2①③④⑤",
+        "options": [
+          {
+            "text": "同じ言葉を聞いても、聞く人の心に浮かぶ景色は話す人の景色とちがうことを示すため。",
+            "verdict": "ĐÚNG",
+            "reason": "Ví dụ mặt trời mọc ở đoạn 2 là bằng chứng cho nhận định ở đoạn 2 câu 5: 言葉は、体験そのものではなく、体験の「説明」にすぎないからだ. Người nói dùng '明るかった、きれいだった' (câu 2), nhưng người nghe chỉ hình dung ra mặt trời mọc của chính mình (câu 3: 自分の見た朝日を思い浮かべるだけで、わたしが見た朝日を共有することはできない), và câu 4 khẳng định: 同じ言葉を使っても、聞く人の心に浮かぶ景色は、話す人の景色とはちがう."
+          },
+          {
+            "text": "朝日の美しさを伝えるには、特別な言葉が必要だと示すため。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói cần 'từ ngữ đặc biệt' để tả cảnh mặt trời mọc. Đoạn 2 câu 2 nói những lời như '明るかった、きれいだった' thì bật ra ngay (そんな言葉はすぐに出てくる) — vấn đề không phải là thiếu từ ngữ đặc biệt, mà là dù dùng lời nào thì người nghe vẫn chỉ hình dung ra cảnh của chính mình (câu 3–4). Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "山の頂で見る朝日は、他の場所で見る朝日より美しいと示すため。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề so sánh mặt trời mọc trên đỉnh núi với mặt trời mọc ở nơi khác, cũng không nói chỗ nào đẹp hơn. Đỉnh núi (山の頂) chỉ là bối cảnh của ví dụ, không phải là nội dung so sánh. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "言葉を使わずに気持ちを伝える方法があると示すため。",
+            "verdict": "SAI",
+            "reason": "Ý này thuộc về đoạn 5 câu 4 (うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある), không phải vai trò của ví dụ mặt trời mọc ở đoạn 2. Ví dụ mặt trời mọc chứng minh lời nói chỉ là 'lời giải thích' về trải nghiệm (đoạn 2 câu 5), chứ không phải để chỉ ra cách truyền đạt không dùng lời. Bẫy lấy ý của đoạn khác gán cho ví dụ này."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 3,
+        "locator": "Đ5③",
+        "options": [
+          {
+            "text": "言葉にできないものは、言葉が足りないから生まれる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 4 câu 1–2: 言葉にならないものは、言葉が足りないからではない — tác giả phủ định thẳng nguyên nhân 'thiếu lời'; trái lại, vì trải nghiệm lớn tới mức không vừa với khuôn khổ của lời nói (むしろ、その体験が言葉の枠におさまらないほど大きいからだ). Lựa chọn này lấy chính nguyên nhân bị phủ định làm đáp án. Bẫy đọc vế phủ định thành khẳng định."
+          },
+          {
+            "text": "言葉にできないものは存在しないのと同じだから、考える必要はない。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 5 câu 1–2: 大切なのは、言葉にできないものを「ないもの」として扱わないことである — và 言葉にならないからといって、それが存在しないわけではない. Tác giả nói rõ thứ không nói được VẪN TỒN TẠI và việc đối diện với nó là bước đầu tiên để hiểu đối phương (đoạn 5 câu 5). Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "言葉を磨けば、どんな気持ちも完全に伝えることができる。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 5 và đoạn 4 câu 4–5: 言葉は、体験そのものではなく、体験の「説明」にすぎない — và ví dụ anh Tanaka cho thấy càng giải thích thì sự tĩnh lặng lại càng nhạt nhòa (説明すればするほど、かえって薄くなってしまう). Lựa chọn này dùng どんな…も完全に để tuyệt đối hóa điều bài đang phủ định. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "沈黙のなかでも、人は相手の気持ちを感じ取ることができる。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với đoạn 5 câu 3: 沈黙のなかで、人は相手の気持ちを感じ取り、言葉のすきまに、思いを読み取ろうとする — và được củng cố ở đoạn 5 câu 4: うなずくこと、そばにいること、ただ黙って耳を傾けること――そうした言葉以外のものが、思いを伝えることもある."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{胸|むね}にしまう",
+        "reading": "むねにしまう",
+        "hanviet": "Hung",
+        "vi": "cất giữ trong lòng (một suy nghĩ, một cảm xúc)"
+      },
+      {
+        "word": "{並|なら}べ{替|べか}える",
+        "reading": "ならべかえる",
+        "hanviet": "Tịnh Thế",
+        "vi": "sắp xếp lại, xếp lại theo thứ tự khác"
+      },
+      {
+        "word": "{切|き}り{落|りお}とす",
+        "reading": "きりおとす",
+        "hanviet": "Thiết Lạc",
+        "vi": "cắt bỏ, cắt đi (một phần)"
+      },
+      {
+        "word": "{頂|いただき}",
+        "reading": "いただき",
+        "hanviet": "Đỉnh",
+        "vi": "đỉnh (núi)"
+      },
+      {
+        "word": "{共有|きょうゆう}する",
+        "reading": "きょうゆうする",
+        "hanviet": "Cộng Hữu",
+        "vi": "chia sẻ, cùng có (một trải nghiệm, một cảm xúc)"
+      },
+      {
+        "word": "{枠|わく}",
+        "reading": "わく",
+        "hanviet": "Khuông",
+        "vi": "khuôn khổ, giới hạn"
+      },
+      {
+        "word": "{積|つ}み{重|みかさ}なる",
+        "reading": "つみかさなる",
+        "hanviet": "Tích Trọng",
+        "vi": "chồng chất lên nhau, tích lũy dần theo thời gian"
+      },
+      {
+        "word": "こえる",
+        "reading": "こえる",
+        "hanviet": "Việt",
+        "vi": "vượt qua, vượt ra ngoài (giới hạn, lời giải thích)"
+      },
+      {
+        "word": "{沈黙|ちんもく}",
+        "reading": "ちんもく",
+        "hanviet": "Trầm Mặc",
+        "vi": "sự im lặng"
+      },
+      {
+        "word": "すきま",
+        "reading": "すきま",
+        "hanviet": "Khích Gian",
+        "vi": "kẽ hở, khoảng trống (giữa các lời nói)"
+      },
+      {
+        "word": "{耳|みみ}を{傾|かたむ}ける",
+        "reading": "みみをかたむける",
+        "hanviet": "Nhĩ Khuynh",
+        "vi": "lắng nghe (một cách chăm chú, chân thành)"
+      },
+      {
+        "word": "{見落|みお}とす",
+        "reading": "みおとす",
+        "hanviet": "Kiến Lạc",
+        "vi": "bỏ sót, không để ý tới (điều quan trọng)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜にすぎない",
+        "vi": "chỉ là… mà thôi (hạ thấp giá trị của đối tượng: không hơn thế)",
+        "in_text": "言葉は、体験そのものではなく、体験の「説明」にすぎないからだ。"
+      },
+      {
+        "pattern": "〜ば〜ほど",
+        "vi": "càng… thì càng… (mức độ tăng dần song song)",
+        "in_text": "説明すればするほど、かえって薄くなってしまう。"
+      },
+      {
+        "pattern": "〜わけではない",
+        "vi": "không phải là… / không có nghĩa là… (phủ định một suy luận, một kết luận vội vàng)",
+        "in_text": "言葉にならないからといって、それが存在しないわけではない。"
+      },
+      {
+        "pattern": "〜こそ",
+        "vi": "chính… (nhấn mạnh: chính cái này, không phải cái khác)",
+        "in_text": "言葉にできないことと向き合うことこそ、相手を本当に理解する第一歩なのだ。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm giới hạn 'chỉ là…': 〜にすぎない / 〜だけだ / 〜にほかならない",
+        "rows": [
+          {
+            "form": "〜にすぎない",
+            "join": "N・Vる + にすぎない",
+            "vi": "chỉ là… mà thôi",
+            "diff": "HẠ THẤP giá trị của đối tượng: 'chỉ là… thôi, không hơn thế'. Dùng để phủ định tầm quan trọng của một thứ ('lời nói chỉ là lời giải thích mà thôi'). Sắc thái hạ thấp, mang tính phủ định.",
+            "example_ja": "{言葉|ことば}は、{体験|たいけん}そのものではなく、{体験|たいけん}の「{説明|せつめい}」にすぎないからだ。",
+            "example_vi": "Bởi vì lời nói không phải là chính trải nghiệm, mà chỉ là 'lời giải thích' về trải nghiệm mà thôi."
+          },
+          {
+            "form": "〜だけだ",
+            "join": "N・Vる + だけだ",
+            "vi": "chỉ là… / chỉ có…",
+            "diff": "Giới hạn TRUNG TÍNH: nêu phạm vi của đối tượng mà không nhấn mạnh khẳng định hay hạ thấp. Khác với にすぎない (hạ thấp) và にほかならない (khẳng định duy nhất, trang trọng), だけだ chỉ nói 'chỉ có thế này thôi' một cách khách quan.",
+            "example_ja": "{言葉|ことば}にできることだけがすべてではない。",
+            "example_vi": "Chỉ những gì nói được mới là tất cả — không phải vậy."
+          },
+          {
+            "form": "〜にほかならない",
+            "join": "N・Vること + にほかならない",
+            "vi": "chính là… không gì khác",
+            "diff": "Khẳng định DỨT KHOÁT và TRANG TRỌNG nhất: chỉ có đúng một đáp án này, không có khả năng nào khác. Hay dùng trong bài luận để nêu định nghĩa hoặc chủ trương. Ngược hướng với にすぎない — にほかならない dùng để khẳng định duy nhất ('chính là…'), còn にすぎない dùng để hạ thấp ('chỉ là… thôi').",
+            "example_ja": "{言葉|ことば}にできないことと{向|む}き{合|きあ}うことこそ、{相手|あいて}を{本当|ほんと}に{理解|りかい}する{第|だい}{一|いっ}{歩|ぽ}なのだ。",
+            "example_vi": "Chính việc đối diện với những điều không thể diễn đạt bằng lời mới là bước đầu tiên để thực sự hiểu đối phương."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm nhấn mạnh: 〜こそ / 〜てこそ / 〜からこそ",
+        "rows": [
+          {
+            "form": "〜こそ",
+            "join": "N・Vること + こそ",
+            "vi": "chính… (là…)",
+            "diff": "Nhấn mạnh TRỰC TIẾP vào một danh từ hoặc một hành động: 'chính cái này, không phải cái khác'. Đứng ngay sau đối tượng được nhấn mạnh, không qua điều kiện hay lý do.",
+            "example_ja": "{言葉|ことば}にできないことと{向|む}き{合|きあ}うことこそ、{相手|あいて}を{本当|ほんと}に{理解|りかい}する{第|だい}{一|いっ}{歩|ぽ}なのだ。",
+            "example_vi": "Chính việc đối diện với những điều không thể diễn đạt bằng lời mới là bước đầu tiên để thực sự hiểu đối phương."
+          },
+          {
+            "form": "〜てこそ",
+            "join": "Vて + こそ",
+            "vi": "chỉ khi làm… thì mới…",
+            "diff": "Nhấn mạnh ĐIỀU KIỆN HÀNH ĐỘNG không thể thiếu: chỉ khi thực hiện hành động đó thì kết quả mới xảy ra. Khác với こそ (nhấn mạnh trực tiếp), てこそ gắn với một hành động cụ thể làm điều kiện.",
+            "example_ja": "{言葉|ことば}の{限界|げんかい}を{知|し}ってこそ、{言葉|ことば}を{本当|ほんと}に{大切|たいせつ}に{使|つか}うことができる。",
+            "example_vi": "Chỉ khi biết giới hạn của lời nói, mới có thể thực sự dùng lời nói một cách trân trọng."
+          },
+          {
+            "form": "〜からこそ",
+            "join": "Vる・Aい・Nだ + からこそ",
+            "vi": "chính vì… nên…",
+            "diff": "Nhấn mạnh LÝ DO: vì có lý do đó nên mới có kết luận này. Khác với こそ (nhấn mạnh trực tiếp) và てこそ (nhấn mạnh điều kiện hành động), からこそ nhấn mạnh nguyên nhân dẫn tới kết luận — thường đứng ở đầu câu với だからこそ.",
+            "example_ja": "{言葉|ことば}にできないものがあるからこそ、{人|ひと}は{言葉|ことば}を{大切|たいせつ}にし、{言葉|ことば}の{限界|げんかい}を{知|し}るのである。",
+            "example_vi": "Chính vì có những thứ không thể diễn đạt bằng lời nên con người mới trân trọng lời nói và biết giới hạn của lời nói."
+          }
+        ]
+      }
+    ]
+  }
+}

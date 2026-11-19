@@ -305,6 +305,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 35 — Lần đầu đi xem kịch ở nhà hát nhỏ (lấy vé, tìm ghế, chờ mở màn, nghỉ giữa giờ, xem hết vở) (初めて小さな劇場でお芝居を見る)",
       "file": "2026-11-19-kaiwa.json"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 20/11/2026（問題11・中文）",
+      "file": "2026-11-20-n1-set.json"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 20/11/2026（長文）",
+      "file": "2026-11-20-reading.json"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 36 — Lần đầu đi karaoke với đồng nghiệp (chọn phòng, đặt đồ uống, chọn bài, hát xong ra về, hẹn lần sau) (初めて同僚とカラオケに行く)",
+      "file": "2026-11-20-kaiwa.json"
     }
   ]
 }
