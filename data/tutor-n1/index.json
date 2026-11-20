@@ -323,6 +323,18 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 36 — Lần đầu đi karaoke với đồng nghiệp (chọn phòng, đặt đồ uống, chọn bài, hát xong ra về, hẹn lần sau) (初めて同僚とカラオケに行く)",
       "file": "2026-11-20-kaiwa.json"
+    },
+    {
+      "date": "2026-11-21",
+      "kind": "sat-set",
+      "title": "Bộ dài ôn tập tuần ngày 21/11/2026（問題10〜13）",
+      "file": "2026-11-21-sat-set.json"
+    },
+    {
+      "date": "2026-11-21",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 37 — Ngày đầu tiên của cụ mới ở day service — đón tiếp, hướng dẫn và giới thiệu với mọi người",
+      "file": "2026-11-21-kaiwa.json"
     }
   ]
 }

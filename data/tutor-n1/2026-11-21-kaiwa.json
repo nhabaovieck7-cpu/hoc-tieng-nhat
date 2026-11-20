@@ -1,0 +1,556 @@
+{
+  "lesson": 37,
+  "topic": "Ngày đầu tiên của cụ mới ở day service — đón tiếp, hướng dẫn và giới thiệu với mọi người",
+  "summary": "Bối cảnh: buổi sáng ở day service, 佐藤さん — một cụ mới — đến lần đầu cùng người nhà. Bài luyện kỹ năng quan trọng mà ba bài kaigo trước chưa đụng tới: đón tiếp người mới (初めての方への対応) — vừa làm cho cụ yên tâm vừa thu thập thông tin cần thiết mà không làm cụ thấy mình bị “kiểm tra”. Thanh điệu chuyển rõ theo đối tượng: kính ngữ ấm áp, chậm rãi với 佐藤さん; suồng sã, rút gọn với đồng nghiệp 莉子; lịch sự ngắn gọn với 山田主任; và khiêm nhường, cẩn trọng với ご家族 vì họ đang giao người thân của mình cho mình lần đầu. Điểm khó/điểm mới so với các bài kaigo trước: cách mời cụ tham gia mà không ép (〜てみませんか thay vì 〜してください), cách giới thiệu người mới với các cụ khác mà không làm cụ thấy mình là “người lạ được trình diện”, cách hỏi về sở thích và điều cụ không thích ăn mà không nghe như một bản khảo sát, và cách trao đổi với người nhà lúc đưa về — báo cáo ngày đầu bằng quan sát cụ thể thay vì nhận xét chung chung, để người nhà yên tâm cho cụ đến tiếp.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（đón cụ mới ở cửa và hướng dẫn cơ sở）",
+      "stage": "（Buổi sáng ở day service, trước cửa ra vào. Xe đưa 佐藤さん đến lần đầu, người nhà đi cùng. 拓海 ra đón ở cửa, 莉子 đứng trong sảnh chuẩn bị.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "おはようございます。{佐藤|さとう}さんですね。はじめまして、デイサービスの{拓海|たくみ}と{申|もう}します。{今日|きょう}は、ようこそいらっしゃいました。",
+          "vi": "Chào buổi sáng ạ. Bác là bác Sato phải không ạ? Cháu là Takumi bên day service, rất vui được gặp bác ạ. Hôm nay bác đã đến, cháu xin chào mừng bác ạ."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "あ、はじめまして。{佐藤|さとう}です。{今日|きょう}から、お{世話|せわ}になります。",
+          "vi": "À, rất vui được gặp cháu. Bác là Sato. Từ hôm nay, nhờ các cháu giúp đỡ nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "こちらこそ、よろしくお{願|ねが}いいたします。あの、{車|くるま}のほうは、{大丈夫|だいじょうぶ}でしたか。{酔|よ}ったり、しませんでしたか。",
+          "vi": "Dạ, chúng cháu mới phải nhờ bác ạ. À, lúc đi xe bác có ổn không ạ? Bác có bị say xe không ạ?"
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "いやいや、{大丈夫|だいじょうぶ}だよ。ちょっと{緊張|きんちょう}したけどね。",
+          "vi": "Không không, bác ổn mà. Chỉ hơi hồi hộp một chút thôi."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "{父|ちち}、{初|はじ}めてのところだと、{緊張|きんちょう}しちゃって。{家|いえ}を{出|で}るときも、なんだか、そわそわしてたんです。",
+          "vi": "Bố tôi đến chỗ lạ lần đầu nên hồi hộp lắm ạ. Lúc ra khỏi nhà bố cứ bồn chồn thế nào ấy ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうですよね。{初|はじ}めての{場所|ばしょ}は、どなたでも、{緊張|きんちょう}なさいますよ。{佐藤|さとう}さん、ゆっくりで{大丈夫|だいじょうぶ}ですからね。まず、こちらへどうぞ。",
+          "vi": "Đúng vậy ạ. Đến chỗ mới lần đầu thì ai cũng hồi hộp thôi ạ. Bác Sato cứ từ từ thôi ạ, không vội đâu ạ. Trước hết, mời bác vào đây ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "こちらが、{玄関|げんかん}で、{靴|くつ}を{入|い}れる{場所|ばしょ}です。あ、{佐藤|さとう}さんの{下駄|げた}{箱|はこ}は、こちらの{三|さん}{番|ばん}です。お{名前|なまえ}を、{貼|は}っておきました。",
+          "vi": "Đây là cửa ra vào, chỗ để giày ạ. À, tủ giày của bác Sato là tủ số ba này ạ. Cháu đã dán tên bác lên rồi ạ."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "おお、{名前|なまえ}が{貼|は}ってある。なんだか、もう{仲間|なかま}に{入|い}れてもらったみたいだね。",
+          "vi": "Ồ, có dán tên bác này. Thế này thì cứ như bác đã được nhận làm thành viên rồi ấy nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "もちろんですよ。{佐藤|さとう}さん、こちらがお{手洗|てあら}いです。あちらが、お{風呂場|ふろば}です。{分|わ}からなくなったら、いつでも{声|こえ}をかけてくださいね。",
+          "vi": "Đương nhiên rồi ạ. Bác Sato, đây là nhà vệ sinh ạ. Đằng kia là phòng tắm ạ. Nếu bác không nhớ đường thì cứ gọi cháu bất cứ lúc nào nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{佐藤|さとう}さん、おはようございます。{莉子|りこ}と{申|もう}します。{今日|きょう}は、よろしくお{願|ねが}いします。",
+          "vi": "Bác Sato, chào buổi sáng ạ. Cháu là Riko ạ. Hôm nay nhờ bác giúp đỡ nhé."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "ああ、{莉子|りこ}さんね。よろしくね。",
+          "vi": "À, Riko đấy à. Nhờ cháu nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "じゃあ、{佐藤|さとう}さん、こちらのお{部屋|へや}で、みなさんと{一緒|いっしょ}に{過|す}ごしていただきます。さあ、どうぞ。",
+          "vi": "Vậy thì bác Sato, bác sẽ sinh hoạt cùng mọi người ở phòng này ạ. Nào, mời bác vào ạ."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（giới thiệu với các cụ khác và ăn trưa cùng）",
+      "stage": "（Phòng sinh hoạt chung của day service, buổi trưa. Các cụ đang ngồi trò chuyện. 拓海 giới thiệu 佐藤さん với mọi người, rồi cùng ăn trưa và hỏi về sở thích, món ăn của bác.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "みなさん、{今日|きょう}から、{新|あたら}しい{仲間|なかま}が{増|ふ}えましたよ。{佐藤|さとう}さんです。みなさん、よろしくお{願|ねが}いしますね。",
+          "vi": "Mọi người ơi, từ hôm nay chúng ta có thêm một thành viên mới ạ. Đây là bác Sato ạ. Mọi người giúp đỡ bác nhé."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "はじめまして、{佐藤|さとう}と{申|もう}します。よろしくお{願|ねが}いします。",
+          "vi": "Rất vui được gặp mọi người, tôi là Sato. Mong mọi người giúp đỡ ạ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{佐藤|さとう}さん、こちらは、{田中|たなか}さんです。{田中|たなか}さん、{佐藤|さとう}さんですよ。お{二人|ふたり}とも、{将棋|しょうぎ}がお{好|す}きだそうですよ。",
+          "vi": "Bác Sato, đây là bác Tanaka ạ. Bác Tanaka, đây là bác Sato ạ. Nghe nói cả hai bác đều thích chơi shogi đấy ạ."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "おお、{将棋|しょうぎ}か。わしも、{若|わか}いころ、よく{指|さ}したもんだよ。",
+          "vi": "Ồ, shogi à. Hồi trẻ bác cũng hay chơi lắm đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{佐藤|さとう}さん、よかったですね。{田中|たなか}さん、{佐藤|さとう}さんと、{将棋|しょうぎ}のお{話|はなし}、してみてくださいね。",
+          "vi": "Bác Sato, tốt quá nhỉ. Bác Tanaka, bác nói chuyện shogi với bác Sato nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、{佐藤|さとう}さん、{午後|ごご}の{体操|たいそう}、どうする？{初|はじ}めてだから、{見|み}てるだけでもいいんじゃない？",
+          "vi": "Takumi này, bác Sato buổi chiều tập thể dục thì sao? Lần đầu nên chỉ ngồi xem thôi cũng được chứ nhỉ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうだね。{佐藤|さとう}さん、{午後|ごご}の{体操|たいそう}は、{無理|むり}しないでくださいね。{見|み}ているだけでも、{大丈夫|だいじょうぶ}ですよ。{気|き}が{向|む}いたら、{一緒|いっしょ}にやってみませんか。",
+          "vi": "Ừ, phải đấy. Bác Sato, tập thể dục buổi chiều bác đừng cố nhé. Chỉ ngồi xem thôi cũng được ạ. Nếu bác thấy thích thì thử tập cùng mọi người nhé."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "ありがとう。ちょっと、{見|み}させてもらうよ。",
+          "vi": "Cảm ơn cháu nhé. Bác xem thử một chút đã."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{佐藤|さとう}さん、お{昼|ひる}ですよ。{今日|きょう}は、お{魚|さかな}の{煮付|につ}けと、お{味噌|みそ}{汁|しる}です。あの、{苦手|にがて}な{食|た}べ{物|べもの}、ありますか。",
+          "vi": "Bác Sato, đến giờ ăn trưa rồi ạ. Hôm nay là cá kho với súp miso ạ. À, bác có món gì không ăn được không ạ?"
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "うーん、{納豆|なっとう}だけは、ちょっと{苦手|にがて}でね。あとは、なんでも{食|た}べるよ。",
+          "vi": "Ừm, chỉ có natto là bác hơi không ăn được thôi. Còn lại món gì bác cũng ăn được."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{分|わ}かりました。{納豆|なっとう}は、{出|だ}しませんので、ご{安心|あんしん}くださいね。お{箸|はし}、こちらですよ。",
+          "vi": "Cháu hiểu rồi ạ. Natto thì chúng cháu sẽ không dọn cho bác đâu, bác yên tâm nhé. Đũa ở đây ạ."
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "いただきます。うん、おいしいね。みんなと{食|た}べると、ごはんも、すすむね。",
+          "vi": "Mời mọi người ăn ạ. Ừm, ngon đấy. Ăn cùng mọi người thì cơm cũng trôi hơn hẳn nhỉ."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（trao đổi với người nhà lúc đưa cụ về）",
+      "stage": "（Buổi chiều muộn, trước giờ xe đưa về. 拓海 và 山田主任 gặp người nhà của 佐藤さん ở sảnh để trao đổi về ngày đầu tiên của bác, rồi tiễn bác ra xe.）",
+      "lines": [
+        {
+          "speaker": "山田主任",
+          "ja": "{佐藤|さとう}さんのご{家族|かぞく}の{方|ほう}ですね。{主任|しゅにん}の{山田|やまだ}と{申|もう}します。{今日|きょう}は、ありがとうございました。",
+          "vi": "Anh/chị là người nhà của bác Sato phải không ạ? Tôi là Yamada, chủ nhiệm ạ. Hôm nay cảm ơn anh/chị đã đưa bác đến ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "あ、こちらこそ、よろしくお{願|ねが}いします。{父|ちち}、{今日|きょう}は、どうでしたか。",
+          "vi": "À, chúng tôi mới phải nhờ anh chị ạ. Bố tôi hôm nay thế nào ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい。{佐藤|さとう}さん、{午前|ごぜん}{中|ちゅう}は、{少|すこ}し{緊張|きんちょう}なさっていましたが、お{昼|ひる}ごろには、すっかり{慣|な}れて、{田中|たなか}さんと{将棋|しょうぎ}のお{話|はなし}で、{盛|も}り{上|りあ}がっていらっしゃいました。",
+          "vi": "Vâng ạ. Buổi sáng bác Sato còn hơi hồi hộp, nhưng đến giờ ăn trưa thì bác đã quen hẳn, còn nói chuyện shogi với bác Tanaka rất vui vẻ ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "そうですか。{父|ちち}、{将棋|しょうぎ}の{話|はなし}になると、{止|と}まらなくなるんです。よかったです。",
+          "vi": "Vậy ạ. Bố tôi mà nói chuyện shogi thì không dừng được đâu ạ. Thế thì tốt quá ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お{昼|ひる}ごはんも、きちんと{召|め}し{上|しあ}がっていらっしゃいました。{納豆|なっとう}が{苦手|にがて}だとおっしゃっていましたので、{記録|きろく}に{書|か}かせていただきました。",
+          "vi": "Bữa trưa bác cũng ăn hết ạ. Bác nói là không ăn được natto, nên cháu đã ghi vào sổ rồi ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "ありがとうございます。あの、{父|ちち}、{午後|ごご}の{体操|たいそう}は、やったんですか。",
+          "vi": "Cảm ơn anh ạ. À, buổi chiều bố tôi có tập thể dục không ạ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい。{見|み}ているだけ、とおっしゃっていたんですが、{途中|とちゅう}から、{手|て}だけ、{一緒|いっしょ}に{動|うご}かしていらっしゃいました。{無理|むり}は、なさっていませんので、ご{安心|あんしん}ください。",
+          "vi": "Vâng ạ. Ban đầu bác nói chỉ ngồi xem thôi, nhưng giữa chừng bác đã cử động tay theo cùng mọi người ạ. Bác không hề gắng sức đâu ạ, anh/chị cứ yên tâm ạ."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "{佐藤|さとう}さん、{初|はじ}めての{場所|ばしょ}で、よく{頑張|がんば}ってくださいました。{次回|じかい}からは、もう{少|すこ}し、ゆっくりと{過|す}ごしていただけると{思|おも}います。{何|なん}か{気|き}になることがございましたら、いつでもご{連絡|れんらく}ください。",
+          "vi": "Bác Sato đã rất cố gắng trong ngày đầu đến chỗ mới ạ. Từ lần sau, chắc bác sẽ sinh hoạt thoải mái hơn nữa ạ. Có điều gì anh/chị bận tâm thì cứ liên lạc với chúng tôi bất cứ lúc nào ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "{分|わ}かりました。ありがとうございます。{父|ちち}を、よろしくお{願|ねが}いします。",
+          "vi": "Tôi hiểu rồi ạ. Cảm ơn anh chị nhiều. Nhờ anh chị chăm sóc bố tôi ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{佐藤|さとう}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。{今日|きょう}は、いかがでしたか。",
+          "vi": "Bác Sato, sắp đến giờ xe đưa về đến rồi ạ. Hôm nay bác thấy thế nào ạ?"
+        },
+        {
+          "speaker": "佐藤さん",
+          "ja": "{楽|たの}しかったよ。みんな、{優|やさ}しくてね。また{来|く}るよ。{来週|らいしゅう}も、{来|き}ていいかい。",
+          "vi": "Vui lắm cháu ạ. Mọi người ai cũng tốt bụng cả. Bác sẽ lại đến đấy. Tuần sau bác đến nữa được không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "もちろんですよ。{来週|らいしゅう}も、お{待|ま}ちしておりますね。お{気|き}をつけて、お{帰|かえ}りください。",
+          "vi": "Đương nhiên rồi ạ. Tuần sau chúng cháu lại chờ bác nhé. Bác đi về cẩn thận ạ."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "はじめまして。私はデイサービスの職員です。よろしくお願いします。",
+      "real": "はじめまして、デイサービスの拓海と申します。今日は、ようこそいらっしゃいました。",
+      "why": "Sách giáo khoa giới thiệu chung chung như một tấm danh thiếp. Nói thật khi đón người mới thì xưng tên mình (拓海と申します) và chào mừng bằng ようこそいらっしゃいました — người mới nghe thấy mình được chờ đợi, chứ không phải chỉ là một “khách hàng” được tiếp nhận."
+    },
+    {
+      "textbook": "初めての場所は緊張しますね。ゆっくりしてください。",
+      "real": "初めての場所は、どなたでも、緊張なさいますよ。佐藤さん、ゆっくりで大丈夫ですからね。",
+      "why": "Sách giáo khoa nói chung chung như an ủi một người lạ. Nói thật thì thêm どなたでも (ai cũng vậy) để cụ thấy mình không phải người duy nhất hồi hộp, và gọi tên cụ (佐藤さん) kèm ゆっくりで大丈夫ですからね — vừa kính ngữ vừa ấm, cụ nghe xong mới thực sự yên tâm."
+    },
+    {
+      "textbook": "午後の体操に参加してください。",
+      "real": "午後の体操は、無理しないでくださいね。見ているだけでも、大丈夫ですよ。気が向いたら、一緒にやってみませんか。",
+      "why": "Sách giáo khoa ra lệnh tham gia như một lịch trình. Người mới ngày đầu mà bị ép tham gia sẽ thấy áp lực. Nói thật thì đưa ra ba nấc: không ép (無理しないでくださいね), cho phép chỉ xem (見ているだけでも大丈夫ですよ), rồi mới mời nhẹ bằng 〜てみませんか — cụ tự chọn, không bị đẩy."
+    },
+    {
+      "textbook": "苦手な食べ物はありますか。",
+      "real": "あの、苦手な食べ物、ありますか。……納豆は、出しませんので、ご安心くださいね。",
+      "why": "Sách giáo khoa chỉ hỏi một câu rồi thôi. Nói thật thì hỏi bằng あの (mở đầu nhẹ) rồi ngay sau đó xác nhận lại bằng hành động cụ thể (出しませんので、ご安心くださいね) — người lớn tuổi nghe thấy thông tin của mình được ghi nhớ và tôn trọng, không phải chỉ hỏi cho có."
+    },
+    {
+      "textbook": "今日は楽しかったですか。",
+      "real": "今日は、いかがでしたか。……楽しかったよ。……来週も、来ていいかい。",
+      "why": "Sách giáo khoa hỏi bằng câu đóng 楽しかったですか (chỉ trả lời có/không). Nói thật thì hỏi mở bằng いかがでしたか — cụ được kể cảm nhận của mình, và chính câu trả lời của cụ (楽しかったよ, 来週も来ていいかい) mới là bằng chứng ngày đầu thành công, quan trọng hơn bất cứ báo cáo nào của nhân viên."
+    },
+    {
+      "textbook": "佐藤さんは午前中緊張していましたが、昼ごろには慣れました。",
+      "real": "午前中は、少し緊張なさっていましたが、お昼ごろには、すっかり慣れて、田中さんと将棋のお話で、盛り上がっていらっしゃいました。",
+      "why": "Báo cáo với người nhà bằng nhận xét chung chung (慣れました) thì người nhà không hình dung được gì. Nói thật thì báo bằng quan sát cụ thể: mốc thời gian (お昼ごろには), mức độ (すっかり), và một chi tiết sống động (将棋のお話で盛り上がっていらっしゃいました) — người nhà nghe xong mới yên tâm thật."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃって / 〜ちゃった",
+      "in_lesson": "緊張しちゃって",
+      "original": "〜てしまって / 〜てしまった",
+      "vi": "Rút gọn của てしまう: lỡ… mất rồi — kể chuyện ngoài ý muốn, giọng than thở nhẹ.",
+      "use": "Dùng khi người nhà kể về cụ với nhân viên (tâm sự, thân mật); người lớn tuổi cũng dùng khi kể chuyện với nhân viên thân quen.",
+      "avoid": "Tránh trong báo cáo chính thức với 主任 — khi đó dùng てしまいました."
+    },
+    {
+      "form": "〜てみませんか",
+      "in_lesson": "一緒にやってみませんか",
+      "original": "〜てみませんか (thể mời của 〜てみる)",
+      "vi": "Thử… xem nhé — lời mời nhẹ, để đối phương tự chọn, không ép buộc.",
+      "use": "Dùng khi mời người lớn tuổi mới tham gia hoạt động, ăn thử món mới — đặc biệt quan trọng với người mới ngày đầu.",
+      "avoid": "Tránh dùng 〜てください với người mới khi chưa biết ý họ — nghe như ra lệnh, dễ làm cụ áp lực."
+    },
+    {
+      "form": "〜で大丈夫です / 〜でも大丈夫ですよ",
+      "in_lesson": "見ているだけでも、大丈夫ですよ",
+      "original": "〜でも構いません",
+      "vi": "Chỉ… thôi cũng được — trấn an đối phương rằng lựa chọn “ít nhất” cũng đủ, không sao cả.",
+      "use": "Dùng khi trấn an người mới, người đang hồi hộp: chỉ xem thôi cũng được, chỉ ngồi thôi cũng được.",
+      "avoid": "Tránh dùng khi cần hướng dẫn bắt buộc (an toàn, y tế) — khi đó nói rõ điều phải làm."
+    },
+    {
+      "form": "〜なさいます / 〜ていらっしゃいます",
+      "in_lesson": "緊張なさいますよ / 盛り上がっていらっしゃいました",
+      "original": "〜します / 〜しています",
+      "vi": "Kính ngữ của する/している — nói về hành động của người lớn tuổi, người nhà một cách tôn trọng.",
+      "use": "Dùng khi nói với và nói về người sử dụng dịch vụ, người nhà — bắt buộc trong kaigo.",
+      "avoid": "Tránh dùng với đồng nghiệp cùng cấp hoặc cấp dưới — nghe quá trang trọng, xa cách."
+    },
+    {
+      "form": "あの / えっと / ちょっと",
+      "in_lesson": "あの、苦手な食べ物、ありますか",
+      "original": "あのう / えっと / 少し",
+      "vi": "À / ừm / một chút — từ đệm mở đầu câu hỏi nhạy cảm, làm câu hỏi mềm đi.",
+      "use": "Dùng khi hỏi người mới về sở thích, món không ăn được, sức khỏe — những câu hỏi dễ làm đối phương ngại.",
+      "avoid": "Tránh lạm dụng liên tục trong báo cáo với 主任 — khi đó vào thẳng nội dung sẽ rõ ràng hơn."
+    },
+    {
+      "form": "〜させていただきました",
+      "in_lesson": "記録に書かせていただきました",
+      "original": "〜しました",
+      "vi": "Xin phép được… — khiêm nhường ngữ, dùng khi mình chủ động làm việc gì đó cho đối phương.",
+      "use": "Dùng khi báo cáo với người nhà việc mình đã ghi chép, chuẩn bị — thể hiện sự khiêm tốn, cẩn trọng.",
+      "avoid": "Tránh dùng với đồng nghiệp thân thiết — nghe quá khách sáo, khi đó nói 〜したよ là đủ."
+    },
+    {
+      "form": "〜んですが / 〜んです",
+      "in_lesson": "見ているだけ、とおっしゃっていたんですが、途中から…",
+      "original": "〜のですが / 〜のです",
+      "vi": "…đấy ạ / …cơ mà — giải thích tình hình, nối hai vế đối lập một cách mềm mại.",
+      "use": "Dùng khi báo cáo với người nhà: kể ý ban đầu của cụ rồi chuyển sang diễn biến thực tế — người nghe hiểu cả quá trình.",
+      "avoid": "Tránh dùng 〜んだ (dạng suồng sã) với người nhà và 主任 — khi đó chuyển sang 〜んです."
+    },
+    {
+      "form": "お待ちしております",
+      "in_lesson": "来週も、お待ちしておりますね",
+      "original": "待っています",
+      "vi": "Chúng cháu sẽ chờ bác — khiêm nhường ngữ của 待つ, dùng khi tiễn khách và hẹn gặp lại.",
+      "use": "Dùng khi tiễn người sử dụng dịch vụ và người nhà ra về, hẹn lần sau — lịch sự và ấm áp.",
+      "avoid": "Tránh dùng với đồng nghiệp thân thiết — khi đó nói また来週ね là đủ."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "はじめまして",
+      "reading": "はじめまして",
+      "vi": "Rất vui được gặp (lần đầu) — câu chào bắt buộc khi gặp người mới lần đầu, luôn đi kèm tự giới thiệu tên.",
+      "example_ja": "はじめまして、デイサービスの{拓海|たくみ}と{申|もう}します。{今日|きょう}は、ようこそいらっしゃいました。",
+      "example_vi": "Rất vui được gặp bác, cháu là Takumi bên day service ạ. Hôm nay bác đã đến, cháu xin chào mừng bác ạ."
+    },
+    {
+      "expr": "ようこそいらっしゃいました",
+      "reading": "ようこそいらっしゃいました",
+      "vi": "Chào mừng bác đã đến — câu chào mừng trang trọng, dùng khi đón người mới đến lần đầu.",
+      "example_ja": "{佐藤|さとう}さん、{今日|きょう}は、ようこそいらっしゃいました。ゆっくり{過|す}ごしてくださいね。",
+      "example_vi": "Bác Sato, hôm nay chào mừng bác đã đến ạ. Bác cứ sinh hoạt thoải mái nhé."
+    },
+    {
+      "expr": "ゆっくりで{大丈夫|だいじょうぶ}です",
+      "reading": "ゆっくりでだいじょうぶです",
+      "vi": "Cứ từ từ là được, không vội đâu — câu trấn an quan trọng nhất với người mới đang hồi hộp.",
+      "example_ja": "{初|はじ}めての{場所|ばしょ}は、どなたでも{緊張|きんちょう}なさいますよ。ゆっくりで{大丈夫|だいじょうぶ}ですからね。",
+      "example_vi": "Đến chỗ mới lần đầu thì ai cũng hồi hộp thôi ạ. Bác cứ từ từ thôi ạ, không vội đâu ạ."
+    },
+    {
+      "expr": "{気|き}が{向|む}いたら",
+      "reading": "きがむいたら",
+      "vi": "Nếu bác thấy thích / khi nào bác có hứng — cụm mời nhẹ, để đối phương tự quyết định.",
+      "example_ja": "{気|き}が{向|む}いたら、{一緒|いっしょ}に{体操|たいそう}をやってみませんか。{見|み}ているだけでも、{大丈夫|だいじょうぶ}ですよ。",
+      "example_vi": "Nếu bác thấy thích thì thử tập thể dục cùng mọi người nhé. Chỉ ngồi xem thôi cũng được ạ."
+    },
+    {
+      "expr": "お{気|き}をつけて",
+      "reading": "おきをつけて",
+      "vi": "Bác đi cẩn thận nhé — câu tiễn khách quen thuộc khi đưa người sử dụng dịch vụ ra về.",
+      "example_ja": "{来週|らいしゅう}も、お{待|ま}ちしておりますね。お{気|き}をつけて、お{帰|かえ}りください。",
+      "example_vi": "Tuần sau chúng cháu lại chờ bác nhé. Bác đi về cẩn thận ạ."
+    },
+    {
+      "expr": "よろしくお{願|ねが}いします",
+      "reading": "よろしくおねがいします",
+      "vi": "Nhờ anh/chị (giúp đỡ) — câu cửa miệng khi bắt đầu một mối quan hệ mới, dùng cả với cụ mới và người nhà.",
+      "example_ja": "{今日|きょう}から、お{世話|せわ}になります。よろしくお{願|ねが}いします。",
+      "example_vi": "Từ hôm nay nhờ các cháu giúp đỡ nhé. Mong các cháu giúp đỡ ạ."
+    }
+  ],
+  "mindset": [
+    "Người Nhật rất coi trọng 初めて (lần đầu tiên): ấn tượng ngày đầu quyết định người ta có quay lại hay không. Trong kaigo, ngày đầu của một 利用者さん mới không phải là “ngày làm thủ tục” mà là “ngày làm cho người ta muốn đến tiếp”. Vì vậy 拓海 không vội hỏi bệnh án hay lịch sử sức khỏe ngay ở cửa — việc đầu tiên là chào mừng (ようこそいらっしゃいました), dán tên lên tủ giày (để cụ thấy mình đã có chỗ ở đây), và giới thiệu một người bạn có cùng sở thích (将棋) — ba việc nhỏ ấy làm cụ từ “người lạ” thành “thành viên mới” trong một buổi sáng.",
+    "Văn hóa Nhật tránh ép buộc người khác, đặc biệt là người lớn tuổi: thay vì ra lệnh (参加してください), người Nhật đưa ra lựa chọn theo từng nấc — không tham gia cũng được (見ているだけでも大丈夫ですよ), thử một chút cũng được (手だけ一緒に動かす), tham gia hẳn khi nào muốn (気が向いたら). Trong bài, 佐藤さん ban đầu chỉ định xem, rồi tự cử động tay theo — đó chính là kết quả của việc “để cụ tự chọn”: cụ tham gia vì muốn, chứ không phải vì bị ép, nên lần sau cụ sẽ tự nguyện quay lại.",
+    "Khi trao đổi với người nhà của người mới, người Nhật báo cáo bằng quan sát cụ thể, không bằng nhận xét chung chung. “慣れました” (đã quen rồi) là một kết luận — người nhà không kiểm chứng được. “お昼ごろにはすっかり慣れて、将棋の話で盛り上がっていらっしゃいました” là một quan sát — người nhà nghe xong tự kết luận được là bố mình ổn. Thêm nữa, báo cáo luôn có ba phần: diễn biến trong ngày, điều đã ghi nhớ (納豆が苦手), và lời mời liên lạc (何か気になることがございましたら) — người nhà ra về với cảm giác “người ta đang để ý bố mình thật”, chứ không phải chỉ nghe một câu “mọi chuyện đều ổn”."
+  ],
+  "mistakes": [
+    "Đừng hỏi dồn dập về sức khỏe, bệnh tật ngay khi cụ mới đến cửa: ngày đầu là ngày làm quen, không phải ngày khám bệnh. Hỏi quá nhiều khiến cụ thấy mình bị “kiểm tra” và người nhà thấy mình bị “điều tra”. Hãy hỏi dần trong sinh hoạt (lúc ăn trưa hỏi món không ăn được, lúc tập thể dục hỏi cụ có mệt không) — thông tin nào cần cho an toàn thì ghi vào 記録 sau.",
+    "Đừng giới thiệu người mới bằng cách “trình diện” trước cả phòng (đứng giữa phòng rồi nói “đây là người mới”): người lớn tuổi Nhật rất ngại trở thành tâm điểm chú ý của đám đông. Trong bài, 拓海 chỉ chào ngắn gọn với cả phòng rồi giới thiệu riêng từng người (田中さん) — cụ được làm quen từng người một, không bị cả phòng nhìn chằm chằm.",
+    "Đừng dùng 〜てください với người mới khi mời tham gia hoạt động: “体操に参加してください” nghe như mệnh lệnh trong lịch trình. Hãy dùng 〜てみませんか hoặc 気が向いたら — người mới ngày đầu cần được chọn, không cần được ra lệnh.",
+    "Đừng báo cáo với người nhà chỉ bằng kết luận chung chung (“今日は楽しかったです” / “もう慣れました”): người nhà lần đầu giao người thân cho mình cần bằng chứng cụ thể. Hãy báo bằng quan sát có mốc thời gian và chi tiết sống động (お昼ごろには、将棋の話で盛り上がっていらっしゃいました) — như Bài 31 đã dạy: báo cáo bằng quan sát + số liệu, không bằng kết luận.",
+    "Đừng quên ghi lại thông tin của người mới ngay trong ngày: món không ăn được (納豆が苦手), sở thích (将棋が好き), mức độ tham gia buổi đầu (見ているだけ→手だけ動かした) — nếu không ghi vào 記録 thì ngày mai nhân viên ca khác lại hỏi lại cụ những câu y hệt, cụ sẽ thấy mình không được lắng nghe."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Một cụ mới đến day service lần đầu cùng người nhà. Hãy ra cửa đón: chào mừng bằng ようこそいらっしゃいました, tự giới thiệu tên mình, hỏi nhẹ xem lúc đi xe có ổn không, rồi hướng dẫn tủ giày (đã dán tên cụ) và nhà vệ sinh — giọng chậm rãi, ấm áp.",
+    "Tình huống 2: Trong phòng sinh hoạt chung, hãy giới thiệu cụ mới với một cụ cũ có cùng sở thích (ví dụ cùng thích 将棋 hoặc cùng thích hát): chào ngắn gọn với cả phòng, rồi giới thiệu riêng từng người — không “trình diện” cụ trước đám đông.",
+    "Tình huống 3: Đến giờ ăn trưa, hãy hỏi cụ mới có món gì không ăn được không bằng câu hỏi mở đầu nhẹ (あの、苦手な食べ物、ありますか), rồi xác nhận lại bằng hành động cụ thể (món đó sẽ không dọn cho bác) để cụ yên tâm.",
+    "Tình huống 4: Xe đưa về đã đến, người nhà ra đón. Hãy trao đổi với người nhà về ngày đầu của cụ: kể diễn biến bằng quan sát cụ thể (buổi sáng còn hồi hộp, đến trưa đã quen và nói chuyện vui vẻ), báo điều đã ghi nhớ (món không ăn được, sở thích), rồi tiễn cụ ra xe bằng câu hẹn gặp lại tuần sau."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "おはようございます。{佐藤|さとう}さんですね。はじめまして、デイサービスの{拓海|たくみ}と{申|もう}します。{今日|きょう}は、ようこそいらっしゃいました。",
+      "vi": "Chào buổi sáng ạ. Bác là bác Sato phải không ạ? Cháu là Takumi bên day service, rất vui được gặp bác ạ. Hôm nay bác đã đến, cháu xin chào mừng bác ạ."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "あ、はじめまして。{佐藤|さとう}です。{今日|きょう}から、お{世話|せわ}になります。",
+      "vi": "À, rất vui được gặp cháu. Bác là Sato. Từ hôm nay, nhờ các cháu giúp đỡ nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "こちらこそ、よろしくお{願|ねが}いいたします。あの、{車|くるま}のほうは、{大丈夫|だいじょうぶ}でしたか。{酔|よ}ったり、しませんでしたか。",
+      "vi": "Dạ, chúng cháu mới phải nhờ bác ạ. À, lúc đi xe bác có ổn không ạ? Bác có bị say xe không ạ?"
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "いやいや、{大丈夫|だいじょうぶ}だよ。ちょっと{緊張|きんちょう}したけどね。",
+      "vi": "Không không, bác ổn mà. Chỉ hơi hồi hộp một chút thôi."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "{父|ちち}、{初|はじ}めてのところだと、{緊張|きんちょう}しちゃって。{家|いえ}を{出|で}るときも、なんだか、そわそわしてたんです。",
+      "vi": "Bố tôi đến chỗ lạ lần đầu nên hồi hộp lắm ạ. Lúc ra khỏi nhà bố cứ bồn chồn thế nào ấy ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうですよね。{初|はじ}めての{場所|ばしょ}は、どなたでも、{緊張|きんちょう}なさいますよ。{佐藤|さとう}さん、ゆっくりで{大丈夫|だいじょうぶ}ですからね。まず、こちらへどうぞ。",
+      "vi": "Đúng vậy ạ. Đến chỗ mới lần đầu thì ai cũng hồi hộp thôi ạ. Bác Sato cứ từ từ thôi ạ, không vội đâu ạ. Trước hết, mời bác vào đây ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "こちらが、{玄関|げんかん}で、{靴|くつ}を{入|い}れる{場所|ばしょ}です。あ、{佐藤|さとう}さんの{下駄|げた}{箱|はこ}は、こちらの{三|さん}{番|ばん}です。お{名前|なまえ}を、{貼|は}っておきました。",
+      "vi": "Đây là cửa ra vào, chỗ để giày ạ. À, tủ giày của bác Sato là tủ số ba này ạ. Cháu đã dán tên bác lên rồi ạ."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "おお、{名前|なまえ}が{貼|は}ってある。なんだか、もう{仲間|なかま}に{入|い}れてもらったみたいだね。",
+      "vi": "Ồ, có dán tên bác này. Thế này thì cứ như bác đã được nhận làm thành viên rồi ấy nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "もちろんですよ。{佐藤|さとう}さん、こちらがお{手洗|てあら}いです。あちらが、お{風呂場|ふろば}です。{分|わ}からなくなったら、いつでも{声|こえ}をかけてくださいね。",
+      "vi": "Đương nhiên rồi ạ. Bác Sato, đây là nhà vệ sinh ạ. Đằng kia là phòng tắm ạ. Nếu bác không nhớ đường thì cứ gọi cháu bất cứ lúc nào nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{佐藤|さとう}さん、おはようございます。{莉子|りこ}と{申|もう}します。{今日|きょう}は、よろしくお{願|ねが}いします。",
+      "vi": "Bác Sato, chào buổi sáng ạ. Cháu là Riko ạ. Hôm nay nhờ bác giúp đỡ nhé."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "ああ、{莉子|りこ}さんね。よろしくね。",
+      "vi": "À, Riko đấy à. Nhờ cháu nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "じゃあ、{佐藤|さとう}さん、こちらのお{部屋|へや}で、みなさんと{一緒|いっしょ}に{過|す}ごしていただきます。さあ、どうぞ。",
+      "vi": "Vậy thì bác Sato, bác sẽ sinh hoạt cùng mọi người ở phòng này ạ. Nào, mời bác vào ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "みなさん、{今日|きょう}から、{新|あたら}しい{仲間|なかま}が{増|ふ}えましたよ。{佐藤|さとう}さんです。みなさん、よろしくお{願|ねが}いしますね。",
+      "vi": "Mọi người ơi, từ hôm nay chúng ta có thêm một thành viên mới ạ. Đây là bác Sato ạ. Mọi người giúp đỡ bác nhé."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "はじめまして、{佐藤|さとう}と{申|もう}します。よろしくお{願|ねが}いします。",
+      "vi": "Rất vui được gặp mọi người, tôi là Sato. Mong mọi người giúp đỡ ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{佐藤|さとう}さん、こちらは、{田中|たなか}さんです。{田中|たなか}さん、{佐藤|さとう}さんですよ。お{二人|ふたり}とも、{将棋|しょうぎ}がお{好|す}きだそうですよ。",
+      "vi": "Bác Sato, đây là bác Tanaka ạ. Bác Tanaka, đây là bác Sato ạ. Nghe nói cả hai bác đều thích chơi shogi đấy ạ."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "おお、{将棋|しょうぎ}か。わしも、{若|わか}いころ、よく{指|さ}したもんだよ。",
+      "vi": "Ồ, shogi à. Hồi trẻ bác cũng hay chơi lắm đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{佐藤|さとう}さん、よかったですね。{田中|たなか}さん、{佐藤|さとう}さんと、{将棋|しょうぎ}のお{話|はなし}、してみてくださいね。",
+      "vi": "Bác Sato, tốt quá nhỉ. Bác Tanaka, bác nói chuyện shogi với bác Sato nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、{佐藤|さとう}さん、{午後|ごご}の{体操|たいそう}、どうする？{初|はじ}めてだから、{見|み}てるだけでもいいんじゃない？",
+      "vi": "Takumi này, bác Sato buổi chiều tập thể dục thì sao? Lần đầu nên chỉ ngồi xem thôi cũng được chứ nhỉ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうだね。{佐藤|さとう}さん、{午後|ごご}の{体操|たいそう}は、{無理|むり}しないでくださいね。{見|み}ているだけでも、{大丈夫|だいじょうぶ}ですよ。{気|き}が{向|む}いたら、{一緒|いっしょ}にやってみませんか。",
+      "vi": "Ừ, phải đấy. Bác Sato, tập thể dục buổi chiều bác đừng cố nhé. Chỉ ngồi xem thôi cũng được ạ. Nếu bác thấy thích thì thử tập cùng mọi người nhé."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "ありがとう。ちょっと、{見|み}させてもらうよ。",
+      "vi": "Cảm ơn cháu nhé. Bác xem thử một chút đã."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{佐藤|さとう}さん、お{昼|ひる}ですよ。{今日|きょう}は、お{魚|さかな}の{煮付|につ}けと、お{味噌|みそ}{汁|しる}です。あの、{苦手|にがて}な{食|た}べ{物|べもの}、ありますか。",
+      "vi": "Bác Sato, đến giờ ăn trưa rồi ạ. Hôm nay là cá kho với súp miso ạ. À, bác có món gì không ăn được không ạ?"
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "うーん、{納豆|なっとう}だけは、ちょっと{苦手|にがて}でね。あとは、なんでも{食|た}べるよ。",
+      "vi": "Ừm, chỉ có natto là bác hơi không ăn được thôi. Còn lại món gì bác cũng ăn được."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{分|わ}かりました。{納豆|なっとう}は、{出|だ}しませんので、ご{安心|あんしん}くださいね。お{箸|はし}、こちらですよ。",
+      "vi": "Cháu hiểu rồi ạ. Natto thì chúng cháu sẽ không dọn cho bác đâu, bác yên tâm nhé. Đũa ở đây ạ."
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "いただきます。うん、おいしいね。みんなと{食|た}べると、ごはんも、すすむね。",
+      "vi": "Mời mọi người ăn ạ. Ừm, ngon đấy. Ăn cùng mọi người thì cơm cũng trôi hơn hẳn nhỉ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "{佐藤|さとう}さんのご{家族|かぞく}の{方|ほう}ですね。{主任|しゅにん}の{山田|やまだ}と{申|もう}します。{今日|きょう}は、ありがとうございました。",
+      "vi": "Anh/chị là người nhà của bác Sato phải không ạ? Tôi là Yamada, chủ nhiệm ạ. Hôm nay cảm ơn anh/chị đã đưa bác đến ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "あ、こちらこそ、よろしくお{願|ねが}いします。{父|ちち}、{今日|きょう}は、どうでしたか。",
+      "vi": "À, chúng tôi mới phải nhờ anh chị ạ. Bố tôi hôm nay thế nào ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい。{佐藤|さとう}さん、{午前|ごぜん}{中|ちゅう}は、{少|すこ}し{緊張|きんちょう}なさっていましたが、お{昼|ひる}ごろには、すっかり{慣|な}れて、{田中|たなか}さんと{将棋|しょうぎ}のお{話|はなし}で、{盛|も}り{上|りあ}がっていらっしゃいました。",
+      "vi": "Vâng ạ. Buổi sáng bác Sato còn hơi hồi hộp, nhưng đến giờ ăn trưa thì bác đã quen hẳn, còn nói chuyện shogi với bác Tanaka rất vui vẻ ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "そうですか。{父|ちち}、{将棋|しょうぎ}の{話|はなし}になると、{止|と}まらなくなるんです。よかったです。",
+      "vi": "Vậy ạ. Bố tôi mà nói chuyện shogi thì không dừng được đâu ạ. Thế thì tốt quá ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お{昼|ひる}ごはんも、きちんと{召|め}し{上|しあ}がっていらっしゃいました。{納豆|なっとう}が{苦手|にがて}だとおっしゃっていましたので、{記録|きろく}に{書|か}かせていただきました。",
+      "vi": "Bữa trưa bác cũng ăn hết ạ. Bác nói là không ăn được natto, nên cháu đã ghi vào sổ rồi ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "ありがとうございます。あの、{父|ちち}、{午後|ごご}の{体操|たいそう}は、やったんですか。",
+      "vi": "Cảm ơn anh ạ. À, buổi chiều bố tôi có tập thể dục không ạ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい。{見|み}ているだけ、とおっしゃっていたんですが、{途中|とちゅう}から、{手|て}だけ、{一緒|いっしょ}に{動|うご}かしていらっしゃいました。{無理|むり}は、なさっていませんので、ご{安心|あんしん}ください。",
+      "vi": "Vâng ạ. Ban đầu bác nói chỉ ngồi xem thôi, nhưng giữa chừng bác đã cử động tay theo cùng mọi người ạ. Bác không hề gắng sức đâu ạ, anh/chị cứ yên tâm ạ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "{佐藤|さとう}さん、{初|はじ}めての{場所|ばしょ}で、よく{頑張|がんば}ってくださいました。{次回|じかい}からは、もう{少|すこ}し、ゆっくりと{過|す}ごしていただけると{思|おも}います。{何|なん}か{気|き}になることがございましたら、いつでもご{連絡|れんらく}ください。",
+      "vi": "Bác Sato đã rất cố gắng trong ngày đầu đến chỗ mới ạ. Từ lần sau, chắc bác sẽ sinh hoạt thoải mái hơn nữa ạ. Có điều gì anh/chị bận tâm thì cứ liên lạc với chúng tôi bất cứ lúc nào ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "{分|わ}かりました。ありがとうございます。{父|ちち}を、よろしくお{願|ねが}いします。",
+      "vi": "Tôi hiểu rồi ạ. Cảm ơn anh chị nhiều. Nhờ anh chị chăm sóc bố tôi ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{佐藤|さとう}さん、そろそろ{送迎|そうげい}の{車|くるま}が{来|き}ますよ。{今日|きょう}は、いかがでしたか。",
+      "vi": "Bác Sato, sắp đến giờ xe đưa về đến rồi ạ. Hôm nay bác thấy thế nào ạ?"
+    },
+    {
+      "speaker": "佐藤さん",
+      "ja": "{楽|たの}しかったよ。みんな、{優|やさ}しくてね。また{来|く}るよ。{来週|らいしゅう}も、{来|き}ていいかい。",
+      "vi": "Vui lắm cháu ạ. Mọi người ai cũng tốt bụng cả. Bác sẽ lại đến đấy. Tuần sau bác đến nữa được không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "もちろんですよ。{来週|らいしゅう}も、お{待|ま}ちしておりますね。お{気|き}をつけて、お{帰|かえ}りください。",
+      "vi": "Đương nhiên rồi ạ. Tuần sau chúng cháu lại chờ bác nhé. Bác đi về cẩn thận ạ."
+    }
+  ],
+  "notes": [
+    "ようこそいらっしゃいました: chào mừng bác đã đến — câu chào đón người mới lần đầu; khác với いらっしゃいませ (dùng ở cửa hàng) và おはようございます (chào hằng ngày).",
+    "下駄箱 (げたばこ): tủ để giày ở cửa ra vào — dán tên người mới lên tủ giày là cách nhỏ mà hiệu quả để cụ thấy mình “đã có chỗ” ở đây ngay ngày đầu.",
+    "気が向いたら: nếu bác thấy thích / khi nào bác có hứng — cụm mời nhẹ, để đối phương tự quyết định; dùng rất nhiều khi mời người lớn tuổi tham gia hoạt động.",
+    "見ているだけでも大丈夫ですよ: chỉ ngồi xem thôi cũng được — câu trấn an cho người mới: lựa chọn “ít nhất” cũng được chấp nhận, không bị ép.",
+    "〜なさいます / 〜ていらっしゃいます: kính ngữ của する/している — bắt buộc khi nói về người sử dụng dịch vụ và người nhà trong kaigo.",
+    "〜てみませんか: thử… xem nhé — thể mời của 〜てみる; dùng khi mời người lớn tuổi tham gia hoạt động mới, để họ tự chọn thay vì bị ra lệnh.",
+    "お待ちしております: chúng cháu sẽ chờ bác — khiêm nhường ngữ của 待つ; dùng khi tiễn khách và hẹn gặp lại, khác với また来週ね (nói với đồng nghiệp thân)."
+  ]
+}
