@@ -1,0 +1,792 @@
+{
+ "feature": "full-exam",
+ "date": "2026-11-21",
+ "level": "N3",
+ "duration_minutes": 90,
+ "pass": {
+  "total_pct": 60,
+  "section_min_pct": 40
+ },
+ "questions": [
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この説明は分かりにくくて、誤解を招きやすい。」の「誤解」の読み方として正しいものはどれですか。",
+   "choices": [
+    "ごけい",
+    "あやまり",
+    "ごかい",
+    "ごがい"
+   ],
+   "answer": 2,
+   "explain_vi": "誤解 đọc là ごかい, nghĩa là 'hiểu lầm'. Các cách đọc còn lại đều không đúng với từ này."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「彼は毎日、記録をつけて、練習の成果を確認している。」の「成果」の読み方として正しいものはどれですか。",
+   "choices": [
+    "せいか",
+    "せいこう",
+    "けっか",
+    "せいが"
+   ],
+   "answer": 0,
+   "explain_vi": "成果 đọc là せいか, nghĩa là 'thành quả, kết quả đạt được'. Cần phân biệt với 成功 (せいこう) là 'thành công' và 結果 (けっか) là 'kết quả' nói chung."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「駅の近くに、新しい図書館が建設される予定だ。」の「建設」の読み方として正しいものはどれですか。",
+   "choices": [
+    "けんちく",
+    "こうせつ",
+    "けんせい",
+    "けんせつ"
+   ],
+   "answer": 3,
+   "explain_vi": "建設 đọc là けんせつ, nghĩa là 'xây dựng' (công trình). 建築 (けんちく) cũng là từ có thật nhưng nghĩa là 'kiến trúc, việc xây nhà' nên không phải đáp án ở đây."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この町の人口は、去年より少し減少した。」の「減少」の読み方として正しいものはどれですか。",
+   "choices": [
+    "げんじょう",
+    "げんしょう",
+    "へんしょう",
+    "げんしょ"
+   ],
+   "answer": 1,
+   "explain_vi": "減少 đọc là げんしょう, nghĩa là 'giảm bớt, sụt giảm'. Cần phân biệt với 現状 (げんじょう) là 'tình trạng hiện tại'."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「彼女の提案は、会議で承認された。」の「承認」の読み方として正しいものはどれですか。",
+   "choices": [
+    "しょうじん",
+    "しょうに",
+    "しょうにん",
+    "しょうねん"
+   ],
+   "answer": 2,
+   "explain_vi": "承認 đọc là しょうにん, nghĩa là 'thừa nhận, phê chuẩn, chấp thuận'. Đây là từ Hán tự thường gặp trong văn bản công việc."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「彼は、外国語の習得に長い時間をかけた。」の「習得」の読み方として正しいものはどれですか。",
+   "choices": [
+    "しゅうとく",
+    "しゅうどく",
+    "しゅとく",
+    "しゅうと"
+   ],
+   "answer": 0,
+   "explain_vi": "習得 đọc là しゅうとく, nghĩa là 'học được, nắm vững (kỹ năng, ngôn ngữ)'. Chữ 得 ở đây đọc là とく giống trong 納得 (なっとく)."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「台風の影響で、船の運航が中止になった。」の「運航」の読み方として正しいものはどれですか。",
+   "choices": [
+    "うんきょう",
+    "うんこう",
+    "うんごう",
+    "うんこ"
+   ],
+   "answer": 1,
+   "explain_vi": "運航 đọc là うんこう, nghĩa là 'vận hành, chạy (tàu, máy bay)'. Cụm 運航が中止になる nghĩa là chuyến tàu/chuyến bay bị hủy."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この店では、毎朝、新鮮な野菜が販売されている。」の「販売」の読み方として正しいものはどれですか。",
+   "choices": [
+    "はんまい",
+    "はんぱい",
+    "はんびゃい",
+    "はんばい"
+   ],
+   "answer": 3,
+   "explain_vi": "販売 đọc là はんばい, nghĩa là 'bán, bán ra'. Đây là từ rất hay gặp trong các biển hiệu và quảng cáo của cửa hàng."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この山の（　）を調べるために、地図で高さを確認した。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "高い",
+    "高さ",
+    "高く",
+    "高まる"
+   ],
+   "answer": 1,
+   "explain_vi": "Sau の cần một danh từ, nên tính từ 高い phải chuyển thành danh từ 高さ (chiều cao). 高まる là động từ 'trở nên cao' nên không đứng sau の được."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「雨が（　）につれて、川の水が増えてきた。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "強さ",
+    "強い",
+    "強く",
+    "強まる"
+   ],
+   "answer": 3,
+   "explain_vi": "Trước につれて cần động từ ở dạng từ điển, nên tính từ 強い phải chuyển thành động từ 強まる (mưa trở nên mạnh hơn). 強さ là danh từ nên không đi với につれて được."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「彼は新しい機械の（　）を説明した。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "使い方",
+    "使う",
+    "使って",
+    "使える"
+   ],
+   "answer": 0,
+   "explain_vi": "Sau の cần một danh từ, nên động từ 使う phải chuyển thành danh từ 使い方 (cách sử dụng). Cụm 機械の使い方 nghĩa là 'cách dùng máy móc'."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「雪が降って、道路が（　）なった。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "白さ",
+    "白い",
+    "白く",
+    "白まる"
+   ],
+   "answer": 2,
+   "explain_vi": "Trước なる cần dạng trạng từ 〜く của tính từ -i, nên dùng 白く (trở nên trắng). 白い là dạng nguyên thể của tính từ, không đi trực tiếp với なる được."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この歌を聞くと、子どものころの（　）がよみがえる。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "思い出す",
+    "思い出",
+    "思い出して",
+    "思い出せる"
+   ],
+   "answer": 1,
+   "explain_vi": "Sau の và trước が (chủ ngữ) cần danh từ, nên động từ 思い出す phải chuyển thành danh từ 思い出 (kỉ niệm). Cụm 思い出がよみがえる nghĩa là 'kỉ niệm sống lại'."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「会議の資料は、事前に全員に（　）しておきます。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "配布",
+    "配達",
+    "発送",
+    "配送"
+   ],
+   "answer": 0,
+   "explain_vi": "資料を配布する nghĩa là 'phát tài liệu cho mọi người' trong một buổi họp hay lớp học. 配達・配送 là 'giao hàng', 発送 là 'gửi đi (bưu kiện)' nên không hợp với tài liệu họp."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「毎月、給料の一部を（　）ために、給料日に自動で貯金用の口座にお金が移るようにした。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "使う",
+    "借りる",
+    "ためる",
+    "返す"
+   ],
+   "answer": 2,
+   "explain_vi": "お金をためる nghĩa là 'tiết kiệm tiền, để dành tiền'. Ngữ cảnh là chuyển tiền vào tài khoản tiết kiệm nên chỉ ためる là phù hợp; 使う là tiêu, 借りる là vay, 返す là trả lại."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「天気予報によると、明日は一日中雨が（　）そうです。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "降り",
+    "降った",
+    "降れば",
+    "降る"
+   ],
+   "answer": 3,
+   "explain_vi": "Mẫu 〜そうです (truyền đạt) đi sau dạng từ điển của động từ: 雨が降るそうです = 'nghe nói ngày mai trời sẽ mưa cả ngày'. 降ったそうです cũng có thể dùng nhưng nói về dự báo tương lai thì dùng 降る."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この薬は、食後に水と一緒に（　）ください。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "飲まない",
+    "飲んで",
+    "飲む",
+    "飲めば"
+   ],
+   "answer": 1,
+   "explain_vi": "Sau ください cần động từ dạng て: 薬を飲んでください = 'hãy uống thuốc'. 飲むください không phải cách nói đúng, 飲まないください sai nghĩa hoàn toàn."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「新しい店ができて、この通りの様子がすっかり（　）。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "変わる",
+    "変わって",
+    "変わった",
+    "変われば"
+   ],
+   "answer": 2,
+   "explain_vi": "すっかり変わった nghĩa là 'đã hoàn toàn thay đổi', diễn tả sự thay đổi đã xong. Dạng quá khứ 変わった là đúng vì phố đã thay đổi sau khi có cửa hàng mới."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「彼女は、将来、自分の店を（　）たいと考えている。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "開き",
+    "開く",
+    "開いて",
+    "開けば"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu 〜たい (muốn làm) đi sau dạng ます bỏ ます: 店を開きたい = 'muốn mở cửa hàng của mình'. 開くたい hay 開いてたい đều không phải dạng đúng."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「電車が遅れたので、約束の時間に（　）なかった。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "間に合う",
+    "間に合って",
+    "間に合い",
+    "間に合わ"
+   ],
+   "answer": 3,
+   "explain_vi": "Cụm 間に合わない nghĩa là 'không kịp giờ': 電車が遅れたので約束の時間に間に合わなかった = 'vì tàu chậm nên tôi đã không kịp giờ hẹn'. Dạng phủ định quá khứ cần 間に合わ + なかった."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「体調が悪いときは、無理をせずに早く（　）ほうがいい。」に入る言葉として最も適切なものはどれですか。",
+   "choices": [
+    "休まない",
+    "休んだ",
+    "休む",
+    "休めば"
+   ],
+   "answer": 1,
+   "explain_vi": "Mẫu 〜たほうがいい (nên làm) đi sau dạng た của động từ: 早く休んだほうがいい = 'nên nghỉ sớm'. 休むほうがいい không phải cách nói đúng của mẫu này."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「この仕事は、思ったより大変だ。」の「大変」の意味として最も近いものはどれですか。",
+   "choices": [
+    "楽しい",
+    "簡単な",
+    "苦労が多い",
+    "暇な"
+   ],
+   "answer": 2,
+   "explain_vi": "大変 ở đây nghĩa là 'vất vả, cực nhọc', gần nghĩa nhất với 苦労が多い (nhiều gian khổ). 楽しい là vui, 簡単な là dễ dàng, 暇な là rảnh rỗi, đều ngược nghĩa."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「あの二人は、たまに会って話している。」の「たまに」の意味として最も近いものはどれですか。",
+   "choices": [
+    "ときどき",
+    "いつも",
+    "ぜんぜん",
+    "すぐに"
+   ],
+   "answer": 0,
+   "explain_vi": "たまに nghĩa là 'thỉnh thoảng, đôi khi', gần nghĩa nhất với ときどき. いつも là luôn luôn, ぜんぜん là hoàn toàn không, すぐに là ngay lập tức, đều khác nghĩa."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「とにかく、明日の朝までにこの書類を出してください。」の「とにかく」の意味として最も近いものはどれですか。",
+   "choices": [
+    "ゆっくり",
+    "たぶん",
+    "少しずつ",
+    "何はともあれ"
+   ],
+   "answer": 3,
+   "explain_vi": "とにかく nghĩa là 'dù sao đi nữa, trước hết cứ', gần nghĩa nhất với 何はともあれ (dù thế nào đi nữa). ゆっくり là từ từ, たぶん là có lẽ, 少しずつ là từng chút một, đều không hợp."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「できるだけ」という言葉の使い方として正しい文はどれですか。",
+   "choices": [
+    "できるだけの部屋を借りました。",
+    "できるだけ早く連絡してください。",
+    "できるだけを食べました。",
+    "彼はできるだけの人です。"
+   ],
+   "answer": 1,
+   "explain_vi": "できるだけ nghĩa là 'càng nhiều/càng sớm càng tốt', thường đi với tính từ, phó từ hay động từ: できるだけ早く = 'càng sớm càng tốt'. Các câu còn lại dùng できるだけ như danh từ hoặc tính từ nên sai."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「わざわざ来てくれて、ありがとう。」の「わざわざ」の意味として最も近いものはどれですか。",
+   "choices": [
+    "あえて手間をかけて",
+    "いつも",
+    "すぐに",
+    "たまたま"
+   ],
+   "answer": 0,
+   "explain_vi": "わざわざ nghĩa là 'đã cất công, cố tình bỏ công sức để làm gì': わざわざ来てくれて、ありがとう = 'cảm ơn bạn đã cất công đến'. いつも là luôn luôn, すぐに là ngay lập tức, たまたま là tình cờ, đều khác nghĩa."
+  },
+  {
+   "level": "N3",
+   "section": "文字・語彙",
+   "question": "「やっと」という言葉の使い方として正しい文はどれですか。",
+   "choices": [
+    "やっとの電車に乗りました。",
+    "やっとを買いました。",
+    "彼はやっと忙しいです。",
+    "やっと宿題が終わった。"
+   ],
+   "answer": 3,
+   "explain_vi": "やっと nghĩa là 'cuối cùng, mãi mới': やっと宿題が終わった = 'cuối cùng bài tập cũng xong'. Các câu còn lại dùng やっと như danh từ hoặc tính từ nên sai."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「彼は、いくら練習しても、なかなか（　）。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "上手になる",
+    "上手にならない",
+    "上手になった",
+    "上手になりたい"
+   ],
+   "answer": 1,
+   "explain_vi": "なかなか〜ない nghĩa là 'mãi mà vẫn không...': いくら練習しても、なかなか上手にならない = 'dù luyện tập bao nhiêu cũng mãi không giỏi lên'. なかなか luôn đi với dạng phủ định."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「この映画は、子ども（　）楽しめる内容です。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "が",
+    "を",
+    "に",
+    "でも"
+   ],
+   "answer": 3,
+   "explain_vi": "子どもでも楽しめる nghĩa là 'ngay cả trẻ em cũng có thể thưởng thức được'. Trợ từ でも ở đây mang nghĩa 'thậm chí, ngay cả', còn が・を・に đều không diễn tả được nghĩa này."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「雨が降っている（　）、試合は予定どおり行われます。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "にもかかわらず",
+    "おかげで",
+    "せいで",
+    "ために"
+   ],
+   "answer": 0,
+   "explain_vi": "〜にもかかわらず nghĩa là 'mặc dù...': mặc dù đang mưa, trận đấu vẫn diễn ra như dự kiến. おかげで là 'nhờ', せいで là 'tại vì (tiêu cực)', ために là 'để/vì', đều không hợp với quan hệ đối lập này."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「この道は、夜になるととても（　）なるので、気をつけてください。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "暗い",
+    "暗さ",
+    "暗く",
+    "暗がる"
+   ],
+   "answer": 2,
+   "explain_vi": "Trước なる cần dạng trạng từ 〜く của tính từ -i: 暗くなる = 'trở nên tối'. 暗い là dạng nguyên thể, 暗さ là danh từ 'độ tối', đều không đi với なる được."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「彼は、仕事が終わる（　）、すぐに帰宅した。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "とたんに",
+    "たびに",
+    "うちに",
+    "ように"
+   ],
+   "answer": 0,
+   "explain_vi": "〜たとたんに nghĩa là 'ngay khi vừa... thì...': vừa tan làm thì anh ấy về nhà ngay. たびに là 'mỗi khi', うちに là 'trong lúc', ように là 'để mà', đều không diễn tả hành động xảy ra ngay lập tức sau đó."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「この料理は、見た目（　）、味もとてもいい。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "はもちろん",
+    "だけでなく",
+    "とはいえ",
+    "というより"
+   ],
+   "answer": 1,
+   "explain_vi": "見た目だけでなく、味もいい nghĩa là 'không chỉ nhìn đẹp mà vị cũng rất ngon', mẫu 〜だけでなく〜も diễn tả hai mặt cùng tốt. はもちろん thì vế sau phải là đương nhiên, とはいえ và というより đều không hợp cấu trúc này."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「この本は、初心者（　）分かりやすく書かれています。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "にとって",
+    "について",
+    "に対して",
+    "にも"
+   ],
+   "answer": 3,
+   "explain_vi": "初心者にも分かりやすい nghĩa là 'ngay cả người mới bắt đầu cũng thấy dễ hiểu', trợ từ にも mang nghĩa 'thậm chí'. にとって là 'đối với', について là 'về', に対して là 'đối với (phản ứng)', đều không hợp."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「彼は、10年間、この町に住み（　）。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "続けてくる",
+    "続けている",
+    "続けてきた",
+    "続けていく"
+   ],
+   "answer": 2,
+   "explain_vi": "〜てきた diễn tả hành động tiếp diễn từ quá khứ đến hiện tại: 10年間住み続けてきた = 'đã sống liên tục ở thị trấn này 10 năm nay'. 続けてくる sai hướng thời gian, 続けている chỉ nói hiện tại, 続けていく là hướng tương lai."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「この薬は、1日3回、食後に飲む（　）になっています。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "こと",
+    "ように",
+    "ため",
+    "はず"
+   ],
+   "answer": 1,
+   "explain_vi": "〜ようになっている nghĩa là 'đã được quy định là...': thuốc này quy định uống ngày 3 lần sau bữa ăn. ことになっている cũng có nghĩa tương tự nhưng sau động từ 飲む thì ようになっている là cách nói tự nhiên cho hướng dẫn sử dụng."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「彼女は、留学する（　）、アルバイトをやめた。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "ために",
+    "おかげで",
+    "せいで",
+    "ところで"
+   ],
+   "answer": 0,
+   "explain_vi": "〜ために chỉ mục đích: 留学するためにアルバイトをやめた = 'cô ấy nghỉ việc làm thêm để đi du học'. おかげで là 'nhờ', せいで là 'tại vì (tiêu cực)', ところで là 'nhân tiện', đều không chỉ mục đích."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「彼は、毎日3時間も勉強した（　）、試験に合格できなかった。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "わりに",
+    "だけに",
+    "せいで",
+    "のに"
+   ],
+   "answer": 3,
+   "explain_vi": "〜のに chỉ sự đối lập với kỳ vọng: dù mỗi ngày học 3 tiếng mà vẫn không đỗ kỳ thi. わりに là 'so với', だけに là 'xứng với', せいで là 'tại vì', đều không diễn tả nghĩa 'dù... mà vẫn...'."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "「明日の会議では、新しい計画について話し合う（　）です。」に入るものとして正しいものはどれですか。",
+   "choices": [
+    "つもり",
+    "はず",
+    "予定",
+    "もの"
+   ],
+   "answer": 2,
+   "explain_vi": "話し合う予定です nghĩa là 'dự định sẽ bàn bạc': mẫu 〜予定です dùng cho kế hoạch, lịch trình đã định. つもり là ý định cá nhân, はず là suy đoán chắc chắn, もの là lời khuyên/quy luật, đều không hợp."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "次の文の（　★　）に入る最もよいものを、1・2・3・4から一つ選びなさい。\n来週の土曜日は（　）（　）（　★　）（　）行く予定です。\n1 家族と　2 温泉に　3 みんなで　4 日帰りで",
+   "choices": [
+    "家族と",
+    "温泉に",
+    "みんなで",
+    "日帰りで"
+   ],
+   "answer": 3,
+   "explain_vi": "Thứ tự đúng là: みんなで（3）家族と（1）日帰りで（4）温泉に（2）行く予定です = 'Thứ Bảy tuần sau, mọi người cùng gia đình sẽ đi suối nước nóng trong ngày'. Vị trí ★ là mảnh thứ ba, tức 日帰りで."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "次の文の（　★　）に入る最もよいものを、1・2・3・4から一つ選びなさい。\n日本語が上手になるには、（　）（　）（　★　）（　）大切です。\n1 毎日　2 少しずつ　3 話す練習を　4 続けることが",
+   "choices": [
+    "毎日",
+    "少しずつ",
+    "話す練習を",
+    "続けることが"
+   ],
+   "answer": 2,
+   "explain_vi": "Thứ tự đúng là: 毎日（1）少しずつ（2）話す練習を（3）続けることが（4）大切です = 'Để giỏi tiếng Nhật, điều quan trọng là mỗi ngày luyện nói một chút và duy trì đều đặn'. Vị trí ★ là mảnh thứ ba, tức 話す練習を."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "次の文の（　★　）に入る最もよいものを、1・2・3・4から一つ選びなさい。\nこの店のケーキは、（　）（　）（　★　）（　）おいしいです。\n1 甘さが　2 ちょうどよくて　3 とても　4 見た目も",
+   "choices": [
+    "甘さが",
+    "ちょうどよくて",
+    "とても",
+    "見た目も"
+   ],
+   "answer": 1,
+   "explain_vi": "Thứ tự đúng là: 見た目も（4）甘さが（1）ちょうどよくて（2）とても（3）おいしいです = 'Bánh ở tiệm này vừa đẹp mắt, độ ngọt lại vừa phải nên rất ngon'. Vị trí ★ là mảnh thứ ba, tức ちょうどよくて."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "リンさんは、先月からあおい市の公民館で日本語のボランティアをしている。週に一度、外国から来た人たちに、日本語の会話を教えている。（　1　）、参加者は毎回10人ぐらい集まる。リンさんは、教える（　2　）、自分もいろいろな国の文化を学ぶことができて、楽しいと言っている。来月からは、公民館の行事で、日本の料理を紹介する（　3　）だそうだ。\n\n（　1　）に入るものとして正しいものはどれですか。",
+   "choices": [
+    "しかし",
+    "今では",
+    "たとえば",
+    "それでも"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu trước nói cô ấy dạy mỗi tuần một lần, câu sau nói số người tham gia đã tăng lên khoảng 10 người mỗi buổi, nên liên từ chỉ thời điểm hiện tại 今では (bây giờ thì) là đúng. しかし và それでも chỉ sự đối lập nên sai."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "リンさんは、先月からあおい市の公民館で日本語のボランティアをしている。週に一度、外国から来た人たちに、日本語の会話を教えている。（　1　）、参加者は毎回10人ぐらい集まる。リンさんは、教える（　2　）、自分もいろいろな国の文化を学ぶことができて、楽しいと言っている。来月からは、公民館の行事で、日本の料理を紹介する（　3　）だそうだ。\n\n（　2　）に入るものとして正しいものはどれですか。",
+   "choices": [
+    "ことで",
+    "ために",
+    "ように",
+    "はずで"
+   ],
+   "answer": 0,
+   "explain_vi": "Mẫu 〜ことで chỉ phương tiện, cách thức: 教えることで、自分も学ぶことができる = 'nhờ việc dạy mà bản thân cô ấy cũng học được'. ために chỉ mục đích, ように chỉ mục tiêu, はずで không đi sau động từ dạng từ điển ở đây."
+  },
+  {
+   "level": "N3",
+   "section": "文法",
+   "question": "リンさんは、先月からあおい市の公民館で日本語のボランティアをしている。週に一度、外国から来た人たちに、日本語の会話を教えている。（　1　）、参加者は毎回10人ぐらい集まる。リンさんは、教える（　2　）、自分もいろいろな国の文化を学ぶことができて、楽しいと言っている。来月からは、公民館の行事で、日本の料理を紹介する（　3　）だそうだ。\n\n（　3　）に入るものとして正しいものはどれですか。",
+   "choices": [
+    "つもり",
+    "はず",
+    "予定",
+    "もの"
+   ],
+   "answer": 2,
+   "explain_vi": "紹介する予定だそうだ nghĩa là 'nghe nói cô ấy dự định sẽ giới thiệu món ăn Nhật trong sự kiện tháng tới'. 予定 dùng cho kế hoạch đã định; つもり là ý định cá nhân, はず là suy đoán, もの không hợp với だそうだ ở đây."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ハオさんへ\n明日の会議室の予約ですが、午後の予約が午前中に変わりました。時間は午前9時から11時までです。場所は変わりません。資料は私が持っていきます。\nミン\n\n会議室の予約は何時に変わりましたか。",
+   "choices": [
+    "午前9時から11時まで",
+    "午後1時から3時まで",
+    "午前11時から午後1時まで",
+    "午後3時から5時まで"
+   ],
+   "answer": 0,
+   "explain_vi": "Ghi chú nói rõ buổi đặt phòng họp ngày mai đổi từ buổi chiều sang buổi sáng, thời gian là 午前9時から11時まで (9 giờ đến 11 giờ sáng). Địa điểm không thay đổi."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "あおい市図書館では、本を1人4冊まで、2週間借りることができる。返す日が休みの日に当たる場合は、次の開館日に返せばよい。\n\n一度に何冊まで借りることができますか。",
+   "choices": [
+    "2冊",
+    "3冊",
+    "5冊",
+    "4冊"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn văn ghi 本を1人4冊まで、2週間借りることができる, tức mỗi người mượn tối đa 4 cuốn trong 2 tuần. Số 2 là số tuần, không phải số sách."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ユウさんは、半年前から毎日夕方に30分歩いている。はじめは医者にすすめられて始めたが、今は歩いた日のほうがよく眠れるので、続けている。雨の日は、家の中で体操をしているそうだ。\n\nユウさんが今、歩くことを続けている理由はどれですか。",
+   "choices": [
+    "よく眠れるから",
+    "医者にすすめられたから",
+    "友達と歩く約束をしたから",
+    "大会に出るため"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn nói ban đầu anh đi bộ vì bác sĩ khuyên, nhưng bây giờ lý do tiếp tục là vì nhận ra ngày nào đi bộ thì đêm ngủ ngon hơn: 歩いた日のほうがよく眠れるので、続けている."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ひかり市の市民プールは、来週の月曜日から水曜日まで、清掃のため休みます。木曜日からは、いつもどおり利用できます。\n\nプールが使えないのはいつですか。",
+   "choices": [
+    "木曜日から",
+    "土曜日と日曜日",
+    "月曜日から水曜日まで",
+    "金曜日だけ"
+   ],
+   "answer": 2,
+   "explain_vi": "Thông báo ghi hồ bơi nghỉ từ thứ Hai đến thứ Tư tuần sau để vệ sinh, từ thứ Năm dùng lại bình thường. Vậy thời gian không dùng được là 月曜日から水曜日まで."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ミンさんは、1年前からバスで会社に通っている。会社まで50分かかるが、その時間に本を読んだり、日本語の勉強をしたりしている。はじめは、バスの中で勉強するのは難しいと思っていたが、今では、バスの時間が一番落ち着いて勉強できる時間になった。車内アナウンスを聞いて、新しい言葉を覚えることもあるそうだ。雨の日は、バスが遅れることがあるので、家をいつもより10分早く出るようにしている。\n\nミンさんはバスの中で何をしていますか。",
+   "choices": [
+    "寝ている",
+    "電話をしている",
+    "本を読んだり、日本語の勉強をしたりしている",
+    "音楽を聞いている"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn ghi trong 50 phút đi xe buýt, chị đọc sách và học tiếng Nhật: 本を読んだり、日本語の勉強をしたりしている. Nghe thông báo trên xe chỉ là việc phụ để nhớ thêm từ mới."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ミンさんは、1年前からバスで会社に通っている。会社まで50分かかるが、その時間に本を読んだり、日本語の勉強をしたりしている。はじめは、バスの中で勉強するのは難しいと思っていたが、今では、バスの時間が一番落ち着いて勉強できる時間になった。車内アナウンスを聞いて、新しい言葉を覚えることもあるそうだ。雨の日は、バスが遅れることがあるので、家をいつもより10分早く出るようにしている。\n\nはじめ、ミンさんはバスの中で勉強することについてどう思っていましたか。",
+   "choices": [
+    "難しいと思っていた",
+    "楽しいと思っていた",
+    "簡単だと思っていた",
+    "つまらないと思っていた"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn ghi はじめは、バスの中で勉強するのは難しいと思っていた, tức lúc đầu chị nghĩ học trên xe buýt là khó; bây giờ thì thời gian trên xe lại là lúc học tập trung nhất."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ミンさんは、1年前からバスで会社に通っている。会社まで50分かかるが、その時間に本を読んだり、日本語の勉強をしたりしている。はじめは、バスの中で勉強するのは難しいと思っていたが、今では、バスの時間が一番落ち着いて勉強できる時間になった。車内アナウンスを聞いて、新しい言葉を覚えることもあるそうだ。雨の日は、バスが遅れることがあるので、家をいつもより10分早く出るようにしている。\n\n雨の日、ミンさんはどうしていますか。",
+   "choices": [
+    "会社を休む",
+    "電車で行く",
+    "バスに乗らない",
+    "家を10分早く出る"
+   ],
+   "answer": 3,
+   "explain_vi": "Đoạn văn ghi 雨の日は、バスが遅れることがあるので、家をいつもより10分早く出るようにしている, tức ngày mưa chị ra khỏi nhà sớm hơn mọi ngày 10 phút vì xe buýt có thể đến muộn."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ゆうひ町では、月に一度、朝市が開かれている。町の人が作った野菜や花、手作りのパンなどが売られている。はじめは店が10軒ぐらいしかなかったが、今では30軒以上が並ぶようになった。朝市では、町の高校生がボランティアとして、買い物の手伝いや案内をしている。高校生たちは、お客さんと話すことで、町の人の生活や仕事について学ぶことができる。一方、お客さんたちは、高校生と話すことを楽しみにしているそうだ。ただ、駐車場がせまいことが問題で、来月からは、少し離れた場所に臨時の駐車場ができる予定だ。\n\n朝市はどのくらいの頻度で開かれていますか。",
+   "choices": [
+    "毎週",
+    "月に一度",
+    "年に一度",
+    "毎日"
+   ],
+   "answer": 1,
+   "explain_vi": "Câu đầu của đoạn văn ghi ゆうひ町では、月に一度、朝市が開かれている, tức chợ sáng họp mỗi tháng một lần."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ゆうひ町では、月に一度、朝市が開かれている。町の人が作った野菜や花、手作りのパンなどが売られている。はじめは店が10軒ぐらいしかなかったが、今では30軒以上が並ぶようになった。朝市では、町の高校生がボランティアとして、買い物の手伝いや案内をしている。高校生たちは、お客さんと話すことで、町の人の生活や仕事について学ぶことができる。一方、お客さんたちは、高校生と話すことを楽しみにしているそうだ。ただ、駐車場がせまいことが問題で、来月からは、少し離れた場所に臨時の駐車場ができる予定だ。\n\n店の数はどう変わりましたか。",
+   "choices": [
+    "10軒以下になった",
+    "変わらなかった",
+    "30軒以上になった",
+    "5軒になった"
+   ],
+   "answer": 2,
+   "explain_vi": "Đoạn văn ghi はじめは店が10軒ぐらいしかなかったが、今では30軒以上が並ぶようになった, tức lúc đầu chỉ khoảng 10 gian hàng, bây giờ đã hơn 30 gian."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ゆうひ町では、月に一度、朝市が開かれている。町の人が作った野菜や花、手作りのパンなどが売られている。はじめは店が10軒ぐらいしかなかったが、今では30軒以上が並ぶようになった。朝市では、町の高校生がボランティアとして、買い物の手伝いや案内をしている。高校生たちは、お客さんと話すことで、町の人の生活や仕事について学ぶことができる。一方、お客さんたちは、高校生と話すことを楽しみにしているそうだ。ただ、駐車場がせまいことが問題で、来月からは、少し離れた場所に臨時の駐車場ができる予定だ。\n\n高校生は朝市で何をしていますか。",
+   "choices": [
+    "買い物の手伝いや案内をしている",
+    "野菜を作っている",
+    "パンを焼いている",
+    "お金を集めている"
+   ],
+   "answer": 0,
+   "explain_vi": "Đoạn văn ghi 高校生がボランティアとして、買い物の手伝いや案内をしている, tức học sinh làm tình nguyện viên giúp mua sắm và hướng dẫn. Rau và bánh là do người dân trong thị trấn làm và bán."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "ゆうひ町では、月に一度、朝市が開かれている。町の人が作った野菜や花、手作りのパンなどが売られている。はじめは店が10軒ぐらいしかなかったが、今では30軒以上が並ぶようになった。朝市では、町の高校生がボランティアとして、買い物の手伝いや案内をしている。高校生たちは、お客さんと話すことで、町の人の生活や仕事について学ぶことができる。一方、お客さんたちは、高校生と話すことを楽しみにしているそうだ。ただ、駐車場がせまいことが問題で、来月からは、少し離れた場所に臨時の駐車場ができる予定だ。\n\n来月からどうなりますか。",
+   "choices": [
+    "朝市がなくなる",
+    "高校生が来なくなる",
+    "店が少なくなる",
+    "臨時の駐車場ができる"
+   ],
+   "answer": 3,
+   "explain_vi": "Cuối đoạn văn ghi vì bãi đỗ xe chật là vấn đề nên 来月からは、少し離れた場所に臨時の駐車場ができる予定だ, tức từ tháng sau sẽ có bãi đỗ xe tạm ở chỗ hơi xa một chút."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "タオさん：私は、仕事のあとに運動をすることが大切だと思います。体を動かすと、気分がよくなり、次の日の仕事も頑張れます。\nナムさん：私は、仕事のあとにゆっくり休むことが大切だと思います。休むことで、疲れが取れて、次の日も元気に働けます。\n\nタオさんとナムさんに共通していることはどれですか。",
+   "choices": [
+    "運動が大切だと思っている",
+    "次の日の仕事のために何かをしている",
+    "仕事のあとに勉強している",
+    "夜遅くまで働いている"
+   ],
+   "answer": 1,
+   "explain_vi": "T nói vận động sau giờ làm để hôm sau làm việc tốt hơn, N nói nghỉ ngơi sau giờ làm để hôm sau làm việc khỏe khoắn. Điểm chung là cả hai đều làm điều gì đó sau giờ làm vì công việc ngày hôm sau, chứ không phải cùng thích vận động."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "タオさん：私は、仕事のあとに運動をすることが大切だと思います。体を動かすと、気分がよくなり、次の日の仕事も頑張れます。\nナムさん：私は、仕事のあとにゆっくり休むことが大切だと思います。休むことで、疲れが取れて、次の日も元気に働けます。\n\nナムさんが仕事のあとに休むのはなぜですか。",
+   "choices": [
+    "運動が嫌いだから",
+    "時間がないから",
+    "疲れが取れて、次の日も元気に働けるから",
+    "お金がかからないから"
+   ],
+   "answer": 2,
+   "explain_vi": "N nói rõ: 休むことで、疲れが取れて、次の日も元気に働けます, tức nghỉ ngơi giúp hết mệt và hôm sau làm việc khỏe khoắn. Đoạn văn không nói anh ghét vận động hay thiếu thời gian."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "つきみ町文化センター「冬の手作り教室」のお知らせ\n日時：12月5日（土）午前10時〜午後0時30分\n場所：つきみ町文化センター 1階 多目的室\n定員：15名\n参加費：2,000円（材料費を含みます）\n持ち物：エプロンとタオル\n申し込み：11月28日までに、電話または文化センターの窓口でお申し込みください。\n※中学生以下は保護者と一緒に参加してください。\n作るもの：冬の野菜のスープと手作りジャム\n\n申し込みはいつまでですか。",
+   "choices": [
+    "12月5日",
+    "11月20日",
+    "12月1日",
+    "11月28日"
+   ],
+   "answer": 3,
+   "explain_vi": "Thông báo ghi 申し込み：11月28日までに, tức hạn đăng ký là ngày 28 tháng 11, qua điện thoại hoặc tại quầy của trung tâm. Ngày 5 tháng 12 là ngày tổ chức lớp học."
+  },
+  {
+   "level": "N3",
+   "section": "読解",
+   "question": "つきみ町文化センター「冬の手作り教室」のお知らせ\n日時：12月5日（土）午前10時〜午後0時30分\n場所：つきみ町文化センター 1階 多目的室\n定員：15名\n参加費：2,000円（材料費を含みます）\n持ち物：エプロンとタオル\n申し込み：11月28日までに、電話または文化センターの窓口でお申し込みください。\n※中学生以下は保護者と一緒に参加してください。\n作るもの：冬の野菜のスープと手作りジャム\n\n持ち物は何ですか。",
+   "choices": [
+    "お金だけ",
+    "エプロンとタオル",
+    "材料費だけ",
+    "レシピの本"
+   ],
+   "answer": 1,
+   "explain_vi": "Thông báo ghi 持ち物：エプロンとタオル, tức đồ cần mang là tạp dề và khăn. Phí nguyên liệu đã nằm trong phí tham gia 2.000 yên nên không phải mang thêm."
+  }
+ ]
+}
