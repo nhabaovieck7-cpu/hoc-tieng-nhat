@@ -217,7 +217,10 @@ const AUTH=(()=>{
 // CHỈ các khoá TIẾN ĐỘ mới đồng bộ: hn_prog_v1 (bài đã học/điểm/học tiếp),
 // hn_srs_v1 (thẻ ôn tập SRS), hn_choukai_<vid> (phiếu nghe đã chọn),
 // hn_choukai_mark_<vid> (tự đánh dấu đúng/sai), hn_game_v1 (thắng game
-// Đấu trùm: {w:{bài: số lần thắng}, d:{ngày: số lần thắng}}). Khoá nội dung/phiên
+// Đấu trùm: {w:{bài: số lần thắng}, d:{ngày: số lần thắng}}), hn_mastery_v1
+// (đánh dấu Đã thuộc/Chưa thuộc + Danh sách của tôi — chỉ ghi khi đã đăng nhập,
+// Worker /progress cũng đã có khoá này trong danh sách cho phép phía server).
+// Khoá nội dung/phiên
 // (hn_key_v1, hn_sess_v1, hn_admin_sess_v1), mã thiết bị (hn_device_id) và
 // tuỳ chọn thiết bị (hn_theme, hn_furi, hn_tts_rate, hn_srs_deck, hn_ai_used)
 // KHÔNG bao giờ rời máy qua kênh này.
@@ -335,6 +338,31 @@ function hnMkSync(CFG){
     });
     return out;
   }
+  function mergeMastery(a,b){
+    // hn_mastery_v1 {m, fv, uf}: m/fv gộp theo từng mục — bản ghi có t mới hơn
+    // thắng, mục chỉ có ở một phía thì giữ nguyên; uf gộp theo id thư mục —
+    // bản có ut mới hơn thắng, thư mục chỉ có ở một phía thì giữ nguyên.
+    a=(a&&typeof a==='object')?a:{};b=(b&&typeof b==='object')?b:{};
+    const out={m:{},fv:{},uf:[]};
+    ['m','fv'].forEach(sec=>{
+      const am=a[sec]||{},bm=b[sec]||{};
+      Object.keys(am).forEach(k=>{out[sec][k]=am[k]});
+      Object.keys(bm).forEach(k=>{
+        const x=out[sec][k],y=bm[k];
+        if(!x){out[sec][k]=y;return}
+        if((+y.t||0)>(+x.t||0))out[sec][k]=y;
+      });
+    });
+    const byId={};
+    (Array.isArray(a.uf)?a.uf:[]).forEach(f=>{if(f&&f.id)byId[f.id]=f});
+    (Array.isArray(b.uf)?b.uf:[]).forEach(f=>{
+      if(!f||!f.id)return;
+      const x=byId[f.id];
+      if(!x||(+f.ut||0)>(+x.ut||0))byId[f.id]=f;
+    });
+    out.uf=Object.keys(byId).map(k=>byId[k]);
+    return out;
+  }
   function mergeVal(k,localStr,serverStr,lts,sts){
     if(serverStr==null)return localStr;
     if(localStr==null)return serverStr;
@@ -342,6 +370,9 @@ function hnMkSync(CFG){
     if(k==='hn_game_v1'){
       const a=parseJ(localStr),b=parseJ(serverStr);
       if(a&&b)return JSON.stringify(mergeGame(a,b));
+    }else if(k==='hn_mastery_v1'){
+      const a=parseJ(localStr),b=parseJ(serverStr);
+      if(a&&b)return JSON.stringify(mergeMastery(a,b));
     }else if(k==='hn_srs_v1'||k==='hn_prog_v1'){
       const a=parseJ(localStr),b=parseJ(serverStr);
       if(a&&b)return JSON.stringify(k==='hn_srs_v1'?mergeSRS(a,b):mergeProg(a,b));
@@ -427,12 +458,12 @@ function hnMkSync(CFG){
   setInterval(()=>{if(Object.keys(dirty).length||Object.keys(dirtyDel).length)push(false)},30000);
   try{addEventListener('unlocked',()=>pull())}catch(e){}
   if(typeof AUTH!='undefined'&&AUTH.session())pull();
-  return {pull:pull,push:push,isKey:isKey,touched:touched,removedKey:removedKey,call:call,rawSet:rawSet,_merge:{srs:mergeSRS,prog:mergeProg,val:mergeVal}};
+  return {pull:pull,push:push,isKey:isKey,touched:touched,removedKey:removedKey,call:call,rawSet:rawSet,_merge:{srs:mergeSRS,prog:mergeProg,val:mergeVal,mastery:mergeMastery}};
 }
 // Giao diện (theme.js/HNSKIN): khóa riêng hn_skin_v1 = {c,t} cũng đồng bộ qua /progress,
 // gộp bằng mergeVal mặc định (mốc thời gian mới hơn thắng). Đây là ngoại lệ chủ đích so với
 // nhóm tuỳ chọn thiết bị ở trên: giao diện là lựa chọn của TÀI KHOẢN, phải theo người dùng qua máy.
-const HNSYNC=hnMkSync({path:'/progress',meta:'hn_sync_meta',isKey:k=>typeof k==='string'&&(k==='hn_prog_v1'||k==='hn_srs_v1'||k==='hn_game_v1'||k==='hn_skin_v1'||k.indexOf('hn_choukai_')===0)});
+const HNSYNC=hnMkSync({path:'/progress',meta:'hn_sync_meta',isKey:k=>typeof k==='string'&&(k==='hn_prog_v1'||k==='hn_srs_v1'||k==='hn_game_v1'||k==='hn_skin_v1'||k==='hn_mastery_v1'||k.indexOf('hn_choukai_')===0)});
 // ===== Đồng bộ Hồ sơ cá nhân theo tài khoản (qua Worker /hoso, bảng riêng tư user_hoso) =====
 // Chỉ chủ tài khoản đọc được. Khách / chưa đăng nhập: không gửi gì. 404 / mất mạng: coi như offline.
 const HNHOSO=(()=>{

@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"></noscript><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23cf3a2e'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3E%E6%97%A5%3C/text%3E%3C/svg%3E"><script>(function(){var t='';try{t=localStorage.getItem('hn_theme')||''}catch(e){}if(t!=='dark'&&t!=='light'){try{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){t='light'}}document.documentElement.dataset.theme=t})()</script><script>(function(){var c='auto';try{var o=JSON.parse(localStorage.getItem('hn_skin_v1')||'null');if(o&&o.c)c=String(o.c)}catch(e){}var S=['manga','bento','fuji','neon'];if(S.indexOf(c)<0){var n=new Date(Date.now()+9*36e5),y=n.getUTCFullYear();c=S[Math.floor((Date.UTC(y,n.getUTCMonth(),n.getUTCDate())-Date.UTC(y,0,0))/864e5)%4]}document.documentElement.dataset.skin=c})()</script><link rel="stylesheet" href="style.css?v=13740566"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#233d63"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Đại Ca Nihongo"><title>Danh sách của tôi</title><meta name="description" content="Thư viện riêng của thành viên: các mục chưa thuộc tự gom theo thư mục, bài kaiwa yêu thích và thư mục tài liệu tự tạo."><meta property="og:title" content="Danh sách của tôi"><meta property="og:description" content="Thư viện riêng của thành viên: các mục chưa thuộc tự gom theo thư mục, bài kaiwa yêu thích và thư mục tài liệu tự tạo."><meta property="og:type" content="website"><meta property="og:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/og/all.jpg"><meta property="og:url" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/danh-sach.html"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Danh sách của tôi"><meta name="twitter:description" content="Thư viện riêng của thành viên: các mục chưa thuộc tự gom theo thư mục, bài kaiwa yêu thích và thư mục tài liệu tự tạo."><meta name="twitter:image" content="https://nhabaovieck7-cpu.github.io/hoc-tieng-nhat/og/all.jpg"></head><body>
+<div class="topbar"><div class="wrap"><a class="brand site-title" href="index.html"></a><nav class="nav">
+<a href="index.html#khoahoc">Khóa học</a><a href="luyen-nghe.html">Luyện nghe</a><a href="tin-tuc.html">Tin tức</a><a href="hoi-ai.html">Hỏi AI</a></nav></div></div>
+<main class="wrap"><a class="hn-back" href="index.html">← Quay lại</a> <button type="button" class="hn-share" data-share>📤 Chia sẻ</button><div class="pagehead"><h1>📋 Danh sách của tôi</h1><p>Thư viện riêng của thành viên: mục chưa thuộc tự gom vào thư mục theo loại, bài kaiwa đã thích và thư mục tài liệu tự tạo.</p></div>
+<div id="dsGuest" class="box" hidden><h3>🔒 Thư viện riêng của thành viên</h3><p>Danh sách của tôi chỉ dành cho thành viên đã đăng nhập: đánh dấu “Chưa thuộc” ở bất kỳ mục học nào, các mục sẽ tự gom vào đây theo thư mục; bài kaiwa hay thì bấm ♥ để lưu lại; và còn tạo được thư mục riêng để lưu tài liệu của mình.</p><p><a class="mk-mini done" href="dang-nhap.html">Đăng nhập</a></p></div>
+<div id="dsMain" hidden>
+<div class="ds-counts"><div class="ds-count"><b id="dsFld">0</b><span>Thư mục tự động</span></div><div class="ds-count no"><b id="dsNo">0</b><span>mục Chưa thuộc</span></div><div class="ds-count uf"><b id="dsUf">0</b><span>Thư mục của tôi</span></div><div class="ds-count yes"><b id="dsYes">0</b><span>mục Đã thuộc</span></div></div>
+<p class="ds-msg" id="dsMsg" role="status"></p>
+<h2>Thư mục tự động</h2>
+<div id="dsAuto"></div>
+<h2>Thư mục của tôi</h2>
+<p><button type="button" class="mk-mini" id="ufCreateBtn">＋ Tạo thư mục</button></p>
+<div class="uf-form" id="ufCreateForm"><input type="text" id="ufNameInput" maxlength="60" placeholder="Tên thư mục, ví dụ: Tài liệu thi"><button type="button" class="mk-mini done" id="ufCreateOk">Tạo</button><button type="button" class="mk-mini" id="ufCreateCancel">Hủy</button></div>
+<div id="dsUfList"></div>
+</div></main><footer class="site-title"></footer>
+<nav class="tabbar" aria-label="Điều hướng dưới"><div class="tabbar-in"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Trang chủ</span></a><a href="index.html#khoahoc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg><span>Khóa học</span></a><a href="luyen-nghe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0 2-2H3z"/></svg><span>Luyện nghe</span></a><a href="tin-tuc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Tin tức</span></a><a href="hoi-ai.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span>Hỏi AI</span></a></div></nav>
+<script src="config.js?v=755aff7d"></script><script src="common.js?v=2f886d6e"></script><script src="auth.js?v=ff241778"></script><script src="study.js?v=c919cd05"></script><script src="features.js?v=63e00a1b"></script><script>
+(function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var EP=(typeof SITE!='undefined'&&SITE.aiEndpoint||'').replace(/\/$/,'');
+function tok(){return (typeof AUTH!='undefined'&&AUTH.session)?AUTH.session():''}
+function fmtSize(n){n=+n||0;if(n<1024)return n+' B';if(n<1048576)return (n/1024).toFixed(1).replace('.',',')+' KB';return (n/1048576).toFixed(1).replace('.',',')+' MB'}
+function fmtDate(t){try{return new Date(t).toLocaleDateString('vi-VN')}catch(e){return ''}}
+function deepLink(u,id){if(!u)return '#';var h=u.indexOf('#');var base=h>=0?u.slice(0,h):u,hash=h>=0?u.slice(h):'';return base+(base.indexOf('?')>=0?'&':'?')+'mk='+encodeURIComponent(id)+hash}
+function msg(t,bad){var m=$('#dsMsg');if(m){m.textContent=t||'';m.classList.toggle('bad',!!bad)}}
+var openFolds={};
+function fkOrder(fk){if(fk.indexOf('tv:')===0)return 0;if(fk.indexOf('kj:')===0)return 1;if(fk.indexOf('np:')===0)return 2;if(fk==='nnv')return 3;if(fk==='nnp')return 4;if(fk==='dsv')return 5;if(fk==='dsp')return 6;if(fk==='kwfav')return 7;return 8}
+function foldHTML(key,name,sub,rows){return '<div class="mk-fold" data-fold="'+F.esc(key)+'"><button type="button" class="mk-fold-h" data-foldbtn="'+F.esc(key)+'">📁 '+F.esc(name)+'<span class="n">'+F.esc(sub)+'</span></button><div class="mk-fold-b"'+(openFolds[key]?'':' hidden')+'>'+rows+'</div></div>'}
+function rowHTML(id,r){return '<div class="mk-row" data-mi="'+F.esc(id)+'"><span class="f jp">'+F.esc(r.f||'')+'</span>'+(r.r?'<span class="r jp">'+F.esc(r.r)+'</span>':'')+'<span class="mean">'+F.esc(r.m||'')+'</span><span class="mk-tag">Chưa thuộc</span><span class="g">'+F.esc(r.g||'')+'</span><span class="acts"><button type="button" class="mk-mini done" data-done="'+F.esc(id)+'">✓ Đã thuộc</button><a class="mk-mini" href="'+F.esc(deepLink(r.u,id))+'">Mở bài gốc →</a><button type="button" class="mk-mini danger" data-del="'+F.esc(id)+'">Xoá</button></span></div>'}
+function favRowHTML(id,r){return '<div class="mk-row" data-favrow="'+F.esc(id)+'"><span class="f">'+F.esc(r.title||id)+'</span>'+(r.lv?'<span class="r">'+F.esc(r.lv)+'</span>':'')+'<span class="mk-tag fav">Yêu thích</span><span class="acts"><a class="mk-mini" href="'+F.esc(deepLink(r.u,id))+'">Mở bài gốc →</a><button type="button" class="mk-mini danger" data-unfav="'+F.esc(id)+'">Bỏ yêu thích</button></span></div>'}
+function ufHTML(f){var files=f.files||[];var tot=files.reduce(function(a,x){return a+(+x.size||0)},0);
+ var rows=files.map(function(x){return '<div class="uf-file" data-file-row><span>📄 '+F.esc(x.name||'tep')+'</span><span class="sz">'+fmtSize(x.size)+'</span><span class="dt">'+fmtDate(x.added)+'</span><span class="acts"><button type="button" class="mk-mini" data-openfile="'+F.esc(f.id)+'|'+F.esc(x.ref||'')+'">Mở/Tải xuống</button><button type="button" class="mk-mini danger" data-delfile="'+F.esc(f.id)+'|'+F.esc(x.ref||'')+'">Xóa</button></span></div>'}).join('');
+ return '<div class="mk-fold" data-ufbox="'+F.esc(f.id)+'"><button type="button" class="mk-fold-h" data-foldbtn="uf:'+F.esc(f.id)+'">🗂 <span class="uf-name">'+F.esc(f.name||'Thư mục')+'</span><span class="n">'+files.length+' file · '+fmtSize(tot)+'</span></button><div class="mk-fold-b"'+(openFolds['uf:'+f.id]?'':' hidden')+'>'
+ +'<div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0"><button type="button" class="mk-mini" data-uf-rename="'+F.esc(f.id)+'">Đổi tên</button><button type="button" class="mk-mini danger" data-uf-del="'+F.esc(f.id)+'">Xóa thư mục</button><label class="mk-mini" style="cursor:pointer">＋ Thêm file<input type="file" hidden data-fileinp="'+F.esc(f.id)+'"></label></div>'
+ +'<div class="uf-form" data-rename-form="'+F.esc(f.id)+'"><input type="text" maxlength="60" data-rename-input="'+F.esc(f.id)+'" value="'+F.esc(f.name||'')+'"><button type="button" class="mk-mini done" data-uf-rename-ok="'+F.esc(f.id)+'">Lưu tên</button><button type="button" class="mk-mini" data-uf-cancel="'+F.esc(f.id)+'">Hủy</button></div>'
+ +'<div class="uf-form danger" data-del-form="'+F.esc(f.id)+'"><span data-del-text="'+F.esc(f.id)+'"></span><button type="button" class="mk-mini danger" data-uf-del-ok="'+F.esc(f.id)+'">Xóa hẳn</button><button type="button" class="mk-mini" data-uf-cancel="'+F.esc(f.id)+'">Không xóa</button></div>'
+ +(rows||'<p class="mut" style="margin:6px 0">Thư mục đang trống — bấm “＋ Thêm file” để lưu tài liệu vào đây.</p>')
+ +'</div></div>'}
+function render(){
+ var main=$('#dsMain'),guest=$('#dsGuest');
+ if(typeof F==='undefined'||!F.MK||!F.MK.logged()){main.hidden=true;guest.hidden=false;return}
+ guest.hidden=true;main.hidden=false;
+ var d=F.MK.load(),groups={},no=0,yes=0;
+ Object.keys(d.m).forEach(function(id){var r=d.m[id];if(!r)return;if(r.s===0){no++;var fk=r.fk||'other';if(!groups[fk])groups[fk]={fg:r.fg||'Khác',items:[]};groups[fk].items.push([id,r])}else yes++});
+ var favIds=Object.keys(d.fv);
+ $('#dsFld').textContent=Object.keys(groups).length+(favIds.length?1:0);
+ $('#dsNo').textContent=no;$('#dsUf').textContent=d.uf.length;$('#dsYes').textContent=yes;
+ var html='';
+ var fks=Object.keys(groups).sort(function(a,b){return fkOrder(a)-fkOrder(b)||(a<b?-1:1)});
+ if(!fks.length&&!favIds.length)html='<p class="mut">Chưa có mục chưa thuộc nào. Mở một bài học, bấm “Chưa thuộc” ở mục chưa nhớ — chúng sẽ tự gom vào thư mục tự động ở đây. Muốn lưu tài liệu riêng, hãy tạo thư mục của riêng mình ở khối dưới.</p>';
+ fks.forEach(function(fk){var g=groups[fk];html+=foldHTML(fk,g.fg,g.items.length+' mục chưa thuộc',g.items.map(function(p){return rowHTML(p[0],p[1])}).join(''))});
+ if(favIds.length)html+=foldHTML('kwfav','Kaiwa yêu thích',favIds.length+' bài kaiwa đã thích',favIds.map(function(id){return favRowHTML(id,d.fv[id])}).join(''));
+ $('#dsAuto').innerHTML=html;
+ $('#dsUfList').innerHTML=d.uf.length?d.uf.map(ufHTML).join(''):'<p class="mut">Chưa có thư mục riêng nào. Bấm “＋ Tạo thư mục” để tạo thư mục lưu tài liệu của riêng mình.</p>';
+}
+async function api(path,opts){
+ var o={method:'POST',headers:{Authorization:'Bearer '+tok()}};
+ if(opts)Object.keys(opts).forEach(function(k){o[k]=opts[k]});
+ var r=await fetch(EP+path,o);var j=await r.json().catch(function(){return{}});
+ if(!r.ok)throw new Error(j.error||('Lỗi '+r.status));
+ return j}
+async function serverDeleteFile(ref){await api('/community/file-delete',{headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok()},body:JSON.stringify({id:ref})})}
+function findFolder(d,id){for(var i=0;i<d.uf.length;i++)if(d.uf[i].id===id)return d.uf[i];return null}
+document.addEventListener('click',function(e){
+ var t=e.target&&e.target.closest?e.target.closest('[data-foldbtn],[data-done],[data-del],[data-unfav],[data-uf-rename],[data-uf-rename-ok],[data-uf-del],[data-uf-del-ok],[data-uf-cancel],[data-openfile],[data-delfile],#ufCreateBtn,#ufCreateOk,#ufCreateCancel'):null;
+ if(!t)return;
+ if(t.id==='ufCreateBtn'){$('#ufCreateForm').classList.add('show');$('#ufNameInput').focus();return}
+ if(t.id==='ufCreateCancel'){$('#ufCreateForm').classList.remove('show');return}
+ if(t.id==='ufCreateOk'){
+  var name=$('#ufNameInput').value.trim()||'Thư mục mới';
+  var d=F.MK.load(),now=Date.now();
+  d.uf.push({id:'uf-'+now.toString(36)+Math.random().toString(36).slice(2,6),name:name.slice(0,60),created:now,ut:now,files:[]});
+  F.MK.save(d);$('#ufNameInput').value='';$('#ufCreateForm').classList.remove('show');render();msg('Đã tạo thư mục “'+name+'”.');return}
+ var fb=t.getAttribute('data-foldbtn');
+ if(fb){var fold=t.closest('.mk-fold'),b=fold?fold.querySelector('.mk-fold-b'):null;if(b){b.hidden=!b.hidden;openFolds[fb]=!b.hidden}return}
+ var done=t.getAttribute('data-done');
+ if(done){F.MK.setMark(done,null,1);render();return}
+ var del=t.getAttribute('data-del');
+ if(del){F.MK.remove(del);render();return}
+ var unf=t.getAttribute('data-unfav');
+ if(unf){F.MK.unfav(unf);render();return}
+ var rn=t.getAttribute('data-uf-rename');
+ if(rn){var f1=document.querySelector('[data-rename-form="'+rn+'"]');if(f1)f1.classList.add('show');var inp=document.querySelector('[data-rename-input="'+rn+'"]');if(inp){inp.focus();inp.select()}return}
+ var rno=t.getAttribute('data-uf-rename-ok');
+ if(rno){var d2=F.MK.load(),fo=findFolder(d2,rno),inp2=document.querySelector('[data-rename-input="'+rno+'"]');
+  if(fo&&inp2){var nm=inp2.value.trim();if(nm){fo.name=nm.slice(0,60);fo.ut=Date.now();F.MK.save(d2)}}
+  render();return}
+ var ud=t.getAttribute('data-uf-del');
+ if(ud){var d3=F.MK.load(),fo3=findFolder(d3,ud),df=document.querySelector('[data-del-form="'+ud+'"]'),tx=document.querySelector('[data-del-text="'+ud+'"]');
+  if(df&&tx&&fo3){var nf=(fo3.files||[]).length;tx.textContent='Xóa thư mục “'+(fo3.name||'')+'”? '+(nf?('Trong thư mục đang có '+nf+' file — xóa thư mục sẽ xóa cả các file này.'):'Thư mục đang trống.');df.classList.add('show')}return}
+ var udo=t.getAttribute('data-uf-del-ok');
+ if(udo){(async function(){
+   var d4=F.MK.load(),fo4=findFolder(d4,udo);if(!fo4)return;
+   var files=(fo4.files||[]).slice();
+   for(var i=0;i<files.length;i++){try{await serverDeleteFile(files[i].ref)}catch(err){msg('Chưa xóa được file “'+(files[i].name||'')+'”: '+(err.message||err)+' — thư mục vẫn giữ nguyên.',1);return}}
+   d4.uf=d4.uf.filter(function(x){return x.id!==udo});F.MK.save(d4);render();msg('Đã xóa thư mục và các file trong đó.');})();return}
+ var uc=t.getAttribute('data-uf-cancel');
+ if(uc){var box=document.querySelector('[data-ufbox="'+uc+'"]');if(box)$$('.uf-form',box).forEach(function(x){x.classList.remove('show')});return}
+ var of=t.getAttribute('data-openfile');
+ if(of){var ref=of.split('|')[1];(async function(){try{var j=await api('/community/file-token',{headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok()},body:JSON.stringify({ids:[ref]})});var u=j.urls&&j.urls[ref];if(!u)throw new Error('Không mở được file này.');window.open(EP+u,'_blank')}catch(err){msg(err.message||'Không mở được file.',1)}})();return}
+ var dlf=t.getAttribute('data-delfile');
+ if(dlf){var parts=dlf.split('|'),fid=parts[0],ref2=parts[1];(async function(){
+   try{await serverDeleteFile(ref2)}catch(err){msg('Chưa xóa được file: '+(err.message||err),1);return}
+   var d5=F.MK.load(),fo5=findFolder(d5,fid);
+   if(fo5){fo5.files=(fo5.files||[]).filter(function(x){return x.ref!==ref2});fo5.ut=Date.now();F.MK.save(d5)}
+   render();msg('Đã xóa file.');})();return}
+});
+document.addEventListener('change',function(e){
+ var inp=e.target&&e.target.closest?e.target.closest('[data-fileinp]'):null;
+ if(!inp)return;
+ var fid=inp.getAttribute('data-fileinp'),file=inp.files&&inp.files[0];
+ inp.value='';
+ if(!file)return;
+ (async function(){
+  try{
+   var fd=new FormData();fd.append('purpose','post');fd.append('file',file);
+   var j=await api('/community/upload',{body:fd});
+   var d=F.MK.load(),fo=findFolder(d,fid);if(!fo)return;
+   fo.files=fo.files||[];fo.files.push({name:j.file.name,size:j.file.size,added:Date.now(),ref:j.file.id});fo.ut=Date.now();F.MK.save(d);
+   openFolds['uf:'+fid]=true;render();msg('Đã thêm file “'+j.file.name+'” vào thư mục.');
+  }catch(err){msg('Chưa tải lên được: '+(err.message||err),1)}
+ })();
+});
+document.addEventListener('hn-synced',function(e){if(e.detail&&e.detail.keys&&e.detail.keys.indexOf('hn_mastery_v1')>=0)render()});
+document.addEventListener('mk-changed',function(){});
+try{addEventListener('unlocked',function(){render()})}catch(e){}
+render();
+})();
+</script><script src="theme.js"></script></body></html>

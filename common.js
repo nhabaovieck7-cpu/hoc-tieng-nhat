@@ -350,6 +350,36 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 // Các trang game KHÔNG nạp common.js của trang chính nên không cần xử lý href ngược.
 (function(){function boot(){var nav=document.querySelector('.topbar .nav');if(!nav||nav.querySelector('a[href="game/index.html"]'))return;var a=document.createElement('a');a.href='game/index.html';a.textContent='🎮 Game';a.className='hn-navlink';if(/(^|\/)game(\/|$)/.test(location.pathname))a.classList.add('on');nav.appendChild(a)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();
 
+// ===== Biểu tượng "Danh sách của tôi" trên topbar, NGAY CẠNH AVATAR (21/11/2026) =====
+// Huy hiệu chỉ đếm mục CHƯA THUỘC (kaiwa yêu thích không tính); khách chưa đăng
+// nhập vẫn thấy biểu tượng nhưng không có huy hiệu. F.MK (features.js) phát sự
+// kiện 'mk-changed' sau mỗi lần ghi hn_mastery_v1; HNSYNC kéo dữ liệu mới về thì
+// phát 'hn-synced' — cả hai đều gọi lại việc đếm ở đây.
+(function(){
+ function sess(){try{return !!(localStorage.getItem('hn_sess_v1')||localStorage.getItem('hn_admin_sess_v1'))}catch(e){return false}}
+ function count(){if(!sess())return 0;try{var d=JSON.parse(localStorage.getItem('hn_mastery_v1')||'null');if(!d||!d.m)return 0;var n=0;Object.keys(d.m).forEach(function(k){if(d.m[k]&&d.m[k].s===0)n++});return n}catch(e){return 0}}
+ function upd(){var b=document.getElementById('mkBadge');if(!b)return;var n=count(),t=String(n),d=n?'':'none';
+  // chỉ ghi khi thật sự khác — upd() chạy trong MutationObserver của topbar,
+  // ghi vô điều kiện sẽ tự kích hoạt observer thành vòng lặp vô hạn
+  if(b.textContent!==t)b.textContent=t;if(b.style.display!==d)b.style.display=d}
+ window.HNMKBadge=upd;
+ function seat(){var w=document.querySelector('.topbar .wrap');if(!w)return null;
+  var a=document.getElementById('mkTopBtn');
+  if(!a){a=document.createElement('a');a.id='mkTopBtn';a.className='mk-top';a.href='danh-sach.html';a.title='Danh sách của tôi';a.setAttribute('aria-label','Danh sách của tôi');
+   a.innerHTML='📋<span class="mk-badge" id="mkBadge" style="display:none">0</span>'}
+  var av=w.querySelector(':scope > .hdr-av');
+  if(av){if(a.nextElementSibling!==av||a.parentNode!==w)w.insertBefore(a,av)}
+  else if(a.parentNode!==w)w.appendChild(a);
+  upd();return a}
+ function boot(){var tb=document.querySelector('.topbar');if(!tb)return;seat();
+  new MutationObserver(function(){seat()}).observe(tb,{childList:true,subtree:true});
+  document.addEventListener('mk-changed',upd);
+  document.addEventListener('hn-synced',function(e){if(e.detail&&e.detail.keys&&e.detail.keys.indexOf('hn_mastery_v1')>=0)upd()});
+  addEventListener('storage',function(e){if(e.key==='hn_mastery_v1'||e.key==='hn_sess_v1')upd()});
+  addEventListener('unlocked',upd)}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+
 
 // ===== Header gọn trên điện thoại (29/10, Phía B): 1 hàng — tên trang · 🔍 · chế độ tối · avatar.
 // Tài khoản, tin nhắn, thông báo, chia sẻ, đăng xuất gom vào menu avatar (#hdrmenu). Trên máy tính #hdrmenu
