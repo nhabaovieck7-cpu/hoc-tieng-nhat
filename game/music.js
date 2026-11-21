@@ -113,6 +113,13 @@
 
   function makePlayer(file) {
     var a = document.createElement('audio');
+    // CORSFIX (21/11): file nhạc nằm trên R2 (khác origin) — BẮT BUỘC đặt
+    // crossOrigin='anonymous' TRƯỚC khi gán src. Thiếu dòng này, media bị
+    // "tainted" nên MediaElementAudioSourceNode (FIX3) cho ra TOÀN SỐ 0:
+    // player vẫn "đang phát", thanh âm lượng vẫn đúng mà loa câm tuyệt đối
+    // trên mọi trình duyệt Chromium (đo RMS tại source = 0; có CORS = 0,23).
+    // Cùng lớp lỗi Lane AG của game-truyen/bgm.js.
+    a.crossOrigin = 'anonymous';
     a.src = base + file;
     a.loop = true;
     a.preload = 'auto';
