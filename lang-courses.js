@@ -24,7 +24,7 @@
   function injectCss(){
     if(document.getElementById('hn-lang-css'))return;
     var l=document.createElement('link');
-    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=4';
+    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=5';
     document.head.appendChild(l);
   }
 

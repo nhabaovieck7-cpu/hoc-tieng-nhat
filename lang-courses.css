@@ -99,13 +99,21 @@ html[data-hn-lang="zh"] ruby,
 html[data-hn-lang="zh"] ruby,
 [lang="zh-Hans"] ruby{margin:0 .08em}
 
-/* Điện thoại: tên ngắn «Đại Ca» + slogan, một cột, không cắt chữ. */
+/* Điện thoại: tên ngắn «Đại Ca» + slogan, không cắt chữ, không đẩy nút avatar
+   ra ngoài 390px (flex 0 0 auto + overflow:visible từng làm tràn ~12px). */
 @media(max-width:860px){
+  .topbar,
+  .topbar .wrap{
+    max-width:100%;
+    box-sizing:border-box;
+    min-width:0;
+  }
+  .topbar .wrap{overflow-x:clip}
   .topbar .brand{
-    overflow:visible;
-    flex:0 0 auto;
-    min-width:auto;
-    max-width:none;
+    overflow:hidden;
+    flex:1 1 auto;
+    min-width:0;
+    max-width:100%;
     white-space:nowrap;
   }
   .topbar .brand .st-f{display:none!important}
@@ -116,6 +124,8 @@ html[data-hn-lang="zh"] ruby,
     color:#fff;
     vertical-align:middle;
     white-space:nowrap;
+    max-width:100%;
+    overflow:hidden;
   }
   .topbar .brand .st-s::before{
     content:"Đại Ca";
@@ -125,10 +135,23 @@ html[data-hn-lang="zh"] ruby,
     color:#fff;
     white-space:nowrap;
   }
-  .topbar .brand .st-s::after{
-    white-space:nowrap;
-    overflow:visible;
+  .topbar .hdr-av .hdr-dot{right:0;top:0}
+  /* Thanh tab: margin 5px × 5 ô làm rộng hơn khung. */
+  .tabbar{
+    width:100%;
+    max-width:100%;
+    left:0;
+    right:0;
+    box-sizing:border-box;
+    overflow:hidden;
   }
+  .tabbar-in{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+    min-width:0;
+  }
+  .tabbar a{margin-left:2px;margin-right:2px;min-width:0;box-sizing:border-box}
 }
 
 /* Nút Quay lại nổi: trên điện thoại ẩn đi (đã có thanh tab + nút «← Khóa …» trong bài)
