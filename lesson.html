@@ -42,10 +42,11 @@ paint()})();
  if(!lv||!s)throw {locked:true,title:'Chưa mở được bài này',msg:'Tất cả bài học đều mở miễn phí cho mọi người — có thể do mạng chập chờn, bấm Thử lại sau ít phút.'};
  const j=await LOCK.free('/free/lesson?level='+encodeURIComponent(lv)+'&section='+encodeURIComponent(s)+'&id='+encodeURIComponent(id));
  window.LESSONS=[j.lesson];addEventListener('guest',()=>{const t=document.getElementById('tags');if(t)t.insertAdjacentHTML('beforeend',' <span class="ht-free">Học thử miễn phí</span>');HT.bar('Thích bài này?')})}})}</script><script src="hoc-thu.js?v=c537136f"></script><script type="text/plain" id="main">
+function ttlPlain(s){return plain(String(s||'')).replace(/<[^>]+>/g,'').replace(/&nbsp;/gi,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim()}
 function ttlHtml(s){s=String(s||'');var m=/[（(]([^（）()]*)[）)]\s*$/.exec(s);if(m&&/[぀-ヿ㐀-鿿]/.test(m[1])){var vi=s.slice(0,m.index).replace(/\s+$/,'');return '<span class="ttl"><span class="t-vi">'+ruby(vi)+'</span><span class="t-jp">'+ruby(m[1])+'</span></span>'}return '<span class="ttl">'+ruby(s)+'</span>'}
 const l=LESSONS.find(x=>x.id==new URLSearchParams(location.search).get('id'));const m=document.getElementById('m'),toc=document.getElementById('toc');
 if(!l){m.innerHTML='<section>Không tìm thấy bài học. <a href="index.html">Về trang chủ</a></section>';toc.remove()}else{
-document.title=plain(l.title)+' – '+SITE.title;document.getElementById('t').innerHTML=ttlHtml(l.title);
+document.title=ttlPlain(l.title)+' – '+SITE.title;document.getElementById('t').innerHTML=ttlHtml(l.title);
 document.getElementById('tags').innerHTML='<span class="tag lv">'+l.level+'</span><span class="tag">'+l.type+'</span>'+(l.sample?'<span class="tag mau">Bài mẫu</span>':'');
 const TH=/^Tổng hợp/.test(l.type); // Bài Tổng hợp: bỏ toàn bộ phần phát âm thanh theo yêu cầu user
 const S=[];const sec=(t,html,c)=>{const id='s'+(S.length+1);S.push([id,t]);return '<section id="'+id+'"'+(c?' class="'+c+'"':'')+'><h2>'+t+'</h2>'+html+'</section>'};
