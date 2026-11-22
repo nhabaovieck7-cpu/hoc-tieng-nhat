@@ -30,6 +30,7 @@ Mỗi bài trong `lessons` là một object:
 | `sections` | có | Mảng `{ "h": "Tiêu đề mục", "html": "…nội dung HTML…" }`. |
 | `quiz` | nên có | Mảng câu trắc nghiệm 4 lựa chọn: `{ "q": "câu hỏi (HTML được)", "o": ["A","B","C","D"], "c": 0 }` — `c` là chỉ số đáp án đúng (0–3). |
 | `ttsLang` | hội thoại | `"zh-CN"`. |
+| `explain` / `examples` | không | Không cần gửi. Bộ nạp tự thêm mảng rỗng để khớp trình bày bài Nhật. |
 
 Không dùng đúng cụm `<b>Nghĩa:</b>` / `<b>Cấu trúc:</b>` (trùng máy sinh câu Nhật). Nên dùng `<b>Giải thích:</b>` và `<b>Công thức:</b>`.
 

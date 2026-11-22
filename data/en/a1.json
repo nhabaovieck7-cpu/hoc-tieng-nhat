@@ -1,0 +1,2284 @@
+{
+  "lang": "en",
+  "level": "A1",
+  "lessons": [
+    {
+      "id": "en-a1-np-01",
+      "title": "Đại từ nhân xưng và động từ be (am / is / are)",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Động từ be dùng để nói “là / thì / ở”",
+          "html": "<p><b>Giải thích:</b> Ở mức A1, động từ <b>be</b> là động từ anh gặp nhiều nhất: nói tên, nghề, cảm giác, nơi mình đang ở. Tiếng Anh đổi hình tùy người: <b>am</b> / <b>is</b> / <b>are</b>.</p><p><b>Công thức:</b> I + am &nbsp;·&nbsp; he/she/it + is &nbsp;·&nbsp; you/we/they + are</p><div class=\"tbl\"><table><thead><tr><th>Chủ ngữ</th><th>Be</th><th>Ví dụ</th></tr></thead><tbody><tr><td>I</td><td>am</td><td>I am Minh.</td></tr><tr><td>You</td><td>are</td><td>You are a student.</td></tr><tr><td>He / She / It</td><td>is</td><td>She is An. / It is a book.</td></tr><tr><td>We / They</td><td>are</td><td>We are friends. / They are at home.</td></tr></tbody></table></div>"
+        },
+        {
+          "h": "Câu khẳng định, phủ định, nghi vấn",
+          "html": "<p><b>Công thức:</b> Khẳng định: Chủ ngữ + am/is/are + …<br>Phủ định: am not / is not (isn't) / are not (aren't)<br>Hỏi: Am/Is/Are + chủ ngữ + …?</p><div class=\"ex\"><div lang=\"en\">I am a teacher. <button type=\"button\" class=\"hn-tts\" data-tts=\"I am a teacher.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi là giáo viên.</div></div><div class=\"ex\"><div lang=\"en\">He isn't at home. <button type=\"button\" class=\"hn-tts\" data-tts=\"He isn't at home.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Anh ấy không có ở nhà.</div></div><div class=\"ex\"><div lang=\"en\">Are you from Vietnam? <button type=\"button\" class=\"hn-tts\" data-tts=\"Are you from Vietnam?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn đến từ Việt Nam phải không?</div></div><div class=\"ex\"><div lang=\"en\">Yes, I am. / No, I'm not. <button type=\"button\" class=\"hn-tts\" data-tts=\"Yes, I am. / No, I'm not.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đúng vậy. / Không phải.</div></div><p>Viết tắt thường gặp: <b>I'm, he's, she's, it's, you're, we're, they're</b>. Phủ định: <b>isn't, aren't</b>. Riêng <i>I am not</i> thường viết <b>I'm not</b> (không nói <i>I amn't</i>).</p>"
+        },
+        {
+          "h": "Lưu ý nhỏ",
+          "html": "<p>Sau <b>be</b> có thể là nghề (<i>a teacher</i>), tính từ (<i>happy, tired</i>) hoặc nơi chốn (<i>at home, in Ha Noi</i>).</p><div class=\"ex\"><div lang=\"en\">An is tired today. <button type=\"button\" class=\"hn-tts\" data-tts=\"An is tired today.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Hôm nay An mệt.</div></div><div class=\"ex\"><div lang=\"en\">They are in the park. <button type=\"button\" class=\"hn-tts\" data-tts=\"They are in the park.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Họ đang ở công viên.</div></div><p>Đừng chia <i>I is</i> hay <i>She are</i>. <b>You</b> luôn đi với <b>are</b>, dù nói với một người hay nhiều người.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn dạng đúng: “She ____ a doctor.”",
+          "o": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định tự nhiên của “They are students.” là:",
+          "o": [
+            "They isn't students.",
+            "They aren't students.",
+            "They not are students.",
+            "They don't are students."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu hỏi đúng là:",
+          "o": [
+            "Is you Minh?",
+            "Are you Minh?",
+            "You are Minh?",
+            "Do you are Minh?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“I'm not hungry.” nghĩa là:",
+          "o": [
+            "Tôi đói.",
+            "Tôi không đói.",
+            "Tôi đã đói.",
+            "Tôi sẽ đói."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-02",
+      "title": "Mạo từ a, an, the",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "a / an — một (chưa xác định)",
+          "html": "<p><b>Giải thích:</b> <b>a</b> và <b>an</b> dùng trước danh từ số ít, đếm được, khi anh nói về một thứ chưa xác định cụ thể. Chọn <b>a</b> hay <b>an</b> theo <i>âm</i> đầu, không phải theo chữ viết.</p><p><b>Công thức:</b> <b>a</b> + âm phụ âm &nbsp;·&nbsp; <b>an</b> + âm nguyên âm</p><div class=\"tbl\"><table><thead><tr><th>Dùng</th><th>Ví dụ</th><th>Lý do</th></tr></thead><tbody><tr><td>a</td><td>a book, a university, a house</td><td><i>book / university / house</i> bắt đầu bằng âm phụ âm (university đọc /juː/)</td></tr><tr><td>an</td><td>an apple, an hour, an English book</td><td><i>apple / hour / English</i> bắt đầu bằng âm nguyên âm (hour câm chữ h)</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">I have a brother and a sister. <button type=\"button\" class=\"hn-tts\" data-tts=\"I have a brother and a sister.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi có một anh/em trai và một chị/em gái.</div></div><div class=\"ex\"><div lang=\"en\">She is an engineer. <button type=\"button\" class=\"hn-tts\" data-tts=\"She is an engineer.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy là kỹ sư.</div></div>"
+        },
+        {
+          "h": "the — cái / người đã xác định",
+          "html": "<p><b>Giải thích:</b> <b>the</b> dùng khi cả hai đã biết đang nói về cái nào: đã nhắc rồi, chỉ có một (<i>the sun, the door</i>), hoặc xác định bằng cụm đứng sau danh từ.</p><div class=\"ex\"><div lang=\"en\">I have a cat. The cat is black. <button type=\"button\" class=\"hn-tts\" data-tts=\"I have a cat. The cat is black.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi có một con mèo. Con mèo đó màu đen.</div></div><div class=\"ex\"><div lang=\"en\">Please close the door. <button type=\"button\" class=\"hn-tts\" data-tts=\"Please close the door.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Làm ơn đóng cửa lại. (cửa mà cả hai đều thấy)</div></div><p>Không dùng <b>a/an</b> với danh từ số nhiều hoặc danh từ không đếm được: <i>books, water, music</i>. Có thể nói <i>the books</i> nếu đã rõ là những quyển nào.</p>"
+        },
+        {
+          "h": "Khi không cần mạo từ",
+          "html": "<p>Tên người, hầu hết tên quốc gia, bữa ăn nói chung, và môn thể thao thường không có mạo từ: <i>Minh, Vietnam, breakfast, football</i>.</p><div class=\"ex\"><div lang=\"en\">An is from Vietnam. <button type=\"button\" class=\"hn-tts\" data-tts=\"An is from Vietnam.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">An đến từ Việt Nam.</div></div><div class=\"ex\"><div lang=\"en\">We have breakfast at seven. <button type=\"button\" class=\"hn-tts\" data-tts=\"We have breakfast at seven.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chúng tôi ăn sáng lúc bảy giờ.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “She is ____ English teacher.”",
+          "o": [
+            "a",
+            "an",
+            "the",
+            "(không cần)"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“I need ____ hour to finish this.”",
+          "o": [
+            "a",
+            "an",
+            "the",
+            "one of"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "I have a water.",
+            "She is a engineer.",
+            "I have a book. The book is new.",
+            "An is the Vietnam."
+          ],
+          "c": 2
+        },
+        {
+          "q": "Vì sao nói “a university”, không nói “an university”?",
+          "o": [
+            "Vì university là số nhiều",
+            "Vì chữ u là phụ âm",
+            "Vì âm đầu là /juː/, không phải âm nguyên âm",
+            "Vì luôn dùng a trước danh từ dài"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-03",
+      "title": "This, that, these, those",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Gần và xa, một và nhiều",
+          "html": "<p><b>Giải thích:</b> Dùng các từ này khi chỉ vào người hoặc vật. <b>This / these</b> cho cái ở gần; <b>that / those</b> cho cái ở xa hơn. Số ít dùng this/that, số nhiều dùng these/those.</p><p><b>Công thức:</b> this / that + danh từ số ít &nbsp;·&nbsp; these / those + danh từ số nhiều</p><div class=\"tbl\"><table><thead><tr><th></th><th>Gần</th><th>Xa hơn</th></tr></thead><tbody><tr><td>Số ít</td><td>this book</td><td>that book</td></tr><tr><td>Số nhiều</td><td>these books</td><td>those books</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">This is my phone. <button type=\"button\" class=\"hn-tts\" data-tts=\"This is my phone.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây là điện thoại của tôi.</div></div><div class=\"ex\"><div lang=\"en\">That is An's house. <button type=\"button\" class=\"hn-tts\" data-tts=\"That is An's house.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Kia là nhà của An.</div></div><div class=\"ex\"><div lang=\"en\">These are my keys. <button type=\"button\" class=\"hn-tts\" data-tts=\"These are my keys.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây là chìa khóa của tôi.</div></div><div class=\"ex\"><div lang=\"en\">Those people are teachers. <button type=\"button\" class=\"hn-tts\" data-tts=\"Those people are teachers.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Những người kia là giáo viên.</div></div>"
+        },
+        {
+          "h": "Hỏi “Đây là cái gì?”",
+          "html": "<p><b>Công thức:</b> What is this / that? &nbsp;·&nbsp; What are these / those?</p><div class=\"ex\"><div lang=\"en\">What is this? It's a map. <button type=\"button\" class=\"hn-tts\" data-tts=\"What is this? It's a map.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây là cái gì? Đây là một tấm bản đồ.</div></div><div class=\"ex\"><div lang=\"en\">What are those? They're tickets. <button type=\"button\" class=\"hn-tts\" data-tts=\"What are those? They're tickets.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Những cái kia là gì? Đó là vé.</div></div><p>Trả lời số ít thường dùng <b>It's</b> (It is). Số nhiều dùng <b>They're</b> (They are).</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng cho nhiều vật ở gần:",
+          "o": [
+            "this",
+            "that",
+            "these",
+            "those"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“That is a station.” nói về:",
+          "o": [
+            "Nhiều nhà ga ở gần",
+            "Một nhà ga ở xa hơn",
+            "Nhiều nhà ga ở xa",
+            "Một nhà ga ở rất gần, đang cầm trên tay"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu hỏi đúng:",
+          "o": [
+            "What are this?",
+            "What is these?",
+            "What are those?",
+            "What is those?"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“These are my friends.” nghĩa là:",
+          "o": [
+            "Kia là bạn của tôi (một người).",
+            "Đây là bạn của tôi (nhiều người, ở gần).",
+            "Kia là bạn của tôi (nhiều người, ở xa).",
+            "Đây là bạn của tôi (một người)."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-04",
+      "title": "Tính từ sở hữu (my, your, his, her…)",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói “của tôi / của bạn / của cô ấy”",
+          "html": "<p><b>Giải thích:</b> Tính từ sở hữu đứng <b>trước danh từ</b> để nói vật đó thuộc về ai. Không thêm <i>a/an</i> ngay trước chúng: nói <i>my book</i>, không nói <i>a my book</i>.</p><div class=\"tbl\"><table><thead><tr><th>Chủ ngữ</th><th>Tính từ sở hữu</th><th>Ví dụ</th></tr></thead><tbody><tr><td>I</td><td>my</td><td>my name, my bag</td></tr><tr><td>you</td><td>your</td><td>your phone</td></tr><tr><td>he</td><td>his</td><td>his brother</td></tr><tr><td>she</td><td>her</td><td>her sister</td></tr><tr><td>it</td><td>its</td><td>its name (tên của con mèo / cái máy)</td></tr><tr><td>we</td><td>our</td><td>our house</td></tr><tr><td>they</td><td>their</td><td>their teacher</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">My name is Minh. <button type=\"button\" class=\"hn-tts\" data-tts=\"My name is Minh.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tên tôi là Minh.</div></div><div class=\"ex\"><div lang=\"en\">Is this your ticket? <button type=\"button\" class=\"hn-tts\" data-tts=\"Is this your ticket?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây có phải vé của bạn không?</div></div><div class=\"ex\"><div lang=\"en\">Their car is red. <button type=\"button\" class=\"hn-tts\" data-tts=\"Their car is red.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Xe của họ màu đỏ.</div></div>"
+        },
+        {
+          "h": "its và it's khác nhau",
+          "html": "<p><b>it's</b> = it is (nó là / trời thì…). <b>its</b> = của nó, không có dấu nháy.</p><div class=\"ex\"><div lang=\"en\">It's a cat. Its name is Mochi. <button type=\"button\" class=\"hn-tts\" data-tts=\"It's a cat. Its name is Mochi.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây là một con mèo. Tên của nó là Mochi.</div></div><p>'s sau tên người cũng chỉ sở hữu: <i>An's bag</i> = túi của An. Đó là cách khác, không phải tính từ sở hữu trong bảng trên.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“____ name is An.” (cô ấy)",
+          "o": [
+            "His",
+            "Her",
+            "Its",
+            "Their"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "This is a my book.",
+            "This is my book.",
+            "This is book my.",
+            "This is I book."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“It's cold today.” nghĩa là:",
+          "o": [
+            "Của nó lạnh hôm nay.",
+            "Trời lạnh hôm nay.",
+            "Họ lạnh hôm nay.",
+            "Cái áo của nó lạnh."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Our teacher is kind.” — Our tương ứng với:",
+          "o": [
+            "I",
+            "he",
+            "we",
+            "they"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-05",
+      "title": "Danh từ số nhiều và There is / There are",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Tạo số nhiều",
+          "html": "<p><b>Giải thích:</b> Hầu hết danh từ thêm <b>-s</b>: book → books. Một số thêm <b>-es</b> khi kết thúc bằng s, ss, sh, ch, x, o: bus → buses, box → boxes, tomato → tomatoes. Kết thúc bằng phụ âm + y: city → cities. Một số bất quy tắc phải nhớ: man → men, woman → women, child → children, person → people, foot → feet.</p><div class=\"tbl\"><table><thead><tr><th>Số ít</th><th>Số nhiều</th></tr></thead><tbody><tr><td>a bag</td><td>bags</td></tr><tr><td>a bus</td><td>buses</td></tr><tr><td>a city</td><td>cities</td></tr><tr><td>a child</td><td>children</td></tr><tr><td>a person</td><td>people</td></tr></tbody></table></div>"
+        },
+        {
+          "h": "There is / There are — “có … (ở đó)”",
+          "html": "<p><b>Công thức:</b> There is + danh từ số ít / không đếm được<br>There are + danh từ số nhiều</p><div class=\"ex\"><div lang=\"en\">There is a park near my house. <button type=\"button\" class=\"hn-tts\" data-tts=\"There is a park near my house.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Có một công viên gần nhà tôi.</div></div><div class=\"ex\"><div lang=\"en\">There are three rooms in the flat. <button type=\"button\" class=\"hn-tts\" data-tts=\"There are three rooms in the flat.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Trong căn hộ có ba phòng.</div></div><div class=\"ex\"><div lang=\"en\">There isn't a lift. <button type=\"button\" class=\"hn-tts\" data-tts=\"There isn't a lift.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Không có thang máy.</div></div><div class=\"ex\"><div lang=\"en\">Are there any shops here? Yes, there are. <button type=\"button\" class=\"hn-tts\" data-tts=\"Are there any shops here? Yes, there are.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Ở đây có cửa hàng nào không? Có.</div></div><p>Dùng <b>there is/are</b> khi giới thiệu sự tồn tại, không dùng <i>It has a park near my house</i> với nghĩa này.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Số nhiều của “child” là:",
+          "o": [
+            "childs",
+            "childes",
+            "children",
+            "childrens"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Chọn đúng:",
+          "o": [
+            "There is two books on the table.",
+            "There are two books on the table.",
+            "There have two books on the table.",
+            "They are two books on the table."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "There isn't any milk.",
+            "There aren't any milk.",
+            "There no is milk.",
+            "There isn't no milk."
+          ],
+          "c": 0
+        },
+        {
+          "q": "“There are many people in the station.” nghĩa là:",
+          "o": [
+            "Người trong nhà ga có nhiều nhà ga.",
+            "Trong nhà ga có nhiều người.",
+            "Những người ấy là nhà ga.",
+            "Nhà ga ở gần nhiều người."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-06",
+      "title": "Have / has",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói “có” (sở hữu)",
+          "html": "<p><b>Giải thích:</b> Dùng <b>have / has</b> để nói mình có một vật, một người trong gia đình, hoặc một đặc điểm (màu tóc, cảm giác đói/khát ở một số cụm quen).</p><p><b>Công thức:</b> I/you/we/they + have &nbsp;·&nbsp; he/she/it + has</p><div class=\"ex\"><div lang=\"en\">I have two sisters. <button type=\"button\" class=\"hn-tts\" data-tts=\"I have two sisters.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi có hai chị/em gái.</div></div><div class=\"ex\"><div lang=\"en\">Minh has a new phone. <button type=\"button\" class=\"hn-tts\" data-tts=\"Minh has a new phone.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Minh có một điện thoại mới.</div></div><div class=\"ex\"><div lang=\"en\">She has black hair. <button type=\"button\" class=\"hn-tts\" data-tts=\"She has black hair.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy có tóc đen.</div></div>"
+        },
+        {
+          "h": "Phủ định và câu hỏi",
+          "html": "<p><b>Giải thích:</b> Ở tiếng Anh hiện đại, câu phủ định và nghi vấn thường dùng <b>do/does</b> (như động từ thường).</p><p><b>Công thức:</b> Phủ định: do not (don't) / does not (doesn't) + have<br>Hỏi: Do/Does + chủ ngữ + have + …?</p><div class=\"ex\"><div lang=\"en\">I don't have a car. <button type=\"button\" class=\"hn-tts\" data-tts=\"I don't have a car.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi không có xe hơi.</div></div><div class=\"ex\"><div lang=\"en\">He doesn't have time today. <button type=\"button\" class=\"hn-tts\" data-tts=\"He doesn't have time today.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Hôm nay anh ấy không có thời gian.</div></div><div class=\"ex\"><div lang=\"en\">Do you have a pen? Yes, I do. / No, I don't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Do you have a pen? Yes, I do. / No, I don't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn có bút không? Có. / Không.</div></div><p>Anh cũng có thể gặp <i>have got / has got</i> (I have got a bike = I've got a bike), nghĩa tương đương “có”. Ở khóa này, dùng <b>have / has</b> là đủ và luôn đúng.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “She ____ a bike.”",
+          "o": [
+            "have",
+            "has",
+            "haves",
+            "having"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng của “They have a dog.”:",
+          "o": [
+            "They hasn't a dog.",
+            "They don't have a dog.",
+            "They doesn't have a dog.",
+            "They not have a dog."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu hỏi đúng:",
+          "o": [
+            "Has you a ticket?",
+            "Do you have a ticket?",
+            "Do you has a ticket?",
+            "Have you got a ticket have?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Minh has two brothers.” nghĩa là:",
+          "o": [
+            "Minh là hai người anh em.",
+            "Minh có hai anh/em trai.",
+            "Hai anh/em trai có Minh.",
+            "Minh không có anh em."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-07",
+      "title": "Thì hiện tại đơn — câu khẳng định",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Dùng thì hiện tại đơn khi nào",
+          "html": "<p><b>Giải thích:</b> Thì hiện tại đơn (Present Simple) nói về thói quen, lịch trình, sự thật chung, không phải hành động đang xảy ra ngay lúc này.</p><p><b>Công thức:</b> I/you/we/they + động từ nguyên mẫu &nbsp;·&nbsp; he/she/it + động từ + s/es</p><div class=\"ex\"><div lang=\"en\">I work in a shop. <button type=\"button\" class=\"hn-tts\" data-tts=\"I work in a shop.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi làm việc ở một cửa hàng.</div></div><div class=\"ex\"><div lang=\"en\">An lives in Ha Noi. <button type=\"button\" class=\"hn-tts\" data-tts=\"An lives in Ha Noi.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">An sống ở Hà Nội.</div></div><div class=\"ex\"><div lang=\"en\">They start work at eight. <button type=\"button\" class=\"hn-tts\" data-tts=\"They start work at eight.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Họ bắt đầu làm lúc tám giờ.</div></div><p>Dấu hiệu thường gặp: <b>always, usually, often, sometimes, never, every day, on Mondays</b>.</p><div class=\"ex\"><div lang=\"en\">Minh usually has coffee in the morning. <button type=\"button\" class=\"hn-tts\" data-tts=\"Minh usually has coffee in the morning.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Buổi sáng Minh thường uống cà phê.</div></div>"
+        },
+        {
+          "h": "Thêm s / es với he, she, it",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Quy tắc</th><th>Ví dụ</th></tr></thead><tbody><tr><td>Thêm -s</td><td>work → works, like → likes, play → plays</td></tr><tr><td>Thêm -es (s, sh, ch, x, o)</td><td>watch → watches, go → goes, do → does</td></tr><tr><td>Phụ âm + y → ies</td><td>study → studies, fly → flies (nhưng play → plays vì trước y là nguyên âm)</td></tr><tr><td>Bất quy tắc</td><td>have → has</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">She watches TV in the evening. <button type=\"button\" class=\"hn-tts\" data-tts=\"She watches TV in the evening.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Buổi tối cô ấy xem ti vi.</div></div><div class=\"ex\"><div lang=\"en\">He goes to school by bus. <button type=\"button\" class=\"hn-tts\" data-tts=\"He goes to school by bus.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Anh ấy đi học bằng xe buýt.</div></div><p>Không chia động từ ở chủ ngữ I/you/we/they: <i>I works</i> là sai. Chỉ he/she/it mới thêm s/es.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “An ____ English every day.”",
+          "o": [
+            "study",
+            "studys",
+            "studies",
+            "studying"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Thì hiện tại đơn thường dùng để nói về:",
+          "o": [
+            "Việc đang làm ngay lúc này",
+            "Thói quen hoặc sự thật chung",
+            "Việc đã xảy ra hôm qua",
+            "Kế hoạch chắc chắn tuần sau"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "He go to work at 8.",
+            "He goes to work at 8.",
+            "He going to work at 8.",
+            "He is goes to work at 8."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Dạng đúng của have với she:",
+          "o": [
+            "have",
+            "haves",
+            "has",
+            "having"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-08",
+      "title": "Thì hiện tại đơn — phủ định và câu hỏi",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Dùng do / does",
+          "html": "<p><b>Giải thích:</b> Để phủ định hoặc đặt câu hỏi ở thì hiện tại đơn, tiếng Anh dùng trợ động từ <b>do / does</b>. Động từ chính trở về nguyên mẫu, không còn thêm s.</p><p><b>Công thức:</b> Phủ định: I/you/we/they + don't + V &nbsp;·&nbsp; he/she/it + doesn't + V<br>Hỏi: Do + I/you/we/they + V? &nbsp;·&nbsp; Does + he/she/it + V?</p><div class=\"ex\"><div lang=\"en\">I don't eat fish. <button type=\"button\" class=\"hn-tts\" data-tts=\"I don't eat fish.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi không ăn cá.</div></div><div class=\"ex\"><div lang=\"en\">She doesn't work on Sunday. <button type=\"button\" class=\"hn-tts\" data-tts=\"She doesn't work on Sunday.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chủ nhật cô ấy không làm việc.</div></div><div class=\"ex\"><div lang=\"en\">Do you live near here? Yes, I do. / No, I don't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Do you live near here? Yes, I do. / No, I don't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn sống gần đây không? Có. / Không.</div></div><div class=\"ex\"><div lang=\"en\">Does Minh like coffee? Yes, he does. <button type=\"button\" class=\"hn-tts\" data-tts=\"Does Minh like coffee? Yes, he does.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Minh có thích cà phê không? Có.</div></div>"
+        },
+        {
+          "h": "Lỗi hay gặp",
+          "html": "<p>Sai: <i>She doesn't works</i>, <i>Does he likes tea?</i> — đã có does thì không thêm s vào động từ chính.</p><p>Sai: <i>She not work</i> — thiếu doesn't.</p><p>Trả lời ngắn dùng do/does, không lặp lại cả động từ: <i>Yes, she does.</i> (không nói <i>Yes, she likes.</i> trong câu trả lời ngắn này).</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “He ____ play football.”",
+          "o": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu hỏi đúng:",
+          "o": [
+            "Does An lives here?",
+            "Do An live here?",
+            "Does An live here?",
+            "An does live here?"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Trả lời ngắn đúng cho “Do they work here?”:",
+          "o": [
+            "Yes, they work.",
+            "Yes, they do.",
+            "Yes, they does.",
+            "Yes, they are."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "She doesn't likes tea.",
+            "She don't like tea.",
+            "She doesn't like tea.",
+            "She not likes tea."
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-09",
+      "title": "Từ để hỏi (What, Where, Who, When, Why, How)",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Hỏi thông tin, không chỉ yes/no",
+          "html": "<p><b>Giải thích:</b> Các từ để hỏi đứng đầu câu, rồi đến trợ động từ (do/does/is/are/can…), rồi chủ ngữ và động từ chính.</p><p><b>Công thức:</b> Từ để hỏi + trợ động từ + chủ ngữ + động từ chính…?</p><div class=\"tbl\"><table><thead><tr><th>Từ</th><th>Hỏi về</th><th>Ví dụ</th></tr></thead><tbody><tr><td>What</td><td>cái gì / việc gì</td><td>What do you do?</td></tr><tr><td>Where</td><td>ở đâu</td><td>Where do you live?</td></tr><tr><td>Who</td><td>ai</td><td>Who is your teacher?</td></tr><tr><td>When</td><td>khi nào</td><td>When do you start work?</td></tr><tr><td>Why</td><td>tại sao</td><td>Why are you late?</td></tr><tr><td>How</td><td>như thế nào</td><td>How are you? / How do you go to work?</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">What is your name? <button type=\"button\" class=\"hn-tts\" data-tts=\"What is your name?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tên bạn là gì?</div></div><div class=\"ex\"><div lang=\"en\">Where does An work? <button type=\"button\" class=\"hn-tts\" data-tts=\"Where does An work?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">An làm việc ở đâu?</div></div><div class=\"ex\"><div lang=\"en\">When is the meeting? <button type=\"button\" class=\"hn-tts\" data-tts=\"When is the meeting?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cuộc họp lúc nào?</div></div><div class=\"ex\"><div lang=\"en\">How old are you? I'm 28. <button type=\"button\" class=\"hn-tts\" data-tts=\"How old are you? I'm 28.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn bao nhiêu tuổi? Tôi 28 tuổi.</div></div>"
+        },
+        {
+          "h": "How many / How much / What time",
+          "html": "<p><b>How many</b> hỏi số lượng danh từ đếm được: <i>How many people are there?</i></p><p><b>How much</b> hỏi giá hoặc danh từ không đếm được: <i>How much is this? How much water do you drink?</i></p><p><b>What time</b> hỏi giờ: <i>What time do you get up?</i></p><div class=\"ex\"><div lang=\"en\">How much is the coffee? It's 3 dollars. <button type=\"button\" class=\"hn-tts\" data-tts=\"How much is the coffee? It's 3 dollars.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cà phê giá bao nhiêu? 3 đô.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Hỏi nơi chốn dùng:",
+          "o": [
+            "What",
+            "Where",
+            "When",
+            "Who"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Chọn câu đúng:",
+          "o": [
+            "Where you live?",
+            "Where do you live?",
+            "Where does you live?",
+            "Where are you live?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“How much is this bag?” hỏi về:",
+          "o": [
+            "Màu sắc",
+            "Số lượng túi (đếm được)",
+            "Giá tiền",
+            "Chủ sở hữu"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“Who is that?” nghĩa là:",
+          "o": [
+            "Cái kia là gì?",
+            "Người kia là ai?",
+            "Kia ở đâu?",
+            "Lúc nào vậy?"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-10",
+      "title": "Can / can't — khả năng và xin phép",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Can không đổi hình",
+          "html": "<p><b>Giải thích:</b> <b>can</b> dùng cho mọi chủ ngữ (I/you/he/she/we/they). Động từ đứng sau <b>can</b> luôn ở nguyên mẫu, không thêm s, không có to.</p><p><b>Công thức:</b> Chủ ngữ + can / can't + động từ nguyên mẫu</p><div class=\"ex\"><div lang=\"en\">I can speak English a little. <button type=\"button\" class=\"hn-tts\" data-tts=\"I can speak English a little.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi nói được một chút tiếng Anh.</div></div><div class=\"ex\"><div lang=\"en\">He can't drive. <button type=\"button\" class=\"hn-tts\" data-tts=\"He can't drive.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Anh ấy không biết lái xe.</div></div><div class=\"ex\"><div lang=\"en\">Can you help me? Yes, I can. / Sorry, I can't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Can you help me? Yes, I can. / Sorry, I can't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn giúp tôi được không? Được. / Xin lỗi, không được.</div></div><p>Viết tắt phủ định: <b>can't</b> (hoặc cannot). Không viết <i>can not</i> theo hai từ trong văn viết thông thường (dùng cannot hoặc can't).</p>"
+        },
+        {
+          "h": "Hai nghĩa hay dùng ở A1",
+          "html": "<p><b>Khả năng:</b> I can swim. (tôi biết / có thể bơi)</p><p><b>Xin phép hoặc nhờ giúp:</b> Can I sit here? Can you open the window?</p><div class=\"ex\"><div lang=\"en\">Can I use your phone? Sure, here you are. <button type=\"button\" class=\"hn-tts\" data-tts=\"Can I use your phone? Sure, here you are.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cho mình mượn điện thoại được không? Được, cầm đây.</div></div><p>Không nói <i>He cans swim</i> hay <i>He can to swim</i>.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng:",
+          "o": [
+            "She can sings.",
+            "She can to sing.",
+            "She can sing.",
+            "She cans sing."
+          ],
+          "c": 2
+        },
+        {
+          "q": "“Can I open the window?” thường là:",
+          "o": [
+            "Hỏi khả năng vật lý của cửa sổ",
+            "Xin phép",
+            "Hỏi giá tiền",
+            "Nói về quá khứ"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "He don't can swim.",
+            "He can't swim.",
+            "He isn't can swim.",
+            "He doesn't can swim."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Trả lời ngắn cho “Can you cook?”:",
+          "o": [
+            "Yes, I cook.",
+            "Yes, I do.",
+            "Yes, I can.",
+            "Yes, I am."
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-11",
+      "title": "Giới từ nơi chốn (in, on, at, under, next to)",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói một thứ ở đâu",
+          "html": "<p><b>Giải thích:</b> Giới từ nơi chốn đứng trước danh từ chỉ chỗ. Ở A1, nhớ vài cặp cố định sẽ đúng trong hầu hết tình huống hàng ngày.</p><div class=\"tbl\"><table><thead><tr><th>Giới từ</th><th>Dùng khi</th><th>Ví dụ</th></tr></thead><tbody><tr><td>in</td><td>trong một không gian, thành phố, quốc gia</td><td>in the room, in Ha Noi, in Vietnam, in a bag</td></tr><tr><td>on</td><td>trên bề mặt; trên đường/tầng</td><td>on the table, on the wall, on the second floor, on Tran Hung Dao Street</td></tr><tr><td>at</td><td>một điểm cụ thể</td><td>at the station, at the door, at home, at work, at school</td></tr><tr><td>under</td><td>ở dưới</td><td>under the chair</td></tr><tr><td>next to / near</td><td>bên cạnh / gần</td><td>next to the bank, near the park</td></tr><tr><td>between</td><td>ở giữa hai thứ</td><td>between the café and the shop</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">The keys are on the table. <button type=\"button\" class=\"hn-tts\" data-tts=\"The keys are on the table.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chìa khóa ở trên bàn.</div></div><div class=\"ex\"><div lang=\"en\">An is at work now. <button type=\"button\" class=\"hn-tts\" data-tts=\"An is at work now.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bây giờ An đang ở chỗ làm.</div></div><div class=\"ex\"><div lang=\"en\">There is a cat under the chair. <button type=\"button\" class=\"hn-tts\" data-tts=\"There is a cat under the chair.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Có một con mèo ở dưới ghế.</div></div>"
+        },
+        {
+          "h": "Cụm nên nhớ nguyên",
+          "html": "<p><b>at home, at work, at school</b> — không nói <i>at the home</i> với nghĩa “ở nhà”.</p><p><b>in bed</b> (đang nằm trên giường), <b>in the morning / afternoon / evening</b>, nhưng <b>at night</b>.</p><p>Những cặp này thuộc giới từ thời gian luôn, anh sẽ gặp lại ở bài giờ và ngày.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“The book is ____ the bag.” (ở trong túi)",
+          "o": [
+            "on",
+            "at",
+            "in",
+            "under"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Chọn cụm đúng:",
+          "o": [
+            "at the home",
+            "at home",
+            "in home",
+            "on home"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“She works ____ a hospital.”",
+          "o": [
+            "at",
+            "on",
+            "under",
+            "between"
+          ],
+          "c": 0
+        },
+        {
+          "q": "“The café is next to the bank.” nghĩa là:",
+          "o": [
+            "Quán cà phê ở trong ngân hàng",
+            "Quán cà phê ở trên ngân hàng",
+            "Quán cà phê ở cạnh ngân hàng",
+            "Quán cà phê ở dưới ngân hàng"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-12",
+      "title": "Giờ, ngày trong tuần và tháng",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói giờ",
+          "html": "<p><b>Công thức:</b> It's + giờ. &nbsp; Hỏi: What time is it? / What's the time?</p><div class=\"ex\"><div lang=\"en\">It's seven o'clock. <button type=\"button\" class=\"hn-tts\" data-tts=\"It's seven o'clock.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bảy giờ đúng.</div></div><div class=\"ex\"><div lang=\"en\">It's half past seven. (7:30) <button type=\"button\" class=\"hn-tts\" data-tts=\"It's half past seven. (7:30)\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bảy giờ rưỡi.</div></div><div class=\"ex\"><div lang=\"en\">It's quarter past seven. (7:15) <button type=\"button\" class=\"hn-tts\" data-tts=\"It's quarter past seven. (7:15)\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bảy giờ mười lăm.</div></div><div class=\"ex\"><div lang=\"en\">It's quarter to eight. (7:45) <button type=\"button\" class=\"hn-tts\" data-tts=\"It's quarter to eight. (7:45)\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Còn mười lăm phút nữa đến tám giờ.</div></div><p>Cách đọc số cũng dùng được và rất rõ: <i>It's seven thirty. It's seven fifteen. It's seven forty-five.</i></p><p>Giới từ giờ: <b>at</b> + giờ: <i>at 7 o'clock, at half past eight</i>. Buổi: <b>in</b> the morning/afternoon/evening, <b>at</b> night.</p>"
+        },
+        {
+          "h": "Ngày và tháng",
+          "html": "<p>Các ngày: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Dùng <b>on</b>: on Monday, on Friday evening, on the first of May.</p><p>Các tháng: January, February, March, April, May, June, July, August, September, October, November, December. Dùng <b>in</b>: in May, in December.</p><div class=\"ex\"><div lang=\"en\">I work from Monday to Friday. <button type=\"button\" class=\"hn-tts\" data-tts=\"I work from Monday to Friday.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi làm từ thứ Hai đến thứ Sáu.</div></div><div class=\"ex\"><div lang=\"en\">Her birthday is in August. <button type=\"button\" class=\"hn-tts\" data-tts=\"Her birthday is in August.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Sinh nhật cô ấy vào tháng Tám.</div></div><p>Viết thứ và tháng trong tiếng Anh luôn viết hoa.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“7:30” nói tự nhiên là:",
+          "o": [
+            "It's half past seven.",
+            "It's half to seven.",
+            "It's quarter past seven.",
+            "It's seven o'clock."
+          ],
+          "c": 0
+        },
+        {
+          "q": "Chọn giới từ đúng: “The class starts ____ 9 o'clock.”",
+          "o": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“I play football ____ Sunday.”",
+          "o": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Her birthday is ____ June.”",
+          "o": [
+            "on",
+            "at",
+            "in",
+            "from"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-13",
+      "title": "Thì hiện tại tiếp diễn (be + V-ing)",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói việc đang xảy ra lúc này",
+          "html": "<p><b>Giải thích:</b> Thì hiện tại tiếp diễn mô tả hành động đang diễn ra ngay bây giờ hoặc quanh thời điểm nói. Khác với hiện tại đơn (thói quen).</p><p><b>Công thức:</b> Chủ ngữ + am/is/are + V-ing</p><div class=\"ex\"><div lang=\"en\">I am cooking now. <button type=\"button\" class=\"hn-tts\" data-tts=\"I am cooking now.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bây giờ tôi đang nấu ăn.</div></div><div class=\"ex\"><div lang=\"en\">She is talking on the phone. <button type=\"button\" class=\"hn-tts\" data-tts=\"She is talking on the phone.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy đang nói chuyện điện thoại.</div></div><div class=\"ex\"><div lang=\"en\">They aren't watching TV. They're reading. <button type=\"button\" class=\"hn-tts\" data-tts=\"They aren't watching TV. They're reading.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Họ không đang xem ti vi. Họ đang đọc.</div></div><div class=\"ex\"><div lang=\"en\">Are you working today? Yes, I am. <button type=\"button\" class=\"hn-tts\" data-tts=\"Are you working today? Yes, I am.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Hôm nay bạn có đang làm việc không? Có.</div></div><p>Dấu hiệu: <b>now, right now, at the moment, Look!, Listen!</b></p>"
+        },
+        {
+          "h": "Cách thêm -ing và so sánh hai thì",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Động từ</th><th>V-ing</th><th>Ghi chú</th></tr></thead><tbody><tr><td>work</td><td>working</td><td>thêm -ing</td></tr><tr><td>make</td><td>making</td><td>bỏ e cuối</td></tr><tr><td>sit</td><td>sitting</td><td>gấp phụ âm cuối ngắn (sit, run, swim)</td></tr><tr><td>lie</td><td>lying</td><td>ie → y + ing</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">He usually drinks tea, but today he is drinking coffee. <button type=\"button\" class=\"hn-tts\" data-tts=\"He usually drinks tea, but today he is drinking coffee.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Anh ấy thường uống trà, nhưng hôm nay đang uống cà phê.</div></div><p>Một số động từ trạng thái ít dùng tiếp diễn ở A1: <i>like, love, want, know, have</i> (khi have = sở hữu). Nói <i>I like this song</i>, không nói <i>I am liking this song</i>.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “Be quiet! The baby ____.”",
+          "o": [
+            "sleeps",
+            "is sleeping",
+            "sleep",
+            "is sleep"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào nói thói quen, không phải “đang xảy ra”?",
+          "o": [
+            "She is cooking now.",
+            "They are working at the moment.",
+            "He goes to work at 8 every day.",
+            "Listen! An is singing."
+          ],
+          "c": 2
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "He isn't working today.",
+            "He doesn't working today.",
+            "He not is working today.",
+            "He isn't work today."
+          ],
+          "c": 0
+        },
+        {
+          "q": "V-ing của make là:",
+          "o": [
+            "makeing",
+            "making",
+            "makking",
+            "makin"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-14",
+      "title": "Some / any và danh từ đếm được, không đếm được",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Đếm được và không đếm được",
+          "html": "<p><b>Giải thích:</b> Danh từ <b>đếm được</b> có số ít/số nhiều: a cup, two cups. Danh từ <b>không đếm được</b> không có a/an và không thêm s ở A1: water, tea, rice, bread, milk, money, music, information.</p><p>Đơn vị giúp “đếm” thứ không đếm được: <i>a cup of tea, a bottle of water, a piece of bread, a bowl of rice</i>.</p><p><b>Công thức:</b> some — thường ở câu khẳng định<br>any — thường ở câu phủ định và câu hỏi</p><div class=\"ex\"><div lang=\"en\">I have some friends in Osaka. <button type=\"button\" class=\"hn-tts\" data-tts=\"I have some friends in Osaka.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi có vài người bạn ở Osaka.</div></div><div class=\"ex\"><div lang=\"en\">We don't have any milk. <button type=\"button\" class=\"hn-tts\" data-tts=\"We don't have any milk.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chúng tôi không còn sữa.</div></div><div class=\"ex\"><div lang=\"en\">Is there any sugar? <button type=\"button\" class=\"hn-tts\" data-tts=\"Is there any sugar?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Có đường không?</div></div><p>Ngoại lệ hay gặp: lời mời hoặc lời đề nghị vẫn dùng <b>some</b>: <i>Would you like some tea? Can I have some water?</i></p>"
+        },
+        {
+          "h": "a lot of, much, many",
+          "html": "<p><b>a lot of</b> dùng được với cả hai loại: a lot of books, a lot of water.</p><p><b>many</b> + đếm được số nhiều (nhất là phủ định/hỏi): many people, How many chairs?</p><p><b>much</b> + không đếm được (nhất là phủ định/hỏi): much time, How much milk?</p><div class=\"ex\"><div lang=\"en\">I don't have much time today. <button type=\"button\" class=\"hn-tts\" data-tts=\"I don't have much time today.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Hôm nay tôi không có nhiều thời gian.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "I want a water.",
+            "I want two rices.",
+            "I want a cup of tea.",
+            "I want a money."
+          ],
+          "c": 2
+        },
+        {
+          "q": "Chọn đúng: “There isn't ____ milk.”",
+          "o": [
+            "some",
+            "any",
+            "a",
+            "many"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Would you like ____ coffee?” (mời)",
+          "o": [
+            "any",
+            "some",
+            "a coffees",
+            "much"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“How many” đi với:",
+          "o": [
+            "water",
+            "bread",
+            "chairs",
+            "money"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-15",
+      "title": "Like, love, hate",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nói sở thích",
+          "html": "<p><b>Giải thích:</b> Sau <b>like / love / hate</b> có thể là danh từ, hoặc động từ thêm <b>-ing</b>. Ở A1 cả hai cách đều đúng và rất hay dùng.</p><p><b>Công thức:</b> Chủ ngữ + like/love/hate + danh từ<br>Chủ ngữ + like/love/hate + V-ing</p><div class=\"ex\"><div lang=\"en\">I like coffee. <button type=\"button\" class=\"hn-tts\" data-tts=\"I like coffee.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi thích cà phê.</div></div><div class=\"ex\"><div lang=\"en\">An loves music. <button type=\"button\" class=\"hn-tts\" data-tts=\"An loves music.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">An rất thích nhạc.</div></div><div class=\"ex\"><div lang=\"en\">Minh hates getting up early. <button type=\"button\" class=\"hn-tts\" data-tts=\"Minh hates getting up early.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Minh ghét phải dậy sớm.</div></div><div class=\"ex\"><div lang=\"en\">They like watching films. <button type=\"button\" class=\"hn-tts\" data-tts=\"They like watching films.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Họ thích xem phim.</div></div>"
+        },
+        {
+          "h": "Hỏi và trả lời",
+          "html": "<p><b>Công thức:</b> Do/Does + chủ ngữ + like + …?</p><div class=\"ex\"><div lang=\"en\">Do you like spicy food? Yes, I do. / No, I don't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Do you like spicy food? Yes, I do. / No, I don't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn có thích đồ cay không? Có. / Không.</div></div><div class=\"ex\"><div lang=\"en\">What kind of films do you like? I like comedies. <button type=\"button\" class=\"hn-tts\" data-tts=\"What kind of films do you like? I like comedies.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn thích loại phim nào? Tôi thích phim hài.</div></div><p>Mức độ: <b>love</b> mạnh hơn like; <b>hate</b> là không thích nhiều. Muốn nhẹ hơn hate, dùng <i>don't like</i>.</p><p>Với he/she nhớ chia: <i>She likes tea. He doesn't like tea.</i></p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng:",
+          "o": [
+            "She like coffee.",
+            "She likes coffee.",
+            "She liking coffee.",
+            "She is like coffee."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "I like swim.",
+            "I like swimming.",
+            "I like to swimming.",
+            "I am like swimming."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“He hates loud music.” nghĩa là:",
+          "o": [
+            "Anh ấy rất thích nhạc ồn.",
+            "Anh ấy không để ý đến nhạc ồn.",
+            "Anh ấy rất không thích nhạc ồn.",
+            "Anh ấy đang nghe nhạc ồn."
+          ],
+          "c": 2
+        },
+        {
+          "q": "Câu hỏi đúng:",
+          "o": [
+            "Does you like tea?",
+            "Do you like tea?",
+            "Do you likes tea?",
+            "Are you like tea?"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-16",
+      "title": "Câu mệnh lệnh và Let's",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Nhờ, bảo, hướng dẫn",
+          "html": "<p><b>Giải thích:</b> Câu mệnh lệnh dùng động từ nguyên mẫu, không có chủ ngữ <i>you</i>. Thêm <b>please</b> để lịch sự. Phủ định dùng <b>Don't</b>.</p><p><b>Công thức:</b> V (nguyên mẫu) + …, please.<br>Don't + V + …</p><div class=\"ex\"><div lang=\"en\">Sit down, please. <button type=\"button\" class=\"hn-tts\" data-tts=\"Sit down, please.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Xin mời ngồi.</div></div><div class=\"ex\"><div lang=\"en\">Open your book. <button type=\"button\" class=\"hn-tts\" data-tts=\"Open your book.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Mở sách ra.</div></div><div class=\"ex\"><div lang=\"en\">Don't be late. <button type=\"button\" class=\"hn-tts\" data-tts=\"Don't be late.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đừng đến trễ.</div></div><div class=\"ex\"><div lang=\"en\">Don't take photos here. <button type=\"button\" class=\"hn-tts\" data-tts=\"Don't take photos here.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Ở đây không chụp ảnh.</div></div>"
+        },
+        {
+          "h": "Let's — rủ cùng làm",
+          "html": "<p><b>Công thức:</b> Let's + động từ nguyên mẫu</p><div class=\"ex\"><div lang=\"en\">Let's have lunch. <button type=\"button\" class=\"hn-tts\" data-tts=\"Let's have lunch.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Mình ăn trưa đi.</div></div><div class=\"ex\"><div lang=\"en\">Let's not wait. It's late. <button type=\"button\" class=\"hn-tts\" data-tts=\"Let's not wait. It's late.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Mình đừng đợi nữa. Muộn rồi.</div></div><p>Let's = Let us. Dùng khi rủ người đang nói chuyện cùng mình, không dùng để ra lệnh cho người khác làm một mình.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Câu mệnh lệnh lịch sự:",
+          "o": [
+            "You sit down.",
+            "Sit down, please.",
+            "Sitting down, please.",
+            "To sit down please."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "Don't be late.",
+            "Not be late.",
+            "Doesn't be late.",
+            "Don't to be late."
+          ],
+          "c": 0
+        },
+        {
+          "q": "“Let's take a taxi.” nghĩa là:",
+          "o": [
+            "Anh hãy đi taxi một mình.",
+            "Chúng ta đi taxi đi.",
+            "Họ đang đi taxi.",
+            "Cấm đi taxi."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào dùng để rủ cùng làm?",
+          "o": [
+            "Open the door.",
+            "Don't open the door.",
+            "Let's open the door.",
+            "You can open the door?"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-17",
+      "title": "Was / were — quá khứ của be",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Hôm qua, tuần trước, lúc đó",
+          "html": "<p><b>Giải thích:</b> Quá khứ của <b>am/is</b> là <b>was</b>. Quá khứ của <b>are</b> là <b>were</b>. Dùng khi nói trạng thái hoặc vị trí trong quá khứ.</p><p><b>Công thức:</b> I/he/she/it + was &nbsp;·&nbsp; you/we/they + were</p><div class=\"tbl\"><table><thead><tr><th>Hiện tại</th><th>Quá khứ</th></tr></thead><tbody><tr><td>I am tired.</td><td>I was tired yesterday.</td></tr><tr><td>She is at home.</td><td>She was at home last night.</td></tr><tr><td>They are at work.</td><td>They were at work on Monday.</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">I was in Osaka last week. <button type=\"button\" class=\"hn-tts\" data-tts=\"I was in Osaka last week.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tuần trước tôi ở Osaka.</div></div><div class=\"ex\"><div lang=\"en\">The shop wasn't open. <button type=\"button\" class=\"hn-tts\" data-tts=\"The shop wasn't open.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cửa hàng đã không mở.</div></div><div class=\"ex\"><div lang=\"en\">Were you at home? Yes, I was. / No, I wasn't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Were you at home? Yes, I was. / No, I wasn't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Lúc đó bạn có ở nhà không? Có. / Không.</div></div>"
+        },
+        {
+          "h": "Dấu hiệu thời gian quá khứ",
+          "html": "<p>Các cụm hay gặp: <b>yesterday, last night, last week, last month, last year, in 2020, two days ago</b>.</p><p>Phủ định: was not = wasn't, were not = weren't. Hỏi: Was I/he/she/it…? Were you/we/they…?</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Chọn đúng: “She ____ at school yesterday.”",
+          "o": [
+            "is",
+            "was",
+            "were",
+            "be"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "They wasn't at home.",
+            "They weren't at home.",
+            "They didn't were at home.",
+            "They not were at home."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu hỏi đúng:",
+          "o": [
+            "Was you tired?",
+            "Were you tired?",
+            "Did you were tired?",
+            "Are you tired yesterday?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“We were in Da Nang last year.” nghĩa là:",
+          "o": [
+            "Năm nay chúng tôi ở Đà Nẵng.",
+            "Năm ngoái chúng tôi đã ở Đà Nẵng.",
+            "Chúng tôi sẽ ở Đà Nẵng.",
+            "Chúng tôi không ở Đà Nẵng."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-np-18",
+      "title": "Thì quá khứ đơn — động từ thường và vài động từ bất quy tắc",
+      "level": "A1",
+      "type": "Ngữ pháp",
+      "sections": [
+        {
+          "h": "Kể việc đã xảy ra và đã xong",
+          "html": "<p><b>Giải thích:</b> Thì quá khứ đơn kể hành động đã kết thúc trong quá khứ. Động từ thường thêm <b>-ed</b>. Nhiều động từ thông dụng là bất quy tắc, phải nhớ dạng quá khứ.</p><p><b>Công thức:</b> Khẳng định: Chủ ngữ + V-ed / V quá khứ bất quy tắc<br>Phủ định: didn't + động từ nguyên mẫu<br>Hỏi: Did + chủ ngữ + động từ nguyên mẫu?</p><div class=\"tbl\"><table><thead><tr><th>Hiện tại</th><th>Quá khứ</th><th>Ghi chú</th></tr></thead><tbody><tr><td>work, play, live</td><td>worked, played, lived</td><td>thêm -ed (live bỏ e rồi thêm ed)</td></tr><tr><td>stop</td><td>stopped</td><td>gấp phụ âm cuối</td></tr><tr><td>study</td><td>studied</td><td>y → ied</td></tr><tr><td>go, have, do, get</td><td>went, had, did, got</td><td>bất quy tắc</td></tr><tr><td>come, eat, see, make, buy</td><td>came, ate, saw, made, bought</td><td>bất quy tắc</td></tr></tbody></table></div><div class=\"ex\"><div lang=\"en\">I visited my parents yesterday. <button type=\"button\" class=\"hn-tts\" data-tts=\"I visited my parents yesterday.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Hôm qua tôi đã thăm bố mẹ.</div></div><div class=\"ex\"><div lang=\"en\">Minh went to the market this morning. <button type=\"button\" class=\"hn-tts\" data-tts=\"Minh went to the market this morning.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Sáng nay Minh đã đi chợ.</div></div><div class=\"ex\"><div lang=\"en\">They didn't watch TV last night. <button type=\"button\" class=\"hn-tts\" data-tts=\"They didn't watch TV last night.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tối qua họ không xem ti vi.</div></div><div class=\"ex\"><div lang=\"en\">Did you buy milk? Yes, I did. / No, I didn't. <button type=\"button\" class=\"hn-tts\" data-tts=\"Did you buy milk? Yes, I did. / No, I didn't.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn có mua sữa không? Có. / Không.</div></div>"
+        },
+        {
+          "h": "Lưu ý quan trọng",
+          "html": "<p>Đã có <b>did / didn't</b> thì động từ chính về nguyên mẫu: sai nếu nói <i>Did you went?</i> hay <i>I didn't went</i>. Đúng: <i>Did you go? I didn't go.</i></p><p>Be không dùng did ở A1 cho câu với was/were: nói <i>Was she at home?</i>, không nói <i>Did she was at home?</i></p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Quá khứ của go là:",
+          "o": [
+            "goed",
+            "gone",
+            "went",
+            "going"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "Did you went home?",
+            "Did you go home?",
+            "Did you going home?",
+            "You did went home?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Phủ định đúng:",
+          "o": [
+            "I didn't saw him.",
+            "I didn't see him.",
+            "I not saw him.",
+            "I wasn't see him."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“She bought some fruit.” nghĩa là:",
+          "o": [
+            "Cô ấy thường mua trái cây.",
+            "Cô ấy đang mua trái cây.",
+            "Cô ấy đã mua một ít trái cây.",
+            "Cô ấy sẽ mua trái cây."
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-01",
+      "title": "Chào hỏi và giới thiệu",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Lời chào theo thời điểm",
+          "html": "<p><b>Giải thích:</b> Dùng lời chào phù hợp thời trong ngày. <b>Hello / Hi</b> dùng mọi lúc, Hi thân mật hơn. Buổi tối khi gặp mặt nói <b>Good evening</b>; <b>Good night</b> là lời chúc khi chia tay đi ngủ, không dùng để chào lúc mới gặp.</p><div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Khi nào dùng</th></tr></thead><tbody><tr><td>Hello / Hi</td><td>mọi lúc</td></tr><tr><td>Good morning</td><td>buổi sáng</td></tr><tr><td>Good afternoon</td><td>buổi chiều</td></tr><tr><td>Good evening</td><td>buổi tối (khi gặp)</td></tr><tr><td>Good night</td><td>khi chào tạm biệt để đi ngủ</td></tr><tr><td>Goodbye / Bye</td><td>khi chia tay</td></tr><tr><td>See you (later / tomorrow)</td><td>hẹn gặp lại / ngày mai gặp lại</td></tr><tr><td>Nice to meet you</td><td>rất vui được gặp bạn (lần đầu)</td></tr></tbody></table></div>"
+        },
+        {
+          "h": "Giới thiệu tên, quê quán",
+          "html": "<div class=\"ex\"><div lang=\"en\">Hello, my name is Minh. What's your name? <button type=\"button\" class=\"hn-tts\" data-tts=\"Hello, my name is Minh. What's your name?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Xin chào, tôi tên Minh. Bạn tên gì?</div></div><div class=\"ex\"><div lang=\"en\">I'm An. Nice to meet you. <button type=\"button\" class=\"hn-tts\" data-tts=\"I'm An. Nice to meet you.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi là An. Rất vui được gặp bạn.</div></div><div class=\"ex\"><div lang=\"en\">Nice to meet you too. <button type=\"button\" class=\"hn-tts\" data-tts=\"Nice to meet you too.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi cũng vậy.</div></div><div class=\"ex\"><div lang=\"en\">Where are you from? I'm from Vietnam. <button type=\"button\" class=\"hn-tts\" data-tts=\"Where are you from? I'm from Vietnam.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn đến từ đâu? Tôi đến từ Việt Nam.</div></div><div class=\"ex\"><div lang=\"en\">How are you? I'm fine, thanks. And you? <button type=\"button\" class=\"hn-tts\" data-tts=\"How are you? I'm fine, thanks. And you?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn khỏe không? Tôi khỏe, cảm ơn. Còn bạn?</div></div><p>Trả lời lịch sự thường có <b>thanks / thank you</b>. Muốn hỏi lại, thêm <b>And you?</b></p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Buổi sáng gặp đồng nghiệp, lời chào phù hợp nhất:",
+          "o": [
+            "Good night",
+            "Good morning",
+            "Good evening",
+            "See you yesterday"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Khi mới gặp lần đầu, nói:",
+          "o": [
+            "Good night",
+            "Nice to meet you",
+            "How old is it?",
+            "Don't mention it"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Where are you from?” hỏi về:",
+          "o": [
+            "Tuổi",
+            "Tên",
+            "Quê quán / quốc gia",
+            "Nghề nghiệp"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Trước khi đi ngủ, nói:",
+          "o": [
+            "Good evening",
+            "Good morning",
+            "Good night",
+            "Hello night"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-02",
+      "title": "Số đếm, tuổi và số điện thoại",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Số 0–20 và số tròn",
+          "html": "<p><b>Giải thích:</b> Đọc số là nền để nói tuổi, giá tiền, giờ, số điện thoại. 0 đọc <b>zero</b> (trong số điện thoại cũng có thể đọc <b>oh</b>).</p><div class=\"tbl\"><table><thead><tr><th>Số</th><th>Cách đọc</th></tr></thead><tbody><tr><td>0–10</td><td>zero, one, two, three, four, five, six, seven, eight, nine, ten</td></tr><tr><td>11–20</td><td>eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty</td></tr><tr><td>21, 22…</td><td>twenty-one, twenty-two</td></tr><tr><td>30, 40, 50, 60, 70, 80, 90, 100</td><td>thirty, forty, fifty, sixty, seventy, eighty, ninety, a hundred</td></tr></tbody></table></div><p>Lưu ý viết: <b>forty</b> (không phải fourty). 15 là fifteen, 50 là fifty — nghe gần nhau, nhìn chữ để khỏi lẫn.</p>"
+        },
+        {
+          "h": "Tuổi và số điện thoại",
+          "html": "<p><b>Công thức:</b> How old are you? — I'm + số + years old.</p><div class=\"ex\"><div lang=\"en\">How old are you? I'm 26 (twenty-six) years old. <button type=\"button\" class=\"hn-tts\" data-tts=\"How old are you? I'm 26 (twenty-six) years old.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn bao nhiêu tuổi? Tôi 26 tuổi.</div></div><div class=\"ex\"><div lang=\"en\">She is 30 years old. <button type=\"button\" class=\"hn-tts\" data-tts=\"She is 30 years old.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy 30 tuổi.</div></div><p>Hỏi số điện thoại: <b>What's your phone number?</b> Đọc từng chữ số, ngắt nhịp cho dễ nghe.</p><div class=\"ex\"><div lang=\"en\">What's your phone number? It's 090 123 4567. <button type=\"button\" class=\"hn-tts\" data-tts=\"What's your phone number? It's 090 123 4567.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Số điện thoại của bạn là gì? 090 123 4567.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“fifteen” là số:",
+          "o": [
+            "5",
+            "14",
+            "15",
+            "50"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Cách viết đúng của 40:",
+          "o": [
+            "fourty",
+            "forty",
+            "fourtyy",
+            "forti"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu đúng khi nói tuổi:",
+          "o": [
+            "I have 26 years.",
+            "I am 26 years old.",
+            "I am 26 years.",
+            "My years are 26."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“What's your phone number?” hỏi về:",
+          "o": [
+            "Tuổi",
+            "Địa chỉ nhà",
+            "Số điện thoại",
+            "Mã quốc gia trên hộ chiếu"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-03",
+      "title": "Gia đình",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Người trong nhà",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead><tbody><tr><td>family</td><td>gia đình</td></tr><tr><td>mother / mum / mom</td><td>mẹ</td></tr><tr><td>father / dad</td><td>bố</td></tr><tr><td>parents</td><td>bố mẹ</td></tr><tr><td>brother / sister</td><td>anh hoặc em trai / chị hoặc em gái</td></tr><tr><td>son / daughter</td><td>con trai / con gái</td></tr><tr><td>husband / wife</td><td>chồng / vợ</td></tr><tr><td>grandfather / grandmother</td><td>ông / bà</td></tr><tr><td>grandparents</td><td>ông bà</td></tr><tr><td>child / children</td><td>con / các con (số nhiều bất quy tắc)</td></tr></tbody></table></div><p><b>older brother</b> = anh trai, <b>younger sister</b> = em gái. Tiếng Anh không có sẵn cặp “anh/chị/em” như tiếng Việt, nên thường thêm older/younger khi cần rõ.</p>"
+        },
+        {
+          "h": "Nói về gia đình mình",
+          "html": "<div class=\"ex\"><div lang=\"en\">There are four people in my family. <button type=\"button\" class=\"hn-tts\" data-tts=\"There are four people in my family.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Gia đình tôi có bốn người.</div></div><div class=\"ex\"><div lang=\"en\">I live with my parents. <button type=\"button\" class=\"hn-tts\" data-tts=\"I live with my parents.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi ở với bố mẹ.</div></div><div class=\"ex\"><div lang=\"en\">I have one older brother and one younger sister. <button type=\"button\" class=\"hn-tts\" data-tts=\"I have one older brother and one younger sister.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi có một anh trai và một em gái.</div></div><div class=\"ex\"><div lang=\"en\">An's husband is a cook. <button type=\"button\" class=\"hn-tts\" data-tts=\"An's husband is a cook.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chồng của An là đầu bếp.</div></div><div class=\"ex\"><div lang=\"en\">This is a photo of my family. <button type=\"button\" class=\"hn-tts\" data-tts=\"This is a photo of my family.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đây là ảnh gia đình tôi.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“parents” nghĩa là:",
+          "o": [
+            "Ông bà",
+            "Bố mẹ",
+            "Con cái",
+            "Anh chị em"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Số nhiều của child là:",
+          "o": [
+            "childs",
+            "childes",
+            "children",
+            "childrens"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“I have an older sister.” nghĩa là:",
+          "o": [
+            "Tôi có một em gái.",
+            "Tôi có một chị gái.",
+            "Tôi là chị gái.",
+            "Tôi không có chị em."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“wife” là:",
+          "o": [
+            "vợ",
+            "chồng",
+            "mẹ",
+            "con gái"
+          ],
+          "c": 0
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-04",
+      "title": "Nghề nghiệp",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Tên nghề thường gặp",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead><tbody><tr><td>teacher</td><td>giáo viên</td></tr><tr><td>student</td><td>học sinh / sinh viên</td></tr><tr><td>doctor / nurse</td><td>bác sĩ / y tá, điều dưỡng</td></tr><tr><td>engineer</td><td>kỹ sư</td></tr><tr><td>office worker</td><td>nhân viên văn phòng</td></tr><tr><td>shop assistant</td><td>nhân viên bán hàng</td></tr><tr><td>cook / chef</td><td>người nấu ăn / đầu bếp</td></tr><tr><td>driver</td><td>tài xế</td></tr><tr><td>farmer</td><td>nông dân</td></tr><tr><td>police officer</td><td>cảnh sát</td></tr></tbody></table></div><p>Trước nghề số ít thường có <b>a/an</b>: a teacher, an engineer. Không nói <i>She is teacher</i>.</p>"
+        },
+        {
+          "h": "Hỏi và nói chỗ làm",
+          "html": "<p><b>Công thức:</b> What do you do? = Bạn làm nghề gì?<br>I am a/an + nghề. I work in/at + nơi.</p><div class=\"ex\"><div lang=\"en\">What do you do? I'm a teacher. I work at a school. <button type=\"button\" class=\"hn-tts\" data-tts=\"What do you do? I'm a teacher. I work at a school.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn làm nghề gì? Tôi là giáo viên. Tôi làm việc ở một trường học.</div></div><div class=\"ex\"><div lang=\"en\">Minh is an engineer. He works for a small company. <button type=\"button\" class=\"hn-tts\" data-tts=\"Minh is an engineer. He works for a small company.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Minh là kỹ sư. Anh ấy làm cho một công ty nhỏ.</div></div><div class=\"ex\"><div lang=\"en\">I'm a student. I don't have a job now. <button type=\"button\" class=\"hn-tts\" data-tts=\"I'm a student. I don't have a job now.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi là sinh viên. Hiện tôi chưa đi làm.</div></div><p><b>work for</b> + công ty/người; <b>work at / in</b> + nơi (at a hospital, in an office).</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“What do you do?” thường hỏi:",
+          "o": [
+            "Bạn đang làm gì ngay lúc này?",
+            "Bạn làm nghề gì?",
+            "Bạn khỏe không?",
+            "Bạn ở đâu?"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu đúng:",
+          "o": [
+            "She is engineer.",
+            "She is an engineer.",
+            "She is a engineer.",
+            "She engineer."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“nurse” là:",
+          "o": [
+            "bác sĩ",
+            "y tá / điều dưỡng",
+            "tài xế",
+            "giáo viên"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“I work at a school.” phù hợp với nghề:",
+          "o": [
+            "farmer",
+            "teacher",
+            "chef in a hotel kitchen only",
+            "driver on the motorway"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-05",
+      "title": "Đồ ăn và thức uống",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Thức ăn và đồ uống hàng ngày",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Nhóm</th><th>Từ vựng</th></tr></thead><tbody><tr><td>Bữa ăn</td><td>breakfast (bữa sáng), lunch (bữa trưa), dinner (bữa tối)</td></tr><tr><td>Đồ uống</td><td>water, tea, coffee, juice, milk</td></tr><tr><td>Đồ ăn</td><td>rice, bread, noodles, fish, chicken, beef, vegetables, fruit, salad, egg, soup</td></tr><tr><td>Vị</td><td>sweet (ngọt), spicy (cay), hot (nóng), cold (lạnh)</td></tr></tbody></table></div><p>Nhiều từ đồ ăn là không đếm được: water, rice, bread, fish (khi nói thịt cá nói chung). Nói <i>some rice, a bowl of rice, a cup of coffee</i>.</p>"
+        },
+        {
+          "h": "Gọi món và nói sở thích ăn uống",
+          "html": "<div class=\"ex\"><div lang=\"en\">I'd like a cup of coffee, please. <button type=\"button\" class=\"hn-tts\" data-tts=\"I'd like a cup of coffee, please.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cho tôi một tách cà phê ạ.</div></div><div class=\"ex\"><div lang=\"en\">Can I have the menu, please? <button type=\"button\" class=\"hn-tts\" data-tts=\"Can I have the menu, please?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cho tôi xem thực đơn được không?</div></div><div class=\"ex\"><div lang=\"en\">I'm vegetarian. I don't eat meat. <button type=\"button\" class=\"hn-tts\" data-tts=\"I'm vegetarian. I don't eat meat.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi ăn chay. Tôi không ăn thịt.</div></div><div class=\"ex\"><div lang=\"en\">This soup is very good. <button type=\"button\" class=\"hn-tts\" data-tts=\"This soup is very good.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Món súp này rất ngon.</div></div><div class=\"ex\"><div lang=\"en\">I don't like spicy food. <button type=\"button\" class=\"hn-tts\" data-tts=\"I don't like spicy food.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi không thích đồ cay.</div></div><p><b>I'd like</b> (= I would like) lịch sự hơn I want khi gọi món.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Bữa sáng là:",
+          "o": [
+            "dinner",
+            "lunch",
+            "breakfast",
+            "menu"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Câu lịch sự khi gọi món:",
+          "o": [
+            "I want coffee.",
+            "Give me coffee.",
+            "I'd like a cup of coffee, please.",
+            "Coffee now."
+          ],
+          "c": 2
+        },
+        {
+          "q": "“vegetables” nghĩa là:",
+          "o": [
+            "trái cây",
+            "rau",
+            "thịt bò",
+            "mì"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu nào đúng?",
+          "o": [
+            "I would like a water.",
+            "I would like a glass of water.",
+            "I would like waters.",
+            "I would like an water."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-06",
+      "title": "Sinh hoạt hằng ngày",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Động từ trong một ngày",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead><tbody><tr><td>get up</td><td>thức dậy (rời giường)</td></tr><tr><td>have breakfast / lunch / dinner</td><td>ăn sáng / trưa / tối</td></tr><tr><td>go to work / go to school</td><td>đi làm / đi học</td></tr><tr><td>start work / finish work</td><td>bắt đầu làm / tan làm</td></tr><tr><td>have a break</td><td>nghỉ giải lao</td></tr><tr><td>go home</td><td>về nhà</td></tr><tr><td>cook</td><td>nấu ăn</td></tr><tr><td>watch TV / read a book</td><td>xem ti vi / đọc sách</td></tr><tr><td>go to bed</td><td>đi ngủ (lên giường)</td></tr></tbody></table></div>"
+        },
+        {
+          "h": "Kể một ngày điển hình",
+          "html": "<div class=\"ex\"><div lang=\"en\">I get up at six o'clock. <button type=\"button\" class=\"hn-tts\" data-tts=\"I get up at six o'clock.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi thức dậy lúc sáu giờ.</div></div><div class=\"ex\"><div lang=\"en\">She goes to work by bus. <button type=\"button\" class=\"hn-tts\" data-tts=\"She goes to work by bus.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy đi làm bằng xe buýt.</div></div><div class=\"ex\"><div lang=\"en\">We have lunch at twelve. <button type=\"button\" class=\"hn-tts\" data-tts=\"We have lunch at twelve.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chúng tôi ăn trưa lúc mười hai giờ.</div></div><div class=\"ex\"><div lang=\"en\">I finish work at six and then I go home. <button type=\"button\" class=\"hn-tts\" data-tts=\"I finish work at six and then I go home.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi tan làm lúc sáu rồi về nhà.</div></div><div class=\"ex\"><div lang=\"en\">He usually goes to bed at eleven. <button type=\"button\" class=\"hn-tts\" data-tts=\"He usually goes to bed at eleven.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Anh ấy thường đi ngủ lúc mười một giờ.</div></div><p>Đi lại: <b>by bus, by train, by bike, by car, on foot</b> (đi bộ — không nói <i>by foot</i>).</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“get up” nghĩa là:",
+          "o": [
+            "đi làm",
+            "thức dậy",
+            "tan làm",
+            "đi ngủ"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Câu đúng:",
+          "o": [
+            "I go to work by foot.",
+            "I go to work on foot.",
+            "I go to work with foot.",
+            "I go to work at foot."
+          ],
+          "c": 1
+        },
+        {
+          "q": "“finish work” là:",
+          "o": [
+            "bắt đầu làm",
+            "tan làm",
+            "nghỉ giải lao",
+            "xin nghỉ phép"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Chọn câu đúng với she:",
+          "o": [
+            "She get up at 6.",
+            "She gets up at 6.",
+            "She getting up at 6.",
+            "She is get up at 6."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-07",
+      "title": "Nhà cửa và phòng ốc",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Căn nhà và các phòng",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead><tbody><tr><td>house / flat (apartment)</td><td>nhà (thường là nhà riêng) / căn hộ</td></tr><tr><td>room</td><td>phòng</td></tr><tr><td>living room</td><td>phòng khách</td></tr><tr><td>bedroom</td><td>phòng ngủ</td></tr><tr><td>kitchen</td><td>nhà bếp</td></tr><tr><td>bathroom</td><td>phòng tắm / nhà vệ sinh (trong nhà)</td></tr><tr><td>balcony</td><td>ban công</td></tr><tr><td>garden</td><td>vườn</td></tr><tr><td>door / window / wall / floor</td><td>cửa / cửa sổ / tường / sàn (cũng là tầng)</td></tr></tbody></table></div><p>Đồ trong nhà: table, chair, bed, sofa, desk, fridge, TV, lamp, key.</p>"
+        },
+        {
+          "h": "Mô tả chỗ ở",
+          "html": "<div class=\"ex\"><div lang=\"en\">I live in a small flat in the city. <button type=\"button\" class=\"hn-tts\" data-tts=\"I live in a small flat in the city.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi sống trong một căn hộ nhỏ ở thành phố.</div></div><div class=\"ex\"><div lang=\"en\">There are two bedrooms and one bathroom. <button type=\"button\" class=\"hn-tts\" data-tts=\"There are two bedrooms and one bathroom.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Có hai phòng ngủ và một phòng tắm.</div></div><div class=\"ex\"><div lang=\"en\">The kitchen is next to the living room. <button type=\"button\" class=\"hn-tts\" data-tts=\"The kitchen is next to the living room.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Nhà bếp ở cạnh phòng khách.</div></div><div class=\"ex\"><div lang=\"en\">My keys are on the table. <button type=\"button\" class=\"hn-tts\" data-tts=\"My keys are on the table.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Chìa khóa của tôi ở trên bàn.</div></div><div class=\"ex\"><div lang=\"en\">Please come in. Take a seat. <button type=\"button\" class=\"hn-tts\" data-tts=\"Please come in. Take a seat.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Mời vào. Ngồi đi.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“kitchen” là:",
+          "o": [
+            "phòng ngủ",
+            "nhà bếp",
+            "phòng khách",
+            "ban công"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Căn hộ tiếng Anh (Anh-Anh) thường gọi là:",
+          "o": [
+            "garden",
+            "house only",
+            "flat",
+            "balcony"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“There are two bedrooms.” nghĩa là:",
+          "o": [
+            "Có hai nhà bếp.",
+            "Có hai phòng ngủ.",
+            "Có hai phòng tắm.",
+            "Có hai cửa sổ."
+          ],
+          "c": 1
+        },
+        {
+          "q": "Chìa khóa ở trên bàn:",
+          "o": [
+            "The keys are in the table.",
+            "The keys are on the table.",
+            "The keys are at the table.",
+            "The keys are under table the."
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-tv-08",
+      "title": "Địa điểm trong thành phố",
+      "level": "A1",
+      "type": "Từ vựng",
+      "sections": [
+        {
+          "h": "Nơi hay hỏi đường",
+          "html": "<div class=\"tbl\"><table><thead><tr><th>Tiếng Anh</th><th>Tiếng Việt</th></tr></thead><tbody><tr><td>station / bus stop</td><td>nhà ga / điểm xe buýt</td></tr><tr><td>supermarket / shop / market</td><td>siêu thị / cửa hàng / chợ</td></tr><tr><td>bank</td><td>ngân hàng</td></tr><tr><td>post office</td><td>bưu điện</td></tr><tr><td>hospital / pharmacy</td><td>bệnh viện / nhà thuốc</td></tr><tr><td>school / university</td><td>trường học / trường đại học</td></tr><tr><td>restaurant / café / hotel</td><td>nhà hàng / quán cà phê / khách sạn</td></tr><tr><td>park / library / museum</td><td>công viên / thư viện / bảo tàng</td></tr><tr><td>street / road / intersection</td><td>phố / đường / ngã tư</td></tr></tbody></table></div>"
+        },
+        {
+          "h": "Hỏi đường rất ngắn",
+          "html": "<div class=\"ex\"><div lang=\"en\">Excuse me, where is the station? <button type=\"button\" class=\"hn-tts\" data-tts=\"Excuse me, where is the station?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Xin lỗi, nhà ga ở đâu?</div></div><div class=\"ex\"><div lang=\"en\">It's over there. / It's next to the bank. <button type=\"button\" class=\"hn-tts\" data-tts=\"It's over there. / It's next to the bank.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Ở đằng kia. / Ở cạnh ngân hàng.</div></div><div class=\"ex\"><div lang=\"en\">Go straight, then turn left. <button type=\"button\" class=\"hn-tts\" data-tts=\"Go straight, then turn left.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đi thẳng, rồi rẽ trái.</div></div><div class=\"ex\"><div lang=\"en\">Turn right at the intersection. <button type=\"button\" class=\"hn-tts\" data-tts=\"Turn right at the intersection.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đến ngã tư thì rẽ phải.</div></div><div class=\"ex\"><div lang=\"en\">The supermarket is opposite the park. <button type=\"button\" class=\"hn-tts\" data-tts=\"The supermarket is opposite the park.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Siêu thị đối diện công viên.</div></div><p><b>Excuse me</b> dùng để mở lời với người lạ. <b>opposite</b> = đối diện; <b>next to</b> = bên cạnh.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "“pharmacy” là:",
+          "o": [
+            "bệnh viện",
+            "nhà thuốc",
+            "bưu điện",
+            "thư viện"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“Go straight, then turn left.” nghĩa là:",
+          "o": [
+            "Rẽ phải rồi đi thẳng",
+            "Đi thẳng, rồi rẽ trái",
+            "Quay lại",
+            "Ngồi chờ ở ngã tư"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Nơi gửi thư / bưu kiện:",
+          "o": [
+            "post office",
+            "restaurant",
+            "hotel",
+            "park"
+          ],
+          "c": 0
+        },
+        {
+          "q": "“The bank is opposite the café.” nghĩa là:",
+          "o": [
+            "Ngân hàng ở trong quán cà phê",
+            "Ngân hàng đối diện quán cà phê",
+            "Ngân hàng cạnh sau quán cà phê",
+            "Ngân hàng ở dưới quán cà phê"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-kw-01",
+      "title": "Lần đầu gặp nhau",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Minh và An mới gặp nhau ở một lớp tiếng Anh. Họ chào, nói tên và hỏi quê quán.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"Hello. My name is Minh. What is your name?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Hello. My name is Minh. What is your name?</div><div class=\"hn-line-vi\">Xin chào. Tôi tên là Minh. Bạn tên gì?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Hello. My name is Minh. What is your name?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Hi, Minh. I'm An. Nice to meet you.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Hi, Minh. I'm An. Nice to meet you.</div><div class=\"hn-line-vi\">Chào Minh. Tôi là An. Rất vui được gặp bạn.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Hi, Minh. I'm An. Nice to meet you.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Nice to meet you too. Where are you from, An?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Nice to meet you too. Where are you from, An?</div><div class=\"hn-line-vi\">Tôi cũng vậy. An đến từ đâu?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Nice to meet you too. Where are you from, An?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I'm from Da Nang. And you?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">I'm from Da Nang. And you?</div><div class=\"hn-line-vi\">Tôi đến từ Đà Nẵng. Còn bạn?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I'm from Da Nang. And you?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I'm from Ha Noi. Are you a student here?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">I'm from Ha Noi. Are you a student here?</div><div class=\"hn-line-vi\">Tôi đến từ Hà Nội. Bạn là học viên ở đây phải không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I'm from Ha Noi. Are you a student here?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Yes, I am. I study English in the evening.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Yes, I am. I study English in the evening.</div><div class=\"hn-line-vi\">Đúng vậy. Tôi học tiếng Anh vào buổi tối.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Yes, I am. I study English in the evening.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Me too. See you in class!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Me too. See you in class!</div><div class=\"hn-line-vi\">Tôi cũng vậy. Gặp bạn trong lớp nhé!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Me too. See you in class!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"See you, Minh.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">See you, Minh.</div><div class=\"hn-line-vi\">Gặp lại Minh sau.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"See you, Minh.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">Nice to meet you. <button type=\"button\" class=\"hn-tts\" data-tts=\"Nice to meet you.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Rất vui được gặp bạn.</div></div><div class=\"ex\"><div lang=\"en\">I'm from Ha Noi. And you? <button type=\"button\" class=\"hn-tts\" data-tts=\"I'm from Ha Noi. And you?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi đến từ Hà Nội. Còn bạn?</div></div><p>Sau tên nghề hoặc vai trò, nhớ động từ be: <i>Are you a student here?</i></p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An đến từ đâu?",
+          "o": [
+            "Hà Nội",
+            "Đà Nẵng",
+            "Osaka",
+            "Sài Gòn"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Họ gặp nhau khi nào trong ngày để học?",
+          "o": [
+            "Buổi sáng",
+            "Buổi trưa",
+            "Buổi tối",
+            "Cuối tuần"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“Nice to meet you too” dùng khi:",
+          "o": [
+            "Mới nghe lời “rất vui được gặp bạn” và đáp lại",
+            "Từ biệt để đi ngủ",
+            "Hỏi đường",
+            "Gọi món"
+          ],
+          "c": 0
+        },
+        {
+          "q": "Minh hỏi An câu nào?",
+          "o": [
+            "How old are you?",
+            "Where are you from?",
+            "How much is it?",
+            "What time is it?"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-02",
+      "title": "Ở quán cà phê",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>An vào quán cà phê và gọi đồ uống. Nhân viên tên Lan tiếp món. Toàn bộ là tình huống giả để luyện nói.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"Hello! What can I get you?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">Hello! What can I get you?</div><div class=\"hn-line-vi\">Xin chào! Bạn dùng gì ạ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Hello! What can I get you?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Hi. I'd like a cup of coffee, please.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Hi. I'd like a cup of coffee, please.</div><div class=\"hn-line-vi\">Chào bạn. Cho tôi một tách cà phê ạ.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Hi. I'd like a cup of coffee, please.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Sure. Small, medium or large?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">Sure. Small, medium or large?</div><div class=\"hn-line-vi\">Vâng. Size nhỏ, vừa hay lớn?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Sure. Small, medium or large?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Medium, please. And a bottle of water too.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Medium, please. And a bottle of water too.</div><div class=\"hn-line-vi\">Size vừa ạ. Thêm một chai nước nữa.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Medium, please. And a bottle of water too.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Would you like something to eat? We have cake and sandwiches.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">Would you like something to eat? We have cake and sandwiches.</div><div class=\"hn-line-vi\">Bạn dùng thêm đồ ăn nữa không? Chúng tôi có bánh và sandwich.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Would you like something to eat? We have cake and sandwiches.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"No, thank you. Just the drinks.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">No, thank you. Just the drinks.</div><div class=\"hn-line-vi\">Không, cảm ơn. Chỉ đồ uống thôi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"No, thank you. Just the drinks.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"That's 5 dollars. Please pay at the counter.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">That's 5 dollars. Please pay at the counter.</div><div class=\"hn-line-vi\">Tổng cộng 5 đô. Thanh toán ở quầy ạ.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"That's 5 dollars. Please pay at the counter.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"OK. Thank you.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">OK. Thank you.</div><div class=\"hn-line-vi\">Được. Cảm ơn bạn.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"OK. Thank you.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"You're welcome. Enjoy your coffee!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">You're welcome. Enjoy your coffee!</div><div class=\"hn-line-vi\">Không có gì. Thưởng thức cà phê nhé!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"You're welcome. Enjoy your coffee!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">I'd like a cup of coffee, please. <button type=\"button\" class=\"hn-tts\" data-tts=\"I'd like a cup of coffee, please.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cho tôi một tách cà phê ạ.</div></div><div class=\"ex\"><div lang=\"en\">Would you like something to eat? No, thank you. <button type=\"button\" class=\"hn-tts\" data-tts=\"Would you like something to eat? No, thank you.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn dùng thêm đồ ăn không? Không, cảm ơn.</div></div><p><b>You're welcome</b> là cách đáp lịch sự sau “Thank you”.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An gọi những gì?",
+          "o": [
+            "Cà phê lớn và bánh",
+            "Cà phê vừa và một chai nước",
+            "Chỉ sandwich",
+            "Trà và bánh"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“I'd like …” khi gọi món là cách nói:",
+          "o": [
+            "Thô và ra lệnh",
+            "Lịch sự",
+            "Chỉ dùng ở quá khứ",
+            "Sai ngữ pháp"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Lan mời An dùng thêm:",
+          "o": [
+            "Sữa",
+            "Bánh và sandwich",
+            "Cơm",
+            "Nước cam"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“You're welcome” nghĩa là:",
+          "o": [
+            "Bạn được chào mừng đến thành phố",
+            "Không có gì (đáp lời cảm ơn)",
+            "Mời vào nhà",
+            "Hẹn gặp lại"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-03",
+      "title": "Hỏi đường",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Minh đang tìm nhà ga. Anh ấy hỏi một người đi đường tên Huy.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"Excuse me, where is the station?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Excuse me, where is the station?</div><div class=\"hn-line-vi\">Xin lỗi, nhà ga ở đâu ạ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Excuse me, where is the station?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"The station? It's not far. Go straight along this street.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">The station? It's not far. Go straight along this street.</div><div class=\"hn-line-vi\">Nhà ga à? Không xa đâu. Đi thẳng con phố này.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"The station? It's not far. Go straight along this street.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Go straight… OK.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Go straight… OK.</div><div class=\"hn-line-vi\">Đi thẳng… Rồi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Go straight… OK.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Then turn right at the traffic lights. The station is next to the post office.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">Then turn right at the traffic lights. The station is next to the post office.</div><div class=\"hn-line-vi\">Rồi đến đèn giao thông thì rẽ phải. Nhà ga ở cạnh bưu điện.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Then turn right at the traffic lights. The station is next to the post office.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Is it far from here?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Is it far from here?</div><div class=\"hn-line-vi\">Có xa đây không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Is it far from here?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"No, it's about five minutes on foot.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">No, it's about five minutes on foot.</div><div class=\"hn-line-vi\">Không, đi bộ khoảng năm phút.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"No, it's about five minutes on foot.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Thank you very much.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Thank you very much.</div><div class=\"hn-line-vi\">Cảm ơn bạn nhiều.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Thank you very much.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"No problem. Have a good day!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">No problem. Have a good day!</div><div class=\"hn-line-vi\">Không có gì. Chúc một ngày tốt lành!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"No problem. Have a good day!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">Excuse me, where is the station? <button type=\"button\" class=\"hn-tts\" data-tts=\"Excuse me, where is the station?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Xin lỗi, nhà ga ở đâu ạ?</div></div><div class=\"ex\"><div lang=\"en\">It's about five minutes on foot. <button type=\"button\" class=\"hn-tts\" data-tts=\"It's about five minutes on foot.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Đi bộ khoảng năm phút.</div></div><p><b>Excuse me</b> để mở lời. <b>on foot</b> = đi bộ. <b>traffic lights</b> = đèn giao thông.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Minh đang tìm:",
+          "o": [
+            "Bưu điện",
+            "Nhà ga",
+            "Bệnh viện",
+            "Quán cà phê"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Ở đèn giao thông, Minh phải:",
+          "o": [
+            "Rẽ trái",
+            "Rẽ phải",
+            "Quay lại",
+            "Đứng chờ năm phút"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Nhà ga ở cạnh:",
+          "o": [
+            "Ngân hàng",
+            "Bưu điện",
+            "Công viên",
+            "Khách sạn"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Đường đi mất khoảng:",
+          "o": [
+            "Năm phút đi bộ",
+            "Năm phút đi xe buýt",
+            "Năm kilomet",
+            "Nửa giờ"
+          ],
+          "c": 0
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-04",
+      "title": "Đi mua sắm",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>An mua trái cây ở một cửa hàng nhỏ. Nhân viên là Mai. Số tiền chỉ là ví dụ trong hội thoại luyện tập.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"Hello. Can I help you?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">Hello. Can I help you?</div><div class=\"hn-line-vi\">Xin chào. Tôi giúp gì được cho bạn?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Hello. Can I help you?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Yes, please. I'd like some apples.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Yes, please. I'd like some apples.</div><div class=\"hn-line-vi\">Dạ. Cho tôi một ít táo.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Yes, please. I'd like some apples.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"These ones? They're sweet and very fresh today.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">These ones? They're sweet and very fresh today.</div><div class=\"hn-line-vi\">Những quả này ạ? Hôm nay ngọt và rất tươi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"These ones? They're sweet and very fresh today.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"OK. Six apples, please. How much is that?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">OK. Six apples, please. How much is that?</div><div class=\"hn-line-vi\">Được. Cho sáu quả. Tổng cộng bao nhiêu?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"OK. Six apples, please. How much is that?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"That's 4 dollars. Anything else?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">That's 4 dollars. Anything else?</div><div class=\"hn-line-vi\">4 đô ạ. Bạn lấy thêm gì nữa không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"That's 4 dollars. Anything else?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Yes. A bottle of orange juice, please.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Yes. A bottle of orange juice, please.</div><div class=\"hn-line-vi\">Có. Cho thêm một chai nước cam.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Yes. A bottle of orange juice, please.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Sure. That's 6 dollars altogether.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">Sure. That's 6 dollars altogether.</div><div class=\"hn-line-vi\">Vâng. Tất cả là 6 đô.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Sure. That's 6 dollars altogether.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Here you are.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Here you are.</div><div class=\"hn-line-vi\">Của bạn đây.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Here you are.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Thank you. Have a nice day!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">Thank you. Have a nice day!</div><div class=\"hn-line-vi\">Cảm ơn. Chúc một ngày vui!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Thank you. Have a nice day!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">How much is that? <button type=\"button\" class=\"hn-tts\" data-tts=\"How much is that?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cái đó / số đó giá bao nhiêu?</div></div><div class=\"ex\"><div lang=\"en\">Anything else? <button type=\"button\" class=\"hn-tts\" data-tts=\"Anything else?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn lấy thêm gì nữa không?</div></div><div class=\"ex\"><div lang=\"en\">Here you are. <button type=\"button\" class=\"hn-tts\" data-tts=\"Here you are.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Của bạn đây. (khi đưa tiền hoặc đưa đồ)</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An mua bao nhiêu quả táo?",
+          "o": [
+            "Bốn",
+            "Năm",
+            "Sáu",
+            "Bảy"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“How much is that?” hỏi về:",
+          "o": [
+            "Cân nặng",
+            "Giá tiền",
+            "Vị (ngọt hay chua)",
+            "Xuất xứ"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Tổng cộng An trả:",
+          "o": [
+            "4 đô",
+            "6 đô",
+            "16 đô",
+            "60 đô"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Ngoài táo, An còn mua:",
+          "o": [
+            "Sữa",
+            "Nước cam",
+            "Bánh mì",
+            "Nước lọc"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-05",
+      "title": "Nói về gia đình",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Cuối buổi học, Lan hỏi Minh về gia đình. Đây là hội thoại giả, không phải thông tin người thật.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"Do you have a big family, Minh?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">Do you have a big family, Minh?</div><div class=\"hn-line-vi\">Minh có gia đình lớn không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Do you have a big family, Minh?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Not really. There are four people in my family: my parents, my sister and me.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Not really. There are four people in my family: my parents, my sister and me.</div><div class=\"hn-line-vi\">Không hẳn. Gia đình tôi có bốn người: bố mẹ, em gái và tôi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Not really. There are four people in my family: my parents, my sister and me.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"What does your sister do?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">What does your sister do?</div><div class=\"hn-line-vi\">Em gái bạn làm nghề gì?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What does your sister do?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"She's a student. She is 19 years old.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">She's a student. She is 19 years old.</div><div class=\"hn-line-vi\">Cô ấy là sinh viên. Cô ấy 19 tuổi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"She's a student. She is 19 years old.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"And your parents?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">And your parents?</div><div class=\"hn-line-vi\">Còn bố mẹ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"And your parents?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"My father is a driver, and my mother works in a shop.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">My father is a driver, and my mother works in a shop.</div><div class=\"hn-line-vi\">Bố tôi là tài xế, mẹ tôi làm ở một cửa hàng.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"My father is a driver, and my mother works in a shop.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"That's nice. I live with my parents too.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">That's nice. I live with my parents too.</div><div class=\"hn-line-vi\">Hay nhỉ. Tôi cũng ở với bố mẹ.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"That's nice. I live with my parents too.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Do you have any brothers or sisters?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Do you have any brothers or sisters?</div><div class=\"hn-line-vi\">Bạn có anh chị em không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Do you have any brothers or sisters?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I have one older brother. He's a cook.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Lan</div><div class=\"hn-line-tx\" lang=\"en\">I have one older brother. He's a cook.</div><div class=\"hn-line-vi\">Tôi có một anh trai. Anh ấy là đầu bếp.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I have one older brother. He's a cook.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">There are four people in my family. <button type=\"button\" class=\"hn-tts\" data-tts=\"There are four people in my family.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Gia đình tôi có bốn người.</div></div><div class=\"ex\"><div lang=\"en\">Do you have any brothers or sisters? <button type=\"button\" class=\"hn-tts\" data-tts=\"Do you have any brothers or sisters?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn có anh chị em không?</div></div><p>Hỏi nghề người khác: <b>What does your sister do?</b> (does + he/she).</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Gia đình Minh có bao nhiêu người?",
+          "o": [
+            "Ba",
+            "Bốn",
+            "Năm",
+            "Sáu"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Em gái Minh là:",
+          "o": [
+            "Tài xế",
+            "Nhân viên cửa hàng",
+            "Sinh viên",
+            "Đầu bếp"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Lan có:",
+          "o": [
+            "Một em gái",
+            "Một anh trai",
+            "Hai chị gái",
+            "Không có anh chị em"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Bố Minh làm nghề:",
+          "o": [
+            "Đầu bếp",
+            "Tài xế",
+            "Giáo viên",
+            "Bác sĩ"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-06",
+      "title": "Một ngày của tôi",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Huy và Mai nói về lịch sinh hoạt trong ngày thường.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"What time do you get up, Huy?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">What time do you get up, Huy?</div><div class=\"hn-line-vi\">Huy dậy lúc mấy giờ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What time do you get up, Huy?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I usually get up at six. Then I have breakfast and go to work.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">I usually get up at six. Then I have breakfast and go to work.</div><div class=\"hn-line-vi\">Tôi thường dậy lúc sáu. Rồi ăn sáng và đi làm.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I usually get up at six. Then I have breakfast and go to work.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"How do you go to work?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">How do you go to work?</div><div class=\"hn-line-vi\">Bạn đi làm bằng gì?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"How do you go to work?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I go by bus. It takes about twenty minutes.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">I go by bus. It takes about twenty minutes.</div><div class=\"hn-line-vi\">Tôi đi xe buýt. Mất khoảng hai mươi phút.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I go by bus. It takes about twenty minutes.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"What time do you finish work?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">What time do you finish work?</div><div class=\"hn-line-vi\">Bạn tan làm lúc mấy giờ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What time do you finish work?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"At five thirty. In the evening I cook dinner and watch TV.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">At five thirty. In the evening I cook dinner and watch TV.</div><div class=\"hn-line-vi\">Lúc năm rưỡi. Buổi tối tôi nấu cơm và xem ti vi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"At five thirty. In the evening I cook dinner and watch TV.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I finish at six. Sometimes I meet friends after work.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Mai</div><div class=\"hn-line-tx\" lang=\"en\">I finish at six. Sometimes I meet friends after work.</div><div class=\"hn-line-vi\">Tôi tan lúc sáu. Đôi khi tan làm tôi gặp bạn bè.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I finish at six. Sometimes I meet friends after work.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"That sounds nice. I usually go to bed at eleven.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Huy</div><div class=\"hn-line-tx\" lang=\"en\">That sounds nice. I usually go to bed at eleven.</div><div class=\"hn-line-vi\">Nghe vui đó. Tôi thường đi ngủ lúc mười một giờ.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"That sounds nice. I usually go to bed at eleven.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">What time do you get up? <button type=\"button\" class=\"hn-tts\" data-tts=\"What time do you get up?\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn dậy lúc mấy giờ?</div></div><div class=\"ex\"><div lang=\"en\">I go by bus. It takes about twenty minutes. <button type=\"button\" class=\"hn-tts\" data-tts=\"I go by bus. It takes about twenty minutes.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi đi xe buýt. Mất khoảng hai mươi phút.</div></div><p><b>It takes + thời gian</b> = mất (bao lâu). <b>usually / sometimes</b> nói mức thường xuyên.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Huy dậy lúc:",
+          "o": [
+            "5:30",
+            "6:00",
+            "6:30",
+            "11:00"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Huy đi làm bằng:",
+          "o": [
+            "Xe máy",
+            "Xe hơi",
+            "Xe buýt",
+            "Đi bộ"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Huy tan làm lúc:",
+          "o": [
+            "5:00",
+            "5:30",
+            "6:00",
+            "11:00"
+          ],
+          "c": 1
+        },
+        {
+          "q": "“It takes about twenty minutes” nói về:",
+          "o": [
+            "Giá vé xe buýt",
+            "Thời gian đi lại",
+            "Giờ tan làm",
+            "Giờ đi ngủ"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-07",
+      "title": "Kế hoạch cuối tuần",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Thứ Sáu, An rủ Minh đi chơi cuối tuần. Họ nói về kế hoạch đơn giản ở thì hiện tại (A1).</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"What do you usually do at the weekend, Minh?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">What do you usually do at the weekend, Minh?</div><div class=\"hn-line-vi\">Cuối tuần Minh thường làm gì?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What do you usually do at the weekend, Minh?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I often stay at home and read. Sometimes I visit my parents.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">I often stay at home and read. Sometimes I visit my parents.</div><div class=\"hn-line-vi\">Tôi hay ở nhà đọc sách. Đôi khi tôi về thăm bố mẹ.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I often stay at home and read. Sometimes I visit my parents.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I want to go to the park on Saturday. Would you like to come?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">I want to go to the park on Saturday. Would you like to come?</div><div class=\"hn-line-vi\">Thứ Bảy tôi muốn ra công viên. Bạn đi cùng không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I want to go to the park on Saturday. Would you like to come?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Yes, I'd like that. What time?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Yes, I'd like that. What time?</div><div class=\"hn-line-vi\">Được, mình đi. Mấy giờ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Yes, I'd like that. What time?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Let's meet at the station at ten o'clock.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Let's meet at the station at ten o'clock.</div><div class=\"hn-line-vi\">Mình gặp nhau ở nhà ga lúc mười giờ đi.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Let's meet at the station at ten o'clock.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"OK. And on Sunday I have lunch with my family.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">OK. And on Sunday I have lunch with my family.</div><div class=\"hn-line-vi\">Được. Còn Chủ nhật tôi ăn trưa với gia đình.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"OK. And on Sunday I have lunch with my family.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Nice. See you on Saturday!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Nice. See you on Saturday!</div><div class=\"hn-line-vi\">Hay quá. Thứ Bảy gặp lại!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Nice. See you on Saturday!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"See you. Have a good evening!\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">See you. Have a good evening!</div><div class=\"hn-line-vi\">Gặp lại. Chúc buổi tối vui!</div><button type=\"button\" class=\"hn-tts\" data-tts=\"See you. Have a good evening!\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">Would you like to come? Yes, I'd like that. <button type=\"button\" class=\"hn-tts\" data-tts=\"Would you like to come? Yes, I'd like that.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn đi cùng không? Được, mình đi.</div></div><div class=\"ex\"><div lang=\"en\">Let's meet at the station at ten o'clock. <button type=\"button\" class=\"hn-tts\" data-tts=\"Let's meet at the station at ten o'clock.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Mình gặp nhau ở nhà ga lúc mười giờ đi.</div></div><p><b>at the weekend</b> (Anh-Anh) = vào cuối tuần; anh cũng sẽ gặp <i>on the weekend</i> ở một số nơi.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Thứ Bảy họ định:",
+          "o": [
+            "Ở nhà đọc sách",
+            "Ra công viên",
+            "Ăn trưa với gia đình",
+            "Đi làm"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Họ hẹn gặp ở đâu?",
+          "o": [
+            "Công viên lúc 10 giờ",
+            "Nhà ga lúc 10 giờ",
+            "Nhà Minh lúc 10 giờ",
+            "Quán cà phê lúc 5 giờ"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Chủ nhật Minh:",
+          "o": [
+            "Ra công viên với An",
+            "Đi làm",
+            "Ăn trưa với gia đình",
+            "Ở lại nhà ga"
+          ],
+          "c": 2
+        },
+        {
+          "q": "“Would you like to come?” là lời:",
+          "o": [
+            "Ra lệnh",
+            "Mời / rủ",
+            "Xin lỗi",
+            "Hỏi giá"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-kw-08",
+      "title": "Nói về công việc",
+      "level": "A1",
+      "type": "Hội thoại",
+      "sections": [
+        {
+          "h": "Tình huống",
+          "html": "<p>Trong giờ nghỉ giải lao, Minh và An hỏi nhau về công việc. Tất cả nghề và công ty trong bài đều là ví dụ giả.</p><div class=\"hn-kaiwa\"><div class=\"hn-ttsbar\"><button type=\"button\" class=\"hn-tts hn-tts-all\">🔊 Đọc cả hội thoại</button> <button type=\"button\" class=\"hn-tts hn-ttslow hn-tts-all\" data-rate=\"slow\">🐢 Chậm</button> <button type=\"button\" class=\"hn-shadow\">📖 Đọc theo</button></div><p class=\"hn-shadow-hint\" hidden></p><div class=\"hn-line\" data-tts=\"What do you do, Minh?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">What do you do, Minh?</div><div class=\"hn-line-vi\">Minh làm nghề gì?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What do you do, Minh?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I'm an office worker. I work for a small company in the city.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">I'm an office worker. I work for a small company in the city.</div><div class=\"hn-line-vi\">Tôi là nhân viên văn phòng. Tôi làm cho một công ty nhỏ ở thành phố.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I'm an office worker. I work for a small company in the city.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Do you like your job?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Do you like your job?</div><div class=\"hn-line-vi\">Bạn có thích việc không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Do you like your job?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Yes, I do. The people are kind, but I am busy every day.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">Yes, I do. The people are kind, but I am busy every day.</div><div class=\"hn-line-vi\">Có. Mọi người tử tế, nhưng ngày nào tôi cũng bận.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Yes, I do. The people are kind, but I am busy every day.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"What time do you start?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">What time do you start?</div><div class=\"hn-line-vi\">Bạn bắt đầu lúc mấy giờ?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"What time do you start?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I start at eight and finish at five. What about you?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">I start at eight and finish at five. What about you?</div><div class=\"hn-line-vi\">Tôi bắt đầu lúc tám và tan lúc năm. Còn bạn?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I start at eight and finish at five. What about you?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"I'm a nurse. I work at a hospital. Some days I start in the afternoon.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">I'm a nurse. I work at a hospital. Some days I start in the afternoon.</div><div class=\"hn-line-vi\">Tôi là điều dưỡng. Tôi làm ở bệnh viện. Có ngày tôi vào ca buổi chiều.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"I'm a nurse. I work at a hospital. Some days I start in the afternoon.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"That's a busy job. Do you work at the weekend too?\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">Minh</div><div class=\"hn-line-tx\" lang=\"en\">That's a busy job. Do you work at the weekend too?</div><div class=\"hn-line-vi\">Việc đó chắc bận. Cuối tuần bạn có làm nữa không?</div><button type=\"button\" class=\"hn-tts\" data-tts=\"That's a busy job. Do you work at the weekend too?\" data-tts-lang=\"en-US\">🔊 Nghe</button></div><div class=\"hn-line\" data-tts=\"Sometimes, yes. But I have two days off every week.\" data-tts-lang=\"en-US\"><div class=\"hn-line-sp\">An</div><div class=\"hn-line-tx\" lang=\"en\">Sometimes, yes. But I have two days off every week.</div><div class=\"hn-line-vi\">Đôi khi có. Nhưng mỗi tuần tôi được nghỉ hai ngày.</div><button type=\"button\" class=\"hn-tts\" data-tts=\"Sometimes, yes. But I have two days off every week.\" data-tts-lang=\"en-US\">🔊 Nghe</button></div></div>"
+        },
+        {
+          "h": "Câu nên nhớ",
+          "html": "<div class=\"ex\"><div lang=\"en\">What do you do? I'm an office worker. <button type=\"button\" class=\"hn-tts\" data-tts=\"What do you do? I'm an office worker.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Bạn làm nghề gì? Tôi là nhân viên văn phòng.</div></div><div class=\"ex\"><div lang=\"en\">I work at a hospital. I have two days off every week. <button type=\"button\" class=\"hn-tts\" data-tts=\"I work at a hospital. I have two days off every week.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi làm ở bệnh viện. Mỗi tuần tôi được nghỉ hai ngày.</div></div><p><b>days off</b> = ngày nghỉ. <b>What about you?</b> = còn bạn thì sao?</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Minh làm nghề:",
+          "o": [
+            "Điều dưỡng",
+            "Nhân viên văn phòng",
+            "Tài xế",
+            "Giáo viên"
+          ],
+          "c": 1
+        },
+        {
+          "q": "An làm ở:",
+          "o": [
+            "Công ty nhỏ",
+            "Bệnh viện",
+            "Cửa hàng",
+            "Trường học"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Giờ làm của Minh là:",
+          "o": [
+            "8 giờ đến 5 giờ",
+            "9 giờ đến 6 giờ",
+            "Ca chiều",
+            "Chỉ cuối tuần"
+          ],
+          "c": 0
+        },
+        {
+          "q": "“days off” nghĩa là:",
+          "o": [
+            "Ngày tăng ca",
+            "Ngày nghỉ",
+            "Ngày nhận lương",
+            "Ngày đi họp"
+          ],
+          "c": 1
+        }
+      ],
+      "ttsLang": "en-US"
+    },
+    {
+      "id": "en-a1-dk-01",
+      "title": "Minh giới thiệu bản thân",
+      "level": "A1",
+      "type": "Đọc hiểu",
+      "sections": [
+        {
+          "h": "Đoạn văn",
+          "html": "<p>Đọc đoạn Minh tự giới thiệu. Các thông tin dưới đây là ví dụ giả, chỉ để luyện đọc.</p><div class=\"ex\"><div lang=\"en\">My name is Minh. I am 28 years old, and I am from Ha Noi. I am an office worker. I work in the city from Monday to Friday. I live in a small flat with my sister. In my free time I like coffee, music and long walks in the park. I study English in the evening because I want to talk to people at work.</div></div><p><b>Nội dung bằng tiếng Việt (để đối chiếu):</b></p><div class=\"vi\">Tên tôi là Minh. Tôi 28 tuổi, tôi đến từ Hà Nội. Tôi là nhân viên văn phòng. Tôi làm việc ở thành phố từ thứ Hai đến thứ Sáu. Tôi ở một căn hộ nhỏ với em gái. Thời gian rảnh tôi thích cà phê, nhạc và đi bộ lâu trong công viên. Tôi học tiếng Anh buổi tối vì muốn nói chuyện với mọi người ở chỗ làm.</div>"
+        },
+        {
+          "h": "Ghi chú",
+          "html": "<p>Cụm đáng nhớ: <b>in my free time</b> (thời gian rảnh), <b>from Monday to Friday</b> (từ thứ Hai đến thứ Sáu), <b>because</b> (bởi vì).</p><div class=\"ex\"><div lang=\"en\">I study English in the evening because I want to talk to people at work. <button type=\"button\" class=\"hn-tts\" data-tts=\"I study English in the evening because I want to talk to people at work.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Tôi học tiếng Anh buổi tối vì muốn nói chuyện với mọi người ở chỗ làm.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Minh bao nhiêu tuổi?",
+          "o": [
+            "18",
+            "26",
+            "28",
+            "30"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Minh sống với:",
+          "o": [
+            "Bố mẹ",
+            "Em gái",
+            "Bạn cùng phòng nam",
+            "Một mình"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Minh làm việc những ngày:",
+          "o": [
+            "Mỗi ngày kể cả cuối tuần",
+            "Thứ Hai đến thứ Sáu",
+            "Chỉ buổi tối",
+            "Chỉ thứ Bảy và Chủ nhật"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Vì sao Minh học tiếng Anh?",
+          "o": [
+            "Vì muốn nói chuyện với mọi người ở chỗ làm",
+            "Vì muốn làm đầu bếp",
+            "Vì em gái bảo vậy",
+            "Vì không thích cà phê"
+          ],
+          "c": 0
+        }
+      ]
+    },
+    {
+      "id": "en-a1-dk-02",
+      "title": "Gia đình của An",
+      "level": "A1",
+      "type": "Đọc hiểu",
+      "sections": [
+        {
+          "h": "Đoạn văn",
+          "html": "<p>An viết một đoạn ngắn về gia đình. Đây là đoạn giả để luyện đọc, không phải chuyện của người thật.</p><div class=\"ex\"><div lang=\"en\">My name is An. I have a small family. There are five people in my family: my parents, my older brother, my younger sister and me. My father is a driver, and my mother is a shop assistant. My brother is a cook in a restaurant. My sister is still a student. We live in a house with a small garden. At the weekend we often have dinner together. I love my family very much.</div></div><p><b>Nội dung bằng tiếng Việt (để đối chiếu):</b></p><div class=\"vi\">Tôi tên An. Tôi có một gia đình nhỏ. Gia đình tôi có năm người: bố mẹ, anh trai, em gái và tôi. Bố tôi là tài xế, mẹ tôi là nhân viên bán hàng. Anh trai tôi là đầu bếp ở một nhà hàng. Em gái tôi vẫn còn là học sinh/sinh viên. Chúng tôi sống trong một ngôi nhà có vườn nhỏ. Cuối tuần chúng tôi thường ăn tối cùng nhau. Tôi rất thương gia đình mình.</div>"
+        },
+        {
+          "h": "Ghi chú",
+          "html": "<p><b>still</b> = vẫn còn. <b>together</b> = cùng nhau. Nghề sau be có mạo từ: <i>a driver, a shop assistant, a cook, a student</i>.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Gia đình An có bao nhiêu người?",
+          "o": [
+            "Bốn",
+            "Năm",
+            "Sáu",
+            "Ba"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Anh trai An làm nghề:",
+          "o": [
+            "Tài xế",
+            "Nhân viên bán hàng",
+            "Đầu bếp",
+            "Học sinh"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Họ sống ở:",
+          "o": [
+            "Căn hộ không có vườn",
+            "Nhà có vườn nhỏ",
+            "Ký túc xá",
+            "Khách sạn"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Cuối tuần gia đình An thường:",
+          "o": [
+            "Đi làm chung",
+            "Ăn tối cùng nhau",
+            "Chuyển nhà",
+            "Học tiếng Anh"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-dk-03",
+      "title": "Một ngày của Lan",
+      "level": "A1",
+      "type": "Đọc hiểu",
+      "sections": [
+        {
+          "h": "Đoạn văn",
+          "html": "<p>Đọc lịch sinh hoạt ngày thường của Lan, rồi trả lời câu hỏi.</p><div class=\"ex\"><div lang=\"en\">Lan is a nurse. She works at a hospital. On weekdays she gets up at five thirty. She has a quick breakfast and goes to work by bus. She starts work at seven and has a break at twelve. She usually finishes at four in the afternoon. In the evening she cooks dinner, talks to her family and studies English for thirty minutes. She goes to bed at ten. She is busy, but she likes her job.</div></div><p><b>Nội dung bằng tiếng Việt (để đối chiếu):</b></p><div class=\"vi\">Lan là điều dưỡng. Cô ấy làm việc ở một bệnh viện. Các ngày trong tuần cô dậy lúc năm rưỡi. Cô ăn sáng nhanh rồi đi làm bằng xe buýt. Cô bắt đầu lúc bảy và nghỉ giải lao lúc mười hai. Cô thường tan làm lúc bốn giờ chiều. Buổi tối cô nấu cơm, nói chuyện với gia đình và học tiếng Anh ba mươi phút. Cô đi ngủ lúc mười giờ. Cô bận, nhưng cô thích công việc của mình.</div>"
+        },
+        {
+          "h": "Ghi chú",
+          "html": "<p><b>on weekdays</b> = các ngày trong tuần (thường là thứ Hai–thứ Sáu). <b>a quick breakfast</b> = bữa sáng ăn nhanh.</p><div class=\"ex\"><div lang=\"en\">She studies English for thirty minutes. <button type=\"button\" class=\"hn-tts\" data-tts=\"She studies English for thirty minutes.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Cô ấy học tiếng Anh trong ba mươi phút. (<b>for</b> + khoảng thời gian)</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Lan dậy lúc:",
+          "o": [
+            "5:00",
+            "5:30",
+            "7:00",
+            "10:00"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Lan đi làm bằng:",
+          "o": [
+            "Xe hơi",
+            "Xe đạp",
+            "Xe buýt",
+            "Đi bộ"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Lan tan làm lúc:",
+          "o": [
+            "12:00",
+            "4 giờ chiều",
+            "5:30",
+            "7:00"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Buổi tối Lan học tiếng Anh bao lâu?",
+          "o": [
+            "Mười phút",
+            "Hai mươi phút",
+            "Ba mươi phút",
+            "Một tiếng"
+          ],
+          "c": 2
+        }
+      ]
+    },
+    {
+      "id": "en-a1-dk-04",
+      "title": "Tin nhắn mời cà phê",
+      "level": "A1",
+      "type": "Đọc hiểu",
+      "sections": [
+        {
+          "h": "Đoạn văn",
+          "html": "<p>Đọc tin nhắn Minh gửi An. Giờ hẹn và địa điểm chỉ là ví dụ trong bài đọc.</p><div class=\"ex\"><div lang=\"en\">Hi An, how are you? I have a day off tomorrow. Would you like to have coffee with me in the afternoon? There is a nice café next to the library on Nguyen Hue Street. Let's meet there at three o'clock. The café is not expensive, and they have good cakes. After that, we can walk in the park. Text me this evening, please. I hope you can come! Minh</div></div><p><b>Nội dung bằng tiếng Việt (để đối chiếu):</b></p><div class=\"vi\">Chào An, bạn khỏe không? Ngày mai tôi được nghỉ. Chiều nay/chiều ngày mai bạn uống cà phê với tôi chứ? Có một quán cà phê dễ chịu cạnh thư viện trên đường Nguyễn Huệ. Mình gặp nhau ở đó lúc ba giờ nhé. Quán không đắt, và bánh của họ ngon. Xong mình có thể đi bộ trong công viên. Nhắn lại cho tôi tối nay nhé. Mong bạn sắp xếp đi được! Minh</div>"
+        },
+        {
+          "h": "Ghi chú",
+          "html": "<p>Đây là tin nhắn, nên có lời chào và lời nhờ (<b>Text me … please</b>). <b>a day off</b> = một ngày nghỉ. <b>I hope you can come</b> = mong bạn đến được.</p><p>Trong bản tiếng Việt, “chiều ngày mai” là nghĩa đúng của <i>in the afternoon</i> khi đã có <i>tomorrow</i> ở câu trước.</p>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Minh rủ An vào lúc nào?",
+          "o": [
+            "Sáng nay",
+            "Chiều ngày mai, lúc 3 giờ",
+            "Tối nay, lúc 7 giờ",
+            "Cuối tuần"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Quán cà phê ở đâu?",
+          "o": [
+            "Đối diện công viên",
+            "Cạnh thư viện trên đường Nguyễn Huệ",
+            "Trong nhà ga",
+            "Trong bệnh viện"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Sau khi uống cà phê, Minh gợi ý:",
+          "o": [
+            "Đi làm",
+            "Đi bộ trong công viên",
+            "Về nhà ngay",
+            "Học tiếng Anh"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Minh nhờ An:",
+          "o": [
+            "Gọi điện ngay lập tức",
+            "Nhắn tin lại buổi tối",
+            "Mua bánh hộ",
+            "Đặt bàn nhà hàng"
+          ],
+          "c": 1
+        }
+      ]
+    },
+    {
+      "id": "en-a1-dk-05",
+      "title": "Căn hộ nhỏ ở thành phố",
+      "level": "A1",
+      "type": "Đọc hiểu",
+      "sections": [
+        {
+          "h": "Đoạn văn",
+          "html": "<p>Huy mô tả nơi ở. Căn hộ trong bài là ví dụ giả để luyện từ vựng nhà cửa và there is/are.</p><div class=\"ex\"><div lang=\"en\">I live in a small flat in the city. It is on the third floor. There are four rooms: a living room, a bedroom, a kitchen and a bathroom. There is also a small balcony. From the balcony I can see a park and a busy street. In the living room there is a sofa, a table and a TV. My desk is in the bedroom, next to the window. I haven't got a garden, but the park is only five minutes away. I like my flat because it is quiet at night and close to a supermarket.</div></div><p><b>Nội dung bằng tiếng Việt (để đối chiếu):</b></p><div class=\"vi\">Tôi sống trong một căn hộ nhỏ ở thành phố. Căn hộ ở tầng ba. Có bốn phòng: phòng khách, phòng ngủ, nhà bếp và phòng tắm. Cũng có một ban công nhỏ. Từ ban công tôi nhìn thấy một công viên và một con phố đông. Trong phòng khách có sofa, bàn và ti vi. Bàn học của tôi ở phòng ngủ, cạnh cửa sổ. Tôi không có vườn, nhưng công viên chỉ cách năm phút đường. Tôi thích căn hộ vì ban đêm yên và gần siêu thị.</div>"
+        },
+        {
+          "h": "Ghi chú",
+          "html": "<p><b>on the third floor</b> = ở tầng ba (cách gọi Anh-Anh: tầng trệt là ground floor, rồi first, second, third…). <b>close to</b> = gần. <b>I haven't got a garden</b> = I don't have a garden.</p><div class=\"ex\"><div lang=\"en\">The park is only five minutes away. <button type=\"button\" class=\"hn-tts\" data-tts=\"The park is only five minutes away.\" data-tts-lang=\"en-US\">🔊</button></div><div class=\"vi\">Công viên chỉ cách năm phút đường.</div></div>"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Căn hộ ở tầng nào?",
+          "o": [
+            "Tầng trệt",
+            "Tầng hai",
+            "Tầng ba",
+            "Tầng bốn"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Căn hộ có bao nhiêu phòng (không tính ban công)?",
+          "o": [
+            "Ba",
+            "Bốn",
+            "Năm",
+            "Sáu"
+          ],
+          "c": 1
+        },
+        {
+          "q": "Bàn học ở đâu?",
+          "o": [
+            "Phòng khách, cạnh sofa",
+            "Nhà bếp",
+            "Phòng ngủ, cạnh cửa sổ",
+            "Ban công"
+          ],
+          "c": 2
+        },
+        {
+          "q": "Vì sao Huy thích căn hộ?",
+          "o": [
+            "Vì có vườn rộng",
+            "Vì ban đêm yên và gần siêu thị",
+            "Vì ở nông thôn",
+            "Vì không có ban công"
+          ],
+          "c": 1
+        }
+      ]
+    }
+  ]
+}

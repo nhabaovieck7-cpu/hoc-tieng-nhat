@@ -84,3 +84,11 @@
   .hn-levels,.hn-levels.six{grid-template-columns:1fr 1fr}
   .hn-map{display:block;overflow-x:auto}
 }
+
+/* Bài EN/ZH dùng giọng máy của trình duyệt; ẩn thanh tốc độ VOICEVOX để khỏi nhầm. */
+html[data-hn-lang="en"] .ttsbar,
+html[data-hn-lang="zh"] .ttsbar{display:none}
+/* Nút Quay lại nổi 48px góc trái — đừng đè tiêu đề khối trên mobile */
+@media (max-width:860px){
+  #hnLangApp .block-h{padding-left:64px}
+}

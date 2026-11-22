@@ -1024,4 +1024,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 /* hn-lang-courses-loader */
-(function(){var src='lang-courses.js?v=1';try{var sc=document.currentScript;if(sc&&sc.src)src=sc.src.replace(/common\.js[^/]*$/,'lang-courses.js?v=1')}catch(e){}var s=document.createElement('script');s.src=src;s.defer=true;(document.head||document.documentElement).appendChild(s)})();
+(function(){var src='lang-courses.js?v=2';try{var sc=document.currentScript;if(sc&&sc.src)src=sc.src.replace(/common\.js[^/]*$/,'lang-courses.js?v=2')}catch(e){}var s=document.createElement('script');s.src=src;s.defer=true;(document.head||document.documentElement).appendChild(s)})();

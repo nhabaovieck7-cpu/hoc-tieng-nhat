@@ -24,7 +24,7 @@
   function injectCss(){
     if(document.getElementById('hn-lang-css'))return;
     var l=document.createElement('link');
-    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=1';
+    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=2';
     document.head.appendChild(l);
   }
 
@@ -219,11 +219,12 @@
     if(lang!=='en'&&lang!=='zh')return false;
     injectCss();if(lang==='zh')injectFonts();
     document.documentElement.classList.remove('locked');
+    document.documentElement.setAttribute('data-hn-lang',lang);
     var back=document.querySelector('.hn-back');
     if(back){back.href=(lang==='en'?'en.html':'zh.html');back.textContent=lang==='en'?'← Khóa tiếng Anh':'← Khóa tiếng Trung'}
     try{
       var pack=await loadPackForId(lang, id);
-      w.LESSONS=pack.lessons||[];
+      w.LESSONS=(pack.lessons||[]).map(function(L){var x={};for(var k in L)x[k]=L[k];if(!Array.isArray(x.explain))x.explain=[];if(!Array.isArray(x.examples))x.examples=[];return x});
       runMain();
       setTimeout(function(){bindTts(document.getElementById('m')||document)},0);
       try{dispatchEvent(new Event('unlocked'))}catch(e){}
@@ -251,6 +252,7 @@
 
   async function renderLanding(lang){
     injectCss();if(lang==='zh')injectFonts();
+    document.documentElement.setAttribute('data-hn-lang',lang);
     var root=document.getElementById('hnLangApp');
     if(!root)return;
     var index;

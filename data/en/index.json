@@ -3,7 +3,7 @@
   "hello": "Hello!",
   "line": "Học tiếng Anh từng bước, giải thích bằng tiếng Việt.",
   "headline": "Tiếng Anh A1 → C1, cùng lối học với khóa tiếng Nhật của anh.",
-  "lead": "Mỗi cấp có ngữ pháp, từ vựng, hội thoại và đọc hiểu. Cấp A1 đang được mở dần; các cấp sau hiện khung sắp có.",
+  "lead": "Mỗi cấp có ngữ pháp, từ vựng, hội thoại và đọc hiểu. Cấp A1 đã mở. Các cấp A2–C1 hiện khung sắp có.",
   "courseTitle": "Khóa tiếng Anh",
   "courseLead": "Chọn cấp độ CEFR. Mốc JLPT bên dưới chỉ để anh hình dung, không phải quy đổi thi cử chính thức.",
   "levels": [
@@ -13,8 +13,8 @@
       "sub": "Beginner",
       "map": "Gần với N5",
       "pack": "a1.json",
-      "ready": false,
-      "desc": "Chào hỏi, giới thiệu, động từ be và have, số đếm, thì hiện tại đơn, câu rất ngắn."
+      "ready": true,
+      "desc": "Chào hỏi, giới thiệu, động từ be và have, số đếm, thì hiện tại đơn và hiện tại tiếp diễn, can, giới từ, some/any, was/were và quá khứ đơn cơ bản — 18 bài ngữ pháp, 8 bài từ vựng, 8 hội thoại, 5 bài đọc hiểu."
     },
     {
       "id": "A2",
