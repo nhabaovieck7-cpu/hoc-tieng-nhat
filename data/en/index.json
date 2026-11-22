@@ -1,0 +1,85 @@
+{
+  "lang": "en",
+  "hello": "Hello!",
+  "line": "Học tiếng Anh từng bước, giải thích bằng tiếng Việt.",
+  "headline": "Tiếng Anh A1 → C1, cùng lối học với khóa tiếng Nhật của anh.",
+  "lead": "Mỗi cấp có ngữ pháp, từ vựng, hội thoại và đọc hiểu. Cấp A1 đang được mở dần; các cấp sau hiện khung sắp có.",
+  "courseTitle": "Khóa tiếng Anh",
+  "courseLead": "Chọn cấp độ CEFR. Mốc JLPT bên dưới chỉ để anh hình dung, không phải quy đổi thi cử chính thức.",
+  "levels": [
+    {
+      "id": "A1",
+      "name": "A1",
+      "sub": "Beginner",
+      "map": "Gần với N5",
+      "pack": "a1.json",
+      "ready": false,
+      "desc": "Chào hỏi, giới thiệu, động từ be và have, số đếm, thì hiện tại đơn, câu rất ngắn."
+    },
+    {
+      "id": "A2",
+      "name": "A2",
+      "sub": "Elementary",
+      "map": "Gần với N4",
+      "pack": "a2.json",
+      "ready": false
+    },
+    {
+      "id": "B1",
+      "name": "B1",
+      "sub": "Intermediate",
+      "map": "Gần với N3",
+      "pack": "b1.json",
+      "ready": false
+    },
+    {
+      "id": "B2",
+      "name": "B2",
+      "sub": "Upper-int.",
+      "map": "Gần với N2",
+      "pack": "b2.json",
+      "ready": false
+    },
+    {
+      "id": "C1",
+      "name": "C1",
+      "sub": "Advanced",
+      "map": "Gần với N1",
+      "pack": "c1.json",
+      "ready": false
+    }
+  ],
+  "mapTable": [
+    [
+      "Tiếng Anh (CEFR)",
+      "Gần với JLPT",
+      "Anh làm được gì"
+    ],
+    [
+      "A1",
+      "N5",
+      "Chào hỏi, nói tên, số, câu rất ngắn"
+    ],
+    [
+      "A2",
+      "N4",
+      "Nói chuyện đời thường đơn giản, mua sắm, hỏi đường"
+    ],
+    [
+      "B1",
+      "N3",
+      "Kể việc đã xảy ra, nói ý kiến ngắn, hiểu tin đơn giản"
+    ],
+    [
+      "B2",
+      "N2",
+      "Làm việc, họp, đọc báo gần như không cần dịch từng câu"
+    ],
+    [
+      "C1",
+      "N1",
+      "Nói và viết mạch lạc trong việc học và công việc"
+    ]
+  ],
+  "mapNote": "Đây là mốc để anh hình dung, không phải quy đổi thi cử chính thức."
+}

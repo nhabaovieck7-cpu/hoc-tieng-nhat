@@ -11,17 +11,18 @@
   try{sid=sessionStorage.getItem(KEY)}catch(e){}
   const pg=()=>(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'')||'index';
   const ls=()=>{const q=new URLSearchParams(location.search);return q.get('id')||q.get('lv')||undefined};
+  const lang=()=>{try{if(window.HNLang&&HNLang.pageLang)return HNLang.pageLang()}catch(e){}try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='zh')return q}catch(e){}return 'jp'};
   const setSid=v=>{sid=v;try{v?sessionStorage.setItem(KEY,v):sessionStorage.removeItem(KEY)}catch(e){}};
   const stop=e=>{if(e&&(e.status===401||e.status===403)){dead=true;clearInterval(timer);timer=null}};
   async function start(){
     if(dead||!tok())return;
-    try{const j=await AUTH.api('/study/start',{method:'POST',body:{page:pg(),lesson:ls()}});if(j&&j.sid){setSid(j.sid);if(j.ping_sec)every=Math.max(45,j.ping_sec)*1e3}}catch(e){stop(e)}
+    try{const j=await AUTH.api('/study/start',{method:'POST',body:{page:pg(),lesson:ls(),lang:lang()}});if(j&&j.sid){setSid(j.sid);if(j.ping_sec)every=Math.max(45,j.ping_sec)*1e3}}catch(e){stop(e)}
   }
   async function ping(){
     if(dead||busy||document.visibilityState!=='visible')return;
     if(!tok()){end();dead=true;return}
     busy=true;
-    try{if(!sid)await start();else await AUTH.api('/study/ping',{method:'POST',body:{sid,page:pg(),lesson:ls()}})}
+    try{if(!sid)await start();else await AUTH.api('/study/ping',{method:'POST',body:{sid,page:pg(),lesson:ls(),lang:lang()}})}
     catch(e){if(e.status===409){setSid(null);await start()}else stop(e)}
     busy=false;
   }

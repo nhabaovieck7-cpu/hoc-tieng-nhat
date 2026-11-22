@@ -18,3 +18,6 @@ CREATE TABLE IF NOT EXISTS study_daily(
   sessions INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY(user_id, day)
 );
+
+-- 22/11/2026: cột ngôn ngữ khóa học (jp|en|zh). Worker chạy ALTER khi khởi động; dòng dưới cho môi trường mới.
+-- ALTER TABLE study_sessions ADD COLUMN lang TEXT;

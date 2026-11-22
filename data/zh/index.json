@@ -1,0 +1,98 @@
+{
+  "lang": "zh",
+  "hello": "你好！",
+  "line": "Học tiếng Trung có pinyin, chữ Hán và nghĩa tiếng Việt.",
+  "headline": "Tiếng Trung HSK 1 → 6, cùng lối học với khóa tiếng Nhật của anh.",
+  "lead": "Mỗi chữ Hán đều có pinyin phía trên, giống furigana bên tiếng Nhật. Khóa HSK đang được biên soạn; các cấp hiện khung sắp có.",
+  "courseTitle": "Khóa tiếng Trung",
+  "courseLead": "Chọn cấp HSK. Mốc JLPT bên dưới chỉ để anh hình dung, không phải quy đổi thi cử chính thức. Dùng chữ giản thể (简体字).",
+  "levels": [
+    {
+      "id": "HSK1",
+      "name": "HSK 1",
+      "sub": "一级",
+      "map": "Gần với N5",
+      "pack": "hsk1.json",
+      "ready": false,
+      "desc": "Khoảng 150 từ, chào hỏi, giới thiệu, số đếm, câu 是 / 吗 / 不."
+    },
+    {
+      "id": "HSK2",
+      "name": "HSK 2",
+      "sub": "二级",
+      "map": "Gần với N4",
+      "pack": "hsk2.json",
+      "ready": false
+    },
+    {
+      "id": "HSK3",
+      "name": "HSK 3",
+      "sub": "三级",
+      "map": "N4–N3",
+      "pack": "hsk3.json",
+      "ready": false
+    },
+    {
+      "id": "HSK4",
+      "name": "HSK 4",
+      "sub": "四级",
+      "map": "Gần với N3",
+      "pack": "hsk4.json",
+      "ready": false
+    },
+    {
+      "id": "HSK5",
+      "name": "HSK 5",
+      "sub": "五级",
+      "map": "Gần với N2",
+      "pack": "hsk5.json",
+      "ready": false
+    },
+    {
+      "id": "HSK6",
+      "name": "HSK 6",
+      "sub": "六级",
+      "map": "Gần với N1",
+      "pack": "hsk6.json",
+      "ready": false
+    }
+  ],
+  "mapTable": [
+    [
+      "Tiếng Trung (HSK)",
+      "Gần với JLPT",
+      "Anh làm được gì"
+    ],
+    [
+      "HSK 1",
+      "N5",
+      "Chào hỏi, nói tên, câu rất ngắn, khoảng 150 từ"
+    ],
+    [
+      "HSK 2",
+      "N4",
+      "Nói chuyện đời thường đơn giản"
+    ],
+    [
+      "HSK 3",
+      "N4–N3",
+      "Kể việc hằng ngày, đọc đoạn ngắn"
+    ],
+    [
+      "HSK 4",
+      "N3",
+      "Thảo luận chủ đề quen thuộc, đọc tin đơn giản"
+    ],
+    [
+      "HSK 5",
+      "N2",
+      "Đọc báo, xem phim, làm việc bằng tiếng Trung"
+    ],
+    [
+      "HSK 6",
+      "N1",
+      "Hiểu văn viết và nói gần như tự nhiên"
+    ]
+  ],
+  "mapNote": "Đây là mốc để anh hình dung, không phải quy đổi thi cử chính thức. Trang dùng chữ giản thể (简体字), phổ biến trong HSK."
+}

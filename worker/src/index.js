@@ -4667,6 +4667,7 @@ async function ensureStudy(env){
     env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_ss_open ON study_sessions(ended_at, last_ping)'),
     env.DB.prepare(`CREATE TABLE IF NOT EXISTS study_daily(user_id TEXT NOT NULL,day TEXT NOT NULL,active_sec INTEGER NOT NULL DEFAULT 0,sessions INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(user_id, day))`)
   ]);
+  try{await env.DB.prepare('ALTER TABLE study_sessions ADD COLUMN lang TEXT').run()}catch(e){}
   _studyReady=true;
 }
 const jstDay=ms=>new Date(ms+9*3600e3).toISOString().slice(0,10);
@@ -4698,16 +4699,17 @@ async function handleStudy(req,env,c,path){
   await ensureStudy(env);
   const t=Date.now(), uid=s.user_id;
   const page=studyStr(b.page,120), lesson=studyStr(b.lesson,120);
+  const lang=(()=>{const v=studyStr(b.lang,8);return (v==='en'||v==='zh'||v==='jp')?v:'jp'})();
   if(path==='/study/start'){
     const open=await env.DB.prepare('SELECT id FROM study_sessions WHERE user_id=? AND ended_at IS NULL AND last_ping>=? ORDER BY last_ping DESC LIMIT 1').bind(uid,t-STUDY_STALE).first();
     if(open){
-      await env.DB.prepare('UPDATE study_sessions SET page=COALESCE(?,page),lesson=COALESCE(?,lesson) WHERE id=?').bind(page,lesson,open.id).run();
+      await env.DB.prepare('UPDATE study_sessions SET page=COALESCE(?,page),lesson=COALESCE(?,lesson),lang=COALESCE(?,lang) WHERE id=?').bind(page,lesson,lang,open.id).run();
       return J({ok:true,sid:open.id,reused:true,ping_sec:60},200,h);
     }
     const sid=randB64(18).replace(/[+/=]/g,c=>c==='+'?'-':c==='/'?'_':'');
     await env.DB.batch([
       env.DB.prepare('UPDATE study_sessions SET ended_at=last_ping WHERE user_id=? AND ended_at IS NULL').bind(uid),
-      env.DB.prepare('INSERT INTO study_sessions(id,user_id,started_at,last_ping,page,lesson,device) VALUES(?,?,?,?,?,?,?)').bind(sid,uid,t,t,page,lesson,studyDevice(req.headers.get('User-Agent'))),
+      env.DB.prepare('INSERT INTO study_sessions(id,user_id,started_at,last_ping,page,lesson,device,lang) VALUES(?,?,?,?,?,?,?,?)').bind(sid,uid,t,t,page,lesson,studyDevice(req.headers.get('User-Agent')),lang),
       env.DB.prepare('INSERT INTO study_daily(user_id,day,active_sec,sessions) VALUES(?,?,0,1) ON CONFLICT(user_id,day) DO UPDATE SET sessions=sessions+1').bind(uid,jstDay(t))
     ]);
     return J({ok:true,sid,reused:false,ping_sec:60},200,h);
@@ -4719,7 +4721,7 @@ async function handleStudy(req,env,c,path){
     if(!row||row.ended_at!=null||t-row.last_ping>STUDY_STALE)return J({ok:false,restart:true,error:'Phiên đã kết thúc, gọi /study/start'},409,h);
     if(t-row.last_ping<STUDY_MINPING)return J({ok:true,added:0,throttled:true},200,h); // rate limit: không ghi DB
     const add=studyAdd(t-row.last_ping);
-    const st=[env.DB.prepare('UPDATE study_sessions SET last_ping=?,active_sec=active_sec+?,page=COALESCE(?,page),lesson=COALESCE(?,lesson) WHERE id=? AND last_ping=?').bind(t,add,page,lesson,sid,row.last_ping)];
+    const st=[env.DB.prepare('UPDATE study_sessions SET last_ping=?,active_sec=active_sec+?,page=COALESCE(?,page),lesson=COALESCE(?,lesson),lang=COALESCE(?,lang) WHERE id=? AND last_ping=?').bind(t,add,page,lesson,lang,sid,row.last_ping)];
     if(add)st.push(env.DB.prepare('INSERT INTO study_daily(user_id,day,active_sec,sessions) VALUES(?,?,?,0) ON CONFLICT(user_id,day) DO UPDATE SET active_sec=active_sec+excluded.active_sec').bind(uid,jstDay(t),add));
     await env.DB.batch(st);
     return J({ok:true,added:add},200,h);

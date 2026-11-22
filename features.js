@@ -66,7 +66,7 @@ function rateBar(){if(!tts.ok)return '';return '<div class="ttsbar"><span>🔊 T
 function bindRate(root){$$('.ttsbar button',root).forEach(b=>b.onclick=()=>{tts.setRate(+b.dataset.r);$$('.ttsbar button').forEach(x=>x.classList.toggle('on',x.dataset.r==b.dataset.r));tts.speak('こんにちは')})}
 
 // ===== 2. Tiến độ (lưu trên máy) =====
-const P={K:'hn_prog_v1',get(){return ls.get(this.K,{days:{},seen:{},best:{},last:null})},save(p){ls.set(this.K,p)},
+const P={K:'hn_prog_v1',key(){try{var L=(window.HNLang&&HNLang.pageLang)?HNLang.pageLang():(function(){var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='zh')return q;var p=location.pathname||'';if(/en\.html$/.test(p))return 'en';if(/zh\.html$/.test(p))return 'zh';return 'jp'})();return L==='jp'?'hn_prog_v1':'hn_prog_v1_'+L}catch(e){return 'hn_prog_v1'}},get(){return ls.get(this.key(),{days:{},seen:{},best:{},last:null})},save(p){ls.set(this.key(),p)},
  touch(){const p=this.get();p.days[today()]=1;this.save(p);return p},
  seen(id,title){const p=this.touch();p.seen[id]=Date.now();p.last={id,title};this.save(p)},
  score(id,title,ok,n){const p=this.touch();const b=p.best[id];if(!b||ok/n>=b.ok/b.n)p.best[id]={ok,n,title,t:Date.now()};p.last={id,title};this.save(p)},
