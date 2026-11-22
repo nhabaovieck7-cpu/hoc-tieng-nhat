@@ -3,7 +3,7 @@
   "hello": "你好！",
   "line": "Học tiếng Trung có pinyin, chữ Hán và nghĩa tiếng Việt.",
   "headline": "Tiếng Trung HSK 1 → 6, cùng lối học với khóa tiếng Nhật của anh.",
-  "lead": "Mỗi chữ Hán đều có pinyin phía trên, giống furigana bên tiếng Nhật. Khóa HSK đang được biên soạn; các cấp hiện khung sắp có.",
+  "lead": "Mỗi chữ Hán đều có pinyin phía trên, giống furigana bên tiếng Nhật. HSK 1 đã mở đủ bài; HSK 2–6 hiện khung sắp có.",
   "courseTitle": "Khóa tiếng Trung",
   "courseLead": "Chọn cấp HSK. Mốc JLPT bên dưới chỉ để anh hình dung, không phải quy đổi thi cử chính thức. Dùng chữ giản thể (简体字).",
   "levels": [
@@ -13,8 +13,8 @@
       "sub": "一级",
       "map": "Gần với N5",
       "pack": "hsk1.json",
-      "ready": false,
-      "desc": "Khoảng 150 từ, chào hỏi, giới thiệu, số đếm, câu 是 / 吗 / 不."
+      "ready": true,
+      "desc": "Đủ 150 từ HSK 1, 13 bài ngữ pháp, 8 hội thoại có đọc to, 4 bài đọc, trắc nghiệm mỗi bài."
     },
     {
       "id": "HSK2",
