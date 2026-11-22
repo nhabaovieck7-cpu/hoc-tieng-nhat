@@ -1,0 +1,534 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 統合理解 trong phần đọc hiểu của đề N1 thật: hai bài văn cùng một chủ đề nhưng góc nhìn khác nhau, kèm 4 câu hỏi — 2 câu hỏi về từng bài riêng và 2 câu hỏi chung chỉ trả lời được khi đọc CẢ HAI bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc lướt nắm chủ trương của từng tác giả rồi mới trả lời; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 13–15 phút (đọc 2 bài + 4 câu hỏi). Trong đề thật, 統合理解 là dạng dễ mất điểm nhất trong đọc hiểu, vì các lựa chọn nhiễu thường lấy ý của bài này gán cho bài kia, hoặc gộp hai ý riêng thành một khẳng định chung không có trong bài.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi chung trước, rồi mới đọc hai bài",
+      "body": "Hai câu hỏi chung (câu 3, câu 4) cho biết bạn cần đối chiếu điểm gì: điểm chung trong suy nghĩ hay lập trường của cả hai tác giả. Biết trước điều cần tìm sẽ giúp bạn đọc có định hướng, thay vì đọc xong mới quay lại tìm."
+    },
+    {
+      "h": "Đọc câu đầu và câu cuối mỗi đoạn của CẢ HAI bài trước",
+      "body": "Mỗi bài đều theo cấu trúc dài — ngắn: đoạn đầu nêu lợi điểm, đoạn giữa chỉ ra điểm yếu, đoạn cuối nêu kết luận. Đọc khung này ở cả hai bài trước sẽ giúp bạn nắm chủ trương của từng tác giả và thấy ngay hai bài bổ sung hay đối chiếu nhau ở đâu."
+    },
+    {
+      "h": "Lập bảng đối chiếu trong đầu: 利点・短所 củaオンライン và 直接会うこと",
+      "body": "Bài A nói về kết nối qua mạng: lợi điểm là không bị ràng buộc bởi khoảng cách hay thời gian, có thể giữ liên lạc với người ở xa và người có cùng mối quan tâm; điểm yếu là khó thấy nét mặt hay giọng điệu nên dễ hiểu lầm, và số lượng kết nối tăng thì quan hệ càng hời hợt. Bài B nói về gặp trực tiếp: lợi điểm là chia sẻ được cả nét mặt, giọng điệu, sự im lặng và bầu không khí, từ đó niềm tin nảy sinh; điểm yếu là bị ràng buộc bởi thời gian, địa điểm và chi phí di chuyển. Câu hỏi chung thường hỏi đúng điểm chung hoặc điểm khác trong bảng đối chiếu này."
+    },
+    {
+      "h": "Câu hỏi về một bài riêng thì CHỈ dùng bài đó",
+      "body": "Câu 1 chỉ hỏi về bài A, câu 2 chỉ hỏi về bài B. Lựa chọn lấy ý của bài kia (ví dụ: lấy 'chia sẻ nét mặt và bầu không khí' của bài B gán cho kết nối qua mạng) là bẫy đánh tráo bài văn — loại ngay dù nghe rất hợp lý."
+    },
+    {
+      "h": "Câu hỏi chung không nằm ở một bài riêng: đáp án phải có căn cứ ở CẢ HAI bài",
+      "body": "Muốn chọn đáp án cho câu hỏi chung, bạn phải tìm được bằng chứng ở cả bài A và bài B. Nếu một lựa chọn chỉ đúng với một bài mà không đúng với bài còn lại, đó không phải đáp án — đó là bẫy gán ý kiến của một bên cho cả hai."
+    },
+    {
+      "h": "Cảnh giác với lựa chọn gộp hai ý riêng thành một khẳng định chung",
+      "body": "Bẫy thường gặp ở dạng tích hợp: lấy một ý đúng ở bài A cộng một ý đúng ở bài B, rồi kết luận thành một điều mà không bài nào nói — ví dụ 'cả hai tác giả đều khuyên nên chuyển sang kết nối qua mạng', trong khi tác giả B không hề khuyên như vậy. Hãy kiểm tra từng nửa của lựa chọn."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài A khen kết nối qua mạng — không bị ràng buộc bởi khoảng cách hay thời gian, có thể sắp xếp lời lẽ trước khi gửi — nhưng thừa nhận khó thấy nét mặt nên dễ hiểu lầm, và số lượng kết nối tăng thì quan hệ càng hời hợt; bài B khen gặp trực tiếp — chia sẻ được cả nét mặt, giọng điệu, sự im lặng và bầu không khí — nhưng cảnh báo bị ràng buộc bởi thời gian, địa điểm và chi phí di chuyển. Điểm chung quan trọng: cả hai tác giả đều kết luận rằng điều quan trọng không phải là phương tiện nào, mà là thái độ đối với đối phương và cách dùng thời gian: bài A đoạn 4 câu 3 (画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすること), bài B đoạn 8 câu 3 (会った時間の長さではなく、その時間にどれだけ相手と向き合ったか). Khi làm câu 3 và câu 4, hãy bám vào điểm chung này và vào lập trường chung của cả hai: khen ưu điểm nhưng đồng thời chỉ ra giới hạn."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「オンラインで人とつながること」\nオンラインで人とつながることの最大の利点は、距離や時間に縛られないことである。遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる。仕事や家事の合間に短いメッセージを送るだけで、つながりを保つことができる。さらに、文字で伝える場合は、言葉を選び直す時間があるため、自分の考えを整理してから伝えることができる。\nしかし、オンラインのつながりには、相手の表情や声の調子が見えにくいという弱点がある。短い文章だけでは、気持ちが伝わらず、誤解が生じることもある。また、つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある。\nそれでもオンラインの価値は、場所を選ばずに人と出会えることにある。近くにいない人とも、共通の関心を通して深く話し合うことができる。直接会う機会が少ない人とも、日常の小さな出来事を分かち合うことができる。この「会えなくてもつながれる」という自由こそが、オンラインのつながりの核心だと言える。\nつまり、オンラインでつながることとは、距離をこえて人との関係を広げる生き方である。ただし、連絡先の数を増やすこと自体が目的になってはいけない。大切なのは、画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすることではないだろうか。\n文章B「直接会って話すこと」\n一方、直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである。表情や声の調子、うなずきや沈黙までもが、会話の一部になる。同じ場所で同じ時間を過ごすことで、相手の気持ちが自然と伝わってくる。さらに、一緒に食事をしたり、歩いたりする中で、何気ない会話から信頼が生まれることもある。\nしかし、直接会うことには、時間や場所の制約が大きいという弱点がある。遠くに住む人とは、なかなか会う機会が持てない。また、会うためには移動の時間や費用がかかり、忙しいときには負担になってしまうこともある。\nそれでも直接会うことの価値は、その場の雰囲気を共有できることにある。画面では伝わらない空気や、言葉にならない気持ちも、同じ空間にいれば感じ取ることができる。困っているときにそばにいること、ただ黙って耳を傾けることが、相手を支えることもある。この「同じ時間と場所を分かち合う」という経験こそが、直接会うことの核心だと言える。\nつまり、直接会って話すこととは、時間と場所を分かち合うことで信頼を深める生き方である。ただし、会う回数を増やすこと自体が目的になってはいけない。大切なのは、会った時間の長さではなく、その時間にどれだけ相手と向き合ったかではないだろうか。\n筆者Aによれば、オンラインでつながることの最大の利点は何か。",
+      "choices": [
+        "相手の表情や声の調子を、画面を通して正確に読み取れること。",
+        "距離や時間に縛られず、関心を共有する人とつながりを保てること。",
+        "連絡先の数が増えれば、自然に深い信頼関係が築けること。",
+        "短い文章で伝えれば、誤解が生じることは決してないこと。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án ở bài A đoạn 1 câu 1: オンラインで人とつながることの最大の利点は、距離や時間に縛られないことである, và câu 2: 遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる. Lựa chọn 1 là giá trị của việc gặp trực tiếp (bài B đoạn 5 câu 2: 表情や声の調子、うなずきや沈黙までもが、会話の一部になる), lựa chọn 4 đi ngược bài A đoạn 2 câu 2."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「オンラインで人とつながること」\nオンラインで人とつながることの最大の利点は、距離や時間に縛られないことである。遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる。仕事や家事の合間に短いメッセージを送るだけで、つながりを保つことができる。さらに、文字で伝える場合は、言葉を選び直す時間があるため、自分の考えを整理してから伝えることができる。\nしかし、オンラインのつながりには、相手の表情や声の調子が見えにくいという弱点がある。短い文章だけでは、気持ちが伝わらず、誤解が生じることもある。また、つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある。\nそれでもオンラインの価値は、場所を選ばずに人と出会えることにある。近くにいない人とも、共通の関心を通して深く話し合うことができる。直接会う機会が少ない人とも、日常の小さな出来事を分かち合うことができる。この「会えなくてもつながれる」という自由こそが、オンラインのつながりの核心だと言える。\nつまり、オンラインでつながることとは、距離をこえて人との関係を広げる生き方である。ただし、連絡先の数を増やすこと自体が目的になってはいけない。大切なのは、画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすることではないだろうか。\n文章B「直接会って話すこと」\n一方、直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである。表情や声の調子、うなずきや沈黙までもが、会話の一部になる。同じ場所で同じ時間を過ごすことで、相手の気持ちが自然と伝わってくる。さらに、一緒に食事をしたり、歩いたりする中で、何気ない会話から信頼が生まれることもある。\nしかし、直接会うことには、時間や場所の制約が大きいという弱点がある。遠くに住む人とは、なかなか会う機会が持てない。また、会うためには移動の時間や費用がかかり、忙しいときには負担になってしまうこともある。\nそれでも直接会うことの価値は、その場の雰囲気を共有できることにある。画面では伝わらない空気や、言葉にならない気持ちも、同じ空間にいれば感じ取ることができる。困っているときにそばにいること、ただ黙って耳を傾けることが、相手を支えることもある。この「同じ時間と場所を分かち合う」という経験こそが、直接会うことの核心だと言える。\nつまり、直接会って話すこととは、時間と場所を分かち合うことで信頼を深める生き方である。ただし、会う回数を増やすこと自体が目的になってはいけない。大切なのは、会った時間の長さではなく、その時間にどれだけ相手と向き合ったかではないだろうか。\n筆者Bによれば、直接会うことで最も大切なのは何か。",
+      "choices": [
+        "移動の手間や費用をかけずに、多くの人と手軽につながれること。",
+        "会えば必ず相手の気持ちを完全に理解できるようになること。",
+        "会う回数を増やすこと自体が、信頼を深める目的になること。",
+        "表情や声の調子、沈黙やその場の雰囲気を共有し、信頼を深めること。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án ở bài B đoạn 5 câu 1: 直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである, và câu 2: 表情や声の調子、うなずきや沈黙までもが、会話の一部になる. Lựa chọn 1 là lợi điểm của mạng (bài A đoạn 1), lựa chọn 3 đi ngược bài B đoạn 8 câu 2."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「オンラインで人とつながること」\nオンラインで人とつながることの最大の利点は、距離や時間に縛られないことである。遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる。仕事や家事の合間に短いメッセージを送るだけで、つながりを保つことができる。さらに、文字で伝える場合は、言葉を選び直す時間があるため、自分の考えを整理してから伝えることができる。\nしかし、オンラインのつながりには、相手の表情や声の調子が見えにくいという弱点がある。短い文章だけでは、気持ちが伝わらず、誤解が生じることもある。また、つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある。\nそれでもオンラインの価値は、場所を選ばずに人と出会えることにある。近くにいない人とも、共通の関心を通して深く話し合うことができる。直接会う機会が少ない人とも、日常の小さな出来事を分かち合うことができる。この「会えなくてもつながれる」という自由こそが、オンラインのつながりの核心だと言える。\nつまり、オンラインでつながることとは、距離をこえて人との関係を広げる生き方である。ただし、連絡先の数を増やすこと自体が目的になってはいけない。大切なのは、画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすることではないだろうか。\n文章B「直接会って話すこと」\n一方、直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである。表情や声の調子、うなずきや沈黙までもが、会話の一部になる。同じ場所で同じ時間を過ごすことで、相手の気持ちが自然と伝わってくる。さらに、一緒に食事をしたり、歩いたりする中で、何気ない会話から信頼が生まれることもある。\nしかし、直接会うことには、時間や場所の制約が大きいという弱点がある。遠くに住む人とは、なかなか会う機会が持てない。また、会うためには移動の時間や費用がかかり、忙しいときには負担になってしまうこともある。\nそれでも直接会うことの価値は、その場の雰囲気を共有できることにある。画面では伝わらない空気や、言葉にならない気持ちも、同じ空間にいれば感じ取ることができる。困っているときにそばにいること、ただ黙って耳を傾けることが、相手を支えることもある。この「同じ時間と場所を分かち合う」という経験こそが、直接会うことの核心だと言える。\nつまり、直接会って話すこととは、時間と場所を分かち合うことで信頼を深める生き方である。ただし、会う回数を増やすこと自体が目的になってはいけない。大切なのは、会った時間の長さではなく、その時間にどれだけ相手と向き合ったかではないだろうか。\n両方の文章に共通する考えとして最も適切なものはどれか。",
+      "choices": [
+        "大切なのは手段そのものではなく、相手と向き合う姿勢や時間の使い方だということ。",
+        "オンラインのつながりは、直接会うことに比べて常に劣っているということ。",
+        "直接会うことは、時間と費用がかかるため、できるだけ避けるべきだということ。",
+        "つながりの数が多ければ多いほど、人との関係は深くなるということ。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án có căn cứ ở CẢ HAI bài: bài A đoạn 4 câu 3 — 画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすること; bài B đoạn 8 câu 3 — 会った時間の長さではなく、その時間にどれだけ相手と向き合ったか. Cả hai đều không khẳng định phương tiện nào hơn phương tiện nào, mà đều nhấn mạnh thái độ đối với đối phương."
+    },
+    {
+      "level": "N1",
+      "section": "読解（統合理解）",
+      "question": "文章A「オンラインで人とつながること」\nオンラインで人とつながることの最大の利点は、距離や時間に縛られないことである。遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる。仕事や家事の合間に短いメッセージを送るだけで、つながりを保つことができる。さらに、文字で伝える場合は、言葉を選び直す時間があるため、自分の考えを整理してから伝えることができる。\nしかし、オンラインのつながりには、相手の表情や声の調子が見えにくいという弱点がある。短い文章だけでは、気持ちが伝わらず、誤解が生じることもある。また、つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある。\nそれでもオンラインの価値は、場所を選ばずに人と出会えることにある。近くにいない人とも、共通の関心を通して深く話し合うことができる。直接会う機会が少ない人とも、日常の小さな出来事を分かち合うことができる。この「会えなくてもつながれる」という自由こそが、オンラインのつながりの核心だと言える。\nつまり、オンラインでつながることとは、距離をこえて人との関係を広げる生き方である。ただし、連絡先の数を増やすこと自体が目的になってはいけない。大切なのは、画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすることではないだろうか。\n文章B「直接会って話すこと」\n一方、直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである。表情や声の調子、うなずきや沈黙までもが、会話の一部になる。同じ場所で同じ時間を過ごすことで、相手の気持ちが自然と伝わってくる。さらに、一緒に食事をしたり、歩いたりする中で、何気ない会話から信頼が生まれることもある。\nしかし、直接会うことには、時間や場所の制約が大きいという弱点がある。遠くに住む人とは、なかなか会う機会が持てない。また、会うためには移動の時間や費用がかかり、忙しいときには負担になってしまうこともある。\nそれでも直接会うことの価値は、その場の雰囲気を共有できることにある。画面では伝わらない空気や、言葉にならない気持ちも、同じ空間にいれば感じ取ることができる。困っているときにそばにいること、ただ黙って耳を傾けることが、相手を支えることもある。この「同じ時間と場所を分かち合う」という経験こそが、直接会うことの核心だと言える。\nつまり、直接会って話すこととは、時間と場所を分かち合うことで信頼を深める生き方である。ただし、会う回数を増やすこと自体が目的になってはいけない。大切なのは、会った時間の長さではなく、その時間にどれだけ相手と向き合ったかではないだろうか。\n両方の筆者について言えることはどれか。",
+      "choices": [
+        "両者とも、自分の取り上げたつながり方だけが正しいと主張している。",
+        "両者とも、オンラインのつながりへの転換を勧めている。",
+        "両者とも、長所を認めつつ、短所や限界も指摘している。",
+        "両者とも、相手と向き合う時間の長さが信頼の決め手だと考えている。"
+      ],
+      "answer": 2,
+      "explain_vi": "Đáp án đúng cho cả hai tác giả: A khen lợi điểm của mạng (đoạn 1, 3) nhưng chỉ ra điểm yếu khó thấy nét mặt và quan hệ hời hợt (đoạn 2); B khen giá trị của gặp trực tiếp (đoạn 5, 7) nhưng chỉ ra điểm yếu ràng buộc thời gian, địa điểm và chi phí (đoạn 6). Không tác giả nào khẳng định cách của mình là duy nhất đúng."
+    }
+  ],
+  "study": {
+    "passage_title": "「オンラインで人とつながること」と「直接会って話すこと」— Phương tiện nào cũng chỉ là phương tiện, quan trọng là thái độ đối với đối phương",
+    "structure": "Hai bài luận thuyết cùng chủ đề 'cách con người kết nối trong thời đại số', mỗi bài 4 đoạn, cùng đi theo mạch 利点 → 短所 → 核心 → 結論, nhưng kết luận khác nhau và bổ sung cho nhau. Bài A (đoạn 1–4): đoạn 1 nêu lợi điểm của kết nối qua mạng — không bị ràng buộc bởi khoảng cách hay thời gian, có thể trò chuyện với người ở xa hay người có cùng mối quan tâm bất cứ lúc nào qua màn hình, chỉ cần gửi tin nhắn ngắn trong lúc rảnh là giữ được liên lạc, và khi truyền đạt bằng chữ viết thì có thời gian chọn lại từ ngữ; đoạn 2 chỉ ra điểm yếu — khó thấy nét mặt hay giọng điệu nên chỉ với câu văn ngắn thì cảm xúc không truyền được và hiểu lầm nảy sinh, số lượng kết nối càng tăng thì quan hệ với từng người càng hời hợt, chỉ số lượng địa chỉ liên lạc tăng lên; đoạn 3 nêu giá trị cốt lõi — gặp gỡ mọi người mà không cần chọn địa điểm, trò chuyện sâu sắc qua mối quan tâm chung, chia sẻ chuyện nhỏ hằng ngày với người ít có dịp gặp trực tiếp, và sự tự do 'dù không gặp được nhau vẫn có thể kết nối' chính là cốt lõi; đoạn 4 kết luận — kết nối qua mạng là cách sống mở rộng quan hệ vượt qua khoảng cách, nhưng bản thân việc tăng số lượng địa chỉ liên lạc không được trở thành mục đích, điều quan trọng là đừng quên sự tồn tại của đối phương ở phía bên kia màn hình và trân trọng từng lần trao đổi. Bài B (đoạn 5–8): đoạn 5 nêu giá trị của gặp trực tiếp — chia sẻ được cả những điều lời nói không truyền được, nét mặt, giọng điệu, cái gật đầu hay sự im lặng đều là một phần của cuộc trò chuyện, cùng ở một nơi và trải qua cùng một khoảng thời gian thì cảm xúc tự nhiên truyền đến, và từ những câu chuyện tưởng chừng vu vơ trong lúc cùng ăn cơm hay đi bộ mà niềm tin nảy sinh; đoạn 6 chỉ ra điểm yếu — bị ràng buộc lớn bởi thời gian và địa điểm, khó gặp người sống ở xa, tốn thời gian di chuyển và chi phí nên khi bận rộn thì trở thành gánh nặng; đoạn 7 nêu giá trị cốt lõi — chia sẻ được bầu không khí của nơi đó, cảm nhận được cả không khí màn hình không truyền được và cảm xúc không thành lời, ở bên cạnh khi đối phương gặp khó khăn hay chỉ lặng lẽ lắng nghe cũng có thể nâng đỡ đối phương, và trải nghiệm 'cùng chia sẻ thời gian và địa điểm' chính là cốt lõi; đoạn 8 kết luận — gặp trực tiếp là cách sống làm sâu sắc thêm niềm tin bằng cách chia sẻ thời gian và địa điểm, nhưng bản thân việc tăng số lần gặp không được trở thành mục đích, điều quan trọng không phải là thời gian gặp dài bao lâu mà là trong khoảng thời gian đó đã đối diện với đối phương đến mức nào. Chủ trương của tác giả A nằm ở đoạn 4 câu 3 (画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすること), của tác giả B nằm ở đoạn 8 câu 3 (会った時間の長さではなく、その時間にどれだけ相手と向き合ったか). Điểm chung của cả hai: không phương tiện nào là vạn năng, và điều quyết định không phải là qua mạng hay gặp trực tiếp, mà là thái độ đối với đối phương và cách dùng thời gian.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "オンラインで{人|ひと}とつながることの{最大|さいだい}の{利点|りてん}は、{距離|きょり}や{時間|じかん}に{縛|しば}られないことである。",
+        "vi": "Lợi ích lớn nhất của việc kết nối với mọi người qua mạng là không bị ràng buộc bởi khoảng cách hay thời gian."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{遠|とお}くに{住|す}む{人|ひと}とも、{同|おな}じ{関心|かんしん}を{持|も}つ{人|ひと}とも、{画面|がめん}の{向|む}こうでいつでも{話|はな}すことができる。",
+        "vi": "Dù là người sống ở xa hay người có cùng mối quan tâm, ta đều có thể trò chuyện với họ bất cứ lúc nào qua màn hình."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{仕事|しごと}や{家事|かじ}の{合間|あいま}に{短|みじか}いメッセージを{送|おく}るだけで、つながりを{保|たも}つことができる。",
+        "vi": "Chỉ cần gửi một tin nhắn ngắn trong lúc rảnh giữa công việc hay việc nhà là đã có thể giữ được sợi dây kết nối."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "さらに、{文字|もじ}で{伝|つた}える{場合|ばあい}は、{言葉|ことば}を{選|えら}び{直|びなお}す{時間|じかん}があるため、{自分|じぶん}の{考|かんが}えを{整理|せいり}してから{伝|つた}えることができる。",
+        "vi": "Hơn nữa, khi truyền đạt bằng chữ viết, ta có thời gian để chọn lại từ ngữ, nên có thể sắp xếp suy nghĩ của mình rồi mới truyền đạt."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "しかし、オンラインのつながりには、{相手|あいて}の{表情|ひょうじょう}や{声|こえ}の{調子|ちょうし}が{見|み}えにくいという{弱点|じゃくてん}がある。",
+        "vi": "Tuy nhiên, kết nối qua mạng có điểm yếu là khó nhìn thấy nét mặt hay giọng điệu của đối phương."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{短|みじか}い{文章|ぶんしょう}だけでは、{気持|きも}ちが{伝|つた}わらず、{誤解|ごかい}が{生|しょう}じることもある。",
+        "vi": "Chỉ với những câu văn ngắn, cảm xúc có thể không truyền đạt được và hiểu lầm cũng có thể nảy sinh."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "また、つながりの{数|かず}が{増|ふ}えるほど、{一人|ひとり}ひとりとの{関係|かんけい}が{浅|あさ}くなり、{連絡|れんらく}{先|さき}の{数|かず}だけが{増|ふ}えていくこともある。",
+        "vi": "Ngoài ra, số lượng kết nối càng tăng thì mối quan hệ với từng người càng trở nên hời hợt, và có khi chỉ số lượng địa chỉ liên lạc tăng lên mà thôi."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "それでもオンラインの{価値|かち}は、{場所|ばしょ}を{選|えら}ばずに{人|ひと}と{出会|であ}えることにある。",
+        "vi": "Dù vậy, giá trị của mạng nằm ở chỗ có thể gặp gỡ mọi người mà không cần chọn địa điểm."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{近|ちか}くにいない{人|ひと}とも、{共通|きょうつう}の{関心|かんしん}を{通|とお}して{深|ふか}く{話|はな}し{合|しあ}うことができる。",
+        "vi": "Ngay cả với người không ở gần, ta cũng có thể trò chuyện sâu sắc thông qua mối quan tâm chung."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "{直接|ちょくせつ}{会|あ}う{機会|きかい}が{少|すく}ない{人|ひと}とも、{日常|にちじょう}の{小|ちい}さな{出来事|できごと}を{分|わ}かち{合|かちあ}うことができる。",
+        "vi": "Ngay cả với người ít có dịp gặp trực tiếp, ta cũng có thể chia sẻ những chuyện nhỏ trong đời sống hằng ngày."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "この「{会|あ}えなくてもつながれる」という{自由|じゆう}こそが、オンラインのつながりの{核心|かくしん}だと{言|い}える。",
+        "vi": "Chính sự tự do 'dù không gặp được nhau vẫn có thể kết nối' này là cốt lõi của việc kết nối qua mạng."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "つまり、オンラインでつながることとは、{距離|きょり}をこえて{人|ひと}との{関係|かんけい}を{広|ひろ}げる{生|い}き{方|かた}である。",
+        "vi": "Nói cách khác, kết nối qua mạng là cách sống mở rộng mối quan hệ với mọi người vượt qua khoảng cách."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "ただし、{連絡|れんらく}{先|さき}の{数|かず}を{増|ふ}やすこと{自体|じたい}が{目的|もくてき}になってはいけない。",
+        "vi": "Tuy nhiên, bản thân việc tăng số lượng địa chỉ liên lạc không được trở thành mục đích."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{大切|たいせつ}なのは、{画面|がめん}の{向|む}こうにいる{相手|あいて}の{存在|そんざい}を{忘|わす}れず、{一|ひと}つひとつのやりとりを{大切|たいせつ}にすることではないだろうか。",
+        "vi": "Điều quan trọng chẳng phải là đừng quên sự tồn tại của đối phương ở phía bên kia màn hình và trân trọng từng lần trao đổi hay sao?"
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{一方|いっぽう}、{直接|ちょくせつ}{会|あ}って{話|はな}すことの{最大|さいだい}の{価値|かち}は、{言葉|ことば}だけでは{伝|つた}わらないものを{分|わ}かち{合|かちあ}えることである。",
+        "vi": "Mặt khác, giá trị lớn nhất của việc gặp trực tiếp và trò chuyện là có thể chia sẻ những điều mà chỉ lời nói không thể truyền đạt."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{表情|ひょうじょう}や{声|こえ}の{調子|ちょうし}、うなずきや{沈黙|ちんもく}までもが、{会話|かいわ}の{一部|いちぶ}になる。",
+        "vi": "Nét mặt, giọng điệu, cái gật đầu hay sự im lặng đều trở thành một phần của cuộc trò chuyện."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{同|おな}じ{場所|ばしょ}で{同|おな}じ{時間|じかん}を{過|す}ごすことで、{相手|あいて}の{気持|きも}ちが{自然|しぜん}と{伝|つた}わってくる。",
+        "vi": "Nhờ cùng ở một nơi và trải qua cùng một khoảng thời gian, cảm xúc của đối phương tự nhiên truyền đến."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "さらに、{一緒|いっしょ}に{食事|しょくじ}をしたり、{歩|ある}いたりする{中|なか}で、{何|なん}{気|げ}ない{会話|かいわ}から{信頼|しんらい}が{生|う}まれることもある。",
+        "vi": "Hơn nữa, trong lúc cùng ăn cơm hay cùng đi bộ, từ những câu chuyện tưởng chừng vu vơ mà niềm tin cũng có thể nảy sinh."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "しかし、{直接|ちょくせつ}{会|あ}うことには、{時間|じかん}や{場所|ばしょ}の{制約|せいやく}が{大|おお}きいという{弱点|じゃくてん}がある。",
+        "vi": "Tuy nhiên, việc gặp trực tiếp có điểm yếu lớn là bị ràng buộc nhiều bởi thời gian và địa điểm."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{遠|とお}くに{住|す}む{人|ひと}とは、なかなか{会|あ}う{機会|きかい}が{持|も}てない。",
+        "vi": "Với người sống ở xa, ta khó mà có dịp gặp nhau."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "また、{会|あ}うためには{移動|いどう}の{時間|じかん}や{費用|ひよう}がかかり、{忙|いそが}しいときには{負担|ふたん}になってしまうこともある。",
+        "vi": "Ngoài ra, để gặp nhau cần tốn thời gian di chuyển và chi phí, nên khi bận rộn thì điều đó có khi trở thành gánh nặng."
+      },
+      {
+        "para": 7,
+        "no": 1,
+        "ja": "それでも{直接|ちょくせつ}{会|あ}うことの{価値|かち}は、その{場|ば}の{雰囲気|ふんいき}を{共有|きょうゆう}できることにある。",
+        "vi": "Dù vậy, giá trị của việc gặp trực tiếp nằm ở chỗ có thể chia sẻ bầu không khí của nơi đó."
+      },
+      {
+        "para": 7,
+        "no": 2,
+        "ja": "{画面|がめん}では{伝|つた}わらない{空気|くうき}や、{言葉|ことば}にならない{気持|きも}ちも、{同|おな}じ{空間|くうかん}にいれば{感|かん}じ{取|じと}ることができる。",
+        "vi": "Bầu không khí mà màn hình không truyền được, hay những cảm xúc không thành lời, chỉ cần ở cùng một không gian là có thể cảm nhận được."
+      },
+      {
+        "para": 7,
+        "no": 3,
+        "ja": "{困|こま}っているときにそばにいること、ただ{黙|だま}って{耳|みみ}を{傾|かたむ}けることが、{相手|あいて}を{支|ささ}えることもある。",
+        "vi": "Ở bên cạnh khi đối phương gặp khó khăn, hay chỉ lặng lẽ lắng nghe, cũng có thể trở thành sự nâng đỡ cho đối phương."
+      },
+      {
+        "para": 7,
+        "no": 4,
+        "ja": "この「{同|おな}じ{時間|じかん}と{場所|ばしょ}を{分|わ}かち{合|かちあ}う」という{経験|けいけん}こそが、{直接|ちょくせつ}{会|あ}うことの{核心|かくしん}だと{言|い}える。",
+        "vi": "Chính trải nghiệm 'cùng chia sẻ thời gian và địa điểm' này là cốt lõi của việc gặp trực tiếp."
+      },
+      {
+        "para": 8,
+        "no": 1,
+        "ja": "つまり、{直接|ちょくせつ}{会|あ}って{話|はな}すこととは、{時間|じかん}と{場所|ばしょ}を{分|わ}かち{合|かちあ}うことで{信頼|しんらい}を{深|ふか}める{生|い}き{方|かた}である。",
+        "vi": "Nói cách khác, gặp trực tiếp và trò chuyện là cách sống làm sâu sắc thêm niềm tin bằng cách chia sẻ thời gian và địa điểm."
+      },
+      {
+        "para": 8,
+        "no": 2,
+        "ja": "ただし、{会|あ}う{回数|かいすう}を{増|ふ}やすこと{自体|じたい}が{目的|もくてき}になってはいけない。",
+        "vi": "Tuy nhiên, bản thân việc tăng số lần gặp nhau không được trở thành mục đích."
+      },
+      {
+        "para": 8,
+        "no": 3,
+        "ja": "{大切|たいせつ}なのは、{会|あ}った{時間|じかん}の{長|なが}さではなく、その{時間|じかん}にどれだけ{相手|あいて}と{向|む}き{合|きあ}ったかではないだろうか。",
+        "vi": "Điều quan trọng chẳng phải là thời gian gặp nhau dài bao lâu, mà là trong khoảng thời gian đó ta đã đối diện với đối phương đến mức nào hay sao?"
+      }
+    ],
+    "answer_key": "②④①③",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "文章A Đ1①②",
+        "options": [
+          {
+            "text": "相手の表情や声の調子を、画面を通して正確に読み取れること。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài A đoạn 2 câu 1: オンラインのつながりには、相手の表情や声の調子が見えにくいという弱点がある — tác giả A nói rõ qua mạng KHÓ thấy nét mặt hay giọng điệu. Khả năng đọc chính xác nét mặt qua màn hình là giá trị của việc gặp trực tiếp (bài B đoạn 5 câu 2). Bẫy đánh tráo bài văn."
+          },
+          {
+            "text": "距離や時間に縛られず、関心を共有する人とつながりを保てること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp bài A đoạn 1 câu 1: オンラインで人とつながることの最大の利点は、距離や時間に縛られないことである, và câu 2: 遠くに住む人とも、同じ関心を持つ人とも、画面の向こうでいつでも話すことができる. Đây chính là lợi điểm lớn nhất mà tác giả A nêu."
+          },
+          {
+            "text": "連絡先の数が増えれば、自然に深い信頼関係が築けること。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài A đoạn 2 câu 3: つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある — số lượng tăng thì quan hệ càng hời hợt, không phải tự nhiên sâu sắc. Và đoạn 4 câu 2 cảnh báo: 連絡先の数を増やすこと自体が目的になってはいけない. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "短い文章で伝えれば、誤解が生じることは決してないこと。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài A đoạn 2 câu 2: 短い文章だけでは、気持ちが伝わらず、誤解が生じることもある — tác giả A nói rõ hiểu lầm CÓ THỂ nảy sinh với câu văn ngắn. Từ 決してない là tuyệt đối hóa, đi ngược hẳn nội dung bài. Bẫy tuyệt đối hóa."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 3,
+        "locator": "文章B Đ5①②",
+        "options": [
+          {
+            "text": "移動の手間や費用をかけずに、多くの人と手軽につながれること。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài B đoạn 6 câu 3: 会うためには移動の時間や費用がかかり、忙しいときには負担になってしまうこともある — gặp trực tiếp TỐN thời gian di chuyển và chi phí. 'Không tốn công sức mà kết nối được với nhiều người' là lợi điểm của mạng (bài A đoạn 1). Bẫy đánh tráo bài văn / đảo ngược ý tác giả."
+          },
+          {
+            "text": "会えば必ず相手の気持ちを完全に理解できるようになること。",
+            "verdict": "SAI",
+            "reason": "Bài B chỉ nói cùng ở một nơi thì cảm xúc 'tự nhiên truyền đến' (đoạn 5 câu 3: 相手の気持ちが自然と伝わってくる) và có thể cảm nhận được cảm xúc không thành lời (đoạn 7 câu 2) — không hề nói gặp nhau thì NHẤT ĐỊNH hiểu hoàn toàn đối phương. Từ 必ず…完全に là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "会う回数を増やすこと自体が、信頼を深める目的になること。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài B đoạn 8 câu 2: 会う回数を増やすこと自体が目的になってはいけない — tác giả B cảnh báo bản thân việc tăng số lần gặp KHÔNG ĐƯỢC trở thành mục đích; và câu 3 khẳng định điều quan trọng không phải là thời gian gặp dài bao lâu. Bẫy đọc vế phủ định thành khẳng định."
+          },
+          {
+            "text": "表情や声の調子、沈黙やその場の雰囲気を共有し、信頼を深めること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp bài B đoạn 5 câu 1–2: 直接会って話すことの最大の価値は、言葉だけでは伝わらないものを分かち合えることである／表情や声の調子、うなずきや沈黙までもが、会話の一部になる, và đoạn 7 câu 1: 直接会うことの価値は、その場の雰囲気を共有できることにある. Đây chính là giá trị lớn nhất mà tác giả B nêu."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "文章A Đ4③・文章B Đ8③",
+        "options": [
+          {
+            "text": "大切なのは手段そのものではなく、相手と向き合う姿勢や時間の使い方だということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Có căn cứ ở CẢ HAI bài: bài A đoạn 4 câu 3 — 画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすること; bài B đoạn 8 câu 3 — 会った時間の長さではなく、その時間にどれだけ相手と向き合ったか. Cả hai tác giả đều kết luận bằng thái độ đối với đối phương, không phải bằng việc chọn phương tiện nào."
+          },
+          {
+            "text": "オンラインのつながりは、直接会うことに比べて常に劣っているということ。",
+            "verdict": "SAI",
+            "reason": "Không tác giả nào nói mạng 'luôn kém hơn' gặp trực tiếp: tác giả A khen mạng có lợi điểm lớn (đoạn 1, 3), tác giả B chỉ bàn về gặp trực tiếp mà không xếp hạng hai phương tiện. Từ 常に là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "直接会うことは、時間と費用がかかるため、できるだけ避けるべきだということ。",
+            "verdict": "SAI",
+            "reason": "Tác giả B thừa nhận gặp trực tiếp tốn thời gian và chi phí (đoạn 6 câu 3), nhưng vẫn khẳng định giá trị lớn nhất của nó là chia sẻ được những điều lời nói không truyền được (đoạn 5 câu 1) và kết luận bằng cách làm sâu sắc thêm niềm tin (đoạn 8 câu 1). Không hề khuyên tránh gặp trực tiếp. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "つながりの数が多ければ多いほど、人との関係は深くなるということ。",
+            "verdict": "SAI",
+            "reason": "Ngược với bài A đoạn 2 câu 3: つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある — số lượng tăng thì quan hệ càng hời hợt. Bài B cũng không hề nói số lượng làm sâu sắc quan hệ. Bẫy đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "文章A Đ1・Đ2・文章B Đ5・Đ6",
+        "options": [
+          {
+            "text": "両者とも、自分の取り上げたつながり方だけが正しいと主張している。",
+            "verdict": "SAI",
+            "reason": "Cả hai tác giả đều chỉ ra giới hạn của phương tiện mình bàn: A thừa nhận mạng khó thấy nét mặt và dễ làm quan hệ hời hợt (đoạn 2), B thừa nhận gặp trực tiếp bị ràng buộc bởi thời gian, địa điểm và chi phí (đoạn 6). Không ai khẳng định cách của mình là duy nhất đúng. Bẫy tuyệt đối hóa / đảo ngược lập trường."
+          },
+          {
+            "text": "両者とも、オンラインのつながりへの転換を勧めている。",
+            "verdict": "SAI",
+            "reason": "'Chuyển sang kết nối qua mạng' chỉ là chủ đề của bài A; tác giả B không hề khuyên chuyển sang mạng, mà hướng dẫn cách làm sâu sắc thêm niềm tin qua gặp trực tiếp (đoạn 8 câu 1, 3). Gán ý kiến của một bên cho cả hai. Bẫy đánh tráo bài văn."
+          },
+          {
+            "text": "両者とも、長所を認めつつ、短所や限界も指摘している。",
+            "verdict": "ĐÚNG",
+            "reason": "Đúng với CẢ HAI tác giả: A nêu lợi điểm của mạng (đoạn 1, 3) rồi chỉ ra điểm yếu (đoạn 2); B nêu giá trị của gặp trực tiếp (đoạn 5, 7) rồi chỉ ra điểm yếu (đoạn 6). Cả hai bài đều theo cùng cấu trúc khen — chê — kết luận."
+          },
+          {
+            "text": "両者とも、相手と向き合う時間の長さが信頼の決め手だと考えている。",
+            "verdict": "SAI",
+            "reason": "Đi ngược bài B đoạn 8 câu 3: 会った時間の長さではなく、その時間にどれだけ相手と向き合ったか — tác giả B nói rõ độ dài thời gian KHÔNG phải là điều quyết định. Bài A cũng không hề nói độ dài thời gian là yếu tố quyết định niềm tin. Bẫy lấy một nửa ý bị phủ định làm đáp án."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{縛|しば}られる",
+        "reading": "しばられる",
+        "hanviet": "Phược",
+        "vi": "bị ràng buộc, bị trói buộc (bởi khoảng cách, thời gian)"
+      },
+      {
+        "word": "{関心|かんしん}",
+        "reading": "かんしん",
+        "hanviet": "Quan Tâm",
+        "vi": "sự quan tâm, mối quan tâm"
+      },
+      {
+        "word": "{分|わ}かち{合|かちあ}う",
+        "reading": "わかちあう",
+        "hanviet": "Phân Tri",
+        "vi": "chia sẻ cùng nhau (cảm xúc, trải nghiệm, thời gian)"
+      },
+      {
+        "word": "{誤解|ごかい}",
+        "reading": "ごかい",
+        "hanviet": "Ngộ Giải",
+        "vi": "sự hiểu lầm"
+      },
+      {
+        "word": "{連絡|れんらく}{先|さき}",
+        "reading": "れんらくさき",
+        "hanviet": "Liên Lạc Tiên",
+        "vi": "địa chỉ liên lạc (số điện thoại, tài khoản…)"
+      },
+      {
+        "word": "{核心|かくしん}",
+        "reading": "かくしん",
+        "hanviet": "Hạch Tâm",
+        "vi": "cốt lõi, phần trung tâm quan trọng nhất"
+      },
+      {
+        "word": "{制約|せいやく}",
+        "reading": "せいやく",
+        "hanviet": "Chế Ước",
+        "vi": "sự ràng buộc, hạn chế (về thời gian, địa điểm)"
+      },
+      {
+        "word": "{雰囲気|ふんいき}",
+        "reading": "ふんいき",
+        "hanviet": "Phân Vi Khí",
+        "vi": "bầu không khí (của một nơi, một buổi gặp)"
+      },
+      {
+        "word": "{何|なん}{気|げ}ない",
+        "reading": "なにげない",
+        "hanviet": "Hà Khí",
+        "vi": "tưởng chừng vu vơ, tự nhiên không để ý"
+      },
+      {
+        "word": "{耳|みみ}を{傾|かたむ}ける",
+        "reading": "みみをかたむける",
+        "hanviet": "Nhĩ Khuynh",
+        "vi": "lắng nghe (một cách chăm chú, chân thành)"
+      },
+      {
+        "word": "{向|む}き{合|きあ}う",
+        "reading": "むきあう",
+        "hanviet": "Hướng Hợp",
+        "vi": "đối diện, đối mặt (với đối phương, với vấn đề)"
+      },
+      {
+        "word": "{選|えら}び{直|びなお}す",
+        "reading": "えらびなおす",
+        "hanviet": "Tuyển Trực",
+        "vi": "chọn lại (từ ngữ, cách diễn đạt)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜こそ",
+        "vi": "chính… (nhấn mạnh: chính cái này, không phải cái khác)",
+        "in_text": "この「会えなくてもつながれる」という自由こそが、オンラインのつながりの核心だと言える。"
+      },
+      {
+        "pattern": "〜てはいけない",
+        "vi": "không được… (cấm đoán, khuyên không nên làm)",
+        "in_text": "ただし、連絡先の数を増やすこと自体が目的になってはいけない。"
+      },
+      {
+        "pattern": "〜ば〜ほど",
+        "vi": "càng… thì càng… (mức độ tăng dần song song)",
+        "in_text": "つながりの数が増えるほど、一人ひとりとの関係が浅くなり、連絡先の数だけが増えていくこともある。"
+      },
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "chẳng phải là… hay sao? (kêu gọi đồng tình, kết luận mềm)",
+        "in_text": "大切なのは、画面の向こうにいる相手の存在を忘れず、一つひとつのやりとりを大切にすることではないだろうか。"
+      },
+      {
+        "pattern": "〜だけで",
+        "vi": "chỉ bằng… / chỉ cần… là… (giới hạn điều kiện đủ)",
+        "in_text": "仕事や家事の合間に短いメッセージを送るだけで、つながりを保つことができる。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm nhấn mạnh phạm vi: 〜こそ / 〜だけ / 〜自体",
+        "rows": [
+          {
+            "form": "〜こそ",
+            "join": "N・Vること + こそ",
+            "vi": "chính… (là…)",
+            "diff": "Nhấn mạnh TRỰC TIẾP vào một yếu tố duy nhất: 'chính cái này, không phải cái khác'. Đứng ngay sau đối tượng được nhấn mạnh, dùng để chỉ ra cốt lõi hoặc yếu tố quan trọng nhất.",
+            "example_ja": "この「{会|あ}えなくてもつながれる」という{自由|じゆう}こそが、オンラインのつながりの{核心|かくしん}だと{言|い}える。",
+            "example_vi": "Chính sự tự do 'dù không gặp được nhau vẫn có thể kết nối' này là cốt lõi của việc kết nối qua mạng."
+          },
+          {
+            "form": "〜だけ",
+            "join": "Vる + だけ / N + だけ",
+            "vi": "chỉ… (là đủ)",
+            "diff": "Giới hạn ĐIỀU KIỆN ĐỦ: chỉ cần chừng đó là đủ để đạt kết quả, không cần thêm gì. Khác với こそ (nhấn mạnh 'chính cái này'), だけ nhấn mạnh 'chỉ cần thế này là đủ' — sắc thái nhẹ nhàng, thực tế.",
+            "example_ja": "{仕事|しごと}や{家事|かじ}の{合間|あいま}に{短|みじか}いメッセージを{送|おく}るだけで、つながりを{保|たも}つことができる。",
+            "example_vi": "Chỉ cần gửi một tin nhắn ngắn trong lúc rảnh giữa công việc hay việc nhà là đã có thể giữ được sợi dây kết nối."
+          },
+          {
+            "form": "〜自体",
+            "join": "Vること + 自体",
+            "vi": "bản thân việc…",
+            "diff": "Nhấn mạnh BẢN THÂN HÀNH ĐỘNG, tách nó khỏi mục đích hay kết quả: 'chính việc đó tự nó'. Hay dùng trong cấu trúc 〜自体が目的になってはいけない để cảnh báo đừng nhầm phương tiện thành mục đích.",
+            "example_ja": "{連絡|れんらく}{先|さき}の{数|かず}を{増|ふ}やすこと{自体|じたい}が{目的|もくてき}になってはいけない。",
+            "example_vi": "Bản thân việc tăng số lượng địa chỉ liên lạc không được trở thành mục đích."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm kết luận mềm: 〜のではないだろうか / 〜のではないか / 〜と思う",
+        "rows": [
+          {
+            "form": "〜のではないだろうか",
+            "join": "Vる・Aい・Nだ + のではないだろうか",
+            "vi": "chẳng phải là… hay sao?",
+            "diff": "Kết luận MỀM, kêu gọi đồng tình: người viết đưa ra ý kiến của mình nhưng giữ khoảng lùi, như hỏi 'chẳng phải thế hay sao?'. Hay dùng ở câu kết của bài luận để nêu chủ trương mà không áp đặt.",
+            "example_ja": "{大切|たいせつ}なのは、{画面|がめん}の{向|む}こうにいる{相手|あいて}の{存在|そんざい}を{忘|わす}れず、{一|ひと}つひとつのやりとりを{大切|たいせつ}にすることではないだろうか。",
+            "example_vi": "Điều quan trọng chẳng phải là đừng quên sự tồn tại của đối phương ở phía bên kia màn hình và trân trọng từng lần trao đổi hay sao?"
+          },
+          {
+            "form": "〜のではないか",
+            "join": "Vる・Aい・Nだ + のではないか",
+            "vi": "có lẽ là… / chẳng phải là…?",
+            "diff": "Phỏng đoán hoặc kết luận mềm, sắc thái TÒ MÒ / NGHI NGỜ hơn のではないだろうか: người viết còn đang suy nghĩ, chưa chắc chắn. のではないだろうか mang tính khẳng định nhẹ ('chắc là thế'), còn のではないか mang tính nghi vấn nhiều hơn.",
+            "example_ja": "オンラインのつながりは、{便利|べんり}さの{裏|うら}に、{関係|かんけい}の{浅|あさ}さという{弱点|じゃくてん}を{隠|かく}しているのではないか。",
+            "example_vi": "Kết nối qua mạng, đằng sau sự tiện lợi, có lẽ đang che giấu điểm yếu là sự hời hợt trong quan hệ."
+          },
+          {
+            "form": "〜と思う",
+            "join": "Vる・Aい・Nだ + と思う",
+            "vi": "tôi nghĩ là…",
+            "diff": "Nêu ý kiến CÁ NHÂN một cách trực tiếp: 'tôi nghĩ như vậy'. Khác với のではないだろうか (kêu gọi đồng tình, giữ khoảng lùi) và のではないか (nghi vấn), と思う là khẳng định ý kiến của riêng mình, sắc thái chủ quan rõ rệt nhất.",
+            "example_ja": "{直接|ちょくせつ}{会|あ}うことの{価値|かち}は、{時間|じかん}と{場所|ばしょ}を{分|わ}かち{合|かちあ}うことにあると{思|おも}う。",
+            "example_vi": "Tôi nghĩ giá trị của việc gặp trực tiếp nằm ở việc chia sẻ thời gian và địa điểm."
+          }
+        ]
+      }
+    ]
+  }
+}

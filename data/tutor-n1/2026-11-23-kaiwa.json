@@ -1,0 +1,366 @@
+{
+  "lesson": 38,
+  "topic": "Lần đầu đi cắm trại cuối tuần ở công viên gần nhà (chuẩn bị đồ tối thứ Sáu, dựng lều, nướng BBQ, ngắm sao, dọn dẹp ra về) (初めて近所の公園でキャンプに行く)",
+  "summary": "Bối cảnh: cuối tuần, 拓海 và 莉子 quyết định đi cắm trại lần đầu ở một công viên gần nhà — chỗ đó có khu cắm trại cho phép dựng lều và nướng BBQ, đi bộ từ nhà chỉ khoảng 20 phút. Tối thứ Sáu, hai người ngồi ở nhà chuẩn bị đồ: lều (テント), túi ngủ (寝袋), đèn lồng (ランタン), bếp nướng (バーベキューコンロ), than (炭), thịt và rau để nướng, nước uống, túi rác. 拓海 lần đầu cắm trại nên không biết mang gì, cứ hỏi đủ thứ; 莉子 đã cắm trại vài lần nên liệt kê đồ cần mang và dặn phải kiểm tra thời tiết. Sáng hôm sau, hai người ra công viên, chọn chỗ bằng phẳng gần cây, cùng nhau dựng lều, nhóm bếp nướng, vừa nướng thịt vừa trò chuyện. Tối đến, hai người tắt đèn, ngắm sao, bàn xem sao nào sáng nhất, rồi dọn dẹp sạch sẽ, thu lều, mang rác về nhà, hẹn lần sau cắm trại ở chỗ xa hơn, có suối. Kỹ năng luyện: văn nói bạn bè khi chuẩn bị đồ cắm trại lần đầu — hỏi mang gì, hỏi cách dựng lều, hỏi cách nhóm lửa; cách nói khi khen thịt nướng ngon (〜がうまく焼けた, 〜がおいしい), cách rủ nhau ngắm sao hay hẹn lần sau (〜しようよ, 今度は〜に行こう), và cách dặn nhau dọn dẹp trước khi về. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về cắm trại (キャンプ, テント, 寝袋, ランタン, バーベキュー, 炭, コンロ, ペグ, ハンマー, 虫よけ, 焚き火, 星空, 片付ける, ゴミ), cách hỏi về cách dựng lều và nhóm lửa bằng câu hỏi xác nhận ngắn gọn (〜って、どうやるの, 〜って、どこだっけ), và cách nói cảm nhận về cảnh đêm và đồ nướng một cách tự nhiên (〜がきれいだった, 〜がうまく焼けた, 〜がすごかった).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（tối thứ Sáu chuẩn bị đồ cắm trại ở nhà: lều, đồ nướng, đèn）",
+      "stage": "（Tối thứ Sáu, trong phòng khách nhà 拓海, trên sàn bày la liệt đồ cắm trại: một cái lều gấp, hai cái túi ngủ, một cái đèn lồng, một bếp nướng nhỏ và một túi than. 拓海 ngồi xổm bên đống đồ, lần đầu cắm trại nên cứ nhìn quanh, không biết còn thiếu gì.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、キャンプってさ、{荷物|にもつ}、こんなにいるの？テントってさ、どうやって{立|た}てるの？",
+          "vi": "Ồ, đi cắm trại ấy, cần nhiều đồ thế này à? Lều ấy, dựng thế nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{大丈夫|だいじょうぶ}だよ。テントはさ、ポール{通|とお}してさ、ペグ{打|う}つだけだよ。{明日|あす}、{一緒|いっしょ}にやろうよ。",
+          "vi": "Không sao đâu. Lều ấy, luồn thanh chống qua rồi đóng cọc là xong ấy mà. Mai cùng dựng nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、{簡単|かんたん}そうじゃん。ってさ、{炭|すみ}ってさ、どこで{買|か}うの？",
+          "vi": "Chà, nghe đơn giản nhỉ. Này, than ấy, mua ở đâu?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あそこのホームセンターだよ。{肉|にく}もさ、{野菜|やさい}もさ、{明日|あす}、{朝|あさ}イチで{買|か}いに{行|い}こうよ。",
+          "vi": "Ở cửa hàng đồ gia dụng đằng kia ấy. Thịt này, rau này, mai sáng sớm đi mua nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、わかった。ってさ、ランタンってさ、{電池|でんち}、{入|はい}ってる？",
+          "vi": "Ừ, biết rồi. Này, đèn lồng ấy, có pin chưa?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "えっとさ、たぶん{入|はい}ってるよ。でもさ、{予備|よび}、{持|も}ってったほうがいいよ。",
+          "vi": "Ừm, chắc là có pin rồi ấy. Nhưng mà, mang thêm pin dự phòng thì hơn đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、そうだね。ってさ、{寝袋|ねぶくろ}ってさ、{寒|さむ}くないの？{夜|よる}、{冷|ひ}えるでしょ。",
+          "vi": "Ồ, đúng rồi nhỉ. Này, túi ngủ ấy, có lạnh không? Ban đêm lạnh mà nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{大丈夫|だいじょうぶ}だよ。{毛布|もうふ}、1{枚|まい}{持|も}ってくからさ。あ、{虫|むし}よけスプレーも{忘|わす}れないでね。",
+          "vi": "Không sao đâu. Mang thêm một cái chăn nữa mà. À, đừng quên xịt chống muỗi nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、ほんとだ。ってさ、{天気|てんき}ってさ、{明日|あす}、どうだっけ。",
+          "vi": "À, đúng thật. Này, thời tiết ấy, mai thế nào nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{晴|は}れだってさ。{星|ほし}、{見|み}えるかもよ。{早|はや}く{寝|ね}ようよ。{明日|あす}、{早起|はやお}きだよ。",
+          "vi": "Nắng ấy mà. Có khi ngắm được sao đấy. Đi ngủ sớm đi. Mai phải dậy sớm đấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（tại công viên: dựng lều, nướng BBQ, ngắm sao, dọn dẹp ra về）",
+      "stage": "（Sáng thứ Bảy, trong công viên gần nhà, dưới một gốc cây lớn, mặt đất bằng phẳng. Hai người vừa dựng xong lều, bếp nướng đã nhóm lửa, khói bay lên nhè nhẹ. Đến tối, đèn lồng sáng lên, bầu trời đầy sao.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、テント、やっと{立|た}ったね。ってさ、ペグってさ、もっと{深|ふか}く{打|う}つんだっけ。",
+          "vi": "Phù, lều cuối cùng cũng dựng xong rồi. Này, cọc ấy, đóng sâu hơn nữa đúng không nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、そうだよ。{風|ふう}、{吹|ふ}いたらさ、{飛|と}んじゃうからさ。ほら、ハンマー、こっちだよ。",
+          "vi": "Ừ, đúng rồi đấy. Gió thổi ấy, bay mất đấy. Này, búa này, đằng này này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ありがとう。ってさ、{火|ひ}ってさ、どうやってつけるの？",
+          "vi": "Ồ, cảm ơn nhé. Này, lửa ấy, nhóm thế nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{着火|ちゃっか}{剤|ざい}に{火|ひ}つけてさ、{炭|すみ}に{移|うつ}すんだよ。ほら、うちわで{扇|あお}いでさ、{火|ひ}、{大|おお}きくするんだよ。",
+          "vi": "Châm mồi lửa rồi truyền sang than ấy mà. Này, quạt bằng quạt tay này, lửa to lên ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、できたじゃん。じゃあさ、{肉|にく}、{焼|や}こうよ。えっと、{何|なん}から{焼|や}く？",
+          "vi": "À, được rồi này. Thế thì, nướng thịt đi. Ừm, nướng cái gì trước?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいよ、{焼|や}いて{焼|や}いて。ほら、トング、こっちだよ。{焦|こ}がさないでね。",
+          "vi": "Được, nướng đi nướng đi. Này, kẹp gắp này, đằng này này. Đừng để cháy nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、わかった。ってさ、この{肉|にく}、めっちゃうまく{焼|や}けたじゃん。",
+          "vi": "Ừ, biết rồi. Này, miếng thịt này nướng ngon thật đấy nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "だよね。{星|ほし}、{見|み}てみて。すごくきれいだよ。あっちの{星|ほし}、{明|あか}るいじゃん。",
+          "vi": "Ừ nhỉ. Nhìn sao kìa. Đẹp lắm đấy. Ngôi sao đằng kia ấy, sáng thật đấy nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。ってさ、そろそろ{片付|かたづ}けようよ。ゴミ、ちゃんと{持|も}って{帰|かえ}ろうよ。",
+          "vi": "Ồ, đúng thật. Này, sắp đến lúc dọn dẹp rồi đấy. Rác ấy, mang về đàng hoàng nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。テント、{畳|たた}んでさ、{忘|わす}れ{物|れもの}、ないかチェックしようよ。{今度|こんど}はさ、{川|がわ}の{近|ちか}くに{行|い}こうよ。",
+          "vi": "Ừ nhỉ. Gấp lều lại này, kiểm tra xem có quên đồ gì không nhé. Lần sau ấy, đi chỗ gần sông nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "キャンプにはたくさんの荷物が必要です。テントはポールを通して、ペグを打ちます。炭はホームセンターで買います。",
+      "real": "キャンプってさ、荷物、こんなにいるの？テントってさ、どうやって立てるの？炭ってさ、どこで買うの？",
+      "why": "Sách giáo khoa dùng 必要です và 買います một cách trang trọng, nghe như đang đọc danh sách đồ dùng in trong sách hướng dẫn cắm trại. Nói thật thì hỏi bằng こんなにいるの và どうやって立てるの, thêm ってさ để đưa chủ đề lên trước rồi hỏi, nghe như người lần đầu cắm trại đang ngồi xổm bên đống đồ, vừa nhìn quanh vừa hỏi bạn."
+    },
+    {
+      "textbook": "ランタンには電池が入っています。予備の電池を持って行ったほうがいいです。夜は冷えるので、毛布を持って行きます。",
+      "real": "ランタンってさ、電池、入ってる？予備、持ってったほうがいいよ。毛布、1枚持ってくからさ。",
+      "why": "Văn nói bạn bè dùng 入ってる và 持ってったほうがいいよ để dặn nhau một cách thân mật, kèm さ để giải thích nhẹ nhàng, còn sách giáo khoa dùng 入っています và 持って行ったほうがいいです cứng nhắc, nghe như đang đọc tờ rơi hướng dẫn. Câu nói thật nghe như hai người đang kiểm tra đồ đạc tối thứ Sáu, vừa xếp đồ vừa nhắc nhau đừng quên thứ gì."
+    },
+    {
+      "textbook": "テントがやっと立ちました。ペグはもっと深く打ってください。火は着火剤に火をつけて、炭に移します。",
+      "real": "テント、やっと立ったね。ペグってさ、もっと深く打つんだっけ。火ってさ、どうやってつけるの？",
+      "why": "Văn nói khi dựng lều dùng やっと立ったね và 打つんだっけ để nói một cách suồng sã, thêm ね・っけ để rủ bạn đồng tình và hỏi lại, còn sách giáo khoa dùng 立ちました và 打ってください trang trọng, nghe như đang viết báo cáo hoạt động ngoài trời nộp cho thầy cô. Câu nói thật nghe như hai người vừa dựng xong lều, đang thở phào, tay còn cầm búa."
+    },
+    {
+      "textbook": "この肉はとてもうまく焼けました。星はとてもきれいです。そろそろ片付けましょう。ゴミはちゃんと持って帰りましょう。",
+      "real": "この肉、めっちゃうまく焼けたじゃん。星、見てみて。すごくきれいだよ。そろそろ片付けようよ。ゴミ、ちゃんと持って帰ろうよ。",
+      "why": "Văn nói dùng めっちゃ và うまく焼けた để khen thịt nướng một cách suồng sã, thêm じゃん・よ để rủ bạn đồng tình, còn sách giáo khoa dùng とてもうまく焼けました và とてもきれいです trang trọng, nghe như đang viết bài cảm nhận. Câu nói thật nghe như hai người đang ngồi bên bếp nướng dưới bầu trời đầy sao, vừa ăn vừa ngắm sao."
+    },
+    {
+      "textbook": "テントを畳んで、忘れ物がないかチェックしましょう。今度は川の近くに行きましょう。",
+      "real": "テント、畳んでさ、忘れ物、ないかチェックしようよ。今度はさ、川の近くに行こうよ。",
+      "why": "Văn nói dùng 畳んでさ và チェックしようよ để rủ nhau dọn dẹp một cách thân mật, kèm さ để nói nhẹ nhàng, còn sách giáo khoa dùng 畳んで và チェックしましょう, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người đang thu dọn đồ đạc trước khi về, vừa gấp lều vừa bàn lần sau đi chỗ gần sông."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ってさ",
+      "in_lesson": "テントってさ、どうやって立てるの？",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa cái lều lên trước rồi hỏi cách dựng; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang chuẩn bị đồ lần đầu và có nhiều thứ chưa biết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "天気ってさ、明日、どうだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; 天気、どうだっけ là hỏi lại thời tiết ngày mai thế nào, ペグ、もっと深く打つんだっけ là hỏi lại cách đóng cọc.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — thời tiết, cách dựng lều, cách đóng cọc, giờ hẹn.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどうですか・〜はどうなりますか)."
+    },
+    {
+      "form": "〜てみて",
+      "in_lesson": "星、見てみて",
+      "original": "〜てみてください",
+      "vi": "…thử xem đi — cách rủ bạn thử nhìn hay thử làm một việc một cách thân mật; 星、見てみて là rủ bạn ngước lên nhìn sao, 食べてみて là rủ bạn ăn thử miếng thịt vừa nướng xong.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau thử nhìn, thử ăn, thử làm một việc ngay lúc đó — ngắm sao, ăn thử đồ nướng, thử dựng lều.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てみてください)."
+    },
+    {
+      "form": "〜うまく焼けた",
+      "in_lesson": "この肉、めっちゃうまく焼けたじゃん",
+      "original": "〜が上手に焼けた / 〜がおいしく焼けた",
+      "vi": "Nướng ngon thật — dạng suồng sã để khen đồ nướng vừa chín tới, thường đi với めっちゃ để khen mạnh; 肉、うまく焼けた là khen thịt nướng ngon, 野菜、いい感じに焼けた là khen rau nướng vừa tới.",
+      "use": "Dùng với bạn bè, người thân khi khen đồ nướng, đồ ăn vừa nấu xong — thịt nướng, rau nướng, cá nướng.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜がおいしく焼けました・上手に焼けました)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "へえ、簡単そうじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; 簡単そうじゃん là khen việc dựng lều có vẻ đơn giản rồi chờ bạn gật đầu theo, きれいじゃん là khen sao đẹp rồi rủ bạn đồng ý.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — lều dễ dựng, sao đẹp, thịt nướng ngon.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜しようよ",
+      "in_lesson": "そろそろ片付けようよ",
+      "original": "〜しましょう",
+      "vi": "…đi / …nào — cách rủ nhau cùng làm một việc một cách thân mật; 片付けようよ là rủ nhau dọn dẹp trước khi về, 早く寝ようよ là rủ nhau đi ngủ sớm để mai dậy sớm.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau cùng làm một việc — dọn dẹp, dựng lều, nướng thịt, ngắm sao, đi ngủ sớm.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜しましょう)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "テント",
+      "reading": "てんと",
+      "vi": "Lều — chỗ ngủ khi cắm trại, thường là lều gấp (組み立て式テント) dựng bằng cách luồn thanh chống (ポール) qua vải lều rồi đóng cọc (ペグ) xuống đất bằng búa (ハンマー); テントを立てる là dựng lều, テントを畳む là gấp lều lại, テントを張る cũng có nghĩa là dựng lều.",
+      "example_ja": "テントってさ、どうやって{立|た}てるの？ポール{通|とお}してさ、ペグ{打|う}つだけだよ。",
+      "example_vi": "Lều ấy, dựng thế nào? Luồn thanh chống qua rồi đóng cọc là xong ấy mà."
+    },
+    {
+      "expr": "バーベキュー",
+      "reading": "ばーべきゅー",
+      "vi": "Nướng BBQ ngoài trời — nướng thịt, rau, hải sản trên bếp nướng (バーベキューコンロ) dùng than (炭); バーベキューする là tổ chức nướng BBQ, バーベキューコンロ là bếp nướng, 炭に火をつける là nhóm lửa cho than, 肉を焼く là nướng thịt; ở Nhật, nhiều công viên có khu vực cho phép nướng BBQ nhưng phải đặt trước.",
+      "example_ja": "じゃあさ、{肉|にく}、{焼|や}こうよ。バーベキュー、{楽|たの}しみだね。",
+      "example_vi": "Thế thì, nướng thịt đi. Nướng BBQ, háo hức thật đấy."
+    },
+    {
+      "expr": "ランタン",
+      "reading": "らんたん",
+      "vi": "Đèn lồng cắm trại — đèn dùng khi cắm trại ban đêm, chạy bằng pin (電池) hoặc sạc USB, treo trong lều hay đặt trên bàn để soi sáng; ランタンをつける là bật đèn lồng, ランタンの明かり là ánh sáng đèn lồng, mang thêm pin dự phòng (予備の電池) thì yên tâm hơn.",
+      "example_ja": "ランタンってさ、{電池|でんち}、{入|はい}ってる？{予備|よび}、{持|も}ってったほうがいいよ。",
+      "example_vi": "Đèn lồng ấy, có pin chưa? Mang thêm pin dự phòng thì hơn đấy."
+    },
+    {
+      "expr": "{寝袋|ねぶくろ}",
+      "reading": "ねぶくろ",
+      "vi": "Túi ngủ — túi vải dày để chui vào ngủ khi cắm trại, thay cho chăn và đệm; 寝袋に入る là chui vào túi ngủ, 寝袋で寝る là ngủ trong túi ngủ, ban đêm ở ngoài trời lạnh nên thường mang thêm chăn (毛布) đắp lên trên túi ngủ.",
+      "example_ja": "{寝袋|ねぶくろ}ってさ、{寒|さむ}くないの？{毛布|もうふ}、1{枚|まい}{持|も}ってくからさ。",
+      "example_vi": "Túi ngủ ấy, có lạnh không? Mang thêm một cái chăn nữa mà."
+    },
+    {
+      "expr": "ペグ",
+      "reading": "ぺぐ",
+      "vi": "Cọc cắm lều — cọc kim loại đóng xuống đất để cố định lều, dùng búa (ハンマー) đóng; ペグを打つ là đóng cọc, ペグを抜く là nhổ cọc khi thu lều, đóng cọc càng sâu thì lều càng chắc, gió thổi cũng không bay.",
+      "example_ja": "ペグってさ、もっと{深|ふか}く{打|う}つんだっけ。{風|ふう}、{吹|ふ}いたらさ、{飛|と}んじゃうからさ。",
+      "example_vi": "Cọc ấy, đóng sâu hơn nữa đúng không nhỉ? Gió thổi ấy, bay mất đấy."
+    },
+    {
+      "expr": "{片付|かたづ}ける",
+      "reading": "かたづける",
+      "vi": "Dọn dẹp, thu dọn — khi cắm trại xong phải dọn sạch chỗ mình dùng: gấp lều, dập lửa, mang rác về; 片付ける là dọn dẹp nói chung, ゴミを持って帰る là mang rác về nhà, 忘れ物をチェックする là kiểm tra xem có quên đồ gì không; ở Nhật, cắm trại mà bỏ rác lại thì bị coi là rất thiếu ý thức.",
+      "example_ja": "そろそろ{片付|かたづ}けようよ。ゴミ、ちゃんと{持|も}って{帰|かえ}ろうよ。",
+      "example_vi": "Sắp đến lúc dọn dẹp rồi đấy. Rác ấy, mang về đàng hoàng nhé."
+    }
+  ],
+  "mindset": [
+    "Cắm trại (キャンプ) ở Nhật rất phổ biến vào cuối tuần, nhất là mùa thu và mùa xuân: nhiều công viên và khu cắm trại (キャンプ場) gần nhà cho phép dựng lều và nướng BBQ, có chỗ phải đặt trước (予約), có chỗ cứ đến là dùng được, nhưng hầu hết đều cấm 焚き火 (đốt lửa trại trực tiếp trên mặt đất) mà chỉ cho nướng trên bếp (バーベキューコンロ). Đồ cắm trại cơ bản gồm lều (テント), túi ngủ (寝袋), đèn lồng (ランタン), bếp nướng, than (炭), đồ ăn để nướng, nước uống, túi rác, xịt chống muỗi (虫よけスプレー). Trong bài, 拓海 đi cắm trại lần đầu nên cứ hỏi đủ thứ — lều dựng thế nào, than mua ở đâu, đèn lồng có pin chưa, túi ngủ có lạnh không — còn 莉子 đã quen nên liệt kê đồ cần mang và dặn kiểm tra thời tiết; đi cắm trại lần đầu mà có bạn đi cùng chỉ giúp thì rất bình thường, nhân viên ở cửa hàng đồ cắm trại cũng quen hướng dẫn khách mới.",
+    "Cách dựng lều ở Nhật thường là lều gấp (組み立て式テント): luồn thanh chống (ポール) qua vải lều, dựng khung lên, rồi đóng cọc (ペグ) xuống đất bằng búa (ハンマー) để cố định — đóng cọc càng sâu thì lều càng chắc, gió thổi cũng không bay. Nhóm lửa nướng BBQ thì châm mồi lửa (着火剤) rồi truyền sang than (炭), dùng quạt tay (うちわ) quạt cho lửa to lên, đợi than đỏ đều rồi mới đặt thịt lên vỉ (網); thịt nướng thì dùng kẹp (トング) để lật, đừng để cháy (焦がす). Trong bài, hai người cùng nhau dựng lều, 拓海 đóng cọc, 莉子 chỉ cách nhóm lửa, rồi hai người vừa nướng thịt vừa trò chuyện — nướng thịt xong khen nhau 肉、うまく焼けたじゃん là chuyện rất thường gặp khi cắm trại.",
+    "Ngắm sao (星を見る) là một trong những thú vui lớn nhất khi cắm trại: ở công viên gần thành phố thì sao không nhiều bằng ở núi, nhưng vào đêm trời quang (晴れ) vẫn thấy được nhiều sao, sao nào sáng nhất thì dễ nhận ra. Quy tắc ngầm khi cắm trại ở Nhật là dọn dẹp sạch sẽ trước khi về (来た時よりも美しく — lúc về phải đẹp hơn lúc đến): gấp lều, dập lửa, mang hết rác về nhà (ゴミを持って帰る), kiểm tra xem có quên đồ gì không (忘れ物をチェックする). Trong bài, hai người ngắm sao xong thì dọn dẹp, thu lều, mang rác về, rồi hẹn lần sau cắm trại ở chỗ gần sông, xa hơn — hẹn lần sau đi chỗ mới là cách kết thúc một buổi cắm trại rất tự nhiên."
+  ],
+  "mistakes": [
+    "Đừng quên kiểm tra thời tiết trước khi đi cắm trại: trời mưa thì lều ướt, than không cháy được, cả buổi cắm trại hỏng hết — trước hôm đi phải xem dự báo (天気予報), nếu mưa thì dời sang cuối tuần khác, đừng cố đi rồi ngồi trong lều cả ngày.",
+    "Đừng đóng cọc (ペグ) quá nông hay quên đóng cọc: lều không cố định thì gió thổi mạnh là lều bay, đồ đạc bên trong bay theo — đóng cọc sâu xuống đất, kiểm tra lại sau khi dựng xong, nhất là khi trời có gió.",
+    "Đừng để thịt nướng bị cháy (焦がす) vì lửa quá to: than mới nhóm thì lửa rất mạnh, đặt thịt lên ngay thì bên ngoài cháy mà bên trong chưa chín — đợi than đỏ đều, lửa ổn định rồi mới nướng, vừa nướng vừa lật bằng kẹp (トング).",
+    "Đừng bỏ rác lại ở công viên khi về: cắm trại ở Nhật thì rác phải mang về nhà (ゴミを持って帰る), không được bỏ lại ở khu cắm trại — trước khi về phải kiểm tra lại chỗ mình ngồi, gấp lều, nhổ cọc, xem có quên đồ gì không."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn lần đầu đi cắm trại và đang chuẩn bị đồ ở nhà tối thứ Sáu. Hãy hỏi bạn đi cùng: cần mang những gì (lều, túi ngủ, đèn lồng, bếp nướng, than), than mua ở đâu, và đèn lồng có pin chưa.",
+    "Tình huống 2: Bạn vừa đến công viên và đang dựng lều với bạn. Hãy hỏi bạn đi cùng: lều dựng thế nào, thanh chống (ポール) luồn qua đâu, cọc (ペグ) đóng sâu bao nhiêu, và búa (ハンマー) ở đâu.",
+    "Tình huống 3: Bạn đang nhóm lửa để nướng BBQ và than chưa cháy. Hãy hỏi bạn đi cùng: lửa nhóm thế nào, mồi lửa (着火剤) châm ra sao, quạt tay (うちわ) quạt thế nào cho lửa to lên, và khi nào thì đặt thịt lên vỉ.",
+    "Tình huống 4: Bạn vừa nướng xong thịt và đang ngồi ngắm sao với bạn. Hãy bàn với bạn đi cùng: thịt nướng ngon thế nào, sao nào sáng nhất, bầu trời đêm nay đẹp ra sao, và lần sau muốn cắm trại ở đâu.",
+    "Tình huống 5: Bạn vừa cắm trại xong và đang dọn dẹp để ra về. Hãy bàn với bạn đi cùng: lều gấp thế nào, rác mang về ra sao, có quên đồ gì không, và lần sau muốn đi cắm trại ở chỗ nào."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、キャンプってさ、{荷物|にもつ}、こんなにいるの？テントってさ、どうやって{立|た}てるの？",
+      "vi": "Ồ, đi cắm trại ấy, cần nhiều đồ thế này à? Lều ấy, dựng thế nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{大丈夫|だいじょうぶ}だよ。テントはさ、ポール{通|とお}してさ、ペグ{打|う}つだけだよ。{明日|あす}、{一緒|いっしょ}にやろうよ。",
+      "vi": "Không sao đâu. Lều ấy, luồn thanh chống qua rồi đóng cọc là xong ấy mà. Mai cùng dựng nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、{簡単|かんたん}そうじゃん。ってさ、{炭|すみ}ってさ、どこで{買|か}うの？",
+      "vi": "Chà, nghe đơn giản nhỉ. Này, than ấy, mua ở đâu?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あそこのホームセンターだよ。{肉|にく}もさ、{野菜|やさい}もさ、{明日|あす}、{朝|あさ}イチで{買|か}いに{行|い}こうよ。",
+      "vi": "Ở cửa hàng đồ gia dụng đằng kia ấy. Thịt này, rau này, mai sáng sớm đi mua nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、わかった。ってさ、ランタンってさ、{電池|でんち}、{入|はい}ってる？",
+      "vi": "Ừ, biết rồi. Này, đèn lồng ấy, có pin chưa?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "えっとさ、たぶん{入|はい}ってるよ。でもさ、{予備|よび}、{持|も}ってったほうがいいよ。",
+      "vi": "Ừm, chắc là có pin rồi ấy. Nhưng mà, mang thêm pin dự phòng thì hơn đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、そうだね。ってさ、{寝袋|ねぶくろ}ってさ、{寒|さむ}くないの？{夜|よる}、{冷|ひ}えるでしょ。",
+      "vi": "Ồ, đúng rồi nhỉ. Này, túi ngủ ấy, có lạnh không? Ban đêm lạnh mà nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{大丈夫|だいじょうぶ}だよ。{毛布|もうふ}、1{枚|まい}{持|も}ってくからさ。あ、{虫|むし}よけスプレーも{忘|わす}れないでね。",
+      "vi": "Không sao đâu. Mang thêm một cái chăn nữa mà. À, đừng quên xịt chống muỗi nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、ほんとだ。ってさ、{天気|てんき}ってさ、{明日|あす}、どうだっけ。",
+      "vi": "À, đúng thật. Này, thời tiết ấy, mai thế nào nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{晴|は}れだってさ。{星|ほし}、{見|み}えるかもよ。{早|はや}く{寝|ね}ようよ。{明日|あす}、{早起|はやお}きだよ。",
+      "vi": "Nắng ấy mà. Có khi ngắm được sao đấy. Đi ngủ sớm đi. Mai phải dậy sớm đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、テント、やっと{立|た}ったね。ってさ、ペグってさ、もっと{深|ふか}く{打|う}つんだっけ。",
+      "vi": "Phù, lều cuối cùng cũng dựng xong rồi. Này, cọc ấy, đóng sâu hơn nữa đúng không nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、そうだよ。{風|ふう}、{吹|ふ}いたらさ、{飛|と}んじゃうからさ。ほら、ハンマー、こっちだよ。",
+      "vi": "Ừ, đúng rồi đấy. Gió thổi ấy, bay mất đấy. Này, búa này, đằng này này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ありがとう。ってさ、{火|ひ}ってさ、どうやってつけるの？",
+      "vi": "Ồ, cảm ơn nhé. Này, lửa ấy, nhóm thế nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{着火|ちゃっか}{剤|ざい}に{火|ひ}つけてさ、{炭|すみ}に{移|うつ}すんだよ。ほら、うちわで{扇|あお}いでさ、{火|ひ}、{大|おお}きくするんだよ。",
+      "vi": "Châm mồi lửa rồi truyền sang than ấy mà. Này, quạt bằng quạt tay này, lửa to lên ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、できたじゃん。じゃあさ、{肉|にく}、{焼|や}こうよ。えっと、{何|なん}から{焼|や}く？",
+      "vi": "À, được rồi này. Thế thì, nướng thịt đi. Ừm, nướng cái gì trước?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいよ、{焼|や}いて{焼|や}いて。ほら、トング、こっちだよ。{焦|こ}がさないでね。",
+      "vi": "Được, nướng đi nướng đi. Này, kẹp gắp này, đằng này này. Đừng để cháy nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、わかった。ってさ、この{肉|にく}、めっちゃうまく{焼|や}けたじゃん。",
+      "vi": "Ừ, biết rồi. Này, miếng thịt này nướng ngon thật đấy nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "だよね。{星|ほし}、{見|み}てみて。すごくきれいだよ。あっちの{星|ほし}、{明|あか}るいじゃん。",
+      "vi": "Ừ nhỉ. Nhìn sao kìa. Đẹp lắm đấy. Ngôi sao đằng kia ấy, sáng thật đấy nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。ってさ、そろそろ{片付|かたづ}けようよ。ゴミ、ちゃんと{持|も}って{帰|かえ}ろうよ。",
+      "vi": "Ồ, đúng thật. Này, sắp đến lúc dọn dẹp rồi đấy. Rác ấy, mang về đàng hoàng nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。テント、{畳|たた}んでさ、{忘|わす}れ{物|れもの}、ないかチェックしようよ。{今度|こんど}はさ、{川|がわ}の{近|ちか}くに{行|い}こうよ。",
+      "vi": "Ừ nhỉ. Gấp lều lại này, kiểm tra xem có quên đồ gì không nhé. Lần sau ấy, đi chỗ gần sông nhé."
+    }
+  ],
+  "notes": [
+    "Đồ cắm trại cơ bản: lều (テント), túi ngủ (寝袋), đèn lồng (ランタン), bếp nướng (バーベキューコンロ), than (炭), mồi lửa (着火剤), quạt tay (うちわ), kẹp gắp (トング), cọc (ペグ), búa (ハンマー), xịt chống muỗi (虫よけスプレー); nhiều công viên cho nướng BBQ nhưng phải đặt trước và cấm đốt lửa trại trực tiếp trên mặt đất.",
+    "Cách dựng lều: luồn thanh chống (ポール) qua vải lều, dựng khung lên, đóng cọc (ペグ) sâu xuống đất bằng búa (ハンマー) để cố định; nhóm lửa BBQ: châm mồi lửa (着火剤) rồi truyền sang than, quạt bằng quạt tay (うちわ) cho lửa to lên, đợi than đỏ đều rồi mới đặt thịt lên vỉ.",
+    "Quy tắc khi cắm trại ở Nhật: dọn sạch trước khi về (来た時よりも美しく) — gấp lều, dập lửa, mang hết rác về nhà (ゴミを持って帰る), kiểm tra quên đồ; ngắm sao (星を見る) là thú vui lớn khi cắm trại, đêm trời quang thì thấy được nhiều sao.",
+    "〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (thời tiết, cách đóng cọc); 〜てみて là cách rủ bạn thử nhìn hay thử làm ngay lúc đó (ngắm sao); 〜うまく焼けた là dạng suồng sã để khen đồ nướng ngon; 〜しようよ là cách rủ nhau cùng làm một việc (dọn dẹp, dựng lều, đi ngủ sớm)."
+  ]
+}
