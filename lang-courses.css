@@ -1,5 +1,5 @@
 /* Khóa tiếng Anh / tiếng Trung — thanh chọn ngôn ngữ + trang vào. Không đổi bố cục bài Nhật. */
-.hn-langbar{background:#fff;border-bottom:1px solid var(--line,#ece6d8);position:sticky;top:62px;z-index:19}
+.hn-langbar{background:var(--bg,#fff);border-bottom:1px solid var(--line,#ece6d8);position:sticky;top:var(--hn-topbar-h,62px);z-index:19}
 .hn-langbar .wrap{display:flex;align-items:center;gap:14px;min-height:52px;padding-top:6px;padding-bottom:6px;max-width:1040px;margin:0 auto;padding-left:18px;padding-right:18px}
 .hn-langbar-lab{margin:0;font-size:13px;font-weight:700;color:var(--m,#68707c);white-space:nowrap}
 .hn-lang-sw{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;flex:1;max-width:640px}
@@ -9,7 +9,7 @@
 .hn-lang-sw a.on{background:linear-gradient(150deg,#31457c,#233d63);color:#fff;border-color:transparent;box-shadow:0 8px 18px rgba(35,61,99,.28)}
 .hn-lang-sw a.on small{color:#c9d6f0}
 @media(max-width:860px){
-  .hn-langbar{top:56px}
+  .hn-langbar{top:var(--hn-topbar-h,56px)}
   .hn-langbar-lab{display:none}
 }
 
@@ -85,10 +85,54 @@
   .hn-map{display:block;overflow-x:auto}
 }
 
-/* Bài EN/ZH dùng giọng máy của trình duyệt; ẩn thanh tốc độ VOICEVOX để khỏi nhầm. */
+/* Bài EN/ZH dùng giọng máy của trình duyệt; ẩn thanh tốc độ VOICEVOX (style.css .ttsbar). */
 html[data-hn-lang="en"] .ttsbar,
-html[data-hn-lang="zh"] .ttsbar{display:none}
-/* Nút Quay lại nổi 48px góc trái — đừng đè tiêu đề khối trên mobile */
-@media (max-width:860px){
-  #hnLangApp .block-h{padding-left:64px}
+html[data-hn-lang="zh"] .ttsbar{display:none!important}
+
+/* Chữ Hán / pinyin: style.css gán Noto Sans JP cho mọi ruby — ghi đè cho bài Trung. */
+html[data-hn-lang="zh"],
+html[data-hn-lang="zh"] ruby,
+[lang="zh-Hans"],
+[lang="zh-Hans"] ruby{
+  font-family:"Noto Sans SC","Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+}
+html[data-hn-lang="zh"] ruby,
+[lang="zh-Hans"] ruby{margin:0 .08em}
+
+/* Điện thoại: tên ngắn «Đại Ca» + slogan, một cột, không cắt chữ. */
+@media(max-width:860px){
+  .topbar .brand{
+    overflow:visible;
+    flex:0 0 auto;
+    min-width:auto;
+    max-width:none;
+    white-space:nowrap;
+  }
+  .topbar .brand .st-f{display:none!important}
+  .topbar .brand .st-s{
+    display:inline-block!important;
+    font-size:0;
+    line-height:1.15;
+    color:#fff;
+    vertical-align:middle;
+    white-space:nowrap;
+  }
+  .topbar .brand .st-s::before{
+    content:"Đại Ca";
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:-.01em;
+    color:#fff;
+    white-space:nowrap;
+  }
+  .topbar .brand .st-s::after{
+    white-space:nowrap;
+    overflow:visible;
+  }
+}
+
+/* Nút Quay lại nổi: trên điện thoại ẩn đi (đã có thanh tab + nút «← Khóa …» trong bài)
+   để khỏi đè mép nội dung. Máy tính giữ nút ở lề trái, ngoài cột bài. */
+@media(max-width:860px){
+  #backBtnFixed{display:none!important}
 }

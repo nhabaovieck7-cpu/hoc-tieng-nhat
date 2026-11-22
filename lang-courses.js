@@ -24,7 +24,7 @@
   function injectCss(){
     if(document.getElementById('hn-lang-css'))return;
     var l=document.createElement('link');
-    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=2';
+    l.id='hn-lang-css';l.rel='stylesheet';l.href='lang-courses.css?v=4';
     document.head.appendChild(l);
   }
 
@@ -48,15 +48,37 @@
       '</div></div></div>';
   }
 
+  function placeBar(){
+    var tb=document.querySelector('.topbar');
+    var bar=document.getElementById('hnLangBar');
+    if(!tb||!bar)return;
+    var h=Math.ceil(tb.getBoundingClientRect().height);
+    if(h<40)h=62;
+    bar.style.top=h+'px';
+    document.documentElement.style.setProperty('--hn-topbar-h',h+'px');
+    var bh=Math.ceil(bar.getBoundingClientRect().height)||52;
+    document.documentElement.style.scrollPaddingTop=(h+bh)+'px';
+  }
   function injectBar(){
     if(document.getElementById('hnLangBar'))return;
     var tb=document.querySelector('.topbar');
     if(!tb)return;
     injectCss();
-    if(pageLang()==='zh'||path()==='zh.html')injectFonts();
-    tb.insertAdjacentHTML('afterend', switcherHtml(pageLang()));
-    // Tránh thanh ngôn ngữ đè nội dung khi topbar sticky
-    try{document.documentElement.style.scrollPaddingTop=''}catch(e){}
+    var lang=pageLang();
+    if(lang==='zh'||path()==='zh.html')injectFonts();
+    if(lang==='en'||lang==='zh')document.documentElement.setAttribute('data-hn-lang',lang);
+    tb.insertAdjacentHTML('afterend', switcherHtml(lang));
+    placeBar();
+    try{
+      if(typeof ResizeObserver==='function'){
+        var ro=new ResizeObserver(function(){placeBar()});
+        ro.observe(tb);
+        var bar=document.getElementById('hnLangBar');
+        if(bar)ro.observe(bar);
+      }
+    }catch(e){}
+    w.addEventListener('resize',placeBar);
+    w.addEventListener('load',placeBar);
   }
 
   /* ---- Browser TTS (en-US / zh-CN). Không đụng F.tts (VOICEVOX tiếng Nhật). ---- */
@@ -173,6 +195,17 @@
   }
 
   /* ---- Load pack / lesson ---- */
+  function normalizeLesson(L){
+    var x=L||{};
+    if(!Array.isArray(x.explain))x.explain=[];
+    if(!Array.isArray(x.examples))x.examples=[];
+    return x;
+  }
+  function normalizePack(pack){
+    if(!pack)return pack;
+    pack.lessons=(pack.lessons||[]).map(normalizeLesson);
+    return pack;
+  }
   function loadJson(url){
     return fetch(url,{cache:'no-cache'}).then(function(r){
       if(!r.ok)throw new Error('Không tải được '+url+' ('+r.status+')');
@@ -189,7 +222,7 @@
     index=index||await loadIndex(lang);
     var lv=(index.levels||[]).find(function(x){return x.id===levelId});
     if(!lv||!lv.ready||!lv.pack)return null;
-    return loadJson(packUrl(lang, lv.pack));
+    return loadJson(packUrl(lang, lv.pack)).then(normalizePack);
   }
   async function loadPackForId(lang, id){
     var index=await loadIndex(lang);
@@ -204,7 +237,8 @@
     for(var i=0;i<order.length;i++){
       var pack=await loadJson(packUrl(lang, order[i].pack));
       var list=pack.lessons||[];
-      if(list.some(function(L){return L.id===id}))return pack;
+      pack=normalizePack(pack);
+      if((pack.lessons||[]).some(function(L){return L.id===id}))return pack;
     }
     throw new Error('Không tìm thấy bài '+id);
   }
@@ -224,9 +258,13 @@
     if(back){back.href=(lang==='en'?'en.html':'zh.html');back.textContent=lang==='en'?'← Khóa tiếng Anh':'← Khóa tiếng Trung'}
     try{
       var pack=await loadPackForId(lang, id);
-      w.LESSONS=(pack.lessons||[]).map(function(L){var x={};for(var k in L)x[k]=L[k];if(!Array.isArray(x.explain))x.explain=[];if(!Array.isArray(x.examples))x.examples=[];return x});
+      pack=normalizePack(pack);
+      w.LESSONS=pack.lessons||[];
       runMain();
-      setTimeout(function(){bindTts(document.getElementById('m')||document)},0);
+      try{document.querySelectorAll('.ttsbar').forEach(function(el){el.hidden=true;el.style.display='none'})}catch(e){}
+      setTimeout(function(){bindTts(document.getElementById('m')||document);
+        try{document.querySelectorAll('.ttsbar').forEach(function(el){el.hidden=true;el.style.display='none'})}catch(e2){}
+      },0);
       try{dispatchEvent(new Event('unlocked'))}catch(e){}
     }catch(e){
       var box=document.getElementById('m');
