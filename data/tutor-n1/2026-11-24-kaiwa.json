@@ -1,0 +1,367 @@
+{
+  "lesson": 39,
+  "topic": "Lần đầu đi học làm gốm cuối tuần (đặt chỗ online, nhào đất, tạo hình trên bàn xoay, chọn men, chờ nung, hẹn ngày lấy thành phẩm) (初めて週末に陶芸体験に行く)",
+  "summary": "Bối cảnh: cuối tuần, 拓海 và 莉子 đăng ký đi học làm gốm lần đầu ở một xưởng gốm nhỏ gần nhà — đặt chỗ trước qua mạng (ネット予約), buổi học kéo dài khoảng 2 tiếng, được làm một cái cốc (湯のみ) hoặc một cái bát (お茶碗). Đến xưởng, hai người được thầy hướng dẫn (先生) dạy cách nhào đất (土をこねる) rồi tạo hình trên bàn xoay (ろくろ): 拓海 lần đầu chạm vào bàn xoay nên đất cứ lệch, làm hỏng một lần rồi làm lại; 莉子 khéo tay hơn nên làm được cái cốc khá ngay ngắn. Xong phần tạo hình, hai người chọn màu men (釉薬) — 拓海 chọn màu xanh (青), 莉子 chọn màu trắng ngà (白) — rồi nghe thầy dặn phải chờ nung (焼く) khoảng 2–3 tuần mới lấy được thành phẩm (作品), hẹn ngày đến lấy sau. Trên đường về, hai người bàn nhau lần sau rủ thêm bạn cùng đi, làm thêm một bộ cốc nữa, rồi về nhà nhắn tin báo người nhà là hôm nay làm gốm vui lắm. Kỹ năng luyện: văn nói bạn bè khi tham gia một lớp trải nghiệm lần đầu — hỏi cách đặt chỗ, hỏi cách nhào đất và dùng bàn xoay, hỏi cách chọn men; cách nói khi làm hỏng rồi làm lại (〜ちゃった, もう一回やる), cách khen đồ người khác làm (〜がいい感じじゃん, 〜がかわいい), cách hẹn ngày lấy đồ và rủ bạn lần sau (今度は〜を誘おう, 〜に行こう). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về làm gốm (陶芸体験, ろくろ, 土, こねる, 釉薬, 焼く, 窯, 作品, 湯のみ, お茶碗, 形になる, 味がある), cách nói khi tay dính đất và đất bị lệch trên bàn xoay (〜がズレちゃった, 〜がゆがんじゃった), và cách nói cảm nhận về đồ thủ công một cách tự nhiên (〜がいい感じだね, 〜が味があるね, 〜が世界に一つだけだね).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở xưởng gốm: gặp thầy, nhào đất, làm trên bàn xoay, làm hỏng rồi làm lại）",
+      "stage": "（Sáng thứ Bảy, trong một xưởng gốm nhỏ, mùi đất sét thoang thoảng, trên kệ xếp đầy cốc và bát đủ màu. Thầy dạy đứng bên bàn xoay, trước mặt mỗi người là một cục đất sét và một chậu nước nhỏ. 拓海 và 莉子 mặc tạp dề, tay áo xắn cao, ngồi trước bàn xoay.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、ろくろってさ、{初|はじ}めて{触|さわ}るよ。{土|つち}ってさ、こんなに{冷|つめ}たいんだね。",
+          "vi": "Ồ, bàn xoay ấy, lần đầu chạm vào đấy. Đất ấy, lạnh thế này cơ à."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだよ。まずさ、{土|つち}をこねてさ、{空気|くうき}を{抜|ぬ}くんだよ。ほら、こうやってさ、グイグイ{押|お}すんだよ。",
+          "vi": "Ừ đấy. Trước tiên ấy, nhào đất này, ép hết không khí ra ấy. Này, làm thế này này, ấn mạnh xuống ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、そうやるんだ。ってさ、こねるのってさ、けっこう{力|ちから}いるじゃん。",
+          "vi": "Chà, làm thế à. Này, nhào đất ấy, tốn sức ghê nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、そうだよ。{手|て}がさ、ベタベタになっちゃうけどさ、{慣|な}れればさ、{楽|たの}しいよ。",
+          "vi": "Ừ, đúng rồi đấy. Tay ấy, dính đầy đất nhưng mà, quen rồi thì vui lắm đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、{先生|せんせい}、{見|み}て{見|み}て。あれ、{土|つち}がさ、ズレちゃったよ。",
+          "vi": "Ồ, thầy ơi, nhìn này nhìn này. Ơ kìa, đất ấy, lệch mất rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、ゆがんじゃったじゃん。でもさ、{大丈夫|だいじょうぶ}だよ。もう{一|いち}{回|かい}、やり{直|なお}せばいいよ。",
+          "vi": "Haha, méo mất rồi nhỉ. Nhưng mà, không sao đâu. Làm lại lần nữa là được mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、わかった。ってさ、{水|みず}ってさ、どのくらいのせるの？",
+          "vi": "Ừ, biết rồi. Này, nước ấy, cho bao nhiêu?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{少|すこ}しずつだよ。{手|て}がさ、{乾|かわ}いたらさ、{水|みず}をつけるんだよ。ほら、ゆっくり{回|まわ}してさ。",
+          "vi": "Từng chút một thôi đấy. Tay ấy, khô rồi thì chấm nước ấy. Này, xoay từ từ này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、できたじゃん。ってさ、これ、{湯|ゆ}のみの{形|かたち}になってる？",
+          "vi": "Ồ, được rồi này. Này, cái này, thành hình cái cốc chưa?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "なってるなってる。いい{感|かん}じだよ。ほら、{口|くち}のとこ、ちょっと{整|ととの}えてさ。",
+          "vi": "Thành rồi thành rồi. Trông ổn đấy. Này, chỗ miệng cốc ấy, chỉnh lại chút đi."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（chọn màu men, hẹn ngày lấy đồ, trên đường về bàn lần sau rủ thêm bạn）",
+      "stage": "（Buổi học gần xong, trên bàn bày mấy lọ men đủ màu: xanh, trắng, nâu, đen. Thầy dạy đang ghi lại tên và màu men mỗi người chọn vào một tờ giấy. Ngoài cửa sổ, nắng chiều chiếu vào xưởng. Sau đó hai người đi bộ ra ga, tay vẫn còn mùi đất sét.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、やっと{形|かたち}になったね。ってさ、{釉薬|ゆうやく}ってさ、どれにする？",
+          "vi": "Phù, cuối cùng cũng thành hình rồi. Này, men ấy, chọn màu nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "えっとさ、{私|わたくし}はさ、{白|しろ}にしようかな。ってさ、{拓海|たくみ}はさ、どれにするの？",
+          "vi": "Ừm, tớ ấy, chọn màu trắng nhé. Này, 拓海 ấy, chọn màu nào?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{青|あお}にしようよ。ってさ、{焼|や}いたらさ、{色|いろ}ってさ、{変|か}わるんだっけ。",
+          "vi": "Ừ, chọn màu xanh nhé. Này, nung lên ấy, màu ấy, có đổi không nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{変|か}わるよ。{焼|や}く{前|まえ}とさ、{焼|や}いた{後|あと}じゃさ、ぜんぜん{違|ちが}うんだよ。",
+          "vi": "Ừ, đổi đấy. Trước khi nung với sau khi nung ấy, khác hẳn nhau đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、そうなんだ。ってさ、{作品|さくひん}ってさ、いつ{取|と}りに{来|く}ればいいの？",
+          "vi": "Chà, thế à. Này, thành phẩm ấy, khi nào đến lấy được?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "2{週間|しゅうかん}{後|ご}だってさ。{先生|せんせい}がさ、{連絡|れんらく}してくれるってさ。{楽|たの}しみだね。",
+          "vi": "2 tuần nữa ấy mà. Thầy ấy, sẽ liên lạc cho mà. Háo hức thật đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。ってさ、{今度|こんど}はさ、{友|とも}だちも{誘|さそ}ってさ、みんなで{来|こ}ようよ。",
+          "vi": "Ồ, đúng thật. Này, lần sau ấy, rủ thêm bạn ấy, mọi người cùng đến nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。{次|つぎ}はさ、みんなでさ、お{茶碗|ちゃわん}、{作|つく}ろうよ。そろってさ、かわいいじゃん。",
+          "vi": "Hay đấy. Lần sau ấy, mọi người cùng làm bát nhé. Cả bộ ấy, dễ thương nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうしようよ。ってさ、{家|いえ}に{帰|かえ}ったらさ、{今日|きょう}のこと、{報告|ほうこく}しようよ。",
+          "vi": "Ừ, làm thế nhé. Này, về đến nhà ấy, kể chuyện hôm nay nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。{陶芸|とうげい}、{思|おも}ったよりさ、{楽|たの}しかったね。また{行|い}こうよ。",
+          "vi": "Ừ nhỉ. Làm gốm ấy, vui hơn tớ nghĩ đấy. Lại đi nữa nhé."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "ろくろは初めて触ります。土は冷たいです。まず土をこねて、空気を抜きます。",
+      "real": "ろくろってさ、初めて触るよ。土ってさ、こんなに冷たいんだね。まずさ、土をこねてさ、空気を抜くんだよ。",
+      "why": "Sách giáo khoa dùng 初めて触ります và 冷たいです một cách trang trọng, nghe như đang đọc phần giới thiệu trong tờ rơi của xưởng gốm. Nói thật thì hỏi bằng 初めて触るよ và こんなに冷たいんだね, thêm ってさ để đưa chủ đề lên trước rồi nói cảm nhận, nghe như người lần đầu chạm vào bàn xoay, tay còn dính đất, vừa ngạc nhiên vừa thích thú."
+    },
+    {
+      "textbook": "土がズレてしまいました。形がゆがんでしまいました。大丈夫です。もう一度やり直せばいいです。",
+      "real": "土がさ、ズレちゃったよ。ゆがんじゃったじゃん。でもさ、大丈夫だよ。もう一回、やり直せばいいよ。",
+      "why": "Văn nói bạn bè dùng ズレちゃった và ゆがんじゃった để nói mình làm hỏng một cách suồng sã, kèm じゃん・さ để cười với nhau và an ủi, còn sách giáo khoa dùng ズレてしまいました và ゆがんでしまいました trang trọng, nghe như đang viết báo cáo kết quả học tập. Câu nói thật nghe như hai người đang ngồi trước bàn xoay, đất méo đi, cả hai cùng cười rồi làm lại."
+    },
+    {
+      "textbook": "釉薬はどれにしますか。私は白にします。焼いたら色が変わりますか。2週間後に作品を取りに来てください。",
+      "real": "釉薬ってさ、どれにする？私はさ、白にしようかな。焼いたらさ、色ってさ、変わるんだっけ。2週間後だってさ。",
+      "why": "Văn nói khi chọn men dùng どれにする và 白にしようかな để bàn với nhau một cách thân mật, thêm ってさ・だっけ để hỏi lại một cách tự nhiên, còn sách giáo khoa dùng どれにしますか và 変わりますか cứng nhắc, nghe như đang trả lời phỏng vấn. Câu nói thật nghe như hai người đang đứng trước mấy lọ men đủ màu, vừa chọn vừa hỏi thầy."
+    },
+    {
+      "textbook": "今度は友だちも誘って、みんなで来ましょう。次はみんなでお茶碗を作りましょう。陶芸は思ったより楽しかったです。",
+      "real": "今度はさ、友だちも誘ってさ、みんなで来ようよ。次はさ、みんなでさ、お茶碗、作ろうよ。陶芸、思ったよりさ、楽しかったね。",
+      "why": "Văn nói dùng 誘ってさ và 来ようよ để rủ bạn lần sau một cách thân mật, kèm さ・ね để nói nhẹ nhàng và rủ đồng tình, còn sách giáo khoa dùng 誘って và 来ましょう, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người đang đi bộ ra ga, tay vẫn còn mùi đất sét, vừa đi vừa bàn lần sau rủ thêm bạn."
+    },
+    {
+      "textbook": "家に帰ったら、今日のことを家族に報告します。陶芸はまた行きたいです。",
+      "real": "家に帰ったらさ、今日のこと、報告しようよ。陶芸、思ったよりさ、楽しかったね。また行こうよ。",
+      "why": "Văn nói dùng 報告しようよ và また行こうよ để rủ nhau kể lại và hẹn lần sau một cách suồng sã, còn sách giáo khoa dùng 報告します và 行きたいです trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy. Câu nói thật nghe như hai người vừa học xong, đang háo hức muốn kể cho người nhà nghe và đã hẹn lần sau."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "土がさ、ズレちゃったよ",
+      "original": "〜てしまった",
+      "vi": "…mất rồi — dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn một cách suồng sã; 土、ズレちゃった là đất lệch mất rồi, ゆがんじゃった là méo mất rồi, 手、ベタベタになっちゃった là tay dính đầy đất mất rồi.",
+      "use": "Dùng với bạn bè, người thân khi kể một sự cố nhỏ xảy ra ngoài ý muốn — đất lệch, hình méo, tay dính đất, làm hỏng rồi làm lại.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "〜ってさ",
+      "in_lesson": "ろくろってさ、初めて触るよ",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa cái bàn xoay lên trước rồi nói lần đầu chạm vào; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang học một thứ mới và có nhiều thứ chưa biết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "こねるのってさ、けっこう力いるじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; 力いるじゃん là nói nhào đất tốn sức rồi chờ bạn gật đầu theo, ゆがんじゃったじゃん là nói hình méo rồi rồi cười với nhau, かわいいじゃん là khen đồ dễ thương rồi rủ bạn đồng ý.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — nhào đất tốn sức, hình méo, đồ làm ra dễ thương.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "焼いたらさ、色ってさ、変わるんだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; 色、変わるんだっけ là hỏi lại màu men có đổi sau khi nung không, 作品、いつ取りに来ればいいの là hỏi lại ngày hẹn lấy đồ.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — màu men có đổi không, ngày hẹn lấy đồ, cách nhào đất.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどうですか・〜はどうなりますか)."
+    },
+    {
+      "form": "〜みたいな / 〜みたいに",
+      "in_lesson": "思ったよりさ、楽しかったね",
+      "original": "〜のように / 〜というように",
+      "vi": "…kiểu như / …hơn mình nghĩ — cách nói cảm nhận một cách suồng sã, không cần nói chính xác; 思ったより楽しかった là vui hơn mình nghĩ, 思ったより難しい là khó hơn mình nghĩ, 味があるみたいな là kiểu có cái hay riêng.",
+      "use": "Dùng với bạn bè, người thân khi nói cảm nhận về một trải nghiệm mới — làm gốm vui hơn nghĩ, khó hơn nghĩ, đồ làm ra có cái hay riêng.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜より・〜のように)."
+    },
+    {
+      "form": "〜しようよ",
+      "in_lesson": "今度はさ、友だちも誘ってさ、みんなで来ようよ",
+      "original": "〜しましょう",
+      "vi": "…đi / …nào — cách rủ nhau cùng làm một việc một cách thân mật; 来ようよ là rủ nhau cùng đến lần sau, 作ろうよ là rủ nhau cùng làm bát, 報告しようよ là rủ nhau về kể lại cho người nhà nghe.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau cùng làm một việc — rủ bạn lần sau, làm thêm một bộ cốc, về kể lại cho người nhà.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜しましょう)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "ろくろ",
+      "reading": "ろくろ",
+      "vi": "Bàn xoay làm gốm — bàn tròn xoay bằng tay hoặc bằng điện, đặt cục đất sét lên rồi dùng tay tạo hình trong lúc bàn xoay; ろくろを回す là xoay bàn xoay, ろくろで作る là làm bằng bàn xoay, ろくろに土をのせる là đặt đất lên bàn xoay; người mới dùng bàn xoay thì đất hay bị lệch (ズレる) và méo (ゆがむ), làm hỏng rồi làm lại là chuyện rất bình thường.",
+      "example_ja": "ろくろってさ、{初|はじ}めて{触|さわ}るよ。{土|つち}ってさ、こんなに{冷|つめ}たいんだね。",
+      "example_vi": "Bàn xoay ấy, lần đầu chạm vào đấy. Đất ấy, lạnh thế này cơ à."
+    },
+    {
+      "expr": "{土|つち}をこねる",
+      "reading": "つちをこねる",
+      "vi": "Nhào đất — dùng tay ấn và gấp cục đất sét nhiều lần để ép hết không khí bên trong ra, đất mới đều và dẻo, khi nung lên mới không bị nứt; 土をこねる là nhào đất, 空気を抜く là ép không khí ra, 土がやわらかい là đất mềm dẻo; nhào đất tốn sức, tay dính đầy đất (ベタベタになる) nhưng quen rồi thì thấy vui.",
+      "example_ja": "まずさ、{土|つち}をこねてさ、{空気|くうき}を{抜|ぬ}くんだよ。ほら、こうやってさ、グイグイ{押|お}すんだよ。",
+      "example_vi": "Trước tiên ấy, nhào đất này, ép hết không khí ra ấy. Này, làm thế này này, ấn mạnh xuống ấy."
+    },
+    {
+      "expr": "{形|かたち}になる",
+      "reading": "かたちになる",
+      "vi": "Thành hình, ra dáng — cục đất sét sau khi tạo hình trên bàn xoay dần dần thành hình cái cốc hay cái bát; 形になる là thành hình, やっと形になった là cuối cùng cũng thành hình rồi, 形がゆがむ là hình bị méo; khi đồ vừa thành hình, người Nhật hay nói いい感じだね để khen trông ổn rồi.",
+      "example_ja": "ふう、やっと{形|かたち}になったね。ほら、{口|くち}のとこ、ちょっと{整|ととの}えてさ。",
+      "example_vi": "Phù, cuối cùng cũng thành hình rồi. Này, chỗ miệng cốc ấy, chỉnh lại chút đi."
+    },
+    {
+      "expr": "{思|おも}ったより{難|むずか}しい",
+      "reading": "おもったよりむずかしい",
+      "vi": "Khó hơn mình nghĩ — cảm nhận rất thường gặp khi thử một việc thủ công lần đầu: nhìn thầy làm thì dễ, tự tay làm mới thấy khó; 思ったより難しい là khó hơn mình nghĩ, 思ったより楽しい là vui hơn mình nghĩ, 思ったより時間がかかる là tốn thời gian hơn mình nghĩ; nói thế này vừa thừa nhận mình vụng vừa khen cái nghề.",
+      "example_ja": "{陶芸|とうげい}ってさ、{見|み}てる{分|ぶん}には{簡単|かんたん}そうだけど、{思|おも}ったより{難|むずか}しいね。",
+      "example_vi": "Làm gốm ấy, nhìn thì có vẻ đơn giản, nhưng khó hơn mình nghĩ đấy."
+    },
+    {
+      "expr": "{味|あじ}がある",
+      "reading": "あじがある",
+      "vi": "Có cái hay riêng, có hồn — khen một món đồ thủ công không hoàn hảo nhưng có nét riêng, không giống đồ làm bằng máy; 味がある là có cái hay riêng, 味のある作品 là tác phẩm có hồn, 手作りならではの味 là cái hay chỉ đồ thủ công mới có; ở Nhật, đồ thủ công méo một chút, không đều một chút lại được khen là có 味, không ai chê là làm hỏng.",
+      "example_ja": "ちょっとゆがんじゃったけど、{味|あじ}があるね。{世界|せかい}に{一|ひと}つだけだよ。",
+      "example_vi": "Hơi méo một chút nhưng có cái hay riêng nhỉ. Chỉ có một cái duy nhất trên đời thôi đấy."
+    },
+    {
+      "expr": "{世界|せかい}に{一|ひと}つだけ",
+      "reading": "せかいにひとつだけ",
+      "vi": "Chỉ có một cái duy nhất trên đời — nói về món đồ thủ công mình tự tay làm: không có cái thứ hai giống hệt, nên dù méo hay không đều thì vẫn quý; 世界に一つだけの作品 là tác phẩm duy nhất trên đời, 自分だけの湯のみ là cái cốc chỉ của riêng mình; câu này hay dùng khi khoe đồ mình làm với bạn bè hay người nhà.",
+      "example_ja": "この{湯|ゆ}のみ、{世界|せかい}に{一|ひと}つだけだよ。{家|いえ}に{帰|かえ}ったらさ、{今日|きょう}のこと、{報告|ほうこく}しようよ。",
+      "example_vi": "Cái cốc này, chỉ có một cái duy nhất trên đời thôi đấy. Về đến nhà ấy, kể chuyện hôm nay nhé."
+    }
+  ],
+  "mindset": [
+    "Làm đồ thủ công (手作り) ở Nhật rất được quý, nhất là gốm (陶芸): một cái cốc hay cái bát tự tay làm, dù méo một chút, không đều một chút, vẫn được khen là có 味がある — có cái hay riêng, có hồn — chứ không ai chê là làm hỏng. Đồ làm bằng máy thì cái nào cũng giống cái nào, còn đồ thủ công thì mỗi cái một vẻ, không có cái thứ hai giống hệt, nên người Nhật hay nói 世界に一つだけ để khoe đồ mình làm. Trong bài, 拓海 làm hỏng một lần, đất lệch rồi méo, nhưng 莉子 chỉ cười rồi bảo làm lại là được — làm hỏng rồi làm lại là chuyện rất bình thường trong lớp trải nghiệm, thầy dạy cũng quen hướng dẫn khách mới, không ai cười ai cả.",
+    "Lớp trải nghiệm làm gốm (陶芸体験) ở Nhật thường kéo dài khoảng 2 tiếng: đặt chỗ trước qua mạng (ネット予約), đến xưởng được thầy dạy hướng dẫn từng bước — nhào đất (土をこねる) để ép hết không khí ra, đặt đất lên bàn xoay (ろくろ) rồi dùng tay tạo hình trong lúc bàn xoay quay, tay khô thì chấm thêm nước (水をつける), tạo hình xong thì chọn màu men (釉薬) rồi chờ nung (焼く) trong lò (窯) khoảng 2–3 tuần mới lấy được thành phẩm (作品). Màu men trước khi nung và sau khi nung khác hẳn nhau, nên thầy hay dặn trước để học viên khỏi bất ngờ; xưởng thường liên lạc (連絡する) khi đồ nung xong, học viên hẹn ngày đến lấy (取りに行く). Trong bài, hai người chọn men xong thì nghe thầy dặn 2 tuần nữa mới lấy được, rồi hẹn ngày đến lấy sau — hẹn ngày lấy đồ là phần không thể thiếu của một buổi học làm gốm.",
+    "Người Nhật đi học một lớp trải nghiệm lần đầu thường rủ thêm bạn đi cùng lần sau: lần đầu đi hai người, lần sau rủ thêm bạn, làm thêm một bộ cốc hay một bộ bát cho đủ bộ (そろう) — làm đồ thủ công càng đông càng vui, vừa làm vừa trò chuyện, làm xong còn khoe nhau. Về nhà, người ta hay kể lại cho người nhà nghe hôm nay làm gì, làm được cái gì, hẹn ngày nào đi lấy đồ — kể lại (報告する) là cách chia sẻ niềm vui rất tự nhiên, nhất là khi đồ mình làm là 世界に一つだけ, chỉ có một cái duy nhất trên đời. Trong bài, hai người trên đường về đã bàn lần sau rủ thêm bạn cùng đi, làm thêm một bộ bát, rồi về nhà kể lại cho người nhà nghe — rủ bạn lần sau và kể lại cho người nhà là cách kết thúc một buổi học làm gốm rất tự nhiên."
+  ],
+  "mistakes": [
+    "Đừng nói quá trang trọng với thầy dạy trong lớp trải nghiệm: thầy dạy ở xưởng gốm là người hướng dẫn mình làm, không phải cấp trên hay khách hàng — nói 先生、見てください là được rồi, đừng nói 先生、お手数ですが、ご確認いただけますでしょうか, nghe như đang viết thư xin việc, thầy cũng khó xử.",
+    "Đừng dùng すみません mỗi khi làm hỏng: đất lệch hay hình méo là chuyện rất bình thường khi mới học, thầy dạy cũng quen rồi — cười rồi nói もう一回やります là được, cứ すみません、すみません mãi thì không khí nặng nề, người bên cạnh cũng khó nói chuyện.",
+    "Đừng nói 土がズレてしまいました với bạn bè: với bạn thì nói 土、ズレちゃったよ là đủ, thêm ちゃった để nói một cách suồng sã, còn 〜てしまいました trang trọng, nghe như đang viết báo cáo — bạn bè nghe sẽ thấy xa cách, không giống đang cùng nhau học làm gốm.",
+    "Đừng quên hỏi ngày hẹn lấy đồ trước khi về: đồ gốm phải nung 2–3 tuần mới lấy được, xưởng sẽ liên lạc khi nung xong — trước khi về phải hỏi 作品、いつ取りに来ればいいですか, ghi lại ngày hẹn, đừng về rồi mới nhớ ra là chưa hỏi, lại phải gọi điện hỏi lại.",
+    "Đừng chê đồ mình làm là 下手だね hay 失敗したね trước mặt thầy và bạn: đồ thủ công méo một chút thì người Nhật khen là 味がある, có cái hay riêng — tự chê mình vụng trước mặt mọi người thì không khí trùng xuống, mà cũng không đúng với cách người Nhật nhìn đồ thủ công."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn muốn đặt chỗ học làm gốm lần đầu qua mạng. Hãy hỏi nhân viên xưởng: buổi học kéo dài bao lâu, làm được mấy món đồ, có cần mang theo gì không, và đặt chỗ qua mạng thế nào.",
+    "Tình huống 2: Bạn đang ở xưởng gốm và lần đầu chạm vào bàn xoay. Hãy hỏi thầy dạy: đất nhào thế nào, tay khô thì chấm nước ra sao, đất bị lệch thì làm thế nào, và miệng cốc chỉnh ra sao.",
+    "Tình huống 3: Bạn vừa làm hỏng một cái cốc trên bàn xoay, đất méo đi. Hãy nói với bạn đi cùng: đất lệch mất rồi, cười với nhau một câu, rồi nói làm lại lần nữa là được.",
+    "Tình huống 4: Bạn đang chọn màu men và nghe thầy dặn phải chờ nung 2–3 tuần. Hãy hỏi thầy: màu men nung lên có đổi không, bao giờ thì lấy được thành phẩm, và xưởng liên lạc thế nào khi nung xong.",
+    "Tình huống 5: Bạn vừa học làm gốm xong và đang đi bộ ra ga với bạn. Hãy bàn với bạn đi cùng: hôm nay vui thế nào, lần sau rủ thêm bạn nào cùng đi, làm thêm món gì, và về nhà kể lại cho người nhà nghe ra sao."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、ろくろってさ、{初|はじ}めて{触|さわ}るよ。{土|つち}ってさ、こんなに{冷|つめ}たいんだね。",
+      "vi": "Ồ, bàn xoay ấy, lần đầu chạm vào đấy. Đất ấy, lạnh thế này cơ à."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだよ。まずさ、{土|つち}をこねてさ、{空気|くうき}を{抜|ぬ}くんだよ。ほら、こうやってさ、グイグイ{押|お}すんだよ。",
+      "vi": "Ừ đấy. Trước tiên ấy, nhào đất này, ép hết không khí ra ấy. Này, làm thế này này, ấn mạnh xuống ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、そうやるんだ。ってさ、こねるのってさ、けっこう{力|ちから}いるじゃん。",
+      "vi": "Chà, làm thế à. Này, nhào đất ấy, tốn sức ghê nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、そうだよ。{手|て}がさ、ベタベタになっちゃうけどさ、{慣|な}れればさ、{楽|たの}しいよ。",
+      "vi": "Ừ, đúng rồi đấy. Tay ấy, dính đầy đất nhưng mà, quen rồi thì vui lắm đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、{先生|せんせい}、{見|み}て{見|み}て。あれ、{土|つち}がさ、ズレちゃったよ。",
+      "vi": "Ồ, thầy ơi, nhìn này nhìn này. Ơ kìa, đất ấy, lệch mất rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、ゆがんじゃったじゃん。でもさ、{大丈夫|だいじょうぶ}だよ。もう{一|いち}{回|かい}、やり{直|なお}せばいいよ。",
+      "vi": "Haha, méo mất rồi nhỉ. Nhưng mà, không sao đâu. Làm lại lần nữa là được mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、わかった。ってさ、{水|みず}ってさ、どのくらいのせるの？",
+      "vi": "Ừ, biết rồi. Này, nước ấy, cho bao nhiêu?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{少|すこ}しずつだよ。{手|て}がさ、{乾|かわ}いたらさ、{水|みず}をつけるんだよ。ほら、ゆっくり{回|まわ}してさ。",
+      "vi": "Từng chút một thôi đấy. Tay ấy, khô rồi thì chấm nước ấy. Này, xoay từ từ này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、できたじゃん。ってさ、これ、{湯|ゆ}のみの{形|かたち}になってる？",
+      "vi": "Ồ, được rồi này. Này, cái này, thành hình cái cốc chưa?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "なってるなってる。いい{感|かん}じだよ。ほら、{口|くち}のとこ、ちょっと{整|ととの}えてさ。",
+      "vi": "Thành rồi thành rồi. Trông ổn đấy. Này, chỗ miệng cốc ấy, chỉnh lại chút đi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、やっと{形|かたち}になったね。ってさ、{釉薬|ゆうやく}ってさ、どれにする？",
+      "vi": "Phù, cuối cùng cũng thành hình rồi. Này, men ấy, chọn màu nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "えっとさ、{私|わたくし}はさ、{白|しろ}にしようかな。ってさ、{拓海|たくみ}はさ、どれにするの？",
+      "vi": "Ừm, tớ ấy, chọn màu trắng nhé. Này, 拓海 ấy, chọn màu nào?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{青|あお}にしようよ。ってさ、{焼|や}いたらさ、{色|いろ}ってさ、{変|か}わるんだっけ。",
+      "vi": "Ừ, chọn màu xanh nhé. Này, nung lên ấy, màu ấy, có đổi không nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{変|か}わるよ。{焼|や}く{前|まえ}とさ、{焼|や}いた{後|あと}じゃさ、ぜんぜん{違|ちが}うんだよ。",
+      "vi": "Ừ, đổi đấy. Trước khi nung với sau khi nung ấy, khác hẳn nhau đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、そうなんだ。ってさ、{作品|さくひん}ってさ、いつ{取|と}りに{来|く}ればいいの？",
+      "vi": "Chà, thế à. Này, thành phẩm ấy, khi nào đến lấy được?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "2{週間|しゅうかん}{後|ご}だってさ。{先生|せんせい}がさ、{連絡|れんらく}してくれるってさ。{楽|たの}しみだね。",
+      "vi": "2 tuần nữa ấy mà. Thầy ấy, sẽ liên lạc cho mà. Háo hức thật đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。ってさ、{今度|こんど}はさ、{友|とも}だちも{誘|さそ}ってさ、みんなで{来|こ}ようよ。",
+      "vi": "Ồ, đúng thật. Này, lần sau ấy, rủ thêm bạn ấy, mọi người cùng đến nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。{次|つぎ}はさ、みんなでさ、お{茶碗|ちゃわん}、{作|つく}ろうよ。そろってさ、かわいいじゃん。",
+      "vi": "Hay đấy. Lần sau ấy, mọi người cùng làm bát nhé. Cả bộ ấy, dễ thương nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうしようよ。ってさ、{家|いえ}に{帰|かえ}ったらさ、{今日|きょう}のこと、{報告|ほうこく}しようよ。",
+      "vi": "Ừ, làm thế nhé. Này, về đến nhà ấy, kể chuyện hôm nay nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。{陶芸|とうげい}、{思|おも}ったよりさ、{楽|たの}しかったね。また{行|い}こうよ。",
+      "vi": "Ừ nhỉ. Làm gốm ấy, vui hơn tớ nghĩ đấy. Lại đi nữa nhé."
+    }
+  ],
+  "notes": [
+    "Từ vựng làm gốm cơ bản: 陶芸体験 (lớp trải nghiệm làm gốm), ろくろ (bàn xoay), 土 (đất sét), こねる (nhào), 釉薬 (men), 焼く (nung), 窯 (lò nung), 作品 (thành phẩm), 湯のみ (cốc uống trà), お茶碗 (bát ăn cơm); buổi học thường kéo dài khoảng 2 tiếng, đặt chỗ trước qua mạng (ネット予約), chờ nung 2–3 tuần mới lấy được đồ.",
+    "Quy trình làm gốm: nhào đất (土をこねる) để ép không khí ra (空気を抜く) → đặt đất lên bàn xoay (ろくろ) → tay khô thì chấm thêm nước (水をつける) → tạo hình từ từ (ゆっくり回す) → chỉnh miệng cốc (口を整える) → chọn màu men (釉薬を選ぶ) → chờ nung (焼く) trong lò (窯) → hẹn ngày đến lấy (取りに行く).",
+    "Văn hóa đồ thủ công ở Nhật: đồ tự tay làm dù méo một chút vẫn được khen là 味がある (có cái hay riêng), mỗi món là 世界に一つだけ (chỉ có một cái duy nhất trên đời); làm hỏng rồi làm lại (やり直す) là chuyện rất bình thường, đừng cứ すみません mãi hay tự chê mình vụng.",
+    "〜ちゃった là dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn (đất lệch, hình méo); 〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (màu men có đổi không, ngày hẹn lấy đồ); 〜しようよ là cách rủ nhau cùng làm một việc (rủ bạn lần sau, làm thêm một bộ bát, về kể lại cho người nhà)."
+  ]
+}

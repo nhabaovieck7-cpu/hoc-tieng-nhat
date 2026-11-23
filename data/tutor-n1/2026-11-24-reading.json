@@ -1,0 +1,506 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 主張理解 trong phần đọc hiểu của đề N1 thật: một bài văn nghị luận, kèm 4 câu hỏi — hỏi chủ trương của tác giả, hỏi cách nghĩ mà tác giả phê phán, hỏi vai trò của ví dụ cụ thể, và hỏi nội dung nào đúng với bài. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc lướt tìm câu chủ trương rồi mới trả lời; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 12–14 phút (đọc bài + 4 câu hỏi). Trong đề thật, 主張理解 là dạng dễ mất điểm vì các lựa chọn nhiễu thường lấy ý của 'người khác' được tác giả trích dẫn rồi gán cho chính tác giả, hoặc đảo ngược câu chủ trương thành ý đối lập nhưng nghe vẫn rất hợp lý.",
+  "tips": [
+    {
+      "h": "Tìm câu chủ trương trước tiên — thường ở đầu bài hoặc cuối bài",
+      "body": "Tác giả thường nêu chủ trương của mình ở câu cuối đoạn đầu (ở đây là đoạn 1 câu 3: 自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ) và nhắc lại, khẳng định ở đoạn cuối (đoạn 6). Đọc hai chỗ này trước, bạn sẽ có 'la bàn' để đánh giá mọi lựa chọn: lựa chọn nào đi ngược hai câu này thì loại ngay."
+    },
+    {
+      "h": "Phân biệt ý của tác giả với ý của người khác được trích dẫn",
+      "body": "Bài này trích dẫn nhiều ý kiến khác: lời khuyên '自分らしく生きなさい', quảng cáo SNS '自分らしさを見つけよう', cách nghĩ của nhân vật công ty viên 'まねすれば手に入る'. Những ý đó được đưa ra để tác giả PHÊ PHÁN, không phải để ủng hộ. Lựa chọn nào lấy ý được trích dẫn làm chủ trương của tác giả là bẫy đánh tráo ý — loại ngay."
+    },
+    {
+      "h": "Đọc câu hỏi về ví dụ cụ thể thì chỉ dùng đúng đoạn chứa ví dụ đó",
+      "body": "Câu 3 hỏi về ví dụ người công ty viên — đáp án chỉ nằm ở đoạn 3. Ví dụ này không chứng minh 'bắt chước là con đường tắt', mà chứng minh điều ngược lại: bắt chước chỉ làm nỗi bất an lớn thêm. Khi làm câu hỏi về ví dụ, hãy tự hỏi: tác giả đưa ví dụ này để CHỨNG MINH điều gì — ủng hộ hay phản bác?"
+    },
+    {
+      "h": "Cảnh giác với lựa chọn tuyệt đối hóa: 必ず・完全に・常に・決して",
+      "body": "Bài văn nghị luận N1 hiếm khi khẳng định tuyệt đối. Lựa chọn có 必ず (nhất định), 完全に (hoàn toàn), 常に (luôn luôn) hoặc 決して〜ない (tuyệt đối không) gần như luôn sai, trừ khi trong bài có đúng từ đó. Ở bài này, các bẫy tuyệt đối hóa nằm ở câu 1 lựa chọn 2 và 4, câu 2 lựa chọn 1."
+    },
+    {
+      "h": "Câu kết luận mềm 〜のではないだろうか chính là chủ trương",
+      "body": "Tác giả kết bài bằng hai câu 〜のではないだろうか (đoạn 4 câu 4 và đoạn 6 câu 3). Đây là cách tác giả nêu chủ trương mà không áp đặt: 'chẳng phải là... hay sao?'. Khi một lựa chọn diễn đạt lại đúng nội dung của hai câu kết này — 'tìm kiếm không phải là đáp án, hành động mới tạo nên mình' — thì đó chính là đáp án."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Chủ trương của tác giả nằm ở đoạn 1 câu 3 (自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ), đoạn 4 câu 2 (探すものではなく、日々の行動の中で少しずつ形作られるものだ) và đoạn 6 câu 2–3 (選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ／まず探すのをやめ、目の前の一歩を踏み出すこと). Cách nghĩ bị phê phán nằm ở đoạn 2: '自分らしさ' là đáp án có sẵn trong lòng từ khi sinh ra, chỉ cần tìm ra là xong, và SNS chỉ cho thấy 'mình' qua con mắt người khác. Ví dụ người công ty viên ở đoạn 3 chứng minh bắt chước lối sống của người khác không mang lại cảm giác thỏa mãn, chỉ làm nỗi bất an lớn thêm."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "「自分らしく生きなさい。」という言葉は、励ましのように聞こえる。しかし、この言葉が多くの人を苦しめていることに、私たちは気づいているだろうか。自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ。\nまず問題なのは、「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである。SNSを開けば、「自分らしさを見つけよう」という広告や投稿があふれている。しかし、そこで示される「自分らしさ」は、たいてい他人の目に映る姿でしかない。他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく。その結果、自分の気持ちよりも、他人からの「いいね」の数のほうが気になってしまう。\nたとえば、ある会社員は、趣味や服装を変えるたびに「これが本当の自分だろうか」と悩み続けたという。彼は、人気のある生き方をまねすれば、自分らしさが手に入ると信じていた。しかし、他人の生き方をなぞるだけでは、満足感は長続きしなかった。むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった。\nでは、自分らしさはどこから生まれるのだろうか。私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている。誰かのために力を尽くしたとき、失敗から立ち直ったとき、人は自分の価値観に気づく。そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか。小さな選択の積み重ねが、やがてその人の生き方そのものになっていく。\nもちろん、周囲の期待に応えること自体が悪いわけではない。問題なのは、期待に応えることが目的になり、自分の気持ちを置き去りにしてしまうことである。他人の評価から自由になるためには、まず自分の行動を振り返ることが必要だ。自分の気持ちに正直になることは、わがままになることとは違う。\nつまり、自分らしさとは、完成された答えを探し当てることではない。それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ。「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか。\n筆者の主張に最も近いものはどれか。",
+      "choices": [
+        "自分らしさは、生まれたときから心の中に眠っている正解であり、それを見つけ出すことが人生の目的である。",
+        "他人の評価を基準にすれば、必ず自分らしさが自然に手に入るということ。",
+        "自分らしさは探すものではなく、日々の行動や経験の積み重ねの中で少しずつ形作られるものだということ。",
+        "自分らしさとは、周囲の期待に完全に応えることで得られるものだということ。"
+      ],
+      "answer": 2,
+      "explain_vi": "Đáp án ở đoạn 4 câu 2: 私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている, và đoạn 6 câu 2: 選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ. Lựa chọn 1 là cách nghĩ mà tác giả phê phán ở đoạn 2 câu 1."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "「自分らしく生きなさい。」という言葉は、励ましのように聞こえる。しかし、この言葉が多くの人を苦しめていることに、私たちは気づいているだろうか。自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ。\nまず問題なのは、「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである。SNSを開けば、「自分らしさを見つけよう」という広告や投稿があふれている。しかし、そこで示される「自分らしさ」は、たいてい他人の目に映る姿でしかない。他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく。その結果、自分の気持ちよりも、他人からの「いいね」の数のほうが気になってしまう。\nたとえば、ある会社員は、趣味や服装を変えるたびに「これが本当の自分だろうか」と悩み続けたという。彼は、人気のある生き方をまねすれば、自分らしさが手に入ると信じていた。しかし、他人の生き方をなぞるだけでは、満足感は長続きしなかった。むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった。\nでは、自分らしさはどこから生まれるのだろうか。私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている。誰かのために力を尽くしたとき、失敗から立ち直ったとき、人は自分の価値観に気づく。そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか。小さな選択の積み重ねが、やがてその人の生き方そのものになっていく。\nもちろん、周囲の期待に応えること自体が悪いわけではない。問題なのは、期待に応えることが目的になり、自分の気持ちを置き去りにしてしまうことである。他人の評価から自由になるためには、まず自分の行動を振り返ることが必要だ。自分の気持ちに正直になることは、わがままになることとは違う。\nつまり、自分らしさとは、完成された答えを探し当てることではない。それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ。「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか。\n筆者が批判している考え方はどれか。",
+      "choices": [
+        "「自分らしさ」は、最初から心の中にある正解であり、それを探し出さなければならないという考え方。",
+        "自分らしさは、日々の行動の中で少しずつ形作られるという考え方。",
+        "他人の評価から自由になるためには、自分の行動を振り返るべきだという考え方。",
+        "自分らしさは、完成された答えではなく、行動の中で自然ににじみ出るものだという考え方。"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án ở đoạn 2 câu 1: 「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られること — tác giả nêu cách nghĩ này ra để phê phán ('まず問題なのは'). Các lựa chọn 2, 3, 4 đều là chủ trương của chính tác giả (đoạn 4 câu 2, đoạn 5 câu 3, đoạn 6 câu 2)."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "「自分らしく生きなさい。」という言葉は、励ましのように聞こえる。しかし、この言葉が多くの人を苦しめていることに、私たちは気づいているだろうか。自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ。\nまず問題なのは、「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである。SNSを開けば、「自分らしさを見つけよう」という広告や投稿があふれている。しかし、そこで示される「自分らしさ」は、たいてい他人の目に映る姿でしかない。他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく。その結果、自分の気持ちよりも、他人からの「いいね」の数のほうが気になってしまう。\nたとえば、ある会社員は、趣味や服装を変えるたびに「これが本当の自分だろうか」と悩み続けたという。彼は、人気のある生き方をまねすれば、自分らしさが手に入ると信じていた。しかし、他人の生き方をなぞるだけでは、満足感は長続きしなかった。むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった。\nでは、自分らしさはどこから生まれるのだろうか。私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている。誰かのために力を尽くしたとき、失敗から立ち直ったとき、人は自分の価値観に気づく。そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか。小さな選択の積み重ねが、やがてその人の生き方そのものになっていく。\nもちろん、周囲の期待に応えること自体が悪いわけではない。問題なのは、期待に応えることが目的になり、自分の気持ちを置き去りにしてしまうことである。他人の評価から自由になるためには、まず自分の行動を振り返ることが必要だ。自分の気持ちに正直になることは、わがままになることとは違う。\nつまり、自分らしさとは、完成された答えを探し当てることではない。それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ。「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか。\n第3段落の会社員の例は、どのような役割を果たしているか。",
+      "choices": [
+        "会社員が趣味や服装を変えて成功し、自分らしさを見つけたことを示すため。",
+        "人気のある生き方をまねることが、自分らしさへの近道であることを示すため。",
+        "自分らしさは生まれたときから決まっているという筆者の考えを裏付けるため。",
+        "他人の生き方をなぞるだけでは自分らしさは手に入らず、不安だけが大きくなることを示すため。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án ở đoạn 3 câu 3–4: 他人の生き方をなぞるだけでは、満足感は長続きしなかった／むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった — ví dụ chứng minh bắt chước lối sống của người khác không mang lại mình, chỉ làm nỗi bất an lớn thêm, qua đó ủng hộ chủ trương ở đoạn 4."
+    },
+    {
+      "level": "N1",
+      "section": "読解（主張理解）",
+      "question": "「自分らしく生きなさい。」という言葉は、励ましのように聞こえる。しかし、この言葉が多くの人を苦しめていることに、私たちは気づいているだろうか。自分らしさは、誰かに与えられるものでも、見つけ出さなければならない宝物でもないはずだ。\nまず問題なのは、「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである。SNSを開けば、「自分らしさを見つけよう」という広告や投稿があふれている。しかし、そこで示される「自分らしさ」は、たいてい他人の目に映る姿でしかない。他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく。その結果、自分の気持ちよりも、他人からの「いいね」の数のほうが気になってしまう。\nたとえば、ある会社員は、趣味や服装を変えるたびに「これが本当の自分だろうか」と悩み続けたという。彼は、人気のある生き方をまねすれば、自分らしさが手に入ると信じていた。しかし、他人の生き方をなぞるだけでは、満足感は長続きしなかった。むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった。\nでは、自分らしさはどこから生まれるのだろうか。私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている。誰かのために力を尽くしたとき、失敗から立ち直ったとき、人は自分の価値観に気づく。そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか。小さな選択の積み重ねが、やがてその人の生き方そのものになっていく。\nもちろん、周囲の期待に応えること自体が悪いわけではない。問題なのは、期待に応えることが目的になり、自分の気持ちを置き去りにしてしまうことである。他人の評価から自由になるためには、まず自分の行動を振り返ることが必要だ。自分の気持ちに正直になることは、わがままになることとは違う。\nつまり、自分らしさとは、完成された答えを探し当てることではない。それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ。「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか。\n筆者の考えに合うものはどれか。",
+      "choices": [
+        "筆者は、周囲の期待に応えること自体が悪いと考えている。",
+        "筆者によれば、自分らしさは、選び、行動し、振り返る営みのなかで自然ににじみ出てくるものだ。",
+        "筆者は、SNSの広告が示す「自分らしさ」こそが本物だと考えている。",
+        "筆者は、「自分らしくありたい」と願う人には、まず自分探しを続けるべきだと勧めている。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án ở đoạn 6 câu 2: それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ. Lựa chọn 1 đi ngược đoạn 5 câu 1 (もちろん、周囲の期待に応えること自体が悪いわけではない), lựa chọn 4 đi ngược đoạn 6 câu 3 (まず探すのをやめ)."
+    }
+  ],
+  "study": {
+    "passage_title": "「『自分らしさ』という呪縛」— 自分らしさは探すものではなく、行動の中で形作られるもの",
+    "structure": "Bài luận thuyết 6 đoạn, đi theo mạch mở bài — phản biện — ví dụ — chuyển hướng — lưu ý — kết luận. Đoạn 1 (mở bài, nêu vấn đề): câu nói '自分らしく生きなさい' nghe như lời động viên, nhưng thực ra đang làm nhiều người khổ sở; tác giả nêu chủ trương sớm ở câu 3 — mình không phải thứ được ai ban cho hay kho báu phải tìm ra. Đoạn 2 (phản biện cách nghĩ phổ biến): vấn đề nằm ở chỗ 'mình' bị nói như thể là đáp án đúng đã ngủ sẵn trong lòng từ khi sinh ra; SNS tràn ngập quảng cáo 'hãy tìm ra mình', nhưng 'mình' ở đó phần lớn chỉ là hình ảnh phản chiếu qua con mắt người khác; càng lấy đánh giá của người khác làm chuẩn thì con người càng xa rời cảm xúc thật của mình, đến mức bận tâm đến số lượt 'thích' hơn là cảm xúc của chính mình. Đoạn 3 (ví dụ cụ thể): một công ty viên cứ mỗi lần đổi sở thích hay trang phục lại băn khoăn 'đây có phải là mình thật không', tin rằng bắt chước lối sống được ưa chuộng thì sẽ có được mình, nhưng bắt chước chỉ khiến cảm giác thỏa mãn không kéo dài, ngược lại nỗi bất an 'không giống mình' ngày càng lớn — ví dụ chứng minh bắt chước không tạo ra mình. Đoạn 4 (chuyển hướng, nêu chủ trương chính): tác giả đặt câu hỏi 'vậy mình sinh ra từ đâu?' rồi trả lời — không phải thứ để tìm, mà được tạo nên từng chút trong hành động hằng ngày; khi dốc sức vì ai đó, khi đứng dậy sau thất bại, con người nhận ra giá trị của mình; chính sự tích lũy kinh nghiệm như vậy tạo nên cái riêng của mỗi người (câu kết mềm 〜のではないだろうか), và sự tích lũy những lựa chọn nhỏ bé rồi sẽ trở thành chính cách sống của người đó. Đoạn 5 (lưu ý, tránh hiểu cực đoan): đáp ứng kỳ vọng của xung quanh tự nó không xấu; vấn đề là khi đáp ứng kỳ vọng trở thành mục đích và bỏ lại cảm xúc của mình; muốn tự do khỏi đánh giá của người khác thì trước hết phải nhìn lại hành động của mình, và trung thực với cảm xúc của mình không có nghĩa là ích kỷ. Đoạn 6 (kết luận, khẳng định lại chủ trương): mình không phải là đáp án hoàn chỉnh để tìm ra; nó là thứ tự nhiên thấm ra trong quá trình chọn lựa, hành động và nhìn lại; ai mong 'muốn sống đúng là mình' thì trước hết hãy ngừng tìm kiếm và bước một bước ngay trước mắt. Câu chủ trương nằm ở đoạn 1 câu 3, đoạn 4 câu 2 và đoạn 6 câu 2–3; cách nghĩ bị phê phán nằm ở đoạn 2 và đoạn 3.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "「{自分|じぶん}らしく{生|い}きなさい。」という{言葉|ことば}は、{励|はげ}ましのように{聞|き}こえる。",
+        "vi": "Câu nói 'Hãy sống đúng là chính mình' nghe như một lời động viên."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "しかし、この{言葉|ことば}が{多|おお}くの{人|ひと}を{苦|くる}しめていることに、{私|わたくし}たちは{気|き}づいているだろうか。",
+        "vi": "Thế nhưng, liệu chúng ta có nhận ra rằng chính câu nói này đang làm nhiều người khổ sở hay không?"
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{自分|じぶん}らしさは、{誰|だれ}かに{与|あた}えられるものでも、{見|み}つけ{出|だ}さなければならない{宝物|たからもの}でもないはずだ。",
+        "vi": "Cái 'mình' hẳn không phải là thứ được ai đó ban cho, cũng không phải là kho báu mà ta buộc phải tìm ra."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "まず{問題|もんだい}なのは、「{自分|じぶん}らしさ」が、あたかも{生|う}まれたときから{心|こころ}の{中|なか}に{眠|ねむ}っている{正解|せいかい}であるかのように{語|かた}られることである。",
+        "vi": "Trước hết, vấn đề nằm ở chỗ 'cái mình' được nói đến cứ như thể nó là đáp án đúng đã ngủ sẵn trong lòng từ khi sinh ra."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "SNSを{開|ひら}けば、「{自分|じぶん}らしさを{見|み}つけよう」という{広告|こうこく}や{投稿|とうこう}があふれている。",
+        "vi": "Mở mạng xã hội ra là thấy tràn ngập những quảng cáo và bài đăng 'Hãy tìm ra con người thật của bạn'."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "しかし、そこで{示|しめ}される「{自分|じぶん}らしさ」は、たいてい{他人|たにん}の{目|め}に{映|うつ}る{姿|すがた}でしかない。",
+        "vi": "Thế nhưng, 'cái mình' được thể hiện ở đó phần lớn chỉ là hình ảnh phản chiếu qua con mắt của người khác mà thôi."
+      },
+      {
+        "para": 2,
+        "no": 4,
+        "ja": "{他人|たにん}の{評価|ひょうか}を{基準|きじゅん}にすればするほど、{人|ひと}は{自分|じぶん}の{本当|ほんと}の{気持|きも}ちから{遠|とお}ざかっていく。",
+        "vi": "Càng lấy đánh giá của người khác làm chuẩn thì con người càng xa rời cảm xúc thật của chính mình."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "その{結果|けっか}、{自分|じぶん}の{気持|きも}ちよりも、{他人|たにん}からの「いいね」の{数|かず}のほうが{気|き}になってしまう。",
+        "vi": "Kết quả là, ta lại bận tâm đến số lượt 'thích' từ người khác hơn là cảm xúc của chính mình."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "たとえば、ある{会社|かいしゃ}{員|いん}は、{趣味|しゅみ}や{服装|ふくそう}を{変|か}えるたびに「これが{本当|ほんと}の{自分|じぶん}だろうか」と{悩|なや}み{続|つづ}けたという。",
+        "vi": "Chẳng hạn, có một nhân viên công ty cứ mỗi lần thay đổi sở thích hay trang phục lại băn khoăn mãi rằng 'Đây có phải là con người thật của mình không?'."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{彼|かれ}は、{人気|にんき}のある{生|い}き{方|かた}をまねすれば、{自分|じぶん}らしさが{手|て}に{入|はい}ると{信|しん}じていた。",
+        "vi": "Anh ta tin rằng nếu bắt chước lối sống được nhiều người ưa chuộng thì sẽ có được cái 'mình'."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "しかし、{他人|たにん}の{生|い}き{方|かた}をなぞるだけでは、{満足|まんぞく}{感|かん}は{長続|ながつづ}きしなかった。",
+        "vi": "Thế nhưng, chỉ bắt chước lối sống của người khác thì cảm giác thỏa mãn đã không kéo dài."
+      },
+      {
+        "para": 3,
+        "no": 4,
+        "ja": "むしろ、「{自分|じぶん}らしくない」という{不安|ふあん}だけが、ますます{大|おお}きくなっていった。",
+        "vi": "Ngược lại, chỉ nỗi bất an 'không giống mình' là ngày càng lớn thêm."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "では、{自分|じぶん}らしさはどこから{生|う}まれるのだろうか。",
+        "vi": "Vậy thì, cái 'mình' sinh ra từ đâu?"
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{私|わたくし}は、それは{探|さが}すものではなく、{日々|ひび}の{行動|こうどう}の{中|なか}で{少|すこ}しずつ{形作|かたちづく}られるものだと{考|かんが}えている。",
+        "vi": "Tôi cho rằng nó không phải là thứ để tìm kiếm, mà là thứ được tạo nên từng chút một trong hành động hằng ngày."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{誰|だれ}かのために{力|ちから}を{尽|つ}くしたとき、{失敗|しっぱい}から{立|た}ち{直|ちなお}ったとき、{人|ひと}は{自分|じぶん}の{価値|かち}{観|かん}に{気|き}づく。",
+        "vi": "Khi dốc hết sức vì ai đó, khi đứng dậy sau thất bại, con người nhận ra giá trị quan của chính mình."
+      },
+      {
+        "para": 4,
+        "no": 4,
+        "ja": "そうした{経験|けいけん}の{積|つ}み{重|みかさ}ねこそが、その{人|ひと}らしさを{作|つく}っていくのではないだろうか。",
+        "vi": "Chẳng phải chính sự tích lũy những kinh nghiệm như vậy là thứ tạo nên cái riêng của mỗi người hay sao?"
+      },
+      {
+        "para": 4,
+        "no": 5,
+        "ja": "{小|ちい}さな{選択|せんたく}の{積|つ}み{重|みかさ}ねが、やがてその{人|ひと}の{生|い}き{方|かた}そのものになっていく。",
+        "vi": "Sự tích lũy những lựa chọn nhỏ bé ấy, rồi sẽ trở thành chính cách sống của người đó."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "もちろん、{周囲|しゅうい}の{期待|きたい}に{応|こた}えること{自体|じたい}が{悪|わる}いわけではない。",
+        "vi": "Dĩ nhiên, bản thân việc đáp ứng kỳ vọng của những người xung quanh không phải là xấu."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{問題|もんだい}なのは、{期待|きたい}に{応|こた}えることが{目的|もくてき}になり、{自分|じぶん}の{気持|きも}ちを{置|お}き{去|きざ}りにしてしまうことである。",
+        "vi": "Vấn đề nằm ở chỗ việc đáp ứng kỳ vọng trở thành mục đích, khiến ta bỏ lại cảm xúc của chính mình."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{他人|たにん}の{評価|ひょうか}から{自由|じゆう}になるためには、まず{自分|じぶん}の{行動|こうどう}を{振|ふ}り{返|りかえ}ることが{必要|ひつよう}だ。",
+        "vi": "Để được tự do khỏi đánh giá của người khác, trước hết cần phải nhìn lại hành động của chính mình."
+      },
+      {
+        "para": 5,
+        "no": 4,
+        "ja": "{自分|じぶん}の{気持|きも}ちに{正直|しょうじき}になることは、わがままになることとは{違|ちが}う。",
+        "vi": "Trung thực với cảm xúc của chính mình không có nghĩa là trở nên ích kỷ."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "つまり、{自分|じぶん}らしさとは、{完成|かんせい}された{答|こた}えを{探|さが}し{当|しあ}てることではない。",
+        "vi": "Nói cách khác, cái 'mình' không phải là đáp án đã hoàn thiện để ta tìm ra."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "それは、{選|えら}び、{行動|こうどう}し、{振|ふ}り{返|りかえ}るという{営|いとな}みのなかで、{自然|しぜん}ににじみ{出|で}てくるものだ。",
+        "vi": "Nó là thứ tự nhiên thấm ra trong quá trình chọn lựa, hành động và nhìn lại."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "「{自分|じぶん}らしくありたい」と{願|ねが}うなら、まず{探|さが}すのをやめ、{目|め}の{前|まえ}の{一|いち}{歩|ぽ}を{踏|ふ}み{出|みだ}すことではないだろうか。",
+        "vi": "Nếu mong muốn 'được sống đúng là chính mình', chẳng phải trước hết hãy ngừng tìm kiếm và bước một bước ngay trước mắt hay sao?"
+      }
+    ],
+    "answer_key": "③①④②",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 2,
+        "locator": "Đ4②・Đ6②",
+        "options": [
+          {
+            "text": "自分らしさは、生まれたときから心の中に眠っている正解であり、それを見つけ出すことが人生の目的である。",
+            "verdict": "SAI",
+            "reason": "Đây chính là cách nghĩ mà tác giả PHÊ PHÁN ở đoạn 2 câu 1: 「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られること — tác giả mở đầu bằng まず問題なのは (trước hết, vấn đề nằm ở chỗ...). Lấy ý bị phê phán làm chủ trương của tác giả. Bẫy đánh tráo ý / đảo ngược lập trường."
+          },
+          {
+            "text": "他人の評価を基準にすれば、必ず自分らしさが自然に手に入るということ。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 4: 他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく — càng lấy đánh giá của người khác làm chuẩn thì càng XA RỜI cảm xúc thật, chứ không phải có được mình. Từ 必ず là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa + đảo ngược ý tác giả."
+          },
+          {
+            "text": "自分らしさは探すものではなく、日々の行動や経験の積み重ねの中で少しずつ形作られるものだということ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 2: 私は、それは探すものではなく、日々の行動の中で少しずつ形作られるものだと考えている, và câu 4: そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか. Đây chính là chủ trương trung tâm của tác giả, được nhắc lại ở đoạn 6 câu 2."
+          },
+          {
+            "text": "自分らしさとは、周囲の期待に完全に応えることで得られるものだということ。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 5 câu 1–2: もちろん、周囲の期待に応えること自体が悪いわけではない／問題なのは、期待に応えることが目的になり、自分の気持ちを置き去りにしてしまうことである — tác giả cảnh báo đừng để đáp ứng kỳ vọng trở thành mục đích. Từ 完全に là tuyệt đối hóa, không có trong bài. Bẫy tuyệt đối hóa + đảo ngược ý tác giả."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ2①",
+        "options": [
+          {
+            "text": "「自分らしさ」は、最初から心の中にある正解であり、それを探し出さなければならないという考え方。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 2 câu 1: 「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである, mở đầu bằng まず問題なのは — tác giả nêu cách nghĩ này ra để chỉ ra vấn đề của nó, và đoạn 1 câu 3 đã phủ định nó từ trước: 見つけ出さなければならない宝物でもないはずだ."
+          },
+          {
+            "text": "自分らしさは、日々の行動の中で少しずつ形作られるという考え方。",
+            "verdict": "SAI",
+            "reason": "Đây là CHỦ TRƯƠNG của chính tác giả (đoạn 4 câu 2: 日々の行動の中で少しずつ形作られるものだ), không phải là cách nghĩ bị phê phán. Câu hỏi hỏi 'cách nghĩ bị phê phán', nên lựa chọn này đi ngược yêu cầu. Bẫy nhầm chủ trương thành đối tượng phê phán."
+          },
+          {
+            "text": "他人の評価から自由になるためには、自分の行動を振り返るべきだという考え方。",
+            "verdict": "SAI",
+            "reason": "Đây cũng là chủ trương của chính tác giả (đoạn 5 câu 3: 他人の評価から自由になるためには、まず自分の行動を振り返ることが必要だ), không phải là đối tượng bị phê phán. Bẫy nhầm chủ trương thành đối tượng phê phán."
+          },
+          {
+            "text": "自分らしさは、完成された答えではなく、行動の中で自然ににじみ出るものだという考え方。",
+            "verdict": "SAI",
+            "reason": "Đây là kết luận của chính tác giả (đoạn 6 câu 1–2: 完成された答えを探し当てることではない／自然ににじみ出てくるものだ), không phải là cách nghĩ bị phê phán. Bẫy nhầm chủ trương thành đối tượng phê phán."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ3③④",
+        "options": [
+          {
+            "text": "会社員が趣味や服装を変えて成功し、自分らしさを見つけたことを示すため。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 3–4: 他人の生き方をなぞるだけでは、満足感は長続きしなかった／むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった — nhân vật KHÔNG thành công, không tìm thấy mình, mà chỉ thấy nỗi bất an lớn thêm. Bẫy đảo ngược kết quả của ví dụ."
+          },
+          {
+            "text": "人気のある生き方をまねることが、自分らしさへの近道であることを示すため。",
+            "verdict": "SAI",
+            "reason": "Câu 2 đoạn 3 (人気のある生き方をまねすれば、自分らしさが手に入ると信じていた) chỉ là NIỀM TIN SAI LẦM của nhân vật, và câu 3–4 chứng minh niềm tin đó là sai: bắt chước không mang lại cảm giác thỏa mãn. Lấy niềm tin của nhân vật làm kết luận của tác giả. Bẫy đánh tráo ý (ý nhân vật → ý tác giả)."
+          },
+          {
+            "text": "自分らしさは生まれたときから決まっているという筆者の考えを裏付けるため。",
+            "verdict": "SAI",
+            "reason": "'Mình đã được quyết định từ khi sinh ra' là cách nghĩ mà tác giả PHÊ PHÁN ở đoạn 2 câu 1, không phải là chủ trương của tác giả, nên ví dụ không thể 'chứng minh' cho nó. Ví dụ ở đoạn 3 chứng minh điều ngược lại: bắt chước lối sống có sẵn không tạo ra mình. Bẫy gán ý bị phê phán cho tác giả."
+          },
+          {
+            "text": "他人の生き方をなぞるだけでは自分らしさは手に入らず、不安だけが大きくなることを示すため。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 3–4: 他人の生き方をなぞるだけでは、満足感は長続きしなかった／むしろ、「自分らしくない」という不安だけが、ますます大きくなっていった. Ví dụ này chứng minh bắt chước không tạo ra mình, qua đó dẫn vào chủ trương ở đoạn 4: mình được tạo nên trong hành động của chính mình, không phải bằng cách bắt chước người khác."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đ6②",
+        "options": [
+          {
+            "text": "筆者は、周囲の期待に応えること自体が悪いと考えている。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 5 câu 1: もちろん、周囲の期待に応えること自体が悪いわけではない — tác giả nói rõ đáp ứng kỳ vọng TỰ NÓ KHÔNG XẤU; vấn đề chỉ nảy sinh khi nó trở thành mục đích (câu 2). Lựa chọn này bỏ mất vế phủ định わけではない. Bẫy đọc vế phủ định thành khẳng định."
+          },
+          {
+            "text": "筆者によれば、自分らしさは、選び、行動し、振り返る営みのなかで自然ににじみ出てくるものだ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 6 câu 2: それは、選び、行動し、振り返るという営みのなかで、自然ににじみ出てくるものだ. Đây là câu kết luận khẳng định lại chủ trương của tác giả, cũng phù hợp với đoạn 4 câu 2 (日々の行動の中で少しずつ形作られるものだ)."
+          },
+          {
+            "text": "筆者は、SNSの広告が示す「自分らしさ」こそが本物だと考えている。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 2 câu 3: そこで示される「自分らしさ」は、たいてい他人の目に映る姿でしかない — tác giả nói 'mình' trên SNS phần lớn CHỈ LÀ hình ảnh qua con mắt người khác, tức là không phải bản thật. Lấy ý được trích dẫn (quảng cáo SNS) làm ý của tác giả. Bẫy đánh tráo ý."
+          },
+          {
+            "text": "筆者は、「自分らしくありたい」と願う人には、まず自分探しを続けるべきだと勧めている。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 6 câu 3: 「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか — tác giả khuyên NGỪNG TÌM KIẾM và bước một bước ngay trước mắt, chứ không phải tiếp tục tìm kiếm bản thân. Bẫy đảo ngược lời khuyên ở câu kết."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{励|はげ}まし",
+        "reading": "はげまし",
+        "hanviet": "Lệ",
+        "vi": "lời động viên, sự khích lệ"
+      },
+      {
+        "word": "{苦|くる}しめる",
+        "reading": "くるしめる",
+        "hanviet": "Khổ",
+        "vi": "làm khổ sở, làm đau khổ (ai đó)"
+      },
+      {
+        "word": "{眠|ねむ}る",
+        "reading": "ねむる",
+        "hanviet": "Miên",
+        "vi": "ngủ, nằm im (trong lòng, chưa được nhận ra)"
+      },
+      {
+        "word": "{基準|きじゅん}",
+        "reading": "きじゅん",
+        "hanviet": "Cơ Chuẩn",
+        "vi": "tiêu chuẩn, chuẩn mực (để đánh giá)"
+      },
+      {
+        "word": "{遠|とお}ざかる",
+        "reading": "とおざかる",
+        "hanviet": "Viễn",
+        "vi": "xa dần, rời xa (cảm xúc thật của mình)"
+      },
+      {
+        "word": "まねる",
+        "reading": "まねる",
+        "hanviet": "—",
+        "vi": "bắt chước (lối sống, cách làm của người khác)"
+      },
+      {
+        "word": "なぞる",
+        "reading": "なぞる",
+        "hanviet": "—",
+        "vi": "vẽ theo, rập theo, bắt chước y hệt"
+      },
+      {
+        "word": "{満足|まんぞく}{感|かん}",
+        "reading": "まんぞくかん",
+        "hanviet": "Mãn Túc Cảm",
+        "vi": "cảm giác thỏa mãn, hài lòng"
+      },
+      {
+        "word": "{長続|ながつづ}き",
+        "reading": "ながつづき",
+        "hanviet": "Trường Tục",
+        "vi": "kéo dài lâu (cảm giác, trạng thái)"
+      },
+      {
+        "word": "{積|つ}み{重|みかさ}ね",
+        "reading": "つみかさね",
+        "hanviet": "Tích Trọng",
+        "vi": "sự tích lũy, chồng chất (kinh nghiệm)"
+      },
+      {
+        "word": "{振|ふ}り{返|りかえ}る",
+        "reading": "ふりかえる",
+        "hanviet": "Chấn Phản",
+        "vi": "nhìn lại, ngoảnh lại (hành động, quá khứ của mình)"
+      },
+      {
+        "word": "にじみ{出|で}る",
+        "reading": "にじみでる",
+        "hanviet": "—",
+        "vi": "thấm ra, lộ ra một cách tự nhiên (cái riêng của mình)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "あたかも〜かのように",
+        "vi": "cứ như thể là… (so sánh giả định, nhấn mạnh sự giống nhau nhưng thực ra không phải vậy)",
+        "in_text": "「自分らしさ」が、あたかも生まれたときから心の中に眠っている正解であるかのように語られることである。"
+      },
+      {
+        "pattern": "〜ば〜ほど",
+        "vi": "càng… thì càng… (mức độ tăng dần song song)",
+        "in_text": "他人の評価を基準にすればするほど、人は自分の本当の気持ちから遠ざかっていく。"
+      },
+      {
+        "pattern": "〜だけでは",
+        "vi": "chỉ bằng… thì không… (giới hạn: chỉ chừng đó thì chưa đủ)",
+        "in_text": "他人の生き方をなぞるだけでは、満足感は長続きしなかった。"
+      },
+      {
+        "pattern": "〜こそ",
+        "vi": "chính… (nhấn mạnh: chính cái này, không phải cái khác)",
+        "in_text": "そうした経験の積み重ねこそが、その人らしさを作っていくのではないだろうか。"
+      },
+      {
+        "pattern": "〜のではないだろうか",
+        "vi": "chẳng phải là… hay sao? (kêu gọi đồng tình, kết luận mềm)",
+        "in_text": "「自分らしくありたい」と願うなら、まず探すのをやめ、目の前の一歩を踏み出すことではないだろうか。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm so sánh giả định: あたかも〜かのように / 〜ように / 〜みたいに",
+        "rows": [
+          {
+            "form": "あたかも〜かのように",
+            "join": "あたかも + Vる・Aい・Nだ + かのように",
+            "vi": "cứ như thể là…",
+            "diff": "So sánh GIẢ ĐỊNH, mang tính văn viết và nhấn mạnh: người viết cho rằng sự việc TRÔNG NHƯ vậy nhưng thực ra KHÔNG phải vậy, thường dùng để phê phán một cách nói sai lệch. Sắc thái trang trọng, hay gặp trong bài luận N1.",
+            "example_ja": "「{自分|じぶん}らしさ」が、あたかも{生|う}まれたときから{心|こころ}の{中|なか}に{眠|ねむ}っている{正解|せいかい}であるかのように{語|かた}られることである。",
+            "example_vi": "'Cái mình' được nói đến cứ như thể nó là đáp án đúng đã ngủ sẵn trong lòng từ khi sinh ra."
+          },
+          {
+            "form": "〜ように",
+            "join": "Vる・Aい・Nの + ように",
+            "vi": "như thể… / giống như…",
+            "diff": "So sánh TRUNG TÍNH, chỉ nêu sự giống nhau về hình thức hay trạng thái, không hàm ý phê phán. Dùng rộng rãi cả trong văn nói và văn viết: 'nghe như lời động viên' (励ましのように聞こえる).",
+            "example_ja": "「{自分|じぶん}らしく{生|い}きなさい。」という{言葉|ことば}は、{励|はげ}ましのように{聞|き}こえる。",
+            "example_vi": "Câu nói 'Hãy sống đúng là chính mình' nghe như một lời động viên."
+          },
+          {
+            "form": "〜みたいに",
+            "join": "Vる・Aい・N + みたいに",
+            "vi": "giống như… / như thể…",
+            "diff": "So sánh THÂN MẬT, khẩu ngữ: sắc thái suồng sã, dùng trong hội thoại hằng ngày. Khác với ように (trung tính, dùng được trong văn viết) và あたかも〜かのように (trang trọng, giả định), みたいに mang giọng nói đời thường.",
+            "example_ja": "{彼|かれ}は、{人気|にんき}のある{生|い}き{方|かた}をまねすれば、まるで{別人|べつじん}になったみたいに{自信|じしん}がつくと{思|おも}っていた。",
+            "example_vi": "Anh ta từng nghĩ nếu bắt chước lối sống được ưa chuộng thì sẽ tự tin như thể biến thành một con người khác."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm diễn đạt sự thay đổi song song: 〜ば〜ほど / 〜につれて / 〜にしたがって",
+        "rows": [
+          {
+            "form": "〜ば〜ほど",
+            "join": "Vば + Vる + ほど",
+            "vi": "càng… thì càng…",
+            "diff": "Nhấn mạnh MỨC ĐỘ TĂNG DẦN song song của hai sự việc, thường mang sắc thái ĐÁNH GIÁ: một bên tăng thì bên kia cũng tăng (tốt lên hoặc xấu đi). Dùng được với cả động từ ý chí và trạng thái.",
+            "example_ja": "{他人|たにん}の{評価|ひょうか}を{基準|きじゅん}にすればするほど、{人|ひと}は{自分|じぶん}の{本当|ほんと}の{気持|きも}ちから{遠|とお}ざかっていく。",
+            "example_vi": "Càng lấy đánh giá của người khác làm chuẩn thì con người càng xa rời cảm xúc thật của chính mình."
+          },
+          {
+            "form": "〜につれて",
+            "join": "Vる・N + につれて",
+            "vi": "cùng với việc… thì… / theo đà…",
+            "diff": "Nhấn mạnh SỰ THAY ĐỔI THEO THỜI GIAN hoặc theo một quá trình tự nhiên: một sự việc biến đổi thì sự việc kia cũng biến đổi theo. Sắc thái khách quan, miêu tả, ít mang tính đánh giá hơn 〜ば〜ほど.",
+            "example_ja": "{経験|けいけん}を{積|つ}むにつれて、{自分|じぶん}が{本当|ほんと}に{大切|たいせつ}にしたいものが{見|み}えてきた。",
+            "example_vi": "Cùng với việc tích lũy kinh nghiệm, tôi dần nhìn thấy điều mà mình thật sự muốn trân trọng."
+          },
+          {
+            "form": "〜にしたがって",
+            "join": "Vる・N + にしたがって",
+            "vi": "theo… thì… / cùng với…",
+            "diff": "Gần nghĩa với 〜につれて, nhưng sắc thái TRANG TRỌNG và LOGIC hơn: nhấn mạnh mối quan hệ tỉ lệ, thường dùng trong văn viết học thuật. 〜につれて thiên về diễn biến tự nhiên theo thời gian, 〜にしたがって thiên về quan hệ tương ứng có quy luật.",
+            "example_ja": "{行動|こうどう}を{振|ふ}り{返|りかえ}る{回数|かいすう}が{増|ふ}えるにしたがって、{自分|じぶん}の{価値|かち}{観|かん}がはっきりしてきた。",
+            "example_vi": "Theo số lần nhìn lại hành động của mình tăng lên, giá trị quan của tôi cũng trở nên rõ ràng hơn."
+          }
+        ]
+      }
+    ]
+  }
+}
