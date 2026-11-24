@@ -371,6 +371,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 39 — Lần đầu đi học làm gốm cuối tuần (đặt chỗ online, nhào đất, tạo hình trên bàn xoay, chọn men, chờ nung, hẹn ngày lấy thành phẩm) (初めて週末に陶芸体験に行く)",
       "file": "2026-11-24-kaiwa.json"
+    },
+    {
+      "date": "2026-11-25",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 25/11/2026（問題10・短文）",
+      "file": "2026-11-25-n1-set.json"
+    },
+    {
+      "date": "2026-11-25",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 25/11/2026（情報検索）",
+      "file": "2026-11-25-reading.json"
+    },
+    {
+      "date": "2026-11-25",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 40 — Lần đầu đi hái dâu cuối tuần (đặt chỗ online, đi tàu, hái dâu ăn thỏa thích 30 phút, mua mứt dâu, nhắn tin báo người nhà) (初めて週末にいちご狩りに行く)",
+      "file": "2026-11-25-kaiwa.json"
     }
   ]
 }

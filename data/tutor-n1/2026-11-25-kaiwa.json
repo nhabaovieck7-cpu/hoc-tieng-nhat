@@ -1,0 +1,367 @@
+{
+  "lesson": 40,
+  "topic": "Lần đầu đi hái dâu cuối tuần (đặt chỗ online, đi tàu, hái dâu ăn thỏa thích 30 phút, mua mứt dâu, nhắn tin báo người nhà) (初めて週末にいちご狩りに行く)",
+  "summary": "Bối cảnh: cuối tuần, 拓海 và 莉子 đi hái dâu lần đầu ở một nông trại dâu (いちご農園) gần nhà — hôm trước hai người đặt chỗ qua mạng (ネット予約), sáng thứ Bảy đi tàu rồi đi bộ một đoạn đến nông trại. Đến cổng, hai người trả tiền ở quầy (受付) rồi vào nhà kính (ハウス) hái dâu ăn thỏa thích trong 30 phút (30分食べ放題): nhân viên dặn cách hái — cầm phần cuống (ヘタ) rồi nhẹ nhàng ngắt, chọn quả đỏ đều, quả to, quả chín mọng (真っ赤) thì ngọt; 拓海 hái vội nên toàn hái phải quả còn chua, còn 莉子 thì khéo chọn quả ngọt, chấm thêm sữa đặc (練乳) cho ngon. Hai người ăn rất nhiều, vừa ăn vừa chụp ảnh (写真を撮る) khoe nhau, đến khi hết giờ thì ra cửa hàng của nông trại (直売所) mua mứt dâu (いちごジャム) và dâu làm quà (お土産), rồi lên tàu về nhà, nhắn tin báo người nhà là hôm nay đi hái dâu vui lắm. Kỹ năng luyện: văn nói bạn bè khi tham gia một buổi trải nghiệm hái trái cây lần đầu — hỏi cách đặt chỗ, hỏi cách hái và cách chọn quả ngọt, hỏi giờ giới hạn và giá tiền; cách nói khi ăn quá nhiều (〜食べすぎちゃった, お腹いっぱい), cách khen quả ngọt (〜が甘いね, 〜がおいしい), cách mua quà và hẹn lần sau (今度は〜に行こう, 〜をお土産にしよう). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về hái dâu (いちご狩り, 食べ放題, ハウス, ヘタ, 甘い, 酸っぱい, 練乳, ジャム, お土産, 予約, 30分), cách nói khi chọn quả chín và quả chưa chín (〜が真っ赤だね, 〜がまだ白いね), và cách nói cảm nhận về đồ ăn tươi hái tại chỗ một cách tự nhiên (〜が甘くておいしいね, 〜が採れたてだね, 〜がジューシーだね).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở nông trại dâu: trả tiền ở cổng, vào nhà kính, học cách hái, ăn thỏa thích）",
+      "stage": "（Sáng thứ Bảy, trong một nhà kính lớn của nông trại dâu, mùi dâu chín thơm ngọt, hai bên luống dâu đỏ rực, quả nào quả nấy to tròn. Nhân viên nông trại đứng ở cửa nhà kính, tay cầm một cái khay nhỏ đựng sữa đặc. 拓海 và 莉子 mỗi người cầm một cái hộp giấy nhỏ, đi giữa các luống dâu.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、いちご{狩|が}りってさ、{初|はじ}めて{来|く}るよ。ハウスの{中|なか}ってさ、こんなに{甘|あま}い{匂|にお}いがするんだね。",
+          "vi": "Ồ, hái dâu ấy, lần đầu đến đấy. Trong nhà kính ấy, thơm mùi ngọt thế này cơ à."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだよ。ほら、{見|み}て{見|み}て。いちごってさ、{真|ま}っ{赤|っか}でさ、{大|おお}きくてさ、すっごいおいしそうじゃん。",
+          "vi": "Ừ đấy. Này, nhìn này nhìn này. Dâu ấy, đỏ au này, to này, trông ngon ghê nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、ほんとだ。ってさ、{摘|つ}み{方|かた}ってさ、どうやるんだっけ。",
+          "vi": "Chà, đúng thật. Này, cách hái ấy, làm thế nào nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ヘタを{持|も}ってさ、{軽|かる}くひねるんだよ。ほら、こうやってさ、ポキッて{取|と}るんだよ。",
+          "vi": "Cầm phần cuống này, vặn nhẹ là được ấy. Này, làm thế này này, bẻ tách một cái là lấy được ấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、やってみるよ。ってさ、あれ、{酸|す}っぱいじゃん。まだ{白|しろ}いとこ、あるじゃん。",
+          "vi": "Ồ, thử xem nào. Này, ơ kìa, chua ghê nhỉ. Chỗ còn trắng ấy, vẫn còn kìa."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、それ、まだ{早|はや}いよ。{真|ま}っ{赤|っか}なやつがさ、{甘|あま}いんだよ。ほら、このへん、{取|と}ってみて。",
+          "vi": "Haha, quả đấy, còn sớm lắm. Quả đỏ au ấy, mới ngọt đấy. Này, chỗ này này, hái thử xem."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、わかった。お、{甘|あま}いじゃん。ってさ、{練乳|れんにゅう}ってさ、つけてもいいの？",
+          "vi": "Ừ, biết rồi. Ồ, ngọt ghê nhỉ. Này, sữa đặc ấy, chấm thêm cũng được à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいよいいよ。ほら、ちょっとだけさ、つけてみて。{甘|あま}さがさ、もっと{増|ま}すよ。",
+          "vi": "Được được. Này, chấm một chút thôi này, thử xem. Độ ngọt ấy, còn tăng thêm đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。ってさ、30{分|わか}ってさ、けっこう{短|みじか}くない？",
+          "vi": "Ồ, đúng thật. Này, 30 phút ấy, ngắn ghê không?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、でもさ、けっこう{食|た}べられるよ。ほら、どんどん{取|と}ってさ、どんどん{食|た}べようよ。",
+          "vi": "Ừ, nhưng mà, ăn được khá nhiều đấy. Này, hái liên tục này, ăn liên tục nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（hết giờ, mua mứt dâu ở cửa hàng, trên tàu về nhắn tin báo người nhà）",
+      "stage": "（Đã hết 30 phút, hai người ra khỏi nhà kính, tay cầm hộp giấy đã vơi đi một nửa, miệng vẫn còn vị dâu ngọt. Trong cửa hàng của nông trại bày đầy mứt dâu, bánh dâu và hộp dâu làm quà, mùi thơm ngọt lan khắp cửa hàng. Sau đó hai người lên tàu về nhà, ngồi cạnh cửa sổ, vừa xem ảnh vừa nhắn tin.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、お{腹|なか}いっぱいだね。ってさ、{食|た}べすぎちゃったかな。",
+          "vi": "Phù, no căng bụng rồi. Này, ăn nhiều quá rồi à?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{私|わたくし}もさ、{食|た}べすぎちゃったよ。でもさ、{採|と}れたてってさ、やっぱりおいしいね。",
+          "vi": "Ừ, tớ cũng, ăn nhiều quá rồi đấy. Nhưng mà, vừa hái xong ấy, đúng là ngon thật đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうだね。ってさ、お{土産|みやげ}ってさ、{何|なん}にしようか。ジャム、{買|か}おうよ。",
+          "vi": "Ừ nhỉ. Này, quà ấy, mua gì nhỉ. Mua mứt nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。いちごジャムってさ、{朝|あさ}ごはんにさ、ぴったりじゃん。ほら、この{瓶|びん}、かわいいよ。",
+          "vi": "Hay đấy. Mứt dâu ấy, ăn sáng ấy, hợp lắm nhỉ. Này, cái lọ này, dễ thương đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、これにしようよ。ってさ、{写真|しゃしん}ってさ、たくさん{撮|と}ったよね。",
+          "vi": "Ừ, lấy cái này nhé. Này, ảnh ấy, chụp nhiều lắm nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだよ。ほら、この{写真|しゃしん}、{見|み}て{見|み}て。いちご、{持|も}ってる{顔|かお}、かわいいじゃん。",
+          "vi": "Ừ đấy. Này, tấm ảnh này, nhìn này nhìn này. Mặt cầm quả dâu ấy, dễ thương nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。ってさ、{家|いえ}に{帰|かえ}ったらさ、{今日|きょう}のこと、{報告|ほうこく}しようよ。",
+          "vi": "Ồ, đúng thật. Này, về đến nhà ấy, kể chuyện hôm nay nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。いちご{狩|が}り、{思|おも}ったよりさ、{楽|たの}しかったね。また{行|い}こうよ。",
+          "vi": "Ừ nhỉ. Hái dâu ấy, vui hơn tớ nghĩ đấy. Lại đi nữa nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうしようよ。ってさ、{今度|こんど}はさ、ぶどう{狩|が}りにも{行|い}ってみようよ。",
+          "vi": "Ừ, làm thế nhé. Này, lần sau ấy, đi hái nho thử xem nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。{秋|あき}になったらさ、みんなでさ、{行|い}こうよ。{楽|たの}しみだね。",
+          "vi": "Hay đấy. Đến mùa thu ấy, mọi người cùng đi nhé. Háo hức thật đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "いちご狩りは初めて来ます。ハウスの中は甘い匂いがします。いちごは真っ赤で、大きくて、おいしそうです。",
+      "real": "いちご狩りってさ、初めて来るよ。ハウスの中ってさ、こんなに甘い匂いがするんだね。いちごってさ、真っ赤でさ、大きくてさ、すっごいおいしそうじゃん。",
+      "why": "Sách giáo khoa dùng 初めて来ます và 匂いがします một cách trang trọng, nghe như đang đọc phần giới thiệu trong tờ rơi của nông trại. Nói thật thì hỏi bằng 初めて来るよ và こんなに甘い匂いがするんだね, thêm ってさ để đưa chủ đề lên trước rồi nói cảm nhận, nghe như người lần đầu bước vào nhà kính, mùi dâu chín thơm ngọt, vừa ngạc nhiên vừa thích thú."
+    },
+    {
+      "textbook": "摘み方はどうやりますか。ヘタを持って、軽くひねります。酸っぱいです。まだ白いところがあります。",
+      "real": "摘み方ってさ、どうやるんだっけ。ヘタを持ってさ、軽くひねるんだよ。酸っぱいじゃん。まだ白いとこ、あるじゃん。",
+      "why": "Văn nói bạn bè dùng どうやるんだっけ để hỏi lại cách hái một cách suồng sã, kèm じゃん để nói quả chua và quả còn trắng rồi cười với nhau, còn sách giáo khoa dùng どうやりますか và 酸っぱいです trang trọng, nghe như đang trả lời phỏng vấn. Câu nói thật nghe như hai người đang đứng giữa luống dâu, hái vội phải quả chưa chín, vừa ăn vừa nhăn mặt."
+    },
+    {
+      "textbook": "練乳をつけてもいいですか。30分は短くないですか。お腹がいっぱいです。食べすぎました。",
+      "real": "練乳ってさ、つけてもいいの？30分ってさ、けっこう短くない？お腹いっぱいだね。食べすぎちゃったかな。",
+      "why": "Văn nói khi hỏi về sữa đặc và giờ giới hạn dùng つけてもいいの và 短くない để hỏi một cách thân mật, thêm ちゃった để nói mình ăn quá nhiều một cách suồng sã, còn sách giáo khoa dùng つけてもいいですか và 短くないですか cứng nhắc, nghe như đang hỏi nhân viên quầy vé. Câu nói thật nghe như hai người vừa ăn no căng bụng, đang ngồi nghỉ trong nhà kính, miệng vẫn còn vị dâu ngọt."
+    },
+    {
+      "textbook": "お土産は何にしますか。ジャムを買いましょう。写真をたくさん撮りましたね。今度はぶどう狩りに行きましょう。",
+      "real": "お土産ってさ、何にしようか。ジャム、買おうよ。写真ってさ、たくさん撮ったよね。今度はさ、ぶどう狩りにも行ってみようよ。",
+      "why": "Văn nói dùng 何にしようか và 買おうよ để bàn mua quà với nhau một cách thân mật, kèm さ・よね để nói nhẹ nhàng và rủ đồng tình, còn sách giáo khoa dùng 何にしますか và 買いましょう, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người đang đứng trong cửa hàng của nông trại, trước mặt bày đầy mứt dâu và bánh dâu, vừa chọn vừa bàn lần sau đi hái nho."
+    },
+    {
+      "textbook": "家に帰ったら、今日のことを家族に報告します。いちご狩りは思ったより楽しかったです。また行きたいです。",
+      "real": "家に帰ったらさ、今日のこと、報告しようよ。いちご狩り、思ったよりさ、楽しかったね。また行こうよ。",
+      "why": "Văn nói dùng 報告しようよ và また行こうよ để rủ nhau kể lại và hẹn lần sau một cách suồng sã, còn sách giáo khoa dùng 報告します và 行きたいです trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy. Câu nói thật nghe như hai người vừa hái dâu xong, đang ngồi trên tàu về nhà, vừa xem ảnh vừa háo hức muốn kể cho người nhà nghe và đã hẹn lần sau."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "食べすぎちゃったかな",
+      "original": "〜てしまった",
+      "vi": "…mất rồi — dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn một cách suồng sã; 食べすぎちゃった là ăn nhiều quá mất rồi, 酸っぱいのが来ちゃった là hái phải quả chua mất rồi, 時間が過ぎちゃった là hết giờ mất rồi.",
+      "use": "Dùng với bạn bè, người thân khi kể một sự cố nhỏ xảy ra ngoài ý muốn — ăn quá nhiều, hái phải quả chưa chín, hết giờ lúc đang ăn dở.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "〜ってさ",
+      "in_lesson": "いちご狩りってさ、初めて来るよ",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa chuyện hái dâu lên trước rồi nói lần đầu đến; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang trải nghiệm một thứ mới và có nhiều thứ chưa biết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "真っ赤でさ、大きくてさ、すっごいおいしそうじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; おいしそうじゃん là nói dâu trông ngon rồi chờ bạn gật đầu theo, 酸っぱいじゃん là nói quả chua rồi cười với nhau, かわいいじゃん là khen ảnh dễ thương rồi rủ bạn đồng ý.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — dâu trông ngon, quả chua, ảnh dễ thương.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "摘み方ってさ、どうやるんだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; 摘み方、どうやるんだっけ là hỏi lại cách hái dâu, 30分、どこから数えるんだっけ là hỏi lại 30 phút tính từ lúc nào.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — cách hái dâu, giờ giới hạn tính từ lúc nào, giá tiền bao nhiêu.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどうですか・〜はどうなりますか)."
+    },
+    {
+      "form": "〜てみて",
+      "in_lesson": "このへん、取ってみて",
+      "original": "〜てみてください",
+      "vi": "…thử xem — cách rủ bạn thử làm một việc một cách thân mật; 取ってみて là rủ bạn hái thử quả này xem, つけてみて là rủ bạn chấm thử sữa đặc xem, 行ってみよう là rủ nhau đi thử hái nho lần sau.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau thử làm một việc lần đầu — hái thử quả ngọt, chấm thử sữa đặc, đi thử hái nho lần sau.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てみてください)."
+    },
+    {
+      "form": "〜しようよ",
+      "in_lesson": "どんどん取ってさ、どんどん食べようよ",
+      "original": "〜しましょう",
+      "vi": "…đi / …nào — cách rủ nhau cùng làm một việc một cách thân mật; 食べようよ là rủ nhau cùng ăn, 買おうよ là rủ nhau cùng mua mứt, 行こうよ là rủ nhau cùng đi hái nho lần sau, 報告しようよ là rủ nhau về kể lại cho người nhà nghe.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau cùng làm một việc — hái dâu ăn thỏa thích, mua mứt làm quà, đi hái nho lần sau, về kể lại cho người nhà.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜しましょう)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "いちご{狩|が}り",
+      "reading": "いちごがり",
+      "vi": "Hái dâu — hoạt động trải nghiệm ở nông trại: trả tiền vào cửa, vào nhà kính (ハウス) tự tay hái dâu rồi ăn thỏa thích trong một khoảng thời gian nhất định, thường là 30分食べ放題 (ăn thỏa thích 30 phút); いちご狩りに行く là đi hái dâu, いちご狩りのチケット là vé hái dâu, いちご農園 là nông trại dâu; mùa dâu ở Nhật thường từ mùa đông đến mùa xuân, cuối tuần hay đông khách nên phải đặt chỗ trước qua mạng (ネット予約).",
+      "example_ja": "いちご{狩|が}りってさ、{初|はじ}めて{来|く}るよ。ハウスの{中|なか}ってさ、こんなに{甘|あま}い{匂|にお}いがするんだね。",
+      "example_vi": "Hái dâu ấy, lần đầu đến đấy. Trong nhà kính ấy, thơm mùi ngọt thế này cơ à."
+    },
+    {
+      "expr": "{食|た}べ{放題|ほうだい}",
+      "reading": "たべほうだい",
+      "vi": "Ăn thỏa thích, ăn bao nhiêu cũng được — hình thức trả một khoản tiền cố định rồi ăn bao nhiêu tùy thích trong một khoảng thời gian nhất định; 30分食べ放題 là ăn thỏa thích trong 30 phút, 食べ放題の時間 là thời gian ăn thỏa thích, 食べ放題で食べすぎちゃった là ăn thỏa thích nên ăn nhiều quá mất rồi; hết giờ thì phải ra khỏi nhà kính, không được mang dâu chưa ăn hết ra ngoài.",
+      "example_ja": "30{分|ぷん}{食|た}べ{放題|ほうだい}ってさ、けっこう{短|みじか}くない？でもさ、けっこう{食|た}べられるよ。",
+      "example_vi": "Ăn thỏa thích 30 phút ấy, ngắn ghê không? Nhưng mà, ăn được khá nhiều đấy."
+    },
+    {
+      "expr": "ヘタを{持|も}つ",
+      "reading": "へたをもつ",
+      "vi": "Cầm phần cuống (phần lá xanh trên đầu quả dâu) — cách hái dâu đúng: cầm phần cuống rồi nhẹ nhàng vặn (軽くひねる) để quả rời khỏi cành mà không làm dập quả; ヘタを持ってひねる là cầm cuống rồi vặn nhẹ, ヘタのとこを持つ là cầm chỗ cuống, ヘタを取る là bỏ cuống đi trước khi ăn; đừng giật mạnh (引っ張る) vì quả dễ bị dập và cành dễ bị gãy.",
+      "example_ja": "ヘタを{持|も}ってさ、{軽|かる}くひねるんだよ。ほら、こうやってさ、ポキッて{取|と}るんだよ。",
+      "example_vi": "Cầm phần cuống này, vặn nhẹ là được ấy. Này, làm thế này này, bẻ tách một cái là lấy được ấy."
+    },
+    {
+      "expr": "{真|ま}っ{赤|っか}",
+      "reading": "まっか",
+      "vi": "Đỏ au, đỏ rực — quả dâu chín mọng, đỏ đều từ đầu đến cuống, ăn vào ngọt lịm; 真っ赤ないちご là quả dâu đỏ au, 真っ赤で大きい là đỏ au mà to, 真っ赤なやつが甘い là quả đỏ au thì ngọt; ngược lại, quả còn trắng ở đầu (まだ白い) thì chưa chín, ăn vào chua (酸っぱい), nên phải chọn quả đỏ đều, không còn chỗ trắng.",
+      "example_ja": "{真|ま}っ{赤|っか}なやつがさ、{甘|あま}いんだよ。ほら、このへん、{取|と}ってみて。",
+      "example_vi": "Quả đỏ au ấy, mới ngọt đấy. Này, chỗ này này, hái thử xem."
+    },
+    {
+      "expr": "{採|と}れたて",
+      "reading": "とれたて",
+      "vi": "Vừa hái xong, còn tươi nguyên — nói về rau củ quả vừa hái tại chỗ, ăn ngay thì ngon nhất; 採れたていちご là dâu vừa hái xong, 採れたてっておいしい là vừa hái xong thì ngon, 採れたての味 là vị của đồ vừa hái; ở nông trại hái dâu, ăn quả vừa hái ngay trong nhà kính là ngon nhất, ngọt và mọng nước (ジューシー) hơn hẳn dâu mua ở siêu thị.",
+      "example_ja": "{採|と}れたてってさ、やっぱりおいしいね。{甘|あま}くてさ、ジューシーだよ。",
+      "example_vi": "Vừa hái xong ấy, đúng là ngon thật đấy. Ngọt này, mọng nước này."
+    },
+    {
+      "expr": "お{土産|みやげ}にする",
+      "reading": "おみやげにする",
+      "vi": "Mua làm quà — mua một món đồ ở nơi mình đến chơi để mang về tặng người nhà hay bạn bè; ジャムをお土産にする là mua mứt làm quà, いちごをお土産に買う là mua dâu làm quà, お土産を買う là mua quà; ở cửa hàng của nông trại (直売所) thường bán mứt dâu (いちごジャム), bánh dâu và hộp dâu tươi làm quà, mua quà ở đây vừa ngon vừa có ý nghĩa vì là đồ của chính nông trại làm ra.",
+      "example_ja": "お{土産|みやげ}ってさ、{何|なん}にしようか。ジャム、{買|か}おうよ。いちごジャムってさ、{朝|あさ}ごはんにさ、ぴったりじゃん。",
+      "example_vi": "Quà ấy, mua gì nhỉ. Mua mứt nhé. Mứt dâu ấy, ăn sáng ấy, hợp lắm nhỉ."
+    }
+  ],
+  "mindset": [
+    "Hái dâu (いちご狩り) là một hoạt động trải nghiệm rất được yêu thích ở Nhật, nhất là vào cuối tuần: cả gia đình hay nhóm bạn cùng đi nông trại, trả tiền vào cửa rồi vào nhà kính (ハウス) tự tay hái dâu ăn thỏa thích trong 30 phút (30分食べ放題). Mùa dâu ở Nhật thường từ mùa đông đến mùa xuân, cuối tuần hay đông khách nên phải đặt chỗ trước qua mạng (ネット予約), đến nơi trả tiền ở quầy (受付) rồi mới vào nhà kính. Trong bài, hai người đặt chỗ hôm trước, sáng thứ Bảy đi tàu rồi đi bộ đến nông trại, trả tiền ở cổng rồi vào nhà kính hái dâu — đặt chỗ trước và đi tàu đến nông trại là cách đi hái dâu rất thường gặp của người Nhật sống ở thành phố.",
+    "Cách hái dâu đúng là cầm phần cuống (ヘタ) rồi nhẹ nhàng vặn (軽くひねる), đừng giật mạnh vì quả dễ bị dập và cành dễ bị gãy; quả nào đỏ đều, đỏ au (真っ赤) từ đầu đến cuống thì ngọt, quả nào còn trắng ở đầu (まだ白い) thì chưa chín, ăn vào chua (酸っぱい). Dâu vừa hái xong (採れたて) ăn ngay trong nhà kính là ngon nhất, ngọt và mọng nước (ジューシー) hơn hẳn dâu mua ở siêu thị; chấm thêm một chút sữa đặc (練乳) thì càng ngon. Trong bài, 拓海 hái vội nên toàn hái phải quả còn chua, còn 莉子 thì khéo chọn quả đỏ au, chấm thêm sữa đặc cho ngon — chọn quả chín và chấm sữa đặc là hai bí quyết nhỏ để ăn dâu hái tại chỗ thật ngon.",
+    "Người Nhật đi chơi về thường mua quà (お土産) ở cửa hàng của nông trại (直売所): mứt dâu (いちごジャム), bánh dâu, hộp dâu tươi — mua quà ở đây vừa ngon vừa có ý nghĩa vì là đồ của chính nông trại làm ra. Về nhà, người ta hay kể lại cho người nhà nghe hôm nay đi đâu, làm gì, ăn gì ngon — kể lại (報告する) là cách chia sẻ niềm vui rất tự nhiên, nhất là khi vừa có một trải nghiệm lần đầu thú vị. Trong bài, hai người mua mứt dâu làm quà, trên tàu về vừa xem ảnh vừa bàn lần sau đi hái nho (ぶどう狩り), rồi về nhà kể lại cho người nhà nghe — mua quà, xem ảnh và hẹn lần sau là cách kết thúc một buổi đi hái dâu rất tự nhiên."
+  ],
+  "mistakes": [
+    "Đừng giật mạnh quả dâu khi hái: cách hái đúng là cầm phần cuống (ヘタ) rồi nhẹ nhàng vặn (軽くひねる), quả sẽ rời khỏi cành một cách sạch sẽ — giật mạnh (引っ張る) thì quả dễ bị dập, cành dễ bị gãy, nhân viên nông trại cũng khó chịu vì làm hỏng luống dâu.",
+    "Đừng hái quả còn trắng ở đầu: quả dâu nào còn trắng (まだ白い) thì chưa chín, ăn vào chua (酸っぱい) — phải chọn quả đỏ đều, đỏ au (真っ赤) từ đầu đến cuống thì mới ngọt; hái vội toàn quả chưa chín thì vừa chua vừa phí, vì quả hái rồi không trả lại được.",
+    "Đừng mang dâu chưa ăn hết ra khỏi nhà kính: 食べ放題 là ăn thỏa thích trong nhà kính, trong thời gian quy định — ăn bao nhiêu cũng được nhưng chỉ được ăn ở trong, hết giờ thì phải ra, dâu chưa ăn hết không được mang ra ngoài, muốn mang về thì mua ở cửa hàng (直売所).",
+    "Đừng nói quá trang trọng với nhân viên nông trại khi hỏi cách hái: nhân viên ở nông trại là người hướng dẫn mình, không phải cấp trên — hỏi 摘み方、どうやるんですか là được rồi, đừng nói お手数ですが、摘み方をご教示いただけますでしょうか, nghe như đang viết thư xin việc, nhân viên cũng khó xử.",
+    "Đừng quên hỏi giờ giới hạn và giá tiền trước khi vào: 食べ放題 thường chỉ có 30 phút, hết giờ là phải ra — trước khi vào phải hỏi rõ 30分って、どこから数えるんですか và giá tiền bao nhiêu, đừng vào rồi mới biết là sắp hết giờ, lại phải vội vàng ăn cho kịp."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn muốn đi hái dâu lần đầu vào cuối tuần. Hãy hỏi nhân viên nông trại qua điện thoại hoặc ở quầy: có cần đặt chỗ trước không, giá tiền bao nhiêu, ăn thỏa thích trong bao lâu, và đi tàu đến nông trại thế nào.",
+    "Tình huống 2: Bạn đang ở trong nhà kính và lần đầu hái dâu. Hãy hỏi nhân viên hoặc bạn đi cùng: cách hái thế nào, cầm cuống ra sao, quả nào thì ngọt, quả nào thì chưa chín, và sữa đặc chấm thế nào.",
+    "Tình huống 3: Bạn vừa hái phải một quả dâu còn chua, nhăn mặt lại. Hãy nói với bạn đi cùng: quả này chua quá, cười với nhau một câu, rồi hỏi bạn quả nào thì ngọt và hái thử quả khác.",
+    "Tình huống 4: Bạn vừa ăn no căng bụng và đã hết 30 phút. Hãy nói với bạn đi cùng: ăn nhiều quá rồi, dâu vừa hái ngon thế nào, rồi cùng nhau đi mua mứt dâu làm quà ở cửa hàng của nông trại.",
+    "Tình huống 5: Bạn vừa đi hái dâu xong và đang ngồi trên tàu về nhà với bạn. Hãy bàn với bạn đi cùng: hôm nay vui thế nào, ảnh chụp được tấm nào đẹp, lần sau đi hái nho vào mùa thu ra sao, và về nhà kể lại cho người nhà nghe thế nào."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、いちご{狩|が}りってさ、{初|はじ}めて{来|く}るよ。ハウスの{中|なか}ってさ、こんなに{甘|あま}い{匂|にお}いがするんだね。",
+      "vi": "Ồ, hái dâu ấy, lần đầu đến đấy. Trong nhà kính ấy, thơm mùi ngọt thế này cơ à."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだよ。ほら、{見|み}て{見|み}て。いちごってさ、{真|ま}っ{赤|っか}でさ、{大|おお}きくてさ、すっごいおいしそうじゃん。",
+      "vi": "Ừ đấy. Này, nhìn này nhìn này. Dâu ấy, đỏ au này, to này, trông ngon ghê nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、ほんとだ。ってさ、{摘|つ}み{方|かた}ってさ、どうやるんだっけ。",
+      "vi": "Chà, đúng thật. Này, cách hái ấy, làm thế nào nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ヘタを{持|も}ってさ、{軽|かる}くひねるんだよ。ほら、こうやってさ、ポキッて{取|と}るんだよ。",
+      "vi": "Cầm phần cuống này, vặn nhẹ là được ấy. Này, làm thế này này, bẻ tách một cái là lấy được ấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、やってみるよ。ってさ、あれ、{酸|す}っぱいじゃん。まだ{白|しろ}いとこ、あるじゃん。",
+      "vi": "Ồ, thử xem nào. Này, ơ kìa, chua ghê nhỉ. Chỗ còn trắng ấy, vẫn còn kìa."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、それ、まだ{早|はや}いよ。{真|ま}っ{赤|っか}なやつがさ、{甘|あま}いんだよ。ほら、このへん、{取|と}ってみて。",
+      "vi": "Haha, quả đấy, còn sớm lắm. Quả đỏ au ấy, mới ngọt đấy. Này, chỗ này này, hái thử xem."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、わかった。お、{甘|あま}いじゃん。ってさ、{練乳|れんにゅう}ってさ、つけてもいいの？",
+      "vi": "Ừ, biết rồi. Ồ, ngọt ghê nhỉ. Này, sữa đặc ấy, chấm thêm cũng được à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいよいいよ。ほら、ちょっとだけさ、つけてみて。{甘|あま}さがさ、もっと{増|ま}すよ。",
+      "vi": "Được được. Này, chấm một chút thôi này, thử xem. Độ ngọt ấy, còn tăng thêm đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。ってさ、30{分|わか}ってさ、けっこう{短|みじか}くない？",
+      "vi": "Ồ, đúng thật. Này, 30 phút ấy, ngắn ghê không?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、でもさ、けっこう{食|た}べられるよ。ほら、どんどん{取|と}ってさ、どんどん{食|た}べようよ。",
+      "vi": "Ừ, nhưng mà, ăn được khá nhiều đấy. Này, hái liên tục này, ăn liên tục nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、お{腹|なか}いっぱいだね。ってさ、{食|た}べすぎちゃったかな。",
+      "vi": "Phù, no căng bụng rồi. Này, ăn nhiều quá rồi à?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{私|わたくし}もさ、{食|た}べすぎちゃったよ。でもさ、{採|と}れたてってさ、やっぱりおいしいね。",
+      "vi": "Ừ, tớ cũng, ăn nhiều quá rồi đấy. Nhưng mà, vừa hái xong ấy, đúng là ngon thật đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうだね。ってさ、お{土産|みやげ}ってさ、{何|なん}にしようか。ジャム、{買|か}おうよ。",
+      "vi": "Ừ nhỉ. Này, quà ấy, mua gì nhỉ. Mua mứt nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。いちごジャムってさ、{朝|あさ}ごはんにさ、ぴったりじゃん。ほら、この{瓶|びん}、かわいいよ。",
+      "vi": "Hay đấy. Mứt dâu ấy, ăn sáng ấy, hợp lắm nhỉ. Này, cái lọ này, dễ thương đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、これにしようよ。ってさ、{写真|しゃしん}ってさ、たくさん{撮|と}ったよね。",
+      "vi": "Ừ, lấy cái này nhé. Này, ảnh ấy, chụp nhiều lắm nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだよ。ほら、この{写真|しゃしん}、{見|み}て{見|み}て。いちご、{持|も}ってる{顔|かお}、かわいいじゃん。",
+      "vi": "Ừ đấy. Này, tấm ảnh này, nhìn này nhìn này. Mặt cầm quả dâu ấy, dễ thương nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。ってさ、{家|いえ}に{帰|かえ}ったらさ、{今日|きょう}のこと、{報告|ほうこく}しようよ。",
+      "vi": "Ồ, đúng thật. Này, về đến nhà ấy, kể chuyện hôm nay nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。いちご{狩|が}り、{思|おも}ったよりさ、{楽|たの}しかったね。また{行|い}こうよ。",
+      "vi": "Ừ nhỉ. Hái dâu ấy, vui hơn tớ nghĩ đấy. Lại đi nữa nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうしようよ。ってさ、{今度|こんど}はさ、ぶどう{狩|が}りにも{行|い}ってみようよ。",
+      "vi": "Ừ, làm thế nhé. Này, lần sau ấy, đi hái nho thử xem nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。{秋|あき}になったらさ、みんなでさ、{行|い}こうよ。{楽|たの}しみだね。",
+      "vi": "Hay đấy. Đến mùa thu ấy, mọi người cùng đi nhé. Háo hức thật đấy."
+    }
+  ],
+  "notes": [
+    "Từ vựng hái dâu cơ bản: いちご狩り (hái dâu), 食べ放題 (ăn thỏa thích), ハウス (nhà kính), ヘタ (cuống quả), 甘い (ngọt), 酸っぱい (chua), 練乳 (sữa đặc), ジャム (mứt), お土産 (quà), 予約 (đặt chỗ), 直売所 (cửa hàng của nông trại); ăn thỏa thích thường chỉ có 30 phút, đặt chỗ trước qua mạng (ネット予約), hết giờ thì phải ra khỏi nhà kính.",
+    "Quy trình hái dâu: đặt chỗ trước qua mạng (ネット予約) → đi tàu rồi đi bộ đến nông trại → trả tiền ở quầy (受付) → vào nhà kính (ハウス) → cầm cuống (ヘタを持つ) rồi nhẹ nhàng vặn (軽くひねる) → chọn quả đỏ au (真っ赤) → chấm sữa đặc (練乳をつける) → ăn thỏa thích trong 30 phút → mua mứt làm quà (お土産) ở cửa hàng (直売所).",
+    "Văn hóa trải nghiệm hái trái cây ở Nhật: hái dâu (いちご狩り) vào mùa đông–xuân, hái nho (ぶどう狩り) vào mùa thu; ăn quả vừa hái xong (採れたて) ngay tại chỗ là ngon nhất, ngọt và mọng nước (ジューシー); mua quà (お土産) ở cửa hàng của nông trại là cách kết thúc buổi đi chơi rất tự nhiên, rồi về nhà kể lại (報告する) cho người nhà nghe.",
+    "〜ちゃった là dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn (ăn quá nhiều, hái phải quả chua); 〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (cách hái, giờ giới hạn tính từ lúc nào); 〜てみて là cách rủ bạn thử làm một việc lần đầu (hái thử quả ngọt, chấm thử sữa đặc)."
+  ]
+}

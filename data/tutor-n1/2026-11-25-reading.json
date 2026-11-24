@@ -1,0 +1,530 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 情報検索 trong phần đọc hiểu của đề N1 thật: một thông báo thực tế (ở đây là thông báo của thư viện), kèm 4 câu hỏi — hỏi xem một người cụ thể trong tình huống cụ thể có thể tham gia企画 nào, hỏi quy tắc mượn sách, hỏi hạn đăng ký của một企画, và hỏi lịch nghỉ dịp cuối năm – đầu năm mới. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới dò thông báo để tìm đúng chỗ; Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình hiểu lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 12–14 phút (đọc thông báo + 4 câu hỏi). Trong đề thật, 情報検索 là dạng dễ mất điểm vì các lựa chọn nhiễu thường lấy đúng một con số nhưng của một企画 khác (ví dụ lấy hạn đăng ký của buổi kể chuyện gán cho khóa học đọc sách), hoặc lấy đúng ngày nhưng sai giờ, hoặc lấy đúng giờ nhưng sai địa điểm — chỉ khi ngày + giờ + địa điểm khớp cả ba thì mới đúng.",
+  "tips": [
+    {
+      "h": "Đọc câu hỏi trước, gạch chân từ khóa: ngày, giờ, địa điểm, tên企画",
+      "body": "Thông báo này có nhiều con số giống nhau (12月5日・12月15日・12月20日, 40人・30組, 2階・1階・3階). Trước khi đọc thông báo, hãy đọc 4 câu hỏi và gạch chân từ khóa: câu 1 hỏi '12月20日(日)の午後' + '参加できる企画', câu 2 hỏi '何冊まで何日間', câu 3 hỏi '読書講座の申込み', câu 4 hỏi '年末年始'. Có từ khóa rồi, bạn chỉ cần dò đúng chỗ chứa từ khóa đó, không cần đọc kỹ cả thông báo."
+    },
+    {
+      "h": "Kiểm tra bảng giờ mở cửa và ngày nghỉ trước khi chọn ngày đi",
+      "body": "Trước khi kết luận một người 'có thể đến thư viện vào ngày X', hãy kiểm tra hai chỗ: đoạn 2 (開館時間: ngày thường đến 20 giờ, thứ Bảy đến 18 giờ, Chủ nhật/ngày lễ đến 17 giờ; riêng 12月24日(木) đóng cửa sớm lúc 17 giờ) và đoạn 3 (休館日: thứ Hai hằng tuần + 12月29日(火)から1月3日(日); 1月4日(月) cũng nghỉ vì là thứ Hai). Bẫy quen thuộc: ngày 1月4日 trông như đã hết kỳ nghỉ nhưng vẫn nghỉ vì rơi vào thứ Hai."
+    },
+    {
+      "h": "Ghép ngày + giờ + địa điểm cùng lúc — chỉ đúng khi cả ba khớp",
+      "body": "Ngày 12月20日(日) có tới hai企画: buổi kể chuyện lúc 11 giờ sáng ở tầng 3 (3階の児童コーナー) và buổi trò chuyện với người chụp ảnh lúc 3 giờ chiều ở tầng 1 (1階の展示コーナー). Một lựa chọn chỉ đúng khi cả ba yếu tố ngày, giờ và địa điểm đều khớp với cùng một企画. Lựa chọn nào lấy giờ của企画 này ghép với ngày của企画 khác là bẫy 'ghép số' — loại ngay."
+    },
+    {
+      "h": "Mỗi企画 có một bộ số riêng: 定員・申込締め切り・申込方法",
+      "body": "Khóa học đọc sách: 定員40人, hạn đăng ký 12月5日(土), đăng ký qua điện thoại hoặc tại quầy. Buổi kể chuyện: 定員30組, hạn đăng ký 12月15日(火), đăng ký qua trang web. Triển lãm ảnh: không cần đăng ký, vào cửa miễn phí. Khi làm câu hỏi về một企画, chỉ dùng đúng bộ số của企画 đó; con số đúng của企画 khác vẫn là đáp án sai."
+    },
+    {
+      "h": "Phân biệt '申込み不要' với '申込みが必要' — và '無料' không có nghĩa là 'không cần đăng ký'",
+      "body": "Triển lãm ảnh ghi rõ 入場は無料で、申込みは必要ありません (vào cửa miễn phí, không cần đăng ký). Ngược lại, khóa học đọc sách và buổi kể chuyện đều ghi 参加費は無料 (phí tham gia miễn phí) NHƯNG vẫn bắt buộc đăng ký trước hạn. Lựa chọn nào nói 'miễn phí nên cứ đến thẳng là được' cho khóa học đọc sách hoặc buổi kể chuyện là bẫy nhầm 'miễn phí' với 'không cần đăng ký'."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Giờ mở cửa: ngày thường 9–20 giờ, thứ Bảy 9–18 giờ, Chủ nhật/ngày lễ 9–17 giờ; 12月24日(木) đóng cửa sớm lúc 17 giờ. Ngày nghỉ: thứ Hai hằng tuần, 12月29日(火)から1月3日(日), 1月4日(月) cũng nghỉ (thứ Hai), mở lại 1月5日(火). Bốn企画: (1) khóa học đọc sách 12月12日(土)14–16 giờ, tầng 2, 定員40人, hạn đăng ký 12月5日(土), điện thoại/quầy; (2) triển lãm ảnh 12月6日(日)–12月21日(月), tầng 1, miễn phí, không cần đăng ký, buổi trò chuyện 12月20日(日)15 giờ; (3) buổi kể chuyện 12月20日(日)11–12 giờ, tầng 3, 定員30組, hạn đăng ký 12月15日(火), đăng ký qua trang web; (4) túi sách may mắn 12月23日(水)–12月27日(日), tầng 1, mỗi người 1 túi, hết thì thôi. Mượn sách: tối đa 10 cuốn, 2 tuần, gia hạn 1 lần, đặt trước tối đa 5 cuốn."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "川崎市民図書館では、12月から1月にかけて、冬の特別企画を開催します。今年のテーマは「本と出会う冬」で、読書講座や写真展など、どなたでも楽しめる企画を用意しました。各企画の詳細は、下記のとおりです。\n開館時間は、平日は午前9時から午後8時までです。土曜日は午前9時から午後6時まで、日曜日と祝日は午前9時から午後5時まで開館しています。12月24日(木)は、特別企画の準備のため、午後5時で閉館します。\n休館日は、毎週月曜日です。年末年始は、12月29日(火)から1月3日(日)まで休館します。1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します。\n冬の特別企画の一つ目は、12月12日(土)午後2時から4時まで、2階の研修室で開かれる読書講座「冬の夜長に読む本」です。講師は、作家の山田あきらさんで、参加費は無料です。定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます。\n二つ目は、12月6日(日)から12月21日(月)まで、1階の展示コーナーで開かれる写真展「川崎の冬景色」です。入場は無料で、申込みは必要ありません。展示される写真は、市民の皆さんから寄せられたもので、12月20日(日)午後3時からは、撮影者によるお話会も行われます。\n三つ目は、12月20日(日)午前11時から正午まで、3階の児童コーナーで開かれる冬のおはなし会です。対象は小学生以下のお子さんとその保護者で、定員は30組、参加費は無料です。申込みは、12月15日(火)までに、図書館のホームページからお願いします。また、12月23日(水)から12月27日(日)まで、1階のカウンターで「冬の本の福袋」を貸し出します。福袋は1人1袋までで、数に限りがありますので、なくなり次第終了となります。\n貸出は、1人につき本は10冊まで、2週間借りることができます。延長は1回までで、借りた日から数えて14日以内に、窓口または電話で手続きをしてください。ただし、他の利用者から予約が入っている本は、延長できません。予約は、1人につき5冊までで、ホームページまたは窓口で受け付けています。\n各企画の申込みは、電話、窓口、ホームページのいずれかで受け付けています。電話での申込みは、開館時間内にお願いします。申込みの際は、企画名、お名前、電話番号をお知らせください。詳しくは、川崎市民図書館のホームページをご覧いただくか、電話044-123-4567までお問い合わせください。\nAさんは12月20日(日)の午後に図書館に行きます。Aさんが参加できる企画はどれですか。",
+      "choices": [
+        "午前11時から3階の児童コーナーで開かれる冬のおはなし会",
+        "午後3時から1階の展示コーナーで開かれる、撮影者によるお話会",
+        "午後2時から2階の研修室で開かれる読書講座「冬の夜長に読む本」",
+        "12月23日から1階のカウンターで貸し出される「冬の本の福袋」"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án ở đoạn 5 câu 3: 12月20日(日)午後3時からは、撮影者によるお話会も行われます — buổi trò chuyện diễn ra đúng chiều ngày 20/12, khớp cả ngày + giờ + địa điểm (tầng 1). Lựa chọn 1 sai giờ (buổi kể chuyện là buổi sáng 11 giờ), lựa chọn 3 sai ngày (khóa học đọc sách là 12月12日), lựa chọn 4 sai ngày (túi sách bắt đầu từ 12月23日)."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "川崎市民図書館では、12月から1月にかけて、冬の特別企画を開催します。今年のテーマは「本と出会う冬」で、読書講座や写真展など、どなたでも楽しめる企画を用意しました。各企画の詳細は、下記のとおりです。\n開館時間は、平日は午前9時から午後8時までです。土曜日は午前9時から午後6時まで、日曜日と祝日は午前9時から午後5時まで開館しています。12月24日(木)は、特別企画の準備のため、午後5時で閉館します。\n休館日は、毎週月曜日です。年末年始は、12月29日(火)から1月3日(日)まで休館します。1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します。\n冬の特別企画の一つ目は、12月12日(土)午後2時から4時まで、2階の研修室で開かれる読書講座「冬の夜長に読む本」です。講師は、作家の山田あきらさんで、参加費は無料です。定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます。\n二つ目は、12月6日(日)から12月21日(月)まで、1階の展示コーナーで開かれる写真展「川崎の冬景色」です。入場は無料で、申込みは必要ありません。展示される写真は、市民の皆さんから寄せられたもので、12月20日(日)午後3時からは、撮影者によるお話会も行われます。\n三つ目は、12月20日(日)午前11時から正午まで、3階の児童コーナーで開かれる冬のおはなし会です。対象は小学生以下のお子さんとその保護者で、定員は30組、参加費は無料です。申込みは、12月15日(火)までに、図書館のホームページからお願いします。また、12月23日(水)から12月27日(日)まで、1階のカウンターで「冬の本の福袋」を貸し出します。福袋は1人1袋までで、数に限りがありますので、なくなり次第終了となります。\n貸出は、1人につき本は10冊まで、2週間借りることができます。延長は1回までで、借りた日から数えて14日以内に、窓口または電話で手続きをしてください。ただし、他の利用者から予約が入っている本は、延長できません。予約は、1人につき5冊までで、ホームページまたは窓口で受け付けています。\n各企画の申込みは、電話、窓口、ホームページのいずれかで受け付けています。電話での申込みは、開館時間内にお願いします。申込みの際は、企画名、お名前、電話番号をお知らせください。詳しくは、川崎市民図書館のホームページをご覧いただくか、電話044-123-4567までお問い合わせください。\n本を何冊まで、何日間借りることができますか。",
+      "choices": [
+        "1人につき10冊まで、2週間",
+        "1人につき5冊まで、2週間",
+        "1人につき10冊まで、1週間",
+        "1人につき5冊まで、1か月"
+      ],
+      "answer": 0,
+      "explain_vi": "Đáp án ở đoạn 7 câu 1: 貸出は、1人につき本は10冊まで、2週間借りることができます. Lựa chọn 2 lấy số 5冊 của 予約 (đặt trước, câu 4) gán cho 貸出; lựa chọn 3 sai thời gian (1週間 thay vì 2週間); lựa chọn 4 sai cả hai số."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "川崎市民図書館では、12月から1月にかけて、冬の特別企画を開催します。今年のテーマは「本と出会う冬」で、読書講座や写真展など、どなたでも楽しめる企画を用意しました。各企画の詳細は、下記のとおりです。\n開館時間は、平日は午前9時から午後8時までです。土曜日は午前9時から午後6時まで、日曜日と祝日は午前9時から午後5時まで開館しています。12月24日(木)は、特別企画の準備のため、午後5時で閉館します。\n休館日は、毎週月曜日です。年末年始は、12月29日(火)から1月3日(日)まで休館します。1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します。\n冬の特別企画の一つ目は、12月12日(土)午後2時から4時まで、2階の研修室で開かれる読書講座「冬の夜長に読む本」です。講師は、作家の山田あきらさんで、参加費は無料です。定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます。\n二つ目は、12月6日(日)から12月21日(月)まで、1階の展示コーナーで開かれる写真展「川崎の冬景色」です。入場は無料で、申込みは必要ありません。展示される写真は、市民の皆さんから寄せられたもので、12月20日(日)午後3時からは、撮影者によるお話会も行われます。\n三つ目は、12月20日(日)午前11時から正午まで、3階の児童コーナーで開かれる冬のおはなし会です。対象は小学生以下のお子さんとその保護者で、定員は30組、参加費は無料です。申込みは、12月15日(火)までに、図書館のホームページからお願いします。また、12月23日(水)から12月27日(日)まで、1階のカウンターで「冬の本の福袋」を貸し出します。福袋は1人1袋までで、数に限りがありますので、なくなり次第終了となります。\n貸出は、1人につき本は10冊まで、2週間借りることができます。延長は1回までで、借りた日から数えて14日以内に、窓口または電話で手続きをしてください。ただし、他の利用者から予約が入っている本は、延長できません。予約は、1人につき5冊までで、ホームページまたは窓口で受け付けています。\n各企画の申込みは、電話、窓口、ホームページのいずれかで受け付けています。電話での申込みは、開館時間内にお願いします。申込みの際は、企画名、お名前、電話番号をお知らせください。詳しくは、川崎市民図書館のホームページをご覧いただくか、電話044-123-4567までお問い合わせください。\n読書講座「冬の夜長に読む本」の申込みについて、正しいものはどれですか。",
+      "choices": [
+        "申込みは12月15日(火)までで、ホームページからのみ受け付ける。",
+        "申込みは不要で、直接会場に行けば参加できる。",
+        "定員は30組で、参加費は500円である。",
+        "定員は40人で、12月5日(土)までに電話または窓口で申し込む。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án ở đoạn 4 câu 3: 定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます. Lựa chọn 1 lấy hạn 12月15日 và cách đăng ký qua trang web của buổi kể chuyện (đoạn 6 câu 3) gán cho khóa học đọc sách; lựa chọn 2 là quy định của triển lãm ảnh (đoạn 5 câu 2: 申込みは必要ありません); lựa chọn 3 lấy 定員30組 của buổi kể chuyện và mức phí 500円 không có trong thông báo."
+    },
+    {
+      "level": "N1",
+      "section": "読解（情報検索）",
+      "question": "川崎市民図書館では、12月から1月にかけて、冬の特別企画を開催します。今年のテーマは「本と出会う冬」で、読書講座や写真展など、どなたでも楽しめる企画を用意しました。各企画の詳細は、下記のとおりです。\n開館時間は、平日は午前9時から午後8時までです。土曜日は午前9時から午後6時まで、日曜日と祝日は午前9時から午後5時まで開館しています。12月24日(木)は、特別企画の準備のため、午後5時で閉館します。\n休館日は、毎週月曜日です。年末年始は、12月29日(火)から1月3日(日)まで休館します。1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します。\n冬の特別企画の一つ目は、12月12日(土)午後2時から4時まで、2階の研修室で開かれる読書講座「冬の夜長に読む本」です。講師は、作家の山田あきらさんで、参加費は無料です。定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます。\n二つ目は、12月6日(日)から12月21日(月)まで、1階の展示コーナーで開かれる写真展「川崎の冬景色」です。入場は無料で、申込みは必要ありません。展示される写真は、市民の皆さんから寄せられたもので、12月20日(日)午後3時からは、撮影者によるお話会も行われます。\n三つ目は、12月20日(日)午前11時から正午まで、3階の児童コーナーで開かれる冬のおはなし会です。対象は小学生以下のお子さんとその保護者で、定員は30組、参加費は無料です。申込みは、12月15日(火)までに、図書館のホームページからお願いします。また、12月23日(水)から12月27日(日)まで、1階のカウンターで「冬の本の福袋」を貸し出します。福袋は1人1袋までで、数に限りがありますので、なくなり次第終了となります。\n貸出は、1人につき本は10冊まで、2週間借りることができます。延長は1回までで、借りた日から数えて14日以内に、窓口または電話で手続きをしてください。ただし、他の利用者から予約が入っている本は、延長できません。予約は、1人につき5冊までで、ホームページまたは窓口で受け付けています。\n各企画の申込みは、電話、窓口、ホームページのいずれかで受け付けています。電話での申込みは、開館時間内にお願いします。申込みの際は、企画名、お名前、電話番号をお知らせください。詳しくは、川崎市民図書館のホームページをご覧いただくか、電話044-123-4567までお問い合わせください。\n年末年始について、正しいものはどれですか。",
+      "choices": [
+        "12月28日(月)から1月4日(月)まで休館する。",
+        "12月24日(木)は休館日である。",
+        "12月29日(火)から1月3日(日)まで休館し、1月4日(月)も月曜日のため休館する。",
+        "1月4日(月)から通常どおり開館する。"
+      ],
+      "answer": 2,
+      "explain_vi": "Đáp án ở đoạn 3 câu 2–3: 年末年始は、12月29日(火)から1月3日(日)まで休館します／1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します. Lựa chọn 1 sai cả ngày bắt đầu (12月28日 thay vì 12月29日) và ngày kết thúc (1月4日 vẫn nghỉ nhưng vì là thứ Hai, không phải vì còn trong kỳ nghỉ); lựa chọn 2 nhầm 'đóng cửa sớm lúc 17 giờ' (đoạn 2 câu 3) với 'nghỉ cả ngày'; lựa chọn 4 sai ngày mở lại (1月5日 mới mở, không phải 1月4日)."
+    }
+  ],
+  "study": {
+    "passage_title": "「川崎市民図書館 冬の特別企画と開館時間のお知らせ」— Thông báo về chương trình đặc biệt mùa đông và giờ mở cửa của Thư viện Công dân Kawasaki",
+    "structure": "Thông báo hành chính 8 đoạn, đi theo mạch giới thiệu chung — giờ mở cửa — ngày nghỉ — bốn企画 — quy tắc mượn sách — cách đăng ký/liên hệ. Đoạn 1 (mở đầu, giới thiệu chung): thư viện tổ chức chương trình đặc biệt mùa đông từ tháng 12 đến tháng 1, chủ đề năm nay là 'Mùa đông gặp gỡ sách', có khóa học đọc sách, triển lãm ảnh và các企画 ai cũng có thể thưởng thức; câu 3 dẫn vào phần chi tiết (下記のとおりです). Đoạn 2 (開館時間): ngày thường mở 9–20 giờ, thứ Bảy 9–18 giờ, Chủ nhật và ngày lễ 9–17 giờ; ngoại lệ duy nhất là 12月24日(木) đóng cửa sớm lúc 17 giờ vì chuẩn bị cho chương trình đặc biệt. Đoạn 3 (休館日): thứ Hai hằng tuần nghỉ; dịp cuối năm – đầu năm mới nghỉ từ 12月29日(火) đến 1月3日(日); bẫy nằm ở câu 3 — 1月4日(月) vẫn nghỉ vì rơi vào thứ Hai, phải đến 1月5日(火) mới mở lại như thường lệ. Đoạn 4 (企画1 — khóa học đọc sách): 12月12日(土) 14–16 giờ, phòng hội thảo tầng 2, giảng viên là nhà văn Yamada Akira, phí tham gia miễn phí, định mức 40 người, hạn đăng ký 12月5日(土) qua điện thoại hoặc tại quầy. Đoạn 5 (企画2 — triển lãm ảnh): 12月6日(日)–12月21日(月), góc triển lãm tầng 1, vào cửa miễn phí và KHÔNG cần đăng ký; ảnh do người dân gửi đến; buổi trò chuyện với người chụp ảnh lúc 15 giờ ngày 12月20日(日). Đoạn 6 (企画3 + 企画4): buổi kể chuyện mùa đông 12月20日(日) 11–12 giờ, góc thiếu nhi tầng 3, đối tượng là trẻ tiểu học trở xuống cùng người giám hộ, định mức 30 nhóm, phí miễn phí, đăng ký trước 12月15日(火) qua trang web; túi sách may mắn 12月23日(水)–12月27日(日) tại quầy tầng 1, mỗi người 1 túi, số lượng có hạn, hết thì thôi. Đoạn 7 (貸出ルール): mỗi người mượn tối đa 10 cuốn trong 2 tuần; gia hạn tối đa 1 lần, phải làm thủ tục trong vòng 14 ngày kể từ ngày mượn, tại quầy hoặc qua điện thoại; sách đã có người khác đặt trước thì không gia hạn được; đặt trước tối đa 5 cuốn mỗi người qua trang web hoặc tại quầy. Đoạn 8 (申込方法・問い合わせ): đăng ký các企画 qua điện thoại, tại quầy hoặc trang web; đăng ký qua điện thoại chỉ trong giờ mở cửa; khi đăng ký cần cho biết tên企画, họ tên và số điện thoại; chi tiết xem trên trang web hoặc gọi 044-123-4567.",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{川崎|かわさき}{市民|しみん}{図書|としょ}{館|かん}では、12{月|つき}から1{月|つき}にかけて、{冬|ふゆ}の{特別|とくべつ}{企画|きかく}を{開催|かいさい}します。",
+        "vi": "Thư viện Công dân Kawasaki sẽ tổ chức chương trình đặc biệt mùa đông từ tháng 12 đến tháng 1."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{今年|ことし}のテーマは「{本|ほん}と{出会|であ}う{冬|ふゆ}」で、{読書|どくしょ}{講座|こうざ}や{写真|しゃしん}{展|てん}など、どなたでも{楽|たの}しめる{企画|きかく}を{用意|ようい}しました。",
+        "vi": "Chủ đề năm nay là 'Mùa đông gặp gỡ sách', với các chương trình như khóa học đọc sách và triển lãm ảnh mà bất cứ ai cũng có thể thưởng thức."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{各|かく}{企画|きかく}の{詳細|しょうさい}は、{下記|かき}のとおりです。",
+        "vi": "Chi tiết của từng chương trình như dưới đây."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{開館|かいかん}{時間|じかん}は、{平日|へいじつ}は{午前|ごぜん}9{時|じ}から{午後|ごご}8{時|じ}までです。",
+        "vi": "Giờ mở cửa: ngày thường từ 9 giờ sáng đến 8 giờ tối."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "{土曜|どよう}{日|ひ}は{午前|ごぜん}9{時|じ}から{午後|ごご}6{時|じ}まで、{日曜|にちよう}{日|ひ}と{祝日|しゅくじつ}は{午前|ごぜん}9{時|じ}から{午後|ごご}5{時|じ}まで{開館|かいかん}しています。",
+        "vi": "Thứ Bảy mở cửa từ 9 giờ sáng đến 6 giờ chiều, Chủ nhật và ngày lễ mở cửa từ 9 giờ sáng đến 5 giờ chiều."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "12{月|つき}24{日|か}({木|き})は、{特別|とくべつ}{企画|きかく}の{準備|じゅんび}のため、{午後|ごご}5{時|じ}で{閉館|へいかん}します。",
+        "vi": "Ngày 24 tháng 12 (thứ Năm), do chuẩn bị cho chương trình đặc biệt nên thư viện đóng cửa lúc 5 giờ chiều."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "{休館|きゅうかん}{日|ひ}は、{毎週|まいしゅう}{月曜|げつよう}{日|ひ}です。",
+        "vi": "Ngày đóng cửa là thứ Hai hằng tuần."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "{年末|ねんまつ}{年始|ねんし}は、12{月|つき}29{日|か}({火|ひ})から1{月|つき}3{日|か}({日|ひ})まで{休館|きゅうかん}します。",
+        "vi": "Dịp cuối năm – đầu năm mới, thư viện đóng cửa từ ngày 29 tháng 12 (thứ Ba) đến ngày 3 tháng 1 (Chủ nhật)."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "1{月|つき}4{日|か}({月|がつ})は{月曜|げつよう}{日|ひ}のため{休館|きゅうかん}で、1{月|つき}5{日|か}({火|ひ})から{通常|つうじょう}どおり{開館|かいかん}します。",
+        "vi": "Ngày 4 tháng 1 (thứ Hai) đóng cửa vì là thứ Hai, và từ ngày 5 tháng 1 (thứ Ba) sẽ mở cửa như thường lệ."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "{冬|ふゆ}の{特別|とくべつ}{企画|きかく}の{一|ひと}つ{目|め}は、12{月|つき}12{日|か}({土|ど}){午後|ごご}2{時|じ}から4{時|じ}まで、2{階|かい}の{研修|けんしゅう}{室|しつ}で{開|ひら}かれる{読書|どくしょ}{講座|こうざ}「{冬|ふゆ}の{夜長|よなが}に{読|よ}む{本|ほん}」です。",
+        "vi": "Chương trình đặc biệt mùa đông thứ nhất là khóa học đọc sách 'Những cuốn sách để đọc trong đêm dài mùa đông', tổ chức từ 2 giờ đến 4 giờ chiều ngày 12 tháng 12 (thứ Bảy) tại phòng hội thảo tầng 2."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "{講師|こうし}は、{作家|さっか}の{山田|やまだ}あきらさんで、{参加|さんか}{費|ひ}は{無料|むりょう}です。",
+        "vi": "Giảng viên là nhà văn Yamada Akira, phí tham gia miễn phí."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "{定員|ていいん}は40{人|にん}で、{申込|もうしこ}みは12{月|つき}5{日|か}({土|ど})までに、{電話|でんわ}または{窓口|まどぐち}で{受|う}け{付|けつ}けます。",
+        "vi": "Số người tối đa là 40 người, đăng ký trước ngày 5 tháng 12 (thứ Bảy) qua điện thoại hoặc tại quầy."
+      },
+      {
+        "para": 5,
+        "no": 1,
+        "ja": "{二|ふた}つ{目|め}は、12{月|つき}6{日|か}({日|ひ})から12{月|つき}21{日|か}({月|がつ})まで、1{階|かい}の{展示|てんじ}コーナーで{開|ひら}かれる{写真|しゃしん}{展|てん}「{川崎|かわさき}の{冬|ふゆ}{景色|けしき}」です。",
+        "vi": "Chương trình thứ hai là triển lãm ảnh 'Phong cảnh mùa đông Kawasaki', tổ chức từ ngày 6 tháng 12 (Chủ nhật) đến ngày 21 tháng 12 (thứ Hai) tại góc triển lãm tầng 1."
+      },
+      {
+        "para": 5,
+        "no": 2,
+        "ja": "{入場|にゅうじょう}は{無料|むりょう}で、{申込|もうしこ}みは{必要|ひつよう}ありません。",
+        "vi": "Vào cửa miễn phí, không cần đăng ký."
+      },
+      {
+        "para": 5,
+        "no": 3,
+        "ja": "{展示|てんじ}される{写真|しゃしん}は、{市民|しみん}の{皆|みな}さんから{寄|よ}せられたもので、12{月|つき}20{日|か}({日|ひ}){午後|ごご}3{時|じ}からは、{撮影|さつえい}{者|しゃ}によるお{話|はなし}{会|かい}も{行|おこな}われます。",
+        "vi": "Các bức ảnh được trưng bày là ảnh do người dân gửi đến, và từ 3 giờ chiều ngày 20 tháng 12 (Chủ nhật) còn có buổi trò chuyện với người chụp ảnh."
+      },
+      {
+        "para": 6,
+        "no": 1,
+        "ja": "{三|みっ}つ{目|め}は、12{月|つき}20{日|か}({日|ひ}){午前|ごぜん}11{時|じ}から{正午|しょうご}まで、3{階|かい}の{児童|じどう}コーナーで{開|ひら}かれる{冬|ふゆ}のおはなし{会|かい}です。",
+        "vi": "Chương trình thứ ba là buổi kể chuyện mùa đông, tổ chức từ 11 giờ sáng đến trưa ngày 20 tháng 12 (Chủ nhật) tại góc thiếu nhi tầng 3."
+      },
+      {
+        "para": 6,
+        "no": 2,
+        "ja": "{対象|たいしょう}は{小学|しょうがく}{生|せい}{以下|いか}のお{子|こ}さんとその{保護|ほご}{者|しゃ}で、{定員|ていいん}は30{組|くみ}、{参加|さんか}{費|ひ}は{無料|むりょう}です。",
+        "vi": "Đối tượng là trẻ em học sinh tiểu học trở xuống cùng người giám hộ, tối đa 30 nhóm, phí tham gia miễn phí."
+      },
+      {
+        "para": 6,
+        "no": 3,
+        "ja": "{申込|もうしこ}みは、12{月|つき}15{日|か}({火|ひ})までに、{図書|としょ}{館|かん}のホームページからお{願|ねが}いします。",
+        "vi": "Đăng ký trước ngày 15 tháng 12 (thứ Ba) qua trang web của thư viện."
+      },
+      {
+        "para": 6,
+        "no": 4,
+        "ja": "また、12{月|つき}23{日|か}({水|みず})から12{月|つき}27{日|か}({日|ひ})まで、1{階|かい}のカウンターで「{冬|ふゆ}の{本|ほん}の{福袋|ふくぶくろ}」を{貸|か}し{出|しだ}します。",
+        "vi": "Ngoài ra, từ ngày 23 tháng 12 (thứ Tư) đến ngày 27 tháng 12 (Chủ nhật), tại quầy tầng 1 sẽ cho mượn 'Túi may mắn sách mùa đông'."
+      },
+      {
+        "para": 6,
+        "no": 5,
+        "ja": "{福袋|ふくぶくろ}は1{人|ひとり}1{袋|ふくろ}までで、{数|すう}に{限|かぎ}りがありますので、なくなり{次第|しだい}{終了|しゅうりょう}となります。",
+        "vi": "Mỗi người chỉ được mượn tối đa 1 túi, số lượng có hạn nên sẽ kết thúc khi hết."
+      },
+      {
+        "para": 7,
+        "no": 1,
+        "ja": "{貸出|かしだし}は、1{人|ひとり}につき{本|ほん}は10{冊|さつ}まで、2{週間|しゅうかん}{借|か}りることができます。",
+        "vi": "Về việc mượn sách: mỗi người được mượn tối đa 10 cuốn trong 2 tuần."
+      },
+      {
+        "para": 7,
+        "no": 2,
+        "ja": "{延長|えんちょう}は1{回|かい}までで、{借|か}りた{日|ひ}から{数|かぞ}えて14{日|か}{以内|いない}に、{窓口|まどぐち}または{電話|でんわ}で{手続|てつづ}きをしてください。",
+        "vi": "Gia hạn được tối đa 1 lần; trong vòng 14 ngày kể từ ngày mượn, hãy làm thủ tục tại quầy hoặc qua điện thoại."
+      },
+      {
+        "para": 7,
+        "no": 3,
+        "ja": "ただし、{他|た}の{利用|りよう}{者|しゃ}から{予約|よやく}が{入|はい}っている{本|ほん}は、{延長|えんちょう}できません。",
+        "vi": "Tuy nhiên, sách đã có người khác đặt trước thì không thể gia hạn."
+      },
+      {
+        "para": 7,
+        "no": 4,
+        "ja": "{予約|よやく}は、1{人|ひとり}につき5{冊|さつ}までで、ホームページまたは{窓口|まどぐち}で{受|う}け{付|けつ}けています。",
+        "vi": "Đặt trước tối đa 5 cuốn mỗi người, nhận đăng ký qua trang web hoặc tại quầy."
+      },
+      {
+        "para": 8,
+        "no": 1,
+        "ja": "{各|かく}{企画|きかく}の{申込|もうしこ}みは、{電話|でんわ}、{窓口|まどぐち}、ホームページのいずれかで{受|う}け{付|けつ}けています。",
+        "vi": "Đăng ký cho từng chương trình được nhận qua điện thoại, tại quầy hoặc trên trang web."
+      },
+      {
+        "para": 8,
+        "no": 2,
+        "ja": "{電話|でんわ}での{申込|もうしこ}みは、{開館|かいかん}{時間|じかん}{内|ない}にお{願|ねが}いします。",
+        "vi": "Đăng ký qua điện thoại xin vui lòng thực hiện trong giờ mở cửa."
+      },
+      {
+        "para": 8,
+        "no": 3,
+        "ja": "{申込|もうしこ}みの{際|さい}は、{企画|きかく}{名|めい}、お{名前|なまえ}、{電話|でんわ}{番号|ばんごう}をお{知|し}らせください。",
+        "vi": "Khi đăng ký, xin cho biết tên chương trình, họ tên và số điện thoại của bạn."
+      },
+      {
+        "para": 8,
+        "no": 4,
+        "ja": "{詳|くわ}しくは、{川崎|かわさき}{市民|しみん}{図書|としょ}{館|かん}のホームページをご{覧|らん}いただくか、{電話|でんわ}044-123-4567までお{問|と}い{合|いあ}わせください。",
+        "vi": "Để biết chi tiết, xin xem trang web của Thư viện Công dân Kawasaki hoặc liên hệ số điện thoại 044-123-4567."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án 2 · Câu 2 – đáp án 1 · Câu 3 – đáp án 4 · Câu 4 – đáp án 3",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ5③ (12月20日(日)午後3時からの撮影者によるお話会)",
+        "options": [
+          {
+            "text": "午前11時から3階の児童コーナーで開かれる冬のおはなし会",
+            "verdict": "SAI",
+            "reason": "Buổi kể chuyện đúng là ngày 12月20日(日) ở tầng 3 (đoạn 6 câu 1), nhưng diễn ra lúc 午前11時から正午まで — tức là BUỔI SÁNG, trong khi Aさん đến vào BUỔI CHIỀU. Lấy đúng ngày và địa điểm nhưng sai giờ. Bẫy 'đúng ngày, sai giờ'."
+          },
+          {
+            "text": "午後3時から1階の展示コーナーで開かれる、撮影者によるお話会",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 5 câu 3: 12月20日(日)午後3時からは、撮影者によるお話会も行われます — đúng ngày 12月20日(日), đúng buổi chiều (15 giờ), đúng địa điểm tầng 1 (góc triển lãm, nơi diễn ra triển lãm ảnh). Cả ba yếu tố ngày + giờ + địa điểm đều khớp."
+          },
+          {
+            "text": "午後2時から2階の研修室で開かれる読書講座「冬の夜長に読む本」",
+            "verdict": "SAI",
+            "reason": "Khóa học đọc sách đúng là lúc 午後2時から4時まで ở phòng hội thảo tầng 2 (đoạn 4 câu 1), nhưng diễn ra vào 12月12日(土), không phải 12月20日(日). Lấy đúng giờ và địa điểm nhưng sai ngày. Bẫy 'đúng giờ, sai ngày'."
+          },
+          {
+            "text": "12月23日から1階のカウンターで貸し出される「冬の本の福袋」",
+            "verdict": "SAI",
+            "reason": "Túi sách may mắn đúng là ở quầy tầng 1 (đoạn 6 câu 4), nhưng chỉ bắt đầu cho mượn từ 12月23日(水), tức là SAU ngày 12月20日(日) mà Aさん đến thư viện. Lấy đúng địa điểm nhưng sai ngày. Bẫy 'đúng địa điểm, sai ngày'."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ7① (貸出は、1人につき本は10冊まで、2週間)",
+        "options": [
+          {
+            "text": "1人につき10冊まで、2週間",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 7 câu 1: 貸出は、1人につき本は10冊まで、2週間借りることができます — đúng cả số cuốn tối đa (10冊) và thời gian mượn (2週間)."
+          },
+          {
+            "text": "1人につき5冊まで、2週間",
+            "verdict": "SAI",
+            "reason": "Số 5冊 là giới hạn của 予約 (đặt trước), không phải của 貸出 (mượn sách): đoạn 7 câu 4 ghi 予約は、1人につき5冊まで. Lấy đúng một con số nhưng của một quy định khác gán cho quy định mượn sách. Bẫy 'đánh tráo quy định'."
+          },
+          {
+            "text": "1人につき10冊まで、1週間",
+            "verdict": "SAI",
+            "reason": "Số cuốn 10冊 thì đúng (đoạn 7 câu 1), nhưng thời gian mượn là 2週間 chứ không phải 1週間. Lấy đúng một nửa thông tin, sai nửa còn lại. Bẫy 'đúng một nửa'."
+          },
+          {
+            "text": "1人につき5冊まで、1か月",
+            "verdict": "SAI",
+            "reason": "Sai cả hai số: giới hạn mượn là 10冊 (không phải 5冊 — 5冊 là giới hạn đặt trước, đoạn 7 câu 4), thời gian mượn là 2週間 (không phải 1か月 — trong thông báo không có con số 1か月 nào). Bẫy 'ghép số sai cả hai vế'."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ4③ (定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます)",
+        "options": [
+          {
+            "text": "申込みは12月15日(火)までで、ホームページからのみ受け付ける。",
+            "verdict": "SAI",
+            "reason": "Hạn 12月15日(火) và cách đăng ký qua trang web là của BUỔI KỂ CHUYỆN (đoạn 6 câu 3: 申込みは、12月15日(火)までに、図書館のホームページからお願いします), không phải của khóa học đọc sách. Khóa học đọc sách hạn 12月5日(土), đăng ký qua điện thoại hoặc tại quầy (đoạn 4 câu 3). Bẫy 'đánh tráo企画' — lấy bộ số của企画 khác."
+          },
+          {
+            "text": "申込みは不要で、直接会場に行けば参加できる。",
+            "verdict": "SAI",
+            "reason": "'Không cần đăng ký' là quy định của TRIỂN LÃM ẢNH (đoạn 5 câu 2: 入場は無料で、申込みは必要ありません). Khóa học đọc sách bắt buộc phải đăng ký trước hạn 12月5日(土) (đoạn 4 câu 3). Bẫy 'đánh tráo企画' — lấy quy định của企画 khác."
+          },
+          {
+            "text": "定員は30組で、参加費は500円である。",
+            "verdict": "SAI",
+            "reason": "Sai cả hai số: 定員 của khóa học đọc sách là 40人 (đoạn 4 câu 3), còn 30組 là 定員 của buổi kể chuyện (đoạn 6 câu 2); tham gia khóa học đọc sách là 無料 (đoạn 4 câu 2), trong thông báo không có mức phí 500円 nào. Bẫy 'ghép số của企画 khác + số bịa'."
+          },
+          {
+            "text": "定員は40人で、12月5日(土)までに電話または窓口で申し込む。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 3: 定員は40人で、申込みは12月5日(土)までに、電話または窓口で受け付けます — đúng cả định mức (40人), hạn đăng ký (12月5日) và cách đăng ký (điện thoại hoặc tại quầy)."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 2,
+        "locator": "Đ3②③ (12月29日(火)から1月3日(日)まで休館／1月4日(月)は月曜日のため休館)",
+        "options": [
+          {
+            "text": "12月28日(月)から1月4日(月)まで休館する。",
+            "verdict": "SAI",
+            "reason": "Sai ngày bắt đầu: kỳ nghỉ cuối năm bắt đầu từ 12月29日(火) (đoạn 3 câu 2), không phải 12月28日(月) — ngày 12月28日 nghỉ là vì rơi vào thứ Hai (đoạn 3 câu 1: 休館日は、毎週月曜日です), không phải vì kỳ nghỉ cuối năm. Ngày 1月4日(月) cũng nghỉ, nhưng lý do là vì là thứ Hai (đoạn 3 câu 3), không phải vì còn trong kỳ nghỉ. Bẫy 'gộp hai lý do nghỉ khác nhau thành một kỳ nghỉ'."
+          },
+          {
+            "text": "12月24日(木)は休館日である。",
+            "verdict": "SAI",
+            "reason": "Ngày 12月24日(木) KHÔNG phải ngày nghỉ: đoạn 2 câu 3 ghi 12月24日(木)は、特別企画の準備のため、午後5時で閉館します — thư viện vẫn mở cửa, chỉ đóng cửa SỚM lúc 17 giờ. Nhầm 'đóng cửa sớm' với 'nghỉ cả ngày'. Bẫy 'đọc lướt, nhầm mức độ'."
+          },
+          {
+            "text": "12月29日(火)から1月3日(日)まで休館し、1月4日(月)も月曜日のため休館する。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 2–3: 年末年始は、12月29日(火)から1月3日(日)まで休館します／1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します — đúng cả khoảng nghỉ cuối năm và lý do ngày 1月4日 vẫn nghỉ."
+          },
+          {
+            "text": "1月4日(月)から通常どおり開館する。",
+            "verdict": "SAI",
+            "reason": "Ngược với đoạn 3 câu 3: 1月4日(月)は月曜日のため休館で、1月5日(火)から通常どおり開館します — ngày 1月4日 vẫn nghỉ vì là thứ Hai, phải đến 1月5日 mới mở lại. Bỏ qua quy tắc 'thứ Hai hằng tuần nghỉ' ở đoạn 3 câu 1. Bẫy 'quên quy tắc chung khi đọc ngoại lệ'."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{開館|かいかん}",
+        "reading": "かいかん",
+        "hanviet": "Khai Quán",
+        "vi": "mở cửa (thư viện, bảo tàng)"
+      },
+      {
+        "word": "{休館|きゅうかん}",
+        "reading": "きゅうかん",
+        "hanviet": "Hưu Quán",
+        "vi": "đóng cửa, nghỉ (thư viện, bảo tàng)"
+      },
+      {
+        "word": "{企画|きかく}",
+        "reading": "きかく",
+        "hanviet": "Xí Hoạch",
+        "vi": "kế hoạch, chương trình, dự án"
+      },
+      {
+        "word": "{定員|ていいん}",
+        "reading": "ていいん",
+        "hanviet": "Định Viên",
+        "vi": "số người tối đa, định mức (người tham gia)"
+      },
+      {
+        "word": "{申込|もうしこ}み",
+        "reading": "もうしこみ",
+        "hanviet": "Thân",
+        "vi": "sự đăng ký, việc đăng ký tham gia"
+      },
+      {
+        "word": "{講師|こうし}",
+        "reading": "こうし",
+        "hanviet": "Giảng Sư",
+        "vi": "giảng viên, người hướng dẫn (khóa học, buổi nói chuyện)"
+      },
+      {
+        "word": "{展示|てんじ}",
+        "reading": "てんじ",
+        "hanviet": "Triển Thị",
+        "vi": "sự trưng bày, triển lãm"
+      },
+      {
+        "word": "{福袋|ふくぶくろ}",
+        "reading": "ふくぶくろ",
+        "hanviet": "Phúc Đại",
+        "vi": "túi may mắn (túi đựng những món bất ngờ, bán hoặc cho mượn dịp đầu năm)"
+      },
+      {
+        "word": "{対象|たいしょう}",
+        "reading": "たいしょう",
+        "hanviet": "Đối Tượng",
+        "vi": "đối tượng (người được hướng đến, được áp dụng)"
+      },
+      {
+        "word": "{貸出|かしだし}",
+        "reading": "かしだし",
+        "hanviet": "Thải Xuất",
+        "vi": "sự cho mượn (sách, đồ vật)"
+      },
+      {
+        "word": "{延長|えんちょう}",
+        "reading": "えんちょう",
+        "hanviet": "Diên Trường",
+        "vi": "sự gia hạn (thời gian mượn sách)"
+      },
+      {
+        "word": "{予約|よやく}",
+        "reading": "よやく",
+        "hanviet": "Dự Ước",
+        "vi": "sự đặt trước, đặt chỗ (sách, vé, chỗ ngồi)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜につき",
+        "vi": "mỗi (đơn vị) thì… / tính theo (đơn vị) (dùng trong quy định, giới hạn theo đơn vị)",
+        "in_text": "貸出は、1人につき本は10冊まで、2週間借りることができます。"
+      },
+      {
+        "pattern": "〜までに",
+        "vi": "trước (thời điểm)… / chậm nhất đến… (hạn chót — hành động phải hoàn thành trước thời điểm đó)",
+        "in_text": "申込みは12月5日(土)までに、電話または窓口で受け付けます。"
+      },
+      {
+        "pattern": "〜次第",
+        "vi": "ngay khi… thì… / hễ… là… (vừa xảy ra thì lập tức kéo theo kết quả)",
+        "in_text": "数に限りがありますので、なくなり次第終了となります。"
+      },
+      {
+        "pattern": "〜から〜まで",
+        "vi": "từ… đến… (chỉ toàn bộ khoảng thời gian, từ điểm bắt đầu đến điểm kết thúc)",
+        "in_text": "年末年始は、12月29日(火)から1月3日(日)まで休館します。"
+      },
+      {
+        "pattern": "〜による",
+        "vi": "do… / bởi… (chỉ tác nhân, người thực hiện)",
+        "in_text": "12月20日(日)午後3時からは、撮影者によるお話会も行われます。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm chỉ đơn vị tính: 〜につき / 〜ごとに / 〜あたり",
+        "rows": [
+          {
+            "form": "〜につき",
+            "join": "N + につき",
+            "vi": "mỗi (đơn vị) thì…",
+            "diff": "Dùng trong QUY ĐỊNH, văn viết trang trọng: chỉ giới hạn hay điều kiện tính theo từng đơn vị (mỗi người được mượn tối đa 10 cuốn). Sắc thái hành chính, hay gặp trong thông báo, nội quy.",
+            "example_ja": "{貸出|かしだし}は、1{人|ひとり}につき{本|ほん}は10{冊|さつ}まで、2{週間|しゅうかん}{借|か}りることができます。",
+            "example_vi": "Về việc mượn sách: mỗi người được mượn tối đa 10 cuốn trong 2 tuần."
+          },
+          {
+            "form": "〜ごとに",
+            "join": "N + ごとに",
+            "vi": "mỗi… / cứ… thì…",
+            "diff": "Nhấn mạnh SỰ LẶP LẠI theo từng đơn vị: cứ mỗi đơn vị thì sự việc lại xảy ra một lần. Dùng rộng rãi cả văn nói và văn viết. Khác với 〜につき (thiên về quy định, giới hạn), 〜ごとに thiên về diễn biến lặp đi lặp lại.",
+            "example_ja": "{図書|としょ}{館|かん}では、{本|ほん}を{返|かえ}すごとに、{貸出|かしだし}カードに{記録|きろく}が{残|のこ}ります。",
+            "example_vi": "Ở thư viện, cứ mỗi lần trả sách thì thẻ mượn lại lưu một bản ghi."
+          },
+          {
+            "form": "〜あたり",
+            "join": "N + あたり",
+            "vi": "mỗi… / tính ra mỗi…",
+            "diff": "Dùng khi TÍNH TOÁN, phân bổ: tính trung bình mỗi đơn vị là bao nhiêu. Sắc thái tính toán, ước lượng (mỗi người bao nhiêu tiền, mỗi cuốn bao nhiêu trang). Ít dùng trong quy định mượn sách như 〜につき.",
+            "example_ja": "{福袋|ふくぶくろ}には、1{袋|ふくろ}あたり3{冊|さつ}から5{冊|さつ}の{本|ほん}が{入|はい}っています。",
+            "example_vi": "Trong mỗi túi may mắn có từ 3 đến 5 cuốn sách."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm chỉ thời điểm kết thúc: 〜までに / 〜まで / 〜から〜まで",
+        "rows": [
+          {
+            "form": "〜までに",
+            "join": "N(日時) + までに",
+            "vi": "trước (thời điểm)… / chậm nhất đến…",
+            "diff": "Chỉ HẠN CHÓT: hành động phải HOÀN THÀNH trước thời điểm đó. Đi với động từ chỉ hành động có điểm kết thúc (đăng ký, nộp, trả). Trong thông báo này: hạn đăng ký khóa học đọc sách là 12月5日(土)までに.",
+            "example_ja": "{申込|もうしこ}みは12{月|つき}5{日|か}({土|ど})までに、{電話|でんわ}または{窓口|まどぐち}で{受|う}け{付|けつ}けます。",
+            "example_vi": "Đăng ký trước ngày 5 tháng 12 (thứ Bảy) qua điện thoại hoặc tại quầy."
+          },
+          {
+            "form": "〜まで",
+            "join": "N(日時) + まで",
+            "vi": "đến (thời điểm)…",
+            "diff": "Chỉ ĐIỂM KẾT THÚC của một khoảng thời gian liên tục: trạng thái kéo dài đến thời điểm đó rồi dừng. Đi với động từ chỉ trạng thái kéo dài (mở cửa, nghỉ, làm việc). Trong thông báo này: 平日は午後8時まで (mở cửa đến 20 giờ).",
+            "example_ja": "{開館|かいかん}{時間|じかん}は、{平日|へいじつ}は{午前|ごぜん}9{時|じ}から{午後|ごご}8{時|じ}までです。",
+            "example_vi": "Giờ mở cửa: ngày thường từ 9 giờ sáng đến 8 giờ tối."
+          },
+          {
+            "form": "〜から〜まで",
+            "join": "N + から + N + まで",
+            "vi": "từ… đến…",
+            "diff": "Chỉ toàn bộ KHOẢNG thời gian: kết hợp cả điểm bắt đầu (から) và điểm kết thúc (まで). Dùng khi muốn nêu rõ cả khoảng, ví dụ kỳ nghỉ: 12月29日から1月3日まで休館します. Khác với 〜までに (chỉ hạn chót của một hành động) và 〜まで (chỉ điểm kết thúc của một trạng thái).",
+            "example_ja": "{年末|ねんまつ}{年始|ねんし}は、12{月|つき}29{日|か}({火|ひ})から1{月|つき}3{日|か}({日|ひ})まで{休館|きゅうかん}します。",
+            "example_vi": "Dịp cuối năm – đầu năm mới, thư viện đóng cửa từ ngày 29 tháng 12 (thứ Ba) đến ngày 3 tháng 1 (Chủ nhật)."
+          }
+        ]
+      }
+    ]
+  }
+}
