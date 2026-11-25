@@ -1,0 +1,367 @@
+{
+  "lesson": 41,
+  "topic": "Lần đầu đi leo núi trong nhà (ボルダリング)",
+  "summary": "Bối cảnh: cuối tuần, 拓海 và 莉子 đi leo núi trong nhà (ボルダリング) lần đầu ở một phòng tập (ボルダリングジム) gần nhà — hôm trước hai người đặt chỗ qua mạng (ネット予約), sáng thứ Bảy đi tàu đến phòng tập. Đến quầy (受付), hai người đăng ký thành viên lần đầu (初回登録), thuê giày leo chuyên dụng (クライミングシューズ) và nghe nhân viên hướng dẫn cách ngã an toàn (落ち方): ngã thì thả lỏng người, cuộn tròn lại, tiếp đất bằng mông rồi lăn ra sau, tuyệt đối không chống tay xuống đất. Sau đó hai người bắt đầu leo thử (トライ): trên tường có nhiều tuyến đường (コース) phân theo màu sắc của các mấu bám (ホールド) và độ khó (グレード) — tuyến màu xanh (緑色) là dễ nhất cho người mới, tuyến màu đỏ (赤色) khó hơn; 莉子 leo cẩn thận từng bước, còn 拓海 leo vội nên trượt tay (手が滑る) rồi ngã xuống đệm (マット) mấy lần, may mà ngã đúng cách nên không sao. Leo được một lúc thì cả hai mệt lử (疲れた), ra ghế ngồi uống nước (水分補給), xem người khác leo rồi bàn lần sau quay lại tập tiếp. Kỹ năng luyện: văn nói bạn bè khi tham gia một buổi trải nghiệm thể thao lần đầu — hỏi cách đặt chỗ, hỏi cách thuê giày, hỏi cách ngã an toàn, hỏi tuyến nào dễ; cách nói khi leo được (〜を登れた) và khi leo trượt (〜が登れない, 〜が滑っちゃった), cách rủ nhau nghỉ uống nước (休憩しよう) và hẹn lần sau (今度は〜をやろう, また来よう). Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về leo núi trong nhà (ボルダリング, ホールド, グレード, コース, マット, クライミングシューズ, 滑る, 登る, 落ちる, 休憩, 水分補給, 初回登録), cách nói khi ngã an toàn (〜で落ちる, 〜に着地する, 〜を丸める) và cách nói cảm nhận về độ khó của tuyến đường một cách tự nhiên (〜が難しすぎる, 〜がちょうどいい, 〜が怖いけど楽しい).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ở quầy phòng tập: đăng ký lần đầu, thuê giày, học cách ngã an toàn, bắt đầu leo thử）",
+      "stage": "（Sáng thứ Bảy, trong một phòng tập leo núi trong nhà, tường leo cao ngất, trên tường gắn đầy các mấu bám đủ màu sắc — xanh, đỏ, vàng, trắng — nhìn từ xa như một bức tường đầy kẹo. Dưới chân tường trải đệm dày màu xanh, mùi cao su thoang thoảng. Nhân viên phòng tập đứng ở quầy, tay cầm một đôi giày leo nhỏ. 拓海 và 莉子 mỗi người xách một cái túi thể thao, đi giày thể thao bình thường, đang nhìn lên tường leo.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、ボルダリングってさ、{初|はじ}めて{来|く}るよ。{壁|かべ}ってさ、こんなに{高|たか}いんだね。",
+          "vi": "Ồ, leo núi trong nhà ấy, lần đầu đến đấy. Tường ấy, cao thế này cơ à."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだよ。ほら、{見|み}て{見|み}て。ホールドってさ、{色|いろ}でさ、コースが{分|わ}かれてるじゃん。",
+          "vi": "Ừ đấy. Này, nhìn này nhìn này. Mấu bám ấy, phân tuyến theo màu này, khác nhau nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、ほんとだ。ってさ、{緑|みどり}ってさ、いちばんやさしいんだっけ。",
+          "vi": "Chà, đúng thật. Này, màu xanh ấy, dễ nhất nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、そうだよ。ほら、{緑|みどり}からさ、{始|はじ}めてみようよ。{赤|あか}はさ、まだ{早|はや}いよ。",
+          "vi": "Ừ, đúng đấy. Này, bắt đầu từ màu xanh này, thử xem nhé. Màu đỏ ấy, còn sớm lắm."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、わかった。ってさ、シューズってさ、{借|か}りるんだよね。サイズ、どうするの？",
+          "vi": "Ồ, biết rồi. Này, giày ấy, thuê nhỉ. Cỡ thì sao?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{受付|うけつけ}でさ、{借|か}りるんだよ。ほら、きつめのやつがさ、いいらしいよ。",
+          "vi": "Ừ, thuê ở quầy ấy. Này, đôi chật một chút ấy, nghe bảo tốt đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、そうなんだ。ってさ、{落|お}ち{方|かた}ってさ、どうやるんだっけ。",
+          "vi": "Chà, ra thế. Này, cách ngã ấy, làm thế nào nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{力|ちから}を{抜|ぬ}いてさ、{丸|まる}くなってさ、お{尻|しり}から{落|お}ちるんだよ。{手|て}をついちゃ、ダメだよ。",
+          "vi": "Thả lỏng người này, cuộn tròn lại này, ngã bằng mông ấy. Chống tay xuống thì, không được đâu."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、やってみるよ。ってさ、ちょっと{怖|こわ}いけどさ、{楽|たの}しみだね。",
+          "vi": "Ồ, thử xem nào. Này, hơi sợ nhưng mà, háo hức thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。ほら、{行|い}こうよ。まず{緑|みどり}のコース、{登|のぼ}ってみようよ。",
+          "vi": "Ừ nhỉ. Này, đi thôi. Trước hết leo thử tuyến màu xanh nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（leo trượt ngã xuống đệm, ngồi nghỉ uống nước, xem người khác leo, hẹn lần sau）",
+      "stage": "（Đã leo được một lúc, hai người đều mệt lử, tay dính đầy bột phấn trắng (チョーク), ngồi bệt xuống đệm nghỉ. Bên cạnh, một người leo giỏi đang leo tuyến khó màu đen, động tác nhẹ nhàng như đang nhảy múa trên tường. Trên ghế dài đặt hai chai nước, khăn mặt và túi đựng bột phấn.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、{疲|つか}れたね。ってさ、{手|て}がさ、{滑|すべ}っちゃったよ。",
+          "vi": "Phù, mệt thật đấy. Này, tay ấy, trượt mất rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、{見|み}てたよ。でもさ、{落|お}ち{方|かた}、うまかったじゃん。お{尻|しり}からさ、ちゃんと{落|お}ちてたよ。",
+          "vi": "Haha, tớ thấy rồi. Nhưng mà, cách ngã ấy, giỏi lắm nhỉ. Ngã bằng mông ấy, đúng chuẩn rồi đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうかな。ってさ、{緑|みどり}ってさ、{思|おも}ったよりさ、{難|むずか}しいね。",
+          "vi": "Thế à. Này, màu xanh ấy, khó hơn tớ nghĩ đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、でもさ、{登|のぼ}れたじゃん。ほら、もう{一|いち}{回|かい}さ、{行|い}ってみようよ。",
+          "vi": "Ừ, nhưng mà, leo được rồi còn gì. Này, thêm một lần nữa này, thử xem nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、ちょっと{休|やす}もうよ。ってさ、{水|みず}、{飲|の}もうよ。{喉|のど}、{渇|かわ}いちゃったよ。",
+          "vi": "Ừ, nghỉ một chút nhé. Này, uống nước nhé. Khát khô cổ rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいよ。ほら、この{人|ひと}、{見|み}て{見|み}て。すっごい{上手|かみて}じゃん。",
+          "vi": "Được. Này, người này, nhìn này nhìn này. Giỏi ghê nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、ほんとだ。ってさ、あんなふうにさ、{登|のぼ}れるようになりたいね。",
+          "vi": "Ồ, đúng thật. Này, leo được như thế ấy, muốn trở thành được như vậy thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。{練習|れんしゅう}すればさ、できるようになるよ。ほら、また{来|こ}ようよ。",
+          "vi": "Ừ nhỉ. Luyện tập thì, sẽ làm được thôi. Này, lại đến nữa nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうしようよ。ってさ、{今度|こんど}はさ、{赤|あか}のコースにも{挑戦|ちょうせん}してみようよ。",
+          "vi": "Ừ, làm thế nhé. Này, lần sau ấy, thử thách cả tuyến màu đỏ nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。でもさ、まずはさ、{緑|みどり}をさ、ちゃんと{登|のぼ}れるようになろうよ。{楽|たの}しみだね。",
+          "vi": "Hay đấy. Nhưng mà, trước hết ấy, leo cho thành thạo tuyến màu xanh đã nhé. Háo hức thật đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "ボルダリングは初めて来ます。壁は高いです。ホールドは色でコースが分かれています。緑色がいちばんやさしいです。",
+      "real": "ボルダリングってさ、初めて来るよ。壁ってさ、こんなに高いんだね。ホールドってさ、色でさ、コースが分かれてるじゃん。緑ってさ、いちばんやさしいんだっけ。",
+      "why": "Sách giáo khoa dùng 初めて来ます và 高いです một cách trang trọng, nghe như đang đọc phần giới thiệu trong tờ rơi của phòng tập. Nói thật thì hỏi bằng 初めて来るよ và こんなに高いんだね, thêm ってさ để đưa chủ đề lên trước rồi nói cảm nhận, nghe như người lần đầu bước vào phòng tập, nhìn lên tường leo cao ngất, vừa ngạc nhiên vừa háo hức."
+    },
+    {
+      "textbook": "落ち方はどうやりますか。力を抜いて、丸くなって、お尻から落ちます。手をついてはいけません。",
+      "real": "落ち方ってさ、どうやるんだっけ。力を抜いてさ、丸くなってさ、お尻から落ちるんだよ。手をついちゃ、ダメだよ。",
+      "why": "Văn nói bạn bè dùng どうやるんだっけ để hỏi lại cách ngã một cách suồng sã, kèm ちゃダメ để dặn nhau đừng chống tay một cách thân mật, còn sách giáo khoa dùng どうやりますか và 手をついてはいけません trang trọng, nghe như đang đọc bảng nội quy dán trên tường. Câu nói thật nghe như hai người đang đứng trước tường leo, vừa nghe nhân viên hướng dẫn vừa lo mình ngã sai cách."
+    },
+    {
+      "textbook": "シューズを借りますか。サイズはどうしますか。きつめのものがいいです。疲れました。手が滑りました。",
+      "real": "シューズってさ、借りるんだよね。サイズ、どうするの？きつめのやつがさ、いいらしいよ。疲れたね。手がさ、滑っちゃったよ。",
+      "why": "Văn nói khi hỏi về giày thuê và nói mình mệt dùng 借りるんだよね và 疲れたね để nói một cách thân mật, thêm ちゃった để nói tay trượt một cách suồng sã, còn sách giáo khoa dùng 借りますか và 疲れました cứng nhắc, nghe như đang trả lời phỏng vấn. Câu nói thật nghe như hai người vừa leo trượt ngã xuống đệm, ngồi thở hổn hển, tay dính đầy bột phấn trắng."
+    },
+    {
+      "textbook": "緑色は思ったより難しいです。登れました。もう一回行ってみましょう。水を飲みましょう。喉が渇きました。",
+      "real": "緑ってさ、思ったよりさ、難しいね。登れたじゃん。もう一回さ、行ってみようよ。水、飲もうよ。喉、渇いちゃったよ。",
+      "why": "Văn nói dùng 登れたじゃん và 行ってみようよ để khen nhau leo được rồi rủ nhau leo thêm một lần một cách thân mật, kèm さ・よね để nói nhẹ nhàng và rủ đồng tình, còn sách giáo khoa dùng 登れました và 行ってみましょう, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người đang ngồi nghỉ trên đệm, vừa uống nước vừa nhìn người khác leo tuyến khó."
+    },
+    {
+      "textbook": "今度は赤色のコースにも挑戦してみましょう。練習すれば、できるようになります。また来ましょう。",
+      "real": "今度はさ、赤のコースにも挑戦してみようよ。練習すればさ、できるようになるよ。また来ようよ。",
+      "why": "Văn nói dùng 挑戦してみようよ và また来ようよ để rủ nhau thử thách tuyến khó hơn và hẹn lần sau một cách suồng sã, còn sách giáo khoa dùng 挑戦してみましょう và 来ましょう trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy. Câu nói thật nghe như hai người vừa leo xong, đang ngồi trên ghế dài uống nước, đã hẹn lần sau quay lại tập tiếp."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "手がさ、滑っちゃったよ",
+      "original": "〜てしまった",
+      "vi": "…mất rồi — dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn một cách suồng sã; 滑っちゃった là trượt tay mất rồi, 喉が渇いちゃった là khát khô cổ mất rồi, 時間が過ぎちゃった là hết giờ mất rồi, 落ちちゃった là ngã mất rồi.",
+      "use": "Dùng với bạn bè, người thân khi kể một sự cố nhỏ xảy ra ngoài ý muốn — trượt tay khi leo, khát nước, hết giờ lúc đang leo dở.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "〜ってさ",
+      "in_lesson": "ボルダリングってさ、初めて来るよ",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa chuyện leo núi trong nhà lên trước rồi nói lần đầu đến; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang trải nghiệm một thứ mới và có nhiều thứ chưa biết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "落ち方、うまかったじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; うまかったじゃん là nói cách ngã giỏi rồi chờ bạn gật đầu theo, 登れたじゃん là nói leo được rồi cười với nhau, すっごい上手じゃん là khen người khác leo giỏi rồi rủ bạn đồng ý.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — cách ngã giỏi, leo được tuyến xanh, người khác leo giỏi.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "緑ってさ、いちばんやさしいんだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; 緑がいちばんやさしいんだっけ là hỏi lại tuyến màu xanh có phải dễ nhất không, 落ち方、どうやるんだっけ là hỏi lại cách ngã an toàn.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — tuyến nào dễ nhất, cách ngã thế nào, giày thuê cỡ bao nhiêu.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどうですか・〜はどうなりますか)."
+    },
+    {
+      "form": "〜てみようよ",
+      "in_lesson": "緑からさ、始めてみようよ",
+      "original": "〜てみましょう",
+      "vi": "…thử xem nhé — cách rủ bạn cùng thử làm một việc một cách thân mật; 始めてみようよ là rủ nhau bắt đầu thử từ tuyến xanh, 登ってみようよ là rủ nhau leo thử, 挑戦してみようよ là rủ nhau thử thách tuyến đỏ lần sau.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau cùng thử làm một việc lần đầu — leo thử tuyến xanh, thử thách tuyến đỏ, đến phòng tập lần nữa.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てみましょう)."
+    },
+    {
+      "form": "〜らしいよ",
+      "in_lesson": "きつめのやつがさ、いいらしいよ",
+      "original": "〜らしいです / 〜そうです",
+      "vi": "Nghe bảo là… — cách nói một thông tin mình nghe được từ người khác, không chắc chắn hoàn toàn; いいらしいよ là nghe bảo đôi chật thì tốt đấy, 難しいらしいよ là nghe bảo tuyến đỏ khó lắm đấy, 初回は安いらしいよ là nghe bảo lần đầu thì rẻ đấy.",
+      "use": "Dùng với bạn bè, người thân khi truyền lại một thông tin nghe được từ nhân viên hay người khác — giày chật thì tốt, tuyến đỏ khó, lần đầu được giảm giá.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói một thông tin mình chắc chắn (khi đó dùng 〜です・〜だよ)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "ボルダリング",
+      "reading": "ぼるだりんぐ",
+      "vi": "Leo núi trong nhà (leo đá trong nhà) — môn thể thao leo tường đá nhân tạo không dùng dây bảo hộ, tường cao khoảng 3–5 mét, dưới chân trải đệm dày (マット) để ngã an toàn; ボルダリングジム là phòng tập leo núi trong nhà, ボルダリングに行く là đi leo núi trong nhà, ボルダリングをやる là chơi leo núi trong nhà; người mới thường bắt đầu từ tuyến dễ nhất, leo bằng tay và chân bám vào các mấu bám (ホールド) gắn trên tường.",
+      "example_ja": "ボルダリングってさ、{初|はじ}めて{来|く}るよ。{壁|かべ}ってさ、こんなに{高|たか}いんだね。",
+      "example_vi": "Leo núi trong nhà ấy, lần đầu đến đấy. Tường ấy, cao thế này cơ à."
+    },
+    {
+      "expr": "ホールド",
+      "reading": "ほーるど",
+      "vi": "Mấu bám — các khối nhựa đủ hình dạng và màu sắc gắn trên tường leo, dùng để bám tay và đặt chân; tuyến đường (コース) được phân theo màu sắc của mấu bám: leo tuyến màu xanh (緑色) thì chỉ được bám các mấu màu xanh, tuyến màu đỏ (赤色) thì chỉ bám các mấu màu đỏ; ホールドを掴む là nắm lấy mấu bám, ホールドに足を置く là đặt chân lên mấu bám, ホールドが滑る là mấu bám bị trơn; tay dính bột phấn (チョーク) thì bám mấu chắc hơn.",
+      "example_ja": "ホールドってさ、{色|いろ}でさ、コースが{分|わ}かれてるじゃん。{緑|みどり}からさ、{始|はじ}めてみようよ。",
+      "example_vi": "Mấu bám ấy, phân tuyến theo màu này, khác nhau nhỉ. Bắt đầu từ màu xanh này, thử xem nhé."
+    },
+    {
+      "expr": "グレード",
+      "reading": "ぐれーど",
+      "vi": "Độ khó (cấp độ khó) — thang đo độ khó của một tuyến đường leo, tuyến nào càng khó thì càng ít mấu bám, mấu bám càng nhỏ và càng xa nhau; グレードが高い là độ khó cao, グレードが低い là độ khó thấp, 初心者向けのグレード là độ khó dành cho người mới, グレードを上げる là leo lên tuyến khó hơn; người mới thường bắt đầu từ tuyến dễ nhất (màu xanh), leo quen rồi mới thử tuyến khó hơn (màu đỏ, màu đen).",
+      "example_ja": "{緑|みどり}ってさ、いちばんやさしいんだっけ。{赤|あか}はさ、まだ{早|はや}いよ。",
+      "example_vi": "Màu xanh ấy, dễ nhất nhỉ? Màu đỏ ấy, còn sớm lắm."
+    },
+    {
+      "expr": "{落|お}ち{方|かた}",
+      "reading": "おちかた",
+      "vi": "Cách ngã — kỹ thuật ngã an toàn khi leo núi trong nhà, vì leo không dùng dây bảo hộ nên ngã là chuyện bình thường: thả lỏng người (力を抜く), cuộn tròn lại (丸くなる), tiếp đất bằng mông (お尻から落ちる) rồi lăn ra sau, tuyệt đối không chống tay xuống đất (手をつかない) vì dễ gãy cổ tay; 落ち方を習う là học cách ngã, 落ち方がうまい là ngã giỏi, 正しい落ち方 là cách ngã đúng; nhân viên phòng tập luôn hướng dẫn cách ngã trước khi cho người mới leo.",
+      "example_ja": "{落|お}ち{方|かた}ってさ、どうやるんだっけ。{力|ちから}を{抜|ぬ}いてさ、{丸|まる}くなってさ、お{尻|しり}から{落|お}ちるんだよ。",
+      "example_vi": "Cách ngã ấy, làm thế nào nhỉ? Thả lỏng người này, cuộn tròn lại này, ngã bằng mông ấy."
+    },
+    {
+      "expr": "クライミングシューズ",
+      "reading": "くらいみんぐしゅーず",
+      "vi": "Giày leo chuyên dụng — giày leo núi có đế cao su bám dính tốt, mũi giày nhỏ và ôm sát chân để đứng vững trên các mấu bám nhỏ; ở phòng tập thường cho thuê giày (シューズを借りる), thuê thì chọn đôi chật hơn giày thường một chút (きつめ) vì giày chật thì bám mấu chắc hơn; クライミングシューズを履く là đi giày leo, シューズのサイズ là cỡ giày, シューズがきつい là giày chật; đi giày thể thao bình thường thì leo rất khó vì đế trơn và mũi giày to.",
+      "example_ja": "シューズってさ、{借|か}りるんだよね。きつめのやつがさ、いいらしいよ。",
+      "example_vi": "Giày ấy, thuê nhỉ. Đôi chật một chút ấy, nghe bảo tốt đấy."
+    },
+    {
+      "expr": "{水分|すいぶん}{補給|ほきゅう}",
+      "reading": "すいぶんほきゅう",
+      "vi": "Uống nước bổ sung (bù nước) — uống nước trong lúc tập thể thao để bù lại lượng nước mất qua mồ hôi; 水分補給をする là uống nước bù, 水分を取る là uống nước, 喉が渇く là khát khô cổ; leo núi trong nhà rất tốn sức, leo được một lúc là mệt lử và khát nước, nên phải mang theo chai nước (ペットボトル) và nghỉ uống nước giữa các lần leo (休憩), đừng đợi đến lúc khát khô mới uống.",
+      "example_ja": "ちょっと{休|やす}もうよ。{水|みず}、{飲|の}もうよ。{喉|のど}、{渇|かわ}いちゃったよ。",
+      "example_vi": "Nghỉ một chút nhé. Uống nước nhé. Khát khô cổ rồi."
+    }
+  ],
+  "mindset": [
+    "Leo núi trong nhà (ボルダリング) là một môn thể thao trong nhà rất được yêu thích ở Nhật, nhất là với người trẻ sống ở thành phố: không cần ra ngoài trời, không cần dụng cụ cồng kềnh, chỉ cần đến phòng tập (ボルダリングジム), thuê giày leo (クライミングシューズ) là chơi được. Tường leo cao khoảng 3–5 mét, dưới chân trải đệm dày (マット) để ngã an toàn, tuyến đường (コース) được phân theo màu sắc của các mấu bám (ホールド) và độ khó (グレード) — người mới bắt đầu từ tuyến dễ nhất, thường là màu xanh (緑色). Trong bài, hai người đặt chỗ trước qua mạng (ネット予約), sáng thứ Bảy đi tàu đến phòng tập, đăng ký lần đầu (初回登録) rồi thuê giày — đặt chỗ trước và đi tàu đến phòng tập là cách đi leo núi trong nhà rất thường gặp của người Nhật sống ở thành phố.",
+    "Ngã là chuyện bình thường khi leo núi trong nhà, vì leo không dùng dây bảo hộ — quan trọng là phải ngã đúng cách: thả lỏng người (力を抜く), cuộn tròn lại (丸くなる), tiếp đất bằng mông (お尻から落ちる) rồi lăn ra sau, tuyệt đối không chống tay xuống đất (手をつかない) vì dễ gãy cổ tay. Nhân viên phòng tập luôn hướng dẫn cách ngã (落ち方) trước khi cho người mới leo, và người mới thường ngã mấy lần mới quen. Trong bài, 拓海 leo vội nên trượt tay (手が滑る) rồi ngã xuống đệm mấy lần, may mà ngã đúng cách nên không sao, còn được 莉子 khen là ngã giỏi — ngã đúng cách và được bạn khen là một trải nghiệm rất tự nhiên của người mới chơi leo núi trong nhà.",
+    "Người Nhật đi tập thể thao về thường hẹn lần sau quay lại tập tiếp — leo núi trong nhà càng tập càng nghiện vì mỗi tuyến đường leo được là một thành tựu nhỏ, leo được tuyến xanh rồi lại muốn thử tuyến đỏ, leo được tuyến đỏ rồi lại muốn thử tuyến đen. Leo xong thì mệt lử, tay dính đầy bột phấn (チョーク), phải ngồi nghỉ uống nước (水分補給) rồi mới leo tiếp, và xem người leo giỏi leo tuyến khó cũng là một cách học rất hay. Trong bài, hai người leo được tuyến xanh, ngồi nghỉ uống nước, xem người khác leo tuyến khó rồi bàn lần sau quay lại thử tuyến đỏ — leo được tuyến dễ, nghỉ uống nước và hẹn lần sau là cách kết thúc một buổi leo núi trong nhà lần đầu rất tự nhiên."
+  ],
+  "mistakes": [
+    "Đừng chống tay xuống đất khi ngã: cách ngã đúng là thả lỏng người (力を抜く), cuộn tròn lại (丸くなる), tiếp đất bằng mông (お尻から落ちる) rồi lăn ra sau — chống tay xuống đệm (手をつく) thì cổ tay dễ bị gãy, vì toàn bộ trọng lượng cơ thể dồn vào một tay; nhân viên phòng tập luôn dặn đi dặn lại điều này trước khi cho người mới leo.",
+    "Đừng leo vội tuyến khó ngay lần đầu: tuyến màu đỏ (赤色) hay màu đen (黒色) có độ khó (グレード) cao, mấu bám ít, nhỏ và xa nhau — người mới phải bắt đầu từ tuyến dễ nhất, thường là màu xanh (緑色), leo quen rồi mới thử tuyến khó hơn; leo vội tuyến khó thì vừa trượt tay liên tục vừa dễ ngã sai cách, lại mau nản.",
+    "Đừng bám nhầm màu mấu bám: mỗi tuyến đường (コース) chỉ được bám các mấu bám (ホールド) cùng màu với tuyến đó — leo tuyến xanh thì chỉ được bám mấu xanh, bám nhầm mấu đỏ thì coi như phạm luật, leo được cũng không tính; trước khi leo phải nhìn kỹ màu của tuyến mình định leo.",
+    "Đừng quên uống nước giữa các lần leo: leo núi trong nhà rất tốn sức, leo được một lúc là mệt lử và khát nước (喉が渇く) — phải mang theo chai nước (ペットボトル) và nghỉ uống nước (水分補給) giữa các lần leo, đừng đợi đến lúc khát khô mới uống, vì lúc đó cơ thể đã mất nước nhiều rồi.",
+    "Đừng đi giày thể thao bình thường để leo: giày thể thao đế trơn, mũi giày to, đứng trên mấu bám nhỏ rất dễ trượt — phải thuê giày leo chuyên dụng (クライミングシューズ) ở quầy (受付), chọn đôi chật hơn giày thường một chút (きつめ) vì giày chật thì bám mấu chắc hơn; đi giày thường leo thì vừa khó leo vừa dễ ngã."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn muốn đi leo núi trong nhà lần đầu vào cuối tuần. Hãy hỏi nhân viên phòng tập qua điện thoại hoặc ở quầy: có cần đặt chỗ trước không, giá tiền bao nhiêu, có cho thuê giày không, và lần đầu có được hướng dẫn cách ngã không.",
+    "Tình huống 2: Bạn đang đứng trước tường leo và lần đầu leo thử. Hãy hỏi nhân viên hoặc bạn đi cùng: tuyến nào dễ nhất cho người mới, màu nào là tuyến dễ, mấu bám nào được bám, và leo lên đến đâu thì coi như xong.",
+    "Tình huống 3: Bạn vừa trượt tay ngã xuống đệm, ngồi thở hổn hển. Hãy nói với bạn đi cùng: tay trượt mất rồi, ngã có đúng cách không, tuyến xanh khó hơn mình nghĩ thế nào, rồi rủ bạn leo thêm một lần nữa.",
+    "Tình huống 4: Bạn vừa leo được tuyến xanh và đang ngồi nghỉ uống nước. Hãy nói với bạn đi cùng: leo được rồi vui thế nào, người leo giỏi bên cạnh leo hay ra sao, rồi cùng nhau bàn lần sau quay lại thử tuyến đỏ.",
+    "Tình huống 5: Bạn vừa leo núi trong nhà xong và đang ngồi trên tàu về nhà với bạn. Hãy bàn với bạn đi cùng: hôm nay vui thế nào, leo được tuyến nào, lần sau tập tiếp ra sao, và về nhà kể lại cho người nhà nghe thế nào."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、ボルダリングってさ、{初|はじ}めて{来|く}るよ。{壁|かべ}ってさ、こんなに{高|たか}いんだね。",
+      "vi": "Ồ, leo núi trong nhà ấy, lần đầu đến đấy. Tường ấy, cao thế này cơ à."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだよ。ほら、{見|み}て{見|み}て。ホールドってさ、{色|いろ}でさ、コースが{分|わ}かれてるじゃん。",
+      "vi": "Ừ đấy. Này, nhìn này nhìn này. Mấu bám ấy, phân tuyến theo màu này, khác nhau nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、ほんとだ。ってさ、{緑|みどり}ってさ、いちばんやさしいんだっけ。",
+      "vi": "Chà, đúng thật. Này, màu xanh ấy, dễ nhất nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、そうだよ。ほら、{緑|みどり}からさ、{始|はじ}めてみようよ。{赤|あか}はさ、まだ{早|はや}いよ。",
+      "vi": "Ừ, đúng đấy. Này, bắt đầu từ màu xanh này, thử xem nhé. Màu đỏ ấy, còn sớm lắm."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、わかった。ってさ、シューズってさ、{借|か}りるんだよね。サイズ、どうするの？",
+      "vi": "Ồ, biết rồi. Này, giày ấy, thuê nhỉ. Cỡ thì sao?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{受付|うけつけ}でさ、{借|か}りるんだよ。ほら、きつめのやつがさ、いいらしいよ。",
+      "vi": "Ừ, thuê ở quầy ấy. Này, đôi chật một chút ấy, nghe bảo tốt đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、そうなんだ。ってさ、{落|お}ち{方|かた}ってさ、どうやるんだっけ。",
+      "vi": "Chà, ra thế. Này, cách ngã ấy, làm thế nào nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{力|ちから}を{抜|ぬ}いてさ、{丸|まる}くなってさ、お{尻|しり}から{落|お}ちるんだよ。{手|て}をついちゃ、ダメだよ。",
+      "vi": "Thả lỏng người này, cuộn tròn lại này, ngã bằng mông ấy. Chống tay xuống thì, không được đâu."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、やってみるよ。ってさ、ちょっと{怖|こわ}いけどさ、{楽|たの}しみだね。",
+      "vi": "Ồ, thử xem nào. Này, hơi sợ nhưng mà, háo hức thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。ほら、{行|い}こうよ。まず{緑|みどり}のコース、{登|のぼ}ってみようよ。",
+      "vi": "Ừ nhỉ. Này, đi thôi. Trước hết leo thử tuyến màu xanh nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、{疲|つか}れたね。ってさ、{手|て}がさ、{滑|すべ}っちゃったよ。",
+      "vi": "Phù, mệt thật đấy. Này, tay ấy, trượt mất rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、{見|み}てたよ。でもさ、{落|お}ち{方|かた}、うまかったじゃん。お{尻|しり}からさ、ちゃんと{落|お}ちてたよ。",
+      "vi": "Haha, tớ thấy rồi. Nhưng mà, cách ngã ấy, giỏi lắm nhỉ. Ngã bằng mông ấy, đúng chuẩn rồi đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうかな。ってさ、{緑|みどり}ってさ、{思|おも}ったよりさ、{難|むずか}しいね。",
+      "vi": "Thế à. Này, màu xanh ấy, khó hơn tớ nghĩ đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、でもさ、{登|のぼ}れたじゃん。ほら、もう{一|いち}{回|かい}さ、{行|い}ってみようよ。",
+      "vi": "Ừ, nhưng mà, leo được rồi còn gì. Này, thêm một lần nữa này, thử xem nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、ちょっと{休|やす}もうよ。ってさ、{水|みず}、{飲|の}もうよ。{喉|のど}、{渇|かわ}いちゃったよ。",
+      "vi": "Ừ, nghỉ một chút nhé. Này, uống nước nhé. Khát khô cổ rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいよ。ほら、この{人|ひと}、{見|み}て{見|み}て。すっごい{上手|かみて}じゃん。",
+      "vi": "Được. Này, người này, nhìn này nhìn này. Giỏi ghê nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、ほんとだ。ってさ、あんなふうにさ、{登|のぼ}れるようになりたいね。",
+      "vi": "Ồ, đúng thật. Này, leo được như thế ấy, muốn trở thành được như vậy thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。{練習|れんしゅう}すればさ、できるようになるよ。ほら、また{来|こ}ようよ。",
+      "vi": "Ừ nhỉ. Luyện tập thì, sẽ làm được thôi. Này, lại đến nữa nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうしようよ。ってさ、{今度|こんど}はさ、{赤|あか}のコースにも{挑戦|ちょうせん}してみようよ。",
+      "vi": "Ừ, làm thế nhé. Này, lần sau ấy, thử thách cả tuyến màu đỏ nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。でもさ、まずはさ、{緑|みどり}をさ、ちゃんと{登|のぼ}れるようになろうよ。{楽|たの}しみだね。",
+      "vi": "Hay đấy. Nhưng mà, trước hết ấy, leo cho thành thạo tuyến màu xanh đã nhé. Háo hức thật đấy."
+    }
+  ],
+  "notes": [
+    "Từ vựng leo núi trong nhà cơ bản: ボルダリング (leo núi trong nhà), ホールド (mấu bám), グレード (độ khó), コース (tuyến đường), マット (đệm), クライミングシューズ (giày leo), 滑る (trượt), 登る (leo), 落ちる (ngã), 休憩 (nghỉ ngơi), 水分補給 (uống nước bù), 初回登録 (đăng ký lần đầu); tuyến đường phân theo màu sắc của mấu bám, người mới bắt đầu từ tuyến dễ nhất, thường là màu xanh (緑色).",
+    "Quy trình đi leo núi trong nhà lần đầu: đặt chỗ trước qua mạng (ネット予約) → đi tàu đến phòng tập → đăng ký lần đầu (初回登録) ở quầy (受付) → thuê giày leo (クライミングシューズを借りる) → nghe hướng dẫn cách ngã an toàn (落ち方) → leo thử tuyến dễ nhất (緑色のコース) → nghỉ uống nước (水分補給) giữa các lần leo → hẹn lần sau quay lại thử tuyến khó hơn.",
+    "Văn hóa leo núi trong nhà ở Nhật: không dùng dây bảo hộ, ngã xuống đệm là chuyện bình thường, quan trọng là ngã đúng cách (thả lỏng, cuộn tròn, tiếp đất bằng mông); càng tập càng nghiện vì mỗi tuyến leo được là một thành tựu nhỏ, xem người leo giỏi leo tuyến khó cũng là một cách học rất hay; leo xong thường hẹn lần sau quay lại tập tiếp.",
+    "〜ちゃった là dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn (trượt tay, khát khô cổ); 〜だっけ là cách hỏi lại một thông tin đã biết nhưng quên mất (tuyến nào dễ nhất, cách ngã thế nào); 〜てみようよ là cách rủ bạn cùng thử làm một việc lần đầu (leo thử tuyến xanh, thử thách tuyến đỏ)."
+  ]
+}

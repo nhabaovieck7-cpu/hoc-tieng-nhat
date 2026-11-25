@@ -389,6 +389,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 40 — Lần đầu đi hái dâu cuối tuần (đặt chỗ online, đi tàu, hái dâu ăn thỏa thích 30 phút, mua mứt dâu, nhắn tin báo người nhà) (初めて週末にいちご狩りに行く)",
       "file": "2026-11-25-kaiwa.json"
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 26/11/2026（問題11・中文）",
+      "file": "2026-11-26-n1-set.json"
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 26/11/2026（短文）",
+      "file": "2026-11-26-reading.json"
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 41 — Lần đầu đi leo núi trong nhà (ボルダリング)",
+      "file": "2026-11-26-kaiwa.json"
     }
   ]
 }

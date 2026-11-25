@@ -1,0 +1,414 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 短文 trong phần đọc hiểu của đề N1 thật: một bài đọc ngắn, trừu tượng vừa phải, kèm 4 câu hỏi — đáp án không nằm lộ liễu trên mặt chữ mà phải suy luận từ chủ trương của tác giả. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, khoanh những câu mang chủ trương （〜ではない・むしろ・こそ・だからこそ); Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình suy luận lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 8–10 phút (đọc + 4 câu hỏi). Trong đề thật, 短文 là dạng dễ mất điểm vì các lựa chọn nhiễu thường diễn đạt na ná ý tác giả nhưng đảo ngược chủ trương, tuyệt đối hóa （誰でも・すべて・必ず), hoặc lấy ví dụ trong bài làm chủ trương — ví dụ lấy câu chuyện về việc nhường ghế để kết luận 'người Nhật không bao giờ nói cảm ơn', trong khi tác giả dùng ví dụ đó để nói điều ngược lại: họ nói 'すみません' thay cho 'ありがとう'.",
+  "tips": [
+    {
+      "h": "Tìm câu chủ trương trước, đừng đọc dịch từng chữ",
+      "body": "Bài 短文 thường có một câu nêu chủ trương rõ nhất, hay nằm ở đoạn 2 hoặc đoạn cuối, với các dấu hiệu つまり、それは…のである／〜こそが／だからこそ. Bài này: đoạn 2 câu 3 (つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである) và đoạn 4 câu 2 (だからこそ、この一言は、単なる決まり文句ではなく…) chính là hai câu chủ trương. Khoanh chúng trước rồi mới làm câu hỏi."
+    },
+    {
+      "h": "しかし／つまり／だからこそ là bản đồ của bài",
+      "body": "しかし ở đầu đoạn 3 mở thêm một vai trò mới của 'すみません' (giữ khoảng cách) bên cạnh vai trò ở đoạn 2 (vừa xin lỗi vừa cảm ơn); つまり ở đoạn 2 câu 3 tóm lại ý của hai câu trước đó ('vừa cảm thấy đã làm phiền đối phương, vừa biết ơn'); だからこそ ở đoạn 4 câu 2 nối hệ quả ('vì すみません vừa là xin lỗi vừa là cảm ơn, lại vừa giữ khoảng cách, nên nó là trí tuệ sống của người Nhật'). Đọc đúng 3 từ nối này là nắm được toàn bộ lập luận."
+    },
+    {
+      "h": "Ví dụ trong bài là bằng chứng, không phải chủ trương",
+      "body": "Ví dụ về việc được nhường ghế ở đoạn 2 chỉ để chứng minh cho chủ trương 'すみません vừa là xin lỗi vừa là cảm ơn' — nó không phải là chủ trương. Lựa chọn nào nói 'người Nhật không biết ơn khi được nhường ghế' là đã đảo ngược ý tác giả; lựa chọn nào nói 'すみません chỉ dùng khi gọi nhân viên cửa hàng' là lấy một ví dụ trong đoạn 1 làm định nghĩa của cả từ."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có 4 đoạn, 12 câu, chủ trương nằm ở đoạn 2 (すみません là lời vừa xin lỗi vừa cảm ơn) và đoạn 4 (すみません là trí tuệ giữ khoảng cách). Khi làm câu hỏi về '〜とはどういうことか', hãy quay lại đúng câu định nghĩa ở đoạn 2 câu 3; khi làm câu hỏi về từ nối しかし, hãy đối chiếu ý đoạn 2 với ý đoạn 3."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "日本では、「すみません」という言葉を、一日に何度も耳にする。道を譲ってもらったとき、店で店員を呼ぶとき――この一言が、さまざまな場面で使われている。不思議なのは、この言葉が謝罪にも感謝にも、呼びかけにもなるということだ。\n席を譲ってもらったとき、日本人は「ありがとう」ではなく「すみません」と言うことが多い。それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ。つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである。\nしかし、この言葉には、もう一つの役割がある。それは、相手との間に、ちょうどよい距離を保つことである。「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある。\n「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ。だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える。「すみません」の意味を考えることは、言葉の奥にある、人との距離の取り方を考えることなのである。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "「すみません」は謝罪の言葉であり、感謝を伝えるために使うべきではない。",
+        "「すみません」は謝罪と感謝のあいだにあり、相手との距離を保つための言葉である。",
+        "「すみません」は決まり文句にすぎず、特に意味はない。",
+        "「すみません」は相手に迷惑をかけたときにだけ使う言葉である。"
+      ],
+      "answer": 1,
+      "explain_vi": "Chủ trương của tác giả nằm ở đoạn 2 câu 3: つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである — và được mở rộng ở đoạn 4 câu 1–2: 「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ／だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える. 'すみません' vừa là xin lỗi vừa là cảm ơn, đồng thời giữ khoảng cách với đối phương."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "日本では、「すみません」という言葉を、一日に何度も耳にする。道を譲ってもらったとき、店で店員を呼ぶとき――この一言が、さまざまな場面で使われている。不思議なのは、この言葉が謝罪にも感謝にも、呼びかけにもなるということだ。\n席を譲ってもらったとき、日本人は「ありがとう」ではなく「すみません」と言うことが多い。それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ。つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである。\nしかし、この言葉には、もう一つの役割がある。それは、相手との間に、ちょうどよい距離を保つことである。「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある。\n「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ。だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える。「すみません」の意味を考えることは、言葉の奥にある、人との距離の取り方を考えることなのである。\n「すみません」を「ありがとう」ではなく使うのはなぜか。",
+      "choices": [
+        "日本語には「ありがとう」という言葉がないから。",
+        "席を譲ってもらったことに感謝していないから。",
+        "相手に手間をかけさせたという気持ちと感謝の気持ちが同時に生まれるから。",
+        "「ありがとう」と言うと相手に失礼になるから。"
+      ],
+      "answer": 2,
+      "explain_vi": "Lý do nằm ở đoạn 2 câu 2: それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ — trong lòng người nói đồng thời nảy sinh hai cảm xúc: cảm thấy mình đã làm phiền đối phương và lòng biết ơn. Vì vậy họ chọn 'すみません', từ chứa cả hai cảm xúc đó."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "日本では、「すみません」という言葉を、一日に何度も耳にする。道を譲ってもらったとき、店で店員を呼ぶとき――この一言が、さまざまな場面で使われている。不思議なのは、この言葉が謝罪にも感謝にも、呼びかけにもなるということだ。\n席を譲ってもらったとき、日本人は「ありがとう」ではなく「すみません」と言うことが多い。それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ。つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである。\nしかし、この言葉には、もう一つの役割がある。それは、相手との間に、ちょうどよい距離を保つことである。「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある。\n「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ。だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える。「すみません」の意味を考えることは、言葉の奥にある、人との距離の取り方を考えることなのである。\n「しかし、この言葉には、もう一つの役割がある」とあるが、もう一つの役割とは何か。",
+      "choices": [
+        "相手との間にちょうどよい距離を保つこと。",
+        "相手との関係をできるだけ近づけること。",
+        "相手に自分の気持ちを強く伝えること。",
+        "店員を呼ぶときにだけ使われること。"
+      ],
+      "answer": 0,
+      "explain_vi": "Câu hỏi hỏi đúng câu trả lời ở đoạn 3 câu 2: それは、相手との間に、ちょうどよい距離を保つことである. 'それ' ở đây chính là 'もう一つの役割' ở câu 1 của đoạn 3. Câu 3 cùng đoạn giải thích thêm: nói thẳng 'ありがとう' đôi khi lại khiến quan hệ trở nên quá gần gũi."
+    },
+    {
+      "level": "N1",
+      "section": "読解（短文）",
+      "question": "日本では、「すみません」という言葉を、一日に何度も耳にする。道を譲ってもらったとき、店で店員を呼ぶとき――この一言が、さまざまな場面で使われている。不思議なのは、この言葉が謝罪にも感謝にも、呼びかけにもなるということだ。\n席を譲ってもらったとき、日本人は「ありがとう」ではなく「すみません」と言うことが多い。それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ。つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである。\nしかし、この言葉には、もう一つの役割がある。それは、相手との間に、ちょうどよい距離を保つことである。「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある。\n「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ。だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える。「すみません」の意味を考えることは、言葉の奥にある、人との距離の取り方を考えることなのである。\n「すみません」の意味を考えることは、どういうことだと筆者は述べているか。",
+      "choices": [
+        "日本語の文法の規則を覚えること。",
+        "謝罪の言葉をできるだけ使わないようにすること。",
+        "「ありがとう」と「すみません」のどちらが正しいかを決めること。",
+        "言葉の奥にある、人との距離の取り方を考えること。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án nằm ở câu cuối của bài (đoạn 4 câu 3): 「すみません」の意味を考えることは、日本語の言葉の奥にある、人との距離の取り方を考えることなのである — suy nghĩ về ý nghĩa của 'すみません' chính là suy nghĩ về cách giữ khoảng cách với người khác ẩn sau từ ngữ tiếng Nhật."
+    }
+  ],
+  "study": {
+    "passage_title": "「『すみません』の一言」— Một từ vừa là xin lỗi vừa là cảm ơn, và cách người Nhật dùng nó để giữ khoảng cách lịch sự",
+    "structure": "Bài đọc ngắn 4 đoạn, 12 câu, lập luận theo trình tự quan sát → giải thích → mở rộng → kết luận. Đoạn 1 mở đầu — nêu quan sát quen thuộc: ở Nhật, 'すみません' được nghe thấy nhiều lần mỗi ngày, từ lúc được nhường đường, lúc gọi nhân viên cửa hàng; điều kỳ lạ là cùng một từ này lại vừa dùng để xin lỗi, vừa dùng để cảm ơn, có khi lại dùng để gọi ai đó; đoạn 2 giải thích bằng ví dụ cụ thể — khi được nhường ghế, người Nhật thường nói 'すみません' thay vì 'ありがとう', vì trong lòng họ đồng thời nảy sinh hai cảm xúc: cảm thấy mình đã làm phiền đối phương và lòng biết ơn; câu 3 tóm lại bằng つまり: 'すみません' là lời vừa thừa nhận gánh nặng của đối phương, vừa truyền đạt lòng biết ơn; đoạn 3 mở thêm một vai trò nữa bằng しかし — 'すみません' còn giữ một khoảng cách vừa phải với đối phương, vì nói thẳng 'ありがとう' thì cảm xúc truyền đi mạnh mẽ nhưng đôi khi lại khiến quan hệ trở nên quá gần gũi; đoạn 4 kết luận — 'すみません' nằm giữa lời xin lỗi và lời cảm ơn, là từ tiện lợi để không bước quá sâu vào đối phương, và chính vì vậy nó không chỉ là câu cửa miệng mà là trí tuệ để trân trọng quan hệ với người khác; câu cuối nâng ý lên: suy nghĩ về ý nghĩa của 'すみません' chính là suy nghĩ về cách giữ khoảng cách với người khác ẩn sau từ ngữ tiếng Nhật. Bẫy chính của bài là các lựa chọn đảo ngược chủ trương (biến 'すみません vừa là xin lỗi vừa là cảm ơn' thành 'すみません chỉ là xin lỗi'), tuyệt đối hóa (biến 'giữ khoảng cách' thành 'không bao giờ gần gũi với ai'), và lấy ví dụ làm chủ trương (lấy chuyện gọi nhân viên cửa hàng để kết luận 'すみません chỉ dùng để gọi người').",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "{日本|にっぽん}では、「すみません」という{言葉|ことば}を、{一|いち}{日|にち}に{何|なん}{度|ど}も{耳|みみ}にする。",
+        "vi": "Ở Nhật, người ta nghe thấy từ 'すみません' nhiều lần trong một ngày."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{道|みち}を{譲|ゆず}ってもらったとき、{店|みせ}で{店員|てんいん}を{呼|よ}ぶとき――この{一言|ひとこと}が、さまざまな{場面|ばめん}で{使|つか}われている。",
+        "vi": "Khi được nhường đường, khi gọi nhân viên trong cửa hàng — một từ này được dùng trong đủ mọi tình huống."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{不思議|ふしぎ}なのは、この{言葉|ことば}が{謝罪|しゃざい}にも{感謝|かんしゃ}にも、{呼|よ}びかけにもなるということだ。",
+        "vi": "Điều kỳ lạ là từ này vừa dùng để xin lỗi, vừa dùng để cảm ơn, và có khi lại dùng để gọi ai đó."
+      },
+      {
+        "para": 2,
+        "no": 1,
+        "ja": "{席|せき}を{譲|ゆず}ってもらったとき、{日本|にっぽん}{人|じん}は「ありがとう」ではなく「すみません」と{言|い}うことが{多|おお}い。",
+        "vi": "Ví dụ, khi được nhường ghế, người Nhật thường nói 'すみません' thay vì 'ありがとう'."
+      },
+      {
+        "para": 2,
+        "no": 2,
+        "ja": "それは、{相手|あいて}に{手間|てま}をかけさせてしまったという{気持|きも}ちが、{感謝|かんしゃ}と{同時|どうじ}に{生|う}まれるからだ。",
+        "vi": "Đó là vì trong lòng họ đồng thời nảy sinh cảm giác rằng mình đã làm phiền đối phương và lòng biết ơn."
+      },
+      {
+        "para": 2,
+        "no": 3,
+        "ja": "つまり、「すみません」は、{相手|あいて}への{負担|ふたん}を{認|みと}めながら、{感謝|かんしゃ}を{伝|つた}える{言葉|ことば}なのである。",
+        "vi": "Nói cách khác, 'すみません' là lời vừa thừa nhận gánh nặng của đối phương, vừa truyền đạt lòng biết ơn."
+      },
+      {
+        "para": 3,
+        "no": 1,
+        "ja": "しかし、この{言葉|ことば}には、もう{一|ひと}つの{役割|やくわり}がある。",
+        "vi": "Thế nhưng, từ này còn có một vai trò khác nữa."
+      },
+      {
+        "para": 3,
+        "no": 2,
+        "ja": "それは、{相手|あいて}との{間|あいだ}に、ちょうどよい{距離|きょり}を{保|たも}つことである。",
+        "vi": "Đó là giữ một khoảng cách vừa phải với đối phương."
+      },
+      {
+        "para": 3,
+        "no": 3,
+        "ja": "「ありがとう」と{言|い}えば、{気持|きも}ちは{強|つよ}く{伝|つた}わるが、{相手|あいて}との{関係|かんけい}を{近|ちか}づけすぎてしまうこともある。",
+        "vi": "Nếu nói thẳng 'ありがとう' thì cảm xúc sẽ truyền đi mạnh mẽ, nhưng đôi khi lại khiến mối quan hệ với đối phương trở nên quá gần gũi."
+      },
+      {
+        "para": 4,
+        "no": 1,
+        "ja": "「すみません」は、{謝罪|しゃざい}と{感謝|かんしゃ}のあいだにあり、{相手|あいて}に{踏|ふ}み{込|みこ}みすぎないための、{便利|べんり}な{言葉|ことば}なのだ。",
+        "vi": "'すみません' nằm giữa lời xin lỗi và lời cảm ơn, là một từ tiện lợi để không bước quá sâu vào đối phương."
+      },
+      {
+        "para": 4,
+        "no": 2,
+        "ja": "だからこそ、{単|たん}なる{決|き}まり{文句|もんく}ではなく、{相手|あいて}との{関係|かんけい}を{大切|たいせつ}にするための{知恵|ちえ}だと{言|い}える。",
+        "vi": "Chính vì vậy, một từ này không chỉ là câu cửa miệng mà có thể nói là trí tuệ để trân trọng mối quan hệ với đối phương."
+      },
+      {
+        "para": 4,
+        "no": 3,
+        "ja": "「すみません」の{意味|いみ}を{考|かんが}えることは、{言葉|ことば}の{奥|おく}にある、{人|ひと}との{距離|きょり}の{取|と}り{方|かた}を{考|かんが}えることなのである。",
+        "vi": "Suy nghĩ về ý nghĩa của 'すみません' chính là suy nghĩ về cách giữ khoảng cách với người khác ẩn sau từ ngữ tiếng Nhật."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ② · Câu 2 – đáp án ③ · Câu 3 – đáp án ① · Câu 4 – đáp án ④",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 1,
+        "locator": "Đ2③・Đ4①②",
+        "options": [
+          {
+            "text": "「すみません」は謝罪の言葉であり、感謝を伝えるために使うべきではない。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược chủ trương của tác giả. Bài viết khẳng định 'すみません' VỪA là xin lỗi VỪA là cảm ơn: đoạn 1 câu 3 (この言葉が謝罪にも感謝にも…なる) và đoạn 2 câu 3 (相手への負担を認めながら、感謝を伝える言葉なのである). Nói 'không nên dùng để cảm ơn' là ngược hẳn với bài. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "「すみません」は謝罪と感謝のあいだにあり、相手との距離を保つための言葉である。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai câu chủ trương: đoạn 2 câu 3 (つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである) và đoạn 4 câu 1 (「すみません」は、謝罪と感謝のあいだにあり、相手に踏み込みすぎないための、便利な言葉なのだ), được khẳng định lại ở đoạn 3 câu 2 (相手との間に、ちょうどよい距離を保つことである)."
+          },
+          {
+            "text": "「すみません」は決まり文句にすぎず、特に意味はない。",
+            "verdict": "SAI",
+            "reason": "Tác giả nói rõ điều ngược lại ở đoạn 4 câu 2: だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える — 'すみません' KHÔNG chỉ là câu cửa miệng mà là trí tuệ giữ gìn quan hệ. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "「すみません」は相手に迷惑をかけたときにだけ使う言葉である。",
+            "verdict": "SAI",
+            "reason": "Bài viết liệt kê nhiều tình huống dùng 'すみません' ngoài lúc gây phiền: cảm ơn khi được nhường ghế (đoạn 2 câu 1), gọi nhân viên cửa hàng (đoạn 1 câu 2: 店で店員を呼ぶとき). Từ 'だけ' (chỉ) đã tuyệt đối hóa sai phạm vi sử dụng của từ này. Bẫy tuyệt đối hóa."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 2,
+        "locator": "Đ2②",
+        "options": [
+          {
+            "text": "日本語には「ありがとう」という言葉がないから。",
+            "verdict": "SAI",
+            "reason": "Bài viết nhắc tới 'ありがとう' nhiều lần (đoạn 2 câu 1, đoạn 3 câu 3) và so sánh hai từ với nhau — tiếng Nhật đương nhiên có từ 'ありがとう'. Lựa chọn này bịa ra một 'sự thật' sai hoàn toàn, không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "席を譲ってもらったことに感謝していないから。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược ý tác giả. Đoạn 2 câu 2 viết rõ: 感謝と同時に生まれるからだ — lòng biết ơn CÓ nảy sinh, cùng lúc với cảm giác đã làm phiền đối phương. Người nói 'すみません' không phải vì không biết ơn mà vì trong lòng có cả hai cảm xúc. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "相手に手間をかけさせたという気持ちと感謝の気持ちが同時に生まれるから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 2 câu 2: それは、相手に手間をかけさせてしまったという気持ちが、感謝と同時に生まれるからだ — cảm giác đã làm phiền đối phương và lòng biết ơn nảy sinh cùng lúc, nên người Nhật chọn 'すみません', từ chứa cả hai cảm xúc đó, thay vì 'ありがとう' chỉ chứa lòng biết ơn."
+          },
+          {
+            "text": "「ありがとう」と言うと相手に失礼になるから。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói 'ありがとう' là bất lịch sự. Đoạn 3 câu 3 chỉ nói: 「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある — vấn đề là quan hệ trở nên quá gần gũi, không phải là bất lịch sự. Lựa chọn này đổi 'quá gần gũi' thành 'bất lịch sự'. Bẫy đổi khái niệm."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 0,
+        "locator": "Đ3②③",
+        "options": [
+          {
+            "text": "相手との間にちょうどよい距離を保つこと。",
+            "verdict": "ĐÚNG",
+            "reason": "Trích nguyên văn đoạn 3 câu 2: それは、相手との間に、ちょうどよい距離を保つことである. 'それ' trong câu này chỉ 'もう一つの役割' ở câu 1 của đoạn 3. Câu 3 cùng đoạn giải thích thêm: nói thẳng 'ありがとう' đôi khi lại khiến quan hệ trở nên quá gần gũi, nên 'すみません' giữ lại một khoảng cách vừa phải."
+          },
+          {
+            "text": "相手との関係をできるだけ近づけること。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược hoàn toàn ý của đoạn 3. Đoạn 3 câu 3 viết: 相手との関係を近づけすぎてしまうこともある — việc quan hệ trở nên quá gần gũi là điều 'すみません' GIÚP TRÁNH, chứ không phải mục đích của nó. Vai trò của 'すみません' là giữ khoảng cách, không phải rút ngắn khoảng cách. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "相手に自分の気持ちを強く伝えること。",
+            "verdict": "SAI",
+            "reason": "Truyền cảm xúc mạnh mẽ là đặc điểm của 'ありがとう' nói thẳng, không phải của 'すみません': đoạn 3 câu 3 viết 「ありがとう」と言えば、気持ちは強く伝わるが… — 'すみません' được dùng chính vì nó KHÔNG truyền cảm xúc quá mạnh, giữ lại một khoảng cách. Lựa chọn này gán đặc điểm của từ đối lập cho 'すみません'. Bẫy đánh tráo đối tượng."
+          },
+          {
+            "text": "店員を呼ぶときにだけ使われること。",
+            "verdict": "SAI",
+            "reason": "Gọi nhân viên cửa hàng chỉ là MỘT ví dụ trong đoạn 1 câu 2 (店で店員を呼ぶとき), không phải 'vai trò còn lại' mà しかし ở đoạn 3 mở ra. 'もう一つの役割' được định nghĩa ngay ở đoạn 3 câu 2 là giữ khoảng cách vừa phải. Lựa chọn này lấy ví dụ trong bài làm chủ trương. Bẫy lấy ví dụ làm định nghĩa."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 3,
+        "locator": "Đ4③",
+        "options": [
+          {
+            "text": "日本語の文法の規則を覚えること。",
+            "verdict": "SAI",
+            "reason": "Bài viết không bàn về quy tắc ngữ pháp nào — toàn bài nói về ý nghĩa và cách dùng của một từ trong giao tiếp. Câu cuối (đoạn 4 câu 3) nói rõ: 人との距離の取り方を考えることなのである — suy nghĩ về cách giữ khoảng cách với người khác, không phải học thuộc quy tắc ngữ pháp. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "謝罪の言葉をできるだけ使わないようにすること。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề khuyên 'hạn chế dùng từ xin lỗi' — ngược lại, tác giả cho thấy 'すみません' được dùng nhiều lần mỗi ngày (đoạn 1 câu 1: 一日に何度も耳にする) và đánh giá cao nó như một trí tuệ (đoạn 4 câu 2). Lựa chọn này bịa ra một lời khuyên không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "「ありがとう」と「すみません」のどちらが正しいかを決めること。",
+            "verdict": "SAI",
+            "reason": "Bài viết không đặt ra chuyện 'từ nào đúng, từ nào sai' — tác giả phân tích mỗi từ có vai trò riêng: 'ありがとう' truyền cảm xúc mạnh mẽ, 'すみません' giữ khoảng cách vừa phải (đoạn 3 câu 3). Câu cuối nói về việc suy nghĩ cách giữ khoảng cách với người khác, không phải chọn ra một từ 'đúng'. Bẫy đặt vấn đề sai."
+          },
+          {
+            "text": "言葉の奥にある、人との距離の取り方を考えること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trích nguyên văn câu cuối của bài (đoạn 4 câu 3): 「すみません」の意味を考えることは、日本語の言葉の奥にある、人との距離の取り方を考えることなのである — suy nghĩ về ý nghĩa của 'すみません' chính là suy nghĩ về cách giữ khoảng cách với người khác ẩn sau từ ngữ tiếng Nhật."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{譲|ゆず}る",
+        "reading": "ゆずる",
+        "hanviet": "Nhượng",
+        "vi": "nhường (ghế, đường, quyền) cho người khác"
+      },
+      {
+        "word": "{手間|てま}",
+        "reading": "てま",
+        "hanviet": "Thủ Gian",
+        "vi": "công sức, thời gian và sự phiền phức phải bỏ ra (để làm việc gì đó)"
+      },
+      {
+        "word": "{謝罪|しゃざい}",
+        "reading": "しゃざい",
+        "hanviet": "Tạ Tội",
+        "vi": "lời xin lỗi, sự xin lỗi (trang trọng)"
+      },
+      {
+        "word": "{感謝|かんしゃ}",
+        "reading": "かんしゃ",
+        "hanviet": "Cảm Tạ",
+        "vi": "sự biết ơn, lòng cảm ơn"
+      },
+      {
+        "word": "{呼|よ}びかけ",
+        "reading": "よびかけ",
+        "hanviet": "Hô",
+        "vi": "sự gọi, lời gọi (gọi ai đó để bắt chuyện hoặc thu hút sự chú ý)"
+      },
+      {
+        "word": "{決|き}まり{文句|もんく}",
+        "reading": "きまりもんく",
+        "hanviet": "Quyết Văn Cú",
+        "vi": "câu cửa miệng, câu nói quen thuộc dùng theo thói quen"
+      },
+      {
+        "word": "{距離|きょり}",
+        "reading": "きょり",
+        "hanviet": "Cự Ly",
+        "vi": "khoảng cách (cả nghĩa đen lẫn nghĩa bóng: khoảng cách trong quan hệ)"
+      },
+      {
+        "word": "{踏|ふ}み{込|みこ}む",
+        "reading": "ふみこむ",
+        "hanviet": "Đạp Nhập",
+        "vi": "bước vào, xâm nhập (vào chuyện riêng, vào lĩnh vực của người khác)"
+      },
+      {
+        "word": "{役割|やくわり}",
+        "reading": "やくわり",
+        "hanviet": "Dịch Cát",
+        "vi": "vai trò, nhiệm vụ (của một người, một vật, một từ ngữ)"
+      },
+      {
+        "word": "{知恵|ちえ}",
+        "reading": "ちえ",
+        "hanviet": "Tri Tuệ",
+        "vi": "trí tuệ, sự khôn ngoan (cách xử lý khéo léo trong đời sống)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "〜ではなく",
+        "vi": "không phải… mà là… (phủ định vế trước, khẳng định vế sau; dùng khi sửa lại cách hiểu hoặc lựa chọn)",
+        "in_text": "席を譲ってもらったとき、日本人は「ありがとう」ではなく「すみません」と言うことが多い。"
+      },
+      {
+        "pattern": "〜ながら",
+        "vi": "vừa… vừa… (hai hành động hoặc hai trạng thái diễn ra đồng thời; ở đây là hai cảm xúc cùng tồn tại)",
+        "in_text": "つまり、「すみません」は、相手への負担を認めながら、感謝を伝える言葉なのである。"
+      },
+      {
+        "pattern": "〜すぎる",
+        "vi": "quá… / …quá mức (vượt quá mức vừa phải; thường mang sắc thái tiêu cực hoặc cần tránh)",
+        "in_text": "「ありがとう」と言えば、気持ちは強く伝わるが、相手との関係を近づけすぎてしまうこともある。"
+      },
+      {
+        "pattern": "だからこそ",
+        "vi": "chính vì vậy (nhấn mạnh hệ quả tất yếu rút ra từ lý do vừa nêu)",
+        "in_text": "だからこそ、単なる決まり文句ではなく、相手との関係を大切にするための知恵だと言える。"
+      },
+      {
+        "pattern": "〜のである",
+        "vi": "…là vì… / chính là… (cách nói trang trọng để giải thích, khẳng định hoặc kết luận; hay dùng trong văn luận)",
+        "in_text": "「すみません」の意味を考えることは、言葉の奥にある、人との距離の取り方を考えることなのである。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm lời xin lỗi / cảm ơn: すみません / ありがとう / ごめんなさい",
+        "rows": [
+          {
+            "form": "すみません",
+            "join": "—",
+            "vi": "xin lỗi / cảm ơn (một cách lịch sự)",
+            "diff": "Vừa xin lỗi vừa cảm ơn, lại giữ khoảng cách vừa phải: dùng khi mình đã làm phiền đối phương dù chỉ một chút, hoặc khi muốn bắt chuyện một cách lịch sự. Sắc thái trung tính, lịch sự, dùng được với cả người lạ và người quen. Trong bài này: 席を譲ってもらったときの「すみません」.",
+            "example_ja": "{席|せき}を{譲|ゆず}ってもらったとき、{日本|にっぽん}{人|じん}は「ありがとう」ではなく「すみません」と{言|い}うことが{多|おお}い。",
+            "example_vi": "Khi được nhường ghế, người Nhật thường nói 'すみません' thay vì 'ありがとう'."
+          },
+          {
+            "form": "ありがとう",
+            "join": "—",
+            "vi": "cảm ơn",
+            "diff": "Chỉ truyền đạt lòng biết ơn, cảm xúc truyền đi mạnh mẽ và trực tiếp: dùng khi muốn bày tỏ rõ ràng lòng biết ơn. Khác với すみません (vừa xin lỗi vừa cảm ơn, giữ khoảng cách), ありがとう chỉ có cảm ơn và có thể khiến quan hệ trở nên gần gũi hơn. Trong bài này: 「ありがとう」と言えば、気持ちは強く伝わる.",
+            "example_ja": "「ありがとう」と{言|い}えば、{気持|きも}ちは{強|つよ}く{伝|つた}わるが、{相手|あいて}との{関係|かんけい}を{近|ちか}づけすぎてしまうこともある。",
+            "example_vi": "Nếu nói thẳng 'ありがとう' thì cảm xúc sẽ truyền đi mạnh mẽ, nhưng đôi khi lại khiến mối quan hệ với đối phương trở nên quá gần gũi."
+          },
+          {
+            "form": "ごめんなさい",
+            "join": "—",
+            "vi": "xin lỗi (thân mật)",
+            "diff": "Chỉ dùng để xin lỗi, sắc thái thân mật, dùng với người quen, bạn bè, người thân: không dùng để cảm ơn, cũng không dùng trong tình huống trang trọng với người lạ. Khác với すみません (lịch sự, dùng được với người lạ, vừa xin lỗi vừa cảm ơn), ごめんなさい chỉ xin lỗi và chỉ dùng trong quan hệ gần gũi.",
+            "example_ja": "{友達|ともだち}に{遅|おく}れてしまって、ごめんなさいと{謝|あやま}った。",
+            "example_vi": "Vì đến muộn với bạn nên tôi đã xin lỗi 'ごめんなさい'."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm phủ định để khẳng định lại: 〜ではなく / 〜というより / 〜わけではない",
+        "rows": [
+          {
+            "form": "〜ではなく",
+            "join": "N・Vる・Aい + ではなく",
+            "vi": "không phải… mà là…",
+            "diff": "Phủ định vế trước để khẳng định vế sau: 'A không phải, mà là B'. Dùng khi sửa lại cách hiểu hoặc khi chọn một trong hai phương án. Trong bài này: 「ありがとう」ではなく「すみません」と言う — không nói 'ありがとう' mà nói 'すみません'.",
+            "example_ja": "{席|せき}を{譲|ゆず}ってもらったとき、{日本|にっぽん}{人|じん}は「ありがとう」ではなく「すみません」と{言|い}うことが{多|おお}い。",
+            "example_vi": "Ví dụ, khi được nhường ghế, người Nhật thường nói 'すみません' thay vì 'ありがとう'."
+          },
+          {
+            "form": "〜というより",
+            "join": "Vる・Aい・Nだ + というより",
+            "vi": "nói là… thì đúng hơn là… / thay vì nói là…",
+            "diff": "Đưa ra cách diễn đạt CHÍNH XÁC HƠN: không phủ định hoàn toàn vế trước mà nói vế sau đúng hơn, sát hơn. Khác với 〜ではなく (phủ định dứt khoát để thay bằng vế sau), 〜というより chỉ điều chỉnh sắc thái cho chính xác hơn.",
+            "example_ja": "「すみません」は{謝罪|しゃざい}というより、{相手|あいて}との{距離|きょり}を{保|たも}つための{言葉|ことば}だと{言|い}える。",
+            "example_vi": "Có thể nói 'すみません' thay vì là lời xin lỗi thì đúng hơn là từ ngữ để giữ khoảng cách với đối phương."
+          },
+          {
+            "form": "〜わけではない",
+            "join": "Vる・Aい・Nだ + わけではない",
+            "vi": "không phải là… (đâu)",
+            "diff": "PHỦ ĐỊNH một phần: phủ định cách hiểu sai hoặc kết luận vội vàng, nhưng không phủ định toàn bộ sự việc, cũng không đưa ra vế thay thế như 〜ではなく. Khác với 〜ではなく (A không phải, mà là B), 〜わけではない chỉ nói 'không phải A' mà không nói 'mà là B'.",
+            "example_ja": "「すみません」を{使|つか}うのは、{感謝|かんしゃ}していないわけではない。",
+            "example_vi": "Việc dùng 'すみません' không phải là vì không biết ơn."
+          }
+        ]
+      }
+    ]
+  }
+}
