@@ -1,0 +1,445 @@
+{
+  "kind": "reading",
+  "intro": "Đây là dạng 中文 trong phần đọc hiểu của đề N1 thật: một bài đọc vừa, trừu tượng, kèm 4 câu hỏi — đáp án không nằm lộ liễu trên mặt chữ mà phải suy luận từ chủ trương của tác giả. Thứ tự học: Phần 1 — tự làm bấm giờ, đọc câu hỏi trước rồi mới đọc bài, khoanh những câu mang chủ trương （〜ではない・つまり・だからこそ); Phần 2 — đọc mẹo làm nhanh; Phần 3 — đọc nguyên văn kèm dịch từng câu để kiểm tra chỗ mình suy luận lệch; Phần 4 — đối chiếu đáp án và giảng giải từng lựa chọn. Mục tiêu thời gian cho bài này khoảng 10–12 phút (đọc + 4 câu hỏi). Trong đề thật, 中文 là dạng dễ mất điểm vì các lựa chọn nhiễu thường diễn đạt na ná ý tác giả nhưng đảo ngược chủ trương, tuyệt đối hóa （必ず・完全に・常に), hoặc lấy ví dụ trong bài làm chủ trương — ví dụ lấy chuyện xem video hay dọn phòng để kết luận 'người trì hoãn là người lười biếng', trong khi tác giả dùng ví dụ đó để nói điều ngược lại: đó là cách để trốn khỏi cảm xúc khó chịu.",
+  "tips": [
+    {
+      "h": "Tìm câu chủ trương trước, đừng đọc dịch từng chữ",
+      "body": "Bài 中文 thường có một câu nêu chủ trương rõ nhất, hay nằm ở giữa bài với つまり hoặc ở đoạn cuối với だからこそ. Bài này: đoạn 2 câu 7 (つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである) và đoạn 4 câu 17–18 (先延ばしは、意志の弱さの証拠ではなく…ごく自然な反応なのである／だからこそ、まず感情と向き合い、小さな一歩から始めること) chính là các câu chủ trương. Khoanh chúng trước rồi mới làm câu hỏi."
+    },
+    {
+      "h": "つまり／しかし／だからこそ là bản đồ của bài",
+      "body": "しかし ở đầu đoạn 1 câu 4 lật lại cách hiểu thông thường ('trì hoãn là do ý chí yếu') để đưa ra chủ trương của tác giả ('trì hoãn là hành động tránh né cảm xúc'); つまり ở đoạn 2 câu 7 tóm lại ý của hai câu trước đó (trốn khỏi bất an và chán nản bằng cách xem video, dọn phòng); だからこそ ở đoạn 4 câu 18 nối hệ quả ('vì trì hoãn là phản ứng tự nhiên trước cảm xúc, nên cách đối phó thực tế nhất là đối diện với cảm xúc và bắt đầu từ một bước nhỏ'). Đọc đúng 3 từ nối này là nắm được toàn bộ lập luận."
+    },
+    {
+      "h": "Ví dụ trong bài là bằng chứng, không phải chủ trương",
+      "body": "Ví dụ về việc xem video hay bắt đầu dọn phòng ở đoạn 2 chỉ để chứng minh cho chủ trương 'trì hoãn là cách trốn khỏi cảm xúc khó chịu' — nó không phải là chủ trương. Lựa chọn nào nói 'người trì hoãn thích xem video và dọn phòng' là đã lấy ví dụ làm định nghĩa; lựa chọn nào nói 'trì hoãn là lười biếng' là đảo ngược ý tác giả ở đoạn 2 câu 7."
+    },
+    {
+      "h": "Áp dụng ngay vào bài hôm nay",
+      "body": "Bài này có 4 đoạn, 18 câu, chủ trương nằm ở đoạn 2 (trì hoãn là cách đối phó với cảm xúc khó chịu, không phải lười biếng) và đoạn 4 (cách đối phó thực tế nhất là hiểu cơ chế của trì hoãn, đối diện với cảm xúc và bắt đầu từ một bước nhỏ). Khi làm câu hỏi về '〜とはどういうことか', hãy quay lại đúng câu định nghĩa ở đoạn 2 câu 7; khi làm câu hỏi về cách đối phó, hãy phân biệt 'quyết định thời gian BẮT ĐẦU' với 'quyết định thời gian KẾT THÚC' ở đoạn 3 câu 13 — bài viết chỉ nói cách thứ hai mới hiệu quả."
+    }
+  ],
+  "questions": [
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "やらなければならないことがあるのに、つい後回しにしてしまうことは、誰にでもある。締め切りが近づくほど焦りは大きくなるのに、なぜか手が動かない。多くの人はこれを「意志が弱いからだ」と考え、自分を責める。しかし、心理学の研究によれば、先延ばしは意志の問題ではなく、感情を避けるための行動だという。\n人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ。つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである。問題は、その対処法が短期的には楽でも、長期的には不安を大きくしてしまうことだ。締め切りが迫れば迫るほど、作業は重く感じられ、ますます手をつけにくくなる。\nここで大切なのは、作業そのものを小さくすることだと言われる。たとえば、「レポートを書く」のではなく、「資料を一枚だけ読む」と決める。始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる。さらに、作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ。「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである。\nもちろん、こうした工夫をしても、すぐに先延ばしがなくなるわけではない。大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ。先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである。だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える。\n筆者が最も言いたいことは何か。",
+      "choices": [
+        "先延ばしは意志が弱いことの証拠であり、強い意志で克服すべきだ。",
+        "先延ばしは怠けであり、締め切りを厳しくすれば自然になくなる。",
+        "先延ばしは感情を避けるための行動であり、感情と向き合い、小さな一歩から始めることが大切だ。",
+        "先延ばしをなくすには、作業を始める時間を厳密に決めることが最も重要だ。"
+      ],
+      "answer": 2,
+      "explain_vi": "Chủ trương của tác giả nằm ở đoạn 2 câu 7: つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである — và được khẳng định lại ở đoạn 4 câu 17–18: 先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである／だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える. Trì hoãn là hành động tránh né cảm xúc, và cách đối phó là đối diện với cảm xúc, bắt đầu từ một bước nhỏ."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "やらなければならないことがあるのに、つい後回しにしてしまうことは、誰にでもある。締め切りが近づくほど焦りは大きくなるのに、なぜか手が動かない。多くの人はこれを「意志が弱いからだ」と考え、自分を責める。しかし、心理学の研究によれば、先延ばしは意志の問題ではなく、感情を避けるための行動だという。\n人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ。つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである。問題は、その対処法が短期的には楽でも、長期的には不安を大きくしてしまうことだ。締め切りが迫れば迫るほど、作業は重く感じられ、ますます手をつけにくくなる。\nここで大切なのは、作業そのものを小さくすることだと言われる。たとえば、「レポートを書く」のではなく、「資料を一枚だけ読む」と決める。始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる。さらに、作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ。「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである。\nもちろん、こうした工夫をしても、すぐに先延ばしがなくなるわけではない。大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ。先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである。だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える。\n「先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである」とあるが、筆者の考えに合うものはどれか。",
+      "choices": [
+        "人は不安や退屈から逃げるために、動画を見たり掃除をしたりして気分を落ち着かせようとする。",
+        "人は作業が好きではないから、わざと締め切りを遅らせようとする。",
+        "人は意志が弱いため、楽なことばかり選んでしまう。",
+        "人は作業を小さくすることで、不安を完全に消すことができる。"
+      ],
+      "answer": 0,
+      "explain_vi": "Lý do nằm ở đoạn 2 câu 5–6: 人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ — con người trốn khỏi nỗi bất an và sự chán nản đi kèm với công việc bằng cách xem video hay dọn phòng để làm dịu tâm trạng. Đó chính là 'cách đối phó để tạm thời làm dịu cảm xúc khó chịu' ở câu 7."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "やらなければならないことがあるのに、つい後回しにしてしまうことは、誰にでもある。締め切りが近づくほど焦りは大きくなるのに、なぜか手が動かない。多くの人はこれを「意志が弱いからだ」と考え、自分を責める。しかし、心理学の研究によれば、先延ばしは意志の問題ではなく、感情を避けるための行動だという。\n人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ。つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである。問題は、その対処法が短期的には楽でも、長期的には不安を大きくしてしまうことだ。締め切りが迫れば迫るほど、作業は重く感じられ、ますます手をつけにくくなる。\nここで大切なのは、作業そのものを小さくすることだと言われる。たとえば、「レポートを書く」のではなく、「資料を一枚だけ読む」と決める。始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる。さらに、作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ。「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである。\nもちろん、こうした工夫をしても、すぐに先延ばしがなくなるわけではない。大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ。先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである。だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える。\n「終わらせる時間を決めることも有効だ」とあるが、なぜ有効なのか。",
+      "choices": [
+        "終わる時間を決めれば、作業を他人に任せることができるから。",
+        "始める時間を決めれば、不安が完全になくなるから。",
+        "作業を小さくすれば、締め切りがなくなるから。",
+        "終わりが見えるため、気が楽になり、手をつけやすくなるから。"
+      ],
+      "answer": 3,
+      "explain_vi": "Đáp án nằm ở đoạn 3 câu 14: 「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである — nếu giới hạn 'chỉ làm mười phút đến ba giờ chiều', vì thấy được điểm kết thúc nên tâm trạng nhẹ nhõm hơn. Câu 13 nhấn mạnh đó là quyết định thời gian KẾT THÚC, không phải thời gian bắt đầu."
+    },
+    {
+      "level": "N1",
+      "section": "読解（中文）",
+      "question": "やらなければならないことがあるのに、つい後回しにしてしまうことは、誰にでもある。締め切りが近づくほど焦りは大きくなるのに、なぜか手が動かない。多くの人はこれを「意志が弱いからだ」と考え、自分を責める。しかし、心理学の研究によれば、先延ばしは意志の問題ではなく、感情を避けるための行動だという。\n人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ。つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである。問題は、その対処法が短期的には楽でも、長期的には不安を大きくしてしまうことだ。締め切りが迫れば迫るほど、作業は重く感じられ、ますます手をつけにくくなる。\nここで大切なのは、作業そのものを小さくすることだと言われる。たとえば、「レポートを書く」のではなく、「資料を一枚だけ読む」と決める。始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる。さらに、作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ。「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである。\nもちろん、こうした工夫をしても、すぐに先延ばしがなくなるわけではない。大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ。先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである。だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える。\n筆者によれば、先延ばしと付き合うために最も大切なことは何か。",
+      "choices": [
+        "自分を責めて、強い意志で自分を追い込むこと。",
+        "先延ばしが起きる仕組みを理解し、感情と向き合って小さな一歩から始めること。",
+        "先延ばしを完全になくす方法を身につけること。",
+        "締め切りをできるだけ先に延ばして、余裕を作ること。"
+      ],
+      "answer": 1,
+      "explain_vi": "Đáp án nằm ở đoạn 4 câu 16–18: 大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ／先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである／だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える. Điều quan trọng là hiểu cơ chế của trì hoãn, đối diện với cảm xúc và bắt đầu từ một bước nhỏ, chứ không phải tự trách mình hay tìm cách xóa bỏ trì hoãn hoàn toàn."
+    }
+  ],
+  "study": {
+    "passage_title": "「『先延ばし』の理由」— Vì sao con người trì hoãn việc cần làm, và cách đối diện với nó bằng một bước nhỏ",
+    "structure": "Bài đọc vừa 4 đoạn, 18 câu, lập luận theo trình tự quan sát → giải thích → đưa ra cách đối phó → kết luận. Đoạn 1 mở đầu — nêu quan sát quen thuộc: ai cũng từng có lúc lỡ để việc cần làm lại sau, hạn chót càng gần thì càng sốt ruột mà tay vẫn không nhúc nhích; nhiều người cho rằng đó là vì ý chí yếu rồi tự trách mình; câu 4 dùng しかし để lật lại: theo nghiên cứu tâm lý học, trì hoãn không phải là vấn đề ý chí mà là hành động để tránh né cảm xúc; đoạn 2 giải thích cơ chế — khi cảm thấy việc đó phiền phức, có thể thất bại, không biết có suôn sẻ hay không, con người muốn trốn khỏi nỗi bất an và sự chán nản đi kèm với công việc đó, nên xem video hay bắt đầu dọn phòng để làm dịu tâm trạng; câu 7 tóm lại bằng つまり: trì hoãn không phải là lười biếng mà là một cách đối phó để tạm thời làm dịu cảm xúc khó chịu; câu 8–9 chỉ ra mặt trái: cách đối phó này trong ngắn hạn thì dễ chịu nhưng về lâu dài lại làm nỗi bất an lớn hơn, hạn chót càng đến gần thì công việc càng nặng nề, càng khó bắt tay vào; đoạn 3 đưa ra cách đối phó — điều quan trọng là làm cho chính công việc đó trở nên nhỏ lại, ví dụ thay vì 'viết báo cáo' thì quyết định 'chỉ đọc một trang tài liệu', bước đầu tiên càng nhỏ thì nỗi bất an càng nhỏ, tay càng dễ cử động; hơn nữa, thay vì quyết định thời gian BẮT ĐẦU, hãy quyết định thời gian KẾT THÚC: giới hạn 'chỉ làm mười phút đến ba giờ chiều' thì vì thấy được điểm kết thúc nên tâm trạng nhẹ nhõm hơn; đoạn 4 kết luận — dĩ nhiên những mẹo này không làm trì hoãn biến mất ngay lập tức, điều quan trọng không phải là tự trách mình mà là hiểu cơ chế khiến trì hoãn xảy ra; câu 17 nâng ý lên: trì hoãn không phải là bằng chứng của ý chí yếu mà là phản ứng hết sức tự nhiên của con người thành thật với cảm xúc; câu 18 kết bằng だからこそ: trước hết hãy đối diện với cảm xúc và bắt đầu từ một bước nhỏ — đó là cách thực tế nhất để chung sống với sự trì hoãn. Bẫy chính của bài là các lựa chọn đảo ngược chủ trương (biến 'trì hoãn không phải là lười biếng' thành 'trì hoãn là lười biếng, cần ý chí mạnh để khắc phục'), tuyệt đối hóa (biến 'làm nhỏ công việc giúp tay dễ cử động' thành 'làm nhỏ công việc sẽ xóa sạch hoàn toàn nỗi bất an'), và đánh tráo chi tiết (đổi 'quyết định thời gian KẾT THÚC' thành 'quyết định thời gian BẮT ĐẦU').",
+    "sentence_pairs": [
+      {
+        "para": 1,
+        "no": 1,
+        "ja": "やらなければならないことがあるのに、つい{後回|あとまわ}しにしてしまうことは、{誰|だれ}にでもある。",
+        "vi": "Dù có việc nhất định phải làm, nhưng ai cũng từng có lúc lỡ để nó lại sau."
+      },
+      {
+        "para": 1,
+        "no": 2,
+        "ja": "{締|し}め{切|めき}りが{近|ちか}づくほど{焦|あせ}りは{大|おお}きくなるのに、なぜか{手|て}が{動|うご}かない。",
+        "vi": "Hạn chót càng đến gần thì càng sốt ruột, vậy mà không hiểu sao tay vẫn không nhúc nhích."
+      },
+      {
+        "para": 1,
+        "no": 3,
+        "ja": "{多|おお}くの{人|ひと}はこれを「{意志|いし}が{弱|よわ}いからだ」と{考|かんが}え、{自分|じぶん}を{責|せ}める。",
+        "vi": "Nhiều người cho rằng đó là vì 'ý chí yếu', rồi tự trách mình."
+      },
+      {
+        "para": 1,
+        "no": 4,
+        "ja": "しかし、{心理|しんり}{学|がく}の{研究|けんきゅう}によれば、{先延|さきの}ばしは{意志|いし}の{問題|もんだい}ではなく、{感情|かんじょう}を{避|さ}けるための{行動|こうどう}だという。",
+        "vi": "Thế nhưng, theo các nghiên cứu tâm lý học, trì hoãn không phải là vấn đề ý chí mà là hành động để tránh né cảm xúc."
+      },
+      {
+        "para": 2,
+        "no": 5,
+        "ja": "{人|ひと}は、{面倒|めんどう}だ、{失敗|しっぱい}しそうだ、うまくいくかどうか{分|わ}からないと{感|かん}じると、その{作業|さぎょう}に{伴|ともな}う{不安|ふあん}や{退屈|たいくつ}から{逃|に}げようとする。",
+        "vi": "Khi cảm thấy việc đó phiền phức, có thể thất bại, không biết có suôn sẻ hay không, con người sẽ muốn trốn khỏi nỗi bất an và sự chán nản đi kèm với công việc đó."
+      },
+      {
+        "para": 2,
+        "no": 6,
+        "ja": "そして、{動画|どうが}を{見|み}たり、{部屋|へや}の{掃除|そうじ}を{始|はじ}めたりして、{気分|きぶん}を{落|お}ち{着|ちつ}かせようとするのだ。",
+        "vi": "Và rồi họ xem video, bắt đầu dọn phòng, để cố làm cho tâm trạng bình tĩnh lại."
+      },
+      {
+        "para": 2,
+        "no": 7,
+        "ja": "つまり、{先延|さきの}ばしは{怠|なま}けではなく、{不快|ふかい}な{感情|かんじょう}を{一時|いちじ}{的|てき}にやわらげるための、ある{種|しゅ}の{対処|たいしょ}{法|ほう}なのである。",
+        "vi": "Nói cách khác, trì hoãn không phải là lười biếng, mà là một cách đối phó nào đó để tạm thời làm dịu đi những cảm xúc khó chịu."
+      },
+      {
+        "para": 2,
+        "no": 8,
+        "ja": "{問題|もんだい}は、その{対処|たいしょ}{法|ほう}が{短期|たんき}{的|てき}には{楽|らく}でも、{長期|ちょうき}{的|てき}には{不安|ふあん}を{大|おお}きくしてしまうことだ。",
+        "vi": "Vấn đề là, cách đối phó đó dù trong ngắn hạn thì dễ chịu, nhưng về lâu dài lại làm nỗi bất an lớn hơn."
+      },
+      {
+        "para": 2,
+        "no": 9,
+        "ja": "{締|し}め{切|めき}りが{迫|せま}れば{迫|せま}るほど、{作業|さぎょう}は{重|おも}く{感|かん}じられ、ますます{手|て}をつけにくくなる。",
+        "vi": "Hạn chót càng đến gần thì công việc càng cảm thấy nặng nề, và càng khó bắt tay vào hơn nữa."
+      },
+      {
+        "para": 3,
+        "no": 10,
+        "ja": "ここで{大切|たいせつ}なのは、{作業|さぎょう}そのものを{小|ちい}さくすることだと{言|い}われる。",
+        "vi": "Người ta nói rằng, điều quan trọng ở đây là làm cho chính công việc đó trở nên nhỏ lại."
+      },
+      {
+        "para": 3,
+        "no": 11,
+        "ja": "たとえば、「レポートを{書|か}く」のではなく、「{資料|しりょう}を{一|いっ}{枚|まい}だけ{読|よ}む」と{決|き}める。",
+        "vi": "Ví dụ, thay vì 'viết báo cáo', hãy quyết định 'chỉ đọc một trang tài liệu'."
+      },
+      {
+        "para": 3,
+        "no": 12,
+        "ja": "{始|はじ}めの{一|いち}{歩|ぽ}が{小|ちい}さければ、{不安|ふあん}も{小|ちい}さくなり、{手|て}を{動|うご}かしやすくなる。",
+        "vi": "Nếu bước đầu tiên đủ nhỏ, nỗi bất an cũng nhỏ lại, và tay sẽ dễ cử động hơn."
+      },
+      {
+        "para": 3,
+        "no": 13,
+        "ja": "さらに、{作業|さぎょう}を{始|はじ}める{時間|じかん}を{決|き}めるのではなく、{終|お}わらせる{時間|じかん}を{決|き}めることも{有効|ゆうこう}だ。",
+        "vi": "Hơn nữa, thay vì quyết định thời gian bắt đầu công việc, việc quyết định thời gian kết thúc nó cũng có hiệu quả."
+      },
+      {
+        "para": 3,
+        "no": 14,
+        "ja": "「{午後|ごご}{三|さん}{時|じ}までに{十|じゅう}{分|ぷん}だけやる」と{区切|くぎ}れば、{終|お}わりが{見|み}えるため、{気|き}が{楽|らく}になるのである。",
+        "vi": "Nếu giới hạn 'chỉ làm mười phút đến ba giờ chiều', vì thấy được điểm kết thúc nên tâm trạng sẽ nhẹ nhõm hơn."
+      },
+      {
+        "para": 4,
+        "no": 15,
+        "ja": "もちろん、こうした{工夫|くふう}をしても、すぐに{先延|さきの}ばしがなくなるわけではない。",
+        "vi": "Dĩ nhiên, dù có những mẹo như vậy, trì hoãn cũng không biến mất ngay lập tức."
+      },
+      {
+        "para": 4,
+        "no": 16,
+        "ja": "{大切|たいせつ}なのは、{自分|じぶん}を{責|せ}めるのではなく、{先延|さきの}ばしが{起|お}きる{仕組|しく}みを{理解|りかい}することだ。",
+        "vi": "Điều quan trọng là không phải tự trách mình, mà là hiểu được cơ chế khiến trì hoãn xảy ra."
+      },
+      {
+        "para": 4,
+        "no": 17,
+        "ja": "{先延|さきの}ばしは、{意志|いし}の{弱|よわ}さの{証拠|しょうこ}ではなく、{感情|かんじょう}に{正直|しょうじき}な{人間|にんげん}の、ごく{自然|しぜん}な{反応|はんのう}なのである。",
+        "vi": "Trì hoãn không phải là bằng chứng của ý chí yếu, mà là phản ứng hết sức tự nhiên của con người thành thật với cảm xúc của mình."
+      },
+      {
+        "para": 4,
+        "no": 18,
+        "ja": "だからこそ、まず{感情|かんじょう}と{向|む}き{合|きあ}い、{小|ちい}さな{一|いち}{歩|ぽ}から{始|はじ}めること――それが、{先延|さきの}ばしと{付|つ}き{合|きあ}うための、{最|もっと}も{現実|げんじつ}{的|てき}な{方法|ほうほう}だと{言|い}える。",
+        "vi": "Chính vì vậy, trước hết hãy đối diện với cảm xúc và bắt đầu từ một bước nhỏ — có thể nói đó là cách thực tế nhất để chung sống với sự trì hoãn."
+      }
+    ],
+    "answer_key": "Câu 1 – đáp án ③ · Câu 2 – đáp án ① · Câu 3 – đáp án ④ · Câu 4 – đáp án ②",
+    "per_question": [
+      {
+        "q": 1,
+        "answer": 2,
+        "locator": "Đ2⑦・Đ4⑰⑱",
+        "options": [
+          {
+            "text": "先延ばしは意志が弱いことの証拠であり、強い意志で克服すべきだ。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược chủ trương của tác giả. Đoạn 1 câu 4 viết rõ: 先延ばしは意志の問題ではなく、感情を避けるための行動だという — trì hoãn KHÔNG phải là vấn đề ý chí; đoạn 4 câu 17 khẳng định lại: 先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである. 'Cần ý chí mạnh để khắc phục' là quan điểm mà tác giả bác bỏ ngay từ đầu bài. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "先延ばしは怠けであり、締め切りを厳しくすれば自然になくなる。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược ý tác giả và thêm thông tin ngoài bài. Đoạn 2 câu 7 viết: 先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである — trì hoãn KHÔNG phải là lười biếng. Bài viết cũng không hề nói 'siết chặt hạn chót sẽ làm trì hoãn biến mất' — ngược lại, đoạn 2 câu 9 nói hạn chót càng đến gần thì công việc càng nặng nề, càng khó bắt tay vào. Bẫy đảo ngược ý tác giả + thêm thông tin ngoài bài."
+          },
+          {
+            "text": "先延ばしは感情を避けるための行動であり、感情と向き合い、小さな一歩から始めることが大切だ。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp với hai câu chủ trương: đoạn 1 câu 4 (先延ばしは意志の問題ではなく、感情を避けるための行動だという), đoạn 2 câu 7 (つまり、先延ばしは怠けではなく、不快な感情を一時的にやわらげるための、ある種の対処法なのである), và đoạn 4 câu 18 (だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える)."
+          },
+          {
+            "text": "先延ばしをなくすには、作業を始める時間を厳密に決めることが最も重要だ。",
+            "verdict": "SAI",
+            "reason": "Đánh tráo chi tiết. Đoạn 3 câu 13 viết: 作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ — tác giả nói quyết định thời gian KẾT THÚC mới hiệu quả, chứ không phải quyết định thời gian bắt đầu một cách nghiêm ngặt. Lựa chọn này đổi 'thời gian kết thúc' thành 'thời gian bắt đầu'. Bẫy đánh tráo chi tiết."
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "answer": 0,
+        "locator": "Đ2⑤⑥⑦",
+        "options": [
+          {
+            "text": "人は不安や退屈から逃げるために、動画を見たり掃除をしたりして気分を落ち着かせようとする。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 2 câu 5–6: 人は、面倒だ、失敗しそうだ、うまくいくかどうか分からないと感じると、その作業に伴う不安や退屈から逃げようとする。そして、動画を見たり、部屋の掃除を始めたりして、気分を落ち着かせようとするのだ — con người trốn khỏi nỗi bất an và sự chán nản đi kèm với công việc bằng cách xem video hay dọn phòng để làm dịu tâm trạng. Đó chính là 'cách đối phó để tạm thời làm dịu cảm xúc khó chịu' ở câu 7."
+          },
+          {
+            "text": "人は作業が好きではないから、わざと締め切りを遅らせようとする。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói người trì hoãn 'cố tình làm chậm hạn chót' vì 'không thích công việc'. Đoạn 2 câu 5 nói rõ nguyên nhân là cảm giác phiền phức, sợ thất bại, không biết có suôn sẻ hay không — tức là trốn khỏi nỗi bất an và sự chán nản, chứ không phải cố tình kéo dài hạn chót. Lựa chọn này bịa ra một động cơ không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "人は意志が弱いため、楽なことばかり選んでしまう。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược ý tác giả. Đoạn 1 câu 4 viết rõ: 先延ばしは意志の問題ではなく、感情を避けるための行動だという — trì hoãn KHÔNG phải là vấn đề ý chí. Việc xem video hay dọn phòng không phải vì 'ý chí yếu nên chỉ chọn việc dễ', mà vì đó là cách để làm dịu cảm xúc khó chịu (đoạn 2 câu 6–7). Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "人は作業を小さくすることで、不安を完全に消すことができる。",
+            "verdict": "SAI",
+            "reason": "Tuyệt đối hóa. Đoạn 3 câu 12 chỉ viết: 始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる — bước đầu tiên nhỏ thì nỗi bất an cũng NHỎ LẠI, tay dễ cử động hơn; không hề nói nỗi bất an sẽ biến mất HOÀN TOÀN. Từ '完全に' (hoàn toàn) đã tuyệt đối hóa sai ý tác giả. Bẫy tuyệt đối hóa."
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "answer": 3,
+        "locator": "Đ3⑬⑭",
+        "options": [
+          {
+            "text": "終わる時間を決めれば、作業を他人に任せることができるから。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nhắc tới chuyện giao việc cho người khác — toàn đoạn 3 chỉ nói về việc tự mình làm nhỏ công việc và giới hạn thời gian làm việc của chính mình. Lựa chọn này bịa ra một hệ quả không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "始める時間を決めれば、不安が完全になくなるから。",
+            "verdict": "SAI",
+            "reason": "Đánh tráo chi tiết và tuyệt đối hóa cùng lúc. Đoạn 3 câu 13 viết: 作業を始める時間を決めるのではなく、終わらせる時間を決めることも有効だ — tác giả nói quyết định thời gian KẾT THÚC mới hiệu quả, chứ không phải thời gian bắt đầu; và câu 12 chỉ nói nỗi bất an NHỎ LẠI (不安も小さくなり), không nói nó biến mất hoàn toàn. Bẫy đánh tráo chi tiết + tuyệt đối hóa."
+          },
+          {
+            "text": "作業を小さくすれば、締め切りがなくなるから。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề nói làm nhỏ công việc sẽ khiến hạn chót biến mất — hạn chót vẫn ở đó, chỉ có cảm giác về công việc là nhẹ đi. Đoạn 3 câu 12 viết: 不安も小さくなり、手を動かしやすくなる — nỗi bất an nhỏ lại, tay dễ cử động hơn; không có chuyện hạn chót biến mất. Lựa chọn này gán một hệ quả không có trong bài. Bẫy thêm thông tin ngoài bài."
+          },
+          {
+            "text": "終わりが見えるため、気が楽になり、手をつけやすくなるから。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 3 câu 14: 「午後三時までに十分だけやる」と区切れば、終わりが見えるため、気が楽になるのである — nếu giới hạn 'chỉ làm mười phút đến ba giờ chiều', vì thấy được điểm kết thúc nên tâm trạng nhẹ nhõm hơn; kết hợp với câu 12 (始めの一歩が小さければ、不安も小さくなり、手を動かしやすくなる) — tay sẽ dễ cử động hơn khi nỗi bất an nhỏ lại."
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "answer": 1,
+        "locator": "Đ4⑯⑰⑱",
+        "options": [
+          {
+            "text": "自分を責めて、強い意志で自分を追い込むこと。",
+            "verdict": "SAI",
+            "reason": "Đảo ngược ý tác giả. Đoạn 4 câu 16 viết rõ: 大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ — điều quan trọng KHÔNG phải là tự trách mình mà là hiểu cơ chế của trì hoãn. Đoạn 1 câu 3–4 cũng bác bỏ cách hiểu 'trì hoãn là do ý chí yếu'. Lựa chọn này đi ngược hoàn toàn với chủ trương của bài. Bẫy đảo ngược ý tác giả."
+          },
+          {
+            "text": "先延ばしが起きる仕組みを理解し、感情と向き合って小さな一歩から始めること。",
+            "verdict": "ĐÚNG",
+            "reason": "Trùng khớp đoạn 4 câu 16–18: 大切なのは、自分を責めるのではなく、先延ばしが起きる仕組みを理解することだ／先延ばしは、意志の弱さの証拠ではなく、感情に正直な人間の、ごく自然な反応なのである／だからこそ、まず感情と向き合い、小さな一歩から始めること――それが、先延ばしと付き合うための、最も現実的な方法だと言える."
+          },
+          {
+            "text": "先延ばしを完全になくす方法を身につけること。",
+            "verdict": "SAI",
+            "reason": "Tuyệt đối hóa và đảo ngược ý tác giả. Đoạn 4 câu 15 viết rõ: こうした工夫をしても、すぐに先延ばしがなくなるわけではない — dù có mẹo thì trì hoãn cũng không biến mất ngay lập tức; và câu 18 nói cách thực tế nhất là 'chung sống' với trì hoãn (先延ばしと付き合う), chứ không phải xóa bỏ nó hoàn toàn. Từ '完全に' (hoàn toàn) đã tuyệt đối hóa sai ý tác giả. Bẫy tuyệt đối hóa."
+          },
+          {
+            "text": "締め切りをできるだけ先に延ばして、余裕を作ること。",
+            "verdict": "SAI",
+            "reason": "Bài viết không hề khuyên kéo dài hạn chót để tạo ra thời gian dư dả — ngược lại, đoạn 2 câu 9 nói hạn chót càng đến gần thì công việc càng nặng nề, càng khó bắt tay vào, tức là kéo dài thời gian chỉ làm vấn đề tệ hơn. Cách đối phó mà tác giả đề xuất là làm nhỏ công việc và quyết định thời gian kết thúc (đoạn 3), không phải dời hạn chót. Bẫy thêm thông tin ngoài bài."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "word": "{先延|さきの}ばし",
+        "reading": "さきのばし",
+        "hanviet": "Tiên Diên",
+        "vi": "sự trì hoãn, việc để việc cần làm lại sau"
+      },
+      {
+        "word": "{後回|あとまわ}し",
+        "reading": "あとまわし",
+        "hanviet": "Hậu Hồi",
+        "vi": "việc để lại sau, hoãn lại (thường đi với にする)"
+      },
+      {
+        "word": "{締|し}め{切|めき}り",
+        "reading": "しめきり",
+        "hanviet": "Đế Thiết",
+        "vi": "hạn chót, thời hạn nộp (bài, công việc)"
+      },
+      {
+        "word": "{意志|いし}",
+        "reading": "いし",
+        "hanviet": "Ý Chí",
+        "vi": "ý chí, quyết tâm (làm việc gì đó)"
+      },
+      {
+        "word": "{責|せ}める",
+        "reading": "せめる",
+        "hanviet": "Trách",
+        "vi": "trách móc, tự trách (bản thân hoặc người khác)"
+      },
+      {
+        "word": "{対処|たいしょ}{法|ほう}",
+        "reading": "たいしょほう",
+        "hanviet": "Đối Xử Pháp",
+        "vi": "cách đối phó, cách xử lý (một vấn đề, tình huống khó khăn)"
+      },
+      {
+        "word": "{退屈|たいくつ}",
+        "reading": "たいくつ",
+        "hanviet": "Thoái Khuất",
+        "vi": "sự chán nản, buồn tẻ (vì việc gì đó nhàm chán, không thú vị)"
+      },
+      {
+        "word": "{不安|ふあん}",
+        "reading": "ふあん",
+        "hanviet": "Bất An",
+        "vi": "nỗi bất an, sự lo lắng (về điều chưa chắc chắn)"
+      },
+      {
+        "word": "{和|やわ}らげる",
+        "reading": "やわらげる",
+        "hanviet": "Hòa",
+        "vi": "làm dịu đi, làm nhẹ bớt (cảm xúc, cơn đau, sự căng thẳng)"
+      },
+      {
+        "word": "{迫|せま}る",
+        "reading": "せまる",
+        "hanviet": "Bách",
+        "vi": "đến gần, tiến sát (hạn chót, thời gian, nguy hiểm)"
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "つい〜てしまう",
+        "vi": "lỡ… / vô tình… (làm gì đó một cách vô thức, không kìm được; thường mang sắc thái hối tiếc hoặc ngoài ý muốn)",
+        "in_text": "やらなければならないことがあるのに、つい後回しにしてしまうことは、誰にでもある。"
+      },
+      {
+        "pattern": "〜ほど",
+        "vi": "càng… càng… (mức độ của vế sau tỉ lệ thuận với mức độ của vế trước)",
+        "in_text": "締め切りが近づくほど焦りは大きくなるのに、なぜか手が動かない。"
+      },
+      {
+        "pattern": "〜に伴う",
+        "vi": "đi kèm với… / kèm theo… (dùng với danh từ: sự việc này kéo theo sự việc khác; ở đây là nỗi bất an và sự chán nản đi kèm với công việc)",
+        "in_text": "その作業に伴う不安や退屈から逃げようとする。"
+      },
+      {
+        "pattern": "〜わけではない",
+        "vi": "không phải là… (đâu) (phủ định một phần: phủ định cách hiểu sai hoặc kết luận vội vàng, nhưng không phủ định toàn bộ sự việc)",
+        "in_text": "もちろん、こうした工夫をしても、すぐに先延ばしがなくなるわけではない。"
+      }
+    ],
+    "compare": [
+      {
+        "pattern": "Nhóm trì hoãn: 先延ばし / 後回し / 怠ける",
+        "rows": [
+          {
+            "form": "先延ばし",
+            "join": "N (先延ばしにする／先延ばしになる)",
+            "vi": "trì hoãn việc cần làm sang sau",
+            "diff": "Nhấn mạnh việc DỜI THỜI GIAN thực hiện sang sau, dù việc đó vẫn cần làm: dùng khi nói về thói quen hoặc hiện tượng chung. Sắc thái trung tính, dùng trong văn luận. Trong bài này: 先延ばしは意志の問題ではなく、感情を避けるための行動だという.",
+            "example_ja": "しかし、{心理|しんり}{学|がく}の{研究|けんきゅう}によれば、{先延|さきの}ばしは{意志|いし}の{問題|もんだい}ではなく、{感情|かんじょう}を{避|さ}けるための{行動|こうどう}だという。",
+            "example_vi": "Thế nhưng, theo các nghiên cứu tâm lý học, trì hoãn không phải là vấn đề ý chí mà là hành động để tránh né cảm xúc."
+          },
+          {
+            "form": "後回し",
+            "join": "N (後回しにする)",
+            "vi": "để việc lại phía sau, hoãn lại",
+            "diff": "Nhấn mạnh THỨ TỰ ƯU TIÊN: để việc này lại sau việc khác, làm việc khác trước. Khác với 先延ばし (dời thời gian thực hiện sang sau), 後回し nói về việc xếp việc này xuống dưới trong danh sách ưu tiên. Trong bài này: つい後回しにしてしまう.",
+            "example_ja": "やらなければならないことがあるのに、つい{後回|あとまわ}しにしてしまうことは、{誰|だれ}にでもある。",
+            "example_vi": "Dù có việc nhất định phải làm, nhưng ai cũng từng có lúc lỡ để nó lại sau."
+          },
+          {
+            "form": "怠ける",
+            "join": "Vる (怠ける)",
+            "vi": "lười biếng, chểnh mảng",
+            "diff": "Chỉ THÁI ĐỘ hoặc TÍNH CÁCH: lười, không chịu làm việc, chểnh mảng với bổn phận. Khác với 先延ばし／後回し (chỉ hành động dời việc sang sau, chưa chắc đã do lười), 怠ける mang sắc thái phê phán về thái độ. Tác giả bài này phủ định chính cách hiểu này: 先延ばしは怠けではない.",
+            "example_ja": "{彼|かれ}は{仕事|しごと}を{怠|なま}けて、{締|し}め{切|めき}りを{過|す}ぎてしまった。",
+            "example_vi": "Anh ta lười biếng trong công việc nên đã quá hạn chót."
+          }
+        ]
+      },
+      {
+        "pattern": "Nhóm 'càng... / đi kèm với...': 〜ほど / 〜につれて / 〜に伴って",
+        "rows": [
+          {
+            "form": "〜ほど",
+            "join": "Vる・Aい + ほど",
+            "vi": "càng... càng...",
+            "diff": "Nhấn mạnh MỨC ĐỘ TỈ LỆ: vế trước càng tăng thì vế sau càng tăng theo. Dùng khi so sánh hai mức độ trong cùng một tình huống. Trong bài này: 締め切りが近づくほど焦りは大きくなる — hạn chót càng đến gần thì càng sốt ruột.",
+            "example_ja": "{締|し}め{切|めき}りが{近|ちか}づくほど{焦|あせ}りは{大|おお}きくなるのに、なぜか{手|て}が{動|うご}かない。",
+            "example_vi": "Hạn chót càng đến gần thì càng sốt ruột, vậy mà không hiểu sao tay vẫn không nhúc nhích."
+          },
+          {
+            "form": "〜につれて",
+            "join": "Vる + につれて",
+            "vi": "cùng với việc... thì...",
+            "diff": "Nhấn mạnh hai sự thay đổi DIỄN RA SONG SONG THEO THỜI GIAN: khi A thay đổi thì B cũng thay đổi theo. Khác với 〜ほど (nhấn mạnh mức độ tỉ lệ trong một tình huống), 〜につれて nhấn mạnh sự biến đổi theo thời gian, sắc thái khách quan hơn.",
+            "example_ja": "{年|ねん}を{取|と}るにつれて、{物事|ものごと}を{先延|さきの}ばしにしなくなった。",
+            "example_vi": "Cùng với tuổi tác, tôi đã bớt trì hoãn mọi việc."
+          },
+          {
+            "form": "〜に伴って",
+            "join": "N + に伴って",
+            "vi": "đi kèm với... / cùng với...",
+            "diff": "Nhấn mạnh sự KÉO THEO: một sự việc xảy ra thì một sự việc khác cũng xảy ra cùng lúc, như đi kèm. Khác với 〜ほど (tỉ lệ mức độ) và 〜につれて (thay đổi song song theo thời gian), 〜に伴って dùng với danh từ và nói về mối quan hệ 'A kéo theo B'. Trong bài này: 作業に伴う不安や退屈.",
+            "example_ja": "{仕事|しごと}{量|りょう}の{増加|ぞうか}に{伴|ともな}って、{先延|さきの}ばしにする{仕事|しごと}も{増|ふ}えてしまった。",
+            "example_vi": "Cùng với khối lượng công việc tăng lên, số việc tôi trì hoãn cũng tăng theo."
+          }
+        ]
+      }
+    ]
+  }
+}

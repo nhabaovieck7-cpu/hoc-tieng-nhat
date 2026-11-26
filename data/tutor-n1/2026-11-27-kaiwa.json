@@ -1,0 +1,367 @@
+{
+  "lesson": 42,
+  "topic": "Lần đầu trồng rau ở ban công (家庭菜園デビュー)",
+  "summary": "Bối cảnh: cuối tuần, 拓海 và 莉子 quyết định trồng rau ở ban công lần đầu (家庭菜園デビュー) — hai người đi tàu đến một cửa hàng đồ gia dụng lớn (ホームセンター) gần nhà, mua chậu trồng cây (プランター), đất trồng (土), hạt giống rau (種) và phân bón (肥料); vì ban công nhà 拓海 nắng tốt (日当たりがいい) nên hai người chọn trồng cà chua bi (ミニトマト) và rau xà lách (レタス). Mua xong về nhà, hai người đổ đất vào chậu, gieo hạt (種をまく), phủ đất mỏng lên trên rồi tưới nước (水やり) cho ẩm; lúc đang loay hoay thì bà hàng xóm (おばさん) sang ngó, chỉ cho hai người cách tưới vừa đủ (水のやりすぎはダメ) và dặn phải để ý sâu bọ (虫). Cuối ngày, hai người ngồi ngắm mấy chậu rau vừa gieo xong, nhắn tin báo người nhà (うちの人に連絡する) là hôm nay trồng rau xong rồi, còn hẹn nhau mấy hôm nữa sang xem hạt đã nảy mầm (芽が出る) chưa. Kỹ năng luyện: văn nói bạn bè khi bắt đầu một sở thích mới ở nhà — hỏi mua chậu và hạt giống ở cửa hàng, hỏi cách gieo hạt và tưới nước, nói chuyện phiếm với hàng xóm; cách nói khi hạt nảy mầm (芽が出た), khi chờ thu hoạch (収穫を待つ), cách nhắn tin báo người nhà (連絡する) một cách tự nhiên. Thanh điệu suồng sã, câu ngắn, nhiều từ đệm và dạng rút gọn. Điểm khó/điểm mới so với bài trước: từ vựng về trồng rau ở ban công (プランター, 土, 種, 水やり, 芽が出る, 収穫, 日当たり, 虫, 肥料, ベランダ), cách nói khi gieo hạt và tưới nước một cách tự nhiên (種をまく, 水をあげる, 土をかぶせる) và cách nói cảm nhận về nắng ở ban công và việc chờ rau lớn lên (日当たりがいい, 早く芽が出ないかな, 収穫が楽しみ).",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（ởホームセンター: mua chậu, đất, hạt giống và phân bón, chọn rau trồng ở ban công）",
+      "stage": "（Sáng thứ Bảy, trong mộtホームセンター lớn, khu vực cây cảnh và dụng cụ làm vườn rộng thênh thang, mùi đất ẩm và mùi gỗ thoang thoảng. Trên kệ xếp ngay ngắn đủ loại chậu nhựa đủ màu, bao đất to, túi hạt giống đủ loại rau — cà chua bi, xà lách, rau thơm — và túi phân bón. 拓海 và 莉子 đang đứng trước kệ hạt giống, tay cầm một cái chậu nhựa màu nâu, vừa nhìn vừa bàn.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "お、{家庭|かてい}{菜園|さいえん}ってさ、やってみようよ。ベランダ、{空|あ}いてるしさ。",
+          "vi": "Ồ, trồng rau ở nhà ấy, thử làm xem nhé. Ban công ấy, đang trống này."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。ほら、{見|み}て{見|み}て。プランターってさ、いろんなサイズがあるじゃん。",
+          "vi": "Hay đấy. Này, nhìn này nhìn này. Chậu trồng cây ấy, đủ cỡ này, khác nhau nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、ほんとだ。ってさ、これってさ、どれがいいんだっけ。",
+          "vi": "Chà, đúng thật. Này, cái này ấy, cái nào tốt nhỉ?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{深|ふか}いやつがさ、いいらしいよ。ほら、トマトはさ、{根|ね}が{深|ふか}いんだって。",
+          "vi": "Ừ, cái sâu ấy, nghe bảo tốt đấy. Này, cà chua ấy, rễ sâu đấy."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、そうなんだ。ってさ、{土|つち}ってさ、どれ{買|か}うの？",
+          "vi": "Ồ, ra thế. Này, đất ấy, mua loại nào?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{野菜|やさい}{用|よう}の{土|つち}がさ、いいよ。ほら、この{袋|ふくろ}、{書|か}いてあるじゃん。",
+          "vi": "Ừ, đất dùng cho rau ấy, tốt đấy. Này, cái túi này, ghi trên đó này."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "へえ、わかった。ってさ、{種|しゅ}ってさ、ミニトマトとレタスにしようよ。",
+          "vi": "Chà, biết rồi. Này, hạt giống ấy, chọn cà chua bi với xà lách nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。でもさ、{日当|ひあ}たり、うちのベランダ、いいんだよね。",
+          "vi": "Hay đấy. Nhưng mà, nắng ấy, ban công nhà mình, tốt đấy nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうだよ。ってさ、{肥料|ひりょう}もさ、{買|か}っちゃおうよ。",
+          "vi": "Ừ, đúng đấy. Này, phân bón cũng này, mua luôn đi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。ほら、レジ、{行|い}こうよ。{早|はや}く{家|いえ}でさ、{種|たね}まきしようよ。",
+          "vi": "Ừ nhỉ. Này, đi tính tiền thôi. Nhanh về nhà này, gieo hạt nhé."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（ở ban công nhà 拓海: gieo hạt, tưới nước, nói chuyện với hàng xóm, nhắn tin báo người nhà）",
+      "stage": "（Chiều cùng ngày, trên ban công nhà 拓海, nắng chiều ấm áp chiếu vào, mấy cái chậu nhựa mới mua xếp ngay ngắn trên giá, bao đất đã mở, túi hạt giống và bình tưới nước (じょうろ) đặt bên cạnh. Đất vương vãi khắp sàn ban công, tay hai người dính đầy đất. Bà hàng xóm đứng ở ban công bên cạnh, tay chống cằm, đang ngó sang.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "ふう、やっとさ、{植|う}え{終|お}わったよ。ってさ、{土|ど}、{手|て}についちゃったよ。",
+          "vi": "Phù, cuối cùng ấy, trồng xong rồi. Này, đất ấy, dính tay mất rồi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "あはは、{見|み}てたよ。でもさ、{種|たね}まき、うまかったじゃん。",
+          "vi": "Haha, tớ thấy rồi. Nhưng mà, gieo hạt ấy, giỏi lắm nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうかな。ってさ、{水|みず}やりってさ、どのくらいあげるの？",
+          "vi": "Thế à. Này, tưới nước ấy, tưới bao nhiêu?"
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、{土|つち}がさ、しっとりするくらいだよ。ほら、やりすぎちゃ、ダメだよ。",
+          "vi": "Ừ, đất ấy, ẩm vừa là được đấy. Này, tưới quá nhiều thì, không được đâu."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "お、わかった。ってさ、おばさん、{見|み}て{見|み}て。{芽|め}、{早|はや}く{出|で}ないかな。",
+          "vi": "Ồ, biết rồi. Này, bác ơi, nhìn này nhìn này. Mầm ấy, mau nảy không nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。ほら、{虫|むし}がさ、つかないといいね。",
+          "vi": "Ừ nhỉ. Này, sâu bọ ấy, đừng bám vào thì tốt nhỉ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうだよ。ってさ、{収穫|しゅうかく}がさ、{楽|たの}しみだね。",
+          "vi": "Ừ, đúng đấy. Này, thu hoạch ấy, háo hức thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "そうだね。ほら、{写真|しゃしん}、{撮|と}ってさ、うちの{人|ひと}に{送|おく}ろうよ。",
+          "vi": "Ừ nhỉ. Này, chụp ảnh này, gửi cho người nhà nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そうしようよ。ってさ、{今日|きょう}、{種|たね}まきしたよってさ、{連絡|れんらく}しようよ。",
+          "vi": "Ừ, làm thế nhé. Này, hôm nay, gieo hạt xong rồi ấy, nhắn báo nhé."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "いいね。ほら、またさ、{数|すう}{日|じつ}{後|ご}に{見|み}に{来|こ}ようよ。{芽|め}が{出|で}てるといいね。",
+          "vi": "Hay đấy. Này, lại này, vài hôm nữa đến xem nhé. Mầm đã nảy thì tốt nhỉ."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "家庭菜園を始めてみたいです。ベランダが空いています。プランターはいろんなサイズがあります。どれがいいですか。",
+      "real": "家庭菜園ってさ、やってみようよ。ベランダ、空いてるしさ。プランターってさ、いろんなサイズがあるじゃん。どれがいいんだっけ。",
+      "why": "Sách giáo khoa dùng 始めてみたいです và 空いています một cách trang trọng, nghe như đang đọc phần giới thiệu về trồng rau ở nhà trong một cuốn sách hướng dẫn. Nói thật thì rủ bằng やってみようよ và 空いてるしさ, thêm ってさ để đưa chủ đề lên trước rồi rủ nhau, nghe như hai người đang đứng trước kệ chậu ởホームセンター, vừa nhìn vừa bàn xem trồng rau gì."
+    },
+    {
+      "textbook": "深いものがいいそうです。トマトは根が深いです。野菜用の土がいいです。種はミニトマトとレタスにしましょう。",
+      "real": "深いやつがさ、いいらしいよ。トマトはさ、根が深いんだって。野菜用の土がさ、いいよ。種ってさ、ミニトマトとレタスにしようよ。",
+      "why": "Văn nói bạn bè dùng いいらしいよ và 深いんだって để truyền lại thông tin nghe được từ nhân viên một cách suồng sã, kèm しようよ để rủ nhau chọn hạt giống một cách thân mật, còn sách giáo khoa dùng いいそうです và にしましょう trang trọng, nghe như đang đọc bảng hướng dẫn dán trên kệ hạt giống. Câu nói thật nghe như hai người đang đứng trước kệ, tay cầm chậu nhựa và túi hạt giống, vừa bàn vừa chọn."
+    },
+    {
+      "textbook": "土が手につきました。種まきが上手でした。水やりはどのくらいあげますか。土がしっとりするくらいです。水のやりすぎはいけません。",
+      "real": "土、手についちゃったよ。種まき、うまかったじゃん。水やりってさ、どのくらいあげるの？土がさ、しっとりするくらいだよ。やりすぎちゃ、ダメだよ。",
+      "why": "Văn nói dùng ついちゃった và うまかったじゃん để nói tay dính đất và khen nhau gieo hạt giỏi một cách suồng sã, kèm ちゃダメ để dặn nhau đừng tưới quá nhiều một cách thân mật, còn sách giáo khoa dùng つきました và 上手でした cứng nhắc, nghe như đang viết báo cáo nộp cho thầy. Câu nói thật nghe như hai người vừa gieo hạt xong trên ban công, tay dính đầy đất, đang cầm bình tưới nước."
+    },
+    {
+      "textbook": "芽が早く出るといいです。虫がつかないといいです。収穫が楽しみです。写真を撮って、うちの人に送りましょう。",
+      "real": "芽、早く出ないかな。虫がさ、つかないといいね。収穫がさ、楽しみだね。写真、撮ってさ、うちの人に送ろうよ。",
+      "why": "Văn nói dùng 出ないかな và 楽しみだね để mong hạt mau nảy mầm và nói mình háo hức chờ thu hoạch một cách thân mật, kèm 送ろうよ để rủ nhau chụp ảnh gửi cho người nhà một cách suồng sã, còn sách giáo khoa dùng 出るといいです và 送りましょう trang trọng, nghe như đang viết bài cảm nhận nộp cho thầy. Câu nói thật nghe như hai người đang ngồi ngắm mấy chậu rau vừa gieo xong trên ban công, nắng chiều ấm áp chiếu vào."
+    },
+    {
+      "textbook": "今日、種まきをしましたと連絡しましょう。また数日後に見に来ましょう。芽が出ているといいです。",
+      "real": "今日、種まきしたよってさ、連絡しようよ。またさ、数日後に見に来ようよ。芽が出てるといいね。",
+      "why": "Văn nói dùng 連絡しようよ và 見に来ようよ để rủ nhau nhắn tin báo người nhà và hẹn vài hôm nữa đến xem mầm một cách suồng sã, kèm ってさ để dẫn lại lời nhắn một cách tự nhiên, còn sách giáo khoa dùng 連絡しましょう và 来ましょう trang trọng, nghe như đang lên kế hoạch chính thức trong cuộc họp. Câu nói thật nghe như hai người vừa trồng rau xong, đang ngồi trên ban công nhắn tin cho người nhà."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃった",
+      "in_lesson": "土、手についちゃったよ",
+      "original": "〜てしまった",
+      "vi": "…mất rồi — dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn một cách suồng sã; 土が手についちゃった là đất dính tay mất rồi, 水をやりすぎちゃった là tưới nhiều nước quá mất rồi, 種を落としちゃった là làm rơi hạt giống mất rồi, 服が汚れちゃった là quần áo bẩn mất rồi.",
+      "use": "Dùng với bạn bè, người thân khi kể một sự cố nhỏ xảy ra ngoài ý muốn — tay dính đất khi gieo hạt, tưới quá nhiều nước, làm rơi hạt giống xuống sàn ban công.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てしまいました)."
+    },
+    {
+      "form": "〜ってさ",
+      "in_lesson": "家庭菜園ってさ、やってみようよ",
+      "original": "〜というのは / 〜については",
+      "vi": "Dạng nói suồng sã để đưa một chủ đề lên trước rồi nói tiếp — ở đây là đưa chuyện trồng rau ở nhà lên trước rồi rủ nhau thử; thêm さ để nhấn mạnh và tạo giọng thân mật.",
+      "use": "Dùng với bạn bè, người thân khi muốn nêu một chủ đề rồi hỏi hoặc bàn tiếp, nhất là khi đang bắt đầu một sở thích mới và có nhiều thứ chưa biết.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với nhân viên hay người lạ (khi đó dùng 〜は・〜について)."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "種まき、うまかったじゃん",
+      "original": "〜じゃないか / 〜ですよね",
+      "vi": "…mà / …cơ mà — cách khẳng định một cảm nhận rồi rủ bạn đồng tình; うまかったじゃん là nói gieo hạt giỏi rồi chờ bạn gật đầu theo, いろんなサイズがあるじゃん là nói chậu có đủ cỡ rồi rủ bạn nhìn theo, 書いてあるじゃん là nói trên túi đất có ghi rồi chỉ cho bạn xem.",
+      "use": "Dùng với bạn bè, người thân khi muốn khẳng định một cảm nhận và rủ người nghe đồng tình — gieo hạt giỏi, chậu có đủ cỡ, trên túi có ghi rõ.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜ですよね・〜じゃないですか)."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "これってさ、どれがいいんだっけ",
+      "original": "〜でしたっけ / 〜だったでしょうか",
+      "vi": "…nhỉ? — cách hỏi lại một thông tin mình đã từng biết hoặc vừa nghe nhưng giờ quên mất; どれがいいんだっけ là hỏi lại chậu nào tốt, 水やり、どのくらいあげるんだっけ là hỏi lại tưới bao nhiêu nước.",
+      "use": "Dùng với bạn bè, người thân khi hỏi lại một thông tin đã biết nhưng quên mất — chậu nào tốt, tưới bao nhiêu nước, hạt giống nào dễ trồng.",
+      "avoid": "Tránh khi hỏi nhân viên hay người lạ một thông tin hoàn toàn mới (khi đó dùng 〜はどうですか・〜はどうなりますか)."
+    },
+    {
+      "form": "〜らしいよ / 〜んだって",
+      "in_lesson": "深いやつがさ、いいらしいよ",
+      "original": "〜らしいです / 〜そうです",
+      "vi": "Nghe bảo là… — cách nói một thông tin mình nghe được từ người khác, không chắc chắn hoàn toàn; いいらしいよ là nghe bảo chậu sâu thì tốt đấy, 根が深いんだって là nghe bảo rễ cà chua sâu đấy, 初心者向けなんだって là nghe bảo loại này dành cho người mới đấy.",
+      "use": "Dùng với bạn bè, người thân khi truyền lại một thông tin nghe được từ nhân viên hay người khác — chậu sâu thì tốt, rễ cà chua sâu, loại hạt này dễ trồng.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói một thông tin mình chắc chắn (khi đó dùng 〜です・〜だよ)."
+    },
+    {
+      "form": "〜てみようよ",
+      "in_lesson": "家庭菜園ってさ、やってみようよ",
+      "original": "〜てみましょう",
+      "vi": "…thử xem nhé — cách rủ bạn cùng thử làm một việc một cách thân mật; やってみようよ là rủ nhau thử trồng rau ở nhà, ミニトマトにしようよ là rủ nhau chọn cà chua bi, 種まきしようよ là rủ nhau gieo hạt, 見に来ようよ là rủ nhau vài hôm nữa đến xem mầm.",
+      "use": "Dùng với bạn bè, người thân khi rủ nhau cùng thử làm một việc lần đầu — trồng rau ở ban công, gieo hạt, tưới nước, vài hôm nữa đến xem mầm đã nảy chưa.",
+      "avoid": "Tránh trong văn bản chính thức và khi nói với cấp trên hay người lạ (khi đó dùng 〜てみましょう)."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "プランター",
+      "reading": "ぷらんたー",
+      "vi": "Chậu trồng cây (chậu nhựa dài) — chậu dùng để trồng rau và hoa ở ban công hay sân nhà, thường làm bằng nhựa, có nhiều kích cỡ và màu sắc, đáy chậu có lỗ thoát nước (水抜き穴) để nước thừa chảy ra ngoài; プランターに土を入れる là đổ đất vào chậu, プランターで野菜を育てる là trồng rau trong chậu, プランターをベランダに置く là đặt chậu lên ban công; trồng rau trong chậu thì phải chọn chậu đủ sâu vì rễ rau cần chỗ để phát triển, nhất là cà chua (トマト) có rễ sâu.",
+      "example_ja": "プランターってさ、いろんなサイズがあるじゃん。{深|ふか}いやつがさ、いいらしいよ。",
+      "example_vi": "Chậu trồng cây ấy, đủ cỡ này, khác nhau nhỉ. Cái sâu ấy, nghe bảo tốt đấy."
+    },
+    {
+      "expr": "{種|しゅ}をまく",
+      "reading": "たねをまく",
+      "vi": "Gieo hạt — rắc hạt giống xuống đất rồi phủ một lớp đất mỏng lên trên; 種まき (たねまき) là việc gieo hạt, 種をまく là gieo hạt, 種を土にかぶせる là phủ đất lên hạt, 種が発芽する là hạt nảy mầm; gieo hạt thì đừng gieo quá dày (種をまきすぎない), gieo xong phải tưới nước cho đất ẩm (土を湿らせる) rồi đặt chậu ở chỗ có nắng, vài ngày sau hạt sẽ nảy mầm (芽が出る).",
+      "example_ja": "{早|はや}く{家|いえ}でさ、{種|たね}まきしようよ。{種|たね}まき、うまかったじゃん。",
+      "example_vi": "Nhanh về nhà này, gieo hạt nhé. Gieo hạt ấy, giỏi lắm nhỉ."
+    },
+    {
+      "expr": "{水|みず}やり",
+      "reading": "みずやり",
+      "vi": "Tưới nước — việc tưới nước cho cây, dùng bình tưới (じょうろ) hoặc vòi nước (ホース); 水をやる là tưới nước, 水やりをする là tưới nước, 水をあげる cũng là tưới nước (nói một cách thân mật); tưới nước thì tưới vừa đủ cho đất ẩm (土がしっとりするくらい), tưới quá nhiều (水のやりすぎ) thì rễ bị úng và thối, tưới quá ít thì đất khô và cây héo; nên tưới vào buổi sáng hoặc buổi chiều mát, đừng tưới lúc nắng gắt giữa trưa.",
+      "example_ja": "{水|みず}やりってさ、どのくらいあげるの？{土|つち}がさ、しっとりするくらいだよ。",
+      "example_vi": "Tưới nước ấy, tưới bao nhiêu? Đất ấy, ẩm vừa là được đấy."
+    },
+    {
+      "expr": "{芽|め}が{出|で}る",
+      "reading": "めがでる",
+      "vi": "Nảy mầm — hạt giống nảy ra mầm non sau khi gieo được vài ngày; 芽 (め) là mầm non, 芽が出る là nảy mầm, 芽が出た là đã nảy mầm, 芽が出ない là không nảy mầm; hạt gieo xuống đất ẩm, đặt ở chỗ có nắng, vài ngày sau sẽ thấy mầm xanh nhỏ nhú lên khỏi mặt đất — đó là khoảnh khắc vui nhất của người mới trồng rau, vì biết là mình gieo hạt thành công; 芽が出るのを待つ là chờ mầm nảy, 芽が出たよ là mầm nảy rồi đấy.",
+      "example_ja": "{芽|め}、{早|はや}く{出|で}ないかな。{数|すう}{日|じつ}{後|ご}に{見|み}に{来|こ}ようよ。{芽|め}が{出|で}てるといいね。",
+      "example_vi": "Mầm ấy, mau nảy không nhỉ. Vài hôm nữa đến xem nhé. Mầm đã nảy thì tốt nhỉ."
+    },
+    {
+      "expr": "{日当|ひあ}たり",
+      "reading": "ひあたり",
+      "vi": "Nắng (độ nắng, ánh nắng chiếu vào) — mức độ ánh nắng chiếu vào một chỗ, nhất là ban công hay sân nhà; 日当たりがいい là nắng tốt, 日当たりが悪い là nắng kém, 日当たりのいいベランダ là ban công nắng tốt; rau cần nhiều nắng để lớn, nên phải đặt chậu ở chỗ nắng tốt, còn nếu ban công nắng kém thì nên trồng rau chịu bóng râm (日陰に強い野菜) như rau thơm (ハーブ) hay xà lách (レタス).",
+      "example_ja": "{日当|ひあ}たり、うちのベランダ、いいんだよね。トマトはさ、{日当|ひあ}たりがいいところが{好|す}きなんだって。",
+      "example_vi": "Nắng ấy, ban công nhà mình, tốt đấy nhỉ. Cà chua ấy, thích chỗ nắng tốt đấy."
+    },
+    {
+      "expr": "{収穫|しゅうかく}",
+      "reading": "しゅうかく",
+      "vi": "Thu hoạch — hái rau quả đã chín để ăn, là khoảnh khắc vui nhất của người trồng rau ở nhà; 収穫する là thu hoạch, 収穫が楽しみ là háo hức chờ thu hoạch, 収穫の時期 là mùa thu hoạch, 野菜を収穫する là thu hoạch rau; cà chua bi (ミニトマト) gieo hạt khoảng 2–3 tháng sau là thu hoạch được, xà lách (レタス) thì nhanh hơn, khoảng 1–2 tháng; rau tự trồng ở ban công thì hái ăn ngay, tươi và ngon hơn rau mua ở siêu thị.",
+      "example_ja": "{収穫|しゅうかく}がさ、{楽|たの}しみだね。ミニトマト、{早|はや}く{赤|あか}くならないかな。",
+      "example_vi": "Thu hoạch ấy, háo hức thật đấy. Cà chua bi, mau chín đỏ không nhỉ."
+    }
+  ],
+  "mindset": [
+    "Trồng rau ở ban công (ベランダ菜園 / 家庭菜園) là một sở thích rất được yêu thích ở Nhật, nhất là với người trẻ sống ở chung cư (マンション) trong thành phố: không cần có sân vườn, chỉ cần vài cái chậu nhựa (プランター), một bao đất (土), vài túi hạt giống (種) và một bình tưới nước (じょうろ) là trồng được rau ăn ngay tại nhà. Ban công nhà nào nắng tốt (日当たりがいい) thì trồng cà chua bi (ミニトマト) và dưa chuột (きゅうり), ban công nắng kém thì trồng rau thơm (ハーブ) hay xà lách (レタス). Trong bài, hai người điホームセンター mua đủ đồ rồi về gieo hạt ngay trong ngày — điホームセンター mua chậu, đất và hạt giống là cách bắt đầu trồng rau ở nhà rất thường gặp của người Nhật.",
+    "Người Nhật trồng rau ở nhà thường bắt đầu từ những loại rau dễ trồng nhất — cà chua bi (ミニトマト), xà lách (レタス), rau thơm (ハーブ) — vì mấy loại này dễ nảy mầm (芽が出やすい), lớn nhanh và ít bị sâu bọ (虫がつきにくい), người mới trồng lần đầu cũng ít thất bại. Gieo hạt (種まき) xong thì phải tưới nước vừa đủ (水やり) cho đất ẩm (土がしっとりするくらい), tưới quá nhiều (水のやりすぎ) thì rễ bị úng, tưới quá ít thì đất khô và cây héo; còn phải bón phân (肥料をやる) đều đặn và để ý sâu bọ (虫). Trong bài, hai người chọn cà chua bi và xà lách vì ban công nắng tốt, gieo hạt xong thì tưới nước vừa đủ, còn được bà hàng xóm dặn phải để ý sâu bọ — chọn rau dễ trồng, tưới vừa đủ và nghe hàng xóm chỉ bảo là cách trồng rau lần đầu rất tự nhiên.",
+    "Người Nhật trồng rau ở nhà rất thích khoe với người nhà và hàng xóm — gieo hạt xong thì chụp ảnh gửi cho người nhà (うちの人に写真を送る), hạt nảy mầm (芽が出た) thì khoe ngay, thu hoạch (収穫) được quả đầu tiên thì hái ăn ngay và khoe với cả nhà, thậm chí còn mang rau sang biếu hàng xóm (おすそ分け). Trồng rau ở ban công không chỉ để ăn mà còn là một thú vui hàng ngày: sáng ra tưới nước, chiều về ngắm rau lớn lên từng ngày, chờ mầm nảy rồi chờ quả chín. Trong bài, hai người gieo hạt xong thì chụp ảnh gửi cho người nhà, nhắn tin báo hôm nay trồng rau xong rồi, còn hẹn nhau vài hôm nữa sang xem hạt đã nảy mầm chưa — chụp ảnh gửi người nhà và hẹn nhau xem mầm là cách kết thúc ngày trồng rau đầu tiên rất tự nhiên."
+  ],
+  "mistakes": [
+    "Đừng tưới quá nhiều nước: tưới nước (水やり) thì tưới vừa đủ cho đất ẩm (土がしっとりするくらい) là được — tưới quá nhiều (水のやりすぎ) thì rễ bị úng nước và thối, cây chết rất nhanh; ngược lại tưới quá ít thì đất khô nứt và cây héo; nên tưới vào buổi sáng hoặc buổi chiều mát, đừng tưới lúc nắng gắt giữa trưa vì nước bốc hơi nhanh và lá dễ bị cháy.",
+    "Đừng gieo hạt quá dày: gieo hạt (種まき) thì rắc hạt thưa ra, mỗi hạt cách nhau một khoảng — gieo quá dày (種をまきすぎる) thì mầm mọc chen chúc, cây nào cũng gầy yếu vì tranh nhau nắng và chất dinh dưỡng, lại phải nhổ bớt (間引き) rất mất công; gieo xong phủ một lớp đất mỏng lên trên (土をかぶせる) rồi tưới nước cho đất ẩm là đủ.",
+    "Đừng chọn chậu quá nông: chậu trồng cây (プランター) phải đủ sâu vì rễ rau cần chỗ để phát triển — nhất là cà chua (トマト) có rễ sâu, chậu nông thì rễ không phát triển được, cây còi cọc và ít quả; trước khi mua phải nhìn kỹ độ sâu của chậu, đừng chỉ nhìn màu sắc hay hình dáng bên ngoài.",
+    "Đừng quên để ý sâu bọ: rau trồng ở ban công rất dễ bị sâu bọ (虫) bám vào lá và ăn lá — phải ngó rau mỗi ngày, thấy sâu thì bắt bỏ ngay (虫を取る), thấy lá bị ăn lủng thì phải tìm sâu ngay; nếu để lâu thì sâu ăn hết lá, cây không quang hợp được và chết dần; hàng xóm trồng rau lâu năm thường biết rất rõ cách phòng sâu, nên hỏi họ là cách học nhanh nhất.",
+    "Đừng đặt chậu ở chỗ nắng kém: rau cần nhiều nắng để lớn, nhất là cà chua bi (ミニトマト) — đặt chậu ở chỗ nắng kém (日当たりが悪い) thì cây mọc dài ngoằng, lá vàng và ít quả; trước khi trồng phải xem ban công nhà mình nắng tốt hay nắng kém vào buổi sáng và buổi chiều, rồi chọn loại rau phù hợp với độ nắng của ban công."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Bạn muốn bắt đầu trồng rau ở ban công lần đầu. Hãy hỏi nhân viên ởホームセンター: nên mua chậu loại nào, đất nào dùng cho rau, hạt giống nào dễ trồng cho người mới, và có cần mua phân bón không.",
+    "Tình huống 2: Bạn đang đứng trước kệ hạt giống ởホームセンター với bạn đi cùng. Hãy bàn với bạn: ban công nhà mình nắng tốt hay nắng kém, nên trồng cà chua bi hay xà lách, chậu sâu hay chậu nông thì tốt hơn.",
+    "Tình huống 3: Bạn vừa gieo hạt xong trên ban công, tay dính đầy đất. Hãy nói với bạn đi cùng: gieo hạt có khó không, tưới bao nhiêu nước thì vừa, và mong hạt mau nảy mầm thế nào.",
+    "Tình huống 4: Bà hàng xóm sang ngó mấy chậu rau bạn vừa gieo và bắt chuyện. Hãy hỏi bà: tưới nước thế nào thì vừa, làm sao để sâu bọ không bám vào rau, và bao lâu nữa thì hạt nảy mầm.",
+    "Tình huống 5: Bạn vừa trồng rau xong và đang ngồi nhắn tin cho người nhà. Hãy nhắn cho người nhà: hôm nay bạn trồng rau gì, gieo hạt xong rồi, chụp ảnh gửi kèm, và hẹn vài hôm nữa xem mầm đã nảy chưa."
+  ],
+  "lines": [
+    {
+      "speaker": "拓海",
+      "ja": "お、{家庭|かてい}{菜園|さいえん}ってさ、やってみようよ。ベランダ、{空|あ}いてるしさ。",
+      "vi": "Ồ, trồng rau ở nhà ấy, thử làm xem nhé. Ban công ấy, đang trống này."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。ほら、{見|み}て{見|み}て。プランターってさ、いろんなサイズがあるじゃん。",
+      "vi": "Hay đấy. Này, nhìn này nhìn này. Chậu trồng cây ấy, đủ cỡ này, khác nhau nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、ほんとだ。ってさ、これってさ、どれがいいんだっけ。",
+      "vi": "Chà, đúng thật. Này, cái này ấy, cái nào tốt nhỉ?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{深|ふか}いやつがさ、いいらしいよ。ほら、トマトはさ、{根|ね}が{深|ふか}いんだって。",
+      "vi": "Ừ, cái sâu ấy, nghe bảo tốt đấy. Này, cà chua ấy, rễ sâu đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、そうなんだ。ってさ、{土|つち}ってさ、どれ{買|か}うの？",
+      "vi": "Ồ, ra thế. Này, đất ấy, mua loại nào?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{野菜|やさい}{用|よう}の{土|つち}がさ、いいよ。ほら、この{袋|ふくろ}、{書|か}いてあるじゃん。",
+      "vi": "Ừ, đất dùng cho rau ấy, tốt đấy. Này, cái túi này, ghi trên đó này."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "へえ、わかった。ってさ、{種|しゅ}ってさ、ミニトマトとレタスにしようよ。",
+      "vi": "Chà, biết rồi. Này, hạt giống ấy, chọn cà chua bi với xà lách nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。でもさ、{日当|ひあ}たり、うちのベランダ、いいんだよね。",
+      "vi": "Hay đấy. Nhưng mà, nắng ấy, ban công nhà mình, tốt đấy nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうだよ。ってさ、{肥料|ひりょう}もさ、{買|か}っちゃおうよ。",
+      "vi": "Ừ, đúng đấy. Này, phân bón cũng này, mua luôn đi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。ほら、レジ、{行|い}こうよ。{早|はや}く{家|いえ}でさ、{種|たね}まきしようよ。",
+      "vi": "Ừ nhỉ. Này, đi tính tiền thôi. Nhanh về nhà này, gieo hạt nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "ふう、やっとさ、{植|う}え{終|お}わったよ。ってさ、{土|ど}、{手|て}についちゃったよ。",
+      "vi": "Phù, cuối cùng ấy, trồng xong rồi. Này, đất ấy, dính tay mất rồi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "あはは、{見|み}てたよ。でもさ、{種|たね}まき、うまかったじゃん。",
+      "vi": "Haha, tớ thấy rồi. Nhưng mà, gieo hạt ấy, giỏi lắm nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうかな。ってさ、{水|みず}やりってさ、どのくらいあげるの？",
+      "vi": "Thế à. Này, tưới nước ấy, tưới bao nhiêu?"
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、{土|つち}がさ、しっとりするくらいだよ。ほら、やりすぎちゃ、ダメだよ。",
+      "vi": "Ừ, đất ấy, ẩm vừa là được đấy. Này, tưới quá nhiều thì, không được đâu."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "お、わかった。ってさ、おばさん、{見|み}て{見|み}て。{芽|め}、{早|はや}く{出|で}ないかな。",
+      "vi": "Ồ, biết rồi. Này, bác ơi, nhìn này nhìn này. Mầm ấy, mau nảy không nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。ほら、{虫|むし}がさ、つかないといいね。",
+      "vi": "Ừ nhỉ. Này, sâu bọ ấy, đừng bám vào thì tốt nhỉ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうだよ。ってさ、{収穫|しゅうかく}がさ、{楽|たの}しみだね。",
+      "vi": "Ừ, đúng đấy. Này, thu hoạch ấy, háo hức thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "そうだね。ほら、{写真|しゃしん}、{撮|と}ってさ、うちの{人|ひと}に{送|おく}ろうよ。",
+      "vi": "Ừ nhỉ. Này, chụp ảnh này, gửi cho người nhà nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そうしようよ。ってさ、{今日|きょう}、{種|たね}まきしたよってさ、{連絡|れんらく}しようよ。",
+      "vi": "Ừ, làm thế nhé. Này, hôm nay, gieo hạt xong rồi ấy, nhắn báo nhé."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "いいね。ほら、またさ、{数|すう}{日|じつ}{後|ご}に{見|み}に{来|こ}ようよ。{芽|め}が{出|で}てるといいね。",
+      "vi": "Hay đấy. Này, lại này, vài hôm nữa đến xem nhé. Mầm đã nảy thì tốt nhỉ."
+    }
+  ],
+  "notes": [
+    "Từ vựng trồng rau ở ban công cơ bản: プランター (chậu trồng cây), 土 (đất), 種 (hạt giống), 種まき (gieo hạt), 水やり (tưới nước), 芽が出る (nảy mầm), 収穫 (thu hoạch), 日当たり (nắng), 虫 (sâu bọ), 肥料 (phân bón), ベランダ (ban công), じょうろ (bình tưới nước); rau dễ trồng cho người mới: cà chua bi (ミニトマト), xà lách (レタス), rau thơm (ハーブ).",
+    "Quy trình trồng rau ở ban công lần đầu: điホームセンター mua chậu (プランター), đất (土), hạt giống (種) và phân bón (肥料) → về nhà đổ đất vào chậu → gieo hạt (種をまく) rồi phủ đất mỏng lên trên (土をかぶせる) → tưới nước vừa đủ cho đất ẩm (水やり) → đặt chậu ở chỗ nắng tốt (日当たりがいいところ) → chờ hạt nảy mầm (芽が出る) → bón phân đều đặn và để ý sâu bọ (虫) → thu hoạch (収穫).",
+    "Văn hóa trồng rau ở nhà ở Nhật: trồng rau ở ban công (ベランダ菜園) là sở thích rất phổ biến của người sống ở chung cư trong thành phố, gieo hạt xong thì chụp ảnh gửi cho người nhà, hạt nảy mầm thì khoe ngay, thu hoạch được quả đầu tiên thì hái ăn ngay và mang sang biếu hàng xóm (おすそ分け); hàng xóm trồng rau lâu năm thường rất nhiệt tình chỉ bảo người mới cách tưới nước và phòng sâu.",
+    "〜ちゃった là dạng rút gọn của 〜てしまった, dùng khi nói một việc xảy ra ngoài ý muốn (tay dính đất, tưới quá nhiều nước); 〜らしいよ / 〜んだって là cách truyền lại một thông tin nghe được từ người khác (chậu sâu thì tốt, rễ cà chua sâu); 〜てみようよ là cách rủ bạn cùng thử làm một việc lần đầu (trồng rau ở ban công, gieo hạt, vài hôm nữa đến xem mầm)."
+  ]
+}

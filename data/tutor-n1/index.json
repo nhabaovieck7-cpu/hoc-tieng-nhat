@@ -407,6 +407,24 @@
       "kind": "kaiwa",
       "title": "Kaiwa Bài 41 — Lần đầu đi leo núi trong nhà (ボルダリング)",
       "file": "2026-11-26-kaiwa.json"
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "n1-set",
+      "title": "Bộ N1 ngày 27/11/2026（問題12・長文）",
+      "file": "2026-11-27-n1-set.json"
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "reading",
+      "title": "Đọc hiểu ngày 27/11/2026（中文）",
+      "file": "2026-11-27-reading.json"
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "kaiwa",
+      "title": "Kaiwa Bài 42 — Lần đầu trồng rau ở ban công (家庭菜園デビュー)",
+      "file": "2026-11-27-kaiwa.json"
     }
   ]
 }
