@@ -1,0 +1,536 @@
+{
+  "lesson": 43,
+  "topic": "Tổ chức sinh nhật cho một cụ ở day service — chuẩn bị bất ngờ, hát chúc mừng, tặng thiệp và chụp ảnh kỷ niệm",
+  "summary": "Bối cảnh: một ngày ở day service, 田中さん tròn 88 tuổi — 米寿, tuổi mừng thọ theo phong tục Nhật. Nhân viên tổ chức một buổi sinh nhật bất ngờ mà cụ không hề biết trước. Bài luyện kỹ năng mà bốn bài kaigo trước chưa đụng tới: tổ chức bất ngờ mà không làm cụ mệt (chuẩn bị kín đáo, giữ nhịp sinh hoạt bình thường, chúc mừng ngắn gọn thay vì kéo dài), chúc mừng sao cho tự nhiên mà vẫn trang trọng, hỏi người nhà về sở thích và món quà cụ thích mà không nghe như một cuộc điều tra, và chụp ảnh kỷ niệm sau khi đã xin phép cụ và người nhà. Thanh điệu chuyển rõ theo đối tượng: kính ngữ ấm áp, chậm rãi với 田中さん; suồng sã, rút gọn với đồng nghiệp 莉子; lịch sự ngắn gọn với 山田主任 khi xin ý kiến; khiêm nhường, cẩn trọng với ご家族 vì mình đang hỏi về sở thích riêng của người thân của họ. Điểm khó/điểm mới so với các bài kaigo trước: cách giữ bí mật bất ngờ trước mặt cụ cả buổi sáng (nói dối trắng mà không làm cụ ngờ), cách chúc mừng tuổi 88 mà không nhấn mạnh tuổi già (mừng thọ 米寿, không hỏi “bác bao nhiêu tuổi rồi”), cách để cụ kể chuyện xưa mà không cắt ngang, và cách gửi ảnh kỷ niệm cho người nhà — vừa là quà, vừa là bằng chứng cụ đã có một ngày vui.",
+  "scenes": [
+    {
+      "title": "Hội thoại 1（buổi sáng chuẩn bị bất ngờ）",
+      "stage": "（Buổi sáng ở day service, trước khi 田中さん đến. 拓海 và 莉子 trang trí phòng sinh hoạt, làm thiệp chúc mừng chung, thống nhất kế hoạch giữ bí mật, rồi hỏi ý 山田主任.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "{拓海|たくみ}くん、{田中|たなか}さん、{今日|きょう}で{八十|はちじゅう}{八|はっ}{歳|さい}だって。{米寿|べいじゅ}だよ、{米寿|べいじゅ}。すごくない？",
+          "vi": "Takumi này, bác Tanaka hôm nay tròn 88 tuổi đấy. Mừng thọ 88 tuổi đấy, mừng thọ Beiju đấy. Ghê chưa?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、{知|し}ってる。だからさ、{今日|きょう}はサプライズでお{祝|いわ}いしようよ。みんなでカードも{作|つく}ったし。",
+          "vi": "Ừ, tớ biết mà. Thế nên hôm nay mình tổ chức sinh nhật bất ngờ cho bác nhé. Thiệp thì mọi người cùng làm xong rồi còn gì."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "カード、{見|み}せて{見|み}せて。うわ、みんなのメッセージ、ぎっしりじゃん。{田中|たなか}さん、{絶対|ぜったい}{喜|よろこ}ぶよ、これ。",
+          "vi": "Cho tớ xem thiệp nào, xem nào. Ôi, tin nhắn của mọi người viết kín cả thiệp thế này. Bác Tanaka chắc chắn sẽ thích lắm cho xem."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "でしょ。あと、ケーキは{午後|ごご}に{冷蔵|れいぞう}{庫|こ}から{出|だ}すね。{田中|たなか}さんが{来|く}る{前|まえ}に、{飾|かざ}り{付|りつ}け、{終|お}わらせちゃおう。",
+          "vi": "Đúng không. Còn bánh thì buổi chiều mới lấy từ tủ lạnh ra nhé. Trước khi bác Tanaka đến, mình trang trí cho xong luôn đi."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "ねえ、{風船|ふうせん}、どこに{付|つ}ける？こっちの{壁|かべ}でいい？ちょっと{高|たか}いけど、{届|とど}く？",
+          "vi": "Này, bóng bay thì dán ở đâu? Dán tường bên này được không? Hơi cao một tí nhưng cậu với tới không?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "うん、そこがいいよ。ちょっと{待|ま}って、{椅子|いす}、{持|も}ってくるから。あ、{田中|たなか}さん、もうすぐ{着|つ}くんだっけ。",
+          "vi": "Ừ, chỗ đấy được đấy. Đợi tí, tớ đi lấy ghế đây. À, bác Tanaka sắp đến rồi đúng không nhỉ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "うん、あと{十|じゅう}{分|ぷん}くらいだよ。ねえ、みんなには、もう{伝|つた}えた？{田中|たなか}さんの{前|まえ}で、バラしちゃダメだよ。",
+          "vi": "Ừ, khoảng mười phút nữa thôi. Này, cậu đã dặn mọi người chưa đấy? Trước mặt bác Tanaka thì đừng có lỡ miệng đấy nhé."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{大丈夫|だいじょうぶ}、みんな{分|わ}かってるって。あ、でもさ、お{昼|ひる}まで、{普通|ふつう}に{過|す}ごすんだよ。{変|へん}にそわそわしないでね。",
+          "vi": "Không sao đâu, mọi người đều biết cả rồi mà. À, nhưng mà này, đến trưa cứ sinh hoạt bình thường thôi nhé. Đừng có bồn chồn một cách lạ lùng đấy."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "おはよう、{二人|ふたり}とも。{準備|じゅんび}、どう？{田中|たなか}さんのお{祝|いわ}い、ちゃんと{進|すす}んでる？",
+          "vi": "Chào buổi sáng, hai đứa. Chuẩn bị đến đâu rồi? Lễ chúc mừng bác Tanaka tiến triển ổn chứ?"
+        },
+        {
+          "speaker": "拓海",
+          "ja": "おはようございます、{主任|しゅにん}。はい、{飾|かざ}り{付|りつ}けも、カードも、ほぼ{終|お}わりました。お{昼|ひる}に、みんなで{歌|うた}ってお{祝|いわ}いする{予定|よてい}です。",
+          "vi": "Chào buổi sáng ạ, sếp. Vâng ạ, trang trí với thiệp gần xong hết rồi ạ. Dự định là buổi trưa mọi người sẽ cùng hát chúc mừng bác ạ."
+        },
+        {
+          "speaker": "山田主任",
+          "ja": "そうか。いいね。ただ、{田中|たなか}さん、あまり{長|なが}くならないようにね。{疲|つか}れちゃうから。{歌|うた}は{一|いち}{曲|きょく}だけにして、ケーキも、{少|すこ}しずつ{食|た}べてもらって。",
+          "vi": "Vậy à. Tốt đấy. Nhưng mà đừng kéo dài quá nhé, bác mệt đấy. Chỉ hát một bài thôi, bánh thì cho bác ăn từng ít một thôi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{分|わ}かりました。{短|みじか}く、でも、ちゃんとお{祝|いわ}いします。ありがとうございます。",
+          "vi": "Cháu hiểu rồi ạ. Ngắn gọn thôi, nhưng vẫn chúc mừng bác đàng hoàng ạ. Cảm ơn sếp ạ."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 2（buổi trưa tổ chức sinh nhật）",
+      "stage": "（Phòng sinh hoạt chung, buổi trưa. Mọi người ăn trưa xong, đèn vụt tắt, bánh sinh nhật được mang ra, cả phòng cùng hát chúc mừng. 田中さん xúc động, kể chuyện xưa, mọi người cùng ăn bánh.）",
+      "lines": [
+        {
+          "speaker": "莉子",
+          "ja": "{田中|たなか}さん、ちょっとこっち、{来|き}てみて。ほら、みんな、{待|ま}ってるよ。",
+          "vi": "Bác Tanaka, bác qua đây một chút xem nào. Này, mọi người đang đợi bác đấy."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "なんだい、なんだい。どうしたんだ、みんな、こっちを{見|み}て。",
+          "vi": "Sao thế, sao thế. Có chuyện gì mà mọi người nhìn bác thế."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、お{誕生|たんじょう}{日|ひ}おめでとうございます。{今日|きょう}は、{八十|はちじゅう}{八|はっ}{歳|さい}、{米寿|べいじゅ}のお{祝|いわ}いです。",
+          "vi": "Bác Tanaka, chúc mừng sinh nhật bác ạ. Hôm nay là lễ mừng thọ 88 tuổi, mừng thọ Beiju của bác ạ."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "せーの。ハッピーバースデー、トゥー・ユー。ハッピーバースデー、トゥー・ユー。",
+          "vi": "Nào, một hai ba. Happy birthday to you. Happy birthday to you."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "おお、こりゃ、びっくりだ。わしが、{今日|きょう}、{誕生|たんじょう}{日|ひ}だって、すっかり{忘|わす}れてたよ。",
+          "vi": "Ồ, thế này thì bất ngờ thật đấy. Bác quên béng mất hôm nay là sinh nhật bác rồi."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、これ、みんなで{作|つく}ったカードです。みんなのメッセージが、{書|か}いてあります。どうぞ。",
+          "vi": "Bác Tanaka, đây là tấm thiệp mọi người cùng làm ạ. Trong này có tin nhắn của mọi người đấy ạ. Bác nhận nhé."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "ありがとう、ありがとう。みんな、わしのこと、{覚|おぼ}えててくれたんだね。うれしいよ、ほんとに。",
+          "vi": "Cảm ơn các cháu, cảm ơn nhé. Mọi người vẫn nhớ đến bác thế này. Bác vui lắm, thật đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{田中|たなか}さん、ケーキ、{食|た}べようよ。{今日|きょう}は、{特別|とくべつ}に、イチゴのケーキだよ。",
+          "vi": "Bác Tanaka, mình ăn bánh nhé. Hôm nay đặc biệt có bánh dâu tây đấy ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "いやあ、{若|わか}いころはな、{誕生|たんじょう}{日|ひ}なんて、{祝|いわ}ってもらったこと、なかったんだよ。{畑仕事|はたけしごと}で、{忙|いそが}しくてね。",
+          "vi": "Chà, hồi trẻ ấy mà, bác có bao giờ được ai chúc mừng sinh nhật đâu. Bận làm đồng suốt ấy mà."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうだったんですね。じゃあ、{今日|きょう}は、{田中|たなか}さんのために、みんなで、ちゃんとお{祝|いわ}いしますね。",
+          "vi": "Thì ra là vậy ạ. Vậy thì hôm nay, vì bác Tanaka, mọi người sẽ chúc mừng bác đàng hoàng ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "うん、ありがとう。みんなと、こうやって{過|す}ごせるのが、いちばんのプレゼントだよ。",
+          "vi": "Ừ, cảm ơn các cháu. Được ở bên mọi người thế này mới là món quà quý nhất đấy."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{田中|たなか}さん、また{来年|らいねん}も、みんなでお{祝|いわ}いしようね。{来年|らいねん}は、{八十|はちじゅう}{九|きゅう}{歳|さい}だよ。",
+          "vi": "Bác Tanaka, sang năm mình lại chúc mừng cùng nhau nữa nhé. Sang năm là bác 89 tuổi đấy."
+        }
+      ]
+    },
+    {
+      "title": "Hội thoại 3（buổi chiều chụp ảnh kỷ niệm và trao đổi với người nhà）",
+      "stage": "（Buổi chiều muộn, trước giờ xe đưa về. 拓海 và 莉子 xin phép 田中さん chụp ảnh kỷ niệm cùng mọi người, rồi gặp người nhà của bác ở sảnh để gửi ảnh và hỏi về món quà, sở thích của bác.）",
+      "lines": [
+        {
+          "speaker": "拓海",
+          "ja": "{田中|たなか}さん、よかったら、みんなで、{記念|きねん}に{写真|しゃしん}を{撮|と}りませんか。{今日|きょう}の{思|おも}い{出|いで}に、なりますよ。",
+          "vi": "Bác Tanaka, nếu bác đồng ý, mọi người mình chụp một tấm ảnh kỷ niệm nhé. Để làm kỷ niệm ngày hôm nay ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "{写真|しゃしん}かい。いいよ、もちろん。わし、{写真|しゃしん}は、ちょっと{苦手|にがて}だけどね。",
+          "vi": "Chụp ảnh à. Được chứ, đương nhiên rồi. Bác hơi không quen chụp ảnh lắm, nhưng mà được."
+        },
+        {
+          "speaker": "莉子",
+          "ja": "{大丈夫|だいじょうぶ}、{田中|たなか}さん、{笑|わら}わなくてもいいよ。いつもの{顔|かお}で、いいんだから。はい、チーズ。",
+          "vi": "Không sao đâu bác Tanaka, bác không cần cười đâu. Cứ để mặt bình thường là được ạ. Nào, cheese."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "わあ、いい{写真|しゃしん}が{撮|と}れましたよ。{田中|たなか}さん、みんな、いい{顔|かお}してます。",
+          "vi": "Chà, chụp được tấm ảnh đẹp rồi ạ. Bác Tanaka, mọi người ai cũng tươi cả."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "ほんとかい。{見|み}せて{見|み}せて。おお、みんな、そろってるね。",
+          "vi": "Thật không đấy. Cho bác xem nào, xem nào. Ồ, mọi người đông đủ cả nhỉ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "あの、すみません。{田中|たなか}のお{迎|むか}えに{来|き}ました。{今日|きょう}は、ありがとうございました。",
+          "vi": "À, xin lỗi ạ. Tôi đến đón bác Tanaka ạ. Hôm nay cảm ơn các anh chị nhiều ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "あ、ご{家族|かぞく}の{方|ほう}ですね。{今日|きょう}は、{田中|たなか}さんのお{誕生|たんじょう}{日|ひ}で、みんなでお{祝|いわ}いしたんですよ。よかったら、この{写真|しゃしん}、お{送|おく}りしてもいいですか。",
+          "vi": "À, anh/chị là người nhà của bác phải không ạ. Hôm nay là sinh nhật bác Tanaka, mọi người đã cùng chúc mừng bác đấy ạ. Nếu anh/chị đồng ý, cháu có thể gửi tấm ảnh này cho anh/chị được không ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "え、{今日|きょう}が{誕生|たんじょう}{日|ひ}だったんですか。{父|ちち}、{家|いえ}では、{何|なん}も{言|い}わなかったんです。{写真|しゃしん}、ぜひ、お{願|ねが}いします。",
+          "vi": "Ơ, hôm nay là sinh nhật bố tôi ạ. Ở nhà bố tôi không nói gì cả. Ảnh thì xin anh cứ gửi giúp tôi ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "はい、{後|のち}ほど、お{送|おく}りしますね。あの、よろしければ、{田中|たなか}さんが、お{好|す}きなものって、{何|なん}か、ございますか。{次回|じかい}、プレゼントの{参考|さんこう}にさせていただきたくて。",
+          "vi": "Vâng ạ, lát nữa cháu sẽ gửi ạ. À, nếu được thì bác Tanaka thích thứ gì ạ, có thứ gì không ạ? Để lần sau cháu tham khảo làm quà cho bác ạ."
+        },
+        {
+          "speaker": "ご家族",
+          "ja": "{父|ちち}ですか。{父|ちち}は、{甘|あま}いものが{好|す}きで、{特|とく}に、あんこのお{菓子|かし}が{好|す}きなんです。あと、{昔|むかし}の{歌|うた}も、よく{口|くち}ずさんでいますよ。",
+          "vi": "Bố tôi ạ. Bố tôi thích đồ ngọt, đặc biệt là thích bánh nhân đậu đỏ ạ. Với cả bố hay lẩm nhẩm mấy bài hát ngày xưa lắm ạ."
+        },
+        {
+          "speaker": "拓海",
+          "ja": "そうなんですね。ありがとうございます。{次回|じかい}は、あんこのお{菓子|かし}を、{用意|ようい}させていただきますね。",
+          "vi": "Thì ra là vậy ạ. Cảm ơn anh/chị nhiều ạ. Lần sau cháu sẽ chuẩn bị bánh nhân đậu đỏ cho bác ạ."
+        },
+        {
+          "speaker": "田中さん",
+          "ja": "{拓海|たくみ}くん、{莉子|りこ}さん、{今日|きょう}は、ほんとにありがとう。また、{来|く}るからね。",
+          "vi": "Takumi, Riko, hôm nay cảm ơn các cháu thật nhiều nhé. Bác sẽ lại đến đấy."
+        }
+      ]
+    }
+  ],
+  "textbook_vs_real": [
+    {
+      "textbook": "お誕生日おめでとうございます。プレゼントを差し上げます。",
+      "real": "お誕生日おめでとうございます。今日は、八十八歳、米寿のお祝いです。……これ、みんなで作ったカードです。",
+      "why": "Sách giáo khoa chúc mừng chung chung rồi đưa quà như một thủ tục. Nói thật trong kaigo thì chúc mừng gắn với mốc cụ thể của cụ (八十八歳、米寿のお祝い) và quà là thứ mọi người cùng làm (みんなで作ったカード) — cụ nghe thấy mình được nhớ đến, chứ không phải chỉ nhận một món quà từ nhân viên."
+    },
+    {
+      "textbook": "一緒に写真を撮ってもいいですか。",
+      "real": "よかったら、みんなで、記念に写真を撮りませんか。今日の思い出に、なりますよ。",
+      "why": "Sách giáo khoa hỏi thẳng như xin phép chụp một tấm ảnh. Nói thật thì mở bằng よかったら (nếu bác đồng ý) rồi nói rõ mục đích (記念に、今日の思い出に) và mời bằng 〜ませんか — cụ được chọn, và cụ hiểu ảnh này là để giữ kỷ niệm, không phải để ghi hồ sơ."
+    },
+    {
+      "textbook": "お父様はどんなものがお好きですか。",
+      "real": "よろしければ、田中さんが、お好きなものって、何か、ございますか。次回、プレゼントの参考にさせていただきたくて。",
+      "why": "Sách giáo khoa hỏi thẳng về sở thích như một câu trong bảng khảo sát. Nói thật với người nhà thì mở bằng よろしければ, dùng って để làm câu hỏi mềm đi, và nói luôn lý do (次回、プレゼントの参考に) — người nhà nghe thấy mình được hỏi để chuẩn bị quà cho cụ, chứ không phải bị điều tra."
+    },
+    {
+      "textbook": "お誕生日はどうでしたか。楽しかったですか。",
+      "real": "今日は、八十八歳、米寿のお祝いです。……みんなと、こうやって過ごせるのが、いちばんのプレゼントだよ。",
+      "why": "Sách giáo khoa hỏi bằng câu đóng 楽しかったですか (chỉ trả lời có/không). Nói thật thì người tổ chức không cần hỏi lại — chính lời cụ nói (みんなと過ごせるのが、いちばんのプレゼントだよ) mới là đáp án. Với người lớn tuổi, đừng biến ngày vui thành một buổi phỏng vấn."
+    },
+    {
+      "textbook": "サプライズパーティーを開きます。秘密にしてください。",
+      "real": "田中さんの前で、バラしちゃダメだよ。……お昼まで、普通に過ごすんだよ。変にそわそわしないでね。",
+      "why": "Sách giáo khoa ra lệnh giữ bí mật như một quy định. Nói thật giữa đồng nghiệp thì dùng バラしちゃダメだよ (đừng lỡ miệng nhé) và dặn cụ thể cách giữ bí mật: sinh hoạt bình thường đến trưa, đừng bồn chồn một cách lạ lùng — vì bí mật bị lộ không phải do ai nói ra, mà do thái độ khác thường của mọi người."
+    }
+  ],
+  "spoken_dict": [
+    {
+      "form": "〜ちゃった / 〜ちゃって",
+      "in_lesson": "疲れちゃうから",
+      "original": "〜てしまった / 〜てしまうから",
+      "vi": "Rút gọn của てしまう: lỡ… mất rồi — kể chuyện ngoài ý muốn, giọng than thở nhẹ.",
+      "use": "Dùng khi 主任 dặn nhân viên (疲れちゃうから) hoặc đồng nghiệp nói với nhau; người lớn tuổi cũng dùng khi kể chuyện với nhân viên thân quen.",
+      "avoid": "Tránh trong báo cáo chính thức với 主任 — khi đó dùng てしまいます."
+    },
+    {
+      "form": "〜じゃん",
+      "in_lesson": "メッセージ、ぎっしりじゃん",
+      "original": "〜じゃないか (dạng khẳng định thân mật)",
+      "vi": "…cơ mà / …thế này cơ mà — khẳng định điều hiển nhiên trước mắt, giọng xuýt xoa, thân mật.",
+      "use": "Dùng giữa đồng nghiệp thân thiết khi cùng xem một thứ (thiệp, ảnh) — tạo cảm giác chia sẻ, đồng cảm.",
+      "avoid": "Tránh dùng với 田中さん và người nhà — với họ phải dùng dạng lịch sự (〜ですね)."
+    },
+    {
+      "form": "〜ってさ / 〜って",
+      "in_lesson": "八十八歳だって / お好きなものって、何か",
+      "original": "〜という (trích dẫn) / 〜は (chủ đề)",
+      "vi": "…đấy / …thì — trích dẫn thông tin nghe được, hoặc đưa chủ đề ra một cách mềm mại, không cứng nhắc.",
+      "use": "Dùng khi đồng nghiệp nhắc lại thông tin đã biết (八十八歳だって), hoặc khi hỏi người nhà một câu nhạy cảm (お好きなものって) để câu hỏi nhẹ đi.",
+      "avoid": "Tránh dùng 〜ってさ với 主任 và người nhà — dạng さ là suồng sã, chỉ dùng giữa đồng nghiệp thân."
+    },
+    {
+      "form": "〜てみて / 〜てみませんか",
+      "in_lesson": "ちょっとこっち、来てみて / 写真を撮りませんか",
+      "original": "〜てみてください / 〜てみませんか (thể mời của 〜てみる)",
+      "vi": "Thử… xem nào / …xem nhé — lời mời nhẹ, để đối phương tự chọn, không ép buộc.",
+      "use": "Dùng khi mời cụ làm một việc mới (đến xem bất ngờ, chụp ảnh) — đặc biệt quan trọng với người lớn tuổi, vì họ cần được chọn chứ không bị đẩy.",
+      "avoid": "Tránh dùng 〜てください khi mời cụ trong ngày vui — nghe như ra lệnh, làm mất không khí."
+    },
+    {
+      "form": "〜だっけ",
+      "in_lesson": "田中さん、もうすぐ着くんだっけ",
+      "original": "〜でしたっけ (xác nhận lại điều đã biết)",
+      "vi": "…đúng không nhỉ / …phải không nhỉ — hỏi lại để xác nhận điều mình đã nghe nhưng không chắc.",
+      "use": "Dùng giữa đồng nghiệp khi kiểm tra lại kế hoạch (giờ xe đến, giờ hát) — nhanh, gọn, thân mật.",
+      "avoid": "Tránh dùng với 田中さん và người nhà — với họ phải hỏi rõ ràng bằng 〜でしたか / 〜でしょうか."
+    },
+    {
+      "form": "〜させていただきます / 〜させていただきたくて",
+      "in_lesson": "プレゼントの参考にさせていただきたくて",
+      "original": "〜します / 〜したいので",
+      "vi": "Xin phép được… — khiêm nhường ngữ, dùng khi mình chủ động làm việc gì đó cho đối phương.",
+      "use": "Dùng khi nói với người nhà về việc mình sẽ làm (gửi ảnh, chuẩn bị quà) — thể hiện sự khiêm tốn, cẩn trọng.",
+      "avoid": "Tránh dùng với đồng nghiệp thân thiết — nghe quá khách sáo, khi đó nói 〜するよ là đủ."
+    }
+  ],
+  "common_phrases": [
+    {
+      "expr": "お{誕生|たんじょう}{日|ひ}おめでとうございます",
+      "reading": "おたんじょうびおめでとうございます",
+      "vi": "Chúc mừng sinh nhật bác — câu chúc mừng sinh nhật trang trọng, bắt buộc dùng với người lớn tuổi.",
+      "example_ja": "{田中|たなか}さん、お{誕生|たんじょう}{日|ひ}おめでとうございます。{今日|きょう}は、{八十|はちじゅう}{八|はっ}{歳|さい}、{米寿|べいじゅ}のお{祝|いわ}いです。",
+      "example_vi": "Bác Tanaka, chúc mừng sinh nhật bác ạ. Hôm nay là lễ mừng thọ 88 tuổi, mừng thọ Beiju của bác ạ."
+    },
+    {
+      "expr": "いつまでもお{元気|げんき}で",
+      "reading": "いつまでもおげんきで",
+      "vi": "Mong bác mãi khỏe mạnh — câu chúc sức khỏe quen thuộc khi mừng thọ người lớn tuổi.",
+      "example_ja": "{田中|たなか}さん、いつまでもお{元気|げんき}でいてくださいね。{来年|らいねん}も、みんなでお{祝|いわ}いしましょう。",
+      "example_vi": "Bác Tanaka, mong bác mãi khỏe mạnh nhé. Sang năm mình lại chúc mừng cùng nhau nhé."
+    },
+    {
+      "expr": "みんなでお{祝|いわ}いする",
+      "reading": "みんなでおいわいする",
+      "vi": "Mọi người cùng chúc mừng — nhấn mạnh niềm vui tập thể, không phải quà của riêng ai.",
+      "example_ja": "{今日|きょう}は、{田中|たなか}さんのために、みんなでお{祝|いわ}いします。カードも、みんなで{作|つく}りました。",
+      "example_vi": "Hôm nay, vì bác Tanaka, mọi người sẽ cùng chúc mừng bác. Thiệp cũng do mọi người cùng làm ạ."
+    },
+    {
+      "expr": "{思|おも}い{出|いで}に{残|のこ}る",
+      "reading": "おもいでにのこる",
+      "vi": "Đáng nhớ, để lại kỷ niệm — dùng khi nói về một ngày vui muốn giữ lại.",
+      "example_ja": "みんなで{写真|しゃしん}を{撮|と}りましょう。{今日|きょう}の{思|おも}い{出|いで}に{残|のこ}りますよ。",
+      "example_vi": "Mọi người mình cùng chụp ảnh nhé. Để làm kỷ niệm ngày hôm nay ạ."
+    },
+    {
+      "expr": "{写真|しゃしん}を{撮|と}る",
+      "reading": "しゃしんをとる",
+      "vi": "Chụp ảnh — trong kaigo, chụp ảnh kỷ niệm luôn phải xin phép cụ và người nhà trước.",
+      "example_ja": "よかったら、みんなで、{記念|きねん}に{写真|しゃしん}を{撮|と}りませんか。",
+      "example_vi": "Nếu bác đồng ý, mọi người mình chụp một tấm ảnh kỷ niệm nhé."
+    },
+    {
+      "expr": "{喜|よろこ}んでいただけてよかったです",
+      "reading": "よろこんでいただけてよかったです",
+      "vi": "Bác vui là chúng cháu mừng lắm rồi — câu nói khiêm nhường khi cụ tỏ ra vui vì món quà hay buổi tiệc.",
+      "example_ja": "{田中|たなか}さんが{喜|よろこ}んでくださって、ほんとうによかったです。{来年|らいねん}も、みんなでお{祝|いわ}いしましょう。",
+      "example_vi": "Bác Tanaka vui là chúng cháu mừng lắm rồi ạ. Sang năm mình lại chúc mừng cùng nhau nhé."
+    }
+  ],
+  "mindset": [
+    "Người Nhật coi sinh nhật tuổi cao không phải là “thêm một tuổi” mà là mừng thọ (長寿のお祝い): 88 tuổi là 米寿, một mốc được chúc mừng trang trọng như 還暦 (60), 古希 (70), 喜寿 (77). Vì vậy trong bài, 拓海 không hỏi “bác bao nhiêu tuổi rồi” mà nói luôn “今日は、八十八歳、米寿のお祝いです” — cụ nghe thấy tuổi của mình được mừng, chứ không phải bị nhắc là mình đã già. Đây là điểm khác lớn nhất với cách chúc mừng sinh nhật thông thường: với người lớn tuổi, đừng nhấn mạnh con số tuổi, hãy nhấn mạnh ý nghĩa của mốc tuổi đó.",
+    "Văn hóa Nhật coi món quà tự làm có giá trị hơn quà đắt tiền: tấm thiệp mọi người cùng viết tin nhắn (みんなのメッセージがぎっしり) quý hơn một món quà mua sẵn, vì nó chứng minh “mọi người nhớ đến bác”. Chính 田中さん cũng nói ra điều này: “みんなと、こうやって過ごせるのが、いちばんのプレゼントだよ” — với người lớn tuổi, được ở bên mọi người mới là món quà lớn nhất. Vì vậy khi hỏi người nhà về món quà cụ thích (あんこのお菓子), nhân viên cũng không hỏi “cụ thích quà đắt tiền nào”, mà hỏi sở thích nhỏ, đời thường — để lần sau chuẩn bị đúng thứ cụ vui.",
+    "Người Nhật rất coi trọng sự đồng ý khi chụp ảnh người lớn tuổi: ảnh không phải là thứ nhân viên tự tiện chụp rồi gửi, mà phải xin phép hai lần — xin phép cụ trước (よかったら、写真を撮りませんか) rồi xin phép người nhà sau (この写真、お送りしてもいいですか). Trong bài, người nhà bất ngờ vì ở nhà bố không hề nói hôm nay là sinh nhật — tấm ảnh gửi về không chỉ là kỷ niệm, mà còn là cách để người nhà biết bố mình đã có một ngày vui ở day service. Đó cũng là lý do ảnh kỷ niệm trong kaigo luôn đi kèm một lời trao đổi ngắn với người nhà, chứ không chỉ gửi ảnh rồi thôi.",
+    "Tổ chức bất ngờ (サプライズ) trong kaigo khác với tiệc bất ngờ thông thường: mục tiêu không phải là làm cụ giật mình, mà là làm cụ vui mà không mệt. Vì vậy kế hoạch trong bài có ba giới hạn rõ ràng do 山田主任 dặn: ngắn gọn (歌は一曲だけ), nhẹ nhàng (ケーキも、少しずつ), và giữ sinh hoạt bình thường đến phút cuối (お昼まで、普通に過ごす). Một buổi sinh nhật thành công ở day service không đo bằng độ hoành tráng, mà đo bằng câu nói của cụ lúc ra về: “また、来るからね”."
+  ],
+  "mistakes": [
+    "Đừng hỏi thẳng tuổi cụ một cách thô (“何歳ですか”): với người lớn tuổi, hỏi tuổi như hỏi một con số trong hồ sơ là bất lịch sự. Hãy nói theo mốc mừng thọ (今日は、八十八歳、米寿のお祝いです) — cụ nghe thấy tuổi mình được mừng, chứ không phải bị tra hỏi. Và nhớ: 88歳 là 米寿 (mừng thọ 88 tuổi), đừng nhầm với 喜寿 (77 tuổi) hay 還暦 (60 tuổi).",
+    "Đừng ép cụ thổi nến hay hát nếu cụ mệt: trong bài, mọi người chỉ hát một bài (歌は一曲だけ) theo đúng lời dặn của 山田主任, và không ai bắt cụ phải thổi nến hay hát theo. Người lớn tuổi vui vì được mọi người chúc mừng, không phải vì phải “trình diễn” trong ngày sinh nhật của mình.",
+    "Đừng chụp ảnh rồi đăng lên mạng khi chưa xin phép người nhà: xin phép cụ chưa đủ — ảnh của người sử dụng dịch vụ còn liên quan đến quyền riêng tư của cả gia đình. Trong bài, 拓海 xin phép cụ trước (写真を撮りませんか) rồi xin phép người nhà sau (この写真、お送りしてもいいですか) — gửi ảnh cho người nhà khác hẳn với đăng ảnh lên mạng xã hội.",
+    "Đừng dùng おめでとう một cách quá suồng sã với cụ mới quen: お誕生日おめでとう (không có ございます) là câu nói thân mật, chỉ dùng với người thân thiết. Với 田中さん — một cụ ở day service — phải dùng đủ お誕生日おめでとうございます. Dạng rút gọn chỉ dùng giữa đồng nghiệp với nhau hoặc khi hát chung (ハッピーバースデー) — còn lời chúc chính thức với cụ thì luôn đầy đủ.",
+    "Đừng để bí mật bất ngờ bị lộ vì thái độ khác thường: trong bài, 拓海 dặn 莉子 “お昼まで、普通に過ごすんだよ。変にそわそわしないでね” — bí mật không bị lộ vì ai nói hớ, mà vì mọi người bồn chồn, nhìn nhau, cười tủm tỉm từ sáng. Giữ bí mật trong kaigo là giữ nhịp sinh hoạt bình thường, không phải chỉ giữ miệng.",
+    "Đừng hỏi người nhà về sở thích của cụ mà không nói rõ lý do: hỏi “お父様はどんなものがお好きですか” không kèm lý do nghe như một cuộc điều tra. Hãy nói luôn mục đích (次回、プレゼントの参考にさせていただきたくて) — người nhà nghe xong hiểu ngay là mình đang giúp chuẩn bị quà cho cụ, nên họ trả lời cởi mở (あんこのお菓子が好き、昔の歌を口ずさむ)."
+  ],
+  "speaking_practice": [
+    "Tình huống 1: Buổi sáng ở day service, hôm nay là sinh nhật 88 tuổi (米寿) của một cụ. Hãy cùng đồng nghiệp chuẩn bị bất ngờ: chia việc trang trí phòng và làm thiệp, thống nhất kế hoạch giữ bí mật đến trưa, rồi báo cáo ngắn gọn với 主任 và nghe dặn dò (chỉ hát một bài, bánh ăn từng ít một).",
+    "Tình huống 2: Buổi trưa, mọi người đã ăn xong. Hãy mang bánh ra, chúc mừng cụ bằng お誕生日おめでとうございます kèm mốc 米寿, cùng cả phòng hát một bài, rồi tặng thiệp do mọi người cùng làm — sau đó để cụ kể chuyện xưa, chỉ lắng nghe và hỏi thêm, không cắt ngang.",
+    "Tình huống 3: Buổi chiều, trước giờ xe đưa về. Hãy xin phép cụ chụp ảnh kỷ niệm (mở bằng よかったら, nói rõ mục đích là giữ kỷ niệm), chụp xong cho cụ xem ảnh, rồi gặp người nhà ở sảnh: báo hôm nay là sinh nhật cụ, xin phép gửi ảnh, và hỏi về món quà cụ thích để lần sau chuẩn bị.",
+    "Tình huống 4: Người nhà hỏi “ở nhà bố tôi không nói gì về sinh nhật cả, sao các anh chị biết?”. Hãy trả lời: day service ghi lại ngày sinh của cụ từ hồ sơ, và mọi người muốn chúc mừng vì cụ đã gắn bó với day service — giọng khiêm nhường, không khoe khoang.",
+    "Tình huống 5: Luyện nói một mình: hãy chúc mừng sinh nhật một cụ 88 tuổi trong 30 giây — mở bằng お誕生日おめでとうございます, nhắc mốc 米寿, chúc いつまでもお元気で, rồi kết bằng lời hẹn sang năm lại chúc mừng cùng nhau. Ghi âm lại và nghe xem giọng mình có đủ ấm áp, chậm rãi chưa."
+  ],
+  "lines": [
+    {
+      "speaker": "莉子",
+      "ja": "{拓海|たくみ}くん、{田中|たなか}さん、{今日|きょう}で{八十|はちじゅう}{八|はっ}{歳|さい}だって。{米寿|べいじゅ}だよ、{米寿|べいじゅ}。すごくない？",
+      "vi": "Takumi này, bác Tanaka hôm nay tròn 88 tuổi đấy. Mừng thọ 88 tuổi đấy, mừng thọ Beiju đấy. Ghê chưa?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、{知|し}ってる。だからさ、{今日|きょう}はサプライズでお{祝|いわ}いしようよ。みんなでカードも{作|つく}ったし。",
+      "vi": "Ừ, tớ biết mà. Thế nên hôm nay mình tổ chức sinh nhật bất ngờ cho bác nhé. Thiệp thì mọi người cùng làm xong rồi còn gì."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "カード、{見|み}せて{見|み}せて。うわ、みんなのメッセージ、ぎっしりじゃん。{田中|たなか}さん、{絶対|ぜったい}{喜|よろこ}ぶよ、これ。",
+      "vi": "Cho tớ xem thiệp nào, xem nào. Ôi, tin nhắn của mọi người viết kín cả thiệp thế này. Bác Tanaka chắc chắn sẽ thích lắm cho xem."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "でしょ。あと、ケーキは{午後|ごご}に{冷蔵|れいぞう}{庫|こ}から{出|だ}すね。{田中|たなか}さんが{来|く}る{前|まえ}に、{飾|かざ}り{付|りつ}け、{終|お}わらせちゃおう。",
+      "vi": "Đúng không. Còn bánh thì buổi chiều mới lấy từ tủ lạnh ra nhé. Trước khi bác Tanaka đến, mình trang trí cho xong luôn đi."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "ねえ、{風船|ふうせん}、どこに{付|つ}ける？こっちの{壁|かべ}でいい？ちょっと{高|たか}いけど、{届|とど}く？",
+      "vi": "Này, bóng bay thì dán ở đâu? Dán tường bên này được không? Hơi cao một tí nhưng cậu với tới không?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "うん、そこがいいよ。ちょっと{待|ま}って、{椅子|いす}、{持|も}ってくるから。あ、{田中|たなか}さん、もうすぐ{着|つ}くんだっけ。",
+      "vi": "Ừ, chỗ đấy được đấy. Đợi tí, tớ đi lấy ghế đây. À, bác Tanaka sắp đến rồi đúng không nhỉ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "うん、あと{十|じゅう}{分|ぷん}くらいだよ。ねえ、みんなには、もう{伝|つた}えた？{田中|たなか}さんの{前|まえ}で、バラしちゃダメだよ。",
+      "vi": "Ừ, khoảng mười phút nữa thôi. Này, cậu đã dặn mọi người chưa đấy? Trước mặt bác Tanaka thì đừng có lỡ miệng đấy nhé."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{大丈夫|だいじょうぶ}、みんな{分|わ}かってるって。あ、でもさ、お{昼|ひる}まで、{普通|ふつう}に{過|す}ごすんだよ。{変|へん}にそわそわしないでね。",
+      "vi": "Không sao đâu, mọi người đều biết cả rồi mà. À, nhưng mà này, đến trưa cứ sinh hoạt bình thường thôi nhé. Đừng có bồn chồn một cách lạ lùng đấy."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "おはよう、{二人|ふたり}とも。{準備|じゅんび}、どう？{田中|たなか}さんのお{祝|いわ}い、ちゃんと{進|すす}んでる？",
+      "vi": "Chào buổi sáng, hai đứa. Chuẩn bị đến đâu rồi? Lễ chúc mừng bác Tanaka tiến triển ổn chứ?"
+    },
+    {
+      "speaker": "拓海",
+      "ja": "おはようございます、{主任|しゅにん}。はい、{飾|かざ}り{付|りつ}けも、カードも、ほぼ{終|お}わりました。お{昼|ひる}に、みんなで{歌|うた}ってお{祝|いわ}いする{予定|よてい}です。",
+      "vi": "Chào buổi sáng ạ, sếp. Vâng ạ, trang trí với thiệp gần xong hết rồi ạ. Dự định là buổi trưa mọi người sẽ cùng hát chúc mừng bác ạ."
+    },
+    {
+      "speaker": "山田主任",
+      "ja": "そうか。いいね。ただ、{田中|たなか}さん、あまり{長|なが}くならないようにね。{疲|つか}れちゃうから。{歌|うた}は{一|いち}{曲|きょく}だけにして、ケーキも、{少|すこ}しずつ{食|た}べてもらって。",
+      "vi": "Vậy à. Tốt đấy. Nhưng mà đừng kéo dài quá nhé, bác mệt đấy. Chỉ hát một bài thôi, bánh thì cho bác ăn từng ít một thôi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{分|わ}かりました。{短|みじか}く、でも、ちゃんとお{祝|いわ}いします。ありがとうございます。",
+      "vi": "Cháu hiểu rồi ạ. Ngắn gọn thôi, nhưng vẫn chúc mừng bác đàng hoàng ạ. Cảm ơn sếp ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{田中|たなか}さん、ちょっとこっち、{来|き}てみて。ほら、みんな、{待|ま}ってるよ。",
+      "vi": "Bác Tanaka, bác qua đây một chút xem nào. Này, mọi người đang đợi bác đấy."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "なんだい、なんだい。どうしたんだ、みんな、こっちを{見|み}て。",
+      "vi": "Sao thế, sao thế. Có chuyện gì mà mọi người nhìn bác thế."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、お{誕生|たんじょう}{日|ひ}おめでとうございます。{今日|きょう}は、{八十|はちじゅう}{八|はっ}{歳|さい}、{米寿|べいじゅ}のお{祝|いわ}いです。",
+      "vi": "Bác Tanaka, chúc mừng sinh nhật bác ạ. Hôm nay là lễ mừng thọ 88 tuổi, mừng thọ Beiju của bác ạ."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "せーの。ハッピーバースデー、トゥー・ユー。ハッピーバースデー、トゥー・ユー。",
+      "vi": "Nào, một hai ba. Happy birthday to you. Happy birthday to you."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "おお、こりゃ、びっくりだ。わしが、{今日|きょう}、{誕生|たんじょう}{日|ひ}だって、すっかり{忘|わす}れてたよ。",
+      "vi": "Ồ, thế này thì bất ngờ thật đấy. Bác quên béng mất hôm nay là sinh nhật bác rồi."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、これ、みんなで{作|つく}ったカードです。みんなのメッセージが、{書|か}いてあります。どうぞ。",
+      "vi": "Bác Tanaka, đây là tấm thiệp mọi người cùng làm ạ. Trong này có tin nhắn của mọi người đấy ạ. Bác nhận nhé."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "ありがとう、ありがとう。みんな、わしのこと、{覚|おぼ}えててくれたんだね。うれしいよ、ほんとに。",
+      "vi": "Cảm ơn các cháu, cảm ơn nhé. Mọi người vẫn nhớ đến bác thế này. Bác vui lắm, thật đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{田中|たなか}さん、ケーキ、{食|た}べようよ。{今日|きょう}は、{特別|とくべつ}に、イチゴのケーキだよ。",
+      "vi": "Bác Tanaka, mình ăn bánh nhé. Hôm nay đặc biệt có bánh dâu tây đấy ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "いやあ、{若|わか}いころはな、{誕生|たんじょう}{日|ひ}なんて、{祝|いわ}ってもらったこと、なかったんだよ。{畑仕事|はたけしごと}で、{忙|いそが}しくてね。",
+      "vi": "Chà, hồi trẻ ấy mà, bác có bao giờ được ai chúc mừng sinh nhật đâu. Bận làm đồng suốt ấy mà."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうだったんですね。じゃあ、{今日|きょう}は、{田中|たなか}さんのために、みんなで、ちゃんとお{祝|いわ}いしますね。",
+      "vi": "Thì ra là vậy ạ. Vậy thì hôm nay, vì bác Tanaka, mọi người sẽ chúc mừng bác đàng hoàng ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "うん、ありがとう。みんなと、こうやって{過|す}ごせるのが、いちばんのプレゼントだよ。",
+      "vi": "Ừ, cảm ơn các cháu. Được ở bên mọi người thế này mới là món quà quý nhất đấy."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{田中|たなか}さん、また{来年|らいねん}も、みんなでお{祝|いわ}いしようね。{来年|らいねん}は、{八十|はちじゅう}{九|きゅう}{歳|さい}だよ。",
+      "vi": "Bác Tanaka, sang năm mình lại chúc mừng cùng nhau nữa nhé. Sang năm là bác 89 tuổi đấy."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "{田中|たなか}さん、よかったら、みんなで、{記念|きねん}に{写真|しゃしん}を{撮|と}りませんか。{今日|きょう}の{思|おも}い{出|いで}に、なりますよ。",
+      "vi": "Bác Tanaka, nếu bác đồng ý, mọi người mình chụp một tấm ảnh kỷ niệm nhé. Để làm kỷ niệm ngày hôm nay ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "{写真|しゃしん}かい。いいよ、もちろん。わし、{写真|しゃしん}は、ちょっと{苦手|にがて}だけどね。",
+      "vi": "Chụp ảnh à. Được chứ, đương nhiên rồi. Bác hơi không quen chụp ảnh lắm, nhưng mà được."
+    },
+    {
+      "speaker": "莉子",
+      "ja": "{大丈夫|だいじょうぶ}、{田中|たなか}さん、{笑|わら}わなくてもいいよ。いつもの{顔|かお}で、いいんだから。はい、チーズ。",
+      "vi": "Không sao đâu bác Tanaka, bác không cần cười đâu. Cứ để mặt bình thường là được ạ. Nào, cheese."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "わあ、いい{写真|しゃしん}が{撮|と}れましたよ。{田中|たなか}さん、みんな、いい{顔|かお}してます。",
+      "vi": "Chà, chụp được tấm ảnh đẹp rồi ạ. Bác Tanaka, mọi người ai cũng tươi cả."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "ほんとかい。{見|み}せて{見|み}せて。おお、みんな、そろってるね。",
+      "vi": "Thật không đấy. Cho bác xem nào, xem nào. Ồ, mọi người đông đủ cả nhỉ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "あの、すみません。{田中|たなか}のお{迎|むか}えに{来|き}ました。{今日|きょう}は、ありがとうございました。",
+      "vi": "À, xin lỗi ạ. Tôi đến đón bác Tanaka ạ. Hôm nay cảm ơn các anh chị nhiều ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "あ、ご{家族|かぞく}の{方|ほう}ですね。{今日|きょう}は、{田中|たなか}さんのお{誕生|たんじょう}{日|ひ}で、みんなでお{祝|いわ}いしたんですよ。よかったら、この{写真|しゃしん}、お{送|おく}りしてもいいですか。",
+      "vi": "À, anh/chị là người nhà của bác phải không ạ. Hôm nay là sinh nhật bác Tanaka, mọi người đã cùng chúc mừng bác đấy ạ. Nếu anh/chị đồng ý, cháu có thể gửi tấm ảnh này cho anh/chị được không ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "え、{今日|きょう}が{誕生|たんじょう}{日|ひ}だったんですか。{父|ちち}、{家|いえ}では、{何|なん}も{言|い}わなかったんです。{写真|しゃしん}、ぜひ、お{願|ねが}いします。",
+      "vi": "Ơ, hôm nay là sinh nhật bố tôi ạ. Ở nhà bố tôi không nói gì cả. Ảnh thì xin anh cứ gửi giúp tôi ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "はい、{後|のち}ほど、お{送|おく}りしますね。あの、よろしければ、{田中|たなか}さんが、お{好|す}きなものって、{何|なん}か、ございますか。{次回|じかい}、プレゼントの{参考|さんこう}にさせていただきたくて。",
+      "vi": "Vâng ạ, lát nữa cháu sẽ gửi ạ. À, nếu được thì bác Tanaka thích thứ gì ạ, có thứ gì không ạ? Để lần sau cháu tham khảo làm quà cho bác ạ."
+    },
+    {
+      "speaker": "ご家族",
+      "ja": "{父|ちち}ですか。{父|ちち}は、{甘|あま}いものが{好|す}きで、{特|とく}に、あんこのお{菓子|かし}が{好|す}きなんです。あと、{昔|むかし}の{歌|うた}も、よく{口|くち}ずさんでいますよ。",
+      "vi": "Bố tôi ạ. Bố tôi thích đồ ngọt, đặc biệt là thích bánh nhân đậu đỏ ạ. Với cả bố hay lẩm nhẩm mấy bài hát ngày xưa lắm ạ."
+    },
+    {
+      "speaker": "拓海",
+      "ja": "そうなんですね。ありがとうございます。{次回|じかい}は、あんこのお{菓子|かし}を、{用意|ようい}させていただきますね。",
+      "vi": "Thì ra là vậy ạ. Cảm ơn anh/chị nhiều ạ. Lần sau cháu sẽ chuẩn bị bánh nhân đậu đỏ cho bác ạ."
+    },
+    {
+      "speaker": "田中さん",
+      "ja": "{拓海|たくみ}くん、{莉子|りこ}さん、{今日|きょう}は、ほんとにありがとう。また、{来|く}るからね。",
+      "vi": "Takumi, Riko, hôm nay cảm ơn các cháu thật nhiều nhé. Bác sẽ lại đến đấy."
+    }
+  ],
+  "notes": [
+    "米寿 (べいじゅ): mừng thọ 88 tuổi — chữ 米 (gạo) tách ra thành 八十八, nên tuổi 88 được gọi là 米寿. Các mốc mừng thọ khác: 還暦 (かんれき, 60 tuổi), 古希 (こき, 70 tuổi), 喜寿 (きじゅ, 77 tuổi).",
+    "お誕生日おめでとうございます: chúc mừng sinh nhật bác — dạng đầy đủ, bắt buộc với người lớn tuổi; dạng rút gọn お誕生日おめでとう chỉ dùng với người thân thiết hoặc bạn bè.",
+    "サプライズ (surprise): tiệc bất ngờ — trong kaigo, bất ngờ phải ngắn gọn, nhẹ nhàng, không làm cụ giật mình hay mệt; khác với tiệc bất ngờ của người trẻ.",
+    "記念に写真を撮る (きねんにしゃしんをとる): chụp ảnh làm kỷ niệm — trong kaigo luôn xin phép cụ trước, rồi xin phép người nhà sau, rồi mới gửi ảnh; không đăng lên mạng khi chưa được đồng ý.",
+    "あんこのお菓子 (あんこのおかし): bánh nhân đậu đỏ — món ngọt truyền thống người lớn tuổi Nhật thường thích; hỏi sở thích cụ để chuẩn bị quà lần sau là cách chăm sóc cụ thể, không chung chung."
+  ]
+}
