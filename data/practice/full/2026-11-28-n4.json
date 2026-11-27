@@ -1,0 +1,727 @@
+{
+  "feature": "full-exam",
+  "date": "2026-11-28",
+  "level": "N4",
+  "duration_minutes": 80,
+  "pass": {
+    "total_pct": 60,
+    "section_min_pct": 40
+  },
+  "questions": [
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "昼休みに友だちとご飯を食べます。「昼休み」の読み方はどれですか。",
+      "choices": [
+        "ひるやすみ",
+        "ひるやすむ",
+        "ちゅうやすみ",
+        "ひるやすし"
+      ],
+      "answer": 0,
+      "explain_vi": "昼休み đọc là ひるやすみ, nghĩa là giờ nghỉ trưa. Chữ 昼 đọc là ひる, 休み đọc là やすみ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "午後の3時に会議があります。「午後」の読み方はどれですか。",
+      "choices": [
+        "ごうご",
+        "ごご",
+        "ごごう",
+        "ごこ"
+      ],
+      "answer": 1,
+      "explain_vi": "午後 đọc là ごご, nghĩa là buổi chiều. Chữ 午 đọc là ご, 後 đọc là ご."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "夕方になったら、家に帰ります。「夕方」の読み方はどれですか。",
+      "choices": [
+        "ゆうほう",
+        "ゆうかた",
+        "ゆうがた",
+        "ゆうがだ"
+      ],
+      "answer": 2,
+      "explain_vi": "夕方 đọc là ゆうがた, nghĩa là buổi chiều tối. Chữ 方 trong từ này đọc là がた."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "今週の土曜日に友だちと会います。「今週」の読み方はどれですか。",
+      "choices": [
+        "こんしゅ",
+        "いましゅう",
+        "きんしゅう",
+        "こんしゅう"
+      ],
+      "answer": 3,
+      "explain_vi": "今週 đọc là こんしゅう, nghĩa là tuần này. Chữ 今 đọc là こん, 週 đọc là しゅう."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "外国から来た友だちがいます。「外国」の読み方はどれですか。",
+      "choices": [
+        "がいこく",
+        "がいこっく",
+        "がいこぐ",
+        "がいこくう"
+      ],
+      "answer": 0,
+      "explain_vi": "外国 đọc là がいこく, nghĩa là nước ngoài. Chữ 外 đọc là がい, 国 đọc là こく."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "夏休みに家族と旅行に行きます。「旅行」の読み方はどれですか。",
+      "choices": [
+        "りょこ",
+        "りょこう",
+        "りょっこう",
+        "りよこう"
+      ],
+      "answer": 1,
+      "explain_vi": "旅行 đọc là りょこう, nghĩa là du lịch. Chữ 旅 đọc là りょ, 行 đọc là こう."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "昨日の夜、映画を見ました。「映画」の読み方はどれですか。",
+      "choices": [
+        "えいか",
+        "えが",
+        "えいがあ",
+        "えいが"
+      ],
+      "answer": 3,
+      "explain_vi": "映画 đọc là えいが, nghĩa là phim. Chữ 映 đọc là えい, 画 đọc là が."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "わたしは毎日電車に乗ります。「電車」の読み方はどれですか。",
+      "choices": [
+        "でんじゃ",
+        "てんしゃ",
+        "でんさ",
+        "でんしゃ"
+      ],
+      "answer": 3,
+      "explain_vi": "電車 đọc là でんしゃ, nghĩa là tàu điện. Chữ 電 đọc là でん, 車 đọc là しゃ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "朝の食事はパンと卵です。「食事」の読み方はどれですか。",
+      "choices": [
+        "しょくじ",
+        "しょくし",
+        "しょっじ",
+        "しょくち"
+      ],
+      "answer": 0,
+      "explain_vi": "食事 đọc là しょくじ, nghĩa là bữa ăn. Chữ 食 đọc là しょく, 事 đọc là じ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "わたしは毎日、母に「てがみ」を書きます。「てがみ」を漢字で書いたものはどれですか。",
+      "choices": [
+        "手文",
+        "手紙",
+        "紙手",
+        "手書"
+      ],
+      "answer": 1,
+      "explain_vi": "てがみ viết bằng kanji là 手紙, nghĩa là thư. Chữ 手 là て, 紙 là がみ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "あおい山はこの町で一番高い「やま」です。「やま」を漢字で書いたものはどれですか。",
+      "choices": [
+        "川",
+        "森",
+        "山",
+        "田"
+      ],
+      "answer": 2,
+      "explain_vi": "やま viết là 山, nghĩa là núi. Núi Aoi là ngọn núi cao nhất vùng này."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "この「かわ」には、魚がたくさんいます。「かわ」を漢字で書いたものはどれですか。",
+      "choices": [
+        "山",
+        "海",
+        "池",
+        "川"
+      ],
+      "answer": 3,
+      "explain_vi": "かわ viết là 川, nghĩa là sông. Trong sông có nhiều cá."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "夏休みに家族と「うみ」へ行きました。「うみ」を漢字で書いたものはどれですか。",
+      "choices": [
+        "海",
+        "川",
+        "湖",
+        "池"
+      ],
+      "answer": 0,
+      "explain_vi": "うみ viết là 海, nghĩa là biển. Mùa hè nhiều gia đình đi biển chơi."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "今日の「そら」は青くて、きれいです。「そら」を漢字で書いたものはどれですか。",
+      "choices": [
+        "星",
+        "空",
+        "雨",
+        "雲"
+      ],
+      "answer": 1,
+      "explain_vi": "そら viết là 空, nghĩa là bầu trời. Hôm nay bầu trời xanh và đẹp."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "雨が降りそうなので、傘を（　）ほうがいいです。",
+      "choices": [
+        "持って行く",
+        "持って行って",
+        "持って行かない",
+        "持って行った"
+      ],
+      "answer": 3,
+      "explain_vi": "Trời sắp mưa nên nên mang ô đi: 持って行ったほうがいい. Mẫu ～たほうがいい dùng để khuyên nên làm gì."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "ご飯を食べる前に、手を（　）ください。",
+      "choices": [
+        "洗って",
+        "拭いて",
+        "切って",
+        "書いて"
+      ],
+      "answer": 0,
+      "explain_vi": "Trước khi ăn cơm cần rửa tay: 手を洗う. 拭く là lau, 切る là cắt."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "寒いので、コートを（　）ください。",
+      "choices": [
+        "脱いで",
+        "着て",
+        "洗って",
+        "買って"
+      ],
+      "answer": 1,
+      "explain_vi": "Trời lạnh nên mặc áo khoác: コートを着る. 脱ぐ là cởi ra, ngược nghĩa."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "明日、さくら市へ行きますから、今日切符を（　）ます。",
+      "choices": [
+        "売ります",
+        "借ります",
+        "買います",
+        "忘れます"
+      ],
+      "answer": 2,
+      "explain_vi": "Ngày mai đi thành phố Sakura nên hôm nay mua vé: 切符を買う. 売る là bán, 借りる là mượn."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "週末に部屋を（　）しました。",
+      "choices": [
+        "料理",
+        "勉強",
+        "運動",
+        "掃除"
+      ],
+      "answer": 3,
+      "explain_vi": "Cuối tuần dọn phòng: 部屋を掃除する. 料理 là nấu ăn, 勉強 là học."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "信号が青になったので、道を（　）ました。",
+      "choices": [
+        "渡ります",
+        "止まります",
+        "曲がります",
+        "走ります"
+      ],
+      "answer": 0,
+      "explain_vi": "Đèn xanh nên qua đường: 道を渡る. 止まる là dừng lại, 曲がる là rẽ."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "荷物が重いので、友だちが荷物を（　）くれました。",
+      "choices": [
+        "作って",
+        "運んで",
+        "買って",
+        "読んで"
+      ],
+      "answer": 1,
+      "explain_vi": "Hành lý nặng nên bạn giúp mang: 荷物を運ぶ. 作る là làm ra, 買う là mua."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「今日はとても暑いです」の「とても」と同じ意味のものはどれですか。",
+      "choices": [
+        "少し",
+        "あまり",
+        "すごく",
+        "ぜんぜん"
+      ],
+      "answer": 2,
+      "explain_vi": "とても và すごく đều có nghĩa là rất. 少し là một chút, ぜんぜん là hoàn toàn không."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「明日はたぶん雨が降ります」の「たぶん」と同じ意味のものはどれですか。",
+      "choices": [
+        "きっと",
+        "すぐに",
+        "もちろん",
+        "おそらく"
+      ],
+      "answer": 3,
+      "explain_vi": "たぶん và おそらく đều có nghĩa là có lẽ, có thể. きっと là chắc chắn, もちろん là đương nhiên."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「この店には本がたくさんあります」の「たくさん」と同じ意味のものはどれですか。",
+      "choices": [
+        "いっぱい",
+        "少し",
+        "ぜんぜん",
+        "あまり"
+      ],
+      "answer": 0,
+      "explain_vi": "たくさん và いっぱい đều có nghĩa là nhiều. 少し là ít, ぜんぜん là hoàn toàn không."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「わたしはいつも7時に起きます」の「いつも」と同じ意味のものはどれですか。",
+      "choices": [
+        "たまに",
+        "まいにち",
+        "ときどき",
+        "あした"
+      ],
+      "answer": 1,
+      "explain_vi": "いつも và まいにち đều có nghĩa là luôn luôn, hằng ngày. たまに và ときどき là thỉnh thoảng."
+    },
+    {
+      "level": "N4",
+      "section": "文字・語彙",
+      "question": "「まず、手を洗ってください」の「まず」と同じ意味のものはどれですか。",
+      "choices": [
+        "さいごに",
+        "あとで",
+        "はじめに",
+        "すぐに"
+      ],
+      "answer": 2,
+      "explain_vi": "まず và はじめに đều có nghĩa là trước tiên. さいごに là cuối cùng, あとで là sau đó."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "わたしは来年、あおい山に（　）みたいです。",
+      "choices": [
+        "登る",
+        "登った",
+        "登って",
+        "登り"
+      ],
+      "answer": 2,
+      "explain_vi": "Muốn thử leo núi Aoi: ～てみたい đi sau động từ dạng て. 登る là dạng từ điển, 登った là dạng quá khứ."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "わたしはすしを（　）ことがあります。",
+      "choices": [
+        "食べる",
+        "食べ",
+        "食べて",
+        "食べた"
+      ],
+      "answer": 3,
+      "explain_vi": "Đã từng ăn sushi: ～たことがある đi sau động từ dạng た. 食べる là dạng từ điển, 食べて là dạng て."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "ここに車を（　）ないでください。",
+      "choices": [
+        "止め",
+        "止める",
+        "止めて",
+        "止めた"
+      ],
+      "answer": 0,
+      "explain_vi": "Đừng đỗ xe ở đây: ～ないでください đi sau động từ dạng ない (bỏ ない). 止める là dạng từ điển."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "今日は雨ですから、学校へ（　）なくてもいいです。",
+      "choices": [
+        "行き",
+        "行か",
+        "行って",
+        "行った"
+      ],
+      "answer": 1,
+      "explain_vi": "Hôm nay mưa nên không cần đến trường: ～なくてもいいです đi sau động từ dạng ない. 行か là phần trước ない của 行かない."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "先生にこの漢字の意味を（　）ほしいです。",
+      "choices": [
+        "教える",
+        "教えた",
+        "教えて",
+        "教え"
+      ],
+      "answer": 2,
+      "explain_vi": "Muốn thầy dạy nghĩa của kanji này: ～てほしい đi sau động từ dạng て. 教える là dạng từ điển, 教えた là dạng quá khứ."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "明日は雨が（　）かもしれません。",
+      "choices": [
+        "降った",
+        "降る",
+        "降って",
+        "降り"
+      ],
+      "answer": 1,
+      "explain_vi": "Ngày mai có thể sẽ mưa: ～かもしれません đi sau dạng từ điển. 降った là dạng quá khứ."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "休みの日は、映画を見（　）、買い物をしたりします。",
+      "choices": [
+        "たり",
+        "て",
+        "た",
+        "る"
+      ],
+      "answer": 0,
+      "explain_vi": "Ngày nghỉ vừa xem phim vừa mua sắm: ～たり～たりする liệt kê các hoạt động. Sau 見 là たり."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "ご飯を（　）から、宿題をします。",
+      "choices": [
+        "食べる",
+        "食べて",
+        "食べた",
+        "食べ"
+      ],
+      "answer": 1,
+      "explain_vi": "Ăn cơm xong rồi làm bài tập: ～てから đi sau động từ dạng て. 食べる là dạng từ điển, 食べた là dạng quá khứ."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "彼は毎日勉強していますから、試験に（　）はずです。",
+      "choices": [
+        "受かって",
+        "受かった",
+        "受かる",
+        "受かり"
+      ],
+      "answer": 2,
+      "explain_vi": "Anh ấy học mỗi ngày nên chắc sẽ đỗ kỳ thi: ～はずです đi sau dạng từ điển, diễn tả suy đoán chắc chắn."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "風邪をひきましたから、今日はお風呂に（　）ほうがいいです。",
+      "choices": [
+        "入る",
+        "入って",
+        "入った",
+        "入らない"
+      ],
+      "answer": 3,
+      "explain_vi": "Bị cảm nên hôm nay tốt hơn là không nên tắm: ～ないほうがいいです diễn tả lời khuyên ở dạng phủ định."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "バスより電車のほうが（　）です。",
+      "choices": [
+        "速い",
+        "遅い",
+        "安い",
+        "遠い"
+      ],
+      "answer": 0,
+      "explain_vi": "So sánh tàu nhanh hơn xe buýt: AよりBのほうが～です, B có tính chất đó hơn A. 遅い là chậm, ngược nghĩa."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "次の文の ★ に入るものはどれですか。\nわたしは ＿＿ ＿＿ ★ ＿＿ 行きました。\n1 昨日　2 友だちと　3 デパートへ　4 買い物に",
+      "choices": [
+        "昨日",
+        "友だちと",
+        "デパートへ",
+        "買い物に"
+      ],
+      "answer": 2,
+      "explain_vi": "Thứ tự đúng là 昨日、友だちと、デパートへ、買い物に行きました. Vị trí ★ là デパートへ, đứng trước 買い物に."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "次の文の ★ に入るものはどれですか。\n彼は ＿＿ ★ ＿＿ ＿＿ 先生です。\n1 いつも　2 学生に　3 やさしく　4 教える",
+      "choices": [
+        "いつも",
+        "学生に",
+        "やさしく",
+        "教える"
+      ],
+      "answer": 1,
+      "explain_vi": "Thứ tự đúng là いつも、学生に、やさしく、教える先生です. Vị trí ★ là 学生に."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "次の文の ★ に入るものはどれですか。\n先生は ＿＿ ＿＿ ＿＿ ★ くれました。\n1 わたしに　2 日本語を　3 やさしく　4 教えて",
+      "choices": [
+        "わたしに",
+        "日本語を",
+        "やさしく",
+        "教えて"
+      ],
+      "answer": 3,
+      "explain_vi": "Thứ tự đúng là わたしに、日本語を、やさしく、教えてくれました. Vị trí ★ là 教えて, đứng ngay trước くれました."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "次の文の ★ に入るものはどれですか。\nあの店は ＿＿ ＿＿ ★ ＿＿ 店です。\n1 とても　2 安くて　3 おいしい　4 料理の",
+      "choices": [
+        "とても",
+        "安くて",
+        "おいしい",
+        "料理の"
+      ],
+      "answer": 2,
+      "explain_vi": "Thứ tự đúng là とても、安くて、おいしい、料理の店です. Vị trí ★ là おいしい."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "ユウタさんは来月、友だちと北海道へ旅行に行きます。旅行の前に、ホテルを予約しました。北海道は今とても寒いですから、暖かい服を（　1　）と思っています。また、新しいカメラも（　2　）つもりです。ユウタさんは旅行がとても楽しみです。\n（　1　）に入るものはどれですか。",
+      "choices": [
+        "持って行く",
+        "持って行った",
+        "持って行こう",
+        "持って行って"
+      ],
+      "answer": 2,
+      "explain_vi": "Dự định mang áo ấm theo: ～ようと思っています diễn tả dự định, đi sau dạng ý chí 持って行こう."
+    },
+    {
+      "level": "N4",
+      "section": "文法",
+      "question": "ユウタさんは来月、友だちと北海道へ旅行に行きます。旅行の前に、ホテルを予約しました。北海道は今とても寒いですから、暖かい服を（　1　）と思っています。また、新しいカメラも（　2　）つもりです。ユウタさんは旅行がとても楽しみです。\n（　2　）に入るものはどれですか。",
+      "choices": [
+        "買う",
+        "買って",
+        "買った",
+        "買い"
+      ],
+      "answer": 0,
+      "explain_vi": "Dự định mua máy ảnh mới: ～つもりです đi sau dạng từ điển 買う."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "メモ\n明日は朝9時に駅の前で会いましょう。遅れないでください。\n明日、何時に会いますか。",
+      "choices": [
+        "8時",
+        "9時",
+        "10時",
+        "11時"
+      ],
+      "answer": 1,
+      "explain_vi": "Ghi chú hẹn gặp lúc 9 giờ sáng mai ở trước ga. 8時, 10時 và 11時 không có trong ghi chú."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "お知らせ\nさくら図書館は、来週の月曜日から水曜日まで休みです。木曜日から開きます。\n図書館はいつから開きますか。",
+      "choices": [
+        "木曜日",
+        "金曜日",
+        "月曜日",
+        "水曜日"
+      ],
+      "answer": 0,
+      "explain_vi": "Thư viện nghỉ từ thứ Hai đến thứ Tư tuần sau, mở lại từ thứ Năm."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "メール\nすみません。今日の午後、仕事がありますから、サッカーの練習に行けません。来週、よろしくお願いします。タケシより\nタケシさんはどうして練習に行けませんか。",
+      "choices": [
+        "雨が降るから",
+        "病気だから",
+        "仕事があるから",
+        "お金がないから"
+      ],
+      "answer": 2,
+      "explain_vi": "Takeshi không đi tập được vì chiều nay có việc. Thư không nhắc đến mưa hay bệnh."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ハナさんはベトナムから来ました。日本に来て2年になります。ハナさんはさくら市のレストランで働いています。仕事は朝10時から夜8時までです。休みの日は、日本語の勉強をしたり、友だちと買い物に行ったりします。先月、ハナさんは初めてあおい山に登りました。朝早く起きて、友だちと一緒に登りました。山の上から見た景色はとてもきれいでした。来年は、家族を日本に呼びたいと思っています。\nハナさんはどこで働いていますか。",
+      "choices": [
+        "大阪のホテル",
+        "さくら市のレストラン",
+        "名古屋の学校",
+        "さくら市の病院"
+      ],
+      "answer": 1,
+      "explain_vi": "Hana làm việc ở nhà hàng tại thành phố Sakura. Các đáp án khác không có trong bài."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ハナさんはベトナムから来ました。日本に来て2年になります。ハナさんはさくら市のレストランで働いています。仕事は朝10時から夜8時までです。休みの日は、日本語の勉強をしたり、友だちと買い物に行ったりします。先月、ハナさんは初めてあおい山に登りました。朝早く起きて、友だちと一緒に登りました。山の上から見た景色はとてもきれいでした。来年は、家族を日本に呼びたいと思っています。\nハナさんは休みの日に何をしますか。",
+      "choices": [
+        "日本語の勉強をしたり、友だちと買い物に行ったりします",
+        "一日中寝ています",
+        "仕事をします",
+        "テレビだけ見ます"
+      ],
+      "answer": 0,
+      "explain_vi": "Ngày nghỉ Hana học tiếng Nhật và đi mua sắm với bạn. Bài không nói cô ấy làm việc hay ngủ cả ngày."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ハナさんはベトナムから来ました。日本に来て2年になります。ハナさんはさくら市のレストランで働いています。仕事は朝10時から夜8時までです。休みの日は、日本語の勉強をしたり、友だちと買い物に行ったりします。先月、ハナさんは初めてあおい山に登りました。朝早く起きて、友だちと一緒に登りました。山の上から見た景色はとてもきれいでした。来年は、家族を日本に呼びたいと思っています。\n来年、ハナさんは何をしたいと思っていますか。",
+      "choices": [
+        "ベトナムへ帰りたい",
+        "新しい仕事を始めたい",
+        "あおい山にまた登りたい",
+        "家族を日本に呼びたい"
+      ],
+      "answer": 3,
+      "explain_vi": "Sang năm Hana muốn đón gia đình sang Nhật. Bài không nói cô ấy muốn về Việt Nam hay đổi việc."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ケンさんは大学生です。毎朝、6時に起きて、ジョギングをします。それから、シャワーを浴びて、朝ごはんを食べます。大学は家から電車で40分かかります。ケンさんは電車の中でいつも英語の勉強をしています。大学では、経済を勉強しています。午後は、図書館でレポートを書いたり、友だちと話したりします。ケンさんは将来、銀行で働きたいと思っています。\nケンさんは朝、何をしますか。",
+      "choices": [
+        "テレビを見ます",
+        "ジョギングをします",
+        "買い物をします",
+        "寝ています"
+      ],
+      "answer": 1,
+      "explain_vi": "Buổi sáng Ken dậy lúc 6 giờ và chạy bộ. Bài không nói cậu ấy xem tivi hay mua sắm."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ケンさんは大学生です。毎朝、6時に起きて、ジョギングをします。それから、シャワーを浴びて、朝ごはんを食べます。大学は家から電車で40分かかります。ケンさんは電車の中でいつも英語の勉強をしています。大学では、経済を勉強しています。午後は、図書館でレポートを書いたり、友だちと話したりします。ケンさんは将来、銀行で働きたいと思っています。\nケンさんは電車の中で何をしていますか。",
+      "choices": [
+        "音楽を聞いています",
+        "本を読んでいます",
+        "英語の勉強をしています",
+        "寝ています"
+      ],
+      "answer": 2,
+      "explain_vi": "Trên tàu Ken luôn học tiếng Anh. Bài không nói cậu ấy nghe nhạc hay đọc sách."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "ケンさんは大学生です。毎朝、6時に起きて、ジョギングをします。それから、シャワーを浴びて、朝ごはんを食べます。大学は家から電車で40分かかります。ケンさんは電車の中でいつも英語の勉強をしています。大学では、経済を勉強しています。午後は、図書館でレポートを書いたり、友だちと話したりします。ケンさんは将来、銀行で働きたいと思っています。\nケンさんは将来、どこで働きたいと思っていますか。",
+      "choices": [
+        "学校",
+        "病院",
+        "レストラン",
+        "銀行"
+      ],
+      "answer": 3,
+      "explain_vi": "Tương lai Ken muốn làm việc ở ngân hàng. Các đáp án khác không có trong bài."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "さくらスポーツクラブ 会員のご案内\n水泳教室：毎週土曜日 9時から10時まで、料金は1回700円、場所は1階プールです。\nテニス教室：毎週日曜日 10時から12時まで、料金は1回900円、場所は屋外コートです。\nヨガ教室：毎週水曜日 19時から20時まで、料金は1回600円、場所は2階スタジオです。\n申し込みは、12月1日から受付で受け付けます。\nテニス教室はいつありますか。",
+      "choices": [
+        "毎週日曜日 10時から12時まで",
+        "毎週土曜日 9時から10時まで",
+        "毎週水曜日 19時から20時まで",
+        "毎週日曜日 9時から10時まで"
+      ],
+      "answer": 0,
+      "explain_vi": "Lớp tennis học chủ nhật hằng tuần từ 10 giờ đến 12 giờ. Thứ Bảy là lớp bơi, thứ Tư là lớp yoga."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "さくらスポーツクラブ 会員のご案内\n水泳教室：毎週土曜日 9時から10時まで、料金は1回700円、場所は1階プールです。\nテニス教室：毎週日曜日 10時から12時まで、料金は1回900円、場所は屋外コートです。\nヨガ教室：毎週水曜日 19時から20時まで、料金は1回600円、場所は2階スタジオです。\n申し込みは、12月1日から受付で受け付けます。\nヨガ教室の料金はいくらですか。",
+      "choices": [
+        "700円",
+        "900円",
+        "1,000円",
+        "600円"
+      ],
+      "answer": 3,
+      "explain_vi": "Lớp yoga 600 yên một buổi. 700 yên là lớp bơi, 900 yên là lớp tennis."
+    },
+    {
+      "level": "N4",
+      "section": "読解",
+      "question": "さくらスポーツクラブ 会員のご案内\n水泳教室：毎週土曜日 9時から10時まで、料金は1回700円、場所は1階プールです。\nテニス教室：毎週日曜日 10時から12時まで、料金は1回900円、場所は屋外コートです。\nヨガ教室：毎週水曜日 19時から20時まで、料金は1回600円、場所は2階スタジオです。\n申し込みは、12月1日から受付で受け付けます。\n申し込みはいつからですか。",
+      "choices": [
+        "11月1日から",
+        "12月10日から",
+        "12月1日から",
+        "11月20日から"
+      ],
+      "answer": 2,
+      "explain_vi": "Đăng ký từ ngày 1 tháng 12 tại quầy tiếp tân."
+    }
+  ]
+}
